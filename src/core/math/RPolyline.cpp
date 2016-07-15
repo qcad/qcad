@@ -220,6 +220,25 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
     return ret;
 }
 
+/**
+ * Appends the given shape to this polyline. The shape is reversed if necessary.
+ */
+bool RPolyline::appendShapeAuto(const RShape& shape) {
+    const RDirected* shapeDir = dynamic_cast<const RDirected*>(&shape);
+    if (shapeDir==NULL) {
+        return false;
+    }
+
+    if (countVertices()>0 && getEndPoint().equalsFuzzy(shapeDir->getEndPoint())) {
+        QSharedPointer<RShape> rev = QSharedPointer<RShape>(shape.clone());
+        QSharedPointer<RDirected> revDir = rev.dynamicCast<RDirected>();
+        revDir->reverse();
+        return appendShape(*rev);
+    }
+
+    return appendShape(shape);
+}
+
 void RPolyline::appendVertex(const RVector& vertex, double bulge, double w1, double w2) {
     vertices.append(vertex);
     bulges.append(bulge);
@@ -1629,4 +1648,75 @@ QList<RVector> RPolyline::verifyTangency(double toleranceMin, double toleranceMa
     else {
         return QList<RVector>();
     }
+}
+
+/**
+ * Modifies (bevels, rounds, trims) the corner of this polyline between segmentIndex1 and segmentIndex2
+ * at the given segment endings. The given cornerShape (bevel, rouding) is inserted between.
+ */
+RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Ending ending1, int segmentIndex1,
+                                     const RShape& trimmedShape2, RS::Ending ending2, int segmentIndex2,
+                                     const RShape* cornerShape) const {
+    QSharedPointer<RShape> segment;
+
+    RPolyline pl;
+
+    if (segmentIndex1<segmentIndex2 && ending1==RS::EndingEnd && ending2==RS::EndingStart) {
+        for (int i=0; i<segmentIndex1; i++) {
+            segment = getSegmentAt(i);
+            pl.appendShape(*segment);
+        }
+
+        pl.appendShapeAuto(trimmedShape1);
+        if (cornerShape!=NULL) {
+            pl.appendShapeAuto(*cornerShape);
+        }
+        pl.appendShapeAuto(trimmedShape2);
+
+        for (int i=segmentIndex2+1; i<countSegments(); i++) {
+            segment = getSegmentAt(i);
+            pl.appendShape(*segment);
+        }
+    }
+    else if (segmentIndex1>segmentIndex2 && ending1==RS::EndingStart && ending2==RS::EndingEnd) {
+        for (int i=0; i<segmentIndex2; i++) {
+            segment = getSegmentAt(i);
+            pl.appendShape(*segment);
+        }
+
+        pl.appendShapeAuto(trimmedShape2);
+        if (cornerShape!=NULL) {
+            pl.appendShapeAuto(*cornerShape);
+        }
+        pl.appendShapeAuto(trimmedShape1);
+
+        for (int i=segmentIndex1+1; i<countSegments(); i++) {
+            segment = getSegmentAt(i);
+            pl.appendShape(*segment);
+        }
+    }
+    else if (segmentIndex1<segmentIndex2 && ending1==RS::EndingStart && ending2==RS::EndingEnd) {
+        pl.appendShapeAuto(trimmedShape1);
+        for (int i=segmentIndex1+1; i<segmentIndex2; i++) {
+            segment = getSegmentAt(i);
+            pl.appendShape(*segment);
+        }
+        pl.appendShapeAuto(trimmedShape2);
+        if (cornerShape!=NULL) {
+            pl.appendShapeAuto(*cornerShape);
+        }
+    }
+    else if (segmentIndex1>segmentIndex2 && ending1==RS::EndingEnd && ending2==RS::EndingStart) {
+        pl.appendShapeAuto(trimmedShape2);
+        for (int i=segmentIndex2+1; i<segmentIndex1; i++) {
+            segment = getSegmentAt(i);
+            pl.appendShape(*segment);
+        }
+        pl.appendShapeAuto(trimmedShape1);
+        if (cornerShape!=NULL) {
+            pl.appendShapeAuto(*cornerShape);
+        }
+    }
+
+    return pl;
 }

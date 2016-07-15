@@ -1851,66 +1851,7 @@ ShapeAlgorithms.appendShapeToPolylineAuto = function(pl, shape) {
  */
 ShapeAlgorithms.modifyPolylineCorner = function(polyline1, trimmedShape1, ending1, segmentIndex1,
                                                 polyline2, trimmedShape2, ending2, segmentIndex2, cornerShape) {
-    var i, segment;
 
-    var pl = new RPolyline();
-
-    if (segmentIndex1<segmentIndex2 && ending1===RS.EndingEnd && ending2===RS.EndingStart) {
-        for (i=0; i<segmentIndex1; i++) {
-            segment = polyline1.getSegmentAt(i);
-            pl.appendShape(segment.data());
-        }
-
-        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape1);
-        if (!isNull(cornerShape)) {
-            ShapeAlgorithms.appendShapeToPolylineAuto(pl, cornerShape);
-        }
-        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape2);
-
-        for (i=segmentIndex2+1; i<polyline1.countSegments(); i++) {
-            segment = polyline1.getSegmentAt(i);
-            pl.appendShape(segment.data());
-        }
-    }
-    else if (segmentIndex1>segmentIndex2 && ending1===RS.EndingStart && ending2===RS.EndingEnd) {
-        for (i=0; i<segmentIndex2; i++) {
-            segment = polyline1.getSegmentAt(i);
-            pl.appendShape(segment.data());
-        }
-
-        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape2);
-        if (!isNull(cornerShape)) {
-            ShapeAlgorithms.appendShapeToPolylineAuto(pl, cornerShape);
-        }
-        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape1);
-
-        for (i=segmentIndex1+1; i<polyline1.countSegments(); i++) {
-            segment = polyline1.getSegmentAt(i);
-            pl.appendShape(segment.data());
-        }
-    }
-    else if (segmentIndex1<segmentIndex2 && ending1===RS.EndingStart && ending2===RS.EndingEnd) {
-        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape1);
-        for (i=segmentIndex1+1; i<segmentIndex2; i++) {
-            segment = polyline1.getSegmentAt(i);
-            pl.appendShape(segment.data());
-        }
-        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape2);
-        if (!isNull(cornerShape)) {
-            ShapeAlgorithms.appendShapeToPolylineAuto(pl, cornerShape);
-        }
-    }
-    else if (segmentIndex1>segmentIndex2 && ending1===RS.EndingEnd && ending2===RS.EndingStart) {
-        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape2);
-        for (i=segmentIndex2+1; i<segmentIndex1; i++) {
-            segment = polyline1.getSegmentAt(i);
-            pl.appendShape(segment.data());
-        }
-        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape1);
-        if (!isNull(cornerShape)) {
-            ShapeAlgorithms.appendShapeToPolylineAuto(pl, cornerShape);
-        }
-    }
-
-    return pl;
+    return RPolyline.modifyPolylineCorner(polyline1, trimmedShape1, ending1, segmentIndex1,
+                                          trimmedShape2, ending2, segmentIndex2, cornerShape);
 };

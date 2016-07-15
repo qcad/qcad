@@ -69,6 +69,7 @@ public:
 
     bool prependShape(const RShape& shape);
     bool appendShape(const RShape& shape, bool prepend = false);
+    bool appendShapeAuto(const RShape& shape);
 
     void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
     void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
@@ -188,6 +189,11 @@ public:
     bool relocateStartPoint(const RVector& p);
     bool convertToClosed();
     bool convertToOpen();
+
+    RPolyline modifyPolylineCorner(
+            const RShape& trimmedShape1, RS::Ending ending1, int segmentIndex1,
+            const RShape& trimmedShape2, RS::Ending ending2, int segmentIndex2,
+            const RShape* cornerShape = NULL) const;
 
     static bool hasProxy() {
         return polylineProxy!=NULL;
