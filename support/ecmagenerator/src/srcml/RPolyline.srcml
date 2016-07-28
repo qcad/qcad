@@ -126,6 +126,9 @@
     <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getEndPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getMiddlePoint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>moveStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>moveEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDirection1</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDirection2</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
