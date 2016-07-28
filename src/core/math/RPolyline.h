@@ -125,6 +125,9 @@ public:
     virtual RVector getEndPoint() const;
     virtual RVector getMiddlePoint() const;
 
+    void moveStartPoint(const RVector& pos);
+    void moveEndPoint(const RVector& pos);
+
     virtual double getDirection1() const;
     virtual double getDirection2() const;
 

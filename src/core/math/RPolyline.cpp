@@ -1032,6 +1032,20 @@ RVector RPolyline::getMiddlePoint() const {
     return RVector::invalid;
 }
 
+void RPolyline::moveStartPoint(const RVector& pos) {
+    if (vertices.isEmpty()) {
+        return;
+    }
+    vertices.first() = pos;
+}
+
+void RPolyline::moveEndPoint(const RVector& pos) {
+    if (vertices.isEmpty()) {
+        return;
+    }
+    vertices.last() = pos;
+}
+
 double RPolyline::getDirection1() const {
     if (vertices.size()==0) {
         return RNANDOUBLE;
