@@ -456,6 +456,9 @@ void RDocument::setMeasurement(RS::Measurement m,  RTransaction* transaction) {
     }
 }
 
+/**
+ * \copydoc RStorage::getMeasurement
+ */
 RS::Measurement RDocument::getMeasurement() const {
     return storage.getMeasurement();
 }
@@ -470,18 +473,30 @@ bool RDocument::isMetric() const {
     return m==RS::Metric;
 }
 
+/**
+ * \copydoc RStorage::setDimensionFont
+ */
 void RDocument::setDimensionFont(const QString& f, RTransaction* transaction) {
     storage.setDimensionFont(f, transaction);
 }
 
+/**
+ * \copydoc RStorage::getDimensionFont
+ */
 QString RDocument::getDimensionFont() const {
     return storage.getDimensionFont();
 }
 
+/**
+ * \copydoc RStorage::setLinetypeScale
+ */
 void RDocument::setLinetypeScale(double v, RTransaction* transaction) {
     storage.setLinetypeScale(v, transaction);
 }
 
+/**
+ * \copydoc RStorage::getLinetypeScale
+ */
 double RDocument::getLinetypeScale() const {
     return storage.getLinetypeScale();
 }
@@ -571,18 +586,30 @@ QChar RDocument::getDecimalSeparator() {
     return getKnownVariable(RS::DIMDSEP, 2).toInt();
 }
 
+/**
+ * \copydoc RStorage::getVariables
+ */
 QStringList RDocument::getVariables() const {
     return storage.getVariables();
 }
 
+/**
+ * \copydoc RStorage::hasVariable
+ */
 bool RDocument::hasVariable(const QString& key) const {
     return storage.hasVariable(key);
 }
 
+/**
+ * \copydoc RStorage::removeVariable
+ */
 void RDocument::removeVariable(const QString& key) {
     storage.removeVariable(key);
 }
 
+/**
+ * \copydoc RStorage::setVariable
+ */
 void RDocument::setVariable(const QString& key, const QVariant& value, bool overwrite) {
     storage.setVariable(key, value, overwrite);
 }
@@ -629,6 +656,9 @@ QVariant RDocument::getKnownVariable(RS::KnownVariable key, const QVariant& defa
     return ret;
 }
 
+/**
+ * \copydoc RStorage::queryCurrentLayer
+ */
 QSharedPointer<RLayer> RDocument::queryCurrentLayer() {
     return storage.queryCurrentLayer();
 }
@@ -643,38 +673,65 @@ QString RDocument::getCurrentLayerName() const {
     return getLayerName(storage.getCurrentLayerId());
 }
 
+/**
+ * \copydoc RStorage::setCurrentColor
+ */
 void RDocument::setCurrentColor(const RColor& color) {
     storage.setCurrentColor(color);
 }
 
+/**
+ * \copydoc RStorage::getCurrentColor
+ */
 RColor RDocument::getCurrentColor() const {
     return storage.getCurrentColor();
 }
 
+/**
+ * \copydoc RStorage::setCurrentLineweight
+ */
 void RDocument::setCurrentLineweight(RLineweight::Lineweight lw) {
     storage.setCurrentLineweight(lw);
 }
 
+/**
+ * \copydoc RStorage::getCurrentLineweight
+ */
 RLineweight::Lineweight RDocument::getCurrentLineweight() const {
     return storage.getCurrentLineweight();
 }
 
+/**
+ * \copydoc RStorage::setCurrentLinetype
+ */
 void RDocument::setCurrentLinetype(RLinetype::Id ltId) {
     storage.setCurrentLinetype(ltId);
 }
 
+/**
+ * \copydoc RStorage::setCurrentLinetype
+ */
 void RDocument::setCurrentLinetype(const QString& name) {
     storage.setCurrentLinetype(name);
 }
 
+/**
+ * \copydoc RStorage::setCurrentLinetypePattern
+ */
 void RDocument::setCurrentLinetypePattern(const RLinetypePattern& p) {
     storage.setCurrentLinetypePattern(p);
 }
 
+/**
+ * \copydoc RStorage::getCurrentLinetypeId
+ */
 RLinetype::Id RDocument::getCurrentLinetypeId() const {
     return storage.getCurrentLinetypeId();
 }
 
+/**
+ * \copydoc RStorage::getCurrentLinetypePattern
+ */
 RLinetypePattern RDocument::getCurrentLinetypePattern() const {
     return storage.getCurrentLinetypePattern();
 }
@@ -696,10 +753,16 @@ RLinetypePattern RDocument::getCurrentLinetypePattern() const {
 ////    return setCurrentLayer(id);
 //}
 
+/**
+ * \copydoc RStorage::setCurrentLayer
+ */
 void RDocument::setCurrentLayer(RLayer::Id layerId, RTransaction* transaction) {
     storage.setCurrentLayer(layerId, transaction);
 }
 
+/**
+ * \copydoc RStorage::setCurrentLayer
+ */
 void RDocument::setCurrentLayer(const QString& layerName, RTransaction* transaction) {
     storage.setCurrentLayer(layerName, transaction);
 }
@@ -720,10 +783,16 @@ void RDocument::setCurrentLayer(const QString& layerName, RTransaction* transact
 ////    setCurrentLayer(transaction, id);
 //}
 
+/**
+ * \copydoc RStorage::queryCurrentBlock
+ */
 QSharedPointer<RBlock> RDocument::queryCurrentBlock() {
     return storage.queryCurrentBlock();
 }
 
+/**
+ * \copydoc RStorage::getCurrentBlockId
+ */
 RBlock::Id RDocument::getCurrentBlockId() const {
     return storage.getCurrentBlockId();
 }
@@ -775,94 +844,163 @@ QString RDocument::getTempBlockName() const {
     } while(true);
 }
 
+/**
+ * \copydoc RStorage::getBlockName
+ */
 QString RDocument::getBlockName(RBlock::Id blockId) const {
     return storage.getBlockName(blockId);
 }
 
+/**
+ * \copydoc RStorage::getBlockNames
+ */
 QSet<QString> RDocument::getBlockNames(const QString& rxStr) const {
     return storage.getBlockNames(rxStr);
 }
 
+/**
+ * \copydoc RStorage::setCurrentView
+ */
 void RDocument::setCurrentView(RView::Id viewId) {
     storage.setCurrentView(viewId);
 }
 
+/**
+ * \copydoc RStorage::setCurrentView
+ */
 void RDocument::setCurrentView(const QString& viewName) {
     storage.setCurrentView(viewName);
 }
 
+/**
+ * \copydoc RStorage::getCurrentViewId
+ */
 RView::Id RDocument::getCurrentViewId() const {
     return storage.getCurrentViewId();
 }
 
+/**
+ * \copydoc RStorage::queryCurrentView
+ */
 QSharedPointer<RView> RDocument::queryCurrentView() {
     return storage.queryCurrentView();
 }
 
+/**
+ * \copydoc RStorage::hasView
+ */
 bool RDocument::hasView(const QString& viewName) const {
     return storage.hasView(viewName);
 }
 
+/**
+ * \copydoc RStorage::getLayerName
+ */
 QString RDocument::getLayerName(RLayer::Id layerId) const {
     return storage.getLayerName(layerId);
 }
 
+/**
+ * \copydoc RStorage::getLayerNames
+ */
 QSet<QString> RDocument::getLayerNames(const QString& rxStr) const {
     return storage.getLayerNames(rxStr);
 }
 
+/**
+ * \copydoc RStorage::getLayoutName
+ */
 QString RDocument::getLayoutName(RLayout::Id layoutId) const {
     return storage.getLayoutName(layoutId);
 }
 
+/**
+ * \copydoc RStorage::getViewNames
+ */
 QSet<QString> RDocument::getViewNames() const {
     return storage.getViewNames();
 }
 
+/**
+ * \copydoc RStorage::hasLayer
+ */
 bool RDocument::hasLayer(const QString& layerName) const {
     return storage.hasLayer(layerName);
 }
 
+/**
+ * \copydoc RStorage::getLayerId
+ */
 RLayer::Id RDocument::getLayerId(const QString& layerName) const {
     return storage.getLayerId(layerName);
 }
 
+/**
+ * \copydoc RStorage::hasBlock
+ */
 bool RDocument::hasBlock(const QString& blockName) const {
     return storage.hasBlock(blockName);
 }
 
+/**
+ * \copydoc RStorage::hasLinetype
+ */
 bool RDocument::hasLinetype(const QString& linetypeName) const {
     return storage.hasLinetype(linetypeName);
 }
 
+/**
+ * \copydoc RStorage::getBlockId
+ */
 RBlock::Id RDocument::getBlockId(const QString& blockName) const {
     return storage.getBlockId(blockName);
 }
 
+/**
+ * \copydoc RStorage::getModelSpaceBlockId
+ */
 RBlock::Id RDocument::getModelSpaceBlockId() const {
     return storage.getModelSpaceBlockId();
 }
 
+/**
+ * \copydoc RStorage::getLinetypeName
+ */
 QString RDocument::getLinetypeName(RLinetype::Id linetypeId) const {
     return storage.getLinetypeName(linetypeId);
 }
 
+/**
+ * \copydoc RStorage::getLinetypeDescription
+ */
 QString RDocument::getLinetypeDescription(RLinetype::Id linetypeId) const {
     return storage.getLinetypeDescription(linetypeId);
 }
 
+/**
+ * \copydoc RStorage::getLinetypeLabel
+ */
 QString RDocument::getLinetypeLabel(RLinetype::Id linetypeId) const {
     return storage.getLinetypeLabel(linetypeId);
 }
 
+/**
+ * \copydoc RStorage::getLinetypeId
+ */
 RLinetype::Id RDocument::getLinetypeId(const QString& linetypeName) const {
     return storage.getLinetypeId(linetypeName);
 }
 
+/**
+ * \copydoc RStorage::getLinetypeNames
+ */
 QSet<QString> RDocument::getLinetypeNames() const {
     return storage.getLinetypeNames();
 }
 
+/**
+ * \copydoc RStorage::getLinetypePatterns
+ */
 QList<RLinetypePattern> RDocument::getLinetypePatterns() const {
     return storage.getLinetypePatterns();
 }
@@ -907,10 +1045,16 @@ bool RDocument::isRedoAvailable() const {
     return transactionStack.isRedoAvailable();
 }
 
+/**
+ * \copydoc RStorage::startTransactionGroup
+ */
 void RDocument::startTransactionGroup() {
     storage.startTransactionGroup();
 }
 
+/**
+ * \copydoc RStorage::getTransactionGroup
+ */
 int RDocument::getTransactionGroup() const {
     return storage.getTransactionGroup();
 }
@@ -968,6 +1112,9 @@ QSet<RObject::Id> RDocument::queryAllObjects() const {
     return storage.queryAllObjects();
 }
 
+/**
+ * \copydoc RStorage::queryAllVisibleEntities
+ */
 QSet<REntity::Id> RDocument::queryAllVisibleEntities() const {
     return storage.queryAllVisibleEntities();
 }
@@ -983,6 +1130,9 @@ QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, RS::E
     return storage.queryAllEntities(undone, allBlocks, type);
 }
 
+/**
+ * \copydoc RStorage::queryAllEntities
+ */
 QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) const {
     return storage.queryAllEntities(undone, allBlocks, types);
 }
@@ -1013,10 +1163,16 @@ QList<RLayer::Id> RDocument::queryAllLayers() const {
 }
 */
 
+/**
+ * \copydoc RStorage::queryAllBlocks
+ */
 QSet<RBlock::Id> RDocument::queryAllBlocks() const {
     return storage.queryAllBlocks();
 }
 
+/**
+ * \copydoc RStorage::queryAllLayoutBlocks
+ */
 QSet<RBlock::Id> RDocument::queryAllLayoutBlocks() const {
     return storage.queryAllLayoutBlocks();
 }
@@ -1029,42 +1185,72 @@ QList<RBlock::Id> RDocument::queryAllBlocks() const {
 }
 */
 
+/**
+ * \copydoc RStorage::queryAllViews
+ */
 QSet<RView::Id> RDocument::queryAllViews() const {
     return storage.queryAllViews();
 }
 
+/**
+ * \copydoc RStorage::queryAllLinetypes
+ */
 QSet<RLinetype::Id> RDocument::queryAllLinetypes() const{
     return storage.queryAllLinetypes();
 }
 
+/**
+ * \copydoc RStorage::queryLayerEntities
+ */
 QSet<REntity::Id> RDocument::queryLayerEntities(RLayer::Id layerId, bool allBlocks) const {
     return storage.queryLayerEntities(layerId, allBlocks);
 }
 
+/**
+ * \copydoc RStorage::hasBlockEntities
+ */
 bool RDocument::hasBlockEntities(RBlock::Id blockId) const {
     return storage.hasBlockEntities(blockId);
 }
 
+/**
+ * \copydoc RStorage::queryBlockEntities
+ */
 QSet<REntity::Id> RDocument::queryBlockEntities(RBlock::Id blockId) const {
     return storage.queryBlockEntities(blockId);
 }
 
+/**
+ * \copydoc RStorage::queryLayerBlockEntities
+ */
 QSet<REntity::Id> RDocument::queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) const {
     return storage.queryLayerBlockEntities(layerId, blockId);
 }
 
+/**
+ * \copydoc RStorage::hasChildEntities
+ */
 bool RDocument::hasChildEntities(REntity::Id parentId) const {
     return storage.hasChildEntities(parentId);
 }
 
+/**
+ * \copydoc RStorage::queryChildEntities
+ */
 QSet<REntity::Id> RDocument::queryChildEntities(REntity::Id parentId, RS::EntityType type) const {
     return storage.queryChildEntities(parentId, type);
 }
 
+/**
+ * \copydoc RStorage::queryBlockReferences
+ */
 QSet<REntity::Id> RDocument::queryBlockReferences(RBlock::Id blockId) const {
     return storage.queryBlockReferences(blockId);
 }
 
+/**
+ * \copydoc RStorage::queryAllBlockReferences
+ */
 QSet<REntity::Id> RDocument::queryAllBlockReferences() const {
     return storage.queryAllBlockReferences();
 }
@@ -1587,38 +1773,65 @@ QSharedPointer<RLayout> RDocument::queryLayout(const QString& layoutName) const 
     return storage.queryLayout(layoutName);
 }
 
+/**
+ * \copydoc RStorage::queryBlockDirect
+ */
 QSharedPointer<RBlock> RDocument::queryBlockDirect(RBlock::Id blockId) const {
     return storage.queryBlockDirect(blockId);
 }
 
+/**
+ * \copydoc RStorage::queryBlock
+ */
 QSharedPointer<RBlock> RDocument::queryBlock(RBlock::Id blockId) const {
     return storage.queryBlock(blockId);
 }
 
+/**
+ * \copydoc RStorage::queryBlock
+ */
 QSharedPointer<RBlock> RDocument::queryBlock(const QString& blockName) const {
     return storage.queryBlock(blockName);
 }
 
+/**
+ * \copydoc RStorage::queryView
+ */
 QSharedPointer<RView> RDocument::queryView(RView::Id viewId) const {
     return storage.queryView(viewId);
 }
 
+/**
+ * \copydoc RStorage::queryView
+ */
 QSharedPointer<RView> RDocument::queryView(const QString& viewName) const {
     return storage.queryView(viewName);
 }
 
+/**
+ * \copydoc RStorage::queryLinetype
+ */
 QSharedPointer<RLinetype> RDocument::queryLinetype(RLinetype::Id linetypeId) const {
     return storage.queryLinetype(linetypeId);
 }
 
+/**
+ * \copydoc RStorage::queryLinetype
+ */
 QSharedPointer<RLinetype> RDocument::queryLinetype(const QString& linetypeName) const {
     return storage.queryLinetype(linetypeName);
 }
 
+/**
+ * \copydoc RStorage::isSelected
+ */
 bool RDocument::isSelected(REntity::Id entityId) {
     return storage.isSelected(entityId);
 }
 
+/**
+ * \copydoc RStorage::isLayerLocked
+ */
 bool RDocument::isLayerLocked(RLayer::Id layerId) const {
     return storage.isLayerLocked(layerId);
 }
@@ -1641,10 +1854,16 @@ bool RDocument::isEntityEditable(REntity::Id entityId) const {
 //    return isLayerLocked(entity->getLayerId());
 //}
 
+/**
+ * \copydoc RStorage::isLayerFrozen
+ */
 bool RDocument::isLayerFrozen(RLayer::Id layerId) const {
     return storage.isLayerFrozen(layerId);
 }
 
+/**
+ * \copydoc RStorage::isBlockFrozen
+ */
 bool RDocument::isBlockFrozen(RBlock::Id blockId) const {
     return storage.isBlockFrozen(blockId);
 }
@@ -1658,6 +1877,9 @@ bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {
     return storage.isLayerFrozen(entity->getLayerId());
 }
 
+/**
+ * \copydoc RStorage::countSelectedEntities
+ */
 int RDocument::countSelectedEntities() const {
     return storage.countSelectedEntities();
 }
@@ -1728,6 +1950,9 @@ bool RDocument::deselectEntities(
     return storage.deselectEntities(entityIds, affectedEntities);
 }
 
+/**
+ * \copydoc RStorage::hasSelection
+ */
 bool RDocument::hasSelection() const {
     return storage.hasSelection();
 }
@@ -1739,6 +1964,9 @@ RBox RDocument::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) const 
     return storage.getBoundingBox(ignoreHiddenLayers, ignoreEmpty);
 }
 
+/**
+ * \copydoc RStorage::getSelectionBox
+ */
 RBox RDocument::getSelectionBox() const {
     return storage.getSelectionBox();
 }
