@@ -33,7 +33,7 @@ CommandLineFocus.prototype.beginEvent = function() {
     if (commandEdit.visible) {
         commandEdit.setFocus(Qt.OtherFocusReason);
     }
+    appWin.findChild("CommandLineDock").activateWindow();
 
     this.terminate();
 };
-
