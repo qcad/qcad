@@ -1665,6 +1665,8 @@ QSharedPointer<RObject> RDocument::queryObject(RObject::Id objectId) const {
  * Queries the object with the given ID.
  * If the storage has the object instantiated, the instance is
  * returned (rather than a clone).
+ * Objects queried this way should not be
+ * modified unless undo / redo functionality is not required.
  *
  * \return Pointer to the object or NULL.
  */
@@ -1677,7 +1679,8 @@ QSharedPointer<RObject> RDocument::queryObjectByHandle(RObject::Handle objectHan
 }
 
 /**
- * Queries the entity with the given ID.
+ * Queries the entity with the given ID. A clone of the actual entity is returned.
+ * Clones should always be used when modifying entities.
  *
  * \return Pointer to the entity or NULL.
  */
@@ -1689,6 +1692,8 @@ QSharedPointer<REntity> RDocument::queryEntity(REntity::Id entityId) const {
  * Queries the entity with the given ID.
  * If the storage has the entity instantiated, the instance is
  * returned (rather than a clone).
+ * Entities queried this way should not be
+ * modified unless undo / redo functionality is not required.
  *
  * \return Pointer to the entity or NULL.
  */
@@ -1730,6 +1735,8 @@ QSharedPointer<RLayer> RDocument::queryLayer(RLayer::Id layerId) const {
 
 /**
  * Queries the layer with the given ID direct (no cloning).
+ * Layers queried this way should not be
+ * modified unless undo / redo functionality is not required.
  *
  * \return Pointer to the layer or NULL.
  */
@@ -1757,6 +1764,8 @@ QSharedPointer<RLayout> RDocument::queryLayout(RLayout::Id layoutId) const {
 
 /**
  * Queries the layout with the given ID direct (no cloning).
+ * Layouts queried this way should not be
+ * modified unless undo / redo functionality is not required.
  *
  * \return Pointer to the layout or NULL.
  */
@@ -1774,49 +1783,65 @@ QSharedPointer<RLayout> RDocument::queryLayout(const QString& layoutName) const 
 }
 
 /**
- * \copydoc RStorage::queryBlockDirect
+ * Queries the block with the given ID direct (no cloning).
+ * Blocks queried this way should not be
+ * modified unless undo / redo functionality is not required.
+ *
+ * \return Pointer to the block or NULL.
  */
 QSharedPointer<RBlock> RDocument::queryBlockDirect(RBlock::Id blockId) const {
     return storage.queryBlockDirect(blockId);
 }
 
 /**
- * \copydoc RStorage::queryBlock
+ * Queries the block with the given ID.
+ *
+ * \return Pointer to the block or NULL.
  */
 QSharedPointer<RBlock> RDocument::queryBlock(RBlock::Id blockId) const {
     return storage.queryBlock(blockId);
 }
 
 /**
- * \copydoc RStorage::queryBlock
+ * Queries the block with the given name.
+ *
+ * \return Pointer to the block or NULL.
  */
 QSharedPointer<RBlock> RDocument::queryBlock(const QString& blockName) const {
     return storage.queryBlock(blockName);
 }
 
 /**
- * \copydoc RStorage::queryView
+ * Queries the view with the given ID.
+ *
+ * \return Pointer to the view or NULL.
  */
 QSharedPointer<RView> RDocument::queryView(RView::Id viewId) const {
     return storage.queryView(viewId);
 }
 
 /**
- * \copydoc RStorage::queryView
+ * Queries the view with the given name.
+ *
+ * \return Pointer to the view or NULL.
  */
 QSharedPointer<RView> RDocument::queryView(const QString& viewName) const {
     return storage.queryView(viewName);
 }
 
 /**
- * \copydoc RStorage::queryLinetype
+ * Queries the linetype with the given ID.
+ *
+ * \return Pointer to the linetype or NULL.
  */
 QSharedPointer<RLinetype> RDocument::queryLinetype(RLinetype::Id linetypeId) const {
     return storage.queryLinetype(linetypeId);
 }
 
 /**
- * \copydoc RStorage::queryLinetype
+ * Queries the linetype with the given name.
+ *
+ * \return Pointer to the linetype or NULL.
  */
 QSharedPointer<RLinetype> RDocument::queryLinetype(const QString& linetypeName) const {
     return storage.queryLinetype(linetypeName);
