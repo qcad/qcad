@@ -178,7 +178,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
             // if the dragging started on top of a reference point,
             // start moving the reference point:
             referencePoint = view.getClosestReferencePoint(this.d1Screen, this.minPickRangePixels);
-            if (referencePoint.isValid()) {
+            if (referencePoint.isValid() && !referencePoint.isIgnore() && !RSettings.getIgnoreAllReferencePoints()) {
                 this.d1Model = referencePoint;
                 this.di.setRelativeZero(this.d1Model);
                 this.setState(DefaultAction.State.MovingReference);
