@@ -20,7 +20,8 @@ public:
     enum Flag {
         NoFlags = 0x000,
         Secondary = 0x001,
-        Center = 0x002
+        Center = 0x002,
+        Ignore = 0x004
     };
     Q_DECLARE_FLAGS(Flags, Flag)
 
@@ -51,6 +52,14 @@ public:
 
     void setSecondary(bool on) {
         setFlag(RRefPoint::Secondary, on);
+    }
+
+    bool isIgnore() const {
+        return getFlag(RRefPoint::Ignore);
+    }
+
+    void setIgnore(bool on) {
+        setFlag(RRefPoint::Ignore, on);
     }
 
     bool isCenter() const {
