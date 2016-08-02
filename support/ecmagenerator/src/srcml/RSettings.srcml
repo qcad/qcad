@@ -218,6 +218,8 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getSelectBlockWithAttribute</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getHideAttributeWithBlock</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getImportRecomputedDimBlocks</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>getIgnoreBlockReferencePoint</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>getIgnoreAllReferencePoints</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasDarkGuiBackground</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasCustomStyleSheet</name><parameter_list>()</parameter_list>;</function_decl>
@@ -264,6 +266,8 @@
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>selectBlockWithAttribute</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>hideAttributeWithBlock</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>importRecomputedDimBlocks</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>ignoreBlockReferencePoint</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>ignoreAllReferencePoints</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QStringList</name></type> <name>recentFiles</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QLocale</name>*</type> <name>numberLocale</name></decl>;</decl_stmt>
 

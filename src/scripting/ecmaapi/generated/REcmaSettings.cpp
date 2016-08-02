@@ -295,6 +295,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getImportRecomputedDimBlocks, "getImportRecomputedDimBlocks");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getIgnoreBlockReferencePoint, "getIgnoreBlockReferencePoint");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getIgnoreAllReferencePoints, "getIgnoreAllReferencePoints");
+            
             REcmaHelper::registerFunction(&engine, &ctor, hasDarkGuiBackground, "hasDarkGuiBackground");
             
             REcmaHelper::registerFunction(&engine, &ctor, hasCustomStyleSheet, "hasCustomStyleSheet");
@@ -5646,6 +5650,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getImportRecomputedDimBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getIgnoreBlockReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getIgnoreBlockReferencePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getIgnoreBlockReferencePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getIgnoreBlockReferencePoint();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getIgnoreBlockReferencePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getIgnoreBlockReferencePoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getIgnoreAllReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getIgnoreAllReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getIgnoreAllReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getIgnoreAllReferencePoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getIgnoreAllReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getIgnoreAllReferencePoints", context, engine);
             return result;
         }
          QScriptValue

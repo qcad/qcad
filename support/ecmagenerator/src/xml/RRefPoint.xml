@@ -10,6 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="NoFlags" />
       <value name="Secondary" />
       <value name="Center" />
+      <value name="Ignore" />
     </enum>
     <constructor>
       <variant />
@@ -65,6 +66,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="setSecondary" cppName="setSecondary"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isIgnore" cppName="isIgnore" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setIgnore" cppName="setIgnore" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />

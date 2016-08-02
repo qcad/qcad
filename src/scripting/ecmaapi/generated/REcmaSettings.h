@@ -403,6 +403,12 @@
         getImportRecomputedDimBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getIgnoreBlockReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIgnoreAllReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasDarkGuiBackground
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

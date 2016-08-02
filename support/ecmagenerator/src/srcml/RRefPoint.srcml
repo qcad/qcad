@@ -21,7 +21,8 @@
     <enum>enum <name>Flag</name> <block>{
         <expr><name>NoFlags</name> = 0x000</expr>,
         <expr><name>Secondary</name> = 0x001</expr>,
-        <expr><name>Center</name> = 0x002</expr>
+        <expr><name>Center</name> = 0x002</expr>,
+        <expr><name>Ignore</name> = 0x004</expr>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>Flag</argument>)</argument_list></macro>
 
@@ -52,6 +53,14 @@
 
     <function><type><name>void</name></type> <name>setSecondary</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Secondary</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isIgnore</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RRefPoint</name>::<name>Ignore</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setIgnore</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Ignore</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isCenter</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

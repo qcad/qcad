@@ -72,6 +72,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setSecondary, "setSecondary");
             
+            REcmaHelper::registerFunction(&engine, proto, isIgnore, "isIgnore");
+            
+            REcmaHelper::registerFunction(&engine, proto, setIgnore, "setIgnore");
+            
             REcmaHelper::registerFunction(&engine, proto, isCenter, "isCenter");
             
             REcmaHelper::registerFunction(&engine, proto, setCenter, "setCenter");
@@ -121,6 +125,11 @@
 
     ctor.setProperty("Center",
     QScriptValue(RRefPoint::Center),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Ignore",
+    QScriptValue(RRefPoint::Ignore),
     QScriptValue::ReadOnly);
 
 
@@ -806,6 +815,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRefPoint::setSecondary", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::isIgnore
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::isIgnore", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::isIgnore";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("isIgnore", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isIgnore();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.isIgnore().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::isIgnore", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::setIgnore
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::setIgnore", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::setIgnore";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("setIgnore", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setIgnore(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.setIgnore().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::setIgnore", context, engine);
             return result;
         }
          QScriptValue

@@ -60,6 +60,12 @@
         setSecondary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isIgnore
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setIgnore
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isCenter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
