@@ -19,9 +19,9 @@ class QCADCORE_EXPORT RRefPoint : public RVector {
 public:
     enum Flag {
         NoFlags = 0x000,
-        Secondary = 0x001,
-        Center = 0x002,
-        Ignore = 0x004
+        Secondary = 0x001,     /**< Secondary reference point (typically shown with different color) */
+        Center = 0x002,        /**< Reference point is a center point */
+        Ignore = 0x004         /**< Ignore reference point for drag and drop */
     };
     Q_DECLARE_FLAGS(Flags, Flag)
 
