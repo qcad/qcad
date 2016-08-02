@@ -425,7 +425,12 @@ QList<RRefPoint> RBlockReferenceData::getReferencePoints(RS::ProjectionRendering
     Q_UNUSED(hint)
 
     QList<RRefPoint> ret;
-    ret.append(position);
+    RRefPoint rp(position);
+    if (RSettings::getIgnoreBlockReferencePoint()) {
+        rp.setIgnore(true);
+    }
+    ret.append(rp);
+
     return ret;
 }
 
