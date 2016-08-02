@@ -217,6 +217,8 @@ public:
     static bool getSelectBlockWithAttribute();
     static bool getHideAttributeWithBlock();
     static bool getImportRecomputedDimBlocks();
+    static bool getIgnoreBlockReferencePoint();
+    static bool getIgnoreAllReferencePoints();
 
     static bool hasDarkGuiBackground();
     static bool hasCustomStyleSheet();
@@ -263,6 +265,8 @@ private:
     static int selectBlockWithAttribute;
     static int hideAttributeWithBlock;
     static int importRecomputedDimBlocks;
+    static int ignoreBlockReferencePoint;
+    static int ignoreAllReferencePoints;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 

@@ -73,6 +73,8 @@ int RSettings::layer0CompatibilityOn = -1;
 int RSettings::selectBlockWithAttribute = -1;
 int RSettings::hideAttributeWithBlock = -1;
 int RSettings::importRecomputedDimBlocks = -1;
+int RSettings::ignoreBlockReferencePoint = -1;
+int RSettings::ignoreAllReferencePoints = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -579,6 +581,27 @@ bool RSettings::getImportRecomputedDimBlocks() {
         importRecomputedDimBlocks = getBoolValue("Dwg/ImportRecomputedDimBlocks", false);
     }
     return importRecomputedDimBlocks;
+}
+
+/**
+ * \return True if dragging the reference points of selected block references should be
+ * treated like dragging the whole selection.
+ */
+bool RSettings::getIgnoreBlockReferencePoint() {
+    if (ignoreBlockReferencePoint==-1) {
+        ignoreBlockReferencePoint = getBoolValue("GraphicsView/IgnoreBlockReferencePoint", false);
+    }
+    return ignoreBlockReferencePoint;
+}
+
+/**
+ * \return True if dragging reference points should be treated like dragging the whole selection.
+ */
+bool RSettings::getIgnoreAllReferencePoints() {
+    if (ignoreAllReferencePoints==-1) {
+        ignoreAllReferencePoints = getBoolValue("GraphicsView/IgnoreAllReferencePoints", false);
+    }
+    return ignoreAllReferencePoints;
 }
 
 bool RSettings::hasDarkGuiBackground() {
