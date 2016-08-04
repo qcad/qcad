@@ -31,7 +31,7 @@
         <translation>ソリューション</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <location line="+60"/>
         <source>No solution</source>
         <translation>解がありません</translation>

@@ -4,9 +4,19 @@
 <context>
     <name>Offset</name>
     <message>
-        <location filename="../Offset.js" line="+74"/>
+        <location filename="../Offset.js" line="+75"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Vyberte čiaru, oblúk, kružnicu alebo elipsu</translation>
+    </message>
+    <message>
+        <location line="+89"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Offset.ui" line="+17"/>

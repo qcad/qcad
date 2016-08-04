@@ -24,7 +24,7 @@
         <translation>Izberite rešitev</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+139"/>
         <location line="+45"/>
         <source>No solution</source>
         <translation>Ni rešitve</translation>

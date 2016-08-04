@@ -19,7 +19,7 @@
         <translation type="unfinished">选择解决方案</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+123"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation type="unfinished">没有解决方案</translation>

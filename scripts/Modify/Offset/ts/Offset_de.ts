@@ -56,9 +56,19 @@
         <translation type="vanished">Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+74"/>
+        <location filename="../Offset.js" line="+75"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
+    </message>
+    <message>
+        <location line="+89"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreis(en).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
+        <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
 </context>
 </TS>

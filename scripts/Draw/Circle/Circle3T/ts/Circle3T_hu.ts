@@ -24,7 +24,7 @@
         <translation>Válasszon megoldást</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <location line="+60"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>

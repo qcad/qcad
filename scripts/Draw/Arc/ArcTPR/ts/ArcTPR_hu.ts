@@ -19,7 +19,7 @@
         <translation type="unfinished">Válasszon megoldást</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+123"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation type="unfinished">Nincs megoldás</translation>

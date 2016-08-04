@@ -206,7 +206,7 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../AboutDialog.ui" line="+76"/>
+        <location filename="../AboutDialog.ui" line="+105"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>

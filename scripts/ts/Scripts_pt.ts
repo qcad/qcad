@@ -72,7 +72,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2009"/>
+        <location line="+2019"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -81,7 +81,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1736"/>
+        <location line="-1746"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -102,7 +102,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+635"/>
+        <location line="+645"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -211,19 +211,17 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>O Raio ficou abaixo de 0,0, após %1 círculo(s) concêntrico(s).</translation>
+        <translation type="vanished">O Raio ficou abaixo de 0,0, após %1 círculo(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
+        <translation type="vanished">O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location line="+795"/>
+        <location filename="../ShapeAlgorithms.js" line="+896"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

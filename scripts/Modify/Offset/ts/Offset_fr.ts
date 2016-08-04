@@ -48,9 +48,19 @@
         <translation type="vanished">Choisissez ligne, arc, cercle ou ellipse</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+74"/>
+        <location filename="../Offset.js" line="+75"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Choisissez ligne, arc, cercle ou ellipse</translation>
+    </message>
+    <message>
+        <location line="+89"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation>Rayon chuté en dessous de zéro après %1 cercle(s) concentrique(s).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
+        <translation>Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
 </context>
 </TS>

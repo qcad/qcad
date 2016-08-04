@@ -68,12 +68,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2009"/>
+        <location line="+2019"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-1736"/>
+        <location line="-1746"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
@@ -89,7 +89,7 @@
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+635"/>
+        <location line="+645"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
@@ -191,19 +191,17 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Radio caído por debajo de 0,0 después %1 de círculos concéntricos.</translation>
+        <translation type="vanished">Radio caído por debajo de 0,0 después %1 de círculos concéntricos.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
+        <translation type="vanished">Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location line="+795"/>
+        <location filename="../ShapeAlgorithms.js" line="+896"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

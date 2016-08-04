@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2009"/>
+        <location line="+2019"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1736"/>
+        <location line="-1746"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -83,7 +83,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+635"/>
+        <location line="+645"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -175,17 +175,15 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreis(en).</translation>
+        <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreis(en).</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
+        <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+802"/>
+        <location filename="../ShapeAlgorithms.js" line="+903"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>

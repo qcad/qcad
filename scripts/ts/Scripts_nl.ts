@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2009"/>
+        <location line="+2019"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1736"/>
+        <location line="-1746"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
@@ -79,7 +79,7 @@
         <translation>Geen</translation>
     </message>
     <message>
-        <location line="+635"/>
+        <location line="+645"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
@@ -167,17 +167,15 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Radius gedaald tot onder 0 na %1 concentrische cirkel(s).</translation>
+        <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische cirkel(s).</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
+        <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location line="+795"/>
+        <location filename="../ShapeAlgorithms.js" line="+896"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>

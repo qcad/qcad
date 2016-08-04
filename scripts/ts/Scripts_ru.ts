@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2009"/>
+        <location line="+2019"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-1736"/>
+        <location line="-1746"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
@@ -79,7 +79,7 @@
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+635"/>
+        <location line="+645"/>
         <source>Options</source>
         <translation>Параметры</translation>
     </message>
@@ -171,17 +171,15 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Радиус уменьшился до 0.0 после %1 концентрической(их) окружности(ей).</translation>
+        <translation type="vanished">Радиус уменьшился до 0.0 после %1 концентрической(их) окружности(ей).</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Радиус уменьшился до 0.0 после %1 концентрической(их) дуг(и).</translation>
+        <translation type="vanished">Радиус уменьшился до 0.0 после %1 концентрической(их) дуг(и).</translation>
     </message>
     <message>
-        <location line="+795"/>
+        <location filename="../ShapeAlgorithms.js" line="+896"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>По крайней мере две точки идентичны.</translation>

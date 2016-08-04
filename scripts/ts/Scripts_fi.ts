@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2009"/>
+        <location line="+2019"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-1736"/>
+        <location line="-1746"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -79,7 +79,7 @@
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+635"/>
+        <location line="+645"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
@@ -171,17 +171,15 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Säde on pudonnut alle 0.0 arvon %1 samankeskisen ympyrän (ympyröiden) jälkeen.</translation>
+        <translation type="vanished">Säde on pudonnut alle 0.0 arvon %1 samankeskisen ympyrän (ympyröiden) jälkeen.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
+        <translation type="vanished">Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location line="+795"/>
+        <location filename="../ShapeAlgorithms.js" line="+896"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>

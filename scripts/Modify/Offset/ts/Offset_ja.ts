@@ -36,9 +36,19 @@
         <translation type="vanished">既存の線分または弧、円との平行線を描画</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+74"/>
+        <location filename="../Offset.js" line="+75"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>線分,弧,円または楕円を選択してください</translation>
+    </message>
+    <message>
+        <location line="+89"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

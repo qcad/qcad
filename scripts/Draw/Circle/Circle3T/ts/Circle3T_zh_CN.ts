@@ -24,7 +24,7 @@
         <translation>选择解决方案</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <location line="+60"/>
         <source>No solution</source>
         <translation>无解决方案</translation>

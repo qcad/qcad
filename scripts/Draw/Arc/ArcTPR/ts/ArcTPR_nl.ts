@@ -19,7 +19,7 @@
         <translation>Kies oplossing</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+123"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>

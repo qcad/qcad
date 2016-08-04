@@ -24,9 +24,19 @@
         <translation>Lijn, boog, cirkel of ellips afzetten</translation>
     </message>
     <message>
-        <location filename="../Offset.js" line="+74"/>
+        <location filename="../Offset.js" line="+75"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Lijn, boog, cirkel of ellips kiezen</translation>
+    </message>
+    <message>
+        <location line="+89"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation>Radius gedaald tot onder 0 na %1 concentrische cirkel(s).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
+        <translation>Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
 </context>
 </TS>

@@ -4,7 +4,7 @@
 <context>
     <name>ExTransactionListener</name>
     <message>
-        <location filename="../ExTransactionListener.js" line="+62"/>
+        <location filename="../ExTransactionListener.js" line="+63"/>
         <source>&amp;Transaction Listener</source>
         <translation>&amp;Операции Слушателя</translation>
     </message>
