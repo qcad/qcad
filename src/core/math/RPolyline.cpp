@@ -744,6 +744,7 @@ bool RPolyline::relocateStartPoint(const RVector& p) {
 
     // end polyline with second part of split segment:
     newShape.appendShape(*lastSegment);
+    newShape.normalize();
     if (isClosed()) {
         // if polyline was closed, create a closed polyline as result:
         newShape.autoClose();
