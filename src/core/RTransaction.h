@@ -218,7 +218,7 @@ public:
     void deleteObject(QSharedPointer<RObject> object);
 
     /**
-     * \return Set of object IDs of objects that are affected by
+     * \return List of object IDs of objects that are affected by
      *      this transaction.
      */
     QList<RObject::Id> getAffectedObjects() const {
