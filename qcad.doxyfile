@@ -828,7 +828,8 @@ EXCLUDE_PATTERNS       = */moc_* \
                          */3rdparty/spatialindexnavel/* \
                          */3rdparty/stemmer/* \
                          */3rdparty/quazip/* \
-                         */Tests/*
+                         */Tests/* \
+                         */scripts/Cam/CamConfigurations/*
 
 # The EXCLUDE_SYMBOLS tag can be used to specify one or more symbol names
 # (namespaces, classes, functions, etc.) that should be excluded from the
