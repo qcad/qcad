@@ -110,8 +110,6 @@ OffsetTest00.prototype.test00 = function() {
     this.setToolOption('OffsetPro/Number', '1');
     this.setToolOption('OffsetPro/SegmentPolylineMode', 'PolylineMode');
     this.setToolOption('OffsetPro/JoinType', 'JoinRound');
-    this.setToolOption('OffsetPro/InterpolateArcs', 'false');
-    this.setToolOption('OffsetPro/Verify', 'false');
     this.updateToolOptions();
     var p = new RVector(15.6, 30.6);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

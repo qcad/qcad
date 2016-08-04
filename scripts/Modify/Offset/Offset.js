@@ -163,7 +163,7 @@ Offset.prototype.getOperation = function(preview) {
             if (isCircleShape(this.shape)) {
                 this.error = qsTr("Radius dropped below 0.0 after %1 concentric circle(s).").arg(c-1);
             }
-            else {
+            else if (isArcShape(this.shape)) {
                 this.error = qsTr("Radius dropped below 0.0 after %1 concentric arc(s).").arg(c-1);
             }
         }
@@ -178,15 +178,20 @@ Offset.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
     for (var i=0; i<offsetShapes.length; ++i) {
-        if (isLineBasedShape(offsetShapes[i]) && !isNull(this.lineType)) {
-            e = Line.createLineEntity(doc, offsetShapes[i].getStartPoint(), offsetShapes[i].getEndPoint(), this.lineType);
+        var offsetShape = offsetShapes[i];
+        if (isNull(offsetShape)) {
+            continue;
+        }
+
+        if (isLineBasedShape(offsetShape) && !isNull(this.lineType)) {
+            e = Line.createLineEntity(doc, offsetShape.getStartPoint(), offsetShape.getEndPoint(), this.lineType);
         }
         else {
-            if (isFunction(offsetShapes[i].data)) {
-                e = shapeToEntity(doc, offsetShapes[i].data());
+            if (isFunction(offsetShape.data)) {
+                e = shapeToEntity(doc, offsetShape.data());
             }
             else {
-                e = shapeToEntity(doc, offsetShapes[i]);
+                e = shapeToEntity(doc, offsetShape);
             }
         }
 
