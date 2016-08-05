@@ -4,9 +4,13 @@
 <context>
     <name>EllipseCPP</name>
     <message>
-        <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation>中心、点、长短轴比完整椭圆(&amp;F)</translation>
+        <translation type="vanished">中心、点、长短轴比完整椭圆(&amp;F)</translation>
+    </message>
+    <message>
+        <location filename="../EllipseCPPInit.js" line="+2"/>
+        <source>&amp;Ellipse (Center, Point, Ratio)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

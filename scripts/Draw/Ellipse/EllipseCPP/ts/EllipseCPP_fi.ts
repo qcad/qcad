@@ -8,9 +8,13 @@
         <translation type="vanished">&amp;Täysi ellipsi</translation>
     </message>
     <message>
-        <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation>&amp;Elliptinen kaari keskeltä, piste, suhteella</translation>
+        <translation type="vanished">&amp;Elliptinen kaari keskeltä, piste, suhteella</translation>
+    </message>
+    <message>
+        <location filename="../EllipseCPPInit.js" line="+2"/>
+        <source>&amp;Ellipse (Center, Point, Ratio)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

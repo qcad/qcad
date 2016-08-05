@@ -4,9 +4,13 @@
 <context>
     <name>EllipseCPP</name>
     <message>
-        <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation>&amp;Полный эллипс по центру, точке, отношению</translation>
+        <translation type="vanished">&amp;Полный эллипс по центру, точке, отношению</translation>
+    </message>
+    <message>
+        <location filename="../EllipseCPPInit.js" line="+2"/>
+        <source>&amp;Ellipse (Center, Point, Ratio)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>

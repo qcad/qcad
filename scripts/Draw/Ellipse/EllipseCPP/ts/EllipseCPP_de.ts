@@ -8,9 +8,13 @@
         <translation type="vanished">&amp;Ellipse</translation>
     </message>
     <message>
-        <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation>&amp;Ellipse von Zentrum, Punkt, Achsenverhältnis</translation>
+        <translation type="vanished">&amp;Ellipse von Zentrum, Punkt, Achsenverhältnis</translation>
+    </message>
+    <message>
+        <location filename="../EllipseCPPInit.js" line="+2"/>
+        <source>&amp;Ellipse (Center, Point, Ratio)</source>
+        <translation>&amp;Ellipse (Zentrum, Punkt, Verhältnis)</translation>
     </message>
     <message>
         <location line="+4"/>

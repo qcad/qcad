@@ -5,7 +5,7 @@
     <name>EllipseCPP</name>
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>
-        <source>&amp;Full Ellipse with Center, Point, Ratio</source>
+        <source>&amp;Ellipse (Center, Point, Ratio)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
