@@ -1677,7 +1677,11 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
     }
 
     QList<double> keys = sortable.keys();
+#if QT_VERSION > 0x050000
     std::sort(keys.begin(), keys.end());
+#else
+    qSort(keys);
+#fi
 
     QList<RVector> sortedPoints;
     for (int i=0; i<keys.length(); i++) {
