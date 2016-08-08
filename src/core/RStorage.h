@@ -389,8 +389,21 @@ public:
     virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const = 0;
     virtual bool hasLinetype(const QString& linetypeName) const;
 
+    /**
+     * \return List of custom variable names stored in this document.
+     */
     virtual QStringList getVariables() const = 0;
+    /**
+     * Sets a custom variable in the context of this document.
+     *
+     * \param key Variable key (name)
+     * \param value Variable value
+     * \param overwrite True to overwrite an existing variable with the same key (default)
+     */
     virtual void setVariable(const QString& key, const QVariant& value, bool overwrite=true) = 0;
+    /**
+     * Removes the custom variable with the given key.
+     */
     virtual void removeVariable(const QString& key) = 0;
     /**
      * \return The value of the given variable or an invalid variant if the
@@ -406,7 +419,18 @@ public:
         return value.isValid();
     }
 
+    /**
+     * Sets a known DXF/DWG variable for this document.
+     *
+     * \param key Variable key (see DXF reference)
+     * \param value New value of the variable.
+     * \param transaction RTransaction to use for the change or NULL (default) to create a transaction on the fly.
+     */
     virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction = NULL) = 0;
+
+    /**
+     * \return Value for the given DXF/DWG variable.
+     */
     virtual QVariant getKnownVariable(RS::KnownVariable key) const = 0;
 
     /**
