@@ -614,6 +614,9 @@ void RDocument::setVariable(const QString& key, const QVariant& value, bool over
     storage.setVariable(key, value, overwrite);
 }
 
+/**
+ * \copydoc RStorage::getVariable
+ */
 QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue, bool useSettings) const {
     QVariant ret = storage.getVariable(key);
     if (!ret.isValid()) {
@@ -625,6 +628,9 @@ QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue
     return ret;
 }
 
+/**
+ * \copydoc RStorage::setKnownVariable
+ */
 void RDocument::setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction) {
 //    bool wasMetric = true;
 
@@ -642,12 +648,18 @@ void RDocument::setKnownVariable(RS::KnownVariable key, const QVariant& value, R
     }
 }
 
+/**
+ * \copydoc RStorage::setKnownVariable
+ */
 void RDocument::setKnownVariable(RS::KnownVariable key, const RVector& value, RTransaction* transaction) {
     QVariant v;
     v.setValue(value);
     storage.setKnownVariable(key, v, transaction);
 }
 
+/**
+ * \copydoc RStorage::getKnownVariable
+ */
 QVariant RDocument::getKnownVariable(RS::KnownVariable key, const QVariant& defaultValue) const {
     QVariant ret = storage.getKnownVariable(key);
     if (!ret.isValid()) {
@@ -663,12 +675,18 @@ QSharedPointer<RLayer> RDocument::queryCurrentLayer() {
     return storage.queryCurrentLayer();
 }
 
+/**
+ * \copydoc RStorage::getCurrentLayerId
+ */
 RLayer::Id RDocument::getCurrentLayerId() const {
     return storage.getCurrentLayerId();
 //    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
 //    v->getCurrentLayerId();
 }
 
+/**
+ * \copydoc RStorage::getCurrentLayerName
+ */
 QString RDocument::getCurrentLayerName() const {
     return getLayerName(storage.getCurrentLayerId());
 }

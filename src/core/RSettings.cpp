@@ -104,6 +104,9 @@ QString RSettings::getAppId() {
     return "QCAD";
 }
 
+/**
+ * \return Device pixel ratio of the display. Usually 1 or 2 (for retina/high res displays).
+ */
 double RSettings::getDevicePixelRatio() {
 #if QT_VERSION >= 0x050000
     return qApp->devicePixelRatio();
@@ -112,6 +115,9 @@ double RSettings::getDevicePixelRatio() {
 #endif
 }
 
+/**
+ * \return List of arguments passed to the application binary.
+ */
 QStringList RSettings::getOriginalArguments() {
     return originalArguments;
 }
@@ -120,6 +126,10 @@ void RSettings::setOriginalArguments(const QStringList& a) {
     originalArguments = a;
 }
 
+/**
+ * \return True if the application is deployed and all resources are inside the App bundle.
+ * This always returns true if the OS is not a Mac OS.
+ */
 bool RSettings::isDeployed() {
 #ifdef Q_OS_MAC
     QDir appDir(QApplication::applicationDirPath());
@@ -134,6 +144,9 @@ bool RSettings::isDeployed() {
 #endif
 }
 
+/**
+ * \return Path where all application resources are stored ('scripts', 'patterns', 'ts', 'doc', 'linetypes', ...)
+ */
 QString RSettings::getApplicationPath() {
     QDir ret(QApplication::applicationDirPath());
 
@@ -161,7 +174,7 @@ QString RSettings::getApplicationPath() {
 
 /**
  * \return List of all plugin paths for application plugins and add on
- * plugins in the application data location.
+ * plugins in the application data location (for user specific plugins).
  */
 QStringList RSettings::getPluginPaths() {
     QStringList ret;
@@ -184,6 +197,9 @@ QStringList RSettings::getPluginPaths() {
     return ret;
 }
 
+/**
+ * \return Path to the application plugins folder.
+ */
 QString RSettings::getPluginPath() {
     QDir appDir = QDir(getApplicationPath());
 
@@ -205,6 +221,10 @@ QString RSettings::getPluginPath() {
     return appDir.path();
 }
 
+/**
+ * \return Standard path for the given standard location.
+ * \param sl QStandardPaths::StandardLocation or QDesktopServices::StandardLocation
+ */
 QString RSettings::getStandardLocation(int sl) {
 #if QT_VERSION >= 0x050000
     QStringList candidates = QStandardPaths::standardLocations((QStandardPaths::StandardLocation)sl);
@@ -217,6 +237,9 @@ QString RSettings::getStandardLocation(int sl) {
 #endif
 }
 
+/**
+ * \return Standard path for caches.
+ */
 QString RSettings::getCacheLocation() {
 #if QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::CacheLocation);
@@ -225,6 +248,9 @@ QString RSettings::getCacheLocation() {
 #endif
 }
 
+/**
+ * \return Standard path for user data.
+ */
 QString RSettings::getDataLocation() {
 #if QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::DataLocation);
@@ -233,6 +259,9 @@ QString RSettings::getDataLocation() {
 #endif
 }
 
+/**
+ * \return Standard path for temporary files.
+ */
 QString RSettings::getTempLocation() {
 #if QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::TempLocation);
@@ -241,6 +270,9 @@ QString RSettings::getTempLocation() {
 #endif
 }
 
+/**
+ * \return Standard path for user desktop files.
+ */
 QString RSettings::getDesktopLocation() {
 #if QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::DesktopLocation);
@@ -249,6 +281,9 @@ QString RSettings::getDesktopLocation() {
 #endif
 }
 
+/**
+ * \return Standard path for user documents.
+ */
 QString RSettings::getDocumentsLocation() {
 #if QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::DocumentsLocation);
@@ -257,6 +292,9 @@ QString RSettings::getDocumentsLocation() {
 #endif
 }
 
+/**
+ * \return Standard path for user home.
+ */
 QString RSettings::getHomeLocation() {
 #if QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::HomeLocation);
@@ -265,14 +303,24 @@ QString RSettings::getHomeLocation() {
 #endif
 }
 
+/**
+ * \return True if the GUI is enabled (no -no-gui switch present).
+ * The GUI is typically disabled for command line tools.
+ */
 bool RSettings::isGuiEnabled() {
     return !QCoreApplication::arguments().contains("-no-gui");
 }
 
+/**
+ * \return True if the script debugger is enabled.
+ */
 bool RSettings::isDebuggerEnabled() {
     return QCoreApplication::arguments().contains("-enable-script-debugger");
 }
 
+/**
+ * \return True if -quit was passed to the application binary.
+ */
 bool RSettings::hasQuitFlag() {
     return quitFlag;
 }
@@ -281,10 +329,13 @@ void RSettings::setQuitFlag() {
     quitFlag = true;
 }
 
-QString RSettings::getDefaultStyle(){
-    return "body { font-family:sans; font-size:11pt; }";
-}
+//QString RSettings::getDefaultStyle(){
+//    return "body { font-family:sans; font-size:11pt; }";
+//}
 
+/**
+ * \return File name of the application settings file (.ini or .conf).
+ */
 QString RSettings::getFileName() {
     return getQSettings()->fileName();
 }
@@ -300,10 +351,16 @@ void RSettings::setLaunchPath(const QString& path) {
     launchPath = path;
 }
 
+/**
+ * \return Path from where the application was launched (can be any path).
+ */
 QString RSettings::getLaunchPath() {
     return launchPath;
 }
 
+/**
+ * \return Locale to be used for translations ('en', 'de', 'de_DE', ...)
+ */
 QString RSettings::getLocale() {
     // override settings if the locale argument is provided
     QStringList args = QCoreApplication::arguments();
@@ -319,6 +376,11 @@ QString RSettings::getLocale() {
     return RSettings::getStringValue("Language/UiLanguage", "en");
 }
 
+/**
+ * Loads the translations for the given module.
+ * \param module Module name ('qcadcore', 'qcadentity', ...)
+ * \param dirs List of directories to look for translation files or empty to check default directories.
+ */
 void RSettings::loadTranslations(const QString& module, const QStringList& dirs) {
     QString locale = RSettings::getLocale();
     if (locale == "en" || locale.toLower() == "en_us") {
@@ -341,10 +403,16 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
     }
 }
 
+/**
+ * Translates the given string for the given context.
+ */
 QString RSettings::translate(const QString& context, const QString& str) {
     return QCoreApplication::translate((const char*)context.toLatin1(), (const char*)str.toLatin1());
 }
 
+/**
+ * \return List of all keys stored in the application settings file.
+ */
 QStringList RSettings::getAllKeys(const QString& group) {
     QSettings* qs = getQSettings();
     qs->beginGroup(group);
@@ -353,6 +421,9 @@ QStringList RSettings::getAllKeys(const QString& group) {
     return res;
 }
 
+/**
+ * \return Pointer to underlying QSettings object.
+ */
 QSettings* RSettings::getQSettings() {
     if (qSettings==NULL) {
         QString appName = QCoreApplication::applicationName();
@@ -375,6 +446,9 @@ QSettings* RSettings::getQSettings() {
     return qSettings;
 }
 
+/**
+ * Initializes the recent files list (recentFiles).
+ */
 void RSettings::initRecentFiles() {
     if (recentFiles.isEmpty()) {
         recentFiles = getValue("RecentFiles/Files", QStringList()).toStringList();
@@ -396,12 +470,18 @@ void RSettings::addRecentFile(const QString& fileName) {
     shortenRecentFiles();
 }
 
+/**
+ * \return List of recent files.
+ */
 QStringList RSettings::getRecentFiles() {
     initRecentFiles();
     shortenRecentFiles();
     return recentFiles;
 }
 
+/**
+ * Purges recent files that exceed the RecentFiles/RecentFilesSize limit.
+ */
 void RSettings::shortenRecentFiles() {
     initRecentFiles();
     int historySize = getValue("RecentFiles/RecentFilesSize", 10).toInt();
@@ -411,12 +491,18 @@ void RSettings::shortenRecentFiles() {
     setValue("RecentFiles/Files", recentFiles);
 }
 
+/**
+ * Removes the given file from the list of recent files.
+ */
 void RSettings::removeRecentFile(const QString& fileName) {
     initRecentFiles();
     recentFiles.removeAll(QFileInfo(fileName).absoluteFilePath());
     setValue("RecentFiles/Files", recentFiles);
 }
 
+/**
+ * Clears the list of recent files.
+ */
 void RSettings::clearRecentFiles() {
     recentFiles.clear();
     setValue("RecentFiles/Files", recentFiles);
@@ -631,18 +717,30 @@ bool RSettings::hasCustomStyleSheet() {
     return !qApp->styleSheet().isEmpty();
 }
 
+/**
+ * \return Qt version as int (Qt 1.2.3 -> 0x010203).
+ */
 int RSettings::getQtVersion() {
     return QT_VERSION;
 }
 
+/**
+ * \return Qt version as human readable string ("1.2.3").
+ */
 QString RSettings::getQtVersionString() {
     return qVersion();
 }
 
+/**
+ * \return True if application was compiled against the given major Qt version.
+ */
 bool RSettings::isQt(int majorVersion) {
     return QT_VERSION >= majorVersion<<16;
 }
 
+/**
+ * \return Compiler name and version as human readable string.
+ */
 QString RSettings::getCompilerVersion() {
 #if defined(Q_CC_CLANG)
     return QString("Clang %1.%2.%3").arg(__clang_major__).arg(__clang_minor__).arg(__clang_patchlevel__);
@@ -668,6 +766,9 @@ QString RSettings::getCompilerVersion() {
     return "Unknown";
 }
 
+/**
+ * \return OS name and version as human readable string.
+ */
 QString RSettings::getOSVersion() {
 #ifdef Q_OS_WIN
     switch (QSysInfo::windowsVersion()) {
@@ -735,10 +836,16 @@ QString RSettings::getOSVersion() {
 #endif
 }
 
+/**
+ * \return Application version as human readable string.
+ */
 QString RSettings::getVersionString() {
     return R_QCAD_VERSION_STRING;
 }
 
+/**
+ * \return Application version as 01020304 for 1.2.3.4
+ */
 QString RSettings::getNumericalVersionString() {
     return QString("%1%2%3%4")
             .arg(R_QCAD_VERSION_MAJOR, 2, 10, QChar('0'))
@@ -763,6 +870,9 @@ int RSettings::getBuildVersion() {
     return R_QCAD_VERSION_BUILD;
 }
 
+/**
+ * \return Git revision number, stored in file revision.txt for deployed applications.
+ */
 QString RSettings::getRevisionString() {
     QString ret = "";
     QFile f("revision.txt");
@@ -883,6 +993,9 @@ QLocale RSettings::getNumberLocale() {
     return *numberLocale;
 }
 
+/**
+ * \return Value of the given setting as color or defaultValue.
+ */
 RColor RSettings::getColor(const QString& key, const RColor& defaultValue) {
     // colors are 'different' and need to be handled without RSettings::getValue:
     if (!isInitialized()) {
@@ -905,6 +1018,9 @@ RColor RSettings::getColor(const QString& key, const RColor& defaultValue) {
     return ret;
 }
 
+/**
+ * \return True if the given key is available in the application settings file.
+ */
 bool RSettings::hasValue(const QString& key) {
     if (!isInitialized()) {
         return false;
@@ -916,6 +1032,9 @@ bool RSettings::hasValue(const QString& key) {
     return ret.isValid();
 }
 
+/**
+ * \return Value of the given setting as variant or defaultValue.
+ */
 QVariant RSettings::getValue(const QString& key, const QVariant& defaultValue) {
     if (!isInitialized()) {
         return defaultValue;
@@ -945,11 +1064,17 @@ QVariant RSettings::getValue(const QString& key, const QVariant& defaultValue) {
     return ret;
 }
 
+/**
+ * \return Value of the given setting as boolean or defaultValue.
+ */
 bool RSettings::getBoolValue(const QString& key, bool defaultValue) {
     QVariant ret = getValue(key, defaultValue);
     return ret.toBool();
 }
 
+/**
+ * \return Value of the given setting as color or defaultValue.
+ */
 RColor RSettings::getColorValue(const QString& key, const RColor& defaultValue) {
     QVariant ret = getValue(key, defaultValue);
     if (ret.canConvert<RColor>()) {
@@ -960,6 +1085,9 @@ RColor RSettings::getColorValue(const QString& key, const RColor& defaultValue) 
     }
 }
 
+/**
+ * \return Value of the given setting as double or defaultValue.
+ */
 double RSettings::getDoubleValue(const QString& key, double defaultValue) {
     QVariant ret = getValue(key, defaultValue);
 
@@ -978,21 +1106,33 @@ double RSettings::getDoubleValue(const QString& key, double defaultValue) {
     return d;
 }
 
+/**
+ * \return Value of the given setting as int or defaultValue.
+ */
 int RSettings::getIntValue(const QString& key, int defaultValue) {
     QVariant ret = getValue(key, defaultValue);
     return ret.toInt();
 }
 
+/**
+ * \return Value of the given setting as string or defaultValue.
+ */
 QString RSettings::getStringValue(const QString& key, const QString& defaultValue) {
     QVariant ret = getValue(key, defaultValue);
     return ret.toString();
 }
 
+/**
+ * \return Value of the given setting as string list or defaultValue.
+ */
 QStringList RSettings::getStringListValue(const QString& key, const QStringList& defaultValue) {
     QVariant ret = getValue(key, defaultValue);
     return ret.toStringList();
 }
 
+/**
+ * Sets the variable with the given key and value, overwriting an existing value if overwrite is true (default).
+ */
 void RSettings::setValue(const QString& key, const QVariant& value, bool overwrite) {
     if (!isInitialized()) {
         return;
@@ -1016,6 +1156,9 @@ void RSettings::setValue(const QString& key, const QVariant& value, bool overwri
     }
 }
 
+/**
+ * Removes the value for the given key.
+ */
 void RSettings::removeValue(const QString& key) {
     if (!isInitialized()) {
         return;

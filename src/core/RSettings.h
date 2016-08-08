@@ -86,7 +86,7 @@ public:
     static QString getLaunchPath();
     static void setLaunchPath(const QString& launchPath);
 
-    static QString getDefaultStyle();
+    //static QString getDefaultStyle();
 
     // GraphicsView Appearance Fonts
     static void setRulerFont(const QFont& font);
