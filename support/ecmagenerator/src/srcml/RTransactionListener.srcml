@@ -30,7 +30,7 @@
 
 
 <comment type="block">/**
- * \brief Abstract base class for classes that wnat to be notified on every transaction
+ * \brief Abstract base class for classes that want to be notified on every transaction
  * (objects added, removed or modified).
  *
  * \ingroup core

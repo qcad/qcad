@@ -20,9 +20,9 @@
 </private><public>public:
     <enum>enum <name>Flag</name> <block>{
         <expr><name>NoFlags</name> = 0x000</expr>,
-        <expr><name>Secondary</name> = 0x001</expr>,
-        <expr><name>Center</name> = 0x002</expr>,
-        <expr><name>Ignore</name> = 0x004</expr>
+        <expr><name>Secondary</name> = 0x001</expr>,     <comment type="block">/**&lt; Secondary reference point (typically shown with different color) */</comment>
+        <expr><name>Center</name> = 0x002</expr>,        <comment type="block">/**&lt; Reference point is a center point */</comment>
+        <expr><name>Ignore</name> = 0x004</expr>         <comment type="block">/**&lt; Ignore reference point for drag and drop */</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>Flag</argument>)</argument_list></macro>
 

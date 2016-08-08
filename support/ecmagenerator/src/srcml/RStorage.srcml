@@ -390,8 +390,21 @@
     <function_decl><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * \return List of custom variable names stored in this document.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>QStringList</name></type> <name>getVariables</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * Sets a custom variable in the context of this document.
+     *
+     * \param key Variable key (name)
+     * \param value Variable value
+     * \param overwrite True to overwrite an existing variable with the same key (default)
+     */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setVariable</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>overwrite</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * Removes the custom variable with the given key.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>removeVariable</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <comment type="block">/**
      * \return The value of the given variable or an invalid variant if the
@@ -407,7 +420,18 @@
         <return>return <expr><name>value</name>.<call><name>isValid</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <comment type="block">/**
+     * Sets a known DXF/DWG variable for this document.
+     *
+     * \param key Variable key (see DXF reference)
+     * \param value New value of the variable.
+     * \param transaction RTransaction to use for the change or NULL (default) to create a transaction on the fly.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setKnownVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return Value for the given DXF/DWG variable.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>QVariant</name></type> <name>getKnownVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**

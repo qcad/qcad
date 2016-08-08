@@ -162,11 +162,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="launchPath" isConst="true" />
       </variant>
     </method>
-    <method name="getDefaultStyle" cppName="getDefaultStyle"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
-    </method>
     <method name="setRulerFont" cppName="setRulerFont"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

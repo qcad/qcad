@@ -130,9 +130,6 @@
         setLaunchPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDefaultStyle
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setRulerFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

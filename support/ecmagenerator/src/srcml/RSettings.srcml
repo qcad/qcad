@@ -87,7 +87,7 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getLaunchPath</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>setLaunchPath</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>launchPath</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>static</name> <name>QString</name></type> <name>getDefaultStyle</name><parameter_list>()</parameter_list>;</function_decl>
+    <comment type="line">//static QString getDefaultStyle();</comment>
 
     <comment type="line">// GraphicsView Appearance Fonts</comment>
     <function_decl><type><name>static</name> <name>void</name></type> <name>setRulerFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QFont</name>&amp;</type> <name>font</name></decl></param>)</parameter_list>;</function_decl>

@@ -113,8 +113,6 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, setLaunchPath, "setLaunchPath");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getDefaultStyle, "getDefaultStyle");
-            
             REcmaHelper::registerFunction(&engine, &ctor, setRulerFont, "setRulerFont");
             
             REcmaHelper::registerFunction(&engine, &ctor, getRulerFont, "getRulerFont");
@@ -1590,45 +1588,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::setLaunchPath", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSettings::getDefaultStyle
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSettings::getDefaultStyle", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDefaultStyle";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        RSettings::
-       getDefaultStyle();
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDefaultStyle().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSettings::getDefaultStyle", context, engine);
             return result;
         }
          QScriptValue
