@@ -44,7 +44,7 @@ Apollonius.getSolutions = function(shape1, shape2, shape3) {
     var lines = [];
     var circles = [];
 
-    var shapes = [ shape1, shape2, shape3];
+    var shapes = [ shape1, shape2, shape3 ];
 
     for (var i=0; i<shapes.length; i++) {
         var s = shapes[i];
