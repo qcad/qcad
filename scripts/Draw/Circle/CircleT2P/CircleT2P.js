@@ -286,7 +286,7 @@ CircleT2P.prototype.getShapes = function(preview) {
         this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);
     }
 
-    if (this.candidates.length===0) {
+    if (isNull(this.candidates) || this.candidates.length===0) {
         if (!preview) {
             this.error = qsTr("No solution");
         }
