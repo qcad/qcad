@@ -1425,17 +1425,18 @@ Apollonius.getTangentsThroughPoint = function(circle, p) {
         return lines;
     }
 
-    // point is inside the circle:
-    else if (circle.contains(p)) {
-        return [];
-    }
-
     // point on the circle line (produces error):
     else if (circle.isOnShape(p)) {
-//        var s = new RLine(p, circle.center);
-//        var lines = [];
-//        lines[0] = lines[1] = new RLine(p, s.getAngle() + Math.PI/2, 1.0);
-//        return lines;
+        var s = new RLine(p, circle.center);
+        var lines = [];
+        lines[0] = new RLine(p, s.getAngle() + Math.PI/2, 1.0);
+        lines[1] = undefined;
+        return lines;
+//        return [];
+    }
+
+    // point is inside the circle:
+    else if (circle.contains(p)) {
         return [];
     }
 
