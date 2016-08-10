@@ -36,6 +36,7 @@ class RMouseEvent;
  */
 class QCADSNAP_EXPORT RSnapReference : public RSnapEntityBase {
 public:
+    RSnapReference() : RSnapEntityBase(RSnap::Reference) {}
     virtual ~RSnapReference() {}
 
 protected:

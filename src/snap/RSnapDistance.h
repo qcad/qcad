@@ -38,7 +38,7 @@ class RMouseEvent;
  */
 class QCADSNAP_EXPORT RSnapDistance : public RSnapEntityBase {
 public:
-    RSnapDistance();
+    RSnapDistance() : RSnapEntityBase(RSnap::Distance), distance(1.0) {}
     virtual ~RSnapDistance() {}
 
     virtual void showUiOptions();

@@ -36,6 +36,7 @@ class RGraphicsView;
  */
 class QCADSNAP_EXPORT RSnapAuto : public RSnap {
 public:
+    RSnapAuto() : RSnap(RSnap::Unknown) {}
     virtual ~RSnapAuto() {}
 
     virtual RVector snap(

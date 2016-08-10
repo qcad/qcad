@@ -66,7 +66,7 @@ public:
     };
 
 public:
-    RSnap() : status(RSnap::Unknown), lastSnap(RVector::invalid) {}
+    RSnap(RSnap::Status s = RSnap::Unknown) : status(s), lastSnap(RVector::invalid) {}
     virtual ~RSnap() {}
 
     /**

@@ -35,6 +35,7 @@ class RMouseEvent;
  */
 class QCADSNAP_EXPORT RSnapPerpendicular : public RSnapEntityBase {
 public:
+    RSnapPerpendicular() : RSnapEntityBase(RSnap::Perpendicular) {}
     virtual ~RSnapPerpendicular() {}
 
 protected:

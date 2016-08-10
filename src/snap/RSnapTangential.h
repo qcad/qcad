@@ -35,6 +35,7 @@ class RMouseEvent;
  */
 class QCADSNAP_EXPORT RSnapTangential : public RSnapEntityBase {
 public:
+    RSnapTangential() : RSnapEntityBase(RSnap::Tangential) {}
     virtual ~RSnapTangential() {}
 
 protected:

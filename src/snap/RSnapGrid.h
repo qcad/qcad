@@ -36,6 +36,7 @@ class RMouseEvent;
  */
 class QCADSNAP_EXPORT RSnapGrid : public RSnap {
 public:
+    RSnapGrid() : RSnap(RSnap::Grid) {}
     virtual ~RSnapGrid() {}
 
     virtual RVector snap(

@@ -18,9 +18,6 @@
  */
 #include "RSnapDistance.h"
 
-RSnapDistance::RSnapDistance() : distance(1.0) {
-}
-
 QList<RVector> RSnapDistance::snapEntity(QSharedPointer<REntity> entity,
     const RVector& point, const RBox& queryBox, RGraphicsView& view) {
 

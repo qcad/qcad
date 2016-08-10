@@ -22,9 +22,6 @@
 #include "RSnapIntersection.h"
 #include "RSettings.h"
 
-RSnapIntersection::RSnapIntersection() {
-}
-
 RVector RSnapIntersection::snap(
         const RVector& position,
         RGraphicsView& view,

@@ -37,7 +37,7 @@ class RMouseEvent;
  */
 class QCADSNAP_EXPORT RSnapIntersection : public RSnap {
 public:
-    RSnapIntersection();
+    RSnapIntersection() : RSnap(RSnap::Intersection) {}
     virtual ~RSnapIntersection() {}
 
     virtual RVector snap(
