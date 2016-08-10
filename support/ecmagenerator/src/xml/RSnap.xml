@@ -24,7 +24,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="CoordinatePolar" />
     </enum>
     <constructor>
-      <variant />
+      <variant>
+        <arg type="RSnap::Status" typeName="RSnap::Status" name="s"
+        hasDefault="true" default="RSnap :: Unknown"
+        isConst="false" />
+      </variant>
     </constructor>
     <method name="snap" cppName="snap" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

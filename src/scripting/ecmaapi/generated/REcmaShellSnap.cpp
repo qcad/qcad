@@ -89,9 +89,9 @@
     // Constructors:
     
       REcmaShellSnap::REcmaShellSnap(
-                
+                RSnap::Status s
             ) : RSnap(
-                
+                s
                 ) {
             }
         

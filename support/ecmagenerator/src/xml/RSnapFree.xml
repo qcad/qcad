@@ -8,6 +8,9 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RSnap" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
     <method name="snap" cppName="snap" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">

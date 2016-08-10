@@ -49,7 +49,8 @@
     // Constructors:
     
       REcmaShellSnap(
-                
+                RSnap::Status s
+        = RSnap :: Unknown
             );
         
     

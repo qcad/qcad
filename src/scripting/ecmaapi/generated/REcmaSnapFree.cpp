@@ -111,8 +111,8 @@
     }
 
     QScriptValue result;
-    
-            // constructor without variants:
+        
+            // generate constructor variants:
             
     if( context->argumentCount() ==
         0

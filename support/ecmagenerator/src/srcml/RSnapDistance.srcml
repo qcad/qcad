@@ -39,7 +39,7 @@
  */</comment>
 <class>class <macro><name>QCADSNAP_EXPORT</name></macro> <name>RSnapDistance</name> <super>: <specifier>public</specifier> <name>RSnapEntityBase</name></super> <block>{<private type="default">
 </private><public>public:
-    <constructor_decl><name>RSnapDistance</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor><name>RSnapDistance</name><parameter_list>()</parameter_list> <member_list>: <call><name>RSnapEntityBase</name><argument_list>(<argument><expr><name><name>RSnap</name>::<name>Distance</name></name></expr></argument>)</argument_list></call>, <call><name>distance</name><argument_list>(<argument><expr>1.0</expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <destructor><specifier>virtual</specifier> <name>~RSnapDistance</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>showUiOptions</name><parameter_list>()</parameter_list>;</function_decl>

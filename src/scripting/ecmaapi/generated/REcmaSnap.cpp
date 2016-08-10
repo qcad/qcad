@@ -215,6 +215,46 @@
     
     } else 
 
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isNumber()
+                ) /* type: RSnap::Status */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RSnap::Status
+                    a0 =
+                    (RSnap::Status)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            REcmaShellSnap
+                    * cppResult =
+                    new
+                    REcmaShellSnap
+                    (
+                    a0
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+        cppResult->__qtscript_self = result;
+    
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RSnap(): no matching constructor found."),

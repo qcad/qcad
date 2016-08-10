@@ -37,6 +37,7 @@
  */</comment>
 <class>class <macro><name>QCADSNAP_EXPORT</name></macro> <name>RSnapAuto</name> <super>: <specifier>public</specifier> <name>RSnap</name></super> <block>{<private type="default">
 </private><public>public:
+    <constructor><name>RSnapAuto</name><parameter_list>()</parameter_list> <member_list>: <call><name>RSnap</name><argument_list>(<argument><expr><name><name>RSnap</name>::<name>Unknown</name></name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <destructor><specifier>virtual</specifier> <name>~RSnapAuto</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>snap</name><parameter_list>(
