@@ -35,7 +35,7 @@ DefaultAction.prototype = new EAction();
 
 DefaultAction.State = {
     Neutral : 0,
-    Dragging : 1,
+    Dragging : 1,               //*< Started dragging, minor distance, could be simple click at this stage
     SettingCorner2 : 2,         //*< Setting 2nd corner of selection rectangle.
     MovingEntity : 3,           //*< Dragging entity, mouse button is down.
     MovingEntityInBlock : 4,    //*< Dragging entity inside block, mouse button is down.
