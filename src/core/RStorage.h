@@ -516,21 +516,8 @@ public:
         return !e.isNull();
     }
 
-    virtual bool isLayerLocked(RLayer::Id layerId) const {
-        QSharedPointer<RLayer> l = queryLayerDirect(layerId);
-        if (l.isNull()) {
-            return false;
-        }
-        return l->isLocked();
-    }
-
-    virtual bool isLayerFrozen(RLayer::Id layerId) const {
-        QSharedPointer<RLayer> l = queryLayerDirect(layerId);
-        if (l.isNull()) {
-            return false;
-        }
-        return l->isFrozen();
-    }
+    virtual bool isLayerLocked(RLayer::Id layerId) const;
+    virtual bool isLayerFrozen(RLayer::Id layerId) const;
 
     virtual bool isBlockFrozen(RBlock::Id blockId) const {
         QSharedPointer<RBlock> b = queryBlockDirect(blockId);

@@ -812,3 +812,23 @@ void RStorage::setModified(bool m) {
         }
     }
 }
+
+bool RStorage::isLayerLocked(RLayer::Id layerId) const {
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
+    return l->isLocked();
+}
+
+bool RStorage::isLayerFrozen(RLayer::Id layerId) const {
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
+    if (l->isFrozen()) {
+        return true;
+    }
+    RLayer::Id parentLayerId = l->getParentLayerId();
+    return isLayerFrozen(parentLayerId);
+}
