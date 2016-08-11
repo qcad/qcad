@@ -848,10 +848,12 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
                 else {
                     ce.setModelPosition(snap(event, false));
                 }
-                if (ce.isValid()) {
+                // 20160811: send event even if it is invalid to make sure status is updated
+                // fixes FS#1456 - Drag and drop: requires two clicks with auto snap
+                //if (ce.isValid()) {
                     cursorPosition = ce.getModelPosition();
                     action.coordinateEvent(ce);
-                }
+                //}
             }
             break;
 
