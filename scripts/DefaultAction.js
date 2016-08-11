@@ -36,12 +36,12 @@ DefaultAction.prototype = new EAction();
 DefaultAction.State = {
     Neutral : 0,
     Dragging : 1,
-    SettingCorner2 : 2,
-    MovingEntity : 3,
-    MovingEntityInBlock : 4,
-    SettingEntity : 5,
-    MovingReference : 6,
-    SettingReference : 7
+    SettingCorner2 : 2,         //*< Setting 2nd corner of selection rectangle.
+    MovingEntity : 3,           //*< Dragging entity, mouse button is down.
+    MovingEntityInBlock : 4,    //*< Dragging entity inside block, mouse button is down.
+    SettingEntity : 5,          //*< Setting position of previously dragged entity, mouse button is up.
+    MovingReference : 6,        //*< Dragging reference point, mouse button is down.
+    SettingReference : 7        //*< Setting position of previously dragged reference point, mouse button is up.
 };
 
 DefaultAction.prototype.beginEvent = function() {
