@@ -102,6 +102,9 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
 
     // interrupted by mouse move:
     if (RMouseEvent::hasMouseMoved()) {
+        if (!freePositioning) {
+            return RVector::invalid;
+        }
         status = RSnap::Free;
         return position;
     }
