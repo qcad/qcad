@@ -517,21 +517,8 @@
         <return>return <expr>!<name>e</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>bool</name></type> <name>isLayerLocked</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>l</name> =<init> <expr><call><name>queryLayerDirect</name><argument_list>(<argument><expr><name>layerId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-        <if>if <condition>(<expr><name>l</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><name>false</name></expr>;</return>
-        }</block></then></if>
-        <return>return <expr><name>l</name>-&gt;<call><name>isLocked</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
-
-    <function><type><name>virtual</name> <name>bool</name></type> <name>isLayerFrozen</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>l</name> =<init> <expr><call><name>queryLayerDirect</name><argument_list>(<argument><expr><name>layerId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-        <if>if <condition>(<expr><name>l</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><name>false</name></expr>;</return>
-        }</block></then></if>
-        <return>return <expr><name>l</name>-&gt;<call><name>isFrozen</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isLayerLocked</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isLayerFrozen</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>virtual</name> <name>bool</name></type> <name>isBlockFrozen</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>b</name> =<init> <expr><call><name>queryBlockDirect</name><argument_list>(<argument><expr><name>blockId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>

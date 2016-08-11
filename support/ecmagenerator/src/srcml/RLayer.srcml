@@ -78,6 +78,9 @@
 
     <function_decl><type><name>virtual</name> <name>RLayer</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getParentLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getParentLayerName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function><type><name>QString</name></type> <name>getName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>name</name></expr>;</return>
     }</block></function>

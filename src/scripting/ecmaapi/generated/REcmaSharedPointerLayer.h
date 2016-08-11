@@ -59,6 +59,12 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getParentLayerId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getParentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

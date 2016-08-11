@@ -45,6 +45,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RLayer *" isPureVirtual="false" />
     </method>
+    <method name="getParentLayerId" cppName="getParentLayerId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLayer::Id" isPureVirtual="false" />
+    </method>
+    <method name="getParentLayerName" cppName="getParentLayerName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getName" cppName="getName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
