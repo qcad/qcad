@@ -77,6 +77,9 @@ public:
 
     virtual RLayer* clone() const;
 
+    RLayer::Id getParentLayerId() const;
+    QString getParentLayerName() const;
+
     QString getName() const {
         return name;
     }

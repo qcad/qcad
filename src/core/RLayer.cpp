@@ -85,6 +85,32 @@ RLayer* RLayer::clone() const {
     return new RLayer(*this);
 }
 
+RLayer::Id RLayer::getParentLayerId() const {
+    QString parentLayerName = getParentLayerName();
+    if (parentLayerName.isEmpty()) {
+        return RLayer::INVALID_ID;
+    }
+
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return RLayer::INVALID_ID;
+    }
+
+    return doc->getLayerId(parentLayerName);
+}
+
+QString RLayer::getParentLayerName() const {
+    QStringList a = name.split(" ... ");
+
+    // top layer:
+    if (a.length()==1) {
+        return "";
+    }
+
+    a.removeLast();
+    return a.join(" ... ");
+}
+
 void RLayer::setName(const QString& n) {
     if (name == "0") {
         return;
