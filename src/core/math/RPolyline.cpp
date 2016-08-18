@@ -1627,8 +1627,15 @@ bool RPolyline::simplify(double angleTolerance) {
         if (!arc.isNull()) {
             // simplify consecutive arcs:
             if (arc->getCenter().equalsFuzzy(center, 0.001) && RMath::fuzzyCompare(arc->getRadius(), radius, 0.001)) {
+                double a1 = arc->getStartAngle();
                 arc->setStartAngle(arc->getCenter().getAngleTo(newPolyline.getEndPoint()));
-                newPolyline.removeLastVertex();
+                if (arc->getSweep()<=M_PI) {
+                    newPolyline.removeLastVertex();
+                }
+                else {
+                    // reverse joining of consecutive arcs (arc would cover more than half a circle):
+                    arc->setStartAngle(a1);
+                }
             }
             newPolyline.appendVertex(arc->getStartPoint(), arc->getBulge());
             angle = RMAXDOUBLE;
