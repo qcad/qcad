@@ -1633,7 +1633,10 @@ bool RPolyline::simplify(double angleTolerance) {
                     newPolyline.removeLastVertex();
                 }
                 else {
-                    // reverse joining of consecutive arcs (arc would cover more than half a circle):
+                    // Reverse joining of consecutive arcs (arc would cover more than half a circle):
+                    // We could join arcs up to almost full circle but precision will suffer and full
+                    // circles represented as polylines might be oddly represented by a 3/4 arc and a
+                    // 1/4 arc instead of two half arcs.
                     arc->setStartAngle(a1);
                 }
             }
