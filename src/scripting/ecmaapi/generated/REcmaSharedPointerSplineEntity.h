@@ -208,6 +208,12 @@
         setEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        toBiArcPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

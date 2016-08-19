@@ -159,6 +159,9 @@
         toPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toBiArcPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         simplify
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
