@@ -107,8 +107,16 @@ Explode.explodeSelection = function(di, action) {
         // explode spline into polyline with line segments:
         else if (isSplineEntity(entity)) {
             var spline = entity.getData().castToShape();
-            var seg = RSettings.getIntValue("Explode/SplineSegments", 64);
-            var pl = spline.toPolyline(seg);
+            var pl;
+            if (RSpline.hasProxy()) {
+                var tol = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
+                pl = spline.toBiArcPolyline(tol);
+            }
+            else {
+                var seg = RSettings.getIntValue("Explode/SplineSegments", 64);
+                pl = spline.toPolyline(seg);
+            }
+
             pl.simplify();
             newShapes.push(pl);
         }
