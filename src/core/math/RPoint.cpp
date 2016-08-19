@@ -80,7 +80,7 @@ QList<RVector> RPoint::getCenterPoints() const {
     return ret;
 }
 
-QList<RVector> RPoint::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RPoint::getPointsWithDistanceToEnd(double distance, int from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
 

@@ -178,7 +178,7 @@ public:
      * \return All points on this shape with the given distance to an endpoint.
      */
     virtual QList<RVector> getPointsWithDistanceToEnd(
-        double distance, RS::From from = RS::FromAny) const = 0;
+        double distance, int from = RS::FromAny) const = 0;
 
     virtual RVector getPointWithDistanceToStart(double distance) {
         QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromStart);

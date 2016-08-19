@@ -648,7 +648,7 @@ QList<RVector> REllipse::getCenterPoints() const {
 /**
  * \todo implement
  */
-QList<RVector> REllipse::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> REllipse::getPointsWithDistanceToEnd(double distance, int from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
 

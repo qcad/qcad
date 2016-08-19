@@ -87,7 +87,7 @@ bool RRay::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, boo
     return true;
 }
 
-QList<RVector> RRay::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RRay::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
     double a1 = getAngle();
 

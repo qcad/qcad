@@ -152,7 +152,7 @@ public:
     virtual QList<RVector> getMiddlePoints() const;
     virtual QList<RVector> getCenterPoints() const;
     virtual QList<RVector> getPointsWithDistanceToEnd(
-        double distance, RS::From from = RS::FromAny) const;
+        double distance, int from = RS::FromAny) const;
 
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;
@@ -178,6 +178,7 @@ public:
     QList<RSpline> splitAtParams(const QList<double>& params) const;
 
     RPolyline toPolyline(int segments) const;
+    RPolyline toBiArcPolyline(double tolerance) const;
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
     QList<QSharedPointer<RShape> > getExplodedBezier(int segments) const;

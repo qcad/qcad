@@ -178,7 +178,7 @@ QList<RVector> RTriangle::getCenterPoints() const {
     return getMiddlePoints();
 }
 
-QList<RVector> RTriangle::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RTriangle::getPointsWithDistanceToEnd(double distance, int from) const {
     Q_UNUSED(from)
 
     QList<RVector> c;

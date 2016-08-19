@@ -81,6 +81,10 @@ public:
     void removeVerticesAfter(int index);
     void removeVerticesBefore(int index);
 
+    bool isEmpty() {
+        return countVertices()==0;
+    }
+
     void setVertices(const QList<RVector>& vertices);
     QList<RVector> getVertices() const;
     void setVertexAt(int i, const RVector& v);
@@ -144,7 +148,7 @@ public:
     virtual QList<RVector> getMiddlePoints() const;
     virtual QList<RVector> getCenterPoints() const;
     virtual QList<RVector> getPointsWithDistanceToEnd(
-        double distance, RS::From from = RS::FromAny) const;
+        double distance, int from = RS::FromAny) const;
 
     virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 

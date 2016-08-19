@@ -282,7 +282,7 @@ public:
     virtual QList<RVector> getMiddlePoints(const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual QList<RVector> getPointsWithDistanceToEnd(
-        double distance, RS::From from = RS::FromAny, const RBox& queryBox = RDEFAULT_RBOX) const;
+        double distance, int from = RS::FromAny, const RBox& queryBox = RDEFAULT_RBOX) const;
 
     virtual RVector getClosestPointOnEntity(const RVector& point,
         double range=RNANDOUBLE, bool limited=true) const;

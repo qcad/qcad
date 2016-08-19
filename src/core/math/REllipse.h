@@ -68,7 +68,7 @@ public:
     virtual QList<RVector> getMiddlePoints() const;
     virtual QList<RVector> getCenterPoints() const;
     virtual QList<RVector> getPointsWithDistanceToEnd(
-        double distance, RS::From from = RS::FromAny) const;
+        double distance, int from = RS::FromAny) const;
 
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;

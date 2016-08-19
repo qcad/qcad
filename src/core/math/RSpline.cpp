@@ -719,6 +719,13 @@ void RSpline::updateTangentsPeriodic() {
     setTangents(t, t);
 }
 
+RPolyline RSpline::toBiArcPolyline(double tolerance) const {
+    if (hasProxy()) {
+        return getSplineProxy()->convertToBiArcPolyline(*this, tolerance);
+    }
+    return RPolyline();
+}
+
 RPolyline RSpline::toPolyline(int segments) const {
     RPolyline ret;
 
@@ -954,7 +961,7 @@ QList<RVector> RSpline::getCenterPoints() const {
     return QList<RVector>();
 }
 
-QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 
     if (splineProxy!=NULL) {

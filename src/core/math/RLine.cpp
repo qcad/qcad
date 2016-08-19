@@ -143,7 +143,7 @@ QList<RVector> RLine::getCenterPoints() const {
     return getMiddlePoints();
 }
 
-QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 
     if (from&RS::FromStart) {

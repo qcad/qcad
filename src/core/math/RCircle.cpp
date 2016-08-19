@@ -160,7 +160,7 @@ QList<RVector> RCircle::getCenterPoints() const {
     return ret;
 }
 
-QList<RVector> RCircle::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RCircle::getPointsWithDistanceToEnd(double distance, int from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
 

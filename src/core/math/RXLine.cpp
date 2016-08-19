@@ -165,7 +165,7 @@ QList<RVector> RXLine::getCenterPoints() const {
     return QList<RVector>();
 }
 
-QList<RVector> RXLine::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RXLine::getPointsWithDistanceToEnd(double distance, int from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
     return QList<RVector>();

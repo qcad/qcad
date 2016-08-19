@@ -460,7 +460,7 @@ public:
      */
     virtual QList<RVector> getPointsWithDistanceToEnd(
             double distance,
-            RS::From from = RS::FromAny,
+            int from = RS::FromAny,
             const RBox& queryBox = RDEFAULT_RBOX) const {
         return getData().getPointsWithDistanceToEnd(distance, from, queryBox);
     }

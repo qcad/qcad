@@ -341,7 +341,7 @@ QList<RVector> REntityData::getCenterPoints(const RBox& queryBox) const {
  * \return Points on entity with given \c distance to either endpoint.
  * Used for snap to points with distance on entity.
  */
-QList<RVector> REntityData::getPointsWithDistanceToEnd(double distance, RS::From from, const RBox& queryBox) const {
+QList<RVector> REntityData::getPointsWithDistanceToEnd(double distance, int from, const RBox& queryBox) const {
     QList<RVector> ret;
     QList<QSharedPointer<RShape> > shapes = getShapes(queryBox, true);
     for (int i=0; i<shapes.size(); i++) {

@@ -593,7 +593,7 @@ QList<RVector> RArc::getCenterPoints() const {
     return ret;
 }
 
-QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 
     if (radius<RS::PointTolerance) {

@@ -56,7 +56,7 @@ public:
     }
 
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
-    virtual QList<RVector> getPointsWithDistanceToEnd(double distance, RS::From from) const;
+    virtual QList<RVector> getPointsWithDistanceToEnd(double distance, int from) const;
 
     virtual bool reverse();
     virtual RLine getClippedLine(const RBox& box) const;

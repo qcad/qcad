@@ -1276,7 +1276,7 @@ QList<RVector> RPolyline::getCenterPoints() const {
     return ret;
 }
 
-QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, RS::From from) const {
+QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 
     QList<QSharedPointer<RShape> > sub = getExploded();
