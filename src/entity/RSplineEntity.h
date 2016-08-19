@@ -280,6 +280,14 @@ public:
         return data.setEndPoint(ep);
     }
 
+    RPolyline toPolyline(int segments) const {
+        return data.toPolyline(segments);
+    }
+
+    RPolyline toBiArcPolyline(double tolerance) const {
+        return data.toBiArcPolyline(tolerance);
+    }
+
     bool reverse() {
         return data.reverse();
     }
