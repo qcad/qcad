@@ -189,6 +189,10 @@ public:
         return RSpline::toPolyline(segments);
     }
 
+    RPolyline toBiArcPolyline(double tolerance) const {
+        return RSpline::toBiArcPolyline(tolerance);
+    }
+
     void simplify(double tolerance) {
         RSpline s = RSpline::simplify(tolerance);
         setShape(s);
