@@ -179,7 +179,7 @@
      * \return All points on this shape with the given distance to an endpoint.
      */</comment>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getPointsWithDistanceToEnd</name><parameter_list>(
-        <param><decl><type><name>double</name></type> <name>distance</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>From</name></name></type> <name>from</name> =<init> <expr><name><name>RS</name>::<name>FromAny</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+        <param><decl><type><name>double</name></type> <name>distance</name></decl></param>, <param><decl><type><name>int</name></type> <name>from</name> =<init> <expr><name><name>RS</name>::<name>FromAny</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
     <function><type><name>virtual</name> <name>RVector</name></type> <name>getPointWithDistanceToStart</name><parameter_list>(<param><decl><type><name>double</name></type> <name>distance</name></decl></param>)</parameter_list> <block>{
         <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>res</name> =<init> <expr><call><name>getPointsWithDistanceToEnd</name><argument_list>(<argument><expr><name>distance</name></expr></argument>, <argument><expr><name><name>RS</name>::<name>FromStart</name></name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>

@@ -154,6 +154,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isEmpty" cppName="isEmpty" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setVertices" cppName="setVertices"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -484,7 +488,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="double" typeName="double" name="distance"
         isConst="false" />
-        <arg type="RS::From" typeName="RS::From" name="from"
+        <arg type="int" typeName="int" name="from"
         hasDefault="true" default="RS :: FromAny"
         isConst="false" />
       </variant>

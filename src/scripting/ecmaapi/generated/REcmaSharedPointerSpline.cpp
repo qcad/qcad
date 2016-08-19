@@ -284,6 +284,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, toPolyline, "toPolyline");
             
+            REcmaHelper::registerFunction(&engine, proto, toBiArcPolyline, "toBiArcPolyline");
+            
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
             REcmaHelper::registerFunction(&engine, proto, getExplodedBezier, "getExplodedBezier");
@@ -4198,7 +4200,7 @@
         ) /* type: double */
      && (
             context->argument(1).isNumber()
-        ) /* type: RS::From */
+        ) /* type: int */
     
     ){
     // prepare arguments:
@@ -4212,10 +4214,10 @@
                     toNumber();
                 
                     // argument isStandardType
-                    RS::From
+                    int
                     a1 =
-                    (RS::From)
                     (int)
+                    
                     context->argument( 1 ).
                     toNumber();
                 
@@ -5983,6 +5985,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::toPolyline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::toBiArcPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::toBiArcPolyline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::toBiArcPolyline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("toBiArcPolyline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->toBiArcPolyline(a0);
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.toBiArcPolyline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::toBiArcPolyline", context, engine);
             return result;
         }
          QScriptValue

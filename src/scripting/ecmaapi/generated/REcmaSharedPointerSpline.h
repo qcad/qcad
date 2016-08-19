@@ -311,6 +311,9 @@
         toPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toBiArcPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

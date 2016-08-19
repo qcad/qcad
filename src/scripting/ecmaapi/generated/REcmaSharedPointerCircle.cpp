@@ -1179,7 +1179,7 @@
         ) /* type: double */
      && (
             context->argument(1).isNumber()
-        ) /* type: RS::From */
+        ) /* type: int */
     
     ){
     // prepare arguments:
@@ -1193,10 +1193,10 @@
                     toNumber();
                 
                     // argument isStandardType
-                    RS::From
+                    int
                     a1 =
-                    (RS::From)
                     (int)
+                    
                     context->argument( 1 ).
                     toNumber();
                 

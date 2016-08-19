@@ -132,6 +132,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, removeVerticesBefore, "removeVerticesBefore");
             
+            REcmaHelper::registerFunction(&engine, proto, isEmpty, "isEmpty");
+            
             REcmaHelper::registerFunction(&engine, proto, setVertices, "setVertices");
             
             REcmaHelper::registerFunction(&engine, proto, getVertices, "getVertices");
@@ -2038,6 +2040,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVerticesBefore", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::isEmpty
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::isEmpty", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::isEmpty";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("isEmpty", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isEmpty();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isEmpty().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isEmpty", context, engine);
             return result;
         }
          QScriptValue
@@ -5085,7 +5136,7 @@
         ) /* type: double */
      && (
             context->argument(1).isNumber()
-        ) /* type: RS::From */
+        ) /* type: int */
     
     ){
     // prepare arguments:
@@ -5099,10 +5150,10 @@
                     toNumber();
                 
                     // argument isStandardType
-                    RS::From
+                    int
                     a1 =
-                    (RS::From)
                     (int)
+                    
                     context->argument( 1 ).
                     toNumber();
                 

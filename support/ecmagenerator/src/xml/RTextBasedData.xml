@@ -115,7 +115,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="double" typeName="double" name="distance"
         isConst="false" />
-        <arg type="RS::From" typeName="RS::From" name="from"
+        <arg type="int" typeName="int" name="from"
         hasDefault="true" default="RS :: FromAny"
         isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"

@@ -116,6 +116,9 @@
         removeVerticesBefore
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isEmpty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setVertices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
