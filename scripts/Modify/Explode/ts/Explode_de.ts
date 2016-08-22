@@ -93,16 +93,17 @@
         <translation>Aufbrechen</translation>
     </message>
     <message>
+        <location filename="../PreferencesPage.ui" line="+133"/>
         <source>Spline segments:</source>
-        <translation type="vanished">Splinesegmente:</translation>
+        <translation>Splinesegmente:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location line="-7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Ellipsensegmente (Vollellipse):</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="-7"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline Toleranz:</translation>
     </message>

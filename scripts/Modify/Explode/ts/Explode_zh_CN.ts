@@ -93,12 +93,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location filename="../PreferencesPage.ui" line="+126"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+7"/>
+        <source>Spline segments:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-14"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>

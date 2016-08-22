@@ -129,16 +129,17 @@ Oculte (congele) todos os carimbos</translatorcomment>
         <translation>Fragmente</translation>
     </message>
     <message>
+        <location filename="../PreferencesPage.ui" line="+133"/>
         <source>Spline segments:</source>
-        <translation type="vanished">Segmentos de spline:</translation>
+        <translation>Segmentos de spline:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location line="-7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmentos de elipse (por elipse inteira):</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="-7"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolerância:</translation>
     </message>

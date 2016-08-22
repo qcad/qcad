@@ -105,16 +105,17 @@ Sombreado/Relleno</translatorcomment>
         <translation>Expota</translation>
     </message>
     <message>
+        <location filename="../PreferencesPage.ui" line="+133"/>
         <source>Spline segments:</source>
-        <translation type="vanished">Segmentos de spline:</translation>
+        <translation>Segmentos de spline:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location line="-7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmentos de elipse:</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="-7"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolerancia:</translation>
     </message>

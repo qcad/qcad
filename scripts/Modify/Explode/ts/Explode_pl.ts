@@ -137,18 +137,19 @@ Wybuch
         <translation type="unfinished">&amp;Rozbij</translation>
     </message>
     <message>
+        <location filename="../PreferencesPage.ui" line="+133"/>
         <source>Spline segments:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Segmenty splajnu:</translation>
+        <translation type="unfinished">Segmenty splajnu:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location line="-7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Segmenty elipsy (na pełnej elipsy):</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="-7"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>

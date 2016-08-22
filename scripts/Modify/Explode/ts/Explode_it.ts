@@ -101,16 +101,17 @@
         <translation>Esplodi</translation>
     </message>
     <message>
+        <location filename="../PreferencesPage.ui" line="+133"/>
         <source>Spline segments:</source>
-        <translation type="vanished">Segmenti di spline:</translation>
+        <translation>Segmenti di spline:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location line="-7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmenti di ellisse:</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="-7"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolleranza:</translation>
     </message>

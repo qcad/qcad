@@ -93,16 +93,17 @@
         <translation>&amp;Räjäytä</translation>
     </message>
     <message>
+        <location filename="../PreferencesPage.ui" line="+133"/>
         <source>Spline segments:</source>
-        <translation type="vanished">Käyrän segmentit:</translation>
+        <translation>Käyrän segmentit:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location line="-7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Ellipsin segmentit (koko ellipsissä):</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="-7"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>

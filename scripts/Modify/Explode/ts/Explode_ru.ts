@@ -93,16 +93,17 @@
         <translation>&amp;Разрушить</translation>
     </message>
     <message>
+        <location filename="../PreferencesPage.ui" line="+133"/>
         <source>Spline segments:</source>
-        <translation type="vanished">Сегменты кривых:</translation>
+        <translation>Сегменты кривых:</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location line="-7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Сегменты эллипса (от полного эллипса):</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="-7"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>
