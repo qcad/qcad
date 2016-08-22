@@ -37,6 +37,11 @@ Explode.prototype.beginEvent = function() {
     this.terminate();
 };
 
+/**
+ * Explodes all selected entities.
+ * \param di Document interface
+ * \param action Action object (used to assign text to transaction), optional
+ */
 Explode.explodeSelection = function(di, action) {
     var document = di.getDocument();
     var storage = document.getStorage();
