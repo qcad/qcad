@@ -47,7 +47,7 @@
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>&amp;Spine</translation>
+        <translation>Spine</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -101,14 +101,18 @@
         <translation>Esplodi</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Spline segments:</source>
-        <translation>Segmenti di spline:</translation>
+        <translation type="vanished">Segmenti di spline:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmenti di ellisse:</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Spline approximation tolerance:</source>
+        <translation>Spline tolleranza:</translation>
     </message>
 </context>
 </TS>

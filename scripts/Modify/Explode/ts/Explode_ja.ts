@@ -93,14 +93,18 @@
         <translation>&amp;E 分解</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Spline segments:</source>
-        <translation>スプラインセグメント:</translation>
+        <translation type="vanished">スプラインセグメント:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>弧セグメント（楕円あたり）:</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Spline approximation tolerance:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

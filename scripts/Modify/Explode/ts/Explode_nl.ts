@@ -93,14 +93,18 @@
         <translation>&amp;Exploderen</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Spline segments:</source>
-        <translation>Spline segmenten:</translation>
+        <translation type="vanished">Spline segmenten:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Ellipse segmenten (per volledige ellips):</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Spline approximation tolerance:</source>
+        <translation>Spline tolerantie:</translation>
     </message>
 </context>
 </TS>

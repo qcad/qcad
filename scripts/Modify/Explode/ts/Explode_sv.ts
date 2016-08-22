@@ -94,12 +94,12 @@
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
-        <source>Spline segments:</source>
+        <source>Ellipse segments (per full ellipse):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+64"/>
-        <source>Ellipse segments (per full ellipse):</source>
+        <location line="+107"/>
+        <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

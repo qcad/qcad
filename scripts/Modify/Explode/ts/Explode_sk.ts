@@ -93,14 +93,18 @@
         <translation>&amp;Rozložiť</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Spline segments:</source>
-        <translation>Úsek Spline:</translation>
+        <translation type="vanished">Úsek Spline:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Úsek elipsy (celá elipsa):</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Spline approximation tolerance:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

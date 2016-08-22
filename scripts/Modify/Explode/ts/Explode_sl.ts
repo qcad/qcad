@@ -93,14 +93,18 @@
         <translation>&amp;Razbij</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Spline segments:</source>
-        <translation>Segmenti krivulj:</translation>
+        <translation type="vanished">Segmenti krivulj:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmenti elips (za cele elipse):</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Spline approximation tolerance:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
