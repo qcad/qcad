@@ -614,6 +614,10 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
             continue;
         }
 
+        if (shape->getLength()<0.001) {
+            continue;
+        }
+
         RVector v = directed->getStartPoint();
         if (!minV.isValid() || v.x<minV.x || (v.x==minV.x && v.y<minV.y)) {
             minV = v;
@@ -626,18 +630,25 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
 
     double l;
     RVector p;
+    QList<RVector> list;
     QSharedPointer<RArc> arcBefore = shapeBefore.dynamicCast<RArc>();
     if (!arcBefore.isNull()) {
         l = arcBefore->getLength();
-        p = arcBefore->getPointsWithDistanceToEnd(l/10, RS::FromStart)[0];
-        shapeBefore = QSharedPointer<RLine>(new RLine(p, arcBefore->getEndPoint()));
+        list = arcBefore->getPointsWithDistanceToEnd(l/10, RS::FromStart);
+        if (!list.isEmpty()) {
+            p = list[0];
+            shapeBefore = QSharedPointer<RLine>(new RLine(p, arcBefore->getEndPoint()));
+        }
     }
 
     QSharedPointer<RArc> arcAfter = shapeAfter.dynamicCast<RArc>();
     if (!arcAfter.isNull()) {
         l = arcAfter->getLength();
-        p = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromEnd)[0];
-        shapeAfter = QSharedPointer<RLine>(new RLine(arcAfter->getStartPoint(), p));
+        list = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromEnd);
+        if (!list.isEmpty()) {
+            p = list[0];
+            shapeAfter = QSharedPointer<RLine>(new RLine(arcAfter->getStartPoint(), p));
+        }
     }
 
     if (shapeBefore.isNull() || shapeAfter.isNull()) {
@@ -1629,7 +1640,7 @@ bool RPolyline::simplify(double angleTolerance) {
             if (arc->getCenter().equalsFuzzy(center, 0.001) && RMath::fuzzyCompare(arc->getRadius(), radius, 0.001)) {
                 double a1 = arc->getStartAngle();
                 arc->setStartAngle(arc->getCenter().getAngleTo(newPolyline.getEndPoint()));
-                if (arc->getSweep()<=M_PI) {
+                if (fabs(arc->getSweep())<=M_PI) {
                     newPolyline.removeLastVertex();
                 }
                 else {
