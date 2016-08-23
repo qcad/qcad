@@ -304,6 +304,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getOrientation" cppName="getOrientation"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RS::Orientation" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="implicitelyClosed"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="getLength" cppName="getLength" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />

@@ -150,6 +150,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, autoClose, "autoClose");
             
+            REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
+            
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
             REcmaHelper::registerFunction(&engine, proto, getLengthTo, "getLengthTo");
@@ -3595,6 +3597,87 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::autoClose", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::getOrientation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getOrientation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getOrientation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("getOrientation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Orientation'
+    RS::Orientation cppResult =
+        
+               self->getOrientation();
+        // return type: RS::Orientation
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Orientation'
+    RS::Orientation cppResult =
+        
+               self->getOrientation(a0);
+        // return type: RS::Orientation
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getOrientation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getOrientation", context, engine);
             return result;
         }
          QScriptValue
