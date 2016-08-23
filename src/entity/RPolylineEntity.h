@@ -230,6 +230,10 @@ public:
         data.autoClose();
     }
 
+    RS::Orientation getOrientation(bool implicitelyClosed = false) const {
+        return data.getOrientation(implicitelyClosed);
+    }
+
     double getLength() const {
         return data.getLength();
     }

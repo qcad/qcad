@@ -163,6 +163,10 @@ public:
         RPolyline::autoClose();
     }
 
+    RS::Orientation getOrientation(bool implicitelyClosed = false) const {
+        return RPolyline::getOrientation(implicitelyClosed);
+    }
+
     QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const {
         return RPolyline::getExploded(segments);
     }
