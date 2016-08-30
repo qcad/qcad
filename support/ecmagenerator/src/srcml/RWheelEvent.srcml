@@ -46,7 +46,7 @@
             <param><decl><type><name>RGraphicsScene</name>&amp;</type> <name>s</name></decl></param>, <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <constructor_decl><name>RWheelEvent</name><parameter_list>(<param><decl><type><name>const</name> <name>QWheelEvent</name>&amp;</type> <name>wheelEvent</name></decl></param>, <param><decl><type><name>RGraphicsScene</name>&amp;</type> <name>s</name></decl></param>,
-            <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</constructor_decl>
+            <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>devicePixelRatio</name> =<init> <expr>1.0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <destructor_decl><specifier>virtual</specifier> <name>~RWheelEvent</name><parameter_list>()</parameter_list>;</destructor_decl>
 

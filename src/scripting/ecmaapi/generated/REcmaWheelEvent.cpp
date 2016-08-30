@@ -448,6 +448,139 @@
                 
     } else 
 
+    if( context->argumentCount() ==
+        4
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                ) /* type: QWheelEvent */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RGraphicsScene */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isNull()
+                ) /* type: RGraphicsView */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isNumber()
+                ) /* type: qreal */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QWheelEvent*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QWheelEvent*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RWheelEvent: Argument 0 is not of type QWheelEvent*.",
+                               context);                    
+                    }
+                    QWheelEvent& a0 = *ap0;
+                
+                    // argument is reference
+                    RGraphicsScene*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RGraphicsScene*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RWheelEvent: Argument 1 is not of type RGraphicsScene*.",
+                               context);                    
+                    }
+                    RGraphicsScene& a1 = *ap1;
+                
+                    // argument is reference
+                    RGraphicsView*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RGraphicsView*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RWheelEvent: Argument 2 is not of type RGraphicsView*.",
+                               context);                    
+                    }
+                    RGraphicsView& a2 = *ap2;
+                
+                    // argument isStandardType
+                    qreal
+                    a3 =
+                    (qreal)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RWheelEvent
+                    * cppResult =
+                    new
+                    RWheelEvent
+                    (
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RWheelEvent(): no matching constructor found."),
