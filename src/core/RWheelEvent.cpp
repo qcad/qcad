@@ -33,9 +33,9 @@ RWheelEvent::RWheelEvent(const RVector& position, int delta,
 }
 
 RWheelEvent::RWheelEvent(const QWheelEvent& wheelEvent, RGraphicsScene& s,
-        RGraphicsView& v) :
+        RGraphicsView& v, qreal devicePixelRatio) :
     QWheelEvent(wheelEvent),
-    RInputEvent(RVector(wheelEvent.pos().x(), wheelEvent.pos().y()), s, v) {
+    RInputEvent(RVector(wheelEvent.pos().x(), wheelEvent.pos().y()), s, v, devicePixelRatio) {
 }
 
 RWheelEvent::~RWheelEvent() {

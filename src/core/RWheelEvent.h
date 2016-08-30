@@ -45,7 +45,7 @@ public:
             RGraphicsScene& s, RGraphicsView& v);
 
     RWheelEvent(const QWheelEvent& wheelEvent, RGraphicsScene& s,
-            RGraphicsView& v);
+            RGraphicsView& v, qreal devicePixelRatio = 1.0);
 
     virtual ~RWheelEvent();
 

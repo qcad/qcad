@@ -306,7 +306,7 @@ void RGraphicsViewQt::wheelEvent(QWheelEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
-    RWheelEvent e(*event, *scene, *this);
+    RWheelEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleWheelEvent(e);
     event->accept();
 }
