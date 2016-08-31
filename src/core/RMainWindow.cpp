@@ -717,17 +717,6 @@ bool RMainWindow::readSettings() {
         ret = true;
     }
 
-    // get total available width on all screens:
-    int totalWidth = 0;
-    for (int i=0; i<QApplication::desktop()->screenCount(); i++) {
-        totalWidth+=QApplication::desktop()->availableGeometry(0).width();
-    }
-
-    // sanity check for x:
-    if (x>totalWidth-100) {
-        move(100, y);
-    }
-
     resize(width, height);
     return ret;
 }

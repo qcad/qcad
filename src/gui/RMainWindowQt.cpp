@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QtGui>
+#include <QDesktopWidget>
 #include <QLabel>
 #include <QMenu>
 #include <QMdiArea>
@@ -480,6 +481,26 @@ bool RMainWindowQt::readSettings() {
     bool statusBarOn = RSettings::getQSettings()->value("Appearance/StatusBar", true).toBool();
     if (!statusBarOn) {
         statusBar()->hide();
+    }
+
+    // get total available width on all screens:
+    int totalWidth = 0;
+    for (int i=0; i<QApplication::desktop()->screenCount(); i++) {
+        totalWidth+=QApplication::desktop()->availableGeometry(i).width();
+    }
+
+    // sanity check for x:
+    if (x()>totalWidth-100) {
+        move(totalWidth-width(), y());
+    }
+
+    // make sure all tool bars are visible:
+    QList<QToolBar*> tbs = findChildren<QToolBar*>();
+    for (int i=0; i<tbs.length(); i++) {
+        QToolBar* tb = tbs[i];
+        if (tb->x()>totalWidth-50) {
+            tb->move(totalWidth - tb->width(), tb->y());
+        }
     }
 
     return ret;
