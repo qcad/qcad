@@ -60,9 +60,6 @@
         getParentLayerId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getParentLayerName
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -106,6 +103,27 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isSelectedForPropertyEditing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasChildLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getChildLayerNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getParentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShortLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayerNameHierarchy
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHierarchySeparator
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
