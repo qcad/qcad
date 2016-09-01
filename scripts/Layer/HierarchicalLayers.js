@@ -27,21 +27,25 @@ function HierarchicalLayers() {
 HierarchicalLayers.separator = RLayer.getHierarchySeparator();
 
 HierarchicalLayers.hasChildLayers = function(doc, layerName) {
-    return RLayer.hasChildLayers(doc, layerName);
+    return RLayer.hasChildLayersStatic(doc, layerName);
 };
 
 HierarchicalLayers.getChildLayerNames = function(doc, layerName, recursive) {
-    return RLayer.getChildLayerNames(doc, layerName, recursive);
+    if (isNull(recursive)) {
+        recursive = true;
+    }
+
+    return RLayer.getChildLayerNamesStatic(doc, layerName, recursive);
 };
 
 HierarchicalLayers.getParentLayerName = function(layerName) {
-    return RLayer.getParentLayerName(layerName);
+    return RLayer.getParentLayerNameStatic(layerName);
 };
 
 HierarchicalLayers.getShortLayerName = function(layerName) {
-    return RLayer.getShortLayerName(layerName);
+    return RLayer.getShortLayerNameStatic(layerName);
 };
 
 HierarchicalLayers.getLayerNameHierarchy = function(layerName) {
-    return RLayer.getLayerNameHierarchy(layerName);
+    return RLayer.getLayerNameHierarchyStatic(layerName);
 };

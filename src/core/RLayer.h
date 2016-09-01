@@ -139,7 +139,7 @@ public:
         if (doc==NULL) {
             return false;
         }
-        return RLayer::hasChildLayers(doc, getName());
+        return RLayer::hasChildLayersStatic(doc, getName());
     }
 
     QList<QString> getChildLayerNames(bool recursive = true) const {
@@ -147,19 +147,19 @@ public:
         if (doc==NULL) {
             return QList<QString>();
         }
-        return RLayer::getChildLayerNames(doc, getName(), recursive);
+        return RLayer::getChildLayerNamesStatic(doc, getName(), recursive);
     }
 
     QString getParentLayerName() const {
-        return RLayer::getParentLayerName(getName());
+        return RLayer::getParentLayerNameStatic(getName());
     }
 
     QString getShortLayerName() const {
-        return RLayer::getShortLayerName(getName());
+        return RLayer::getShortLayerNameStatic(getName());
     }
 
     QList<QString> getLayerNameHierarchy() const {
-        return RLayer::getLayerNameHierarchy(getName());
+        return RLayer::getLayerNameHierarchyStatic(getName());
     }
 
     static QString getHierarchySeparator() {
@@ -169,35 +169,35 @@ public:
         return "";
     }
 
-    static bool hasChildLayers(const RDocument* doc, const QString& layerName) {
+    static bool hasChildLayersStatic(const RDocument* doc, const QString& layerName) {
         if (layerProxy!=NULL) {
             return layerProxy->hasChildLayers(doc, layerName);
         }
         return false;
     }
 
-    static QList<QString> getChildLayerNames(const RDocument* doc, const QString& layerName, bool recursive = true) {
+    static QList<QString> getChildLayerNamesStatic(const RDocument* doc, const QString& layerName, bool recursive = true) {
         if (layerProxy!=NULL) {
             return layerProxy->getChildLayerNames(doc, layerName, recursive);
         }
         return QList<QString>();
     }
 
-    static QString getParentLayerName(const QString& layerName) {
+    static QString getParentLayerNameStatic(const QString& layerName) {
         if (layerProxy!=NULL) {
             return layerProxy->getParentLayerName(layerName);
         }
         return QString();
     }
 
-    static QString getShortLayerName(const QString& layerName) {
+    static QString getShortLayerNameStatic(const QString& layerName) {
         if (layerProxy!=NULL) {
             return layerProxy->getShortLayerName(layerName);
         }
         return QString();
     }
 
-    static QList<QString> getLayerNameHierarchy(const QString& layerName) {
+    static QList<QString> getLayerNameHierarchyStatic(const QString& layerName) {
         if (layerProxy!=NULL) {
             return layerProxy->getLayerNameHierarchy(layerName);
         }
