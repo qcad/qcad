@@ -17,52 +17,31 @@
  * along with QCAD.
  */
 
+/**
+ * HierarchicalLayers is provided for backwards compatibility.
+ * Use the functions provided in RLayer instead.
+ */
 function HierarchicalLayers() {
 }
 
-HierarchicalLayers.separator = " ... ";
+HierarchicalLayers.separator = RLayer.getHierarchySeparator();
 
 HierarchicalLayers.hasChildLayers = function(doc, layerName) {
-    return HierarchicalLayers.getChildLayerNames(doc, layerName).length!==0;
+    return RLayer.hasChildLayers(doc, layerName);
 };
 
 HierarchicalLayers.getChildLayerNames = function(doc, layerName, recursive) {
-    if (isNull(recursive)) {
-        recursive = true;
-    }
-
-    var ret = [];
-    var prefixLower = layerName.toLowerCase() + HierarchicalLayers.separator;
-    var names = doc.getLayerNames();
-    for (var i=0; i<names.length; i++) {
-        var name = names[i].toLowerCase();;
-        var nameLower = name.toLowerCase();
-        if (nameLower.startsWith(prefixLower)) {
-            if (recursive || !nameLower.substring(prefixLower.length).contains(HierarchicalLayers.separator)) {
-                ret.push(name);
-            }
-        }
-    }
-    return ret;
+    return RLayer.getChildLayerNames(doc, layerName, recursive);
 };
 
 HierarchicalLayers.getParentLayerName = function(layerName) {
-    var a = layerName.split(HierarchicalLayers.separator);
-
-    // top layer:
-    if (a.length===1) {
-        return "";
-    }
-
-    a.pop();
-    return a.join(HierarchicalLayers.separator);
+    return RLayer.getParentLayerName(layerName);
 };
 
 HierarchicalLayers.getShortLayerName = function(layerName) {
-    var a = HierarchicalLayers.getLayerNameHierarchy(layerName);
-    return a[a.length-1];
+    return RLayer.getShortLayerName(layerName);
 };
 
 HierarchicalLayers.getLayerNameHierarchy = function(layerName) {
-    return layerName.split(HierarchicalLayers.separator);
+    return RLayer.getLayerNameHierarchy(layerName);
 };

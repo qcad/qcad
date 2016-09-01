@@ -19,6 +19,8 @@
 #include "RLayer.h"
 #include "RDocument.h"
 
+RLayerProxy* RLayer::layerProxy = NULL;
+
 RPropertyTypeId RLayer::PropertyCustom;
 RPropertyTypeId RLayer::PropertyType;
 RPropertyTypeId RLayer::PropertyHandle;
@@ -97,18 +99,6 @@ RLayer::Id RLayer::getParentLayerId() const {
     }
 
     return doc->getLayerId(parentLayerName);
-}
-
-QString RLayer::getParentLayerName() const {
-    QStringList a = name.split(" ... ");
-
-    // top layer:
-    if (a.length()==1) {
-        return "";
-    }
-
-    a.removeLast();
-    return a.join(" ... ");
 }
 
 void RLayer::setName(const QString& n) {
