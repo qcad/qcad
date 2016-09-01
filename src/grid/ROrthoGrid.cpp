@@ -230,8 +230,10 @@ void ROrthoGrid::update(bool force) {
         }
     }
 
+    int minDevicePixelSpacing = minPixelSpacing * RSettings::getDevicePixelRatio();
+
     // auto scale grid:
-    QList<RVector> s = getIdealSpacing(minPixelSpacing, minSpacing, minMetaSpacing);
+    QList<RVector> s = getIdealSpacing(minDevicePixelSpacing, minSpacing, minMetaSpacing);
     if (RSettings::getAutoScaleGrid()) {
         autoSpacing = spacing = s.at(0);
     }
@@ -240,16 +242,16 @@ void ROrthoGrid::update(bool force) {
     }
 
     // switch grid off below given pixel limit:
-    if (view.mapDistanceToView(spacing.x) < minPixelSpacing) {
+    if (view.mapDistanceToView(spacing.x) < minDevicePixelSpacing) {
         spacing = RVector::invalid;
     }
-    if (view.mapDistanceToView(metaSpacing.x) < minPixelSpacing) {
+    if (view.mapDistanceToView(metaSpacing.x) < minDevicePixelSpacing) {
         metaSpacing = RVector::invalid;
     }
-    if (view.mapDistanceToView(spacing.y) < minPixelSpacing) {
+    if (view.mapDistanceToView(spacing.y) < minDevicePixelSpacing) {
         spacing = RVector::invalid;
     }
-    if (view.mapDistanceToView(metaSpacing.y) < minPixelSpacing) {
+    if (view.mapDistanceToView(metaSpacing.y) < minDevicePixelSpacing) {
         metaSpacing = RVector::invalid;
     }
 
