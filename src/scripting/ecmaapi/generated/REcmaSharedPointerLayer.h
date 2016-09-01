@@ -125,6 +125,21 @@
         getHierarchySeparator
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasChildLayersStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getChildLayerNamesStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getParentLayerNameStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShortLayerNameStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayerNameHierarchyStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

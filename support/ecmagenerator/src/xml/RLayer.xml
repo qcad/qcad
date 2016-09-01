@@ -158,12 +158,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="RDocument *" typeName="RDocument *" name="doc"
-        isConst="true" />
-        <arg type="QString &amp;" typeName="QString"
-        name="layerName" isConst="true" />
-      </variant>
     </method>
     <method name="getChildLayerNames" cppName="getChildLayerNames"
     specifier="public" isStatic="false" isVirtual="false"
@@ -173,6 +167,41 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="recursive"
         hasDefault="true" default="true" isConst="false" />
       </variant>
+    </method>
+    <method name="getParentLayerName" cppName="getParentLayerName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getShortLayerName" cppName="getShortLayerName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getLayerNameHierarchy"
+    cppName="getLayerNameHierarchy" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QString &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getHierarchySeparator"
+    cppName="getHierarchySeparator" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="hasChildLayersStatic"
+    cppName="hasChildLayersStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RDocument *" typeName="RDocument *" name="doc"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getChildLayerNamesStatic"
+    cppName="getChildLayerNamesStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; QString &gt;"
       isPureVirtual="false">
         <arg type="RDocument *" typeName="RDocument *" name="doc"
@@ -183,39 +212,30 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
-    <method name="getParentLayerName" cppName="getParentLayerName"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
+    <method name="getParentLayerNameStatic"
+    cppName="getParentLayerNameStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
       </variant>
     </method>
-    <method name="getShortLayerName" cppName="getShortLayerName"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
+    <method name="getShortLayerNameStatic"
+    cppName="getShortLayerNameStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
       </variant>
     </method>
-    <method name="getLayerNameHierarchy"
-    cppName="getLayerNameHierarchy" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QList &lt; QString &gt;"
-      isPureVirtual="false" />
+    <method name="getLayerNameHierarchyStatic"
+    cppName="getLayerNameHierarchyStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; QString &gt;"
       isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
       </variant>
-    </method>
-    <method name="getHierarchySeparator"
-    cppName="getHierarchySeparator" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
     </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

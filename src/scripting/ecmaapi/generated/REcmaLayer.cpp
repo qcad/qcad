@@ -127,6 +127,16 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getHierarchySeparator, "getHierarchySeparator");
             
+            REcmaHelper::registerFunction(&engine, &ctor, hasChildLayersStatic, "hasChildLayersStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getChildLayerNamesStatic, "getChildLayerNamesStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getParentLayerNameStatic, "getParentLayerNameStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getShortLayerNameStatic, "getShortLayerNameStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getLayerNameHierarchyStatic, "getLayerNameHierarchyStatic");
+            
             REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
 
@@ -2398,58 +2408,6 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RDocument * */
-     && (
-            context->argument(1).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    RDocument * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<RDocument >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RLayer: Argument 0 is not of type RDocument *RDocument *.", context);                    
-                    }
-                
-                    // argument isStandardType
-                    QString
-                    a1 =
-                    (QString)
-                    
-                    context->argument( 1 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->hasChildLayers(a0
-        ,
-    a1);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.hasChildLayers().",
                    context);
@@ -2531,6 +2489,280 @@
 
 
         
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getChildLayerNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::getChildLayerNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::getParentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::getParentLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getParentLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("getParentLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getParentLayerName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getParentLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::getParentLayerName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::getShortLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::getShortLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getShortLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("getShortLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getShortLayerName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getShortLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::getShortLayerName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::getLayerNameHierarchy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::getLayerNameHierarchy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getLayerNameHierarchy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("getLayerNameHierarchy", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QString >'
+    QList < QString > cppResult =
+        
+               self->getLayerNameHierarchy();
+        // return type: QList < QString >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getLayerNameHierarchy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::getLayerNameHierarchy", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::getHierarchySeparator
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::getHierarchySeparator", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getHierarchySeparator";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RLayer::
+       getHierarchySeparator();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getHierarchySeparator().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::getHierarchySeparator", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::hasChildLayersStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::hasChildLayersStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::hasChildLayersStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RLayer: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RLayer::
+       hasChildLayersStatic(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.hasChildLayersStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::hasChildLayersStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::getChildLayerNamesStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::getChildLayerNamesStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getChildLayerNamesStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
     
     if( context->argumentCount() ==
     2 && (
@@ -2571,8 +2803,8 @@
     // call C++ function:
     // return type 'QList < QString >'
     QList < QString > cppResult =
-        
-               self->getChildLayerNames(a0
+        RLayer::
+       getChildLayerNamesStatic(a0
         ,
     a1);
         // return type: QList < QString >
@@ -2634,8 +2866,8 @@
     // call C++ function:
     // return type 'QList < QString >'
     QList < QString > cppResult =
-        
-               self->getChildLayerNames(a0
+        RLayer::
+       getChildLayerNamesStatic(a0
         ,
     a1
         ,
@@ -2649,54 +2881,23 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getChildLayerNames().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getChildLayerNamesStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLayer::getChildLayerNames", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::getChildLayerNamesStatic", context, engine);
             return result;
         }
          QScriptValue
-        REcmaLayer::getParentLayerName
+        REcmaLayer::getParentLayerNameStatic
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLayer::getParentLayerName", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getParentLayerName";
+            //REcmaHelper::functionStart("REcmaLayer::getParentLayerNameStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getParentLayerNameStatic";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLayer* self = 
-                        getSelf("getParentLayerName", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        
-               self->getParentLayerName();
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
     
     if( context->argumentCount() ==
     1 && (
@@ -2714,214 +2915,13 @@
                     context->argument( 0 ).
                     toString();
                 
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        
-               self->getParentLayerName(a0);
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getParentLayerName().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLayer::getParentLayerName", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaLayer::getShortLayerName
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLayer::getShortLayerName", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getShortLayerName";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLayer* self = 
-                        getSelf("getShortLayerName", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        
-               self->getShortLayerName();
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        
-               self->getShortLayerName(a0);
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getShortLayerName().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLayer::getShortLayerName", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaLayer::getLayerNameHierarchy
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLayer::getLayerNameHierarchy", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getLayerNameHierarchy";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLayer* self = 
-                        getSelf("getLayerNameHierarchy", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QString >'
-    QList < QString > cppResult =
-        
-               self->getLayerNameHierarchy();
-        // return type: QList < QString >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QString >'
-    QList < QString > cppResult =
-        
-               self->getLayerNameHierarchy(a0);
-        // return type: QList < QString >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getLayerNameHierarchy().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLayer::getLayerNameHierarchy", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaLayer::getHierarchySeparator
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLayer::getHierarchySeparator", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getHierarchySeparator";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
     // end of arguments
 
     // call C++ function:
     // return type 'QString'
     QString cppResult =
         RLayer::
-       getHierarchySeparator();
+       getParentLayerNameStatic(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2931,10 +2931,110 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getHierarchySeparator().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getParentLayerNameStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLayer::getHierarchySeparator", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::getParentLayerNameStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::getShortLayerNameStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::getShortLayerNameStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getShortLayerNameStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RLayer::
+       getShortLayerNameStatic(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getShortLayerNameStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::getShortLayerNameStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::getLayerNameHierarchyStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::getLayerNameHierarchyStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getLayerNameHierarchyStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QString >'
+    QList < QString > cppResult =
+        RLayer::
+       getLayerNameHierarchyStatic(a0);
+        // return type: QList < QString >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getLayerNameHierarchyStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::getLayerNameHierarchyStatic", context, engine);
             return result;
         }
          QScriptValue
