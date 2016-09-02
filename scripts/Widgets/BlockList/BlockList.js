@@ -249,12 +249,12 @@ RBlockListQt.prototype.getBlockItem = function(block) {
 };
 
 RBlockListQt.prototype.updateItemIcons = function(item, block) {
-    var iconName = BlockList.includeBasePath + "/Visible%1.svg".arg(Number(!block.isFrozen()));
+    var iconName = autoIconPath(BlockList.includeBasePath + "/Visible%1.svg".arg(Number(!block.isFrozen())));
     item.setIcon(BlockList.colVisible, new QIcon(iconName));
 
     var doc = this.di.getDocument();
     var currentBlockId = doc.getCurrentBlockId();
-    iconName = BlockList.includeBasePath + "/Edit%1.svg".arg(Number(block.getId()===currentBlockId));
+    iconName = autoIconPath(BlockList.includeBasePath + "/Edit%1.svg".arg(Number(block.getId()===currentBlockId)));
     item.setIcon(BlockList.colEdit, new QIcon(iconName));
 };
 
