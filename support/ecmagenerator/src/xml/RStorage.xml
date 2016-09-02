@@ -998,6 +998,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isParentLayerFrozen"
+    cppName="isParentLayerFrozen" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="isBlockFrozen" cppName="isBlockFrozen"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

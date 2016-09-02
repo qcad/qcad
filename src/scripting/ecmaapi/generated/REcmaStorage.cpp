@@ -299,6 +299,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isLayerFrozen, "isLayerFrozen");
             
+            REcmaHelper::registerFunction(&engine, proto, isParentLayerFrozen, "isParentLayerFrozen");
+            
             REcmaHelper::registerFunction(&engine, proto, isBlockFrozen, "isBlockFrozen");
             
             REcmaHelper::registerFunction(&engine, proto, setObjectId, "setObjectId");
@@ -8507,6 +8509,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::isLayerFrozen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::isParentLayerFrozen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::isParentLayerFrozen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::isParentLayerFrozen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("isParentLayerFrozen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isParentLayerFrozen(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.isParentLayerFrozen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::isParentLayerFrozen", context, engine);
             return result;
         }
          QScriptValue
