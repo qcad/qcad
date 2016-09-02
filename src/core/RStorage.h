@@ -518,6 +518,7 @@ public:
 
     virtual bool isLayerLocked(RLayer::Id layerId) const;
     virtual bool isLayerFrozen(RLayer::Id layerId) const;
+    virtual bool isParentLayerFrozen(RLayer::Id layerId) const;
 
     virtual bool isBlockFrozen(RBlock::Id blockId) const {
         QSharedPointer<RBlock> b = queryBlockDirect(blockId);

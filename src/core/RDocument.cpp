@@ -1905,6 +1905,13 @@ bool RDocument::isLayerFrozen(RLayer::Id layerId) const {
 }
 
 /**
+ * \copydoc RStorage::isParentLayerFrozen
+ */
+bool RDocument::isParentLayerFrozen(RLayer::Id layerId) const {
+    return storage.isParentLayerFrozen(layerId);
+}
+
+/**
  * \copydoc RStorage::isBlockFrozen
  */
 bool RDocument::isBlockFrozen(RBlock::Id blockId) const {

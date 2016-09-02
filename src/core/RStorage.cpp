@@ -821,6 +821,9 @@ bool RStorage::isLayerLocked(RLayer::Id layerId) const {
     return l->isLocked();
 }
 
+/**
+ * \return True if this layer or one of its parent layers are frozen.
+ */
 bool RStorage::isLayerFrozen(RLayer::Id layerId) const {
     QSharedPointer<RLayer> l = queryLayerDirect(layerId);
     if (l.isNull()) {
@@ -829,6 +832,25 @@ bool RStorage::isLayerFrozen(RLayer::Id layerId) const {
     if (l->isFrozen()) {
         return true;
     }
+    return isParentLayerFrozen(layerId);
+}
+
+/**
+ * \return True if a parent layer of the given layer is frozen.
+ */
+bool RStorage::isParentLayerFrozen(RLayer::Id layerId) const {
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
     RLayer::Id parentLayerId = l->getParentLayerId();
-    return isLayerFrozen(parentLayerId);
+    if (parentLayerId==RLayer::INVALID_ID) {
+        // no parent:
+        return false;
+    }
+    QSharedPointer<RLayer> pl = queryLayerDirect(parentLayerId);
+    if (pl->isFrozen()) {
+        return true;
+    }
+    return isParentLayerFrozen(parentLayerId);
 }
