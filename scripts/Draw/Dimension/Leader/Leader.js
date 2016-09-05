@@ -248,9 +248,9 @@ Leader.prototype.slotArrowHeadChanged = function(v) {
     di.clearPreview();
     var op = this.getOperation(false);
     if (!isNull(op)) {
-        //if (this.leaderEntity.countVertices() >= 2) {
+        if (this.leaderEntity.countVertices() >= 2) {
             this.applyOperation(op);
-        //}
+        }
     }
     this.updatePreview();
 };
