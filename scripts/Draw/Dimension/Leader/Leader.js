@@ -203,7 +203,7 @@ Leader.prototype.applyOperation = function(op) {
     var document = this.getDocument();
     var transaction = di.applyOperation(op);
 
-    // find out ID of polyline, that was added to the document:
+    // find out ID of leader, that was added to the document:
     var ids = transaction.getAffectedObjects();
     for (var i=0; i<ids.length; ++i) {
         var id = ids[i];
@@ -248,7 +248,9 @@ Leader.prototype.slotArrowHeadChanged = function(v) {
     di.clearPreview();
     var op = this.getOperation(false);
     if (!isNull(op)) {
-        this.applyOperation(op);
+        //if (this.leaderEntity.countVertices() >= 2) {
+            this.applyOperation(op);
+        //}
     }
     this.updatePreview();
 };
