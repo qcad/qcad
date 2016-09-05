@@ -217,7 +217,7 @@
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation>Eigenschaften des aktuellen Blocks und des aktuallen Layers anzeigen</translation>
+        <translation>Eigenschaften des aktuellen Blocks und des aktuellen Layers anzeigen</translation>
     </message>
 </context>
 </TS>
