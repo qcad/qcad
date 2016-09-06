@@ -84,10 +84,11 @@ QList<QPair<QString, RPattern*> > RPattern::loadAllFrom(const QString& fileName)
         if (pattern!=NULL) {
             QStringList parts = line.split(',', QString::SkipEmptyParts);
             if (parts.length()<5) {
-                qWarning() << "RPattern::loadAllFrom: pattern error.";
-                delete pattern;
-                ret.removeLast();
-                break;
+                // 20160906: silently ignore invalid lines:
+                //qWarning() << "RPattern::loadAllFrom: ignoring line: " << line << " in pattern " << fileName;
+                //delete pattern;
+                //ret.removeLast();
+                continue;
             }
 
             RPatternLine patternLine;
