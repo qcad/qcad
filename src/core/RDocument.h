@@ -199,6 +199,7 @@ public:
     );
     bool isSelected(REntity::Id entityId);
     bool isLayerLocked(RLayer::Id layerId) const;
+    bool isParentLayerLocked(RLayer::Id layerId) const;
     bool isEntityEditable(REntity::Id entityId) const;
     //bool isEntityLayerLocked(REntity::Id entityId) const;
     bool isLayerFrozen(RLayer::Id layerId) const;

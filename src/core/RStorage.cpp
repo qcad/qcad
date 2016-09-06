@@ -818,7 +818,30 @@ bool RStorage::isLayerLocked(RLayer::Id layerId) const {
     if (l.isNull()) {
         return false;
     }
-    return l->isLocked();
+    if (l->isLocked()) {
+        return true;
+    }
+    return isParentLayerLocked(layerId);
+}
+
+/**
+ * \return True if a parent layer of the given layer is locked.
+ */
+bool RStorage::isParentLayerLocked(RLayer::Id layerId) const {
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
+    RLayer::Id parentLayerId = l->getParentLayerId();
+    if (parentLayerId==RLayer::INVALID_ID) {
+        // no parent:
+        return false;
+    }
+    QSharedPointer<RLayer> pl = queryLayerDirect(parentLayerId);
+    if (pl->isLocked()) {
+        return true;
+    }
+    return isParentLayerLocked(parentLayerId);
 }
 
 /**
