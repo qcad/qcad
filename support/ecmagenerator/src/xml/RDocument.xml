@@ -593,6 +593,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isParentLayerLocked"
+    cppName="isParentLayerLocked" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="isEntityEditable" cppName="isEntityEditable"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

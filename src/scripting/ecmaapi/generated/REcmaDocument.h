@@ -225,6 +225,9 @@
         isLayerLocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isParentLayerLocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isEntityEditable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
