@@ -246,7 +246,7 @@ Circle2TR.prototype.getCircles2TR = function(preview) {
         return undefined;
     }
 
-    var i,k,ips;
+    var i,k,ips,s;
 
     if (isNull(this.candidates)) {
         var offset1 = ShapeAlgorithms.getOffsetShapes(this.shape1, this.radius, 1, RS.BothSides);
@@ -254,14 +254,14 @@ Circle2TR.prototype.getCircles2TR = function(preview) {
 
         if (isCircleShape(this.shape1) || isArcShape(this.shape1)) {
             if (this.radius>this.shape1.getRadius()) {
-                var s = this.shape1.clone();
+                s = this.shape1.clone();
                 s.setRadius(this.radius - this.shape1.getRadius());
                 offset1.push(s);
             }
         }
         if (isCircleShape(this.shape2) || isArcShape(this.shape2)) {
             if (this.radius>this.shape2.getRadius()) {
-                var s = this.shape2.clone();
+                s = this.shape2.clone();
                 s.setRadius(this.radius - this.shape2.getRadius());
                 offset2.push(s);
             }
@@ -270,7 +270,11 @@ Circle2TR.prototype.getCircles2TR = function(preview) {
         var centerPoints = [];
         for (i=0; i<offset1.length; i++) {
             for (k=0; k<offset2.length; k++) {
-                ips = offset1[i].getIntersectionPoints(offset2[k].data(), false);
+                s = offset2[k];
+                if (isFunction(s.data)) {
+                    s = s.data();
+                }
+                ips = offset1[i].getIntersectionPoints(s, false);
                 centerPoints = centerPoints.concat(ips);
             }
         }
