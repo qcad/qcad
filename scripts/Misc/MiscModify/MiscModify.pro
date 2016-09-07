@@ -4,6 +4,7 @@ SUBDIRS = \
     ts \
     ArcChangeDirection \
     ChangeFontToArial \
+    ConvertToInch \
     FlushBackLog \
     ReloadLinetypes \
     SplineToLine
