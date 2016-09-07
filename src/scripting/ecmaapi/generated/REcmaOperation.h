@@ -63,6 +63,9 @@
         setAllowInvisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAllowAll
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setTransactionGroup
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

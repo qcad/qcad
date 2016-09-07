@@ -518,6 +518,7 @@
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isLayerLocked</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isParentLayerLocked</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isLayerFrozen</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isParentLayerFrozen</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -661,10 +662,27 @@
      */</comment>
     <function_decl><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>RStorage</name>&amp;</type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
 
+    <comment type="block">/**
+     * Resets the modified flag. Modification time is stored.
+     */</comment>
     <function_decl><type><name>void</name></type> <name>setModified</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
 
+    <comment type="block">/**
+     * \return True if the document has unsaved changes.
+     */</comment>
     <function><type><name>bool</name></type> <name>isModified</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>modified</name></expr>;</return>
+        <return>return <expr><name>lastModified</name>.<call><name>isValid</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>QDateTime</name></type> <name>getLastModifiedDateTime</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>lastModified</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getLastModified</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>lastModified</name>.<call><name>toString</name><argument_list>(<argument><expr>"yyyyMMddHHmmsszzz"</expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>void</name></type> <name>addModifiedListener</name><parameter_list>(<param><decl><type><name>RModifiedListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
@@ -675,7 +693,7 @@
     <function><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <block>{}</block></function>
 
 </public><protected>protected:
-    <decl_stmt><decl><type><name>bool</name></type> <name>modified</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QDateTime</name></type> <name>lastModified</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>

@@ -391,6 +391,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isModified, "isModified");
             
+            REcmaHelper::registerFunction(&engine, proto, getLastModifiedDateTime, "getLastModifiedDateTime");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLastModified, "getLastModified");
+            
             REcmaHelper::registerFunction(&engine, proto, setModified, "setModified");
             
             REcmaHelper::registerFunction(&engine, proto, copyVariablesFrom, "copyVariablesFrom");
@@ -12675,6 +12679,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::isModified", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getLastModifiedDateTime
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getLastModifiedDateTime", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getLastModifiedDateTime";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getLastModifiedDateTime", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QDateTime'
+    QDateTime cppResult =
+        
+               self->getLastModifiedDateTime();
+        // return type: QDateTime
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getLastModifiedDateTime().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getLastModifiedDateTime", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getLastModified
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getLastModified", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getLastModified";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getLastModified", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLastModified();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getLastModified().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getLastModified", context, engine);
             return result;
         }
          QScriptValue

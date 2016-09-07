@@ -390,6 +390,9 @@
         isLayerLocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isParentLayerLocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isLayerFrozen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -490,6 +493,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isModified
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLastModified
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addModifiedListener

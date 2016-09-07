@@ -528,6 +528,12 @@
         isModified
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLastModifiedDateTime
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLastModified
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setModified
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

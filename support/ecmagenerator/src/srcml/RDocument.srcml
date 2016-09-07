@@ -352,6 +352,8 @@
     <function_decl><type><name>QChar</name></type> <name>getDecimalSeparator</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>isModified</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QDateTime</name></type> <name>getLastModifiedDateTime</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getLastModified</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setModified</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>copyVariablesFrom</name><parameter_list>(<param><decl><type><name>const</name> <name>RDocument</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>

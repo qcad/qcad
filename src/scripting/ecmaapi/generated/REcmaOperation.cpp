@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAllowInvisible, "setAllowInvisible");
             
+            REcmaHelper::registerFunction(&engine, proto, setAllowAll, "setAllowAll");
+            
             REcmaHelper::registerFunction(&engine, proto, setTransactionGroup, "setTransactionGroup");
             
             REcmaHelper::registerFunction(&engine, proto, setText, "setText");
@@ -496,6 +498,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaOperation::setAllowInvisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOperation::setAllowAll
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOperation::setAllowAll", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOperation::setAllowAll";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROperation* self = 
+                        getSelf("setAllowAll", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAllowAll(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.setAllowAll().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOperation::setAllowAll", context, engine);
             return result;
         }
          QScriptValue

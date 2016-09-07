@@ -1332,6 +1332,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getLastModifiedDateTime"
+    cppName="getLastModifiedDateTime" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QDateTime" isPureVirtual="false" />
+    </method>
+    <method name="getLastModified" cppName="getLastModified"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="setModified" cppName="setModified"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

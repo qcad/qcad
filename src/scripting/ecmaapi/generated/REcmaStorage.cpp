@@ -297,6 +297,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isLayerLocked, "isLayerLocked");
             
+            REcmaHelper::registerFunction(&engine, proto, isParentLayerLocked, "isParentLayerLocked");
+            
             REcmaHelper::registerFunction(&engine, proto, isLayerFrozen, "isLayerFrozen");
             
             REcmaHelper::registerFunction(&engine, proto, isParentLayerFrozen, "isParentLayerFrozen");
@@ -362,6 +364,8 @@
             REcmaHelper::registerFunction(&engine, proto, setModified, "setModified");
             
             REcmaHelper::registerFunction(&engine, proto, isModified, "isModified");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLastModified, "getLastModified");
             
             REcmaHelper::registerFunction(&engine, proto, addModifiedListener, "addModifiedListener");
             
@@ -8452,6 +8456,66 @@
             return result;
         }
          QScriptValue
+        REcmaStorage::isParentLayerLocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::isParentLayerLocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::isParentLayerLocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("isParentLayerLocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isParentLayerLocked(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.isParentLayerLocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::isParentLayerLocked", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaStorage::isLayerFrozen
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -10706,6 +10770,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::isModified", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getLastModified
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getLastModified", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getLastModified";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getLastModified", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLastModified();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getLastModified().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getLastModified", context, engine);
             return result;
         }
          QScriptValue
