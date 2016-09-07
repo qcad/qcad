@@ -50,6 +50,7 @@ public:
         recordAffectedObjects(true),
         spatialIndexDisabled(false),
         allowInvisible(false),
+        allowAll(false),
         entityTypeFilter(entityTypeFilter),
         transactionGroup(-1) {
         RDebug::incCounter("ROperation");
@@ -84,6 +85,10 @@ public:
         allowInvisible = on;
     }
 
+    void setAllowAll(bool on) {
+        allowAll = on;
+    }
+
     void setTransactionGroup(int g) {
         transactionGroup = g;
     }
@@ -97,6 +102,7 @@ protected:
     bool recordAffectedObjects;
     bool spatialIndexDisabled;
     bool allowInvisible;
+    bool allowAll;
     RS::EntityType entityTypeFilter;
     int transactionGroup;
     QString text;

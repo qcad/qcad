@@ -109,6 +109,7 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setRecordAffectedObjects(recordAffectedObjects);
     transaction.setSpatialIndexDisabled(spatialIndexDisabled);
+    transaction.setAllowAll(allowAll);
     transaction.setAllowInvisible(allowInvisible);
     transaction.setGroup(transactionGroup);
 
