@@ -2263,10 +2263,30 @@ QList<RTransaction> RDocument::redo() {
     return transactionStack.redo();
 }
 
+/**
+ * \copydoc RStorage::isModified
+ */
 bool RDocument::isModified() const {
     return storage.isModified();
 }
 
+/**
+ * \copydoc RStorage::getLastModifiedDateTime
+ */
+QDateTime RDocument::getLastModifiedDateTime() const {
+    return storage.getLastModifiedDateTime();
+}
+
+/**
+ * \copydoc RStorage::getLastModified
+ */
+QString RDocument::getLastModified() const {
+    return storage.getLastModified();
+}
+
+/**
+ * \copydoc RStorage::setModified
+ */
 void RDocument::setModified(bool m) {
     if (this==clipboard) {
         return;

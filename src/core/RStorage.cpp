@@ -23,7 +23,6 @@
 
 RStorage::RStorage() :
     document(NULL),
-    modified(false),
     maxDrawOrder(0),
     idCounter(0),
     handleCounter(0),
@@ -38,7 +37,7 @@ RStorage::RStorage() :
 }
 
 void RStorage::clear() {
-    modified = false;
+    lastModified = QDateTime();
     maxDrawOrder = 0;
     idCounter = 0;
     handleCounter = 0;
@@ -803,12 +802,28 @@ void RStorage::addModifiedListener(RModifiedListener* l) {
 }
 
 void RStorage::setModified(bool m) {
-    if (m!=modified) {
-        modified = m;
+    bool wasModified = isModified();
 
-        QList<RModifiedListener*>::iterator it;
-        for (it = modifiedListeners.begin(); it != modifiedListeners.end(); ++it) {
-            (*it)->updateModifiedListener(this);
+    if (m==true) {
+        lastModified = QDateTime::currentDateTime();
+
+        // document was unmodified, is now modified:
+        if (!wasModified) {
+            QList<RModifiedListener*>::iterator it;
+            for (it = modifiedListeners.begin(); it != modifiedListeners.end(); ++it) {
+                (*it)->updateModifiedListener(this);
+            }
+        }
+    }
+    else {
+        lastModified = QDateTime();
+
+        // document was modified, is now unmodified:
+        if (wasModified) {
+            QList<RModifiedListener*>::iterator it;
+            for (it = modifiedListeners.begin(); it != modifiedListeners.end(); ++it) {
+                (*it)->updateModifiedListener(this);
+            }
         }
     }
 }

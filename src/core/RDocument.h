@@ -351,6 +351,8 @@ public:
     QChar getDecimalSeparator();
 
     bool isModified() const;
+    QDateTime getLastModifiedDateTime() const;
+    QString getLastModified() const;
     void setModified(bool m);
 
     void copyVariablesFrom(const RDocument& other);

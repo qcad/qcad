@@ -661,10 +661,27 @@ public:
      */
     friend QDebug operator<<(QDebug dbg, RStorage& s);
 
+    /**
+     * Resets the modified flag. Modification time is stored.
+     */
     void setModified(bool m);
 
+    /**
+     * \return True if the document has unsaved changes.
+     */
     bool isModified() const {
-        return modified;
+        return lastModified.isValid();
+    }
+
+    /**
+     * \nonscriptable
+     */
+    QDateTime getLastModifiedDateTime() const {
+        return lastModified;
+    }
+
+    QString getLastModified() const {
+        return lastModified.toString("yyyyMMddHHmmsszzz");
     }
 
     void addModifiedListener(RModifiedListener* l);
@@ -675,7 +692,7 @@ public:
     virtual void update() {}
 
 protected:
-    bool modified;
+    QDateTime lastModified;
 
 private:
     RDocument* document;
