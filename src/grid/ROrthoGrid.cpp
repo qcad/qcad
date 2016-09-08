@@ -230,7 +230,11 @@ void ROrthoGrid::update(bool force) {
         }
     }
 
-    int minDevicePixelSpacing = minPixelSpacing * RSettings::getDevicePixelRatio();
+    int minDevicePixelSpacing = minPixelSpacing;
+
+    if (RSettings::getHighResolutionGraphicsView()) {
+        minDevicePixelSpacing *= RSettings::getDevicePixelRatio();
+    }
 
     // auto scale grid:
     QList<RVector> s = getIdealSpacing(minDevicePixelSpacing, minSpacing, minMetaSpacing);
