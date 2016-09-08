@@ -18,7 +18,7 @@
  */
 
 include("../File.js");
-include("sprintf.js");
+include("scripts/sprintf.js");
 if (RSettings.isGuiEnabled() && typeof(PrintPreview)=="undefined") {
     include("../PrintPreview/PrintPreview.js");
 }
