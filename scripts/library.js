@@ -23,7 +23,8 @@
 // ensure compatibility between scripts and script bindings.
 //requiresFramework([3,0,9,0], [3,1,0,0]);
 
-include("sprintf.js");
+// don't include sprintf.js here to keep library footprint small:
+//include("sprintf.js");
 
 if (typeof(global)==="undefined") {
     global = this;
