@@ -1258,6 +1258,11 @@ QScriptValue RScriptHandlerEcma::ecmaInclude(QScriptContext* context, QScriptEng
 
 
 bool RScriptHandlerEcma::isIncluded(QScriptEngine* engine, const QString& className) {
+    if (alwaysLoadScripts) {
+        // always include (again) to reload potential changes:
+        return false;
+    }
+
     QVariant vAlreadyIncluded;
 
     vAlreadyIncluded = engine->property("alreadyIncluded");
