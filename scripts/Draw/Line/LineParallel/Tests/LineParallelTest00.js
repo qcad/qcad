@@ -35,14 +35,14 @@ LineParallelTest00.prototype.test00 = function() {
     this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.setZoom(10, new RVector(5, 5, 0) );
-    var p = new RVector(36.4, 27.2);
+    var p = new RVector(40, 30);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
-    var p = new RVector(36.4, 27.2);
+    var p = new RVector(40, 30);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(10, new RVector(5, 5, 0) );
-    var p = new RVector(5.4, 4.1);
+    var p = new RVector(10, 10);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
-    var p = new RVector(5.4, 4.1);
+    var p = new RVector(10, 10);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     var p = new RVector(8.8, 3.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
