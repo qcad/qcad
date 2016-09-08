@@ -18,7 +18,7 @@
  */
 
 include("../Widgets.js");
-include("WidgetFactory.js");
+include("scripts/WidgetFactory.js");
 
 /**
  * Block list widget class (QWidget).
