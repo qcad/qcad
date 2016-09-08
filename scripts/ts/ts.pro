@@ -10,6 +10,7 @@ SOURCES = \
     ../ShapeAlgorithms.js \
     ../WidgetFactory.js \
     ../autostart.js \
+    ../date.js \
     ../input.js \
     ../library.js \
     ../map.js \
