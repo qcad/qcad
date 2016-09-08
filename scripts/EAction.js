@@ -22,6 +22,7 @@ include("scripts/Widgets/OptionsToolBar/OptionsToolBar.js");
 
 if (RSettings.isGuiEnabled()) {
     if (new QFileInfo(autoPath("scripts/Widgets/CadToolBar/CadToolBar.js")).exists()) {
+        include("scripts/Widgets/CadToolBar/ColumnLayout.js");
         include("scripts/Widgets/CadToolBar/CadToolBar.js");
     }
 }

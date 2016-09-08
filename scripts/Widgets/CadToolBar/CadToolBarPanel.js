@@ -17,7 +17,9 @@
  * along with QCAD.
  */
 
-include("ColumnLayout.js");
+// don't include ColumnLayout here, causes maximum call stack reached
+// include before CadToolBarPanel.js instead
+//include("ColumnLayout.js");
 
 function CadToolBarPanel(parent, hasBackButton) {
     RWidget.call(this, parent);
