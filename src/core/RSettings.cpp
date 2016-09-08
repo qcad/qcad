@@ -890,7 +890,9 @@ QString RSettings::getReleaseDate() {
 int RSettings::getSnapRange() {
     if (snapRange==-1) {
         snapRange = getValue("GraphicsView/SnapRange", QVariant(10)).toInt();
-        snapRange *= getDevicePixelRatio();
+        if (getHighResolutionGraphicsView()) {
+            snapRange *= getDevicePixelRatio();
+        }
     }
     return snapRange;
 }
@@ -898,7 +900,9 @@ int RSettings::getSnapRange() {
 int RSettings::getPickRange() {
     if (pickRange==-1) {
         pickRange = getValue("GraphicsView/PickRange", QVariant(10)).toInt();
-        pickRange *= getDevicePixelRatio();
+        if (getHighResolutionGraphicsView()) {
+            pickRange *= getDevicePixelRatio();
+        }
     }
     return pickRange;
 }
