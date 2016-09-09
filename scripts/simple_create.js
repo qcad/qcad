@@ -71,29 +71,76 @@ function addCircle(p1, p2, p3) {
 /**
  * Adds a polyline to the drawing.
  * \ingroup ecma_simple
+ * \author Andrew Mustun
+ * \author tukuyomi
  *
- * \param points Array of RVector or [x,y] tuples.
- * \param closed True for an implicitely closed polyline.
+ * \param p Array of type [ [ x, y, bulge, relative ], ..., [ ... ] ]
+ * or [ [ vector, bulge, relative ], ..., [ ... ] ]
+ * Where:
+ * x: X coordinate
+ * y: Y coordinate
+ * vector: RVector with position of vertex
+ * bulge: Bulge for next segment after vertex, defaults to 0.0.
+ * relative: True if this vector's coordinates are relative to the previous coordinates,
+ * defaults to false.
+ *
+ * \param closed True for an implicitely closed polyline. Default is false.
+ * \param relative True to treat all coordinates as relative.
+ * The first coordinate is always absolute. Default is false.
  *
  * \code
  * addPolyline([[x1,y1],[x2,y2],[x3,y3]], false)
- * addPolyline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], false)
+ * addPolyline([ [ 100 , 0 ], [ 20 , -10 , 1 ], [ 0 , 40 , 0 , true ], [ -20 , -10 , 1 , true ] ])
+ * addPolyline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], closed, relative)
+ * addPolyline([new RVector(x1,y1),bulge1,rel1],[new RVector(x2,y2),bulge2,rel2],[new RVector(x3,y3),bulge3,rel3]], closed, relative)
  * \endcode
  */
-function addPolyline(points, closed) {
+function addPolyline(points, closed, relative) {
     if (isNull(closed)) {
         closed = false;
     }
+    if (isNull(relative)) {
+        relative = false;
+    }
+
     var pl = new RPolyline();
     pl.setClosed(closed);
+
+    var v = new RVector(0,0);
     for (var i=0; i<points.length; i++) {
-        if (isVector(points[i])) {
-            pl.appendVertex(points[i]);
+        var v0, b, rel;
+
+        // first item in vertex tuple is RVector or x,y pair:
+        if (isVector(points[i][0])) {
+            v0 = points[i][0];
+            b = points[i][1];
+            rel = points[i][2];
         }
         else {
-            pl.appendVertex(new RVector(points[i][0], points[i][1]));
+            v0 = new RVector(points[i][0], points[i][1]);
+            b = points[i][2];
+            rel = points[i][3];
         }
+
+        // defaults for vertices:
+        if (isNull(b)) {
+            b = 0.0;
+        }
+        if (isNull(rel)) {
+            rel = relative;
+        }
+
+        // relative or absolute vertex position:
+        if (relative) {
+            v = v.operator_add(v0);
+        }
+        else {
+            v = v0;
+        }
+
+        pl.appendVertex(v, b);
     }
+
     return addShape(pl);
 }
 
