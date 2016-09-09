@@ -183,8 +183,8 @@ Print.prototype.print = function(pdfFile) {
     );
 
     // printer calibration goes here (future use):
-    //printerFactor.x *= 200/200.05;
-    //printerFactor.y *= 280/280.30;
+    printerFactor.x *= RSettings.getDoubleValue(printer.printerName() + "/FactorX", 1.0);
+    printerFactor.y *= RSettings.getDoubleValue(printer.printerName() + "/FactorY", 1.0);
 
     this.view.setPrintPointSize(new RVector(1.0/printerFactor.x, 1.0/printerFactor.y));
 
