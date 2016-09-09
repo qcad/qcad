@@ -301,6 +301,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, hasCustomStyleSheet, "hasCustomStyleSheet");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPrinterNames, "getPrinterNames");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getDefaultPrinterName, "getDefaultPrinterName");
+            
 
     // static properties:
     
@@ -5765,6 +5769,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::hasCustomStyleSheet", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getPrinterNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPrinterNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPrinterNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RSettings::
+       getPrinterNames();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPrinterNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPrinterNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDefaultPrinterName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDefaultPrinterName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDefaultPrinterName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getDefaultPrinterName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDefaultPrinterName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDefaultPrinterName", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

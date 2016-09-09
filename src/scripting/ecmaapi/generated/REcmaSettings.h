@@ -411,6 +411,12 @@
         ;static  QScriptValue
         hasCustomStyleSheet
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPrinterNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDefaultPrinterName
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
