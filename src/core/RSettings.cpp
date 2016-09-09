@@ -22,6 +22,7 @@
 #include <QCoreApplication>
 #include <QFileInfo>
 #include <QFrame>
+#include <QPrinterInfo>
 #include <QStringList>
 #include <QTranslator>
 
@@ -715,6 +716,14 @@ bool RSettings::hasDarkGuiBackground() {
 
 bool RSettings::hasCustomStyleSheet() {
     return !qApp->styleSheet().isEmpty();
+}
+
+QStringList RSettings::getPrinterNames() {
+    return QPrinterInfo::availablePrinterNames();
+}
+
+QString RSettings::getDefaultPrinterName() {
+    return QPrinterInfo::defaultPrinterName();
 }
 
 /**

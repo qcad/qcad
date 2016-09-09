@@ -223,6 +223,9 @@ public:
     static bool hasDarkGuiBackground();
     static bool hasCustomStyleSheet();
 
+    static QStringList getPrinterNames();
+    static QString getDefaultPrinterName();
+
 private:
     static bool isInitialized();
     static void shortenRecentFiles();
