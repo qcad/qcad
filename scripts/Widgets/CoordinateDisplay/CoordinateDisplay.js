@@ -24,18 +24,28 @@ include("scripts/Widgets/StatusBar/StatusBar.js");
 function CoordinateDisplay() {
 }
 
-CoordinateDisplay.postInit = function(basePath) {
-    var widget = WidgetFactory.createWidget(basePath, "CoordinateDisplay.ui");
-    StatusBar.addWidget(widget, 100, RSettings.getBoolValue("StatusBar/CoordinateDisplay", true));
+CoordinateDisplay.singleShot = undefined;
 
-    var lAbs = widget.findChild("Abs");
-    lAbs.font = RSettings.getStatusBarFont();
-    var lRel = widget.findChild("Rel");
-    lRel.font = RSettings.getStatusBarFont();
-    var lAbsPol = widget.findChild("AbsPol");
-    lAbsPol.font = RSettings.getStatusBarFont();
-    var lRelPol = widget.findChild("RelPol");
-    lRelPol.font = RSettings.getStatusBarFont();
+CoordinateDisplay.widget = undefined;
+CoordinateDisplay.lAbs = undefined;
+CoordinateDisplay.lRel = undefined;
+CoordinateDisplay.lAbsPol = undefined;
+CoordinateDisplay.lRelPol = undefined;
+
+CoordinateDisplay.counter = 0;
+
+CoordinateDisplay.postInit = function(basePath) {
+    CoordinateDisplay.widget = WidgetFactory.createWidget(basePath, "CoordinateDisplay.ui");
+    StatusBar.addWidget(CoordinateDisplay.widget, 100, RSettings.getBoolValue("StatusBar/CoordinateDisplay", true));
+
+    CoordinateDisplay.lAbs = CoordinateDisplay.widget.findChild("Abs");
+    CoordinateDisplay.lAbs.font = RSettings.getStatusBarFont();
+    CoordinateDisplay.lRel = CoordinateDisplay.widget.findChild("Rel");
+    CoordinateDisplay.lRel.font = RSettings.getStatusBarFont();
+    CoordinateDisplay.lAbsPol = CoordinateDisplay.widget.findChild("AbsPol");
+    CoordinateDisplay.lAbsPol.font = RSettings.getStatusBarFont();
+    CoordinateDisplay.lRelPol = CoordinateDisplay.widget.findChild("RelPol");
+    CoordinateDisplay.lRelPol.font = RSettings.getStatusBarFont();
 
     var cartCoordSep;
     var polCoordSep;
@@ -45,68 +55,70 @@ CoordinateDisplay.postInit = function(basePath) {
     var appWin = EAction.getMainWindow();
     appWin.addCoordinateListener(adapter);
 
-    var counter=0;
-    var singleShot = undefined;
+    adapter.coordinateUpdated.connect(CoordinateDisplay.update);
+};
 
-    adapter.coordinateUpdated.connect(function(documentInterface) {
-        if (!widget.enabled) {
-            return;
+CoordinateDisplay.update = function(documentInterface) {
+    if (!CoordinateDisplay.widget.enabled) {
+        return;
+    }
+
+    if (isNull(documentInterface)) {
+        // clear texts (no document open):
+        CoordinateDisplay.lAbs.setText("");
+        CoordinateDisplay.lAbsPol.setText("");
+        CoordinateDisplay.lRel.setText("");
+        CoordinateDisplay.lRelPol.setText("");
+        return;
+    }
+
+    if (!isNull(CoordinateDisplay.singleShot)) {
+        if (CoordinateDisplay.singleShot.active) {
+            // never mind previous update:
+            CoordinateDisplay.singleShot.stop();
         }
+        CoordinateDisplay.singleShot.destroy();
+        CoordinateDisplay.singleShot = undefined;
+    }
 
-        if (isNull(documentInterface)) {
-            // clear texts (no document open):
-            lAbs.setText("");
-            lAbsPol.setText("");
-            lRel.setText("");
-            lRelPol.setText("");
-            return;
-        }
+    CoordinateDisplay.singleShot = new QTimer();
+    CoordinateDisplay.singleShot.singleShot = true;
+    CoordinateDisplay.singleShot.timeout.connect(CoordinateDisplay.timedUpdate);
 
+    // force immediate update every 10 mouse moves
+    CoordinateDisplay.counter++;
+    if (CoordinateDisplay.counter>=10) {
+        CoordinateDisplay.singleShot.start(0);
+        CoordinateDisplay.counter = 0;
+    }
+    else {
+        CoordinateDisplay.singleShot.start(20);
+    }
+};
 
-        if (!isNull(singleShot)) {
-            if (singleShot.active) {
-                // never mind previous update:
-                singleShot.stop();
-            }
-            singleShot.destroy();
-            singleShot = undefined;
-        }
+CoordinateDisplay.timedUpdate = function() {
+    var di = EAction.getDocumentInterface();
+    var doc = di.getDocument();
 
-        singleShot = new QTimer();
-        singleShot.singleShot = true;
-        singleShot.timeout.connect(function() {
-            var doc = EAction.getDocument();
-            StatusBar.clearMessage();
-            var absPos = documentInterface.getCursorPosition();
-            var relPos = absPos.operator_subtract(documentInterface.getRelativeZero());
+    StatusBar.clearMessage();
+    var absPos = di.getCursorPosition();
+    var relPos = absPos.operator_subtract(di.getRelativeZero());
 
-            if (absPos.isValid()) {
-                lAbs.setText(coordinateToString(absPos, 4, false, false, doc));
-                lAbsPol.setText(coordinateToString(absPos, 4, false, true, doc));
-            }
-            else {
-                lAbs.setText("-");
-                lAbsPol.setText("-");
-            }
+    if (absPos.isValid()) {
+        CoordinateDisplay.lAbs.setText(coordinateToString(absPos, 4, false, false, doc));
+        CoordinateDisplay.lAbsPol.setText(coordinateToString(absPos, 4, false, true, doc));
+    }
+    else {
+        CoordinateDisplay.lAbs.setText("-");
+        CoordinateDisplay.lAbsPol.setText("-");
+    }
 
-            if (relPos.isValid()) {
-                lRel.setText(coordinateToString(relPos, 4, true, false, doc));
-                lRelPol.setText(coordinateToString(relPos, 4, true, true, doc));
-            }
-            else {
-                lRel.setText("-");
-                lRelPol.setText("-");
-            }
-        });
-
-        // force immediate update every 10 mouse moves
-        counter++;
-        if (counter>=10) {
-            singleShot.start(0);
-            counter = 0;
-        }
-        else {
-            singleShot.start(20);
-        }
-    });
+    if (relPos.isValid()) {
+        CoordinateDisplay.lRel.setText(coordinateToString(relPos, 4, true, false, doc));
+        CoordinateDisplay.lRelPol.setText(coordinateToString(relPos, 4, true, true, doc));
+    }
+    else {
+        CoordinateDisplay.lRel.setText("-");
+        CoordinateDisplay.lRelPol.setText("-");
+    }
 };
