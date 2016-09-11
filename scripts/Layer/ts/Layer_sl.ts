@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Layer</name>
     <message>
@@ -21,22 +21,22 @@
     <message>
         <location line="+17"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikazujem vse plasti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrivam vse plasti</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaklepam vse plasti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Odklepam vse plasti</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@
     </message>
     <message>
         <source>Pen</source>
-        <translation type="vanished">Pisalo</translation>
+        <translation>Pisalo</translation>
     </message>
     <message>
         <location line="+28"/>

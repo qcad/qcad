@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>BehaviorPreferences</name>
     <message>
@@ -44,7 +44,7 @@
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloki</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -54,7 +54,7 @@
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrij atribute, ko so skrite blokovne reference</translation>
     </message>
     <message>
         <location line="-85"/>
@@ -68,7 +68,7 @@
     </message>
     <message>
         <source>Right-click on entity shows context menu</source>
-        <translation type="vanished">Desni klik na entiteto prikaže kontekstni meni</translation>
+        <translation>Desni klik na entiteto prikaže kontekstni meni</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -77,7 +77,7 @@
     </message>
     <message>
         <source>Block Selection</source>
-        <translation type="vanished">Blokovni izbor</translation>
+        <translation>Blokovni izbor</translation>
     </message>
     <message>
         <location line="+43"/>

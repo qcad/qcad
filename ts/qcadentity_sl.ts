@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>REntity</name>
     <message>
@@ -252,7 +252,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Skupna dolžina</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -270,7 +270,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Skupna ploščina</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
@@ -465,7 +465,7 @@
     <message>
         <location line="+2"/>
         <source>Block Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime bloka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -629,7 +629,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok puščice</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
@@ -749,7 +749,7 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation type="vanished">Preprosto</translation>
+        <translation>Preprosto</translation>
     </message>
     <message>
         <source>Contents</source>
@@ -757,51 +757,51 @@
     </message>
     <message>
         <source>Text</source>
-        <translation type="vanished">Besedilo</translation>
+        <translation>Besedilo</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation type="vanished">Preprosto besedilo</translation>
+        <translation>Preprosto besedilo</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation type="vanished">Ime pisave</translation>
+        <translation>Ime pisave</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation type="vanished">Višina besedila</translation>
+        <translation>Višina besedila</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation type="vanished">Kot besedila</translation>
+        <translation>Kot besedila</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation type="vanished">X Razmerje</translation>
+        <translation>X Razmerje</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation type="vanished">Krepko</translation>
+        <translation>Krepko</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation type="vanished">Poštevno</translation>
+        <translation>Poštevno</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation type="vanished">Razmik med vrsticami</translation>
+        <translation>Razmik med vrsticami</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation type="vanished">Poravnava</translation>
+        <translation>Poravnava</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation type="vanished">Vodoravno</translation>
+        <translation>Vodoravno</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation type="vanished">Navpično</translation>
+        <translation>Navpično</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
