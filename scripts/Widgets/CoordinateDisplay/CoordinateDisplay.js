@@ -100,7 +100,14 @@ CoordinateDisplay.update = function(documentInterface) {
 
 CoordinateDisplay.timedUpdate = function() {
     var di = EAction.getDocumentInterface();
+    if (isNull(di)) {
+        return;
+    }
+
     var doc = di.getDocument();
+    if (isNull(doc)) {
+        return;
+    }
 
     StatusBar.clearMessage();
     var absPos = di.getCursorPosition();
