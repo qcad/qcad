@@ -24,7 +24,8 @@
  * \brief This module contains ECMAScript implementations of various
  * measuring and information tools.
  */
-include("../EAction.js");
+include("scripts/EAction.js");
+include("scripts/sprintf.js");
 
 /**
  * \class Information
