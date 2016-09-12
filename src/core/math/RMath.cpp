@@ -635,7 +635,7 @@ double RMath::getRelativeAngle(double a, double baseAngle) {
 
 /**
  * \param a1 first angle in rad
- * \param a2 s second angle in rad
+ * \param a2 second angle in rad
  *
  * \return The angle that needs to be added to a1 to reach a2.
  *         Always positive and less than 2*pi.
