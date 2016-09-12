@@ -917,11 +917,14 @@ double RExporter::exportLine(const RLine& line, double offset) {
         return ret;
     }
 
+    RVector dv = (line.getEndPoint() - line.getStartPoint()).getNormalized();
+
     RVector* vp = NULL;
     vp = new RVector[p.getNumDashes()];
     for (int i = 0; i < p.getNumDashes(); ++i) {
-        vp[i] = RVector(cos(angle) * fabs(p.getDashLengthAt(i)),
-                        sin(angle) * fabs(p.getDashLengthAt(i)));
+//        vp[i] = RVector(cos(angle) * fabs(p.getDashLengthAt(i)),
+//                        sin(angle) * fabs(p.getDashLengthAt(i)));
+        vp[i] = dv * fabs(p.getDashLengthAt(i));
     }
 
     if (RMath::isNaN(offset)) {
@@ -934,7 +937,8 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
     bool done = false;
     int i = 0;
-    RVector cursor(line.getStartPoint() + RVector::createPolar(offset, angle));
+    //RVector cursor(line.getStartPoint() + RVector::createPolar(offset, angle));
+    RVector cursor(line.getStartPoint() + dv*offset);
     double total = offset;
     double nextTotal;
     bool isGap = false;
