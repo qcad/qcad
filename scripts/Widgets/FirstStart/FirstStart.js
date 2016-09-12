@@ -21,6 +21,7 @@ include("scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js"
 include("scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js");
 include("scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js");
 include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");
+include("scripts/sprintf.js");
 
 function FirstStart() {
 }

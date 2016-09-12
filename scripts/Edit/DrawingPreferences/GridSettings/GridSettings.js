@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 
+include("scripts/sprintf.js");
+
 function GridSettings() {
 }
 

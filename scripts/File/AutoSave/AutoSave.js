@@ -18,6 +18,7 @@
  */
 
 include("../File.js");
+include("scripts/sprintf.js");
 
 var documentCounter;
 if (documentCounter == undefined) {

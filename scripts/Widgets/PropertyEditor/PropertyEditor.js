@@ -18,6 +18,7 @@
  */
 
 include("scripts/EAction.js");
+include("scripts/sprintf.js");
 include("../../WidgetFactory.js");
 
 /**

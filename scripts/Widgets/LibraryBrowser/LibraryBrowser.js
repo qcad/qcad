@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+include("scripts/sprintf.js");
 include("../Widgets.js");
 include("ListViewEventHandler.js");
 include("ItemDelegate.js");

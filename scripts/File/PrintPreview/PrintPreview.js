@@ -21,6 +21,7 @@ include("scripts/DefaultAction.js");
 include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");
 include("scripts/File/File.js");
 include("scripts/File/Print/Print.js");
+include("scripts/sprintf.js");
 
 /**
  * Switches the current document to print preview mode.

@@ -18,6 +18,7 @@
  */
 
 include("scripts/EAction.js");
+include("scripts/sprintf.js");
 include("scripts/File/Print/Print.js");
 
 function PageSettings() {
