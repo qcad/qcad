@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>About</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location line="+15"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 temelji na QCAD, brezplačnem (Odprto Kodnem) programu.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -126,11 +126,11 @@
     </message>
     <message>
         <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation type="vanished">Del tega programa  © 2013 Digia Plc.</translation>
+        <translation>Del tega programa  © 2013 Digia Plc.</translation>
     </message>
     <message>
         <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation type="vanished">Del tega programa © 2012 Nokia Corporation ter/ali njihovih podružnic.</translation>
+        <translation>Del tega programa © 2012 Nokia Corporation ter/ali njihovih podružnic.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -198,7 +198,7 @@
     <message>
         <location line="+13"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Predloge</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -220,7 +220,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="vanished">o:prazno</translation>
+        <translation>o:prazno</translation>
     </message>
     <message>
         <location line="+67"/>

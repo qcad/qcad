@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Offset</name>
     <message>
@@ -33,7 +33,7 @@
     </message>
     <message>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation type="vanished">Nariši vzporednico obstoječi črti ali kocentrični lok, krog</translation>
+        <translation>Nariši vzporednico obstoječi črti ali kocentrični lok, krog</translation>
     </message>
     <message>
         <location filename="../Offset.js" line="+75"/>
@@ -43,12 +43,12 @@
     <message>
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Polmer je padel pod 0,0 po %1 kocentričnimi krogi.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Polmer je padel pod 0,0 po %1 kocentričnimi loki.</translation>
     </message>
 </context>
 </TS>

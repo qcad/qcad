@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -85,7 +85,7 @@
     </message>
     <message>
         <source>Block Options</source>
-        <translation type="vanished">Nastavitve bloka</translation>
+        <translation>Nastavitve bloka</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -172,11 +172,11 @@
     <name>ShapeAlgorithms</name>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="vanished">Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
+        <translation>Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
     </message>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="vanished">Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
+        <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
         <location filename="../ShapeAlgorithms.js" line="+896"/>
@@ -722,12 +722,12 @@
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"></translation>
+        <translation>Površine</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation>Površina</translation>
     </message>
     <message>
         <location line="+2"/>

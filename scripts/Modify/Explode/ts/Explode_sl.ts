@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Dialog</name>
     <message>
@@ -105,7 +105,7 @@
     <message>
         <location line="-7"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Toleranca približka krivulje:</translation>
     </message>
 </context>
 </TS>
