@@ -22,6 +22,7 @@
 #include "RMainWindow.h"
 
 RStorage::RStorage() :
+    modified(false),
     document(NULL),
     maxDrawOrder(0),
     idCounter(0),
@@ -38,6 +39,7 @@ RStorage::RStorage() :
 
 void RStorage::clear() {
     lastModified = QDateTime();
+    modified = false;
     maxDrawOrder = 0;
     idCounter = 0;
     handleCounter = 0;
@@ -806,6 +808,7 @@ void RStorage::setModified(bool m) {
 
     if (m==true) {
         lastModified = QDateTime::currentDateTime();
+        modified=true;
 
         // document was unmodified, is now modified:
         if (!wasModified) {
@@ -816,7 +819,7 @@ void RStorage::setModified(bool m) {
         }
     }
     else {
-        lastModified = QDateTime();
+        modified=false;
 
         // document was modified, is now unmodified:
         if (wasModified) {

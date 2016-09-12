@@ -670,7 +670,7 @@ public:
      * \return True if the document has unsaved changes.
      */
     bool isModified() const {
-        return lastModified.isValid();
+        return modified;
     }
 
     /**
@@ -693,6 +693,7 @@ public:
 
 protected:
     QDateTime lastModified;
+    bool modified;
 
 private:
     RDocument* document;
