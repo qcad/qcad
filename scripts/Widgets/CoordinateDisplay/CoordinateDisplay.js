@@ -77,8 +77,10 @@ CoordinateDisplay.update = function(documentInterface) {
             // never mind previous update:
             CoordinateDisplay.singleShot.stop();
         }
-        CoordinateDisplay.singleShot.destroy();
-        CoordinateDisplay.singleShot = undefined;
+        if (!isNull(CoordinateDisplay.singleShot)) {
+            CoordinateDisplay.singleShot.destroy();
+            CoordinateDisplay.singleShot = undefined;
+        }
     }
 
     CoordinateDisplay.singleShot = new QTimer();
