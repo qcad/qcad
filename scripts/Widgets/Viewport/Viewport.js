@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 
+include("sprintf.js");
+
 if (new QFileInfo(autoPath("scripts/Navigation/DefaultNavigation/DefaultNavigation.js")).exists()) {
     include("scripts/Navigation/DefaultNavigation/DefaultNavigation.js");
 }
