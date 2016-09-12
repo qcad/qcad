@@ -31,7 +31,7 @@
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+704"/>
+        <location filename="../PropertyEditor.js" line="+705"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>

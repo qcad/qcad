@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -57,7 +57,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+62"/>
+        <location filename="../EAction.js" line="+63"/>
         <source>Back</source>
         <translation>Nazaj</translation>
     </message>
@@ -85,7 +85,7 @@
     </message>
     <message>
         <source>Block Options</source>
-        <translation>Nastavitve bloka</translation>
+        <translation type="vanished">Nastavitve bloka</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -172,11 +172,11 @@
     <name>ShapeAlgorithms</name>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
+        <translation type="vanished">Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
     </message>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
+        <translation type="vanished">Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
         <location filename="../ShapeAlgorithms.js" line="+896"/>
@@ -390,7 +390,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+756"/>
+        <location filename="../library.js" line="+757"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>

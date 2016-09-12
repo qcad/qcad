@@ -11,12 +11,12 @@
     <message>
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Polomer klesol pod 0.0 po %1 sústredných kružniciach.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Polomer klesol pod 0.0 po %1 sústredných oblúkoch.</translation>
     </message>
     <message>
         <location filename="../Offset.ui" line="+17"/>

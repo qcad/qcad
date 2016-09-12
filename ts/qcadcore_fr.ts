@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.1" language="fr">
 <context>
     <name>QObject</name>
     <message>
@@ -333,7 +333,7 @@ Autres...</translatorcomment>
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+45"/>
         <source>Current Layer ID</source>
-        <translation>ID de la couche actuelle</translation>
+        <translation>Calque actuel uniquement</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -526,7 +526,7 @@ Liste des calques</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+80"/>
+        <location filename="../src/core/RLayer.cpp" line="+82"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_fr.ts--

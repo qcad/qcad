@@ -31,7 +31,7 @@
         <translation type="vanished">Géométrie</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+389"/>
+        <location filename="../PropertyEditor.js" line="+390"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>

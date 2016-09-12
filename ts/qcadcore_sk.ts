@@ -362,7 +362,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+80"/>
+        <location filename="../src/core/RLayer.cpp" line="+82"/>
         <source>Linetype</source>
         <translation>Typ čiary</translation>
     </message>

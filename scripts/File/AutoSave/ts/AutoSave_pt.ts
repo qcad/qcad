@@ -4,7 +4,7 @@
 <context>
     <name>AutoSave</name>
     <message>
-        <location filename="../AutoSave.js" line="+34"/>
+        <location filename="../AutoSave.js" line="+35"/>
         <source>Load/Save</source>
         <translation>Carregue/Grave</translation>
     </message>

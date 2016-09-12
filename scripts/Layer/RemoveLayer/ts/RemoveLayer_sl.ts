@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>RemoveLayer</name>
     <message>
         <source>&amp;Remove Layer</source>
-        <translation>&amp;Odstrani plast</translation>
+        <translation type="vanished">&amp;Odstrani plast</translation>
     </message>
     <message>
         <location filename="../RemoveLayerInit.js" line="+2"/>

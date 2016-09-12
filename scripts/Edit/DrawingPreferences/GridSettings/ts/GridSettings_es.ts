@@ -47,7 +47,7 @@
 <context>
     <name>GridSettings</name>
     <message>
-        <location filename="../GridSettings.js" line="+27"/>
+        <location filename="../GridSettings.js" line="+29"/>
         <source>General</source>
         <translation>General</translation>
     </message>

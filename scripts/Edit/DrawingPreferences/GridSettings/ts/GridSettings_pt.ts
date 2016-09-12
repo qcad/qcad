@@ -62,7 +62,7 @@ Matriz:</translatorcomment>
 <context>
     <name>GridSettings</name>
     <message>
-        <location filename="../GridSettings.js" line="+27"/>
+        <location filename="../GridSettings.js" line="+29"/>
         <source>General</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

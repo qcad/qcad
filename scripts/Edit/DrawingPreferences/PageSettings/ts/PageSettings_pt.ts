@@ -4,7 +4,7 @@
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../PageSettings.js" line="+30"/>
+        <location filename="../PageSettings.js" line="+31"/>
         <source>Printing</source>
         <translatorcomment>--exact match--
 --file: MultiPageSettings_pt.ts--

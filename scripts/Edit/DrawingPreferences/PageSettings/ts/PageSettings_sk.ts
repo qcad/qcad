@@ -4,7 +4,7 @@
 <context>
     <name>PageSettings</name>
     <message>
-        <location filename="../PageSettings.js" line="+28"/>
+        <location filename="../PageSettings.js" line="+29"/>
         <source>Defaults for New Drawings</source>
         <translation>Prednastavené pre Nové výkresy</translation>
     </message>

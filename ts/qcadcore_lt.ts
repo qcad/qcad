@@ -239,7 +239,7 @@
     <name>REntity</name>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+60"/>
-        <location filename="../src/core/RLayer.cpp" line="+76"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <location filename="../src/core/RLayout.cpp" line="+75"/>
         <source>Name</source>
         <translation type="unfinished"></translation>

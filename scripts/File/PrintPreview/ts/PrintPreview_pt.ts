@@ -32,7 +32,7 @@ Fecha todas as janelas</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+161"/>
+        <location filename="../PrintPreview.js" line="+162"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arraste para mover o papel</translation>

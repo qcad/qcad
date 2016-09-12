@@ -20,12 +20,12 @@
     </message>
     <message>
         <location line="+97"/>
-        <location line="+94"/>
+        <location line="+98"/>
         <source>No solution</source>
         <translation>解がありません</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-48"/>
         <source>Invalid radius</source>
         <translation>無効な角度</translation>
     </message>

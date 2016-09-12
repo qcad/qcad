@@ -11,7 +11,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+71"/>
+        <location filename="../LibraryBrowser.js" line="+72"/>
         <source>audience</source>
         <translation>público</translation>
     </message>

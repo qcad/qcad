@@ -19,7 +19,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+162"/>
+        <location filename="../PrintPreview.js" line="+163"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>

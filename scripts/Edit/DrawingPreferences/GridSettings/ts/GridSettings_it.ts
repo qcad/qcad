@@ -51,7 +51,7 @@
         <translation type="obsolete">Griglia predefinita</translation>
     </message>
     <message>
-        <location filename="../GridSettings.js" line="+27"/>
+        <location filename="../GridSettings.js" line="+29"/>
         <source>General</source>
         <translation>Generale</translation>
     </message>

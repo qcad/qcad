@@ -66,7 +66,7 @@ Mnożnik &amp;X:</translatorcomment>
 <context>
     <name>GridSettings</name>
     <message>
-        <location filename="../GridSettings.js" line="+25"/>
+        <location filename="../GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--

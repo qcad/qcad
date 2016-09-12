@@ -105,7 +105,7 @@
     <message>
         <location line="-7"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline - približná tolerancia:</translation>
     </message>
 </context>
 </TS>

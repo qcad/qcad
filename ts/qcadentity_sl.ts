@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>REntity</name>
     <message>
@@ -749,7 +749,7 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation>Preprosto</translation>
+        <translation type="vanished">Preprosto</translation>
     </message>
     <message>
         <source>Contents</source>
@@ -757,51 +757,51 @@
     </message>
     <message>
         <source>Text</source>
-        <translation>Besedilo</translation>
+        <translation type="vanished">Besedilo</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Preprosto besedilo</translation>
+        <translation type="vanished">Preprosto besedilo</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation>Ime pisave</translation>
+        <translation type="vanished">Ime pisave</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Višina besedila</translation>
+        <translation type="vanished">Višina besedila</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Kot besedila</translation>
+        <translation type="vanished">Kot besedila</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>X Razmerje</translation>
+        <translation type="vanished">X Razmerje</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation>Krepko</translation>
+        <translation type="vanished">Krepko</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation>Poštevno</translation>
+        <translation type="vanished">Poštevno</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation>Razmik med vrsticami</translation>
+        <translation type="vanished">Razmik med vrsticami</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation>Poravnava</translation>
+        <translation type="vanished">Poravnava</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation>Vodoravno</translation>
+        <translation type="vanished">Vodoravno</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation>Navpično</translation>
+        <translation type="vanished">Navpično</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

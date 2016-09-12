@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>EllipseCPP</name>
     <message>
         <source>&amp;Full Ellipse</source>
-        <translation>&amp;Polna elipsa</translation>
+        <translation type="vanished">&amp;Polna elipsa</translation>
     </message>
     <message>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation>&amp;Polna elipsa s središčem, točko, razmerjem</translation>
+        <translation type="vanished">&amp;Polna elipsa s središčem, točko, razmerjem</translation>
     </message>
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>

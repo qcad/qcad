@@ -57,7 +57,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+62"/>
+        <location filename="../EAction.js" line="+63"/>
         <source>Back</source>
         <translation>Terug</translation>
     </message>
@@ -386,7 +386,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+756"/>
+        <location filename="../library.js" line="+757"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>

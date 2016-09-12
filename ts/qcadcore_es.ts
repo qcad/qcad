@@ -532,7 +532,7 @@ Lista de Capas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+80"/>
+        <location filename="../src/core/RLayer.cpp" line="+82"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_es.ts--

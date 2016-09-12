@@ -150,7 +150,7 @@ Selecciona entidades solas</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+279"/>
+        <location filename="../Viewport.js" line="+281"/>
         <source>Dropped data not supported</source>
         <translation>Datos insertados no compatibles</translation>
     </message>

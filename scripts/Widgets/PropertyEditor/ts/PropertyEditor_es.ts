@@ -38,7 +38,7 @@ Tipo de línea:</translatorcomment>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+704"/>
+        <location filename="../PropertyEditor.js" line="+705"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>

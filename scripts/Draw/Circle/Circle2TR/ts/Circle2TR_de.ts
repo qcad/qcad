@@ -20,12 +20,12 @@
     </message>
     <message>
         <location line="+97"/>
-        <location line="+94"/>
+        <location line="+98"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-48"/>
         <source>Invalid radius</source>
         <translation>Ungültiger Radius</translation>
     </message>

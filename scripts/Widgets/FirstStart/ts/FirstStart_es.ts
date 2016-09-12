@@ -4,7 +4,7 @@
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../FirstStart.js" line="+246"/>
+        <location filename="../FirstStart.js" line="+247"/>
         <source>Black</source>
         <translation>Negro</translation>
     </message>

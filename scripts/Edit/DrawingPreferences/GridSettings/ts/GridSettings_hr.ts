@@ -4,7 +4,7 @@
 <context>
     <name>GridSettings</name>
     <message>
-        <location filename="../GridSettings.js" line="+25"/>
+        <location filename="../GridSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation type="unfinished"></translation>
     </message>

@@ -27,7 +27,7 @@
         <translation type="obsolete">auto</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="+34"/>
+        <location filename="../AutoSave.js" line="+35"/>
         <source>Load/Save</source>
         <translation>Cargar/Guardar</translation>
     </message>

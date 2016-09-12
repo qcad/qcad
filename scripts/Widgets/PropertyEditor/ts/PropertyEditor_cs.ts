@@ -32,7 +32,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+188"/>
+        <location filename="../PropertyEditor.js" line="+189"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>

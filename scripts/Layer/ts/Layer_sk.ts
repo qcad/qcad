@@ -21,22 +21,22 @@
     <message>
         <location line="+17"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazenie všetkých vrstiev</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrytie všetkých vrstiev</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzamknutie všetkých vrstiev</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Odomknutie všetkých vrstiev</translation>
     </message>
 </context>
 <context>

@@ -35,7 +35,7 @@
         <translation type="obsolete">Verzeichnis:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="+34"/>
+        <location filename="../AutoSave.js" line="+35"/>
         <source>Load/Save</source>
         <translation>Laden/Speichern</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+161"/>
+        <location filename="../PrintPreview.js" line="+162"/>
         <source>Drag to move paper</source>
         <translation>Slepen om papier te verplaatsen</translation>
     </message>

@@ -58,7 +58,7 @@ Espacement de grille minimal (px)</translatorcomment>
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="+107"/>
+        <location filename="../CadToolBarPanel.js" line="+109"/>
         <source>Back</source>
         <translation>Précédent</translation>
     </message>

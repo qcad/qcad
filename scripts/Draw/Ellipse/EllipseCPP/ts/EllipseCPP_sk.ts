@@ -10,7 +10,7 @@
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Elipsa (Stred, Bod, Pomer)</translation>
     </message>
     <message>
         <location line="+4"/>
