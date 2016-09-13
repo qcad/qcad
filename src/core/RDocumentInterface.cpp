@@ -1735,8 +1735,6 @@ void RDocumentInterface::clearPreview() {
     }
 }
 
-
-
 /**
  * \return True if the previews of all scenes are empty.
  * This is used to detect if the views needs to be redrawn
