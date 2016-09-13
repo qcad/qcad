@@ -65,6 +65,10 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         range = view.mapDistanceFromView(rangePixels);
     }
 
+    if (range<RS::PointTolerance) {
+        return lastSnap;
+    }
+
     // matching ids per query range:
     QList<QSet<REntity::Id> > idsList;
     QList<RBox> queryBoxList;
