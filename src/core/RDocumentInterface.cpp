@@ -1542,9 +1542,8 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
         scene->setStyle(Qt::DashLine);
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
 
-        for (int i=0; i<4; ++i) {
-            scene->exportLine(RLine(boxCorners[i], boxCorners[(i+1)%4]));
-        }
+        RPolyline pl = box.getPolyline2d();
+        scene->exportShape(QSharedPointer<RShape>(pl.clone()));
         scene->endPreview();
     }
 }
