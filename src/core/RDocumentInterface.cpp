@@ -1531,8 +1531,6 @@ bool RDocumentInterface::hasSelection() {
  * while drawing a window to magnify an area.
  */
 void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
-    QList<RVector> boxCorners = box.getCorners();
-
     QList<RGraphicsScene*>::iterator it;
     for (it = scenes.begin(); it != scenes.end(); it++) {
         RGraphicsScene* scene = *it;
