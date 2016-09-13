@@ -719,11 +719,28 @@ bool RSettings::hasCustomStyleSheet() {
 }
 
 QStringList RSettings::getPrinterNames() {
+#if QT_VERSION >= 0x050300
     return QPrinterInfo::availablePrinterNames();
+#else
+    QList<QPrinterInfo> printers = QPrinterInfo::availablePrinters();
+    QStringList ret;
+    for (int i=0l i<printers.length(); i++) {
+        ret.append(printers[i].printerName());
+    }
+    return ret;
+#endif
 }
 
 QString RSettings::getDefaultPrinterName() {
+#if QT_VERSION >= 0x050300
     return QPrinterInfo::defaultPrinterName();
+#else
+    QPrinterInfo printer = QPrinterInfo::defaultPrinter();
+    if (printer.isNull()) {
+        return QString();
+    }
+    return printer.printerName();
+#endif
 }
 
 /**
