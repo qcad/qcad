@@ -581,8 +581,6 @@ void RGraphicsView::handleMouseMoveEvent(RMouseEvent& event) {
     }
 }
 
-
-
 /**
  * This should be called by the mouse press event handler of a higher level
  * GUI toolkit. Events are forwarded to the scene and the navigation action
