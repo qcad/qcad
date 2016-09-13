@@ -138,49 +138,9 @@ Lengthen.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var trimStartPoint;
-    if (isPolylineEntity(this.entity)) {
-        trimStartPoint = this.entity.getLengthTo(this.pos) < this.entity.getLength()/2;
-    }
-    else {
-        trimStartPoint = this.pos.getDistanceTo(this.entity.getStartPoint()) < this.pos.getDistanceTo(this.entity.getEndPoint());
-    }
-
-    var from;
-    if (trimStartPoint) {
-        from = RS.FromStart;
-    }
-    else {
-        from = RS.FromEnd;
-    }
-
-    var iss;
-    if (isPolylineEntity(this.entity)) {
-        var pl = this.entity.castToShape();
-        iss = pl.getPointsWithDistanceToEnd(-this.amount, from|RS.AlongPolyline);
-    }
-    else {
-        iss = this.entity.getPointsWithDistanceToEnd(-this.amount, from|RS.AlongPolyline);
-    }
-
-    var is = this.pos.getClosest(iss);
-
-    if (!isValidVector(is)) {
+    var ret = Lengthen.lengthen(this.entity, this.pos, undefined, this.amount);
+    if (!ret) {
         return undefined;
-    }
-
-    if (trimStartPoint) {
-        if (!isFunction(this.entity.trimStartPoint)) {
-            return undefined;
-        }
-
-        this.entity.trimStartPoint(is, is, this.amount>0);
-    } else {
-        if (!isFunction(this.entity.trimEndPoint)) {
-            return undefined;
-        }
-
-        this.entity.trimEndPoint(is, is, this.amount>0);
     }
 
     return new RAddObjectOperation(this.entity, this.getToolTitle(), false);
@@ -198,3 +158,60 @@ Lengthen.prototype.slotAmountChanged = function(amount) {
     this.amount = amount;
 };
 
+/**
+ * Lengthens the given entity by the given amount at its start or end point.
+ *
+ * \param entity Entity to lengthen
+ * \param position Position clicked by the user or undefined if trimStartPoint is given
+ * \param trimStartPoint True to trim start point, false to trim end point
+ * \param amount Amount to lengthen or negative to shorten
+ */
+Lengthen.lengthen = function(entity, position, trimStartPoint, amount) {
+    if (isNull(trimStartPoint)) {
+        if (isPolylineEntity(entity)) {
+            trimStartPoint = entity.getLengthTo(position) < entity.getLength()/2;
+        }
+        else {
+            trimStartPoint = position.getDistanceTo(entity.getStartPoint()) < position.getDistanceTo(entity.getEndPoint());
+        }
+    }
+
+    var from;
+    if (trimStartPoint) {
+        from = RS.FromStart;
+    }
+    else {
+        from = RS.FromEnd;
+    }
+
+    var iss;
+    if (isPolylineEntity(entity)) {
+        var pl = entity.castToShape();
+        iss = pl.getPointsWithDistanceToEnd(-amount, from|RS.AlongPolyline);
+    }
+    else {
+        iss = entity.getPointsWithDistanceToEnd(-amount, from|RS.AlongPolyline);
+    }
+
+    var is = position.getClosest(iss);
+
+    if (!isValidVector(is)) {
+        return false;
+    }
+
+    if (trimStartPoint) {
+        if (!isFunction(entity.trimStartPoint)) {
+            return false;
+        }
+
+        entity.trimStartPoint(is, is, amount>0);
+    } else {
+        if (!isFunction(entity.trimEndPoint)) {
+            return false;
+        }
+
+        entity.trimEndPoint(is, is, amount>0);
+    }
+
+    return true;
+}
