@@ -67,6 +67,8 @@ public:
      */
     RVector(double vx, double vy, double vz = 0.0, bool valid_in = true);
 
+    RVector(const QList<double>& tuples);
+
     /**
      * Sets new values for the vector and makes the vector valid.
      */

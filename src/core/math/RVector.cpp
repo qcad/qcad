@@ -41,6 +41,19 @@ RVector::RVector(double vx, double vy, double vz, bool valid_in) :
         RMath::isNormal(z);
 }
 
+RVector::RVector(const QList<double>& tuples) {
+    if (tuples.length()>0) {
+        x = tuples[0];
+    }
+    if (tuples.length()>1) {
+        y = tuples[1];
+    }
+    if (tuples.length()>2) {
+        z = tuples[2];
+    }
+    valid = true;
+}
+
 bool RVector::isValid() const {
     return valid;
 }
