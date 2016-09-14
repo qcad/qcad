@@ -39,3 +39,14 @@ function endTransaction() {
     __simpleUseOp = false;
     return ret;
 }
+
+/**
+ * \ingroup ecma_simple
+ * \return Current operation if we are in a transaction or a new operation.
+ */
+function getOperation() {
+    if (!isNull(__simpleOp)) {
+        return __simpleOp;
+    }
+    return new RAddObjectsOperation();
+}

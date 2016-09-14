@@ -9,13 +9,13 @@
  * \param e Entity, entity ID or shape.
  *
  * \code
- * move(entity, x,y)
+ * move(entity, [x,y])
  * move(entity, new RVector(x,y))
  * \endcode
  */
-function move(e, p1, p2) {
-    if (isNumber(p1)) {
-        return move(e, new RVector(p1, p2));
+function move(e, offset) {
+    if (isArray(offset)) {
+        return move(e, new RVector(offset));
     }
     if (isNumber(e)) {
         var doc = getDocument();
@@ -23,10 +23,10 @@ function move(e, p1, p2) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
-        return move(entity, p1);
+        return move(entity, offset);
     }
 
-    e.move(p1);
+    e.move(offset);
     return addEntity(e);
 }
 
@@ -37,13 +37,13 @@ function move(e, p1, p2) {
  * \param e Entity, entity ID or shape.
  *
  * \code
- * rotate(entity, angle, cx,cy)
+ * rotate(entity, angle, [cx,cy])
  * rotate(entity, angle, new RVector(cx,cy))
  * \endcode
  */
-function rotate(e, angle, p1, p2) {
-    if (isNumber(p1)) {
-        return rotate(e, angle, new RVector(p1, p2));
+function rotate(e, angle, center) {
+    if (isArray(center)) {
+        return rotate(e, angle, new RVector(center));
     }
     if (isNumber(e)) {
         var doc = getDocument();
@@ -51,14 +51,14 @@ function rotate(e, angle, p1, p2) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
-        return rotate(entity, angle, p1);
+        return rotate(entity, angle, center);
     }
 
     if (isNull(p1)) {
         e.rotate(deg2rad(angle));
     }
     else {
-        e.rotate(deg2rad(angle), p1);
+        e.rotate(deg2rad(angle), center);
     }
     return addEntity(e);
 }
@@ -70,13 +70,13 @@ function rotate(e, angle, p1, p2) {
  * \param e Entity, entity ID or shape.
  *
  * \code
- * scale(entity, factor, cx,cy)
+ * scale(entity, factor, [cx,cy])
  * scale(entity, factor, new RVector(cx,cy))
  * \endcode
  */
-function scale(e, factor, p1, p2) {
-    if (isNumber(p1)) {
-        return scale(e, factor, new RVector(p1, p2));
+function scale(e, factor, focusPoint) {
+    if (isNumber(focusPoint)) {
+        return scale(e, factor, new RVector(focusPoint));
     }
     if (isNumber(e)) {
         var doc = getDocument();
@@ -84,7 +84,7 @@ function scale(e, factor, p1, p2) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
-        return scale(entity, factor, p1);
+        return scale(entity, factor, focusPoint);
     }
 
     if (isNull(p1)) {
@@ -104,16 +104,16 @@ function scale(e, factor, p1, p2) {
  *
  * \code
  * mirror(entity, axis)
- * mirror(entity, p1, p2)
- * mirror(entity, x1,y1, x2,y2)
+ * mirror(entity, [p1, p2])
+ * mirror(entity, [[x1,y1], [x2,y2]])
  * \endcode
  */
-function mirror(e, p1, p2, p3, p4) {
-    if (isNumber(p1)) {
-        return mirror(e, new RLine(new RVector(p1, p2), new RVector(p3, p4)));
-    }
-    if (isVector(p1)) {
-        return mirror(e, new RLine(p1, p2));
+function mirror(e, axis) {
+    if (isArray(axis)) {
+        if (isVector(axis[0])) {
+            return mirror(e, new RLine(axis[0], axis[1]));
+        }
+        return mirror(e, new RLine(new RVector(axis[0]), new RVector(axis[1])));
     }
     if (isNumber(e)) {
         var doc = getDocument();
@@ -121,9 +121,95 @@ function mirror(e, p1, p2, p3, p4) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
-        return mirror(entity, p1);
+        return mirror(entity, axis);
     }
 
-    e.mirror(p1);
+    e.mirror(axis);
     return addEntity(e);
+}
+
+/**
+ * Trims the given entity / entities or shape(s).
+ *
+ * \param trimEntity Entity, entity ID or shape to trim
+ * \param trimClickPos Position clicked when choosing trim entity.
+ * \param limitingEntity Entity, entity ID or shape that limits the trimming.
+ * \param limitingClickPos Position clicked when choosing limiting entity.
+ * \param trimBoth True to trim both entities.
+ *
+ * \return RTransaction created by operation if no operation is given. If op is given, undefined is returned.
+ */
+function trim(trimEntity, trimClickPos, limitingEntity, limitingClickPos, trimBoth) {
+    var trimShape, limitingShape;
+
+    var doc = getDocument();
+    if (isNull(doc)) {
+        return undefined;
+    }
+
+    if (isNumber(trimEntity)) {
+        trimEntity = doc.queryEntity(trimEntity);
+    }
+    if (isNumber(limitingEntity)) {
+        limitingEntity = doc.queryEntity(limitingEntity);
+    }
+
+    if (isShape(trimEntity) && isShape(limitingShape)) {
+        trimShape = trimEntity;
+        limitingShape = limitingEntity;
+    }
+    else {
+        trimShape = trimEntity.castToShape();
+        limitingShape = limitingEntity.castToShape();
+        if (isNull(limitingShape)) {
+            limitingShape = limitingEntity.getClosestSimpleShape(limitingClickPos);
+            if (!isNull(limitingShape)) {
+                limitingShape = limitingShape.data();
+            }
+        }
+    }
+
+    if (isNull(trimShape) || isNull(limitingShape)) {
+        return undefined;
+    }
+
+    var samePolyline = (limitingEntity.getId()===trimEntity.getId() && isPolylineEntity(limitingEntity));
+    if (samePolyline) {
+        if (!trimBoth) {
+            // TODO: fix trimming one segment within same polyline:
+            return undefined;
+        }
+    }
+
+    var newShapes = RShape.trim(trimShape, trimClickPos, limitingShape, limitingClickPos, trimBoth, samePolyline);
+    if (newShapes.length===0) {
+        return undefined;
+    }
+
+    var op = getOperation();
+
+    if (!modifyEntity(op, trimEntity.clone(), newShapes[0].data())) {
+        if (trimBoth) {
+            warning(qsTr("First entity cannot be trimmed."));
+        }
+        else {
+            warning(qsTr("Entity cannot be trimmed."));
+        }
+    }
+
+    if (newShapes.length===1) {
+        // trimming was within same polyline
+    }
+    else {
+        if (trimBoth) {
+            if (!modifyEntity(op, limitingEntity.clone(), newShapes[1].data())) {
+                warning(qsTr("Second entity cannot be trimmed."));
+            }
+        }
+    }
+
+    if (!__simpleUseOp) {
+        var di = getDocumentInterface();
+        return di.applyOperation(op);
+    }
 }

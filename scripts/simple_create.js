@@ -7,16 +7,16 @@
  * \ingroup ecma_simple
  *
  * \code
- * addPoint(x,y)
+ * addPoint([x,y])
  * addPoint(new RVector(x,y))
  * \endcode
  */
-function addPoint(p1, p2) {
-    if (isNumber(p1)) {
-        return addPoint(new RVector(p1, p2));
+function addPoint(position) {
+    if (isArray(position)) {
+        return addPoint(new RVector(position));
     }
 
-    return addShape(new RPoint(p1));
+    return addShape(new RPoint(position));
 }
 
 /**
@@ -24,16 +24,19 @@ function addPoint(p1, p2) {
  * \ingroup ecma_simple
  *
  * \code
- * addLine(x1,y1, x2,y2)
+ * addLine([x1,y1], [x2,y2])
  * addLine(new RVector(x1,y1), new RVector(x2,y2))
  * \endcode
  */
-function addLine(p1, p2, p3, p4) {
-    if (isNumber(p1)) {
-        return addLine(new RVector(p1, p2), new RVector(p3, p4));
+function addLine(startPoint, endPoint) {
+    if (isArray(startPoint)) {
+        startPoint = new RVector(startPoint);
+    }
+    if (isArray(endPoint)) {
+        endPoint = new RVector(endPoint);
     }
 
-    return addShape(new RLine(p1, p2));
+    return addShape(new RLine(startPoint, endPoint));
 }
 
 /**
@@ -41,15 +44,15 @@ function addLine(p1, p2, p3, p4) {
  * \ingroup ecma_simple
  *
  * \code
- * addArc(cx,cy, radius, startAngle, endAngle, reversed)
+ * addArc([cx,cy], radius, startAngle, endAngle, reversed)
  * addArc(new RVector(cx,cy), radius, startAngle, endAngle, reversed)
  * \endcode
  */
-function addArc(p1, p2, p3, p4, p5, p6) {
-    if (isNumber(p1)) {
-        return addArc(new RVector(p1, p2), p3, p4,p5, p6);
+function addArc(center, radius, startAngle, endAngle, reversed) {
+    if (isArray(center)) {
+        center = new RVector(center);
     }
-    return addShape(new RArc(p1, p2, deg2rad(p3),deg2rad(p4), p5));
+    return addShape(new RArc(center, radius, deg2rad(startAngle), deg2rad(endAngle), reversed));
 }
 
 /**
@@ -61,11 +64,11 @@ function addArc(p1, p2, p3, p4, p5, p6) {
  * addCircle(new RVector(cx,cy), radius)
  * \endcode
  */
-function addCircle(p1, p2, p3) {
-    if (isNumber(p1)) {
-        return addCircle(new RVector(p1, p2), p3);
+function addCircle(center, radius) {
+    if (isArray(center)) {
+        center = new RVector(center);
     }
-    return addShape(new RCircle(p1, p2));
+    return addShape(new RCircle(center));
 }
 
 /**
@@ -178,8 +181,7 @@ function addSpline(points, closed) {
  * \ingroup ecma_simple
  *
  * \param text Text string.
- * \param x X position
- * \param y Y position
+ * \param position position
  * \param height Text height (defaults to 1)
  * \param angle Text angle (defaults to 0)
  * \param font Font (defaults to "standard")
@@ -189,10 +191,10 @@ function addSpline(points, closed) {
  * \param italic True for italic text (TTF fonts only)
  *
  * \code
- * addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, italic)
+ * addSimpleText(text, [x, y], height, angle, font, vAlign, hAlign, bold, italic)
  * \endcode
  */
-function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, italic) {
+function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold, italic) {
     if (isNull(height)) height = 1.0;
     if (isNull(angle)) angle = 0.0;
     if (isNull(font)) font = "Standard";
@@ -201,11 +203,15 @@ function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, it
     if (isNull(bold)) bold = false;
     if (isNull(italic)) italic = false;
 
+    if (isArray(position)) {
+        position = new RVector(position);
+    }
+
     var entity = new RTextEntity(
         getDocument(),
         new RTextData(
-              new RVector(x, y),
-              new RVector(x, y),
+              position,
+              position,
               height,
               100.0,
               vAlign,
