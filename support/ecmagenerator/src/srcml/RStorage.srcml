@@ -671,7 +671,7 @@
      * \return True if the document has unsaved changes.
      */</comment>
     <function><type><name>bool</name></type> <name>isModified</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>lastModified</name>.<call><name>isValid</name><argument_list>()</argument_list></call></expr>;</return>
+        <return>return <expr><name>modified</name></expr>;</return>
     }</block></function>
 
     <comment type="block">/**
@@ -694,6 +694,7 @@
 
 </public><protected>protected:
     <decl_stmt><decl><type><name>QDateTime</name></type> <name>lastModified</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>modified</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>

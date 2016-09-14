@@ -21,6 +21,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="valid_in"
         hasDefault="true" default="true" isConst="false" />
       </variant>
+      <variant>
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="tuples"
+        isConst="true" />
+      </variant>
     </constructor>
     <method name="set" cppName="set" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
