@@ -9,7 +9,7 @@
         <translation>&amp;Trimmen</translation>
     </message>
     <message>
-        <location filename="../Trim.js" line="+77"/>
+        <location filename="../Trim.js" line="+80"/>
         <source>Choose limiting entity</source>
         <translation>Limitierendes Objekt wählen</translation>
     </message>

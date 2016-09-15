@@ -831,4 +831,22 @@
         <translation>Unbekanntes Element</translation>
     </message>
 </context>
+<context>
+    <name>simple_modify</name>
+    <message>
+        <location filename="../simple_modify.js" line="+193"/>
+        <source>First entity cannot be trimmed.</source>
+        <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Entity cannot be trimmed.</source>
+        <translation>Objekt kann nicht getrimmt werden.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Second entity cannot be trimmed.</source>
+        <translation>Zweites Objekt kann nicht getrimmt werden.</translation>
+    </message>
+</context>
 </TS>

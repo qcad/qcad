@@ -775,4 +775,22 @@
         <translation>Неизвестный объект</translation>
     </message>
 </context>
+<context>
+    <name>simple_modify</name>
+    <message>
+        <location filename="../simple_modify.js" line="+193"/>
+        <source>First entity cannot be trimmed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Entity cannot be trimmed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Second entity cannot be trimmed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

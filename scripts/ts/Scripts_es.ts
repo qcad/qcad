@@ -868,4 +868,22 @@ en las líneas, los sólidos y los textos</translatorcomment>
         <translation>Entidad desconocida</translation>
     </message>
 </context>
+<context>
+    <name>simple_modify</name>
+    <message>
+        <location filename="../simple_modify.js" line="+193"/>
+        <source>First entity cannot be trimmed.</source>
+        <translation>Primera entidad no se pueden recortar.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Entity cannot be trimmed.</source>
+        <translation>Entidad no se pueden recortar.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Second entity cannot be trimmed.</source>
+        <translation>Segunda entidad no se pueden recortar.</translation>
+    </message>
+</context>
 </TS>
