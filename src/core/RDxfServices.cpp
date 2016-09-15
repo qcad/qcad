@@ -1416,7 +1416,7 @@ int RDxfServices::getCodeForVariable(RS::KnownVariable v) {
 //    case RS::CELWEIGHT:
 //        return 370;
 //    case RS::CEPSNTYPE:
-        return 380;
+//        return 380;
     case RS::CHAMFERA:
         return 40;
     case RS::CHAMFERB:
@@ -1504,7 +1504,7 @@ int RDxfServices::getCodeForVariable(RS::KnownVariable v) {
 //    case RS::DIMFXL:
 //        return 40;
 //    case RS::DIMFXLON:
-        return 70;
+//        return 70;
     case RS::DIMGAP:
         return 40;
 //    case RS::DIMJOGANG:
@@ -1888,6 +1888,24 @@ int RDxfServices::getCodeForVariable(RS::KnownVariable v) {
     default:
         return -1;
     }
+}
+
+RDxfServices::Type RDxfServices::getTypeForVariable(RS::KnownVariable v) {
+    int c = getCodeForVariable(v);
+    if (c>=0 && c<=9) {
+        return String;
+    }
+    if (c>=10 && c<=39) {
+        return Vector;
+    }
+    if (c>=40 && c<=59) {
+        return Float;
+    }
+    if (c>=60 && c<=99) {
+        return Int;
+    }
+
+    return Unknown;
 }
 
 /**

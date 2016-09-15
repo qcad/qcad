@@ -38,6 +38,15 @@
  */
 class QCADCORE_EXPORT RDxfServices {
 public:
+    enum Type {
+        Unknown,
+        String,
+        Int,
+        Float,
+        Vector
+    };
+
+public:
     RDxfServices();
 
     void reset();
@@ -118,6 +127,7 @@ public:
     static RS::KnownVariable stringToVariable(const QString& s);
     static QString variableToString(RS::KnownVariable v);
     static int getCodeForVariable(RS::KnownVariable v);
+    static RDxfServices::Type getTypeForVariable(RS::KnownVariable v);
     static bool isVariable2D(RS::KnownVariable v);
 
     static QString escapeUnicode(const QString& str);
@@ -141,6 +151,7 @@ private:
     QTextCodec* codec;
 };
 
+Q_DECLARE_METATYPE(RDxfServices::Type)
 Q_DECLARE_METATYPE(RDxfServices)
 Q_DECLARE_METATYPE(RDxfServices*)
 
