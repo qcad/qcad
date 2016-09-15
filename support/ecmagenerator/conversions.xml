@@ -61,6 +61,7 @@
 	<entry key="RS::EndType" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::Ending" value="toNumber()" testFunction="isNumber()" cast="int" />
 
+	<entry key="RDxfServices::Type" testFunction="isNumber()" cast="int" />
 	<entry key="RLineweight::Lineweight" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLinetype::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLinetype::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />

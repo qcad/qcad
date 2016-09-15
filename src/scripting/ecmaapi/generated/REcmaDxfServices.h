@@ -145,6 +145,9 @@
         getCodeForVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTypeForVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isVariable2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -163,6 +166,8 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RDxfServices* getSelf(const QString& fName, QScriptContext* context)
     ;static RDxfServices* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static  QScriptValue toScriptValueEnumType(QScriptEngine* engine, const RDxfServices::Type& value)
+    ;static  void fromScriptValueEnumType(const QScriptValue& value, RDxfServices::Type& out)
     ;};
     #endif
     

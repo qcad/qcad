@@ -39,6 +39,15 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RDxfServices</name> <block>{<private type="default">
 </private><public>public:
+    <enum>enum <name>Type</name> <block>{
+        <expr><name>Unknown</name></expr>,
+        <expr><name>String</name></expr>,
+        <expr><name>Int</name></expr>,
+        <expr><name>Float</name></expr>,
+        <expr><name>Vector</name></expr>
+    }</block>;</enum>
+
+</public><public>public:
     <constructor_decl><name>RDxfServices</name><parameter_list>()</parameter_list>;</constructor_decl>
 
     <function_decl><type><name>void</name></type> <name>reset</name><parameter_list>()</parameter_list>;</function_decl>
@@ -119,6 +128,7 @@
     <function_decl><type><name>static</name> <name><name>RS</name>::<name>KnownVariable</name></name></type> <name>stringToVariable</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>variableToString</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getCodeForVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name><name>RDxfServices</name>::<name>Type</name></name></type> <name>getTypeForVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isVariable2D</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>QString</name></type> <name>escapeUnicode</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list>;</function_decl>

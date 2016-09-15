@@ -130,6 +130,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getCodeForVariable, "getCodeForVariable");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getTypeForVariable, "getTypeForVariable");
+            
             REcmaHelper::registerFunction(&engine, &ctor, isVariable2D, "isVariable2D");
             
             REcmaHelper::registerFunction(&engine, &ctor, escapeUnicode, "escapeUnicode");
@@ -145,8 +147,40 @@
     // enum values:
     
 
+    ctor.setProperty("Unknown",
+    QScriptValue(RDxfServices::Unknown),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("String",
+    QScriptValue(RDxfServices::String),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Int",
+    QScriptValue(RDxfServices::Int),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Float",
+    QScriptValue(RDxfServices::Float),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Vector",
+    QScriptValue(RDxfServices::Vector),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
+    qScriptRegisterMetaType<RDxfServices::Type>(
+        &engine,
+        toScriptValueEnumType,
+        fromScriptValueEnumType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
         
     // init class:
     engine.globalObject().setProperty("RDxfServices",
@@ -2096,6 +2130,56 @@
             return result;
         }
          QScriptValue
+        REcmaDxfServices::getTypeForVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getTypeForVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getTypeForVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RDxfServices::Type'
+    RDxfServices::Type cppResult =
+        RDxfServices::
+       getTypeForVariable(a0);
+        // return type: RDxfServices::Type
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getTypeForVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getTypeForVariable", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDxfServices::isVariable2D
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2385,5 +2469,15 @@
             
 
 
+        }
+         QScriptValue REcmaDxfServices::toScriptValueEnumType(QScriptEngine* engine, const RDxfServices::Type& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaDxfServices::fromScriptValueEnumType(const QScriptValue& value, RDxfServices::Type& out)
+    
+        {
+            out = qvariant_cast<RDxfServices::Type>(value.toVariant());
         }
         
