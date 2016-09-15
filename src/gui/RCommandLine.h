@@ -37,6 +37,7 @@ Q_OBJECT
 
 signals:
     void clearHistory();
+    void multiLinePaste();
     void commandConfirmed(const QString& command);
     void completeCommand(const QString& command);
     void escape();

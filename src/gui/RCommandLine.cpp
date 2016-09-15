@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QDebug>
 #include <QEvent>
 #include <QKeyEvent>
 
@@ -63,6 +64,12 @@ void RCommandLine::keyPressEvent(QKeyEvent* event) {
     case Qt::Key_L:
         if (event->modifiers() == Qt::ControlModifier) {
             emit clearHistory();
+            return;
+        }
+        break;
+    case Qt::Key_V:
+        if (event->modifiers() == Qt::ControlModifier) {
+            emit multiLinePaste();
             return;
         }
         break;

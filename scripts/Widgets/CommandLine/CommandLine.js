@@ -335,6 +335,26 @@ CommandLine.init = function(basePath) {
     
     leCommand.clearHistory.connect(teHistory, "clear");
 
+    leCommand.multiLinePaste.connect(function() {
+        var cb = QGuiApplication.clipboard();
+        qDebug("pasting: " + cb.text());
+
+        var text = cb.text();
+
+        // multi line paste and enter:
+        if (text.contains("\n")) {
+            var lines = text.split("\n");
+            for (var i=0; i<lines.length; i++) {
+                qDebug("line: " + lines[i]);
+                leCommand.commandConfirmed(lines[i]);
+            }
+        }
+        else {
+            // single line paste only:
+            leCommand.paste(text);
+        }
+    });
+
     // show message to user:
     appWin.userMessage.connect(function(message) {
             appendAndScroll("<span>" + message + "</span>");
