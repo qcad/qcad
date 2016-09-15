@@ -179,8 +179,12 @@ DrawBasedOnRectangleSize.prototype.updatePreview = function(clear) {
 
 DrawBasedOnRectangleSize.prototype.getOperation = function(preview) {
     var i;
+
+    if (!isNumber(this.angle)) {
+        this.angle = 0;
+    }
     
-    if (isNull(this.pos) || isNull(this.width) || isNull(this.height) || isNull(this.angle)) {
+    if (isNull(this.pos) || isNull(this.width) || isNull(this.height)) {
         return;
     }
     
