@@ -1,0 +1,24 @@
+<html>
+<head>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" /> 
+</head>
+<body>
+    <div id="map" style="width: 700px; height: 500px"></div>
+ 
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <style>
+       .leaflet-container { background-color: #fff }
+    </style>
+
+    <script>
+        var map = L.map('map').setView([0, 0], 2);
+        L.tileLayer('{z}/{x}/{y}.png', {
+            minZoom: 1,
+            maxZoom: 4,
+            attribution: 'QCAD',
+            tms: true,
+            noWrap: true
+        }).addTo(map);
+    </script>
+</body>
+</html>
