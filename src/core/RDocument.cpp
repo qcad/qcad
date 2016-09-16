@@ -1508,7 +1508,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
                 QSharedPointer<REntity> parent = queryEntityDirect(blockRefId);
                 QSharedPointer<RBlockReferenceEntity> blockRef = parent.dynamicCast<RBlockReferenceEntity>();
                 if (!blockRef.isNull()) {
-                    if (isLayerFrozen(blockRef->getLayerId())) {
+                    if (isLayerFrozen(blockRef->getLayerId()) || isBlockFrozen(blockRef->getReferencedBlockId())) {
                         continue;
                     }
                 }
