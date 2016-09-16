@@ -168,6 +168,12 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     var block;
     
     var pos = this.verticalScrollBar().sliderPosition;
+    var selectedBlockName = undefined;
+    var selectedItems = this.selectedItems();
+    if (selectedItems.length===1) {
+        selectedBlockName = selectedItems[0].data(BlockList.colName, Qt.UserRole);
+    }
+
     this.clear();
     if (isNull(documentInterface)) {
         return;
@@ -178,8 +184,11 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     var blockNames = doc.getBlockNames();
     this.sortBlockNames(blockNames);
 
+    var hideInternal = RSettings.getBoolValue("BlockList/HideInternalBlocks", false);
+
     var currentBlockId = doc.getCurrentBlockId();
     var currentItem = undefined;
+    var selectedItem = undefined;
     for (var i=0; i<blockNames.length; ++i) {
         var blockName = blockNames[i];
         block = doc.queryBlock(blockName);
@@ -188,7 +197,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
         }
 
         // hide anonymous blocks:
-        if (RSettings.getBoolValue("BlockList/HideInternalBlocks", false)===true) {
+        if (hideInternal===true) {
             if (blockName.toLowerCase().startsWith("a$c") && blockName.length===13) {
                 continue;
             }
@@ -200,22 +209,19 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
 
         var item = this.getBlockItem(block);
         this.addTopLevelItem(item);
+        if (blockName===selectedBlockName) {
+            selectedItem = item;
+        }
 
         if (currentBlockId===block.getId()) {
             currentItem = item;
         }
     }
 
-    block = doc.queryCurrentBlock();
-    if (!block.isNull()) {
-        var list = this.findItems(block.getName(), Qt.MatchExactly);
-        if (list.length!==0) {
-            this.setCurrentItem(list[0]);
-        }
-    }
     this.verticalScrollBar().sliderPosition = pos;
-    if (!isNull(currentItem)) {
-        this.setCurrentItem(currentItem);
+
+    if (!isNull(selectedItem)) {
+        selectedItem.setSelected(true);
     }
 
     this.blockActivated();
