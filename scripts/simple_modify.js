@@ -163,6 +163,7 @@ function mirror(e, axis) {
 
 /**
  * Trims the given entity / entities or shape(s).
+ * \ingroup ecma_simple
  *
  * \param trimEntity Entity, entity ID or shape to trim
  * \param trimClickPos Position clicked when choosing trim entity.
@@ -255,4 +256,40 @@ function trim(trimEntity, trimClickPos, limitingEntity, limitingClickPos, trimBo
         var di = getDocumentInterface();
         return di.applyOperation(op);
     }
+}
+
+/**
+ * Lengthens of shortens the given entity or shape.
+ * \ingroup ecma_simple
+ *
+ * \param entity Entity, entity ID or shape to lengthen
+ * \param start True to extend at start point, false for end point
+ * \param amount Amount to lengthen or negative value to shorten
+ */
+function lengthen(entity, start, amount) {
+    var doc = getDocument();
+    if (isNull(doc)) {
+        return undefined;
+    }
+
+    if (isNumber(entity)) {
+        entity = doc.queryEntity(entity);
+    }
+
+    var from = RS.FromStart;
+    if (!start) {
+        from = RS.FromEnd;
+    }
+
+    var pts = entity.getPointsWithDistanceToEnd(-amount, from);
+    if (pts.length===1) {
+        if (start) {
+            entity.trimStartPoint(pts[0], pts[0], true);
+        }
+        else {
+            entity.trimEndPoint(pts[0], pts[0], true);
+        }
+    }
+
+    return addEntity(entity);
 }
