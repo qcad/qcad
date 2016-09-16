@@ -9,11 +9,16 @@
  * \param e Entity, entity ID or shape.
  *
  * \code
+ * move(entity, x,y)
  * move(entity, [x,y])
  * move(entity, new RVector(x,y))
  * \endcode
  */
 function move(e, offset) {
+    if (arguments.length===3) {
+        return move(arguments[0], new RVector(arguments[1], arguments[2]));
+    }
+
     if (isArray(offset)) {
         return move(e, new RVector(offset));
     }
@@ -37,11 +42,16 @@ function move(e, offset) {
  * \param e Entity, entity ID or shape.
  *
  * \code
+ * rotate(entity, angle, cx,cy)
  * rotate(entity, angle, [cx,cy])
  * rotate(entity, angle, new RVector(cx,cy))
  * \endcode
  */
 function rotate(e, angle, center) {
+    if (arguments.length===4) {
+        return rotate(arguments[0], arguments[1], new RVector(arguments[2], arguments[3]));
+    }
+
     if (isArray(center)) {
         return rotate(e, angle, new RVector(center));
     }
@@ -70,11 +80,16 @@ function rotate(e, angle, center) {
  * \param e Entity, entity ID or shape.
  *
  * \code
+ * scale(entity, factor, cx,cy)
  * scale(entity, factor, [cx,cy])
  * scale(entity, factor, new RVector(cx,cy))
  * \endcode
  */
 function scale(e, factor, focusPoint) {
+    if (arguments.length===4) {
+        return scale(arguments[0], arguments[1], new RVector(arguments[2], arguments[3]));
+    }
+
     if (isNumber(focusPoint)) {
         return scale(e, factor, new RVector(focusPoint));
     }
@@ -103,12 +118,30 @@ function scale(e, factor, focusPoint) {
  * \param e Entity, entity ID or shape.
  *
  * \code
- * mirror(entity, axis)
- * mirror(entity, [p1, p2])
+ * mirror(entity, x1,y1, x2,y2)
+ * mirror(entity, [x1,y1], [x2,y2])
+ * mirror(entity, new RVector(x1,y1), new RVector(x2,y2))
+ * mirror(entity, new RLine(x1,y1, x2, y2))
+ * mirror(entity, [new RVector(x1,y1), new RVector(x2,y2)])
  * mirror(entity, [[x1,y1], [x2,y2]])
  * \endcode
  */
 function mirror(e, axis) {
+    if (arguments.length===5) {
+        return mirror(arguments[0], new RLine(arguments[1], arguments[2], arguments[3], arguments[4]));
+    }
+    if (arguments.length===3) {
+        var p1 = arguments[1];
+        if (isArray(p1)) {
+            p1 = new RVector(p1);
+        }
+        var p2 = arguments[1];
+        if (isArray(p2)) {
+            p2 = new RVector(p2);
+        }
+        return mirror(arguments[0], new RLine(p1, p2));
+    }
+
     if (isArray(axis)) {
         if (isVector(axis[0])) {
             return mirror(e, new RLine(axis[0], axis[1]));
@@ -138,8 +171,18 @@ function mirror(e, axis) {
  * \param trimBoth True to trim both entities.
  *
  * \return RTransaction created by operation if no operation is given. If op is given, undefined is returned.
+ *
+ * \code
+ * trim(trimEntity, x1,y1, limitingEntity, x2,y2, trimBoth)
+ * trim(trimEntity, [x1,y1], limitingEntity, [x2,y2], trimBoth)
+ * trim(trimEntity, new RVector(x1,y1), limitingEntity, new RVector(x2,y2), trimBoth)
+ * \endcode
  */
 function trim(trimEntity, trimClickPos, limitingEntity, limitingClickPos, trimBoth) {
+    if (arguments.length===7) {
+        return trim(arguments[0], new RVector(arguments[1], arguments[2]), arguments[3], new RVector(arguments[4], arguments[5]), arguments[6]);
+    }
+
     var trimShape, limitingShape;
 
     var doc = getDocument();
