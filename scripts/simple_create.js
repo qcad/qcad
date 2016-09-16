@@ -7,11 +7,16 @@
  * \ingroup ecma_simple
  *
  * \code
+ * addPoint(x,y)
  * addPoint([x,y])
  * addPoint(new RVector(x,y))
  * \endcode
  */
 function addPoint(position) {
+    if (arguments.length===2) {
+        return addPoint(new RVector(arguments[0], arguments[1]));
+    }
+
     if (isArray(position)) {
         return addPoint(new RVector(position));
     }
@@ -24,11 +29,16 @@ function addPoint(position) {
  * \ingroup ecma_simple
  *
  * \code
+ * addLine(x1,y1, x2,y2)
  * addLine([x1,y1], [x2,y2])
  * addLine(new RVector(x1,y1), new RVector(x2,y2))
  * \endcode
  */
 function addLine(startPoint, endPoint) {
+    if (arguments.length===4) {
+        return addLine(new RVector(arguments[0], arguments[1]), new RVector(arguments[2], arguments[3]));
+    }
+
     if (isArray(startPoint)) {
         startPoint = new RVector(startPoint);
     }
@@ -44,11 +54,16 @@ function addLine(startPoint, endPoint) {
  * \ingroup ecma_simple
  *
  * \code
+ * addArc(cx,cy, radius, startAngle, endAngle, reversed)
  * addArc([cx,cy], radius, startAngle, endAngle, reversed)
  * addArc(new RVector(cx,cy), radius, startAngle, endAngle, reversed)
  * \endcode
  */
 function addArc(center, radius, startAngle, endAngle, reversed) {
+    if (arguments.length===6) {
+        return addShape(new RVector(arguments[0], arguments[1]), arguments[2], arguments[3], arguments[4], arguments[5]);
+    }
+
     if (isArray(center)) {
         center = new RVector(center);
     }
@@ -61,10 +76,15 @@ function addArc(center, radius, startAngle, endAngle, reversed) {
  *
  * \code
  * addCircle(cx,cy, radius)
+ * addCircle([cx,cy], radius)
  * addCircle(new RVector(cx,cy), radius)
  * \endcode
  */
 function addCircle(center, radius) {
+    if (arguments.length===3) {
+        return addShape(new RVector(arguments[0], arguments[1]), arguments[2]);
+    }
+
     if (isArray(center)) {
         center = new RVector(center);
     }
@@ -191,10 +211,16 @@ function addSpline(points, closed) {
  * \param italic True for italic text (TTF fonts only)
  *
  * \code
+ * addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, italic)
  * addSimpleText(text, [x, y], height, angle, font, vAlign, hAlign, bold, italic)
+ * addSimpleText(text, new RVector(x, y), height, angle, font, vAlign, hAlign, bold, italic)
  * \endcode
  */
 function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold, italic) {
+    if (arguments.length===10) {
+        return addShape(arguments[0], new RVector(arguments[1], arguments[2]), arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]);
+    }
+
     if (isNull(height)) height = 1.0;
     if (isNull(angle)) angle = 0.0;
     if (isNull(font)) font = "Standard";
