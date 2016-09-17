@@ -27,12 +27,17 @@ function startTransaction() {
 /**
  * \see startTransaction
  * \ingroup ecma_simple
+ *
+ * \param di RDocumentInterface to apply the transaction to (defaults to current
+ * document interface).
  * \return RTransaction object containing information about the transaction.
  */
-function endTransaction() {
+function endTransaction(di) {
     var ret = undefined;
     if (!isNull(__simpleOp)) {
-        var di = getDocumentInterface();
+        if (isNull(di)) {
+            di = getDocumentInterface();
+        }
         ret = di.applyOperation(__simpleOp);
         __simpleOp = undefined;
     }
