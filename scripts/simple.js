@@ -14,6 +14,7 @@ include("input.js");
 // internal:
 __simpleUseOp = false;
 __simpleOp = undefined;
+__simpleDoc = undefined;
 
 include("simple_create.js");
 include("simple_info.js");
@@ -60,6 +61,14 @@ function getGraphicsView() {
         return undefined;
     }
     return di.getLastKnownViewWithFocus();
+}
+
+/**
+ * Creates an off-screen document. Such a document can be filled with
+ * objects and saved to disk, pasted into the current document, etc.
+ */
+function createOffScreenDocument() {
+    return new RDocument(new RMemoryStorage(), new RSpatialIndexSimple());
 }
 
 /**
