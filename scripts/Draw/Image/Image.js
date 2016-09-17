@@ -40,7 +40,7 @@ function Image(guiAction) {
     this.height = undefined;
     this.angle = undefined;
 
-    this.setUiOptions("Image.ui");
+    this.setUiOptions("scripts/Draw/Image/Image.ui");
 }
 
 Image.State = {
