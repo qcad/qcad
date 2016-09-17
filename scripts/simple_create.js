@@ -221,6 +221,11 @@ function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold
         return addShape(arguments[0], new RVector(arguments[1], arguments[2]), arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]);
     }
 
+    var doc = getTransactionDocument();
+    if (isNull(doc)) {
+        return undefined;
+    }
+
     if (isNull(height)) height = 1.0;
     if (isNull(angle)) angle = 0.0;
     if (isNull(font)) font = "Standard";
@@ -234,7 +239,7 @@ function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold
     }
 
     var entity = new RTextEntity(
-        getDocument(),
+        doc,
         new RTextData(
               position,
               position,
@@ -257,12 +262,19 @@ function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold
 }
 
 /**
- * Adds the given RShape to the drawing using current layer and attributes.
+ * Adds the given RShape to the drawing as a new entity using current layer and attributes.
  * \ingroup ecma_simple
+ *
+ * \return ID of added entity or undefined if a transaction is in progress
+ * and the entity ID is not yet known.
  */
 function addShape(shape) {
-    var di = getDocumentInterface();
-    var entity = shapeToEntity(getDocument(), shape);
+    var doc = getTransactionDocument();
+    if (isNull(doc)) {
+        return undefined;
+    }
+
+    var entity = shapeToEntity(doc, shape);
     return addEntity(entity);
 }
 
