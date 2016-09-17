@@ -264,6 +264,24 @@ EcmaScriptShell.init = function(basePath) {
         leCommand.setFocus();
     });
 
+    leCommand.multiLinePaste.connect(function() {
+        var cb = QGuiApplication.clipboard();
+
+        var text = cb.text();
+
+        // multi line paste and enter:
+        if (text.contains("\n")) {
+            var lines = text.split("\n");
+            for (var i=0; i<lines.length; i++) {
+                leCommand.commandConfirmed(lines[i]);
+            }
+        }
+        else {
+            // single line paste only:
+            leCommand.paste(text);
+        }
+    });
+
     // user pressed tab:
     leCommand.completeCommand.connect(function(command) {
         // look from cursor pos backwards:
