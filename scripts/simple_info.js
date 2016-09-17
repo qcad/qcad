@@ -12,13 +12,17 @@
  * on the given entities or shapes (visible intersections).
  */
 function getIntersectionPoints(e1, e2, limited) {
-    var doc = getDocument();
-    if (isNull(doc)) {
-        return [];
-    }
-
     if (isNull(limited)) {
         limited = true;
+    }
+
+    // document is required if entitiy IDs are passed:
+    var doc = undefined;
+    if (isNumber(e1) || isNumber(e2)) {
+        doc = getDocument();
+        if (isNull(doc)) {
+            return [];
+        }
     }
 
     if (isNumber(e1)) {
