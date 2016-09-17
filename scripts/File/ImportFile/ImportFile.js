@@ -92,13 +92,32 @@ ImportFile.prototype.getFileName = function() {
         return undefined;
     }
 
-    var files = fileDialog.selectedFiles();
-    if (files.length===0) {
+    var fileNames = fileDialog.selectedFiles();
+    if (fileNames.length===0) {
         fileDialog.destroy();
         return undefined;
     }
 
+    var fileName = fileNames[0];
+
+    var suffix = new QFileInfo(fileName).suffix();
+    suffix = suffix.toUpperCase();
+
+    var imageFormats = QImageReader.supportedImageFormats();
+    for (var i=0; i<imageFormats.length; i++) {
+        var format = imageFormats[i];
+        if (suffix===format.toString().toUpperCase()) {
+            // delegate import to image action:
+            include("scripts/Draw/Image/Image.js");
+            var imageAction = new Image();
+            imageAction.fileName = fileName;
+            this.getDocumentInterface().queueAction(imageAction);
+            this.terminate();
+            return;
+        }
+    }
+
     RSettings.setValue("ImportFile/Path", fileDialog.directory().absolutePath());
 
-    return [ files[0], fileDialog.selectedNameFilter() ];
+    return [ fileNames[0], fileDialog.selectedNameFilter() ];
 };
