@@ -3,6 +3,32 @@
  */
 
 /**
+ * Pastes the given document into the current document or into the second given document.
+ *
+ * \param offset Offset
+ */
+function paste(docSource, diDestination, offset, scale, rotation, flipHorizontal, flipVertical, toCurrentLayer, overwriteLayers, overwriteBlocks) {
+    if (isArray(offset)) {
+        return paste(docSource, diDestination, new RVector(offset), scale, rotation, flipHorizontal, flipVertical, toCurrentLayer, overwriteLayers, overwriteBlocks);
+    }
+
+    var op = new RPasteOperation(docSource);
+    op.setOffset(offset);
+    op.setScale(scale);
+    op.setRotation(deg2rad(rotation));
+    op.setFlipHorizontal(flipHorizontal);
+    op.setFlipVertical(flipVertical);
+    op.setToCurrentLayer(toCurrentLayer);
+    op.setOverwriteLayers(overwriteLayers);
+    op.setOverwriteBlocks(overwriteBlocks);
+
+    if (isNull(diDestination)) {
+        diDestination = getDocumentInterface();
+    }
+    diDestination.applyOperation(op);
+}
+
+/**
  * Moves the given entity or shape by the given offset.
  * \ingroup ecma_simple
  *
