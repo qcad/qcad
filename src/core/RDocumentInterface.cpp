@@ -1536,6 +1536,7 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
         RGraphicsScene* scene = *it;
         scene->beginPreview();
         scene->setColor(RSettings::getColor("GraphicsViewColors/ZoomBoxColor", RColor(127,0,0)));
+        scene->setBrush(Qt::NoBrush);
         scene->setLineweight(RLineweight::Weight000);
         scene->setStyle(Qt::DashLine);
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
