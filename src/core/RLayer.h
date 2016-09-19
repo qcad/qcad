@@ -162,6 +162,10 @@ public:
         return RLayer::getLayerNameHierarchyStatic(getName());
     }
 
+    bool isChildLayerOf(const QString& layerName) const {
+        return RLayer::isChildLayerOfStatic(getName(), layerName);
+    }
+
     static QString getHierarchySeparator() {
         if (layerProxy!=NULL) {
             return layerProxy->getHierarchySeparator();
@@ -202,6 +206,13 @@ public:
             return layerProxy->getLayerNameHierarchy(layerName);
         }
         return QList<QString>();
+    }
+
+    static bool isChildLayerOfStatic(const QString& layerName, const QString& parentLayerName) {
+        if (layerProxy!=NULL) {
+            return layerProxy->isChildLayerOf(layerName, parentLayerName);
+        }
+        return false;
     }
 
     static bool hasProxy() {

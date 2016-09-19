@@ -41,6 +41,7 @@ public:
     virtual QString getParentLayerName(const QString& layerName) = 0;
     virtual QString getShortLayerName(const QString& layerName) = 0;
     virtual QList<QString> getLayerNameHierarchy(const QString& layerName) = 0;
+    virtual bool isChildLayerOf(const QString& layerName, const QString& parentLayerName) = 0;
 };
 
 #endif
