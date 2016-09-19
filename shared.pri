@@ -46,8 +46,8 @@ macx-ios-* {
 
 !r_mobile {
     greaterThan(QT_MAJOR_VERSION, 4) {
-        greaterThan(QT_MINOR_VERSION, 5) {
-            # Qt >= 5.6
+        greaterThan(QT_MINOR_VERSION, 6) {
+            # Qt >= 5.7
             QT += webenginewidgets
         }
         else {
