@@ -115,6 +115,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLayerNameHierarchy, "getLayerNameHierarchy");
             
+            REcmaHelper::registerFunction(&engine, proto, isChildLayerOf, "isChildLayerOf");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RLayerPointer>(), *proto);
       
@@ -137,6 +139,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getShortLayerNameStatic, "getShortLayerNameStatic");
             
             REcmaHelper::registerFunction(&engine, &ctor, getLayerNameHierarchyStatic, "getLayerNameHierarchyStatic");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isChildLayerOfStatic, "isChildLayerOfStatic");
             
             REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
@@ -2645,6 +2649,66 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerLayer::isChildLayerOf
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::isChildLayerOf", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::isChildLayerOf";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("isChildLayerOf", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isChildLayerOf(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isChildLayerOf().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::isChildLayerOf", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerLayer::getHierarchySeparator
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3036,6 +3100,69 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerLayer::getLayerNameHierarchyStatic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLayer::isChildLayerOfStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::isChildLayerOfStatic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::isChildLayerOfStatic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RLayer::
+       isChildLayerOfStatic(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isChildLayerOfStatic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::isChildLayerOfStatic", context, engine);
             return result;
         }
          QScriptValue

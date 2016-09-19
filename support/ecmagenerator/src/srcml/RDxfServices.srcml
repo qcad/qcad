@@ -152,6 +152,7 @@
     <decl_stmt><decl><type><name>QTextCodec</name>*</type> <name>codec</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDxfServices::Type</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDxfServices</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDxfServices*</argument>)</argument_list></macro>
 

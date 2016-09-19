@@ -120,6 +120,9 @@
         getLayerNameHierarchy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isChildLayerOf
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHierarchySeparator
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -136,6 +139,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLayerNameHierarchyStatic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isChildLayerOfStatic
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasProxy

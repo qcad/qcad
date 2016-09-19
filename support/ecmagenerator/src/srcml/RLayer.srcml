@@ -163,6 +163,10 @@
         <return>return <expr><call><name><name>RLayer</name>::<name>getLayerNameHierarchyStatic</name></name><argument_list>(<argument><expr><call><name>getName</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isChildLayerOf</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RLayer</name>::<name>isChildLayerOfStatic</name></name><argument_list>(<argument><expr><call><name>getName</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>layerName</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>static</name> <name>QString</name></type> <name>getHierarchySeparator</name><parameter_list>()</parameter_list> <block>{
         <if>if <condition>(<expr><name>layerProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
             <return>return <expr><name>layerProxy</name>-&gt;<call><name>getHierarchySeparator</name><argument_list>()</argument_list></call></expr>;</return>
@@ -203,6 +207,13 @@
             <return>return <expr><name>layerProxy</name>-&gt;<call><name>getLayerNameHierarchy</name><argument_list>(<argument><expr><name>layerName</name></expr></argument>)</argument_list></call></expr>;</return>
         }</block></then></if>
         <return>return <expr><call><name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>isChildLayerOfStatic</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>parentLayerName</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>layerProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <return>return <expr><name>layerProxy</name>-&gt;<call><name>isChildLayerOf</name><argument_list>(<argument><expr><name>layerName</name></expr></argument>, <argument><expr><name>parentLayerName</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
     <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{

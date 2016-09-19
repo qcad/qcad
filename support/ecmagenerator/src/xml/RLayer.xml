@@ -184,6 +184,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; QString &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="isChildLayerOf" cppName="isChildLayerOf"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
+    </method>
     <method name="getHierarchySeparator"
     cppName="getHierarchySeparator" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -235,6 +243,16 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
+      </variant>
+    </method>
+    <method name="isChildLayerOfStatic"
+    cppName="isChildLayerOfStatic" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="parentLayerName" isConst="true" />
       </variant>
     </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"
