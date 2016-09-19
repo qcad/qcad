@@ -4,8 +4,20 @@
 
 /**
  * Pastes the given document into the current document or into the second given document.
+* \ingroup ecma_simple
  *
- * \param offset Offset
+ * \param docSource RDocument to paste
+ * \param docDestination RDocument to paste into (or undefined for current document)
+ * \param offset Offset RVector or [x,y] array
+ * \param scale Scale factor
+ * \param rotation Rotation angle in degrees
+ * \param flipHorizontal True to flip horizontally
+ * \param flipVertial True to flip vertically
+ * \param toCurrentLayer Paste all entities to the current layer of the target document
+ * \param overwriteLayers Overwrite existing layers in the target document with layers
+ * from the source document
+ * \param overwriteBlocks Overwrite existing blocks in the target document with blocks
+ * from the source document
  */
 function paste(docSource, diDestination, offset, scale, rotation, flipHorizontal, flipVertical, toCurrentLayer, overwriteLayers, overwriteBlocks) {
     if (isArray(offset)) {
