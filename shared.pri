@@ -44,17 +44,18 @@ macx-ios-* {
     CONFIG += r_mobile
 }
 
-!r_mobile {
-    greaterThan(QT_MAJOR_VERSION, 4) {
-        greaterThan(QT_MINOR_VERSION, 5) {
-            # Qt >= 5.6
-            QT += webenginewidgets
-        }
-        else {
-            QT += webkitwidgets
-        }
-    }
-}
+# QCAD does not depend on WebKit / WebEngine anymore and uses QTextBrowser instead:
+#!r_mobile {
+#    greaterThan(QT_MAJOR_VERSION, 4) {
+#        greaterThan(QT_MINOR_VERSION, 5) {
+#            # Qt >= 5.6
+#            QT += webenginewidgets
+#        }
+#        else {
+#            QT += webkitwidgets
+#        }
+#    }
+#}
 
 win32-msvc2010 {
     CONFIG+=win32-msvc
