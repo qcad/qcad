@@ -40,7 +40,7 @@ function getDocumentInterface() {
 }
 
 /**
- * Returns the current RDocument or undefined.
+ * \return the current RDocument or undefined.
  * \ingroup ecma_simple
  */
 function getDocument() {
@@ -52,7 +52,7 @@ function getDocument() {
 }
 
 /**
- * Returns the current or last active RGraphicsView.
+ * \return the current or last active RGraphicsView.
  * \ingroup ecma_simple
  */
 function getGraphicsView() {
@@ -66,6 +66,9 @@ function getGraphicsView() {
 /**
  * Creates an off-screen document. Such a document can be filled with
  * objects and saved to disk, pasted into the current document, etc.
+ * \ingroup ecma_simple
+ *
+ * \return new empty RDocument with default settings
  */
 function createOffScreenDocument() {
     return new RDocument(new RMemoryStorage(), new RSpatialIndexSimple());
