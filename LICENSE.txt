@@ -1,5 +1,6 @@
 The QCAD 3 source code is open source and distributed under GPL version 3
 with optional exceptions.
+
 See files:
 - gpl-3.0.txt
 - gpl-3.0-exceptions.txt (if available)
@@ -16,13 +17,13 @@ See cc-by-3.0.txt
 their respective licenses:
 
 dxflib:             GPL version 2.0 or greater.
-                    See 3rdparty/dxflib/gpl-2.0greater.txt
+                    See src/3rdparty/dxflib/gpl-2.0greater.txt
                     Commercial licenses of dxflib for proprietary use are also available.
 opennurbs:          Public domain (neither copyright nor copyleft apply).
-                    See 3rdparty/opennurbs/readme.txt
-spatialindexnavel:  MIT
-                    See 3rdparty/spatialindexnavel/COPYING
-stemmer:            BSD 2-Clause License
-                    See 3rdparty/stemmer/bsd-2.txt
+                    See src/3rdparty/opennurbs/readme.txt
 quazip:             LPGL version 2.1 or greater.
-                    See 3rdparty/quazip/lgpl-2.1.txt
+                    See src/3rdparty/quazip/lgpl-2.1.txt
+spatialindexnavel:  MIT
+                    See src/3rdparty/spatialindexnavel/COPYING
+stemmer:            BSD 2-Clause License
+                    See src/3rdparty/stemmer/bsd-2.txt
