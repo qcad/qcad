@@ -282,7 +282,8 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
         case DefaultAction.State.Dragging:
-            entityId = this.getEntityId(event);
+            // find selectable entity under cursor:
+            entityId = this.getEntityId(event, false, true);
             //qDebug("entityId: ", entityId);
 
             if (entityId !== -1) {

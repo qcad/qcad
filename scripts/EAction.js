@@ -1942,9 +1942,12 @@ EAction.enableCoordinateWidget = function(enable) {
  * \param event RRInputEvent
  * \param range Cursor range in pixels
  */
-EAction.getEntityIdUnderCursor = function(di, event, range) {
+EAction.getEntityIdUnderCursor = function(di, event, range, selectable) {
     if (isNull(di)) {
         return [];
+    }
+    if (isNull(selectable)) {
+        selectable = false;
     }
 
     var view = event.getGraphicsView();
@@ -1955,7 +1958,7 @@ EAction.getEntityIdUnderCursor = function(di, event, range) {
     range = view.mapDistanceFromView(range);
 
     var strictRange = view.mapDistanceFromView(10);
-    return di.getClosestEntity(event.getModelPosition(), range, strictRange, true);
+    return di.getClosestEntity(event.getModelPosition(), range, strictRange, !selectable);
 };
 
 /**
@@ -1963,9 +1966,12 @@ EAction.getEntityIdUnderCursor = function(di, event, range) {
  * \param event RRInputEvent
  * \param range Cursor range in pixels
  */
-EAction.getEntityIdsUnderCursor = function(di, event, range) {
+EAction.getEntityIdsUnderCursor = function(di, event, range, selectable) {
     if (isNull(di)) {
         return [];
+    }
+    if (isNull(selectable)) {
+        selectable = false;
     }
 
     var view = event.getGraphicsView();
@@ -1976,29 +1982,39 @@ EAction.getEntityIdsUnderCursor = function(di, event, range) {
     range = view.mapDistanceFromView(range);
 
     var doc = di.getDocument();
-    return doc.queryIntersectedEntitiesXY(new RBox(event.getModelPosition(), range), false, true);
+    return doc.queryIntersectedEntitiesXY(new RBox(event.getModelPosition(), range), false, !selectable);
 };
 
 /**
  * \return Entity ID under the mouse cursor. User may choose between multiple candidates if
  * result is ambiguous and Alt key is pressed.
+ *
  * \param event RRInputEvent
+ * \param preview for previewing purposes
+ * \param selectable Only return selectable (editable) entities
  */
-EAction.prototype.getEntityId = function(event, preview) {
+EAction.prototype.getEntityId = function(event, preview, selectable) {
     if (isNull(preview)) {
         preview = false;
     }
+    if (isNull(selectable)) {
+        selectable = false;
+    }
+
     var di = this.getDocumentInterface();
     if (isNull(di)) {
         return RObject.INVALID_ID;
     }
 
-    return EAction.getEntityId(di, this, event, preview);
+    return EAction.getEntityId(di, this, event, preview, selectable);
 };
 
-EAction.getEntityId = function(di, action, event, preview) {
+EAction.getEntityId = function(di, action, event, preview, selectable) {
     if (isNull(preview)) {
         preview = false;
+    }
+    if (isNull(selectable)) {
+        selectable = false;
     }
 
     var mod;
@@ -2016,12 +2032,13 @@ EAction.getEntityId = function(di, action, event, preview) {
             return action.idFromContextMenu;
         }
         else {
-            return EAction.getEntityIdUnderCursor(di, event);
+            return EAction.getEntityIdUnderCursor(di, event, undefined, selectable);
         }
     }
 
     // fixed range, we never want to show a lot of entities in the context menu:
-    var entityIds = EAction.getEntityIdsUnderCursor(di, event, 10);
+    var r = 10 * (RSettings.getHighResolutionGraphicsView() ? RSettings.getDevicePixelRatio() : 1);
+    var entityIds = EAction.getEntityIdsUnderCursor(di, event, r, selectable);
     entityIds = di.getStorage().orderBackToFront(entityIds);
     if (entityIds.length===0) {
         // no entity under cursor:
