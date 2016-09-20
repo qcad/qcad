@@ -1,5 +1,5 @@
-TARGET = qtscript_core
 include(../qtbindingsbase.pri)
+TARGET = qtscript_core
 SOURCES += plugin.cpp
 HEADERS += qtscriptconcurrent.h plugin.h
 INCLUDEPATH += ./include/

@@ -1,5 +1,5 @@
-TARGET = qtscript_webkitwidgets
 include(../qtbindingsbase.pri)
+TARGET = qtscript_webkitwidgets
 QT += network webkitwidgets
 SOURCES += plugin.cpp
 HEADERS += plugin.h

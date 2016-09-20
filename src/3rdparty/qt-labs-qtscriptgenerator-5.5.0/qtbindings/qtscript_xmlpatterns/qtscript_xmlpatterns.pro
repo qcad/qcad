@@ -1,5 +1,5 @@
-TARGET = qtscript_xmlpatterns
 include(../qtbindingsbase.pri)
+TARGET = qtscript_xmlpatterns
 QT -= gui
 QT += xmlpatterns network
 SOURCES += plugin.cpp

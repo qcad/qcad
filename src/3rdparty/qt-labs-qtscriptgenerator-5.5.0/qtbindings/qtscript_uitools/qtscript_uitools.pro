@@ -1,5 +1,5 @@
-TARGET = qtscript_uitools
 include(../qtbindingsbase.pri)
+TARGET = qtscript_uitools
 QT += uitools widgets
 SOURCES += plugin.cpp
 HEADERS += plugin.h

@@ -1,5 +1,5 @@
-TARGET = qtscript_multimedia
 include(../qtbindingsbase.pri)
+TARGET = qtscript_multimedia
 SOURCES += plugin.cpp
 HEADERS += plugin.h
 QT += core gui widgets multimedia

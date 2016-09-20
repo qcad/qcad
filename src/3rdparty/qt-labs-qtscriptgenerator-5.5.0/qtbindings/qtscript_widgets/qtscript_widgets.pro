@@ -1,5 +1,5 @@
-TARGET = qtscript_widgets
 include(../qtbindingsbase.pri)
+TARGET = qtscript_widgets
 SOURCES += plugin.cpp
 HEADERS += plugin.h
 QT += widgets gui

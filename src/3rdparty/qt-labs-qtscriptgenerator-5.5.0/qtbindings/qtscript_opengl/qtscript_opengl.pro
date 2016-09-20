@@ -1,5 +1,5 @@
-TARGET = qtscript_opengl
 include(../qtbindingsbase.pri)
+TARGET = qtscript_opengl
 QT += opengl
 SOURCES += plugin.cpp
 HEADERS += plugin.h

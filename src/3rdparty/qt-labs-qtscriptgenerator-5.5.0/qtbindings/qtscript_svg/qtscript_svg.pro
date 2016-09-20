@@ -1,5 +1,5 @@
-TARGET = qtscript_svg
 include(../qtbindingsbase.pri)
+TARGET = qtscript_svg
 QT += svg
 SOURCES += plugin.cpp
 HEADERS += plugin.h

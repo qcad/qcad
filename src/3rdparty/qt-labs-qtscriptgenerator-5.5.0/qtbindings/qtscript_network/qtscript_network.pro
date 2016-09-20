@@ -1,5 +1,5 @@
-TARGET = qtscript_network
 include(../qtbindingsbase.pri)
+TARGET = qtscript_network
 QT -= gui
 QT += network
 SOURCES += plugin.cpp

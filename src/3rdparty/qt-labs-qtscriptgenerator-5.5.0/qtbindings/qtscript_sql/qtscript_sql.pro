@@ -1,5 +1,5 @@
-TARGET = qtscript_sql
 include(../qtbindingsbase.pri)
+TARGET = qtscript_sql
 QT -= gui
 QT += sql
 SOURCES += plugin.cpp

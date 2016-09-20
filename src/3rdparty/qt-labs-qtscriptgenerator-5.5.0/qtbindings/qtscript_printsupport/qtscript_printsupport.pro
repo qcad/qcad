@@ -1,5 +1,5 @@
-TARGET = qtscript_printsupport
 include(../qtbindingsbase.pri)
+TARGET = qtscript_printsupport
 SOURCES += plugin.cpp
 HEADERS += plugin.h
 QT += core gui widgets printsupport
