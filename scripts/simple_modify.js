@@ -61,7 +61,7 @@ function move(e, offset) {
         return move(e, new RVector(offset));
     }
     if (isNumber(e)) {
-        var doc = getDocument();
+        var doc = getTransactionDocument();
         if (isNull(doc)) {
             return undefined;
         }
@@ -94,7 +94,7 @@ function rotate(e, angle, center) {
         return rotate(e, angle, new RVector(center));
     }
     if (isNumber(e)) {
-        var doc = getDocument();
+        var doc = getTransactionDocument();
         if (isNull(doc)) {
             return undefined;
         }
@@ -132,7 +132,7 @@ function scale(e, factor, focusPoint) {
         return scale(e, factor, new RVector(focusPoint));
     }
     if (isNumber(e)) {
-        var doc = getDocument();
+        var doc = getTransactionDocument();
         if (isNull(doc)) {
             return undefined;
         }
@@ -187,7 +187,7 @@ function mirror(e, axis) {
         return mirror(e, new RLine(new RVector(axis[0]), new RVector(axis[1])));
     }
     if (isNumber(e)) {
-        var doc = getDocument();
+        var doc = getTransactionDocument();
         if (isNull(doc)) {
             return undefined;
         }
@@ -224,7 +224,7 @@ function trim(trimEntity, trimClickPos, limitingEntity, limitingClickPos, trimBo
 
     var trimShape, limitingShape;
 
-    var doc = getDocument();
+    var doc = getTransactionDocument();
     if (isNull(doc)) {
         return undefined;
     }
@@ -305,7 +305,7 @@ function trim(trimEntity, trimClickPos, limitingEntity, limitingClickPos, trimBo
  * \param amount Amount to lengthen or negative value to shorten
  */
 function lengthen(entity, start, amount) {
-    var doc = getDocument();
+    var doc = getTransactionDocument();
     if (isNull(doc)) {
         return undefined;
     }
