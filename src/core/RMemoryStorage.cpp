@@ -181,11 +181,8 @@ QSet<REntity::Id> RMemoryStorage::queryAllVisibleEntities() {
         }
 
         RLayer::Id layerId = e->getLayerId();
-        QSharedPointer<RLayer> layer = queryLayerDirect(layerId);
-        if (!layer.isNull()) {
-            if (layer->isFrozen()) {
-                continue;
-            }
+        if (isLayerFrozen(layerId)) {
+            continue;
         }
 
         result.insert(e->getId());
