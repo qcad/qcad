@@ -15,6 +15,7 @@ include("input.js");
 __simpleUseOp = false;
 __simpleOp = undefined;
 __simpleDoc = undefined;
+__simpleDi = undefined;
 
 include("simple_create.js");
 include("simple_info.js");
