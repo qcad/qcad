@@ -311,17 +311,30 @@ QSet<RLinetype::Id> RMemoryStorage::queryAllLinetypes() {
 }
 
 QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
-    RBlock::Id currentBlock = getCurrentBlockId();
+    RBlock::Id currentBlockId = getCurrentBlockId();
+
     QSet<REntity::Id> result;
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && !e->isUndone() &&
-            (e->getType()==RS::EntityXLine || e->getType()==RS::EntityRay) &&
-            e->getBlockId() == currentBlock) {
-
-            result.insert(e->getId());
+        if (e.isNull()) {
+            continue;
         }
+
+        if (e->isUndone()) {
+            continue;
+        }
+
+        if (e->getType()!=RS::EntityXLine && e->getType()!=RS::EntityRay) {
+            continue;
+        }
+
+        if (e->getBlockId() != currentBlockId) {
+            continue;
+        }
+
+        result.insert(e->getId());
+
     }
     return result;
 }
@@ -1051,49 +1064,62 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         return false;
     }
 
+    QSharedPointer<RLayer> layer;
+    QSharedPointer<RLayout> layout;
+    QSharedPointer<RBlock> block;
+    QSharedPointer<RLinetype> linetype;
+
     //qDebug() << "saveObject: " << *object;
 
     // never allow two layers with identical names, update layer instead:
-    QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
-    if (!layer.isNull()) {
-        RLayer::Id id = getLayerId(layer->getName());
-        if (id != RLayer::INVALID_ID && id != layer->getId()) {
-            setObjectId(*layer, id);
+    if (object->getType()==RS::ObjectLayer) {
+        layer = object.dynamicCast<RLayer>();
+        if (!layer.isNull()) {
+            RLayer::Id id = getLayerId(layer->getName());
+            if (id != RLayer::INVALID_ID && id != layer->getId()) {
+                setObjectId(*layer, id);
 
-            // never unprotect an existing protected layer:
-            QSharedPointer<RLayer> existingLayer = queryLayerDirect(id);
-            if (!existingLayer.isNull()) {
-                if (existingLayer->isProtected()) {
-                    layer->setProtected(true);
+                // never unprotect an existing protected layer:
+                QSharedPointer<RLayer> existingLayer = queryLayerDirect(id);
+                if (!existingLayer.isNull()) {
+                    if (existingLayer->isProtected()) {
+                        layer->setProtected(true);
+                    }
                 }
             }
         }
     }
 
     // never allow two layouts with identical names, update layout instead:
-    QSharedPointer<RLayout> layout = object.dynamicCast<RLayout> ();
-    if (!layout.isNull()) {
-        RLayout::Id id = getLayoutId(layout->getName());
-        if (id != RLayout::INVALID_ID && id != layout->getId()) {
-            setObjectId(*layout, id);
+    if (object->getType()==RS::ObjectLayout) {
+        layout = object.dynamicCast<RLayout> ();
+        if (!layout.isNull()) {
+            RLayout::Id id = getLayoutId(layout->getName());
+            if (id != RLayout::INVALID_ID && id != layout->getId()) {
+                setObjectId(*layout, id);
+            }
         }
     }
 
     // never allow two blocks with identical names, update block instead:
-    QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
-    if (!block.isNull()) {
-        RBlock::Id id = getBlockId(block->getName());
-        if (id != RBlock::INVALID_ID && id != block->getId()) {
-            setObjectId(*block, id);
+    if (object->getType()==RS::ObjectBlock) {
+        block = object.dynamicCast<RBlock> ();
+        if (!block.isNull()) {
+            RBlock::Id id = getBlockId(block->getName());
+            if (id != RBlock::INVALID_ID && id != block->getId()) {
+                setObjectId(*block, id);
+            }
         }
     }
 
     // never allow two linetypes with identical names, update linetype instead:
-    QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype> ();
-    if (!linetype.isNull()) {
-        RLinetype::Id id = getLinetypeId(linetype->getName());
-        if (id != RLinetype::INVALID_ID && id != linetype->getId()) {
-            setObjectId(*linetype, id);
+    if (object->getType()==RS::ObjectLinetype) {
+        linetype = object.dynamicCast<RLinetype> ();
+        if (!linetype.isNull()) {
+            RLinetype::Id id = getLinetypeId(linetype->getName());
+            if (id != RLinetype::INVALID_ID && id != linetype->getId()) {
+                setObjectId(*linetype, id);
+            }
         }
     }
 
