@@ -82,6 +82,8 @@ public:
         ObjectLinetype,
         ObjectView,
         ObjectLayout,
+        ObjectUcs,
+        ObjectDocumentVariable,
 
         EntityAll,          /**< All entities (for filters) */
         EntityUnknown,      /**< Unknown entity */

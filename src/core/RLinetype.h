@@ -65,6 +65,10 @@ public:
 
     static void init();
 
+    virtual RS::EntityType getType() const {
+        return RS::ObjectLinetype;
+    }
+
     virtual RLinetype* clone() const {
         return new RLinetype(*this);
     }

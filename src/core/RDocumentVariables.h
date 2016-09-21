@@ -50,6 +50,10 @@ public:
 
     static void init();
 
+    virtual RS::EntityType getType() const {
+        return RS::ObjectDocumentVariable;
+    }
+
     virtual RDocumentVariables* clone() const {
         return new RDocumentVariables(*this);
     }

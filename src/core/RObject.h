@@ -71,6 +71,8 @@ public:
 
     static void init();
 
+    virtual RS::EntityType getType() const = 0;
+
     virtual RObject* clone() const = 0;
 
     RDocument* getDocument() {
@@ -115,10 +117,6 @@ public:
 
     RObject::Handle getHandle() const {
         return handle;
-    }
-
-    virtual RS::EntityType getType() const {
-        return RS::ObjectUnknown;
     }
 
     bool isProtected() const {

@@ -73,6 +73,10 @@ public:
 
     static void init();
 
+    virtual RS::EntityType getType() const {
+        return RS::ObjectUcs;
+    }
+
     virtual RUcs* clone() const {
         return new RUcs(*this);
     }
