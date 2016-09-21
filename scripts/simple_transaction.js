@@ -7,8 +7,8 @@
  * Entities are added in one transaction when endTransaction is called.
  * \ingroup ecma_simple
  *
- * \param doc RDocument to apply the transaction to (defaults to current
- * document).
+ * \param d RDocument or RDocumentInterface to apply the transaction to
+ * (defaults to current document).
  *
  * \code
  * startTransaction();
@@ -18,13 +18,22 @@
  * endTransaction();
  * \endcode
  */
-function startTransaction(doc) {
+function startTransaction(d) {
     __simpleUseOp = true;
-    __simpleDoc = doc;
+    if (isOfType(d, RDocument)) {
+        __simpleDoc = d;
+        __simpleDi = undefined;
+    }
+    if (isOfType(d, RDocumentInterface)) {
+        __simpleDi = d;
+        __simpleDoc = d.getDocument();
+    }
+
     if (!isNull(__simpleOp)) {
         __simpleOp.destroy();
         __simpleOp = undefined;
     }
+
     return true;
 }
 
@@ -37,13 +46,22 @@ function startTransaction(doc) {
 function endTransaction() {
     var ret = undefined;
     if (!isNull(__simpleOp)) {
-        if (!isNull(__simpleDoc)) {
-            // apply operation to off-screen document:
+
+        // apply operation to document interface:
+        if (!isNull(__simpleDi)) {
+            __simpleDi.applyOperation(__simpleOp);
+            __simpleDi = undefined;
+            __simpleDoc = undefined;
+        }
+
+        // apply operation to off-screen document:
+        else if (!isNull(__simpleDoc)) {
             ret = __simpleOp.apply(__simpleDoc);
             __simpleDoc = undefined;
         }
+
+        // apply operation to current document:
         else {
-            // apply operation to current document:
             var di = getDocumentInterface();
             if (!isNull(di)) {
                 ret = di.applyOperation(__simpleOp);
