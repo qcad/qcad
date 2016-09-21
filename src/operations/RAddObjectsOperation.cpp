@@ -113,7 +113,7 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) cons
     transaction.setAllowInvisible(allowInvisible);
     transaction.setGroup(transactionGroup);
 
-    for (int i = 0; i < addedObjects.size(); ++i) {
+    for (int i=0; i<addedObjects.size(); ++i) {
         if (limitPreview && preview && i>RSettings::getPreviewEntities()) {
             break;
         }
