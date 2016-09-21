@@ -265,8 +265,8 @@ function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold
  * Adds the given RShape to the drawing as a new entity using current layer and attributes.
  * \ingroup ecma_simple
  *
- * \return ID of added entity or undefined if a transaction is in progress
- * and the entity ID is not yet known.
+ * \return The added entity. The entity does not yet have a valid ID if it was added within a
+ * transaction.
  */
 function addShape(shape) {
     var doc = getTransactionDocument();
@@ -282,8 +282,8 @@ function addShape(shape) {
  * Adds the given REntity to the drawing using layer and attributes as set by the entity.
  * \ingroup ecma_simple
  *
- * \return ID of added entity or undefined if a transaction is in progress
- * and the entity ID is not yet known.
+ * \return The added entity. The entity does not yet have a valid ID if it was added within a
+ * transaction.
  */
 function addEntity(entity) {
     if (isFunction(entity.data)) {
@@ -293,13 +293,15 @@ function addEntity(entity) {
     if (__simpleUseOp===true) {
         if (isNull(__simpleOp)) {
             __simpleOp = new RAddObjectsOperation();
+            qDebug("create op");
         }
         __simpleOp.addObject(entity, false);
-        return undefined;
+        return entity
     }
     else {
         var di = getDocumentInterface();
         di.applyOperation(new RAddObjectOperation(entity, false));
-        return entity.getId();
+        qDebug("apply local op");
+        return entity;
     }
 }
