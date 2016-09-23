@@ -593,6 +593,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                         }
 
                         var label = new QLabel(localTitle + this.colon, groupBox);
+                        label.textInteractionFlags = Qt.TextSelectableByMouse;
                         label.alignment = Qt.AlignRight | Qt.AlignVCenter;
 
                         gridLayout.addWidget(label, row,0);
