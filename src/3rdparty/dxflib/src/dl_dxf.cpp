@@ -2336,9 +2336,11 @@ void DL_Dxf::writePoint(DL_WriterA& dw,
     dw.entity("POINT");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbPoint");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbPoint");
+    }
     dw.coord(DL_POINT_COORD_CODE, data.x, data.y, data.z);
 }
 
@@ -2357,9 +2359,11 @@ void DL_Dxf::writeLine(DL_WriterA& dw,
     dw.entity("LINE");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbLine");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbLine");
+    }
     dw.coord(DL_LINE_START_CODE, data.x1, data.y1, data.z1);
     dw.coord(DL_LINE_END_CODE, data.x2, data.y2, data.z2);
 }
@@ -2379,9 +2383,11 @@ void DL_Dxf::writeXLine(DL_WriterA& dw,
     dw.entity("XLINE");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbLine");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbLine");
+    }
     dw.coord(DL_LINE_START_CODE, data.bx, data.by, data.bz);
     dw.coord(DL_LINE_END_CODE, data.dx, data.dy, data.dz);
 }
@@ -2401,9 +2407,11 @@ void DL_Dxf::writeRay(DL_WriterA& dw,
     dw.entity("RAY");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbLine");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbLine");
+    }
     dw.coord(DL_LINE_START_CODE, data.bx, data.by, data.bz);
     dw.coord(DL_LINE_END_CODE, data.dx, data.dy, data.dz);
 }
@@ -2423,8 +2431,8 @@ void DL_Dxf::writePolyline(DL_WriterA& dw,
                            const DL_Attributes& attrib) {
     if (version==DL_VERSION_2000) {
         dw.entity("LWPOLYLINE");
-        dw.entityAttributes(attrib);
         dw.dxfString(100, "AcDbEntity");
+        dw.entityAttributes(attrib);
         dw.dxfString(100, "AcDbPolyline");
         dw.dxfInt(90, (int)data.number);
         dw.dxfInt(70, data.flags);
@@ -2495,9 +2503,11 @@ void DL_Dxf::writeSpline(DL_WriterA& dw,
                          const DL_Attributes& attrib) {
 
     dw.entity("SPLINE");
-    dw.entityAttributes(attrib);
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
+    }
+    dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbSpline");
     }
     dw.dxfInt(70, data.flags);
@@ -2571,9 +2581,11 @@ void DL_Dxf::writeCircle(DL_WriterA& dw,
     dw.entity("CIRCLE");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbCircle");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbCircle");
+    }
     dw.coord(10, data.cx, data.cy, data.cz);
     dw.dxfReal(40, data.radius);
 }
@@ -2624,9 +2636,11 @@ void DL_Dxf::writeEllipse(DL_WriterA& dw,
         dw.entity("ELLIPSE");
         if (version==DL_VERSION_2000) {
             dw.dxfString(100, "AcDbEntity");
-            dw.dxfString(100, "AcDbEllipse");
         }
         dw.entityAttributes(attrib);
+        if (version==DL_VERSION_2000) {
+            dw.dxfString(100, "AcDbEllipse");
+        }
         dw.coord(10, data.cx, data.cy, data.cz);
         dw.coord(11, data.mx, data.my, data.mz);
         dw.dxfReal(40, data.ratio);
@@ -2650,9 +2664,11 @@ void DL_Dxf::writeSolid(DL_WriterA& dw,
     dw.entity("SOLID");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbTrace");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbTrace");
+    }
     dw.coord(10, data.x[0], data.y[0], data.z[0]);
     dw.coord(11, data.x[1], data.y[1], data.z[1]);
     dw.coord(12, data.x[2], data.y[2], data.z[2]);
@@ -2673,9 +2689,11 @@ void DL_Dxf::writeTrace(DL_WriterA& dw,
     dw.entity("TRACE");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbTrace");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbTrace");
+    }
     dw.coord(10, data.x[0], data.y[0], data.z[0]);
     dw.coord(11, data.x[1], data.y[1], data.z[1]);
     dw.coord(12, data.x[2], data.y[2], data.z[2]);
@@ -2698,9 +2716,11 @@ void DL_Dxf::write3dFace(DL_WriterA& dw,
     dw.entity("3DFACE");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbFace");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbFace");
+    }
     dw.coord(10, data.x[0], data.y[0], data.z[0]);
     dw.coord(11, data.x[1], data.y[1], data.z[1]);
     dw.coord(12, data.x[2], data.y[2], data.z[2]);
@@ -2729,6 +2749,9 @@ void DL_Dxf::writeInsert(DL_WriterA& dw,
     dw.entity("INSERT");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
+    }
+    dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
         if (data.cols!=1 || data.rows!=1) {
             dw.dxfString(100, "AcDbMInsertBlock");
         }
@@ -2736,7 +2759,6 @@ void DL_Dxf::writeInsert(DL_WriterA& dw,
             dw.dxfString(100, "AcDbBlockReference");
         }
     }
-    dw.entityAttributes(attrib);
     dw.dxfString(2, data.name);
     dw.dxfReal(10, data.ipx);
     dw.dxfReal(20, data.ipy);
@@ -2775,9 +2797,11 @@ void DL_Dxf::writeMText(DL_WriterA& dw,
     dw.entity("MTEXT");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbMText");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbMText");
+    }
     dw.dxfReal(10, data.ipx);
     dw.dxfReal(20, data.ipy);
     dw.dxfReal(30, data.ipz);
@@ -2825,9 +2849,11 @@ void DL_Dxf::writeText(DL_WriterA& dw,
     dw.entity("TEXT");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbText");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbText");
+    }
     dw.dxfReal(10, data.ipx);
     dw.dxfReal(20, data.ipy);
     dw.dxfReal(30, data.ipz);
@@ -2845,6 +2871,7 @@ void DL_Dxf::writeText(DL_WriterA& dw,
     dw.dxfReal(31, data.apz);
 
     if (version==DL_VERSION_2000) {
+        // required twice for some reason:
         dw.dxfString(100, "AcDbText");
     }
 
@@ -2858,9 +2885,11 @@ void DL_Dxf::writeAttribute(DL_WriterA& dw,
     dw.entity("ATTRIB");
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
-        dw.dxfString(100, "AcDbText");
     }
     dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
+        dw.dxfString(100, "AcDbText");
+    }
     dw.dxfReal(10, data.ipx);
     dw.dxfReal(20, data.ipy);
     dw.dxfReal(30, data.ipz);
@@ -3353,9 +3382,11 @@ void DL_Dxf::writeLeader(DL_WriterA& dw,
                          const DL_Attributes& attrib) {
     if (version>DL_VERSION_R12) {
         dw.entity("LEADER");
-        dw.entityAttributes(attrib);
         if (version==DL_VERSION_2000) {
             dw.dxfString(100, "AcDbEntity");
+        }
+        dw.entityAttributes(attrib);
+        if (version==DL_VERSION_2000) {
             dw.dxfString(100, "AcDbLeader");
         }
         dw.dxfString(3, "Standard");
@@ -3402,9 +3433,11 @@ void DL_Dxf::writeHatch1(DL_WriterA& dw,
                          const DL_Attributes& attrib) {
 
     dw.entity("HATCH");
-    dw.entityAttributes(attrib);
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
+    }
+    dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbHatch");
     }
     dw.dxfReal(10, 0.0);             // elevation
@@ -3600,9 +3633,11 @@ int DL_Dxf::writeImage(DL_WriterA& dw,
 
     dw.entity("IMAGE");
 
-    dw.entityAttributes(attrib);
     if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbEntity");
+    }
+    dw.entityAttributes(attrib);
+    if (version==DL_VERSION_2000) {
         dw.dxfString(100, "AcDbRasterImage");
         dw.dxfInt(90, 0);
     }
