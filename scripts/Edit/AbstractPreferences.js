@@ -439,6 +439,21 @@ AbstractPreferences.prototype.showPage = function() {
     }
 
     var parent = item.parent();
+
+    var warningLabel = this.dialog.findChild("Warning");
+    warningLabel.text = "";
+    warningLabel.visible = false;
+    if (!isNull(parent)) {
+        if (parent.text(0).contains(qsTr("Defaults for "))) {
+            warningLabel.text = "<font color='red'>" +
+                    qsTr("You are changing default preferences for new drawings.") + "<br/>" +
+                    qsTr("Changes will affect new drawings but NOT the current drawing.") + "<br/>" +
+                    qsTr("You can change preferences of the current drawing under<br/><i>Edit &gt; Drawing Preferences</i>.") +
+                    "</font>";
+            warningLabel.visible = true;
+        }
+    }
+
     var pText = "";
     while (!isNull(parent)) {
         pText += parent.text(0) + ": " + pText;
