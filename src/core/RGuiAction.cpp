@@ -52,6 +52,7 @@ RGuiAction::RGuiAction(const QString& text, QObject* parent)
     requiresUndoableTransaction(false),
     requiresRedoableTransaction(false),
     override(false),
+    allowInterrupt(false),
     noState(false),
     toggleable(false),
     iconDisabled(false),

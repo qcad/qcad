@@ -1069,7 +1069,9 @@ void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
 //        qWarning() << "RScriptHandlerEcma::createActionDocumentLevel(): "
 //                   << scriptFile
 //                   << ": Engine is busy. Aborting...";
-        return;
+        if (guiAction==NULL || !guiAction->getAllowInterrupt()) {
+            return;
+        }
     }
 
     if (guiAction==NULL) {

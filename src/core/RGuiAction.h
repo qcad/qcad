@@ -222,6 +222,14 @@ public:
         return override;
     }
 
+    void setAllowInterrupt() {
+        allowInterrupt = true;
+    }
+
+    bool getAllowInterrupt() const {
+        return allowInterrupt;
+    }
+
     void setNoState(bool checkable = false) {
         noState = true;
         setCheckable(checkable);
@@ -367,6 +375,7 @@ protected:
     bool requiresUndoableTransaction;
     bool requiresRedoableTransaction;
     bool override;
+    bool allowInterrupt;
     bool noState;
     bool toggleable;
     QString uniqueGroup;
