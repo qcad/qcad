@@ -185,6 +185,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isOverride, "isOverride");
             
+            REcmaHelper::registerFunction(&engine, proto, setAllowInterrupt, "setAllowInterrupt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAllowInterrupt, "getAllowInterrupt");
+            
             REcmaHelper::registerFunction(&engine, proto, setNoState, "setNoState");
             
             REcmaHelper::registerFunction(&engine, proto, hasNoState, "hasNoState");
@@ -3633,6 +3637,99 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::isOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setAllowInterrupt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setAllowInterrupt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setAllowInterrupt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("setAllowInterrupt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAllowInterrupt();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setAllowInterrupt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setAllowInterrupt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getAllowInterrupt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getAllowInterrupt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getAllowInterrupt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("getAllowInterrupt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getAllowInterrupt();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getAllowInterrupt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getAllowInterrupt", context, engine);
             return result;
         }
          QScriptValue

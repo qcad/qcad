@@ -228,6 +228,12 @@
         isOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAllowInterrupt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAllowInterrupt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setNoState
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

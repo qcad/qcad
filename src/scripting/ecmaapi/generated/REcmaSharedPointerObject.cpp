@@ -57,6 +57,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
             REcmaHelper::registerFunction(&engine, proto, getDocument, "getDocument");
@@ -66,8 +68,6 @@
             REcmaHelper::registerFunction(&engine, proto, getId, "getId");
             
             REcmaHelper::registerFunction(&engine, proto, getHandle, "getHandle");
-            
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
             REcmaHelper::registerFunction(&engine, proto, isProtected, "isProtected");
             
@@ -253,6 +253,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -532,55 +581,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::getHandle", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerObject::getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getType";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RObject* self = 
-                        getSelf("getType", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RS::EntityType'
-    RS::EntityType cppResult =
-        
-               self->getType();
-        // return type: RS::EntityType
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getType().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getType", context, engine);
             return result;
         }
          QScriptValue

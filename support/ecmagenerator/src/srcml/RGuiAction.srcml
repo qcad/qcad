@@ -223,6 +223,14 @@
         <return>return <expr><name>override</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setAllowInterrupt</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>allowInterrupt</name> = <name>true</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getAllowInterrupt</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>allowInterrupt</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setNoState</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>checkable</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>noState</name> = <name>true</name></expr>;</expr_stmt>
         <constructor_decl><name>setCheckable</name><parameter_list>(<param><decl><type><name>checkable</name></type></decl></param>)</parameter_list>;</constructor_decl>
@@ -368,6 +376,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>requiresUndoableTransaction</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>requiresRedoableTransaction</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>override</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>allowInterrupt</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>noState</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>toggleable</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>uniqueGroup</name></decl>;</decl_stmt>

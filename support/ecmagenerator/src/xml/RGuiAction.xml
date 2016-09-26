@@ -430,6 +430,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setAllowInterrupt" cppName="setAllowInterrupt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getAllowInterrupt" cppName="getAllowInterrupt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setNoState" cppName="setNoState"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

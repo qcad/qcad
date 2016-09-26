@@ -158,6 +158,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("ObjectUcs",
+    QScriptValue(RS::ObjectUcs),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectDocumentVariable",
+    QScriptValue(RS::ObjectDocumentVariable),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityAll",
     QScriptValue(RS::EntityAll),
     QScriptValue::ReadOnly);

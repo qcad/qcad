@@ -83,6 +83,8 @@
         <expr><name>ObjectLinetype</name></expr>,
         <expr><name>ObjectView</name></expr>,
         <expr><name>ObjectLayout</name></expr>,
+        <expr><name>ObjectUcs</name></expr>,
+        <expr><name>ObjectDocumentVariable</name></expr>,
 
         <expr><name>EntityAll</name></expr>,          <comment type="block">/**&lt; All entities (for filters) */</comment>
         <expr><name>EntityUnknown</name></expr>,      <comment type="block">/**&lt; Unknown entity */</comment>
