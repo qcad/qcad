@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>594</width>
-    <height>488</height>
+    <width>336</width>
+    <height>350</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -73,14 +73,26 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="2" column="2">
       <widget class="QPushButton" name="Button66">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd66.png</normaloff>Icons/pd66.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd66.svg</normaloff>Icons/pd66.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -94,19 +106,25 @@
      <item row="0" column="0">
       <widget class="QPushButton" name="Button0">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd0.png</normaloff>Icons/pd0.png</iconset>
-       </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd0.svg</normaloff>Icons/pd0.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -131,14 +149,26 @@
      </item>
      <item row="3" column="3">
       <widget class="QPushButton" name="Button99">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd99.png</normaloff>Icons/pd99.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd99.svg</normaloff>Icons/pd99.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -151,14 +181,26 @@
      </item>
      <item row="1" column="4">
       <widget class="QPushButton" name="Button36">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd36.png</normaloff>Icons/pd36.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd36.svg</normaloff>Icons/pd36.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -171,14 +213,26 @@
      </item>
      <item row="1" column="2">
       <widget class="QPushButton" name="Button34">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd34.png</normaloff>Icons/pd34.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd34.svg</normaloff>Icons/pd34.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -191,14 +245,26 @@
      </item>
      <item row="3" column="2">
       <widget class="QPushButton" name="Button98">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd98.png</normaloff>Icons/pd98.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd98.svg</normaloff>Icons/pd98.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -211,14 +277,26 @@
      </item>
      <item row="2" column="0">
       <widget class="QPushButton" name="Button64">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd64.png</normaloff>Icons/pd64.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd64.svg</normaloff>Icons/pd64.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -231,17 +309,29 @@
      </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="Button1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
        <property name="autoFillBackground">
         <bool>false</bool>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>Icons/pd1.png</normaloff>Icons/pd1.png</iconset>
+         <normaloff>Icons/pd1.svg</normaloff>Icons/pd1.svg</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>64</width>
-         <height>64</height>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -257,14 +347,26 @@
      </item>
      <item row="0" column="4">
       <widget class="QPushButton" name="Button4">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd4.png</normaloff>Icons/pd4.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd4.svg</normaloff>Icons/pd4.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -277,14 +379,26 @@
      </item>
      <item row="0" column="2">
       <widget class="QPushButton" name="Button2">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd2.png</normaloff>Icons/pd2.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd2.svg</normaloff>Icons/pd2.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -297,14 +411,26 @@
      </item>
      <item row="2" column="1">
       <widget class="QPushButton" name="Button65">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd65.png</normaloff>Icons/pd65.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd65.svg</normaloff>Icons/pd65.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -317,14 +443,26 @@
      </item>
      <item row="0" column="3">
       <widget class="QPushButton" name="Button3">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd3.png</normaloff>Icons/pd3.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd3.svg</normaloff>Icons/pd3.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -337,14 +475,26 @@
      </item>
      <item row="3" column="1">
       <widget class="QPushButton" name="Button97">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd97.png</normaloff>Icons/pd97.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd97.svg</normaloff>Icons/pd97.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -357,14 +507,26 @@
      </item>
      <item row="2" column="4">
       <widget class="QPushButton" name="Button68">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd68.png</normaloff>Icons/pd68.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd68.svg</normaloff>Icons/pd68.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -377,14 +539,26 @@
      </item>
      <item row="1" column="0">
       <widget class="QPushButton" name="Button32">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd32.png</normaloff>Icons/pd32.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd32.svg</normaloff>Icons/pd32.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -397,14 +571,26 @@
      </item>
      <item row="1" column="3">
       <widget class="QPushButton" name="Button35">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd35.png</normaloff>Icons/pd35.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd35.svg</normaloff>Icons/pd35.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -417,14 +603,26 @@
      </item>
      <item row="3" column="4">
       <widget class="QPushButton" name="Button100">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd100.png</normaloff>Icons/pd100.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd100.svg</normaloff>Icons/pd100.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -437,14 +635,26 @@
      </item>
      <item row="1" column="1">
       <widget class="QPushButton" name="Button33">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd33.png</normaloff>Icons/pd33.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd33.svg</normaloff>Icons/pd33.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -457,14 +667,26 @@
      </item>
      <item row="2" column="3">
       <widget class="QPushButton" name="Button67">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd67.png</normaloff>Icons/pd67.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd67.svg</normaloff>Icons/pd67.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
@@ -477,14 +699,26 @@
      </item>
      <item row="3" column="0">
       <widget class="QPushButton" name="Button96">
-       <property name="icon">
-        <iconset>
-         <normaloff>Icons/pd96.png</normaloff>Icons/pd96.png</iconset>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-       <property name="iconSize">
+       <property name="minimumSize">
         <size>
          <width>64</width>
          <height>64</height>
+        </size>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/pd96.svg</normaloff>Icons/pd96.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
         </size>
        </property>
        <property name="checkable">
