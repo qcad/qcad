@@ -667,7 +667,7 @@ bool RSettings::getImportRecomputedDimBlocks() {
     if (importRecomputedDimBlocks==-1) {
         importRecomputedDimBlocks = getBoolValue("Dwg/ImportRecomputedDimBlocks", false);
         if (!importRecomputedDimBlocks) {
-            importRecomputedDimBlocks = originalArguments.contains("-recompute-dim");
+            importRecomputedDimBlocks = (int)originalArguments.contains("-recompute-dim");
         }
     }
     return importRecomputedDimBlocks;
