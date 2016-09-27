@@ -51,7 +51,7 @@
         <translation>Voit vaihtaa numeroiden / koordinaattien muotoa sovelluksen ominaisuuksista.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+84"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Toiminto keskeytetty. Tarkista lohkojen rekursio/määrittely sekä lukitut tai näkymättömät tasot tai lohkot.</translation>
     </message>

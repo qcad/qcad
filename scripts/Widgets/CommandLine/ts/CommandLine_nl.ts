@@ -51,7 +51,7 @@
         <translation>U kunt het formaat voor getallen en coördinaten in de programma voorkeursinstellingen wijzigen.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+84"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Transactie mislukt. Controleer tekening voor blok recursies en vergrendeld of onzichtbare lagen of blokken.</translation>
     </message>

@@ -39,7 +39,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+351"/>
+        <location line="+352"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -68,12 +68,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2019"/>
+        <location line="+2036"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-1746"/>
+        <location line="-1763"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -116,7 +116,7 @@
         <translation>Entité est sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="+215"/>
+        <location line="+232"/>
         <source>Length:</source>
         <translation>Longueur :</translation>
     </message>
@@ -883,7 +883,7 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+193"/>
+        <location filename="../simple_modify.js" line="+275"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Première entité ne peut pas être ajuster.</translation>
     </message>

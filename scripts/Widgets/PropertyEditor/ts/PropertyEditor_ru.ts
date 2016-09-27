@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1321"/>
+        <location filename="../PropertyEditor.js" line="+1322"/>
         <source>*VARIES*</source>
         <translation>*РАЗНЫЕ*</translation>
     </message>
     <message>
-        <location line="-1132"/>
+        <location line="-1133"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -57,7 +57,7 @@
         <translation>Индекс</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+60"/>
         <source>Remove this property from selected objects</source>
         <translation>Удалить это свойство из выделенных объектов</translation>
     </message>

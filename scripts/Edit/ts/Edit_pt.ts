@@ -35,7 +35,31 @@ Preferências do Desenho Atual...</translatorcomment>
 the preference changes to take effect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Por favor, reinicie o QCAD
-para que as mudanças de preferências entrem em vigor</translation>
+para que as mudanças de preferências entrem em vigor.</translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Defaults for </source>
+        <translation>Padrões para</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>These are default preferences for new drawings.</source>
+        <translation>Estas são as preferências padrão para novos desenhos.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
+        <translation>Preferências do desenho atual pode ser alterado sob&lt;br/&gt;&lt;i&gt;Edição &amp;gt; Preferências de Desenho&lt;/i&gt;.</translation>
+    </message>
+    <message>
+        <source>You are changing default preferences for new drawings.</source>
+        <translation type="vanished">Estas são as preferências padrão para novos desenhos.</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Changes will affect new drawings but NOT the current drawing.</source>
+        <translation>Mudanças afetarão novos desenhos, mas não o desenho atual.</translation>
     </message>
 </context>
 <context>

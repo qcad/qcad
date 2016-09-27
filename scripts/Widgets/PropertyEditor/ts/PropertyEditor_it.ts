@@ -31,7 +31,7 @@
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+705"/>
+        <location filename="../PropertyEditor.js" line="+706"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -66,7 +66,7 @@
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1132"/>
+        <location line="-1133"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -103,7 +103,7 @@ Nessuna selezione</translatorcomment>
         <translation>Indice</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+60"/>
         <source>Remove this property from selected objects</source>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>

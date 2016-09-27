@@ -35,13 +35,13 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1321"/>
+        <location filename="../PropertyEditor.js" line="+1322"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">* Różni *</translation>
     </message>
     <message>
-        <location line="-1132"/>
+        <location line="-1133"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -93,7 +93,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
         <translation type="unfinished">Indeks</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+60"/>
         <source>Remove this property from selected objects</source>
         <translation type="unfinished"></translation>
     </message>

@@ -39,7 +39,7 @@
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+351"/>
+        <location line="+352"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -72,7 +72,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2019"/>
+        <location line="+2036"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -81,7 +81,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1746"/>
+        <location line="-1763"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -136,7 +136,7 @@ Ferramentas CAD</translatorcomment>
         <translation>A entidade está em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+215"/>
+        <location line="+232"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>
@@ -1047,7 +1047,7 @@ Insira o texto de dimensão
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+193"/>
+        <location filename="../simple_modify.js" line="+275"/>
         <source>First entity cannot be trimmed.</source>
         <translation>A primeira entidade não pode ser aparada.</translation>
     </message>

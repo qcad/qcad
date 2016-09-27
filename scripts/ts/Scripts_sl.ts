@@ -34,7 +34,7 @@
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+351"/>
+        <location line="+352"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2019"/>
+        <location line="+2036"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-1746"/>
+        <location line="-1763"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
@@ -103,7 +103,7 @@
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>
     <message>
-        <location line="+215"/>
+        <location line="+232"/>
         <source>Length:</source>
         <translation>Dolžina:</translation>
     </message>
@@ -778,7 +778,7 @@
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+193"/>
+        <location filename="../simple_modify.js" line="+275"/>
         <source>First entity cannot be trimmed.</source>
         <translation type="unfinished"></translation>
     </message>

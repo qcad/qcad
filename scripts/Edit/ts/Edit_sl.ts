@@ -25,6 +25,26 @@ the preference changes to take effect.</source>
         <translation>QCAD je potrebno ponovno zagnat,
 da bodo spremembe začele delovat.</translation>
     </message>
+    <message>
+        <location line="+86"/>
+        <source>Defaults for </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>These are default preferences for new drawings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Changes will affect new drawings but NOT the current drawing.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ClipboardOperation</name>

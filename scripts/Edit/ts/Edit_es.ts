@@ -25,6 +25,30 @@ the preference changes to take effect.</source>
         <translation>Por favor, reiniciar QCAD
 para aplicar los cambios.</translation>
     </message>
+    <message>
+        <location line="+86"/>
+        <source>Defaults for </source>
+        <translation>Unidad en</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>These are default preferences for new drawings.</source>
+        <translation>Estas son las preferencias por defecto para los nuevos dibujos.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
+        <translation>Preferencias del dibujo actual se pueden cambiar en&lt;br/&gt;&lt;i&gt;Editar &amp;gt; Preferencias del dibujo&lt;/i&gt;.</translation>
+    </message>
+    <message>
+        <source>You are changing default preferences for new drawings.</source>
+        <translation type="vanished">Está cambiando las preferencias por defecto para los nuevos dibujos.</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Changes will affect new drawings but NOT the current drawing.</source>
+        <translation>Los cambios afectarán a los nuevos dibujos, pero no el dibujo actual.</translation>
+    </message>
 </context>
 <context>
     <name>ClipboardOperation</name>

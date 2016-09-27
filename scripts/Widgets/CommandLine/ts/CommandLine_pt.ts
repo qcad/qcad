@@ -55,7 +55,7 @@ Linha de Comando</translatorcomment>
         <translation>Você pode modificar o número/formato das coordenadas nas preferências do aplicativo.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+84"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Falha na transação. Por favor verifique por autorreferências em Blocos ou camadas bloqueadas ou invisíveis nos Blocos.</translation>
     </message>
@@ -69,7 +69,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="-317"/>
+        <location line="-337"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -84,7 +84,7 @@ Linha de Comando</translatorcomment>
         <translation>Coordenada ou distância inválida &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+129"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--

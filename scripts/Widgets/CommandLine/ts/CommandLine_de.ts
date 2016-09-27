@@ -48,7 +48,7 @@
         <translation>Sie können das Format für Zahlen und Koordinaten in den Einstellungen anpassen.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+84"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Transaktion fehlgeschlagen. Bitte überprüfen Sie Ihre Zeichnung auf mögliche Blockrekursionen und gesperrte oder unsichtbare Layer oder Blöcke.</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation type="obsolete">Versuch Objekte auf gesperrtem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
     <message>
-        <location line="-317"/>
+        <location line="-337"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Ungültige Koordinate oder Distanz &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+129"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>

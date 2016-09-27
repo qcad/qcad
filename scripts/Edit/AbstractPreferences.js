@@ -446,9 +446,9 @@ AbstractPreferences.prototype.showPage = function() {
     if (!isNull(parent)) {
         if (parent.text(0).contains(qsTr("Defaults for "))) {
             warningLabel.text = "<font color='red'>" +
-                    qsTr("You are changing default preferences for new drawings.") + "<br/>" +
+                    qsTr("These are default preferences for new drawings.") + "<br/>" +
                     qsTr("Changes will affect new drawings but NOT the current drawing.") + "<br/>" +
-                    qsTr("You can change preferences of the current drawing under<br/><i>Edit &gt; Drawing Preferences</i>.") +
+                    qsTr("Preferences of the current drawing can be changed under<br/><i>Edit &gt; Drawing Preferences</i>.") +
                     "</font>";
             warningLabel.visible = true;
         }

@@ -32,12 +32,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1321"/>
+        <location filename="../PropertyEditor.js" line="+1322"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1132"/>
+        <location line="-1133"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -71,7 +71,7 @@
         <translation>Hakemisto</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+60"/>
         <source>Remove this property from selected objects</source>
         <translation>Poista tämä ominaisuus valituilta kohteilta</translation>
     </message>

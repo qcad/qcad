@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+351"/>
+        <location line="+352"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -72,7 +72,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2019"/>
+        <location line="+2036"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -81,7 +81,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-1746"/>
+        <location line="-1763"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -131,7 +131,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location line="+215"/>
+        <location line="+232"/>
         <source>Length:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -995,7 +995,7 @@ Wprowadź tekst</translatorcomment>
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+193"/>
+        <location filename="../simple_modify.js" line="+275"/>
         <source>First entity cannot be trimmed.</source>
         <translation type="unfinished"></translation>
     </message>

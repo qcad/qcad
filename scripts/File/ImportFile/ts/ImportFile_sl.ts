@@ -13,7 +13,7 @@
         <translation type="vanished">Brez filtrov uvoza</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Niso bili najdeni nobeni filtri uvoza. Prekinjam...</translation>
     </message>

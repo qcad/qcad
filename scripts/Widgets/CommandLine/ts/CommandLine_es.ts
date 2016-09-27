@@ -50,7 +50,7 @@
         <translation>Usted puede cambiar el formato número y coordenada en las preferencias de la aplicación.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+84"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation type="obsolete">Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="-317"/>
+        <location line="-337"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -79,7 +79,7 @@
         <translation>Inválida coordinar o distancia &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+129"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>

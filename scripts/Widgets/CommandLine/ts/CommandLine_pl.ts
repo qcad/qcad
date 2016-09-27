@@ -51,7 +51,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Możesz zmienić numer / format współrzędnych w preferencjach aplikacji.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+84"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61,7 +61,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-317"/>
+        <location line="-337"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -76,7 +76,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+129"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

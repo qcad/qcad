@@ -4,7 +4,7 @@
 <context>
     <name>Trim</name>
     <message>
-        <location filename="../Trim.js" line="+80"/>
+        <location filename="../Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
         <translation type="unfinished"></translation>
     </message>

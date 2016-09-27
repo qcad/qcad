@@ -616,7 +616,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+182"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+183"/>
         <source>Requires selection</source>
         <translation>Benötigt Selektion</translation>
     </message>

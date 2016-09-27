@@ -39,7 +39,7 @@
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+351"/>
+        <location line="+352"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>
@@ -68,12 +68,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2019"/>
+        <location line="+2036"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-1746"/>
+        <location line="-1763"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
@@ -116,7 +116,7 @@
         <translation>Entidad está en una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="+215"/>
+        <location line="+232"/>
         <source>Length:</source>
         <translation>Longitud:</translation>
     </message>
@@ -871,7 +871,7 @@ en las líneas, los sólidos y los textos</translatorcomment>
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+193"/>
+        <location filename="../simple_modify.js" line="+275"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Primera entidad no se pueden recortar.</translation>
     </message>

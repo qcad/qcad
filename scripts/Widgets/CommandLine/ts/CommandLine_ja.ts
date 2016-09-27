@@ -40,7 +40,7 @@
         <translation>数値/座標のフォーマットをアプリケーション設定で変更できます。</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+84"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-317"/>
+        <location line="-337"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation>無効な座標または距離 &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+129"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>

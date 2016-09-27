@@ -9,7 +9,7 @@
         <translation>Fout bij het importeren van bestand %1</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Geen import filters zijn gevonden. Afgebroken...</translation>
     </message>
