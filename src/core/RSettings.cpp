@@ -727,7 +727,7 @@ QStringList RSettings::getPrinterNames() {
 #else
     QList<QPrinterInfo> printers = QPrinterInfo::availablePrinters();
     QStringList ret;
-    for (int i=0l i<printers.length(); i++) {
+    for (int i=0; i<printers.length(); i++) {
         ret.append(printers[i].printerName());
     }
     return ret;
