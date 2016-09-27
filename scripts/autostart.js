@@ -632,8 +632,8 @@ function main() {
 
     // create application window:
     var appWin = new RMainWindowQt();
-    if (RSettings.getQtVersionString().startsWith("4.")) {
-        // animated is nice, but crashes sometimes (Qt 4.7.2):
+    if (!RSettings.getQtVersionString().startsWith("5.7")) {
+        // animated crashes sometimes (Qt 4.7.2, 5.6.0):
         // Qt 5.7.0 will not allow tabifying dock widgets if animations are turned off:
         appWin.animated = false;
     }
