@@ -57,7 +57,8 @@ Information.prototype.formatLinearResult = function(distance) {
         return "";
     }
 
-    return RUnit.getLabel(distance, document, true);
+    // use preference for label precision:
+    return RUnit.getLabel(distance, document, RSettings.getIntValue("Info/Precision", -1));
 };
 
 Information.prototype.formatAngularResult = function(angle) {
