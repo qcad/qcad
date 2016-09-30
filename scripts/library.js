@@ -1222,6 +1222,13 @@ Array.prototype.contains = function(obj, method) {
 };
 
 /**
+ * \return True if this array contains the given string (case insensitive).
+ */
+Array.prototype.containsIgnoreCase = function(obj) {
+    return this.contains(obj, function(a,b) { return a.toUpperCase()===b.toUpperCase(); });
+};
+
+/**
  * \return Array with all elements of this array that are not also
  * in the given array (subtract).
  */
@@ -1262,16 +1269,32 @@ Array.prototype.clear = function() {
 };
 
 /**
- * Remove the given value from the array.
+ * Remove the first match of the given value from the array.
  * \param val The value to remove.
  */
-Array.prototype.remove = function(val) {
+Array.prototype.remove = function(val, compareFunction) {
     for (var i=0; i<this.length; i++) {
-        if (this[i] == val) {
+        var match = false;
+        if (!isNull(compareFunction)) {
+            match = compareFunction(this[i], val);
+        }
+        else {
+            match = (this[i] == val);
+        }
+
+        if (match) {
             this.splice(i, 1);
             break;
         }
     }
+};
+
+/**
+ * Remove the first case insensitive match of the given string value from the array.
+ * \param val The value to remove.
+ */
+Array.prototype.removeIgnoreCase = function(val) {
+    this.remove(val, function(a,b) { return a.toUpperCase()===b.toUpperCase(); });
 };
 
 /**
