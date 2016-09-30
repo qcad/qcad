@@ -64,6 +64,9 @@
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBoxes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

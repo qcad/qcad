@@ -139,6 +139,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
+            REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBoxes, "getBoundingBoxes");
             
             REcmaHelper::registerFunction(&engine, proto, getHull, "getHull");
@@ -2651,6 +2653,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::to2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::to2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("to2D", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->to2D();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.to2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::to2D", context, engine);
             return result;
         }
          QScriptValue

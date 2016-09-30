@@ -329,6 +329,13 @@
     }</block></function>
 
     <comment type="block">/**
+     * \copydoc REntityData::to2D
+     */</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>to2D</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
      * \copydoc REntityData::getBoundingBoxes
      */</comment>
     <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>getBoundingBoxes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{

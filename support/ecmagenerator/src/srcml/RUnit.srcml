@@ -26,6 +26,10 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <class_decl>class <name>RDocument</name>;</class_decl>
 
 <comment type="block">/**
@@ -90,7 +94,7 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>unitToSymbol</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>unitToName</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>, <param><decl><type><name>bool</name></type> <name>tr</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getLabel</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>,
-                            <param><decl><type><name>bool</name></type> <name>maxPrecision</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                            <param><decl><type><name>int</name></type> <name>precisionOverride</name>=<init><expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>,
                             <param><decl><type><name>bool</name></type> <name>forceSuppressTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
                             <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 

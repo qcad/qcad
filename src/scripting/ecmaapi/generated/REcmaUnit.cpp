@@ -3623,8 +3623,8 @@
             context->argument(1).isNull()
         ) /* type: RDocument */
      && (
-            context->argument(2).isBool()
-        ) /* type: bool */
+            context->argument(2).isNumber()
+        ) /* type: int */
     
     ){
     // prepare arguments:
@@ -3654,12 +3654,12 @@
                     RDocument& a1 = *ap1;
                 
                     // argument isStandardType
-                    bool
+                    int
                     a2 =
-                    (bool)
+                    (int)
                     
                     context->argument( 2 ).
-                    toBool();
+                    toNumber();
                 
     // end of arguments
 
@@ -3691,8 +3691,8 @@
             context->argument(1).isNull()
         ) /* type: RDocument */
      && (
-            context->argument(2).isBool()
-        ) /* type: bool */
+            context->argument(2).isNumber()
+        ) /* type: int */
      && (
             context->argument(3).isBool()
         ) /* type: bool */
@@ -3725,12 +3725,12 @@
                     RDocument& a1 = *ap1;
                 
                     // argument isStandardType
-                    bool
+                    int
                     a2 =
-                    (bool)
+                    (int)
                     
                     context->argument( 2 ).
-                    toBool();
+                    toNumber();
                 
                     // argument isStandardType
                     bool
@@ -3772,8 +3772,8 @@
             context->argument(1).isNull()
         ) /* type: RDocument */
      && (
-            context->argument(2).isBool()
-        ) /* type: bool */
+            context->argument(2).isNumber()
+        ) /* type: int */
      && (
             context->argument(3).isBool()
         ) /* type: bool */
@@ -3809,12 +3809,12 @@
                     RDocument& a1 = *ap1;
                 
                     // argument isStandardType
-                    bool
+                    int
                     a2 =
-                    (bool)
+                    (int)
                     
                     context->argument( 2 ).
-                    toBool();
+                    toNumber();
                 
                     // argument isStandardType
                     bool
