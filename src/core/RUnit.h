@@ -25,6 +25,10 @@
 #include "RS.h"
 #include "RVector.h"
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 class RDocument;
 
 /**
@@ -89,7 +93,7 @@ public:
     static QString unitToSymbol(RS::Unit unit);
     static QString unitToName(RS::Unit unit, bool tr=true);
     static QString getLabel(double v, RDocument& document,
-                            bool maxPrecision=false,
+                            int precisionOverride=RDEFAULT_MIN1,
                             bool forceSuppressTrailingZeroes=false,
                             bool onlyPreciseResult=false);
 

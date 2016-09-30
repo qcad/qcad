@@ -31,7 +31,7 @@
  * \see RSettings::getNumberLocale()
  */
 QString RUnit::getLabel(double v, RDocument& document,
-                        bool forceMaxPrecision, bool forceSuppressTrailingZeroes,
+                        int precisionOverride, bool forceSuppressTrailingZeroes,
                         bool onlyPreciseResult) {
 
     if (fabs(v) < 1e-6) {
@@ -40,7 +40,7 @@ QString RUnit::getLabel(double v, RDocument& document,
 
     return RUnit::formatLinear(v, document.getUnit(),
                 document.getLinearFormat(),
-                forceMaxPrecision ? 8 : document.getLinearPrecision(),
+                precisionOverride!=-1 ? precisionOverride : document.getLinearPrecision(),
                 false,
                 document.showLeadingZeroes(),
                 forceSuppressTrailingZeroes ? false : document.showTrailingZeroes(),
