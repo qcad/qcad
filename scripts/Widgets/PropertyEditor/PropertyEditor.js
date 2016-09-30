@@ -893,8 +893,11 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
             value = RMath.rad2deg(value);
         }
         var document = EAction.getDocument();
-        if (!attributes.isAngleType() && (document.getLinearFormat()===RS.Fractional || document.getLinearFormat()===RS.FractionalStacked)) {
-            newText = RUnit.getLabel(value, document, true);
+        if (!attributes.isAngleType() &&
+            (document.getLinearFormat()===RS.Fractional ||
+             document.getLinearFormat()===RS.FractionalStacked)) {
+
+            newText = RUnit.getLabel(value, document, 8);
         }
         else {
             newText = sprintf("%.6f", value);

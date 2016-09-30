@@ -26,12 +26,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1322"/>
+        <location filename="../PropertyEditor.js" line="+1325"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1133"/>
+        <location line="-1136"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -70,7 +70,7 @@
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+641"/>
+        <location line="+644"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -107,7 +107,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-619"/>
+        <location line="-622"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -125,7 +125,7 @@
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+126"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -205,7 +205,7 @@
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-1003"/>
+        <location filename="../PropertyEditor.js" line="-1006"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
