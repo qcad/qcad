@@ -112,6 +112,8 @@ public:
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
+    virtual void to2D();
+
     /**
      * \return List of bounding boxes that contain this entity.
      * This is used for complex entities such as block references

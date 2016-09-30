@@ -271,6 +271,14 @@ RBox REntityData::getBoundingBox(bool ignoreEmpty) const {
     return ret;
 }
 
+void REntityData::to2D() {
+    RShape* shape = castToShape();
+    if (shape==NULL) {
+        return;
+    }
+    shape->to2D();
+}
+
 /**
  * \return A polygon that contains this entity.
  * Default implementation returns a polygon around the bounding box.

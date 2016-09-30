@@ -328,6 +328,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::to2D
+     */
+    virtual void to2D() {
+        getData().to2D();
+    }
+
+    /**
      * \copydoc REntityData::getBoundingBoxes
      */
     virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const {
