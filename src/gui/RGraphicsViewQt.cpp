@@ -233,13 +233,13 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
         return;
     }
 
-#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
-    if (event->button()!=qApp->property("MOUSEBUTTON")) {
-        // eat phantom wacom tablet click:
-        event->accept();
-        return;
-    }
-#endif
+//#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
+//    if (event->button()!=qApp->property("MOUSEBUTTON")) {
+//        // eat phantom wacom tablet click:
+//        event->accept();
+//        return;
+//    }
+//#endif
 
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     mousePressScreenPosition = e.getScreenPosition();
@@ -258,13 +258,13 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
         return;
     }
 
-#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
-    if (event->button()!=qApp->property("MOUSEBUTTON")) {
-        // eat phantom wacom tablet click:
-        event->accept();
-        return;
-    }
-#endif
+//#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
+//    if (event->button()!=qApp->property("MOUSEBUTTON")) {
+//        // eat phantom wacom tablet click:
+//        event->accept();
+//        return;
+//    }
+//#endif
 
     event->ignore();
 
@@ -288,13 +288,13 @@ void RGraphicsViewQt::mouseDoubleClickEvent(QMouseEvent* event) {
         return;
     }
 
-#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
-    if (event->button()!=qApp->property("MOUSEBUTTON")) {
-        // eat phantom wacom tablet click:
-        event->accept();
-        return;
-    }
-#endif
+//#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
+//    if (event->button()!=qApp->property("MOUSEBUTTON")) {
+//        // eat phantom wacom tablet click:
+//        event->accept();
+//        return;
+//    }
+//#endif
 
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleMouseDoubleClickEvent(e);
