@@ -17,12 +17,12 @@
  * along with QCAD.
  */
 
+include("scripts/EAction.js");
+
 /**
  * \brief This tool converts a drawing from the current drawing unit to inch.
  * The coordinates in the drawing are scaled accordingly.
  */
-include("scripts/EAction.js");
-
 function ConvertToInch(guiAction) {
     EAction.call(this, guiAction);
 }
