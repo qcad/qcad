@@ -86,6 +86,21 @@ CommandLine.init = function(basePath) {
         blue = "#2E9AFE";
     }
 
+    // open fragment links of format "#<entity ID>" by selecting
+    // the entity with the given id:
+    teHistory.openLinks = false;
+    teHistory.anchorClicked.connect(function(url) {
+        var di = appWin.getDocumentInterface();
+        if (isNull(di)) {
+            return;
+        }
+        if (!url.hasFragment()) {
+            return;
+        }
+
+        di.selectEntity(parseInt(url.fragment(), 10));
+    });
+
     function appendAndScroll(msg) {
         teHistory.append(msg);
         var c = teHistory.textCursor();
