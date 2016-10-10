@@ -175,20 +175,20 @@ RS::Unit RUnit::parseUnit(const QString& str) {
 }
 
 /**
- * @return a short string representing the given unit (e.g. "mm")
+ * @return a short string representing the given unit (e.g. "mm" or """)
  */
-QString RUnit::unitToSymbol(RS::Unit unit) {
+QString RUnit::unitToSymbol(RS::Unit unit, bool asText) {
     QString ret = "";
 
     switch (unit) {
     case RS::None:
-        ret = "";
+        ret = asText ? "--" : "";
         break;
     case RS::Inch:
-        ret = "\"";
+        ret = asText ? "in" : "\"";
         break;
     case RS::Foot:
-        ret = "'";
+        ret = asText ? "ft" : "'";
         break;
     case RS::Mile:
         ret = "mi";
@@ -249,7 +249,7 @@ QString RUnit::unitToSymbol(RS::Unit unit) {
     //    break;
 
     default:
-        ret = "";
+        ret = asText ? "--" : "";
         break;
     }
 
