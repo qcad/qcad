@@ -83,8 +83,6 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, unitToSymbol, "unitToSymbol");
             
-            REcmaHelper::registerFunction(&engine, &ctor, unitToShortName, "unitToShortName");
-            
             REcmaHelper::registerFunction(&engine, &ctor, unitToName, "unitToName");
             
             REcmaHelper::registerFunction(&engine, &ctor, getLabel, "getLabel");
@@ -3496,56 +3494,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaUnit::unitToSymbol", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaUnit::unitToShortName
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaUnit::unitToShortName", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaUnit::unitToShortName";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: RS::Unit */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RS::Unit
-                    a0 =
-                    (RS::Unit)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        RUnit::
-       unitToShortName(a0);
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.unitToShortName().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaUnit::unitToShortName", context, engine);
             return result;
         }
          QScriptValue

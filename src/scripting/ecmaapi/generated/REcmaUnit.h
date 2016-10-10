@@ -82,9 +82,6 @@
         unitToSymbol
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        unitToShortName
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         unitToName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
