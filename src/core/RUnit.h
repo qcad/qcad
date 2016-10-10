@@ -91,7 +91,6 @@ public:
     static double getFactorToM(RS::Unit unit);
     static RS::Unit parseUnit(const QString& str);
     static QString unitToSymbol(RS::Unit unit, bool asText=false);
-    static QString unitToShortName(RS::Unit unit);
     static QString unitToName(RS::Unit unit, bool tr=true);
     static QString getLabel(double v, RDocument& document,
                             int precisionOverride=RDEFAULT_MIN1,
