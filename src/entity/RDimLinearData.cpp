@@ -127,6 +127,7 @@ bool RDimLinearData::stretch(const RPolyline& area, const RVector& offset) {
     RDimensionData::stretch(area, offset);
     extensionPoint1.stretch(area, offset);
     extensionPoint2.stretch(area, offset);
+    definitionPoint.stretch(area, offset);
     update();
     return true;
 }
