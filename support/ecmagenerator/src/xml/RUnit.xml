@@ -191,6 +191,16 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="RS::Unit" typeName="RS::Unit" name="unit"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="asText"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="unitToShortName" cppName="unitToShortName"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="false" />
       </variant>
     </method>
     <method name="unitToName" cppName="unitToName"
