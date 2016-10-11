@@ -402,14 +402,9 @@ TextDialog.prototype.show =  function(textDataIn) {
     this.currentCharFormatChanged(this.textEdit.currentCharFormat());
     //this.colorChanged();
 
-    // exec text dialog:
-    if (!this.dialog.exec()) {
-        // dialog canceled:
-        this.dialog.destroy();
-        EAction.activateMainWindow();
-        return undefined;
-    }
 
+    // exec text dialog:
+    var res = this.dialog.exec();
     if (this.tabWidget.currentIndex===0) {
         this.updateSource(true);
     }
@@ -491,7 +486,12 @@ TextDialog.prototype.show =  function(textDataIn) {
     this.dialog.destroy();
     EAction.activateMainWindow();
 
-    return textDataOut;
+    if (res) {
+        return textDataOut;
+    }
+    else {
+        return undefined;
+    }
 };
 
 TextDialog.basePath = includeBasePath;
