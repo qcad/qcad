@@ -244,6 +244,9 @@ public:
     virtual QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const {
         return queryLayer(layerId);
     }
+    virtual QSharedPointer<RLayer> queryLayerDirect(const QString& layerName) const {
+        return queryLayerDirect(getLayerId(layerName));
+    }
 
     /**
      * \return A pointer to the layer with the given \c layerName
@@ -280,6 +283,9 @@ public:
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const = 0;
 
     virtual QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const = 0;
+    virtual QSharedPointer<RBlock> queryBlockDirect(const QString& blockName) const {
+        return queryBlockDirect(getBlockId(blockName));
+    }
     virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const = 0;
     virtual QSharedPointer<RBlock> queryBlock(const QString& blockName) const = 0;
 

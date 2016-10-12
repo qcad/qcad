@@ -1812,6 +1812,17 @@ QSharedPointer<RBlock> RDocument::queryBlockDirect(RBlock::Id blockId) const {
 }
 
 /**
+ * Queries the block with the given name direct (no cloning).
+ * Blocks queried this way should not be
+ * modified unless undo / redo functionality is not required.
+ *
+ * \return Pointer to the block or NULL.
+ */
+QSharedPointer<RBlock> RDocument::queryBlockDirect(const QString& blockName) const {
+    return storage.queryBlockDirect(blockName);
+}
+
+/**
  * Queries the block with the given ID.
  *
  * \return Pointer to the block or NULL.

@@ -165,6 +165,7 @@ public:
     QSharedPointer<RLayout> queryLayout(const QString& layoutName) const;
     QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;
     QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
+    QSharedPointer<RBlock> queryBlockDirect(const QString& blockName) const;
     QSharedPointer<RBlock> queryBlock(const QString& blockName) const;
     QSharedPointer<RView> queryView(RView::Id viewId) const;
     QSharedPointer<RView> queryView(const QString& viewName) const;
