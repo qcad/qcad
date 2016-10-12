@@ -324,6 +324,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
       </variant>
+      <variant returnType="QSharedPointer &lt; RLayer &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
     </method>
     <method name="queryCurrentLayer" cppName="queryCurrentLayer"
     specifier="public" isStatic="false" isVirtual="true"
@@ -386,6 +391,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="queryBlockDirect" cppName="queryBlockDirect"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RBlock &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+      </variant>
       <variant returnType="QSharedPointer &lt; RBlock &gt;"
       isPureVirtual="false">
         <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"

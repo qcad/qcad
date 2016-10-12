@@ -470,6 +470,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
         isConst="false" />
       </variant>
+      <variant returnType="QSharedPointer &lt; RBlock &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+      </variant>
     </method>
     <method name="queryView" cppName="queryView" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
