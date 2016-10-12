@@ -165,8 +165,6 @@ RBlockListQt.prototype.sortBlockNames = function(blockNames) {
 RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     this.di = documentInterface;
 
-    var block;
-    
     var pos = this.verticalScrollBar().sliderPosition;
     var selectedBlockName = undefined;
     var selectedItems = this.selectedItems();
@@ -181,29 +179,44 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
 
     var doc = documentInterface.getDocument();
 
-    var blockNames = doc.getBlockNames();
-    this.sortBlockNames(blockNames);
+    var blockNameCandidates = doc.getBlockNames();
 
     var hideInternal = RSettings.getBoolValue("BlockList/HideInternalBlocks", false);
 
-    var currentBlockId = doc.getCurrentBlockId();
-    var currentItem = undefined;
-    var selectedItem = undefined;
-    for (var i=0; i<blockNames.length; ++i) {
-        var blockName = blockNames[i];
-        block = doc.queryBlock(blockName);
-        if (block.isNull()) {
+    var i;
+
+    // filter block names:
+    var blockNames = [];
+    for (i=0; i<blockNameCandidates.length; i++) {
+        var blockNameCandidate = blockNameCandidates[i];
+        var blockCandidate = doc.queryBlockDirect(blockNameCandidate);
+        if (blockCandidate.isNull()) {
             continue;
         }
 
         // hide anonymous blocks:
         if (hideInternal===true) {
-            if (blockName.toLowerCase().startsWith("a$c") && blockName.length===13) {
+            if (blockNameCandidate.toLowerCase().startsWith("a$c") && blockNameCandidate.length===13) {
                 continue;
             }
         }
 
-        if (!this.filter(block)) {
+        if (!this.filter(blockCandidate)) {
+            continue;
+        }
+
+        blockNames.push(blockNameCandidate);
+    }
+
+    this.sortBlockNames(blockNames);
+
+    var currentBlockId = doc.getCurrentBlockId();
+    var currentItem = undefined;
+    var selectedItem = undefined;
+    for (i=0; i<blockNames.length; ++i) {
+        var blockName = blockNames[i];
+        var block = doc.queryBlockDirect(blockName);
+        if (block.isNull()) {
             continue;
         }
 
