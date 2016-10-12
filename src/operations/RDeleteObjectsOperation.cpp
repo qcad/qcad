@@ -35,6 +35,10 @@ void RDeleteObjectsOperation::deleteObject(const QSharedPointer<RObject>& o) {
 RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) const {
     Q_UNUSED(preview)
     RTransaction transaction(document.getStorage(), text, undoable);
+    transaction.setRecordAffectedObjects(recordAffectedObjects);
+    transaction.setSpatialIndexDisabled(spatialIndexDisabled);
+    transaction.setAllowAll(allowAll);
+    transaction.setAllowInvisible(allowInvisible);
     transaction.setGroup(transactionGroup);
 
     for (int i = 0; i < list.size(); ++i) {
