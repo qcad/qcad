@@ -167,6 +167,7 @@ public:
     QList<RLine> getTangents(const RVector& point) const;
 
     QList<RSpline> approximateWithSplines() const;
+    RPolyline approximateWithArcs(int segments) const;
 
     virtual QList<QSharedPointer<RShape> > getOffsetShapes(double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
     virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;

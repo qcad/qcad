@@ -26,6 +26,7 @@
 
 class REllipse;
 class RSpline;
+class RPolyline;
 
 
 /**
@@ -39,6 +40,7 @@ public:
     virtual ~REllipseProxy() {}
 
     virtual QList<RSpline> approximateWithSplines(const REllipse& ellipse) const = 0;
+    virtual RPolyline approximateWithArcs(const REllipse& ellipse, int segments) const = 0;
 };
 
 #endif

@@ -75,10 +75,17 @@ Explode.explodeSelection = function(di, action) {
 
         // explode ellipse into polyline with arc segments:
         if (isEllipseEntity(entity)) {
-            var ellipse = entity.getData().castToShape();
-            var s = RSettings.getIntValue("Explode/EllipseSegments", 32);
-            polyline = ShapeAlgorithms.approximateEllipse(ellipse, s);
-            newShapes.push(polyline);
+            if (REllipse.hasProxy()) {
+                var ellipse = entity.getData().castToShape();
+                var s = RSettings.getIntValue("Explode/EllipseSegments", 32);
+                polyline = ellipse.approximateWithArcs(s);
+                if (!polyline.isEmpty()) {
+                    newShapes.push(polyline);
+                }
+            }
+            else {
+                continue;
+            }
         }
 
         // explode polyline into line and arc segments:

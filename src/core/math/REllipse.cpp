@@ -1061,6 +1061,13 @@ QList<RSpline> REllipse::approximateWithSplines() const {
     return QList<RSpline>();
 }
 
+RPolyline REllipse::approximateWithArcs(int segments) const {
+    if (REllipse::hasProxy()) {
+        return REllipse::getEllipseProxy()->approximateWithArcs(*this, segments);
+    }
+    return RPolyline();
+}
+
 /**
  * \return Array of spline shapes representing the parallel curves to this ellipse shape.
  */
