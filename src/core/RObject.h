@@ -178,6 +178,8 @@ public:
     bool hasCustomProperty(const QString& title, const QRegExp& key) const;
 
     QVariant getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT) const;
+    double getCustomDoubleProperty(const QString& title, const QString& key, double defaultValue) const;
+    int getCustomIntProperty(const QString& title, const QString& key, int defaultValue) const;
     bool getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) const;
     void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
     void removeCustomProperty(const QString& title, const QString& key);

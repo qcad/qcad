@@ -446,6 +446,38 @@ QVariant RObject::getCustomProperty(const QString& title, const QString& key, co
     return vm.value(key, defaultValue);
 }
 
+double RObject::getCustomDoubleProperty(const QString& title, const QString& key, double defaultValue) const {
+    QVariant ret = getCustomProperty(title, key, defaultValue);
+    if (ret.type()==QVariant::Double) {
+        return ret.toDouble();
+    }
+    if (ret.type()==QVariant::String) {
+        QString s = ret.toString();
+        bool ok;
+        double d = s.toDouble(&ok);
+        if (ok) {
+            return d;
+        }
+    }
+    return defaultValue;
+}
+
+int RObject::getCustomIntProperty(const QString& title, const QString& key, int defaultValue) const {
+    QVariant ret = getCustomProperty(title, key, defaultValue);
+    if (ret.type()==QVariant::Int) {
+        return ret.toInt();
+    }
+    if (ret.type()==QVariant::String) {
+        QString s = ret.toString();
+        bool ok;
+        int i = s.toInt(&ok);
+        if (ok) {
+            return i;
+        }
+    }
+    return defaultValue;
+}
+
 bool RObject::getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) const {
     QVariant ret = getCustomProperty(title, key, defaultValue);
     if (ret.type()==QVariant::Bool) {
