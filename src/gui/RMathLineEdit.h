@@ -35,12 +35,14 @@
 class QCADGUI_EXPORT RMathLineEdit: public QLineEdit {
 
 Q_OBJECT
-Q_PROPERTY(bool angle READ isAngle WRITE setAngle)
-Q_PROPERTY(bool integer READ isInteger WRITE setInteger)
-//Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue)
-//Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit)
-//Q_PROPERTY(RS::Unit defaultUnit READ getDefaultUnit WRITE setDefaultUnit)
-//Q_ENUMS(RS::Unit)
+
+// keep extra ';' in place for the benefit of ecmagenerator:
+Q_PROPERTY(bool angle READ isAngle WRITE setAngle);
+Q_PROPERTY(bool integer READ isInteger WRITE setInteger);
+//Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);
+//Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
+//Q_PROPERTY(RS::Unit defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
+//Q_ENUMS(RS::Unit);
 
 public:
     RMathLineEdit(QWidget* parent = NULL);
