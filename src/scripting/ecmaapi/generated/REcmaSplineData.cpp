@@ -145,7 +145,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, toPolyline, "toPolyline");
             
-            REcmaHelper::registerFunction(&engine, proto, toBiArcPolyline, "toBiArcPolyline");
+            REcmaHelper::registerFunction(&engine, proto, approximateWithArcs, "approximateWithArcs");
             
             REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
             
@@ -2883,19 +2883,19 @@
             return result;
         }
          QScriptValue
-        REcmaSplineData::toBiArcPolyline
+        REcmaSplineData::approximateWithArcs
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSplineData::toBiArcPolyline", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::toBiArcPolyline";
+            //REcmaHelper::functionStart("REcmaSplineData::approximateWithArcs", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::approximateWithArcs";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RSplineData* self = 
-                        getSelf("toBiArcPolyline", context);
+                        getSelf("approximateWithArcs", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2926,7 +2926,7 @@
     // return type 'RPolyline'
     RPolyline cppResult =
         
-               self->toBiArcPolyline(a0);
+               self->approximateWithArcs(a0);
         // return type: RPolyline
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -2936,10 +2936,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.toBiArcPolyline().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.approximateWithArcs().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSplineData::toBiArcPolyline", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::approximateWithArcs", context, engine);
             return result;
         }
          QScriptValue

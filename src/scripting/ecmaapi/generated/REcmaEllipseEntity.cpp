@@ -150,6 +150,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, approximateWithSplines, "approximateWithSplines");
             
+            REcmaHelper::registerFunction(&engine, proto, approximateWithArcs, "approximateWithArcs");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<REllipseEntity*>(), *proto);
 
@@ -3454,6 +3456,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEllipseEntity::approximateWithSplines", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEllipseEntity::approximateWithArcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEllipseEntity::approximateWithArcs", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEllipseEntity::approximateWithArcs";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipseEntity* self = 
+                        getSelf("approximateWithArcs", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->approximateWithArcs(a0);
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseEntity.approximateWithArcs().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEllipseEntity::approximateWithArcs", context, engine);
             return result;
         }
          QScriptValue REcmaEllipseEntity::toString

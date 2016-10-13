@@ -289,6 +289,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RSpline &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="approximateWithArcs"
+    cppName="approximateWithArcs" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false">
+        <arg type="int" typeName="int" name="segments"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

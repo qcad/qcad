@@ -209,7 +209,7 @@
         toPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        toBiArcPolyline
+        approximateWithArcs
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         reverse

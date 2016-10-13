@@ -36,6 +36,8 @@
 <class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RMathLineEdit</name><super>: <specifier>public</specifier> <name>QLineEdit</name></super> <block>{<private type="default">
 
 <function_decl><type><name>Q_OBJECT</name></type>
+
+<comment type="line">// keep extra ';' in place for the benefit of ecmagenerator:</comment>
 <name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>angle</name> <name>READ</name> <name>isAngle</name> <name>WRITE</name></type> <name>setAngle</name></decl></param>)</parameter_list>;</function_decl>
 <constructor_decl><name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>integer</name> <name>READ</name> <name>isInteger</name> <name>WRITE</name></type> <name>setInteger</name></decl></param>)</parameter_list>;</constructor_decl>
 <comment type="line">//Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);</comment>

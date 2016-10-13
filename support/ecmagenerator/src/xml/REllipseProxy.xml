@@ -3,6 +3,7 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="REllipse" />
   <class_decl name="RSpline" />
+  <class_decl name="RPolyline" />
   <class name="REllipseProxy"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"

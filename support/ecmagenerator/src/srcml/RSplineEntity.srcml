@@ -285,8 +285,8 @@
         <return>return <expr><name>data</name>.<call><name>toPolyline</name><argument_list>(<argument><expr><name>segments</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>RPolyline</name></type> <name>toBiArcPolyline</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>data</name>.<call><name>toBiArcPolyline</name><argument_list>(<argument><expr><name>tolerance</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>RPolyline</name></type> <name>approximateWithArcs</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>approximateWithArcs</name><argument_list>(<argument><expr><name>tolerance</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>reverse</name><parameter_list>()</parameter_list> <block>{

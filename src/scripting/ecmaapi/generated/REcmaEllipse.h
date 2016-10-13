@@ -280,6 +280,9 @@
         approximateWithSplines
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        approximateWithArcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getOffsetShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

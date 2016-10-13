@@ -393,9 +393,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="toBiArcPolyline" cppName="toBiArcPolyline"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="approximateWithArcs"
+    cppName="approximateWithArcs" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RPolyline" isPureVirtual="false">
         <arg type="double" typeName="double" name="tolerance"
         isConst="false" />

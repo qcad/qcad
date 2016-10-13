@@ -27,6 +27,7 @@
 
 <class_decl>class <name>REllipse</name>;</class_decl>
 <class_decl>class <name>RSpline</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
 
 
 <comment type="block">/**
@@ -40,6 +41,7 @@
     <destructor><specifier>virtual</specifier> <name>~REllipseProxy</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RSpline</name></argument>&gt;</argument_list></name></type> <name>approximateWithSplines</name><parameter_list>(<param><decl><type><name>const</name> <name>REllipse</name>&amp;</type> <name>ellipse</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RPolyline</name></type> <name>approximateWithArcs</name><parameter_list>(<param><decl><type><name>const</name> <name>REllipse</name>&amp;</type> <name>ellipse</name></decl></param>, <param><decl><type><name>int</name></type> <name>segments</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
