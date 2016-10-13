@@ -156,6 +156,30 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RDEFAULT_QVARIANT" isConst="true" />
       </variant>
     </method>
+    <method name="getCustomDoubleProperty"
+    cppName="getCustomDoubleProperty" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="double" typeName="double" name="defaultValue"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getCustomIntProperty"
+    cppName="getCustomIntProperty" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="int" typeName="int" name="defaultValue"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getCustomBoolProperty"
     cppName="getCustomBoolProperty" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

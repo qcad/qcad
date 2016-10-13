@@ -87,6 +87,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCustomProperty, "getCustomProperty");
             
+            REcmaHelper::registerFunction(&engine, proto, getCustomDoubleProperty, "getCustomDoubleProperty");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCustomIntProperty, "getCustomIntProperty");
+            
             REcmaHelper::registerFunction(&engine, proto, getCustomBoolProperty, "getCustomBoolProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setCustomProperty, "setCustomProperty");
@@ -1642,6 +1646,178 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::getCustomProperty", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::getCustomDoubleProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::getCustomDoubleProperty", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::getCustomDoubleProperty";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("getCustomDoubleProperty", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getCustomDoubleProperty(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomDoubleProperty().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::getCustomDoubleProperty", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::getCustomIntProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::getCustomIntProperty", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::getCustomIntProperty";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("getCustomIntProperty", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getCustomIntProperty(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomIntProperty().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::getCustomIntProperty", context, engine);
             return result;
         }
          QScriptValue
