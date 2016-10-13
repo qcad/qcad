@@ -78,8 +78,12 @@ CoordinateDisplay.update = function(documentInterface) {
             CoordinateDisplay.singleShot.stop();
         }
         if (!isNull(CoordinateDisplay.singleShot)) {
-            CoordinateDisplay.singleShot.destroy();
-            CoordinateDisplay.singleShot = undefined;
+            // catch exception when ran with script debugger:
+            try {
+                CoordinateDisplay.singleShot.destroy();
+                CoordinateDisplay.singleShot = undefined;
+            }
+            catch(e) {}
         }
     }
 
