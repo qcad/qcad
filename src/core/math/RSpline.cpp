@@ -719,9 +719,9 @@ void RSpline::updateTangentsPeriodic() {
     setTangents(t, t);
 }
 
-RPolyline RSpline::toBiArcPolyline(double tolerance) const {
+RPolyline RSpline::approximateWithArcs(double tolerance) const {
     if (hasProxy()) {
-        return getSplineProxy()->convertToBiArcPolyline(*this, tolerance);
+        return getSplineProxy()->approximateWithArcs(*this, tolerance);
     }
     return RPolyline();
 }

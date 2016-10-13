@@ -284,8 +284,8 @@ public:
         return data.toPolyline(segments);
     }
 
-    RPolyline toBiArcPolyline(double tolerance) const {
-        return data.toBiArcPolyline(tolerance);
+    RPolyline approximateWithArcs(double tolerance) const {
+        return data.approximateWithArcs(tolerance);
     }
 
     bool reverse() {

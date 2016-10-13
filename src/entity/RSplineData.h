@@ -189,8 +189,8 @@ public:
         return RSpline::toPolyline(segments);
     }
 
-    RPolyline toBiArcPolyline(double tolerance) const {
-        return RSpline::toBiArcPolyline(tolerance);
+    RPolyline approximateWithArcs(double tolerance) const {
+        return RSpline::approximateWithArcs(tolerance);
     }
 
     void simplify(double tolerance) {

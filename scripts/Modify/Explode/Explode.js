@@ -122,7 +122,7 @@ Explode.explodeSelection = function(di, action) {
             var pl;
             if (RSpline.hasProxy()) {
                 var tol = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
-                pl = spline.toBiArcPolyline(tol);
+                pl = spline.approximateWithArcs(tol);
             }
             else {
                 var seg = RSettings.getIntValue("Explode/SplineSegments", 64);

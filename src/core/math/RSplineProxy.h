@@ -44,7 +44,7 @@ public:
     virtual double getDistanceAtT(const RSpline& spline, double t) = 0;
     virtual RVector getVectorTo(const RSpline& spline, const RVector& point, bool limited=true, double strictRange=RMAXDOUBLE) = 0;
     virtual RSpline simplify(const RSpline& spline, double tolerance) = 0;
-    virtual RPolyline convertToBiArcPolyline(const RSpline& spline, double tolerance=0.001) = 0;
+    virtual RPolyline approximateWithArcs(const RSpline& spline, double tolerance=0.001) = 0;
     virtual QList<RVector> getIntersectionPoints(const RSpline& spline, const RShape& other, bool limited=true, bool same=false) = 0;
 };
 
