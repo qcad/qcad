@@ -238,6 +238,10 @@ public:
         return data.approximateWithSplines();
     }
 
+    RPolyline approximateWithArcs(int segments) const {
+        return data.approximateWithArcs(segments);
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 
