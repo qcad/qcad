@@ -172,7 +172,7 @@ double RVector::getMagnitude() const {
     }
     // Note that the z coordinate is also needed for 2d
     //   (due to definition of crossP())
-    return sqrt(RMath::pow(x, 2) + RMath::pow(y, 2) + RMath::pow(z, 2));
+    return sqrt(x*x + y*y + z*z);
 }
 
 /**
@@ -182,7 +182,7 @@ double RVector::getMagnitude2d() const {
     if (!valid) {
         return RNANDOUBLE;
     }
-    return sqrt(RMath::pow(x, 2) + RMath::pow(y, 2));
+    return sqrt(x*x + y*y);
 }
 
 /**
@@ -193,7 +193,7 @@ double RVector::getSquaredMagnitude() const {
         return RNANDOUBLE;
     }
 
-    return RMath::pow(x, 2) + RMath::pow(y, 2) + RMath::pow(z, 2);
+    return x*x + y*y + z*z;
 }
 
 /**
