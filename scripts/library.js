@@ -2352,7 +2352,7 @@ if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     }
 }
 
-// add isLocalFile to API for Qt 4.7:
+// add QUrl.isLocalFile to API for Qt 4.7:
 if (!isFunction(QUrl.prototype.isLocalFile)) {
     QUrl.prototype.isLocalFile = function() {
         return this.scheme().toLowerCase()==="file";
