@@ -1874,6 +1874,10 @@ QList<QSharedPointer<RShape> > RShape::getOffsetLines(const RShape& shape, doubl
     QList<QSharedPointer<RShape> > ret;
     const RDirected* dir = dynamic_cast<const RDirected*>(&shape);
 
+    if (dir==NULL) {
+        return ret;
+    }
+
     QList<RS::Side> sides;
     if (position.isValid()) {
         sides.append(dir->getSideOfPoint(position));
