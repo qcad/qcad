@@ -361,6 +361,12 @@
         modifyPolylineCorner
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getConvexVertices
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getConcaveVertices
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

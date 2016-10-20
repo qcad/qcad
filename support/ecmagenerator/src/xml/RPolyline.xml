@@ -772,6 +772,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="NULL" isConst="true" />
       </variant>
     </method>
+    <method name="getConvexVertices" cppName="getConvexVertices"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getConcaveVertices" cppName="getConcaveVertices"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

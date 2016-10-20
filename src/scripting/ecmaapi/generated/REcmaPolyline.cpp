@@ -290,6 +290,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, modifyPolylineCorner, "modifyPolylineCorner");
             
+            REcmaHelper::registerFunction(&engine, proto, getConvexVertices, "getConvexVertices");
+            
+            REcmaHelper::registerFunction(&engine, proto, getConcaveVertices, "getConcaveVertices");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPolyline*>(), *proto);
 
@@ -8327,6 +8331,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::modifyPolylineCorner", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getConvexVertices
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getConvexVertices", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getConvexVertices";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getConvexVertices", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getConvexVertices();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getConvexVertices().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getConvexVertices", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getConcaveVertices
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getConcaveVertices", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getConcaveVertices";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getConcaveVertices", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getConcaveVertices();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getConcaveVertices().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getConcaveVertices", context, engine);
             return result;
         }
          QScriptValue

@@ -203,6 +203,9 @@
             <param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>trimmedShape2</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Ending</name></name></type> <name>ending2</name></decl></param>, <param><decl><type><name>int</name></type> <name>segmentIndex2</name></decl></param>,
             <param><decl><type><name>const</name> <name>RShape</name>*</type> <name>cornerShape</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getConvexVertices</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getConcaveVertices</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>polylineProxy</name>!=<name>NULL</name></expr>;</return>
     }</block></function>
