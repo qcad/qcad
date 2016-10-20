@@ -202,6 +202,9 @@ public:
             const RShape& trimmedShape2, RS::Ending ending2, int segmentIndex2,
             const RShape* cornerShape = NULL) const;
 
+    QList<RVector> getConvexVertices(bool convex = true) const;
+    QList<RVector> getConcaveVertices() const;
+
     static bool hasProxy() {
         return polylineProxy!=NULL;
     }

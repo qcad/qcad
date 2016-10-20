@@ -1756,3 +1756,50 @@ RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Endin
 
     return pl;
 }
+
+QList<RVector> RPolyline::getConvexVertices(bool convex) const {
+    if (!isGeometricallyClosed()) {
+        return QList<RVector>();
+    }
+
+    RPolyline pl = *this;
+    pl.autoClose();
+
+    RS::Orientation ori = pl.getOrientation();
+
+    QList<RVector> ret;
+
+    for (int i=0; i<pl.vertices.count(); i++) {
+        int iPrev = RMath::absmod(i-1, pl.vertices.count());
+        QSharedPointer<RShape> segmentPrev = pl.getSegmentAt(iPrev);
+        QSharedPointer<RShape> segmentNext = pl.getSegmentAt(i);
+
+        QSharedPointer<RDirected> dirPrev = segmentPrev.dynamicCast<RDirected>();
+        QSharedPointer<RDirected> dirNext = segmentNext.dynamicCast<RDirected>();
+
+        double aPrev = dirPrev->getDirection2() + M_PI;
+        double aNext = dirNext->getDirection1();
+
+        RVector pPrev = RVector::createPolar(1.0, aPrev);
+        RVector pNext = RVector::createPolar(1.0, aNext);
+
+        RVector cp = RVector::getCrossProduct(pPrev, pNext);
+
+        if (convex) {
+            if (ori==RS::CW && cp.z<0.0 || ori==RS::CCW && cp.z>0.0) {
+                ret.append(pl.vertices[i]);
+            }
+        }
+        else {
+            if (ori==RS::CCW && cp.z<0.0 || ori==RS::CW && cp.z>0.0) {
+                ret.append(pl.vertices[i]);
+            }
+        }
+    }
+
+    return ret;
+}
+
+QList<RVector> RPolyline::getConcaveVertices() const {
+    return getConvexVertices(false);
+}
