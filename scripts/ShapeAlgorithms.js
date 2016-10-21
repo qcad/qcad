@@ -329,7 +329,10 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend) {
 
     // make sure direction of shape does not change in the process:
     if (isFunction(shape.getStartPoint)) {
-        intersectionPoints = RVector.getSortedByDistance(intersectionPoints, shape.getStartPoint());
+        //intersectionPoints = RVector.getSortedByDistance(intersectionPoints, shape.getStartPoint());
+        intersectionPoints.sort(function(a,b) {
+            return shape.getDistanceFromStart(a)-shape.getDistanceFromStart(b);
+        });
     }
 
     var cutPos1 = undefined;
@@ -738,6 +741,7 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
     }
 
     var orthoLine = undefined;
+    var reversedShape = false;
 
     // auxiliary line othogonal to entity and through cursor:
     var p = shape.getClosestPointOnShape(position, true);
@@ -751,6 +755,7 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
         if (isArcShape(shape) || isEllipseShape(shape)) {
             if (shape.isReversed()) {
                 shape.reverse();
+                reversedShape = true;
             }
         }
     }
@@ -807,6 +812,9 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
 
     // at least 2 intersection points are required to proceed:
     if (intersections.length<2 && onShape && !isXLineShape(shape)) {
+        if (reversedShape) {
+            shape.reverse();
+        }
         return undefined;
     }
 
@@ -929,6 +937,10 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
             cutPos1 = cutPos1;
             cutPos2 = cutPos4;
         }
+    }
+
+    if (reversedShape) {
+        shape.reverse();
     }
 
     return [cutPos1, cutPos2];
