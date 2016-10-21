@@ -25,22 +25,22 @@
  * drawing tool.
  */
 include("../Draw.js");
-include("HatchDialog.js");
+include("../HatchDialog.js");
 
 /**
  * \class Hatch
  * \brief Create hatch for selected boundary.
  * \ingroup ecma_draw_hatch
  */
-function Hatch(guiAction) {
+function HatchFromBoundary(guiAction) {
     Draw.call(this, guiAction);
 }
 
-Hatch.prototype = new Draw();
-Hatch.tolerance = 0.001;
-Hatch.errorPoint = undefined;
+HatchFromBoundary.prototype = new Draw();
+HatchFromBoundary.tolerance = 0.001;
+HatchFromBoundary.errorPoint = undefined;
 
-Hatch.prototype.beginEvent = function() {
+HatchFromBoundary.prototype.beginEvent = function() {
     var i, entityId, entity, shape;
     
     Draw.prototype.beginEvent.call(this);
@@ -58,21 +58,21 @@ Hatch.prototype.beginEvent = function() {
         return;
     }
 
-    if (!Hatch.verifyBoundary(doc, selectedIds)) {
+    if (!HatchFromBoundary.verifyBoundary(doc, selectedIds)) {
         this.terminate();
         return;
     }
 
     // collect hatch data (boundary elements ordered as loops):
-    var hatchData = Hatch.createHatchData(doc, selectedIds);
+    var hatchData = HatchFromBoundary.createHatchData(doc, selectedIds);
 
     if (isNull(hatchData)) {
         this.updatePreview();
         di.keepPreview();
         EAction.handleUserWarning(
                     qsTr("Loop not closed at point %1/%2.")
-                    .arg(isNull(Hatch.connectionPoint) ? "?" : Hatch.connectionPoint.x)
-                    .arg(isNull(Hatch.connectionPoint) ? "?" : Hatch.connectionPoint.y),
+                    .arg(isNull(HatchFromBoundary.connectionPoint) ? "?" : HatchFromBoundary.connectionPoint.x)
+                    .arg(isNull(HatchFromBoundary.connectionPoint) ? "?" : HatchFromBoundary.connectionPoint.y),
                     true);
         this.terminate();
         return;
@@ -98,8 +98,8 @@ Hatch.prototype.beginEvent = function() {
     this.terminate();
 };
 
-Hatch.prototype.getAuxPreview = function() {
-    if (!isValidVector(Hatch.errorPoint)) {
+HatchFromBoundary.prototype.getAuxPreview = function() {
+    if (!isValidVector(HatchFromBoundary.errorPoint)) {
         return undefined;
     }
 
@@ -112,7 +112,7 @@ Hatch.prototype.getAuxPreview = function() {
 
     var radius = view.mapDistanceFromView(10.0);
 
-    ret.push(new RCircle(Hatch.errorPoint, radius));
+    ret.push(new RCircle(HatchFromBoundary.errorPoint, radius));
 
     return ret;
 };
@@ -120,11 +120,11 @@ Hatch.prototype.getAuxPreview = function() {
 /**
  * Verifies the entities entityIds as potential hatch boundary.
  */
-Hatch.verifyBoundary = function(doc, entityIds) {
+HatchFromBoundary.verifyBoundary = function(doc, entityIds) {
     for (var i = 0; i < entityIds.length; i++) {
         var entityId = entityIds[i];
         var entity = doc.queryEntityDirect(entityId);
-        if (!Hatch.verifyBoundaryEntity(doc, entity)) {
+        if (!HatchFromBoundary.verifyBoundaryEntity(doc, entity)) {
             return false;
         }
     }
@@ -135,7 +135,7 @@ Hatch.verifyBoundary = function(doc, entityIds) {
 /**
  * Verifies the given entity as potential hatch boundary.
  */
-Hatch.verifyBoundaryEntity = function(doc, entity) {
+HatchFromBoundary.verifyBoundaryEntity = function(doc, entity) {
     if (isBlockReferenceEntity(entity)) {
         var blockReferenceData = entity.getData();
         var ids = doc.queryBlockEntities(blockReferenceData.getReferencedBlockId());
@@ -148,7 +148,7 @@ Hatch.verifyBoundaryEntity = function(doc, entity) {
             if (!bEntity.isVisible()) {
                 continue;
             }
-            ret = ret && Hatch.verifyBoundaryEntity(doc, bEntity);
+            ret = ret && HatchFromBoundary.verifyBoundaryEntity(doc, bEntity);
         }
         return ret;
     }
@@ -178,7 +178,7 @@ Hatch.verifyBoundaryEntity = function(doc, entity) {
 /**
  * \return RHatchData object created from the given boundary entities entityIds or undefined.
  */
-Hatch.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
+HatchFromBoundary.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
     if (isNull(ignoreOpenLoops)) {
         ignoreOpenLoops = false;
     }
@@ -187,7 +187,7 @@ Hatch.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
     hatchData.setDocument(doc);
 
     doc.traversed = {};
-    Hatch.errorPoint = undefined;
+    HatchFromBoundary.errorPoint = undefined;
 
     for (var i=0; i<entityIds.length; i++) {
         var entityId = entityIds[i];
@@ -195,7 +195,7 @@ Hatch.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
             continue;
         }
         var entity = doc.queryEntityDirect(entityId);
-        if (!Hatch.traverse(hatchData, doc, entity, entityIds)) {
+        if (!HatchFromBoundary.traverse(hatchData, doc, entity, entityIds)) {
             if (ignoreOpenLoops) {
                 continue;
             }
@@ -212,11 +212,11 @@ Hatch.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
  * Traverses the given candidates recursively for connected entities.
  * Resulting loops are appened to the given hatch data.
  */
-Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
+HatchFromBoundary.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
     var i;
 
     // handle closed polyline loops:
-    if (Hatch.isClosedPolyline(entity)) {
+    if (HatchFromBoundary.isClosedPolyline(entity)) {
         if (entity.getLength()<RS.PointTolerance) {
             // zero length closed polyline: safe to ignore:
             return true;
@@ -235,7 +235,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
     }
 
     // handle circle, full ellipse and closed spline loops:
-    if (Hatch.isClosedCurve(entity)) {
+    if (HatchFromBoundary.isClosedCurve(entity)) {
         hatchData.newLoop();
         hatchData.addBoundary(entity.getData().castToShape());
         docOrBlockRef.traversed[entity.getId()] = true;
@@ -262,7 +262,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
             if (!bEntity.isVisible()) {
                 continue;
             }
-            if (!Hatch.traverse(hatchData, blockReferenceData, bEntity, ids)) {
+            if (!HatchFromBoundary.traverse(hatchData, blockReferenceData, bEntity, ids)) {
                 ret = false;
                 break;
             }
@@ -287,10 +287,10 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
 
     // find connected entities:
     var done2 = true;
-    Hatch.connectionPoint = undefined;
+    HatchFromBoundary.connectionPoint = undefined;
     do {
         done2 = true;
-        Hatch.connectionPoint = currentShape.getEndPoint();
+        HatchFromBoundary.connectionPoint = currentShape.getEndPoint();
         for (i = 0; i < candidateIds.length; i++) {
             var entityId = candidateIds[i];
             if (docOrBlockRef.traversed[entityId]) {
@@ -310,7 +310,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
                 continue;
             }
 
-            if (Hatch.isClosedCurve(entity) || Hatch.isClosedPolyline(entity)) {
+            if (HatchFromBoundary.isClosedCurve(entity) || HatchFromBoundary.isClosedPolyline(entity)) {
                 continue;
             }
 
@@ -325,8 +325,8 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
             var sp = entity.getStartPoint();
             var ep = entity.getEndPoint();
 
-            var spConnects = Hatch.connectionPoint.equalsFuzzy(sp, Hatch.tolerance);
-            var epConnects = Hatch.connectionPoint.equalsFuzzy(ep, Hatch.tolerance);
+            var spConnects = HatchFromBoundary.connectionPoint.equalsFuzzy(sp, HatchFromBoundary.tolerance);
+            var epConnects = HatchFromBoundary.connectionPoint.equalsFuzzy(ep, HatchFromBoundary.tolerance);
 
             if (spConnects || epConnects) {
                 docOrBlockRef.traversed[entityId] = true;
@@ -341,26 +341,26 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
                 break;
             }
 
-            //qDebug("gap sp: ", Hatch.connectionPoint.getDistanceTo(sp));
-            //qDebug("gap ep: ", Hatch.connectionPoint.getDistanceTo(ep));
+            //qDebug("gap sp: ", HatchFromBoundary.connectionPoint.getDistanceTo(sp));
+            //qDebug("gap ep: ", HatchFromBoundary.connectionPoint.getDistanceTo(ep));
         }
     } while (!done2);
 
-    if (!Hatch.connectionPoint.equalsFuzzy(loopStartPoint, Hatch.tolerance)) {
-        Hatch.errorPoint = Hatch.connectionPoint;
+    if (!HatchFromBoundary.connectionPoint.equalsFuzzy(loopStartPoint, HatchFromBoundary.tolerance)) {
+        HatchFromBoundary.errorPoint = HatchFromBoundary.connectionPoint;
         hatchData.cancelLoop();
-        //qDebug("start does not connect to end by: ", Hatch.connectionPoint.getDistanceTo(loopStartPoint));
+        //qDebug("start does not connect to end by: ", HatchFromBoundary.connectionPoint.getDistanceTo(loopStartPoint));
         return false;
     }
 
     return true;
 };
 
-Hatch.isClosedPolyline = function(entity) {
+HatchFromBoundary.isClosedPolyline = function(entity) {
     return (isPolylineEntity(entity) && entity.isGeometricallyClosed()) || isFaceEntity(entity);
 };
 
-Hatch.isClosedCurve = function(entity) {
+HatchFromBoundary.isClosedCurve = function(entity) {
     return isCircleEntity(entity) ||
             (isEllipseEntity(entity) && entity.isFullEllipse()) ||
             (isSplineEntity(entity) && entity.isClosed());

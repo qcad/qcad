@@ -16,10 +16,6 @@
   <property name="windowTitle">
    <string>Hatch</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>Hatch.svg</normaloff>Hatch.svg</iconset>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <layout class="QGridLayout" name="gridLayout" columnstretch="0,1">

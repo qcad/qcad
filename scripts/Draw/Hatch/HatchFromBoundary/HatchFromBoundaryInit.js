@@ -1,8 +1,8 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("Hatch", "&Hatch"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("HatchFromBoundary", "&Hatch"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/Hatch.js");
-    action.setIcon(basePath + "/Hatch.svg");
+    action.setScriptFile(basePath + "/HatchFromBoundary.js");
+    action.setIcon(basePath + "/HatchFromBoundary.svg");
     action.setStatusTip(qsTranslate("Hatch", "Draw hatch or solid fill"));
     action.setDefaultShortcut(new QKeySequence("h,a"));
     action.setDefaultCommands(["hatch", "ha"]);
