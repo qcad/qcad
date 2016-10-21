@@ -185,47 +185,7 @@ BreakOut.prototype.slotRemoveSegmentChanged = function(value) {
  * \param extend True if entity is being extended.
  */
 BreakOut.getOtherShapes = function(doc, entityId, shape, extend) {
-    if (isNull(shape)) {
-        return [];
-    }
-
-    // find other shapes that potentially intersect with the chosen entity:
-    var ret = [];
-    // allow for error: especialy for ellipse segments bordering to tangential lines this is needed:
-    var otherEntityIds;
-
-    if (extend===true) {
-        // TODO: if we are extending, the 'rest' has to be queried instead
-        //otherEntityIds = document.queryIntersectedEntitiesXY(document.getBoundingBox().growXY(1.0e-2), true);
-        otherEntityIds = doc.queryAllVisibleEntities();
-    }
-    else {
-        if (isXLineShape(shape) || isRayShape(shape)) {
-            otherEntityIds = doc.queryAllEntities();
-        }
-        else {
-            otherEntityIds = doc.queryIntersectedEntitiesXY(shape.getBoundingBox().growXY(1.0e-2));
-        }
-    }
-
-    for (var i=0; i<otherEntityIds.length; i++) {
-        if (otherEntityIds[i]===entityId) {
-            continue;
-        }
-
-        var otherEntity = doc.queryEntityDirect(otherEntityIds[i]);
-
-        // TODO: if shape is arc, circle, ellipse or ellipse arc:
-        // entities with full bounding box outside full circle or full ellipse
-        // bounding box could be ignored.
-
-        var s = otherEntity.getShapes();
-        if (s.length!==0) {
-            ret = ret.concat(s);
-        }
-    }
-
-    return ret;
+    return ShapeAlgorithms.getIntersectingShapes(doc, entityId, shape, extend);
 };
 
 /**

@@ -252,6 +252,62 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
 };
 
 /**
+ * \return Array of shapes to extend or trim to.
+ *
+ * \param doc RDocument
+ * \param entityId ID of entity to exclude (typically clicked entity).
+ * \param shape Shape of (clicked) entity.
+ * \param extend True if entity is being extended.
+ */
+ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend) {
+    if (isNull(extend)) {
+        extend = false;
+    }
+
+    if (isNull(shape)) {
+        return [];
+    }
+
+    // find other shapes that potentially intersect with the chosen entity:
+    var ret = [];
+    // allow for error: especialy for ellipse segments bordering to tangential lines this is needed:
+    var otherEntityIds;
+
+    if (extend===true) {
+        // TODO: if we are extending, the 'rest' has to be queried instead
+        //otherEntityIds = document.queryIntersectedEntitiesXY(document.getBoundingBox().growXY(1.0e-2), true);
+        otherEntityIds = doc.queryAllVisibleEntities();
+    }
+    else {
+        if (isXLineShape(shape) || isRayShape(shape)) {
+            otherEntityIds = doc.queryAllEntities();
+        }
+        else {
+            otherEntityIds = doc.queryIntersectedEntitiesXY(shape.getBoundingBox().growXY(1.0e-2));
+        }
+    }
+
+    for (var i=0; i<otherEntityIds.length; i++) {
+        if (otherEntityIds[i]===entityId) {
+            continue;
+        }
+
+        var otherEntity = doc.queryEntityDirect(otherEntityIds[i]);
+
+        // TODO: if shape is arc, circle, ellipse or ellipse arc:
+        // entities with full bounding box outside full circle or full ellipse
+        // bounding box could be ignored.
+
+        var s = otherEntity.getShapes();
+        if (s.length!==0) {
+            ret = ret.concat(s);
+        }
+    }
+
+    return ret;
+};
+
+/**
  * Breaks the closest segment in shape to position between two intersections
  * with otherShapes or
  * extends a shape to the next two (imaginary) intersections with otherShapes.
@@ -1554,4 +1610,103 @@ ShapeAlgorithms.modifyPolylineCorner = function(polyline1, trimmedShape1, ending
 
     return polyline1.modifyPolylineCorner(trimmedShape1, ending1, segmentIndex1,
                                           trimmedShape2, ending2, segmentIndex2, cornerShape);
+};
+
+
+/**
+ * Finds the next segment in CCW direction from the cursor position.
+ *
+ * \param cursor Current position
+ * \param dir Direction backwards to last traced segment
+ */
+//ShapeAlgorithms.getShapeSegment = function(cursor, dir) {
+
+//};
+
+ShapeAlgorithms.divideShape = function(shape, pos1, pos2) {
+    if (isNull(pos1) || isNull(shape)) {
+        return undefined;
+    }
+
+    // circles and ellipses require two cut points:
+    if (isNull(pos2)) {
+        if (isCircleShape(shape) || (isEllipseShape(shape) && shape.isFullEllipse())) {
+            return undefined;
+        }
+    }
+
+    var center;
+    var angle = undefined;
+    var angle2 = undefined;
+    var e;
+    var cutPos1 = undefined;
+    var cutPos2 = undefined;
+
+    if (isCircleShape(shape)) {
+        center = shape.getCenter();
+        var radius = shape.getRadius();
+        angle = center.getAngleTo(pos1);
+        angle2 = center.getAngleTo(pos2);
+
+        cutPos1 = center.operator_add(RVector.createPolar(radius, angle));
+        cutPos2 = center.operator_add(RVector.createPolar(radius, angle2));
+
+        // introduce tiny gap to make sure full arc is still rendered correctly
+        // in other CAD systems:
+        var arc1 = new RArc(
+            shape.getCenter(),
+            shape.getRadius(),
+            angle,
+            angle2,
+            false);
+        var arc2 = new RArc(
+            shape.getCenter(),
+            shape.getRadius(),
+            angle2,
+            angle,
+            false);
+
+        return [ [ arc1, arc2 ], [ cutPos1, cutPos2 ] ];
+    }
+    else if (isEllipseShape(shape) && shape.isFullEllipse()) {
+        center = shape.getCenter();
+        var ellipseAngle = shape.getAngle();
+
+        angle = center.getAngleTo(pos1) - ellipseAngle;
+        angle2 = center.getAngleTo(pos2) - ellipseAngle;
+
+        cutPos1 = shape.getPointAt(angle);
+        cutPos2 = shape.getPointAt(angle2);
+
+        var ellipse1 = shape.clone();
+        ellipse1.setStartParam(ellipse1.angleToParam(angle));
+        ellipse1.setEndParam(ellipse1.angleToParam(angle2));
+
+        var ellipse2 = shape.clone();
+        ellipse2.setStartParam(ellipse2.angleToParam(angle2));
+        ellipse2.setEndParam(ellipse2.angleToParam(angle));
+
+        return [ [ ellipse1, ellipse2 ], [ cutPos1, cutPos2 ] ];
+    }
+    else if (isPolylineShape(shape) && shape.isClosed()) {
+        shape.relocateStartPoint(pos1);
+        shape.convertToOpen();
+        cutPos1 = pos1;
+        if (!isNull(pos2)) {
+            return Divide.divideShape(pos2, undefined, shape);
+        }
+        return [ [ shape, undefined ], [ pos1, undefined ] ];
+    }
+    else {
+        var shape1 = shape.clone();
+        var shape2 = shape.clone();
+
+        shape1 = trimEndPoint(shape1, pos1, pos1);
+
+        cutPos1 = shape1.getEndPoint();
+
+        shape2 = trimStartPoint(shape2, pos1, pos1);
+
+        return [ [ shape1, shape2 ], [ cutPos1, cutPos2 ] ];
+    }
 };
