@@ -242,34 +242,51 @@ Explode.explodeSelection = function(di, action) {
             newEntities.push(new RTextEntity(document, d));
         }
 
-        // explode block reference into contained entities:
+        // explode block reference or block reference array:
         else if (isBlockReferenceEntity(entity)) {
             var data = entity.getData();
-            var subIds = document.queryBlockEntities(data.getReferencedBlockId());
-            for (var col=0; col<data.getColumnCount(); col++) {
-                for (var row=0; row<data.getRowCount(); row++) {
-                    for (k=0; k<subIds.length; k++) {
-                        var subEntity = data.queryEntity(subIds[k]);
-                        if (isNull(subEntity)) {
-                            continue;
-                        }
+            var pos = entity.getPosition();
 
-                        // ignore attribute definitions:
-                        if (isAttributeDefinitionEntity(subEntity)) {
-                            continue;
-                        }
+            // explode array into multiple block references:
+            if (data.getColumnCount()>1 || data.getRowCount()>1) {
+                for (var col=0; col<data.getColumnCount(); col++) {
+                    for (var row=0; row<data.getRowCount(); row++) {
+                        var offset = data.getColumnRowOffset(col, row);
 
-                        e = subEntity.clone();
-                        data.applyColumnRowOffsetTo(e, col, row);
+                        e = entity.clone();
+                        e.setRowCount(1);
+                        e.setColumnCount(1);
+                        e.setPosition(pos.operator_add(offset));
                         storage.setObjectId(e, RObject.INVALID_ID);
-                        e.setBlockId(document.getCurrentBlockId());
                         e.setSelected(true);
                         newEntities.push(e);
                     }
                 }
             }
-        }
 
+            // explode block reference into contained entities:
+            else {
+                var subIds = document.queryBlockEntities(data.getReferencedBlockId());
+                for (k=0; k<subIds.length; k++) {
+                    var subEntity = data.queryEntity(subIds[k]);
+                    if (isNull(subEntity)) {
+                        continue;
+                    }
+
+                    // ignore attribute definitions:
+                    if (isAttributeDefinitionEntity(subEntity)) {
+                        continue;
+                    }
+
+                    e = subEntity.clone();
+                    //data.applyColumnRowOffsetTo(e, col, row);
+                    storage.setObjectId(e, RObject.INVALID_ID);
+                    e.setBlockId(document.getCurrentBlockId());
+                    e.setSelected(true);
+                    newEntities.push(e);
+                }
+            }
+        }
 
         // add explosion result and delete original:
         if (newShapes.length!==0 || newEntities.length!==0) {
