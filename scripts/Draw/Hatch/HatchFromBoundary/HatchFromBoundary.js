@@ -24,7 +24,7 @@
  * \brief This module contains the ECMAScript implementation of the hatch
  * drawing tool.
  */
-include("../Draw.js");
+include("scripts/EAction.js");
 include("../HatchDialog.js");
 
 /**
@@ -33,17 +33,17 @@ include("../HatchDialog.js");
  * \ingroup ecma_draw_hatch
  */
 function HatchFromBoundary(guiAction) {
-    Draw.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
-HatchFromBoundary.prototype = new Draw();
+HatchFromBoundary.prototype = new EAction();
 HatchFromBoundary.tolerance = 0.001;
 HatchFromBoundary.errorPoint = undefined;
 
 HatchFromBoundary.prototype.beginEvent = function() {
     var i, entityId, entity, shape;
     
-    Draw.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     var doc = this.getDocument();
     var di = this.getDocumentInterface();
