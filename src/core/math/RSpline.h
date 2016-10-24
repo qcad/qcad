@@ -24,7 +24,6 @@
 
 #include "RArc.h"
 #include "RBox.h"
-#include "RDirected.h"
 #include "RExplodable.h"
 #include "RShape.h"
 #include "RSplineProxy.h"
@@ -53,7 +52,7 @@
  * \copyable
  * \hasStreamOperator
  */
-class QCADCORE_EXPORT RSpline: public RShape, public RExplodable, public RDirected {
+class QCADCORE_EXPORT RSpline: public RShape, public RExplodable {
 public:
     RSpline();
     RSpline(const QList<RVector>& controlPoints, int degree);
@@ -65,6 +64,10 @@ public:
 
     virtual RSpline* clone() const {
         return new RSpline(*this);
+    }
+
+    virtual bool isDirected() const {
+        return true;
     }
 
     void copySpline(const RSpline& other);
@@ -173,6 +176,12 @@ public:
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
     virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
+    virtual bool trimStartPoint(double trimDist) {
+        return RShape::trimStartPoint(trimDist);
+    }
+    virtual bool trimEndPoint(double trimDist) {
+        return RShape::trimEndPoint(trimDist);
+    }
 
     QList<RSpline> splitAtPoints(const QList<RVector>& points) const;
     QList<RSpline> splitAtParams(const QList<double>& params) const;

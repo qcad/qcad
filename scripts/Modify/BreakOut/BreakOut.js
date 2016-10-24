@@ -175,19 +175,6 @@ BreakOut.prototype.slotRemoveSegmentChanged = function(value) {
     this.removeSegment = value;
 };
 
-
-/**
- * \return Array of shapes to extend or trim to.
- *
- * \param doc RDocument
- * \param entityId ID of entity to exclude (typically clicked entity).
- * \param shape Shape of (clicked) entity.
- * \param extend True if entity is being extended.
- */
-BreakOut.getOtherShapes = function(doc, entityId, shape, extend) {
-    return ShapeAlgorithms.getIntersectingShapes(doc, entityId, shape, extend);
-};
-
 /**
  * Breaks out the segment closest to pos from the given entity.
  *
@@ -203,9 +190,10 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
     var doc = entity.getDocument();
     var shape = entity.getClosestShape(pos);
 
-    var otherShapes = BreakOut.getOtherShapes(doc, entity.getId(), shape, extend);
-
-    var newSegments = ShapeAlgorithms.autoSplit(shape, otherShapes, pos, extend);
+    //debugger;
+    var selfIntersectionPoints = [];
+    var otherShapes = ShapeAlgorithms.getIntersectingShapes(doc, entity.getId(), shape, extend, selfIntersectionPoints);
+    var newSegments = ShapeAlgorithms.autoSplit(shape, otherShapes, pos, extend, selfIntersectionPoints);
 
     if (isNull(newSegments)) {
         return false;

@@ -731,14 +731,14 @@ RPolyline RSpline::toPolyline(int segments) const {
 
     QList<QSharedPointer<RShape> > lineSegments = getExplodedBezier(segments);
     for (int k=0; k<lineSegments.size(); k++) {
-        QSharedPointer<RDirected> dir = lineSegments[k].dynamicCast<RDirected>();
-        if (dir.isNull()) {
+        QSharedPointer<RShape> shape = lineSegments[k];
+        if (shape.isNull() || !shape->isDirected()) {
             continue;
         }
         if (k==0) {
-            ret.appendVertex(dir->getStartPoint());
+            ret.appendVertex(shape->getStartPoint());
         }
-        ret.appendVertex(dir->getEndPoint());
+        ret.appendVertex(shape->getEndPoint());
     }
     if (isClosed()) {
         ret.setClosed(true);

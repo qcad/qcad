@@ -24,7 +24,6 @@
 
 #include "RShape.h"
 #include "RSpline.h"
-#include "RDirected.h"
 #include "REllipseProxy.h"
 #include "RLine.h"
 #include "RVector.h"
@@ -40,7 +39,7 @@ class RBox;
  * \copyable
  * \hasStreamOperator
  */
-class QCADCORE_EXPORT REllipse: public RShape, public RDirected {
+class QCADCORE_EXPORT REllipse: public RShape {
 public:
     REllipse();
     REllipse(const RVector& center,
@@ -56,6 +55,10 @@ public:
 
     virtual REllipse* clone() const {
         return new REllipse(*this);
+    }
+
+    virtual bool isDirected() const {
+        return true;
     }
 
     bool isValid();
@@ -158,6 +161,12 @@ public:
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
     virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
+    virtual bool trimStartPoint(double trimDist) {
+        return RShape::trimStartPoint(trimDist);
+    }
+    virtual bool trimEndPoint(double trimDist) {
+        return RShape::trimEndPoint(trimDist);
+    }
 
     void correctMajorMinor();
     double getSweep() const;

@@ -39,7 +39,7 @@ class RPolyline;
  * \copyable
  * \hasStreamOperator
  */
-class QCADCORE_EXPORT RXLine: public RShape, public RDirected {
+class QCADCORE_EXPORT RXLine: public RShape {
 public:
     RXLine();
     RXLine(const RLine& line);
@@ -57,6 +57,10 @@ public:
 
     virtual RXLine* clone() const {
         return new RXLine(*this);
+    }
+
+    virtual bool isDirected() const {
+        return true;
     }
 
     RBox getBoundingBox() const;
@@ -96,6 +100,12 @@ public:
 
     virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
+    virtual bool trimStartPoint(double trimDist) {
+        return RShape::trimStartPoint(trimDist);
+    }
+    virtual bool trimEndPoint(double trimDist) {
+        return RShape::trimEndPoint(trimDist);
+    }
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
 
     virtual RLine getClippedLine(const RBox& box) const;

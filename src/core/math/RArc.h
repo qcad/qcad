@@ -22,7 +22,6 @@
 
 #include "../core_global.h"
 
-#include "RDirected.h"
 #include "RShape.h"
 #include "RVector.h"
 
@@ -38,7 +37,7 @@ class RPolyline;
  * \copyable
  * \hasStreamOperator
  */
-class QCADCORE_EXPORT RArc: public RShape, public RDirected {
+class QCADCORE_EXPORT RArc: public RShape {
 public:
     RArc();
     RArc(double cx, double cy, double radius, double startAngle,
@@ -53,6 +52,10 @@ public:
 
     virtual RArc* clone() const {
         return new RArc(*this);
+    }
+
+    virtual bool isDirected() const {
+        return true;
     }
 
     virtual void to2D();
@@ -138,6 +141,12 @@ public:
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
     virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
+    virtual bool trimStartPoint(double trimDist) {
+        return RShape::trimStartPoint(trimDist);
+    }
+    virtual bool trimEndPoint(double trimDist) {
+        return RShape::trimEndPoint(trimDist);
+    }
     virtual double getDistanceFromStart(const RVector& p) const;
 
     RPolyline approximateWithLines(double segmentLength);

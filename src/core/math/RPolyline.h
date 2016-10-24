@@ -24,7 +24,6 @@
 
 #include <QSharedPointer>
 
-#include "RDirected.h"
 #include "RExplodable.h"
 #include "RPainterPath.h"
 #include "RPolylineProxy.h"
@@ -47,7 +46,7 @@ class RBox;
  * \copyable
  * \hasStreamOperator
  */
-class QCADCORE_EXPORT RPolyline: public RShape, public RExplodable, public RDirected {
+class QCADCORE_EXPORT RPolyline: public RShape, public RExplodable {
 public:
     RPolyline();
     RPolyline(const QList<RVector>& vertices, bool closed);
@@ -60,6 +59,10 @@ public:
 
     virtual RPolyline* clone() const {
         return new RPolyline(*this);
+    }
+
+    virtual bool isDirected() const {
+        return true;
     }
 
     virtual void to2D();
@@ -118,6 +121,8 @@ public:
     bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
     bool autoClose();
 
+    QList<RVector> getSelfIntersectionPoints() const;
+
     RS::Orientation getOrientation(bool implicitelyClosed = false) const;
 
     bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
@@ -142,6 +147,15 @@ public:
     double getArea() const;
 
     virtual double getLength() const;
+
+    virtual double getDistanceFromStart(const RVector& p) const {
+        QList<double> res = getDistancesFromStart(p);
+        if (res.isEmpty()) {
+            return RMAXDOUBLE;
+        }
+        return res.first();
+    }
+    virtual QList<double> getDistancesFromStart(const RVector& p) const;
     double getLengthTo(const RVector& p, bool limited = true) const;
 
     virtual QList<RVector> getEndPoints() const;
@@ -172,6 +186,8 @@ public:
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
     virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
+    virtual bool trimStartPoint(double trimDist);
+    virtual bool trimEndPoint(double trimDist);
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
     QList<RPolyline> getOutline() const;

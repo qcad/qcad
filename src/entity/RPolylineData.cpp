@@ -146,21 +146,19 @@ QList<RVector> RPolylineData::getIntersectionPoints(
             QList<RVector> candidates = shape1->getIntersectionPoints(*shape2, limited, false);
             if (same) {
                 // polyline internal intersections:
-                QSharedPointer<RDirected> dir1 = shape1.dynamicCast<RDirected>();
-                QSharedPointer<RDirected> dir2 = shape2.dynamicCast<RDirected>();
-                if (!dir1.isNull() && !dir2.isNull()) {
+                if (shape1->isDirected() && shape2->isDirected()) {
                     // ignore polyline nodes:
                     for (int c=0; c<candidates.size(); c++) {
-                        if (candidates[c].equalsFuzzy(dir1->getStartPoint())) {
+                        if (candidates[c].equalsFuzzy(shape1->getStartPoint())) {
                             continue;
                         }
-                        if (candidates[c].equalsFuzzy(dir1->getEndPoint())) {
+                        if (candidates[c].equalsFuzzy(shape1->getEndPoint())) {
                             continue;
                         }
-                        if (candidates[c].equalsFuzzy(dir2->getStartPoint())) {
+                        if (candidates[c].equalsFuzzy(shape2->getStartPoint())) {
                             continue;
                         }
-                        if (candidates[c].equalsFuzzy(dir2->getEndPoint())) {
+                        if (candidates[c].equalsFuzzy(shape2->getEndPoint())) {
                             continue;
                         }
                         ret.append(candidates[c]);

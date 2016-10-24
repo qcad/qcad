@@ -140,18 +140,17 @@ void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, con
         }
 
         QSharedPointer<RShape> shape = QSharedPointer<RShape>(shapes[i]->clone());
-        QSharedPointer<RDirected> dir = shape.dynamicCast<RDirected>();
-        if (dir.isNull()) {
+        if (!shape->isDirected()) {
             continue;
         }
 
         if (i==i1) {
             // trim start point:
-            dir->trimStartPoint(p1);
+            shape->trimStartPoint(p1);
         }
         if (i==i2) {
             // trim end point:
-            dir->trimEndPoint(p2);
+            shape->trimEndPoint(p2);
         }
 
         exporter.exportShapeSegment(shape, angle);

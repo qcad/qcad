@@ -1635,16 +1635,6 @@ QList<RVector> RShape::getIntersectionPointsXX(const RExplodable& explodable1,
         for (it2=sub2.begin(), c2=0; it2!=sub2.end(); ++it2, ++c2) {
             // sub shapes of same, interpolated shape (e.g. spline):
             if (same) {
-                /*
-                QSharedPointer<RDirected> directed1 = *it1->dynamicCast<RDirected>();
-                QSharedPointer<RDirected> directed2 = *it2->dynamicCast<RDirected>();
-                if (!directed1.isNull() && !directed2.isNull()) {
-                    if (directed1->connectsTo(*directed2)) {
-                        // spline internal connection point is not an intersection:
-                        continue;
-                    }
-                }
-                */
                 // segments are connected and therefore don't intersect for a spline:
                 if (qAbs(c1-c2)<=1) {
                     continue;
@@ -1770,10 +1760,9 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
             }
 
             // line, arc, ellipse arc, spline loop segment:
-            QSharedPointer<RDirected> directed = shape.dynamicCast<RDirected>();
-            if (!directed.isNull()) {
+            if (shape->isDirected()) {
                 if (!loopStartPoint.isValid()) {
-                    loopStartPoint = directed->getStartPoint();
+                    loopStartPoint = shape->getStartPoint();
                     //qDebug() << "RShape::order: loopStartPoint: " << loopStartPoint;
                 }
 
@@ -1783,8 +1772,8 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
                 bool sp = true;
                 bool ep = false;
                 if (cursor.isValid()) {
-                    sp = cursor.equalsFuzzy(directed->getStartPoint(), 0.001);
-                    ep = cursor.equalsFuzzy(directed->getEndPoint(), 0.001);
+                    sp = cursor.equalsFuzzy(shape->getStartPoint(), 0.001);
+                    ep = cursor.equalsFuzzy(shape->getEndPoint(), 0.001);
                     //qDebug() << "sp: " << sp << " (distance: " << cursor.getDistanceTo(directed->getStartPoint()) << ")";
                     //qDebug() << "ep: " << ep << " (distance: " << cursor.getDistanceTo(directed->getEndPoint()) << ")";
                 }
@@ -1792,14 +1781,14 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
                 if (sp || ep) {
                     if (ep && !sp) {
                         //qDebug() << "reverse element";
-                        directed->reverse();
+                        shape->reverse();
                     }
                     loop.removeAt(k);
                     //qDebug() << "\tremove: " << k;
                     //qDebug() << "\tleft: " << loop.count();
                     newBoundary.last().append(shape);
                     //qDebug() << "\tloop: " << newBoundary.count() << "\t\tshape: " << *shape;
-                    cursor = directed->getEndPoint();
+                    cursor = shape->getEndPoint();
                     //qDebug() << "\t\tcursor after: " << cursor;
                     k = 0;
                     continue;
@@ -1872,15 +1861,14 @@ QList<QSharedPointer<RShape> > RShape::getOffsetShapes(double distance, int numb
 QList<QSharedPointer<RShape> > RShape::getOffsetLines(const RShape& shape, double distance, int number, RS::Side side, const RVector& position) {
     errorCode = 0;
     QList<QSharedPointer<RShape> > ret;
-    const RDirected* dir = dynamic_cast<const RDirected*>(&shape);
 
-    if (dir==NULL) {
+    if (!shape.isDirected()) {
         return ret;
     }
 
     QList<RS::Side> sides;
     if (position.isValid()) {
-        sides.append(dir->getSideOfPoint(position));
+        sides.append(shape.getSideOfPoint(position));
     }
     else {
         if (side==RS::BothSides) {
@@ -1897,10 +1885,10 @@ QList<QSharedPointer<RShape> > RShape::getOffsetLines(const RShape& shape, doubl
 
         double a;
         if (side==RS::LeftHand) {
-            a = dir->getDirection1() + M_PI/2.0;
+            a = shape.getDirection1() + M_PI/2.0;
         }
         else {
-            a = dir->getDirection1() - M_PI/2.0;
+            a = shape.getDirection1() - M_PI/2.0;
         }
 
         RVector distanceV;
@@ -2021,10 +2009,7 @@ QList<QSharedPointer<RShape> > RShape::getReversedShapeList(const QList<QSharedP
 
     for (int i=shapes.length()-1; i>=0; i--) {
         QSharedPointer<RShape> shape = QSharedPointer<RShape>(shapes[i]->clone());
-        QSharedPointer<RDirected> dir = shape.dynamicCast<RDirected>();
-        if (!dir.isNull()) {
-            dir->reverse();
-        }
+        shape->reverse();
         ret.append(shape);
     }
 
@@ -2171,20 +2156,19 @@ QList<QSharedPointer<RShape> > RShape::trim(
     }
 
     // trim trim entity:
-    QSharedPointer<RDirected> trimmedShape1Dir = trimmedTrimShape.dynamicCast<RDirected>();
-    RS::Ending ending1 = trimmedShape1Dir->getTrimEnd(is, trimClickPos);
+    RS::Ending ending1 = trimmedTrimShape->getTrimEnd(is, trimClickPos);
 
     switch (ending1) {
     case RS::EndingStart:
-        trimmedShape1Dir->trimStartPoint(is, trimClickPos);
+        trimmedTrimShape->trimStartPoint(is, trimClickPos);
         if (isCircleShape(trimShape) || isFullEllipseShape(trimShape)) {
-            trimmedShape1Dir->trimEndPoint(is2, trimClickPos);
+            trimmedTrimShape->trimEndPoint(is2, trimClickPos);
         }
         break;
     case RS::EndingEnd:
-        trimmedShape1Dir->trimEndPoint(is, trimClickPos);
+        trimmedTrimShape->trimEndPoint(is, trimClickPos);
         if (isCircleShape(trimShape) || isFullEllipseShape(trimShape)) {
-            trimmedShape1Dir->trimStartPoint(is2, trimClickPos);
+            trimmedTrimShape->trimStartPoint(is2, trimClickPos);
         }
         break;
     default:
@@ -2202,21 +2186,20 @@ QList<QSharedPointer<RShape> > RShape::trim(
 
     // trim limiting shape if possible (not possible for splines):
     RS::Ending ending2 = RS::EndingNone;
-    QSharedPointer<RDirected> trimmedShape2Dir = trimmedLimitingShape.dynamicCast<RDirected>();
-    if (trimBoth && !trimmedShape2Dir.isNull()) {
-        ending2 = trimmedShape2Dir->getTrimEnd(is, limitingClickPos);
+    if (trimBoth && !trimmedLimitingShape.isNull()) {
+        ending2 = trimmedLimitingShape->getTrimEnd(is, limitingClickPos);
 
         switch (ending2) {
         case RS::EndingStart:
-            trimmedShape2Dir->trimStartPoint(is, limitingClickPos);
+            trimmedLimitingShape->trimStartPoint(is, limitingClickPos);
             if (isCircleShape(limitingShape) || isFullEllipseShape(limitingShape)) {
-                trimmedShape2Dir->trimEndPoint(is2, limitingClickPos);
+                trimmedLimitingShape->trimEndPoint(is2, limitingClickPos);
             }
             break;
         case RS::EndingEnd:
-            trimmedShape2Dir->trimEndPoint(is, limitingClickPos);
+            trimmedLimitingShape->trimEndPoint(is, limitingClickPos);
             if (isCircleShape(limitingShape) || isFullEllipseShape(limitingShape)) {
-                trimmedShape2Dir->trimStartPoint(is2, limitingClickPos);
+                trimmedLimitingShape->trimStartPoint(is2, limitingClickPos);
             }
             break;
         default:

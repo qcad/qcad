@@ -506,8 +506,8 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
     else {
         // if the current loop is not empty, check if entity connects:
         if (!boundary.last().isEmpty()) {
-            QSharedPointer<RDirected> prev = boundary.last().last().dynamicCast<RDirected>();
-            QSharedPointer<RDirected> next = shape.dynamicCast<RDirected>();
+            QSharedPointer<RShape> prev = boundary.last().last();
+            QSharedPointer<RShape> next = shape;
             if (!prev.isNull() && !next.isNull()) {
                 RVector ep = prev->getEndPoint();
                 RVector sp = next->getStartPoint();

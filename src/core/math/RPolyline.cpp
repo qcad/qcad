@@ -21,7 +21,6 @@
 #include "RArc.h"
 #include "RBox.h"
 #include "RCircle.h"
-#include "RDirected.h"
 #include "RLine.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
@@ -52,16 +51,16 @@ RPolyline::RPolyline(const QList<QSharedPointer<RShape> >& segments) :
 
     QList<QSharedPointer<RShape> >::const_iterator it;
     for (it=segments.begin(); it!=segments.end(); ++it) {
-        QSharedPointer<RDirected> directed = it->dynamicCast<RDirected>();
+        QSharedPointer<RShape> segment = *it;
 
-        if (!directed.isNull()) {
+        if (segment->isDirected()) {
             if (vertices.size()==0) {
-                appendVertex(directed->getStartPoint(), 0.0);
+                appendVertex(segment->getStartPoint(), 0.0);
             }
-            appendVertex(directed->getEndPoint(), 0.0);
+            appendVertex(segment->getEndPoint(), 0.0);
         }
 
-        QSharedPointer<RArc> arc = directed.dynamicCast<RArc>();
+        QSharedPointer<RArc> arc = segment.dynamicCast<RArc>();
         if (!arc.isNull()) {
             if (bulges.size()>1) {
                 bulges[bulges.size()-2] = arc->getBulge();
@@ -161,22 +160,14 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
         return ret;
     }
 
-    const RDirected* directed = NULL;
     double bulge = 0.0;
 
-    const RLine* line = dynamic_cast<const RLine*>(&shape);
-    if (line!=NULL) {
-        directed = line;
-    }
-    else {
-        const RArc* arc = dynamic_cast<const RArc*>(&shape);
-        if (arc!=NULL) {
-            bulge = arc->getBulge();
-            directed = arc;
-        }
+    const RArc* arc = dynamic_cast<const RArc*>(&shape);
+    if (arc!=NULL) {
+        bulge = arc->getBulge();
     }
 
-    if (directed==NULL) {
+    if (!shape.isDirected()) {
         qWarning() << "RPolyline::appendShape: shape is not a line, arc or polyline: " << shape;
         return false;
     }
@@ -186,8 +177,8 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
     double gap;
     if (prepend) {
         // prepend:
-        connectionPoint = directed->getEndPoint();
-        nextPoint = directed->getStartPoint();
+        connectionPoint = shape.getEndPoint();
+        nextPoint = shape.getStartPoint();
         if (vertices.size()==0) {
             appendVertex(connectionPoint);
         }
@@ -195,8 +186,8 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
     }
     else {
         // append:
-        connectionPoint = directed->getStartPoint();
-        nextPoint = directed->getEndPoint();
+        connectionPoint = shape.getStartPoint();
+        nextPoint = shape.getEndPoint();
         if (vertices.size()==0) {
             appendVertex(connectionPoint);
         }
@@ -224,15 +215,13 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
  * Appends the given shape to this polyline. The shape is reversed if necessary.
  */
 bool RPolyline::appendShapeAuto(const RShape& shape) {
-    const RDirected* shapeDir = dynamic_cast<const RDirected*>(&shape);
-    if (shapeDir==NULL) {
+    if (!shape.isDirected()) {
         return false;
     }
 
-    if (countVertices()>0 && getEndPoint().equalsFuzzy(shapeDir->getEndPoint())) {
+    if (countVertices()>0 && getEndPoint().equalsFuzzy(shape.getEndPoint())) {
         QSharedPointer<RShape> rev = QSharedPointer<RShape>(shape.clone());
-        QSharedPointer<RDirected> revDir = rev.dynamicCast<RDirected>();
-        revDir->reverse();
+        rev->reverse();
         return appendShape(*rev);
     }
 
@@ -281,15 +270,12 @@ void RPolyline::insertVertexAt(const RVector& point) {
 
     QSharedPointer<RShape> seg2 = QSharedPointer<RShape>(seg1->clone());
 
-    QSharedPointer<RDirected> dir1 = seg1.dynamicCast<RDirected>();
-    QSharedPointer<RDirected> dir2 = seg2.dynamicCast<RDirected>();
-
-    if (dir1.isNull() || dir2.isNull()) {
+    if (!seg1->isDirected() || !seg2->isDirected()) {
         return;
     }
 
-    dir1->trimEndPoint(p);
-    dir2->trimStartPoint(p);
+    seg1->trimEndPoint(p);
+    seg2->trimStartPoint(p);
 
     insertVertex(index+1, p);
 
@@ -466,16 +452,11 @@ double RPolyline::getVertexAngle(int i, RS::Orientation orientation) const {
 
     QSharedPointer<RShape> prevSegment = getSegmentAt(RMath::absmod(i-1, countSegments()));
     QSharedPointer<RShape> nextSegment = getSegmentAt(i%countSegments());
-    QSharedPointer<RDirected> prevDir = prevSegment.dynamicCast<RDirected>();
-    QSharedPointer<RDirected> nextDir = nextSegment.dynamicCast<RDirected>();
-    if (prevDir.isNull() || nextDir.isNull()) {
-        return 0.0;
-    }
 
     // angle from vertex to next segment:
-    double aNext = nextDir->getDirection1();
+    double aNext = nextSegment->getDirection1();
     // angle from vertex to previous segment:
-    double aPrev = prevDir->getDirection2();
+    double aPrev = prevSegment->getDirection2();
 
     if (orientation==RS::UnknownOrientation) {
         orientation = getOrientation(true);
@@ -587,6 +568,32 @@ bool RPolyline::autoClose() {
     return true;
 }
 
+QList<RVector> RPolyline::getSelfIntersectionPoints() const {
+    QList<RVector> ret;
+
+    QList<QSharedPointer<RShape> > segments = getExploded();
+    for (int i=0; i<segments.length(); i++) {
+        QSharedPointer<RShape> segment = getSegmentAt(i);
+
+        for (int k=i+1; k<segments.length(); k++) {
+            QSharedPointer<RShape> otherSegment = getSegmentAt(k);
+
+            QList<RVector> ips = segment->getIntersectionPoints(*otherSegment);
+            for (int n=0; n<ips.length(); n++) {
+                RVector ip = ips[n];
+                if (k==i+1 && ip.equalsFuzzy(segment->getEndPoint())) {
+                    // ignore intersection at vertex between two consecutive segments:
+                    continue;
+                }
+
+                ret.append(ip);
+            }
+        }
+    }
+
+    return ret;
+}
+
 RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
     if (!implicitelyClosed && !isGeometricallyClosed()) {
         return RS::Any;
@@ -597,10 +604,10 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
     }
 
     RVector minV = RVector::invalid;
-    QSharedPointer<RDirected> shapeBefore;
-    QSharedPointer<RDirected> shapeAfter;
+    QSharedPointer<RShape> shapeBefore;
+    QSharedPointer<RShape> shapeAfter;
     QSharedPointer<RShape> shape;
-    QSharedPointer<RDirected> previousShape = getSegmentAt(countSegments()-1).dynamicCast<RDirected>();
+    QSharedPointer<RShape> previousShape = getSegmentAt(countSegments()-1);
 
     // find minimum vertex (lower left corner):
     QList<QSharedPointer<RShape> > segments = getExploded();
@@ -609,23 +616,19 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
         if (shape.isNull()) {
             continue;
         }
-        QSharedPointer<RDirected> directed = shape.dynamicCast<RDirected>();
-        if (directed.isNull()) {
-            continue;
-        }
 
         if (shape->getLength()<0.001) {
             continue;
         }
 
-        RVector v = directed->getStartPoint();
+        RVector v = shape->getStartPoint();
         if (!minV.isValid() || v.x<minV.x || (v.x==minV.x && v.y<minV.y)) {
             minV = v;
             shapeBefore = previousShape;
-            shapeAfter = directed;
+            shapeAfter = shape;
         }
 
-        previousShape = directed;
+        previousShape = shape;
     }
 
     double l;
@@ -726,18 +729,10 @@ bool RPolyline::relocateStartPoint(const RVector& p) {
     RPolyline newShape;
 
     QSharedPointer<RShape> firstSegment = getSegmentAt(segmentIndex);
-    QSharedPointer<RDirected> firstDirected = firstSegment.dynamicCast<RDirected>();
-    if (firstSegment.isNull() || firstDirected.isNull()) {
-        return false;
-    }
     QSharedPointer<RShape> lastSegment = getSegmentAt(segmentIndex);
-    QSharedPointer<RDirected> lastDirected = lastSegment.dynamicCast<RDirected>();
-    if (lastSegment.isNull() || lastDirected.isNull()) {
-        return false;
-    }
 
     // trim segment start to p
-    firstDirected->trimStartPoint(p);
+    firstSegment->trimStartPoint(p);
 
     // start polyline with second part of split segment:
     newShape.appendShape(*firstSegment);
@@ -751,7 +746,7 @@ bool RPolyline::relocateStartPoint(const RVector& p) {
     }
 
     // trim segment end to p
-    lastDirected->trimEndPoint(p);
+    lastSegment->trimEndPoint(p);
 
     // end polyline with second part of split segment:
     newShape.appendShape(*lastSegment);
@@ -997,9 +992,8 @@ bool RPolyline::containsShape(const RShape& shape) const {
     // check if the shape is completely inside the polygon.
     // this is the case if one point on the entity is inside the polygon
     // and the entity does not intersect with the polygon.
-    const RDirected* dir = dynamic_cast<const RDirected*>(&shape);
-    if (dir!=NULL) {
-        return contains(dir->getStartPoint()) && contains(dir->getEndPoint());
+    if (shape.isDirected()) {
+        return contains(shape.getStartPoint()) && contains(shape.getEndPoint());
     }
 
     Q_ASSERT("shape not supported");
@@ -1064,12 +1058,7 @@ double RPolyline::getDirection1() const {
     }
 
     QSharedPointer<RShape> shape = getSegmentAt(0);
-    QSharedPointer<RDirected> dirShape = shape.dynamicCast<RDirected>();
-    if (dirShape.isNull()) {
-        return RNANDOUBLE;
-    }
-
-    return dirShape->getDirection1();
+    return shape->getDirection1();
 }
 
 double RPolyline::getDirection2() const {
@@ -1083,12 +1072,7 @@ double RPolyline::getDirection2() const {
     }
 
     QSharedPointer<RShape> shape = getSegmentAt(i);
-    QSharedPointer<RDirected> dirShape = shape.dynamicCast<RDirected>();
-    if (dirShape.isNull()) {
-        return RNANDOUBLE;
-    }
-
-    return dirShape->getDirection2();
+    return shape->getDirection2();
 }
 
 RS::Side RPolyline::getSideOfPoint(const RVector& point) const {
@@ -1101,13 +1085,7 @@ RS::Side RPolyline::getSideOfPoint(const RVector& point) const {
     if (segment.isNull()) {
         return RS::NoSide;
     }
-
-    QSharedPointer<RDirected> directed = segment.dynamicCast<RDirected>();
-    if (directed.isNull()) {
-        return RS::NoSide;
-    }
-
-    return directed->getSideOfPoint(point);
+    return segment->getSideOfPoint(point);
 }
 
 RBox RPolyline::getBoundingBox() const {
@@ -1241,9 +1219,29 @@ double RPolyline::getLengthTo(const RVector& p, bool limited) const {
         lim = true;
     }
     RVector p2 = seg->getClosestPointOnShape(p, lim);
-    QSharedPointer<RDirected> dir = seg.dynamicCast<RDirected>();
-    dir->trimEndPoint(p2);
+    seg->trimEndPoint(p2);
     ret += seg->getLength();
+
+    return ret;
+}
+
+QList<double> RPolyline::getDistancesFromStart(const RVector& p) const {
+    QList<double> ret;
+
+    // any segment might contain point (self intersection):
+    double len = 0.0;
+    for (int i=0; i<countSegments(); i++) {
+        QSharedPointer<RShape> segment = getSegmentAt(i);
+        if (segment->getDistanceTo(p)<0.0001) {
+            ret.append(len + segment->getDistanceFromStart(p));
+        }
+        len+=segment->getLength();
+    }
+
+    // point is not on polyline, return distance to point closest to position:
+    if (ret.isEmpty()) {
+        ret.append(getLengthTo(p, true));
+    }
 
     return ret;
 }
@@ -1531,8 +1529,7 @@ bool RPolyline::reverse() {
 
     for (int i=segments.count()-1; i>=0; i--) {
         QSharedPointer<RShape> seg = segments.at(i);
-        QSharedPointer<RDirected> directed = seg.dynamicCast<RDirected>();
-        directed->reverse();
+        seg->reverse();
         nPolyline.appendShape(*seg);
     }
     if (closed) {
@@ -1578,6 +1575,20 @@ bool RPolyline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoi
 bool RPolyline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     if (polylineProxy!=NULL) {
         return polylineProxy->trimEndPoint(*this, trimPoint, clickPoint, extend);
+    }
+    return false;
+}
+
+bool RPolyline::trimStartPoint(double trimDist) {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->trimStartPoint(*this, trimDist);
+    }
+    return false;
+}
+
+bool RPolyline::trimEndPoint(double trimDist) {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->trimEndPoint(*this, trimDist);
     }
     return false;
 }
@@ -1774,11 +1785,8 @@ QList<RVector> RPolyline::getConvexVertices(bool convex) const {
         QSharedPointer<RShape> segmentPrev = pl.getSegmentAt(iPrev);
         QSharedPointer<RShape> segmentNext = pl.getSegmentAt(i);
 
-        QSharedPointer<RDirected> dirPrev = segmentPrev.dynamicCast<RDirected>();
-        QSharedPointer<RDirected> dirNext = segmentNext.dynamicCast<RDirected>();
-
-        double aPrev = dirPrev->getDirection2() + M_PI;
-        double aNext = dirNext->getDirection1();
+        double aPrev = segmentPrev->getDirection2() + M_PI;
+        double aNext = segmentNext->getDirection1();
 
         RVector pPrev = RVector::createPolar(1.0, aPrev);
         RVector pNext = RVector::createPolar(1.0, aNext);

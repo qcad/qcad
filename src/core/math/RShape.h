@@ -213,6 +213,90 @@ public:
     QList<RVector> getIntersectionPoints(const RShape& other,
             bool limited = true, bool same = false, bool force = false) const;
 
+    virtual bool isDirected() const {
+        return false;
+    }
+
+    virtual double getDirection1() const {
+        return RNANDOUBLE;
+    }
+    virtual double getDirection2() const {
+        return RNANDOUBLE;
+    }
+
+    virtual RS::Side getSideOfPoint(const RVector& point) const {
+        return RS::NoSide;
+    }
+
+    virtual RVector getStartPoint() const {
+        return RVector::invalid;
+    }
+    virtual RVector getEndPoint() const {
+        return RVector::invalid;
+    }
+    virtual RVector getMiddlePoint() const {
+        return RVector::invalid;
+    }
+
+    virtual bool reverse() {
+        return false;
+    }
+
+    /**
+     * \param trimPoint Trim start point or end point to this coordinate.
+     * \param clickPoint Point that was clicked by user.
+     * \param extend True if the shape is to be extended.
+     * Used for polylines to determine that the first segment has to be trimmed even if another segment was clicked.
+     */
+    virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        return false;
+    }
+
+    virtual bool trimStartPoint(double trimDist) {
+        RVector p = getPointWithDistanceToStart(trimDist);
+        return trimStartPoint(p);
+    }
+
+    /**
+     * \param trimPoint Trim start point or end point to this coordinate.
+     * \param clickPoint Point that was clicked by user.
+     * \param extend True if the shape is to be extended.
+     * Used for polylines to determine that the last segment has to be trimmed even if another segment was clicked.
+     */
+    virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        return false;
+    }
+
+    virtual bool trimEndPoint(double trimDist) {
+        RVector p = getPointWithDistanceToStart(trimDist);
+        return trimEndPoint(p);
+    }
+
+    /**
+     * \param trimPoint Trim start point or end point to this coordinate.
+     * \param clickPoint Point that was clicked by user.
+     */
+    virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+        return RS::EndingNone;
+    }
+
+    /**
+     * \return Distance of given point to start point of shape along shape.
+     * \param p Point (assumed to be on shape).
+     */
+    virtual double getDistanceFromStart(const RVector& p) const {
+        Q_UNUSED(p)
+        return RMAXDOUBLE;
+    }
+
+    /**
+     * \return All possible distances of given point to start point of shape along shape.
+     * \param p Point (assumed to be on shape).
+     */
+    virtual QList<double> getDistancesFromStart(const RVector& p) const {
+        return QList<double>() << getDistanceFromStart(p);
+    }
+
     /**
      * \return The intersection point(s) between this shape and the given
      *      other shape.

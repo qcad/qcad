@@ -604,13 +604,10 @@ function isShape(obj) {
 /**
  * Checks if the given object is a directed shape.
  *
- * \return true if the given object is a directed shape (derived from RShape and RDirected).
+ * \return true if the given object is a directed shape.
  */
 function isDirectedShape(obj) {
-    return isShape(obj) &&
-            isFunction(obj.getStartPoint) &&
-            isFunction(obj.getEndPoint) &&
-            isFunction(obj.reverse);
+    return isShape(obj) && obj.isDirected();
 }
 
 /**
