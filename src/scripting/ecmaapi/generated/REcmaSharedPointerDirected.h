@@ -47,40 +47,7 @@
     
 
     // public methods:
-    static  QScriptValue
-        getDirection1
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDirection2
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getSideOfPoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getStartPoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getEndPoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getMiddlePoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        reverse
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        trimStartPoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        trimEndPoint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getTrimEnd
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDistanceFromStart
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue toString
+    static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RDirected* getSelf(const QString& fName, QScriptContext* context)

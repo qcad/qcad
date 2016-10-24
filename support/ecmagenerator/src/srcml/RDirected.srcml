@@ -38,47 +38,58 @@
 </private><public>public:
     <destructor><specifier>virtual</specifier> <name>~RDirected</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
-    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDirection1</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDirection2</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+<comment type="line">//    virtual double getDirection1() const = 0;</comment>
+<comment type="line">//    virtual double getDirection2() const = 0;</comment>
 
-    <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>Side</name></name></type> <name>getSideOfPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+<comment type="line">//    virtual RS::Side getSideOfPoint(const RVector&amp; point) const = 0;</comment>
 
-    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getStartPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getEndPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getMiddlePoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+<comment type="line">//    virtual RVector getStartPoint() const = 0;</comment>
+<comment type="line">//    virtual RVector getEndPoint() const = 0;</comment>
+<comment type="line">//    virtual RVector getMiddlePoint() const = 0;</comment>
 
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>reverse</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+<comment type="line">//    virtual bool reverse() = 0;</comment>
 
-    <comment type="block">/**
-     * \param trimPoint Trim start point or end point to this coordinate.
-     * \param clickPoint Point that was clicked by user.
-     * \param extend True if the shape is to be extended.
-     * Used for polylines to determine that the first segment has to be trimmed even if another segment was clicked.
-     */</comment>
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+<comment type="line">//    /**</comment>
+<comment type="line">//     * \param trimPoint Trim start point or end point to this coordinate.</comment>
+<comment type="line">//     * \param clickPoint Point that was clicked by user.</comment>
+<comment type="line">//     * \param extend True if the shape is to be extended.</comment>
+<comment type="line">//     * Used for polylines to determine that the first segment has to be trimmed even if another segment was clicked.</comment>
+<comment type="line">//     */</comment>
+<comment type="line">//    virtual bool trimStartPoint(const RVector&amp; trimPoint, const RVector&amp; clickPoint = RVector::invalid, bool extend = false) = 0;</comment>
+<comment type="line">//    virtual bool trimStartPoint(double trimDist) {</comment>
+<comment type="line">//        return trimStartPoint();</comment>
+<comment type="line">//    }</comment>
 
-    <comment type="block">/**
-     * \param trimPoint Trim start point or end point to this coordinate.
-     * \param clickPoint Point that was clicked by user.
-     * \param extend True if the shape is to be extended.
-     * Used for polylines to determine that the last segment has to be trimmed even if another segment was clicked.
-     */</comment>
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+<comment type="line">//    /**</comment>
+<comment type="line">//     * \param trimPoint Trim start point or end point to this coordinate.</comment>
+<comment type="line">//     * \param clickPoint Point that was clicked by user.</comment>
+<comment type="line">//     * \param extend True if the shape is to be extended.</comment>
+<comment type="line">//     * Used for polylines to determine that the last segment has to be trimmed even if another segment was clicked.</comment>
+<comment type="line">//     */</comment>
+<comment type="line">//    virtual bool trimEndPoint(const RVector&amp; trimPoint, const RVector&amp; clickPoint = RVector::invalid, bool extend = false) = 0;</comment>
 
-    <comment type="block">/**
-     * \param trimPoint Trim start point or end point to this coordinate.
-     * \param clickPoint Point that was clicked by user.
-     */</comment>
-    <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+<comment type="line">//    /**</comment>
+<comment type="line">//     * \param trimPoint Trim start point or end point to this coordinate.</comment>
+<comment type="line">//     * \param clickPoint Point that was clicked by user.</comment>
+<comment type="line">//     */</comment>
+<comment type="line">//    virtual RS::Ending getTrimEnd(const RVector&amp; trimPoint, const RVector&amp; clickPoint) = 0;</comment>
 
-    <comment type="block">/**
-     * \return Distance of given point to start point of shape along shape.
-     * \param p Point (assumed to be on shape).
-     */</comment>
-    <function><type><name>virtual</name> <name>double</name></type> <name>getDistanceFromStart</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>p</argument>)</argument_list></macro>
-        <return>return <expr><name>RMAXDOUBLE</name></expr>;</return>
-    }</block></function>
+<comment type="line">//    /**</comment>
+<comment type="line">//     * \return Distance of given point to start point of shape along shape.</comment>
+<comment type="line">//     * \param p Point (assumed to be on shape).</comment>
+<comment type="line">//     */</comment>
+<comment type="line">//    virtual double getDistanceFromStart(const RVector&amp; p) const {</comment>
+<comment type="line">//        Q_UNUSED(p)</comment>
+<comment type="line">//        return RMAXDOUBLE;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    /**</comment>
+<comment type="line">//     * \return All possible distances of given point to start point of shape along shape.</comment>
+<comment type="line">//     * \param p Point (assumed to be on shape).</comment>
+<comment type="line">//     */</comment>
+<comment type="line">//    virtual QList&lt;double&gt; getDistancesFromStart(const RVector&amp; p) const {</comment>
+<comment type="line">//        return QList&lt;double&gt;() &lt;&lt; getDistanceFromStart(p);</comment>
+<comment type="line">//    }</comment>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDirected*</argument>)</argument_list></macro>

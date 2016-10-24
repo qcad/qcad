@@ -25,7 +25,6 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDirected.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExplodable.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolylineProxy.h"</cpp:file></cpp:include>
@@ -48,7 +47,7 @@
  * \copyable
  * \hasStreamOperator
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPolyline</name><super>: <specifier>public</specifier> <name>RShape</name>, <specifier>public</specifier> <name>RExplodable</name>, <specifier>public</specifier> <name>RDirected</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPolyline</name><super>: <specifier>public</specifier> <name>RShape</name>, <specifier>public</specifier> <name>RExplodable</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor_decl><name>RPolyline</name><parameter_list>()</parameter_list>;</constructor_decl>
     <constructor_decl><name>RPolyline</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vertices</name></decl></param>, <param><decl><type><name>bool</name></type> <name>closed</name></decl></param>)</parameter_list>;</constructor_decl>
@@ -61,6 +60,10 @@
 
     <function><type><name>virtual</name> <name>RPolyline</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr>new <call><name>RPolyline</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isDirected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>true</name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list>;</function_decl>
@@ -119,6 +122,8 @@
     <function_decl><type><name>bool</name></type> <name>isGeometricallyClosed</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>autoClose</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getSelfIntersectionPoints</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name><name>RS</name>::<name>Orientation</name></name></type> <name>getOrientation</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>implicitelyClosed</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>contains</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>borderIsInside</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -143,6 +148,15 @@
     <function_decl><type><name>double</name></type> <name>getArea</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getLength</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>double</name></type> <name>getDistanceFromStart</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>res</name> =<init> <expr><call><name>getDistancesFromStart</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>res</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>RMAXDOUBLE</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>res</name>.<call><name>first</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getDistancesFromStart</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getLengthTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getEndPoints</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -173,6 +187,8 @@
     <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>trimDist</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>trimDist</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getExploded</name><parameter_list>(<param><decl><type><name>int</name></type> <name>segments</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>getOutline</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -203,7 +219,7 @@
             <param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>trimmedShape2</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Ending</name></name></type> <name>ending2</name></decl></param>, <param><decl><type><name>int</name></type> <name>segmentIndex2</name></decl></param>,
             <param><decl><type><name>const</name> <name>RShape</name>*</type> <name>cornerShape</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getConvexVertices</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getConvexVertices</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>convex</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getConcaveVertices</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{

@@ -23,7 +23,6 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDirected.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
@@ -39,7 +38,7 @@
  * \copyable
  * \hasStreamOperator
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RArc</name><super>: <specifier>public</specifier> <name>RShape</name>, <specifier>public</specifier> <name>RDirected</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RArc</name><super>: <specifier>public</specifier> <name>RShape</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor_decl><name>RArc</name><parameter_list>()</parameter_list>;</constructor_decl>
     <constructor_decl><name>RArc</name><parameter_list>(<param><decl><type><name>double</name></type> <name>cx</name></decl></param>, <param><decl><type><name>double</name></type> <name>cy</name></decl></param>, <param><decl><type><name>double</name></type> <name>radius</name></decl></param>, <param><decl><type><name>double</name></type> <name>startAngle</name></decl></param>,
@@ -54,6 +53,10 @@
 
     <function><type><name>virtual</name> <name>RArc</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr>new <call><name>RArc</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isDirected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>true</name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list>;</function_decl>
@@ -139,6 +142,12 @@
     <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>trimDist</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>RShape</name>::<name>trimStartPoint</name></name><argument_list>(<argument><expr><name>trimDist</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>trimDist</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>RShape</name>::<name>trimEndPoint</name></name><argument_list>(<argument><expr><name>trimDist</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDistanceFromStart</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>RPolyline</name></type> <name>approximateWithLines</name><parameter_list>(<param><decl><type><name>double</name></type> <name>segmentLength</name></decl></param>)</parameter_list>;</function_decl>

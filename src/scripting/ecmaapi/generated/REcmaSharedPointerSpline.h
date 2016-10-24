@@ -37,8 +37,6 @@
             QScriptEngine *engine)
         ;static  QScriptValue getRExplodable(QScriptContext *context,
             QScriptEngine *engine)
-        ;static  QScriptValue getRDirected(QScriptContext *context,
-            QScriptEngine *engine)
         ;
 
     // returns class name:
@@ -53,14 +51,6 @@
 
         // methods of secondary base class RExplodable:
         
-        // properties of secondary base class RDirected:
-        
-
-        // methods of secondary base class RDirected:
-        static  QScriptValue
-        getDistanceFromStart
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;
 
     // properties:
     static  QScriptValue getSetControlPoints
@@ -81,6 +71,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clone
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isDirected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         copySpline

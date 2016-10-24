@@ -304,6 +304,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getSelfIntersectionPoints"
+    cppName="getSelfIntersectionPoints" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="getOrientation" cppName="getOrientation"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

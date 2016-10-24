@@ -33,8 +33,6 @@
     // conversion functions for base classes:
     static  QScriptValue getRShape(QScriptContext *context,
             QScriptEngine *engine)
-        ;static  QScriptValue getRDirected(QScriptContext *context,
-            QScriptEngine *engine)
         ;
 
     // returns class name:
@@ -43,14 +41,6 @@
 
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
-        ;
-        // properties of secondary base class RDirected:
-        
-
-        // methods of secondary base class RDirected:
-        static  QScriptValue
-        getDistanceFromStart
-        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:
@@ -74,6 +64,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clone
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isDirected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isValid

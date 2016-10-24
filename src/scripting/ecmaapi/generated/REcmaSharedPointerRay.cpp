@@ -63,9 +63,6 @@
         // conversion for base class RShape
         REcmaHelper::registerFunction(&engine, proto, getRShape, "getRShape");
         
-        // conversion for base class RDirected
-        REcmaHelper::registerFunction(&engine, proto, getRDirected, "getRDirected");
-        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -423,15 +420,6 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
-             QScriptValue REcmaSharedPointerRay::getRDirected(QScriptContext *context,
-            QScriptEngine *engine)
-        
-            {
-                RDirected* cppResult =
-                    qscriptvalue_cast<RRay*> (context->thisObject());
-                QScriptValue result = qScriptValueFromValue(engine, cppResult);
-                return result;
-            }
             
 
     // returns class name:
@@ -451,8 +439,6 @@
         list.append("RXLine");
     
         list.append("RShape");
-    
-        list.append("RDirected");
     
 
         return qScriptValueFromSequence(engine, list);

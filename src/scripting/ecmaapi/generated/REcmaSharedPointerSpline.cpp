@@ -13,8 +13,6 @@
                   #include "REcmaSharedPointerShape.h"
                 
                   #include "REcmaSharedPointerExplodable.h"
-                
-                  #include "REcmaSharedPointerDirected.h"
                  void REcmaSharedPointerSpline::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -36,7 +34,6 @@
           
         /*
         REcmaExplodable::initEcma(engine, proto);
-          REcmaDirected::initEcma(engine, proto);
           
         */
     
@@ -65,9 +62,6 @@
         // conversion for base class RExplodable
         REcmaHelper::registerFunction(&engine, proto, getRExplodable, "getRExplodable");
         
-        // conversion for base class RDirected
-        REcmaHelper::registerFunction(&engine, proto, getRDirected, "getRDirected");
-        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -82,14 +76,6 @@
 
         // methods of secondary base class RExplodable:
         
-
-        // properties of secondary base class RDirected:
-        
-
-        // methods of secondary base class RDirected:
-        
-            REcmaHelper::registerFunction(&engine, proto, getDistanceFromStart, "getDistanceFromStart");
-            
 
     // properties:
     
@@ -135,6 +121,8 @@
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
+            
+            REcmaHelper::registerFunction(&engine, proto, isDirected, "isDirected");
             
             REcmaHelper::registerFunction(&engine, proto, copySpline, "copySpline");
             
@@ -470,15 +458,6 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
-             QScriptValue REcmaSharedPointerSpline::getRDirected(QScriptContext *context,
-            QScriptEngine *engine)
-        
-            {
-                RDirected* cppResult =
-                    qscriptvalue_cast<RSpline*> (context->thisObject());
-                QScriptValue result = qScriptValueFromValue(engine, cppResult);
-                return result;
-            }
             
 
     // returns class name:
@@ -499,8 +478,6 @@
     
         list.append("RExplodable");
     
-        list.append("RDirected");
-    
 
         return qScriptValueFromSequence(engine, list);
     }
@@ -509,83 +486,6 @@
         
 
         // methods of secondary base class RExplodable:
-        
-        // properties of secondary base class RDirected:
-        
-
-        // methods of secondary base class RDirected:
-         QScriptValue
-        REcmaSharedPointerSpline::getDistanceFromStart
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerSpline::getDistanceFromStart", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::getDistanceFromStart";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RSpline* self = 
-                        getSelf("getDistanceFromStart", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RVector */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDirected: Argument 0 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDistanceFromStart(a0);
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getDistanceFromStart().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getDistanceFromStart", context, engine);
-            return result;
-        }
         
 
     // properties:
@@ -829,6 +729,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::isDirected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::isDirected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::isDirected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("isDirected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isDirected();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.isDirected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::isDirected", context, engine);
             return result;
         }
          QScriptValue
@@ -5383,6 +5332,38 @@
     
     if( context->argumentCount() ==
     1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->trimStartPoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
@@ -5603,6 +5584,38 @@
                     return REcmaHelper::throwError("self is NULL", context);
                 }
                 
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->trimEndPoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
     
     if( context->argumentCount() ==
     1 && (

@@ -35,8 +35,6 @@
             QScriptEngine *engine)
         ;static  QScriptValue getRShape(QScriptContext *context,
             QScriptEngine *engine)
-        ;static  QScriptValue getRDirected(QScriptContext *context,
-            QScriptEngine *engine)
         ;
 
     // returns class name:

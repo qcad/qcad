@@ -15,8 +15,6 @@
                   #include "REcmaSharedPointerShape.h"
                 
                   #include "REcmaSharedPointerExplodable.h"
-                
-                  #include "REcmaSharedPointerDirected.h"
                  void REcmaSharedPointerPolyline::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -38,7 +36,6 @@
           
         /*
         REcmaExplodable::initEcma(engine, proto);
-          REcmaDirected::initEcma(engine, proto);
           
         */
     
@@ -67,9 +64,6 @@
         // conversion for base class RExplodable
         REcmaHelper::registerFunction(&engine, proto, getRExplodable, "getRExplodable");
         
-        // conversion for base class RDirected
-        REcmaHelper::registerFunction(&engine, proto, getRDirected, "getRDirected");
-        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -85,14 +79,6 @@
         // methods of secondary base class RExplodable:
         
 
-        // properties of secondary base class RDirected:
-        
-
-        // methods of secondary base class RDirected:
-        
-            REcmaHelper::registerFunction(&engine, proto, getDistanceFromStart, "getDistanceFromStart");
-            
-
     // properties:
     
 
@@ -101,6 +87,8 @@
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
+            
+            REcmaHelper::registerFunction(&engine, proto, isDirected, "isDirected");
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
             
@@ -190,6 +178,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, autoClose, "autoClose");
             
+            REcmaHelper::registerFunction(&engine, proto, getSelfIntersectionPoints, "getSelfIntersectionPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
             
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
@@ -219,6 +209,10 @@
             REcmaHelper::registerFunction(&engine, proto, getArea, "getArea");
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDistanceFromStart, "getDistanceFromStart");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDistancesFromStart, "getDistancesFromStart");
             
             REcmaHelper::registerFunction(&engine, proto, getLengthTo, "getLengthTo");
             
@@ -478,15 +472,6 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
-             QScriptValue REcmaSharedPointerPolyline::getRDirected(QScriptContext *context,
-            QScriptEngine *engine)
-        
-            {
-                RDirected* cppResult =
-                    qscriptvalue_cast<RPolyline*> (context->thisObject());
-                QScriptValue result = qScriptValueFromValue(engine, cppResult);
-                return result;
-            }
             
 
     // returns class name:
@@ -507,8 +492,6 @@
     
         list.append("RExplodable");
     
-        list.append("RDirected");
-    
 
         return qScriptValueFromSequence(engine, list);
     }
@@ -517,83 +500,6 @@
         
 
         // methods of secondary base class RExplodable:
-        
-        // properties of secondary base class RDirected:
-        
-
-        // methods of secondary base class RDirected:
-         QScriptValue
-        REcmaSharedPointerPolyline::getDistanceFromStart
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDistanceFromStart", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getDistanceFromStart";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPolyline* self = 
-                        getSelf("getDistanceFromStart", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RVector */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDirected: Argument 0 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDistanceFromStart(a0);
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getDistanceFromStart().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDistanceFromStart", context, engine);
-            return result;
-        }
         
 
     // properties:
@@ -696,6 +602,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::isDirected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::isDirected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::isDirected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("isDirected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isDirected();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isDirected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isDirected", context, engine);
             return result;
         }
          QScriptValue
@@ -3808,6 +3763,55 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::getSelfIntersectionPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getSelfIntersectionPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getSelfIntersectionPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getSelfIntersectionPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getSelfIntersectionPoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getSelfIntersectionPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getSelfIntersectionPoints", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::getOrientation
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4802,6 +4806,150 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDistanceFromStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getDistanceFromStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getDistanceFromStart", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDistanceFromStart(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getDistanceFromStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDistanceFromStart", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getDistancesFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDistancesFromStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getDistancesFromStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getDistancesFromStart", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getDistancesFromStart(a0);
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getDistancesFromStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDistancesFromStart", context, engine);
             return result;
         }
          QScriptValue
@@ -6852,6 +7000,38 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->trimStartPoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.trimStartPoint().",
                    context);
@@ -7067,6 +7247,38 @@
     a1
         ,
     a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->trimEndPoint(a0);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -8364,6 +8576,38 @@
     QList < RVector > cppResult =
         
                self->getConvexVertices();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getConvexVertices(a0);
         // return type: QList < RVector >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);

@@ -15,8 +15,6 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaShape.h"
-                
-                  #include "REcmaDirected.h"
                  void REcmaLine::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -41,8 +39,7 @@
             }
           
         /*
-        REcmaDirected::initEcma(engine, proto);
-          
+        
         */
     
 
@@ -61,9 +58,6 @@
         // conversion for base class RShape
         REcmaHelper::registerFunction(&engine, proto, getRShape, "getRShape");
         
-        // conversion for base class RDirected
-        REcmaHelper::registerFunction(&engine, proto, getRDirected, "getRDirected");
-        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -72,12 +66,6 @@
     // conversion to all base classes (multiple inheritance):
     REcmaHelper::registerFunction(&engine, proto, getBaseClasses, "getBaseClasses");
     
-
-        // properties of secondary base class RDirected:
-        
-
-        // methods of secondary base class RDirected:
-        
 
     // properties:
     
@@ -103,6 +91,8 @@
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
+            
+            REcmaHelper::registerFunction(&engine, proto, isDirected, "isDirected");
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
             
@@ -534,15 +524,6 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
-             QScriptValue REcmaLine::getRDirected(QScriptContext *context,
-            QScriptEngine *engine)
-        
-            {
-                RDirected* cppResult =
-                    qscriptvalue_cast<RLine*> (context->thisObject());
-                QScriptValue result = qScriptValueFromValue(engine, cppResult);
-                return result;
-            }
             
 
     // returns class name:
@@ -561,17 +542,10 @@
         
         list.append("RShape");
     
-        list.append("RDirected");
-    
 
         return qScriptValueFromSequence(engine, list);
     }
     
-        // properties of secondary base class RDirected:
-        
-
-        // methods of secondary base class RDirected:
-        
 
     // properties:
      QScriptValue REcmaLine::getSetStartPoint
@@ -759,6 +733,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLine::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLine::isDirected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLine::isDirected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLine::isDirected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLine* self = 
+                        getSelf("isDirected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isDirected();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLine.isDirected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLine::isDirected", context, engine);
             return result;
         }
          QScriptValue
@@ -3184,6 +3207,38 @@
     
     if( context->argumentCount() ==
     1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->trimStartPoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
@@ -3404,6 +3459,38 @@
                     return REcmaHelper::throwError("self is NULL", context);
                 }
                 
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->trimEndPoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
     
     if( context->argumentCount() ==
     1 && (

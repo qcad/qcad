@@ -150,6 +150,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, autoClose, "autoClose");
             
+            REcmaHelper::registerFunction(&engine, proto, getSelfIntersectionPoints, "getSelfIntersectionPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
@@ -3597,6 +3599,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::autoClose", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::getSelfIntersectionPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getSelfIntersectionPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getSelfIntersectionPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("getSelfIntersectionPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getSelfIntersectionPoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getSelfIntersectionPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getSelfIntersectionPoints", context, engine);
             return result;
         }
          QScriptValue

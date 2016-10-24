@@ -8,7 +8,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <baseClass name="RShape" specifier="public" />
     <baseClass name="RExplodable" specifier="public" />
-    <baseClass name="RDirected" specifier="public" />
     <constructor>
       <variant />
       <variant>
@@ -31,6 +30,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RPolyline *" isPureVirtual="false" />
+    </method>
+    <method name="isDirected" cppName="isDirected"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="to2D" cppName="to2D" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -358,6 +362,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getSelfIntersectionPoints"
+    cppName="getSelfIntersectionPoints" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="getOrientation" cppName="getOrientation"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -452,6 +462,23 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getLength" cppName="getLength" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getDistanceFromStart"
+    cppName="getDistanceFromStart" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDistancesFromStart"
+    cppName="getDistancesFromStart" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getLengthTo" cppName="getLengthTo"
     specifier="public" isStatic="false" isVirtual="false"
@@ -629,6 +656,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="extend"
         hasDefault="true" default="false" isConst="false" />
       </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="trimDist"
+        isConst="false" />
+      </variant>
     </method>
     <method name="trimEndPoint" cppName="trimEndPoint"
     specifier="public" isStatic="false" isVirtual="true"
@@ -641,6 +672,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RVector :: invalid" isConst="true" />
         <arg type="bool" typeName="bool" name="extend"
         hasDefault="true" default="false" isConst="false" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="trimDist"
+        isConst="false" />
       </variant>
     </method>
     <method name="getExploded" cppName="getExploded"
@@ -776,7 +811,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QList &lt; RVector &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="convex"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
     </method>
     <method name="getConcaveVertices" cppName="getConcaveVertices"
     specifier="public" isStatic="false" isVirtual="false"

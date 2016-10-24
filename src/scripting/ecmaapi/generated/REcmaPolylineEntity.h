@@ -167,6 +167,9 @@
         autoClose
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSelfIntersectionPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getOrientation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

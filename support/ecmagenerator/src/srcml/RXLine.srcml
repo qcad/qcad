@@ -40,7 +40,7 @@
  * \copyable
  * \hasStreamOperator
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RXLine</name><super>: <specifier>public</specifier> <name>RShape</name>, <specifier>public</specifier> <name>RDirected</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RXLine</name><super>: <specifier>public</specifier> <name>RShape</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor_decl><name>RXLine</name><parameter_list>()</parameter_list>;</constructor_decl>
     <constructor_decl><name>RXLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>)</parameter_list>;</constructor_decl>
@@ -58,6 +58,10 @@
 
     <function><type><name>virtual</name> <name>RXLine</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr>new <call><name>RXLine</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isDirected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>true</name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>RBox</name></type> <name>getBoundingBox</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -97,6 +101,12 @@
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>trimDist</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>RShape</name>::<name>trimStartPoint</name></name><argument_list>(<argument><expr><name>trimDist</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>trimDist</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>RShape</name>::<name>trimEndPoint</name></name><argument_list>(<argument><expr><name>trimDist</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
     <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>RLine</name></type> <name>getClippedLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
