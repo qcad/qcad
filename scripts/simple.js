@@ -37,6 +37,9 @@ function getMainWindow() {
  */
 function getDocumentInterface() {
     var appWin = getMainWindow();
+    if (isNull(appWin)) {
+        return undefined;
+    }
     return appWin.getDocumentInterface();
 }
 

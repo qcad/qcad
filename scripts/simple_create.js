@@ -61,7 +61,7 @@ function addLine(startPoint, endPoint) {
  */
 function addArc(center, radius, startAngle, endAngle, reversed) {
     if (arguments.length===6) {
-        return addShape(new RVector(arguments[0], arguments[1]), arguments[2], arguments[3], arguments[4], arguments[5]);
+        return addArc(new RVector(arguments[0], arguments[1]), arguments[2], arguments[3], arguments[4], arguments[5]);
     }
 
     if (isArray(center)) {
@@ -82,13 +82,13 @@ function addArc(center, radius, startAngle, endAngle, reversed) {
  */
 function addCircle(center, radius) {
     if (arguments.length===3) {
-        return addShape(new RVector(arguments[0], arguments[1]), arguments[2]);
+        return addCircle(new RVector(arguments[0], arguments[1]), arguments[2]);
     }
 
     if (isArray(center)) {
         center = new RVector(center);
     }
-    return addShape(new RCircle(center));
+    return addShape(new RCircle(center, radius));
 }
 
 /**
@@ -131,26 +131,31 @@ function addPolyline(points, closed, relative) {
 
     var v = new RVector(0,0);
     for (var i=0; i<points.length; i++) {
-        var v0, b, rel;
+        var v0 = undefined;
+        var b = 0.0;
+        var rel = relative;
 
+        if (isVector(points[i])) {
+            v0 = points[i];
+        }
         // first item in vertex tuple is RVector or x,y pair:
-        if (isVector(points[i][0])) {
+        else if (isVector(points[i][0])) {
             v0 = points[i][0];
-            b = points[i][1];
-            rel = points[i][2];
+            if (!isNull(points[i][1])) {
+                b = points[i][1];
+            }
+            if (!isNull(points[i][2])) {
+                rel = points[i][2];
+            }
         }
         else {
             v0 = new RVector(points[i][0], points[i][1]);
-            b = points[i][2];
-            rel = points[i][3];
-        }
-
-        // defaults for vertices:
-        if (isNull(b)) {
-            b = 0.0;
-        }
-        if (isNull(rel)) {
-            rel = relative;
+            if (!isNull(points[i][2])) {
+                b = points[i][2];
+            }
+            if (!isNull(points[i][3])) {
+                rel = points[i][3];
+            }
         }
 
         // relative or absolute vertex position:
@@ -218,7 +223,7 @@ function addSpline(points, closed) {
  */
 function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold, italic) {
     if (arguments.length===10) {
-        return addShape(arguments[0], new RVector(arguments[1], arguments[2]), arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]);
+        return addSimpleText(arguments[0], new RVector(arguments[1], arguments[2]), arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]);
     }
 
     var doc = getTransactionDocument();
