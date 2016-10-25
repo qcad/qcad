@@ -1679,13 +1679,20 @@ String.prototype.regexLastIndexOf = function(regex, startpos) {
     return lastIndexOf;
 }
 
-
 /**
  * Modulo which works also for negative numbers (workaround for
  * ECMAScript modulo bug).
  */
 Number.prototype.mod = function(n) {
     return ((this%n)+n)%n;
+};
+
+Math.sign = Math.sign || function(x) {
+  x = +x; // convert to a number
+  if (x === 0 || isNaN(x)) {
+    return Number(x);
+  }
+  return x > 0 ? 1 : -1;
 };
 
 /**
