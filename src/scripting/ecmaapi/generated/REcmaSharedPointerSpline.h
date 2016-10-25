@@ -295,6 +295,9 @@
         trimEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         splitAtPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -335,6 +338,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDistanceAtT
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSegments

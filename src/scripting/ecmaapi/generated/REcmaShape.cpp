@@ -109,6 +109,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getIntersectionPoints, "getIntersectionPoints");
             
+            REcmaHelper::registerFunction(&engine, proto, getSelfIntersectionPoints, "getSelfIntersectionPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, isDirected, "isDirected");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
@@ -3617,6 +3619,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShape::getIntersectionPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::getSelfIntersectionPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::getSelfIntersectionPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::getSelfIntersectionPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RShape* self = 
+                        getSelf("getSelfIntersectionPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getSelfIntersectionPoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getSelfIntersectionPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::getSelfIntersectionPoints", context, engine);
             return result;
         }
          QScriptValue

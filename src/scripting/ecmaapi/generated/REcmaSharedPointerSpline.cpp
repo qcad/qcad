@@ -266,6 +266,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, trimEndPoint, "trimEndPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, getDistanceFromStart, "getDistanceFromStart");
+            
             REcmaHelper::registerFunction(&engine, proto, splitAtPoints, "splitAtPoints");
             
             REcmaHelper::registerFunction(&engine, proto, splitAtParams, "splitAtParams");
@@ -293,6 +295,8 @@
             REcmaHelper::registerFunction(&engine, proto, getTAtPoint, "getTAtPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getTAtDistance, "getTAtDistance");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDistanceAtT, "getDistanceAtT");
             
             REcmaHelper::registerFunction(&engine, proto, getSegments, "getSegments");
             
@@ -5819,6 +5823,78 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerSpline::getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::getDistanceFromStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::getDistanceFromStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getDistanceFromStart", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDistanceFromStart(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getDistanceFromStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getDistanceFromStart", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerSpline::splitAtPoints
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6636,6 +6712,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getTAtDistance", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::getDistanceAtT
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::getDistanceAtT", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::getDistanceAtT";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getDistanceAtT", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDistanceAtT(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getDistanceAtT().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getDistanceAtT", context, engine);
             return result;
         }
          QScriptValue

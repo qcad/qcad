@@ -145,6 +145,9 @@
         getTrimEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClippedLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

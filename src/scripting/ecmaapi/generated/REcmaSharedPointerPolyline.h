@@ -255,6 +255,9 @@
         getLengthTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSegmentsLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEndPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -349,6 +352,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         stripWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSegmentAtDist
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         relocateStartPoint

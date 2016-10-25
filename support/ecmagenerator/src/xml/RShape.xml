@@ -318,6 +318,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="getSelfIntersectionPoints"
+    cppName="getSelfIntersectionPoints" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="isDirected" cppName="isDirected"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

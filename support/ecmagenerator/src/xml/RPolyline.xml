@@ -490,6 +490,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="getSegmentsLength" cppName="getSegmentsLength"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="fromIndex"
+        isConst="false" />
+        <arg type="int" typeName="int" name="toIndex"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getEndPoints" cppName="getEndPoints"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -769,12 +779,24 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getSegmentAtDist" cppName="getSegmentAtDist"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="double" typeName="double" name="dist"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="relocateStartPoint" cppName="relocateStartPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="p"
         isConst="true" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="dist"
+        isConst="false" />
       </variant>
     </method>
     <method name="convertToClosed" cppName="convertToClosed"

@@ -216,6 +216,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLengthTo, "getLengthTo");
             
+            REcmaHelper::registerFunction(&engine, proto, getSegmentsLength, "getSegmentsLength");
+            
             REcmaHelper::registerFunction(&engine, proto, getEndPoints, "getEndPoints");
             
             REcmaHelper::registerFunction(&engine, proto, getMiddlePoints, "getMiddlePoints");
@@ -277,6 +279,8 @@
             REcmaHelper::registerFunction(&engine, proto, verifyTangency, "verifyTangency");
             
             REcmaHelper::registerFunction(&engine, proto, stripWidths, "stripWidths");
+            
+            REcmaHelper::registerFunction(&engine, proto, getSegmentAtDist, "getSegmentAtDist");
             
             REcmaHelper::registerFunction(&engine, proto, relocateStartPoint, "relocateStartPoint");
             
@@ -5082,6 +5086,79 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::getSegmentsLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getSegmentsLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getSegmentsLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getSegmentsLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getSegmentsLength(a0
+        ,
+    a1);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getSegmentsLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getSegmentsLength", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::getEndPoints
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -8091,6 +8168,66 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::getSegmentAtDist
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getSegmentAtDist", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getSegmentAtDist";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getSegmentAtDist", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getSegmentAtDist(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getSegmentAtDist().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getSegmentAtDist", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::relocateStartPoint
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -8139,6 +8276,38 @@
                     RVector 
                     a0 = 
                     *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->relocateStartPoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
                 
     // end of arguments
 

@@ -214,6 +214,10 @@
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getIntersectionPoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>other</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>same</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>force</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getSelfIntersectionPoints</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>virtual</name> <name>bool</name></type> <name>isDirected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
