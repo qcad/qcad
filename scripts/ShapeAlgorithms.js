@@ -252,6 +252,57 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
 };
 
 /**
+ * \return Intersection points between shape and other shapes.
+ */
+ShapeAlgorithms.getIntersectionPoints = function(shape, otherShapes, onShape, onOtherShapes) {
+    var intersections = [];
+    var i, k;
+
+    // treat start and end points as intersection points for open shapes:
+    if (onShape &&
+        !isCircleShape(shape) &&
+        !isFullEllipseShape(shape) &&
+        !isXLineShape(shape) &&
+        (!isPolylineShape(shape) || !shape.isGeometricallyClosed()) &&
+        (!isSplineShape(shape) || !shape.isClosed())) {
+
+        var sp = shape.getStartPoint();
+        sp.isStart = true;
+        intersections.push(sp);
+
+        if (!isRayShape(shape)) {
+            var ep = shape.getEndPoint()
+            ep.isEnd = true;
+            intersections.push(ep);
+        }
+    }
+
+    // find all intersection points:
+    for (i=0; i<otherShapes.length; i++) {
+        var otherShape = otherShapes[i];
+        if (isFunction(otherShape.data)) {
+            otherShape = otherShape.data();
+        }
+
+        var sol = shape.getIntersectionPoints(otherShape, onShape, false, true);
+        for (k=0; k<sol.length; k++) {
+            if (!onOtherShapes || otherShape.isOnShape(sol[k])) {
+                intersections.push(sol[k]);
+            }
+        }
+    }
+
+    var selfIntersectionPoints = shape.getSelfIntersectionPoints();
+
+    // add self intersection points to list:
+    if (selfIntersectionPoints.length!==0) {
+        intersections = intersections.concat(selfIntersectionPoints);
+    }
+
+    return intersections;
+};
+
+/**
  * \return Array of shapes to extend or trim to.
  *
  * \param doc RDocument
@@ -338,7 +389,34 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend, selfI
         extend = false;
     }
 
-    var cutDistances = ShapeAlgorithms.getClosestIntersectionPointDistances(shape, otherShapes, position, !extend, extend, selfIntersectionPoints);
+    debugger;
+
+    // get intersection points:
+    var ips = ShapeAlgorithms.getIntersectionPoints(shape, otherShapes, !extend, extend);
+
+    // convert circle to arc:
+    if (isCircleShape(shape)) {
+        var ap = shape.getCenter().getAngleTo(position);
+        var arc = new RArc(shape.getCenter(), shape.getRadius(), ap, ap, false);
+
+        var maxD = undefined;
+        var p = undefined;
+        for (var i=0; i<ips.length; i++) {
+            var ip = ips[i];
+            var d  = arc.getDistanceFromStart(ip);
+            if (isNull(maxD) || d>maxD) {
+                maxD = d;
+                p = ip;
+            }
+        }
+
+        // angle at intersection point closest to end of arc is where we split the circle:
+        ap = shape.getCenter().getAngleTo(p);
+        shape = new RArc(shape.getCenter(), shape.getRadius(), ap, ap, false);
+    }
+
+    // find intersection points closest to position:
+    var cutDistances = ShapeAlgorithms.getClosestIntersectionPointDistances(shape, ips, position);
 
     // distance along shape to clicked position:
     //var dPosition = ;
@@ -348,32 +426,55 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend, selfI
 
     var cutDist1 = undefined;
     var cutDist2 = undefined;
+    var cutPos1 = undefined;
+    var cutPos2 = undefined;
 
     if (!isNull(cutDistances) && cutDistances.length>1) {
-        cutDist1 = cutDistances[0];
-        cutDist2 = cutDistances[1];
+        cutDist1 = cutDistances[0][0];
+        cutDist2 = cutDistances[0][1];
+        cutPos1 = cutDistances[1][0];
+        cutPos2 = cutDistances[1][1];
     }
 
-    return ShapeAlgorithms.autoSplitManual(shape, cutDist1, cutDist2, position);
+    // if we only have one cutting point (XLine, Ray), make it the first parameter:
+    if (isNull(cutDist1)) {
+        cutDist1 = cutDist2;
+        cutPos1 = cutPos2;
+        cutDist2 = undefined;
+        cutPos2 = undefined;
+    }
+
+    return ShapeAlgorithms.autoSplitManual(shape, cutDist1, cutDist2, cutPos1, cutPos2, position);
 };
 
-ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) {
-    if (!isCircleShape(shape) && !isFullEllipseShape(shape) &&
-        !isXLineShape(shape) && !isRayShape(shape)) {
+ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, cutPos2, position) {
+//    if (!isCircleShape(shape) && !isFullEllipseShape(shape) &&
+//        !isXLineShape(shape) && !isRayShape(shape)) {
 
-        if (isNull(cutDist1) || isNull(cutDist2)) {
-            // abort if shape requires two intersection points:
-            return undefined;
-        }
-    }
+//        if (isNull(cutDist1) || isNull(cutDist2)) {
+//            // abort if shape requires two intersection points:
+//            return undefined;
+//        }
+//    }
+
+//    if (isNull(cutDist2)) {
+//        cutDist2 = cutDist1;
+//    }
 
     var dummy;
     var distSegment;
 
-    var cutPos1 = shape.getPointWithDistanceToStart(cutDist1);
-    var cutPos2 = undefined;
-    if (!isNull(cutDist2)) {
-        cutPos2 = shape.getPointWithDistanceToStart(cutDist2);
+//    var cutPos1 = shape.getPointWithDistanceToStart(cutDist1);
+//    var cutPos2 = undefined;
+//    if (!isNull(cutDist2)) {
+//        cutPos2 = shape.getPointWithDistanceToStart(cutDist2);
+//    }
+
+    if (isNull(cutDist1) && !isNull(cutPos1)) {
+        cutDist1 = shape.getDistanceFromStart(cutPos1);
+    }
+    if (isNull(cutDist2) && !isNull(cutPos2)) {
+        cutDist2 = shape.getDistanceFromStart(cutPos2);
     }
 
     var rest1 = undefined;
@@ -409,6 +510,15 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
 
     // xlines:
     else if (isXLineShape(shape)) {
+        var line = shape.getLineShape();
+        cutPos1 = line.getPointWithDistanceToStart(cutDist1);
+        if (isNull(cutDist2)) {
+            cutPos2 = undefined;
+        }
+        else {
+            cutPos2 = line.getPointWithDistanceToStart(cutDist2);
+        }
+
         rest1 = undefined;
         rest2 = undefined;
 
@@ -418,10 +528,10 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
             cutDist2 = dummy;
         }
 
-        if (!isNull(cutDist1) && !isNull(cutDist2)) {
-            cutDist1 = cutDist2;
-            cutDist2 = undefined;
-        }
+//        if (!isNull(cutDist1) && !isNull(cutDist2)) {
+//            cutDist1 = cutDist2;
+//            cutDist2 = undefined;
+//        }
 
         // <--------x---------------x--------->
         // rest2   cp2   segment   cp1   rest1
@@ -454,34 +564,32 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
         rest1 = undefined;
         rest2 = undefined;
 
-        if (cutDist1.isValid() && cutDist2.isValid() &&
-            !RMath.isSameDirection(cutDist1.getAngleTo(cutDist2), shape.getDirection1(), 0.01)) {
-
+        if (!isNull(cutDist1) && !isNull(cutDist2) && Math.sign(cutDist1) !== Math.sign(cutDist2)) {
             dummy = cutDist1;
             cutDist1 = cutDist2;
             cutDist2 = dummy;
         }
 
-        if (!cutDist1.isValid() && cutDist2.isValid()) {
-            cutDist1 = cutDist2;
-            cutDist2 = undefined;
-        }
+//        if (!cutDist1.isValid() && cutDist2.isValid()) {
+//            cutDist1 = cutDist2;
+//            cutDist2 = undefined;
+//        }
 
         // <--------x-------o-------x---------
         // rest2   cp2   segment   cp1   rest1
-        if (isValidVector(cutDist1) && isValidVector(cutDist2)) {
-            rest1 = new RLine(shape.getBasePoint(), cutDist1);
-            segment = new RLine(cutDist1, cutDist2);
-            rest2 = new RRay(cutDist2, RVector.createPolar(1.0, shape.getDirection1()));
+        if (isValidVector(cutPos1) && isValidVector(cutPos2)) {
+            rest1 = new RLine(shape.getBasePoint(), cutPos1);
+            segment = new RLine(cutPos1, cutPos2);
+            rest2 = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection1()));
         }
 
         // <-------o--------x-----------------
         //      segment    cp1     rest1
         // <----------------x--------o--------
         //       rest1     cp1    segment
-        else if (isValidVector(cutDist1)) {
-            rest1 = new RLine(shape.getBasePoint(), cutDist1);
-            segment = new RRay(cutDist1, RVector.createPolar(1.0, shape.getDirection1()));
+        else if (isValidVector(cutPos1)) {
+            rest1 = new RLine(shape.getBasePoint(), cutPos1);
+            segment = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection1()));
             rest2 = undefined;
 
             distSegment = segment.getDistanceTo(position);
@@ -498,22 +606,24 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
         rest1 = shape.clone();
         rest2 = shape.clone();
 
-        rest1.trimEndPoint(cutDist1, cutDist1);
-        rest2.trimStartPoint(cutDist2, cutDist2);
+        rest1.trimEndPoint(cutDist1);
+        rest2.trimStartPoint(cutDist2);
 
         segment = shape.clone();
-        segment.trimStartPoint(cutDist1, cutDist1);
-        segment.trimEndPoint(cutDist2, cutDist2);
+        var l1 = segment.getLength();
+        segment.trimStartPoint(cutDist1);
+        var l2 = segment.getLength();
+        segment.trimEndPoint(cutDist2 - (l1-l2));
 
         var angleLength1 = rest1.getAngleLength(true);
         var angleLength2 = rest2.getAngleLength(true);
 
         if (angleLength1+angleLength2 > shape.getAngleLength()) {
-            rest1.trimEndPoint(cutDist2, cutDist2);
-            rest2.trimStartPoint(cutDist1, cutDist1);
+            rest1.trimEndPoint(cutDist2);
+            rest2.trimStartPoint(cutDist1);
 
-            segment.trimStartPoint(cutDist2, cutDist2);
-            segment.trimEndPoint(cutDist1, cutDist1);
+            segment.trimStartPoint(cutDist2);
+            segment.trimEndPoint(cutDist1);
 
             angleLength1 = rest1.getAngleLength(true);
             angleLength2 = rest2.getAngleLength(true);
@@ -530,7 +640,7 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
 
     // circles:
     else if (isCircleShape(shape)) {
-        if (!isValidVector(cutDist1) || !isValidVector(cutDist2)) {
+        if (isNull(cutDist1) || isNull(cutDist2)) {
             rest1 = undefined;
             rest2 = undefined;
         }
@@ -563,7 +673,6 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
             }
 
             var angleLength1 = rest1.getAngleLength(true);
-
             if (angleLength1<RS.AngleTolerance) {
                 rest1 = undefined;
             }
@@ -620,6 +729,8 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
         if (closed) {
             shape.relocateStartPoint(cutDist1);
             shape.convertToOpen();
+            cutDist2 -= cutDist1;
+            cutDist1 = 0.0;
         }
         rest1 = shape.clone();
         rest2 = shape.clone();
@@ -649,8 +760,12 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
 //            }
 //            else {
                 rest1.trimEndPoint(cutDist1);
+
+                var l1 = segment.getLength();
                 segment.trimStartPoint(cutDist1);
-                segment.trimEndPoint(cutDist2);
+                var l2 = segment.getLength();
+                segment.trimEndPoint(cutDist2 - (l1-l2));
+
                 rest2.trimStartPoint(cutDist2);
 //            }
         }
@@ -693,8 +808,8 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
         rest2 = shape.clone();
         segment = shape.clone();
 
-        var tAtCutPos1 = shape.getTAtPoint(cutDist1);
-        var tAtCutPos2 = shape.getTAtPoint(cutDist2);
+        var tAtCutPos1 = shape.getTAtDistance(cutDist1);
+        var tAtCutPos2 = shape.getTAtDistance(cutDist2);
 
         if (shape.getStartPoint().equalsFuzzy(shape.getEndPoint())) {
             if (RMath.fuzzyCompare(tAtCutPos1, shape.getTMax())) {
@@ -703,16 +818,24 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
         }
 
         if (tAtCutPos1 < tAtCutPos2) {
-            rest1.trimEndPoint(cutDist1, cutDist1);
-            segment.trimStartPoint(cutDist1, cutDist1);
-            segment.trimEndPoint(cutDist2, cutDist2);
-            rest2.trimStartPoint(cutDist2, cutDist2);
+            rest1.trimEndPoint(cutDist1);
+
+            var l1 = segment.getLength();
+            segment.trimStartPoint(cutDist1);
+            var l2 = segment.getLength();
+            segment.trimEndPoint(cutDist2 - (l1-l2));
+
+            rest2.trimStartPoint(cutDist2);
         }
         else {
-            rest1.trimEndPoint(cutDist2, cutDist2);
-            segment.trimStartPoint(cutDist2, cutDist2);
-            segment.trimEndPoint(cutDist1, cutDist1);
-            rest2.trimStartPoint(cutDist1, cutDist1);
+            rest1.trimEndPoint(cutDist2);
+
+            var l1 = segment.getLength();
+            segment.trimStartPoint(cutDist2);
+            var l2 = segment.getLength();
+            segment.trimEndPoint(cutDist1 - (l1-l2));
+
+            rest2.trimStartPoint(cutDist1);
         }
 
         if (!segment.isValid() || segment.getLength()<RS.PointTolerance) {
@@ -748,76 +871,108 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, position) 
  * \param onOtherShapes True only return intersections on one of the other
  * shapes (for extending).
  */
-ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, otherShapes, position, onShape, onOtherShapes, selfIntersectionPoints) {
-    if (isNull(onShape)) {
-        onShape = true;
-    }
-    if (isNull(onOtherShapes)) {
-        onOtherShapes = false;
+ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersections, position) {
+//    if (isNull(onShape)) {
+//        onShape = true;
+//    }
+//    if (isNull(onOtherShapes)) {
+//        onOtherShapes = false;
+//    }
+
+//    var i, k;
+
+//    // treat start and end points as intersection points for open shapes:
+//    if (onShape &&
+//        !isCircleShape(shape) &&
+//        !isFullEllipseShape(shape) &&
+//        !isXLineShape(shape) &&
+//        (!isPolylineShape(shape) || !shape.isGeometricallyClosed()) &&
+//        (!isSplineShape(shape) || !shape.isClosed())) {
+
+//        var sp = shape.getStartPoint();
+//        sp.isStart = true;
+//        intersections.push(sp);
+
+//        if (!isRayShape(shape)) {
+//            var ep = shape.getEndPoint()
+//            ep.isEnd = true;
+//            intersections.push(ep);
+//        }
+//    }
+
+//    // find all intersection points:
+//    for (i=0; i<otherShapes.length; i++) {
+//        var otherShape = otherShapes[i];
+//        if (isFunction(otherShape.data)) {
+//            otherShape = otherShape.data();
+//        }
+
+//        var sol = shape.getIntersectionPoints(otherShape, onShape, false, true);
+//        for (k=0; k<sol.length; k++) {
+//            if (!onOtherShapes || otherShape.isOnShape(sol[k])) {
+//                intersections.push(sol[k]);
+//            }
+//        }
+//    }
+
+//    // add self intersection points to list:
+//    if (!isNull(selfIntersectionPoints) && selfIntersectionPoints.length!==0) {
+//        intersections = intersections.concat(selfIntersectionPoints);
+//    }
+
+    var cutPos1 = undefined;
+    var cutPos2 = undefined;
+    var ip, dist;
+
+    // closed circular shapes:
+    var circular = false;
+    if (isCircleShape(shape)) {
+        var a = shape.getCenter().getAngleTo(position);
+        shape = new RArc(shape.getCenter(), shape.getRadius(), a, a, false);
+        circular = true;
+//        var distRight = undefined;
+//        var distLeft = undefined;
+//        for (i=0; i<intersections.length; i++) {
+//            ip = intersections[i];
+
+//            dist = RMath.getAngleDifference(shape.getCenter().getAngleTo(position), shape.getCenter().getAngleTo(ip));
+//            if (isNull(distRight) || dist>distRight) {
+//                cutPos1 = ip;
+//                distRight = dist;
+//            }
+//            if (isNull(distLeft) || dist<distLeft) {
+//                cutPos2 = ip;
+//                distLeft = dist;
+//            }
+//        }
     }
 
+    if (isPolylineShape(shape) && shape.isGeometricallyClosed()) {
+        circular = true;
+    }
+//    if (isSplineShape(shape) && shape.isGeometricallyClosed()) {
+//        circular = true;
+//    }
+
+    // open shapes with start and end:
     var pDist = shape.getDistanceFromStart(position);
-
-    var intersections = [];
-    var i, k;
-
-    // treat start and end points as intersection points for open shapes:
-    if (onShape &&
-        !isCircleShape(shape) &&
-        !isFullEllipseShape(shape) &&
-        !isXLineShape(shape) &&
-        (!isPolylineShape(shape) || !shape.isGeometricallyClosed()) &&
-        (!isSplineShape(shape) || !shape.isClosed())) {
-
-        var sp = shape.getStartPoint();
-        sp.isStart = true;
-        intersections.push(sp);
-
-        if (!isRayShape(shape)) {
-            var ep = shape.getEndPoint()
-            ep.isEnd = true;
-            intersections.push(ep);
-        }
-    }
-
-    // find all intersection points:
-    for (i=0; i<otherShapes.length; i++) {
-        var otherShape = otherShapes[i];
-        if (isFunction(otherShape.data)) {
-            otherShape = otherShape.data();
-        }
-
-        var sol = shape.getIntersectionPoints(otherShape, onShape, false, true);
-        for (k=0; k<sol.length; k++) {
-            if (!onOtherShapes || otherShape.isOnShape(sol[k])) {
-                intersections.push(sol[k]);
-            }
-        }
-    }
-
-    // add self intersection points to list:
-    if (!isNull(selfIntersectionPoints) && selfIntersectionPoints.length!==0) {
-        intersections = intersections.concat(selfIntersectionPoints);
-    }
 
     // find intersection points directly before and after clicked position:
     var cutDist1 = undefined;
     var cutDist2 = undefined;
-    var cutPos1 = undefined;
-    var cutPos2 = undefined;
     for (i=0; i<intersections.length; i++) {
-        var ip = intersections[i];
+        ip = intersections[i];
 
         var distances = shape.getDistancesFromStart(ip);
         for (k=0; k<distances.length; k++) {
-            var dist = distances[k];
-            if (dist<pDist) {
+            dist = distances[k];
+            if (dist<pDist || circular) {
                 if (isNull(cutDist1) || dist>cutDist1) {
                     cutDist1 = dist;
                     cutPos1 = ip;
                 }
             }
-            if (dist>pDist) {
+            if (dist>pDist || circular) {
                 if (isNull(cutDist2) || dist<cutDist2) {
                     cutDist2 = dist;
                     cutPos2 = ip;
@@ -830,21 +985,25 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, otherShap
         !isFullEllipseShape(shape) &&
         !isXLineShape(shape) &&
         !isRayShape(shape) &&
-        (!isPolylineShape(shape) || shape.isGeometricallyClosed()) &&
+        (!isPolylineShape(shape) || !shape.isGeometricallyClosed()) &&
         (!isSplineShape(shape) || !shape.isClosed())) {
 
         if (!isValidVector(cutPos1)) {
-            //cutPos1 = shape.getEndPoint();
             cutDist1 = 0.0;
+            cutPos1 = shape.getStartPoint();
         }
         if (!isValidVector(cutPos2)) {
-            //cutPos2 = shape.getStartPoint();
             cutDist2 = shape.getLength();
+            cutPos2 = shape.getEndPoint();
         }
     }
 
     //return [cutPos1, cutPos2];
-    return [ cutDist1, cutDist2 ];
+    if (circular) {
+        return [ [cutDist2, cutDist1], [cutPos2, cutPos1] ];
+    }
+
+    return [ [cutDist1, cutDist2], [cutPos1, cutPos2] ];
 
     /*
     var orthoLine = undefined;
