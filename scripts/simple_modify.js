@@ -60,17 +60,23 @@ function move(e, offset) {
     if (isArray(offset)) {
         return move(e, new RVector(offset));
     }
+    if (isEntity(e)) {
+        return move(e.getId(), offset);
+    }
+    if (isShape(e)) {
+        e.move(offset);
+        return undefined;
+    }
     if (isNumber(e)) {
         var doc = getTransactionDocument();
         if (isNull(doc)) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
-        return move(entity, offset);
+        entity.move(offset);
+        return addEntity(entity);
     }
-
-    e.move(offset);
-    return addEntity(e);
+    return undefined;
 }
 
 /**
@@ -93,22 +99,29 @@ function rotate(e, angle, center) {
     if (isArray(center)) {
         return rotate(e, angle, new RVector(center));
     }
+    if (isEntity(e)) {
+        return rotate(e.getId(), angle, center);
+    }
+    if (isShape(e)) {
+        e.rotate(angle, center);
+        return undefined;
+    }
     if (isNumber(e)) {
         var doc = getTransactionDocument();
         if (isNull(doc)) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
-        return rotate(entity, angle, center);
-    }
 
-    if (isNull(p1)) {
-        e.rotate(deg2rad(angle));
+        if (isNull(center)) {
+            entity.rotate(deg2rad(angle));
+        }
+        else {
+            entity.rotate(deg2rad(angle), center);
+        }
+        return addEntity(entity);
     }
-    else {
-        e.rotate(deg2rad(angle), center);
-    }
-    return addEntity(e);
+    return undefined;
 }
 
 /**
@@ -131,22 +144,29 @@ function scale(e, factor, focusPoint) {
     if (isNumber(focusPoint)) {
         return scale(e, factor, new RVector(focusPoint));
     }
+    if (isEntity(e)) {
+        return scale(e.getId(), factor, focusPoint);
+    }
+    if (isShape(e)) {
+        e.scale(factor, focusPoint);
+        return undefined;
+    }
     if (isNumber(e)) {
         var doc = getTransactionDocument();
         if (isNull(doc)) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
-        return scale(entity, factor, focusPoint);
+        if (isNull(focusPoint)) {
+            entity.scale(factor);
+        }
+        else {
+            entity.scale(factor, focusPoint);
+        }
+        return addEntity(entity);
     }
 
-    if (isNull(p1)) {
-        e.scale(factor);
-    }
-    else {
-        e.scale(factor, p1);
-    }
-    return addEntity(e);
+    return undefined;
 }
 
 /**
@@ -186,17 +206,23 @@ function mirror(e, axis) {
         }
         return mirror(e, new RLine(new RVector(axis[0]), new RVector(axis[1])));
     }
+    if (isEntity(e)) {
+        return mirror(e.getId(), axis);
+    }
+    if (isShape(e)) {
+        e.mirror(axis);
+        return undefined;
+    }
     if (isNumber(e)) {
         var doc = getTransactionDocument();
         if (isNull(doc)) {
             return undefined;
         }
         var entity = doc.queryEntity(e);
-        return mirror(entity, axis);
+        entity.mirror(axis);
+        return addEntity(entity);
     }
-
-    e.mirror(axis);
-    return addEntity(e);
+    return undefined;
 }
 
 /**

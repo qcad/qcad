@@ -292,7 +292,7 @@ function addShape(shape) {
  */
 function addEntity(entity) {
     if (isFunction(entity.data)) {
-        addEntity(entity.data().clone());
+        return addEntity(entity.data().clone());
     }
 
     if (__simpleUseOp===true) {
@@ -301,12 +301,12 @@ function addEntity(entity) {
             qDebug("create op");
         }
         __simpleOp.addObject(entity, false);
-        return entity
+        return entity.clone();
     }
     else {
         var di = getDocumentInterface();
         di.applyOperation(new RAddObjectOperation(entity, false));
         qDebug("apply local op");
-        return entity;
+        return entity.clone();
     }
 }
