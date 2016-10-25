@@ -45,7 +45,7 @@ log10 = Math.log10 = function(x) { return Math.log(x) / Math.LN10; };
 log1p = Math.log1p = function(x) { return Math.log(1 + x); };
 log2 = Math.log2 = function(x) { return Math.log(x) / Math.LN2; };
 
-sign = Math.sign = function(x) { x = +x; if (x === 0 || isNaN(x)) { return x; } return x > 0 ? 1 : -1; };
+sign = Math.sign = function(x) { x = +x; if (x === 0 || isNaN(x)) { return Number(x); } return x > 0 ? 1 : -1; };
 
 cosh = Math.cosh = function(x) { return (Math.exp(x) + Math.exp(-x)) / 2; };
 sinh = Math.sinh = function(x) { return (Math.exp(x) - Math.exp(-x)) / 2; };
@@ -61,3 +61,4 @@ hypot = Math.hypot = function() { var y = 0; var length = arguments.length; for 
 cbrt = Math.cbrt = function(x) { var y = Math.pow(Math.abs(x), 1/3); return x < 0 ? -y : y; };
 
 trunc = Math.trunc = function(x) { return x < 0 ? Math.ceil(x) : Math.floor(x); };
+
