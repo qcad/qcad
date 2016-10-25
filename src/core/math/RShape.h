@@ -213,6 +213,10 @@ public:
     QList<RVector> getIntersectionPoints(const RShape& other,
             bool limited = true, bool same = false, bool force = false) const;
 
+    virtual QList<RVector> getSelfIntersectionPoints() const {
+        return QList<RVector>();
+    }
+
     virtual bool isDirected() const {
         return false;
     }
