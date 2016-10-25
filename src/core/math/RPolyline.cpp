@@ -571,6 +571,8 @@ bool RPolyline::autoClose() {
 QList<RVector> RPolyline::getSelfIntersectionPoints() const {
     QList<RVector> ret;
 
+    bool cl = isGeometricallyClosed();
+
     QList<QSharedPointer<RShape> > segments = getExploded();
     for (int i=0; i<segments.length(); i++) {
         QSharedPointer<RShape> segment = getSegmentAt(i);
@@ -584,6 +586,12 @@ QList<RVector> RPolyline::getSelfIntersectionPoints() const {
                 if (k==i+1 && ip.equalsFuzzy(segment->getEndPoint())) {
                     // ignore intersection at vertex between two consecutive segments:
                     continue;
+                }
+
+                if (cl) {
+                    if (i==0 && k==segments.length()-1 && ip.equalsFuzzy(segment->getStartPoint())) {
+                        continue;
+                    }
                 }
 
                 ret.append(ip);
@@ -709,55 +717,29 @@ void RPolyline::stripWidths() {
     }
 }
 
+int RPolyline::getSegmentAtDist(double dist) {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getSegmentAtDist(*this, dist);
+    }
+    return -1;
+}
+
 /**
  * Relocates the start point of this closed polyline to the given point.
  * The visual appearance of the polyline does not change.
  */
 bool RPolyline::relocateStartPoint(const RVector& p) {
-    if (!isGeometricallyClosed()) {
-        return false;
+    if (polylineProxy!=NULL) {
+        return polylineProxy->relocateStartPoint(*this, p);
     }
+    return false;
+}
 
-    // convert closed to open polyline with start in p:
-
-    // find closest segment of polyline:
-    int segmentIndex = getClosestSegment(p);
-    if (segmentIndex<0) {
-        return false;
+bool RPolyline::relocateStartPoint(double dist) {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->relocateStartPoint(*this, dist);
     }
-
-    RPolyline newShape;
-
-    QSharedPointer<RShape> firstSegment = getSegmentAt(segmentIndex);
-    QSharedPointer<RShape> lastSegment = getSegmentAt(segmentIndex);
-
-    // trim segment start to p
-    firstSegment->trimStartPoint(p);
-
-    // start polyline with second part of split segment:
-    newShape.appendShape(*firstSegment);
-
-    // append rest of polyline:
-    for (int i=segmentIndex+1; i<countSegments(); i++) {
-        newShape.appendShape(*getSegmentAt(i));
-    }
-    for (int i=0; i<segmentIndex; i++) {
-        newShape.appendShape(*getSegmentAt(i));
-    }
-
-    // trim segment end to p
-    lastSegment->trimEndPoint(p);
-
-    // end polyline with second part of split segment:
-    newShape.appendShape(*lastSegment);
-    newShape.normalize();
-    if (isClosed()) {
-        // if polyline was closed, create a closed polyline as result:
-        newShape.autoClose();
-    }
-    *this = newShape;
-
-    return true;
+    return false;
 }
 
 bool RPolyline::convertToClosed() {
@@ -1223,6 +1205,19 @@ double RPolyline::getLengthTo(const RVector& p, bool limited) const {
     ret += seg->getLength();
 
     return ret;
+}
+
+/**
+ * \return Length of all segements from first index (fromIndex) to last index (toIndex),
+ * excluding toIndex.
+ */
+double RPolyline::getSegmentsLength(int fromIndex, int toIndex) const {
+    double len;
+    for (int i=fromIndex; i<toIndex; i++) {
+        QSharedPointer<RShape> segment = getSegmentAt(i);
+        len+=segment->getLength();
+    }
+    return len;
 }
 
 QList<double> RPolyline::getDistancesFromStart(const RVector& p) const {

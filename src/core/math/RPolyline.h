@@ -157,6 +157,7 @@ public:
     }
     virtual QList<double> getDistancesFromStart(const RVector& p) const;
     double getLengthTo(const RVector& p, bool limited = true) const;
+    double getSegmentsLength(int fromIndex, int toIndex) const;
 
     virtual QList<RVector> getEndPoints() const;
     virtual QList<RVector> getMiddlePoints() const;
@@ -209,7 +210,9 @@ public:
 
     void stripWidths();
 
+    int getSegmentAtDist(double dist);
     bool relocateStartPoint(const RVector& p);
+    bool relocateStartPoint(double dist);
     bool convertToClosed();
     bool convertToOpen();
 

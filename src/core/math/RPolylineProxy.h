@@ -46,6 +46,9 @@ public:
     virtual bool trimEndPoint(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint, bool extend = false) = 0;
     virtual bool trimStartPoint(RPolyline& polyline, double trimDist) = 0;
     virtual bool trimEndPoint(RPolyline& polyline, double trimDist) = 0;
+    virtual bool relocateStartPoint(RPolyline& polyline, const RVector& p) = 0;
+    virtual bool relocateStartPoint(RPolyline& polyline, double dist) = 0;
+    virtual int getSegmentAtDist(const RPolyline& polyline, double dist) = 0;
 
     virtual QList<RPolyline> renderThickPolyline(const RPolyline& polyline) = 0;
     virtual QList<RVector> verifyTangency(const RPolyline& polyline, double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4) = 0;
