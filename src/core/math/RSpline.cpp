@@ -1243,6 +1243,13 @@ double RSpline::getTAtDistance(double distance) const {
     return 0.0;
 }
 
+double RSpline::getDistanceAtT(double t) const {
+    if (splineProxy!=NULL) {
+        return splineProxy->getDistanceAtT(*this, t);
+    }
+    return 0.0;
+}
+
 QList<RSpline> RSpline::getSegments(const QList<RVector>& points) const {
     return splitAtPoints(points);
 }
@@ -1604,6 +1611,11 @@ bool RSpline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, 
     }
     update();
     return true;
+}
+
+double RSpline::getDistanceFromStart(const RVector& p) const {
+    double t = getTAtPoint(p);
+    return getDistanceAtT(t);
 }
 
 QList<RSpline> RSpline::splitAtPoints(const QList<RVector>& points) const {

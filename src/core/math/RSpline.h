@@ -182,6 +182,7 @@ public:
     virtual bool trimEndPoint(double trimDist) {
         return RShape::trimEndPoint(trimDist);
     }
+    virtual double getDistanceFromStart(const RVector& p) const;
 
     QList<RSpline> splitAtPoints(const QList<RVector>& points) const;
     QList<RSpline> splitAtParams(const QList<double>& params) const;
@@ -201,6 +202,7 @@ public:
     double getTMax() const;
     double getTAtPoint(const RVector& point) const;
     double getTAtDistance(double distance) const;
+    double getDistanceAtT(double t) const;
     QList<RSpline> getSegments(const QList<RVector>& points) const;
 
     QList<RVector> getDiscontinuities() const;
