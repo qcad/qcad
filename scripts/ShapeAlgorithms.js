@@ -389,8 +389,6 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend, selfI
         extend = false;
     }
 
-    debugger;
-
     // get intersection points:
     var ips = ShapeAlgorithms.getIntersectionPoints(shape, otherShapes, !extend, extend);
 
