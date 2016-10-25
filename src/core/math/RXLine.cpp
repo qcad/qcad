@@ -125,6 +125,10 @@ RS::Ending RXLine::getTrimEnd(const RVector& trimPoint, const RVector& clickPoin
     return getLineShape().getTrimEnd(trimPoint, clickPoint);
 }
 
+double RXLine::getDistanceFromStart(const RVector& p) const {
+    return basePoint.getDistanceTo(p);
+}
+
 RVector RXLine::getBasePoint() const {
     return basePoint;
 }

@@ -107,6 +107,7 @@ public:
         return RShape::trimEndPoint(trimDist);
     }
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
+    virtual double getDistanceFromStart(const RVector& p) const;
 
     virtual RLine getClippedLine(const RBox& box) const;
 
