@@ -126,6 +126,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
             
+            REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDoubleProperties, "getDoubleProperties");
+            
+            REcmaHelper::registerFunction(&engine, proto, getBoolProperties, "getBoolProperties");
+            
             REcmaHelper::registerFunction(&engine, proto, isInterpolated, "isInterpolated");
             
             REcmaHelper::registerFunction(&engine, proto, appendControlPoint, "appendControlPoint");
@@ -1034,6 +1040,153 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::to2D", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::getVectorProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getVectorProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getVectorProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getVectorProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getVectorProperties();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getVectorProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getVectorProperties", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::getDoubleProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getDoubleProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getDoubleProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getDoubleProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getDoubleProperties();
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getDoubleProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getDoubleProperties", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::getBoolProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getBoolProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getBoolProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getBoolProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < bool >'
+    QList < bool > cppResult =
+        
+               self->getBoolProperties();
+        // return type: QList < bool >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getBoolProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getBoolProperties", context, engine);
             return result;
         }
          QScriptValue

@@ -64,6 +64,9 @@
         to2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVectorProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         createArrow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

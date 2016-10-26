@@ -72,6 +72,15 @@
         to2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVectorProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDoubleProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoolProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

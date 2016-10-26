@@ -100,6 +100,21 @@
         getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        equals
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVectorProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDoubleProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoolProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVectorTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

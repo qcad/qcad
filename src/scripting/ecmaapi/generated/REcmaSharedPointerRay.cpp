@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
+            
             REcmaHelper::registerFunction(&engine, proto, trimEndPoint, "trimEndPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getPointsWithDistanceToEnd, "getPointsWithDistanceToEnd");
@@ -545,6 +547,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerRay::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerRay::getVectorProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::getVectorProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::getVectorProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRay* self = 
+                        getSelf("getVectorProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getVectorProperties();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRay.getVectorProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::getVectorProperties", context, engine);
             return result;
         }
          QScriptValue

@@ -31,6 +31,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getVectorProperties"
+    cppName="getVectorProperties" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="createArrow" cppName="createArrow"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

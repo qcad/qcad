@@ -60,6 +60,7 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getVectorProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>static</name> <name>RTriangle</name></type> <name>createArrow</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>double</name></type> <name>direction</name></decl></param>, <param><decl><type><name>double</name></type> <name>size</name></decl></param>)</parameter_list>;</function_decl>
 
