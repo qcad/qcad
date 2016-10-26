@@ -50,6 +50,10 @@ void RTriangle::to2D() {
     corner[2].z = 0.0;
 }
 
+QList<RVector> RTriangle::getVectorProperties() const {
+    return QList<RVector>() << corner[0] << corner[1] << corner[2];
+}
+
 RTriangle RTriangle::createArrow(const RVector& position, double direction, double arrowSize) {
     double cosv1, sinv1, cosv2, sinv2;
     double arrowSide = arrowSize/cos(0.165);

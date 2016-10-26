@@ -137,6 +137,12 @@ public:
      */
     virtual double getLength() const = 0;
 
+    virtual bool equals(const RShape& other, double tolerance=RS::PointTolerance) const;
+    virtual QList<RVector> getVectorProperties() const { return QList<RVector>(); }
+    virtual QList<int> getIntProperties() const { return QList<int>(); }
+    virtual QList<double> getDoubleProperties() const { return QList<double>(); }
+    virtual QList<bool> getBoolProperties() const { return QList<bool>(); }
+
     /**
      * \return Shortest vector from this shape to the given point.
      *

@@ -60,6 +60,10 @@ public:
 
     virtual void to2D();
 
+    virtual QList<RVector> getVectorProperties() const;
+    virtual QList<double> getDoubleProperties() const;
+    virtual QList<bool> getBoolProperties() const;
+
     bool isValid() const;
     bool isFullCircle(double tolerance = RS::AngleTolerance) const;
 

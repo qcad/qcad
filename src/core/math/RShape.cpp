@@ -108,6 +108,47 @@ RVector RShape::getClosestPointOnShape(const RVector& p, bool limited, double st
     return p - dv;
 }
 
+bool RShape::equals(const RShape& other, double tolerance) const {
+    if (getType()!=other.getType()) {
+        return false;
+    }
+
+    QList<RVector> vList1 = getVectorProperties();
+    QList<RVector> vList2 = other.getVectorProperties();
+    if (vList1.length() != vList2.length()) {
+        return false;
+    }
+    for (int i=0; i<vList1.length(); i++) {
+        if (!vList1[i].equalsFuzzy(vList2[i], tolerance)) {
+            return false;
+        }
+    }
+
+    QList<double> dList1 = getDoubleProperties();
+    QList<double> dList2 = other.getDoubleProperties();
+    if (dList1.length() != dList2.length()) {
+        return false;
+    }
+    for (int i=0; i<dList1.length(); i++) {
+        if (!RMath::fuzzyCompare(dList1[i], dList2[i], tolerance)) {
+            return false;
+        }
+    }
+
+    QList<bool> bList1 = getBoolProperties();
+    QList<bool> bList2 = other.getBoolProperties();
+    if (bList1.length() != bList2.length()) {
+        return false;
+    }
+    for (int i=0; i<bList1.length(); i++) {
+        if (bList1[i] != bList2[i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 /**
  * \return Point at given percentile.
  */

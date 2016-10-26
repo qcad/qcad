@@ -66,6 +66,18 @@ void REllipse::to2D() {
     majorPoint.z = 0.0;
 }
 
+QList<RVector> REllipse::getVectorProperties() const {
+    return QList<RVector>() << center << majorPoint;
+}
+
+QList<double> REllipse::getDoubleProperties() const {
+    return QList<double>() << ratio << startParam << endParam;
+}
+
+QList<bool> REllipse::getBoolProperties() const {
+    return QList<bool>() << reversed;
+}
+
 void REllipse::moveStartPoint(const RVector& pos, bool changeAngleOnly) {
     if (changeAngleOnly) {
         startParam = getParamTo(pos);

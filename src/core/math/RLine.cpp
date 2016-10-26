@@ -57,6 +57,10 @@ void RLine::to2D() {
     endPoint.z = 0.0;
 }
 
+QList<RVector> RLine::getVectorProperties() const {
+    return QList<RVector>() << startPoint << endPoint;
+}
+
 bool RLine::isValid() const {
     return startPoint.isValid() && endPoint.isValid();
 }

@@ -54,6 +54,10 @@ void RPoint::to2D() {
     position.z = 0.0;
 }
 
+QList<RVector> RPoint::getVectorProperties() const {
+    return QList<RVector>() << position;
+}
+
 RBox RPoint::getBoundingBox() const {
     return RBox(position, position);
 }

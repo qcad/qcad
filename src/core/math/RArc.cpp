@@ -60,6 +60,18 @@ void RArc::to2D() {
     center.z = 0.0;
 }
 
+QList<RVector> RArc::getVectorProperties() const {
+    return QList<RVector>() << center;
+}
+
+QList<double> RArc::getDoubleProperties() const {
+    return QList<double>() << radius << startAngle << endAngle;
+}
+
+QList<bool> RArc::getBoolProperties() const {
+    return QList<bool>() << reversed;
+}
+
 bool RArc::isValid() const {
     return center.isValid() && radius>0.0;
 }

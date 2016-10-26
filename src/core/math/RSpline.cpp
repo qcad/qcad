@@ -212,6 +212,22 @@ void RSpline::to2D() {
     }
 }
 
+QList<RVector> RSpline::getVectorProperties() const {
+    return QList<RVector>() << tangentStart << tangentEnd << controlPoints << fitPoints;
+}
+
+QList<double> RSpline::getDoubleProperties() const {
+    return QList<double>() << knotVector << weights;
+}
+
+QList<int> RSpline::getIntProperties() const {
+    return QList<int>() << degree;
+}
+
+QList<bool> RSpline::getBoolProperties() const {
+    return QList<bool>() << periodic;
+}
+
 /**
  * Disabled for splines (bad performance).
  * 20120223: Re-enabled, seems to perform OK, needed by some users.

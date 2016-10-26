@@ -59,6 +59,7 @@ public:
 
     virtual void to2D();
 
+    virtual QList<RVector> getVectorProperties() const;
 
     static RTriangle createArrow(const RVector& position, double direction, double size);
 

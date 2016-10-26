@@ -61,6 +61,10 @@ void RXLine::to2D() {
     directionVector.z = 0.0;
 }
 
+QList<RVector> RXLine::getVectorProperties() const {
+    return QList<RVector>() << basePoint << directionVector;
+}
+
 double RXLine::getLength() const {
     return RNANDOUBLE;
 }

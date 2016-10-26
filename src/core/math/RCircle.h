@@ -60,6 +60,9 @@ public:
 
     virtual void to2D();
 
+    virtual QList<RVector> getVectorProperties() const;
+    virtual QList<double> getDoubleProperties() const;
+
     virtual RBox getBoundingBox() const;
     virtual double getLength() const;
 

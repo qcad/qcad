@@ -45,6 +45,10 @@ RRay::RRay(const RVector& basePoint, double angle, double distance) :
 RRay::~RRay() {
 }
 
+QList<RVector> RRay::getVectorProperties() const {
+    return QList<RVector>() << basePoint << directionVector;
+}
+
 RVector RRay::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     if (!limited) {
         return RXLine::getVectorTo(point, false, strictRange);

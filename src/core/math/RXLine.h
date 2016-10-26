@@ -66,6 +66,8 @@ public:
     RBox getBoundingBox() const;
     void to2D();
 
+    virtual QList<RVector> getVectorProperties() const;
+
     virtual QList<RVector> getEndPoints() const;
     virtual QList<RVector> getMiddlePoints() const;
     virtual QList<RVector> getCenterPoints() const;

@@ -86,6 +86,14 @@ void RCircle::to2D() {
     center.z = 0.0;
 }
 
+QList<RVector> RCircle::getVectorProperties() const {
+    return QList<RVector>() << center;
+}
+
+QList<double> RCircle::getDoubleProperties() const {
+    return QList<double>() << radius;
+}
+
 RVector RCircle::getCenter() const{
     return center;
 }

@@ -77,6 +77,11 @@ public:
 
     virtual void to2D();
 
+    virtual QList<RVector> getVectorProperties() const;
+    virtual QList<int> getIntProperties() const;
+    virtual QList<double> getDoubleProperties() const;
+    virtual QList<bool> getBoolProperties() const;
+
     virtual bool isInterpolated() const {
         return true;
     }

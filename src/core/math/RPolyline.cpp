@@ -80,6 +80,18 @@ void RPolyline::to2D() {
     }
 }
 
+QList<RVector> RPolyline::getVectorProperties() const {
+    return QList<RVector>() << vertices;
+}
+
+QList<double> RPolyline::getDoubleProperties() const {
+    return QList<double>() << bulges << endWidths << startWidths;
+}
+
+QList<bool> RPolyline::getBoolProperties() const {
+    return QList<bool>() << closed;
+}
+
 void RPolyline::clear() {
     vertices.clear();
     bulges.clear();

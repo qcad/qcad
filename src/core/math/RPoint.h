@@ -52,6 +52,8 @@ public:
 
     virtual void to2D();
 
+    virtual QList<RVector> getVectorProperties() const;
+
     RVector getPosition() const {
        return position;
     }

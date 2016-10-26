@@ -60,6 +60,8 @@ public:
 
     virtual void to2D();
 
+    virtual QList<RVector> getVectorProperties() const;
+
     bool isValid() const;
 
     virtual RBox getBoundingBox() const;

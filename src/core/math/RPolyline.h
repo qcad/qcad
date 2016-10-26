@@ -67,6 +67,10 @@ public:
 
     virtual void to2D();
 
+    virtual QList<RVector> getVectorProperties() const;
+    virtual QList<double> getDoubleProperties() const;
+    virtual QList<bool> getBoolProperties() const;
+
     void clear();
     void normalize(double tolerance = RS::PointTolerance);
 
