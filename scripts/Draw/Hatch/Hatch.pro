@@ -1,4 +1,4 @@
 TEMPLATE = subdirs
 SUBDIRS = \
-    HatchFromBoundary \
+    HatchFromSelection \
     ts

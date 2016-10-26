@@ -1,3 +1,3 @@
 NAME = Hatch
-SOURCES = ../HatchDialog.js
+SOURCES = ../Hatch.js ../HatchDialog.js
 FORMS = ../HatchDialog.ui
