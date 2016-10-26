@@ -310,7 +310,7 @@ ShapeAlgorithms.getIntersectionPoints = function(shape, otherShapes, onShape, on
  * \param shape Shape of (clicked) entity.
  * \param extend True if entity is being extended.
  */
-ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend, selfIntersectionPoints) {
+ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend) {
     if (isNull(extend)) {
         extend = false;
     }
@@ -342,20 +342,7 @@ ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend, s
         var otherEntity = doc.queryEntityDirect(otherEntityIds[i]);
 
         if (otherEntityIds[i]===entityId) {
-            if (isPolylineEntity(otherEntity)) {
-                // self intersecting polyline:
-                if (!isNull(selfIntersectionPoints)) {
-                    var ips = otherEntity.getSelfIntersectionPoints();
-                    for (var k=0; k<ips.length; k++) {
-                        // don't use concat as it creates a new array:
-                        selfIntersectionPoints.push(ips[k]);
-                    }
-                }
-                continue;
-            }
-            else {
-                continue;
-            }
+            continue;
         }
 
         // TODO: if shape is arc, circle, ellipse or ellipse arc:
@@ -384,10 +371,12 @@ ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend, s
  * The second shape is the rest at the end of the shape.
  * The third shape is the segment self in its new shape.
  */
-ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend, selfIntersectionPoints) {
+ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend) {
     if (isNull(extend)) {
         extend = false;
     }
+
+    //debugger;
 
     // get intersection points:
     var ips = ShapeAlgorithms.getIntersectionPoints(shape, otherShapes, !extend, extend);
@@ -406,6 +395,11 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend, selfI
                 maxD = d;
                 p = ip;
             }
+        }
+
+        // no intersections:
+        if (isNull(p)) {
+            return [undefined, undefined, shape.clone()];
         }
 
         // angle at intersection point closest to end of arc is where we split the circle:
@@ -599,8 +593,8 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         }
     }
 
-    // arcs / ellipse arcs:
-    else if (isArcShape(shape) || isEllipseArcShape(shape)) {
+    // arcs:
+    else if (isArcShape(shape)) {
         rest1 = shape.clone();
         rest2 = shape.clone();
 
@@ -677,15 +671,49 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         }
     }
 
+    // ellipse arcs:
+    else if (isEllipseArcShape(shape)) {
+        rest1 = shape.clone();
+        rest2 = shape.clone();
+
+        rest1.trimEndPoint(cutPos1, cutPos1);
+        rest2.trimStartPoint(cutPos2, cutPos2);
+
+        segment = shape.clone();
+        segment.trimStartPoint(cutPos1, cutPos1);
+        segment.trimEndPoint(cutPos2, cutPos2);
+
+        var angleLength1 = rest1.getAngleLength(true);
+        var angleLength2 = rest2.getAngleLength(true);
+
+        if (angleLength1+angleLength2 > shape.getAngleLength()) {
+            rest1.trimEndPoint(cutPos2, cutPos2);
+            rest2.trimStartPoint(cutPos1, cutPos1);
+            segment.trimStartPoint(cutPos2, cutPos2);
+            segment.trimEndPoint(cutPos1, cutPos1);
+
+            angleLength1 = rest1.getAngleLength(true);
+            angleLength2 = rest2.getAngleLength(true);
+        }
+
+        if (angleLength1<1.0e-5) {
+            rest1 = undefined;
+        }
+
+        if (angleLength2<1.0e-5) {
+            rest2 = undefined;
+        }
+    }
+
     // full ellipses:
     else if (isFullEllipseShape(shape)) {
-        if (!isValidVector(cutDist1) || !isValidVector(cutDist2)) {
+        if (!isValidVector(cutPos1) || !isValidVector(cutPos2)) {
             rest1 = undefined;
             rest2 = undefined;
         }
         else {
-            var angle1 = shape.getParamTo(cutDist1);
-            var angle2 = shape.getParamTo(cutDist2);
+            var angle1 = shape.getParamTo(cutPos1);
+            var angle2 = shape.getParamTo(cutPos2);
 
             rest1 = new REllipse(
                         shape.getCenter(),
@@ -955,25 +983,50 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
     // open shapes with start and end:
     var pDist = shape.getDistanceFromStart(position);
 
+    var orthoLine;
+    var reversedShape = false;
+    if (isEllipseShape(shape)) {
+        orthoLine = new RLine(shape.getCenter(), position);
+        if (isEllipseShape(shape)) {
+            if (shape.isReversed()) {
+                shape.reverse();
+                reversedShape = true;
+            }
+        }
+    }
+
     // find intersection points directly before and after clicked position:
     var cutDist1 = undefined;
     var cutDist2 = undefined;
-    for (i=0; i<intersections.length; i++) {
+    for (var i=0; i<intersections.length; i++) {
         ip = intersections[i];
 
-        var distances = shape.getDistancesFromStart(ip);
-        for (k=0; k<distances.length; k++) {
-            dist = distances[k];
-            if (dist<pDist || circular) {
-                if (isNull(cutDist1) || dist>cutDist1) {
-                    cutDist1 = dist;
-                    cutPos1 = ip;
-                }
+        if (isEllipseShape(shape)) {
+            dist = RMath.getAngleDifference(orthoLine.getAngle(), shape.getCenter().getAngleTo(ip));
+            if (isNull(cutDist1) || dist>cutDist1) {
+                cutPos1 = ip;
+                cutDist1 = dist;
             }
-            if (dist>pDist || circular) {
-                if (isNull(cutDist2) || dist<cutDist2) {
-                    cutDist2 = dist;
-                    cutPos2 = ip;
+            if (isNull(cutDist2) || dist<cutDist2) {
+                cutPos2 = ip;
+                cutDist2 = dist;
+            }
+        }
+        else {
+            var dists = shape.getDistancesFromStart(ip);
+            for (var k=0; k<dists.length; k++) {
+                dist = dists[k];
+                if (dist<pDist || circular) {
+                    if (isNull(cutDist1) || dist>cutDist1) {
+                        cutDist1 = dist;
+                        cutPos1 = ip;
+                    }
+                }
+                if (dist>pDist || circular) {
+                    if (isNull(cutDist2) || dist<cutDist2) {
+                        cutDist2 = dist;
+                        cutPos2 = ip;
+                    }
                 }
             }
         }
@@ -994,6 +1047,10 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
             cutDist2 = shape.getLength();
             cutPos2 = shape.getEndPoint();
         }
+    }
+
+    if (reversedShape) {
+        shape.reverse();
     }
 
     //return [cutPos1, cutPos2];
