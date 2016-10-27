@@ -341,7 +341,10 @@ ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend) {
     for (var i=0; i<otherEntityIds.length; i++) {
         var otherEntity = doc.queryEntityDirect(otherEntityIds[i]);
 
-        if (otherEntityIds[i]===entityId) {
+        // ignore intersection points of same entity
+        // self intersection points are handled elsewhere
+        var same = otherEntityIds[i]===entityId;
+        if (same && !isBlockReferenceEntity(otherEntity)) {
             continue;
         }
 
@@ -351,7 +354,17 @@ ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend) {
 
         var s = otherEntity.getShapes();
         if (s.length!==0) {
-            ret = ret.concat(s);
+            if (!same) {
+                ret = ret.concat(s);
+            }
+            else {
+                // ignore same shape for block reference entities:
+                for (var k=0; k<s.length; k++) {
+                     if (!shape.equals(s[k].data())) {
+                         ret.push(s[k]);
+                     }
+                }
+            }
         }
     }
 
