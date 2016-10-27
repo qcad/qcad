@@ -52,6 +52,8 @@ RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer
  * \param angle Always 0.0.
  */
 void RShapesExporter::exportLineSegment(const RLine& line, double angle) {
+    Q_UNUSED(angle)
+
     // indices of segments on real shape:
     int i1, i2;
     // map segment start to real shape:
