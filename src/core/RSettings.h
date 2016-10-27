@@ -186,6 +186,11 @@ public:
     static QString getStringValue(const QString& key, const QString& defaultValue);
     static QStringList getStringListValue(const QString& key, const QStringList& defaultValue);
 
+    /**
+     * \nonscriptable
+     */
+    static QChar getCharValue(const QString& key, const QChar& defaultValue);
+
     static void setValue(const QString& key, const QVariant& value, bool overwrite=true);
     static void removeValue(const QString& key);
 

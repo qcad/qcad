@@ -1169,6 +1169,17 @@ QStringList RSettings::getStringListValue(const QString& key, const QStringList&
 }
 
 /**
+ * \return Value of the given setting as char or defaultValue.
+ */
+QChar RSettings::getCharValue(const QString& key, const QChar& defaultValue) {
+    QString ret = getStringValue(key, defaultValue);
+    if (ret.isEmpty()) {
+        return defaultValue;
+    }
+    return ret[0];
+}
+
+/**
  * Sets the variable with the given key and value, overwriting an existing value if overwrite is true (default).
  */
 void RSettings::setValue(const QString& key, const QVariant& value, bool overwrite) {
