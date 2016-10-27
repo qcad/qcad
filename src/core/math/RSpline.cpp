@@ -1303,15 +1303,6 @@ RSpline RSpline::simplify(double tolerance) {
     return *this;
 }
 
-//bool RSpline::getIntersectionPointsProxy(QList<RVector>& res, const RShape& other, bool limited, bool same) const {
-//    if (splineProxy!=NULL) {
-//        res.append(splineProxy->getIntersectionPoints(*this, other, limited, same));
-//        return true;
-//    }
-
-//    return false;
-//}
-
 void RSpline::invalidate() const {
 #ifndef R_NO_OPENNURBS
     curve.Destroy();
@@ -1731,6 +1722,10 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
         ret.append(QSharedPointer<RShape>(subSplines[i].clone()));
     }
     return ret;
+}
+
+QList<RVector> RSpline::getSelfIntersectionPoints() const {
+    return getIntersectionPointsSS(*this, *this, true, true);
 }
 
 void RSpline::print(QDebug dbg) const {

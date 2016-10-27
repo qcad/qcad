@@ -485,6 +485,12 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         cutDist2 = shape.getDistanceFromStart(cutPos2);
     }
 
+    if (RMath.fuzzyCompare(cutDist1, 0.0) && shape.getStartPoint().equalsFuzzy(cutPos1) &&
+        RMath.fuzzyCompare(cutDist2, shape.getLength()) && shape.getEndPoint().equalsFuzzy(cutPos2)) {
+
+        return [undefined, undefined, shape.clone()];
+    }
+
     var rest1 = undefined;
     var rest2 = undefined;
     var segment = undefined;
@@ -852,6 +858,7 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
         var tAtCutPos1 = shape.getTAtDistance(cutDist1);
         var tAtCutPos2 = shape.getTAtDistance(cutDist2);
+        var tMax = shape.getTMax();
 
         if (shape.getStartPoint().equalsFuzzy(shape.getEndPoint())) {
             if (RMath.fuzzyCompare(tAtCutPos1, shape.getTMax())) {
@@ -860,10 +867,15 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         }
 
         if (tAtCutPos1 < tAtCutPos2) {
-            rest1.trimEndPoint(cutDist1);
-            // positions are more precise but
-            // distances take into account possible self intersections:
-            rest1.setEndPoint(cutPos1);
+            if (RMath.fuzzyCompare(tAtCutPos1, 0.0)) {
+                rest1 = undefined;
+            }
+            else {
+                rest1.trimEndPoint(cutDist1);
+                // positions are more precise but
+                // distances take into account possible self intersections:
+                rest1.setEndPoint(cutPos1);
+            }
 
             var l1 = segment.getLength();
             segment.trimStartPoint(cutDist1);
@@ -872,12 +884,22 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
             segment.trimEndPoint(cutDist2 - (l1-l2));
             segment.setEndPoint(cutPos2);
 
-            rest2.trimStartPoint(cutDist2);
-            rest2.setStartPoint(cutPos2);
+            if (RMath.fuzzyCompare(tAtCutPos2, tMax)) {
+                rest2 = undefined;
+            }
+            else {
+                rest2.trimStartPoint(cutDist2);
+                rest2.setStartPoint(cutPos2);
+            }
         }
         else {
-            rest1.trimEndPoint(cutDist2);
-            rest1.setEndPoint(cutPos2);
+            if (RMath.fuzzyCompare(tAtCutPos1, 0.0)) {
+                rest1 = undefined;
+            }
+            else {
+                rest1.trimEndPoint(cutDist2);
+                rest1.setEndPoint(cutPos2);
+            }
 
             var l1 = segment.getLength();
             segment.trimStartPoint(cutDist2);
@@ -886,20 +908,31 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
             segment.trimEndPoint(cutDist1 - (l1-l2));
             segment.setEndPoint(cutPos1);
 
-            rest2.trimStartPoint(cutDist1);
-            rest2.setStartPoint(cutPos1);
+            if (RMath.fuzzyCompare(tAtCutPos2, tMax)) {
+                rest2 = undefined;
+            }
+            else {
+                rest2.trimStartPoint(cutDist1);
+                rest2.setStartPoint(cutPos1);
+            }
         }
 
-        if (!segment.isValid() || segment.getLength()<RS.PointTolerance) {
-            segment = undefined;
+        if (!isNull(segment)) {
+            if (!segment.isValid() || segment.getLength()<RS.PointTolerance) {
+                segment = undefined;
+            }
         }
 
-        if (!rest1.isValid() || rest1.getLength()<RS.PointTolerance) {
-            rest1 = undefined;
+        if (!isNull(rest1)) {
+            if (!rest1.isValid() || rest1.getLength()<RS.PointTolerance) {
+                rest1 = undefined;
+            }
         }
 
-        if (!rest2.isValid() || rest2.getLength()<RS.PointTolerance) {
-            rest2 = undefined;
+        if (!isNull(rest2)) {
+            if (!rest2.isValid() || rest2.getLength()<RS.PointTolerance) {
+                rest2 = undefined;
+            }
         }
     }
 

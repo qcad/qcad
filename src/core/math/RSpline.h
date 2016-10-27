@@ -223,6 +223,8 @@ public:
         return dirty;
     }
 
+    QList<RVector> getSelfIntersectionPoints() const;
+
     static bool hasProxy() {
         return splineProxy!=NULL;
     }
