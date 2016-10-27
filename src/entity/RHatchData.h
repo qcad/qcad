@@ -55,6 +55,8 @@ public:
 
     RHatchData& operator=(const RHatchData& other);
 
+    void clearBoundary();
+
     bool hasCustomPattern() const {
         return !pattern.getPatternLines().isEmpty();
     }

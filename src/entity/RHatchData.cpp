@@ -123,6 +123,11 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     return *this;
 }
 
+void RHatchData::clearBoundary() {
+    boundary.clear();
+    dirty = true;
+}
+
 RBox RHatchData::getBoundingBox(bool ignoreEmpty) const {
     Q_UNUSED(ignoreEmpty)
 
