@@ -594,7 +594,7 @@ QSharedPointer<RShape> REntityData::getClosestShape(const RVector& pos, double r
         QSharedPointer<RExplodable> explodable = shape.dynamicCast<RExplodable>();
         // 20110916: interpolated shapes are not exploded at this point (e.g.
         // for perpendicular snap to spline inside block):
-        if (explodable.isNull() || shape->isInterpolated()) {
+        if (!ignoreComplex || explodable.isNull() || shape->isInterpolated()) {
             subShapes.append(QSharedPointer<RShape>(shape->clone()));
         }
         else {
