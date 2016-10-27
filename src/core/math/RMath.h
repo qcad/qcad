@@ -153,6 +153,7 @@ public:
             RS::PointTolerance);
 
     static double parseScale(const QString& scaleString);
+    static RVector parseCoordinate(const QString& coordinateString, const RVector& relativeZero = RVector::nullVector);
 
     /**
      * \nonscriptable

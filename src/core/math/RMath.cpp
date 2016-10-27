@@ -858,6 +858,89 @@ double RMath::parseScale(const QString& scaleString) {
     return scale;
 }
 
+/**
+ * Parses the given string as coordinate.
+ *
+ * \param relativeZero RVector position of relative zero point.
+ * \param str String to parse (e.g. "34,15.6" or "@10,30" or "50<60", ...)
+ *
+ * \return undefined if the string is not a coordinate, an invalid RVector
+ *      if str is an invalid coordinate or the RVector result.
+ */
+RVector RMath::parseCoordinate(const QString& coordinateString, const RVector& relativeZero) {
+    QString str = coordinateString;
+    QChar decimalPoint = RSettings::getCharValue("Input/DecimalPoint", '.');
+    QChar cartCoordSep = RSettings::getCharValue("Input/CartesianCoordinateSeparator", ',');
+    QChar polCoordSep = RSettings::getCharValue("Input/PolarCoordinateSeparator", '<');
+    QChar relCoordPre = RSettings::getCharValue( "Input/RelativeCoordinatePrefix", '@');
+
+    if (str.count(cartCoordSep)!=1 && str.count(polCoordSep)!=1) {
+        // not a coordinate (not an error, could be another value such as a radius):
+        return RVector::nanVector;
+    }
+
+    str = str.trimmed();
+
+    if (str.isEmpty()) {
+        // empty (not an error):
+        return RVector::nanVector;
+    }
+
+    bool relative = false;
+    if (str[0]==relCoordPre) {
+        relative = true;
+        str = str.mid(1);
+    }
+
+    QStringList sl;
+    bool polar = false;
+    if (str.count(cartCoordSep)==1) {
+        sl = str.split(cartCoordSep);
+        polar = false;
+    }
+    else {
+        sl = str.split(polCoordSep);
+        polar = true;
+    }
+
+    if (sl.length()!=2) {
+        // invalid coordinate (error):
+        return RVector::invalid;
+    }
+
+    // 'fix' decimal point:
+    if (decimalPoint!='.') {
+        sl[0] = sl[0].replace(decimalPoint, '.');
+        sl[1] = sl[1].replace(decimalPoint, '.');
+    }
+
+    // evaluate x/y or radius/angle pair:
+    double a0 = RMath::eval(sl[0]);
+    double a1 = RMath::eval(sl[1]);
+
+    if (isNaN(a0) || isNaN(a1)) {
+        // invalid coordinate (error):
+        return RVector::invalid;
+    }
+
+    RVector pos;
+    if (polar) {
+        // polar coordinate:
+        pos = RVector::createPolar(a0,RMath::deg2rad(a1));
+    }
+    else {
+        // Cartesian coordinate:
+        pos = RVector(a0,a1);
+    }
+
+    // relative coordinate:
+    if (relative) {
+        pos = relativeZero + pos;
+    }
+
+    return pos;
+}
+
 void RMath::getQuadRoots(double p[], double r[][5]) {
     /*
     Array r[3][5] p[5]
