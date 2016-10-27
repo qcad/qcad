@@ -389,10 +389,13 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend) {
         extend = false;
     }
 
-    //debugger;
-
     // get intersection points:
     var ips = ShapeAlgorithms.getIntersectionPoints(shape, otherShapes, !extend, extend);
+    if (ips.length===0) {
+        // no intersections with other shapes or self,
+        // return whole shape as segment:
+        return [undefined, undefined, shape.clone()];
+    }
 
     // convert circle to arc:
     if (isCircleShape(shape)) {
@@ -858,23 +861,33 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
         if (tAtCutPos1 < tAtCutPos2) {
             rest1.trimEndPoint(cutDist1);
+            // positions are more precise but
+            // distances take into account possible self intersections:
+            rest1.setEndPoint(cutPos1);
 
             var l1 = segment.getLength();
             segment.trimStartPoint(cutDist1);
+            segment.setStartPoint(cutPos1);
             var l2 = segment.getLength();
             segment.trimEndPoint(cutDist2 - (l1-l2));
+            segment.setEndPoint(cutPos2);
 
             rest2.trimStartPoint(cutDist2);
+            rest2.setStartPoint(cutPos2);
         }
         else {
             rest1.trimEndPoint(cutDist2);
+            rest1.setEndPoint(cutPos2);
 
             var l1 = segment.getLength();
             segment.trimStartPoint(cutDist2);
+            segment.setStartPoint(cutPos2);
             var l2 = segment.getLength();
             segment.trimEndPoint(cutDist1 - (l1-l2));
+            segment.setEndPoint(cutPos1);
 
             rest2.trimStartPoint(cutDist1);
+            rest2.setStartPoint(cutPos1);
         }
 
         if (!segment.isValid() || segment.getLength()<RS.PointTolerance) {
