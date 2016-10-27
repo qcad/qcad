@@ -252,7 +252,7 @@ CommandLine.init = function(basePath) {
                 pos = stringToCoordinate(di.getRelativeZero(), command);
             }
 
-            if (!isNull(pos)) {
+            if (!pos.isNaN()) {
                 if (!pos.isValid()) {
                     appWin.handleUserWarning(
                         qsTr("Invalid coordinate or distance '%1'.")
