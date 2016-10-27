@@ -187,6 +187,11 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getStringValue</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>defaultValue</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getStringListValue</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>defaultValue</name></decl></param>)</parameter_list>;</function_decl>
 
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>QChar</name></type> <name>getCharValue</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>defaultValue</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>static</name> <name>void</name></type> <name>setValue</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>overwrite</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>removeValue</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
 

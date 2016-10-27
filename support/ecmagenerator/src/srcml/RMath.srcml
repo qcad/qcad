@@ -154,6 +154,7 @@
             <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>double</name></type> <name>parseScale</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scaleString</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>parseCoordinate</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>coordinateString</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>relativeZero</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable

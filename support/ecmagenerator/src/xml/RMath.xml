@@ -286,5 +286,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="scaleString" isConst="true" />
       </variant>
     </method>
+    <method name="parseCoordinate" cppName="parseCoordinate"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="coordinateString" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="relativeZero" hasDefault="true"
+        default="RVector :: nullVector" isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

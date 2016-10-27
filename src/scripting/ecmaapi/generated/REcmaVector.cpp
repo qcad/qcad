@@ -98,6 +98,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
+            REcmaHelper::registerFunction(&engine, proto, isNaN, "isNaN");
+            
             REcmaHelper::registerFunction(&engine, proto, isInside, "isInside");
             
             REcmaHelper::registerFunction(&engine, proto, equalsFuzzy, "equalsFuzzy");
@@ -289,6 +291,10 @@
             
             ctor.setProperty("nullVector",
                 qScriptValueFromValue(&engine, RVector::nullVector),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("nanVector",
+                qScriptValueFromValue(&engine, RVector::nanVector),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -1071,6 +1077,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::isSane", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::isNaN
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::isNaN", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::isNaN";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("isNaN", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isNaN();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.isNaN().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::isNaN", context, engine);
             return result;
         }
          QScriptValue

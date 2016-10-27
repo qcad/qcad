@@ -91,6 +91,9 @@
         getVectorProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getIntProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDoubleProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

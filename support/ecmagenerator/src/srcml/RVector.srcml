@@ -87,6 +87,7 @@
 
     <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isSane</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isNaN</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>isInside</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>b</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -313,6 +314,11 @@
      * null vector
      */</comment>
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>RVector</name></type> <name>nullVector</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * NaN vector
+     */</comment>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name>RVector</name></type> <name>nanVector</name></decl>;</decl_stmt>
 </public>}</block>;</class>
 
 <function_decl><type><name>QCADCORE_EXPORT</name> <name>RVector</name></type> <name>operator*</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>

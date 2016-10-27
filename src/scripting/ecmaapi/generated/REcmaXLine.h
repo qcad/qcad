@@ -73,12 +73,6 @@
         getVectorProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDoubleProperties
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getBoolProperties
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getEndPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

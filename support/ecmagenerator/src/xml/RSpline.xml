@@ -69,6 +69,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getIntProperties" cppName="getIntProperties"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; int &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="getDoubleProperties"
     cppName="getDoubleProperties" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

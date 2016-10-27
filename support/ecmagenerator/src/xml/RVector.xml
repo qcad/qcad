@@ -59,6 +59,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="isNaN" cppName="isNaN" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="isInside" cppName="isInside" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
@@ -780,6 +784,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="invalid" type="RVector" isConst="true"
     isStatic="true" />
     <property name="nullVector" type="RVector" isConst="true"
+    isStatic="true" />
+    <property name="nanVector" type="RVector" isConst="true"
     isStatic="true" />
   </class>
 </unit>

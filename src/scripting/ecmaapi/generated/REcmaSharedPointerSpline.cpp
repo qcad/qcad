@@ -130,6 +130,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
             
+            REcmaHelper::registerFunction(&engine, proto, getIntProperties, "getIntProperties");
+            
             REcmaHelper::registerFunction(&engine, proto, getDoubleProperties, "getDoubleProperties");
             
             REcmaHelper::registerFunction(&engine, proto, getBoolProperties, "getBoolProperties");
@@ -1086,6 +1088,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getVectorProperties", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::getIntProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::getIntProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::getIntProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getIntProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < int >'
+    QList < int > cppResult =
+        
+               self->getIntProperties();
+        // return type: QList < int >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getIntProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getIntProperties", context, engine);
             return result;
         }
          QScriptValue

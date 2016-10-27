@@ -69,6 +69,9 @@
         isSane
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isNaN
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isInside
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
