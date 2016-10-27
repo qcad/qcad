@@ -235,6 +235,7 @@ public:
     }
 
     virtual RS::Side getSideOfPoint(const RVector& point) const {
+        Q_UNUSED(point)
         return RS::NoSide;
     }
 
@@ -259,6 +260,10 @@ public:
      * Used for polylines to determine that the first segment has to be trimmed even if another segment was clicked.
      */
     virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        Q_UNUSED(trimPoint)
+        Q_UNUSED(clickPoint)
+        Q_UNUSED(extend)
+
         return false;
     }
 
@@ -274,6 +279,10 @@ public:
      * Used for polylines to determine that the last segment has to be trimmed even if another segment was clicked.
      */
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        Q_UNUSED(trimPoint)
+        Q_UNUSED(clickPoint)
+        Q_UNUSED(extend)
+
         return false;
     }
 
@@ -287,6 +296,9 @@ public:
      * \param clickPoint Point that was clicked by user.
      */
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+        Q_UNUSED(trimPoint)
+        Q_UNUSED(clickPoint)
+
         return RS::EndingNone;
     }
 
