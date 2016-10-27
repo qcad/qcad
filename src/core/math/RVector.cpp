@@ -28,6 +28,7 @@
 
 const RVector RVector::invalid = RVector(0, 0, 0, false);
 const RVector RVector::nullVector = RVector(0, 0, 0, true);
+const RVector RVector::nanVector = RVector(RNANDOUBLE, RNANDOUBLE, RNANDOUBLE, true);
 RVector RVector::RVectorDistanceSort::v;
 RVector RVector::RVectorAngleSort::center;
 double RVector::RVectorAngleSort::angle = 0.0;
@@ -60,6 +61,10 @@ bool RVector::isValid() const {
 
 bool RVector::isSane() const {
     return isValid() && RMath::isSane(x) && RMath::isSane(y) && RMath::isSane(z);
+}
+
+bool RVector::isNaN() const {
+    return RMath::isNaN(x) || RMath::isNaN(y) || RMath::isNaN(z);
 }
 
 void RVector::setX(double x) {

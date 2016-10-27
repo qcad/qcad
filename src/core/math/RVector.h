@@ -86,6 +86,7 @@ public:
 
     bool isValid() const;
     bool isSane() const;
+    bool isNaN() const;
 
     bool isInside(const RBox& b) const;
 
@@ -312,6 +313,11 @@ public:
      * null vector
      */
     static const RVector nullVector;
+
+    /**
+     * NaN vector
+     */
+    static const RVector nanVector;
 };
 
 QCADCORE_EXPORT RVector operator*(double s, const RVector& v);
