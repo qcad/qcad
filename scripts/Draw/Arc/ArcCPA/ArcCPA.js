@@ -237,8 +237,14 @@ ArcCPA.prototype.slotDirectionChanged = function(button) {
 ArcCPA.prototype.applyCommand = function(event, preview) {
     var v;
     var di = this.getDocumentInterface();
+    var cmd = event.getCommand();
 
-    var value = RMath.eval(event.getCommand());
+    var pos = RMath.parseCoordinate(cmd);
+    if (pos.isValid()) {
+        return;
+    }
+
+    var value = RMath.eval(cmd);
     if (isNaN(value)) {
         return;
     }

@@ -133,9 +133,15 @@ CircleCP.prototype.getOperation = function(preview) {
 
 CircleCP.prototype.applyCommand = function(event, preview) {
     var di = this.getDocumentInterface();
+    var cmd = event.getCommand();
 
-    var value = RMath.eval(event.getCommand());
-    if (isNaN(value)) {
+    var pos = RMath.parseCoordinate(cmd);
+    if (pos.isValid()) {
+        return;
+    }
+
+    var value = RMath.eval(cmd);
+    if (pos.isValid()) {
         return;
     }
 

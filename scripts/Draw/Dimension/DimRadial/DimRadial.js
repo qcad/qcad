@@ -182,8 +182,14 @@ DimRadial.prototype.getHighlightedEntities = function() {
 
 DimRadial.prototype.applyCommand = function(event, preview) {
     var di = this.getDocumentInterface();
+    var cmd = event.getCommand();
 
-    var value = RMath.eval(event.getCommand());
+    var pos = RMath.parseCoordinate(cmd);
+    if (pos.isValid()) {
+        return;
+    }
+
+    var value = RMath.eval(cmd);
     if (isNaN(value)) {
         return;
     }
