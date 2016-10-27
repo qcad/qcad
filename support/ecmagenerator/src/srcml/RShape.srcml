@@ -236,6 +236,7 @@
     }</block></function>
 
     <function><type><name>virtual</name> <name><name>RS</name>::<name>Side</name></name></type> <name>getSideOfPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>point</argument>)</argument_list></macro>
         <return>return <expr><name><name>RS</name>::<name>NoSide</name></name></expr>;</return>
     }</block></function>
 
@@ -260,6 +261,10 @@
      * Used for polylines to determine that the first segment has to be trimmed even if another segment was clicked.
      */</comment>
     <function><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>trimPoint</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>clickPoint</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>extend</argument>)</argument_list></macro>
+
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
@@ -275,6 +280,10 @@
      * Used for polylines to determine that the last segment has to be trimmed even if another segment was clicked.
      */</comment>
     <function><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>trimPoint</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>clickPoint</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>extend</argument>)</argument_list></macro>
+
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
@@ -288,6 +297,9 @@
      * \param clickPoint Point that was clicked by user.
      */</comment>
     <function><type><name>virtual</name> <name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>trimPoint</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>clickPoint</argument>)</argument_list></macro>
+
         <return>return <expr><name><name>RS</name>::<name>EndingNone</name></name></expr>;</return>
     }</block></function>
 

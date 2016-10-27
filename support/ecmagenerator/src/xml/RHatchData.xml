@@ -31,6 +31,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="other" isConst="true" />
       </variant>
     </method>
+    <method name="clearBoundary" cppName="clearBoundary"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="hasCustomPattern" cppName="hasCustomPattern"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

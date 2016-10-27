@@ -82,6 +82,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, operator_assign, "operator_assign");
             
+            REcmaHelper::registerFunction(&engine, proto, clearBoundary, "clearBoundary");
+            
             REcmaHelper::registerFunction(&engine, proto, hasCustomPattern, "hasCustomPattern");
             
             REcmaHelper::registerFunction(&engine, proto, getCustomPattern, "getCustomPattern");
@@ -506,6 +508,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::operator=", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::clearBoundary
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::clearBoundary", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::clearBoundary";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("clearBoundary", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearBoundary();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.clearBoundary().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::clearBoundary", context, engine);
             return result;
         }
          QScriptValue

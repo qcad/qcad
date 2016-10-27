@@ -58,6 +58,9 @@
         operator_assign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearBoundary
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasCustomPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

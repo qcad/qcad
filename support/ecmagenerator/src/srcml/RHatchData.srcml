@@ -56,6 +56,8 @@
 
     <function_decl><type><name>RHatchData</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RHatchData</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>clearBoundary</name><parameter_list>()</parameter_list>;</function_decl>
+
     <function><type><name>bool</name></type> <name>hasCustomPattern</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr>!<name>pattern</name>.<call><name>getPatternLines</name><argument_list>()</argument_list></call>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
