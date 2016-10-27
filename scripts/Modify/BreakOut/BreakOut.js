@@ -190,7 +190,6 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
     var doc = entity.getDocument();
     var shape = entity.getClosestShape(pos);
 
-    //debugger;
     var otherShapes = ShapeAlgorithms.getIntersectingShapes(doc, entity.getId(), shape, extend);
     var newSegments = ShapeAlgorithms.autoSplit(shape, otherShapes, pos, extend);
 
