@@ -135,15 +135,26 @@ Explode.explodeSelection = function(di, action) {
 
         // explode hatch into lines / solid fill into boundary:
         else if (isHatchEntity(entity)) {
-            var painterPaths = entity.getPainterPaths(false);
-            for (k=0; k<painterPaths.length; k++) {
-                shapes = painterPaths[k].getShapes();
-                for (n=0; n<shapes.length; n++) {
-                    shape = shapes[n].data();
-                    if (isSplineShape(shape)) {
-                        shape = ShapeAlgorithms.splineToLineOrArc(shape, 0.01);
+            if (entity.isSolid()) {
+                for (k=0; k<entity.getLoopCount(); k++) {
+                    shapes = entity.getLoopBoundary(k);
+                    for (n=0; n<shapes.length; n++) {
+                        shape = shapes[n];
+                        newShapes.push(shape.clone());
                     }
-                    newShapes.push(shape.clone());
+                }
+            }
+            else {
+                var painterPaths = entity.getPainterPaths(false);
+                for (k=0; k<painterPaths.length; k++) {
+                    shapes = painterPaths[k].getShapes();
+                    for (n=0; n<shapes.length; n++) {
+                        shape = shapes[n].data();
+                        if (isSplineShape(shape)) {
+                            shape = ShapeAlgorithms.splineToLineOrArc(shape, 0.01);
+                        }
+                        newShapes.push(shape.clone());
+                    }
                 }
             }
         }
