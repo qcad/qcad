@@ -100,8 +100,23 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
     e.ignore();
 };
 
-
 RBlockListQt.prototype.filter = function(block) {
+    var hideInternal = RSettings.getBoolValue("BlockList/HideInternalBlocks", false);
+
+    if (hideInternal===true) {
+        var blockNameLower = block.getName().toLowerCase();
+
+        // hide anonymous blocks:
+        if (blockNameLower.startsWith("a$c") &&
+            blockNameLower.length===13) {
+            return false;
+        }
+
+        if (blockNameLower.startsWith("camtool$$") ||
+            blockNameLower.startsWith("camtoolpath$$")) {
+            return false;
+        }
+    }
     return true;
 };
 
@@ -181,8 +196,6 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
 
     var blockNameCandidates = doc.getBlockNames();
 
-    var hideInternal = RSettings.getBoolValue("BlockList/HideInternalBlocks", false);
-
     var i;
 
     // filter block names:
@@ -192,13 +205,6 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
         var blockCandidate = doc.queryBlockDirect(blockNameCandidate);
         if (blockCandidate.isNull()) {
             continue;
-        }
-
-        // hide anonymous blocks:
-        if (hideInternal===true) {
-            if (blockNameCandidate.toLowerCase().startsWith("a$c") && blockNameCandidate.length===13) {
-                continue;
-            }
         }
 
         if (!this.filter(blockCandidate)) {
