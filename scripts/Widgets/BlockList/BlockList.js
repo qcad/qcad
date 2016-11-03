@@ -112,8 +112,10 @@ RBlockListQt.prototype.filter = function(block) {
             return false;
         }
 
-        if (blockNameLower.startsWith("camtool$$") ||
-            blockNameLower.startsWith("camtoolpath$$")) {
+        // hide blocks tagged as resources
+        // such blocks may be added by add-ons to provide
+        // additional resources such as CAM tools, etc.
+        if (block.hasCustomProperty("QCAD", "ResourceFlag")) {
             return false;
         }
     }
