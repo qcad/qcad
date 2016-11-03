@@ -1220,19 +1220,11 @@ PropertyEditorImpl.prototype.filterChanged = function() {
 
     var selectionCombo = this.widget.findChild("Selection");
     var entityTypeFilter = selectionCombo.itemData(selectionCombo.currentIndex);
-//    if (!isNull(entityTypeFilter)) {
-//        this.setEntityTypeFilter(entityTypeFilter);
-//    }
-//    else {
-//        this.setEntityTypeFilter(RS.EntityAll);
-//    }
+    if (isNull(entityTypeFilter)) {
+        entityTypeFilter = RS.EntityAll;
+    }
 
-//    if (!isNumber(this.entityTypeFilter)) {
-//        this.updateFromDocument(doc, false, RS.EntityAll, true);
-//    }
-//    else {
-        this.updateFromDocument(doc, false, entityTypeFilter, true);
-//    }
+    this.updateFromDocument(doc, false, entityTypeFilter, true);
 };
 
 PropertyEditorImpl.prototype.getAdjustedPropertyValue = function(propertyTypeId) {
