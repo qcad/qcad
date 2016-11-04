@@ -68,6 +68,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="segment"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getMeasuredValue" cppName="getMeasuredValue"
