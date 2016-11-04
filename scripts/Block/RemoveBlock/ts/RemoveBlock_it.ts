@@ -6,7 +6,7 @@
     <message>
         <location filename="../RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
-        <translation>&amp;Cancella Blocco</translation>
+        <translation>&amp;Cancella blocco</translation>
     </message>
     <message>
         <location line="+1"/>

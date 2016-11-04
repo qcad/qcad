@@ -8,7 +8,7 @@
         <location line="+41"/>
         <location line="+39"/>
         <source>Block List</source>
-        <translation>Lista Blocchi</translation>
+        <translation>Lista blocchi</translation>
     </message>
     <message>
         <location line="-80"/>

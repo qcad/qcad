@@ -292,7 +292,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location filename="../LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
-        <translation>&amp;Browser Librerie</translation>
+        <translation>&amp;Browser librerie</translation>
     </message>
 </context>
 <context>

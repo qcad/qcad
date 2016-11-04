@@ -6,7 +6,7 @@
     <message>
         <location filename="../DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>Preferenze Disegno</translation>
+        <translation>Preferenze disegno</translation>
     </message>
 </context>
 </TS>

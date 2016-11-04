@@ -6,7 +6,7 @@
     <message>
         <location filename="../InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation>&amp;Inverti Selezione</translation>
+        <translation>&amp;Inverti selezione</translation>
     </message>
     <message>
         <location line="+4"/>

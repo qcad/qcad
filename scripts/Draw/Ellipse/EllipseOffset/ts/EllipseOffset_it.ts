@@ -36,7 +36,7 @@
     </message>
     <message>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation type="obsolete">&amp;Curvo parallelo (Distanza)</translation>
+        <translation type="obsolete">&amp;Curvo parallelo (distanza)</translation>
     </message>
     <message>
         <source>Draw parallel curve to ellipse</source>

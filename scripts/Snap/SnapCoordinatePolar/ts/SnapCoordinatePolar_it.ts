@@ -37,7 +37,7 @@
     <message>
         <location filename="../SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
-        <translation>Coordinate P&amp;olari</translation>
+        <translation>Coordinate p&amp;olari</translation>
     </message>
 </context>
 </TS>

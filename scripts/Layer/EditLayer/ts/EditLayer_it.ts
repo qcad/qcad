@@ -6,7 +6,7 @@
     <message>
         <location filename="../EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation>Modifica Layer</translation>
+        <translation>Modifica layer</translation>
     </message>
 </context>
 </TS>

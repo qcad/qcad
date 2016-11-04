@@ -6,7 +6,7 @@
     <message>
         <location filename="../RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
-        <translation>&amp;Rinomina Blocco</translation>
+        <translation>&amp;Rinomina blocco</translation>
     </message>
 </context>
 </TS>

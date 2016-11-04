@@ -20,7 +20,7 @@
     <message>
         <location filename="../CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;Concentrico (Distanza)</translation>
+        <translation>&amp;Concentrico (distanza)</translation>
     </message>
     <message>
         <location line="+5"/>

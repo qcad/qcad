@@ -31,7 +31,7 @@
     <message>
         <location filename="../ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation>&amp;Centro, Punto, Angoli</translation>
+        <translation>&amp;Centro, punto, angoli</translation>
     </message>
     <message>
         <location line="+4"/>

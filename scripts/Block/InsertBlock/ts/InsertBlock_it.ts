@@ -22,7 +22,7 @@
     <message>
         <location filename="../InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation>&amp;Inserisci Blocco</translation>
+        <translation>&amp;Inserisci blocco</translation>
     </message>
     <message>
         <location filename="../InsertBlock.ui" line="+17"/>

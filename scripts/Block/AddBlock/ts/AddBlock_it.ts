@@ -10,7 +10,7 @@
     <message>
         <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>&amp;Aggiungi Blocco</translation>
+        <translation>&amp;Aggiungi blocco</translation>
     </message>
     <message>
         <location line="+6"/>

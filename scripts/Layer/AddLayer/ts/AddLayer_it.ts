@@ -6,7 +6,7 @@
     <message>
         <location filename="../AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation>&amp;Aggiungi Layer</translation>
+        <translation>&amp;Aggiungi layer</translation>
     </message>
     <message>
         <location filename="../AddLayer.js" line="+35"/>

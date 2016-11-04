@@ -30,7 +30,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location filename="../TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
-        <translation>&amp;Sposta / Copia</translation>
+        <translation>&amp;Sposta / copia</translation>
     </message>
     <message>
         <location line="+10"/>

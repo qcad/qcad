@@ -51,7 +51,7 @@
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>&amp;Anteprima di Stampa</translation>
+        <translation>&amp;Anteprima di stampa</translation>
     </message>
     <message>
         <location line="+6"/>

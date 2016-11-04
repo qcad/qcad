@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation>&amp;Interruttore di Visibilità</translation>
+        <translation>&amp;Interruttore di visibilità</translation>
     </message>
 </context>
 </TS>
