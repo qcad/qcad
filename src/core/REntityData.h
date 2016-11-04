@@ -85,10 +85,15 @@ public:
 
     /**
      * \return Shapes that represent the geometry of this entity.
+     *
+     * \param queryBox Limit returned shapes to query box
+     * \param ignoreComplex Ignore complex shapes and explode those into simple shapes
+     * \param segment Split up splines into spline segments
      */
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const {
         Q_UNUSED(queryBox)
         Q_UNUSED(ignoreComplex)
+        Q_UNUSED(segment)
 
         return QList<QSharedPointer<RShape> >();
     }

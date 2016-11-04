@@ -113,7 +113,7 @@ void RDimAlignedData::recomputeDefinitionPoint(
     }
 }
 
-QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
+QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
 

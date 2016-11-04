@@ -199,7 +199,7 @@ public:
     QList<QSharedPointer<RShape> > getExplodedBezier(int segments) const;
     QList<QSharedPointer<RShape> > getExplodedWithSegmentLength(double segmentLength) const;
 
-    QList<RSpline> getBezierSegments() const;
+    QList<RSpline> getBezierSegments(const RBox& queryBox = RDEFAULT_RBOX) const;
 
     bool isValid() const;
     double getTDelta() const;

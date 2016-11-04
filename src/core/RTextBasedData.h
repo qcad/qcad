@@ -300,7 +300,7 @@ public:
     virtual bool isDirty() const;
 
     virtual QList<RPainterPath> getPainterPaths(bool draft = false, double pixelSizeHint = RDEFAULT_MIN1) const;
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const;
     virtual QList<QSharedPointer<RShape> > getExploded() const;
 
     virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false) const {

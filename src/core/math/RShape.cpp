@@ -513,7 +513,7 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             }
             const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
             if (spline2 != NULL) {
-                return getIntersectionPointsSS(*spline1, *spline2, limited);
+                return getIntersectionPointsSS(*spline1, *spline2, limited, same);
             }
 
             // spline, polyline, ...:
@@ -1637,11 +1637,10 @@ QList<RVector> RShape::getIntersectionPointsSX(const RSpline& spline1,
 
 QList<RVector> RShape::getIntersectionPointsSS(const RSpline& spline1,
         const RSpline& spline2, bool limited, bool same) {
-    Q_UNUSED(same)
 
     if (RSpline::hasProxy()) {
         RSplineProxy* proxy = RSpline::getSplineProxy();
-        return proxy->getIntersectionPoints(spline1, spline2, limited);
+        return proxy->getIntersectionPoints(spline1, spline2, limited, same);
     }
 
     return QList<RVector>();

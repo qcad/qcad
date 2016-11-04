@@ -433,7 +433,7 @@ RVector RTextBasedData::getClosestPointOnEntity(const RVector& point,
     return RVector::invalid;
 }
 
-QList<QSharedPointer<RShape> > RTextBasedData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
+QList<QSharedPointer<RShape> > RTextBasedData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
     Q_UNUSED(queryBox);
 
     QList<QSharedPointer<RShape> > ret;

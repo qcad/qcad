@@ -72,7 +72,7 @@ bool RViewportData::moveReferencePoint(const RVector& referencePoint,
     return ret;
 }
 
-QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
+QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
 

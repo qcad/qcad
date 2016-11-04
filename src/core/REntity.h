@@ -358,8 +358,8 @@ public:
     /**
      * \copydoc REntityData::getShapes
      */
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
-        return getData().getShapes(queryBox, ignoreComplex);
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const {
+        return getData().getShapes(queryBox, ignoreComplex, segment);
     }
 
     /**

@@ -183,7 +183,7 @@ public:
         return RPolyline::verifyTangency(toleranceMin, toleranceMax);
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const;
 
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,

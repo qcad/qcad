@@ -101,7 +101,7 @@ public:
     virtual bool scale(const RVector& scaleFactors, const RVector& center);
     virtual bool mirror(const RLine& axis);
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const;
     double getAngle() const;
     bool getAngles(double& ang1, double& ang2,
                    bool& reversed,

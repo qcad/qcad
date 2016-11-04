@@ -81,3 +81,19 @@ bool RSplineData::moveReferencePoint(const RVector& referencePoint, const RVecto
 
     return ret;
 }
+
+QList<QSharedPointer<RShape> > RSplineData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
+    Q_UNUSED(ignoreComplex)
+
+    if (!queryBox.isValid() || !segment) {
+        return QList<QSharedPointer<RShape> >() <<
+                QSharedPointer<RShape>(new RSpline(*this));
+    }
+
+    QList<RSpline> bezierSegments = getBezierSegments(queryBox);
+    QList<QSharedPointer<RShape> > ret;
+    for (int i=0; i<bezierSegments.length(); i++) {
+        ret.append(QSharedPointer<RShape>(new RSpline(bezierSegments[i])));
+    }
+    return ret;
+}

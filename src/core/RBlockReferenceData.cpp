@@ -448,7 +448,7 @@ RBox RBlockReferenceData::getQueryBoxInBlockCoordinates(const RBox& box) const {
     return RBox(RVector::getMinimum(corners), RVector::getMaximum(corners));
 }
 
-QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
+QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
     QList<QSharedPointer<RShape> > ret;
 
     static int recursionDepth=0;

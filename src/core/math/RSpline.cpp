@@ -1528,7 +1528,7 @@ void RSpline::updateBoundingBox() const {
 /**
  * \return List of bezier spline segments which together represent this curve.
  */
-QList<RSpline> RSpline::getBezierSegments() const {
+QList<RSpline> RSpline::getBezierSegments(const RBox& queryBox) const {
     // spline is a single bezier segment:
     if (countControlPoints()==getDegree()+1) {
         return QList<RSpline>() << *this;
@@ -1556,7 +1556,11 @@ QList<RSpline> RSpline::getBezierSegments() const {
             bc.GetCV(cpi, onp);
             ctrlPts.append(RVector(onp.x, onp.y, onp.z));
         }
-        ret.append(RSpline(ctrlPts, degree));
+        RSpline bezierSegment(ctrlPts, degree);
+
+        if (!queryBox.isValid() || queryBox.intersects(bezierSegment.getBoundingBox())) {
+            ret.append(bezierSegment);
+        }
     }
     delete dup;
  #endif

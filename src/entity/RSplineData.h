@@ -206,16 +206,7 @@ public:
         return this;
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
-        Q_UNUSED(queryBox)
-        Q_UNUSED(ignoreComplex)
-
-        // make sure we copy only splines with updated cache:
-        //getExploded();
-
-        return QList<QSharedPointer<RShape> >() <<
-                QSharedPointer<RShape>(new RSpline(*this));
-    }
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const;
 
     virtual void update() const {
         //RSpline::update();

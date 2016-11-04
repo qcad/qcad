@@ -446,19 +446,26 @@ QList<RVector> REntityData::getIntersectionPoints(
         const REntityData& other, bool limited, bool same, const RBox& queryBox, bool ignoreComplex) const {
 
     QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, ignoreComplex);
+    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, ignoreComplex, true);
 
     if (RMouseEvent::hasMouseMoved()) {
         return QList<RVector>();
     }
 
-    QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox, ignoreComplex);
+    QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox, ignoreComplex, true);
 
     for (int i=0; i<shapes1.size(); i++) {
         for (int k=0; k<shapes2.size(); k++) {
             if (RMouseEvent::hasMouseMoved()) {
                 return QList<RVector>();
             }
+//            if (same) {
+//                if (abs(i-k)<=1) {
+//                    // same or connecting segment of same entity
+//                    continue;
+//                }
+//            }
+
             ret.append(
                 shapes1.at(i)->getIntersectionPoints(*shapes2.at(k), limited, same)
             );
