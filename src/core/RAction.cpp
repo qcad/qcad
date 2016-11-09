@@ -198,6 +198,23 @@ RStorage* RAction::getStorage() {
     }
 }
 
+/**
+ * Sets the current click mode.
+ *
+ * \see ClickMode
+ */
+void RAction::setClickMode(RAction::ClickMode m) {
+    clickMode = m;
+
+    // if this is a class that overrides a base class,
+    // set click mode in base class:
+    if (isOverride()) {
+        RAction* base = getOverrideBase();
+        if (base) {
+            base->setClickMode(m);
+        }
+    }
+}
 
 /**
  * Uses the currently active snap function to snap to the closest

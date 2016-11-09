@@ -114,14 +114,7 @@ public:
         documentInterface = di;
     }
 
-    /**
-     * Sets the current click mode.
-     *
-     * \see ClickMode
-     */
-    void setClickMode(RAction::ClickMode m) {
-        clickMode = m;
-    }
+    void setClickMode(RAction::ClickMode m);
 
     /**
      * \return The current click mode of this action as previously
@@ -148,7 +141,7 @@ public:
      */
     virtual void enterEvent() = 0;
     /**
-     * Called with the action is Suspended, for example when another action
+     * Called when the action is suspended, for example when another action
      * becomes active or the mouse cursor leaves the view.
      */
     virtual void suspendEvent() = 0;
