@@ -33,6 +33,10 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QVARIANT</name> <name>QVariant</name>()</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSTRING</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSTRING</name> <name>QString</name>()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 
 <comment type="block">/**
  * Abstract base class for all objects. Objects have
@@ -186,7 +190,7 @@
     <function_decl><type><name>void</name></type> <name>removeCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QStringList</name></type> <name>getCustomPropertyTitles</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QStringList</name></type> <name>getCustomPropertyKeys</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>copyCustomPropertiesFrom</name><parameter_list>(<param><decl><type><name>RObject</name>*</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>copyCustomPropertiesFrom</name><parameter_list>(<param><decl><type><name>RObject</name>*</type> <name>other</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable

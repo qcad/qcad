@@ -233,6 +233,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RObject *" typeName="RObject *" name="other"
         isConst="false" />
+        <arg type="QString &amp;" typeName="QString" name="title"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
       </variant>
     </method>
     <method name="getComplexity" cppName="getComplexity"
