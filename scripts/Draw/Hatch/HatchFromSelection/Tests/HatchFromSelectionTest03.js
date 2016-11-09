@@ -46,7 +46,8 @@ HatchFromSelectionTest03.prototype.test00 = function() {
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Angle',  [ 176, 0 ] )");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::HatchFromSelectionButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::HatchToolsPanelButton');
+    this.clickOnWidget('MainWindow::HatchToolsPanel::HatchFromSelectionButton');
     this.verifyDrawing('HatchFromSelectionTest03_000.dxf');
     this.tearDown();
     qDebug('finished HatchFromSelectionTest03.test00()');

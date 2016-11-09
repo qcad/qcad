@@ -26,7 +26,8 @@ HatchFromSelectionTest06.prototype.test00 = function() {
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Angle', '0.0')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::HatchFromSelectionButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::HatchToolsPanelButton');
+    this.clickOnWidget('MainWindow::HatchToolsPanel::HatchFromSelectionButton');
     this.setZoom(15.67382920110193, new RVector(-32.8702, -17.4001, 0, true));
     var p = new RVector(68.98137, 27.033957);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

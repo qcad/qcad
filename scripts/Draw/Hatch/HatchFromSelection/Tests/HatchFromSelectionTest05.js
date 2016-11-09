@@ -15,7 +15,6 @@ HatchFromSelectionTest05.prototype.test00 = function() {
     qDebug('running HatchFromSelectionTest05.test00()...');
     this.setUp();
     this.importFile('scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_polyline.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::HatchFromSelectionButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SelectToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::SelectAllButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SelectToolsPanel::BackButton');
@@ -27,7 +26,8 @@ HatchFromSelectionTest05.prototype.test00 = function() {
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Angle', '0.0')");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::HatchFromSelectionButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::HatchToolsPanelButton');
+    this.clickOnWidget('MainWindow::HatchToolsPanel::HatchFromSelectionButton');
     this.setZoom(10.248366013071895, new RVector(-20.5077, -13.4356, 0, true));
     var p = new RVector(75.052934, 24.559311);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
