@@ -32,6 +32,10 @@ class RTransaction;
 #define RDEFAULT_QVARIANT QVariant()
 #endif
 
+#ifndef RDEFAULT_QSTRING
+#define RDEFAULT_QSTRING QString()
+#endif
+
 
 /**
  * Abstract base class for all objects. Objects have
@@ -185,7 +189,7 @@ public:
     void removeCustomProperty(const QString& title, const QString& key);
     QStringList getCustomPropertyTitles() const;
     QStringList getCustomPropertyKeys(const QString& title) const;
-    void copyCustomPropertiesFrom(RObject* other);
+    void copyCustomPropertiesFrom(RObject* other, const QString& title = RDEFAULT_QSTRING);
 
     /**
      * \nonscriptable
