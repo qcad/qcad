@@ -1,6 +1,6 @@
-include(../../../shared.pri)
 CONFIG      += plugin
 TARGET      = transactionlistener
+include(../../../shared.pri)
 
 TEMPLATE    = lib
 HEADERS     = TransactionListenerPlugin.h

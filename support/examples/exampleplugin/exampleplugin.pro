@@ -1,6 +1,6 @@
-include(../../../shared.pri)
 CONFIG      += plugin
 TARGET      = $${RLIBNAME}example
+include(../../../shared.pri)
 
 TEMPLATE    = lib
 HEADERS     = RExamplePlugin.h
