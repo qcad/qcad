@@ -25,10 +25,16 @@
 
 RDockWidget::RDockWidget(const QString& title, QWidget* parent, Qt::WindowFlags flags) :
     QDockWidget(title, parent, flags), layout(NULL) {
+
+    // avoid document drag error when dragging icon under macOS:
+    setWindowIcon(QIcon());
 }
 
 RDockWidget::RDockWidget(QWidget* parent, Qt::WindowFlags flags) :
     QDockWidget(parent, flags) {
+
+    // avoid document drag error when dragging icon under macOS:
+    setWindowIcon(QIcon());
 }
 
 void RDockWidget::showEvent(QShowEvent* event) {
