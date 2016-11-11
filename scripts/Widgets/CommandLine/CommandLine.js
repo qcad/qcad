@@ -86,8 +86,8 @@ CommandLine.init = function(basePath) {
         blue = "#2E9AFE";
     }
 
-    // open fragment links of format "#<entity ID>" by selecting
-    // the entity with the given id:
+    // open fragment links of format "#<entity ID>,<entity ID>" by selecting
+    // the entities with the given IDs:
     teHistory.openLinks = false;
     teHistory.anchorClicked.connect(function(url) {
         var di = appWin.getDocumentInterface();
@@ -98,7 +98,13 @@ CommandLine.init = function(basePath) {
             return;
         }
 
-        di.selectEntity(parseInt(url.fragment(), 10));
+        var frag = url.fragment();
+        var entityIds = frag.split(",");
+        for (var i=0; i<entityIds.length; i++) {
+            entityIds[i] = parseInt(entityIds[i], 10);
+        }
+
+        di.selectEntities(entityIds);
     });
 
     function appendAndScroll(msg) {
@@ -371,36 +377,52 @@ CommandLine.init = function(basePath) {
     });
 
     // show message to user:
-    appWin.userMessage.connect(function(message) {
-            appendAndScroll("<span>" + message + "</span>");
-        });
+    appWin.userMessage.connect(function(message, escape) {
+        if (escape) {
+            message = Qt.escape(message);
+        }
+
+        appendAndScroll("<span>" + message + "</span>");
+    });
 
     // show warning to user:
-    appWin.userWarning.connect(function(message, messageBox) {
-            // TODO: refactor:
-            if (message==="#transaction_failed") {
-                message = qsTr("Transaction failed. Please check for block recursions and locked or invisible layers or blocks.");
-            }
+    appWin.userWarning.connect(function(message, messageBox, escape) {
+        // TODO: refactor:
+        if (message==="#transaction_failed") {
+            message = qsTr("Transaction failed. Please check for block recursions and locked or invisible layers or blocks.");
+        }
 
-            appendAndScroll("<span style='color:#cc0000;'>" + Qt.escape(message) + "</span>");
-            if (RSettings.getBoolValue("CommandLine/WarningsAsDialog", false) || messageBox) {
-                QMessageBox.warning(appWin, qsTr("Warning"), message);
-            }
-        });
+        if (escape) {
+            message = Qt.escape(message);
+        }
+
+        appendAndScroll("<span style='color:#cc0000;'>" + message + "</span>");
+        if (RSettings.getBoolValue("CommandLine/WarningsAsDialog", false) || messageBox) {
+            QMessageBox.warning(appWin, qsTr("Warning"), message);
+        }
+    });
 
     // show info to user:
-    appWin.userInfo.connect(function(message) {
-            appendAndScroll("<span style='color:#0066cc;'>" + Qt.escape(message) + "</span>");
-            if (RSettings.getBoolValue("CommandLine/InfoAsDialog", false)) {
-                QMessageBox.information(appWin, qsTr("Info"), message);
-            }
-        });
+    appWin.userInfo.connect(function(message, escape) {
+        if (escape) {
+            message = Qt.escape(message);
+        }
+
+        appendAndScroll("<span style='color:#0066cc;'>" + message + "</span>");
+        if (RSettings.getBoolValue("CommandLine/InfoAsDialog", false)) {
+            QMessageBox.information(appWin, qsTr("Info"), message);
+        }
+    });
 
     // show previously entered command:
-    appWin.userCommand.connect(function(message) {
+    appWin.userCommand.connect(function(message, escape) {
         // prevent some very frequent commands from being displayed every time:
         if (message==="snapauto" || message==="restrictoff" || message==="escape") {
             return;
+        }
+
+        if (escape) {
+            message = Qt.escape(message);
         }
 
         var cartCoordSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ',');
@@ -419,7 +441,7 @@ CommandLine.init = function(basePath) {
         appendAndScroll(
             "<span style='color:" + blue + ";'>"
             + "<i>" + what + ": </i>"
-            + Qt.escape(message) + "</span>");
+            + message + "</span>");
     });
 
     // change command prompt label:

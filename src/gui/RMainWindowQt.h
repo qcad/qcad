@@ -73,19 +73,15 @@ public:
     virtual int getPositionY();
     virtual void resize(int width, int height);
     virtual void move(int x, int y);
-    virtual void disable() {
-        setEnabled(false);
-    }
-    virtual void enable() {
-        setEnabled(true);
-    }
+    virtual void disable();
+    virtual void enable();
     virtual RDocument* getDocument();
     virtual RDocumentInterface* getDocumentInterface();
 
-    virtual void handleUserMessage(const QString& message);
-    virtual void handleUserInfo(const QString& message);
-    virtual void handleUserWarning(const QString& message, bool messageBox = false);
-    virtual void handleUserCommand(const QString& message);
+    virtual void handleUserMessage(const QString& message, bool escape = true);
+    virtual void handleUserInfo(const QString& message, bool escape = true);
+    virtual void handleUserWarning(const QString& message, bool messageBox = false, bool escape = true);
+    virtual void handleUserCommand(const QString& message, bool escape = true);
 
     virtual void postSelectionChangedEvent();
     virtual void postTransactionEvent(
@@ -154,10 +150,10 @@ signals:
     void progressText(const QString& label);
     void progressCanceled();
 
-    void userMessage(const QString& message);
-    void userInfo(const QString& message);
-    void userWarning(const QString& message, bool messageBox);
-    void userCommand(const QString& message);
+    void userMessage(const QString& message, bool escape);
+    void userInfo(const QString& message, bool escape);
+    void userWarning(const QString& message, bool messageBox, bool escape);
+    void userCommand(const QString& message, bool escape);
 
     /**
      * Emitted when a context menu is requested on top of the given entity.
@@ -190,6 +186,8 @@ protected slots:
 
 protected:
     RMdiArea* mdiArea;
+
+    int disableCounter;
 
 //private:
 //    bool objectWasDestroyed;

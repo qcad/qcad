@@ -238,20 +238,28 @@ public:
 
     virtual QWidget* getChildWidget(const QString& name) = 0;
 
-    virtual void handleUserMessage(const QString& message) {
+    virtual void handleUserMessage(const QString& message, bool escape = true) {
+        Q_UNUSED(escape);
+
         qDebug() << message;
     }
 
-    virtual void handleUserInfo(const QString& message) {
+    virtual void handleUserInfo(const QString& message, bool escape = true) {
+        Q_UNUSED(escape);
+
         qDebug() << message;
     }
 
-    virtual void handleUserWarning(const QString& message, bool messageBox = false) {
+    virtual void handleUserWarning(const QString& message, bool messageBox = false, bool escape = true) {
         Q_UNUSED(messageBox);
+        Q_UNUSED(escape);
+
         qWarning() << message;
     }
 
-    virtual void handleUserCommand(const QString& message) {
+    virtual void handleUserCommand(const QString& message, bool escape = true) {
+        Q_UNUSED(escape);
+
         qDebug() << "Command: " << message;
     }
 

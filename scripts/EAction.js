@@ -1780,48 +1780,71 @@ EAction.prototype.simulateMouseMoveEvent = function() {
     view.simulateMouseMoveEvent();
 };
 
-EAction.handleUserWarning = function(message) {
+/**
+ * Shows the given warning to the user.
+ *
+ * \param escape True to escape rich text and disaply the message
+ * exactly as given (default), false to allow rich text in message
+ * (colors, indentation, links, etc.)
+ */
+EAction.handleUserWarning = function(message, escape) {
     if (isNull(message)) {
         return;
     }
+    if (isNull(escape)) {
+        escape = true;
+    }
+
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
     }
-    appWin.handleUserWarning(message);
+    appWin.handleUserWarning(message, false, escape);
 };
 
-EAction.handleUserMessage = function(message) {
+EAction.handleUserMessage = function(message, escape) {
     if (isNull(message)) {
         return;
     }
+    if (isNull(escape)) {
+        escape = true;
+    }
+
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
     }
-    appWin.handleUserMessage(message);
+    appWin.handleUserMessage(message, escape);
 };
 
-EAction.handleUserInfo = function(message) {
+EAction.handleUserInfo = function(message, escape) {
     if (isNull(message)) {
         return;
     }
+    if (isNull(escape)) {
+        escape = true;
+    }
+
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
     }
-    appWin.handleUserInfo(message);
+    appWin.handleUserInfo(message, escape);
 };
 
-EAction.handleUserCommand = function(message) {
+EAction.handleUserCommand = function(message, escape) {
     if (isNull(message)) {
         return;
     }
+    if (isNull(escape)) {
+        escape = true;
+    }
+
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
     }
-    appWin.handleUserCommand(message);
+    appWin.handleUserCommand(message, escape);
 };
 
 EAction.setProgress = function(p) {

@@ -41,7 +41,7 @@
 #include "RTransactionEvent.h"
 
 RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
-    QMainWindow(parent), RMainWindow(), mdiArea(NULL) {
+    QMainWindow(parent), RMainWindow(), mdiArea(NULL), disableCounter(0) {
 
 // uncomment for unified tool bars under Mac:
 //#if QT_VERSION >= 0x050201
@@ -114,20 +114,20 @@ void RMainWindowQt::subWindowActivated(QMdiSubWindow* sw) {
     }
 }
 
-void RMainWindowQt::handleUserMessage(const QString& message) {
-    emit userMessage(message);
+void RMainWindowQt::handleUserMessage(const QString& message, bool escape) {
+    emit userMessage(message, escape);
 }
 
-void RMainWindowQt::handleUserInfo(const QString& message) {
-    emit userInfo(message);
+void RMainWindowQt::handleUserInfo(const QString& message, bool escape) {
+    emit userInfo(message, escape);
 }
 
-void RMainWindowQt::handleUserWarning(const QString& message, bool messageBox) {
-    emit userWarning(message, messageBox);
+void RMainWindowQt::handleUserWarning(const QString& message, bool messageBox, bool escape) {
+    emit userWarning(message, messageBox, escape);
 }
 
-void RMainWindowQt::handleUserCommand(const QString& message) {
-    emit userCommand(message);
+void RMainWindowQt::handleUserCommand(const QString& message, bool escape) {
+    emit userCommand(message, escape);
 }
 
 void RMainWindowQt::postSelectionChangedEvent() {
@@ -332,6 +332,20 @@ void RMainWindowQt::resize(int width, int height) {
 
 void RMainWindowQt::move(int x, int y) {
     QMainWindow::move(x, y);
+}
+
+void RMainWindowQt::disable() {
+    disableCounter++;
+    if (disableCounter==1) {
+        setEnabled(false);
+    }
+}
+
+void RMainWindowQt::enable() {
+    disableCounter--;
+    if (disableCounter==0) {
+        setEnabled(true);
+    }
 }
 
 void RMainWindowQt::quit() {
