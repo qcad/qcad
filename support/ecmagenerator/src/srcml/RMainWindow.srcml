@@ -239,20 +239,28 @@
 
     <function_decl><type><name>virtual</name> <name>QWidget</name>*</type> <name>getChildWidget</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>handleUserMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>handleUserMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>escape</name></type></decl></param>)</parameter_list>;</constructor_decl>
+
         <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; <name>message</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>handleUserInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>handleUserInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>escape</name></type></decl></param>)</parameter_list>;</constructor_decl>
+
         <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; <name>message</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>handleUserWarning</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>messageBox</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>handleUserWarning</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>messageBox</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>messageBox</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>escape</name></type></decl></param>)</parameter_list>;</constructor_decl>
+
         <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; <name>message</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>handleUserCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>handleUserCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>Q_UNUSED</name><parameter_list>(<param><decl><type><name>escape</name></type></decl></param>)</parameter_list>;</constructor_decl>
+
         <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; "Command: " &lt;&lt; <name>message</name></expr>;</expr_stmt>
     }</block></function>
 

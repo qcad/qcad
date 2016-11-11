@@ -33,11 +33,11 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RMessageHandler</name> <block>{<private type="default">
 </private><public>public:
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserWarning</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>,
-            <param><decl><type><name>bool</name></type> <name>messageBox</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+            <param><decl><type><name>bool</name></type> <name>messageBox</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>handleUserCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>bool</name></type> <name>escape</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RMessageHandler*</argument>)</argument_list></macro>

@@ -115,14 +115,7 @@
         <expr_stmt><expr><name>documentInterface</name> = <name>di</name></expr>;</expr_stmt>
     }</block></function>
 
-    <comment type="block">/**
-     * Sets the current click mode.
-     *
-     * \see ClickMode
-     */</comment>
-    <function><type><name>void</name></type> <name>setClickMode</name><parameter_list>(<param><decl><type><name><name>RAction</name>::<name>ClickMode</name></name></type> <name>m</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>clickMode</name> = <name>m</name></expr>;</expr_stmt>
-    }</block></function>
+    <function_decl><type><name>void</name></type> <name>setClickMode</name><parameter_list>(<param><decl><type><name><name>RAction</name>::<name>ClickMode</name></name></type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \return The current click mode of this action as previously
@@ -149,7 +142,7 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>enterEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <comment type="block">/**
-     * Called with the action is Suspended, for example when another action
+     * Called when the action is suspended, for example when another action
      * becomes active or the mouse cursor leaves the view.
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>suspendEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>

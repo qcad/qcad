@@ -100,6 +100,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="message"
         isConst="true" />
+        <arg type="bool" typeName="bool" name="escape"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="handleUserInfo" cppName="handleUserInfo"
@@ -108,6 +110,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="message"
         isConst="true" />
+        <arg type="bool" typeName="bool" name="escape"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="handleUserWarning" cppName="handleUserWarning"
@@ -118,6 +122,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool" name="messageBox"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="escape"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="handleUserCommand" cppName="handleUserCommand"
@@ -126,6 +132,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="message"
         isConst="true" />
+        <arg type="bool" typeName="bool" name="escape"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="postSelectionChangedEvent"
