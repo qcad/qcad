@@ -199,6 +199,19 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
                 // SVG file in in:
                 this.svgImporter.resolutionScale = RUnit.convert(1, RS.Inch, docUnit);
             }
+
+            var scaleToViewBox = 1.0;
+            var viewBox = atts.value("viewBox");
+            var vbTokens = viewBox.split(/\s/);
+            if (vbTokens.length===4) {
+                var vbX = vbTokens[0];
+                var vbY = vbTokens[1];
+                var vbWidth = vbTokens[2];
+                var vbHeight = vbTokens[3];
+
+                scaleToViewBox = parseFloat(w) / parseFloat(vbWidth);
+                this.svgImporter.resolutionScale*=scaleToViewBox;
+            }
         }
         break;
 
