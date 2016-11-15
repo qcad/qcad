@@ -239,6 +239,17 @@ bool RVector::equalsFuzzy(const RVector& v, double tol) const {
 }
 
 /**
+ * \return True if this vector and the given vector are almost equal
+ * (see RS::PointTolerance) in 2D space (x,y).
+ *
+ * \param tol Tolerance in X, Y.
+ */
+bool RVector::equalsFuzzy2D(const RVector& v, double tol) const {
+    return (qAbs(x-v.x)<tol &&
+            qAbs(y-v.y)<tol);
+}
+
+/**
  * \return The distance between this and the given coordinate.
  */
 double RVector::getDistanceTo(const RVector& v) const {
