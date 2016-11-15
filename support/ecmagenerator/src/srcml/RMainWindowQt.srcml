@@ -74,12 +74,8 @@
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>getPositionY</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>resize</name><parameter_list>(<param><decl><type><name>int</name></type> <name>width</name></decl></param>, <param><decl><type><name>int</name></type> <name>height</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>move</name><parameter_list>(<param><decl><type><name>int</name></type> <name>x</name></decl></param>, <param><decl><type><name>int</name></type> <name>y</name></decl></param>)</parameter_list>;</function_decl>
-    <function><type><name>virtual</name> <name>void</name></type> <name>disable</name><parameter_list>()</parameter_list> <block>{
-        <constructor_decl><name>setEnabled</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
-    <function><type><name>virtual</name> <name>void</name></type> <name>enable</name><parameter_list>()</parameter_list> <block>{
-        <constructor_decl><name>setEnabled</name><parameter_list>(<param><decl><type><name>true</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>disable</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>enable</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list>;</function_decl>
 
@@ -191,6 +187,8 @@
 
 </protected><protected>protected:
     <decl_stmt><decl><type><name>RMdiArea</name>*</type> <name>mdiArea</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>int</name></type> <name>disableCounter</name></decl>;</decl_stmt>
 
 <comment type="line">//private:</comment>
 <comment type="line">//    bool objectWasDestroyed;</comment>
