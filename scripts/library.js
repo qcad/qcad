@@ -726,6 +726,20 @@ function isSplineShape(obj) {
 }
 
 /**
+ * Checks if the given object is a closed spline shape.
+ *
+ * \return true if the given object is a closed spline shape (RSpline).
+ */
+function isClosedSplineShape(obj, tolerance) {
+    if (isNull(tolerance)) {
+        return isSplineShape(obj) && obj.isGeometricallyClosed();
+    }
+    else {
+        return isSplineShape(obj) && obj.isGeometricallyClosed(tolerance);
+    }
+}
+
+/**
  * Checks if the given object is a triangle shape.
  *
  * \return true if the given object is a triangle shape (RTriangle).
