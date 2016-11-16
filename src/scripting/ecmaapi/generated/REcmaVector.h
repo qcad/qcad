@@ -282,6 +282,9 @@
         getAverage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getUnion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getXList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

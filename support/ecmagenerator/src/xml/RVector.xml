@@ -634,6 +634,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getUnion" cppName="getUnion" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectorsA"
+        isConst="true" />
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectorsB"
+        isConst="true" />
+        <arg type="double" typeName="double" name="tol"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getXList" cppName="getXList" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; double &gt;"

@@ -254,6 +254,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAverage, "getAverage");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getUnion, "getUnion");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getXList, "getXList");
             
             REcmaHelper::registerFunction(&engine, &ctor, getYList, "getYList");
@@ -6308,6 +6310,131 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::getAverage", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getUnion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getUnion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getUnion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isArray
+                    QList < RVector >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RVector::
+       getUnion(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isArray
+                    QList < RVector >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RVector::
+       getUnion(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getUnion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getUnion", context, engine);
             return result;
         }
          QScriptValue
