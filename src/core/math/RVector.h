@@ -223,6 +223,8 @@ public:
     static RVector getAverage(const RVector& v1, const RVector& v2);
     static RVector getAverage(const QList<RVector>& vectors);
 
+    static QList<RVector> getUnion(const QList<RVector>& vectorsA, const QList<RVector>& vectorsB, double tol = RS::PointTolerance);
+
     static QList<double> getXList(const QList<RVector>& vectors);
     static QList<double> getYList(const QList<RVector>& vectors);
     static QList<double> getZList(const QList<RVector>& vectors);

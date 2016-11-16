@@ -761,6 +761,19 @@ RVector RVector::getAverage(const QList<RVector>& vectors) {
 }
 
 /**
+ * \return Union based on fuzzy comparison.
+ */
+QList<RVector> RVector::getUnion(const QList<RVector>& vectorsA, const QList<RVector>& vectorsB, double tol) {
+    QList<RVector> ret;
+    for (int i=0; i<vectorsA.length(); i++) {
+        if (RVector::containsFuzzy(vectorsB, vectorsA[i], tol)) {
+            ret.append(vectorsA[i]);
+        }
+    }
+    return ret;
+}
+
+/**
  * \return All X values of the given list of vectors as a new list.
  */
 QList<double> RVector::getXList(const QList<RVector>& vectors) {
