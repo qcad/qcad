@@ -319,7 +319,13 @@ void RGraphicsViewImage::updateImage() {
 
 void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint& pos, bool highlight) {
     RColor color;
-    if (pos.isSecondary()) {
+    if (pos.isStart()) {
+        color = RSettings::getStartReferencePointColor();
+    }
+    else if (pos.isEnd()) {
+        color = RSettings::getEndReferencePointColor();
+    }
+    else if (pos.isSecondary()) {
         color = RSettings::getSecondaryReferencePointColor();
     }
     else {

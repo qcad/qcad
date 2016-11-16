@@ -48,6 +48,8 @@ QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
 RColor* RSettings::selectionColor = NULL;
 RColor* RSettings::referencePointColor = NULL;
+RColor* RSettings::startReferencePointColor = NULL;
+RColor* RSettings::endReferencePointColor = NULL;
 RColor* RSettings::secondaryReferencePointColor = NULL;
 int RSettings::darkGuiBackground = -1;
 int RSettings::snapRange = -1;
@@ -577,6 +579,20 @@ RColor RSettings::getReferencePointColor() {
         referencePointColor = new RColor(getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172)));
     }
     return *referencePointColor;
+}
+
+RColor RSettings::getStartReferencePointColor() {
+    if (startReferencePointColor==NULL) {
+        startReferencePointColor = new RColor(getColor("GraphicsViewColors/StartReferencePointColor", RColor(192,0,32)));
+    }
+    return *startReferencePointColor;
+}
+
+RColor RSettings::getEndReferencePointColor() {
+    if (endReferencePointColor==NULL) {
+        endReferencePointColor = new RColor(getColor("GraphicsViewColors/EndReferencePointColor", RColor(0,0,172)));
+    }
+    return *endReferencePointColor;
 }
 
 RColor RSettings::getSecondaryReferencePointColor() {

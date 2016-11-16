@@ -98,6 +98,8 @@ public:
 
     static RColor getSelectionColor();
     static RColor getReferencePointColor();
+    static RColor getStartReferencePointColor();
+    static RColor getEndReferencePointColor();
     static RColor getSecondaryReferencePointColor();
 
     static bool getHighResolutionGraphicsView();
@@ -247,6 +249,8 @@ private:
     static QFont* statusBarFont;
     static RColor* selectionColor;
     static RColor* referencePointColor;
+    static RColor* startReferencePointColor;
+    static RColor* endReferencePointColor;
     static RColor* secondaryReferencePointColor;
     static int darkGuiBackground;
     static int snapRange;

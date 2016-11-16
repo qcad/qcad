@@ -18,10 +18,12 @@
 class QCADCORE_EXPORT RRefPoint : public RVector {
 public:
     enum Flag {
-        NoFlags = 0x000,
-        Secondary = 0x001,     /**< Secondary reference point (typically shown with different color) */
-        Center = 0x002,        /**< Reference point is a center point */
-        Ignore = 0x004         /**< Ignore reference point for drag and drop */
+        NoFlags   = 0x000,
+        Secondary = 0x001,        /**< Secondary reference point (typically shown with different color) */
+        Center    = 0x002,        /**< Reference point is a center point */
+        Ignore    = 0x004,        /**< Ignore reference point for drag and drop */
+        Start     = 0x008,        /**< Reference point is a start point */
+        End       = 0x010         /**< Reference point is a start point */
     };
     Q_DECLARE_FLAGS(Flags, Flag)
 
@@ -68,6 +70,22 @@ public:
 
     void setCenter(bool on) {
         setFlag(RRefPoint::Center, on);
+    }
+
+    bool isStart() const {
+        return getFlag(RRefPoint::Start);
+    }
+
+    void setStart(bool on) {
+        setFlag(RRefPoint::Start, on);
+    }
+
+    bool isEnd() const {
+        return getFlag(RRefPoint::End);
+    }
+
+    void setEnd(bool on) {
+        setFlag(RRefPoint::End, on);
     }
 
     void setFlag(RRefPoint::Flag flag, bool on) {

@@ -62,6 +62,11 @@ QList<RRefPoint> RPolylineData::getReferencePoints(RS::ProjectionRenderingHint h
     Q_UNUSED(hint)
 
     QList<RRefPoint> ret = RRefPoint::toRefPointList(getVertices());
+    if (!ret.isEmpty()) {
+        // mark start and end points:
+        ret.first().setStart(true);
+        ret.last().setEnd(true);
+    }
     for (int i=0; i<countSegments(); i++) {
         if (isArcSegmentAt(i)) {
             QSharedPointer<RArc> arc = getSegmentAt(i).dynamicCast<RArc>();
