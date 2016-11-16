@@ -387,11 +387,29 @@ public:
     virtual RLayout::Id getLayoutId(const QString& layoutName) const = 0;
     virtual bool hasLayout(const QString& layoutName) const;
 
+    /**
+     * \return Linetype name of the given linetype.
+     */
     virtual QString getLinetypeName(RLinetype::Id linetypeId) const = 0;
+    /**
+     * \return User readable description for the given linetype.
+     */
     virtual QString getLinetypeDescription(RLinetype::Id linetypeId) const = 0;
+    /**
+     * \return User readable label for the given linetype.
+     */
     virtual QString getLinetypeLabel(RLinetype::Id linetypeId) const = 0;
+    /**
+     * \return List of all available linetype pattern names in this document.
+     */
     virtual QSet<QString> getLinetypeNames() const = 0;
+    /**
+     * \return List of all available linetype patterns in this document.
+     */
     virtual QList<RLinetypePattern> getLinetypePatterns() const = 0;
+    /**
+     * \return Linetype ID of the given linetype name or RObject::INVALID_ID.
+     */
     virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const = 0;
     virtual bool hasLinetype(const QString& linetypeName) const;
 

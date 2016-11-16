@@ -314,6 +314,12 @@ QString RStorage::getDimensionFont() const {
     return v->getDimensionFont();
 }
 
+/**
+ * Sets the global linetype scale of this document to the given value.
+ *
+ * \param transaction Transaction to use for the modification or NULL to
+ * create a local transaction (default).
+ */
 void RStorage::setLinetypeScale(double v, RTransaction* transaction) {
     bool useLocalTransaction;
     QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);

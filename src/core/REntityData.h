@@ -214,10 +214,17 @@ public:
 
     QString getBlockName() const;
 
+    /**
+     * Sets the linetype of this entity to the given linetype ID.
+     * \see RDocument::getLinetypeId
+     */
     virtual void setLinetypeId(RLinetype::Id linetypeId) {
         this->linetypeId = linetypeId;
     }
 
+    /**
+     * \return Linetype ID of this entity. Note that this might be ByLayer or ByBlock.
+     */
     virtual RLinetype::Id getLinetypeId() const {
         return linetypeId;
     }
