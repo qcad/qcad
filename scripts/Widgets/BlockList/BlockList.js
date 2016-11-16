@@ -242,7 +242,9 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     this.verticalScrollBar().sliderPosition = pos;
 
     if (!isNull(selectedItem)) {
+        this.blockSignals(true);
         selectedItem.setSelected(true);
+        this.blockSignals(false);
     }
 
     this.blockActivated();
