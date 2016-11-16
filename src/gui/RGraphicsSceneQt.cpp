@@ -142,7 +142,12 @@ bool RGraphicsSceneQt::beginPath() {
         currentPainterPath.setPen(localPen);
     }
     else {
-        if (entity!=NULL && entity->getCustomBoolProperty("QCAD", "ScreenWeight", false)==true) {
+        QSharedPointer<RLayer> layer;
+        if (entity!=NULL) {
+            layer = document->queryLayerDirect(entity->getLayerId());
+        }
+        if ((entity!=NULL && entity->getCustomBoolProperty("QCAD", "ScreenWeight", false)==true) ||
+            (!layer.isNull() && layer->getCustomBoolProperty("QCAD", "ScreenWeight", false)==true)) {
             QPen localPen = currentPen;
             localPen.setCosmetic(true);
             localPen.setWidthF(entity->getLineweight()/10);
