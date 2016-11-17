@@ -1737,6 +1737,16 @@ function angleToString(num, decimals) {
  * Formats the given coordinate (RVector) into a locale aware string.
  */
 function coordinateToString(coordinate, decimals, relative, polar, doc) {
+    if (isNull(decimals)) {
+        decimals = 3;
+    }
+    if (isNull(relative)) {
+        relative = false;
+    }
+    if (isNull(polar)) {
+        polar = false;
+    }
+
     var first;
     var second;
     var sep;
