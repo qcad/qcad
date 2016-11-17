@@ -235,7 +235,8 @@ bool RVector::isInside(const RBox& b) const {
 bool RVector::equalsFuzzy(const RVector& v, double tol) const {
     return (qAbs(x-v.x)<tol &&
             qAbs(y-v.y)<tol &&
-            qAbs(z-v.z)<tol);
+            qAbs(z-v.z)<tol &&
+            valid==v.valid);
 }
 
 /**
@@ -246,7 +247,8 @@ bool RVector::equalsFuzzy(const RVector& v, double tol) const {
  */
 bool RVector::equalsFuzzy2D(const RVector& v, double tol) const {
     return (qAbs(x-v.x)<tol &&
-            qAbs(y-v.y)<tol);
+            qAbs(y-v.y)<tol &&
+            valid==v.valid);
 }
 
 /**
