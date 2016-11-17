@@ -220,7 +220,7 @@ QPen RExporter::getPen(const RPainterPath& path) {
     QPen pen = currentPen;
 
     // required for text widths in screen based linetype mode:
-    if (draftMode || screenBasedLinetypes) {
+    if (draftMode || getScreenBasedLinetypes()) {
         pen.setWidth(0);
     }
 
@@ -896,7 +896,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
     // continuous line or
     // we are in draft mode or
     // QCAD is configured to show screen based line patterns
-    if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         exportLineSegment(line, angle);
         return ret;
     }
@@ -1069,7 +1069,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         return;
     }
 
-    if (getEntity() == NULL || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (getEntity() == NULL || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         exportArcSegment(arc);
         return;
     }
@@ -1361,7 +1361,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, doub
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1412,7 +1412,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1482,7 +1482,7 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     QList<QSharedPointer<RShape> > sub = explodable.getExploded();
 
     RLinetypePattern p = getLinetypePattern();
-    if (!p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (!p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         for (int i=0; i<sub.length(); i++) {
             QSharedPointer<RLine> lineP = sub[i].dynamicCast<RLine>();
             if (!lineP.isNull()) {

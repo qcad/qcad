@@ -118,6 +118,10 @@ public:
 
     virtual void startEntity(bool topLevelEntity);
 
+    virtual bool getScreenBasedLinetypes() const {
+        return screenBasedLinetypesOverride;
+    }
+
     virtual void dump() {
         qDebug() << *this;
     }
@@ -137,6 +141,7 @@ private:
     QMap<REntity::Id, RBox> previewClipRectangles;
 
     bool decorating;
+    bool screenBasedLinetypesOverride;
 };
 
 Q_DECLARE_METATYPE(RGraphicsSceneQt*)

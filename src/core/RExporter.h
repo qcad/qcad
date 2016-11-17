@@ -298,7 +298,7 @@ public:
         setScreenBasedLinetypes(!screenBasedLinetypes);
     }
 
-    bool getScreenBasedLinetypes() const {
+    virtual bool getScreenBasedLinetypes() const {
         return screenBasedLinetypes;
     }
 

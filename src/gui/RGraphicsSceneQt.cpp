@@ -33,7 +33,7 @@
 
 
 RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface)
-    : RGraphicsScene(documentInterface), decorating(false) {
+    : RGraphicsScene(documentInterface), decorating(false), screenBasedLinetypesOverride(false) {
 
     setProjectionRenderingHint(RS::RenderTop);
 
@@ -113,15 +113,24 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath.setZLevel(0);
     currentPainterPath.setNoClipping(!getClipping());
 
-    if (screenBasedLinetypes && currentPen.style()==Qt::SolidLine) {
+    REntity* entity = getEntity();
+    QSharedPointer<RLayer> layer;
+    if (entity!=NULL) {
+        layer = document->queryLayerDirect(entity->getLayerId());
+    }
+    screenBasedLinetypesOverride = screenBasedLinetypes;
+    if (!layer.isNull() && layer->getCustomBoolProperty("QCAD", "ScreenBasedLinetypes", false)==true) {
+        screenBasedLinetypesOverride = true;
+    }
+
+    if (getScreenBasedLinetypes() && currentPen.style()==Qt::SolidLine) {
         QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype();
         if (!pat.isEmpty()) {
             currentPen.setDashPattern(pat);
         }
     }
 
-    REntity* entity = getEntity();
-    if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         QPen localPen = currentPen;
         if (twoColorSelectedMode) {
             // fixed width for selected entities in two color selected mode:
@@ -142,10 +151,6 @@ bool RGraphicsSceneQt::beginPath() {
         currentPainterPath.setPen(localPen);
     }
     else {
-        QSharedPointer<RLayer> layer;
-        if (entity!=NULL) {
-            layer = document->queryLayerDirect(entity->getLayerId());
-        }
         if ((entity!=NULL && entity->getCustomBoolProperty("QCAD", "ScreenWeight", false)==true) ||
             (!layer.isNull() && layer->getCustomBoolProperty("QCAD", "ScreenWeight", false)==true)) {
             QPen localPen = currentPen;
@@ -339,7 +344,7 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
 //     p.addArc(arc);
 //     currentPainterPath.addPath(p);
 
-    if (twoColorSelectedMode || screenBasedLinetypes) {
+    if (twoColorSelectedMode || getScreenBasedLinetypes()) {
         // QPainterPath with pattern shown as solid (when clipped?)
         // bug workaround:
         currentPainterPath.moveTo(arc.getStartPoint());
@@ -452,7 +457,7 @@ void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
     // add new painter path with current entity ID:
     RPainterPath p;
     p.setZLevel(0);
-    if (draftMode || screenBasedLinetypes) {
+    if (draftMode || getScreenBasedLinetypes()) {
         QPen draftPen = currentPen;
         draftPen.setWidth(0);
         p.setPen(draftPen);
