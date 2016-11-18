@@ -46,10 +46,18 @@ QList<RRefPoint> RSplineData::getReferencePoints(RS::ProjectionRenderingHint hin
     Q_UNUSED(hint)
 
     if (countFitPoints()!=0) {
-        return RRefPoint::toRefPointList(getFitPoints());
+        QList<RRefPoint> ret = RRefPoint::toRefPointList(getFitPoints());
+        ret.first().setStart(true);
+        ret.last().setEnd(true);
+        return ret;
     }
     else {
-        return RRefPoint::toRefPointList(getControlPoints());
+        QList<RRefPoint> ret = RRefPoint::toRefPointList(getControlPoints());
+        if (!isClosed()) {
+            ret.first().setStart(true);
+            ret.last().setEnd(true);
+        }
+        return ret;
     }
 }
 

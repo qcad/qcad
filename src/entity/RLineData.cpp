@@ -56,8 +56,8 @@ QList<RRefPoint> RLineData::getReferencePoints(RS::ProjectionRenderingHint hint)
     Q_UNUSED(hint)
 
     QList<RRefPoint> ret;
-    ret.append(startPoint);
-    ret.append(endPoint);
+    ret.append(RRefPoint(startPoint, RRefPoint::Start));
+    ret.append(RRefPoint(endPoint, RRefPoint::End));
     return ret;
 }
 

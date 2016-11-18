@@ -40,8 +40,8 @@ QList<RRefPoint> RArcData::getReferencePoints(RS::ProjectionRenderingHint hint) 
 
     QList<RRefPoint> ret;
     ret.append(RRefPoint(center, RRefPoint::Center));
-    ret.append(getStartPoint());
-    ret.append(getEndPoint());
+    ret.append(RRefPoint(getStartPoint(), RRefPoint::Start));
+    ret.append(RRefPoint(getEndPoint(), RRefPoint::End));
     ret.append(RRefPoint(getMiddlePoint(), RRefPoint::Secondary));
 
     QList<RRefPoint> p;
