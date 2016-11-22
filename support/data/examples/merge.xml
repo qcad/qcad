@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns="http://qcad.org/merge/elements/1.0/" unit="Millimeter">
+  <item src="merge_a.dxf">
+    <insert x="0" y="0" angle="0" scale="1" flipx="false" flipy="false" />
+  </item>
+  <item src="merge_b.dxf">
+    <insert x="100" y="0" angle="0" />
+  </item>
+</merge>
