@@ -56,6 +56,7 @@ void RMemoryStorage::clear() {
     layerMap.clear();
     layoutMap.clear();
     linetypeMap.clear();
+    childMap.clear();
     transactionMap.clear();
     documentVariables.clear();
     variables.clear();
@@ -428,6 +429,14 @@ QSet<REntity::Id> RMemoryStorage::queryLayerBlockEntities(RLayer::Id layerId, RB
 }
 
 QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {
+    if (!childMap.contains(parentId)) {
+        return QSet<REntity::Id>();
+    }
+
+    QList<REntity::Id> childIds = childMap.values(parentId);
+    return childIds.toSet();
+
+    /*
     QSet<REntity::Id> result; // = queryBlockEntities(blockRef->getReferencedBlockId());
     if (parentId==REntity::INVALID_ID) {
         return result;
@@ -446,9 +455,13 @@ QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::E
     }
 
     return result;
+    */
 }
 
 bool RMemoryStorage::hasChildEntities(REntity::Id parentId) {
+    return childMap.contains(parentId);
+
+    /*
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
@@ -460,6 +473,7 @@ bool RMemoryStorage::hasChildEntities(REntity::Id parentId) {
     }
 
     return false;
+    */
 }
 
 QSet<REntity::Id> RMemoryStorage::queryBlockReferences(RBlock::Id blockId) {
@@ -1176,6 +1190,10 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         entityMap[entity->getId()] = entity;
         blockEntityMap.insert(entity->getBlockId(), entity);
         setMaxDrawOrder(qMax(entity->getDrawOrder()+1, getMaxDrawOrder()));
+
+        if (entity->getParentId()!=REntity::INVALID_ID) {
+            childMap.insert(entity->getParentId(), entity->getId());
+        }
     }
 
     if (!layer.isNull()) {
@@ -1251,6 +1269,11 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
         if (!entity.isNull()) {
             blockEntityMap.remove(entity->getBlockId(), entity);
             //qDebug() << "deleteObject: removed " << entity->getId() << " from block " << entity->getBlockId();
+
+            // remove entity from childMap values:
+            if (entity->getParentId()!=REntity::INVALID_ID) {
+                childMap.remove(entity->getParentId(), entity->getId());
+            }
         }
     }
 
@@ -1263,6 +1286,9 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
     }
     if (layerMap.contains(objectId)) {
         layerMap.remove(objectId);
+    }
+    if (childMap.contains(objectId)) {
+        childMap.remove(objectId);
     }
 
     clearSelectionCache();

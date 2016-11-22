@@ -207,6 +207,8 @@ protected:
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
     QHash<RLayout::Id, QSharedPointer<RLayout> > layoutMap;
     QHash<RLinetype::Id, QSharedPointer<RLinetype> > linetypeMap;
+    /** maps parent entity IDs to child entity IDs */
+    QMultiHash<REntity::Id, REntity::Id> childMap;
     QHash<int, RTransaction> transactionMap;
 
     // document wide variables are stored as custom properties in this object:
