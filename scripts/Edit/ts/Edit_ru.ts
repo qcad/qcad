@@ -36,13 +36,13 @@ the preference changes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
+        <location line="+1"/>
+        <source>Changes will affect new drawings but NOT the current drawing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1"/>
-        <source>Changes will affect new drawings but NOT the current drawing.</source>
+        <location line="+1"/>
+        <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

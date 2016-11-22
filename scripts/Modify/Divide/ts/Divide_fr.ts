@@ -12,7 +12,7 @@
         <translation type="vanished">Choisissez ligne, arc, cercle, ellipse ou spline</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
+        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>Choisir ligne, arc, cercle, ellipse, spline ou polyligne</translation>
     </message>

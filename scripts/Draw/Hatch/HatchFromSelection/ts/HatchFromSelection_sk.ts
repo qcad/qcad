@@ -4,72 +4,87 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation>Nie je vybratý žiadny obrys.</translation>
+        <translation type="vanished">Nie je vybratý žiadny obrys.</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Kontúra nie je uzavretá v bode %1/%2.</translation>
+        <translation type="vanished">Kontúra nie je uzavretá v bode %1/%2.</translation>
     </message>
     <message>
-        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Každý prvok obrysu musí byť úsečka, oblúk, kružnica, elipsový oblúk, elipsa, krivka alebo spline. Nájdené:</translation>
+        <translation type="vanished">Každý prvok obrysu musí byť úsečka, oblúk, kružnica, elipsový oblúk, elipsa, krivka alebo spline. Nájdené:</translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Šrafy/Výplň</translation>
+        <translation type="vanished">&amp;Šrafy/Výplň</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
-        <translation>Vytvoriť šrafy alebo výplň</translation>
+        <translation type="vanished">Vytvoriť šrafy alebo výplň</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="+7"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>HatchDialog</name>
     <message>
-        <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Šrafovanie / Výplň</translation>
+        <translation type="vanished">Šrafovanie / Výplň</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Type</source>
-        <translation>Možnosť</translation>
+        <translation type="vanished">Možnosť</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Výplň</translation>
+        <translation type="vanished">Výplň</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Šrafy</translation>
+        <translation type="vanished">Šrafy</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Preview</source>
-        <translation>Náhľad</translation>
+        <translation type="vanished">Náhľad</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Pattern</source>
-        <translation>Vzor</translation>
+        <translation type="vanished">Vzor</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Angle:</source>
-        <translation>Uhol:</translation>
+        <translation type="vanished">Uhol:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Scale:</source>
-        <translation>Mierka:</translation>
+        <translation type="vanished">Mierka:</translation>
+    </message>
+</context>
+<context>
+    <name>HatchFromSelection</name>
+    <message>
+        <location filename="../HatchFromSelection.js" line="+56"/>
+        <source>No boundary selected.</source>
+        <translation type="unfinished">Nie je vybratý žiadny obrys.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Loop not closed at point %1/%2.</source>
+        <translation type="unfinished">Kontúra nie je uzavretá v bode %1/%2.</translation>
+    </message>
+    <message>
+        <location line="+96"/>
+        <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
+        <translation type="unfinished">Každý prvok obrysu musí byť úsečka, oblúk, kružnica, elipsový oblúk, elipsa, krivka alebo spline. Nájdené:</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <source>&amp;Hatch from Selection</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

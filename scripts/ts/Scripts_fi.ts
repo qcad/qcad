@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2036"/>
+        <location line="+2059"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-1763"/>
+        <location line="-1786"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -98,7 +98,7 @@
         <translation>CAD työkalut</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+710"/>
         <source>Entity is on a locked layer.</source>
         <translation>Kohde on lukitussa tasossa.</translation>
     </message>
@@ -179,7 +179,7 @@
         <translation type="vanished">Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+896"/>
+        <location filename="../ShapeAlgorithms.js" line="+1361"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>
@@ -195,7 +195,7 @@
         <translation>Kaari ei mahdollinen.</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
         <translation>Virheellinen määrä segmenttejä %1.</translation>
     </message>
@@ -390,7 +390,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+757"/>
+        <location filename="../library.js" line="+768"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -778,7 +778,7 @@
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+275"/>
+        <location filename="../simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
         <translation type="unfinished"></translation>
     </message>

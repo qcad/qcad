@@ -117,7 +117,17 @@
         <translation>Výplň boxu výberu sprava doľava:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Start points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Snap Tools</source>
         <translation>Nástroje prichytávania</translation>
     </message>

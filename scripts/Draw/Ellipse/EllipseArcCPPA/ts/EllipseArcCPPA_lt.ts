@@ -44,7 +44,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+264"/>
+        <location line="+269"/>
         <source>Invalid major radius.</source>
         <translation type="unfinished"></translation>
     </message>

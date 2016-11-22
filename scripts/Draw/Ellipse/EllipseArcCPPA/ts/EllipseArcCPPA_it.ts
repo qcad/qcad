@@ -44,7 +44,7 @@
         <translation>Parametro finale</translation>
     </message>
     <message>
-        <location line="+264"/>
+        <location line="+269"/>
         <source>Invalid major radius.</source>
         <translation>Invalido raggio maggiore.</translation>
     </message>

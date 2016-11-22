@@ -35,7 +35,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Coordenar inválido &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+223"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconhecido, ou coordenadas ou valor inválido: &apos;%1&apos;</translation>
     </message>
@@ -55,7 +55,7 @@ Linha de Comando</translatorcomment>
         <translation>Você pode modificar o número/formato das coordenadas nas preferências do aplicativo.</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+88"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Falha na transação. Por favor verifique por autorreferências em Blocos ou camadas bloqueadas ou invisíveis nos Blocos.</translation>
     </message>
@@ -69,12 +69,12 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="-337"/>
+        <location line="-362"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+218"/>
         <source>Invalid value:</source>
         <translation>Valor inválido:</translation>
     </message>
@@ -84,7 +84,7 @@ Linha de Comando</translatorcomment>
         <translation>Coordenada ou distância inválida &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+137"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -94,12 +94,12 @@ Aviso:</translatorcomment>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Info</source>
         <translation>Informação</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>Expression</source>
         <translation>Expressão</translation>
     </message>

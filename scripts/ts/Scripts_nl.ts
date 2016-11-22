@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2036"/>
+        <location line="+2059"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1763"/>
+        <location line="-1786"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
@@ -94,7 +94,7 @@
         <translation>CAD gereedschappen</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+710"/>
         <source>Entity is on a locked layer.</source>
         <translation>Object is op een vergrendelde laag.</translation>
     </message>
@@ -175,7 +175,7 @@
         <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+896"/>
+        <location filename="../ShapeAlgorithms.js" line="+1361"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>
@@ -191,7 +191,7 @@
         <translation>Geen boog mogelijk.</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
         <translation>Ongeldig aantal segmenten: %1.</translation>
     </message>
@@ -386,7 +386,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+757"/>
+        <location filename="../library.js" line="+768"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
@@ -774,7 +774,7 @@
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+275"/>
+        <location filename="../simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Eerste object kan niet worden getrimmed.</translation>
     </message>

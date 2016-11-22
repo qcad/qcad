@@ -107,7 +107,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Start points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Snap Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -147,7 +157,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-562"/>
+        <location line="-616"/>
         <source>Origin:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -121,7 +121,17 @@ Arrière-plan du dessin :</translatorcomment>
         <translation>Zone de sélection croisée :</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Start points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Snap Tools</source>
         <translation>Outils de accrochage</translation>
     </message>
@@ -171,7 +181,7 @@ Arrière-plan du dessin :</translatorcomment>
         <translation type="obsolete">Réticule inactif :</translation>
     </message>
     <message>
-        <location line="-643"/>
+        <location line="-697"/>
         <source>Crosshairs:</source>
         <translation>Réticule :</translation>
     </message>

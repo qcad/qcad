@@ -8,7 +8,7 @@
         <translation type="vanished">Vyberte čiaru, oblúk, kružnicu, elipsu alebo spline</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
+        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>Vyberte čiaru, oblúk, kružnicu, elipsu, spline alebo krivku</translation>
     </message>

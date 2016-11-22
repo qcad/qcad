@@ -118,7 +118,17 @@ Tło okna:</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Start points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Snap Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -163,7 +173,7 @@ Tło okna:</translatorcomment>
         <translation type="obsolete">Nieaktywne Krzyżyk:</translation>
     </message>
     <message>
-        <location line="-562"/>
+        <location line="-616"/>
         <source>Origin:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pochodzenie:</translation>

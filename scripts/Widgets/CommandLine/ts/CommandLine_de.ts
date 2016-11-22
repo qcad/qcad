@@ -28,7 +28,7 @@
         <translation type="obsolete">Ungültige Koordinate &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+223"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Unbekanntes Kommando oder ungültige Koordinate oder Wert: &apos;%1&apos;</translation>
     </message>
@@ -48,7 +48,7 @@
         <translation>Sie können das Format für Zahlen und Koordinaten in den Einstellungen anpassen.</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+88"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Transaktion fehlgeschlagen. Bitte überprüfen Sie Ihre Zeichnung auf mögliche Blockrekursionen und gesperrte oder unsichtbare Layer oder Blöcke.</translation>
     </message>
@@ -61,12 +61,12 @@
         <translation type="obsolete">Versuch Objekte auf gesperrtem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
     <message>
-        <location line="-337"/>
+        <location line="-362"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+218"/>
         <source>Invalid value:</source>
         <translation>Ungültiger Wert:</translation>
     </message>
@@ -76,17 +76,17 @@
         <translation>Ungültige Koordinate oder Distanz &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+137"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>Expression</source>
         <translation>Ausdruck</translation>
     </message>

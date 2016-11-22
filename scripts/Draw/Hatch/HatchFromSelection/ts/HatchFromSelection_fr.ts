@@ -4,72 +4,87 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation>Pas de frontière sélectionnée.</translation>
+        <translation type="vanished">Pas de frontière sélectionnée.</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Contour pas fermé au point %1/%2.</translation>
+        <translation type="vanished">Contour pas fermé au point %1/%2.</translation>
     </message>
     <message>
-        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Chaque objet frontière doit être une ligne, arc, cercle, un arc elliptique, ellipse, polyligne ou une spline. Trouvés:</translation>
+        <translation type="vanished">Chaque objet frontière doit être une ligne, arc, cercle, un arc elliptique, ellipse, polyligne ou une spline. Trouvés:</translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Hachure</translation>
+        <translation type="vanished">&amp;Hachure</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
-        <translation>Dessinez une hachure ou un remplissage uni</translation>
+        <translation type="vanished">Dessinez une hachure ou un remplissage uni</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="+7"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>HatchDialog</name>
     <message>
-        <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Hachure</translation>
+        <translation type="vanished">Hachure</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation type="vanished">Type</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Remplissage uni</translation>
+        <translation type="vanished">Remplissage uni</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Motif hachure</translation>
+        <translation type="vanished">Motif hachure</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Preview</source>
-        <translation>Prévisualisation</translation>
+        <translation type="vanished">Prévisualisation</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Pattern</source>
-        <translation>Motif</translation>
+        <translation type="vanished">Motif</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Angle:</source>
-        <translation>Angle :</translation>
+        <translation type="vanished">Angle :</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Scale:</source>
-        <translation>Echelle :</translation>
+        <translation type="vanished">Echelle :</translation>
+    </message>
+</context>
+<context>
+    <name>HatchFromSelection</name>
+    <message>
+        <location filename="../HatchFromSelection.js" line="+56"/>
+        <source>No boundary selected.</source>
+        <translation type="unfinished">Pas de frontière sélectionnée.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Loop not closed at point %1/%2.</source>
+        <translation type="unfinished">Contour pas fermé au point %1/%2.</translation>
+    </message>
+    <message>
+        <location line="+96"/>
+        <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
+        <translation type="unfinished">Chaque objet frontière doit être une ligne, arc, cercle, un arc elliptique, ellipse, polyligne ou une spline. Trouvés:</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <source>&amp;Hatch from Selection</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

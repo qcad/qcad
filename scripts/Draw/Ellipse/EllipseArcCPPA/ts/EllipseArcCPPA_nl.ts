@@ -44,7 +44,7 @@
         <translation>Eind parameter</translation>
     </message>
     <message>
-        <location line="+264"/>
+        <location line="+269"/>
         <source>Invalid major radius.</source>
         <translation>Ongeldig straal eerste as.</translation>
     </message>

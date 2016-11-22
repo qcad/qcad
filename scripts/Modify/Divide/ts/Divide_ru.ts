@@ -8,7 +8,7 @@
         <translation type="vanished">Выбрать линию, дугу, окружность или кривую</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
+        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>Выберите линию, дугу, окружность, эллипс, кривую или многоугольник</translation>
     </message>

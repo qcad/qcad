@@ -9,7 +9,7 @@
         <translation type="obsolete">Wybierz linię, łuk lub okrąg</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
+        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation type="unfinished"></translation>
     </message>

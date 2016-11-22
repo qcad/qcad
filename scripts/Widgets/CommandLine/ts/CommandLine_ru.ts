@@ -21,7 +21,7 @@
         <translation>&amp;Командная строка</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+188"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -51,22 +51,22 @@
         <translation>Вы можете изменить формат числа/координат в настройках приложения.</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+88"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Транзакция не удалась. Пожалуйста, проверьте рекурсии блоков и блокировки, или невидимые слои, или блоки.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+9"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Info</source>
         <translation>Информация</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>Expression</source>
         <translation type="unfinished"></translation>
     </message>

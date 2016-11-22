@@ -59,7 +59,7 @@ Kąt obracania</translatorcomment>
         <translation type="unfinished">Parametr End</translation>
     </message>
     <message>
-        <location line="+264"/>
+        <location line="+269"/>
         <source>Invalid major radius.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieprawidłowy główny promień.</translation>

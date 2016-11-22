@@ -72,7 +72,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2036"/>
+        <location line="+2059"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -81,7 +81,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1763"/>
+        <location line="-1786"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -130,7 +130,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+710"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>A entidade está em uma camada bloqueada.</translation>
@@ -221,7 +221,7 @@ Ferramentas CAD</translatorcomment>
         <translation type="vanished">O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+896"/>
+        <location filename="../ShapeAlgorithms.js" line="+1361"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -239,7 +239,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Nenhum arco possível.</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Número de segmentos inválido: %1.</translation>
@@ -517,7 +517,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+757"/>
+        <location filename="../library.js" line="+768"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>
@@ -1047,7 +1047,7 @@ Insira o texto de dimensão
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+275"/>
+        <location filename="../simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
         <translation>A primeira entidade não pode ser aparada.</translation>
     </message>

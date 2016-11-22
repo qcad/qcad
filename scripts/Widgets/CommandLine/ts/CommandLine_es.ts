@@ -30,7 +30,7 @@
         <translation type="obsolete">Inválida coordinar &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+223"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconocido o valor de coordenadas no válido: &apos;%1&apos;</translation>
     </message>
@@ -50,7 +50,7 @@
         <translation>Usted puede cambiar el formato número y coordenada en las preferencias de la aplicación.</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+88"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
@@ -64,12 +64,12 @@
         <translation type="obsolete">Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="-337"/>
+        <location line="-362"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+218"/>
         <source>Invalid value:</source>
         <translation>Valor no válido:</translation>
     </message>
@@ -79,17 +79,17 @@
         <translation>Inválida coordinar o distancia &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+137"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>Expression</source>
         <translation>Expresión</translation>
     </message>

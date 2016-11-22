@@ -97,7 +97,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+309"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>

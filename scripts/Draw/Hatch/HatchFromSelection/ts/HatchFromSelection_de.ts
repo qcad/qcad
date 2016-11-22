@@ -4,76 +4,91 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation>Keine Kontur selektiert.</translation>
+        <translation type="vanished">Keine Kontur selektiert.</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Kontur nicht geschlossen am Punkt %1/%2.</translation>
+        <translation type="vanished">Kontur nicht geschlossen am Punkt %1/%2.</translation>
     </message>
     <message>
-        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Jedes Konturelement muss eine Linie, ein Bogen, ein Kreis, ein Ellipsenbogen, eine Ellipse, eine Polylinie oder Spline sein. Gefunden:</translation>
+        <translation type="vanished">Jedes Konturelement muss eine Linie, ein Bogen, ein Kreis, ein Ellipsenbogen, eine Ellipse, eine Polylinie oder Spline sein. Gefunden:</translation>
     </message>
     <message>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found: </source>
         <translation type="obsolete">Jedes Konturelement muss eine Linie, ein Bogen, ein Kreis, ein Ellipsenbogen, eine Ellipse, eine Polylinie oder Spline sein. Gefunden:</translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Schraffur</translation>
+        <translation type="vanished">&amp;Schraffur</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
-        <translation>Schraffur oder Füllung</translation>
+        <translation type="vanished">Schraffur oder Füllung</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="+7"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>HatchDialog</name>
     <message>
-        <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Schraffur</translation>
+        <translation type="vanished">Schraffur</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation type="vanished">Typ</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Solide Füllung</translation>
+        <translation type="vanished">Solide Füllung</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Schraffurmuster</translation>
+        <translation type="vanished">Schraffurmuster</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Preview</source>
-        <translation>Vorschau</translation>
+        <translation type="vanished">Vorschau</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Pattern</source>
-        <translation>Muster</translation>
+        <translation type="vanished">Muster</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Angle:</source>
-        <translation>Winkel:</translation>
+        <translation type="vanished">Winkel:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Scale:</source>
-        <translation>Skalierung:</translation>
+        <translation type="vanished">Skalierung:</translation>
+    </message>
+</context>
+<context>
+    <name>HatchFromSelection</name>
+    <message>
+        <location filename="../HatchFromSelection.js" line="+56"/>
+        <source>No boundary selected.</source>
+        <translation type="unfinished">Keine Kontur selektiert.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Loop not closed at point %1/%2.</source>
+        <translation type="unfinished">Kontur nicht geschlossen am Punkt %1/%2.</translation>
+    </message>
+    <message>
+        <location line="+96"/>
+        <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
+        <translation type="unfinished">Jedes Konturelement muss eine Linie, ein Bogen, ein Kreis, ein Ellipsenbogen, eine Ellipse, eine Polylinie oder Spline sein. Gefunden:</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <source>&amp;Hatch from Selection</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

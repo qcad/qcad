@@ -44,7 +44,7 @@
         <translation>Krajni parametar</translation>
     </message>
     <message>
-        <location line="+264"/>
+        <location line="+269"/>
         <source>Invalid major radius.</source>
         <translation>Neispravna velika poluos.</translation>
     </message>

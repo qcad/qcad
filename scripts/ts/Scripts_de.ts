@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2036"/>
+        <location line="+2059"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1763"/>
+        <location line="-1786"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -102,7 +102,7 @@
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+710"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
@@ -183,7 +183,7 @@
         <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+903"/>
+        <location filename="../ShapeAlgorithms.js" line="+1368"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -193,7 +193,7 @@
         <translation>Kein Bogen möglich.</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
         <translation>Ungültige Anzahl Segmente: %1.</translation>
     </message>
@@ -207,7 +207,7 @@
         <translation type="obsolete">Mindestens zwei Punkte sind identisch</translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="-61"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Mindestens zwei Punkte sind identisch.</translation>
@@ -446,7 +446,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+757"/>
+        <location filename="../library.js" line="+768"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>
@@ -834,7 +834,7 @@
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+275"/>
+        <location filename="../simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
     </message>

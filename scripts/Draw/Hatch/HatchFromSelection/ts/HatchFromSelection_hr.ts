@@ -4,14 +4,41 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation>Nije odabrana granica.</translation>
+        <translation type="vanished">Nije odabrana granica.</translation>
+    </message>
+    <message>
+        <source>Loop not closed at point %1/%2.</source>
+        <translation type="vanished">Petlja nije zatvorena u točki %1/%2.</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="+7"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HatchDialog</name>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Kut:</translation>
+    </message>
+    <message>
+        <source>Scale:</source>
+        <translation type="vanished">Mjerilo:</translation>
+    </message>
+</context>
+<context>
+    <name>HatchFromSelection</name>
+    <message>
+        <location filename="../HatchFromSelection.js" line="+56"/>
+        <source>No boundary selected.</source>
+        <translation type="unfinished">Nije odabrana granica.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Petlja nije zatvorena u točki %1/%2.</translation>
+        <translation type="unfinished">Petlja nije zatvorena u točki %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -19,57 +46,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="+2"/>
-        <source>&amp;Hatch</source>
+        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <source>&amp;Hatch from Selection</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw hatch or solid fill</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>HatchDialog</name>
-    <message>
-        <location filename="../HatchDialog.ui" line="+17"/>
-        <source>Hatch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Solid Fill</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Hatch Pattern</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Preview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Pattern</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Angle:</source>
-        <translation>Kut:</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Scale:</source>
-        <translation>Mjerilo:</translation>
     </message>
 </context>
 </TS>

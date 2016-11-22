@@ -4,7 +4,15 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+56"/>
+        <location filename="../HatchFromSelectionInit.js" line="+7"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HatchFromSelection</name>
+    <message>
+        <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19,56 +27,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="+2"/>
-        <source>&amp;Hatch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw hatch or solid fill</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>HatchDialog</name>
-    <message>
-        <location filename="../HatchDialog.ui" line="+17"/>
-        <source>Hatch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Solid Fill</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Hatch Pattern</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Preview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Pattern</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Angle:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Scale:</source>
+        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <source>&amp;Hatch from Selection</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

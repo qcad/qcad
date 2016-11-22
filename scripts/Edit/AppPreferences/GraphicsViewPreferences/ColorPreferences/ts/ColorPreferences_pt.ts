@@ -134,7 +134,17 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation>Preenchimento da caixa de seleção cruzada:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Start points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Snap Tools</source>
         <translation>Ferramentas de Salto</translation>
     </message>
@@ -179,7 +189,7 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation type="obsolete">Mira inativos:</translation>
     </message>
     <message>
-        <location line="-562"/>
+        <location line="-616"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: qgis_pt.ts--

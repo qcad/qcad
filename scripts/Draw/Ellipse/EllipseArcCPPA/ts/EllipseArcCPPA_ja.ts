@@ -44,7 +44,7 @@
         <translation>終了パラメータ</translation>
     </message>
     <message>
-        <location line="+264"/>
+        <location line="+269"/>
         <source>Invalid major radius.</source>
         <translation>無効な長軸半径です。</translation>
     </message>

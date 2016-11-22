@@ -27,7 +27,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+207"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieznane polecenie lub nieprawidłowy współrzędnych lub wartość:&apos;&amp;#39;</translation>
@@ -51,7 +51,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Możesz zmienić numer / format współrzędnych w preferencjach aplikacji.</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+88"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61,12 +61,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-337"/>
+        <location line="-362"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+218"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -76,7 +76,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+137"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -85,7 +85,7 @@ Ostrzeżenie: %1</translatorcomment>
         <translation type="unfinished">Ostrzeżenie</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Info</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -95,7 +95,7 @@ Wypisuje informację debugowania obiektów</translatorcomment>
         <translation type="unfinished">Informacja</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>Expression</source>
         <translation type="unfinished"></translation>
     </message>

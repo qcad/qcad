@@ -127,7 +127,17 @@ Ver gráficos</translatorcomment>
         <translation>Cuadro de selección de captura:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Start points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Snap Tools</source>
         <translation>Herramientas de forzar</translation>
     </message>
@@ -172,7 +182,7 @@ Ver gráficos</translatorcomment>
         <translation type="obsolete">Retículo inactivo:</translation>
     </message>
     <message>
-        <location line="-562"/>
+        <location line="-616"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--

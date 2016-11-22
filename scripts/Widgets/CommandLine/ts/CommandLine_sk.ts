@@ -21,7 +21,7 @@
         <translation>&amp;Príkazový riadok</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+188"/>
         <source>Invalid value:</source>
         <translation>Neplatná hodnota:</translation>
     </message>
@@ -51,22 +51,22 @@
         <translation>Formát čísiel / súradníc môžete zmeniť v nastaveniach programu.</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+88"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Úkon zlyhal. Prosím, skontrolujte blokové rekurzie a zamknuté alebo neviditeľné vrstvy alebo bloky.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+9"/>
         <source>Warning</source>
         <translation>Varovanie</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>Expression</source>
         <translation>Výraz</translation>
     </message>

@@ -121,7 +121,17 @@
         <translation>Kreuzende Auswahlbox:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Start points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Snap Tools</source>
         <translation>Fangwerkzeuge</translation>
     </message>
@@ -177,7 +187,7 @@
         <translation type="obsolete">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location line="-643"/>
+        <location line="-697"/>
         <source>Crosshairs:</source>
         <translation>Fadenkreuz:</translation>
     </message>

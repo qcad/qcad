@@ -12,7 +12,7 @@
         <translation type="vanished">Elija línea, arco, círculo, elipse o spline</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
+        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>Seleccionar línea, arco, círculo, elipse, spline o polilínea</translation>
     </message>

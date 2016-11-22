@@ -21,7 +21,7 @@
         <translation>&amp;Comando regel</translation>
     </message>
     <message>
-        <location line="+167"/>
+        <location line="+188"/>
         <source>Invalid value:</source>
         <translation>Ongeldig waarde:</translation>
     </message>
@@ -51,22 +51,22 @@
         <translation>U kunt het formaat voor getallen en coördinaten in de programma voorkeursinstellingen wijzigen.</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+88"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Transactie mislukt. Controleer tekening voor blok recursies en vergrendeld of onzichtbare lagen of blokken.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+9"/>
         <source>Warning</source>
         <translation>Waarschuwing</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>Expression</source>
         <translation>Uitdrukking</translation>
     </message>

@@ -12,7 +12,7 @@
         <translation type="vanished">線分,弧,円,楕円またはスプラインを選択してください</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
+        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation type="unfinished"></translation>
     </message>

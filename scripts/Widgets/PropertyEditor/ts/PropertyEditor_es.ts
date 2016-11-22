@@ -67,13 +67,13 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+619"/>
+        <location line="+611"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1136"/>
+        <location line="-1128"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -131,7 +131,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+644"/>
+        <location line="+636"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -161,7 +161,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-486"/>
+        <location line="-478"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -182,7 +182,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+320"/>
+        <location line="+312"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

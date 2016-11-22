@@ -44,7 +44,7 @@
         <translation>Loppuparametri</translation>
     </message>
     <message>
-        <location line="+264"/>
+        <location line="+269"/>
         <source>Invalid major radius.</source>
         <translation>Virheellinen pääsäde.</translation>
     </message>

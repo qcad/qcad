@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+268"/>
+        <location filename="../src/core/RUnit.cpp" line="+272"/>
         <source>None</source>
         <translation>Нет</translation>
     </message>
@@ -309,7 +309,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Расположение</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -544,7 +544,7 @@
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished"></translation>
+        <translation>Общий</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
@@ -567,7 +567,7 @@
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Порядок перехода</translation>
     </message>
     <message>
         <location line="+1"/>

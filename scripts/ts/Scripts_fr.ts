@@ -68,12 +68,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2036"/>
+        <location line="+2059"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-1763"/>
+        <location line="-1786"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -110,7 +110,7 @@
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+710"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité est sur un calque verrouillé.</translation>
@@ -201,7 +201,7 @@
         <translation type="vanished">Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+896"/>
+        <location filename="../ShapeAlgorithms.js" line="+1361"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -219,7 +219,7 @@
         <translation>Aucun arc possible.</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Invalid nombre de segments :.%1.</translation>
@@ -457,7 +457,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+757"/>
+        <location filename="../library.js" line="+768"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>
@@ -883,7 +883,7 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
 <context>
     <name>simple_modify</name>
     <message>
-        <location filename="../simple_modify.js" line="+275"/>
+        <location filename="../simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Première entité ne peut pas être ajuster.</translation>
     </message>

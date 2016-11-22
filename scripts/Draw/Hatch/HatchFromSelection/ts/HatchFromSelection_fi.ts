@@ -4,72 +4,87 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation>Ei rajaa valittuna.</translation>
+        <translation type="vanished">Ei rajaa valittuna.</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Silmukkaa ei suljettu pisteessa %1/%2.</translation>
+        <translation type="vanished">Silmukkaa ei suljettu pisteessa %1/%2.</translation>
     </message>
     <message>
-        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai splini. Löydetty:</translation>
+        <translation type="vanished">Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai splini. Löydetty:</translation>
     </message>
     <message>
-        <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Kuviotäyttö</translation>
+        <translation type="vanished">&amp;Kuviotäyttö</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw hatch or solid fill</source>
-        <translation>Piirrä kuviotäyttö tai tasainen täyttö</translation>
+        <translation type="vanished">Piirrä kuviotäyttö tai tasainen täyttö</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="+7"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>HatchDialog</name>
     <message>
-        <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Kuviotäyttö</translation>
+        <translation type="vanished">Kuviotäyttö</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Type</source>
-        <translation>Tyyppi</translation>
+        <translation type="vanished">Tyyppi</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Solid Fill</source>
-        <translation>Tasainen Täyttö</translation>
+        <translation type="vanished">Tasainen Täyttö</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Kuviotäytön Kuvio</translation>
+        <translation type="vanished">Kuviotäytön Kuvio</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Preview</source>
-        <translation>Esikatselu</translation>
+        <translation type="vanished">Esikatselu</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Pattern</source>
-        <translation>Kuvio</translation>
+        <translation type="vanished">Kuvio</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Angle:</source>
-        <translation>Kulma:</translation>
+        <translation type="vanished">Kulma:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Scale:</source>
-        <translation>Mittakaava:</translation>
+        <translation type="vanished">Mittakaava:</translation>
+    </message>
+</context>
+<context>
+    <name>HatchFromSelection</name>
+    <message>
+        <location filename="../HatchFromSelection.js" line="+56"/>
+        <source>No boundary selected.</source>
+        <translation type="unfinished">Ei rajaa valittuna.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Loop not closed at point %1/%2.</source>
+        <translation type="unfinished">Silmukkaa ei suljettu pisteessa %1/%2.</translation>
+    </message>
+    <message>
+        <location line="+96"/>
+        <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
+        <translation type="unfinished">Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai splini. Löydetty:</translation>
+    </message>
+    <message>
+        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <source>&amp;Hatch from Selection</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

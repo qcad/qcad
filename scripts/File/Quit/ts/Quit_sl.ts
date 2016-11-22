@@ -4,7 +4,7 @@
 <context>
     <name>Quit</name>
     <message>
-        <location filename="../QuitInit.js" line="+2"/>
+        <location filename="../QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
         <translation>&amp;Izhod</translation>
     </message>

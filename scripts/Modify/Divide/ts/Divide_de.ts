@@ -8,7 +8,7 @@
         <translation type="vanished">Linie, Bogen, Kreis, Ellipse oder Spline wählen</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
+        <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>Linie, Bogen, Kreis, Ellipse, Spline oder Polylinie wählen</translation>
     </message>
