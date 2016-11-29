@@ -320,7 +320,7 @@ double RMath::eval(const QString& expression, bool* ok) {
     }
 
     // convert fraction notation to formula:
-    // e.g. 7 3/32 to 7+3/32
+    // e.g. 7 3/32 to (7+3/32)
     {
         QRegExp re("(\\d+)[ ]+(\\d+/\\d+)", Qt::CaseInsensitive, QRegExp::RegExp2);
         do {
@@ -332,34 +332,28 @@ double RMath::eval(const QString& expression, bool* ok) {
             QString fractionString = re.cap(2);
             expr.replace(
                 re,
-                QString("%1+%2").arg(numberString).arg(fractionString)
+                QString("(%1+%2)").arg(numberString).arg(fractionString)
             );
         } while(idx!=-1);
     }
 
     // advanced feet/inch entering:
-    // e.g. 12'3/4"
+    // e.g. 12'3/4" -> (12*12+3/4)
     {
-        QRegExp re("([+-])?(\\d+)'[ ]*([^\"]*)\"", Qt::CaseInsensitive, QRegExp::RegExp2);
+        QRegExp re("(\\d+)'[ ]*([^+\\-\"][^\"]*)\"", Qt::CaseInsensitive, QRegExp::RegExp2);
         do {
             idx = re.indexIn(expr);
             if (idx==-1) {
                 break;
             }
-            QString signString = re.cap(1);
-            if (signString.isEmpty()) {
-                signString = "+";
-            }
-            QString feetString = re.cap(2);
-            //QString spacesString = re.cap(2);
-            QString inchString = re.cap(3);
+            QString feetString = re.cap(1);
+            QString inchString = re.cap(2);
             expr.replace(
                         re,
-                        QString("%1%2*12%3(%4)")
-                        .arg(re.cap(1))                                // sign for feet or ""
-                        .arg(feetString)                               // feet (number)
-                        .arg(inchString.isEmpty() ? "" : signString)   // sign for inches (same as sign for feet)
-                        .arg(inchString)                               // inches number of formula
+                        //       ((FT)*12+(IN))
+                        QString("(%1*12+(%2))")
+                        .arg(feetString)             // feet (number)
+                        .arg(inchString)             // inches (number or formula)
                         );
         } while(idx!=-1);
     }
@@ -368,30 +362,23 @@ double RMath::eval(const QString& expression, bool* ok) {
     // e.g.
     // 10'5  -> 10*12+5
     // 10'   -> 10*12
-    // -10'5 -> -10*12-5
     // an optional " at the end may be present and is ignored
     {
-        QRegExp re("([+-])?(\\d+)'[ ]*(\\d*)(\"?)", Qt::CaseInsensitive, QRegExp::RegExp2);
+        QRegExp re("(\\d+)'[ ]*(\\d*)(\"?)", Qt::CaseInsensitive, QRegExp::RegExp2);
         do {
             idx = re.indexIn(expr);
             if (idx==-1) {
                 break;
             }
-            QString signString = re.cap(1);
-            if (signString.isEmpty()) {
-                signString = "+";
-            }
-            QString feetString = re.cap(2);
-            //QString spacesString = re.cap(2);
-            QString inchString = re.cap(3);
+            QString feetString = re.cap(1);
+            QString inchString = re.cap(2);
             expr.replace(
-                re,
-                QString("%1%2*12%3%4")
-                    .arg(re.cap(1))                                // sign for feet
-                    .arg(feetString)                               // feet
-                    .arg(inchString.isEmpty() ? "" : signString)   // sign for inches (same as sign for feet)
-                    .arg(inchString)                               // inches
-            );
+                        re,
+                        QString("(%1*12%2%3)")
+                        .arg(feetString)                               // feet
+                        .arg(inchString.isEmpty() ? "" : "+")
+                        .arg(inchString)                               // inches
+                        );
         } while(idx!=-1);
     }
 
