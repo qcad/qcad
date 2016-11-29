@@ -96,6 +96,7 @@ public:
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const {
         Q_UNUSED(queryBox)
         Q_UNUSED(ignoreComplex)
+        Q_UNUSED(segment)
 
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RRay(*this));
