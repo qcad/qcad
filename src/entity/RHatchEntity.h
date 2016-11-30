@@ -185,8 +185,7 @@ public:
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const {
-        Q_UNUSED(ignoreComplex)
-        return data.getShapes(queryBox);
+        return data.getShapes(queryBox, ignoreComplex, segment);
     }
 
     virtual QList<QSharedPointer<RShape> > getExploded() const {
