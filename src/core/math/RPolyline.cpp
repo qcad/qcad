@@ -860,7 +860,7 @@ int RPolyline::countSegments() const {
  * \return Shape of segment at given position.
  */
 QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
-    if (i<0 || i>=vertices.size()-1 || i>=bulges.size()-1) {
+    if (i<0 || i>=vertices.size() || i>=bulges.size()) {
         qWarning() << "RPolyline::getSegmentAt(" << i << "): i out of range";
         return QSharedPointer<RShape>();
     }
