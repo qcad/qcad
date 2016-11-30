@@ -308,24 +308,20 @@ ModifyCorner.prototype.pickCorner = function(event) {
     if (isPolylineEntity(this.entity1)) {
 
         // find two closest segments and click positions:
+        var vc = this.entity1.countVertices();
         var vertexIndex = this.entity1.getClosestVertex(this.posCorner);
-        if (vertexIndex<1 || vertexIndex>=this.entity1.countVertices()-1) {
-            return false;
-        }
-
         this.entity2 = this.entity1;
-        var s1 = this.entity1.getSegmentAt(vertexIndex-1);
+        var s1 = this.entity1.getSegmentAt(RMath.absmod(vertexIndex-1, vc-1));
         var s2 = this.entity1.getSegmentAt(vertexIndex);
         this.clickPos1 = s1.getPointWithDistanceToEnd(s1.getLength()/3);
         this.clickPos2 = s2.getPointWithDistanceToStart(s2.getLength()/3);
 
-        //this.clickPos2 = this.clickPos1;
         this.posSolution = this.posCorner;
 
         return true;
     }
 
-    //this.shape1 = this.entity1.getClosestSimpleShape(this.posCorner);
+    this.shape1 = this.entity1.getClosestSimpleShape(this.posCorner);
     this.clickPos1 = this.entity1.getClosestPointOnEntity(this.posCorner);
 
     // ids of entities potentially intersecting entity1:
@@ -341,19 +337,19 @@ ModifyCorner.prototype.pickCorner = function(event) {
         var ips = this.entity1.getIntersectionPoints(entity2Candidate.data());
         for (var k=0; k<ips.length; k++) {
             var ip = ips[k];
-            var side1 = this.entity1.getSideOfPoint(this.posCorner);
+            var side1 = this.shape1.getSideOfPoint(this.posCorner);
 
             var dist = this.clickPos1.getDistanceTo(ip);
             if (isNull(minDist) || dist<minDist) {
 
                 var clickPos2Candidate = entity2Candidate.getClosestPointOnEntity(this.posCorner);
-                var side2 = this.entity1.getSideOfPoint(clickPos2Candidate);
+                var side2 = this.shape1.getSideOfPoint(clickPos2Candidate);
 
                 if (side1===side2) {
                     // potential closest intersection point found:
                     minDist = dist;
                     this.entity2 = entity2Candidate;
-                    //this.shape2 = entity2Candidate.getClosestSimpleShape(this.posCorner);
+                    this.shape2 = entity2Candidate.getClosestSimpleShape(this.posCorner);
                     this.clickPos2 = clickPos2Candidate;
                 }
             }
