@@ -305,6 +305,27 @@ ModifyCorner.prototype.pickCorner = function(event) {
         return false;
     }
 
+    if (isPolylineEntity(this.entity1)) {
+
+        // find two closest segments and click positions:
+        var vertexIndex = this.entity1.getClosestVertex(this.posCorner);
+        if (vertexIndex<1 || vertexIndex>=this.entity1.countVertices()-1) {
+            return false;
+        }
+
+        this.entity2 = this.entity1;
+        var s1 = this.entity1.getSegmentAt(vertexIndex-1);
+        var s2 = this.entity1.getSegmentAt(vertexIndex);
+        this.clickPos1 = s1.getClosestPointOnShape(this.posCorner);
+        this.clickPos2 = s2.getClosestPointOnShape(this.posCorner);
+
+        //this.clickPos2 = this.clickPos1;
+        this.posSolution = this.posCorner;
+
+        return true;
+    }
+
+    //this.shape1 = this.entity1.getClosestSimpleShape(this.posCorner);
     this.clickPos1 = this.entity1.getClosestPointOnEntity(this.posCorner);
 
     // ids of entities potentially intersecting entity1:
@@ -332,6 +353,7 @@ ModifyCorner.prototype.pickCorner = function(event) {
                     // potential closest intersection point found:
                     minDist = dist;
                     this.entity2 = entity2Candidate;
+                    //this.shape2 = entity2Candidate.getClosestSimpleShape(this.posCorner);
                     this.clickPos2 = clickPos2Candidate;
                 }
             }
