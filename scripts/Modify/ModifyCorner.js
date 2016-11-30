@@ -316,8 +316,8 @@ ModifyCorner.prototype.pickCorner = function(event) {
         this.entity2 = this.entity1;
         var s1 = this.entity1.getSegmentAt(vertexIndex-1);
         var s2 = this.entity1.getSegmentAt(vertexIndex);
-        this.clickPos1 = s1.getClosestPointOnShape(this.posCorner);
-        this.clickPos2 = s2.getClosestPointOnShape(this.posCorner);
+        this.clickPos1 = s1.getPointWithDistanceToEnd(s1.getLength()/3);
+        this.clickPos2 = s2.getPointWithDistanceToStart(s2.getLength()/3);
 
         //this.clickPos2 = this.clickPos1;
         this.posSolution = this.posCorner;
