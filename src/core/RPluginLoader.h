@@ -66,12 +66,8 @@ public:
         return pluginsInfo.count();
     }
 
-    static RPluginInfo getPluginInfo(int i) {
-        if (i<0 || i>pluginsInfo.count()) {
-            return RPluginInfo();
-        }
-        return pluginsInfo[i];
-    }
+    static RPluginInfo getPluginInfo(int i);
+    static RPluginInfo getPluginInfo(const QString& id);
 
     static QString getPluginsPath();
     static bool hasPlugin(const QString& id);
