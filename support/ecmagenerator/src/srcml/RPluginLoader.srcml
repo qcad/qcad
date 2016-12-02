@@ -67,12 +67,8 @@
         <return>return <expr><name>pluginsInfo</name>.<call><name>count</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>static</name> <name>RPluginInfo</name></type> <name>getPluginInfo</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <block>{
-        <if>if <condition>(<expr><name>i</name>&lt;0 || <name>i</name>&gt;<name>pluginsInfo</name>.<call><name>count</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><call><name>RPluginInfo</name><argument_list>()</argument_list></call></expr>;</return>
-        }</block></then></if>
-        <return>return <expr><name><name>pluginsInfo</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>static</name> <name>RPluginInfo</name></type> <name>getPluginInfo</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RPluginInfo</name></type> <name>getPluginInfo</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>id</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getPluginsPath</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasPlugin</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>id</name></decl></param>)</parameter_list>;</function_decl>

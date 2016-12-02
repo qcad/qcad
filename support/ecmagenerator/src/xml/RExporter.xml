@@ -746,7 +746,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getScreenBasedLinetypes"
     cppName="getScreenBasedLinetypes" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="isVisualExporter" cppName="isVisualExporter"

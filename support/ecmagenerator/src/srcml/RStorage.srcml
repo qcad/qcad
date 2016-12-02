@@ -388,11 +388,29 @@
     <function_decl><type><name>virtual</name> <name><name>RLayout</name>::<name>Id</name></name></type> <name>getLayoutId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layoutName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasLayout</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layoutName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * \return Linetype name of the given linetype.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLinetypeName</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * \return User readable description for the given linetype.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLinetypeDescription</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * \return User readable label for the given linetype.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLinetypeLabel</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * \return List of all available linetype pattern names in this document.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getLinetypeNames</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * \return List of all available linetype patterns in this document.
+     */</comment>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RLinetypePattern</name></argument>&gt;</argument_list></name></type> <name>getLinetypePatterns</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * \return Linetype ID of the given linetype name or RObject::INVALID_ID.
+     */</comment>
     <function_decl><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

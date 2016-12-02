@@ -129,6 +129,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getReferencePointColor, "getReferencePointColor");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getStartReferencePointColor, "getStartReferencePointColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getEndReferencePointColor, "getEndReferencePointColor");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getSecondaryReferencePointColor, "getSecondaryReferencePointColor");
             
             REcmaHelper::registerFunction(&engine, &ctor, getHighResolutionGraphicsView, "getHighResolutionGraphicsView");
@@ -1936,6 +1940,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getReferencePointColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getStartReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getStartReferencePointColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getStartReferencePointColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getStartReferencePointColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getStartReferencePointColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getStartReferencePointColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getEndReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getEndReferencePointColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getEndReferencePointColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getEndReferencePointColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getEndReferencePointColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getEndReferencePointColor", context, engine);
             return result;
         }
          QScriptValue

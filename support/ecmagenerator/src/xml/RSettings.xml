@@ -208,6 +208,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false" />
     </method>
+    <method name="getStartReferencePointColor"
+    cppName="getStartReferencePointColor" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="getEndReferencePointColor"
+    cppName="getEndReferencePointColor" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
     <method name="getSecondaryReferencePointColor"
     cppName="getSecondaryReferencePointColor" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

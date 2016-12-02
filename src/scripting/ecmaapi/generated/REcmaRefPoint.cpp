@@ -80,6 +80,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCenter, "setCenter");
             
+            REcmaHelper::registerFunction(&engine, proto, isStart, "isStart");
+            
+            REcmaHelper::registerFunction(&engine, proto, setStart, "setStart");
+            
+            REcmaHelper::registerFunction(&engine, proto, isEnd, "isEnd");
+            
+            REcmaHelper::registerFunction(&engine, proto, setEnd, "setEnd");
+            
             REcmaHelper::registerFunction(&engine, proto, setFlag, "setFlag");
             
             REcmaHelper::registerFunction(&engine, proto, getFlag, "getFlag");
@@ -130,6 +138,16 @@
 
     ctor.setProperty("Ignore",
     QScriptValue(RRefPoint::Ignore),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Start",
+    QScriptValue(RRefPoint::Start),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("End",
+    QScriptValue(RRefPoint::End),
     QScriptValue::ReadOnly);
 
 
@@ -1023,6 +1041,214 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRefPoint::setCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::isStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::isStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::isStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("isStart", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isStart();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.isStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::isStart", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::setStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::setStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::setStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("setStart", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStart(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.setStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::setStart", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::isEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::isEnd", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::isEnd";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("isEnd", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isEnd();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.isEnd().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::isEnd", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::setEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::setEnd", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::setEnd";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("setEnd", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEnd(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.setEnd().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::setEnd", context, engine);
             return result;
         }
          QScriptValue

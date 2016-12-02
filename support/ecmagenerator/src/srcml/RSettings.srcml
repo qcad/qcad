@@ -99,6 +99,8 @@
 
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getSelectionColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getStartReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getEndReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getSecondaryReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getHighResolutionGraphicsView</name><parameter_list>()</parameter_list>;</function_decl>
@@ -248,6 +250,8 @@
     <decl_stmt><decl><type><name>static</name> <name>QFont</name>*</type> <name>statusBarFont</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>selectionColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>referencePointColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>startReferencePointColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>endReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>secondaryReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>darkGuiBackground</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>snapRange</name></decl>;</decl_stmt>

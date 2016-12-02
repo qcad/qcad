@@ -144,6 +144,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, startEntity, "startEntity");
             
+            REcmaHelper::registerFunction(&engine, proto, getScreenBasedLinetypes, "getScreenBasedLinetypes");
+            
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
         engine.setDefaultPrototype(
@@ -3216,6 +3218,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::startEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneQt::getScreenBasedLinetypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getScreenBasedLinetypes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getScreenBasedLinetypes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneQt* self = 
+                        getSelf("getScreenBasedLinetypes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getScreenBasedLinetypes();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getScreenBasedLinetypes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getScreenBasedLinetypes", context, engine);
             return result;
         }
          QScriptValue

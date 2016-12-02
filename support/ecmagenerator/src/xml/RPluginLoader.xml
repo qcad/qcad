@@ -64,6 +64,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RPluginInfo" isPureVirtual="false">
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
+      <variant returnType="RPluginInfo" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getPluginsPath" cppName="getPluginsPath"
     specifier="public" isStatic="true" isVirtual="false"

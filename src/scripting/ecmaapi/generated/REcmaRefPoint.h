@@ -72,6 +72,18 @@
         setCenter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFlag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

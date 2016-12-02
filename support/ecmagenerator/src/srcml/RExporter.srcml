@@ -299,7 +299,7 @@
         <expr_stmt><expr><call><name>setScreenBasedLinetypes</name><argument_list>(<argument><expr>!<name>screenBasedLinetypes</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>bool</name></type> <name>getScreenBasedLinetypes</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name>bool</name></type> <name>getScreenBasedLinetypes</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>screenBasedLinetypes</name></expr>;</return>
     }</block></function>
 

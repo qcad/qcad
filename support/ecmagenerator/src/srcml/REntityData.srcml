@@ -215,10 +215,17 @@
 
     <function_decl><type><name>QString</name></type> <name>getBlockName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * Sets the linetype of this entity to the given linetype ID.
+     * \see RDocument::getLinetypeId
+     */</comment>
     <function><type><name>virtual</name> <name>void</name></type> <name>setLinetypeId</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>linetypeId</name> = <name>linetypeId</name></expr>;</expr_stmt>
     }</block></function>
 
+    <comment type="block">/**
+     * \return Linetype ID of this entity. Note that this might be ByLayer or ByBlock.
+     */</comment>
     <function><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>linetypeId</name></expr>;</return>
     }</block></function>

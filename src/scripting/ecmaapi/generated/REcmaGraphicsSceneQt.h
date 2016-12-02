@@ -161,6 +161,9 @@
         startEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getScreenBasedLinetypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         dump
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

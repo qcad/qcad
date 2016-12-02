@@ -154,6 +154,12 @@
         getReferencePointColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getStartReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEndReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSecondaryReferencePointColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -19,10 +19,12 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RRefPoint</name> <super>: <specifier>public</specifier> <name>RVector</name></super> <block>{<private type="default">
 </private><public>public:
     <enum>enum <name>Flag</name> <block>{
-        <expr><name>NoFlags</name> = 0x000</expr>,
-        <expr><name>Secondary</name> = 0x001</expr>,     <comment type="block">/**&lt; Secondary reference point (typically shown with different color) */</comment>
-        <expr><name>Center</name> = 0x002</expr>,        <comment type="block">/**&lt; Reference point is a center point */</comment>
-        <expr><name>Ignore</name> = 0x004</expr>         <comment type="block">/**&lt; Ignore reference point for drag and drop */</comment>
+        <expr><name>NoFlags</name>   = 0x000</expr>,
+        <expr><name>Secondary</name> = 0x001</expr>,        <comment type="block">/**&lt; Secondary reference point (typically shown with different color) */</comment>
+        <expr><name>Center</name>    = 0x002</expr>,        <comment type="block">/**&lt; Reference point is a center point */</comment>
+        <expr><name>Ignore</name>    = 0x004</expr>,        <comment type="block">/**&lt; Ignore reference point for drag and drop */</comment>
+        <expr><name>Start</name>     = 0x008</expr>,        <comment type="block">/**&lt; Reference point is a start point */</comment>
+        <expr><name>End</name>       = 0x010</expr>         <comment type="block">/**&lt; Reference point is a start point */</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>Flag</argument>)</argument_list></macro>
 
@@ -69,6 +71,22 @@
 
     <function><type><name>void</name></type> <name>setCenter</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Center</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isStart</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RRefPoint</name>::<name>Start</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setStart</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Start</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isEnd</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RRefPoint</name>::<name>End</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setEnd</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>End</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Flag</name></name></type> <name>flag</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
