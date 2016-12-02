@@ -40,6 +40,8 @@ class RProgressHandler;
  */
 class QCADCORE_EXPORT RFileExporterFactory {
 public:
+    virtual ~RFileExporterFactory() {}
+
     virtual QStringList getFilterStrings() = 0;
     virtual int canExport(const QString& fileName,
         const QString& nameFilter = "") = 0;
