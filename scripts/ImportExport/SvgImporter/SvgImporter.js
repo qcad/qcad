@@ -190,7 +190,7 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
         var w = atts.value("width");
         var h = atts.value("height");
         var docUnit = this.svgImporter.getDocument().getUnit();
-        if (!isNull(w) && !isNull(h)) {
+        if (w.length!==0 && h.length!==0) {
             if (w.endsWith("mm") && h.endsWith("mm")) {
                 // SVG file in mm:
                 this.svgImporter.resolutionScale = RUnit.convert(1, RS.Millimeter, docUnit);
