@@ -42,10 +42,10 @@ void TransactionListenerPlugin::initScriptExtensions(QScriptEngine& engine) {
 RPluginInfo TransactionListenerPlugin::getPluginInfo() {
     RPluginInfo ret;
     ret.set("Version", R_QCAD_VERSION_STRING);
-    ret.set("ID", "MYPLUGIN");
-    ret.set("Name", "My Plugin");
-    ret.set("License", "Proprietary");
-    ret.set("URL", "http://mycompany.com");
+    ret.set("ID", "TRANSACTIONLISTENERPLUGIN");
+    ret.set("Name", "Transaction Listener Example Plugin");
+    ret.set("License", "Public Domain");
+    ret.set("URL", "http://qcad.org");
     return ret;
 }
 
