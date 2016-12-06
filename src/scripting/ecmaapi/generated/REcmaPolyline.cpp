@@ -182,6 +182,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, autoClose, "autoClose");
             
+            REcmaHelper::registerFunction(&engine, proto, toLogicallyClosed, "toLogicallyClosed");
+            
+            REcmaHelper::registerFunction(&engine, proto, toLogicallyOpen, "toLogicallyOpen");
+            
             REcmaHelper::registerFunction(&engine, proto, getSelfIntersectionPoints, "getSelfIntersectionPoints");
             
             REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
@@ -3920,6 +3924,136 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::autoClose", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::toLogicallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::toLogicallyClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::toLogicallyClosed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("toLogicallyClosed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->toLogicallyClosed();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->toLogicallyClosed(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.toLogicallyClosed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::toLogicallyClosed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::toLogicallyOpen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::toLogicallyOpen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::toLogicallyOpen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("toLogicallyOpen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->toLogicallyOpen();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.toLogicallyOpen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::toLogicallyOpen", context, engine);
             return result;
         }
          QScriptValue

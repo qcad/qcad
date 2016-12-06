@@ -160,8 +160,16 @@
         <return>return <expr><call><name><name>RPolyline</name>::<name>isGeometricallyClosed</name></name><argument_list>(<argument><expr><name>tolerance</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>autoClose</name><parameter_list>()</parameter_list> <block>{
-        <constructor_decl><name>RPolyline::autoClose</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <function><type><name>bool</name></type> <name>autoClose</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>toLogicallyClosed</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>toLogicallyClosed</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>toLogicallyClosed</name></name><argument_list>(<argument><expr><name>tolerance</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>toLogicallyOpen</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>toLogicallyOpen</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name><name>RS</name>::<name>Orientation</name></name></type> <name>getOrientation</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>implicitelyClosed</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{

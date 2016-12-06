@@ -132,6 +132,12 @@
         autoClose
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toLogicallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        toLogicallyOpen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getOrientation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
