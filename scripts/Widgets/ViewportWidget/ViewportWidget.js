@@ -23,7 +23,7 @@ if (new QFileInfo(autoPath("scripts/Navigation/DefaultNavigation/DefaultNavigati
     include("scripts/Navigation/DefaultNavigation/DefaultNavigation.js");
 }
 
-Viewport.templateDir = autoPath("scripts/Widgets/Viewport/Templates");
+ViewportWidget.templateDir = autoPath("scripts/Widgets/ViewportWidget/Templates");
 
 /**
  * A viewport encapsulates one graphics view and might provide means to navigate
@@ -35,7 +35,7 @@ Viewport.templateDir = autoPath("scripts/Widgets/Viewport/Templates");
  * \param vpWidget Viewport widget that will contain the viewport
  * after initialization.
  */
-function Viewport(vpNumber, vpWidget, documentInterface) {
+function ViewportWidget(vpNumber, vpWidget, documentInterface) {
     this.vpNumber = vpNumber;
     this.vpWidget = vpWidget;
     this.documentInterface = documentInterface;
@@ -43,10 +43,10 @@ function Viewport(vpNumber, vpWidget, documentInterface) {
 }
 
 /**
- * \return Array of Viewport objects, one for each child of widget that
+ * \return Array of ViewportWidget objects, one for each child of widget that
  * is called "ViewportXX".
  */
-Viewport.getViewports = function(widget, documentInterface) {
+ViewportWidget.getViewports = function(widget, documentInterface) {
     var vpWidget;
     var c = 0;
     var vps = [];
@@ -56,27 +56,27 @@ Viewport.getViewports = function(widget, documentInterface) {
         if (isNull(vpWidget)) {
             break;
         }
-        var viewport = new Viewport(c, vpWidget, documentInterface);
+        var viewport = new ViewportWidget(c, vpWidget, documentInterface);
         vps.push(viewport);
         ++c;
     } while (!isNull(vpWidget));
     return vps;
 };
 
-Viewport.initEventHandler = function(viewports) {
+ViewportWidget.initEventHandler = function(viewports) {
     for ( var i = 0; i < viewports.length; ++i) {
         viewports[i].initEventHandler();
     }
 };
 
-Viewport.initializeViewports = function(viewports, uiFile, graphicsSceneClass) {
+ViewportWidget.initializeViewports = function(viewports, uiFile, graphicsSceneClass) {
     for ( var i = 0; i < viewports.length; ++i) {
         var vp = viewports[i];
         vp.init(uiFile, graphicsSceneClass);
     }
 };
 
-Viewport.updateViewports = function(viewports) {
+ViewportWidget.updateViewports = function(viewports) {
     // TODO auto zoom for each graphics view works only for the first viewport
     for (var i = 0; i < viewports.length; ++i) {
         var vp = viewports[i];
@@ -100,13 +100,13 @@ Viewport.updateViewports = function(viewports) {
     }
 };
 
-Viewport.initMdiChild = function(mdiChild, uiFileName) {
-    var w = WidgetFactory.createWidget("", Viewport.templateDir + QDir.separator + uiFileName, mdiChild);
+ViewportWidget.initMdiChild = function(mdiChild, uiFileName) {
+    var w = WidgetFactory.createWidget("", ViewportWidget.templateDir + QDir.separator + uiFileName, mdiChild);
     w.setWindowTitle("");
     mdiChild.setWidget(w);
 };
 
-Viewport.prototype.initEventHandler = function() {
+ViewportWidget.prototype.initEventHandler = function() {
     this.eventHandler = new EventHandler(this, this.documentInterface);
     if (isOfType(this.graphicsView, RGraphicsViewQt)) {
         this.graphicsView.drop.connect(this.eventHandler, "drop");
@@ -123,12 +123,12 @@ Viewport.prototype.initEventHandler = function() {
 };
 
 /**
- * Initializes this viewport.
+ * Initializes this viewport widget.
  *
- * \param uiFile UI file to use for view port (defaults to ViewportQt.ui).
+ * \param uiFile UI file to use for view port (defaults to ViewportWidgetQt.ui).
  * \param graphicsSceneClass Class to use for graphics scene (defaults to "RGraphicsSceneQt")
  */
-Viewport.prototype.init = function(uiFile, graphicsSceneClass) {
+ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     // delete placeholder children if there are any (clear out parent window):
     var chs = this.vpWidget.children();
     for (var i = 0; i < chs.length; ++i) {
@@ -137,10 +137,10 @@ Viewport.prototype.init = function(uiFile, graphicsSceneClass) {
     }
 
     if (isNull(uiFile)) {
-        uiFile = "scripts/Widgets/Viewport/ViewportQt.ui";
+        uiFile = "scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui";
     }
 
-    // use ViewportQt.ui or
+    // use ViewportWidgetQt.ui or
     var vpw = WidgetFactory.createWidget("", uiFile, this.vpWidget);
 
     var layout = new QVBoxLayout();
@@ -240,19 +240,19 @@ Viewport.prototype.init = function(uiFile, graphicsSceneClass) {
     }
 };
 
-Viewport.prototype.getVpWidget = function() {
+ViewportWidget.prototype.getVpWidget = function() {
     return this.vpWidget;
 };
 
-Viewport.prototype.getGraphicsView = function() {
+ViewportWidget.prototype.getGraphicsView = function() {
     return this.graphicsView;
 };
 
-Viewport.prototype.getDocumentInterface = function() {
+ViewportWidget.prototype.getDocumentInterface = function() {
     return this.documentInterface;
 };
 
-Viewport.prototype.getEventHandler = function() {
+ViewportWidget.prototype.getEventHandler = function() {
     return this.eventHandler;
 };
 

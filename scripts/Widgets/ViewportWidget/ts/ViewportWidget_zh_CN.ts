@@ -92,9 +92,9 @@
     </message>
 </context>
 <context>
-    <name>Viewport</name>
+    <name>ViewportWidget</name>
     <message>
-        <location filename="../Viewport.js" line="+281"/>
+        <location filename="../ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>

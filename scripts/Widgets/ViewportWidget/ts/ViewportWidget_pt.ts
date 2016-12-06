@@ -148,9 +148,9 @@ Selecione Entidades singulares</translatorcomment>
     </message>
 </context>
 <context>
-    <name>Viewport</name>
+    <name>ViewportWidget</name>
     <message>
-        <location filename="../Viewport.js" line="+281"/>
+        <location filename="../ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
         <translation>Dados inseridos não suportados</translation>
     </message>
@@ -243,7 +243,7 @@ Indique o ponto de referência
     </message>
 </context>
 <context>
-    <name>ViewportGl</name>
+    <name>ViewportWidgetGl</name>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="vanished">Espaçamento da Grade &lt; Espaçamento da Metagrade</translation>

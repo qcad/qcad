@@ -1,62 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<TS version="2.1" language="es_ES">
 <context>
     <name>Form</name>
     <message>
         <source>Single</source>
-        <translation type="obsolete">シングル</translation>
+        <translatorcomment>--exact match--
+--file: es.po--
+Desagrupa Entidades de Texto en Letras sencillas
+Selecciona entidades solas</translatorcomment>
+        <translation type="obsolete">Sencillo</translation>
     </message>
     <message>
         <source>Two: Vertical</source>
-        <translation type="obsolete">２:垂直</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Dos: Vertical</translation>
     </message>
     <message>
         <source>Two: Horizontal</source>
-        <translation type="obsolete">２:水平</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Dos: Horizontal</translation>
     </message>
     <message>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation>３:右</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation>Tres: Derecho</translation>
     </message>
     <message>
         <location filename="../Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation>３:左</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation>Tres: Izquierda</translation>
     </message>
     <message>
         <location filename="../Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation>３:上</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation>Tres: Por encima de</translation>
     </message>
     <message>
         <source>Three: Below</source>
-        <translation type="obsolete">３:下</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Tres: Por debajo de</translation>
     </message>
     <message>
         <source>Three: Vertical</source>
-        <translation type="obsolete">３:垂直</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Tres: Vertical</translation>
     </message>
     <message>
         <source>Three: Horizontal</source>
-        <translation type="obsolete">２:垂直</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Tres: Horizontal</translation>
     </message>
     <message>
         <source>Four: Equal</source>
-        <translation type="obsolete">４:イコール</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Cuatro: Igual</translation>
     </message>
     <message>
         <source>Four: Right</source>
-        <translation type="obsolete">４:右</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Cuatro: Derecho</translation>
     </message>
     <message>
         <source>Four: Left</source>
-        <translation type="obsolete">４:左</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Cuatro: Izquierda</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="obsolete">グリッド間隔＜メタグリッド間隔</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
     </message>
 </context>
 <context>
@@ -64,7 +80,7 @@
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>４:イコール</translation>
+        <translation>Cuatro: Igual</translation>
     </message>
 </context>
 <context>
@@ -72,7 +88,7 @@
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>４:左</translation>
+        <translation>Cuatro: Izquierda</translation>
     </message>
 </context>
 <context>
@@ -80,7 +96,7 @@
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>４:右</translation>
+        <translation>Cuatro: Derecho</translation>
     </message>
 </context>
 <context>
@@ -88,7 +104,7 @@
     <message>
         <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>単一</translation>
+        <translation>Sencillo</translation>
     </message>
 </context>
 <context>
@@ -96,7 +112,7 @@
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>３:下</translation>
+        <translation>Tres: Por debajo de</translation>
     </message>
 </context>
 <context>
@@ -104,7 +120,7 @@
     <message>
         <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation>３:水平</translation>
+        <translation>Tres: Horizontal</translation>
     </message>
 </context>
 <context>
@@ -112,7 +128,7 @@
     <message>
         <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation>３:垂直</translation>
+        <translation>Tres: Vertical</translation>
     </message>
 </context>
 <context>
@@ -120,7 +136,7 @@
     <message>
         <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation>２:水平</translation>
+        <translation>Dos: Horizontal</translation>
     </message>
 </context>
 <context>
@@ -128,68 +144,76 @@
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>２:垂直</translation>
+        <translation>Dos: Vertical</translation>
     </message>
 </context>
 <context>
-    <name>Viewport</name>
+    <name>ViewportWidget</name>
     <message>
-        <location filename="../Viewport.js" line="+281"/>
+        <location filename="../ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos insertados no compatibles</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Importing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de archivo: </translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Importación de URL: </translation>
     </message>
     <message>
         <source>Grid</source>
-        <translation type="vanished">グリッド</translation>
+        <translation type="vanished">Rejilla</translation>
     </message>
     <message>
         <source>End</source>
-        <translation type="vanished">終端</translation>
+        <translation type="vanished">Fin</translation>
     </message>
     <message>
         <source>On Entity</source>
-        <translation type="vanished">エンティティ</translation>
+        <translation type="vanished">En entidad</translation>
     </message>
     <message>
         <source>Perpendicular</source>
-        <translation type="vanished">垂線</translation>
+        <translatorcomment>--exact match--
+--file: artisan_es.ts--
+&amp;Perpendicular
+Perpendicular</translatorcomment>
+        <translation type="vanished">Perpendicular</translation>
+    </message>
+    <message>
+        <source>Tangential</source>
+        <translation type="vanished">Tangencial</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">中心</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation type="vanished">中央</translation>
+        <translation type="vanished">Medio</translation>
     </message>
     <message>
         <source>Intersection</source>
-        <translation type="vanished">交点</translation>
+        <translation type="vanished">Intersección</translation>
     </message>
     <message>
         <source>Reference</source>
-        <translation type="vanished">基準点</translation>
+        <translation type="vanished">Referencia</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">グリッド間隔＜メタグリッド間隔</translation>
+        <translation type="vanished">Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
     </message>
 </context>
 <context>
-    <name>ViewportGl</name>
+    <name>ViewportWidgetGl</name>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">グリッド間隔＜メタグリッド間隔</translation>
+        <translation type="vanished">Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
     </message>
 </context>
 </TS>

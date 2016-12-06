@@ -1,78 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="ja">
 <context>
     <name>Form</name>
     <message>
         <source>Single</source>
-        <translatorcomment>--ignored case--
---file: locale_it_BKChem.po--
-Esplodi gli oggetti testo in singole lettere
-Seleziona Singolo Oggetto</translatorcomment>
-        <translation type="obsolete">Singolo</translation>
+        <translation type="obsolete">シングル</translation>
     </message>
     <message>
         <source>Two: Vertical</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Due: verticale</translation>
+        <translation type="obsolete">２:垂直</translation>
     </message>
     <message>
         <source>Two: Horizontal</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Due: orizzontale</translation>
+        <translation type="obsolete">２:水平</translation>
     </message>
     <message>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Tre: destra</translation>
+        <translation>３:右</translation>
     </message>
     <message>
         <location filename="../Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Tre: sinistra</translation>
+        <translation>３:左</translation>
     </message>
     <message>
         <location filename="../Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Tre: sopra</translation>
+        <translation>３:上</translation>
     </message>
     <message>
         <source>Three: Below</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Tre: al di sotto</translation>
+        <translation type="obsolete">３:下</translation>
     </message>
     <message>
         <source>Three: Vertical</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Tre: verticale</translation>
+        <translation type="obsolete">３:垂直</translation>
     </message>
     <message>
         <source>Three: Horizontal</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Tre: orizzontale</translation>
+        <translation type="obsolete">２:垂直</translation>
     </message>
     <message>
         <source>Four: Equal</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Quattro: equal</translation>
+        <translation type="obsolete">４:イコール</translation>
     </message>
     <message>
         <source>Four: Right</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Quattro: giusto</translation>
+        <translation type="obsolete">４:右</translation>
     </message>
     <message>
         <source>Four: Left</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Quattro: sinistra</translation>
+        <translation type="obsolete">４:左</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
+        <translation type="obsolete">グリッド間隔＜メタグリッド間隔</translation>
     </message>
 </context>
 <context>
@@ -80,7 +64,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Quattro: equal</translation>
+        <translation>４:イコール</translation>
     </message>
 </context>
 <context>
@@ -88,7 +72,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Quattro: sinistra</translation>
+        <translation>４:左</translation>
     </message>
 </context>
 <context>
@@ -96,7 +80,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Quattro: giusto</translation>
+        <translation>４:右</translation>
     </message>
 </context>
 <context>
@@ -104,7 +88,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>Singolo</translation>
+        <translation>単一</translation>
     </message>
 </context>
 <context>
@@ -112,7 +96,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>Tre: al di sotto</translation>
+        <translation>３:下</translation>
     </message>
 </context>
 <context>
@@ -120,7 +104,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation>Tre: orizzontale</translation>
+        <translation>３:水平</translation>
     </message>
 </context>
 <context>
@@ -128,7 +112,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation>Tre: verticale</translation>
+        <translation>３:垂直</translation>
     </message>
 </context>
 <context>
@@ -136,7 +120,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation>Due: orizzontale</translation>
+        <translation>２:水平</translation>
     </message>
 </context>
 <context>
@@ -144,77 +128,68 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>Due: verticale</translation>
+        <translation>２:垂直</translation>
     </message>
 </context>
 <context>
-    <name>Viewport</name>
+    <name>ViewportWidget</name>
     <message>
-        <location filename="../Viewport.js" line="+281"/>
+        <location filename="../ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
-        <translation>I dati inseriti non sono supportati</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Importing file: </source>
-        <translation>File importazione: </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation>Importazione URL: </translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Grid</source>
-        <translation type="vanished">Griglia</translation>
+        <translation type="vanished">グリッド</translation>
     </message>
     <message>
         <source>End</source>
-        <translation type="vanished">Fine</translation>
+        <translation type="vanished">終端</translation>
     </message>
     <message>
         <source>On Entity</source>
-        <translation type="vanished">Sull&apos;entità</translation>
+        <translation type="vanished">エンティティ</translation>
     </message>
     <message>
         <source>Perpendicular</source>
-        <translatorcomment>--exact match--
---file: SnapPerpendicular_it.ts--
-&amp;Perpendicolare
-Perpendicolare
-Seleziona il piano perpendicolare alla vista corrente</translatorcomment>
-        <translation type="vanished">Perpendicolare</translation>
-    </message>
-    <message>
-        <source>Tangential</source>
-        <translation type="vanished">Tangenziale</translation>
+        <translation type="vanished">垂線</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Centro</translation>
+        <translation type="vanished">中心</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation type="vanished">Medio</translation>
+        <translation type="vanished">中央</translation>
     </message>
     <message>
         <source>Intersection</source>
-        <translation type="vanished">Intersezione</translation>
+        <translation type="vanished">交点</translation>
     </message>
     <message>
         <source>Reference</source>
-        <translation type="vanished">Riferimento</translation>
+        <translation type="vanished">基準点</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
+        <translation type="vanished">グリッド間隔＜メタグリッド間隔</translation>
     </message>
 </context>
 <context>
-    <name>ViewportGl</name>
+    <name>ViewportWidgetGl</name>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
+        <translation type="vanished">グリッド間隔＜メタグリッド間隔</translation>
     </message>
 </context>
 </TS>

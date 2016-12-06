@@ -1,22 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<TS version="2.1" language="de_DE">
 <context>
     <name>Form</name>
     <message>
+        <source>Form</source>
+        <translation type="obsolete">Formular</translation>
+    </message>
+    <message>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="obsolete">Rasterabstand &lt; Meta Rasterabstand</translation>
+    </message>
+    <message>
+        <source>Single</source>
+        <translation type="obsolete">Einzel</translation>
+    </message>
+    <message>
+        <source>Two: Vertical</source>
+        <translation type="obsolete">Zwei: Vertikal</translation>
+    </message>
+    <message>
+        <source>Two: Horizontal</source>
+        <translation type="obsolete">Zwei: Horizontal</translation>
+    </message>
+    <message>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation>Три: Правый</translation>
+        <translation>Drei: Rechts</translation>
     </message>
     <message>
         <location filename="../Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation>Три: Левый</translation>
+        <translation>Drei: Links</translation>
     </message>
     <message>
         <location filename="../Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation>Три: Над</translation>
+        <translation>Drei: Oben</translation>
+    </message>
+    <message>
+        <source>Three: Below</source>
+        <translation type="obsolete">Drei: Unten</translation>
+    </message>
+    <message>
+        <source>Three: Vertical</source>
+        <translation type="obsolete">Drei: Vertikal</translation>
+    </message>
+    <message>
+        <source>Three: Horizontal</source>
+        <translation type="obsolete">Drei: Horizontal</translation>
+    </message>
+    <message>
+        <source>Four: Equal</source>
+        <translation type="obsolete">Vier: Gleichmässig</translation>
+    </message>
+    <message>
+        <source>Four: Right</source>
+        <translation type="obsolete">Vier: Rechts</translation>
+    </message>
+    <message>
+        <source>Four: Left</source>
+        <translation type="obsolete">Vier: Links</translation>
     </message>
 </context>
 <context>
@@ -24,7 +68,7 @@
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Четыре: Равный</translation>
+        <translation>Vier: Gleichmässig</translation>
     </message>
 </context>
 <context>
@@ -32,7 +76,7 @@
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Четыре: Левый</translation>
+        <translation>Vier: Links</translation>
     </message>
 </context>
 <context>
@@ -40,7 +84,7 @@
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Четыре: Правый</translation>
+        <translation>Vier: Rechts</translation>
     </message>
 </context>
 <context>
@@ -48,7 +92,7 @@
     <message>
         <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>Одинарный</translation>
+        <translation>Einzel</translation>
     </message>
 </context>
 <context>
@@ -56,7 +100,7 @@
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>Три: Под</translation>
+        <translation>Drei: Unten</translation>
     </message>
 </context>
 <context>
@@ -64,7 +108,7 @@
     <message>
         <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation>Три: Горизонтальный</translation>
+        <translation>Drei: Horizontal</translation>
     </message>
 </context>
 <context>
@@ -72,7 +116,7 @@
     <message>
         <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation>Три: Вертикальный</translation>
+        <translation>Drei: Vertikal</translation>
     </message>
 </context>
 <context>
@@ -80,7 +124,7 @@
     <message>
         <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation>Два: Горизонтальный</translation>
+        <translation>Zwei: Horizontal</translation>
     </message>
 </context>
 <context>
@@ -88,72 +132,72 @@
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>Два: Вертикальный</translation>
+        <translation>Zwei: Vertikal</translation>
     </message>
 </context>
 <context>
-    <name>Viewport</name>
+    <name>ViewportWidget</name>
     <message>
-        <location filename="../Viewport.js" line="+281"/>
+        <location filename="../ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
-        <translation>Опущенные данные не поддерживаются</translation>
+        <translation>Eingefügte Daten nicht unterstützt</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Importing file: </source>
-        <translation>Импортирование файла:</translation>
+        <translation>Importiere Datei: </translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation>URL для импортирования:</translation>
+        <translation>Importiere URL: </translation>
     </message>
     <message>
         <source>Grid</source>
-        <translation type="vanished">По сетке</translation>
+        <translation type="vanished">Raster</translation>
     </message>
     <message>
         <source>End</source>
-        <translation type="vanished">Конец</translation>
+        <translation type="vanished">Ende</translation>
     </message>
     <message>
         <source>On Entity</source>
-        <translation type="vanished">Точка на кривой</translation>
+        <translation type="vanished">Auf Objekt</translation>
     </message>
     <message>
         <source>Perpendicular</source>
-        <translation type="vanished">Перпендикуляр</translation>
+        <translation type="vanished">Lotrecht</translation>
     </message>
     <message>
         <source>Tangential</source>
-        <translation type="vanished">По касательной</translation>
+        <translation type="vanished">Tangential</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Центр</translation>
+        <translation type="vanished">Zentrum</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation type="vanished">Середина</translation>
+        <translation type="vanished">Mitte</translation>
     </message>
     <message>
         <source>Intersection</source>
-        <translation type="vanished">Пересечение</translation>
+        <translation type="vanished">Schnittpunkt</translation>
     </message>
     <message>
         <source>Reference</source>
-        <translation type="vanished">Привязка</translation>
+        <translation type="vanished">Referenz</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Шаг сетки &lt; шага дополнительной сетки</translation>
+        <translation type="vanished">Rasterabstand &lt; Meta Rasterabstand</translation>
     </message>
 </context>
 <context>
-    <name>ViewportGl</name>
+    <name>ViewportWidgetGl</name>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Шаг сетки &lt; шага дополнительной сетки</translation>
+        <translation type="vanished">Rasterabstand &lt; Meta Rasterabstand</translation>
     </message>
 </context>
 </TS>

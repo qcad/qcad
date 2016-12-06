@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("scripts/Widgets/Viewport/Viewport.js");
+include("scripts/Widgets/ViewportWidget/ViewportWidget.js");
 
 function ViewportSettings() {
 }
@@ -36,14 +36,14 @@ ViewportSettings.initPreferences = function(pageWidget, calledByPrefDialog, docu
     var previewWidget = widgets["PreviewWidget"];
 
     vpList.clear();
-    var dir = new QDir(Viewport.templateDir);
+    var dir = new QDir(ViewportWidget.templateDir);
     var filters = new QDir.Filters(QDir.Files, QDir.NoDotAndDotDot, QDir.Readable);
     var sortFlags = new QDir.SortFlags(QDir.Name);
     var eil = dir.entryInfoList(new Array("*.ui"), filters, sortFlags);
     var defaultRow = -1;
     for ( var j = 0; j < eil.length; ++j) {
         var fi = eil[j];
-        var w = WidgetFactory.createWidget(Viewport.templateDir, fi.fileName());
+        var w = WidgetFactory.createWidget(ViewportWidget.templateDir, fi.fileName());
         var lwi = new QListWidgetItem(w.windowTitle, vpList, QListWidgetItem.Type.valueOf());
         lwi.setData(Qt.UserRole, fi.fileName());
         // default viewport setting
@@ -72,7 +72,7 @@ ViewportSettings.updatePreview = function(previewWidget, item) {
     if (fileName == undefined) {
         return;
     }
-    var w = WidgetFactory.createWidget(Viewport.templateDir, fileName);
+    var w = WidgetFactory.createWidget(ViewportWidget.templateDir, fileName);
     w.setParent(previewWidget);
     w.enabled = false;
     w.setFixedSize(new QSize(320, 240));
@@ -100,9 +100,9 @@ ViewportSettings.applyPreferences = function(doc) {
         uiFileName = RSettings.getStringValue("Viewport/ViewportList.data", "00_Single.ui");
     }
     
-    Viewport.initMdiChild(mdiChild, uiFileName);
+    ViewportWidget.initMdiChild(mdiChild, uiFileName);
     
-    var viewports = Viewport.getViewports(mdiChild, mdiChild.getDocumentInterface());
+    var viewports = ViewportWidget.getViewports(mdiChild, mdiChild.getDocumentInterface());
     mdiChild.viewports = viewports;
     for ( var i = 0; i < viewports.length; ++i) {
         viewports[i].init();

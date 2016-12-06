@@ -20,4 +20,4 @@ SUBDIRS = \
     StatusBar \
     TabBar \
     ToolBarContextMenu \
-    Viewport
+    ViewportWidget

@@ -1,4 +1,4 @@
-include('scripts/Widgets/Viewport/Viewport.js');
+include('scripts/Widgets/ViewportWidget/ViewportWidget.js');
 var viewports = Viewport.getViewports(widget, documentInterface);
 
 // creates a scene for the view,

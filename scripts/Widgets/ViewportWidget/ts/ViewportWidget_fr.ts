@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>Form</name>
     <message>
         <source>Single</source>
-        <translatorcomment>--exact match--
---file: es.po--
-Desagrupa Entidades de Texto en Letras sencillas
-Selecciona entidades solas</translatorcomment>
-        <translation type="obsolete">Sencillo</translation>
+        <translatorcomment>--google--
+Décompose les entités textuelles en simples lettres 
+Sélectionne des entités uniques
+Points uniques</translatorcomment>
+        <translation type="obsolete">Un seul</translation>
     </message>
     <message>
         <source>Two: Vertical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Dos: Vertical</translation>
+        <translation type="obsolete">Deux : verticale</translation>
     </message>
     <message>
         <source>Two: Horizontal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Dos: Horizontal</translation>
+        <translation type="obsolete">Deux : horizontale</translation>
     </message>
     <message>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tres: Derecho</translation>
+        <translation>Trois : droite</translation>
     </message>
     <message>
         <location filename="../Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tres: Izquierda</translation>
+        <translation>Trois : gauche</translation>
     </message>
     <message>
         <location filename="../Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tres: Por encima de</translation>
+        <translation>Trois : au-dessus</translation>
     </message>
     <message>
         <source>Three: Below</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Tres: Por debajo de</translation>
+        <translation type="obsolete">Trois : en dessous</translation>
     </message>
     <message>
         <source>Three: Vertical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Tres: Vertical</translation>
+        <translation type="obsolete">Trois : verticale</translation>
     </message>
     <message>
         <source>Three: Horizontal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Tres: Horizontal</translation>
+        <translation type="obsolete">Trois : horizontale</translation>
     </message>
     <message>
         <source>Four: Equal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Cuatro: Igual</translation>
+        <translation type="obsolete">Quatre : égalité</translation>
     </message>
     <message>
         <source>Four: Right</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Cuatro: Derecho</translation>
+        <translation type="obsolete">Quatre : droite</translation>
     </message>
     <message>
         <source>Four: Left</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Cuatro: Izquierda</translation>
+        <translation type="obsolete">Quatre : gauche</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
+        <translation type="obsolete">Espacement de la grille &lt; espacement de la meta grille</translation>
     </message>
 </context>
 <context>
@@ -80,7 +80,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Cuatro: Igual</translation>
+        <translation>Quatre : égalité</translation>
     </message>
 </context>
 <context>
@@ -88,7 +88,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation>Cuatro: Izquierda</translation>
+        <translation>Quatre : gauche</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Cuatro: Derecho</translation>
+        <translation>Quatre : droite</translation>
     </message>
 </context>
 <context>
@@ -104,7 +104,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation>Sencillo</translation>
+        <translation>Un seul</translation>
     </message>
 </context>
 <context>
@@ -112,7 +112,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>Tres: Por debajo de</translation>
+        <translation>Trois : en dessous</translation>
     </message>
 </context>
 <context>
@@ -120,7 +120,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation>Tres: Horizontal</translation>
+        <translation>Trois : horizontale</translation>
     </message>
 </context>
 <context>
@@ -128,7 +128,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation>Tres: Vertical</translation>
+        <translation>Trois : verticale</translation>
     </message>
 </context>
 <context>
@@ -136,7 +136,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation>Dos: Horizontal</translation>
+        <translation>Deux : horizontale</translation>
     </message>
 </context>
 <context>
@@ -144,29 +144,29 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation>Dos: Vertical</translation>
+        <translation>Deux : verticale</translation>
     </message>
 </context>
 <context>
-    <name>Viewport</name>
+    <name>ViewportWidget</name>
     <message>
-        <location filename="../Viewport.js" line="+281"/>
+        <location filename="../ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
-        <translation>Datos insertados no compatibles</translation>
+        <translation>Données insérées pas pris en charge</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Importing file: </source>
-        <translation>Importación de archivo: </translation>
+        <translation>Importation fichier: </translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation>Importación de URL: </translation>
+        <translation>Importation URL: </translation>
     </message>
     <message>
         <source>Grid</source>
-        <translation type="vanished">Rejilla</translation>
+        <translation type="vanished">Grille</translation>
     </message>
     <message>
         <source>End</source>
@@ -174,46 +174,43 @@ Selecciona entidades solas</translatorcomment>
     </message>
     <message>
         <source>On Entity</source>
-        <translation type="vanished">En entidad</translation>
+        <translation type="vanished">A l&apos;entité</translation>
     </message>
     <message>
         <source>Perpendicular</source>
-        <translatorcomment>--exact match--
---file: artisan_es.ts--
-&amp;Perpendicular
-Perpendicular</translatorcomment>
-        <translation type="vanished">Perpendicular</translation>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">Perpendiculairement</translation>
     </message>
     <message>
         <source>Tangential</source>
-        <translation type="vanished">Tangencial</translation>
+        <translation type="vanished">Tangentiel</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Centro</translation>
+        <translation type="vanished">Centre</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation type="vanished">Medio</translation>
+        <translation type="vanished">Milieu</translation>
     </message>
     <message>
         <source>Intersection</source>
-        <translation type="vanished">Intersección</translation>
+        <translation type="vanished">Intersection</translation>
     </message>
     <message>
         <source>Reference</source>
-        <translation type="vanished">Referencia</translation>
+        <translation type="vanished">Référence</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
+        <translation type="vanished">Espacement de la grille &lt; espacement de la meta grille</translation>
     </message>
 </context>
 <context>
-    <name>ViewportGl</name>
+    <name>ViewportWidgetGl</name>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
+        <translation type="vanished">Espacement de la grille &lt; espacement de la meta grille</translation>
     </message>
 </context>
 </TS>

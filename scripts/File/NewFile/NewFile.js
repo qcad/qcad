@@ -19,7 +19,7 @@
 
 include("../File.js");
 include("../Save/Save.js");
-include("scripts/Widgets/Viewport/Viewport.js");
+include("scripts/Widgets/ViewportWidget/ViewportWidget.js");
 include("../AutoSave/AutoSave.js");
 
 if (new QFileInfo("scripts/DefaultAction.js").exists()) {
@@ -93,7 +93,7 @@ NewFile.prototype.beginEvent = function() {
  *
  * \param fileName File name of file to open.
  * \param nameFilter Filter to use to import file.
- * \param uiFile UI file to use for view port (defaults to ViewportQt.ui).
+ * \param uiFile UI file to use for view port (defaults to ViewportWidgetQt.ui).
  * \param graphicsSceneClass Class to use for graphics scene (defaults to "RGraphicsSceneQt")
  */
 NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneClass) {
@@ -216,15 +216,15 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     // load ui file and set the MDI content widget:
     //qDebug("initMdiChild");
-    Viewport.initMdiChild(mdiChild, uiFileName);
+    ViewportWidget.initMdiChild(mdiChild, uiFileName);
     
     // fix Qt bug in which Qt icon is shown at the top left if tab bar is off:
     mdiChild.showMaximized();
 
-    var viewports = Viewport.getViewports(mdiChild, documentInterface);
+    var viewports = ViewportWidget.getViewports(mdiChild, documentInterface);
     mdiChild.viewports = viewports;
     //qDebug("initViewports");
-    Viewport.initializeViewports(viewports, uiFile, graphicsSceneClass);
+    ViewportWidget.initializeViewports(viewports, uiFile, graphicsSceneClass);
     //qDebug("initViewports: done");
     NewFile.updateTitle(mdiChild);
 
@@ -235,7 +235,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         documentInterface.setDefaultAction(idleAction);
     }
 
-    Viewport.initEventHandler(viewports);
+    ViewportWidget.initEventHandler(viewports);
 
     RGuiAction.triggerGroupDefaults();
 
@@ -258,7 +258,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     //qDebug("updateViewports");
     if (!isDeleted(mdiChild)) {
         mdiChild.updatesEnabled = true;
-        Viewport.updateViewports(viewports);
+        ViewportWidget.updateViewports(viewports);
     }
 
     if (isOpen) {
