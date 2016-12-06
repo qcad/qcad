@@ -159,8 +159,16 @@ public:
         return RPolyline::isGeometricallyClosed(tolerance);
     }
 
-    void autoClose() {
-        RPolyline::autoClose();
+    bool autoClose() {
+        return RPolyline::toLogicallyClosed();
+    }
+
+    bool toLogicallyClosed(double tolerance=RS::PointTolerance) {
+        return RPolyline::toLogicallyClosed(tolerance);
+    }
+
+    bool toLogicallyOpen() {
+        return RPolyline::toLogicallyOpen();
     }
 
     RS::Orientation getOrientation(bool implicitelyClosed = false) const {

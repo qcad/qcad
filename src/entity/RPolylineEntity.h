@@ -226,8 +226,16 @@ public:
         return data.isGeometricallyClosed(tolerance);
     }
 
-    void autoClose() {
-        data.autoClose();
+    bool autoClose(double tolerance=RS::PointTolerance) {
+        return data.toLogicallyClosed(tolerance);
+    }
+
+    bool toLogicallyClosed(double tolerance=RS::PointTolerance) {
+        return data.toLogicallyClosed(tolerance);
+    }
+
+    bool toLogicallyOpen() {
+        return data.toLogicallyOpen();
     }
 
     QList<RVector> getSelfIntersectionPoints() const {

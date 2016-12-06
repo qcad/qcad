@@ -569,17 +569,27 @@ bool RPolyline::isGeometricallyClosed(double tolerance) const {
     return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
 }
 
-bool RPolyline::autoClose() {
+bool RPolyline::toLogicallyClosed(double tolerance) {
     if (isClosed()) {
         return false;
     }
 
-    if (!isGeometricallyClosed()) {
+    if (!isGeometricallyClosed(tolerance)) {
         return false;
     }
 
     removeLastVertex();
     setClosed(true);
+    return true;
+}
+
+bool RPolyline::toLogicallyOpen() {
+    if (!isClosed()) {
+        return false;
+    }
+
+    appendVertex(getEndPoint(), getBulgeAt(vertices.size()-1));
+    setClosed(false);
     return true;
 }
 

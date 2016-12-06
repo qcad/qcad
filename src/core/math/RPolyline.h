@@ -123,7 +123,11 @@ public:
     void setClosed(bool on);
     bool isClosed() const;
     bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
-    bool autoClose();
+    bool autoClose() {
+        return toLogicallyClosed();
+    }
+    bool toLogicallyClosed(double tolerance=RS::PointTolerance);
+    bool toLogicallyOpen();
 
     QList<RVector> getSelfIntersectionPoints() const;
 
