@@ -131,6 +131,18 @@ DrawBasedOnRectanglePP.prototype.getCorners = function() {
     ];
 };
 
+DrawBasedOnRectanglePP.prototype.getCenter = function() {
+    return RVector.getAverage(this.corner1, this.corner2);
+};
+
+DrawBasedOnRectanglePP.prototype.getWidth = function() {
+    return Math.abs(this.corner1.x-this.corner2.x);
+};
+
+DrawBasedOnRectanglePP.prototype.getHeight = function() {
+    return Math.abs(this.corner1.y-this.corner2.y);
+};
+
 DrawBasedOnRectanglePP.prototype.getAuxPreview = function() {
     if (this.previewRectangle!==true) {
         return undefined;
