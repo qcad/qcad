@@ -449,6 +449,8 @@ RBox RBlockReferenceData::getQueryBoxInBlockCoordinates(const RBox& box) const {
 }
 
 QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
+    Q_UNUSED(segment)
+
     QList<QSharedPointer<RShape> > ret;
 
     static int recursionDepth=0;
