@@ -33,7 +33,7 @@
 #include "RXLine.h"
 
 double RShape::twopi = M_PI*2;
-double RShape::epsTolerance = 1.0e-03;
+double RShape::epsTolerance = 1.0e-02;
 int RShape::errorCode = 0;
 
 bool RShape::isFullEllipseShape(const RShape& s) {
