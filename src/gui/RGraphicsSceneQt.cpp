@@ -679,13 +679,25 @@ QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawables(REntity::Id entityI
     return QList<RGraphicsSceneDrawable>();
 }
 
-bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId) {
-    return clipRectangles.contains(entityId);
+bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) {
+    if (preview) {
+        return previewClipRectangles.contains(entityId);
+    }
+    else {
+        return clipRectangles.contains(entityId);
+    }
 }
 
-RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId) {
-    if (clipRectangles.contains(entityId)) {
-        return clipRectangles.value(entityId);
+RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) {
+    if (preview) {
+        if (previewClipRectangles.contains(entityId)) {
+            return previewClipRectangles.value(entityId);
+        }
+    }
+    else {
+        if (clipRectangles.contains(entityId)) {
+            return clipRectangles.value(entityId);
+        }
     }
 
     return RBox();

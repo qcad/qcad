@@ -783,7 +783,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
     }
 
     // clipping:
-    RBox clipRectangle = sceneQt->getClipRectangle(id);
+    RBox clipRectangle = sceneQt->getClipRectangle(id, preview);
     if (clipRectangle.isValid()) {
         clipRectangle.move(paintOffset);
         painter->setClipRect(QRectF(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight()));

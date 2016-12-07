@@ -111,8 +111,8 @@ public:
     virtual void addToPreview(REntity::Id entityId, const RGraphicsSceneDrawable& drawable);
     void addTextToPreview(const RTextBasedData& text);
 
-    bool hasClipRectangleFor(REntity::Id entityId);
-    RBox getClipRectangle(REntity::Id entityId);
+    bool hasClipRectangleFor(REntity::Id entityId, bool preview = false);
+    RBox getClipRectangle(REntity::Id entityId, bool preview = false);
 
     void addPath(REntity::Id entityId, const RGraphicsSceneDrawable& path, bool draft);
 
