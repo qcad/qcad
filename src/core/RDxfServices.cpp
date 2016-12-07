@@ -43,7 +43,7 @@ void RDxfServices::reset() {
 void RDxfServices::fixVersion2String(QString& str) const {
     // correct stacked text
     // \S+0.1\-0.1; -> \S+0.1^-0.1;
-    QRegExp rx("\\\\S([^\\\\]*)\\\\([^;]*);");
+    QRegExp rx("\\\\S([^\\\\;]*)\\\\([^;]*);");
     str.replace(rx, "\\S\\1^\\2;");
 }
 
