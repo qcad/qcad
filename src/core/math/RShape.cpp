@@ -33,7 +33,7 @@
 #include "RXLine.h"
 
 double RShape::twopi = M_PI*2;
-double RShape::epsTolerance = 1.0e-04;
+double RShape::epsTolerance = 1.0e-03;
 int RShape::errorCode = 0;
 
 bool RShape::isFullEllipseShape(const RShape& s) {
@@ -1521,6 +1521,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
 
         // check for multiple roots
         if ((i > 1) && (fabs(ychk[i] - ychk[i-1]) < (epsTolerance/2.0))) {
+            //qDebug() << "multiple roots";
             continue;
         }
         // check intersection points for ychk[i]
@@ -1528,7 +1529,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
             x1 = 0.0;
         }
         else {
-            x1 = a1*sqrt (1.0 - (ychk[i]*ychk[i])/(b1*b1));
+            x1 = a1*sqrt(1.0 - (ychk[i]*ychk[i])/(b1*b1));
         }
         x2 = -x1;
 //        qDebug() << "fabs(ellipse2tr(x1, ychk[i], AA, BB, CC, DD, EE, FF)): " << fabs(ellipse2tr(x1, ychk[i], AA, BB, CC, DD, EE, FF));
@@ -1560,7 +1561,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
         }
     }
 
-    //qDebug() << "nintpts: " << nintpts;
+//    qDebug() << "nintpts: " << nintpts;
 
     for (int i=1; i<=nintpts; i++) {
 //        qDebug() << "intersection: x/y: " << xint[i] << "/" << yint[i];
