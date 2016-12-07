@@ -58,15 +58,52 @@ QList<RRefPoint> RViewportData::getReferencePoints(RS::ProjectionRenderingHint h
     Q_UNUSED(hint)
 
     QList<RRefPoint> ret;
-    ret.append(position);
+    ret.append(RRefPoint(position, RRefPoint::Center));
+
+    ret.append(position + RVector( width/2,  height/2));
+    ret.append(position + RVector(-width/2,  height/2));
+    ret.append(position + RVector(-width/2, -height/2));
+    ret.append(position + RVector( width/2, -height/2));
+
     return ret;
 }
 
 bool RViewportData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
+
+    RVector offset = targetPoint - referencePoint;
+
     if (referencePoint.equalsFuzzy(position)) {
         position = targetPoint;
+        ret = true;
+    }
+    else if (referencePoint.equalsFuzzy(position + RVector(width/2, height/2))) {
+        position.x += offset.x/2;
+        position.y += offset.y/2;
+        width += offset.x;
+        height += offset.y;
+        ret = true;
+    }
+    else if (referencePoint.equalsFuzzy(position + RVector(-width/2, height/2))) {
+        position.x += offset.x/2;
+        position.y += offset.y/2;
+        width -= offset.x;
+        height += offset.y;
+        ret = true;
+    }
+    else if (referencePoint.equalsFuzzy(position + RVector(-width/2, -height/2))) {
+        position.x += offset.x/2;
+        position.y += offset.y/2;
+        width -= offset.x;
+        height -= offset.y;
+        ret = true;
+    }
+    else if (referencePoint.equalsFuzzy(position + RVector(width/2, -height/2))) {
+        position.x += offset.x/2;
+        position.y += offset.y/2;
+        width += offset.x;
+        height -= offset.y;
         ret = true;
     }
     return ret;
