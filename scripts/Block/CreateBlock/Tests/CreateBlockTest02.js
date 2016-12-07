@@ -58,6 +58,14 @@ CreateBlockTest02.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::EditToolBar::ToolButtonPaste');
+    this.setToolOption('Paste/Rotation', '0');
+    this.setToolOption('Paste/Scale', '1');
+    this.setToolOption('Paste/FlipHorizontal', 'false');
+    this.setToolOption('Paste/FlipVertical', 'false');
+    this.setToolOption('Paste/ToCurrentLayer', 'false');
+    this.setToolOption('Paste/OverwriteLayers', 'false');
+    this.setToolOption('Paste/OverwriteBlocks', 'false');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(19.7, -0.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
