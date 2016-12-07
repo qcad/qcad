@@ -758,7 +758,6 @@ void RDxfImporter::addMText(const DL_MTextData& data) {
     mtext.append(data.text.c_str());
     mtext.replace(QByteArray("^ "), QByteArray("^"));
     QString mtextString = QString(mtext);
-    //mtextString.replace("^ ", "^");
 
     QVariant vDwgCodePage = document->getKnownVariable(RS::DWGCODEPAGE);
     if (vDwgCodePage.isValid()) {
