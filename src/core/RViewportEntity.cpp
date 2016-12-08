@@ -193,7 +193,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             doc->getModelSpaceBlockId(),
             data.position + offset,
             RVector(data.scale, data.scale),
-            data.rotation
+            0.0
         )
     );
     modelSpaceData.update();
@@ -215,6 +215,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         if (entity.isNull()) {
             continue;
         }
+
+        entity->rotate(data.rotation, data.position);
 
         // prevent recursions:
         if (entity->getType()==RS::EntityViewport) {

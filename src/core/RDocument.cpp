@@ -248,6 +248,9 @@ void RDocument::init() {
             docVars->setKnownVariable(RS::DIMAZIN, 2);
         }
 
+        // max number of active viewports:
+        docVars->setKnownVariable(RS::MAXACTVP, 32);
+
         //  multi page printing settings:
         setVariable("MultiPageSettings/Columns", RSettings::getIntValue("MultiPageSettings/Columns", 1));
         setVariable("MultiPageSettings/Rows", RSettings::getIntValue("MultiPageSettings/Rows", 1));
