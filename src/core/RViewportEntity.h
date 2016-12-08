@@ -57,6 +57,7 @@ public:
     static RPropertyTypeId PropertyHeight;
     static RPropertyTypeId PropertyScale;
     static RPropertyTypeId PropertyRotation;
+    static RPropertyTypeId PropertyOn;
     static RPropertyTypeId PropertyViewCenterX;
     static RPropertyTypeId PropertyViewCenterY;
     static RPropertyTypeId PropertyViewTargetX;
@@ -179,6 +180,14 @@ public:
 
     void setOverall(bool on) {
         data.setOverall(on);
+    }
+
+    bool isOff() const {
+        return data.isOff();
+    }
+
+    void setOff(bool v) {
+        data.setOff(v);
     }
 
 protected:

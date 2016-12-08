@@ -40,6 +40,7 @@ RPropertyTypeId RViewportEntity::PropertyWidth;
 RPropertyTypeId RViewportEntity::PropertyHeight;
 RPropertyTypeId RViewportEntity::PropertyScale;
 RPropertyTypeId RViewportEntity::PropertyRotation;
+RPropertyTypeId RViewportEntity::PropertyOn;
 RPropertyTypeId RViewportEntity::PropertyViewCenterX;
 RPropertyTypeId RViewportEntity::PropertyViewCenterY;
 RPropertyTypeId RViewportEntity::PropertyViewTargetX;
@@ -76,6 +77,7 @@ void RViewportEntity::init() {
     RViewportEntity::PropertyHeight.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
     RViewportEntity::PropertyScale.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
     RViewportEntity::PropertyRotation.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Rotation"));
+    RViewportEntity::PropertyOn.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "On"));
     RViewportEntity::PropertyViewCenterX.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Center"), QT_TRANSLATE_NOOP("REntity", "X"));
     RViewportEntity::PropertyViewCenterY.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Center"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RViewportEntity::PropertyViewTargetX.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "X"));
@@ -101,6 +103,13 @@ bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.viewTarget.y, value, PropertyViewTargetY == propertyTypeId);
     ret = ret || RObject::setMember(data.viewTarget.z, value, PropertyViewTargetZ == propertyTypeId);
     ret = ret || RObject::setMember(data.overall, value, PropertyOverall == propertyTypeId);
+
+    if (PropertyOn==propertyTypeId) {
+        bool on = !data.isOff();
+        ret = ret || RObject::setMember(on, value);
+        data.setOff(!on);
+    }
+
     return ret;
 }
 
@@ -120,6 +129,8 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
         return qMakePair(QVariant(data.scale), RPropertyAttributes());
     } else if (propertyTypeId == PropertyRotation) {
         return qMakePair(QVariant(data.rotation), RPropertyAttributes(RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyOn) {
+        return qMakePair(QVariant(!data.isOff()), RPropertyAttributes());
     } else if (propertyTypeId == PropertyViewCenterX) {
         return qMakePair(QVariant(data.viewCenter.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyViewCenterY) {
@@ -153,14 +164,19 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     RBox viewportBox(data.position, data.width, data.height);
 
     // if layer is visible, export viewport frame
-    // viewport contents is always exported!
+    // viewport contents is always exported (unless viewport if off):
     if (isVisible()) {
-    // export viewport frame to layer of viewport:
+        // export viewport frame to layer of viewport:
         e.setBrush(Qt::NoBrush);
         QList<RLine> lines = viewportBox.getLines2d();
         for (int i=0; i<lines.length(); i++) {
             e.exportLine(lines[i]);
         }
+    }
+
+    // if viewport is off, we're done:
+    if (isOff()) {
+        return;
     }
 
     // clip rectangle export

@@ -45,6 +45,11 @@ protected:
     RViewportData(RDocument* document, const RViewportData& data);
 
 public:
+    enum Status {
+        Off = 0x20000
+    };
+
+public:
     RViewportData();
 //    RViewportData(const RVector& center, double width, double height, double scale,
 //        const RVector& viewCenter,
@@ -140,12 +145,33 @@ public:
         overall = on;
     }
 
+    bool isOff() const {
+        return testStatusFlag(Off);
+    }
+
+    void setOff(bool v) {
+        setStatusFlag(Off, v);
+    }
+
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const;
+
+protected:
+    void setStatusFlag(Status s, bool on) {
+        if (on) {
+            status |= s;
+        } else {
+            status &= ~s;
+        }
+    }
+
+    bool testStatusFlag(Status s) const {
+        return (status & s) == s;
+    }
 
 private:
     int viewportId;
