@@ -70,6 +70,8 @@ public:
     void setName(const QString& n);
     QString getDescription() const;
     void setDescription(const QString& d);
+    double getScreenScale() const;
+    void setScreenScale(double s);
 
     QString getLabel() const;
     bool isMetric() const {
@@ -144,6 +146,7 @@ private:
     bool metric;
     QString name;
     QString description;
+    double screenScale;
     mutable QString patternString;
 
     QList<double> pattern;

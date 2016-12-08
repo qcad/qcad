@@ -30,7 +30,7 @@ QMap<QString, QString> RLinetypePattern::nameMap;
 
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, int num...)
-    : metric(metric), name(name), description(description) {
+    : metric(metric), name(name), description(description), screenScale(1.0) {
 
     QList<double> dashes;
 
@@ -45,7 +45,7 @@ RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QStri
 }
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, const QList<double>& dashes)
-    : metric(metric), name(name), description(description) {
+    : metric(metric), name(name), description(description), screenScale(1.0) {
 
     set(dashes);
 }
@@ -132,6 +132,7 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
     metric = other.metric;
     name = other.name;
     description = other.description;
+    screenScale = other.screenScale;
     patternString = other.patternString;
     pattern = other.pattern;
     shapes = other.shapes;
@@ -340,6 +341,14 @@ void RLinetypePattern::setDescription(const QString& d) {
     description = d;
 }
 
+double RLinetypePattern::getScreenScale() const {
+    return screenScale;
+}
+
+void RLinetypePattern::setScreenScale(double s) {
+    screenScale = s;
+}
+
 QString RLinetypePattern::getLabel() const {
     QString desc = description;
     QString preview;
@@ -368,7 +377,8 @@ QString RLinetypePattern::getLabel() const {
 }
 
 /**
- * Set pattern based on .lin formatted string (e.g. "A,3.81,[TRACK1,ltypeshp.shx,S=6.35],3.81").
+ * Set pattern based on .lin formatted string.
+ * e.g. "A,3.81,[TRACK1,ltypeshp.shx,S=6.35],3.81"
  */
 bool RLinetypePattern::setPatternString(const QString& patternString) {
     this->patternString = "";
@@ -380,6 +390,7 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
     shapeTexts.clear();
     shapeTextStyles.clear();
     shapes.clear();
+    screenScale = 1.0;
 
     QStringList parts;
     QRegExp rx("\\[[^\\]]*\\]|A|([+-]?\\d+\\.?\\d*)|([+-]?\\d*\\.?\\d+)");

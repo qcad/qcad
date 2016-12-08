@@ -118,17 +118,17 @@ bool RGraphicsSceneQt::beginPath() {
     if (entity!=NULL) {
         layer = document->queryLayerDirect(entity->getLayerId());
     }
-    screenBasedLinetypesOverride = screenBasedLinetypes;
-    if (!layer.isNull() && layer->getCustomBoolProperty("QCAD", "ScreenBasedLinetypes", false)==true) {
+    if (!layer.isNull() &&
+        layer->getCustomBoolProperty("QCAD", "ScreenBasedLinetypes", false)==true) {
         screenBasedLinetypesOverride = true;
     }
 
-    if (getScreenBasedLinetypes() && currentPen.style()==Qt::SolidLine) {
-        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype();
-        if (!pat.isEmpty()) {
-            currentPen.setDashPattern(pat);
-        }
-    }
+//    if (getScreenBasedLinetypes() && currentPen.style()==Qt::SolidLine) {
+//        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype();
+//        if (!pat.isEmpty()) {
+//            currentPen.setDashPattern(pat);
+//        }
+//    }
 
     if (draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         QPen localPen = currentPen;
@@ -207,6 +207,8 @@ void RGraphicsSceneQt::endPath() {
             }
         }
     }
+
+    screenBasedLinetypesOverride = false;
 }
 
 void RGraphicsSceneQt::exportPoint(const RPoint& point) {
@@ -353,13 +355,15 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
             currentPainterPath.lineTo(arc.getEndPoint());
         }
         else {
-            currentPainterPath.arcTo(
-                arc.getCenter().x-arc.getRadius(),
-                arc.getCenter().y-arc.getRadius(),
-                arc.getRadius()*2, arc.getRadius()*2,
-                RMath::rad2deg(-arc.getStartAngle()),
-                RMath::rad2deg(-arc.getSweep())
-            );
+//            currentPainterPath.arcTo(
+//                arc.getCenter().x-arc.getRadius(),
+//                arc.getCenter().y-arc.getRadius(),
+//                arc.getRadius()*2, arc.getRadius()*2,
+//                RMath::rad2deg(-arc.getStartAngle()),
+//                RMath::rad2deg(-arc.getSweep())
+//            );
+            currentPainterPath.setAlwaysRegen(true);
+            RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
         }
     }
     else {

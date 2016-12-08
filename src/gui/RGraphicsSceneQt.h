@@ -119,7 +119,10 @@ public:
     virtual void startEntity(bool topLevelEntity);
 
     virtual bool getScreenBasedLinetypes() const {
-        return screenBasedLinetypesOverride;
+        if (screenBasedLinetypesOverride) {
+            return true;
+        }
+        return RGraphicsScene::getScreenBasedLinetypes();
     }
 
     virtual void dump() {
