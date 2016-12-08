@@ -214,8 +214,7 @@ bool RObject::setMember(int& variable, const QVariant& value,
 /**
  * \overload
  */
-bool RObject::setMember(bool& variable, const QVariant& value,
-        bool condition) {
+bool RObject::setMember(bool& variable, const QVariant& value, bool condition) {
     if (!condition) {
         return false;
     }
