@@ -163,8 +163,13 @@ BitmapExport.prototype.getProperties = function() {
 
     var ret = [];
 
-    ret["width"] = widthEdit.getValue();
-    ret["height"] = heightEdit.getValue();
+    if (resolutionCombo.currentText!=="auto") {
+        ret["resolution"] = parseInt(resolutionCombo.currentText);
+    }
+    else {
+        ret["width"] = widthEdit.getValue();
+        ret["height"] = heightEdit.getValue();
+    }
     if (whiteRadio.checked) {
         ret["backgroundColor"] = new QColor("white");
     }
@@ -196,7 +201,6 @@ BitmapExport.prototype.resolutionChanged = function(str) {
         this.documentWidth = document.getBoundingBox(true, true).getWidth();
         this.documentHeight = document.getBoundingBox(true, true).getHeight();
     }
-
 
     widthEdit.setValue(res * this.documentWidth);
     heightEdit.setValue(res * this.documentHeight);
