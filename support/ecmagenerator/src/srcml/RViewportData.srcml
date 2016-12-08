@@ -125,6 +125,14 @@
         <expr_stmt><expr><name>scale</name> = <name>s</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>double</name></type> <name>getRotation</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>rotation</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setRotation</name><parameter_list>(<param><decl><type><name>double</name></type> <name>r</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>rotation</name> = <name>r</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>bool</name></type> <name>isOverall</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>overall</name></expr>;</return>
     }</block></function>
@@ -146,6 +154,7 @@
     <decl_stmt><decl><type><name>double</name></type> <name>width</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>height</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>scale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>rotation</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>RVector</name></type> <name>viewCenter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>viewTarget</name></decl>;</decl_stmt>

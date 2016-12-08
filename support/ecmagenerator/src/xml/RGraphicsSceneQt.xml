@@ -296,6 +296,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getClipRectangle" cppName="getClipRectangle"
@@ -304,6 +306,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RBox" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="addPath" cppName="addPath" specifier="public"

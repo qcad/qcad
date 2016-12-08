@@ -118,6 +118,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
             
+            REcmaHelper::registerFunction(&engine, proto, getRotation, "getRotation");
+            
+            REcmaHelper::registerFunction(&engine, proto, setRotation, "setRotation");
+            
             REcmaHelper::registerFunction(&engine, proto, isOverall, "isOverall");
             
             REcmaHelper::registerFunction(&engine, proto, setOverall, "setOverall");
@@ -205,6 +209,10 @@
             
             ctor.setProperty("PropertyScale",
                 qScriptValueFromValue(&engine, RViewportEntity::PropertyScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyRotation",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyRotation),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyViewCenterX",
@@ -2193,6 +2201,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaViewportEntity::setScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::getRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::getRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::getRotation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getRotation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getRotation();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getRotation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::getRotation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setRotation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setRotation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setRotation(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setRotation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setRotation", context, engine);
             return result;
         }
          QScriptValue

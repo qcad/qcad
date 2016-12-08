@@ -102,6 +102,12 @@
         setScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isOverall
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
