@@ -24,6 +24,7 @@ RViewportData::RViewportData()
       width(0.0),
       height(0.0),
       scale(1.0),
+      rotation(0.0),
       overall(false) {
 }
 

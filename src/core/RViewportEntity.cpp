@@ -39,6 +39,7 @@ RPropertyTypeId RViewportEntity::PropertyCenterZ;
 RPropertyTypeId RViewportEntity::PropertyWidth;
 RPropertyTypeId RViewportEntity::PropertyHeight;
 RPropertyTypeId RViewportEntity::PropertyScale;
+RPropertyTypeId RViewportEntity::PropertyRotation;
 RPropertyTypeId RViewportEntity::PropertyViewCenterX;
 RPropertyTypeId RViewportEntity::PropertyViewCenterY;
 RPropertyTypeId RViewportEntity::PropertyViewTargetX;
@@ -74,6 +75,7 @@ void RViewportEntity::init() {
     RViewportEntity::PropertyWidth.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Width"));
     RViewportEntity::PropertyHeight.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
     RViewportEntity::PropertyScale.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+    RViewportEntity::PropertyRotation.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Rotation"));
     RViewportEntity::PropertyViewCenterX.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Center"), QT_TRANSLATE_NOOP("REntity", "X"));
     RViewportEntity::PropertyViewCenterY.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Center"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RViewportEntity::PropertyViewTargetX.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "X"));
@@ -92,6 +94,7 @@ bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.width, value, PropertyWidth == propertyTypeId);
     ret = ret || RObject::setMember(data.height, value, PropertyHeight == propertyTypeId);
     ret = ret || RObject::setMember(data.scale, value, PropertyScale == propertyTypeId);
+    ret = ret || RObject::setMember(data.rotation, value, PropertyRotation == propertyTypeId);
     ret = ret || RObject::setMember(data.viewCenter.x, value, PropertyViewCenterX == propertyTypeId);
     ret = ret || RObject::setMember(data.viewCenter.y, value, PropertyViewCenterY == propertyTypeId);
     ret = ret || RObject::setMember(data.viewTarget.x, value, PropertyViewTargetX == propertyTypeId);
@@ -115,6 +118,8 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
         return qMakePair(QVariant(data.height), RPropertyAttributes());
     } else if (propertyTypeId == PropertyScale) {
         return qMakePair(QVariant(data.scale), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyRotation) {
+        return qMakePair(QVariant(data.rotation), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyViewCenterX) {
         return qMakePair(QVariant(data.viewCenter.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyViewCenterY) {
@@ -172,7 +177,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             doc->getModelSpaceBlockId(),
             data.position + offset,
             RVector(data.scale, data.scale),
-            0
+            data.rotation
         )
     );
     modelSpaceData.update();

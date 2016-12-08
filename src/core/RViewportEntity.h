@@ -56,6 +56,7 @@ public:
     static RPropertyTypeId PropertyWidth;
     static RPropertyTypeId PropertyHeight;
     static RPropertyTypeId PropertyScale;
+    static RPropertyTypeId PropertyRotation;
     static RPropertyTypeId PropertyViewCenterX;
     static RPropertyTypeId PropertyViewCenterY;
     static RPropertyTypeId PropertyViewTargetX;
@@ -162,6 +163,14 @@ public:
 
     void setScale(double s) {
         data.setScale(s);
+    }
+
+    double getRotation() const {
+        return data.getRotation();
+    }
+
+    void setRotation(double r) {
+        data.setRotation(r);
     }
 
     bool isOverall() const {

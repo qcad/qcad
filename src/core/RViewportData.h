@@ -124,6 +124,14 @@ public:
         scale = s;
     }
 
+    double getRotation() const {
+        return rotation;
+    }
+
+    void setRotation(double r) {
+        rotation = r;
+    }
+
     bool isOverall() const {
         return overall;
     }
@@ -145,6 +153,7 @@ private:
     double width;
     double height;
     double scale;
+    double rotation;
 
     RVector viewCenter;
     RVector viewTarget;
