@@ -1237,7 +1237,7 @@ double RPolyline::getLengthTo(const RVector& p, bool limited) const {
  * excluding toIndex.
  */
 double RPolyline::getSegmentsLength(int fromIndex, int toIndex) const {
-    double len;
+    double len = 0.0;
     for (int i=fromIndex; i<toIndex; i++) {
         QSharedPointer<RShape> segment = getSegmentAt(i);
         len+=segment->getLength();
