@@ -4,7 +4,7 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/HatchFromSelection.js");
     action.setIcon(basePath + "/HatchFromSelection.svg");
-    action.setStatusTip(qsTranslate("Hatch", "Create hatch or solid fill from selected boundary"));
+    action.setStatusTip(qsTranslate("HatchFromSelection", "Create hatch or solid fill from selected boundary"));
     action.setDefaultShortcut(new QKeySequence("h,a"));
     action.setDefaultCommands(["hatch", "ha"]);
     action.setGroupSortOrder(11800);
