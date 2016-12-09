@@ -447,6 +447,7 @@ bool RHatchData::stretch(const RPolyline& area, const RVector& offset) {
 
 QList<QSharedPointer<RShape> > RHatchData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
     Q_UNUSED(queryBox)
+    Q_UNUSED(segment)
 
     QList<QSharedPointer<RShape> > ret;
 

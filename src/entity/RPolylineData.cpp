@@ -180,6 +180,8 @@ QList<RVector> RPolylineData::getIntersectionPoints(
 }
 
 QList<QSharedPointer<RShape> > RPolylineData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
+    Q_UNUSED(segment)
+
     if (!ignoreComplex) {
         return QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(new RPolyline(*this));
     }
