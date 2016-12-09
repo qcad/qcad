@@ -75,10 +75,10 @@ public:
         return RPolyline::getTrimEnd(trimPoint, clickPoint);
     }
     bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
-        return RPolyline::trimStartPoint(trimPoint, clickPoint);
+        return RPolyline::trimStartPoint(trimPoint, clickPoint, extend);
     }
     bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
-        return RPolyline::trimEndPoint(trimPoint, clickPoint);
+        return RPolyline::trimEndPoint(trimPoint, clickPoint, extend);
     }
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;

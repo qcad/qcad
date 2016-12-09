@@ -78,10 +78,10 @@ public:
         return RXLine::getTrimEnd(trimPoint, clickPoint);
     }
     bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
-        return RXLine::trimStartPoint(trimPoint, clickPoint);
+        return RXLine::trimStartPoint(trimPoint, clickPoint, extend);
     }
     bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
-        return RXLine::trimEndPoint(trimPoint, clickPoint);
+        return RXLine::trimEndPoint(trimPoint, clickPoint, extend);
     }
 
     RS::Side getSideOfPoint(const RVector& point) const {

@@ -122,10 +122,10 @@ public:
         return RSpline::getTrimEnd(trimPoint, clickPoint);
     }
     bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
-        return RSpline::trimStartPoint(trimPoint, clickPoint);
+        return RSpline::trimStartPoint(trimPoint, clickPoint, extend);
     }
     bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
-        return RSpline::trimEndPoint(trimPoint, clickPoint);
+        return RSpline::trimEndPoint(trimPoint, clickPoint, extend);
     }
 
     bool isClosed() const  {

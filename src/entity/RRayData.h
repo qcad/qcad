@@ -75,10 +75,10 @@ public:
         return RRay::getTrimEnd(trimPoint, clickPoint);
     }
     bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
-        return RRay::trimStartPoint(trimPoint, clickPoint);
+        return RRay::trimStartPoint(trimPoint, clickPoint, extend);
     }
     bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
-        return RRay::trimEndPoint(trimPoint, clickPoint);
+        return RRay::trimEndPoint(trimPoint, clickPoint, extend);
     }
 
     RS::Side getSideOfPoint(const RVector& point) const {
