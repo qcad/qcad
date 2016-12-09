@@ -20,7 +20,11 @@
 #ifndef RCHARACTERWIDGETPLUGIN_H_
 #define RCHARACTERWIDGETPLUGIN_H_
 
+#if QT_VERSION >= 0x050000
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
+#else
 #include <QDesignerCustomWidgetInterface>
+#endif
 
 class RCharacterWidgetPlugin: public QObject,
         public QDesignerCustomWidgetInterface {
