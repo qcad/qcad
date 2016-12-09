@@ -31,11 +31,6 @@ Wzory &amp;kreskowania:</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Remis kreskowania lub stałe wypełnienie</translation>
     </message>
-    <message>
-        <location filename="../HatchFromSelectionInit.js" line="+7"/>
-        <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HatchDialog</name>
@@ -122,8 +117,13 @@ Skala:</translatorcomment>
         <translation type="unfinished">Każda jednostka musi być granica linia, łuk, okrąg, elipsa, łuk, elipsa, polilinia lub splajn. Znaleziono:</translation>
     </message>
     <message>
-        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -260,8 +260,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+71"/>
-        <location line="+6"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
+        <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
         <translation>X</translation>
@@ -270,7 +270,7 @@
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-3"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="-8"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -294,7 +294,7 @@
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-1"/>
-        <location line="+6"/>
+        <location line="+8"/>
         <location line="+2"/>
         <source>Y</source>
         <translation>Y</translation>
@@ -309,8 +309,8 @@
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
-        <location line="+8"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
+        <location line="+10"/>
         <source>Z</source>
         <translation>Z</translation>
     </message>
@@ -323,7 +323,7 @@
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="-5"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
         <translation>Skalierung</translation>
     </message>
@@ -538,6 +538,16 @@
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
+        <source>Rotation</source>
+        <translation>Rotation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>On</source>
+        <translation>Ein</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
         <translation>Ansicht Zentrum</translation>
@@ -762,7 +772,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+856"/>
         <source>By Layer</source>
         <translation>Von Layer</translation>
     </message>

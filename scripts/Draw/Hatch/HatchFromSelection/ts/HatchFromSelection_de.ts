@@ -27,11 +27,6 @@
         <source>Draw hatch or solid fill</source>
         <translation type="vanished">Schraffur oder Füllung</translation>
     </message>
-    <message>
-        <location filename="../HatchFromSelectionInit.js" line="+7"/>
-        <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HatchDialog</name>
@@ -73,22 +68,27 @@
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">Keine Kontur selektiert.</translation>
+        <translation>Keine Kontur selektiert.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Kontur nicht geschlossen am Punkt %1/%2.</translation>
+        <translation>Kontur nicht geschlossen am Punkt %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Jedes Konturelement muss eine Linie, ein Bogen, ein Kreis, ein Ellipsenbogen, eine Ellipse, eine Polylinie oder Spline sein. Gefunden:</translation>
+        <translation>Jedes Konturelement muss eine Linie, ein Bogen, ein Kreis, ein Ellipsenbogen, eine Ellipse, eine Polylinie oder Spline sein. Gefunden:</translation>
     </message>
     <message>
-        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Schraffur von Auswahl</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation>Schraffur oder Füllung von ausgewählter Umrandung erstellen</translation>
     </message>
 </context>
 </TS>

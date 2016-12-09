@@ -23,11 +23,6 @@
         <source>Draw hatch or solid fill</source>
         <translation type="vanished">Dibuje un sombreado o un relleno sólido</translation>
     </message>
-    <message>
-        <location filename="../HatchFromSelectionInit.js" line="+7"/>
-        <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HatchDialog</name>
@@ -69,22 +64,27 @@
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">No hay límite seleccionado.</translation>
+        <translation>No hay límite seleccionado.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Contorno no se cierra en el punto %1/%2.</translation>
+        <translation>Contorno no se cierra en el punto %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Cada objeto de frontera debe ser una línea, arco, círculo, arco elíptico, una elipse, polilínea o spline. Encuentran:</translation>
+        <translation>Cada objeto de frontera debe ser una línea, arco, círculo, arco elíptico, una elipse, polilínea o spline. Encuentran:</translation>
     </message>
     <message>
-        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rayado de selección</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation>Crear rayado o relleno del límite seleccionado</translation>
     </message>
 </context>
 </TS>

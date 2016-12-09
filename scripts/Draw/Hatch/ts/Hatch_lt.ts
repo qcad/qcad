@@ -4,17 +4,17 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="72"/>
+        <location filename="../Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="77"/>
+        <location line="+5"/>
         <source>Show hatch tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Hatch.js" line="99"/>
+        <location line="+22"/>
         <source>&amp;Hatch</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22,42 +22,42 @@
 <context>
     <name>HatchDialog</name>
     <message>
-        <location filename="../HatchDialog.ui" line="17"/>
+        <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="25"/>
+        <location line="+8"/>
         <source>Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="31"/>
+        <location line="+6"/>
         <source>Solid Fill</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="41"/>
+        <location line="+10"/>
         <source>Hatch Pattern</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="57"/>
+        <location line="+16"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="65"/>
+        <location line="+8"/>
         <source>Pattern</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="79"/>
+        <location line="+14"/>
         <source>Angle:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchDialog.ui" line="86"/>
+        <location line="+7"/>
         <source>Scale:</source>
         <translation type="unfinished"></translation>
     </message>

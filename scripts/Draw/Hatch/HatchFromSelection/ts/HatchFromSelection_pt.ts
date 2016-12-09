@@ -31,11 +31,6 @@ Padrões de &amp;Hachura:</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation type="vanished">Desenhe hachura ou preenchimento sólido</translation>
     </message>
-    <message>
-        <location filename="../HatchFromSelectionInit.js" line="+7"/>
-        <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HatchDialog</name>
@@ -111,22 +106,27 @@ Escala da Superfície</translatorcomment>
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">Nenhum contorno selecionado</translation>
+        <translation>Nenhum contorno selecionado.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Contorno não fechado no ponto %1/%2.</translation>
+        <translation>Contorno não fechado no ponto %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Cada entidade de contorno deve ser uma linha, arco, círculo, elipse arco, elipse, polilinha ou uma spline. Encontrados:</translation>
+        <translation>Cada entidade de contorno deve ser uma linha, arco, círculo, elipse arco, elipse, polilinha ou uma spline. Encontrados:</translation>
     </message>
     <message>
-        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hachura da seleção</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation>Criar hachura ou preenchimento do limite selecionado</translation>
     </message>
 </context>
 </TS>

@@ -11,11 +11,6 @@
         <source>Loop not closed at point %1/%2.</source>
         <translation type="vanished">Petlja nije zatvorena u točki %1/%2.</translation>
     </message>
-    <message>
-        <location filename="../HatchFromSelectionInit.js" line="+7"/>
-        <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HatchDialog</name>
@@ -46,8 +41,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

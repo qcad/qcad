@@ -393,8 +393,8 @@ Lista Blocchi</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+71"/>
-        <location line="+6"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
+        <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
         <translatorcomment>--exact match--
@@ -408,7 +408,7 @@ Esportazione Disegno...</translatorcomment>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-3"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="-8"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -437,7 +437,7 @@ Specificare la posizione</translatorcomment>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-1"/>
-        <location line="+6"/>
+        <location line="+8"/>
         <location line="+2"/>
         <source>Y</source>
         <translatorcomment>--exact match--
@@ -457,8 +457,8 @@ Caricamento indirizzi delle librerie
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
-        <location line="+8"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
+        <location line="+10"/>
         <source>Z</source>
         <translatorcomment>--exact match--
 --file: src_shell_data_translations_ktoon_it.ts--
@@ -476,7 +476,7 @@ Congela tutto</translatorcomment>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="-5"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -719,6 +719,16 @@ Colore G&amp;riglia:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
+        <source>Rotation</source>
+        <translation>Rotazione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>On</source>
+        <translation>Acceso</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
         <translation>Visualizza centro</translation>
@@ -1019,7 +1029,7 @@ Margine (Ingrandita)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+856"/>
         <source>By Layer</source>
         <translation>Da Layer</translation>
     </message>

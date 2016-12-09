@@ -109,12 +109,12 @@
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Startpunten:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eindpunten:</translation>
     </message>
     <message>
         <location line="+50"/>

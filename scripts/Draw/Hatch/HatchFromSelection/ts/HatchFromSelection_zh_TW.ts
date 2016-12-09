@@ -2,14 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_TW">
 <context>
-    <name>Hatch</name>
-    <message>
-        <location filename="../HatchFromSelectionInit.js" line="+7"/>
-        <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>HatchFromSelection</name>
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
@@ -27,8 +19,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

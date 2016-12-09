@@ -136,12 +136,12 @@ Pano de Fundo do Desenho:</translatorcomment>
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pontos iniciais:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pontos finais:</translation>
     </message>
     <message>
         <location line="+50"/>

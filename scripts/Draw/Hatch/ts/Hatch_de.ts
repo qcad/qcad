@@ -22,12 +22,12 @@
     <message>
         <location filename="../Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Schraffurwerkzeuge</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Schraffurwerkzeuge anzeigen</translation>
     </message>
     <message>
         <location line="+22"/>

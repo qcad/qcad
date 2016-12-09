@@ -18,12 +18,12 @@
     <message>
         <location filename="../Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Menú rayado</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar menú rayado</translation>
     </message>
     <message>
         <location line="+22"/>

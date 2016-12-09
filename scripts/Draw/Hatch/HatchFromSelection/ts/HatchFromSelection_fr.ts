@@ -23,11 +23,6 @@
         <source>Draw hatch or solid fill</source>
         <translation type="vanished">Dessinez une hachure ou un remplissage uni</translation>
     </message>
-    <message>
-        <location filename="../HatchFromSelectionInit.js" line="+7"/>
-        <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HatchDialog</name>
@@ -69,22 +64,27 @@
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">Pas de frontière sélectionnée.</translation>
+        <translation>Pas de frontière sélectionnée.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Contour pas fermé au point %1/%2.</translation>
+        <translation>Contour pas fermé au point %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Chaque objet frontière doit être une ligne, arc, cercle, un arc elliptique, ellipse, polyligne ou une spline. Trouvés:</translation>
+        <translation>Chaque objet frontière doit être une ligne, arc, cercle, un arc elliptique, ellipse, polyligne ou une spline. Trouvés:</translation>
     </message>
     <message>
-        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hachures depuis sélection</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Create hatch or solid fill from selected boundary</source>
+        <translation>Créer une hachure ou un remplissage à partir de la limite sélectionnée</translation>
     </message>
 </context>
 </TS>

@@ -23,11 +23,6 @@
         <source>Draw hatch or solid fill</source>
         <translation type="vanished">ハッチングまたは全面色を描画</translation>
     </message>
-    <message>
-        <location filename="../HatchFromSelectionInit.js" line="+7"/>
-        <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HatchDialog</name>
@@ -82,8 +77,13 @@
         <translation type="unfinished">各輪郭は線分、弧、円、楕円弧、楕円、ポリラインまたはスプラインでなければなりません。 発見:</translation>
     </message>
     <message>
-        <location filename="../HatchFromSelectionInit.js" line="-5"/>
+        <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Create hatch or solid fill from selected boundary</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
