@@ -183,21 +183,23 @@ RDocumentInterface* RGraphicsView::getDocumentInterface() {
     return &scene->getDocumentInterface();
 }
 
-void RGraphicsView::autoZoom(int margin, bool ignoreEmpty) {
+void RGraphicsView::autoZoom(int margin, bool ignoreEmpty, bool ignoreLineweight) {
     RDocument* document = getDocument();
     if (document == NULL) {
         return;
     }
     RBox bb = document->getBoundingBox(true, ignoreEmpty);
 
-    // TODO: optional:
-    bb.growXY(
-        RUnit::convert(
-            document->getMaxLineweight()/100.0/2,
-            RS::Millimeter,
-            document->getUnit()
-        )
-    );
+    // add lineweight margin:
+    if (!ignoreLineweight) {
+        bb.growXY(
+            RUnit::convert(
+                document->getMaxLineweight()/100.0/2,
+                RS::Millimeter,
+                document->getUnit()
+            )
+        );
+    }
 
     zoomTo(bb, (margin!=-1 ? margin : getMargin()));
 }
