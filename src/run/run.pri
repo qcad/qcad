@@ -87,6 +87,7 @@ else {
 
         greaterThan(QT_MAJOR_VERSION, 4) {
             FILES += imageformats/libqtga.so
+            FILES += platforms/libqxcb.so
         }
         else {
             FILES += \
