@@ -73,8 +73,8 @@ public:
         return RGraphicsView::getBox();
     }
 
-    void autoZoom(int margin = RDEFAULT_MIN1, bool ignoreEmpty=false) {
-        RGraphicsView::autoZoom(margin, ignoreEmpty);
+    void autoZoom(int margin = RDEFAULT_MIN1, bool ignoreEmpty=false, bool ignoreLineweight=false) {
+        RGraphicsView::autoZoom(margin, ignoreEmpty, ignoreLineweight);
     }
 
     void zoomTo(const RBox &window, int margin = 0) {
