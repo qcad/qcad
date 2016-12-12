@@ -74,6 +74,8 @@ bool RSpatialIndexSimple::removeFromIndex(
 }
 
 bool RSpatialIndexSimple::removeFromIndex(int id, const QList<RBox>& bb) {
+    Q_UNUSED(bb)
+
     si.remove(id);
     return true;
 }

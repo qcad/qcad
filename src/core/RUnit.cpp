@@ -473,6 +473,11 @@ QString RUnit::formatEngineering(double length, RS::Unit unit,
                                  bool showLeadingZeroes, bool showTrailingZeroes,
                                  bool onlyPreciseResult) {
 
+    Q_UNUSED(showUnit)
+    Q_UNUSED(showLeadingZeroes)
+    Q_UNUSED(showTrailingZeroes)
+    Q_UNUSED(onlyPreciseResult)
+
 //    if (unit!=RS::Inch && unit!=RS::Foot) {
 //        qWarning() << "RUnit::formatEngineering:"
 //                   << "Unit must be set to 'Inch' or 'Foot' for engineering format";
@@ -527,6 +532,10 @@ QString RUnit::formatArchitectural(double length, RS::Unit unit,
                                    int prec, bool showUnit,
                                    bool showLeadingZeroes, bool showTrailingZeroes,
                                    bool onlyPreciseResult) {
+    Q_UNUSED(showLeadingZeroes)
+    Q_UNUSED(showTrailingZeroes)
+    Q_UNUSED(onlyPreciseResult)
+
 //    if (unit!=RS::Inch && unit!=RS::Foot) {
 //        qWarning() << "RUnit::formatArchitectural:"
 //                   << "Unit must be set to 'Inch' for architectural format";

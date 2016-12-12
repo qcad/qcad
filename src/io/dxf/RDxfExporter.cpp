@@ -62,6 +62,8 @@ RDxfExporter::RDxfExporter(RDocument& document,
 }
 
 QString RDxfExporter::getCorrectedFileName(const QString& fileName, const QString& nameFilter) {
+    Q_UNUSED(nameFilter)
+
     QString ret = fileName;
     QString ext = QFileInfo(ret).suffix().toLower();
 

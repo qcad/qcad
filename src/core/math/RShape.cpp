@@ -2064,6 +2064,8 @@ QList<QSharedPointer<RShape> > RShape::getReversedShapeList(const QList<QSharedP
  * \param points Array of RVector, assumed to be on shape.
  */
 QList<QSharedPointer<RShape> > RShape::splitAt(const QList<RVector>& points) const {
+    Q_UNUSED(points)
+
     QList<QSharedPointer<RShape> > ret;
     ret.append(QSharedPointer<RShape>(clone()));
     return ret;
@@ -2085,7 +2087,7 @@ QList<QSharedPointer<RShape> > RShape::trim(
         const RShape& limitingShape, const RVector& limitingClickPos,
         bool trimBoth, bool samePolyline) {
 
-    int i1;
+    int i1=0;
     QSharedPointer<RShape> segment;
     QSharedPointer<RShape> trimShapeSimple = QSharedPointer<RShape>(trimShape.clone());
     if (isPolylineShape(trimShape)) {
@@ -2101,7 +2103,7 @@ QList<QSharedPointer<RShape> > RShape::trim(
         trimShapeSimple = segment;
     }
 
-    int i2;
+    int i2=0;
     QSharedPointer<RShape> limitingShapeSimple = QSharedPointer<RShape>(limitingShape.clone());
     if (isPolylineShape(limitingShape)) {
         const RPolyline& polyline = dynamic_cast<const RPolyline&>(limitingShape);

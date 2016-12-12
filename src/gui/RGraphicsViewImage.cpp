@@ -1039,7 +1039,8 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
                 // draw outline:
                 if (pen.style() != Qt::NoPen) {
                     // TODO: optional (more accurate, slower?):
-                    qreal x, y;
+                    qreal x=0.0;
+                    qreal y=0.0;
                     for (int i=0; i<path.elementCount(); i++) {
                         QPainterPath::Element el = path.elementAt(i);
                         if (el.isMoveTo()) {

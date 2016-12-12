@@ -218,6 +218,8 @@ void REventHandler::updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestrict
     case RSnap::Reference:
         text = tr("Reference");
         break;
+    default:
+        break;
     }
 
     drawSnapLabel(painter, pos, posRestriction, text);
