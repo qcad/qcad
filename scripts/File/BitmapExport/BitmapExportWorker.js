@@ -87,7 +87,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         view.zoomTo(properties["window"], properties["margin"]);
     }
     else {
-        view.autoZoom(properties["margin"], true);
+        view.autoZoom(properties["margin"], true, properties["noweightmargin"]);
     }
 
     scene.regenerate();
