@@ -191,5 +191,6 @@ Q_DECLARE_METATYPE(RViewportData)
 Q_DECLARE_METATYPE(RViewportData*)
 Q_DECLARE_METATYPE(const RViewportData*)
 Q_DECLARE_METATYPE(QSharedPointer<RViewportData>)
+Q_DECLARE_METATYPE(RViewportData::Status)
 
 #endif
