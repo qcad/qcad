@@ -192,6 +192,7 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RViewportData*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RViewportData*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RViewportData&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RViewportData::Status</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

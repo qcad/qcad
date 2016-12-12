@@ -364,7 +364,7 @@
     
     
       void REcmaShellGraphicsViewImage::autoZoom(
-                int margin, bool ignoreEmpty
+                int margin, bool ignoreEmpty, bool ignoreLineweight
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::autoZoom", engine);
@@ -377,7 +377,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewImage::autoZoom";
@@ -390,7 +390,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewImage::autoZoom(
-                            margin, ignoreEmpty
+                            margin, ignoreEmpty, ignoreLineweight
                         );
 
                         // block recursion again:
@@ -426,6 +426,15 @@
         << qScriptValueFromValue(engine, 
 
         ignoreEmpty
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        ignoreLineweight
         )
       
                             )

@@ -74,8 +74,8 @@
         <return>return <expr><call><name><name>RGraphicsView</name>::<name>getBox</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>autoZoom</name><parameter_list>(<param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RGraphicsView::autoZoom</name><parameter_list>(<param><decl><type><name>margin</name></type></decl></param>, <param><decl><type><name>ignoreEmpty</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    <function><type><name>void</name></type> <name>autoZoom</name><parameter_list>(<param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreLineweight</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::autoZoom</name><parameter_list>(<param><decl><type><name>margin</name></type></decl></param>, <param><decl><type><name>ignoreEmpty</name></type></decl></param>, <param><decl><type><name>ignoreLineweight</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>void</name></type> <name>zoomTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name> &amp;</type><name>window</name></decl></param>, <param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list> <block>{

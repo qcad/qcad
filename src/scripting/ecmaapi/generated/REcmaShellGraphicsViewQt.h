@@ -286,6 +286,7 @@
       void autoZoom(
                 int margin
         = RDEFAULT_MIN1, bool ignoreEmpty
+        = false, bool ignoreLineweight
         = false
             );
         

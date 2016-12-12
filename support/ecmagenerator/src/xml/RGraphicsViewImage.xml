@@ -48,6 +48,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="bool" typeName="bool" name="ignoreEmpty"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="ignoreLineweight"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="zoomTo" cppName="zoomTo" specifier="public"
