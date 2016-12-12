@@ -64,6 +64,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDescription, "setDescription");
             
+            REcmaHelper::registerFunction(&engine, proto, getScreenScale, "getScreenScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setScreenScale, "setScreenScale");
+            
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
             REcmaHelper::registerFunction(&engine, proto, isMetric, "isMetric");
@@ -891,6 +895,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePattern::setDescription", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getScreenScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getScreenScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getScreenScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getScreenScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getScreenScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getScreenScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getScreenScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setScreenScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setScreenScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setScreenScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setScreenScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScreenScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setScreenScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setScreenScale", context, engine);
             return result;
         }
          QScriptValue

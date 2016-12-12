@@ -205,6 +205,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isOff" cppName="isOff" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setOff" cppName="setOff" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="v"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -247,6 +258,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyScale" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyRotation" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOn" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyViewCenterX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

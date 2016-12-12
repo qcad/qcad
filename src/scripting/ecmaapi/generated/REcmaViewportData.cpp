@@ -115,6 +115,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setOverall, "setOverall");
             
+            REcmaHelper::registerFunction(&engine, proto, isOff, "isOff");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOff, "setOff");
+            
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
@@ -142,8 +146,20 @@
     // enum values:
     
 
+    ctor.setProperty("Off",
+    QScriptValue(RViewportData::Off),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
+    qScriptRegisterMetaType<RViewportData::Status>(
+        &engine,
+        toScriptValueEnumStatus,
+        fromScriptValueEnumStatus,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
         
     // init class:
     engine.globalObject().setProperty("RViewportData",
@@ -1440,6 +1456,110 @@
             return result;
         }
          QScriptValue
+        REcmaViewportData::isOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportData::isOff", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::isOff";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportData* self = 
+                        getSelf("isOff", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOff();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.isOff().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportData::isOff", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportData::setOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportData::setOff", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setOff";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportData* self = 
+                        getSelf("setOff", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOff(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setOff().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportData::setOff", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaViewportData::getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1920,5 +2040,15 @@
             
 
 
+        }
+         QScriptValue REcmaViewportData::toScriptValueEnumStatus(QScriptEngine* engine, const RViewportData::Status& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaViewportData::fromScriptValueEnumStatus(const QScriptValue& value, RViewportData::Status& out)
+    
+        {
+            out = qvariant_cast<RViewportData::Status>(value.toVariant());
         }
         

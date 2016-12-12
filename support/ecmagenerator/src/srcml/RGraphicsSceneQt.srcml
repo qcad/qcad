@@ -120,7 +120,10 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>startEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>topLevelEntity</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>virtual</name> <name>bool</name></type> <name>getScreenBasedLinetypes</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>screenBasedLinetypesOverride</name></expr>;</return>
+        <if>if <condition>(<expr><name>screenBasedLinetypesOverride</name></expr>)</condition><then> <block>{
+            <return>return <expr><name>true</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><call><name><name>RGraphicsScene</name>::<name>getScreenBasedLinetypes</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>dump</name><parameter_list>()</parameter_list> <block>{

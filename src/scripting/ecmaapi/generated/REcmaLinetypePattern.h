@@ -70,6 +70,12 @@
         setDescription
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getScreenScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScreenScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

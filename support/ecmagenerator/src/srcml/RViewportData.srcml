@@ -46,6 +46,11 @@
     <constructor_decl><name>RViewportData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RViewportData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
 
 </protected><public>public:
+    <enum>enum <name>Status</name> <block>{
+        <expr><name>Off</name> = 0x20000</expr>
+    }</block>;</enum>
+
+</public><public>public:
     <constructor_decl><name>RViewportData</name><parameter_list>()</parameter_list>;</constructor_decl>
 <comment type="line">//    RViewportData(const RVector&amp; center, double width, double height, double scale,</comment>
 <comment type="line">//        const RVector&amp; viewCenter,</comment>
@@ -141,6 +146,14 @@
         <expr_stmt><expr><name>overall</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isOff</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>testStatusFlag</name><argument_list>(<argument><expr><name>Off</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setOff</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setStatusFlag</name><parameter_list>(<param><decl><type><name>Off</name></type></decl></param>, <param><decl><type><name>v</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>getReferencePoints</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name> =<init> <expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>moveReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, 
@@ -148,7 +161,20 @@
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getShapes</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name> =<init> <expr><name>RDEFAULT_RBOX</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>segment</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-</public><private>private:
+</public><protected>protected:
+    <function><type><name>void</name></type> <name>setStatusFlag</name><parameter_list>(<param><decl><type><name>Status</name></type> <name>s</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>status</name> |= <name>s</name></expr>;</expr_stmt>
+        }</block></then> <else>else <block>{
+            <expr_stmt><expr><name>status</name> &amp;= ~<name>s</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>testStatusFlag</name><parameter_list>(<param><decl><type><name>Status</name></type> <name>s</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>(<name>status</name> &amp; <name>s</name>) == <name>s</name></expr>;</return>
+    }</block></function>
+
+</protected><private>private:
     <decl_stmt><decl><type><name>int</name></type> <name>viewportId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>status</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>width</name></decl>;</decl_stmt>

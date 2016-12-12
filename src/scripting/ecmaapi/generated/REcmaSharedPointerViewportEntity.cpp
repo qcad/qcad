@@ -128,6 +128,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setOverall, "setOverall");
             
+            REcmaHelper::registerFunction(&engine, proto, isOff, "isOff");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOff, "setOff");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RViewportEntityPointer>(), *proto);
       
@@ -214,6 +218,10 @@
             
             ctor.setProperty("PropertyRotation",
                 qScriptValueFromValue(&engine, RViewportEntity::PropertyRotation),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyOn",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyOn),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyViewCenterX",
@@ -2410,6 +2418,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::setOverall", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerViewportEntity::isOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerViewportEntity::isOff", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerViewportEntity::isOff";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("isOff", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOff();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.isOff().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::isOff", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerViewportEntity::setOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerViewportEntity::setOff", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerViewportEntity::setOff";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setOff", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOff(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setOff().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::setOff", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerViewportEntity::toString

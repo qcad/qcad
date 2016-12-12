@@ -138,6 +138,12 @@
         ;static  QScriptValue
         setOverall
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOff
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

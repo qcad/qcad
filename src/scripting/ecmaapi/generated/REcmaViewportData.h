@@ -114,6 +114,12 @@
         setOverall
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -129,6 +135,8 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RViewportData* getSelf(const QString& fName, QScriptContext* context)
     ;static RViewportData* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static  QScriptValue toScriptValueEnumStatus(QScriptEngine* engine, const RViewportData::Status& value)
+    ;static  void fromScriptValueEnumStatus(const QScriptValue& value, RViewportData::Status& out)
     ;};
     #endif
     

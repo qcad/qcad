@@ -7,6 +7,9 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="REntityData" specifier="public" />
     <baseClass name="RPoint" specifier="protected" />
+    <enum name="Status">
+      <value name="Off" />
+    </enum>
     <constructor>
       <variant />
     </constructor>
@@ -141,6 +144,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isOff" cppName="isOff" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setOff" cppName="setOff" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="v"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getReferencePoints" cppName="getReferencePoints"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -172,6 +186,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="segment"
         hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="setStatusFlag" cppName="setStatusFlag"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="Status" typeName="Status" name="s"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="testStatusFlag" cppName="testStatusFlag"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="Status" typeName="Status" name="s"
+        isConst="false" />
       </variant>
     </method>
   </class>
