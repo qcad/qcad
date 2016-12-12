@@ -87,7 +87,6 @@ else {
 
         greaterThan(QT_MAJOR_VERSION, 4) {
             FILES += imageformats/libqtga.so
-            FILES += platforms/libqxcb.so
         }
         else {
             FILES += \
@@ -105,6 +104,10 @@ else {
             !exists("$${DESTDIR}/../plugins/$${FILE}") {
                 system(cp "$$[QT_INSTALL_PLUGINS]/$${FILE}" "$${DESTDIR}/../plugins/$${FILE}")
             }
+        }
+
+        greaterThan(QT_MAJOR_VERSION, 4) {
+            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqxcb.so" "$${DESTDIR}/../platforms")
         }
     }
 
