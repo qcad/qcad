@@ -654,13 +654,13 @@ function main() {
     menuBar.objectName = "MenuBar";
 
     // load add-ons:
-    RDebug.startTimer(0);
+    //RDebug.startTimer(0);
     loadAddOns(addOns, splash);
-    RDebug.stopTimer(0, "loading add-ons");
+    //RDebug.stopTimer(0, "loading add-ons");
 
-    RDebug.startTimer(0);
+    //RDebug.startTimer(0);
     initAddOns(addOns, splash);
-    RDebug.stopTimer(0, "initializing add-ons");
+    //RDebug.stopTimer(0, "initializing add-ons");
 
     // auto load scripts in AutoLoad folders for global script engine:
     var files = RAutoLoadEcma.getAutoLoadFiles();
