@@ -1400,7 +1400,7 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
 
 #ifdef Q_OS_LINUX
     // linux text rendering bug (tiny text displayed very large):
-    if (text.getTextHeight()*factor<0.005) {
+    if (text.getTextHeight()*factor<0.05) {
         return;
     }
 #endif
