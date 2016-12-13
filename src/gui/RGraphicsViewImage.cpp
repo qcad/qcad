@@ -892,7 +892,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             paintText(painter, text);
         }
 
-        // unknown drawable:
+        // unknown drawable or already handled:
         if (drawable.getType()!=RGraphicsSceneDrawable::PainterPath) {
             continue;
         }
@@ -1397,6 +1397,13 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
     }
 
     //RDebug::startTimer(0);
+
+#ifdef Q_OS_LINUX
+    // linux text rendering bug (tiny text displayed very large):
+    if (text.getTextHeight()*factor<0.005) {
+        return;
+    }
+#endif
 
     if (isPrinting()) {
         text.update(true);
