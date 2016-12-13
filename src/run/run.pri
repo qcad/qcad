@@ -105,6 +105,10 @@ else {
                 system(cp "$$[QT_INSTALL_PLUGINS]/$${FILE}" "$${DESTDIR}/../plugins/$${FILE}")
             }
         }
+
+        greaterThan(QT_MAJOR_VERSION, 4) {
+            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqxcb.so" "$${DESTDIR}/../platforms")
+        }
     }
 
     else:win32 {
