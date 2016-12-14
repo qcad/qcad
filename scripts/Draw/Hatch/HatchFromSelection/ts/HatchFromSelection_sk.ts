@@ -17,11 +17,11 @@
     </message>
     <message>
         <source>&amp;Hatch</source>
-        <translation type="vanished">&amp;Šrafy/Výplň</translation>
+        <translation type="vanished">&amp;Šrafovanie/Výplň</translation>
     </message>
     <message>
         <source>Draw hatch or solid fill</source>
-        <translation type="vanished">Vytvoriť šrafy alebo výplň</translation>
+        <translation type="vanished">Vytvoriť šrafovanie alebo výplň</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Hatch Pattern</source>
-        <translation type="vanished">Šrafy</translation>
+        <translation type="vanished">Šrafovanie</translation>
     </message>
     <message>
         <source>Preview</source>
@@ -64,27 +64,27 @@
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">Nie je vybratý žiadny obrys.</translation>
+        <translation>Nie je vybratý žiadny obrys.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Kontúra nie je uzavretá v bode %1/%2.</translation>
+        <translation>Obrys nie je uzavretý v bode %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Každý prvok obrysu musí byť úsečka, oblúk, kružnica, elipsový oblúk, elipsa, krivka alebo spline. Nájdené:</translation>
+        <translation>Každý prvok obrysu musí byť úsečka, oblúk, kružnica, elipsový oblúk, elipsa, krivka alebo spline. Nájdené:</translation>
     </message>
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Každý prvok obrysu musí byť úsečka, oblúk, kružnica, elipsový oblúk, elipsa, krivka alebo spline. Nájdené:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Vytvoriť šrafovanie alebo výplň vo vybranom obryse</translation>
     </message>
 </context>
 </TS>

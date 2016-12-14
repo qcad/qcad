@@ -119,37 +119,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="-134"/>
         <source>Use full resolution for Retina display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-7"/>
         <source>Anti-aliasing on by default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+327"/>
         <source>Maximum number of reference points displayed:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-76"/>
+        <location line="-62"/>
         <source>Timeout for hatch rendering:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-343"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
@@ -162,17 +162,16 @@
         <translation type="vanished">パフォーマンス</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+92"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation>テキスト高さの表示しきい値 (px):</translation>
+        <translation type="vanished">テキスト高さの表示しきい値 (px):</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>この角度以下の弧を直線で表示 (度):</translation>
     </message>
@@ -181,7 +180,7 @@
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+339"/>
+        <location line="+325"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

@@ -57,7 +57,7 @@
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Šráfy</translation>
+        <translation>Šrafovania</translation>
     </message>
     <message>
         <location line="+8"/>

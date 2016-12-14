@@ -104,47 +104,46 @@
         <translation>Obraz a výkon</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+20"/>
         <source>Number of preview entities:</source>
         <translation>Počet prvkov náhľadu:</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation>Limit zobrazovanej výšky textu (px):</translation>
+        <translation type="vanished">Limit zobrazovanej výšky textu (px):</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Zobraziť oblúky ako čiary pod týmto uhlom (v stupňoch):</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+151"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Zobraziť prvky s viac než N čiarkami súvisle:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimálny uhol kroku pre zobrazovanie oblúkov (v stupňoch):</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="-134"/>
         <source>Use full resolution for Retina display</source>
         <translation>Použiť celé rozlíšenie pre Retina display</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Predvolené vyhladenie prvkov</translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="+265"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pre zobrazenie šrafovania:</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+62"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Maximálny počet zobrazených bodov :</translation>
     </message>

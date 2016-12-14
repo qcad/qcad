@@ -151,37 +151,37 @@ Autozoom
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="-134"/>
         <source>Use full resolution for Retina display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-7"/>
         <source>Anti-aliasing on by default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+327"/>
         <source>Maximum number of reference points displayed:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-76"/>
+        <location line="-62"/>
         <source>Timeout for hatch rendering:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-343"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation type="unfinished"></translation>
     </message>
@@ -191,7 +191,7 @@ Autozoom
         <translation type="obsolete">Wydajność</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+92"/>
         <source>Number of preview entities:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -200,11 +200,6 @@ Liczba obiektów w podglądzie:</translatorcomment>
     </message>
     <message>
         <location line="+58"/>
-        <source>Text height display threshold (px):</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation type="unfinished"></translation>
     </message>
@@ -214,7 +209,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
         <translation type="obsolete">Wysokość progu Text display:</translation>
     </message>
     <message>
-        <location line="+339"/>
+        <location line="+325"/>
         <source>Selection</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

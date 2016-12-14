@@ -99,37 +99,37 @@
         <translation>Prikaz in optimizacija</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Prikaži entitete z več kot N pikami kot neprekinjene:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Najmanjši kot koraka za izris krivulje (stopinje):</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="-134"/>
         <source>Use full resolution for Retina display</source>
         <translation>Uporabi polno resolucijo za Retina zaslone</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Glajenje robov provzeto vklopljeno</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+327"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Največje število prikazanih referenčnih točk:</translation>
     </message>
     <message>
-        <location line="-76"/>
+        <location line="-62"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-343"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
@@ -142,17 +142,16 @@
         <translation type="vanished">Optimizacija</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+92"/>
         <source>Number of preview entities:</source>
         <translation>Število entitet v predogledu:</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation>Prag prikaza višine besedila (px):</translation>
+        <translation type="vanished">Prag prikaza višine besedila (px):</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Prikaži loke kot črt, če je kot manjši od (stopinje): </translation>
     </message>
@@ -161,7 +160,7 @@
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+339"/>
+        <location line="+325"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

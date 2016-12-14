@@ -119,32 +119,32 @@
         <translation>Visualización y rendimiento</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="-134"/>
         <source>Use full resolution for Retina display</source>
         <translation>Utilice la resolución completa de la pantalla Retina</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing activado por defecto</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+327"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Número máximo de puntos de referencia muestran:</translation>
     </message>
     <message>
-        <location line="-76"/>
+        <location line="-62"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Tiempo de espera para la representación rayado:</translation>
     </message>
@@ -157,7 +157,7 @@
         <translation type="obsolete">Mostrar entidades con guiones N como contínua:</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-343"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -170,17 +170,16 @@
         <translation type="vanished">Rendimiento</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+92"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades previsualizadas:</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation>Mostrar límite para el texto (px):</translation>
+        <translation type="vanished">Mostrar límite para el texto (px):</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Mostrar arcos como las líneas por debajo de este ángulo (grados):</translation>
     </message>
@@ -189,7 +188,7 @@
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+339"/>
+        <location line="+325"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>

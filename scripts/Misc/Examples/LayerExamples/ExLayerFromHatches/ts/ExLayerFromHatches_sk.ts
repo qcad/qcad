@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExLayerFromHatchesInit.js" line="+2"/>
         <source>&amp;Create New Layer from Hatches</source>
-        <translation>&amp;Vytvoriť novú vrstvu z šráf/výplne</translation>
+        <translation>&amp;Vytvoriť novú vrstvu šrafovania/výplne</translation>
     </message>
 </context>
 </TS>

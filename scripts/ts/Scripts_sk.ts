@@ -622,12 +622,12 @@
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Šráfy</translation>
+        <translation>Šrafovania</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Šráfy</translation>
+        <translation>Šrafovanie</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -722,12 +722,12 @@
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished">Vzhľady</translation>
+        <translation>Plochy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished">Tvár</translation>
+        <translation>Plocha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -780,17 +780,17 @@
     <message>
         <location filename="../simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvý prvok sa nedá odrezať.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvok sa nedá odrezať.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhý prvok sa nedá odrezať.</translation>
     </message>
 </context>
 </TS>

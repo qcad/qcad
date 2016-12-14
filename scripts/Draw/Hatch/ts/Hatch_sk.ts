@@ -18,21 +18,21 @@
     <message>
         <location filename="../Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Nástroje Šrafovanie/Výplň</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť nástroje Šrafovanie/Výplň</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Šrafy/Výplň</translation>
+        <translation>&amp;Šrafovanie/Výplň</translation>
     </message>
     <message>
         <source>Draw hatch or solid fill</source>
-        <translation type="vanished">Vytvoriť šrafy alebo výplň</translation>
+        <translation type="vanished">Vytvoriť šrafovanie alebo výplň</translation>
     </message>
 </context>
 <context>
@@ -55,7 +55,7 @@
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Šrafy</translation>
+        <translation>Šrafovanie</translation>
     </message>
     <message>
         <location line="+16"/>

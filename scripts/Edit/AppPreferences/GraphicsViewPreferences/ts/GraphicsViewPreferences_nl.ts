@@ -99,52 +99,51 @@
         <translation>Weergave en prestatie</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Objecten met meer dan N streepjes als doorlopend weergeven:</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="-216"/>
         <source>Use full resolution for Retina display</source>
         <translation>Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing altijd aan</translation>
     </message>
     <message>
-        <location line="-411"/>
+        <location line="-78"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+92"/>
         <source>Number of preview entities:</source>
         <translation>Aantal voorbeeld objecten:</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation>Drempel voor weergave van tekst (px):</translation>
+        <translation type="vanished">Drempel voor weergave van tekst (px):</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Weergave van bogen als lijnen onder deze hoek (graden):</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+69"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimale hoek voor weergave van bogens (graden):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+124"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Time-out voor weergave van arcering:</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+62"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Maximum aantal weergeven referentiepunten:</translation>
     </message>

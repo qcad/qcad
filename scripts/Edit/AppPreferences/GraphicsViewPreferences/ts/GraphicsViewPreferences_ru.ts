@@ -99,52 +99,51 @@
         <translation>Отображение и производительность</translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Отображать объекты с более чем N тире как непрерывные:</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="-216"/>
         <source>Use full resolution for Retina display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
-        <location line="-411"/>
+        <location line="-78"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Автоматически использовать экран на основе типов линий в просмотре моделей</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+92"/>
         <source>Number of preview entities:</source>
         <translation>Количество объектов при предпросмотре:</translation>
     </message>
     <message>
-        <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation>Порог отображения высоты текста (пикс):</translation>
+        <translation type="vanished">Порог отображения высоты текста (пикс):</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Отображать дуги как линии под этим углом (в градусах):</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+69"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Минимальный шаг угля для рендеринга дуги (в градусах):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+124"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Время ожидания для рендеринга штриховки:</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+62"/>
         <source>Maximum number of reference points displayed:</source>
         <translation type="unfinished"></translation>
     </message>

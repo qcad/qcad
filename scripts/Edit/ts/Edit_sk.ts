@@ -28,22 +28,22 @@ musíte znovu spustiť QCAD.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation type="unfinished"></translation>
+        <translation>Predvolené</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toto sú predvolené nastavenia pre nový výkres.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavenia aktuálneho výkresu môžu byť zmenené pod&lt;br/&gt;&lt;i&gt;Upraviť &amp;gt; Nastavenia kreslenia&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmeny sa dotknú nových výkresov, ale nie aktuálneho výkresu.</translation>
     </message>
 </context>
 <context>

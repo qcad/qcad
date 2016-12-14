@@ -6,12 +6,12 @@
     <message>
         <location filename="../EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation>Vybrať šrafy/výplň</translation>
+        <translation>Vybrať šrafovanie/výplň</translation>
     </message>
     <message>
         <location filename="../EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Upraviť &amp;Šrafy/Výplň</translation>
+        <translation>Upraviť &amp;Šrafovanie/Výplň</translation>
     </message>
 </context>
 <context>
