@@ -68,6 +68,10 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         properties["margin"] = 20;
     }
 
+    if (typeof(properties["noweightmargin"])==="undefined") {
+        properties["noweightmargin"] = false;
+    }
+
     if (properties["resolution"]) {
         var bb = doc.getBoundingBox(true, true);
         properties["width"] = Math.round(bb.getWidth() * properties["resolution"] + 2 * properties["margin"]);
