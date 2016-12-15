@@ -92,7 +92,7 @@ Bevel.bevel = function(op, entity1, clickPos1, entity2, clickPos2, trim, distanc
         return false;
     }
 
-    // add new trimmed entities:
+    // add new trimmed entities or polyline:
     if (trim && !modifyEntity(op, entity1, newShapes[0])) {
         if (!preview) {
             EAction.handleUserWarning(qsTr("First entity cannot be trimmed."));
