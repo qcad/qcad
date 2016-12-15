@@ -74,8 +74,8 @@ function exportBitmap(doc, scene, fileName, properties, view) {
 
     if (properties["resolution"]) {
         var bb = doc.getBoundingBox(true, true);
-        properties["width"] = Math.round(bb.getWidth() * properties["resolution"] + 2 * properties["margin"]);
-        properties["height"] = Math.round(bb.getHeight() * properties["resolution"] + 2 * properties["margin"]);
+        properties["width"] = Math.ceil(bb.getWidth() * properties["resolution"] + 2 * properties["margin"]);
+        properties["height"] = Math.ceil(bb.getHeight() * properties["resolution"] + 2 * properties["margin"]);
     }
 
     if (!properties["width"]) {
@@ -92,6 +92,12 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     }
     else {
         view.autoZoom(properties["margin"], true, properties["noweightmargin"]);
+
+        // make sure we use the desired resolution:
+        // auto zoom might be slightly off, due to rounding canvas to pixels:
+        if (properties["resolution"]) {
+            view.setFactor(properties["resolution"]);
+        }
     }
 
     scene.regenerate();
