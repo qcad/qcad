@@ -1732,6 +1732,8 @@ RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Endin
         for (int i=0; i<segmentIndex1; i++) {
             segment = getSegmentAt(i);
             pl.appendShape(*segment);
+            pl.setStartWidthAt(pl.startWidths.size()-2, getStartWidthAt(i));
+            pl.setEndWidthAt(pl.endWidths.size()-2, getEndWidthAt(i));
         }
 
         pl.appendShapeAuto(trimmedShape1);
@@ -1743,12 +1745,16 @@ RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Endin
         for (int i=segmentIndex2+1; i<countSegments(); i++) {
             segment = getSegmentAt(i);
             pl.appendShape(*segment);
+            pl.setStartWidthAt(pl.startWidths.size()-2, getStartWidthAt(i));
+            pl.setEndWidthAt(pl.endWidths.size()-2, getEndWidthAt(i));
         }
     }
     else if (segmentIndex1>segmentIndex2 && ending1==RS::EndingStart && ending2==RS::EndingEnd) {
         for (int i=0; i<segmentIndex2; i++) {
             segment = getSegmentAt(i);
             pl.appendShape(*segment);
+            pl.setStartWidthAt(pl.startWidths.size()-2, getStartWidthAt(i));
+            pl.setEndWidthAt(pl.endWidths.size()-2, getEndWidthAt(i));
         }
 
         pl.appendShapeAuto(trimmedShape2);
@@ -1760,6 +1766,8 @@ RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Endin
         for (int i=segmentIndex1+1; i<countSegments(); i++) {
             segment = getSegmentAt(i);
             pl.appendShape(*segment);
+            pl.setStartWidthAt(pl.startWidths.size()-2, getStartWidthAt(i));
+            pl.setEndWidthAt(pl.endWidths.size()-2, getEndWidthAt(i));
         }
     }
     else if (segmentIndex1<segmentIndex2 && ending1==RS::EndingStart && ending2==RS::EndingEnd) {
@@ -1767,6 +1775,8 @@ RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Endin
         for (int i=segmentIndex1+1; i<segmentIndex2; i++) {
             segment = getSegmentAt(i);
             pl.appendShape(*segment);
+            pl.setStartWidthAt(pl.startWidths.size()-2, getStartWidthAt(i));
+            pl.setEndWidthAt(pl.endWidths.size()-2, getEndWidthAt(i));
         }
         pl.appendShapeAuto(trimmedShape2);
         if (cornerShape!=NULL) {
@@ -1778,6 +1788,8 @@ RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Endin
         for (int i=segmentIndex2+1; i<segmentIndex1; i++) {
             segment = getSegmentAt(i);
             pl.appendShape(*segment);
+            pl.setStartWidthAt(pl.startWidths.size()-2, getStartWidthAt(i));
+            pl.setEndWidthAt(pl.endWidths.size()-2, getEndWidthAt(i));
         }
         pl.appendShapeAuto(trimmedShape1);
         if (cornerShape!=NULL) {
