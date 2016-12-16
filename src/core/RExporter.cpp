@@ -896,7 +896,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
     // continuous line or
     // we are in draft mode or
     // QCAD is configured to show screen based line patterns
-    if (draftMode /*|| getScreenBasedLinetypes()*/ || twoColorSelectedMode) {
+    if (draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         exportLineSegment(line, angle);
         return ret;
     }
@@ -1069,7 +1069,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         return;
     }
 
-    if (getEntity() == NULL || draftMode /*|| getScreenBasedLinetypes()*/ || twoColorSelectedMode) {
+    if (getEntity() == NULL || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         exportArcSegment(arc);
         return;
     }
@@ -1365,7 +1365,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, doub
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode /*|| getScreenBasedLinetypes()*/ || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1416,7 +1416,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode /*|| getScreenBasedLinetypes()*/ || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1610,34 +1610,21 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
 
     //qDebug() << "factor (entity): " << factor;
 
-    // screen based linetypes:
-    // don't scale by line weight but apply scale based on
-    // pattern length and pixelsize (current zoom):
-    if (getScreenBasedLinetypes()) {
-        //factor*=pixelSizeHint*4.25;
-        //qDebug() << "p.getScreenScale():" << p.getScreenScale();
-        qDebug() << "pixelSizeHint: " << pixelSizeHint;
-        factor *= pixelSizeHint * (4.25/2.0) * p.getScreenScale();
-        factor *= RUnit::convert(1.0, document->getUnit(), RS::Millimeter);
-        qDebug() << "factor: " << factor;
-    }
-    else {
-        // optional: automatic scaling by line weight:
-        if (RSettings::getAutoScaleLinetypePatterns()) {
-            if (currentPen.widthF()<1e-6) {
-                // line pattern factor for lines of width 0:
-                int zww = RSettings::getZeroWeightWeight()/100.0;
-                if (zww<=0) {
-                    zww = 1.0;
-                }
-                //factor *= RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit());
-                factor *= zww;
+    // optional: automatic scaling by line weight:
+    if (RSettings::getAutoScaleLinetypePatterns()) {
+        if (currentPen.widthF()<1e-6) {
+            // line pattern factor for lines of width 0:
+            int zww = RSettings::getZeroWeightWeight()/100.0;
+            if (zww<=0) {
+                zww = 1.0;
             }
-            else {
-                //qDebug() << "currentPen.widthF(): " << currentPen.widthF();
-                //qDebug() << "currentPen.widthF() mm: " << RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
-                factor *= RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
-            }
+            //factor *= RUnit::convert(zww/100.0, RS::Millimeter, document->getUnit());
+            factor *= zww;
+        }
+        else {
+            //qDebug() << "currentPen.widthF(): " << currentPen.widthF();
+            //qDebug() << "currentPen.widthF() mm: " << RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
+            factor *= RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter);
         }
     }
 
