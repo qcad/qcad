@@ -841,24 +841,18 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // do we need to regen the path?
         bool regen = false;
 
-        // always regen in screen-based linetype mode:
-        if (sceneQt->getScreenBasedLinetypes()) {
-            regen = true;
-        }
-        else {
-            for (int p=0; p<drawables.size(); p++) {
-                if (drawables.at(p).getType()==RGraphicsSceneDrawable::PainterPath) {
-                    if (drawables.at(p).getPainterPath().getAlwaysRegen()==true) {
+        for (int p=0; p<drawables.size(); p++) {
+            if (drawables.at(p).getType()==RGraphicsSceneDrawable::PainterPath) {
+                if (drawables.at(p).getPainterPath().getAlwaysRegen()==true) {
+                    regen = true;
+                    break;
+                }
+                if (drawables.at(p).getPainterPath().getAutoRegen()==true) {
+                    if (drawables.at(p).getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
+                            (drawables.at(p).getPainterPath().getPixelSizeHint()<ps/5 || drawables.at(p).getPainterPath().getPixelSizeHint()>ps*5)) {
+
                         regen = true;
                         break;
-                    }
-                    if (drawables.at(p).getPainterPath().getAutoRegen()==true) {
-                        if (drawables.at(p).getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
-                           (drawables.at(p).getPainterPath().getPixelSizeHint()<ps/5 || drawables.at(p).getPainterPath().getPixelSizeHint()>ps*5)) {
-
-                            regen = true;
-                            break;
-                        }
                     }
                 }
             }
