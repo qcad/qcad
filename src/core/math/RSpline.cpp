@@ -104,7 +104,7 @@ QList<RSpline> RSpline::createSplinesFromArc(const RArc& arc) {
     QList<RSpline> curves;
 
     double piOverTwo = M_PI_2;
-    double segmentationAngle = piOverTwo;
+    double segmentationAngle = piOverTwo/4;
     //double segmentationAngle = M_PI/8;
     double sgn = (startAngle < endAngle) ? +1 : -1;
 
@@ -1159,10 +1159,10 @@ QSharedPointer<RShape> RSpline::getTransformed(const QTransform& transform) cons
     QSharedPointer<RSpline> ret = QSharedPointer<RSpline>(clone());
 
     for (int i=0; i<ret->controlPoints.size(); i++) {
-        ret->controlPoints[i].transform2d(transform);
+        ret->controlPoints[i].transform2D(transform);
     }
     for (int i=0; i<ret->fitPoints.size(); i++) {
-        ret->fitPoints[i].transform2d(transform);
+        ret->fitPoints[i].transform2D(transform);
     }
 
     ret->update();
@@ -1329,6 +1329,7 @@ void RSpline::updateInternal() const {
 
     // if fit points are known, update from fit points, otherwise from
     // control points:
+    // TODO: use fitpoints from DXF/DWG file if possible (fit points might not correspond to control points):
     if (fitPoints.size()==0) {
         updateFromControlPoints();
     }
