@@ -123,12 +123,12 @@ bool RGraphicsSceneQt::beginPath() {
         screenBasedLinetypesOverride = true;
     }
 
-//    if (getScreenBasedLinetypes() && currentPen.style()==Qt::SolidLine) {
-//        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype();
-//        if (!pat.isEmpty()) {
-//            currentPen.setDashPattern(pat);
-//        }
-//    }
+    if (getScreenBasedLinetypes() && currentPen.style()==Qt::SolidLine) {
+        QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype();
+        if (!pat.isEmpty()) {
+            currentPen.setDashPattern(pat);
+        }
+    }
 
     if (draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
         QPen localPen = currentPen;
@@ -355,15 +355,27 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
             currentPainterPath.lineTo(arc.getEndPoint());
         }
         else {
-//            currentPainterPath.arcTo(
-//                arc.getCenter().x-arc.getRadius(),
-//                arc.getCenter().y-arc.getRadius(),
-//                arc.getRadius()*2, arc.getRadius()*2,
-//                RMath::rad2deg(-arc.getStartAngle()),
-//                RMath::rad2deg(-arc.getSweep())
-//            );
-            currentPainterPath.setAlwaysRegen(true);
-            RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
+//            if (getLinetypePattern().getNumDashes()<=1) {
+//                // continuous arc:
+//                currentPainterPath.setAutoRegen(true);
+//                RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
+//            }
+//            else {
+                currentPainterPath.setAutoRegen(true);
+                QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
+                for (int i=0; i<splines.length(); i++) {
+                    currentPainterPath.addSpline(splines[i]);
+                }
+
+                // this is not precise enough:
+//                currentPainterPath.arcTo(
+//                    arc.getCenter().x-arc.getRadius(),
+//                    arc.getCenter().y-arc.getRadius(),
+//                    arc.getRadius()*2, arc.getRadius()*2,
+//                    RMath::rad2deg(-arc.getStartAngle()),
+//                    RMath::rad2deg(-arc.getSweep())
+//                );
+//            }
         }
     }
     else {
