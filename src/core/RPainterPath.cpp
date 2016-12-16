@@ -514,7 +514,7 @@ void RPainterPath::transform(const QTransform& t) {
     (*(QPainterPath*)this) = qp;
 
     for (int i=0; i<points.count(); i++) {
-        points[i].transform2d(t);
+        points[i].transform2D(t);
     }
 }
 

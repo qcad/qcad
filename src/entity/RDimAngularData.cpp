@@ -185,14 +185,14 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
     double dist;
 
     // 1st extension line:
-    dist = center.getDistanceTo2d(p1);
+    dist = center.getDistanceTo2D(p1);
     len = rad - dist + dimexe;
     dir.setPolar(1.0, ang1);
     line = RLine(center + dir*dist + dir*dimexo, center + dir*dist + dir*len);
     ret.append(QSharedPointer<RShape>(new RLine(line)));
 
     // 2nd extension line:
-    dist = center.getDistanceTo2d(p2);
+    dist = center.getDistanceTo2D(p2);
     len = rad - dist + dimexe;
     dir.setPolar(1.0, ang2);
     line = RLine(center + dir*dist + dir*dimexo, center + dir*dist + dir*len);

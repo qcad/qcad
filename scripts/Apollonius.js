@@ -603,7 +603,7 @@ Apollonius.getPole = function(circle, polarLine) {
     var opInverse = (r * r) / op;
 
     var v = p.operator_subtract(center);
-    v.setMagnitude2d(opInverse);
+    v.setMagnitude2D(opInverse);
     return center.operator_add(v);
 };
 

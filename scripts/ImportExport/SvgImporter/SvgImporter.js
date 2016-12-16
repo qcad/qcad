@@ -372,7 +372,7 @@ SvgImporter.prototype.importShape = function(shape) {
         var t = this.transform;
         shape = ShapeAlgorithms.transformArc(shape,
             function(v) {
-                v.transform2d(t);
+                v.transform2D(t);
             }
         );
     }

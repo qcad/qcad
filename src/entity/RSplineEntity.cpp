@@ -97,6 +97,11 @@ bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.knotVector, value, PropertyKnotN == propertyTypeId);
     ret = ret || RObject::setMember(data.periodic, value, PropertyPeriodic == propertyTypeId);
 
+    // TODO:
+//    if  (propertyTypeId==PropertyFitPointNX || propertyTypeId==PropertyFitPointNY || propertyTypeId==PropertyFitPointNZ) {
+//        data.controlPoints.clear();
+//    }
+
     if (PropertyDegree == propertyTypeId) {
         if (value.type()==QVariant::Int) {
             ret = ret || RObject::setMember(data.degree, value);
@@ -105,7 +110,6 @@ bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
             ret = ret || RObject::setMember(data.degree, value.toString().toInt());
         }
     }
-
 
     if (ret) {
         data.RSpline::update();

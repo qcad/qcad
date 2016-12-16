@@ -120,7 +120,7 @@ bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId,
         if (s<RS::PointTolerance) {
             return false;
         }
-        data.uVector.setMagnitude2d(s);
+        data.uVector.setMagnitude2D(s);
         return true;
     }
     if (PropertyScaleFactorY == propertyTypeId) {
@@ -128,7 +128,7 @@ bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId,
         if (s<RS::PointTolerance) {
             return false;
         }
-        data.vVector.setMagnitude2d(s);
+        data.vVector.setMagnitude2D(s);
         return true;
     }
     if (PropertyWidth == propertyTypeId) {

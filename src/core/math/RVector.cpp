@@ -116,7 +116,7 @@ void RVector::setAngle(double a) {
  */
 double RVector::getAngle() const {
     double ret = 0.0;
-    double m = getMagnitude2d();
+    double m = getMagnitude2D();
 
     if (m > 1.0e-6) {
         double dp = getDotProduct(*this, RVector(1.0, 0.0));
@@ -163,7 +163,7 @@ double RVector::getAngleTo(const RVector& v) const {
 /**
  * Sets the vector magnitude without chaning the direction.
  */
-void RVector::setMagnitude2d(double m) {
+void RVector::setMagnitude2D(double m) {
     double a = getAngle();
     setPolar(m, a);
 }
@@ -183,7 +183,7 @@ double RVector::getMagnitude() const {
 /**
  * \return Magnitude (length) of the vector projected to the x/y plane (2d).
  */
-double RVector::getMagnitude2d() const {
+double RVector::getMagnitude2D() const {
     if (!valid) {
         return RNANDOUBLE;
     }
@@ -265,11 +265,11 @@ double RVector::getDistanceTo(const RVector& v) const {
 /**
  * \return The distance between this and the given coordinate on the XY plane.
  */
-double RVector::getDistanceTo2d(const RVector& v) const {
+double RVector::getDistanceTo2D(const RVector& v) const {
     if (!valid || !v.valid) {
         return RMAXDOUBLE;
     } else {
-        return (*this - v).getMagnitude2d();
+        return (*this - v).getMagnitude2D();
     }
 }
 
@@ -309,7 +309,7 @@ RVector RVector::rotate(double rotation) {
         return *this;
     }
 
-    double r = getMagnitude2d();
+    double r = getMagnitude2D();
     double a = getAngle() + rotation;
 
     x = cos(a) * r;
@@ -326,7 +326,7 @@ RVector RVector::rotate(double rotation, const RVector& center) {
     return *this;
 }
 
-RVector RVector::rotate3d(const RLine& axis, double rotation) {
+RVector RVector::rotate3D(const RLine& axis, double rotation) {
     RVector off = -axis.getStartPoint();
     RVector ret = *this;
     ret.move(off);
@@ -339,7 +339,7 @@ RVector RVector::rotate3d(const RLine& axis, double rotation) {
     return *this;
 }
 
-RVector RVector::rotate3d(const QQuaternion& quaternion) {
+RVector RVector::rotate3D(const QQuaternion& quaternion) {
     QVector3D qv = quaternion.rotatedVector(QVector3D(x, y, z));
     *this = RVector(qv.x(), qv.y(), qv.z());
     return *this;
@@ -860,7 +860,7 @@ RVector RVector::getTransformed(const RMatrix& m) const {
 /**
  * Generic 2d transformation. \c m must be a 3x2 matrix.
  */
-RVector RVector::transform2dM(const RMatrix& m) {
+RVector RVector::transform2DM(const RMatrix& m) {
     RMatrix input;
 
     input = RMatrix::create3x1(
@@ -880,24 +880,24 @@ RVector RVector::transform2dM(const RMatrix& m) {
  * \return A new vector which is the result of this vector transformed by
  * the given matrix.
  */
-RVector RVector::getTransformed2dM(const RMatrix& m) const {
+RVector RVector::getTransformed2DM(const RMatrix& m) const {
     RVector ret = *this;
-    return ret.transform2dM(m);
+    return ret.transform2DM(m);
 }
 
 /**
  * \return A new vector which is the result of this vector transformed by
  * the given transformation matrix.
  */
-RVector RVector::getTransformed2d(const QTransform& t) const {
+RVector RVector::getTransformed2D(const QTransform& t) const {
     RVector ret = *this;
-    return ret.transform2d(t);
+    return ret.transform2D(t);
 }
 
 /**
  * Transforms this vector with the given transformation matrix.
  */
-RVector RVector::transform2d(const QTransform& t) {
+RVector RVector::transform2D(const QTransform& t) {
     QPointF p(x, y);
     p = t.map(p);
     x = p.x();
@@ -942,8 +942,8 @@ RVector RVector::getClosest(const QList<RVector>& list) const {
     return list[index];
 }
 
-RVector RVector::getClosest2d(const QList<RVector>& list) const {
-    int index = getClosestIndex2d(list);
+RVector RVector::getClosest2D(const QList<RVector>& list) const {
+    int index = getClosestIndex2D(list);
     if (index==-1) {
         return RVector::invalid;
     }
@@ -976,7 +976,7 @@ int RVector::getClosestIndex(const QList<RVector>& list, bool ignoreZ) const {
         if (list[i].valid) {
             double dist;
             if (ignoreZ) {
-                dist = getDistanceTo2d(list[i]);
+                dist = getDistanceTo2D(list[i]);
             }
             else {
                 dist = getDistanceTo(list[i]);

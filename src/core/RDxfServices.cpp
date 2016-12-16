@@ -284,7 +284,7 @@ QString RDxfServices::collectVersion2Info(const QString& fileName) {
 
                 // check if major radius is 0 or ratio is 0
                 // and drop ellipse if that is the case:
-                if (majorPoint.getMagnitude2d()>1.0e-6 &&
+                if (majorPoint.getMagnitude2D()>1.0e-6 &&
                     fabs(ratio)>1.0e-6) {
                     // write corrected ellipse entity to temporary file:
                     for (int i=0; i<ellipseDataOrder.size(); i++) {

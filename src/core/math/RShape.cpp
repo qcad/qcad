@@ -1023,7 +1023,7 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCi
     if (RMath::fuzzyCompare(uMag, r1+r2, 1.0e-4) ||
         RMath::fuzzyCompare(uMag, fabs(r1-r2), 1.0e-4)) {
 
-        u.setMagnitude2d(r1);
+        u.setMagnitude2D(r1);
         res.append(c1 + u);
         return res;
     }

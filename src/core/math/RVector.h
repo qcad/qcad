@@ -93,15 +93,15 @@ public:
     bool equalsFuzzy(const RVector& v, double tol = RS::PointTolerance) const;
     bool equalsFuzzy2D(const RVector& v, double tol = RS::PointTolerance) const;
     double getDistanceTo(const RVector& v) const;
-    double getDistanceTo2d(const RVector& v) const;
+    double getDistanceTo2D(const RVector& v) const;
     void setAngle(double a);
     double getAngle() const;
     double getAngleToPlaneXY() const;
     double getAngleTo(const RVector& v) const;
-    void setMagnitude2d(double m);
+    void setMagnitude2D(double m);
     double getMagnitude() const;
     double getSquaredMagnitude() const;
-    double getMagnitude2d() const;
+    double getMagnitude2D() const;
     RVector getLerp(const RVector& v, double t) const;
     RVector getUnitVector() const;
     void setX(double x);
@@ -122,8 +122,8 @@ public:
 
     RVector rotate(double rotation);
     RVector rotate(double rotation, const RVector& center);
-    RVector rotate3d(const RLine& axis, double rotation);
-    RVector rotate3d(const QQuaternion& quaternion);
+    RVector rotate3D(const RLine& axis, double rotation);
+    RVector rotate3D(const QQuaternion& quaternion);
 
     /**
      * \nonscriptable
@@ -155,21 +155,21 @@ public:
     RVector stretch(const RPolyline& area, const RVector& offset);
     RVector isoProject(RS::IsoProjectionType type, bool trueScale);
     RVector transform(const RMatrix& m);
-    RVector transform2dM(const RMatrix& m);
-    RVector transform2d(const QTransform& t);
+    RVector transform2DM(const RMatrix& m);
+    RVector transform2D(const QTransform& t);
 
     RVector getTransformed(const RMatrix& m) const;
-    RVector getTransformed2dM(const RMatrix& m) const;
-    RVector getTransformed2d(const QTransform& t) const;
+    RVector getTransformed2DM(const RMatrix& m) const;
+    RVector getTransformed2D(const QTransform& t) const;
 
     RVector getDividedComponents(const RVector& v) const;
     RVector getMultipliedComponents(const RVector& v) const;
 
     RVector getClosest(const QList<RVector>& list) const;
-    RVector getClosest2d(const QList<RVector>& list) const;
+    RVector getClosest2D(const QList<RVector>& list) const;
     double getClosestDistance(const QList<RVector>& list, int counts);
     int getClosestIndex(const QList<RVector>& list, bool ignoreZ = false) const;
-    int getClosestIndex2d(const QList<RVector>& list) const {
+    int getClosestIndex2D(const QList<RVector>& list) const {
         return getClosestIndex(list, true);
     }
 

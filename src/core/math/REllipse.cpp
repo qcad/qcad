@@ -907,13 +907,13 @@ bool REllipse::reverse() {
 }
 
 QSharedPointer<RShape> REllipse::getTransformed(const QTransform& transform) const {
-    RVector ct = center.getTransformed2d(transform);
+    RVector ct = center.getTransformed2D(transform);
     RVector mp = center + getMajorPoint();
-    RVector mpt = mp.getTransformed2d(transform);
+    RVector mpt = mp.getTransformed2D(transform);
     RVector sp = getStartPoint();
-    RVector spt = sp.getTransformed2d(transform);
+    RVector spt = sp.getTransformed2D(transform);
     RVector ep = getEndPoint();
-    RVector ept = ep.getTransformed2d(transform);
+    RVector ept = ep.getTransformed2D(transform);
 
     QSharedPointer<REllipse> ret = QSharedPointer<REllipse>(
         new REllipse(

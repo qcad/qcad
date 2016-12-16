@@ -134,9 +134,9 @@ public:
     QSharedPointer<RShape> getTransformed(const QTransform& transform) const {
         return QSharedPointer<RShape>(
             new RTriangle(
-                corner[0].getTransformed2d(transform),
-                corner[1].getTransformed2d(transform),
-                corner[2].getTransformed2d(transform)
+                corner[0].getTransformed2D(transform),
+                corner[1].getTransformed2D(transform),
+                corner[2].getTransformed2D(transform)
             )
         );
     }

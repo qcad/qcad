@@ -648,14 +648,14 @@ void ROrthoGrid::paintRuler(RRuler& ruler, qreal devicePixelRatio) {
     // use grid spacing if available or auto grid spacing:
     RVector localSpacing = spacing;
     if (!localSpacing.isValid() ||
-        (autoSpacing.isValid() && autoSpacing.getMagnitude2d() < localSpacing.getMagnitude2d())) {
+        (autoSpacing.isValid() && autoSpacing.getMagnitude2D() < localSpacing.getMagnitude2D())) {
         localSpacing = autoSpacing;
     }
 
     // use meta grid spacing if available or auto meta grid spacing:
     RVector localMetaSpacing = metaSpacing;
     if (!localMetaSpacing.isValid() ||
-        (autoMetaSpacing.isValid() && autoMetaSpacing.getMagnitude2d() < localMetaSpacing.getMagnitude2d())) {
+        (autoMetaSpacing.isValid() && autoMetaSpacing.getMagnitude2D() < localMetaSpacing.getMagnitude2D())) {
         //localMetaSpacing = autoMetaSpacing;
     }
 

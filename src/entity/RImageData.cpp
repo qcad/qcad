@@ -282,14 +282,14 @@ void RImageData::setWidth(double w, bool keepRatio) {
         return;
     }
     double m2 = w / imageWidth;
-    uVector.setMagnitude2d(m2);
+    uVector.setMagnitude2D(m2);
     if (keepRatio) {
-        double m1 = vVector.getMagnitude2d();
+        double m1 = vVector.getMagnitude2D();
         if (m1<RS::PointTolerance) {
             return;
         }
         double f = m2/m1;
-        vVector.setMagnitude2d(vVector.getMagnitude2d() * f);
+        vVector.setMagnitude2D(vVector.getMagnitude2D() * f);
     }
 }
 
@@ -302,25 +302,25 @@ void RImageData::setHeight(double h, bool keepRatio) {
         return;
     }
     double m2 = h / imageHeight;
-    vVector.setMagnitude2d(m2);
+    vVector.setMagnitude2D(m2);
     if (keepRatio) {
-        double m1 = uVector.getMagnitude2d();
+        double m1 = uVector.getMagnitude2D();
         if (m1<RS::PointTolerance) {
             return;
         }
         double f = m2/m1;
-        uVector.setMagnitude2d(uVector.getMagnitude2d() * f);
+        uVector.setMagnitude2D(uVector.getMagnitude2D() * f);
     }
 }
 
 double RImageData::getWidth() const {
-    double m2 = uVector.getMagnitude2d();
+    double m2 = uVector.getMagnitude2D();
     double imageWidth = getImage().width();
     return m2 * imageWidth;
 }
 
 double RImageData::getHeight() const {
-    double m2 = vVector.getMagnitude2d();
+    double m2 = vVector.getMagnitude2D();
     double imageHeight = getImage().height();
     return m2 * imageHeight;
 }

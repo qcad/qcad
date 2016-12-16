@@ -174,11 +174,11 @@ RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRang
     RVector ae = endPoint - startPoint;
     RVector ap = point - startPoint;
 
-    if (ae.getMagnitude2d() < 1.0e-6) {
+    if (ae.getMagnitude2D() < 1.0e-6) {
         return RVector::invalid;
     }
 
-    if (ap.getMagnitude2d() < 1.0e-6) {
+    if (ap.getMagnitude2D() < 1.0e-6) {
         // distance to start point is very small:
         return RVector(0,0);
     }
@@ -348,7 +348,7 @@ bool RLine::stretch(const RPolyline& area, const RVector& offset) {
 }
 
 QSharedPointer<RShape> RLine::getTransformed(const QTransform& transform) const {
-    return QSharedPointer<RShape>(new RLine(startPoint.getTransformed2d(transform), endPoint.getTransformed2d(transform)));
+    return QSharedPointer<RShape>(new RLine(startPoint.getTransformed2D(transform), endPoint.getTransformed2D(transform)));
 }
 
 RS::Ending RLine::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {

@@ -95,7 +95,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         if (intersections) {
             RSnapIntersection snapIntersection;
             lastSnap = snapIntersection.snap(position, view, ids, queryBox);
-            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
                 status = RSnap::Intersection;
                 entityIds = snapIntersection.getEntityIds();
                 return lastSnap;
@@ -122,7 +122,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
 
             RSnapEnd snapEnd;
             lastSnap = snapEnd.snap(position, view, ids, queryBox);
-            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
                 status = RSnap::Endpoint;
                 entityIds = snapEnd.getEntityIds();
                 return lastSnap;
@@ -140,7 +140,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
 
             RSnapMiddle snapMiddle;
             lastSnap = snapMiddle.snap(position, view, ids, queryBox);
-            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
                 status = RSnap::Middle;
                 entityIds = snapMiddle.getEntityIds();
                 return lastSnap;
@@ -158,7 +158,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
 
             RSnapCenter snapCenter;
             lastSnap = snapCenter.snap(position, view, ids, queryBox);
-            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
                 status = RSnap::Center;
                 entityIds = snapCenter.getEntityIds();
                 return lastSnap;
@@ -176,7 +176,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
 
             RSnapPerpendicular snapPerpendicular;
             lastSnap = snapPerpendicular.snap(position, view, ids, queryBox);
-            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
                 status = RSnap::Perpendicular;
                 entityIds = snapPerpendicular.getEntityIds();
                 return lastSnap;
@@ -194,7 +194,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
 
             RSnapTangential snapTangential;
             lastSnap = snapTangential.snap(position, view, ids, queryBox);
-            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
                 status = RSnap::Tangential;
                 entityIds = snapTangential.getEntityIds();
                 return lastSnap;
@@ -212,7 +212,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
 
             RSnapReference snapReference;
             lastSnap = snapReference.snap(position, view, ids, queryBox);
-            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
                 status = RSnap::Reference;
                 entityIds = snapReference.getEntityIds();
                 return lastSnap;
@@ -225,7 +225,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     if (gridPoints) {
         RSnapGrid snapGrid;
         lastSnap = snapGrid.snap(position, view, range);
-        if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+        if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
             status = RSnap::Grid;
             return lastSnap;
         }
@@ -242,7 +242,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
             // on entity
             RSnapOnEntity snapOnEntity;
             lastSnap = snapOnEntity.snap(position, view, ids, queryBox);
-            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
                 status = RSnap::OnEntity;
                 entityIds = snapOnEntity.getEntityIds();
                 return lastSnap;

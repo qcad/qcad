@@ -142,7 +142,7 @@ bool RPoint::flipVertical() {
 }
 
 QSharedPointer<RShape> RPoint::getTransformed(const QTransform& transform) const {
-    return QSharedPointer<RShape>(new RPoint(position.getTransformed2d(transform)));
+    return QSharedPointer<RShape>(new RPoint(position.getTransformed2D(transform)));
 }
 
 void RPoint::print(QDebug dbg) const {

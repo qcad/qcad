@@ -80,11 +80,11 @@ RVector RSnapEntityBase::snap(
         }
 
         RVector candidate =
-            position.getClosest2d(
+            position.getClosest2D(
                 snapEntity(e, position, queryBox, view)
             );
 
-        dist = candidate.getDistanceTo2d(position);
+        dist = candidate.getDistanceTo2D(position);
         if (dist<minDist) {
             lastSnap = candidate;
             minDist = dist;
