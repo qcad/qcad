@@ -1365,7 +1365,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, doub
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode /*|| getScreenBasedLinetypes()*/ || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1416,7 +1416,7 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
     bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
+    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode /*|| getScreenBasedLinetypes()*/ || twoColorSelectedMode) {
         continuous = true;
     }
 
@@ -1616,10 +1616,10 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     if (getScreenBasedLinetypes()) {
         //factor*=pixelSizeHint*4.25;
         //qDebug() << "p.getScreenScale():" << p.getScreenScale();
+        qDebug() << "pixelSizeHint: " << pixelSizeHint;
         factor *= pixelSizeHint * (4.25/2.0) * p.getScreenScale();
-        if (!p.isMetric()) {
-            factor *= 25.4;
-        }
+        factor *= RUnit::convert(1.0, document->getUnit(), RS::Millimeter);
+        qDebug() << "factor: " << factor;
     }
     else {
         // optional: automatic scaling by line weight:
