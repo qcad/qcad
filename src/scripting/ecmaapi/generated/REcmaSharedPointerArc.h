@@ -263,6 +263,9 @@
         ;static  QScriptValue
         splitAt
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAtQuadrantLines
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

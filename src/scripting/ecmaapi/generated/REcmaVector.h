@@ -84,7 +84,7 @@
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDistanceTo2d
+        getDistanceTo2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setAngle
@@ -99,7 +99,7 @@
         getAngleTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setMagnitude2d
+        setMagnitude2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getMagnitude
@@ -108,7 +108,7 @@
         getSquaredMagnitude
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getMagnitude2d
+        getMagnitude2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLerp
@@ -144,7 +144,7 @@
         rotate
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        rotate3d
+        rotate3D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         scale
@@ -168,19 +168,19 @@
         transform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        transform2dM
+        transform2DM
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        transform2d
+        transform2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTransformed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getTransformed2dM
+        getTransformed2DM
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getTransformed2d
+        getTransformed2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDividedComponents
@@ -192,7 +192,7 @@
         getClosest
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getClosest2d
+        getClosest2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getClosestDistance
@@ -201,7 +201,7 @@
         getClosestIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getClosestIndex2d
+        getClosestIndex2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         operator_add

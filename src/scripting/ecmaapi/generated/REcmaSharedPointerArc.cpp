@@ -242,6 +242,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, splitAt, "splitAt");
             
+            REcmaHelper::registerFunction(&engine, proto, splitAtQuadrantLines, "splitAtQuadrantLines");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RArcPointer>(), *proto);
       
@@ -6085,6 +6087,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerArc::splitAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerArc::splitAtQuadrantLines
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerArc::splitAtQuadrantLines", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::splitAtQuadrantLines";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("splitAtQuadrantLines", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RArc >'
+    QList < RArc > cppResult =
+        
+               self->splitAtQuadrantLines();
+        // return type: QList < RArc >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.splitAtQuadrantLines().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerArc::splitAtQuadrantLines", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerArc::toString

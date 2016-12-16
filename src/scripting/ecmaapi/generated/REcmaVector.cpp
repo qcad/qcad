@@ -108,7 +108,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
             
-            REcmaHelper::registerFunction(&engine, proto, getDistanceTo2d, "getDistanceTo2d");
+            REcmaHelper::registerFunction(&engine, proto, getDistanceTo2D, "getDistanceTo2D");
             
             REcmaHelper::registerFunction(&engine, proto, setAngle, "setAngle");
             
@@ -118,13 +118,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngleTo, "getAngleTo");
             
-            REcmaHelper::registerFunction(&engine, proto, setMagnitude2d, "setMagnitude2d");
+            REcmaHelper::registerFunction(&engine, proto, setMagnitude2D, "setMagnitude2D");
             
             REcmaHelper::registerFunction(&engine, proto, getMagnitude, "getMagnitude");
             
             REcmaHelper::registerFunction(&engine, proto, getSquaredMagnitude, "getSquaredMagnitude");
             
-            REcmaHelper::registerFunction(&engine, proto, getMagnitude2d, "getMagnitude2d");
+            REcmaHelper::registerFunction(&engine, proto, getMagnitude2D, "getMagnitude2D");
             
             REcmaHelper::registerFunction(&engine, proto, getLerp, "getLerp");
             
@@ -148,7 +148,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, rotate, "rotate");
             
-            REcmaHelper::registerFunction(&engine, proto, rotate3d, "rotate3d");
+            REcmaHelper::registerFunction(&engine, proto, rotate3D, "rotate3D");
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
@@ -164,15 +164,15 @@
             
             REcmaHelper::registerFunction(&engine, proto, transform, "transform");
             
-            REcmaHelper::registerFunction(&engine, proto, transform2dM, "transform2dM");
+            REcmaHelper::registerFunction(&engine, proto, transform2DM, "transform2DM");
             
-            REcmaHelper::registerFunction(&engine, proto, transform2d, "transform2d");
+            REcmaHelper::registerFunction(&engine, proto, transform2D, "transform2D");
             
             REcmaHelper::registerFunction(&engine, proto, getTransformed, "getTransformed");
             
-            REcmaHelper::registerFunction(&engine, proto, getTransformed2dM, "getTransformed2dM");
+            REcmaHelper::registerFunction(&engine, proto, getTransformed2DM, "getTransformed2DM");
             
-            REcmaHelper::registerFunction(&engine, proto, getTransformed2d, "getTransformed2d");
+            REcmaHelper::registerFunction(&engine, proto, getTransformed2D, "getTransformed2D");
             
             REcmaHelper::registerFunction(&engine, proto, getDividedComponents, "getDividedComponents");
             
@@ -180,13 +180,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClosest, "getClosest");
             
-            REcmaHelper::registerFunction(&engine, proto, getClosest2d, "getClosest2d");
+            REcmaHelper::registerFunction(&engine, proto, getClosest2D, "getClosest2D");
             
             REcmaHelper::registerFunction(&engine, proto, getClosestDistance, "getClosestDistance");
             
             REcmaHelper::registerFunction(&engine, proto, getClosestIndex, "getClosestIndex");
             
-            REcmaHelper::registerFunction(&engine, proto, getClosestIndex2d, "getClosestIndex2d");
+            REcmaHelper::registerFunction(&engine, proto, getClosestIndex2D, "getClosestIndex2D");
             
             REcmaHelper::registerFunction(&engine, proto, operator_add, "operator_add");
             
@@ -1535,19 +1535,19 @@
             return result;
         }
          QScriptValue
-        REcmaVector::getDistanceTo2d
+        REcmaVector::getDistanceTo2D
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::getDistanceTo2d", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getDistanceTo2d";
+            //REcmaHelper::functionStart("REcmaVector::getDistanceTo2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getDistanceTo2D";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("getDistanceTo2d", context);
+                        getSelf("getDistanceTo2D", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1590,7 +1590,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDistanceTo2d(a0);
+               self->getDistanceTo2D(a0);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1600,10 +1600,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getDistanceTo2d().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getDistanceTo2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::getDistanceTo2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getDistanceTo2D", context, engine);
             return result;
         }
          QScriptValue
@@ -1832,19 +1832,19 @@
             return result;
         }
          QScriptValue
-        REcmaVector::setMagnitude2d
+        REcmaVector::setMagnitude2D
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::setMagnitude2d", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::setMagnitude2d";
+            //REcmaHelper::functionStart("REcmaVector::setMagnitude2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::setMagnitude2D";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("setMagnitude2d", context);
+                        getSelf("setMagnitude2D", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1874,16 +1874,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->setMagnitude2d(a0);
+               self->setMagnitude2D(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.setMagnitude2d().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.setMagnitude2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::setMagnitude2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::setMagnitude2D", context, engine);
             return result;
         }
          QScriptValue
@@ -1985,19 +1985,19 @@
             return result;
         }
          QScriptValue
-        REcmaVector::getMagnitude2d
+        REcmaVector::getMagnitude2D
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::getMagnitude2d", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMagnitude2d";
+            //REcmaHelper::functionStart("REcmaVector::getMagnitude2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMagnitude2D";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("getMagnitude2d", context);
+                        getSelf("getMagnitude2D", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2017,7 +2017,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getMagnitude2d();
+               self->getMagnitude2D();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2027,10 +2027,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMagnitude2d().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMagnitude2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::getMagnitude2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMagnitude2D", context, engine);
             return result;
         }
          QScriptValue
@@ -2766,19 +2766,19 @@
             return result;
         }
          QScriptValue
-        REcmaVector::rotate3d
+        REcmaVector::rotate3D
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::rotate3d", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::rotate3d";
+            //REcmaHelper::functionStart("REcmaVector::rotate3D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::rotate3D";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("rotate3d", context);
+                        getSelf("rotate3D", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2832,7 +2832,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->rotate3d(a0
+               self->rotate3D(a0
         ,
     a1);
         // return type: RVector
@@ -2876,7 +2876,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->rotate3d(a0);
+               self->rotate3D(a0);
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -2886,10 +2886,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.rotate3d().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.rotate3D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::rotate3d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::rotate3D", context, engine);
             return result;
         }
          QScriptValue
@@ -3604,19 +3604,19 @@
             return result;
         }
          QScriptValue
-        REcmaVector::transform2dM
+        REcmaVector::transform2DM
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::transform2dM", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::transform2dM";
+            //REcmaHelper::functionStart("REcmaVector::transform2DM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::transform2DM";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("transform2dM", context);
+                        getSelf("transform2DM", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3659,7 +3659,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->transform2dM(a0);
+               self->transform2DM(a0);
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -3669,26 +3669,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.transform2dM().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.transform2DM().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::transform2dM", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::transform2DM", context, engine);
             return result;
         }
          QScriptValue
-        REcmaVector::transform2d
+        REcmaVector::transform2D
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::transform2d", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::transform2d";
+            //REcmaHelper::functionStart("REcmaVector::transform2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::transform2D";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("transform2d", context);
+                        getSelf("transform2D", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3729,7 +3729,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->transform2d(a0);
+               self->transform2D(a0);
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -3739,10 +3739,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.transform2d().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.transform2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::transform2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::transform2D", context, engine);
             return result;
         }
          QScriptValue
@@ -3818,19 +3818,19 @@
             return result;
         }
          QScriptValue
-        REcmaVector::getTransformed2dM
+        REcmaVector::getTransformed2DM
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::getTransformed2dM", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getTransformed2dM";
+            //REcmaHelper::functionStart("REcmaVector::getTransformed2DM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getTransformed2DM";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("getTransformed2dM", context);
+                        getSelf("getTransformed2DM", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3873,7 +3873,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->getTransformed2dM(a0);
+               self->getTransformed2DM(a0);
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -3883,26 +3883,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getTransformed2dM().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getTransformed2DM().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::getTransformed2dM", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getTransformed2DM", context, engine);
             return result;
         }
          QScriptValue
-        REcmaVector::getTransformed2d
+        REcmaVector::getTransformed2D
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::getTransformed2d", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getTransformed2d";
+            //REcmaHelper::functionStart("REcmaVector::getTransformed2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getTransformed2D";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("getTransformed2d", context);
+                        getSelf("getTransformed2D", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3943,7 +3943,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->getTransformed2d(a0);
+               self->getTransformed2D(a0);
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -3953,10 +3953,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getTransformed2d().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getTransformed2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::getTransformed2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getTransformed2D", context, engine);
             return result;
         }
          QScriptValue
@@ -4165,19 +4165,19 @@
             return result;
         }
          QScriptValue
-        REcmaVector::getClosest2d
+        REcmaVector::getClosest2D
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::getClosest2d", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosest2d";
+            //REcmaHelper::functionStart("REcmaVector::getClosest2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosest2D";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("getClosest2d", context);
+                        getSelf("getClosest2D", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -4209,7 +4209,7 @@
     // return type 'RVector'
     RVector cppResult =
         
-               self->getClosest2d(a0);
+               self->getClosest2D(a0);
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -4219,10 +4219,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosest2d().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosest2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::getClosest2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getClosest2D", context, engine);
             return result;
         }
          QScriptValue
@@ -4407,19 +4407,19 @@
             return result;
         }
          QScriptValue
-        REcmaVector::getClosestIndex2d
+        REcmaVector::getClosestIndex2D
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaVector::getClosestIndex2d", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosestIndex2d";
+            //REcmaHelper::functionStart("REcmaVector::getClosestIndex2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosestIndex2D";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RVector* self = 
-                        getSelf("getClosestIndex2d", context);
+                        getSelf("getClosestIndex2D", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -4451,7 +4451,7 @@
     // return type 'int'
     int cppResult =
         
-               self->getClosestIndex2d(a0);
+               self->getClosestIndex2D(a0);
         // return type: int
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -4461,10 +4461,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestIndex2d().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestIndex2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaVector::getClosestIndex2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getClosestIndex2D", context, engine);
             return result;
         }
          QScriptValue
