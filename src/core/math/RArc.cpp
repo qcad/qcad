@@ -430,7 +430,6 @@ double RArc::getAngleLength(bool allowForZeroLength) const {
     return ret;
 }
 
-
 /**
  * \return Arc sweep in rad. The sweep is the angle covered by this arc.
  * Positive for ccw, negative for cw.
@@ -746,13 +745,13 @@ bool RArc::stretch(const RPolyline& area, const RVector& offset) {
  * \todo Not working as expected, fix or disable
  */
 QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
-    RVector ct = center.getTransformed2d(transform);
+    RVector ct = center.getTransformed2D(transform);
     RVector sp = getStartPoint();
-    RVector spt = sp.getTransformed2d(transform);
+    RVector spt = sp.getTransformed2D(transform);
     RVector ep = getEndPoint();
-    RVector ept = ep.getTransformed2d(transform);
+    RVector ept = ep.getTransformed2D(transform);
     RVector mp = getMiddlePoint();
-    RVector mpt = mp.getTransformed2d(transform);
+    RVector mpt = mp.getTransformed2D(transform);
 
     RArc* ret = new RArc(
             ct,
@@ -813,7 +812,7 @@ double RArc::getDistanceFromStart(const RVector& p) const {
     }
 }
 
-RPolyline RArc::approximateWithLines(double segmentLength) {
+RPolyline RArc::approximateWithLines(double segmentLength) const {
     RPolyline polyline;
 
     // avoid a segment length of 0:
@@ -860,7 +859,7 @@ RPolyline RArc::approximateWithLines(double segmentLength) {
     return polyline;
 }
 
-RPolyline RArc::approximateWithLinesTan(double segmentLength) {
+RPolyline RArc::approximateWithLinesTan(double segmentLength) const {
     RPolyline polyline;
 
     // avoid a segment length of 0:
@@ -877,7 +876,7 @@ RPolyline RArc::approximateWithLinesTan(double segmentLength) {
     // real angle step:
     aStep = fabs(getSweep()) / steps;
     if (fabs(cos(aStep/2))<RS::PointTolerance) {
-        qWarning() << "RArc::approximateWithLinesTan: segmentLength too coarse to yield meaningful result";
+        qWarning() << "RArc::approximateWithLinesTan: segmentLength to coarse to yield meaningful result";
         polyline.appendVertex(getStartPoint());
         polyline.appendVertex(getEndPoint());
         return polyline;
@@ -944,17 +943,48 @@ QList<QSharedPointer<RShape> > RArc::splitAt(const QList<RVector>& points) const
         sortedPoints.append(endPoint);
     }
 
+    //qDebug() << "sortedPoints: " << sortedPoints;
+
     for (int i=0; i<sortedPoints.length()-1; i++) {
         if (sortedPoints[i].equalsFuzzy(sortedPoints[i+1])) {
             continue;
         }
 
         RArc* seg = clone();
-        seg->setStartAngle(center.getAngleTo(sortedPoints[i]));
-        seg->setEndAngle(center.getAngleTo(sortedPoints[i+1]));
+        double a1 = center.getAngleTo(sortedPoints[i]);
+        double a2 = center.getAngleTo(sortedPoints[i+1]);
+        if (RMath::getAngleDifference180(a1, a2)<0.001) {
+            continue;
+        }
+        seg->setStartAngle(a1);
+        seg->setEndAngle(a2);
         ret.append(QSharedPointer<RShape>(seg));
     }
 
+    return ret;
+}
+
+QList<RArc> RArc::splitAtQuadrantLines() const {
+    QVector<double> angles;
+    angles.append(0.0);
+    angles.append(M_PI/2);
+    angles.append(M_PI);
+    angles.append(M_PI/2*3);
+
+    QList<RVector> points;
+    for (int i=0; i<angles.length(); i++) {
+        if (isAngleWithinArc(angles[i])) {
+            points.append(center + RVector::createPolar(radius, angles[i]));
+        }
+    }
+
+    QList<QSharedPointer<RShape> > segments = splitAt(points);
+
+    QList<RArc> ret;
+    for (int i=0; i<segments.length(); i++) {
+        QSharedPointer<RArc> seg = segments[i].dynamicCast<RArc>();
+        ret.append(*seg);
+    }
     return ret;
 }
 

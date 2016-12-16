@@ -102,7 +102,7 @@ public:
     bool isReversed() const;
     void setReversed(bool reversed);
     double getAngleLength(bool allowForZeroLength = false) const;
-    bool isAngleWithinArc(double a) {
+    bool isAngleWithinArc(double a) const {
         return RMath::isAngleBetween(a, startAngle, endAngle, reversed);
     }
 
@@ -153,8 +153,8 @@ public:
     }
     virtual double getDistanceFromStart(const RVector& p) const;
 
-    RPolyline approximateWithLines(double segmentLength);
-    RPolyline approximateWithLinesTan(double segmentLength);
+    RPolyline approximateWithLines(double segmentLength) const;
+    RPolyline approximateWithLinesTan(double segmentLength) const;
 
     QList<RLine> getTangents(const RVector& point) const;
 
@@ -163,6 +163,8 @@ public:
     }
 
     virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
+
+    QList<RArc> splitAtQuadrantLines() const;
 
 protected:
     virtual void print(QDebug dbg) const;
