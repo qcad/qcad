@@ -972,7 +972,7 @@ QList<RArc> RArc::splitAtQuadrantLines() const {
     angles.append(M_PI/2*3);
 
     QList<RVector> points;
-    for (int i=0; i<angles.length(); i++) {
+    for (int i=0; i<angles.size(); i++) {
         if (isAngleWithinArc(angles[i])) {
             points.append(center + RVector::createPolar(radius, angles[i]));
         }
