@@ -54,10 +54,10 @@ SnapIntersectionManual.prototype.beginEvent = function() {
         this.terminate();
         return;
     }
-    if (this.base.getClickMode()!=RAction.PickCoordinate) {
-        qWarning("No coordinate requested at this point");
-        this.terminate();
-    }
+//    if (this.base.getClickMode()!==RAction.PickCoordinate) {
+//        qWarning("No coordinate requested at this point");
+//        this.terminate();
+//    }
 };
 
 SnapIntersectionManual.prototype.finishEvent = function() {
