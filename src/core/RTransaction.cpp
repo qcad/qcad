@@ -342,7 +342,7 @@ void RTransaction::endCycle() {
 
         REntity::Id parentId = entity->getParentId();
         if (cloneIds.contains(parentId)) {
-            entity->setParentId(cloneIds.value(parentId, REntity::INVALID_ID));
+            storage->setEntityParentId(*entity, cloneIds.value(parentId, REntity::INVALID_ID));
         }
     }
     cloneIds.clear();

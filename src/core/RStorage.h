@@ -556,6 +556,10 @@ public:
     virtual void setObjectId(RObject& object, RObject::Id objectId) const;
     virtual void setObjectHandle(RObject& object, RObject::Handle objectHandle);
 
+    virtual void setEntityParentId(REntity& entity, REntity::Id parentId) {
+        entity.setParentId(parentId);
+    }
+
     virtual void setUndoStatus(RObject& object, bool status);
 
     /**

@@ -1624,6 +1624,20 @@ void RMemoryStorage::update() {
     boundingBoxDirty = true;
 }
 
+void RMemoryStorage::setEntityParentId(REntity& entity, REntity::Id parentId) {
+    RStorage::setEntityParentId(entity, parentId);
+
+    QList<REntity::Id> parentIds = childMap.keys();
+    for (int i=0; i<parentIds.length(); i++) {
+        REntity::Id parentId = parentIds[i];
+        if (childMap.contains(parentId, entity.getId())) {
+            childMap.remove(parentId, entity.getId());
+        }
+    }
+
+    childMap.insert(entity.getParentId(), entity.getId());
+}
+
 //void RMemoryStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
 //    this->unit = unit;
 //    setModified(true);

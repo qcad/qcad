@@ -179,6 +179,8 @@ public:
 
     virtual void update();
 
+    virtual void setEntityParentId(REntity& entity, REntity::Id parentId);
+
     //virtual void setUnit(RS::Unit unit, RTransaction* transaction = NULL);
     //virtual RS::Unit getUnit() const;
 
