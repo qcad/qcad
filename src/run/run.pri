@@ -87,6 +87,7 @@ else {
 
         greaterThan(QT_MAJOR_VERSION, 4) {
             FILES += imageformats/libqtga.so
+            FILES += printsupport/libcupsprintersupport.so
         }
         else {
             FILES += \
