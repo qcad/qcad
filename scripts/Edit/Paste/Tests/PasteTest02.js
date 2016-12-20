@@ -16,7 +16,7 @@ PasteTest02.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Edit/Paste/Tests/data/block_attributes.dxf');
     this.selectAll();
-    TdbTest.clickOnWidget('MainWindow::EditToolBar::ToolButtonCopyWithReference');
+    this.triggerCommand('copywithreference');
     this.setZoom(38.24390243902439, new RVector(2.6352, 0.778699, 0, true));
     var p = new RVector(-0.203444, 0.00574);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
