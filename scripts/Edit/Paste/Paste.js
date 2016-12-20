@@ -48,7 +48,22 @@ Paste.State = {
     SettingPosition : 0
 };
 
+Paste.getPreferencesCategory = function() {
+    return [qsTr("Edit"), qsTr("Paste")];
+};
+
 Paste.prototype.beginEvent = function() {
+    // always reset paste options to defaults:
+    if (RSettings.getBoolValue("Paste/ResetOnToolStart", false)===true) {
+        RSettings.setValue("Paste/Scale", 1.0, true);
+        RSettings.setValue("Paste/Rotation", 0.0, true);
+        RSettings.setValue("Paste/FlipHorizontal", false, true);
+        RSettings.setValue("Paste/FlipVertical", false, true);
+        RSettings.setValue("Paste/OverwriteBlocks", false, true);
+        RSettings.setValue("Paste/OverwriteLayers", false, true);
+        RSettings.setValue("Paste/ToCurrentLayer", false, true);
+    }
+
     Edit.prototype.beginEvent.call(this);
 
     this.di = this.getDocumentInterface();
