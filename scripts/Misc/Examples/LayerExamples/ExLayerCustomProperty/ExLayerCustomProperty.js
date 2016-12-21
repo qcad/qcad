@@ -50,7 +50,7 @@ ExLayerCustomProperty.prototype.beginEvent = function() {
  * Adds a menu for this action.
  */
 ExLayerCustomProperty.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Add custom property to a layer"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Add Custom Property to a Layer"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExLayerCustomProperty.js");
     action.setGroupSortOrder(78100);
