@@ -80,8 +80,8 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
     if (fromUnit===toUnit) {
         return [1, qsTr("Nothing to be done.")];
     }
-    if (fromUnit === 0 || toUnit === 0) {
-        return [1, qsTr("RS.None selected - Nothing to be done")];
+    if (fromUnit === RS.None || toUnit === RS.None) {
+        return [1, qsTr("Unit '%1' selected - Nothing to be done").arg(RUnit.unitToName(RS.None))];
     }
 
     var factor = RUnit.convert(1.0, fromUnit, toUnit);
@@ -140,28 +140,9 @@ ConvertUnit.initUnitCombo = function(unitCombo) {
     // available units in DXF/DWG
     // int values correspond to unit codes from DXF spec
     unitCombo.clear();
-    unitCombo.addItem(qsTr("None"), RS.None);
-    unitCombo.addItem(qsTr("Inch"), RS.Inch);
-    unitCombo.addItem(qsTr("Foot"), RS.Foot);
-    unitCombo.addItem(qsTr("Mile"), RS.Mile);
-    unitCombo.addItem(qsTr("Millimeter"), RS.Millimeter);
-    unitCombo.addItem(qsTr("Centimeter"), RS.Centimeter);
-    unitCombo.addItem(qsTr("Meter"), RS.Meter);
-    unitCombo.addItem(qsTr("Kilometer"), RS.Kilometer);
-    unitCombo.addItem(qsTr("Microinch"), RS.Microinch);
-    unitCombo.addItem(qsTr("Mil"), RS.Mil);
-    unitCombo.addItem(qsTr("Yard"), RS.Yard);
-    unitCombo.addItem(qsTr("Angstrom"), RS.Angstrom);
-    unitCombo.addItem(qsTr("Nanometer"), RS.Nanometer);
-    unitCombo.addItem(qsTr("Micron"), RS.Micron);
-    unitCombo.addItem(qsTr("Decimeter"), RS.Decimeter);
-    unitCombo.addItem(qsTr("Decameter"), RS.Decameter);
-    unitCombo.addItem(qsTr("Hectometer"), RS.Hectometer);
-    unitCombo.addItem(qsTr("Gigameter"), RS.Gigameter);
-    unitCombo.addItem(qsTr("Astro"), RS.Astro);
-    unitCombo.addItem(qsTr("Lightyear"), RS.Lightyear);
-    unitCombo.addItem(qsTr("Parsec"), RS.Parsec);
-    //unitCombo.addItem(qsTr("Plu"), RS.Plu);
+    for (var u=RS.None; u<=RS.MaxUnit; u++) {
+        unitCombo.addItem(RUnit.unitToName(u), u);
+    }
 };
 
 ConvertUnit.prototype.slotFromChanged = function(value) {
