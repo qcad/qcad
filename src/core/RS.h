@@ -316,6 +316,7 @@ public:
         CHAMFERB,
         CHAMFERC,
         CHAMFERD,
+        CLAYER,
         CMLJUST,
         CMLSCALE,
         /** Decimal places in angular dimensions */
