@@ -306,7 +306,7 @@ About.prototype.initAboutScripts = function(textBrowser) {
             + "<h1>%1</h1>".arg(qsTr("Script Add-Ons"))
             + "<hr/>";
 
-    var addOns = AddOn.addOns;
+    var addOns = AddOn.getAddOns();
     var numAddOns = addOns.length;
 
     if (numAddOns===0) {
