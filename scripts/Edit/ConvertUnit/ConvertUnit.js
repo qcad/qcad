@@ -65,6 +65,11 @@ ConvertUnit.prototype.doConvert = function() {
         }
     }
 
+    // The focus ends up in ToolMatrix filter box, for unknown reason
+    // Change it back to drawing
+    var mdiChild = EAction.getMdiChild();
+    mdiChild.setFocus();
+
     this.terminate();
 }
 
