@@ -4,6 +4,8 @@ var credits =
         qsTr("Programming"),
         [ "Andrew Mustun",    "Main developer<br>"
                               ],
+        [ "Matfie",           "Gear generator library item \"InvoluteSpur\"<br>"
+                              ],
         [ "Matthias Melcher", "Drawing box joint lines<br>" +
                               "Drawing dovetail joint lines<br>" +
                               "MOL file import<br>"
