@@ -110,8 +110,8 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
         } else if (isDimensionEntity(entity)) {
             var s = entity.getDimScale();
             s = s * factor;
-            entity.setDimScale(s);
             entity.scale(factor);
+            entity.setDimScale(s);
         } else {
             entity.scale(factor);
         }
