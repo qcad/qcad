@@ -311,13 +311,13 @@ void ROrthoGrid::update(bool force) {
     metaGridBox = RBox(minGridPoint, maxGridPoint);
 
     if (isometric) {
-        QString i1 = RUnit::getLabel(spacing.x / cos(M_PI/6), *doc, true, true);
-        QString i2 = RUnit::getLabel(metaSpacing.x / cos(M_PI/6) / 2, *doc, true, true);
+        QString i1 = RUnit::getLabel(spacing.x / cos(M_PI/6), *doc, 8, true, true);
+        QString i2 = RUnit::getLabel(metaSpacing.x / cos(M_PI/6) / 2, *doc, 8, true, true);
         infoText = QString("%1 < %2").arg(i1).arg(i2);
     }
     else {
-        QString i1 = RUnit::getLabel(spacing.x, *doc, true, true);
-        QString i2 = RUnit::getLabel(metaSpacing.x, *doc, true, true);
+        QString i1 = RUnit::getLabel(spacing.x, *doc, 8, true, true);
+        QString i2 = RUnit::getLabel(metaSpacing.x, *doc, 8, true, true);
         infoText = QString("%1 < %2").arg(i1).arg(i2);
     }
 }
@@ -699,8 +699,8 @@ void ROrthoGrid::paintRuler(RRuler& ruler, qreal devicePixelRatio) {
     // ideal tick spacing in pixels:
     int pSpacing = (int) ceil(view.mapDistanceToView(tickSpacing));
 
-    QString l1 = RUnit::getLabel(isHorizontal ? min.x : min.y, *doc, false, true);
-    QString l2 = RUnit::getLabel(isHorizontal ? max.x : max.y, *doc, false, true);
+    QString l1 = RUnit::getLabel(isHorizontal ? min.x : min.y, *doc, 8, false, true);
+    QString l2 = RUnit::getLabel(isHorizontal ? max.x : max.y, *doc, 8, false, true);
     int labelWidth = std::max(
             QFontMetrics(ruler.getFont()).boundingRect(l1).width(),
             QFontMetrics(ruler.getFont()).boundingRect(l2).width()) + 15;
@@ -781,7 +781,8 @@ void ROrthoGrid::paintRuler(RRuler& ruler, qreal devicePixelRatio) {
         } else {
             v = view.mapToView(RVector(0, p)).y;
         }
-        ruler.paintTick(v*devicePixelRatio, hasLabel, hasLabel ? RUnit::getLabel(p, *doc, false, true, true) : QString());
+        ruler.paintTick(v*devicePixelRatio, hasLabel,
+                        hasLabel ? RUnit::getLabel(p, *doc, 8, true, true) : QString());
     }
 }
 
