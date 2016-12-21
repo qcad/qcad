@@ -2,6 +2,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     ts \
     AppPreferences \
+    ConvertUnit \
     Copy \
     CopyWithReference \
     Cut \
