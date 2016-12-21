@@ -66,7 +66,7 @@ ChangeFontToArial.init = function(basePath) {
     action.setRequiresDocument(true);
     action.setRequiresSelection(false);
     action.setScriptFile(basePath + "/ChangeFontToArial.js");
-    action.setGroupSortOrder(56100);
-    action.setSortOrder(300);
+    action.setGroupSortOrder(56150);
+    action.setSortOrder(100);
     action.setWidgetNames(["MiscModifyMenu", "MiscModifyToolBar", "MiscModifyToolsPanel"]);
 };
