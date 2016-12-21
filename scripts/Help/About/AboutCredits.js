@@ -17,18 +17,19 @@ var credits =
                               "Selecting overlapping entities<br>" +
                               "Polyline area calculation<br>" +
                               "Command line calculator<br>" +
-                              "Snap > X/Y from Points<br>" +
-                              "Snap > Y/X from Points<br>" +
-                              "Snap > Distance Manual<br>" +
-                              "Misc > Drawing > Centerline Cross<br>" +
-                              "Misc > Drawing > Counter<br>" +
-                              "Edit > Drawing Preferences > General > Point Display<br>" +
-                              "Modify > Break out Manual<br>" +
+                              "Edit > Draw Preferences > General > Point Display<br>" +
+                              "Edit > Convert Unit<br>" +
                               "View > Display Distance/Angle<br>" +
                               "Draw > Shape > Polygon (Center, Side)<br>" +
                               "Draw > Shape > Polygon (Side, Side)<br>" +
                               "Draw > Arc > 2 Points and Length<br>" +
                               "Draw > Arc > 2 Points and Height<br>" +
+                              "Modify > Break out Manual<br>" +
+                              "Snap > X/Y from Points<br>" +
+                              "Snap > Y/X from Points<br>" +
+                              "Snap > Distance Manual<br>" +
+                              "Misc > Draw > Centerline Cross<br>" +
+                              "Misc > Draw > Counter<br>" +
                               "Misc > Development > Run Script<br>" +
                               "<i>Significant contributions to:</i><br>" +
                               "Draw > Line > Line from 2 Points<br>" +
