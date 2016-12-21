@@ -381,6 +381,12 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
     else {
         currentPainterPath.setAutoRegen(true);
         RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
+
+        // TODO: this might be worth considering:
+//        QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
+//        for (int i=0; i<splines.length(); i++) {
+//            currentPainterPath.addSpline(splines[i]);
+//        }
     }
 }
 
