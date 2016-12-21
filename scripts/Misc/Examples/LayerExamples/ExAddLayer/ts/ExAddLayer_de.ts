@@ -2,9 +2,9 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="de_DE">
 <context>
-    <name>ExLayerAdd</name>
+    <name>ExAddLayer</name>
     <message>
-        <location filename="../ExLayerAdd.js" line="+44"/>
+        <location filename="../ExAddLayer.js" line="+44"/>
         <source>Added layer &apos;MyLayer&apos;</source>
         <translation>Layer &apos;MyLayer&apos; hinzugefügt</translation>
     </message>

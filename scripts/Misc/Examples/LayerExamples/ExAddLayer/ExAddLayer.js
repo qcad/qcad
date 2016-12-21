@@ -21,16 +21,16 @@ include("../LayerExamples.js");
 
 /**
  * \ingroup ecma_misc_examples_layerexamples
- * \class ExLayerAdd
+ * \class ExAddLayer
  * This action adds a custom property to layer '0'.
  */
-function ExLayerAdd(guiAction) {
+function ExAddLayer(guiAction) {
     LayerExamples.call(this, guiAction);
 }
 
-ExLayerAdd.prototype = new LayerExamples();
+ExAddLayer.prototype = new LayerExamples();
 
-ExLayerAdd.prototype.beginEvent = function() {
+ExAddLayer.prototype.beginEvent = function() {
     LayerExamples.prototype.beginEvent.call(this);
 
     var di = this.getDocumentInterface();
@@ -53,10 +53,10 @@ ExLayerAdd.prototype.beginEvent = function() {
 /**
  * Adds a menu for this action.
  */
-ExLayerAdd.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Add layer"), RMainWindowQt.getMainWindow());
+ExAddLayer.init = function(basePath) {
+    var action = new RGuiAction(qsTr("Add Layer"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/ExLayerAdd.js");
+    action.setScriptFile(basePath + "/ExAddLayer.js");
     action.setGroupSortOrder(78100);
     action.setSortOrder(50);
     action.setWidgetNames(["LayerExamplesMenu"]);
