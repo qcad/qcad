@@ -54,6 +54,6 @@ FlushBackLog.init = function(basePath) {
     action.setRequiresSelection(false);
     action.setScriptFile(basePath + "/FlushBackLog.js");
     action.setGroupSortOrder(56100);
-    action.setSortOrder(360);
+    action.setSortOrder(400);
     action.setWidgetNames(["MiscModifyMenu", "!MiscModifyToolBar", "!MiscModifyToolsPanel"]);
 };

@@ -50,6 +50,6 @@ ReloadLinetypes.init = function(basePath) {
     action.setRequiresSelection(false);
     action.setScriptFile(basePath + "/ReloadLinetypes.js");
     action.setGroupSortOrder(56100);
-    action.setSortOrder(350);
+    action.setSortOrder(300);
     action.setWidgetNames(["MiscModifyMenu", "MiscModifyToolBar", "MiscModifyToolsPanel"]);
 };

@@ -71,7 +71,7 @@ SplineToLine.init = function(basePath) {
     var action = new RGuiAction(qsTr("Convert Straight Splines to Lines"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SplineToLine.js");
-    action.setGroupSortOrder(56100);
+    action.setGroupSortOrder(56170);
     action.setSortOrder(200);
     action.setWidgetNames(["MiscModifyMenu", "MiscModifyToolBar", "MiscModifyToolsPanel"]);
 };
