@@ -778,6 +778,10 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
             shape.relocateStartPoint(cutDist1);
             shape.convertToOpen();
             cutDist2 -= cutDist1;
+            if (cutDist2<0.0) {
+                cutDist2 = shape.getLength() + cutDist2;
+            }
+
             cutDist1 = 0.0;
         }
         rest1 = shape.clone();
@@ -1005,8 +1009,6 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
 //        intersections = intersections.concat(selfIntersectionPoints);
 //    }
 
-    var cutPos1 = undefined;
-    var cutPos2 = undefined;
     var ip, dist;
 
     // closed circular shapes:
@@ -1015,21 +1017,6 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
         var a = shape.getCenter().getAngleTo(position);
         shape = new RArc(shape.getCenter(), shape.getRadius(), a, a, false);
         circular = true;
-//        var distRight = undefined;
-//        var distLeft = undefined;
-//        for (i=0; i<intersections.length; i++) {
-//            ip = intersections[i];
-
-//            dist = RMath.getAngleDifference(shape.getCenter().getAngleTo(position), shape.getCenter().getAngleTo(ip));
-//            if (isNull(distRight) || dist>distRight) {
-//                cutPos1 = ip;
-//                distRight = dist;
-//            }
-//            if (isNull(distLeft) || dist<distLeft) {
-//                cutPos2 = ip;
-//                distLeft = dist;
-//            }
-//        }
     }
 
     if (isPolylineShape(shape) && shape.isGeometricallyClosed()) {
@@ -1039,7 +1026,6 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
 //        circular = true;
 //    }
 
-    // open shapes with start and end:
     var pDist = shape.getDistanceFromStart(position);
 
     var orthoLine;
@@ -1057,6 +1043,15 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
     // find intersection points directly before and after clicked position:
     var cutDist1 = undefined;
     var cutDist2 = undefined;
+    var cutPos1 = undefined;
+    var cutPos2 = undefined;
+
+    // for circular shapes, also find intersections closest to start point:
+    var cutDistMax = undefined;
+    var cutDistMin = undefined;
+    var cutPosMax = undefined;
+    var cutPosMin = undefined;
+
     for (var i=0; i<intersections.length; i++) {
         ip = intersections[i];
 
@@ -1075,22 +1070,43 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
             var dists = shape.getDistancesFromStart(ip);
             for (var k=0; k<dists.length; k++) {
                 dist = dists[k];
-                if (dist<pDist || circular) {
+
+                // largest distance to start
+                // but smaller than click point:
+                if (dist<pDist) {
                     if (isNull(cutDist1) || dist>cutDist1) {
                         cutDist1 = dist;
                         cutPos1 = ip;
                     }
                 }
-                if (dist>pDist || circular) {
+
+                if (circular) {
+                    if (isNull(cutDistMax) || dist>cutDistMax) {
+                        cutDistMax = dist;
+                        cutPosMax = ip;
+                    }
+                }
+
+                // smallest distance to start
+                // but larger than click point
+                if (dist>pDist) {
                     if (isNull(cutDist2) || dist<cutDist2) {
                         cutDist2 = dist;
                         cutPos2 = ip;
+                    }
+                }
+
+                if (circular) {
+                    if (isNull(cutDistMin) || dist<cutDistMin) {
+                        cutDistMin = dist;
+                        cutPosMin = ip;
                     }
                 }
             }
         }
     }
 
+    // open shape: cut to start or end point:
     if (!isCircleShape(shape) &&
         !isFullEllipseShape(shape) &&
         !isXLineShape(shape) &&
@@ -1112,9 +1128,15 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
         shape.reverse();
     }
 
-    //return [cutPos1, cutPos2];
     if (circular) {
-        return [ [cutDist2, cutDist1], [cutPos2, cutPos1] ];
+        if (isNull(cutDist1)) {
+            cutDist1 = cutDistMax;
+            cutPos1 = cutPosMax;
+        }
+        if (isNull(cutDist2)) {
+            cutDist2 = cutDistMin;
+            cutPos2 = cutPosMin;
+        }
     }
 
     return [ [cutDist1, cutDist2], [cutPos1, cutPos2] ];
@@ -1884,7 +1906,6 @@ ShapeAlgorithms.explodeToTrimmable = function(shape) {
 ShapeAlgorithms.splitAt = function(shape, points) {
     return shape.splitAt(points);
 };
-
 
 /**
  * \return An arc, circle or ellipse, whichever can be used to represent
