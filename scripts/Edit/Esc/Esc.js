@@ -35,7 +35,15 @@ Esc.prototype.beginEvent = function() {
     // focus in RMathLineEdit (e.g. in options toolbar)
     // return focus to graphics view:
     if (isOfType(w, RMathLineEdit)) {
-        returnFocus = true;
+        if (w.ignoreEscape===true) {
+            // ignore escape and use standard action for escape
+            // this is for some actions to make sure esc triggers step back
+            // and not move focus to graphics view
+            // the ignoreEscape property can be set in the UI file
+        }
+        else {
+            returnFocus = true;
+        }
     }
 
     // special case: erase command line text:
