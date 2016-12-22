@@ -44,6 +44,12 @@ RPropertyTypeId RSplineEntity::PropertyPeriodic;
 RPropertyTypeId RSplineEntity::PropertyDegree;
 RPropertyTypeId RSplineEntity::PropertyLength;
 RPropertyTypeId RSplineEntity::PropertyTotalLength;
+RPropertyTypeId RSplineEntity::PropertyStartTangentX;
+RPropertyTypeId RSplineEntity::PropertyStartTangentY;
+RPropertyTypeId RSplineEntity::PropertyStartTangentZ;
+RPropertyTypeId RSplineEntity::PropertyEndTangentX;
+RPropertyTypeId RSplineEntity::PropertyEndTangentY;
+RPropertyTypeId RSplineEntity::PropertyEndTangentZ;
 
 RSplineEntity::RSplineEntity(RDocument* document, const RSplineData& data) :
     REntity(document), data(document, data) {
@@ -83,6 +89,12 @@ void RSplineEntity::init() {
     RSplineEntity::PropertyKnotN.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Knot Vector"), QT_TRANSLATE_NOOP("REntity", "Knot"));
     RSplineEntity::PropertyLength.generateId(typeid(RSplineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
     RSplineEntity::PropertyTotalLength.generateId(typeid(RSplineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
+    RSplineEntity::PropertyStartTangentX.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Start Tangent"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RSplineEntity::PropertyStartTangentY.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Start Tangent"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RSplineEntity::PropertyStartTangentZ.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Start Tangent"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RSplineEntity::PropertyEndTangentX.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "End Tangent"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RSplineEntity::PropertyEndTangentY.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "End Tangent"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RSplineEntity::PropertyEndTangentZ.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "End Tangent"), QT_TRANSLATE_NOOP("REntity", "Z"));
 }
 
 bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -96,6 +108,14 @@ bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMemberZ(data.fitPoints, value, PropertyFitPointNZ == propertyTypeId);
     ret = ret || RObject::setMember(data.knotVector, value, PropertyKnotN == propertyTypeId);
     ret = ret || RObject::setMember(data.periodic, value, PropertyPeriodic == propertyTypeId);
+
+    ret = ret || RObject::setMember(data.tangentStart.x, value, PropertyStartTangentX == propertyTypeId);
+    ret = ret || RObject::setMember(data.tangentStart.y, value, PropertyStartTangentY == propertyTypeId);
+    ret = ret || RObject::setMember(data.tangentStart.z, value, PropertyStartTangentZ == propertyTypeId);
+
+    ret = ret || RObject::setMember(data.tangentEnd.x, value, PropertyEndTangentX == propertyTypeId);
+    ret = ret || RObject::setMember(data.tangentEnd.y, value, PropertyEndTangentY == propertyTypeId);
+    ret = ret || RObject::setMember(data.tangentEnd.z, value, PropertyEndTangentZ == propertyTypeId);
 
     // TODO:
 //    if  (propertyTypeId==PropertyFitPointNX || propertyTypeId==PropertyFitPointNY || propertyTypeId==PropertyFitPointNZ) {
@@ -152,6 +172,25 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
             QVariant v;
             v.setValue(RVector::getZList(data.fitPoints));
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+        }
+
+        if (propertyTypeId == PropertyStartTangentX) {
+            return qMakePair(QVariant(data.tangentStart.x), RPropertyAttributes());
+        }
+        else if (propertyTypeId == PropertyStartTangentY) {
+            return qMakePair(QVariant(data.tangentStart.y), RPropertyAttributes());
+        }
+        else if (propertyTypeId == PropertyStartTangentZ) {
+            return qMakePair(QVariant(data.tangentStart.z), RPropertyAttributes());
+        }
+        else if (propertyTypeId == PropertyEndTangentX) {
+            return qMakePair(QVariant(data.tangentEnd.x), RPropertyAttributes());
+        }
+        else if (propertyTypeId == PropertyEndTangentY) {
+            return qMakePair(QVariant(data.tangentEnd.y), RPropertyAttributes());
+        }
+        else if (propertyTypeId == PropertyEndTangentZ) {
+            return qMakePair(QVariant(data.tangentEnd.z), RPropertyAttributes());
         }
     }
 
