@@ -22,7 +22,7 @@ If your script does not require or does not have access to a user interface
 \endcode
 
 Under Mac OS X, you might also want to use -no-dock-icon to prevent Mac OS X
-from showing a dock icon everytime your application is launched:
+from showing a dock icon every time your application is launched:
 
 \code
 ./qcad -no-gui -no-dock-icon -autostart myscript.js
