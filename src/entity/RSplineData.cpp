@@ -49,6 +49,9 @@ QList<RRefPoint> RSplineData::getReferencePoints(RS::ProjectionRenderingHint hin
         QList<RRefPoint> ret = RRefPoint::toRefPointList(getFitPoints());
         ret.first().setStart(true);
         ret.last().setEnd(true);
+        // TODO: tangent support:
+//        ret.append(RRefPoint(getStartPoint() + getTangentAtStart(), RRefPoint::Secondary));
+//        ret.append(RRefPoint(getEndPoint() + getTangentAtEnd(), RRefPoint::Secondary));
         return ret;
     }
     else {
@@ -79,6 +82,16 @@ bool RSplineData::moveReferencePoint(const RVector& referencePoint, const RVecto
             ret = true;
         }
     }
+
+    // TODO: tangent support:
+//    if (referencePoint.equalsFuzzy(getStartPoint() + getTangentAtStart())) {
+//        setTangentAtStart(targetPoint - getStartPoint());
+//        ret = true;
+//    }
+//    else if (referencePoint.equalsFuzzy(getEndPoint() + getTangentAtEnd())) {
+//        setTangentAtEnd(targetPoint - getEndPoint());
+//        ret = true;
+//    }
 
     if (ret) {
         //if (periodic) {

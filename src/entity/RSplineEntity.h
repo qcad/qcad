@@ -64,12 +64,14 @@ public:
     static RPropertyTypeId PropertyKnotN;
     static RPropertyTypeId PropertyPeriodic;
     static RPropertyTypeId PropertyDegree;
-    static RPropertyTypeId PropertyStartTangentX;
-    static RPropertyTypeId PropertyStartTangentY;
-    static RPropertyTypeId PropertyStartTangentZ;
-    static RPropertyTypeId PropertyEndTangentX;
-    static RPropertyTypeId PropertyEndTangentY;
-    static RPropertyTypeId PropertyEndTangentZ;
+//    static RPropertyTypeId PropertyUseStartTangent;
+//    static RPropertyTypeId PropertyStartTangentX;
+//    static RPropertyTypeId PropertyStartTangentY;
+//    static RPropertyTypeId PropertyStartTangentZ;
+//    static RPropertyTypeId PropertyUseEndTangent;
+//    static RPropertyTypeId PropertyEndTangentX;
+//    static RPropertyTypeId PropertyEndTangentY;
+//    static RPropertyTypeId PropertyEndTangentZ;
 
     static RPropertyTypeId PropertyLength;
     static RPropertyTypeId PropertyTotalLength;

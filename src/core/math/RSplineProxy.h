@@ -36,7 +36,7 @@ public:
     virtual ~RSplineProxy() {}
     virtual void init() = 0;
     virtual void uninit() = 0;
-    virtual RSpline updateFromFitPoints(const RSpline& spline, bool useTangents) = 0;
+    virtual RSpline updateFromFitPoints(const RSpline& spline, bool rec = false) = 0;
     virtual QList<RSpline> split(const RSpline& spline, const QList<double>& params) = 0;
     virtual QList<RSpline> splitEqual(const RSpline& spline, int pieces) = 0;
     virtual double getTAtPoint(const RSpline& spline, const RVector& point) = 0;

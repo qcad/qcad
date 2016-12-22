@@ -499,6 +499,18 @@ int RSpline::getOrder() const {
 
 void RSpline::setPeriodic(bool on) {
     periodic = on;
+
+    // TODO: tangent support:
+//    tangentStart.valid = false;
+//    tangentEnd.valid = false;
+//    if (on) {
+//        if (!fitPoints.isEmpty()) {
+//            if (fitPoints.first().equalsFuzzy(fitPoints.last())) {
+//                fitPoints.removeLast();
+//            }
+//        }
+//    }
+
     update();
 }
 
@@ -724,6 +736,10 @@ void RSpline::updateTangentsPeriodic() {
                       "spline not valid or not closed";
     }
 
+    // TODO: tangent support:
+//    RVector lStartTangent = tangentStart;
+//    RVector lEndTangent = tangentEnd;
+
     unsetTangents();
 
     double tangent1 = getDirection1();
@@ -732,6 +748,24 @@ void RSpline::updateTangentsPeriodic() {
     RVector v2 = RVector::createPolar(1.0, tangent2);
     RVector t = (v1 + v2).getNormalized();
 
+    // TODO: tangent support:
+//    RVector t1 = t;
+//    RVector t2 = t;
+//    t1.valid = lStartTangent.valid;
+//    t2.valid = lEndTangent.valid;
+
+//    if (!lStartTangent.isValid()) {
+//        setTangentAtStart(t1);
+//    }
+//    else {
+//        setTangentAtStart(lStartTangent);
+//    }
+//    if (!lEndTangent.isValid()) {
+//        setTangentAtEnd(t2);
+//    }
+//    else {
+//        setTangentAtEnd(lEndTangent);
+//    }
     setTangents(t, t);
 }
 
@@ -1491,7 +1525,7 @@ void RSpline::updateFromControlPoints() const {
  * Updates the internal spline data from \c fitPoints.
  * Degree is always corrected to 3rd degree.
  */
-void RSpline::updateFromFitPoints(bool useTangents) const {
+void RSpline::updateFromFitPoints() const {
     if (fitPoints.size()<degree) {
         invalidate();
         return;
@@ -1499,7 +1533,9 @@ void RSpline::updateFromFitPoints(bool useTangents) const {
 
     // call into plugin
     if (splineProxy!=NULL) {
-        RSpline spline = splineProxy->updateFromFitPoints(*this, useTangents);
+        RSpline spline = splineProxy->updateFromFitPoints(*this);
+//        qDebug() << "tan start before:" << this->tangentStart;
+//        qDebug() << "tan start:" << spline.tangentStart;
         this->degree = spline.degree;
         this->periodic = spline.periodic;
         this->controlPoints = spline.controlPoints;

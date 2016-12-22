@@ -214,7 +214,7 @@ public:
     RSpline simplify(double tolerance);
 
     void updateFromControlPoints() const;
-    void updateFromFitPoints(bool useTangents = false) const;
+    void updateFromFitPoints() const;
     void update() const;
 
     virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
