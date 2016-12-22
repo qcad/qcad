@@ -1064,8 +1064,8 @@ bool RSpline::rotate(double rotation, const RVector& center) {
     for (int i=0; i<fitPoints.size(); i++) {
         fitPoints[i].rotate(rotation, center);
     }
-    tangentStart.rotate(rotation, center);
-    tangentEnd.rotate(rotation, center);
+    tangentStart.rotate(rotation);
+    tangentEnd.rotate(rotation);
     update();
     return true;
 }
@@ -1149,8 +1149,8 @@ bool RSpline::reverse() {
         knotVector[j] = -t;
     }
     RVector ts = tangentStart;
-    tangentStart = tangentEnd;
-    tangentEnd = ts;
+    tangentStart = tangentEnd.getNegated();
+    tangentEnd = ts.getNegated();
     update();
     return true;
 }
