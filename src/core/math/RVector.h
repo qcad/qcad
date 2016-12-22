@@ -85,6 +85,7 @@ public:
     }
 
     bool isValid() const;
+    bool isZero() const;
     bool isSane() const;
     bool isNaN() const;
 

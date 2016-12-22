@@ -59,6 +59,10 @@ bool RVector::isValid() const {
     return valid;
 }
 
+bool RVector::isZero() const {
+    return getMagnitude()<RS::PointTolerance;
+}
+
 bool RVector::isSane() const {
     return isValid() && RMath::isSane(x) && RMath::isSane(y) && RMath::isSane(z);
 }
