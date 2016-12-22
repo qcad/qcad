@@ -4,7 +4,17 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.js" line="+77"/>
+        <location filename="../Paste.js" line="+52"/>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -99,6 +109,11 @@ Użyj bieżącej warstwy</translatorcomment>
 --file: qt_pl.ts--
 &amp;Wklej</translatorcomment>
         <translation type="unfinished">&amp;Wklej</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Reset to defaults every time tool is used</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

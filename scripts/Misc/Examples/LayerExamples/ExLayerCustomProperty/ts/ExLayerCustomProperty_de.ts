@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Add custom property to a layer</source>
+        <source>Add Custom Property to a Layer</source>
         <translation>Benutzerdefinierte Eigenschaft zu Layer hinzufügen</translation>
+    </message>
+    <message>
+        <source>Add custom property to a layer</source>
+        <translation type="vanished">Benutzerdefinierte Eigenschaft zu Layer hinzufügen</translation>
     </message>
 </context>
 </TS>

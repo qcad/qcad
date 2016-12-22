@@ -34,7 +34,7 @@
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+352"/>
+        <location line="+355"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -175,7 +175,7 @@
         <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1361"/>
+        <location filename="../ShapeAlgorithms.js" line="+1383"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>

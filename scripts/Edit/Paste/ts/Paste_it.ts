@@ -64,7 +64,17 @@
         <translation>Sovrascrivere i blocchi</translation>
     </message>
     <message>
-        <location filename="../Paste.js" line="+77"/>
+        <location filename="../Paste.js" line="+52"/>
+        <source>Edit</source>
+        <translation>Modifica</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Paste</source>
+        <translation>Incolla</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>
@@ -72,6 +82,11 @@
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
         <translation>&amp;Incolla</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Reset to defaults every time tool is used</source>
+        <translation>Ripristina impostazioni predefinite viene utilizzato ogni strumento tempo</translation>
     </message>
 </context>
 </TS>

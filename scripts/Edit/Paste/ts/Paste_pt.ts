@@ -4,7 +4,17 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.js" line="+77"/>
+        <location filename="../Paste.js" line="+52"/>
+        <source>Edit</source>
+        <translation>Editar</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Paste</source>
+        <translation>Colar</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -120,6 +130,11 @@ Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área 
 --file: InsertBlockItem_pt.ts--
 Sobrescrever blocos</translatorcomment>
         <translation>Substitua os Blocos</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Reset to defaults every time tool is used</source>
+        <translation>Repor predefinições sempre que a ferramenta é utilizada</translation>
     </message>
 </context>
 </TS>

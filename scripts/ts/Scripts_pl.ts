@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+352"/>
+        <location line="+355"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -217,7 +217,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="obsolete">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1361"/>
+        <location filename="../ShapeAlgorithms.js" line="+1383"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

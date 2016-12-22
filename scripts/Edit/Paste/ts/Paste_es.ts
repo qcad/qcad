@@ -64,7 +64,17 @@
         <translation>Sobreescribir los bloques</translation>
     </message>
     <message>
-        <location filename="../Paste.js" line="+77"/>
+        <location filename="../Paste.js" line="+52"/>
+        <source>Edit</source>
+        <translation>Editar</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Paste</source>
+        <translation>Pegar</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
@@ -72,6 +82,11 @@
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
         <translation>&amp;Pegar</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Reset to defaults every time tool is used</source>
+        <translation>Restablecer los valores predeterminados cada vez que se utiliza la herramienta</translation>
     </message>
 </context>
 </TS>

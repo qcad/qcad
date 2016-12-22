@@ -4,9 +4,13 @@
 <context>
     <name>ExProcess</name>
     <message>
-        <location filename="../ExProcess.js" line="+81"/>
         <source>&amp;Run process</source>
-        <translation>&amp;Запустить процесс</translation>
+        <translation type="vanished">&amp;Запустить процесс</translation>
+    </message>
+    <message>
+        <location filename="../ExProcess.js" line="+81"/>
+        <source>&amp;Run Process</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

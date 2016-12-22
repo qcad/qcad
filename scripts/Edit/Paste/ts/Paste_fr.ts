@@ -64,7 +64,17 @@
         <translation>Ecraser les blocs</translation>
     </message>
     <message>
-        <location filename="../Paste.js" line="+77"/>
+        <location filename="../Paste.js" line="+52"/>
+        <source>Edit</source>
+        <translation>Éditer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Paste</source>
+        <translation>Coller</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -72,6 +82,11 @@
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
         <translation>Co&amp;ller</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Reset to defaults every time tool is used</source>
+        <translation>Réinitialisation des valeurs par défaut à chaque utilisation de l&apos;outil</translation>
     </message>
 </context>
 </TS>

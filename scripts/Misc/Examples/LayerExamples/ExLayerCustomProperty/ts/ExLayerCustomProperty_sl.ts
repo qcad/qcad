@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Add Custom Property to a Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Add custom property to a layer</source>
-        <translation>Dodaj prilagojeno lasnost na plast</translation>
+        <translation type="vanished">Dodaj prilagojeno lasnost na plast</translation>
     </message>
 </context>
 </TS>

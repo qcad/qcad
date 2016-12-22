@@ -34,7 +34,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+352"/>
+        <location line="+355"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -183,7 +183,7 @@
         <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1368"/>
+        <location filename="../ShapeAlgorithms.js" line="+1390"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>

@@ -4,7 +4,17 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.js" line="+77"/>
+        <location filename="../Paste.js" line="+52"/>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Paste</source>
+        <translation>Einfügen</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -152,6 +162,11 @@
         <location line="+3"/>
         <source>Overwrite blocks</source>
         <translation>Blöcke überschreiben</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Reset to defaults every time tool is used</source>
+        <translation>Zurücksetzen auf die Standardeinstellungen jedes Mal wenn das Werkzeug verwendet wird</translation>
     </message>
 </context>
 </TS>

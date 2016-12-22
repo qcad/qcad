@@ -4,7 +4,17 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.js" line="+77"/>
+        <location filename="../Paste.js" line="+52"/>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -71,6 +81,11 @@
     <message>
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Reset to defaults every time tool is used</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
