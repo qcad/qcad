@@ -1,0 +1,10 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ql="http://qcad.org/ql/elements/1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="">
+    <dcterms:license>See InvoluteSpur.js</dcterms:license>
+    <dcterms:created>2016-12-20</dcterms:created>
+    <dc:creator>Iain Hibbert</dc:creator>
+  </rdf:Description>
+</rdf:RDF>
