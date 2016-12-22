@@ -258,6 +258,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
             
+            REcmaHelper::registerFunction(&engine, proto, setEntityParentId, "setEntityParentId");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RMemoryStorage*>(), *proto);
 
@@ -7503,6 +7505,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::setEntityParentId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::setEntityParentId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::setEntityParentId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("setEntityParentId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument isStandardType
+                    REntity::Id
+                    a1 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEntityParentId(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.setEntityParentId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::setEntityParentId", context, engine);
             return result;
         }
          QScriptValue REcmaMemoryStorage::toString

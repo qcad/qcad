@@ -732,10 +732,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="updateFromFitPoints"
     cppName="updateFromFitPoints" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="useTangents"
-        hasDefault="true" default="false" isConst="false" />
-      </variant>
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="update" cppName="update" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

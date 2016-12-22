@@ -86,6 +86,7 @@
     }</block></function>
 
     <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isZero</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isSane</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isNaN</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -94,15 +95,15 @@
     <function_decl><type><name>bool</name></type> <name>equalsFuzzy</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>tol</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>equalsFuzzy2D</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>tol</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getDistanceTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>double</name></type> <name>getDistanceTo2d</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDistanceTo2D</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getAngleToPlaneXY</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getAngleTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>setMagnitude2d</name><parameter_list>(<param><decl><type><name>double</name></type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setMagnitude2D</name><parameter_list>(<param><decl><type><name>double</name></type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getMagnitude</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getSquaredMagnitude</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>double</name></type> <name>getMagnitude2d</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getMagnitude2D</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getLerp</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>t</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getUnitVector</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setX</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>)</parameter_list>;</function_decl>
@@ -123,8 +124,8 @@
 
     <function_decl><type><name>RVector</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RVector</name></type> <name>rotate3d</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>, <param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RVector</name></type> <name>rotate3d</name><parameter_list>(<param><decl><type><name>const</name> <name>QQuaternion</name>&amp;</type> <name>quaternion</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>rotate3D</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>, <param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>rotate3D</name><parameter_list>(<param><decl><type><name>const</name> <name>QQuaternion</name>&amp;</type> <name>quaternion</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
@@ -156,21 +157,21 @@
     <function_decl><type><name>RVector</name></type> <name>stretch</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>area</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>isoProject</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>IsoProjectionType</name></name></type> <name>type</name></decl></param>, <param><decl><type><name>bool</name></type> <name>trueScale</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RVector</name></type> <name>transform2dM</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RVector</name></type> <name>transform2d</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>transform2DM</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>transform2D</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>RVector</name></type> <name>getTransformed</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>RVector</name></type> <name>getTransformed2dM</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>RVector</name></type> <name>getTransformed2d</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getTransformed2DM</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getTransformed2D</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>RVector</name></type> <name>getDividedComponents</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getMultipliedComponents</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>RVector</name></type> <name>getClosest</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>RVector</name></type> <name>getClosest2d</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getClosest2D</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getClosestDistance</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>int</name></type> <name>counts</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>int</name></type> <name>getClosestIndex</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreZ</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function><type><name>int</name></type> <name>getClosestIndex2d</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>int</name></type> <name>getClosestIndex2D</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getClosestIndex</name><argument_list>(<argument><expr><name>list</name></expr></argument>, <argument><expr><name>true</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 

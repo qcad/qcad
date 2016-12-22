@@ -793,6 +793,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("CLAYER",
+    QScriptValue(RS::CLAYER),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("CMLJUST",
     QScriptValue(RS::CMLJUST),
     QScriptValue::ReadOnly);

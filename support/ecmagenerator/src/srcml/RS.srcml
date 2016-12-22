@@ -317,6 +317,7 @@
         <expr><name>CHAMFERB</name></expr>,
         <expr><name>CHAMFERC</name></expr>,
         <expr><name>CHAMFERD</name></expr>,
+        <expr><name>CLAYER</name></expr>,
         <expr><name>CMLJUST</name></expr>,
         <expr><name>CMLSCALE</name></expr>,
         <comment type="block">/** Decimal places in angular dimensions */</comment>

@@ -309,6 +309,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setObjectHandle, "setObjectHandle");
             
+            REcmaHelper::registerFunction(&engine, proto, setEntityParentId, "setEntityParentId");
+            
             REcmaHelper::registerFunction(&engine, proto, setUndoStatus, "setUndoStatus");
             
             REcmaHelper::registerFunction(&engine, proto, hasSelection, "hasSelection");
@@ -8913,6 +8915,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::setObjectHandle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::setEntityParentId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::setEntityParentId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setEntityParentId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("setEntityParentId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument isStandardType
+                    REntity::Id
+                    a1 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEntityParentId(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setEntityParentId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setEntityParentId", context, engine);
             return result;
         }
          QScriptValue

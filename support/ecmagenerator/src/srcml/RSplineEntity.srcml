@@ -65,6 +65,14 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyKnotN</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPeriodic</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDegree</name></decl>;</decl_stmt>
+<comment type="line">//    static RPropertyTypeId PropertyUseStartTangent;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyStartTangentX;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyStartTangentY;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyStartTangentZ;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyUseEndTangent;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyEndTangentX;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyEndTangentY;</comment>
+<comment type="line">//    static RPropertyTypeId PropertyEndTangentZ;</comment>
 
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLength</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyTotalLength</name></decl>;</decl_stmt>

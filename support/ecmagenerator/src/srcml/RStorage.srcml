@@ -557,6 +557,10 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setObjectId</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setObjectHandle</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>objectHandle</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>setEntityParentId</name><parameter_list>(<param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>, <param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>parentId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>entity</name>.<call><name>setParentId</name><argument_list>(<argument><expr><name>parentId</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setUndoStatus</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name>bool</name></type> <name>status</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**

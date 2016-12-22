@@ -408,6 +408,9 @@
         setObjectHandle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setEntityParentId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setUndoStatus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -66,6 +66,9 @@
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isZero
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isSane
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

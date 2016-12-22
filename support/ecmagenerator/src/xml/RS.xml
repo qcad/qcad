@@ -179,6 +179,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="CHAMFERB" />
       <value name="CHAMFERC" />
       <value name="CHAMFERD" />
+      <value name="CLAYER" />
       <value name="CMLJUST" />
       <value name="CMLSCALE" />
       <value name="DIMADEC" />

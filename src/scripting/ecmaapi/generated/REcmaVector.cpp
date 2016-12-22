@@ -96,6 +96,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
+            REcmaHelper::registerFunction(&engine, proto, isZero, "isZero");
+            
             REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, proto, isNaN, "isNaN");
@@ -1032,6 +1034,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::isZero
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::isZero", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::isZero";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("isZero", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isZero();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.isZero().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::isZero", context, engine);
             return result;
         }
          QScriptValue

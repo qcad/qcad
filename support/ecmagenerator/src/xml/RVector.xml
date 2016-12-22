@@ -55,6 +55,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="isZero" cppName="isZero" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="isSane" cppName="isSane" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
@@ -100,7 +104,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getDistanceTo2d" cppName="getDistanceTo2d"
+    <method name="getDistanceTo2D" cppName="getDistanceTo2D"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
@@ -132,7 +136,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="setMagnitude2d" cppName="setMagnitude2d"
+    <method name="setMagnitude2D" cppName="setMagnitude2D"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -150,7 +154,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
-    <method name="getMagnitude2d" cppName="getMagnitude2d"
+    <method name="getMagnitude2D" cppName="getMagnitude2D"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
@@ -232,7 +236,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="rotate3d" cppName="rotate3d" specifier="public"
+    <method name="rotate3D" cppName="rotate3D" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="RLine &amp;" typeName="RLine" name="axis"
@@ -310,7 +314,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="transform2dM" cppName="transform2dM"
+    <method name="transform2DM" cppName="transform2DM"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
@@ -318,7 +322,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="transform2d" cppName="transform2d"
+    <method name="transform2D" cppName="transform2D"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
@@ -334,7 +338,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getTransformed2dM" cppName="getTransformed2dM"
+    <method name="getTransformed2DM" cppName="getTransformed2DM"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
@@ -342,7 +346,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getTransformed2d" cppName="getTransformed2d"
+    <method name="getTransformed2D" cppName="getTransformed2D"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
@@ -375,7 +379,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getClosest2d" cppName="getClosest2d"
+    <method name="getClosest2D" cppName="getClosest2D"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
@@ -406,7 +410,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
-    <method name="getClosestIndex2d" cppName="getClosestIndex2d"
+    <method name="getClosestIndex2D" cppName="getClosestIndex2D"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
