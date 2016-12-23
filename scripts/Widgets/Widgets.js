@@ -25,7 +25,6 @@
  * user interface widgets.
  */
 include("../EAction.js");
-include("../View/View.js");
 
 /**
  * \class Widgets
@@ -40,6 +39,7 @@ Widgets.prototype = new EAction();
 Widgets.includeBasePath = includeBasePath;
 
 Widgets.getMenu = function() {
+    include("../View/View.js");
     return View.getMenu();
 };
 
