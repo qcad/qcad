@@ -996,12 +996,11 @@ void RScriptHandlerEcma::doScript(const QString& scriptFile,const QStringList& a
         return;
     }
 
-    QScriptValue globalObject = engine->globalObject();
-
-    if (!alwaysLoadScripts && isIncluded(engine, fi.completeBaseName())) {
+    if (isIncluded(engine, fi.completeBaseName())) {
         return;
     }
 
+    QScriptValue globalObject = engine->globalObject();
     initGlobalVariables(scriptFile);
     if (!arguments.isEmpty()) {
         // set global variable args to (command line) arguments:
@@ -1260,7 +1259,7 @@ QScriptValue RScriptHandlerEcma::ecmaInclude(QScriptContext* context, QScriptEng
 
 
 bool RScriptHandlerEcma::isIncluded(QScriptEngine* engine, const QString& className) {
-    if (alwaysLoadScripts) {
+    if (alwaysLoadScripts && className!="library" && className!="EAction" && className!="WidgetFactory") {
         // always include (again) to reload potential changes:
         return false;
     }
