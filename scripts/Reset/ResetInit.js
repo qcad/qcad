@@ -8,7 +8,24 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/Reset.js");
     action.setIcon(basePath + "/Reset.svg");
-    action.setDefaultShortcut(new QKeySequence("q,q"));
+
+    // workaround for Linux/Qt bug
+    // input of @ in command line not possible on German keyboard where
+    // Alt-Q is used to enter @:
+    var useShortcut = true;
+    if (RS.getSystemId()==="linux") {
+        var locale = RSettings.getLocale();
+        if (locale.length>=2) {
+            if (locale.substring(0,2)==="de") {
+                useShortcut = false;
+            }
+        }
+    }
+
+    if (useShortcut) {
+        action.setDefaultShortcut(new QKeySequence("q,q"));
+    }
+
     action.setDefaultCommands(["reset", "qq"]);
     action.setGroupSortOrder(2700);
     action.setSortOrder(200);
