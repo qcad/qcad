@@ -114,9 +114,7 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+83"/>
-        <location line="+3"/>
-        <location line="+6"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+86"/>
         <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
@@ -203,9 +201,7 @@ Arco: Centro, Punto, Angoli
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
-        <location line="+3"/>
-        <location line="+6"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
@@ -270,9 +266,7 @@ Caricamento indirizzi delle librerie
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
-        <location line="+3"/>
-        <location line="+6"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
@@ -335,7 +329,7 @@ Arcocomplementare</translatorcomment>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+9"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
         <translatorcomment>--exact match--
@@ -731,18 +725,12 @@ Punto di adattamento successivo
         <translation>Nodo</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Tangente iniziale</translation>
+        <translation type="vanished">Tangente iniziale</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>End Tangent</source>
-        <translation>Tangente finale</translation>
+        <translation type="vanished">Tangente finale</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-10"/>

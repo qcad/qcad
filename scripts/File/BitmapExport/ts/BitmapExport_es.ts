@@ -62,17 +62,53 @@
         <translation>Píxeles por unidad de dibujo:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+104"/>
+        <location line="+23"/>
+        <source>Color</source>
+        <translation>Color</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Monochrome</source>
+        <translation>Monocromo</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Grayscale</source>
+        <translation>Escala de grises</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Anti-aliasing</source>
+        <translation>Antialiasing</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use anti-aliasing</source>
+        <translation>Antialiasing</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Margin</source>
+        <translation>Márgen</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Margin:</source>
         <translation>Márgen:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>px</source>
         <translation>px</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+9"/>
+        <source>Add extra margin to compensate for line weight</source>
+        <translation>Agregue un margen adicional para compensar el peso de la línea</translation>
+    </message>
+    <message>
+        <location line="-163"/>
         <source>Background</source>
         <translation>Fondo</translation>
     </message>

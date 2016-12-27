@@ -72,9 +72,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+83"/>
-        <location line="+3"/>
-        <location line="+6"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+86"/>
         <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
@@ -139,9 +137,7 @@ Exportando o desenho...</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
-        <location line="+3"/>
-        <location line="+6"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
@@ -206,9 +202,7 @@ Modifique
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
-        <location line="+3"/>
-        <location line="+6"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
@@ -280,7 +274,7 @@ Diâmetro (ø)</translatorcomment>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+9"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
         <translatorcomment>--exact match--
@@ -931,18 +925,12 @@ Especifique o próximo ponto de controle</translatorcomment>
         <translation>Nó</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>Start Tangent</source>
-        <translation>Tangente Inicial</translation>
+        <translation type="vanished">Tangente Inicial</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <location line="+1"/>
-        <location line="+1"/>
         <source>End Tangent</source>
-        <translation>Tangente Final</translation>
+        <translation type="vanished">Tangente Final</translation>
     </message>
     <message>
         <source>Simple</source>

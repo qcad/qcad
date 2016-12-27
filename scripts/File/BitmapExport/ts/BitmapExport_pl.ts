@@ -72,7 +72,38 @@ Wysokość tekstu:</translatorcomment>
         <translation type="unfinished">Pikseli na jednostkę rysunku:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+104"/>
+        <location line="+23"/>
+        <source>Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Monochrome</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Grayscale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Anti-aliasing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use anti-aliasing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Margin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Margin:</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -81,7 +112,7 @@ Marginesy:</translatorcomment>
         <translation type="unfinished">Marginesy:</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+62"/>
         <source>px</source>
         <translatorcomment>--google--
 Minimalny odstęp siatki (piksele):
@@ -89,7 +120,12 @@ Minimalny odstęp siatki (piksele)</translatorcomment>
         <translation type="unfinished">px</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+9"/>
+        <source>Add extra margin to compensate for line weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-163"/>
         <source>Background</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
