@@ -142,6 +142,14 @@ BitmapExport.prototype.getProperties = function() {
     var whiteRadio = this.dialog.findChild("WhiteBackground");
     var blackRadio = this.dialog.findChild("BlackBackground");
 
+    var monoRadio = this.dialog.findChild("ColorMonochrome");
+    var grayRadio = this.dialog.findChild("ColorGrayscale");
+    var colorRadio = this.dialog.findChild("ColorFull");
+
+    var antiAliasingCheckbox = this.dialog.findChild("AntiAliasing");
+
+    var weightMarginCheckbox = this.dialog.findChild("WeightMargin");
+
     widthEdit.valueChanged.connect(
                 function() {
                     resolutionCombo.index = 0;
@@ -167,8 +175,8 @@ BitmapExport.prototype.getProperties = function() {
         ret["resolution"] = parseInt(resolutionCombo.currentText);
     }
     else {
-        ret["width"] = widthEdit.getValue();
-        ret["height"] = heightEdit.getValue();
+        ret["width"] = Math.ceil(widthEdit.getValue());
+        ret["height"] = Math.ceil(heightEdit.getValue());
     }
     if (whiteRadio.checked) {
         ret["backgroundColor"] = new QColor("white");
@@ -177,6 +185,15 @@ BitmapExport.prototype.getProperties = function() {
         ret["backgroundColor"] = new QColor("black");
     }
     ret["margin"] = RMath.eval(marginCombo.currentText);
+    ret["antialiasing"] = antiAliasingCheckbox.checked;
+    if (monoRadio.checked) {
+      ret["monochrome"] = true;
+    }
+    if (grayRadio.checked) {
+      ret["grayscale"] = true;
+    }
+
+    ret["noweightmargin"] = !weightMarginCheckbox.checked
 
     this.dialog.destroy();
     EAction.activateMainWindow();
@@ -202,8 +219,8 @@ BitmapExport.prototype.resolutionChanged = function(str) {
         this.documentHeight = document.getBoundingBox(true, true).getHeight();
     }
 
-    widthEdit.setValue(res * this.documentWidth);
-    heightEdit.setValue(res * this.documentHeight);
+    widthEdit.setValue(Math.ceil(res * this.documentWidth));
+    heightEdit.setValue(Math.ceil(res * this.documentHeight));
 };
 
 BitmapExport.prototype.exportBitmap = function(di, fileName, properties) {
@@ -213,62 +230,5 @@ BitmapExport.prototype.exportBitmap = function(di, fileName, properties) {
     var scene = view.getScene();
 
     return exportBitmap(di.getDocument(), scene, fileName, properties);
-    //var document = this.getDocument();
-    //var di = this.getDocumentInterface();
-//    var document = di.getDocument();
-
-//    // make sure nothing is selected:
-//    di.deselectAll();
-
-//    var v = di.getLastKnownViewWithFocus();
-//    var scene = v.getScene();
-//    var view = new RGraphicsViewImage();
-//    view.setScene(scene, false);
-//    view.setAntialiasing(true);
-//    view.setPaintOrigin(false);
-//    view.setTextHeightThresholdOverride(0);
-
-//    // disabled: produces very thin lines, invisible for units >= Meter
-//    //view.setPrinting(true);
-
-//    view.setBackgroundColor(properties.background);
-//    view.resizeImage(properties.width, properties.height);
-
-//    view.autoZoom(properties.margin);
-
-//    di.regenerateScenes();
-
-//    // export file
-//    var buffer = view.getBuffer();
-
-//    scene.unregisterView(view);
-    
-//    var iw = new QImageWriter(fileName);
-//    // always empty
-//    //qDebug("BitmapExport.js:", "exportBitmap(): format:", iw.format());
-//    var ext = new QFileInfo(fileName).suffix().toLowerCase();
-//    if (ext === "png") {
-//        iw.setQuality(9);
-//    } else if (ext === "jpg" || ext === "jpeg") {
-//        iw.setQuality(95);
-//    } else if (ext === "tif" || ext === "tiff") {
-//        iw.setCompression(1);
-//    } else if (ext === "bmp") {
-//        iw.setCompression(1);
-//    }
-
-//    var appWin = EAction.getMainWindow();
-//    if (!iw.write(buffer)) {
-//        print("Error: cannot save file: ", fileName);
-//        print("Error: ", iw.errorString());
-//        appWin.handleUserWarning(
-//                qsTr("Error while generating Bitmap file '%1': %2")
-//                    .arg(fileName).arg(iw.errorString()));
-//    } else {
-//        print("Conversion finished.");
-//        appWin.handleUserMessage(
-//                qsTr("Bitmap file has been exported to '%1'").arg(fileName));
-//    }
-//    iw.destroy();
 };
 
