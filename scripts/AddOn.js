@@ -479,9 +479,9 @@ AddOn.getAddOns = function(dir) {
 
         for (i=0; i<localAddOns.length; i++) {
             var localAddOnDir = RSettings.getDataLocation() + "/" + localAddOns[i] + "/scripts";
-            qDebug("adding scripts dir of add-on: ", localAddOnDir);
             var fi = new QFileInfo(localAddOnDir);
             if (fi.exists()) {
+                qDebug("adding scripts dir of add-on: ", localAddOnDir);
                 fileMenuList.push(fi);
             }
         }
