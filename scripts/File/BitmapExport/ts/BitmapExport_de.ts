@@ -101,7 +101,7 @@
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Zusätzliche Marge hinzufügen um Linienbreite zu kompensieren</translation>
+        <translation>Zusätzlichen Rand hinzufügen für Linienbreite</translation>
     </message>
     <message>
         <location line="-163"/>
