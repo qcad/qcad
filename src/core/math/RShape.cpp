@@ -536,6 +536,10 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
                 if (arc2 != NULL) {
                     return getIntersectionPointsAX(*arc2, *explodable1, limited);
                 }
+                const RCircle* circle2 = dynamic_cast<const RCircle*> (&shape2);
+                if (circle2 != NULL) {
+                    return getIntersectionPointsCX(*circle2, *explodable1, limited);
+                }
                 const REllipse* ellipse2 = dynamic_cast<const REllipse*> (&shape2);
                 if (ellipse2 != NULL) {
                     return getIntersectionPointsEX(*ellipse2, *explodable1, limited);
