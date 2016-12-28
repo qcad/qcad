@@ -13,7 +13,7 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="1">
+     <item row="2" column="1">
       <widget class="QComboBox" name="SplineSegments">
        <property name="currentIndex">
         <number>5</number>
@@ -110,7 +110,7 @@
        </item>
       </widget>
      </item>
-     <item row="2" column="1">
+     <item row="3" column="1">
       <widget class="QComboBox" name="EllipseSegments">
        <property name="editable">
         <bool>true</bool>
@@ -177,24 +177,34 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
+     <item row="4" column="0" colspan="2">
+      <widget class="QCheckBox" name="TextToPolylines">
+       <property name="text">
+        <string>Explode text glyphs to polylines</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
       <widget class="QLabel" name="label_3">
        <property name="text">
         <string>Spline segments:</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
+     <item row="3" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
         <string>Ellipse segments (per full ellipse):</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0" colspan="2">
-      <widget class="QCheckBox" name="TextToPolylines">
+     <item row="1" column="0" colspan="2">
+      <widget class="QCheckBox" name="SplinesToLineSegments">
        <property name="text">
-        <string>Explode text glyphs to polylines</string>
+        <string>Explode splines to polylines with line segments</string>
        </property>
       </widget>
      </item>

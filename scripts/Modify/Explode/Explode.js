@@ -50,6 +50,10 @@ Explode.explodeSelection = function(di, action) {
     var polyline, shapes, shape;
 
     var splineTolerance = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
+    var splineSegments = RSettings.getIntValue("Explode/SplineSegments", 64);
+    var ellipseSegments = RSettings.getIntValue("Explode/EllipseSegments", 32);
+    var splinesToLineSegments = RSettings.getBoolValue("Explode/SplinesToLineSegments", false);
+    var textToPolylines = RSettings.getBoolValue("Explode/TextToPolylines", true);
 
     var op = new RAddObjectsOperation();
 
@@ -79,8 +83,7 @@ Explode.explodeSelection = function(di, action) {
         if (isEllipseEntity(entity)) {
             if (REllipse.hasProxy()) {
                 var ellipse = entity.getData().castToShape();
-                var s = RSettings.getIntValue("Explode/EllipseSegments", 32);
-                polyline = ellipse.approximateWithArcs(s);
+                polyline = ellipse.approximateWithArcs(ellipseSegments);
                 if (!polyline.isEmpty()) {
                     newShapes.push(polyline);
                 }
@@ -122,12 +125,11 @@ Explode.explodeSelection = function(di, action) {
         else if (isSplineEntity(entity)) {
             var spline = entity.getData().castToShape();
             var pl;
-            if (RSpline.hasProxy()) {
+            if (RSpline.hasProxy() && !splinesToLineSegments) {
                 pl = spline.approximateWithArcs(splineTolerance);
             }
             else {
-                var seg = RSettings.getIntValue("Explode/SplineSegments", 64);
-                pl = spline.toPolyline(seg);
+                pl = spline.toPolyline(splineSegments);
             }
 
             pl.simplify();
@@ -230,7 +232,6 @@ Explode.explodeSelection = function(di, action) {
                     continue;
                 }
 
-                var textToPolylines = RSettings.getBoolValue("Explode/TextToPolylines", false);
                 var plText = undefined;
 
                 shapes = painterPaths[k].getShapes();
@@ -243,7 +244,12 @@ Explode.explodeSelection = function(di, action) {
                         if (textToPolylines) {
                             // spline to polyline with arcs:
                             if (isSplineShape(shape)) {
-                                shape = shape.approximateWithArcs(splineTolerance);
+                                if (RSpline.hasProxy() && !splinesToLineSegments) {
+                                    shape = shape.approximateWithArcs(splineTolerance);
+                                }
+                                else {
+                                    shape = shape.toPolyline(splineSegments);
+                                }
                             }
                         }
                     }
