@@ -49,6 +49,8 @@ Explode.explodeSelection = function(di, action) {
     var i, k, e, n;
     var polyline, shapes, shape;
 
+    var splineTolerance = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
+
     var op = new RAddObjectsOperation();
 
     if (!isNull(action)) {
@@ -121,8 +123,7 @@ Explode.explodeSelection = function(di, action) {
             var spline = entity.getData().castToShape();
             var pl;
             if (RSpline.hasProxy()) {
-                var tol = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
-                pl = spline.approximateWithArcs(tol);
+                pl = spline.approximateWithArcs(splineTolerance);
             }
             else {
                 var seg = RSettings.getIntValue("Explode/SplineSegments", 64);
@@ -228,17 +229,54 @@ Explode.explodeSelection = function(di, action) {
                 if (painterPaths[k].getFeatureSize()<0) {
                     continue;
                 }
+
+                var textToPolylines = RSettings.getBoolValue("Explode/TextToPolylines", false);
+                var plText = undefined;
+
                 shapes = painterPaths[k].getShapes();
                 for (n=0; n<shapes.length; n++) {
                     shape = shapes[n];
                     if (isSplineShape(shape)) {
-                        shape = ShapeAlgorithms.splineToLineOrArc(shape, 1e-6 * painterPaths[k].getFeatureSize());
+                        // spline to arc or line or spline:
+                        shape = ShapeAlgorithms.splineToLineOrArc(shape, splineTolerance);
+
+                        if (textToPolylines) {
+                            // spline to polyline with arcs:
+                            if (isSplineShape(shape)) {
+                                shape = shape.approximateWithArcs(splineTolerance);
+                            }
+                        }
                     }
 
                     if (!isNull(shape)) {
                         var sc = shape.clone();
                         sc.color = col;
-                        newShapes.push(sc);
+
+                        if (textToPolylines) {
+                            // explode to polylines:
+                            if (!isNull(plText) && plText.getEndPoint().equalsFuzzy(shape.getStartPoint())) {
+                                plText.appendShape(sc);
+                            }
+                            else {
+                                if (!isNull(plText)) {
+                                    plText.toLogicallyClosed();
+                                }
+
+                                plText = new RPolyline();
+                                newShapes.push(plText);
+                                plText.appendShape(sc);
+                            }
+                        }
+                        else {
+                            // explode to lines, arcs, polylines:
+                            newShapes.push(sc);
+                        }
+                    }
+                }
+
+                if (textToPolylines) {
+                    if (!isNull(plText)) {
+                        plText.toLogicallyClosed();
                     }
                 }
             }
