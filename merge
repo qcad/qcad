@@ -3,9 +3,4 @@
 DIR=${0%/*}
 binary="$DIR/qcad"
 
-platform=""
-if [ "$OSTYPE" = "linux-gnu" -o `uname` = "Linux" ]; then
-    platform="-platform offscreen"
-fi
-
-QT_QPA_FONTDIR=fonts/qt "$binary" $platform -no-dock-icon -no-gui -allow-multiple-instances -autostart scripts/Tools/MergeDrawings/MergeDrawings.js "$0" "$@"
+"$binary" -no-dock-icon -no-gui -allow-multiple-instances -autostart scripts/Tools/MergeDrawings/MergeDrawings.js "$0" "$@"
