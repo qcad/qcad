@@ -396,11 +396,9 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
     }
 
     QTranslator* translator = new QTranslator(qApp);
-    bool success = false;
     for (int i=0; i<translationsDirs.size(); ++i) {
         if (translator->load(module + "_" + locale, translationsDirs[i])) {
             QCoreApplication::installTranslator(translator);
-            success = true;
             break;
         }
     }
