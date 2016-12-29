@@ -49,6 +49,12 @@ Explode.explodeSelection = function(di, action) {
     var i, k, e, n;
     var polyline, shapes, shape;
 
+    var splineTolerance = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
+    var splineSegments = RSettings.getIntValue("Explode/SplineSegments", 64);
+    var ellipseSegments = RSettings.getIntValue("Explode/EllipseSegments", 32);
+    var splinesToLineSegments = RSettings.getBoolValue("Explode/SplinesToLineSegments", false);
+    var textToPolylines = RSettings.getBoolValue("Explode/TextToPolylines", true);
+
     var op = new RAddObjectsOperation();
 
     if (!isNull(action)) {
@@ -77,8 +83,7 @@ Explode.explodeSelection = function(di, action) {
         if (isEllipseEntity(entity)) {
             if (REllipse.hasProxy()) {
                 var ellipse = entity.getData().castToShape();
-                var s = RSettings.getIntValue("Explode/EllipseSegments", 32);
-                polyline = ellipse.approximateWithArcs(s);
+                polyline = ellipse.approximateWithArcs(ellipseSegments);
                 if (!polyline.isEmpty()) {
                     newShapes.push(polyline);
                 }
@@ -120,13 +125,11 @@ Explode.explodeSelection = function(di, action) {
         else if (isSplineEntity(entity)) {
             var spline = entity.getData().castToShape();
             var pl;
-            if (RSpline.hasProxy()) {
-                var tol = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
-                pl = spline.approximateWithArcs(tol);
+            if (RSpline.hasProxy() && !splinesToLineSegments) {
+                pl = spline.approximateWithArcs(splineTolerance);
             }
             else {
-                var seg = RSettings.getIntValue("Explode/SplineSegments", 64);
-                pl = spline.toPolyline(seg);
+                pl = spline.toPolyline(splineSegments);
             }
 
             pl.simplify();
@@ -228,17 +231,58 @@ Explode.explodeSelection = function(di, action) {
                 if (painterPaths[k].getFeatureSize()<0) {
                     continue;
                 }
+
+                var plText = undefined;
+
                 shapes = painterPaths[k].getShapes();
                 for (n=0; n<shapes.length; n++) {
                     shape = shapes[n];
                     if (isSplineShape(shape)) {
-                        shape = ShapeAlgorithms.splineToLineOrArc(shape, 1e-6 * painterPaths[k].getFeatureSize());
+                        // spline to arc or line or spline:
+                        shape = ShapeAlgorithms.splineToLineOrArc(shape, splineTolerance);
+
+                        if (textToPolylines) {
+                            // spline to polyline with arcs:
+                            if (isSplineShape(shape)) {
+                                if (RSpline.hasProxy() && !splinesToLineSegments) {
+                                    shape = shape.approximateWithArcs(splineTolerance);
+                                }
+                                else {
+                                    shape = shape.toPolyline(splineSegments);
+                                }
+                            }
+                        }
                     }
 
                     if (!isNull(shape)) {
                         var sc = shape.clone();
                         sc.color = col;
-                        newShapes.push(sc);
+
+                        if (textToPolylines) {
+                            // explode to polylines:
+                            if (!isNull(plText) && plText.getEndPoint().equalsFuzzy(shape.getStartPoint())) {
+                                plText.appendShape(sc);
+                            }
+                            else {
+                                if (!isNull(plText)) {
+                                    plText.toLogicallyClosed();
+                                }
+
+                                plText = new RPolyline();
+                                newShapes.push(plText);
+                                plText.appendShape(sc);
+                            }
+                        }
+                        else {
+                            // explode to lines, arcs, polylines:
+                            newShapes.push(sc);
+                        }
+                    }
+                }
+
+                if (textToPolylines) {
+                    if (!isNull(plText)) {
+                        plText.toLogicallyClosed();
                     }
                 }
             }
