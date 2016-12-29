@@ -6,8 +6,11 @@ See files:
 - gpl-3.0-exceptions.txt (if available)
 
 Hershey fonts are released under the terms described in fonts/hershey.readme.
-Other fonts in directory 'fonts' are released as public domain (all copyright
+Other CXF fonts in directory 'fonts' are released as public domain (all copyright
 is waived). 
+
+Fonts in directory fonts/qt are released under their respective licenses.
+See fonts/qt/LICENSES.txt.
 
 Icons and documentation are distributed under the terms of the 
 'Creative Commons Attribution 3.0 Unported' license.
