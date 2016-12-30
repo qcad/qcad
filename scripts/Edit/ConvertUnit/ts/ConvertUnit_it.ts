@@ -32,5 +32,25 @@
         <source>Convert drawing to a different drawing unit</source>
         <translation>Convertire il disegno di una unità di disegno diverso</translation>
     </message>
+    <message>
+        <location filename="../ConvertUnit.ui" line="+20"/>
+        <source>From:</source>
+        <translation>Da:</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>To:</source>
+        <translation>In:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Convert:</source>
+        <translation>Converti:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
 </context>
 </TS>

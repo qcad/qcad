@@ -28,5 +28,25 @@
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../ConvertUnit.ui" line="+20"/>
+        <source>From:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>To:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Convert:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
