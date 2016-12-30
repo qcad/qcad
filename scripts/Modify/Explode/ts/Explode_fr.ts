@@ -106,17 +106,27 @@ Combiner hachures</translatorcomment>
         <translation>Décomposer</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+133"/>
+        <location filename="../PreferencesPage.ui" line="+183"/>
+        <source>Explode text glyphs to polylines</source>
+        <translation>Décomposer contours de texte en polylignes</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Spline segments:</source>
         <translation>Segments de spline :</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segments de ellipse :</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+7"/>
+        <source>Explode splines to polylines with line segments</source>
+        <translation>Décomposer splines aux polylignes avec des segments de ligne</translation>
+    </message>
+    <message>
+        <location line="-31"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolérance :</translation>
     </message>

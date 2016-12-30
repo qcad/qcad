@@ -93,17 +93,27 @@
         <translation>&amp;Exploderen</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+133"/>
+        <location filename="../PreferencesPage.ui" line="+183"/>
+        <source>Explode text glyphs to polylines</source>
+        <translation>Tekstcontouren exploderen in polylines</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Spline segments:</source>
         <translation>Spline segmenten:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Ellipse segmenten (per volledige ellips):</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+7"/>
+        <source>Explode splines to polylines with line segments</source>
+        <translation>Splines exploderen in polylijnen met lijnstukken</translation>
+    </message>
+    <message>
+        <location line="-31"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolerantie:</translation>
     </message>

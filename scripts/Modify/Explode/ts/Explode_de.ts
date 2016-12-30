@@ -93,17 +93,27 @@
         <translation>Aufbrechen</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+133"/>
+        <location filename="../PreferencesPage.ui" line="+183"/>
+        <source>Explode text glyphs to polylines</source>
+        <translation>Textumrisse aufbrechen in Polylinien</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Spline segments:</source>
         <translation>Splinesegmente:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Ellipsensegmente (Vollellipse):</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+7"/>
+        <source>Explode splines to polylines with line segments</source>
+        <translation>Splines aufbrechen in Polylinien mit Liniensegmenten</translation>
+    </message>
+    <message>
+        <location line="-31"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline Toleranz:</translation>
     </message>

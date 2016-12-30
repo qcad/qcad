@@ -93,17 +93,27 @@
         <translation>&amp;E 分解</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+133"/>
+        <location filename="../PreferencesPage.ui" line="+183"/>
+        <source>Explode text glyphs to polylines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Spline segments:</source>
         <translation>スプラインセグメント:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>弧セグメント（楕円あたり）:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+7"/>
+        <source>Explode splines to polylines with line segments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-31"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>
