@@ -145,7 +145,7 @@ function printGenericUsage() {
         print("Qt/X11 platform arguments:");
         print();
         print("  -platform offscreen     Run without requiring an X11 server or display.");
-        print("                          Use this arguent to run this command line tool in a ");
+        print("                          Use this argument to run this command line tool in a ");
         print("                          Linux server environment.");
         print();
         print("Qt/X11 environment variables:");
