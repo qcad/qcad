@@ -24,6 +24,7 @@ function printHelp() {
     print("Changes the color of all solid lines in the given file to blue.");
     print();
     print("  -h, -help               Display this help");
+    printGenericUsage();
     print();
 }
 

@@ -138,3 +138,18 @@ function printArgument(name, prop) {
 
     print(" ", name, spc, ":", prop);
 }
+
+function printGenericUsage() {
+    if (RS.getSystemId()==="linux") {
+        print();
+        print("Qt/X11 platform arguments:");
+        print();
+        print("  -platform offscreen     Run without requiring an X11 server or display.");
+        print("                          Use this arguent to run this command line tool in a ");
+        print("                          Linux server environment.");
+        print();
+        print("Qt/X11 environment variables:");
+        print();
+        print("  QT_QPA_FONTDIR          Set to fonts directory in a server environment, e.g. 'fonts/qt'.");
+    }
+}

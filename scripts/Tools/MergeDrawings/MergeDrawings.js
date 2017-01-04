@@ -36,6 +36,7 @@ function printHelp() {
     print("                          (e.g. R12...R27 or 2000...2013)");
     print("  -o FILE, -outfile=FILE  Set output file to FILE");
     print("                          default is same path and base name as input file");
+    printGenericUsage();
     print();
     print("XML format:");
     print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
