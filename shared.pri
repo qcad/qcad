@@ -77,15 +77,15 @@ macx {
 macx {
     QMAKE_CXXFLAGS_X86 += -Werror=return-type
     macx-clang* {
-        QMAKE_CXXFLAGS += -mmacosx-version-min=10.6
-        exists(/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk) {
-            QMAKE_MAC_SDK = macosx10.9
+        QMAKE_CXXFLAGS += -mmacosx-version-min=10.7
+        exists(/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk) {
+            QMAKE_MAC_SDK = macosx10.12
         }
         else:exists(/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk) {
             QMAKE_MAC_SDK = macosx10.11
         }
-        else:exists(/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk) {
-            QMAKE_MAC_SDK = macosx10.12
+        else:exists(/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk) {
+            QMAKE_MAC_SDK = macosx10.9
         }
         #exists(/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1) {
         #    INCLUDEPATH += /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1
