@@ -435,7 +435,8 @@ bool RObject::hasCustomProperty(const QString& title, const QRegExp& key) const 
 }
 
 /**
- * \return Value of given custom property.
+ * \return Value of given custom property or the given default
+ * value if no such property exists.
  */
 QVariant RObject::getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue) const {
     if (!customProperties.contains(title)) {
@@ -512,12 +513,16 @@ void RObject::removeCustomProperty(const QString& title, const QString& key) {
     }
 }
 
+/**
+ * \return List of custom property titles. These are typically names of applications
+ * which have assigned custom properties to this object.
+ */
 QStringList RObject::getCustomPropertyTitles() const {
     return customProperties.keys();
 }
 
 /**
- * \return List of custom property keys.
+ * \return List of custom property keys for the given title (application).
  */
 QStringList RObject::getCustomPropertyKeys(const QString& title) const {
     if (!customProperties.contains(title)) {
