@@ -27,12 +27,8 @@ include("../Snap.js");
 function SnapIntersectionManual(guiAction) {
     Snap.call(this, guiAction);
 
-    this.State = {
-        PickingEntity1 : 0,
-        PickingEntity2 : 1
-    };
+    this.autoTerminate = RSettings.getBoolValue("SnapIntersectionManual/AutoTerminate", true);
 
-    this.state = this.State.PickingEntity1;
     this.entity1 = undefined;
     this.shape1 = undefined;
     this.entity2 = undefined;
@@ -42,18 +38,53 @@ function SnapIntersectionManual(guiAction) {
 
 SnapIntersectionManual.prototype = new Snap();
 
+SnapIntersectionManual.State = {
+    PickingEntity1 : 0,
+    PickingEntity2 : 1
+};
+
+SnapIntersectionManual.getPreferencesCategory = function() {
+    return [qsTr("Snap"), qsTr("Intersection Manual")];
+};
+
+SnapIntersectionManual.prototype.setState = function(state) {
+    Snap.prototype.setState.call(this, state);
+
+    switch (this.state) {
+    case SnapIntersectionManual.State.PickingEntity1:
+        this.entity1 = undefined;
+        this.shape1 = undefined;
+        this.entity2 = undefined;
+        this.shape2 = undefined;
+        this.entityId1 = -1;
+        var trFirstEntity = qsTr("First entity");
+        this.setCommandPrompt(trFirstEntity);
+        this.setLeftMouseTip(trFirstEntity);
+        this.setRightMouseTip(EAction.trCancel);
+        this.di = this.getDocumentInterface();
+        this.di.setSnap(null);
+        this.di.setClickMode(RAction.PickEntity);
+        this.di.setCursorOverride(true);
+        break;
+
+    case SnapIntersectionManual.State.PickingEntity2:
+        var trSecondEntity = qsTr("Second entity");
+        this.setCommandPrompt(trSecondEntity);
+        this.setLeftMouseTip(trSecondEntity);
+        this.setRightMouseTip(EAction.trCancel);
+        break;
+    }
+};
+
 SnapIntersectionManual.prototype.beginEvent = function() {
     Snap.prototype.beginEvent.call(this);
-    this.di = this.getDocumentInterface();
-    this.di.setSnap(null);
-    this.di.setClickMode(RAction.PickEntity);
-    this.di.setCursorOverride(true);
     this.base = this.getOverrideBase();
     if (isNull(this.base)) {
         qWarning("No base action to override");
         this.terminate();
         return;
     }
+    this.setState(SnapIntersectionManual.State.PickingEntity1);
 //    if (this.base.getClickMode()!==RAction.PickCoordinate) {
 //        qWarning("No coordinate requested at this point");
 //        this.terminate();
@@ -73,13 +104,13 @@ SnapIntersectionManual.prototype.entityPickEvent = function(event) {
 
     var pos = event.getModelPosition();
 
-    if (this.state===this.State.PickingEntity1) {
+    if (this.state===SnapIntersectionManual.State.PickingEntity1) {
         var id = EAction.getEntityId(this.di, this, event, true);
         this.entity1 = doc.queryEntity(id);
         if (!this.entity1.isNull()) {
             this.shape1 = this.entity1.getClosestSimpleShape(pos);
             this.entityId1 = EAction.prototype.getEntityId.call(this, event, false);
-            this.state = this.State.PickingEntity2;
+            this.setState(SnapIntersectionManual.State.PickingEntity2);
         }
     }
     else {
@@ -95,18 +126,23 @@ SnapIntersectionManual.prototype.entityPickEvent = function(event) {
                 )
             );
         }
-        this.terminate();
+        if (this.autoTerminate) {
+            this.terminate();
+        }
+        else {
+            this.setState(SnapIntersectionManual.State.PickingEntity1);
+        }
     }
 };
 
 SnapIntersectionManual.prototype.entityPickEventPreview = function(event) {
-    if (this.state===this.State.PickingEntity1) {
+    if (this.state===SnapIntersectionManual.State.PickingEntity1) {
         if (event.getEntityId()!==-1) {
             this.di.highlightEntity(event.getEntityId());
         }
         this.di.setCursorPosition(RVector.invalid);
     }
-    else if (this.state===this.State.PickingEntity2) {
+    else if (this.state===SnapIntersectionManual.State.PickingEntity2) {
         if (this.entityId1!==-1) {
             this.di.highlightEntity(this.entityId1);
         }
