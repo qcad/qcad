@@ -65,6 +65,8 @@ class QCADCORE_EXPORT REntity : public RObject {
 
     Q_DECLARE_TR_FUNCTIONS(REntity)
 
+    friend class RStorage;
+
 public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
@@ -214,13 +216,6 @@ public:
      */
     QString getBlockName() const {
         return getData().getBlockName();
-    }
-
-    /**
-     * \copydoc REntityData::setParentId
-     */
-    void setParentId(REntity::Id parentId) {
-        getData().setParentId(parentId);
     }
 
     /**
@@ -621,6 +616,13 @@ public:
     }
 
 protected:
+    /**
+     * \copydoc REntityData::setParentId
+     */
+    void setParentId(REntity::Id parentId) {
+        getData().setParentId(parentId);
+    }
+
     virtual void print(QDebug dbg) const;
 };
 

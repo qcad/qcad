@@ -255,7 +255,7 @@ void RClipboardOperation::copy(
             }
 
             if (e->getParentId()==REntity::INVALID_ID) {
-                e->setParentId(refId);
+                dest.getStorage().setEntityParentId(*e, refId);
             }
         }
     }
