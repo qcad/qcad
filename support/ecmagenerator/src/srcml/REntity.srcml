@@ -66,6 +66,8 @@
 
     <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>REntity</argument>)</argument_list></macro>
 
+    <decl_stmt><decl><type><name>friend</name> class</type> <name>RStorage</name></decl>;</decl_stmt>
+
 </private><public>public:
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCustom</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
@@ -215,13 +217,6 @@
      */</comment>
     <function><type><name>QString</name></type> <name>getBlockName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getBlockName</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
-
-    <comment type="block">/**
-     * \copydoc REntityData::setParentId
-     */</comment>
-    <function><type><name>void</name></type> <name>setParentId</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>parentId</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setParentId</name><argument_list>(<argument><expr><name>parentId</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
     <comment type="block">/**
@@ -622,6 +617,13 @@
     }</block></function>
 
 </public><protected>protected:
+    <comment type="block">/**
+     * \copydoc REntityData::setParentId
+     */</comment>
+    <function><type><name>void</name></type> <name>setParentId</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>parentId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setParentId</name><argument_list>(<argument><expr><name>parentId</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 </protected>}</block>;</class>
 

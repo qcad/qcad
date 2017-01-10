@@ -111,9 +111,6 @@
         getBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setParentId
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getParentId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

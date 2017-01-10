@@ -107,8 +107,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBlockName, "getBlockName");
             
-            REcmaHelper::registerFunction(&engine, proto, setParentId, "setParentId");
-            
             REcmaHelper::registerFunction(&engine, proto, getParentId, "getParentId");
             
             REcmaHelper::registerFunction(&engine, proto, setLinetypeId, "setLinetypeId");
@@ -1444,61 +1442,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::getBlockName", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaEntity::setParentId
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaEntity::setParentId", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::setParentId";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    REntity* self = 
-                        getSelf("setParentId", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: REntity::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    REntity::Id
-                    a0 =
-                    (REntity::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setParentId(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.setParentId().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaEntity::setParentId", context, engine);
             return result;
         }
          QScriptValue
