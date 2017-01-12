@@ -1055,6 +1055,10 @@ Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
         circle2 = tmp;
     }
 
+    // find solutions for tangent to:
+    // center point of smaller circle,
+    // concentric circles for larger circle with distance = radius of smaller circle
+    // parallels to line with distance = radius of smaller circle
     var arr1 = [];
     var arr2 = [];
     var arr3 = [];
@@ -1109,15 +1113,23 @@ Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
             obj1.radius += circle1.radius;
             obj2.radius -= circle1.radius;
 
-            if (RMath.fuzzyCompare(obj1.center.getDistanceTo(circle1.center), obj1.radius+circle1.radius) &&
-                RMath.fuzzyCompare(obj1.center.getDistanceTo(circle2.center), obj1.radius+circle2.radius) &&
+            var obj1c1 = obj1.center.getDistanceTo(circle1.center);
+            var obj1c2 = obj1.center.getDistanceTo(circle2.center);
+            if ((RMath.fuzzyCompare(obj1c1, circle1.radius+obj1.radius) ||
+                 RMath.fuzzyCompare(obj1c1, circle1.radius-obj1.radius)) &&
+                (RMath.fuzzyCompare(obj1c2, circle2.radius+obj1.radius) ||
+                 RMath.fuzzyCompare(obj1c2, circle2.radius-obj1.radius)) &&
                 RMath.fuzzyCompare(line.getDistanceTo(obj1.center, false), obj1.radius)) {
 
                 ret.push(obj1);
             }
 
-            if (RMath.fuzzyCompare(obj2.center.getDistanceTo(circle1.center), obj2.radius+circle1.radius) &&
-                RMath.fuzzyCompare(obj2.center.getDistanceTo(circle2.center), obj2.radius+circle2.radius) &&
+            var obj2c1 = obj2.center.getDistanceTo(circle1.center);
+            var obj2c2 = obj2.center.getDistanceTo(circle2.center);
+            if ((RMath.fuzzyCompare(obj2c1, circle1.radius+obj2.radius) ||
+                 RMath.fuzzyCompare(obj2c1, circle1.radius-obj2.radius)) &&
+                (RMath.fuzzyCompare(obj2c2, circle2.radius+obj2.radius) ||
+                 RMath.fuzzyCompare(obj2c2, circle2.radius-obj2.radius)) &&
                 RMath.fuzzyCompare(line.getDistanceTo(obj2.center, false), obj2.radius)) {
 
                 ret.push(obj2);
