@@ -19,6 +19,7 @@
 
 include("../Circle.js");
 include("scripts/ShapeAlgorithms.js");
+include("scripts/Apollonius.js");
 
 /**
  * \class Circle2TR
@@ -235,71 +236,8 @@ Circle2TR.prototype.getOperation = function(preview) {
 };
 
 Circle2TR.prototype.getCircles2TR = function(preview) {
-    if (isNull(this.shape1) || isNull(this.shape2) || !isNumber(this.radius)) {
-        return undefined;
-    }
-
-    if (this.radius <= 0.0 || this.radius > 1.0e6) {
-        if (!preview) {
-            this.error = qsTr("Invalid radius");
-        }
-        return undefined;
-    }
-
-    var i,k,ips,s;
-
-    if (isNull(this.candidates)) {
-        var offset1 = ShapeAlgorithms.getOffsetShapes(this.shape1, this.radius, 1, RS.BothSides);
-        var offset2 = ShapeAlgorithms.getOffsetShapes(this.shape2, this.radius, 1, RS.BothSides);
-
-        if (isCircleShape(this.shape1) || isArcShape(this.shape1)) {
-            if (this.radius>this.shape1.getRadius()) {
-                s = this.shape1.clone();
-                s.setRadius(this.radius - this.shape1.getRadius());
-                offset1.push(s);
-            }
-        }
-        if (isCircleShape(this.shape2) || isArcShape(this.shape2)) {
-            if (this.radius>this.shape2.getRadius()) {
-                s = this.shape2.clone();
-                s.setRadius(this.radius - this.shape2.getRadius());
-                offset2.push(s);
-            }
-        }
-
-        var centerPoints = [];
-        for (i=0; i<offset1.length; i++) {
-            for (k=0; k<offset2.length; k++) {
-                s = offset2[k];
-                if (isFunction(s.data)) {
-                    s = s.data();
-                }
-                ips = offset1[i].getIntersectionPoints(s, false);
-                centerPoints = centerPoints.concat(ips);
-            }
-        }
-
-        this.candidates = [];
-        var circle = undefined;
-        for (i=0; i<centerPoints.length; i++) {
-            var c = new RCircle(centerPoints[i], this.radius);
-            this.candidates.push(c);
-        }
-    }
-
-    if (this.candidates.length===0) {
-        if (!preview) {
-            this.error = qsTr("No solution");
-        }
-        return undefined;
-    }
-
-    // no position yet: return all candidates for preview:
-    if (isNull(this.pos)) {
-        return this.candidates;
-    }
-
-    return [ ShapeAlgorithms.getClosestShape(this.candidates, this.pos) ];
+    var ret = Apollonius.getCircles2TR(this.shape1, this.shape2, this.radius, this.candidates, preview);
+    this.error = Apollonius.error;
 };
 
 Circle2TR.prototype.slotRadiusChanged = function(value) {
