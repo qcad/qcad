@@ -779,6 +779,16 @@ QList<RVector> RVector::getUnion(const QList<RVector>& vectorsA, const QList<RVe
     return ret;
 }
 
+QList<RVector> RVector::getUnique(const QList<RVector>& vectors, double tol) {
+    QList<RVector> ret;
+    for (int i=0; i<vectors.length(); i++) {
+        if (!RVector::containsFuzzy(ret, vectors[i], tol)) {
+            ret.append(vectors[i]);
+        }
+    }
+    return ret;
+}
+
 /**
  * \return All X values of the given list of vectors as a new list.
  */
