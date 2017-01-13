@@ -288,6 +288,9 @@
         getUnion
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getUnique
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getXList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
