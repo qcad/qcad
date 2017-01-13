@@ -38,7 +38,7 @@ function Circle2TR(guiAction) {
     this.center = undefined;
     this.pos = undefined;
 
-    this.candidates = undefined;
+    this.candidates = [];
 
     this.setUiOptions("Circle2TR.ui");
 }
@@ -73,7 +73,7 @@ Circle2TR.prototype.setState = function(state) {
         this.shape2 = undefined;
         this.center = undefined;
         this.pos = undefined;
-        this.candidates = undefined;
+        this.candidates = [];
         var trFirstEntity = qsTr("First line, arc or circle");
         this.setCommandPrompt(trFirstEntity);
         this.setLeftMouseTip(trFirstEntity);
@@ -86,7 +86,7 @@ Circle2TR.prototype.setState = function(state) {
         this.shape2 = undefined;
         this.center = undefined;
         this.pos = undefined;
-        this.candidates = undefined;
+        this.candidates = [];
         var trSecondEntity = qsTr("Second line, arc or circle");
         this.setCommandPrompt(trSecondEntity);
         this.setLeftMouseTip(trSecondEntity);
@@ -166,7 +166,8 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
 
     case Circle2TR.State.ChoosingShape2:
         if (entityId!==this.entity2Id) {
-            this.candidates = undefined;
+            // force re-calculation:
+            this.candidates = [];
         }
         this.entity2 = entity;
         this.entity2Id = entityId;
@@ -236,8 +237,9 @@ Circle2TR.prototype.getOperation = function(preview) {
 };
 
 Circle2TR.prototype.getCircles2TR = function(preview) {
-    var ret = Apollonius.getCircles2TR(this.shape1, this.shape2, this.radius, this.candidates, preview);
+    var ret = Apollonius.getCircles2TR(this.shape1, this.shape2, this.radius, this.pos, this.candidates, preview);
     this.error = Apollonius.error;
+    return ret;
 };
 
 Circle2TR.prototype.slotRadiusChanged = function(value) {

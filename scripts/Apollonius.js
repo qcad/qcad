@@ -1163,6 +1163,8 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
         return [];
     }
 
+    //debugger;
+
     var line2Data;
     if (isFunction(line2.data)) {
         line2Data = line2.data();
@@ -1170,15 +1172,21 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
     else {
         line2Data = line2;
     }
-    var ips = line1.getIntersectionPoints(line2Data, false);
+    var ipsLL = line1.getIntersectionPoints(line2Data, false);
 
-    var c;
+    var ips;
+    var i, k, c;
     var circles, circle;
-    var centers;
+    var centers = [];
 
-    // circle C tangential to two lines with center E:
-    if (ips.length===0) {
-        // lines parallel:
+    var bisectorLines = Apollonius.getAngleBisectors(line1, line2);
+    var bisectorLine;
+
+    var onLine1 = line1.isOnShape(point.position, false);
+    var onLine2 = line2.isOnShape(point.position, false);
+
+    // lines are parallel:
+    if (ipsLL.length===0) {
         // middle line:
         var s = line1.getStartPoint();
         var p = line2.getClosestPointOnShape(s, false);
@@ -1190,36 +1198,52 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
         // intersections between circle and middle line are candidates:
         centers = circle.getIntersectionPoints(middleLine, false);
     }
+
+    // point is on line1 or line2:
+    else if (onLine1 || onLine2) {
+        var line = onLine1 ? line1 : line2;
+        var orthoLine = new RLine(point.position, line.getAngle() + Math.PI/2, 1.0);
+        for (k=0; k<bisectorLines.length; k++) {
+            bisectorLine = bisectorLines[k];
+            ips = bisectorLine.getIntersectionPoints(orthoLine, false);
+            if (ips.length!==1) {
+                continue;
+            }
+            centers.push(ips[0]);
+        }
+    }
+
     else {
+        // circle C tangential to two lines with center E:
         circles = Apollonius.getCircles2TR(line1, line2, 10.0);
         if (isNull(circles) || circles.length===0) {
             return [];
         }
 
         var centerCandidates = [];
-        for (var i=0; i<circles.length; i++) {
+        for (i=0; i<circles.length; i++) {
             circle = circles[i];
             var e = circle.getCenter();
 
             // line L from intersection between the two lines to the point:
             var line;
-            if (ips.length===0) {
+            if (ipsLL.length===0) {
                 // lines parallel:
                 line = line1.clone();
                 line.move(point.position.operator_subtract(line1.getStartPoint()));
             }
             else {
-                line = new RLine(ips[0], point.position);
+                line = new RLine(ipsLL[0], point.position);
             }
 
             // intersections beteeen line L and circle C -> G, H:
-            ips = line.getIntersectionPoints(circle, false);
-            if (ips.length!==2) {
+            var ipsLC = line.getIntersectionPoints(circle, false);
+            if (ipsLC.length!==2) {
                 continue;
             }
 
-            var g = ips[0];
-            var h = ips[1];
+            var g = ipsLC[0];
+            var h = ipsLC[1];
 
             // two lines L1, L2 with same angle as EG, EH through point:
             var l1 = new RLine(e, g);
@@ -1228,9 +1252,8 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
             l2.move(point.position.operator_subtract(l2.getStartPoint()));
 
             // intersection of angle bisector and lines L1, L2 are centers of candidates:
-            var bisectorLines = Apollonius.getAngleBisectors(line1, line2);
-            for (var k=0; k<bisectorLines.length; k++) {
-                var bisectorLine = bisectorLines[k];
+            for (k=0; k<bisectorLines.length; k++) {
+                bisectorLine = bisectorLines[k];
                 centerCandidates = centerCandidates.concat(l1.getIntersectionPoints(bisectorLine, false));
                 centerCandidates = centerCandidates.concat(l2.getIntersectionPoints(bisectorLine, false));
             }
@@ -1249,7 +1272,6 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
     }
 
     var ret = [];
-
     for (c=0; c<centers.length; c++) {
         var r = centers[c].getDistanceTo(point.position);
         if (RMath.fuzzyCompare(r, 0.0)) {
@@ -1257,7 +1279,6 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
         }
         ret.push(new RCircle(centers[c], r));
     }
-
     return ret;
 };
 
@@ -1601,11 +1622,12 @@ Apollonius.getVerticalToPoint = function(line, p) {
  * \return Array of circles tangential to shape1 and shape2 with given radius.
  *
  * \param pos Only return circle closest to given pos or undefined to return all circles
- * \param candidates Array always filled with all candidates or undefined
+ * \param candidates Empty array. Filled with all candidates or undefined if caller is not
+ *   interested in all solution.
  * \param preview True for preview mode
  */
 Apollonius.getCircles2TR = function(shape1, shape2, radius, pos, candidates, preview) {
-    Apollonius.error = undefined;
+    Apollonius.error = "";
     if (isNull(shape1) || isNull(shape2) || !isNumber(radius)) {
         return undefined;
     }
@@ -1625,6 +1647,9 @@ Apollonius.getCircles2TR = function(shape1, shape2, radius, pos, candidates, pre
 
     if (isNull(candidates)) {
         candidates = [];
+    }
+
+    if (candidates.length===0) {
         var offset1 = ShapeAlgorithms.getOffsetShapes(shape1, radius, 1, RS.BothSides);
         var offset2 = ShapeAlgorithms.getOffsetShapes(shape2, radius, 1, RS.BothSides);
 
