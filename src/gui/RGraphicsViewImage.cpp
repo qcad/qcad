@@ -66,6 +66,14 @@ RGraphicsViewImage::RGraphicsViewImage()
 RGraphicsViewImage::~RGraphicsViewImage() {
 }
 
+void RGraphicsViewImage::clear() {
+    QPainter* painter = new QPainter(&graphicsBuffer);
+    // erase background to transparent:
+    painter->setCompositionMode(QPainter::CompositionMode_Clear);
+    painter->eraseRect(graphicsBuffer.rect());
+    delete painter;
+}
+
 void RGraphicsViewImage::setPaintOrigin(bool val) {
     doPaintOrigin = val;
 }

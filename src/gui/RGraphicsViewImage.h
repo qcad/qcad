@@ -54,6 +54,8 @@ public:
     RGraphicsViewImage();
     virtual ~RGraphicsViewImage();
 
+    void clear();
+
     // TODO: these methods are not found in RGraphicsViewQt, due to the
     // multiple inheritance of RGraphicsViewQt (QWidget and RGraphicsViewImage)
     // unless they are re-declared here again:

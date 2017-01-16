@@ -72,6 +72,7 @@ public:
         return viewportNumber;
     }
 
+    void clear() {}
     void clearCaches();
 
     void setDisplayOnlyCurrentUcs(bool on);
