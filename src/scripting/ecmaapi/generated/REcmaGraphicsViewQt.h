@@ -51,6 +51,9 @@
 
         // methods of secondary base class RGraphicsViewImage:
         static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setViewportNumber
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

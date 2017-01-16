@@ -55,6 +55,8 @@
     <constructor_decl><name>RGraphicsViewImage</name><parameter_list>()</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RGraphicsViewImage</name><parameter_list>()</parameter_list>;</destructor_decl>
 
+    <function_decl><type><name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
     <comment type="line">// TODO: these methods are not found in RGraphicsViewQt, due to the</comment>
     <comment type="line">// multiple inheritance of RGraphicsViewQt (QWidget and RGraphicsViewImage)</comment>
     <comment type="line">// unless they are re-declared here again:</comment>

@@ -88,6 +88,8 @@
 
         // methods of secondary base class RGraphicsViewImage:
         
+            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
+            
             REcmaHelper::registerFunction(&engine, proto, setViewportNumber, "setViewportNumber");
             
             REcmaHelper::registerFunction(&engine, proto, getViewportNumber, "getViewportNumber");
@@ -512,6 +514,50 @@
         
 
         // methods of secondary base class RGraphicsViewImage:
+         QScriptValue
+        REcmaGraphicsViewQt::clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::clear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::clear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("clear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clear();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.clear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::clear", context, engine);
+            return result;
+        }
          QScriptValue
         REcmaGraphicsViewQt::setViewportNumber
         (QScriptContext* context, QScriptEngine* engine) 

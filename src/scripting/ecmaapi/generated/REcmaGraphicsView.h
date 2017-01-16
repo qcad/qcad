@@ -52,6 +52,9 @@
         getViewportNumber
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearCaches
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

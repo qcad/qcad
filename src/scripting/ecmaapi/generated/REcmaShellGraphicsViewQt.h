@@ -263,6 +263,11 @@
   
         // methods of 1st level base class RGraphicsViewImage:
         
+      void clear(
+                
+            );
+        
+    
       void setViewportNumber(
                 int n
             );

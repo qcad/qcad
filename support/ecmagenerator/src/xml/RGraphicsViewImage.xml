@@ -16,6 +16,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
     </constructor>
+    <method name="clear" cppName="clear" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="setViewportNumber" cppName="setViewportNumber"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

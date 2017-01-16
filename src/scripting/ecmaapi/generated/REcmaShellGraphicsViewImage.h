@@ -38,6 +38,12 @@
         
     
     
+      void clear(
+                
+            );
+        
+    
+    
       void setViewportNumber(
                 int n
             );
