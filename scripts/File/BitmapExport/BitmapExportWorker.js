@@ -100,6 +100,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         }
     }
 
+    view.clear();
     scene.regenerate();
 
     // export file
