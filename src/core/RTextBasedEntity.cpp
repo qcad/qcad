@@ -157,7 +157,7 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
 void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
 
-    if (RSettings::isTextRenderedAsText()) {
+    if (e.isTextRenderedAsText()) {
         // export text:
         QList<RPainterPath> paths = e.exportText(getData(), forceSelected);
 

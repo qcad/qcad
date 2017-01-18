@@ -272,6 +272,13 @@ public:
 
     virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
 
+    /**
+     * Override to force text rendering mode.
+     */
+    virtual bool isTextRenderedAsText() {
+        return RSettings::isTextRenderedAsText();
+    }
+
     QStack<REntity*> getEntityStack();
 
     void setDraftMode(bool on);

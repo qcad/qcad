@@ -132,7 +132,7 @@ void RAttributeEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(forceSelected);
 
     if (!isInvisible()) {
-        if (RSettings::isTextRenderedAsText()) {
+        if (e.isTextRenderedAsText()) {
             QList<RPainterPath> paths = e.exportText(getData(), forceSelected);
             e.exportPainterPaths(paths);
         }
