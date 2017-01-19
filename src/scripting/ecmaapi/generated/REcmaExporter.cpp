@@ -233,6 +233,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLineTypePatternScale, "getLineTypePatternScale");
             
+            REcmaHelper::registerFunction(&engine, proto, isTextRenderedAsText, "isTextRenderedAsText");
+            
             REcmaHelper::registerFunction(&engine, proto, getEntityStack, "getEntityStack");
             
             REcmaHelper::registerFunction(&engine, proto, setDraftMode, "setDraftMode");
@@ -6603,6 +6605,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getLineTypePatternScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::isTextRenderedAsText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::isTextRenderedAsText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::isTextRenderedAsText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("isTextRenderedAsText", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isTextRenderedAsText();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.isTextRenderedAsText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::isTextRenderedAsText", context, engine);
             return result;
         }
          QScriptValue

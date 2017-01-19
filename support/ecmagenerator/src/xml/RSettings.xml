@@ -749,5 +749,18 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="appendOpenGLMessage"
+    cppName="appendOpenGLMessage" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="msg"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getOpenGLMessages" cppName="getOpenGLMessages"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

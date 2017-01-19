@@ -506,6 +506,11 @@
             );
         
     
+      bool isTextRenderedAsText(
+                
+            );
+        
+    
       QStack < REntity * > getEntityStack(
                 
             );

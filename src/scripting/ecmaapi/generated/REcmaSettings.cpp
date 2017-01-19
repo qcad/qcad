@@ -309,6 +309,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getDefaultPrinterName, "getDefaultPrinterName");
             
+            REcmaHelper::registerFunction(&engine, &ctor, appendOpenGLMessage, "appendOpenGLMessage");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getOpenGLMessages, "getOpenGLMessages");
+            
 
     // static properties:
     
@@ -5929,6 +5933,90 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getDefaultPrinterName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::appendOpenGLMessage
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::appendOpenGLMessage", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::appendOpenGLMessage";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       appendOpenGLMessage(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.appendOpenGLMessage().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::appendOpenGLMessage", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getOpenGLMessages
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getOpenGLMessages", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getOpenGLMessages";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RSettings::
+       getOpenGLMessages();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getOpenGLMessages().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getOpenGLMessages", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

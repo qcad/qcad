@@ -274,6 +274,9 @@
         getLineTypePatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isTextRenderedAsText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEntityStack
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
