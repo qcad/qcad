@@ -93,6 +93,8 @@ bool RSettings::firstStart = false;
 bool RSettings::newVersion = false;
 int RSettings::previousVersion = 0;
 
+QStringList RSettings::openGLMessages;
+
 /**
  * App ID used for DXF/DWG exports / imports to identify app XData.
  */
