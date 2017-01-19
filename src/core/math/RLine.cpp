@@ -62,7 +62,7 @@ QList<RVector> RLine::getVectorProperties() const {
 }
 
 bool RLine::isValid() const {
-    return startPoint.isValid() && endPoint.isValid();
+    return startPoint.isSane() && endPoint.isSane();
 }
 
 double RLine::getLength() const {
