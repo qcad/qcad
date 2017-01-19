@@ -887,7 +887,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
     double length = line.getLength();
 
-    if (length>1e100 || length<RS::PointTolerance) {
+    if (length>1e100 || length<RS::PointTolerance || !RMath::isSane(length)) {
         return ret;
     }
 
@@ -947,8 +947,6 @@ double RExporter::exportLine(const RLine& line, double offset) {
     do {
         double dashLength = p.getDashLengthAt(i);
         nextTotal = total + fabs(dashLength);
-        //qDebug() << "total: " << total;
-        //qDebug() << "nextTotal: " << nextTotal;
 
         // dash, no gap. note that a dash can have a length of 0.0 (point):
         if (dashLength > -RS::PointTolerance) {
@@ -995,7 +993,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
         cursor += vp[i];
         total = nextTotal;
 
-        done = total > length;
+        done = (total > length) || RMath::isNaN(total);
 
         // export shape (zigzag, text, etc.) at end of dash / gap:
         if (p.hasShapeAt(i)) {
