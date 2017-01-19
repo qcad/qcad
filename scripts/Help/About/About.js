@@ -451,6 +451,11 @@ About.prototype.initAboutSystem = function(textEdit) {
     text += "\n";
     text += "\nArguments: " + RSettings.getOriginalArguments();
 
+    if (RS.getSystemId()==="win") {
+        text += "\n"
+        text += "\nOpenGL:\n" + RSettings.getOpenGLMessages().join("\n");
+    }
+
     var numPlugins = RPluginLoader.countPlugins();
     if (numPlugins>0) {
         text += "\n";
