@@ -79,8 +79,15 @@ void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& conte
     QByteArray localMsg = message.toLocal8Bit();
     QByteArray p = RDebug::getPrefix().toLocal8Bit();
 
+    // intercept OpenGL messages for display in about dialog:
+    if (localMsg.startsWith("Qt: ") ||
+        localMsg.contains("QWindowsEGLStaticContext")) {
+        RSettings::appendOpenGLMessage(localMsg);
+    }
+
     switch (type) {
     case QtDebugMsg:
+
         if (context.file!=NULL && context.function!=NULL) {
             fprintf(stderr, "\033[36m%s%s:%u, %s:\033[0m\n",
                     p.constData(), context.file, context.line, context.function);

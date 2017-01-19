@@ -233,6 +233,9 @@ public:
     static QStringList getPrinterNames();
     static QString getDefaultPrinterName();
 
+    static void appendOpenGLMessage(const QString& msg);
+    static QStringList getOpenGLMessages();
+
 private:
     static bool isInitialized();
     static void shortenRecentFiles();
@@ -298,6 +301,8 @@ private:
     static bool firstStart;
     static bool newVersion;
     static int previousVersion;
+
+    static QStringList openGLMessages;
 };
 
 Q_DECLARE_METATYPE(RSettings*)

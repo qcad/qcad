@@ -760,6 +760,18 @@ QString RSettings::getDefaultPrinterName() {
 #endif
 }
 
+void RSettings::appendOpenGLMessage(const QString& msg) {
+    if (openGLMessages.contains(msg)) {
+        // avoid redundant messages:
+        return;
+    }
+    openGLMessages.append(msg);
+}
+
+QStringList RSettings::getOpenGLMessages() {
+    return openGLMessages;
+}
+
 /**
  * \return Qt version as int (Qt 1.2.3 -> 0x010203).
  */
