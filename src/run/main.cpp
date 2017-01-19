@@ -100,6 +100,14 @@ int main(int argc, char *argv[]) {
     setenv("UNICODEMAP_JP", "cp932", 1);
 #endif
 
+#ifdef Q_OS_WIN
+#if QT_VERSION >= 0x050200
+    // enable OpenGL logging under Windows
+    // this info can then be shown in the about dialog
+    QLoggingCategory::setFilterRules(QStringLiteral("qt.qpa.gl=true"));
+#endif
+#endif
+
     // Auto scale up user interface for high res displays under Windows:
 #ifdef Q_OS_WIN
 #if QT_VERSION >= 0x050600
