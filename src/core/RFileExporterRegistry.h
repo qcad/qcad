@@ -44,7 +44,7 @@ class RProgressHandler;
  */
 class QCADCORE_EXPORT RFileExporterRegistry {
 public:
-    static void registerFileExporter(RFileExporterFactory* factory);
+    static void registerFileExporter(RFileExporterFactory* factory, bool prepend=false);
     static void unregisterFileExporter(RFileExporterFactory* factory);
 
     static RFileExporter* getFileExporter(

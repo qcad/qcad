@@ -32,8 +32,13 @@ QList<RFileExporterFactory*> RFileExporterRegistry::factories;
  * \param factory exporter factory that provides information about the
  * exporter and can instantiate it.
  */
-void RFileExporterRegistry::registerFileExporter(RFileExporterFactory* factory) {
-    factories.append(factory);
+void RFileExporterRegistry::registerFileExporter(RFileExporterFactory* factory, bool prepend) {
+    if (prepend) {
+        factories.prepend(factory);
+    }
+    else {
+        factories.append(factory);
+    }
 }
 
 /**
