@@ -20,7 +20,12 @@
 #ifndef RFONTCHOOSERWIDGET_H_
 #define RFONTCHOOSERWIDGET_H_
 
+#include <qglobal.h>
+#if QT_VERSION >= 0x050400
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
+#else
 #include <QDesignerCustomWidgetInterface>
+#endif
 
 class RFontChooserWidgetPlugin: public QObject, public QDesignerCustomWidgetInterface {
 

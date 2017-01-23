@@ -20,7 +20,13 @@
 #ifndef RCUSTOMWIDGETS_H_
 #define RCUSTOMWIDGETS_H_
 
-#include <QtDesigner/QtDesigner>
+#include <qglobal.h>
+#if QT_VERSION >= 0x050400
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
+#else
+#include <QDesignerCustomWidgetInterface>
+#endif
+
 #include <QtCore/qplugin.h>
 
 class RCustomWidgets: public QObject,

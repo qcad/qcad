@@ -20,7 +20,12 @@
 #ifndef RSHORTCUTLINEEDITPLUGIN_H_
 #define RSHORTCUTLINEEDITPLUGIN_H_
 
+#include <qglobal.h>
+#if QT_VERSION >= 0x050400
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
+#else
 #include <QDesignerCustomWidgetInterface>
+#endif
 
 class RShortcutLineEditPlugin: public QObject, public QDesignerCustomWidgetInterface {
 

@@ -20,7 +20,12 @@
 #ifndef RLINETYPECOMBOPLUGIN_H_
 #define RLINETYPECOMBOPLUGIN_H_
 
+#include <qglobal.h>
+#if QT_VERSION >= 0x050400
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
+#else
 #include <QDesignerCustomWidgetInterface>
+#endif
 
 class RLinetypeComboPlugin: public QObject, public QDesignerCustomWidgetInterface {
 

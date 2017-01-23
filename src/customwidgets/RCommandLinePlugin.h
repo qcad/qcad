@@ -20,7 +20,12 @@
 #ifndef RCOMMANDLINEPLUGIN_H_
 #define RCOMMANDLINEPLUGIN_H_
 
+#include <qglobal.h>
+#if QT_VERSION >= 0x050400
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
+#else
 #include <QDesignerCustomWidgetInterface>
+#endif
 
 class RCommandLinePlugin: public QObject, public QDesignerCustomWidgetInterface {
 
