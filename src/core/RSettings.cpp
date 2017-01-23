@@ -1103,6 +1103,7 @@ bool RSettings::hasValue(const QString& key) {
  */
 QVariant RSettings::getValue(const QString& key, const QVariant& defaultValue) {
     if (!isInitialized()) {
+        qDebug() << "RSettings not initialized";
         return defaultValue;
     }
     if (cache.contains(key)) {
@@ -1257,6 +1258,10 @@ bool RSettings::isInitialized() {
  */
 void RSettings::setApplicationNameOverride(const QString& n) {
     applicationNameOverride = n;
+}
+
+QString RSettings::getApplicationNameOverride() {
+    return applicationNameOverride;
 }
 
 bool RSettings::hasApplicationNameOverride() {
