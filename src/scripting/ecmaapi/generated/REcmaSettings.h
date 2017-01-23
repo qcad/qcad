@@ -349,6 +349,9 @@
         setApplicationNameOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getApplicationNameOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasApplicationNameOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

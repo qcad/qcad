@@ -615,6 +615,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getApplicationNameOverride"
+    cppName="getApplicationNameOverride" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="hasApplicationNameOverride"
     cppName="hasApplicationNameOverride" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

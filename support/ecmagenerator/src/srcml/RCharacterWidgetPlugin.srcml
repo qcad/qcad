@@ -21,7 +21,8 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCHARACTERWIDGETPLUGIN_H_</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RCHARACTERWIDGETPLUGIN_H_</name></cpp:define>
 
-<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x050000</expr></cpp:if>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;qglobal.h&gt;</cpp:file></cpp:include>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x050400</expr></cpp:if>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtUiPlugin/QDesignerCustomWidgetInterface&gt;</cpp:file></cpp:include>
 <cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDesignerCustomWidgetInterface&gt;</cpp:file></cpp:include>

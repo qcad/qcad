@@ -21,7 +21,12 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RLINEWEIGHTCOMBOPLUGIN_H_</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RLINEWEIGHTCOMBOPLUGIN_H_</name></cpp:define>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;qglobal.h&gt;</cpp:file></cpp:include>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x050400</expr></cpp:if>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtUiPlugin/QDesignerCustomWidgetInterface&gt;</cpp:file></cpp:include>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDesignerCustomWidgetInterface&gt;</cpp:file></cpp:include>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <class>class <name>RLineweightComboPlugin</name><super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>QDesignerCustomWidgetInterface</name></super> <block>{<private type="default">
 
