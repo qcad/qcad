@@ -63,6 +63,7 @@ public:
     static RPropertyTypeId PropertyMeasuredValue;
     static RPropertyTypeId PropertyFontName;
 
+    static RPropertyTypeId PropertyDimScale;
     static RPropertyTypeId PropertyDimBlockName;
 
     static RPropertyTypeId PropertyOriginX;
