@@ -22,6 +22,7 @@
 
 #include "RPluginInterface.h"
 #include "RPluginLoader.h"
+#include "RSettings.h"
 
 QList<RPluginInfo > RPluginLoader::pluginsInfo;
 QStringList RPluginLoader::pluginFiles;
@@ -84,12 +85,35 @@ void RPluginLoader::loadPlugins(bool init) {
     pluginFiles.clear();
     pluginsInfo.clear();
 
+    // plugin settings are always stored in a file with base name "QCAD3":
+    // this happens before RSettings is initialized:
+    QSettings settings(
+#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
+        QSettings::IniFormat,
+#else
+        QSettings::NativeFormat,
+#endif
+        QSettings::UserScope,
+        QCoreApplication::organizationName(),
+        "QCAD3"
+    );
+    settings.beginGroup("Plugins");
+    QString disabledPlugins = settings.value("DisabledPlugins", "").toString();
+    settings.endGroup();
+
+    QStringList disabledPluginsList = disabledPlugins.split(',');
+
     foreach (QString fileName, getPluginFiles()) {
+        QString fn = QFileInfo(fileName).fileName();
+        if (disabledPluginsList.contains(fn, Qt::CaseInsensitive)) {
+            continue;
+        }
         QPluginLoader loader(fileName);
         QObject* plugin = loader.instance();
         loadPlugin(plugin, init, fileName, loader.errorString());
     }
 
+    // load statically compiled in plugins:
     QObjectList staticPlugins = QPluginLoader::staticInstances();
     for (int i=0; i<staticPlugins.size(); i++) {
         QObject* plugin = staticPlugins[i];

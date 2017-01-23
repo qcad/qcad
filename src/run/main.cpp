@@ -269,6 +269,9 @@ int main(int argc, char *argv[]) {
     RBlock::init();
     RView::init();
 
+    // make sure plugins can find plugin related settings:
+    // these are always stored in "QCAD3.ini/conf":
+    RSettings::setApplicationNameOverride("QCAD3");
     RPluginLoader::loadPlugins(true);
 
     RLinetypeListMetric::init();
