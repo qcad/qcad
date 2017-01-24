@@ -140,6 +140,13 @@ function printArgument(name, prop) {
 }
 
 function printGenericUsage() {
+    if (RS.getSystemId()==="osx") {
+        print();
+        print("Mac OS X specific options:\n");
+        print("  -no-dock-icon           Don't show icon in dock. This should only be used\n"
+            + "                          in combination with -no-gui."  );
+    }
+
     if (RS.getSystemId()==="linux") {
         print();
         print("Qt/X11 platform arguments:");
