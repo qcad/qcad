@@ -45,7 +45,7 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RFileExporterRegistry</name> <block>{<private type="default">
 </private><public>public:
-    <function_decl><type><name>static</name> <name>void</name></type> <name>registerFileExporter</name><parameter_list>(<param><decl><type><name>RFileExporterFactory</name>*</type> <name>factory</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>registerFileExporter</name><parameter_list>(<param><decl><type><name>RFileExporterFactory</name>*</type> <name>factory</name></decl></param>, <param><decl><type><name>bool</name></type> <name>prepend</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>unregisterFileExporter</name><parameter_list>(<param><decl><type><name>RFileExporterFactory</name>*</type> <name>factory</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>RFileExporter</name>*</type> <name>getFileExporter</name><parameter_list>(

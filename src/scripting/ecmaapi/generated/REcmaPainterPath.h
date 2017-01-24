@@ -258,6 +258,12 @@
         addShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addOriginalShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasOriginalShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         rotateList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

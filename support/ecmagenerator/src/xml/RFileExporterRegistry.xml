@@ -17,6 +17,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RFileExporterFactory *"
         typeName="RFileExporterFactory *" name="factory"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="prepend"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="unregisterFileExporter"

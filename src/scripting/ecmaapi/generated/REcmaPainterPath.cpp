@@ -212,6 +212,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, addShape, "addShape");
             
+            REcmaHelper::registerFunction(&engine, proto, addOriginalShape, "addOriginalShape");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasOriginalShapes, "hasOriginalShapes");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPainterPath*>(), *proto);
 
@@ -5031,6 +5035,141 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::addShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::addOriginalShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::addOriginalShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addOriginalShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("addOriginalShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RShape > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RShape > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RShape * o0 = 
+                    qscriptvalue_cast < RShape * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RShape >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RShape >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type  RShape .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type  RShape .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RShape > 
+                    //a0 =
+                    //QSharedPointer < RShape >(o0->clone());
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addOriginalShape(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addOriginalShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::addOriginalShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::hasOriginalShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::hasOriginalShapes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::hasOriginalShapes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("hasOriginalShapes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasOriginalShapes();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.hasOriginalShapes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::hasOriginalShapes", context, engine);
             return result;
         }
          QScriptValue
