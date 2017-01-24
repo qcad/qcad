@@ -1971,6 +1971,11 @@ function initFontComboBox(comboBox) {
     else {
         var fontList = RFontList.getNames();
         for (var i=fontList.length-1; i>=0; --i) {
+            // ignore shape definition files:
+            if (fontList[i]==="ltypeshp" || fontList[i]==="qcadshp") {
+                continue;
+            }
+
             comboBox.insertItem(0, new QIcon(), fontList[i]);
         }
     }
