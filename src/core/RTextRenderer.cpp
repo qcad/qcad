@@ -1438,7 +1438,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
             continue;
         }
 
-        QPainterPath glyph = font->getGlyph(ch, draft);
+        RPainterPath glyph = font->getGlyph(ch, draft);
         // glyph not available in font (show as question mark):
         if (glyph.elementCount()==0) {
             glyph = font->getGlyph('?', draft);
