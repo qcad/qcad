@@ -21,6 +21,7 @@ include("library.js");
 include("AddOn.js");
 include("scripts/File/OpenFile/OpenFile.js");
 include("scripts/File/AutoSave/AutoSave.js");
+include("scripts/Tools/arguments.js");
 
 /**
  * Prints version information.
@@ -77,12 +78,7 @@ function usage() {
           + "                                 given script(s).\n"
     );
 
-    // Mac OS X only:
-    if (RS.getSystemId()==="osx") {
-        print("\nMac OS X specific options:\n");
-        print("-no-dock-icon                    Don't show icon in dock. This should only be used\n"
-            + "                                 in combination with -no-gui."  );
-    }
+    printGenericUsage();
 
     print("\n");
 }
