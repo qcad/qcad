@@ -57,7 +57,8 @@ RPainterPath::RPainterPath(const RPainterPath& other) :
     modes(other.modes),
     points(other.points),
     featureSize(other.featureSize),
-    pixelSizeHint(other.pixelSizeHint) {
+    pixelSizeHint(other.pixelSizeHint),
+    originalShapes(other.originalShapes) {
 
     RDebug::incCounter("RPainterPath");
 }
@@ -172,6 +173,11 @@ void RPainterPath::addBox(const RBox& box) {
 }
 
 QList<QSharedPointer<RShape> > RPainterPath::getShapes() const {
+    // painter path stores original shapes (e.g. font glyph):
+    if (!originalShapes.isEmpty()) {
+        return originalShapes;
+    }
+
     QList<QSharedPointer<RShape> > ret;
     QPointF cursor;
 
@@ -516,11 +522,22 @@ void RPainterPath::transform(const QTransform& t) {
     for (int i=0; i<points.count(); i++) {
         points[i].transform2D(t);
     }
+
+    if (!originalShapes.isEmpty()) {
+        QList<QSharedPointer<RShape> > os;
+        for (int i=0; i<originalShapes.length(); i++) {
+            os.append(originalShapes[i]->getTransformed(t));
+        }
+        originalShapes = os;
+    }
 }
 
 void RPainterPath::move(const RVector& offset) {
     translate(offset.x, offset.y);
     RVector::moveList(points, offset);
+    for (int i=0; i<originalShapes.length(); i++) {
+        originalShapes[i]->move(offset);
+    }
 }
 
 void RPainterPath::rotate(double angle) {
@@ -667,4 +684,12 @@ void RPainterPath::addShape(QSharedPointer<RShape> shape) {
         addPath(pp);
         return;
     }
+}
+
+void RPainterPath::addOriginalShape(QSharedPointer<RShape> shape) {
+    originalShapes.append(shape);
+}
+
+bool RPainterPath::hasOriginalShapes() const {
+    return !originalShapes.isEmpty();
 }

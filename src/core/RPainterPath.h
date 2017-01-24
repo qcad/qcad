@@ -236,6 +236,9 @@ public:
 
     void addShape(QSharedPointer<RShape> shape);
 
+    void addOriginalShape(QSharedPointer<RShape> shape);
+    bool hasOriginalShapes() const;
+
     static void rotateList(QList<RPainterPath>& pps, double angle);
     static void translateList(QList<RPainterPath>& pps, const RVector& offset);
     static void scaleList(QList<RPainterPath>& pps, double fx, double fy);
@@ -251,6 +254,7 @@ private:
     // < 0 for secondary path (e.g. bounding box of text)
     double featureSize;
     double pixelSizeHint;
+    QList<QSharedPointer<RShape> > originalShapes;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RPainterPath& p);
