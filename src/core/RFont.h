@@ -29,6 +29,7 @@
 #include <QString>
 #include <QStringList>
 
+#include "RPainterPath.h"
 
 /**
  * Represents a CXF font.
@@ -93,14 +94,14 @@ public:
     /**
      * \nonscriptable
      */
-    QMap<QChar, QPainterPath> getGlyphMap() const {
+    QMap<QChar, RPainterPath> getGlyphMap() const {
         return glyphMap;
     }
 
     /**
      * \nonscriptable
      */
-    QPainterPath getGlyph(const QChar& ch, bool draft = false) const;
+    RPainterPath getGlyph(const QChar& ch, bool draft = false) const;
 
     /**
      * \nonscriptable
@@ -122,7 +123,8 @@ public:
 
 private:
     //! list of glyphs as painter paths (letters)
-    QMap<QChar, QPainterPath> glyphMap;
+    QMap<QChar, RPainterPath> glyphMap;
+    //! list of shapes (used for complex line types)
     QMap<QString, QPainterPath> shapeMap;
     QMap<QChar, QString> numNameMap;
     QMap<QChar, QPainterPath> glyphDraftMap;

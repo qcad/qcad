@@ -25,6 +25,7 @@
 #include "RLine.h"
 #include "RFont.h"
 #include "RS.h"
+#include "RSpline.h"
 
 
 /**
@@ -53,7 +54,7 @@ RFont::RFont(const QString& fileName) :
 RFont::~RFont() {
 }
 
-QPainterPath RFont::getGlyph(const QChar& ch, bool draft) const {
+RPainterPath RFont::getGlyph(const QChar& ch, bool draft) const {
     if (draft && glyphDraftMap.contains(ch)) {
         return glyphDraftMap.value(ch);
     }
@@ -62,7 +63,7 @@ QPainterPath RFont::getGlyph(const QChar& ch, bool draft) const {
         return glyphMap.value(ch);
     }
 
-    return QPainterPath();
+    return RPainterPath();
 }
 
 QPainterPath RFont::getShape(const QString& name) const {
@@ -207,8 +208,8 @@ bool RFont::load() {
             }
 
             // create new glyph:
-            QPainterPath glyph;
-            QPainterPath glyphDraft;
+            RPainterPath glyph;
+            RPainterPath glyphDraft;
             RVector pos = RVector::invalid;
 
             // read glyph definition:
@@ -239,6 +240,7 @@ bool RFont::load() {
                         }
                         glyph.lineTo(endPoint.x, endPoint.y);
                         glyphDraft.lineTo(endPoint.x, endPoint.y);
+                        glyph.addOriginalShape(QSharedPointer<RShape>(new RLine(startPoint, endPoint)));
                         pos = endPoint;
                     }
 
@@ -276,11 +278,20 @@ bool RFont::load() {
                             glyphDraft.moveTo(startPoint.x, startPoint.y);
                         }
 
-                        glyph.arcTo(cx-r, cy-r,
-                                    2*r, 2*r,
-                                    RMath::rad2deg(arc.getStartAngle()),
-                                    RMath::rad2deg(arc.getSweep())
-                        );
+                        RArc arc2 = arc;
+                        arc2.mirror(RLine(RVector(cx, cy), RVector(cx+1.0, cy)));
+                        QList<RSpline> splines = RSpline::createSplinesFromArc(arc2);
+                        for (int i=0; i<splines.length(); i++) {
+                            glyph.addSpline(splines[i]);
+                        }
+
+                        glyph.addOriginalShape(QSharedPointer<RShape>(new RArc(arc2)));
+
+//                        glyph.arcTo(cx-r, cy-r,
+//                                    2*r, 2*r,
+//                                    RMath::rad2deg(arc.getStartAngle()),
+//                                    RMath::rad2deg(arc.getSweep())
+//                        );
 
                         // draft version of glyph: interpolated arcs:
                         for (int li=0; li<midPoints.size(); li++) {
