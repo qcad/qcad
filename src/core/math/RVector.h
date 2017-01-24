@@ -46,7 +46,7 @@ class RPolyline;
 class QCADCORE_EXPORT RVector {
 public:
     /**
-     * Constructor for a valid vector (0/0/0).
+     * Constructor for a valid null vector (0/0/0).
      */
     inline RVector() :
         x(0.0), y(0.0), z(0.0), valid(true) {
