@@ -9,5 +9,25 @@
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Intersección manual</translation>
     </message>
+    <message>
+        <location filename="../SnapIntersectionManual.js" line="+47"/>
+        <source>Snap</source>
+        <translation>Forzar</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Intersection Manual</source>
+        <translation>Intersección manual</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>First entity</source>
+        <translation>Primera entidad</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Second entity</source>
+        <translation>Segunda entidad</translation>
+    </message>
 </context>
 </TS>

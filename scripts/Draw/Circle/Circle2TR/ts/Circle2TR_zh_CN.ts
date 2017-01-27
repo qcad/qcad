@@ -4,7 +4,7 @@
 <context>
     <name>Circle2TR</name>
     <message>
-        <location filename="../Circle2TR.js" line="+76"/>
+        <location filename="../Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
         <translation>第一条线、弧线或圆</translation>
     </message>
@@ -19,15 +19,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+97"/>
         <location line="+98"/>
         <source>No solution</source>
         <translation>无解决方案</translation>
     </message>
     <message>
-        <location line="-48"/>
         <source>Invalid radius</source>
-        <translation>无效的半径</translation>
+        <translation type="vanished">无效的半径</translation>
     </message>
     <message>
         <location filename="../Circle2TR.ui" line="+17"/>

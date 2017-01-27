@@ -8,5 +8,25 @@
         <source>&amp;Intersection Manual</source>
         <translation>&amp;Intersectie manueel</translation>
     </message>
+    <message>
+        <location filename="../SnapIntersectionManual.js" line="+47"/>
+        <source>Snap</source>
+        <translation>Snap</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Intersection Manual</source>
+        <translation>Intersectie manueel</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>First entity</source>
+        <translation>Eerste object</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Second entity</source>
+        <translation>Tweede object</translation>
+    </message>
 </context>
 </TS>

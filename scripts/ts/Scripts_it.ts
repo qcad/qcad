@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="it_IT">
 <context>
+    <name>Apollonius</name>
+    <message>
+        <location filename="../Apollonius.js" line="+1641"/>
+        <source>Invalid radius</source>
+        <translation>Raggio valido</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>No solution</source>
+        <translation>Nessuna soluzione</translation>
+    </message>
+</context>
+<context>
     <name>DefaultAction</name>
     <message>
         <location filename="../DefaultAction.js" line="+89"/>
@@ -409,7 +422,7 @@
         <translation type="obsolete">Post-inizializzazione...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+320"/>
+        <location filename="../autostart.js" line="+316"/>
         <source>Loading add-on translations...</source>
         <translation>Caricamento aggiuntivo traduzioni...</translation>
     </message>

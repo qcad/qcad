@@ -4,7 +4,7 @@
 <context>
     <name>Circle2TR</name>
     <message>
-        <location filename="../Circle2TR.js" line="+76"/>
+        <location filename="../Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
         <translation>Première ligne, arc ou cercle</translation>
     </message>
@@ -19,15 +19,13 @@
         <translation>Choisir solution</translation>
     </message>
     <message>
-        <location line="+97"/>
         <location line="+98"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
     <message>
-        <location line="-48"/>
         <source>Invalid radius</source>
-        <translation>Rayon invalide</translation>
+        <translation type="vanished">Rayon invalide</translation>
     </message>
     <message>
         <location filename="../Circle2TR.ui" line="+17"/>

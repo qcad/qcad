@@ -9,5 +9,25 @@
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Instrukcja Intersection</translation>
     </message>
+    <message>
+        <location filename="../SnapIntersectionManual.js" line="+47"/>
+        <source>Snap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Intersection Manual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>First entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Second entity</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
