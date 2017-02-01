@@ -11,7 +11,7 @@
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridajte vlastnú vlastnosť na vrstvu</translation>
     </message>
     <message>
         <source>Add custom property to a layer</source>

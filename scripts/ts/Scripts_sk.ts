@@ -4,14 +4,14 @@
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../Apollonius.js" line="+1641"/>
+        <location filename="../Apollonius.js" line="+1769"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Neplatný polomer</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne riašenie</translation>
     </message>
 </context>
 <context>

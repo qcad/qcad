@@ -4,7 +4,7 @@
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../Apollonius.js" line="+1641"/>
+        <location filename="../Apollonius.js" line="+1769"/>
         <source>Invalid radius</source>
         <translation>Raggio valido</translation>
     </message>

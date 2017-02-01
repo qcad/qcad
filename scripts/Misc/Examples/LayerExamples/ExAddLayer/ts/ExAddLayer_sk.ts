@@ -11,7 +11,7 @@
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Pridať vrstvu</translation>
     </message>
     <message>
         <source>Add layer</source>

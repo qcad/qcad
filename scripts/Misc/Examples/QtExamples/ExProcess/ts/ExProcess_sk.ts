@@ -10,7 +10,7 @@
     <message>
         <location filename="../ExProcess.js" line="+81"/>
         <source>&amp;Run Process</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Spustený proces</translation>
     </message>
 </context>
 </TS>

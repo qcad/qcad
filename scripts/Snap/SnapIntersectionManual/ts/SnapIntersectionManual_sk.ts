@@ -11,12 +11,12 @@
     <message>
         <location filename="../SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Prichytávanie</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Ručná Priesečnica</translation>
     </message>
     <message>
         <location line="+13"/>

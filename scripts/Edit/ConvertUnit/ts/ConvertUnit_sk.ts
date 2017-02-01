@@ -41,12 +41,12 @@
     <message>
         <location line="+30"/>
         <source>Convert:</source>
-        <translation type="unfinished"></translation>
+        <translation>Konvertovať:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
 </context>
 </TS>

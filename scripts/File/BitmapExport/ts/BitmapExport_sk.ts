@@ -52,7 +52,7 @@
         <location line="+104"/>
         <location line="+23"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Farba</translation>
     </message>
     <message>
         <location line="-17"/>
@@ -62,12 +62,12 @@
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation type="unfinished"></translation>
+        <translation>Odtiene šedej</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyhl&amp;adenie prvkov</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -77,7 +77,7 @@
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Okraj</translation>
     </message>
     <message>
         <location line="+8"/>
