@@ -160,6 +160,9 @@
         stretch
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        moveTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTransformed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

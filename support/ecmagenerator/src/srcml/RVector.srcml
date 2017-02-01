@@ -47,7 +47,7 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RVector</name> <block>{<private type="default">
 </private><public>public:
     <comment type="block">/**
-     * Constructor for a valid vector (0/0/0).
+     * Constructor for a valid null vector (0/0/0).
      */</comment>
     <constructor><specifier>inline</specifier> <name>RVector</name><parameter_list>()</parameter_list> <member_list>:
         <call><name>x</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call>, <call><name>y</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call>, <call><name>z</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call>, <call><name>valid</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call> </member_list><block>{

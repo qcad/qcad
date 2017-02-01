@@ -30,6 +30,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 
 <comment type="block">/**
  * Represents a CXF font.
@@ -94,14 +95,14 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>QPainterPath</name></argument>&gt;</argument_list></name></type> <name>getGlyphMap</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getGlyphMap</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>glyphMap</name></expr>;</return>
     }</block></function>
 
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function_decl><type><name>QPainterPath</name></type> <name>getGlyph</name><parameter_list>(<param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RPainterPath</name></type> <name>getGlyph</name><parameter_list>(<param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
@@ -123,7 +124,8 @@
 
 </public><private>private:
     <comment type="line">//! list of glyphs as painter paths (letters)</comment>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>QPainterPath</name></argument>&gt;</argument_list></name></type> <name>glyphMap</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>glyphMap</name></decl>;</decl_stmt>
+    <comment type="line">//! list of shapes (used for complex line types)</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QPainterPath</name></argument>&gt;</argument_list></name></type> <name>shapeMap</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>numNameMap</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>QPainterPath</name></argument>&gt;</argument_list></name></type> <name>glyphDraftMap</name></decl>;</decl_stmt>
