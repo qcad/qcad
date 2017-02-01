@@ -405,7 +405,7 @@ Apollonius.getSolutionsCCCAlt = function(c1, c2, c3) {
 
     var circle21 = circle2.clone();
     var circle22 = circle2.clone();
-    circle21.radius -= circle1.radius;
+    circle21.radius = Math.abs(circle21.radius - circle1.radius);
     circle22.radius += circle1.radius;
     //        Apollonius.constructionShapes.push(circle21);
     //        Apollonius.constructionShapes.push(circle22);
@@ -419,7 +419,7 @@ Apollonius.getSolutionsCCCAlt = function(c1, c2, c3) {
 
     var circle31 = circle3.clone();
     var circle32 = circle3.clone();
-    circle31.radius -= circle1.radius;
+    circle31.radius = Math.abs(circle31.radius - circle1.radius);
     circle32.radius += circle1.radius;
     //        Apollonius.constructionShapes.push(circle31);
     //        Apollonius.constructionShapes.push(circle32);
@@ -995,7 +995,7 @@ Apollonius.getSolutionsLLC = function(line1, line2, circle) {
             obj1 = obj.clone();
             obj2 = obj.clone();
             obj1.radius += circle.radius;
-            obj2.radius -= circle.radius;
+            obj2.radius = Math.abs(obj2.radius - circle.radius);
 
             var d1 = obj1.center.getDistanceTo(circle.center);
             if ((RMath.fuzzyCompare(d1, obj1.radius+circle.radius) ||
@@ -1063,7 +1063,7 @@ Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
     }
     else {
         var circle22 = circle2.clone();
-        circle22.radius -= circle1.radius;
+        circle22.radius = Math.abs(circle22.radius - circle1.radius);
         arr2.push(circle22);
         arr4.push(circle22);
     }
@@ -1078,6 +1078,11 @@ Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
     var cArr2 = Apollonius.getSolutions(arr2[0], arr2[1], arr2[2]);
     var cArr3 = Apollonius.getSolutions(arr3[0], arr3[1], arr3[2]);
     var cArr4 = Apollonius.getSolutions(arr4[0], arr4[1], arr4[2]);
+
+//    qDebug("cArr1:\n" + cArr1 + "\n\n");
+//    qDebug("cArr2:\n" + cArr2 + "\n\n");
+//    qDebug("cArr3:\n" + cArr3 + "\n\n");
+//    qDebug("cArr4:\n" + cArr4 + "\n\n");
 
     var cArrs = [ cArr1, cArr2, cArr3, cArr4 ];
     var ret = [];
@@ -1094,7 +1099,7 @@ Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
             obj1 = obj.clone();
             obj2 = obj.clone();
             obj1.radius += circle1.radius;
-            obj2.radius -= circle1.radius;
+            obj2.radius = Math.abs(obj2.radius - circle1.radius);
 
             var obj1c1 = obj1.center.getDistanceTo(circle1.center);
             var obj1c2 = obj1.center.getDistanceTo(circle2.center);
@@ -1135,21 +1140,146 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
         return [];
     }
 
-    var inversionCircle = new RCircle(point.position, 10);
-
-    if (line.isOnShape(point.position) || circle.isOnShape(point.position)) {
-        // TODO: there is still a colution here:
-        return [];
+    var lData = line;
+    if (isFunction(line.data)) {
+        lData = line.data();
     }
 
-    var shapes = [];
-    shapes.push(circle);
-    shapes.push(line);
+//    if (point.position.equalsFuzzy(new RVector(190,90))) {
+//        debugger;
+//    }
 
-    var shapesInverse = Apollonius.getInverseShapes(shapes, inversionCircle);
-    var tangents = Apollonius.getCommonTangents(shapesInverse[0], shapesInverse[1]);
+//    var inversionCircle = new RCircle(point.position, 10);
 
-    return Apollonius.getInverseShapes(tangents, inversionCircle);
+//    if (line.isOnShape(point.position) || circle.isOnShape(point.position)) {
+//        // TODO: there is still a solution here:
+//        return [];
+//    }
+
+//    var shapes = [];
+//    shapes.push(circle);
+//    shapes.push(line);
+
+//    var shapesInverse = Apollonius.getInverseShapes(shapes, inversionCircle);
+//    var tangents = Apollonius.getCommonTangents(shapesInverse[0], shapesInverse[1]);
+
+//    return Apollonius.getInverseShapes(tangents, inversionCircle);
+
+    var a = point.getPosition();
+    var c = circle.getCenter();
+    var f = line.getClosestPointOnShape(c, false);
+    var ortho = new RLine(c, f);
+
+    var cf = f.operator_subtract(c);
+    var ce = cf.copy();
+    ce.setMagnitude2D(circle.getRadius());
+    // intersections of orthogonal through c to line with circle:
+    var d1 = c.operator_add(ce);
+    var e1 = c.operator_subtract(ce);
+    var ds = [d1, e1];
+    var es = [e1, d1];
+
+    var centerCandidates = [];
+    var ips;
+    var p;
+
+    for (var i=0; i<2; i++) {
+        var d = ds[i];
+        var e = es[i];
+
+        // special case:
+        // a is on orthogonal cf:
+        if (ortho.getDistanceTo(a, false)<RS.PointTolerance) {
+            var da_ = new RLine(d, f);
+            da_.rotate(Math.PI/4, d);
+            var par = line.clone();
+            par.moveTo(a);
+
+            ips = da_.getIntersectionPoints(par, false);
+            if (ips.length!==1) {
+                continue;
+            }
+            var a_ = ips[0];
+
+            ips = da_.getIntersectionPoints(lData, false);
+            if (ips.length!==1) {
+                continue;
+            }
+
+            var f_ = ips[0];
+
+            var a_e = new RLine(a_, e);
+            var f_p = a_e.clone();
+            f_p.moveTo(f_);
+
+            ips = f_p.getIntersectionPoints(ortho, false);
+            if (ips.length!==1) {
+                continue;
+            }
+
+            p = ips[0];
+
+            var apm = RVector.getAverage(a, p);
+            var m = line.getDistanceTo(apm, false);
+            var circ = new RCircle(a, m);
+            var par2 = line.clone();
+            par2.moveTo(apm);
+
+            ips = par2.getIntersectionPoints(circ, false);
+            centerCandidates = centerCandidates.concat(ips);
+        }
+        else {
+            var da = new RLine(d, a);
+            ips = da.getIntersectionPoints(lData, false);
+            if (ips.length!==1) {
+                continue;
+            }
+            var m = ips[0];
+            var efa = RCircle.createFrom3Points(e, f, a);
+            var ps = da.getIntersectionPoints(efa, false);
+            if (ps.length<1) {
+                continue;
+            }
+            p = ps[0];
+            if (p.equalsFuzzy(a)) {
+                p = ps[1];
+            }
+
+            var ap = new RLine(a, p);
+            var apOrtho = ap.copy();
+            apOrtho.rotate(Math.PI/2, ap.getMiddlePoint());
+
+            var tangents = Apollonius.getTangentsThroughPoint(efa, m);
+            for (var k=0; k<tangents.length; k++) {
+                var tangent = tangents[k];
+                if (isNull(tangent)) {
+                    continue;
+                }
+
+                var mt = tangent.getLength();
+                var mu = line.endPoint.operator_subtract(line.startPoint);
+                mu.setMagnitude2D(mt);
+                var u = m.operator_add(mu);
+                var v = m.operator_subtract(mu);
+                var orthU = line.clone();
+                orthU.rotate(Math.PI/2, u);
+                var orthV = line.clone();
+                orthV.rotate(Math.PI/2, v);
+
+                var pps = apOrtho.getIntersectionPoints(orthU, false);
+                centerCandidates = centerCandidates.concat(pps);
+                pps = apOrtho.getIntersectionPoints(orthV, false);
+                centerCandidates = centerCandidates.concat(pps);
+            }
+        }
+    }
+
+    var res = [];
+    for (var n=0; n<centerCandidates.length; n++) {
+        var centerCandidate = centerCandidates[n];
+        res.push(new RCircle(centerCandidate, centerCandidate.getDistanceTo(a)));
+    }
+    return res;
 };
 
 /**
@@ -1162,8 +1292,6 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
         !isLineBasedShape(line2)) {
         return [];
     }
-
-    //debugger;
 
     var line2Data;
     if (isFunction(line2.data)) {
@@ -1445,7 +1573,7 @@ Apollonius.getCommonTangents = function(circle1, circle2) {
     }
 
     var c21 = c2.clone();
-    c21.radius -= c1.radius;
+    c21.radius = Math.abs(c21.radius - c1.radius);
 
     var c22 = c2.clone();
     c22.radius += c1.radius;
