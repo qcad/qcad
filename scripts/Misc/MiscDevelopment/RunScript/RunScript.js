@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2017 by Andrew Mustun. All rights reserved.
  *
  * Copyright (c) 2014 by Robert S. All rights reserved.
  * 

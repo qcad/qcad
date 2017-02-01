@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2017 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -154,6 +154,27 @@ public:
     }
     static int getPreviousVersion() {
         return previousVersion;
+    }
+    /**
+     * \return True if this is the first start of the software or
+     * the current version is a newer version than the one previously installed
+     * while the current version is the same or newer than versionCheck.
+     * This can be used to check for an update from a version older than the given
+     * version to a version newer or equal to the given version.
+     */
+    static int isUpdated(int versionCheck=-1) {
+        if (isNewVersion()) {
+            return true;
+        }
+        if (versionCheck==-1) {
+            if (getCurrentVersion()>getPreviousVersion()) {
+                return true;
+            }
+        }
+        if (getCurrentVersion()>=versionCheck && getPreviousVersion()<versionCheck) {
+            return true;
+        }
+        return false;
     }
 
     static int getSnapRange();
