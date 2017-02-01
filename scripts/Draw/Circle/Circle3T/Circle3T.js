@@ -216,7 +216,7 @@ Circle3T.prototype.pickEntity = function(event, preview) {
         }
         else {
             var op = this.getOperation(false);
-            if (!isNull(op)) {
+            if (!isNull(op) && !isNull(this.candidates)) {
                 // only one solution:
                 if (this.candidates.length===1) {
                     di.applyOperation(op);
@@ -283,6 +283,7 @@ Circle3T.prototype.getShapes = function(preview) {
 
     if (isNull(this.candidates)) {
         Apollonius.constructionShapes = [];
+
         this.candidates = Apollonius.getSolutions(this.shape1.data(), this.shape2.data(), this.shape3.data());
         // filter out lines:
         this.candidates = ShapeAlgorithms.getCircleShapes(this.candidates);
