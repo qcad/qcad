@@ -347,6 +347,11 @@ bool RLine::stretch(const RPolyline& area, const RVector& offset) {
     return ret;
 }
 
+bool RLine::moveTo(const RVector& dest) {
+    RVector offset = dest - startPoint;
+    return move(offset);
+}
+
 QSharedPointer<RShape> RLine::getTransformed(const QTransform& transform) const {
     return QSharedPointer<RShape>(new RLine(startPoint.getTransformed2D(transform), endPoint.getTransformed2D(transform)));
 }
