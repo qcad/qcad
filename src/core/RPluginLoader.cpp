@@ -87,27 +87,27 @@ void RPluginLoader::loadPlugins(bool init) {
 
     // plugin settings are always stored in a file with base name "QCAD3":
     // this happens before RSettings is initialized:
-    QSettings settings(
-#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
-        QSettings::IniFormat,
-#else
-        QSettings::NativeFormat,
-#endif
-        QSettings::UserScope,
-        QCoreApplication::organizationName(),
-        "QCAD3"
-    );
-    settings.beginGroup("Plugins");
-    QString disabledPlugins = settings.value("DisabledPlugins", "").toString();
-    settings.endGroup();
+//    QSettings settings(
+//#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
+//        QSettings::IniFormat,
+//#else
+//        QSettings::NativeFormat,
+//#endif
+//        QSettings::UserScope,
+//        QCoreApplication::organizationName(),
+//        "QCAD3"
+//    );
+//    settings.beginGroup("Plugins");
+//    QString disabledPlugins = settings.value("DisabledPlugins", "").toString();
+//    settings.endGroup();
 
-    QStringList disabledPluginsList = disabledPlugins.split(',');
+//    QStringList disabledPluginsList = disabledPlugins.split(',');
 
     foreach (QString fileName, getPluginFiles()) {
-        QString fn = QFileInfo(fileName).fileName();
-        if (disabledPluginsList.contains(fn, Qt::CaseInsensitive)) {
-            continue;
-        }
+//        QString fn = QFileInfo(fileName).fileName();
+//        if (disabledPluginsList.contains(fn, Qt::CaseInsensitive)) {
+//            continue;
+//        }
         QPluginLoader loader(fileName);
         QObject* plugin = loader.instance();
         loadPlugin(plugin, init, fileName, loader.errorString());
