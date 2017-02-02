@@ -978,6 +978,10 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
             return;
         }
 
+        // make sure entities / block references on locked layers are deleted:
+        bool allowAllOri = allowAll;
+        allowAll = true;
+
         // delete all block references to this block:
         QSet<REntity::Id> ids = storage->queryBlockReferences(objectId);
         QSetIterator<REntity::Id> it(ids);
@@ -996,6 +1000,8 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
         if (objectId == storage->getCurrentBlockId()) {
             storage->setCurrentBlock(RBlock::modelSpaceName);
         }
+
+        allowAll = allowAllOri;
     }
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
@@ -1010,11 +1016,17 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
 
     // if the entity has child entities, delete all child entities (e.g. attributes):
     if (!entity.isNull() && storage->hasChildEntities(entity->getId())) {
+        // make sure child entities on locked layers are deleted:
+        bool allowAllOri = allowAll;
+        allowAll = true;
+
         QSet<REntity::Id> ids = storage->queryChildEntities(entity->getId());
         QSetIterator<REntity::Id> it(ids);
         while (it.hasNext()) {
             deleteObject(it.next());
         }
+
+        allowAll = allowAllOri;
     }
 
     // if the current view is deleted, reset current view:
