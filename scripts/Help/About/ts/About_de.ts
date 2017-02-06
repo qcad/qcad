@@ -28,12 +28,11 @@
         <translation>Das bedeutet, dass jeder &lt;a href=&apos;%1&apos;&gt;mithelfen&lt;/a&gt; kann!</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation>Teile dieser Software sind © 2008-2016 The Qt Company Ltd.</translation>
+        <translation type="vanished">Teile dieser Software sind © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+9"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE JEDE GEWÄHRLEISTUNG - sogar ohne die implizite Gewährleistung der MARKTREIFE oder der EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.</translation>
     </message>
@@ -82,7 +81,12 @@
         <translation>Qt Version:</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-74"/>
+        <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
+        <translation type="unfinished">Teile dieser Software sind © 2008-2016 The Qt Company Ltd. {2008-2017 ?}</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>License:</source>
         <translation>Lizenz:</translation>
     </message>

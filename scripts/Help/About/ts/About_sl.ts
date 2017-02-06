@@ -24,12 +24,11 @@
         <translation>To pomeni, da lahko sodeluje pri razvoju &lt;a href=&apos;%1&apos;&gt;čisto vsak&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation>Del tega programa © 2008-2016 The Qt Company Ltd.</translation>
+        <translation type="vanished">Del tega programa © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+9"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Program je nuden KOT JE to je BREZ KAKRŠNE KOLI GARANCIJE, KAR VKLUČUJE GARANCIJO OBLIKE, STROJNO OBDELOVALNOST TER USKLAJENOST ZA DOLOČENI NAMEN.</translation>
     </message>
@@ -78,7 +77,12 @@
         <translation>Qt verzija:</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-74"/>
+        <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
+        <translation type="unfinished">Del tega programa © 2008-2016 The Qt Company Ltd. {2008-2017 ?}</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>License:</source>
         <translation>Licenca:</translation>
     </message>

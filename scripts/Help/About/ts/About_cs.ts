@@ -79,7 +79,7 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
+        <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -19,12 +19,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+9"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -125,7 +120,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+3"/>
+        <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>No plugins found.</source>
         <translation type="unfinished"></translation>
     </message>

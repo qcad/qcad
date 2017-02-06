@@ -24,12 +24,11 @@
         <translation>Dit betekent dat iedereen kan &lt;a href=&apos;%1&apos;&gt;meedoen&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation>Delen van deze software © 2008-2016 The Qt Company Ltd.</translation>
+        <translation type="vanished">Delen van deze software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+9"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>De software wordt verspreid in de hoop dat deze nuttig is maar ZONDER ENIGE GARANTIE, zelfs zonder impliciete garantie van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.</translation>
     </message>
@@ -78,7 +77,12 @@
         <translation>Qt Versie:</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-74"/>
+        <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
+        <translation type="unfinished">Delen van deze software © 2008-2016 The Qt Company Ltd. {2008-2017 ?}</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>License:</source>
         <translation>Licentie:</translation>
     </message>
