@@ -57,7 +57,7 @@
     <message>
         <location line="-17"/>
         <source>Monochrome</source>
-        <translation type="unfinished"></translation>
+        <translation>Čiernobiele</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -72,7 +72,7 @@
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť vyhladzovanie hrán</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -92,7 +92,7 @@
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>V prípade hrubej čiary rozšíriť okraj</translation>
     </message>
     <message>
         <location line="-163"/>

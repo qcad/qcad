@@ -21,12 +21,12 @@
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvý prvok</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhý prvok</translation>
     </message>
 </context>
 </TS>

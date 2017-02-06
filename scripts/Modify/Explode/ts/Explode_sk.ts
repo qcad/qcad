@@ -95,7 +95,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+183"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozložiť text na krivky</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -110,7 +110,7 @@
     <message>
         <location line="+7"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozložiť spline-u na krivky s čiarových úsekov</translation>
     </message>
     <message>
         <location line="-31"/>

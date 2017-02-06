@@ -86,7 +86,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="unfinished"></translation>
+        <translation>Obnoviť pôvodné nastavenia pri každom použití nástroja</translation>
     </message>
 </context>
 </TS>
