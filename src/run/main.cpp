@@ -78,6 +78,10 @@
 #include "RVersion.h"
 #include "RXLineEntity.h"
 
+#ifdef Q_OS_MAC
+#include "removemacmenus.h"
+#endif
+
 
 #if defined(Q_OS_MAC) || defined(Q_OS_LINUX)
 void catchSigPipe(int /*s*/){
@@ -116,6 +120,11 @@ int main(int argc, char *argv[]) {
 #else
     _putenv_s("QT_DEVICE_PIXEL_RATIO", "auto");
 #endif
+#endif
+
+#ifdef Q_OS_MAC
+    // TODO: fix linking with objective c
+    removeMacMenus();
 #endif
 
     // these are defaults:

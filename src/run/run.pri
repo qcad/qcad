@@ -24,6 +24,12 @@ win32 {
 #}
 
 SOURCES += $$PWD/main.cpp
+
+macx {
+    OBJECTIVE_SOURCES += $$PWD/removemacmenus.mm
+    OBJECTIVE_HEADERS += $$PWD/removemacmenus.h
+}
+
 TEMPLATE = app
 OTHER_FILES += $$PWD/run.dox
 

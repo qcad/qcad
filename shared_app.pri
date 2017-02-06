@@ -50,6 +50,7 @@ macx {
     QMAKE_LFLAGS += -framework ApplicationServices
     LIBS += \
         -framework CoreServices \
+        -framework AppKit \
         -liconv \
         -lz
 }
