@@ -40,31 +40,20 @@ function getArgument(args, shortFlag, longFlag, def) {
  * \param longFlag E.g. "-output"
  */
 function getArguments(args, shortFlag, longFlag) {
-    var start = 0;
-    var done = false;
     var ret = [];
-    var i;
 
-    do {
-        done = true;
-        i = args.indexOf(shortFlag, start);
-        if (i!==-1) {
-            if (i+1 < args.length) {
-                ret.push(args[i+1]);
-                start=i+2;
-                done = false;
+    for (var k=0; k<args.length; k++) {
+        if (args[k]===shortFlag) {
+            if (k+1 < args.length) {
+                ret.push(args[k+1]);
             }
         }
 
-        for (var k=start; k<args.length; k++) {
-            if (args[k].indexOf(longFlag+"=")===0) {
-                var j=args[k].indexOf("=");
-                ret.push(args[k].substr(j+1));
-                start=k+1;
-                done = false;
-            }
+        if (args[k].indexOf(longFlag+"=")===0) {
+            var j=args[k].indexOf("=");
+            ret.push(args[k].substr(j+1));
         }
-    } while (!done);
+    }
 
     return ret;
 }
