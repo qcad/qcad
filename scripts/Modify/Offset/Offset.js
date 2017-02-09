@@ -184,7 +184,16 @@ Offset.prototype.getOperation = function(preview) {
         }
 
         if (isLineBasedShape(offsetShape) && !isNull(this.lineType)) {
-            e = Line.createLineEntity(doc, offsetShape.getStartPoint(), offsetShape.getEndPoint(), this.lineType);
+            var lt = this.lineType;
+            if (lt===Line.LineType.Auto) {
+                lt = Line.getLineType(offsetShape);
+            }
+
+            e = Line.createLineEntity(
+                        doc,
+                        offsetShape.getStartPoint(),
+                        offsetShape.getEndPoint(),
+                        lt);
         }
         else {
             if (isFunction(offsetShape.data)) {

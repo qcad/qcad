@@ -108,6 +108,19 @@ Line.prototype.getTitle = function() {
     return Line.getTitle();
 };
 
+Line.getLineType = function(shape) {
+    if (isLineShape(shape)) {
+        return Line.LineType.Line;
+    }
+    if (isRayShape(shape)) {
+        return Line.LineType.Ray;
+    }
+    if (isXLineShape(shape)) {
+        return Line.LineType.XLine;
+    }
+    return undefined;
+};
+
 Line.createLineEntity = function(doc, p1, p2, lineType) {
     switch (lineType) {
     default:
