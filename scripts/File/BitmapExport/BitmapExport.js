@@ -19,6 +19,7 @@
 
 include("../File.js");
 include("BitmapExportWorker.js");
+include("scripts/Tools/arguments.js");
 
 function BitmapExport(guiAction) {
     File.call(this, guiAction);
@@ -31,15 +32,38 @@ BitmapExport.includeBasePath = includeBasePath;
 BitmapExport.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
-    var bmpFileName = this.getFilename();
+    var bmpFileName = undefined;
+    var properties = [];
 
-    if (isNull(bmpFileName)) {
-        this.terminate();
-        return;
+    if (!isNull(this.guiAction)) {
+        // get output name from command line:
+        bmpFileName = getArgument(this.guiAction.getArguments(), "-o", "", undefined);
+        properties = [];
+        properties["width"] = getIntArgument(this.guiAction.getArguments(), "-x", "", 640);
+        properties["height"] = getIntArgument(this.guiAction.getArguments(), "-y", "", 480);
+        properties["margin"] = 10;
+        properties["antialiasing"] = false;
     }
 
-    var properties = this.getProperties();
-    if (isNull(properties)) {
+    if (isNull(bmpFileName)) {
+        // get file name / properties from dialogs:
+        bmpFileName = this.getFilename();
+
+        if (isNull(bmpFileName)) {
+            // file dialog cancelled:
+            this.terminate();
+            return;
+        }
+
+        properties = this.getProperties();
+        if (isNull(properties)) {
+            // properties dialog cancelled:
+            this.terminate();
+            return;
+        }
+    }
+
+    if (isNull(bmpFileName)) {
         this.terminate();
         return;
     }
