@@ -304,6 +304,10 @@ function loadTranslations(addOns, splash) {
 
     // load C++ translations:
     var modules = ["qt", "assistant", "qt_help", "qcadcore", "qcadentity", "qcadgui"];
+    if (RSettings.isQt(5)) {
+        modules.unshift("qtbase");
+    }
+
     for (var mi=0; mi<modules.length; ++mi) {
         var module = modules[mi];
 
