@@ -281,7 +281,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation>Prompt</translation>
+        <translation>Názov výzvy</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>

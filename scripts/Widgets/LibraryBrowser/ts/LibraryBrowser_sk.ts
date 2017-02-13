@@ -124,7 +124,7 @@
     <message>
         <location line="+16"/>
         <source>Updating library index:</source>
-        <translation>Aktualizovať Index:</translation>
+        <translation>Aktualizuje sa zoznam:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -222,7 +222,7 @@ Prehliadač Knižnica nebude k dispozícii.</translation>
     <message>
         <location line="+6"/>
         <source>Update search index on startup</source>
-        <translation>Aktualizovať hľadanie indexu pri štarte</translation>
+        <translation>Pri štarte aktualizovať zoznam knižnice</translation>
     </message>
     <message>
         <location line="+13"/>

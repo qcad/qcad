@@ -83,7 +83,7 @@
     <message>
         <location line="-74"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation type="unfinished">Teile dieser Software sind © 2008-2016 The Qt Company Ltd. {2008-2017 ?}</translation>
+        <translation>Teile dieser Software sind © 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+78"/>

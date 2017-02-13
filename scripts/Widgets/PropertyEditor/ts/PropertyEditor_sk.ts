@@ -68,7 +68,7 @@
     <message>
         <location line="+166"/>
         <source>Index</source>
-        <translation>Index</translation>
+        <translation>Zoznam</translation>
     </message>
     <message>
         <location line="+60"/>

@@ -281,7 +281,7 @@
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation>Poznámka:</translation>
+        <translation>Názov výzvy:</translation>
     </message>
     <message>
         <location line="+17"/>

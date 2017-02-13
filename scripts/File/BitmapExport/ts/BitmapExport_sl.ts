@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+105"/>
+        <location filename="../BitmapExport.js" line="+129"/>
         <source>Files</source>
         <translation>Datoteke</translation>
     </message>
