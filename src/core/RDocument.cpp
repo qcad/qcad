@@ -224,6 +224,7 @@ void RDocument::init() {
 
         docVars->setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
         docVars->setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4));
+        docVars->setKnownVariable(RS::DIMDSEP, RSettings::getIntValue("DimensionSettings/DecimalPoint", '.'));
 
         // show trailing zeroes:
         if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
@@ -585,8 +586,12 @@ int RDocument::getAnglePrecision() {
     return getKnownVariable(RS::DIMADEC, 2).toInt();
 }
 
+/**
+ * \return The decimal separator for this document.
+ * This is determined by the variable "$DIMDSEP".
+ */
 QChar RDocument::getDecimalSeparator() {
-    return getKnownVariable(RS::DIMDSEP, 2).toInt();
+    return getKnownVariable(RS::DIMDSEP, (int)'.').toInt();
 }
 
 /**

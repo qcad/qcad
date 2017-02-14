@@ -45,7 +45,8 @@ public:
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
                                   bool showTrailingZeroes=false,
-                                  bool onlyPreciseResult=false);
+                                  bool onlyPreciseResult=false,
+                                  QChar decimalSeparator='.');
     static QString formatScientific(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
@@ -55,12 +56,14 @@ public:
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
                                   bool showTrailingZeroes=false,
-                                  bool onlyPreciseResult=false);
+                                  bool onlyPreciseResult=false,
+                                  QChar decimalSeparator='.');
     static QString formatEngineering(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
                                   bool showTrailingZeroes=false,
-                                  bool onlyPreciseResult=false);
+                                  bool onlyPreciseResult=false,
+                                  QChar decimalSeparator='.');
     static QString formatArchitectural(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
@@ -100,7 +103,8 @@ public:
     static QString doubleToString(double value, double prec,
         bool showLeadingZeroes=true, bool showTrailingZeroes=false);
     static QString doubleToString(double value, int prec,
-        bool showLeadingZeroes=true, bool showTrailingZeroes=false);
+        bool showLeadingZeroes=true, bool showTrailingZeroes=false,
+        QChar decimalSeparator='.');
 
     // workaround: make the second version also accessible by scripts:
     static QString doubleToStringDec(double value, int prec,

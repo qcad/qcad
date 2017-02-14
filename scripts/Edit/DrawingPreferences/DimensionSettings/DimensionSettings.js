@@ -91,6 +91,7 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     var wastz = widgets["AngularShowTrailingZeros"];
     var wap = widgets["AngularPrecision"];
     var wdf = widgets["DimensionFont"];
+    var wdp = widgets["DecimalPoint"];
     var wfg = widgets["FontGroup"];
     var wkp = widgets["KeepProportions"];
 
@@ -129,6 +130,13 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
         widgets["DIMTXT"].valueChanged.connect(function(value) {
             DimensionSettings.keepProportions(value, widgets);
         });
+    }
+
+    // decimal point:
+    if (!isNull(wdp)) {
+        wdp.addItem(". (" + qsTr("point") + ")", '.'.charCodeAt(0));
+        wdp.addItem(", (" + qsTr("comma") + ")", ','.charCodeAt(0));
+        wdp.currentIndex = wdp.findData(RSettings.getIntValue(settingsName + "/DecimalPoint", '.'.charCodeAt(0)));
     }
 
     // init linear dimension format combo boxes:
@@ -617,6 +625,9 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     }
     widgets["ArchitecturalTick"].setProperty("Saved", true);
     widgets["Arrow"].setProperty("Saved", true);
+
+    // decimal point:
+    document.setKnownVariable(RS.DIMDSEP, widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex), transaction);
 
     // dimension format / precision:
     document.setKnownVariable(RS.DIMLUNIT, widgets["LinearFormat"].currentIndex+1, transaction);

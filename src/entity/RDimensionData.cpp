@@ -531,9 +531,9 @@ QString RDimensionData::formatLabel(double distance) const {
         ret = RUnit::formatLinear(distance, document->getUnit(),
             document->getLinearFormat(), document->getLinearPrecision(),
             false,
-            document->showLeadingZeroes(), document->showTrailingZeroes()
-                                  // TODO: , document->getDecimalSeparator()
-                                  );
+            document->showLeadingZeroes(), document->showTrailingZeroes(),
+            false,
+            document->getDecimalSeparator());
     }
     else {
         ret = QString("%1").arg(distance);

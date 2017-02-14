@@ -357,7 +357,8 @@ QString RUnit::formatLinear(double length, RS::Unit unit,
                             int prec, bool showUnit,
                             bool showLeadingZeroes, 
                             bool showTrailingZeroes,
-                            bool onlyPreciseResult) {
+                            bool onlyPreciseResult,
+                            QChar decimalSeparator) {
     QString ret;
 
     // imperial display: show as fraction:
@@ -369,12 +370,14 @@ QString RUnit::formatLinear(double length, RS::Unit unit,
 
     case RS::Decimal:
         ret = formatDecimal(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
+              showLeadingZeroes, showTrailingZeroes, onlyPreciseResult,
+              decimalSeparator);
         break;
 
     case RS::Engineering:
         ret = formatEngineering(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
+            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult,
+            decimalSeparator);
         break;
 
     case RS::Architectural:
@@ -443,14 +446,14 @@ QString RUnit::formatScientific(double length, RS::Unit unit,
 QString RUnit::formatDecimal(double length, RS::Unit unit,
                              int prec, bool showUnit,
                              bool showLeadingZeroes, bool showTrailingZeroes,
-                             bool /*onlyPreciseResult*/) {
+                             bool /*onlyPreciseResult*/, QChar decimalSeparator) {
 
     QString ret;
     
     // unit appended to value (e.g. 'mm'):
 
     ret = doubleToString(length, prec,
-            showLeadingZeroes, showTrailingZeroes);
+            showLeadingZeroes, showTrailingZeroes, decimalSeparator);
 
     if(showUnit) {
         ret+=unitToSymbol(unit);
@@ -471,12 +474,13 @@ QString RUnit::formatDecimal(double length, RS::Unit unit,
 QString RUnit::formatEngineering(double length, RS::Unit unit,
                                  int prec, bool showUnit,
                                  bool showLeadingZeroes, bool showTrailingZeroes,
-                                 bool onlyPreciseResult) {
+                                 bool onlyPreciseResult, QChar decimalSeparator) {
 
     Q_UNUSED(showUnit)
     Q_UNUSED(showLeadingZeroes)
     Q_UNUSED(showTrailingZeroes)
     Q_UNUSED(onlyPreciseResult)
+    Q_UNUSED(decimalSeparator)
 
 //    if (unit!=RS::Inch && unit!=RS::Foot) {
 //        qWarning() << "RUnit::formatEngineering:"
@@ -806,7 +810,8 @@ QString RUnit::doubleToString(double value, double prec,
  * @param prec Precision
  */
 QString RUnit::doubleToString(double value, int prec,
-        bool /*showLeadingZeroes*/, bool showTrailingZeroes) {
+        bool /*showLeadingZeroes*/, bool showTrailingZeroes,
+        QChar decimalSeparator) {
 
     QString ret;
 
@@ -841,6 +846,10 @@ QString RUnit::doubleToString(double value, int prec,
 
     if (ret=="-0") {
         ret = "0";
+    }
+
+    if (decimalSeparator!='.') {
+        ret.replace ('.', decimalSeparator);
     }
 
     return ret;
