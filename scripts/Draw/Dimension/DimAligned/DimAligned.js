@@ -122,8 +122,9 @@ DimAligned.prototype.pickCoordinate = function(event, preview) {
                 Math.PI/2.0;
         var doc = di.getDocument();
         var dimtxt = doc.getKnownVariable(RS.DIMTXT, 2.5);
+        var dimscale = doc.getKnownVariable(RS.DIMSCALE, 1.0);
         var dp = this.data.getExtensionPoint2();
-        dp = dp.operator_add(RVector.createPolar(dimtxt*2, angle));
+        dp = dp.operator_add(RVector.createPolar(dimtxt*2*dimscale, angle));
         this.data.setDefinitionPoint(dp);
 
         if (preview) {
