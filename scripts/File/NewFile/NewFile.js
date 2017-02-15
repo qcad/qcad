@@ -358,6 +358,11 @@ NewFile.closeRequested = function(mdiChild) {
         return;
     }
 
+    if (!isNull(appWin) && appWin.property("NewFile/DiscardChanges")===true) {
+        mdiChild.setCloseEventAccepted();
+        return;
+    }
+
     var dialog = WidgetFactory.createDialog(NewFile.includeBasePath, "CloseDialog.ui", mdiChild);
 
     var fileName = new QFileInfo(document.getFileName()).fileName();
