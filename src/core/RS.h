@@ -208,12 +208,25 @@ public:
      * Projection type for isometric projections.
      */
     enum IsoProjectionType {
-        IsoTop,        //!< Top projection (x/y)
-        IsoBottom,     //!< Bottom projection (x/y)
-        IsoLeft,       //!< Front left projection (x/z)
-        IsoLeftBack,   //!< Back left projection (x/z)
-        IsoRight,      //!< Front right projection (y/z)
-        IsoRightBack   //!< Back right projection (y/z)
+        Top = 0x1,          //!< Top projection (x/y)
+        Bottom = 0x2,       //!< Bottom projection (x/y)
+        Left = 0x4,         //!< Front left projection (x/z)
+        LeftBack = 0x8,     //!< Back left projection (x/z)
+        Right = 0x10,       //!< Front right projection (y/z)
+        RightBack = 0x20,   //!< Back right projection (y/z)
+
+        Isometric = 0x1000,   //!< Isometric
+        Cabinet = 0x2000,     //!< Cabinet
+        Cavalier = 0x4000,    //!< Cavalier
+        Planometric = 0x8000, //!< Cavalier
+
+        // backwards compatibility:
+        IsoTop = Top | Isometric,
+        IsoBottom = Bottom | Isometric,
+        IsoLeft = Left | Isometric,
+        IsoLeftBack = LeftBack | Isometric,
+        IsoRight = Right | Isometric,
+        IsoRightBack = RightBack | Isometric
     };
 
     /**

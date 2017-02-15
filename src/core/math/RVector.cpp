@@ -447,32 +447,80 @@ RVector RVector::stretch(const RPolyline& area, const RVector& offset) {
  * \todo refactor
  */
 RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
-    static RMatrix iso =
-            RMatrix::create3x3(
-                sqrt(3.0), 0.0,        -sqrt(3.0),
-                1.0,       2.0,        1.0,
-                sqrt(2.0), -sqrt(2.0), sqrt(2.0)
-            ) * (1.0 / sqrt(6.0));
+//    static RMatrix iso =
+//            RMatrix::create3x3(
+//                sqrt(3.0), 0.0,        -sqrt(3.0),
+//                1.0,       2.0,        1.0,
+//                sqrt(2.0), -sqrt(2.0), sqrt(2.0)
+//            ) * (1.0 / sqrt(6.0));
+
+    double a, b, sx, sy, sz;
+
+    switch (type&0xf000) {
+    default:
+    case RS::Isometric:
+        a = RMath::deg2rad(30.0);
+        b = RMath::deg2rad(30.0);
+        sx = 1.0;
+        sy = 1.0;
+        sz = 1.0;
+        break;
+    case RS::Cabinet:
+        a = RMath::deg2rad(45.0);
+        b = RMath::deg2rad(0.0);
+        sx = 0.5;
+        sy = 1.0;
+        sz = 1.0;
+        break;
+    case RS::Cavalier:
+        a = RMath::deg2rad(45.0);
+        b = RMath::deg2rad(0.0);
+        sx = 1.0;
+        sy = 1.0;
+        sz = 1.0;
+        break;
+    case RS::Planometric:
+        a = RMath::deg2rad(45.0);
+        b = RMath::deg2rad(45.0);
+        sx = 1.0;
+        sy = 1.0;
+        sz = 1.0;
+        break;
+    }
+
+
+    RMatrix iso =
+        RMatrix::create3x3(
+            sx*cos(a), -sy*cos(b), 0,
+            sx*sin(a),  sy*sin(b), sz,
+                    0,          0, 0
+        );
 
     RMatrix input;
     switch (type) {
     case RS::IsoRight:
-        input = RMatrix::create3x1(x, y, -z);
+        //input = RMatrix::create3x1(x, y, -z);
+        input = RMatrix::create3x1(x, -z, y);
         break;
     case RS::IsoRightBack:
-        input = RMatrix::create3x1(-x, y, z);
+        //input = RMatrix::create3x1(-x, y, z);
+        input = RMatrix::create3x1(-x, -z, y);
         break;
     case RS::IsoTop:
-        input = RMatrix::create3x1(y, z, -x);
+        //input = RMatrix::create3x1(y, z, -x);
+        input = RMatrix::create3x1(y, -x, z);
         break;
     case RS::IsoBottom:
-        input = RMatrix::create3x1(y, z, x);
+        //input = RMatrix::create3x1(y, z, x);
+        input = RMatrix::create3x1(y, x, z);
         break;
     case RS::IsoLeft:
-        input = RMatrix::create3x1(z, y, -x);
+        //input = RMatrix::create3x1(z, y, -x);
+        input = RMatrix::create3x1(z, -x, y);
         break;
     case RS::IsoLeftBack:
-        input = RMatrix::create3x1(z, y, x);
+        //input = RMatrix::create3x1(z, y, x);
+        input = RMatrix::create3x1(z, x, y);
         break;
     }
 
@@ -482,8 +530,8 @@ RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
     y = res.get(1, 0);
     z = 0.0;
 
-    if (trueScale) {
-        double f = 1.0 / cos(RMath::deg2rad(35.0 + 16.0/60.0));
+    if (!trueScale) {
+        double f = cos(RMath::deg2rad(35.0 + 16.0/60.0));
         x *= f;
         y *= f;
     }
