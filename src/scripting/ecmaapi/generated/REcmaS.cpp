@@ -498,8 +498,68 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Top",
+    QScriptValue(RS::Top),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Bottom",
+    QScriptValue(RS::Bottom),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Left",
+    QScriptValue(RS::Left),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("LeftBack",
+    QScriptValue(RS::LeftBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Right",
+    QScriptValue(RS::Right),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("RightBack",
+    QScriptValue(RS::RightBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Isometric",
+    QScriptValue(RS::Isometric),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Cabinet",
+    QScriptValue(RS::Cabinet),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Cavalier",
+    QScriptValue(RS::Cavalier),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Planometric",
+    QScriptValue(RS::Planometric),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("IsoTop",
     QScriptValue(RS::IsoTop),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Top",
+    QScriptValue(RS::Top),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Isometric",
+    QScriptValue(RS::Isometric),
     QScriptValue::ReadOnly);
 
 
@@ -508,8 +568,28 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Bottom",
+    QScriptValue(RS::Bottom),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Isometric",
+    QScriptValue(RS::Isometric),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("IsoLeft",
     QScriptValue(RS::IsoLeft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Left",
+    QScriptValue(RS::Left),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Isometric",
+    QScriptValue(RS::Isometric),
     QScriptValue::ReadOnly);
 
 
@@ -518,13 +598,43 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("LeftBack",
+    QScriptValue(RS::LeftBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Isometric",
+    QScriptValue(RS::Isometric),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("IsoRight",
     QScriptValue(RS::IsoRight),
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Right",
+    QScriptValue(RS::Right),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Isometric",
+    QScriptValue(RS::Isometric),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("IsoRightBack",
     QScriptValue(RS::IsoRightBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("RightBack",
+    QScriptValue(RS::RightBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Isometric",
+    QScriptValue(RS::Isometric),
     QScriptValue::ReadOnly);
 
 

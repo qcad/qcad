@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RS.h"><comment type="block">/**
- * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2017 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -209,12 +209,25 @@
      * Projection type for isometric projections.
      */</comment>
     <enum>enum <name>IsoProjectionType</name> <block>{
-        <expr><name>IsoTop</name></expr>,        <comment type="line">//!&lt; Top projection (x/y)</comment>
-        <expr><name>IsoBottom</name></expr>,     <comment type="line">//!&lt; Bottom projection (x/y)</comment>
-        <expr><name>IsoLeft</name></expr>,       <comment type="line">//!&lt; Front left projection (x/z)</comment>
-        <expr><name>IsoLeftBack</name></expr>,   <comment type="line">//!&lt; Back left projection (x/z)</comment>
-        <expr><name>IsoRight</name></expr>,      <comment type="line">//!&lt; Front right projection (y/z)</comment>
-        <expr><name>IsoRightBack</name></expr>   <comment type="line">//!&lt; Back right projection (y/z)</comment>
+        <expr><name>Top</name> = 0x1</expr>,          <comment type="line">//!&lt; Top projection (x/y)</comment>
+        <expr><name>Bottom</name> = 0x2</expr>,       <comment type="line">//!&lt; Bottom projection (x/y)</comment>
+        <expr><name>Left</name> = 0x4</expr>,         <comment type="line">//!&lt; Front left projection (x/z)</comment>
+        <expr><name>LeftBack</name> = 0x8</expr>,     <comment type="line">//!&lt; Back left projection (x/z)</comment>
+        <expr><name>Right</name> = 0x10</expr>,       <comment type="line">//!&lt; Front right projection (y/z)</comment>
+        <expr><name>RightBack</name> = 0x20</expr>,   <comment type="line">//!&lt; Back right projection (y/z)</comment>
+
+        <expr><name>Isometric</name> = 0x1000</expr>,   <comment type="line">//!&lt; Isometric</comment>
+        <expr><name>Cabinet</name> = 0x2000</expr>,     <comment type="line">//!&lt; Cabinet</comment>
+        <expr><name>Cavalier</name> = 0x4000</expr>,    <comment type="line">//!&lt; Cavalier</comment>
+        <expr><name>Planometric</name> = 0x8000</expr>, <comment type="line">//!&lt; Cavalier</comment>
+
+        <comment type="line">// backwards compatibility:</comment>
+        <expr><name>IsoTop</name> = <name>Top</name> | <name>Isometric</name></expr>,
+        <expr><name>IsoBottom</name> = <name>Bottom</name> | <name>Isometric</name></expr>,
+        <expr><name>IsoLeft</name> = <name>Left</name> | <name>Isometric</name></expr>,
+        <expr><name>IsoLeftBack</name> = <name>LeftBack</name> | <name>Isometric</name></expr>,
+        <expr><name>IsoRight</name> = <name>Right</name> | <name>Isometric</name></expr>,
+        <expr><name>IsoRightBack</name> = <name>RightBack</name> | <name>Isometric</name></expr>
     }</block>;</enum>
 
     <comment type="block">/**
