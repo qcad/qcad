@@ -20,7 +20,17 @@
         <translation>寸法</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+108"/>
+        <source>point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>comma</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Scientific</source>
         <translation>科学</translation>
     </message>
@@ -150,6 +160,16 @@
     </message>
     <message>
         <location line="+13"/>
+        <source>Number Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Decimal separator:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Label Format</source>
         <translation>ラベルフォーマット</translation>
     </message>

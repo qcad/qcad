@@ -24,7 +24,17 @@
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
+        <source>point</source>
+        <translation>Punkt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>comma</source>
+        <translation>Komma</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Scientific</source>
         <translation>Wissenschaftlich</translation>
     </message>
@@ -145,6 +155,16 @@
     </message>
     <message>
         <location line="+13"/>
+        <source>Number Format</source>
+        <translation>Nummerformat</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Decimal separator:</source>
+        <translation>Dezimalzeichen:</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Label Format</source>
         <translation>Beschriftungsformat</translation>
     </message>

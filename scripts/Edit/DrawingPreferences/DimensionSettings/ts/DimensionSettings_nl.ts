@@ -20,7 +20,17 @@
         <translation>Bemating</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+108"/>
+        <source>point</source>
+        <translation>Punt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>comma</source>
+        <translation>Komma</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Scientific</source>
         <translation>Wetenschappelijk</translation>
     </message>
@@ -146,6 +156,16 @@
     </message>
     <message>
         <location line="+13"/>
+        <source>Number Format</source>
+        <translation>Nummer formaat</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Decimal separator:</source>
+        <translation>Decimaalscheidingsteken:</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Label Format</source>
         <translation>Tekstformaat</translation>
     </message>

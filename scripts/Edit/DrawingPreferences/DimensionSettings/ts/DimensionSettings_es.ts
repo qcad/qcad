@@ -24,7 +24,17 @@
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
+        <source>point</source>
+        <translation>Punto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>comma</source>
+        <translation>Coma</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Scientific</source>
         <translation>Científico</translation>
     </message>
@@ -154,6 +164,16 @@
     </message>
     <message>
         <location line="+13"/>
+        <source>Number Format</source>
+        <translation>Formato numérico</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Decimal separator:</source>
+        <translation>Separador decimal:</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Label Format</source>
         <translation>Formato de etiqueta</translation>
     </message>

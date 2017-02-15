@@ -24,7 +24,17 @@
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
+        <source>point</source>
+        <translation>Point</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>comma</source>
+        <translation>Comma</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Scientific</source>
         <translation>Scientifique</translation>
     </message>
@@ -154,6 +164,16 @@
     </message>
     <message>
         <location line="+13"/>
+        <source>Number Format</source>
+        <translation>Format des numéros</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Decimal separator:</source>
+        <translation>Séparateur décimal :</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Label Format</source>
         <translation>Format de l&apos;étiquette</translation>
     </message>

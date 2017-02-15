@@ -31,7 +31,17 @@ Dimensão Alinhada</translatorcomment>
         <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
+        <source>point</source>
+        <translation>Ponto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>comma</source>
+        <translation>Vírgula</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -229,6 +239,16 @@ Espessura Arquitetônica</translatorcomment>
     </message>
     <message>
         <location line="+13"/>
+        <source>Number Format</source>
+        <translation>Formato de número</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Decimal separator:</source>
+        <translation>Separador decimal:</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Label Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Formato do rótulo</translation>
