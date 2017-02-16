@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LineDove2</class>
+ <widget class="QWidget" name="LineDove2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>494</width>
+    <height>49</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout">
+
+   <item>
+    <widget class="QLabel" name="labelDovetailAmount">
+     <property name="text">
+      <string>Number of Dovetails:</string>
+     </property>
+     <property name="buddy">
+      <cstring>DovetailNumber</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="DovetailNumber" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" stdset="0">
+      <string notr="true">5</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="labelDovetailHeight">
+     <property name="text">
+      <string>Dovetail Height:</string>
+     </property>
+     <property name="buddy">
+      <cstring>DovetailHeight</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="DovetailHeight" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" stdset="0">
+      <string notr="true">20</string>
+     </property>
+    </widget>
+   </item>
+   
+   
+   <item>
+    <widget class="QLabel" name="labelDovetailGradient">
+     <property name="text">
+      <string>Dovetail Gradient:</string>
+     </property>
+     <property name="buddy">
+      <cstring>DovetailGradient</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="DovetailGradient" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" stdset="0">
+      <string notr="true">7</string>
+     </property>
+    </widget>
+   </item>
+   
+   
+   <item>
+    <widget class="QLabel" name="labelPinRatio">
+     <property name="text">
+      <string>Dovetail/Pin Ratio:</string>
+     </property>
+     <property name="buddy">
+      <cstring>PinRatio</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="PinRatio" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" stdset="0">
+      <string notr="true">1</string>
+     </property>
+    </widget>
+   </item>
+   
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QWidget</extends>
+   <header>rmathlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

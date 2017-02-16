@@ -4,6 +4,8 @@ var credits =
         qsTr("Programming"),
         [ "Andrew Mustun",    "Main developer<br>"
                               ],
+        [ "Christian Aigner", "Misc > Draw > Dovetail from 2 Points<br>"
+                              ],
         [ "Matfie",           "Gear generator library item \"InvoluteSpur\"<br>"
                               ],
         [ "Matthias Melcher", "Drawing box joint lines<br>" +
