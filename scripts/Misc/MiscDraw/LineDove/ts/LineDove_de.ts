@@ -2,28 +2,29 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="de_DE">
 <context>
-    <name>LineDove</name>
+    <name>LineDove2</name>
     <message>
-        <location filename="../LineDove.js" line="+56"/>
-        <source>First corner</source>
-        <translation>Erster Eckpunkt</translation>
+        <location filename="../LineDove2.js" line="63"/>
+        <source>First point</source>
+        <translation>Erster Punkt</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Second corner</source>
-        <translation>Zweiter Eckpunkt</translation>
+        <location filename="../LineDove2.js" line="70"/>
+        <source>Second point</source>
+        <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <source>&amp;Dovetail joint</source>
-        <translation type="vanished">&amp;Schwalbenschwanzverbindung</translation>
+        <location filename="../LineDove2.js" line="73"/>
+        <source>Done</source>
+        <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../LineDoveInit.js" line="+2"/>
-        <source>&amp;Dovetail Joint</source>
-        <translation>&amp;Schwalbenschwanzverbindung</translation>
+        <location filename="../LineDove2Init.js" line="2"/>
+        <source>&amp;Dovetail Joint from 2 Points</source>
+        <translation>&amp;Schwalbenschwanzverbindung von 2 Punkten</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../LineDove2Init.js" line="6"/>
         <source>Draw a dovetail joint</source>
         <translation>Schwalbenschwanzverbindung zeichnen</translation>
     </message>

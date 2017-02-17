@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LineDove2</class>
- <widget class="QWidget" name="LineDove2">
+ <class>LineDove</class>
+ <widget class="QWidget" name="LineDove">
   <property name="geometry">
    <rect>
     <x>0</x>
