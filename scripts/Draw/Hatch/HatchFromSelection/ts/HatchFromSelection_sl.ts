@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Hatch</name>
     <message>
         <source>No boundary selected.</source>
-        <translation type="vanished">Nobena obroba ni izbrana.</translation>
+        <translation>Nobena obroba ni izbrana.</translation>
     </message>
     <message>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="vanished">Zanka ni zaklučena na točki %1/%2.</translation>
+        <translation>Zanka ni zaklučena na točki %1/%2.</translation>
     </message>
     <message>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="vanished">Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
+        <translation>Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
     </message>
     <message>
         <source>&amp;Hatch</source>
-        <translation type="vanished">Š&amp;rafura</translation>
+        <translation>Š&amp;rafura</translation>
     </message>
     <message>
         <source>Draw hatch or solid fill</source>
-        <translation type="vanished">Nariši šrafuro ali polnilo</translation>
+        <translation>Nariši šrafuro ali polnilo</translation>
     </message>
 </context>
 <context>
     <name>HatchDialog</name>
     <message>
         <source>Hatch</source>
-        <translation type="vanished">Šrafura</translation>
+        <translation>Šrafura</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="vanished">Vrsta</translation>
+        <translation>Vrsta</translation>
     </message>
     <message>
         <source>Solid Fill</source>
-        <translation type="vanished">Polnilo</translation>
+        <translation>Polnilo</translation>
     </message>
     <message>
         <source>Hatch Pattern</source>
-        <translation type="vanished">Vzorec šrafure</translation>
+        <translation>Vzorec šrafure</translation>
     </message>
     <message>
         <source>Preview</source>
-        <translation type="vanished">Predogled</translation>
+        <translation>Predogled</translation>
     </message>
     <message>
         <source>Pattern</source>
-        <translation type="vanished">Vzorec</translation>
+        <translation>Vzorec</translation>
     </message>
     <message>
         <source>Angle:</source>
-        <translation type="vanished">Kot:</translation>
+        <translation>Kot:</translation>
     </message>
     <message>
         <source>Scale:</source>
-        <translation type="vanished">Razmerje:</translation>
+        <translation>Razmerje:</translation>
     </message>
 </context>
 <context>
@@ -64,27 +64,27 @@
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">Nobena obroba ni izbrana.</translation>
+        <translation>Nobena obroba ni izbrana.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Zanka ni zaklučena na točki %1/%2.</translation>
+        <translation>Zanka ni zaklučena na točki %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
+        <translation>Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
     </message>
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Šrafura iz &amp;izbora</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustvari šrafuro ali polnilo iz izbranih mej</translation>
     </message>
 </context>
 </TS>

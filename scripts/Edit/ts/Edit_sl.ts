@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>AbstractPreferences</name>
     <message>
@@ -28,22 +28,22 @@ da bodo spremembe začele delovat.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation type="unfinished"></translation>
+        <translation>Privzeto za </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>To so privzete nastavitve za nove risbe.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavitve trenutne risbe se lahko spremenijo pod &lt;br/&gt;&lt;i&gt;Uredi &amp;gt; Nastavitve risbe&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremembe bodo vplivale na nove risbe in NE na trenutno risbo.</translation>
     </message>
 </context>
 <context>

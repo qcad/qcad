@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Apollonius</name>
     <message>
         <location filename="../Apollonius.js" line="+1769"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Neveljavni polmer</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni rešitve</translation>
     </message>
 </context>
 <context>
@@ -98,7 +98,7 @@
     </message>
     <message>
         <source>Block Options</source>
-        <translation type="vanished">Nastavitve bloka</translation>
+        <translation>Nastavitve bloka</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -185,11 +185,11 @@
     <name>ShapeAlgorithms</name>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="vanished">Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
+        <translation>Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
     </message>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="vanished">Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
+        <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
         <location filename="../ShapeAlgorithms.js" line="+1383"/>
@@ -793,17 +793,17 @@
     <message>
         <location filename="../simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prve entitete ni mogoče porezat.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entiteto ni mogoče porezat.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Druge entitete ni mogoče porezat.</translation>
     </message>
 </context>
 </TS>
