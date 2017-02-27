@@ -397,11 +397,17 @@ TextDialog.prototype.show =  function(textDataIn) {
     this.colorChanged(this.textEdit.textColor());
     this.colorChanged(this.initialColor);
 
-    this.textEdit.setFocus(Qt.OtherFocusReason);
-    this.textEdit.selectAll();
+    if (cbSimpleText.checked) {
+        this.sourceEdit.setFocus(Qt.OtherFocusReason);
+        this.sourceEdit.selectAll();
+    }
+    else {
+        this.textEdit.setFocus(Qt.OtherFocusReason);
+        this.textEdit.selectAll();
+    }
+
     this.currentCharFormatChanged(this.textEdit.currentCharFormat());
     //this.colorChanged();
-
 
     // exec text dialog:
     var res = this.dialog.exec();
