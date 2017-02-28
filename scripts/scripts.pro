@@ -1,7 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS = \
-	Block \
+    Block \
     Draw \
     Edit \
     File \
