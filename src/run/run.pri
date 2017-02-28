@@ -156,24 +156,30 @@ else {
 
         DESTDIR_WIN = $${DESTDIR}
         DESTDIR_WIN ~= s,/,\\,g
+        QT_INSTALL_PLUGINS_WIN = $$[QT_INSTALL_PLUGINS]
+        QT_INSTALL_PLUGINS_WIN ~= s,/,\\,g
+        QT_INSTALL_BINS_WIN = $$[QT_INSTALL_BINS]
+        QT_INSTALL_BINS_WIN ~= s,/,\\,g
+        QT_INSTALL_LIBS_WIN = $$[QT_INSTALL_LIBS]
+        QT_INSTALL_LIBS_WIN ~= s,/,\\,g
 
         for(FILE,FILES) {
-            !exists("$$[QT_INSTALL_PLUGINS]\\$${FILE}") {
-                error("File $$[QT_INSTALL_PLUGINS]\\$${FILE} not found. This Qt plugin is required by QCAD.")
+            !exists("$${QT_INSTALL_PLUGINS_WIN}\\$${FILE}") {
+                error("File $${QT_INSTALL_PLUGINS_WIN}\\$${FILE} not found. This Qt plugin is required by QCAD.")
             }
             !exists("$${DESTDIR_WIN}\\..\\plugins\\$${FILE}") {
                 message(Copying $${FILE})
-                system(copy "$$[QT_INSTALL_PLUGINS]\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
+                system(copy "$${QT_INSTALL_PLUGINS_WIN}\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
             }
         }
 
         # copy Qt libraries into same dir as exe to avoid Qt version mixup:
         greaterThan(QT_MAJOR_VERSION, 4) {
-            system(copy "$$[QT_INSTALL_BINS]/*.dll" "$${DESTDIR_WIN}")
-            system(copy "$$[QT_INSTALL_PLUGINS]/platforms/*.dll" "$${DESTDIR_WIN}\\..\\platforms")
+            system(copy "$${QT_INSTALL_BINS_WIN}\\*.dll" "$${DESTDIR_WIN}")
+            system(copy "$${QT_INSTALL_PLUGINS_WIN}\\platforms\\*.dll" "$${DESTDIR_WIN}\\..\\platforms")
         }
         else {
-            system(copy "$$[QT_INSTALL_LIBS]/*.dll" "$${DESTDIR_WIN}")
+            system(copy "$${QT_INSTALL_LIBS_WIN}\\*.dll" "$${DESTDIR_WIN}")
         }
     }
 }

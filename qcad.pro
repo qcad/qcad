@@ -6,7 +6,11 @@ SUBDIRS = \
     ts
 
 win32 {
-    SUBDIRS += $$system("dir /B ..\* | findstr qcad..*")
+    dirs = $$system("dir /B ..\* | findstr qcad..*")
+    for (dir, $$list($$dirs)) {
+        message(..\\$$dir)
+        SUBDIRS += ..\\$$dir
+    }
 }
 else {
     SUBDIRS += $$system("ls -d ../qcad?* | grep -v qcadmobile")
