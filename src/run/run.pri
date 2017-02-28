@@ -163,17 +163,17 @@ else {
             }
             !exists("$${DESTDIR_WIN}\\..\\plugins\\$${FILE}") {
                 message(Copying $${FILE})
-                system(cp "$$[QT_INSTALL_PLUGINS]\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
+                system(copy "$$[QT_INSTALL_PLUGINS]\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
             }
         }
 
         # copy Qt libraries into same dir as exe to avoid Qt version mixup:
         greaterThan(QT_MAJOR_VERSION, 4) {
-            system(cp "$$[QT_INSTALL_BINS]/*.dll" "$${DESTDIR_WIN}")
-            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/*.dll" "$${DESTDIR_WIN}\\..\\platforms")
+            system(copy "$$[QT_INSTALL_BINS]/*.dll" "$${DESTDIR_WIN}")
+            system(copy "$$[QT_INSTALL_PLUGINS]/platforms/*.dll" "$${DESTDIR_WIN}\\..\\platforms")
         }
         else {
-            system(cp "$$[QT_INSTALL_LIBS]/*.dll" "$${DESTDIR_WIN}")
+            system(copy "$$[QT_INSTALL_LIBS]/*.dll" "$${DESTDIR_WIN}")
         }
     }
 }
