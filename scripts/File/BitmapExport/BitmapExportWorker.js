@@ -37,6 +37,8 @@
  * \param view Optional graphics view to use.
  */
 function exportBitmap(doc, scene, fileName, properties, view) {
+    var ret;
+
     var viewCreated = false;
     if (typeof(view)==="undefined") {
         view = new RGraphicsViewImage();
@@ -85,6 +87,12 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         properties["height"] = 480;
     }
 
+    if (properties["width"] * properties["height"] > 2147483647/4) {
+        qDebug("invalid image size");
+        ret = [ false, qsTr("Invalid image size (width * height must be less than 536870911)") ];
+        return ret;
+    }
+
     view.resizeImage(properties["width"], properties["height"]);
 
     if (properties["window"]) {
@@ -123,7 +131,6 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         iw.setCompression(1);
     }
 
-    var ret;
     if (!iw.write(buffer)) {
         ret = [false, iw.errorString()];
     } else {
