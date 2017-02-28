@@ -77,7 +77,6 @@ BitmapExport.prototype.beginEvent = function() {
         appWin.handleUserWarning(
                 qsTr("Error while generating Bitmap file '%1': %2")
                     .arg(bmpFileName).arg(res[1]));
-        appWin.handleUserWarning();
     }
     else {
         appWin.handleUserMessage(
