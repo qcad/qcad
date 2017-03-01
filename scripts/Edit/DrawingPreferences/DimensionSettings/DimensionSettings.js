@@ -329,6 +329,13 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
         wastz.setProperty("Loaded", true);
     }
 
+    // decimal separator:
+    var dimdsep = document.getKnownVariable(RS.DIMDSEP, '.');
+    if (!isNull(wdp)) {
+        wdp.currentIndex = wdp.findData(dimdsep);
+        wdp.setProperty("Loaded", true);
+    }
+
     // update unit labels, preview:
     DimensionSettings.updateUnit(unit);
 
