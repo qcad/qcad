@@ -2168,15 +2168,29 @@ function addActionsToWidgets() {
             var w = appWin.findChild(wn);
             if (!isNull(w)) {
 
-                // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in sub menus)
-                if (RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) {
-                    if (isOfType(w.parentWidget(), QMenu)) {
-                        new QShortcut(a.shortcut, a.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(a, "trigger");
+                // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in SUB menus):
+                // workaround for QTBUG-57990 (action not triggered for letter based shortcuts in ALL menus):
+                if ((RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) ||
+                    (RSettings.getQtVersion()===0x050800 && RS.getSystemId()==="linux")) {
+
+                    if (isOfType(w.parentWidget(), QMenu) || RSettings.getQtVersion()===0x050800) {
+                        //new QShortcut(a.shortcut, a.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(a, "trigger");
+
+                        var shortcuts = a.shortcuts();
+                        for (var si=0; si<shortcuts.length; si++) {
+                            new QShortcut(shortcuts[si], a.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(a, "trigger");
+                        }
 
                         // avoid 'Ambiguous shortcut overload' when tool buttons visible:
                         var sc = a.shortcut.toString();
                         if (sc.length>0) {
-                            a.setShortcutText(" " + sc);
+                            if (RS.getSystemId()==="linux") {
+                                a.setShortcutText("[" + sc + "]");
+                                //a.setShortcutText("\t" + sc);
+                            }
+                            else {
+                                a.setShortcutText(" " + sc);
+                            }
                         }
                         a.setDefaultShortcuts([]);
                     }
