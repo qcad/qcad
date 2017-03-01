@@ -497,6 +497,7 @@ RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
         );
 
     RMatrix input;
+
     switch (type) {
     case RS::IsoRight:
         //input = RMatrix::create3x1(x, y, -z);
@@ -521,6 +522,9 @@ RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
     case RS::IsoLeftBack:
         //input = RMatrix::create3x1(z, y, x);
         input = RMatrix::create3x1(z, x, y);
+        break;
+    default:
+        input = RMatrix::create3x1(x, y, z);
         break;
     }
 
