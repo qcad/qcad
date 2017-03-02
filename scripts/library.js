@@ -1183,6 +1183,24 @@ function deepCopy(obj) {
     return obj;
 }
 
+function hasOwnPropertyCI(obj, prop) {
+   return Object.keys(obj)
+           .filter(function (v) {
+               return v.toLowerCase() === prop.toLowerCase();
+           }).length > 0;
+}
+
+function getOwnPropertyCI(obj, prop) {
+    var ret = Object.keys(obj)
+            .filter(function (v) {
+                return v.toLowerCase() === prop.toLowerCase();
+            });
+    if (ret.length>0) {
+        return obj[ret[0]];
+    }
+    return undefined;
+}
+
 /**
  * \return A new array which contains every unique item of this array only once.
  */
