@@ -307,6 +307,14 @@ public:
         return false;
     }
 
+    /**
+     * Reimplementations may return true to register this view and allow it
+     * to be returned by RDocumentInterface::getLastKnownViewWithFocus.
+     */
+    virtual bool registerForFocus() const {
+        return false;
+    }
+
 protected:
     bool printing;
     bool printPreview;

@@ -2203,7 +2203,9 @@ RGraphicsView* RDocumentInterface::getLastKnownViewWithFocus() {
 }
 
 void RDocumentInterface::setLastKnownViewWithFocus(RGraphicsView* view) {
-    lastKnownViewWithFocus = view;
+    if (view!=NULL && view->registerForFocus()) {
+        lastKnownViewWithFocus = view;
+    }
 }
 
 QVariant RDocumentInterface::eval(const QString& ext, const QString& script) {
