@@ -651,12 +651,12 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+856"/>
         <source>By Layer</source>
-        <translation type="unfinished">Podle vrstvy</translation>
+        <translation>Podle vrstvy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">Podle bloku</translation>
+        <translation>Podle bloku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -845,12 +845,12 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+35"/>
         <source>By Layer</source>
-        <translation type="unfinished">Podle vrstvy</translation>
+        <translation>Podle vrstvy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">Podle bloku</translation>
+        <translation>Podle bloku</translation>
     </message>
     <message>
         <location line="+1"/>
