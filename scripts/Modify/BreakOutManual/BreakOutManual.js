@@ -25,8 +25,7 @@ function BreakOutManual(guiAction) {
 
     this.entity = undefined;
     this.shape = undefined;
-    this.cedo1 = undefined;     // circle/ellipse draw order
-    this.cedo2 = undefined;
+    this.ceids = [];
     this.point1 = undefined;
     this.point2 = undefined;
     this.point3 = undefined;
@@ -85,6 +84,7 @@ BreakOutManual.prototype.setState = function(state) {
         this.setCommandPrompt(trFirstPoint);
         this.setLeftMouseTip(trFirstPoint);
         this.setRightMouseTip(EAction.trCancel);
+        this.ceids = [];
         break;
     case BreakOutManual.State.SettingPoint1:
         this.point2 = undefined;
@@ -163,13 +163,14 @@ BreakOutManual.prototype.pickEntity = function(event, preview) {
     case BreakOutManual.State.SelectCircleEllipsePart:
         di.highlightEntity(this.entity.getId());
         if (!preview) {
-            if (this.entity.getDrawOrder() === this.cedo1 || this.entity.getDrawOrder() === this.cedo2) {
+            if (this.ceids.indexOf(this.entity.getId())!==-1) {
                 var op = new RDeleteObjectOperation(this.entity);
+                op.setTransactionGroup(doc.getTransactionGroup());
                 if (!isNull(op)) {
                     di.applyOperation(op);
                 }
-                this.setState(BreakOutManual.State.SettingShape);
             }
+            this.setState(BreakOutManual.State.SettingShape);
         }
         break;
     }
@@ -177,6 +178,7 @@ BreakOutManual.prototype.pickEntity = function(event, preview) {
 
 BreakOutManual.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
+    var doc = this.getDocument();
     var line;
     var op;
 
@@ -207,6 +209,7 @@ BreakOutManual.prototype.pickCoordinate = function(event, preview) {
             this.setState(BreakOutManual.State.SettingPoint2);
         }
         break;
+
     case BreakOutManual.State.SettingPoint2:
         this.point3 = event.getModelPosition();
         if (!isValidVector(this.point3)) {
@@ -229,19 +232,22 @@ BreakOutManual.prototype.pickCoordinate = function(event, preview) {
         } else  {
             op = this.getOperation(false);
             if (!isNull(op)) {
-                di.applyOperation(op);
-            }
+                doc.startTransactionGroup();
+                op.setTransactionGroup(doc.getTransactionGroup());
+                var t = di.applyOperation(op);
 
-            if ((isCircleEntity(this.entity) || isFullEllipseEntity(this.entity)) && this.removeSegment) {
-                if (this.point2.equalsFuzzy(this.point4)) {
-                    this.setState(BreakOutManual.State.SettingShape);
+                if ((isCircleEntity(this.entity) || isFullEllipseEntity(this.entity)) && this.removeSegment) {
+                    if (this.point2.equalsFuzzy(this.point4)) {
+                        this.setState(BreakOutManual.State.SettingShape);
+                    } else {
+                        // remember IDs of added entities from transaction:
+                        // used to make sure user cannot delete another entity:
+                        this.ceids = t.getAffectedObjects();
+                        this.setState(BreakOutManual.State.SelectCircleEllipsePart);
+                    }
                 } else {
-                    this.cedo1 = this.getDocument().getStorage().getMaxDrawOrder() - 1;
-                    this.cedo2 = this.getDocument().getStorage().getMaxDrawOrder() - 2;
-                    this.setState(BreakOutManual.State.SelectCircleEllipsePart);
+                    this.setState(BreakOutManual.State.SettingShape);
                 }
-            } else {
-                this.setState(BreakOutManual.State.SettingShape);
             }
         }
         break;
