@@ -659,8 +659,8 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
             rest2 = undefined;
         }
         else {
-            var angle1 = shape.getCenter().getAngleTo(cutDist1);
-            var angle2 = shape.getCenter().getAngleTo(cutDist2);
+            var angle1 = shape.getCenter().getAngleTo(cutPos1);
+            var angle2 = shape.getCenter().getAngleTo(cutPos2);
 
             rest1 = new RArc(
                         shape.getCenter(),
