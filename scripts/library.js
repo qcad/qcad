@@ -2335,6 +2335,30 @@ function applyTheme() {
     }
 }
 
+function readTextFile(fileName) {
+    var file = new QFile(fileName);
+    var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+    if (file.open(flags)) {
+        var textStream = new QTextStream(file);
+        var contents = textStream.readAll();
+        file.close();
+        return contents;
+    }
+
+    return undefined;
+}
+
+function writeTextFile(fileName, str) {
+    var file = new QFile(fileName);
+    var flags = new QIODevice.OpenMode(QIODevice.WriteOnly | QIODevice.Text);
+    if (file.open(flags)) {
+        var textStream = new QTextStream(file);
+        textStream.writeString(str);
+    }
+    file.close();
+};
+
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
