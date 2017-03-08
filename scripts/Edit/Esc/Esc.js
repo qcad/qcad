@@ -100,9 +100,9 @@ Esc.prototype.beginEvent = function() {
 
     // return focus to graphics view or application window:
     if (returnFocus) {
-        var view = this.getGraphicsViews();
-        if (!isNull(view) && isFunction(view.getGraphicsViewQt)) {
-            var viewQt = view.getGraphicsViewQt();
+        var view = this.getGraphicsView();
+        if (!isNull(view) && isFunction(view.getQWidget)) {
+            var viewQt = view.getQWidget();
             if (!isNull(viewQt)) {
                 viewQt.setFocus(Qt.OtherFocusReason);
                 this.terminate();
