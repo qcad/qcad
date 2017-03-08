@@ -19,6 +19,7 @@
 
 include("../Shape.js");
 include("../../DrawBasedOnRectanglePP.js");
+include("scripts/Draw/Hatch/Hatch.js");
 
 /**
  * \class ShapeRectanglePP
@@ -29,6 +30,7 @@ function ShapeRectanglePP(guiAction) {
     DrawBasedOnRectanglePP.call(this, guiAction);
 
     this.createPolyline = false;
+    this.fill = false;
     this.setUiOptions("../Shape.ui");
 }
 
@@ -39,6 +41,7 @@ ShapeRectanglePP.prototype.beginEvent = function() {
 };
 
 ShapeRectanglePP.prototype.getOperation = function(preview) {
+    var doc = this.getDocument();
     var corners = this.getCorners();
 
     var op = new RAddObjectsOperation();
@@ -53,6 +56,20 @@ ShapeRectanglePP.prototype.getOperation = function(preview) {
         op.addObject(e);
     }
 
+    if (this.fill) {
+        var hatchData = new RHatchData();
+        hatchData.setDocument(doc);
+        hatchData.setAngle(0.0);
+        hatchData.setScale(1.0);
+        hatchData.setSolid(true);
+        hatchData.setPatternName("SOLID");
+        hatchData.newLoop();
+        for (var k=0; k<shapes.length; ++k) {
+            hatchData.addBoundary(shapes[k]);
+        }
+        op.addObject(new RHatchEntity(doc, hatchData));
+    }
+
     return op;
 };
 
@@ -61,7 +78,11 @@ ShapeRectanglePP.prototype.getShapes = function(corners) {
 };
 
 ShapeRectanglePP.prototype.slotCreatePolylineChanged = function(checked) {
-    this.createPolyline = checked;
+    Shape.prototype.slotCreatePolylineChanged.call(this, checked);
+};
+
+ShapeRectanglePP.prototype.slotFillChanged = function(checked) {
+    Shape.prototype.slotFillChanged.call(this, checked);
 };
 
 ShapeRectanglePP.prototype.initUiOptions = function(resume, optionsToolBar) {
