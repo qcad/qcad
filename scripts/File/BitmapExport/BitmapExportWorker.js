@@ -89,7 +89,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
 
     if (properties["width"] * properties["height"] > 2147483647/4) {
         qDebug("invalid image size");
-        ret = [ false, qsTr("Invalid image size (width * height must be less than 536870911)") ];
+        ret = [ false, qsTr("Invalid image size (width x height must be less than %1)").arg(536870911) ];
         return ret;
     }
 
