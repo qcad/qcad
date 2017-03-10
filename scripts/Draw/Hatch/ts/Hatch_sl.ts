@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>Hatch</name>
     <message>
         <source>No boundary selected.</source>
-        <translation>Nobena obroba ni izbrana.</translation>
+        <translation type="vanished">Nobena obroba ni izbrana.</translation>
     </message>
     <message>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Zanka ni zaklučena na točki %1/%2.</translation>
+        <translation type="vanished">Zanka ni zaklučena na točki %1/%2.</translation>
     </message>
     <message>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
+        <translation type="vanished">Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
     </message>
     <message>
         <location filename="../Hatch.js" line="+72"/>
@@ -32,7 +32,7 @@
     </message>
     <message>
         <source>Draw hatch or solid fill</source>
-        <translation>Nariši šrafuro ali polnilo</translation>
+        <translation type="vanished">Nariši šrafuro ali polnilo</translation>
     </message>
 </context>
 <context>

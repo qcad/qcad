@@ -80,7 +80,7 @@
         <translation>Maanmittauksen yksiköt</translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+205"/>
         <source>Unit / Format</source>
         <translation>Yksikkö / Muoto</translation>
     </message>

@@ -8,7 +8,7 @@
         <translation type="vanished">Выберите линию, дугу, окружность, эллипс или ломаную чтобы разбить</translation>
     </message>
     <message>
-        <location filename="../BreakOutManual.js" line="+80"/>
+        <location filename="../BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
         <translation>Выберите линию, дугу, окружность, эллипс, кривую или ломаную чтобы разбить</translation>
     </message>
@@ -18,7 +18,7 @@
         <translation>Выберите линию, дугу, окружность или эллипс чтобы разбить</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>First break point</source>
         <translation>Первая точка разбиения</translation>
     </message>

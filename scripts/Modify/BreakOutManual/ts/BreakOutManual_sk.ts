@@ -8,7 +8,7 @@
         <translation type="vanished">Vyberte prvok ktorý chcete orezať</translation>
     </message>
     <message>
-        <location filename="../BreakOutManual.js" line="+80"/>
+        <location filename="../BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
         <translation>Vyberte prvok ktorý chcete prerušiť</translation>
     </message>
@@ -18,7 +18,7 @@
         <translation>Vyberte prvok ktorý chcete orezať</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>First break point</source>
         <translation>Prvý bod rezu</translation>
     </message>

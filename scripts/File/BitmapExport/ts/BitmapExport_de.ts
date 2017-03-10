@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+129"/>
+        <location filename="../BitmapExport.js" line="+128"/>
         <source>Files</source>
         <translation>Dateien</translation>
     </message>
@@ -14,12 +14,12 @@
         <translation>Exportieren als Bitmap</translation>
     </message>
     <message>
-        <location line="-61"/>
+        <location line="-60"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>Fehler beim Generieren der Bitmap Datei &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translation>Bitmapdatei wurde erstellt als &quot;%1&quot;</translation>
     </message>
@@ -121,6 +121,14 @@
     <message>
         <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
         <translation type="obsolete">Fehler beim Generieren der Bitmap Datei &quot;%1&quot;: &quot;%2&quot;</translation>
+    </message>
+</context>
+<context>
+    <name>BitmapExportWorker</name>
+    <message>
+        <location filename="../BitmapExportWorker.js" line="+92"/>
+        <source>Invalid image size (width x height must be less than %1)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

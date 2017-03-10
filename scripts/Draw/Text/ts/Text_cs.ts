@@ -50,7 +50,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+260"/>
+        <location line="+266"/>
         <source>&amp;Undo</source>
         <translation type="unfinished"></translation>
     </message>

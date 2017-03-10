@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+129"/>
+        <location filename="../BitmapExport.js" line="+128"/>
         <source>Files</source>
         <translatorcomment>--exact match--
 --file: Image_pt.ts--
@@ -19,13 +19,13 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <translation>Exporte como Bitmap</translation>
     </message>
     <message>
-        <location line="-61"/>
+        <location line="-60"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Erro ao gerar o arquivo Bitmap &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>O arquivo Bitmap foi exportado para &apos;%1&apos;</translation>
@@ -152,6 +152,14 @@ Branco / Preto
 Branco / preto
 Preto</translatorcomment>
         <translation>Preto</translation>
+    </message>
+</context>
+<context>
+    <name>BitmapExportWorker</name>
+    <message>
+        <location filename="../BitmapExportWorker.js" line="+92"/>
+        <source>Invalid image size (width x height must be less than %1)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

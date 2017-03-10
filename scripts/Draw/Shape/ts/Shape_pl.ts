@@ -29,7 +29,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../Shape.js" line="+74"/>
+        <location filename="../Shape.js" line="+75"/>
         <source>Shape Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -50,6 +50,11 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     <message>
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Fill</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

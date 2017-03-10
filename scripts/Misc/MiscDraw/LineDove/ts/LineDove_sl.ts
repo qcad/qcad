@@ -1,32 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
+<context>
+    <name>LineDove</name>
+    <message>
+        <location filename="../LineDove.js" line="+63"/>
+        <source>First point</source>
+        <translation type="unfinished">Prva točka</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Second point</source>
+        <translation type="unfinished">Druga točka</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Done</source>
+        <translation type="unfinished">Končaj</translation>
+    </message>
+    <message>
+        <location filename="../LineDoveInit.js" line="+2"/>
+        <source>&amp;Dovetail Joint from 2 Points</source>
+        <translation type="unfinished">Spoj &amp;rogličenja iz 2 točk</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a dovetail joint</source>
+        <translation type="unfinished">Nariši spoj za rogljičenje</translation>
+    </message>
+</context>
 <context>
     <name>LineDove2</name>
     <message>
-        <location filename="../LineDove2.js" line="63"/>
         <source>First point</source>
-        <translation>Prva točka</translation>
+        <translation type="vanished">Prva točka</translation>
     </message>
     <message>
-        <location filename="../LineDove2.js" line="70"/>
         <source>Second point</source>
-        <translation>Druga točka</translation>
+        <translation type="vanished">Druga točka</translation>
     </message>
     <message>
-        <location filename="../LineDove2.js" line="73"/>
         <source>Done</source>
-        <translation>Končaj</translation>
+        <translation type="vanished">Končaj</translation>
     </message>
     <message>
-        <location filename="../LineDove2Init.js" line="2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>Spoj &amp;rogličenja iz 2 točk</translation>
+        <translation type="vanished">Spoj &amp;rogličenja iz 2 točk</translation>
     </message>
     <message>
-        <location filename="../LineDove2Init.js" line="6"/>
         <source>Draw a dovetail joint</source>
-        <translation>Nariši spoj za rogljičenje</translation>
+        <translation type="vanished">Nariši spoj za rogljičenje</translation>
     </message>
 </context>
 </TS>

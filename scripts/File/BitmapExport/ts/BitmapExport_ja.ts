@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+129"/>
+        <location filename="../BitmapExport.js" line="+128"/>
         <source>Files</source>
         <translation>ファイル</translation>
     </message>
@@ -14,12 +14,12 @@
         <translation>ビットマップとしてエクスポート</translation>
     </message>
     <message>
-        <location line="-61"/>
+        <location line="-60"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>ビットマップファイルの生成中にエラー &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translation>ビットマップファイルはエクスポートされました &apos;%1&apos;</translation>
     </message>
@@ -113,6 +113,14 @@
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
         <translation>&amp;m ビットマップエクスポート...</translation>
+    </message>
+</context>
+<context>
+    <name>BitmapExportWorker</name>
+    <message>
+        <location filename="../BitmapExportWorker.js" line="+92"/>
+        <source>Invalid image size (width x height must be less than %1)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

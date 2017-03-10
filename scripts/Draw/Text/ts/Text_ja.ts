@@ -50,7 +50,7 @@
         <translation>デフォルト:</translation>
     </message>
     <message>
-        <location line="+260"/>
+        <location line="+266"/>
         <source>&amp;Undo</source>
         <translation>&amp;U アンドゥ</translation>
     </message>

@@ -50,7 +50,7 @@
         <translation>Privzeta vrednost:</translation>
     </message>
     <message>
-        <location line="+260"/>
+        <location line="+266"/>
         <source>&amp;Undo</source>
         <translation>Ra&amp;zveljavi</translation>
     </message>

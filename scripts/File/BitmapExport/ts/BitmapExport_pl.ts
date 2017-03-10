@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+129"/>
+        <location filename="../BitmapExport.js" line="+128"/>
         <source>Files</source>
         <translatorcomment>--exact match--
 --file: assistant_pl.ts--
@@ -19,13 +19,13 @@ Wszystkie pliki (*.*)</translatorcomment>
         <translation type="unfinished">Eksportuj jako bitmapę</translation>
     </message>
     <message>
-        <location line="-61"/>
+        <location line="-60"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Błąd podczas generowania pliku bitmapy&apos;&amp;#39;:</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Bitmap file został wywieziony do&apos;&amp;#39;</translation>
@@ -157,6 +157,14 @@ Bardzo gruby</translatorcomment>
         <source>Bit&amp;map Export...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Bitmap Export ...</translation>
+    </message>
+</context>
+<context>
+    <name>BitmapExportWorker</name>
+    <message>
+        <location filename="../BitmapExportWorker.js" line="+92"/>
+        <source>Invalid image size (width x height must be less than %1)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -4,7 +4,7 @@
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../Shape.js" line="+74"/>
+        <location filename="../Shape.js" line="+75"/>
         <source>Shape Tools</source>
         <translation>Figurverktyg</translation>
     </message>
@@ -22,6 +22,11 @@
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
         <translation>Skapa polylinje</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Fill</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

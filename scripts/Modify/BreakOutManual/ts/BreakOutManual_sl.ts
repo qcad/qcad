@@ -4,7 +4,7 @@
 <context>
     <name>BreakOutManual</name>
     <message>
-        <location filename="../BreakOutManual.js" line="+80"/>
+        <location filename="../BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
         <translation>Izberi črto, lok, krog, elipso, krivuljo ali lomljenko za lomljenje</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Izberi črto, lok, krog, elipso za lomljenje</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>First break point</source>
         <translation>Prva točka lomljenja</translation>
     </message>

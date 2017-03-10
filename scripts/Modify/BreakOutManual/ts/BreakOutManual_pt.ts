@@ -8,7 +8,7 @@
         <translation type="vanished">Escolha uma linha, arco, circulo, elipse ou polilinha</translation>
     </message>
     <message>
-        <location filename="../BreakOutManual.js" line="+80"/>
+        <location filename="../BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
         <translation>Escolha uma linha, arco, circulo, elipse, spline ou polilinha</translation>
     </message>
@@ -18,7 +18,7 @@
         <translation>Escolha uma linha, arco, círculo ou elipse para quebrar</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>First break point</source>
         <translation>Primeiro ponto de quebra</translation>
     </message>

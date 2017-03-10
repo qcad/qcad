@@ -9,7 +9,7 @@
         <translation>Virhe, kun tehdään bittikarttatiedostoa &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translation>Bittikartta on viety &apos;%1&apos;een</translation>
     </message>
@@ -113,6 +113,14 @@
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
         <translation>Bittikartan tuonti...</translation>
+    </message>
+</context>
+<context>
+    <name>BitmapExportWorker</name>
+    <message>
+        <location filename="../BitmapExportWorker.js" line="+92"/>
+        <source>Invalid image size (width x height must be less than %1)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

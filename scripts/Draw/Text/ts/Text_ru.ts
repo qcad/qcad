@@ -50,7 +50,7 @@
         <translation>Значение по умолчанию:</translation>
     </message>
     <message>
-        <location line="+260"/>
+        <location line="+266"/>
         <source>&amp;Undo</source>
         <translation>Отменить</translation>
     </message>

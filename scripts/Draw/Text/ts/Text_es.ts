@@ -50,7 +50,7 @@
         <translation>Por defecto:</translation>
     </message>
     <message>
-        <location line="+260"/>
+        <location line="+266"/>
         <source>&amp;Undo</source>
         <translation>&amp;Deshacer</translation>
     </message>

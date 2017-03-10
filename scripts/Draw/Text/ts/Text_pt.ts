@@ -70,7 +70,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Valor padrão:</translation>
     </message>
     <message>
-        <location line="+260"/>
+        <location line="+266"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--

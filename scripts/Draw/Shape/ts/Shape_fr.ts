@@ -31,7 +31,7 @@
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../Shape.js" line="+74"/>
+        <location filename="../Shape.js" line="+75"/>
         <source>Shape Tools</source>
         <translation>Outils de forme</translation>
     </message>
@@ -53,6 +53,11 @@
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
         <translation>Créer polyligne</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Fill</source>
+        <translation>Remplissage</translation>
     </message>
 </context>
 </TS>

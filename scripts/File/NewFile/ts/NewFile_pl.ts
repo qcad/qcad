@@ -106,7 +106,7 @@ Tylko do odczytu</translatorcomment>
         <translation type="unfinished">Tylko do odczytu</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+58"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Czy chcesz zapisać zmiany wprowadzone w &lt;br&gt; dokument?&apos;&amp;#39;</translation>

@@ -2,29 +2,29 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
-    <name>LineDove2</name>
+    <name>LineDove</name>
     <message>
-        <location filename="../LineDove2.js" line="63"/>
+        <location filename="../LineDove.js" line="+63"/>
         <source>First point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineDove2.js" line="70"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineDove2.js" line="73"/>
+        <location line="+3"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineDove2Init.js" line="2"/>
+        <location filename="../LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LineDove2Init.js" line="6"/>
+        <location line="+4"/>
         <source>Draw a dovetail joint</source>
         <translation type="unfinished"></translation>
     </message>

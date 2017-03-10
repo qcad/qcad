@@ -20,7 +20,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+108"/>
+        <source>point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>comma</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Scientific</source>
         <translation type="unfinished"></translation>
     </message>
@@ -70,7 +80,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+198"/>
+        <location line="+205"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
     </message>
@@ -146,6 +156,16 @@
     </message>
     <message>
         <location line="+13"/>
+        <source>Number Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Decimal separator:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Label Format</source>
         <translation type="unfinished"></translation>
     </message>

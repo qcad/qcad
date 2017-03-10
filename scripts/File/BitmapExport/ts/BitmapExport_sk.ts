@@ -9,7 +9,7 @@
         <translation>Chyba pri generovaní obrázkového súboru &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translation>Obrázkový súbor bol exportovaný do &apos;%1&apos;</translation>
     </message>
@@ -113,6 +113,14 @@
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
         <translation>Ex&amp;portovať ako obrázok...</translation>
+    </message>
+</context>
+<context>
+    <name>BitmapExportWorker</name>
+    <message>
+        <location filename="../BitmapExportWorker.js" line="+92"/>
+        <source>Invalid image size (width x height must be less than %1)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
