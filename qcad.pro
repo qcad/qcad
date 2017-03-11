@@ -13,7 +13,7 @@ win32 {
     }
 }
 else {
-    SUBDIRS += $$system("ls -d ../qcad?* | grep -v qcadmobile")
+    SUBDIRS += $$system("ls -d ../qcad?* 2>/dev/null | grep -v qcadmobile")
 }
 
 !r_mobile {
