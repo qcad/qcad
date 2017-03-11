@@ -32,6 +32,7 @@ OptionsToolBarFocus.prototype.beginEvent = function() {
     var w = OptionsToolBar.getFirstInputWidget();
     if (!isNull(w)) {
         w.setFocus(Qt.OtherFocusReason);
+        w.selectAll();
     }
 
     this.terminate();
