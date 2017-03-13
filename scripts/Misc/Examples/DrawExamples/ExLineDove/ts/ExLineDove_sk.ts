@@ -2,30 +2,49 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sk_SK">
 <context>
+    <name>ExLineDove</name>
+    <message>
+        <location filename="../ExLineDove.js" line="+56"/>
+        <source>First corner</source>
+        <translation type="unfinished">Prvý roh</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Second corner</source>
+        <translation type="unfinished">Druhý roh</translation>
+    </message>
+    <message>
+        <location filename="../ExLineDoveInit.js" line="+2"/>
+        <source>&amp;Dovetail Joint</source>
+        <translation type="unfinished">&amp;Rybinový spoj</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a dovetail joint</source>
+        <translation type="unfinished">Nakreslite rybinový spoj</translation>
+    </message>
+</context>
+<context>
     <name>LineDove</name>
     <message>
-        <location filename="../LineDoveInit.js" line="+6"/>
         <source>Draw a dovetail joint</source>
-        <translation>Nakreslite rybinový spoj</translation>
+        <translation type="vanished">Nakreslite rybinový spoj</translation>
     </message>
     <message>
-        <location filename="../LineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation>Prvý roh</translation>
+        <translation type="vanished">Prvý roh</translation>
     </message>
     <message>
-        <location filename="../LineDoveInit.js" line="-4"/>
         <source>&amp;Dovetail Joint</source>
-        <translation>&amp;Rybinový spoj</translation>
+        <translation type="vanished">&amp;Rybinový spoj</translation>
     </message>
     <message>
         <source>&amp;Dovetail joint</source>
         <translation type="vanished">&amp;Rybinový spoj</translation>
     </message>
     <message>
-        <location filename="../LineDove.js" line="+7"/>
         <source>Second corner</source>
-        <translation>Druhý roh</translation>
+        <translation type="vanished">Druhý roh</translation>
     </message>
 </context>
 </TS>

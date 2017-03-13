@@ -120,7 +120,7 @@
     <message>
         <location filename="../BitmapExportWorker.js" line="+92"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ongeldige beeldformaat (breedte x hoogte moet kleiner zijn dan %1)</translation>
     </message>
 </context>
 </TS>
