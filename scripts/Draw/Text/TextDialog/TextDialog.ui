@@ -1009,6 +1009,9 @@ p, li { white-space: pre-wrap; }
        <property name="text">
         <string>OK</string>
        </property>
+       <property name="shortcut">
+        <string>Ctrl+Return</string>
+       </property>
        <property name="default">
         <bool>true</bool>
        </property>
