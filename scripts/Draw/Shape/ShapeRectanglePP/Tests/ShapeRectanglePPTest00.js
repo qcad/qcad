@@ -27,8 +27,7 @@ ShapeRectanglePPTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('Shape/CreatePolyline', 'true');
-    this.updateToolOptions();
-    this.setToolOption('Shape/CreatePolyline', 'true');
+    this.setToolOption('Shape/Fill', 'false');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(30.2, 29.8);
