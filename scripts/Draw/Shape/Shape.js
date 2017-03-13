@@ -35,6 +35,7 @@ function Shape(guiAction) {
     Draw.call(this, guiAction);
 
     this.createPolyline = false;
+    this.fill = false;
 }
 
 Shape.prototype = new Draw();
@@ -116,11 +117,17 @@ Shape.prototype.initUiOptions = function(resume, optionsToolBar) {
     Draw.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
     this.createPolyline = RSettings.getBoolValue(this.settingsGroup + "/CreatePolyline", false);
+    this.fill = RSettings.getBoolValue(this.settingsGroup + "/Fill", false);
 
     //var optionsToolBar = EAction.getOptionsToolBar();
     var w = optionsToolBar.findChild("CreatePolyline");
     if (!isNull(w)) {
         w.checked = this.createPolyline;
+    }
+
+    w = optionsToolBar.findChild("Fill");
+    if (!isNull(w)) {
+        w.checked = this.fill;
     }
 };
 
@@ -128,15 +135,32 @@ Shape.prototype.hideUiOptions = function(saveToSettings) {
     Draw.prototype.hideUiOptions.call(this, saveToSettings);
 
     RSettings.setValue(this.settingsGroup + "/CreatePolyline", this.createPolyline);
+    RSettings.setValue(this.settingsGroup + "/Fill", this.fill);
 };
 
 Shape.prototype.slotCreatePolylineChanged = function(checked) {
-    this.createPolyline = checked;
+    Shape.slotCreatePolylineChanged(this, checked);
+};
+
+Shape.slotCreatePolylineChanged = function(action, checked) {
+    action.createPolyline = checked;
+};
+
+Shape.prototype.slotFillChanged = function(checked) {
+    Shape.slotFillChanged(this, checked);
+};
+
+Shape.slotFillChanged = function(action, checked) {
+    action.fill = checked;
 };
 
 Shape.prototype.getShapes = function(vertices) {
+    return Shape.getShapes(this, vertices);
+};
+
+Shape.getShapes = function(action, vertices) {
     var i;
-    if (this.createPolyline) {
+    if (action.createPolyline) {
         var pl = new RPolyline();
         for (i=0; i<vertices.length; ++i) {
             pl.appendVertex(vertices[i]);
@@ -150,5 +174,25 @@ Shape.prototype.getShapes = function(vertices) {
             ret.push(new RLine(vertices[i], vertices[(i+1)%vertices.length]));
         }
         return ret;
+    }
+};
+
+Shape.prototype.complementOperation = function(op, shapes) {
+    Shape.complementOperation(this, this.getDocument(), op, shapes);
+};
+
+Shape.complementOperation = function(action, doc, op, shapes) {
+    if (action.fill) {
+        var hatchData = new RHatchData();
+        hatchData.setDocument(doc);
+        hatchData.setAngle(0.0);
+        hatchData.setScale(1.0);
+        hatchData.setSolid(true);
+        hatchData.setPatternName("SOLID");
+        hatchData.newLoop();
+        for (var k=0; k<shapes.length; ++k) {
+            hatchData.addBoundary(shapes[k]);
+        }
+        op.addObject(new RHatchEntity(doc, hatchData));
     }
 };

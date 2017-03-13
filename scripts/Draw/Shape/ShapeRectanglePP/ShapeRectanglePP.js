@@ -56,33 +56,21 @@ ShapeRectanglePP.prototype.getOperation = function(preview) {
         op.addObject(e);
     }
 
-    if (this.fill) {
-        var hatchData = new RHatchData();
-        hatchData.setDocument(doc);
-        hatchData.setAngle(0.0);
-        hatchData.setScale(1.0);
-        hatchData.setSolid(true);
-        hatchData.setPatternName("SOLID");
-        hatchData.newLoop();
-        for (var k=0; k<shapes.length; ++k) {
-            hatchData.addBoundary(shapes[k]);
-        }
-        op.addObject(new RHatchEntity(doc, hatchData));
-    }
+    Shape.complementOperation(this, doc, op, shapes);
 
     return op;
 };
 
 ShapeRectanglePP.prototype.getShapes = function(corners) {
-    return Shape.prototype.getShapes.call(this, corners);
+    return Shape.getShapes(this, corners);
 };
 
 ShapeRectanglePP.prototype.slotCreatePolylineChanged = function(checked) {
-    Shape.prototype.slotCreatePolylineChanged.call(this, checked);
+    Shape.slotCreatePolylineChanged(this, checked);
 };
 
 ShapeRectanglePP.prototype.slotFillChanged = function(checked) {
-    Shape.prototype.slotFillChanged.call(this, checked);
+    Shape.slotFillChanged(this, checked);
 };
 
 ShapeRectanglePP.prototype.initUiOptions = function(resume, optionsToolBar) {

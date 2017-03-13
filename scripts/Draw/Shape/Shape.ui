@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>141</width>
+    <width>184</width>
     <height>50</height>
    </rect>
   </property>
@@ -18,6 +18,13 @@
      </property>
      <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="Fill">
+     <property name="text">
+      <string>Fill</string>
      </property>
     </widget>
    </item>

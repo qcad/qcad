@@ -140,6 +140,8 @@ ShapePolygonCP.prototype.getOperation = function(preview) {
         op.addObject(e);
     }
 
+    this.complementOperation(op, shapes);
+
     return op;
 };
 

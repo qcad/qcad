@@ -29,6 +29,7 @@ function ShapeRectangleSize(guiAction) {
     DrawBasedOnRectangleSize.call(this, guiAction);
 
     this.createPolyline = false;
+    this.fill = false;
     this.includeBasePath = ShapeRectangleSize.includeBasePath;
     this.dialogUiFile = "ShapeRectangleSizeDialog.ui";
 
@@ -39,11 +40,15 @@ ShapeRectangleSize.prototype = new DrawBasedOnRectangleSize();
 ShapeRectangleSize.includeBasePath = includeBasePath;
 
 ShapeRectangleSize.prototype.getShapes = function(corners) {
-    return Shape.prototype.getShapes.call(this, corners);
+    return Shape.getShapes(this, corners);
 };
 
 ShapeRectangleSize.prototype.slotCreatePolylineChanged = function(checked) {
-    this.createPolyline = checked;
+    Shape.slotCreatePolylineChanged(this, checked);
+};
+
+ShapeRectangleSize.prototype.slotFillChanged = function(checked) {
+    Shape.slotFillChanged(this, checked);
 };
 
 ShapeRectangleSize.prototype.initUiOptions = function(resume, optionsToolBar) {
@@ -62,4 +67,13 @@ ShapeRectangleSize.prototype.hideUiOptions = function(saveToSettings) {
     DrawBasedOnRectangleSize.prototype.hideUiOptions.call(this, saveToSettings);
 
     RSettings.setValue(this.settingsGroup + "/CreatePolyline", this.createPolyline);
+};
+
+ShapeRectangleSize.prototype.getOperation = function(preview) {
+    var op = DrawBasedOnRectangleSize.prototype.getOperation.call(this, preview);
+    if (!isNull(op)) {
+        var shapes = this.getShapes(this.corners);
+        Shape.complementOperation(this, this.getDocument(), op, shapes);
+    }
+    return op;
 };
