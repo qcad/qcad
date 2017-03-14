@@ -1026,9 +1026,15 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
                     line.clipToXY(clipBox);
                 }
 
+                QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
+                             QPointF(line.endPoint.x, line.endPoint.y));
+
+                if (line.startPoint.equalsFuzzy(line.endPoint, 1e-5)) {
+                    // draw zero length line as one pixel long line:
+                    double d = mapDistanceFromView(1.0);
+                    qLine.setP2(QPointF(line.endPoint.x + d, line.endPoint.y));
+                }
                 if (line.isValid()) {
-                    QLineF qLine(QPointF(line.startPoint.x, line.startPoint.y),
-                                QPointF(line.endPoint.x, line.endPoint.y));
                     painter->drawLine(qLine);
                 }
             }

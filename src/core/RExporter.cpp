@@ -887,7 +887,12 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
     double length = line.getLength();
 
-    if (length>1e100 || length<RS::PointTolerance || !RMath::isSane(length)) {
+    if (length>1e100 || !RMath::isSane(length)) {
+        return ret;
+    }
+
+    if (length<RS::PointTolerance) {
+        exportLineSegment(line, 0.0);
         return ret;
     }
 
