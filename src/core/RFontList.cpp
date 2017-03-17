@@ -84,6 +84,10 @@ void RFontList::initSubstitutions() {
     }
 }
 
+QString RFontList::getSubName(const QString& resName) {
+    return res.getSubName(resName);
+}
+
 void RFontList::uninit() {
     res.uninit();
 }
@@ -93,8 +97,12 @@ void RFontList::uninit() {
  *      refers to a TTF font.
  */
 bool RFontList::isCadFont(const QString& fontName, const QString& fontFile) {
-    RFont* font = res.get(fontName);
+    QString fontSubName = res.getSubName(fontName);
+    RFont* font = get(fontSubName);
     if (font==NULL) {
+        if (fontSubName!=fontName) {
+            return false;
+        }
         return fontFile.toLower().contains(".shx");
     }
     return font->isValid();
@@ -104,4 +112,8 @@ QStringList RFontList::getNames() {
     QStringList ret = res.getNames();
     qSort(ret.begin(), ret.end());
     return ret;
+}
+
+RFont* RFontList::get(const QString& resName) {
+    return res.get(resName);
 }

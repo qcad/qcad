@@ -49,6 +49,7 @@ public:
         }
 
         resMap.clear();
+        resSubstitutionMap.clear();
     }
 
     /**
@@ -58,27 +59,34 @@ public:
         return resMap.keys();
     }
 
+    QString getSubName(const QString& resName, int rec=0) {
+        // check substitution map first:
+        if (RS::mapContainsCaseInsensitive(resSubstitutionMap, resName)) {
+            // substitution found:
+            QString subName = RS::mapValueCaseInsensitive(resSubstitutionMap, resName);
+            if (subName.compare(resName, Qt::CaseInsensitive)==0 || rec>16) {
+                qWarning() << "recursive resource substitution:" << resName << "->" << subName;
+                // cannot substitute font with itself (avoid recursion):
+                return QString();
+            }
+            return getSubName(subName, ++rec);
+        }
+        return resName;
+    }
+
     /**
      * \return Resource with the given name or an invalid resource.
      * The returned resource is loaded first if it isn't already.
      */
-    T* get(const QString& resName) {
-        if (!RS::mapContainsCaseInsensitive(resMap, resName)) {
-            // resource not found, check substitution map:
-            if (RS::mapContainsCaseInsensitive(resSubstitutionMap, resName)) {
-                // substitution found:
-                QString sub = RS::mapValueCaseInsensitive(resSubstitutionMap, resName);
-                if (sub.compare(resName, Qt::CaseInsensitive)==0) {
-                    qWarning() << "recursive resource substitution:" << resName << "->" << sub;
-                    // cannot substitute font with itself (avoid recursion):
-                    return NULL;
-                }
-                return get(sub);
-            }
+    T* get(const QString& resName, int rec=0) {
+        QString resNameSub = getSubName(resName);
+
+        // check if resource is available:
+        if (!RS::mapContainsCaseInsensitive(resMap, resNameSub)) {
             return NULL;
         }
 
-        T* res = RS::mapValueCaseInsensitive(resMap, resName);
+        T* res = RS::mapValueCaseInsensitive(resMap, resNameSub);
         if (res==NULL) {
             qWarning("RResourceList::get: list contains NULL resource.");
             Q_ASSERT(false);

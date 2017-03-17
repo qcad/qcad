@@ -1286,7 +1286,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
 //        }
 //    }
 
-    QFont font(getBlockFont());
+    QString subFont = RFontList::getSubName(getBlockFont());
+    QFont font(subFont);
     // drawing with a 1pt font will freak out Windows:
     font.setPointSizeF(100.0);
     font.setBold(getBlockBold());
@@ -1384,6 +1385,10 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
 
         // 20120309: resort to standard font (better than nothing):
         font = RFontList::get("standard");
+        if (font==NULL) {
+            qWarning() << "standard font not found";
+            return QList<RPainterPath>();
+        }
     }
 
     double cursor = 0.0;

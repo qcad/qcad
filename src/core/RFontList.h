@@ -38,11 +38,8 @@ public:
     static void uninit();
 
     static QStringList getNames();
-
-    static RFont* get(const QString& resName) {
-        return res.get(resName);
-    }
-
+    static QString getSubName(const QString& resName);
+    static RFont* get(const QString& resName);
     static bool isCadFont(const QString& fontName, const QString& fontFile);
 
 private:
