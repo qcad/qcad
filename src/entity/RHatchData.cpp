@@ -627,6 +627,8 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
         localPattern.scale(scaleFactor);
     }
 
+    bool hasDots = localPattern.hasDots();
+
     RBox boundaryBox = boundaryPath.getBoundingBox();
     boundaryBox.grow(1.0);
     QList<RLine> boundaryEdges = boundaryBox.getLines2d();
@@ -786,6 +788,9 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
 
             RPainterPathExporter ppExporter;
             ppExporter.setExportZeroLinesAsPoints(false);
+            // ignore zero lines if
+            // line was split up into segments
+            ppExporter.setIgnoreZeroLines(!hasDots);
             ppExporter.setLineweight(RLineweight::Weight100);
             if (!patternLine.dashes.isEmpty()) {
                 RLinetypePattern pat;
