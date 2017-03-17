@@ -52,6 +52,8 @@ public:
         return !fileName.isEmpty();
     }
 
+    bool hasDots() const;
+
     void clear() {
         fileName.clear();
         name.clear();

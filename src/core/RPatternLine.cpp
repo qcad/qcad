@@ -46,6 +46,15 @@ RPainterPath RPatternLine::getPainterPath() const {
     return p;
 }
 
+bool RPatternLine::hasDots() const {
+    for (int i=0; i<dashes.length(); i++) {
+        if (RMath::fuzzyCompare(dashes[i], 0.0)) {
+            return true;
+        }
+    }
+    return false;
+}
+
 QList<RLine> RPatternLine::getLines() const {
     QList<RLine> ret;
 

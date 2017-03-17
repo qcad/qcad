@@ -42,6 +42,7 @@ public:
     QList<double> dashes;
 
     RPainterPath getPainterPath() const;
+    bool hasDots() const;
     QList<RLine> getLines() const;
     double getLength() const;
     void scale(double f);

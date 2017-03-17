@@ -130,6 +130,15 @@ RPattern::RPattern(const QString& name, const QString& description) :
 RPattern::~RPattern() {
 }
 
+bool RPattern::hasDots() const {
+    for (int i=0; i<patternLines.length(); ++i) {
+        if (patternLines[i].hasDots()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 /**
  * Scales the pattern by the given factor.
  */
