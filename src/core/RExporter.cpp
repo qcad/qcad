@@ -1356,7 +1356,9 @@ void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
     vp.set(cp.x+cos(a2)*radius1,
            cp.y+sin(a2)*radius2);
     vp.rotate(angle, vc);
-    polyline.appendVertex(vp);
+    if (!polyline.getLastVertex().equalsFuzzy(vp)) {
+        polyline.appendVertex(vp);
+    }
 
     exportPolyline(polyline, true, offset);
 }
