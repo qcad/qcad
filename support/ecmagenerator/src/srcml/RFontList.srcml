@@ -39,11 +39,8 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getNames</name><parameter_list>()</parameter_list>;</function_decl>
-
-    <function><type><name>static</name> <name>RFont</name>*</type> <name>get</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>resName</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>res</name>.<call><name>get</name><argument_list>(<argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
-
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getSubName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>resName</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RFont</name>*</type> <name>get</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>resName</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isCadFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontFile</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><private>private:

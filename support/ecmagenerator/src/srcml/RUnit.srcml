@@ -30,6 +30,10 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_DOT</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_DOT</name> '.'</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <class_decl>class <name>RDocument</name>;</class_decl>
 
 <comment type="block">/**
@@ -46,7 +50,8 @@
                                   <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
                                   <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
                                   <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
-                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>char</name></type> <name>decimalSeparator</name>=<init><expr><name>RDEFAULT_DOT</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>formatScientific</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
                                   <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
                                   <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
@@ -56,12 +61,14 @@
                                   <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
                                   <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
                                   <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
-                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>char</name></type> <name>decimalSeparator</name>=<init><expr><name>RDEFAULT_DOT</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>formatEngineering</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
                                   <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
                                   <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
                                   <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
-                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>char</name></type> <name>decimalSeparator</name>=<init><expr><name>RDEFAULT_DOT</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>formatArchitectural</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
                                   <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
                                   <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
@@ -101,7 +108,8 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>doubleToString</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>double</name></type> <name>prec</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>doubleToString</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>int</name></type> <name>prec</name></decl></param>,
-        <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+        <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name>char</name></type> <name>decimalSeparator</name>=<init><expr><name>RDEFAULT_DOT</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="line">// workaround: make the second version also accessible by scripts:</comment>
     <function><type><name>static</name> <name>QString</name></type> <name>doubleToStringDec</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>int</name></type> <name>prec</name></decl></param>,

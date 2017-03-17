@@ -58,6 +58,9 @@
         getNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSubName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         get
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

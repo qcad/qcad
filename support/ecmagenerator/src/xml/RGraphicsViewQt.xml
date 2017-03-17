@@ -133,6 +133,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="registerForFocus" cppName="registerForFocus"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="sizeHint" cppName="sizeHint"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

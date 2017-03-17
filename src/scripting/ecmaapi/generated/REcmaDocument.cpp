@@ -12645,11 +12645,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QChar'
-    QChar cppResult =
+    // return type 'char'
+    char cppResult =
         
                self->getDecimalSeparator();
-        // return type: QChar
+        // return type: char
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             

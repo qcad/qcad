@@ -677,6 +677,152 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    9 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::Unit */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: RS::LinearFormat */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(4).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(5).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(6).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(7).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(8).isVariant() || 
+            context->argument(8).isQObject() || 
+            context->argument(8).isNull()
+        ) /* type: char */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::Unit
+                    a1 =
+                    (RS::Unit)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::LinearFormat
+                    a2 =
+                    (RS::LinearFormat)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a3 =
+                    (int)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a5 =
+                    (bool)
+                    
+                    context->argument( 5 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a6 =
+                    (bool)
+                    
+                    context->argument( 6 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a7 =
+                    (bool)
+                    
+                    context->argument( 7 ).
+                    toBool();
+                
+                    // argument is reference
+                    char*
+                    ap8 =
+                    qscriptvalue_cast<
+                    char*
+                        >(
+                        context->argument(
+                        8
+                        )
+                    );
+                    if( ap8 == NULL ){
+                           return REcmaHelper::throwError("RUnit: Argument 8 is not of type char*.",
+                               context);                    
+                    }
+                    char& a8 = *ap8;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RUnit::
+       formatLinear(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6
+        ,
+    a7
+        ,
+    a8);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatLinear().",
                    context);
@@ -1553,6 +1699,139 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    8 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::Unit */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(5).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(6).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(7).isVariant() || 
+            context->argument(7).isQObject() || 
+            context->argument(7).isNull()
+        ) /* type: char */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::Unit
+                    a1 =
+                    (RS::Unit)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a5 =
+                    (bool)
+                    
+                    context->argument( 5 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a6 =
+                    (bool)
+                    
+                    context->argument( 6 ).
+                    toBool();
+                
+                    // argument is reference
+                    char*
+                    ap7 =
+                    qscriptvalue_cast<
+                    char*
+                        >(
+                        context->argument(
+                        7
+                        )
+                    );
+                    if( ap7 == NULL ){
+                           return REcmaHelper::throwError("RUnit: Argument 7 is not of type char*.",
+                               context);                    
+                    }
+                    char& a7 = *ap7;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RUnit::
+       formatDecimal(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6
+        ,
+    a7);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatDecimal().",
                    context);
@@ -1983,6 +2262,139 @@
     a5
         ,
     a6);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    8 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::Unit */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(5).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(6).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(7).isVariant() || 
+            context->argument(7).isQObject() || 
+            context->argument(7).isNull()
+        ) /* type: char */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::Unit
+                    a1 =
+                    (RS::Unit)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a5 =
+                    (bool)
+                    
+                    context->argument( 5 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a6 =
+                    (bool)
+                    
+                    context->argument( 6 ).
+                    toBool();
+                
+                    // argument is reference
+                    char*
+                    ap7 =
+                    qscriptvalue_cast<
+                    char*
+                        >(
+                        context->argument(
+                        7
+                        )
+                    );
+                    if( ap7 == NULL ){
+                           return REcmaHelper::throwError("RUnit: Argument 7 is not of type char*.",
+                               context);                    
+                    }
+                    char& a7 = *ap7;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RUnit::
+       formatEngineering(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6
+        ,
+    a7);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -4258,6 +4670,100 @@
     a2
         ,
     a3);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: char */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument is reference
+                    char*
+                    ap4 =
+                    qscriptvalue_cast<
+                    char*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if( ap4 == NULL ){
+                           return REcmaHelper::throwError("RUnit: Argument 4 is not of type char*.",
+                               context);                    
+                    }
+                    char& a4 = *ap4;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RUnit::
+       doubleToString(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);

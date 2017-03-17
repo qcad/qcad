@@ -49,6 +49,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, getPainterPath, "getPainterPath");
             
+            REcmaHelper::registerFunction(&engine, proto, hasDots, "hasDots");
+            
             REcmaHelper::registerFunction(&engine, proto, getLines, "getLines");
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
@@ -204,6 +206,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPatternLine::getPainterPath", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPatternLine::hasDots
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPatternLine::hasDots", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPatternLine::hasDots";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPatternLine* self = 
+                        getSelf("hasDots", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasDots();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPatternLine.hasDots().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPatternLine::hasDots", context, engine);
             return result;
         }
          QScriptValue

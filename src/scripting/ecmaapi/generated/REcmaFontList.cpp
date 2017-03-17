@@ -65,6 +65,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getNames, "getNames");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getSubName, "getSubName");
+            
             REcmaHelper::registerFunction(&engine, &ctor, get, "get");
             
             REcmaHelper::registerFunction(&engine, &ctor, isCadFont, "isCadFont");
@@ -298,6 +300,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaFontList::getNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFontList::getSubName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFontList::getSubName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFontList::getSubName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RFontList::
+       getSubName(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFontList.getSubName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFontList::getSubName", context, engine);
             return result;
         }
          QScriptValue

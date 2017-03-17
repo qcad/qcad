@@ -270,6 +270,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isShared, "isShared");
             
+            REcmaHelper::registerFunction(&engine, proto, registerForFocus, "registerForFocus");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsView*>(), *proto);
 
@@ -6669,6 +6671,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::isShared", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::registerForFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::registerForFocus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::registerForFocus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("registerForFocus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->registerForFocus();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.registerForFocus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::registerForFocus", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsView::toString

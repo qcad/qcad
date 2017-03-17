@@ -1330,7 +1330,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getDecimalSeparator"
     cppName="getDecimalSeparator" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QChar" isPureVirtual="false" />
+      <variant returnType="char" isPureVirtual="false" />
     </method>
     <method name="isModified" cppName="isModified"
     specifier="public" isStatic="false" isVirtual="false"

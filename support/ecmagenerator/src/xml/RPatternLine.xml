@@ -10,6 +10,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RPainterPath" isPureVirtual="false" />
     </method>
+    <method name="hasDots" cppName="hasDots" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getLines" cppName="getLines" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; RLine &gt;"

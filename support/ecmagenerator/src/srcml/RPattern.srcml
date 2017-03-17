@@ -53,6 +53,8 @@
         <return>return <expr>!<name>fileName</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>bool</name></type> <name>hasDots</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function><type><name>void</name></type> <name>clear</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><name>fileName</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
         <expr_stmt><expr><name>name</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>

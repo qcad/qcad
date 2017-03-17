@@ -350,7 +350,7 @@
     <function_decl><type><name>bool</name></type> <name>showTrailingZeroesAngle</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name><name>RS</name>::<name>AngleFormat</name></name></type> <name>getAngleFormat</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>int</name></type> <name>getAnglePrecision</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>QChar</name></type> <name>getDecimalSeparator</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>char</name></type> <name>getDecimalSeparator</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>isModified</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QDateTime</name></type> <name>getLastModifiedDateTime</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

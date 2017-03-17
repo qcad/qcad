@@ -159,6 +159,12 @@
         
     
     
+      bool registerForFocus(
+                
+            );
+        
+    
+    
       QSize sizeHint(
                 
             );

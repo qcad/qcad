@@ -52,6 +52,9 @@
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasDots
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

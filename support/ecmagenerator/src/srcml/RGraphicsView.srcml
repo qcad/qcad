@@ -308,6 +308,14 @@
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
+    <comment type="block">/**
+     * Reimplementations may return true to register this view and allow it
+     * to be returned by RDocumentInterface::getLastKnownViewWithFocus.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>registerForFocus</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
 </public><protected>protected:
     <decl_stmt><decl><type><name>bool</name></type> <name>printing</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>printPreview</name></decl>;</decl_stmt>

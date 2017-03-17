@@ -26,6 +26,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="char" typeName="char" name="decimalSeparator"
+        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
     </method>
     <method name="formatScientific" cppName="formatScientific"
@@ -66,6 +68,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="char" typeName="char" name="decimalSeparator"
+        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
     </method>
     <method name="formatEngineering" cppName="formatEngineering"
@@ -86,6 +90,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="char" typeName="char" name="decimalSeparator"
+        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
     </method>
     <method name="formatArchitectural"
@@ -244,6 +250,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="char" typeName="char" name="decimalSeparator"
+        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
     </method>
     <method name="doubleToStringDec" cppName="doubleToStringDec"

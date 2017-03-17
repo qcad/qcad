@@ -22,6 +22,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QStringList" isPureVirtual="false" />
     </method>
+    <method name="getSubName" cppName="getSubName"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="resName"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="get" cppName="get" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RFont *" isPureVirtual="false">
