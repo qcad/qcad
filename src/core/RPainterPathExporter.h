@@ -33,7 +33,8 @@
  */
 class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:
-    RPainterPathExporter() : RExporter(), exportZeroLinesAsPoints(true) { }
+    RPainterPathExporter() :
+        RExporter(), exportZeroLinesAsPoints(true), ignoreZeroLines(false) { }
 
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
@@ -58,10 +59,14 @@ public:
     void setExportZeroLinesAsPoints(bool on) {
         exportZeroLinesAsPoints = on;
     }
+    void setIgnoreZeroLines(bool on) {
+        ignoreZeroLines = on;
+    }
 
 private:
     RPainterPath path;
     bool exportZeroLinesAsPoints;
+    bool ignoreZeroLines;
 };
 
 #endif
