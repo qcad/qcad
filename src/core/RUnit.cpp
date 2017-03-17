@@ -358,7 +358,7 @@ QString RUnit::formatLinear(double length, RS::Unit unit,
                             bool showLeadingZeroes, 
                             bool showTrailingZeroes,
                             bool onlyPreciseResult,
-                            QChar decimalSeparator) {
+                            char decimalSeparator) {
     QString ret;
 
     // imperial display: show as fraction:
@@ -446,7 +446,7 @@ QString RUnit::formatScientific(double length, RS::Unit unit,
 QString RUnit::formatDecimal(double length, RS::Unit unit,
                              int prec, bool showUnit,
                              bool showLeadingZeroes, bool showTrailingZeroes,
-                             bool /*onlyPreciseResult*/, QChar decimalSeparator) {
+                             bool /*onlyPreciseResult*/, char decimalSeparator) {
 
     QString ret;
     
@@ -474,7 +474,7 @@ QString RUnit::formatDecimal(double length, RS::Unit unit,
 QString RUnit::formatEngineering(double length, RS::Unit unit,
                                  int prec, bool showUnit,
                                  bool showLeadingZeroes, bool showTrailingZeroes,
-                                 bool onlyPreciseResult, QChar decimalSeparator) {
+                                 bool onlyPreciseResult, char decimalSeparator) {
 
     Q_UNUSED(showUnit)
     Q_UNUSED(showLeadingZeroes)
@@ -811,7 +811,7 @@ QString RUnit::doubleToString(double value, double prec,
  */
 QString RUnit::doubleToString(double value, int prec,
         bool /*showLeadingZeroes*/, bool showTrailingZeroes,
-        QChar decimalSeparator) {
+        char decimalSeparator) {
 
     QString ret;
 
@@ -849,7 +849,7 @@ QString RUnit::doubleToString(double value, int prec,
     }
 
     if (decimalSeparator!='.') {
-        ret.replace ('.', decimalSeparator);
+        ret.replace('.', decimalSeparator);
     }
 
     return ret;

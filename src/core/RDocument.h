@@ -349,7 +349,7 @@ public:
     bool showTrailingZeroesAngle();
     RS::AngleFormat getAngleFormat();
     int getAnglePrecision();
-    QChar getDecimalSeparator();
+    char getDecimalSeparator();
 
     bool isModified() const;
     QDateTime getLastModifiedDateTime() const;
