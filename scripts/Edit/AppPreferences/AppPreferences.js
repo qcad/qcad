@@ -48,6 +48,7 @@ AppPreferences.init = function(basePath) {
 
         if (sysLang===appLang) {
             action = new RGuiAction("Preferences", RMainWindowQt.getMainWindow());
+            action.menuRole = QAction.PreferencesRole;
             // preferences menu under Mac OS X has no icon:
             action.disableIcon();
             action.setDefaultShortcut(new QKeySequence(QKeySequence.Preferences));
