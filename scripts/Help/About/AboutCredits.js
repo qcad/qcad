@@ -54,6 +54,7 @@ var credits =
         [ "Andrew Mustun",     "Dutch (nl) translation" ],
         [ "Timo Seppola",      "Finnish (fi) translation" ],
         [ "Andrew Mustun",     "German (de) translation" ],
+        [ "Fabri",             "Italian (it) translation" ],
         [ "Tanaka Hidemune",   "Japanese (ja) translation and user reference manual" ],
         [ "Евгений, AlexL",    "Russian (ru) translation" ],
         [ "Ján Jamriška",      "Slovak (sk) translation" ],
