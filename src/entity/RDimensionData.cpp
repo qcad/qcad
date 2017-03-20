@@ -548,7 +548,8 @@ QString RDimensionData::formatAngleLabel(double angle) const {
     if (document!=NULL) {
         ret = RUnit::formatAngle(angle,
                                  document->getAngleFormat(), document->getAnglePrecision(),
-                                 document->showLeadingZeroesAngle(), document->showTrailingZeroesAngle());
+                                 document->showLeadingZeroesAngle(), document->showTrailingZeroesAngle(),
+                                 document->getDecimalSeparator());
     }
     else {
         ret = QString("%1").arg(angle);
