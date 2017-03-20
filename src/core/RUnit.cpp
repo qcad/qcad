@@ -32,7 +32,8 @@
  */
 QString RUnit::getLabel(double v, RDocument& document,
                         int precisionOverride, bool forceSuppressTrailingZeroes,
-                        bool onlyPreciseResult) {
+                        bool onlyPreciseResult,
+                        char decimalSeparator) {
 
     if (fabs(v) < 1e-6) {
         v = 0.0;
@@ -44,7 +45,7 @@ QString RUnit::getLabel(double v, RDocument& document,
                 false,
                 document.showLeadingZeroes(),
                 forceSuppressTrailingZeroes ? false : document.showTrailingZeroes(),
-                onlyPreciseResult);
+                onlyPreciseResult, decimalSeparator);
 
     //QLocale locale = RSettings::getNumberLocale();
     //return locale.toString(v, 'g', 6);
@@ -365,31 +366,30 @@ QString RUnit::formatLinear(double length, RS::Unit unit,
     switch (format) {
     case RS::Scientific:
         ret = formatScientific(length, unit, prec, showUnit, 
-            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
+                showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     case RS::Decimal:
         ret = formatDecimal(length, unit, prec, showUnit,
-              showLeadingZeroes, showTrailingZeroes, onlyPreciseResult,
-              decimalSeparator);
+                showLeadingZeroes, showTrailingZeroes, onlyPreciseResult,
+                decimalSeparator);
         break;
 
     case RS::Engineering:
         ret = formatEngineering(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult,
-            decimalSeparator);
+                showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     case RS::Architectural:
     case RS::ArchitecturalStacked:
         ret = formatArchitectural(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
+                showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     case RS::Fractional:
     case RS::FractionalStacked:
         ret = formatFractional(length, unit, prec, showUnit,
-            showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
+                showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
         break;
 
     default:
@@ -430,7 +430,7 @@ QString RUnit::formatScientific(double length, RS::Unit unit,
     char format[128];
     sprintf(format, "%%.%dE%%s", prec);
     ret.sprintf(format, length, (const char*)unitString.toLatin1());
-    
+
     return ret;
 }
 
@@ -474,13 +474,12 @@ QString RUnit::formatDecimal(double length, RS::Unit unit,
 QString RUnit::formatEngineering(double length, RS::Unit unit,
                                  int prec, bool showUnit,
                                  bool showLeadingZeroes, bool showTrailingZeroes,
-                                 bool onlyPreciseResult, char decimalSeparator) {
+                                 bool onlyPreciseResult) {
 
     Q_UNUSED(showUnit)
     Q_UNUSED(showLeadingZeroes)
     Q_UNUSED(showTrailingZeroes)
     Q_UNUSED(onlyPreciseResult)
-    Q_UNUSED(decimalSeparator)
 
 //    if (unit!=RS::Inch && unit!=RS::Foot) {
 //        qWarning() << "RUnit::formatEngineering:"
@@ -680,7 +679,8 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
 QString RUnit::formatAngle(double angle, RS::AngleFormat format,
                            int prec,
                            bool showLeadingZeroes,
-                           bool showTrailingZeroes) {
+                           bool showTrailingZeroes,
+                           char decimalSeparator) {
 
     QString ret;
     double value;
@@ -706,7 +706,7 @@ QString RUnit::formatAngle(double angle, RS::AngleFormat format,
     case RS::DegreesDecimal:
     case RS::Radians:
     case RS::Gradians:
-        ret = doubleToString(value, prec, showLeadingZeroes, showTrailingZeroes);
+        ret = doubleToString(value, prec, showLeadingZeroes, showTrailingZeroes, decimalSeparator);
         if (format==RS::DegreesDecimal)
             ret+=QChar(0xB0);
         if (format==RS::Radians)
@@ -724,6 +724,7 @@ QString RUnit::formatAngle(double angle, RS::AngleFormat format,
             vMinutes = (int)floor((value - vDegrees) * 60.0);
             vSeconds = (value - vDegrees - (vMinutes/60.0)) * 3600.0;
 
+            // note: decimal separator does not apply here:
             seconds = doubleToString(vSeconds, (prec>1 ? prec-2 : 0), showLeadingZeroes, showTrailingZeroes);
 
             if (seconds=="60") {
@@ -774,7 +775,8 @@ QString RUnit::formatAngle(double angle, RS::AngleFormat format,
  *     value of 2.12030 will be converted to "2.1". 2.000 is always just "2").
  */
 QString RUnit::doubleToString(double value, double prec,
-        bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/) {
+        bool showLeadingZeroes, bool showTrailingZeroes,
+        char decimalSeparator) {
 
     QString ret;
     QString exaStr;
@@ -794,7 +796,7 @@ QString RUnit::doubleToString(double value, double prec,
         ret.sprintf("%d", RMath::mround(num*prec));
     } else {
         int digits = exaStr.length() - dotPos - 1;
-        ret = doubleToString(num*prec, digits);
+        ret = doubleToString(num*prec, digits, showLeadingZeroes, showTrailingZeroes, decimalSeparator);
     }
 
     return ret;

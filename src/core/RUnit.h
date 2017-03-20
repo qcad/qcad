@@ -66,8 +66,7 @@ public:
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
                                   bool showTrailingZeroes=false,
-                                  bool onlyPreciseResult=false,
-                                  char decimalSeparator=RDEFAULT_DOT);
+                                  bool onlyPreciseResult=false);
     static QString formatArchitectural(double length, RS::Unit unit,
                                   int prec, bool showUnit=false,
                                   bool showLeadingZeroes=true, 
@@ -80,9 +79,10 @@ public:
                                   bool onlyPreciseResult=false);
 
     static QString formatAngle(double angle, RS::AngleFormat format,
-                                 int prec,
-                                 bool showLeadingZeroes=true,
-                                 bool showTrailingZeroes=false);
+                               int prec,
+                               bool showLeadingZeroes=true,
+                               bool showTrailingZeroes=false,
+                               char decimalSeparator=RDEFAULT_DOT);
 
     /*
     static RVector paperFormatToSize(RS::PaperFormat p);
@@ -102,19 +102,22 @@ public:
     static QString getLabel(double v, RDocument& document,
                             int precisionOverride=RDEFAULT_MIN1,
                             bool forceSuppressTrailingZeroes=false,
-                            bool onlyPreciseResult=false);
+                            bool onlyPreciseResult=false,
+                            char decimalSeparator=RDEFAULT_DOT);
 
     static QString doubleToString(double value, double prec,
-        bool showLeadingZeroes=true, bool showTrailingZeroes=false);
+        bool showLeadingZeroes=true, bool showTrailingZeroes=false,
+        char decimalSeparator=RDEFAULT_DOT);
     static QString doubleToString(double value, int prec,
         bool showLeadingZeroes=true, bool showTrailingZeroes=false,
         char decimalSeparator=RDEFAULT_DOT);
 
     // workaround: make the second version also accessible by scripts:
     static QString doubleToStringDec(double value, int prec,
-        bool showLeadingZeroes=true, bool showTrailingZeroes=false) {
+        bool showLeadingZeroes=true, bool showTrailingZeroes=false,
+        char decimalSeparator=RDEFAULT_DOT) {
 
-        return doubleToString(value, prec, showLeadingZeroes, showTrailingZeroes);
+        return doubleToString(value, prec, showLeadingZeroes, showTrailingZeroes, decimalSeparator);
     }
 };
 
