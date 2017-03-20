@@ -66,6 +66,8 @@ RGuiAction::RGuiAction(const QString& text, QObject* parent)
     setCheckable(true);
 
     actions.push_back(this);
+
+    setMenuRole(QAction::NoRole);
 }
 
 
