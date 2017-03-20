@@ -136,7 +136,13 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     if (!isNull(wdp)) {
         wdp.addItem(". (" + qsTr("point") + ")", '.'.charCodeAt(0));
         wdp.addItem(", (" + qsTr("comma") + ")", ','.charCodeAt(0));
+        wdp.addItem("  (" + qsTr("space") + ")", ' '.charCodeAt(0));
         wdp.currentIndex = wdp.findData(RSettings.getIntValue(settingsName + "/DecimalPoint", '.'.charCodeAt(0)));
+
+        wdp["activated(int)"].connect(function() {
+            DimensionSettings.updateLinearPreview(widgets);
+            DimensionSettings.updateAngularPreview(widgets);
+        });
     }
 
     // init linear dimension format combo boxes:
@@ -561,6 +567,7 @@ DimensionSettings.updateAngularPrecision = function(widgets) {
 DimensionSettings.updateLinearPreview = function(widgets) {
     var wFormat = widgets["LinearFormat"];
     var showTrailingZeros = isNull(widgets["LinearShowTrailingZeros"]) ? false : widgets["LinearShowTrailingZeros"].checked;
+    var dimsep = isNull(widgets["DecimalPoint"]) ? '.' : widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex);
     var value = 14.43112351;
     if (showTrailingZeros===true && RUnit.isMetric(DimensionSettings.unit)) {
         value = 10.0;
@@ -575,7 +582,9 @@ DimensionSettings.updateLinearPreview = function(widgets) {
                 wFormat.itemData(wFormat.currentIndex),
                 widgets["LinearPrecision"].currentIndex,
                 false, false,
-                showTrailingZeros);
+                showTrailingZeros,
+                false,
+                dimsep);
         if (prev==="") {
             prev = "N/A";
         }
@@ -586,6 +595,7 @@ DimensionSettings.updateLinearPreview = function(widgets) {
 DimensionSettings.updateAngularPreview = function(widgets) {
     var wFormat = widgets["AngularFormat"];
     var showTrailingZeros = widgets["AngularShowTrailingZeros"].checked;
+    var dimsep = isNull(widgets["DecimalPoint"]) ? '.' : widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex);
     var value = RMath.deg2rad(37.15357578);
     if (showTrailingZeros===true) {
         value = RMath.deg2rad(60.0);
@@ -599,7 +609,8 @@ DimensionSettings.updateAngularPreview = function(widgets) {
         prev = RUnit.formatAngle(value,
                 wFormat.itemData(wFormat.currentIndex),
                 widgets["AngularPrecision"].currentIndex,
-                showTrailingZeros);
+                true, showTrailingZeros,
+                dimsep);
         if (prev==="") {
             prev = "N/A";
         }
