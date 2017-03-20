@@ -244,14 +244,18 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     appWin.resumedTab.connect(NewFile, "updateTitle");
 
     // make sure the MDI widget is maximized before performing an auto zoom:
-    // TODO: fix for Qt 5:
-    //if (!RSettings.isQt(5)) {
+
+    // Qt 5 / Unity bug workaround:
+    // breaks Ubuntu Unity menu on start:
+    if (RS.getSystemId()!=="linux" || !RSettings.isQt(5)) {
         appWin.enabled = false;
-        for (var i=0; i<5; i++) {
-            QCoreApplication.processEvents();
-        }
+    }
+    for (var i=0; i<5; i++) {
+        QCoreApplication.processEvents();
+    }
+    if (RS.getSystemId()!=="linux" || !RSettings.isQt(5)) {
         appWin.enabled = true;
-    //}
+    }
 
     //qDebug("subWindowActivated");
     appWin.subWindowActivated(mdiChild);
