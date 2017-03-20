@@ -5,6 +5,7 @@
 	<entry key="float" value="toNumber()" testFunction="isNumber()" />
 	<entry key="qreal" value="toNumber()" testFunction="isNumber()" />
 	<entry key="int" value="toNumber()" testFunction="isNumber()" />
+	<entry key="char" value="toNumber()" testFunction="isNumber()" />
     <!--
     causes ambigous calls:
 	<entry key="qint64" value="toNumber()" testFunction="isNumber()" />

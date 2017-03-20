@@ -90,8 +90,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
         hasDefault="true" default="false" isConst="false" />
-        <arg type="char" typeName="char" name="decimalSeparator"
-        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
     </method>
     <method name="formatArchitectural"
@@ -148,6 +146,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="char" typeName="char" name="decimalSeparator"
+        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
     </method>
     <method name="isMetric" cppName="isMetric" specifier="public"
@@ -226,6 +226,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="char" typeName="char" name="decimalSeparator"
+        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
     </method>
     <method name="doubleToString" cppName="doubleToString"
@@ -240,6 +242,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="char" typeName="char" name="decimalSeparator"
+        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
       <variant returnType="QString" isPureVirtual="false">
         <arg type="double" typeName="double" name="value"
@@ -266,6 +270,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="char" typeName="char" name="decimalSeparator"
+        hasDefault="true" default="RDEFAULT_DOT" isConst="false" />
       </variant>
     </method>
   </class>
