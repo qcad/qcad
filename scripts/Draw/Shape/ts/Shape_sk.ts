@@ -26,7 +26,7 @@
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Výplň</translation>
     </message>
 </context>
 </TS>

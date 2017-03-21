@@ -6,22 +6,22 @@
     <message>
         <location filename="../ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation type="unfinished">Prvý roh</translation>
+        <translation>Prvý roh</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished">Druhý roh</translation>
+        <translation>Druhý roh</translation>
     </message>
     <message>
         <location filename="../ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished">&amp;Rybinový spoj</translation>
+        <translation>&amp;Rybinový spoj</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished">Nakreslite rybinový spoj</translation>
+        <translation>Nakreslite rybinový spoj</translation>
     </message>
 </context>
 <context>

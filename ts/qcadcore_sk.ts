@@ -576,7 +576,7 @@
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished">Zmrazená</translation>
+        <translation>Zmrazená</translation>
     </message>
     <message>
         <location line="+1"/>
