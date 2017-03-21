@@ -57,7 +57,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="+126"/>
+        <source>Highlight entity within range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>
@@ -85,12 +90,12 @@
         <translation>Диапазон курсора</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+109"/>
         <source>Cursor range for snap:</source>
         <translation>Диапазон курсора для прилипания:</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
         <translation>Диапазон курсора для выбора объектов:</translation>
     </message>

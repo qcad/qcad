@@ -200,7 +200,7 @@
         <translation>Preklady</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Templates</source>
         <translation>Šablóny</translation>
     </message>

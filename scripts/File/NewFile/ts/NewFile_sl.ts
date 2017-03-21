@@ -78,7 +78,7 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+128"/>
         <source>Untitled %1</source>
         <translation>Brez naslova %1</translation>
     </message>

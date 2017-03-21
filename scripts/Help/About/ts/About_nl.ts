@@ -200,7 +200,7 @@
         <translation>Vertalingen</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Templates</source>
         <translation>Sjablonen</translation>
     </message>

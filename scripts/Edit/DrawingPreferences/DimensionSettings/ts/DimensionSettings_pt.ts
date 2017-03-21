@@ -41,7 +41,12 @@ Dimensão Alinhada</translatorcomment>
         <translation>Vírgula</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <source>space</source>
+        <translation>Espaço</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

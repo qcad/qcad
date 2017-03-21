@@ -11,7 +11,7 @@
         <translation type="obsolete">&amp;Preferências</translation>
     </message>
     <message>
-        <location filename="../AppPreferences.js" line="+64"/>
+        <location filename="../AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Preferências do Aplicativo</translation>

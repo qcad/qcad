@@ -57,7 +57,12 @@
         <translation>Ocultar atributos quando as referências de blocos estão escondidos</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="+126"/>
+        <source>Highlight entity within range</source>
+        <translation>Realçar entidade dentro do intervalo</translation>
+    </message>
+    <message>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -89,12 +94,12 @@
         <translation>Limites do Cursor</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+109"/>
         <source>Cursor range for snap:</source>
         <translation>Limites do cursor para salto:</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
         <translation>Limites do cursor para escolher entidades:</translation>
     </message>

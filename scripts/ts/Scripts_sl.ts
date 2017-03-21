@@ -62,7 +62,7 @@
         <translation>Premakni entiteto</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+124"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Urejanje gradnika &apos;%1&lt;br&gt;Ko boste končali, izberite&lt;i&gt;Gradnik &gt; Vrnitev na glasvno risbo&lt;/i&gt;</translation>
     </message>

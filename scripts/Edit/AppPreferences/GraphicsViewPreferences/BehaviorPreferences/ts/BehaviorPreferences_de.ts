@@ -57,7 +57,12 @@
         <translation>Attribute mit Blockreferenz ausblenden</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="+126"/>
+        <source>Highlight entity within range</source>
+        <translation>Objekt in Reichweite hervorheben</translation>
+    </message>
+    <message>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -89,12 +94,12 @@
         <translation>Zeigerreichweite</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+109"/>
         <source>Cursor range for snap:</source>
         <translation>Zeigerreichweite für Fangen:</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
         <translation>Zeigerreichweite für Objektwahl:</translation>
     </message>

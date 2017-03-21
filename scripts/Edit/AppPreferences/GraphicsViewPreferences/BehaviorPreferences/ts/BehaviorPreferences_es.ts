@@ -57,7 +57,12 @@
         <translation>Ocultar atributos cuando las referencias de bloque están ocultos</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="+126"/>
+        <source>Highlight entity within range</source>
+        <translation>Resaltar entidad dentro del rango</translation>
+    </message>
+    <message>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Botão direito do mouse</translation>
     </message>
@@ -89,12 +94,12 @@
         <translation>Gama cursor del ratón</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+109"/>
         <source>Cursor range for snap:</source>
         <translation>Gama cursor del ratón de forzar cursor:</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
         <translation>Gama cursor para recoger entidades:</translation>
     </message>

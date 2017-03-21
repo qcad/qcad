@@ -208,7 +208,7 @@
         <translation>Traduzioni</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Templates</source>
         <translation>Modelli</translation>
     </message>

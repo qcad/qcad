@@ -39,7 +39,12 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <source>space</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

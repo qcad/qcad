@@ -57,7 +57,12 @@
         <translation>Masquer les attributs lorsque les références de blocs sont cachés</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="+126"/>
+        <source>Highlight entity within range</source>
+        <translation>Mettre en surbrillance l&apos;entité dans la plage</translation>
+    </message>
+    <message>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>
@@ -89,12 +94,12 @@
         <translation>Gamme de curseur de souris</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+109"/>
         <source>Cursor range for snap:</source>
         <translation>Gamme de curseur de souris pour accrochage :</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
         <translation>Gamme de curseur pour capter des entités :</translation>
     </message>

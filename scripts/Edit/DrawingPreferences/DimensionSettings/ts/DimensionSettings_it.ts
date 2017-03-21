@@ -34,7 +34,12 @@
         <translation>Virgola</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <source>space</source>
+        <translation>Spazio</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Scientific</source>
         <translation>Scientifica</translation>
     </message>

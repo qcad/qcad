@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+272"/>
+        <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
         <translation>無</translation>
     </message>
@@ -239,14 +239,13 @@
     <name>REntity</name>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+60"/>
-        <location filename="../src/core/RLayer.cpp" line="+78"/>
+        <location filename="../src/core/RLayer.cpp" line="+82"/>
         <location filename="../src/core/RLayout.cpp" line="+75"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Hidden</source>
         <translation type="unfinished"></translation>
     </message>
@@ -375,7 +374,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+3"/>
+        <location filename="../src/core/RLayer.cpp" line="+5"/>
         <source>Linetype</source>
         <translation type="unfinished"></translation>
     </message>
@@ -453,7 +452,17 @@
         <translation>高度</translation>
     </message>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="-1"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Frozen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Locked</source>
         <translation>鎖定</translation>
     </message>
@@ -618,7 +627,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+178"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+180"/>
         <source>Requires selection</source>
         <translation type="unfinished"></translation>
     </message>

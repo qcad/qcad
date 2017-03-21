@@ -62,7 +62,7 @@
         <translation>Presunúť prvok</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+124"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Úprava bloku &apos;%1&apos;&lt;br&gt;Vybrať &lt;i&gt;Blok &gt; Návrat ku kresleniu &lt;/i&gt; keď bude hotové</translation>
     </message>

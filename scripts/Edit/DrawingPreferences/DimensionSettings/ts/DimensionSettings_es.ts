@@ -34,7 +34,12 @@
         <translation>Coma</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <source>space</source>
+        <translation>Espacio</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Scientific</source>
         <translation>Científico</translation>
     </message>

@@ -30,7 +30,12 @@
         <translation>Komma</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <source>space</source>
+        <translation>Spatie</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Scientific</source>
         <translation>Wetenschappelijk</translation>
     </message>

@@ -67,7 +67,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+124"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Édition bloc &apos;%1&apos;&lt;br&gt;Choisissez &lt;i&gt;Bloc &gt; Retour au dessin principal&lt;/i&gt; lorsque vous avez terminé</translation>
     </message>

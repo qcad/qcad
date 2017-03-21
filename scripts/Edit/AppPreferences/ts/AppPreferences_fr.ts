@@ -8,7 +8,7 @@
         <translation type="obsolete">Préférences</translation>
     </message>
     <message>
-        <location filename="../AppPreferences.js" line="+64"/>
+        <location filename="../AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
         <translation>&amp;Préférences générales</translation>
     </message>

@@ -34,7 +34,12 @@
         <translation>Komma</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+1"/>
+        <source>space</source>
+        <translation>Leerzeichen</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Scientific</source>
         <translation>Wissenschaftlich</translation>
     </message>

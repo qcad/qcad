@@ -4,7 +4,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/core/RUnit.cpp" line="+272"/>
+        <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
         <translation>Inget</translation>
     </message>
@@ -362,7 +362,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+82"/>
+        <location filename="../src/core/RLayer.cpp" line="+87"/>
         <source>Linetype</source>
         <translation>Linjetyp</translation>
     </message>
@@ -558,19 +558,28 @@
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
-        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <location filename="../src/core/RLayer.cpp" line="-4"/>
         <location filename="../src/core/RLayout.cpp" line="-16"/>
         <source>Name</source>
         <translation type="unfinished">Namn</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Hidden</source>
         <translation type="unfinished">Dold</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Frozen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Locked</source>
         <translation type="unfinished">Låst</translation>
     </message>
@@ -618,7 +627,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+178"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+180"/>
         <source>Requires selection</source>
         <translation>Kräver markering</translation>
     </message>

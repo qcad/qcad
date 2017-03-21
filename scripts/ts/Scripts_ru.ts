@@ -62,7 +62,7 @@
         <translation>Перенести объект</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+124"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Редактируя блок &apos;%1&apos;,&lt;br&gt;Выберите &lt;i&gt;Блок &gt; Возврат к главному рисованию&lt;/i&gt;, когда закончите</translation>
     </message>
