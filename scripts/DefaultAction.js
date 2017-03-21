@@ -549,6 +549,10 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
  * Called when the mouse cursor hovers over an entity.
  */
 DefaultAction.prototype.highlightEntity = function(entityId) {
+    if (RSettings.getBoolValue("GraphicsView/HighlightEntity", true)===false) {
+        return;
+    }
+
     if (isNull(this.di)) {
         return;
     }

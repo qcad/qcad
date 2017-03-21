@@ -129,11 +129,51 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Cursor range for snap:</string>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="PickRange">
+           <property name="editable">
+            <bool>true</bool>
            </property>
+           <item>
+            <property name="text">
+             <string notr="true">10</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">15</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">20</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">25</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">30</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">50</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">100</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">10000</string>
+            </property>
+           </item>
           </widget>
          </item>
          <item row="0" column="1">
@@ -190,51 +230,21 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QComboBox" name="PickRange">
-           <property name="editable">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Cursor range for snap:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QCheckBox" name="HighlightEntity">
+           <property name="text">
+            <string>Highlight entity within range</string>
+           </property>
+           <property name="checked">
             <bool>true</bool>
            </property>
-           <item>
-            <property name="text">
-             <string notr="true">10</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">15</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">20</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">25</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">30</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">50</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">100</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">10000</string>
-            </property>
-           </item>
           </widget>
          </item>
         </layout>
