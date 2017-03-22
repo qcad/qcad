@@ -206,7 +206,8 @@ void RDxfImporter::processCodeValuePair(unsigned int groupCode, const std::strin
 void RDxfImporter::addLayer(const DL_LayerData& data) {
     QString layerName = decode(data.name.c_str());
 
-    bool frozen = (attributes.getColor()<0 || data.flags&0x01);
+    bool off = attributes.getColor()<0;
+    bool frozen = data.flags&0x01;
     bool locked = data.flags&0x04;
     attributes.setColor(abs(attributes.getColor()));
     RColor color = RDxfServices::attributesToColor(
@@ -226,11 +227,13 @@ void RDxfImporter::addLayer(const DL_LayerData& data) {
                 new RLayer(
                     document,
                     layerName,
-                    frozen,
+                    // only support one flag for visibility for CE:
+                    frozen || off,
                     false,
                     color,
                     linetypeId,
-                    lw
+                    lw,
+                    off
                     )
                 );
 
