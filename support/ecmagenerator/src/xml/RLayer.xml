@@ -27,6 +27,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RLineweight::Lineweight" name="lineweight"
         hasDefault="true" default="RLineweight :: Weight000"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="off"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant>
         <arg type="RLayer &amp;" typeName="RLayer" name="other"
@@ -59,6 +61,22 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="n"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="isOffOrFrozen" cppName="isOffOrFrozen"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isOff" cppName="isOff" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setOff" cppName="setOff" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
       </variant>
     </method>
     <method name="isFrozen" cppName="isFrozen" specifier="public"
@@ -268,6 +286,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyProtected" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOff" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyFrozen" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

@@ -66,6 +66,15 @@
         setName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isOffOrFrozen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isFrozen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

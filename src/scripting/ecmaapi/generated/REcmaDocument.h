@@ -231,6 +231,12 @@
         isEntityEditable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isLayerOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isLayerOffOrFrozen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isLayerFrozen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
