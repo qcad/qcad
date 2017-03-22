@@ -567,7 +567,7 @@ void RExporter::exportEntities(const RBox& box) {
 
 void RExporter::exportLayer(RLayer::Id layerId) {
     QSharedPointer<RLayer> layer = getDocument().queryLayer(layerId);
-    if (layer.isNull() || !layer->isFrozen()) {
+    if (layer.isNull() || !layer->isOffOrFrozen()) {
         exportLayer(*layer);
     }
 }
@@ -719,7 +719,7 @@ QSharedPointer<RLayer> RExporter::getEntityLayer(REntity& entity) {
 bool RExporter::isVisible(REntity& entity) {
 
     // only export entities on visible layers:
-    if (currentLayer!=NULL && currentLayer->isFrozen()) {
+    if (currentLayer!=NULL && currentLayer->isOffOrFrozen()) {
         // viewports are exported even if layer is hidden (but without border):
         if (entity.getType()!=RS::EntityViewport) {
             return false;
@@ -758,7 +758,7 @@ bool RExporter::isVisible(REntity& entity) {
                     currentLayer = layer.data();
                 }
                 //bool ret = isVisible(*blockRef);
-                bool ret = !doc->isLayerFrozen(blockRef->getLayerId());
+                bool ret = !doc->isLayerOffOrFrozen(blockRef->getLayerId());
                 currentLayer = currentLayerBak;
                 return ret;
             }

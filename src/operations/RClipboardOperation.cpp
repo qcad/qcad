@@ -396,8 +396,8 @@ void RClipboardOperation::copyEntity(
         // paste to current layer:
         QSharedPointer<RLayer> currentLayer = dest.queryCurrentLayer();
         Q_ASSERT(!currentLayer.isNull());
-        if (currentLayer->isLocked() || currentLayer->isFrozen()) {
-            qWarning("RClipboardOperation::copyToDocument: current layer is locked or frozen");
+        if (currentLayer->isLocked() || currentLayer->isOffOrFrozen()) {
+            qWarning("RClipboardOperation::copyToDocument: current layer is locked, off or frozen");
             transaction.fail();
             return;
         }

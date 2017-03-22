@@ -366,27 +366,38 @@ bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
 }
 
 /**
- * \return true if this entity is visible (i.e. is not on a frozen layer
+ * \return true if this entity is visible (i.e. is not on a frozen or hidden layer
  * or in a frozen block).
  */
 bool REntity::isVisible() const {
-    if (getDocument()==NULL) {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
         return true;
     }
 
+    RLayer::Id layerId = getLayerId();
+
     // check if layer is frozen:
-    if (getDocument()->isLayerFrozen(getLayerId())) {
+    if (doc->isLayerFrozen(layerId)) {
+        return false;
+    }
+
+    // check if layer is off and this is not a block reference:
+    // block references on layer X remain visible if X is off but not frozen:
+    if (doc->isLayerOff(layerId) && getType()!=RS::EntityBlockRef) {
         return false;
     }
 
     // check if block is frozen:
-    const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(this);
-    if (blockRef!=NULL) {
-        RBlock::Id blockId = blockRef->getReferencedBlockId();
-        if (blockId!=RBlock::INVALID_ID) {
-            QSharedPointer<RBlock> block = getDocument()->queryBlockDirect(blockId);
-            if (!block.isNull() && block->isFrozen()) {
-                return false;
+    if (getType()==RS::EntityBlockRef) {
+        const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(this);
+        if (blockRef!=NULL) {
+            RBlock::Id blockId = blockRef->getReferencedBlockId();
+            if (blockId!=RBlock::INVALID_ID) {
+                QSharedPointer<RBlock> block = doc->queryBlockDirect(blockId);
+                if (!block.isNull() && block->isFrozen()) {
+                    return false;
+                }
             }
         }
     }
