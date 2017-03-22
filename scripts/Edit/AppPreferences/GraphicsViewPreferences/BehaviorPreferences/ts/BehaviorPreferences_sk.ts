@@ -59,7 +59,7 @@
     <message>
         <location line="+126"/>
         <source>Highlight entity within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvýrazniť prvok v rozsahu</translation>
     </message>
     <message>
         <location line="-211"/>

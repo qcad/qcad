@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>LineDove</name>
     <message>
         <location filename="../LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rybínový spoj z 2 bodov</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -32,17 +32,17 @@
     <message>
         <location filename="../LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvý bod</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhý bod</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Hotovo</translation>
     </message>
 </context>
 </TS>

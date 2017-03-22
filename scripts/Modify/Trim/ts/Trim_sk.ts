@@ -36,7 +36,7 @@
     <message>
         <location filename="../TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>&amp;Predĺžiť</translation>
+        <translation>&amp;Predĺžiť po</translation>
     </message>
 </context>
 </TS>

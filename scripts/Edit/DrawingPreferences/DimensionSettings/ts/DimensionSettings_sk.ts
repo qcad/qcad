@@ -22,17 +22,17 @@
     <message>
         <location line="+108"/>
         <source>point</source>
-        <translation type="unfinished"></translation>
+        <translation>bodka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation type="unfinished"></translation>
+        <translation>čiarka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation>medzera</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -162,12 +162,12 @@
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Číselný formát</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oddeľovač desatinných miest:</translation>
     </message>
     <message>
         <location line="+26"/>
