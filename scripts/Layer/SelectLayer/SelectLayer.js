@@ -44,7 +44,7 @@ SelectLayer.prototype.beginEvent = function() {
 SelectLayer.prototype.selectLayer = function(layer) {
     var doc = this.getDocument();
     var di = this.getDocumentInterface();
-    if (layer.isFrozen()) {
+    if (layer.isOffOrFrozen()) {
         return false;
     }
 
