@@ -27,6 +27,7 @@ RPropertyTypeId RLayer::PropertyHandle;
 RPropertyTypeId RLayer::PropertyProtected;
 
 RPropertyTypeId RLayer::PropertyName;
+RPropertyTypeId RLayer::PropertyOff;
 RPropertyTypeId RLayer::PropertyFrozen;
 RPropertyTypeId RLayer::PropertyLocked;
 RPropertyTypeId RLayer::PropertyColor;
@@ -35,6 +36,7 @@ RPropertyTypeId RLayer::PropertyLineweight;
 
 RLayer::RLayer() :
         RObject(),
+        off(false),
         frozen(false),
         locked(false),
         linetypeId(RLinetype::INVALID_ID),
@@ -45,8 +47,9 @@ RLayer::RLayer() :
 
 RLayer::RLayer(RDocument* document, const QString& name,
     bool frozen, bool locked, const RColor& color,
-    RLinetype::Id linetype, RLineweight::Lineweight lineweight) :
-    RObject(document), name(name.trimmed()), frozen(frozen), locked(locked),
+    RLinetype::Id linetype, RLineweight::Lineweight lineweight, bool off) :
+
+    RObject(document), name(name.trimmed()), off(off), frozen(frozen), locked(locked),
     color(color), linetypeId(linetype), lineweight(lineweight) {
 
     RDebug::incCounter("RLayer");
@@ -55,6 +58,7 @@ RLayer::RLayer(RDocument* document, const QString& name,
 RLayer::RLayer(const RLayer& other) :
     RObject(other),
     name(other.name),
+    off(other.off),
     frozen(other.frozen),
     locked(other.locked),
     color(other.color),
@@ -76,7 +80,8 @@ void RLayer::init() {
     RLayer::PropertyProtected.generateId(typeid(RLayer), RObject::PropertyProtected);
 
     RLayer::PropertyName.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Name"));
-    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Hidden"));
+    RLayer::PropertyOff.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Off"));
+    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Frozen"));
     RLayer::PropertyLocked.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Locked"));
     RLayer::PropertyColor.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Color"));
     RLayer::PropertyLinetype.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
@@ -123,6 +128,7 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
     }
 
     ret = ret || RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
+    ret = ret || RObject::setMember(off, value, PropertyOff == propertyTypeId);
     ret = ret || RObject::setMember(frozen, value, PropertyFrozen == propertyTypeId);
     ret = ret || RObject::setMember(locked, value, PropertyLocked == propertyTypeId);
     ret = ret || RObject::setMember(color, value, PropertyColor == propertyTypeId);
@@ -156,6 +162,9 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
 QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(name), RPropertyAttributes());
+    }
+    if (propertyTypeId == PropertyOff) {
+        return qMakePair(QVariant(off), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyFrozen) {
         return qMakePair(QVariant(frozen), RPropertyAttributes());
