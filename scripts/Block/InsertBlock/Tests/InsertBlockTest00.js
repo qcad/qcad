@@ -18,6 +18,7 @@ InsertBlockTest00.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapePolygonPPButton');
     this.setToolOption('ShapePolygonPP/Corners', '3');
     this.setToolOption('Shape/CreatePolyline', 'true');
+    this.setToolOption('Shape/Fill', 'false');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.7, 9.9);
