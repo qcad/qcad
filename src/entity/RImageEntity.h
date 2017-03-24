@@ -77,10 +77,6 @@ public:
 
     virtual RImageEntity* clone() const;
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityImage;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

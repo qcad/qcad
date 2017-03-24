@@ -50,6 +50,9 @@ public:
     RAttributeData(const RTextBasedData& textData, RBlockReferenceEntity::Id blockReferenceId, const QString& tag);
     virtual ~RAttributeData() {}
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityAttribute;
+    }
     virtual QString getRenderedText(bool escUnicode=false) const;
 
     QString getTag() const {

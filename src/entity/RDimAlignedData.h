@@ -45,6 +45,9 @@ public:
                     const RVector& extensionPoint1,
                     const RVector& extensionPoint2);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityDimAligned;
+    }
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;

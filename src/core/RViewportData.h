@@ -55,6 +55,10 @@ public:
 //        const RVector& viewCenter,
 //        const RVector& viewTarget);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityViewport;
+    }
+
     virtual RBox getBoundingBox(bool ignoreEmpty) const;
 
     virtual RBox getBoundingBox() const {

@@ -91,10 +91,6 @@ public:
         return new RDimAlignedEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityDimAligned;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

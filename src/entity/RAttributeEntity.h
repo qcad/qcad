@@ -85,10 +85,6 @@ public:
         return new RAttributeEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityAttribute;
-    }
-
     virtual RAttributeData& getData() {
         return data;
     }

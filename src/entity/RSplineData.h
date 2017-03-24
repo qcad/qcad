@@ -47,6 +47,9 @@ public:
     RSplineData();
     RSplineData(const RSpline& spline);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntitySpline;
+    }
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;

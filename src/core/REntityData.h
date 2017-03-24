@@ -83,6 +83,10 @@ public:
         this->document = document;
     }
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityUnknown;
+    }
+
     /**
      * \return Shapes that represent the geometry of this entity.
      *

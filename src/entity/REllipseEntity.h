@@ -88,10 +88,6 @@ public:
         return new REllipseEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityEllipse;
-    }
-
     void setShape(const REllipse& e);
 
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

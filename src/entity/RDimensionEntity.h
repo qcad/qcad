@@ -87,10 +87,6 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(typeid(RDimensionEntity));
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityDimension;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

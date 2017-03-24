@@ -83,10 +83,6 @@ public:
         return new RTextEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityText;
-    }
-
     virtual RTextData& getData() {
         return data;
     }

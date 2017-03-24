@@ -77,10 +77,6 @@ public:
         return new RLineEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityLine;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

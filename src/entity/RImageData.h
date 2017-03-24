@@ -57,6 +57,9 @@ public:
         int fade);
     virtual ~RImageData();
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityImage;
+    }
     RImageData& operator=(const RImageData& other);
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;

@@ -53,6 +53,9 @@ public:
                    const QString& fontName,
                    double textAngle);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityDimension;
+    }
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual bool isValid() const;

@@ -89,10 +89,6 @@ public:
         return new RDimRadialEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityDimRadial;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

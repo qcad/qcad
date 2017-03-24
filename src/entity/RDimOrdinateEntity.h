@@ -94,10 +94,6 @@ public:
         return new RDimOrdinateEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityDimOrdinate;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

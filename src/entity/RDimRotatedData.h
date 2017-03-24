@@ -46,6 +46,9 @@ public:
                     const RVector& extensionPoint2,
                     double rotation);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityDimRotated;
+    }
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual bool isValid() const;

@@ -44,6 +44,9 @@ public:
     RDimRadialData(const RDimensionData& dimData,
                     const RVector& chordPoint);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityDimRadial;
+    }
     virtual bool isValid() const;
 
     void setCenter(const RVector& p) {

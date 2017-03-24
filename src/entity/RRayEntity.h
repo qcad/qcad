@@ -79,10 +79,6 @@ public:
         return new RRayEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityRay;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

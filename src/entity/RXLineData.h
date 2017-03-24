@@ -48,6 +48,9 @@ public:
     RXLineData(const RXLine& line);
     RXLineData(const RVector& basePoint, const RVector& dir);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityXLine;
+    }
     RXLine getXLine() {
         return *this;
     }

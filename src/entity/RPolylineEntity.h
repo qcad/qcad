@@ -88,10 +88,6 @@ public:
         return new RPolylineEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityPolyline;
-    }
-
     void setShape(const RPolyline& l);
 
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

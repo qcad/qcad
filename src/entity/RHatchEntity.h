@@ -77,10 +77,6 @@ public:
 
     virtual RHatchEntity* clone() const;
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityHatch;
-    }
-
     void setData(RHatchData& d) {
         data = d;
     }

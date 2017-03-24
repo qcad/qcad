@@ -79,10 +79,6 @@ public:
         return new RBlockReferenceEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityBlockRef;
-    }
-
     virtual QSet<RPropertyTypeId> getPropertyTypeIds() const;
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId,

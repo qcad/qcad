@@ -81,10 +81,6 @@ public:
         return new RSolidEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntitySolid;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(
