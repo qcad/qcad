@@ -43,7 +43,7 @@ public:
     RCircle(const RVector& center, const double radius);
     virtual ~RCircle();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Circle;
     }
 

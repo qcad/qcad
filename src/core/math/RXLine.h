@@ -47,7 +47,7 @@ public:
     RXLine(const RVector& basePoint, double angle, double distance);
     virtual ~RXLine();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return XLine;
     }
 

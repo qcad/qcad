@@ -72,40 +72,40 @@ public:
     virtual ~RShape() {
     }
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Unknown;
     }
 
     static bool isPointShape(const RShape& s) {
-        return s.getType()==RShape::Point;
+        return s.getShapeType()==RShape::Point;
     }
     static bool isLineShape(const RShape& s) {
-        return s.getType()==RShape::Line;
+        return s.getShapeType()==RShape::Line;
     }
     static bool isArcShape(const RShape& s) {
-        return s.getType()==RShape::Arc;
+        return s.getShapeType()==RShape::Arc;
     }
     static bool isCircleShape(const RShape& s) {
-        return s.getType()==RShape::Circle;
+        return s.getShapeType()==RShape::Circle;
     }
     static bool isEllipseShape(const RShape& s) {
-        return s.getType()==RShape::Ellipse;
+        return s.getShapeType()==RShape::Ellipse;
     }
     static bool isFullEllipseShape(const RShape& s);
     static bool isPolylineShape(const RShape& s) {
-        return s.getType()==RShape::Polyline;
+        return s.getShapeType()==RShape::Polyline;
     }
     static bool isSplineShape(const RShape& s) {
-        return s.getType()==RShape::Spline;
+        return s.getShapeType()==RShape::Spline;
     }
     static bool isTriangleShape(const RShape& s) {
-        return s.getType()==RShape::Triangle;
+        return s.getShapeType()==RShape::Triangle;
     }
     static bool isXLineShape(const RShape& s) {
-        return s.getType()==RShape::XLine;
+        return s.getShapeType()==RShape::XLine;
     }
     static bool isRayShape(const RShape& s) {
-        return s.getType()==RShape::Ray;
+        return s.getShapeType()==RShape::Ray;
     }
 
     virtual RShape* clone() const = 0;

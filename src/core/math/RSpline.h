@@ -58,7 +58,7 @@ public:
     RSpline(const QList<RVector>& controlPoints, int degree);
     virtual ~RSpline();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Spline;
     }
 

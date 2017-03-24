@@ -37,7 +37,7 @@ double RShape::epsTolerance = 1.0e-02;
 int RShape::errorCode = 0;
 
 bool RShape::isFullEllipseShape(const RShape& s) {
-    return s.getType()==RShape::Ellipse && dynamic_cast<const REllipse&>(s).isFullEllipse();
+    return s.getShapeType()==RShape::Ellipse && dynamic_cast<const REllipse&>(s).isFullEllipse();
 }
 
 /**
@@ -109,7 +109,7 @@ RVector RShape::getClosestPointOnShape(const RVector& p, bool limited, double st
 }
 
 bool RShape::equals(const RShape& other, double tolerance) const {
-    if (getType()!=other.getType()) {
+    if (getShapeType()!=other.getShapeType()) {
         return false;
     }
 

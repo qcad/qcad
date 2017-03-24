@@ -46,7 +46,7 @@ public:
     RLine(const RVector& startPoint, double angle, double distance);
     virtual ~RLine();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Line;
     }
 

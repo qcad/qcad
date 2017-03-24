@@ -49,7 +49,7 @@ public:
              bool reversed);
     virtual ~REllipse();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Ellipse;
     }
 
