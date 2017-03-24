@@ -717,7 +717,9 @@ QSharedPointer<RLayer> RExporter::getEntityLayer(REntity& entity) {
 }
 
 bool RExporter::isVisible(REntity& entity) {
+    return entity.isVisible();
 
+    /*
     // only export entities on visible layers:
     if (currentLayer!=NULL && currentLayer->isOffOrFrozen()) {
         // viewports are exported even if layer is hidden (but without border):
@@ -766,6 +768,7 @@ bool RExporter::isVisible(REntity& entity) {
     }
 
     return true;
+    */
 }
 
 /**

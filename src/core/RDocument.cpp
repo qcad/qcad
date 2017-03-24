@@ -1482,33 +1482,37 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
             }
         }
 
+        if (!entity->isVisible()) {
+            continue;
+        }
+
         // layer is off:
-        if (isLayerOff(entity->getLayerId())) {
-            // block references are exported even if layer is off:
-            if (entity->getType()!=RS::EntityBlockRef) {
-                continue;
-            }
-        }
+//        if (isLayerOff(entity->getLayerId())) {
+//            // block references are exported even if layer is off:
+//            if (entity->getType()!=RS::EntityBlockRef) {
+//                continue;
+//            }
+//        }
 
-        // layer is frozen:
-        if (isLayerFrozen(entity->getLayerId())) {
-            // viewports are exported even if layer is off or frozen (but without border):
-            if (entity->getType()!=RS::EntityViewport) {
-                continue;
-            }
-        }
+//        // layer is frozen:
+//        if (isLayerFrozen(entity->getLayerId())) {
+//            // viewports are exported even if layer is off or frozen (but without border):
+//            if (entity->getType()!=RS::EntityViewport) {
+//                continue;
+//            }
+//        }
 
-        // referenced block is off:
-        QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
-        if (!blockRef.isNull()) {
-            RBlock::Id referencedBlockId = blockRef->getReferencedBlockId();
-            if (referencedBlockId!=RBlock::INVALID_ID) {
-                QSharedPointer<RBlock> block = queryBlockDirect(referencedBlockId);
-                if (!block.isNull() && block->isFrozen()) {
-                    continue;
-                }
-            }
-        }
+//        // referenced block is off:
+//        QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+//        if (!blockRef.isNull()) {
+//            RBlock::Id referencedBlockId = blockRef->getReferencedBlockId();
+//            if (referencedBlockId!=RBlock::INVALID_ID) {
+//                QSharedPointer<RBlock> block = queryBlockDirect(referencedBlockId);
+//                if (!block.isNull() && block->isFrozen()) {
+//                    continue;
+//                }
+//            }
+//        }
 
         // layer is locked:
         if (!includeLockedLayers) {
@@ -1586,26 +1590,31 @@ QSet<REntity::Id> RDocument::queryContainedEntitiesXY(const RBox& box) {
             continue;
         }
 
-        // layer is off:
-        if (isLayerOff(entity->getLayerId())) {
+        if (!entity->isVisible()) {
             outsiders.insert(*it);
             continue;
         }
 
-        // layer is frozen:
-        if (isLayerFrozen(entity->getLayerId())) {
-            outsiders.insert(*it);
-            continue;
-        }
+//        // layer is off:
+//        if (isLayerOff(entity->getLayerId())) {
+//            outsiders.insert(*it);
+//            continue;
+//        }
 
-        // block is off:
-        QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
-        if (!blockRef.isNull()) {
-            if (isBlockFrozen(blockRef->getReferencedBlockId())) {
-                outsiders.insert(*it);
-                continue;
-            }
-        }
+//        // layer is frozen:
+//        if (isLayerFrozen(entity->getLayerId())) {
+//            outsiders.insert(*it);
+//            continue;
+//        }
+
+//        // block is off:
+//        QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+//        if (!blockRef.isNull()) {
+//            if (isBlockFrozen(blockRef->getReferencedBlockId())) {
+//                outsiders.insert(*it);
+//                continue;
+//            }
+//        }
 
         if (!boxExpanded.contains(entity->getBoundingBox())) {
             outsiders.insert(*it);
