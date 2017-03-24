@@ -141,7 +141,7 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
     if (event.buttons().valueOf() === Qt.MidButton.valueOf() ||
         (event.buttons().valueOf() === Qt.LeftButton.valueOf() &&
          event.modifiers().valueOf() === Qt.ControlModifier.valueOf())) {
-         return;
+        return;
     }
 
     var view, referencePoint, entityId, range;
