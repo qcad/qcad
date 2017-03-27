@@ -133,6 +133,10 @@ bool RGraphicsViewQt::event(QEvent* e) {
         return gestureEvent(static_cast<QGestureEvent*>(e));
     }
 
+    if (e->type() == QEvent::NativeGesture) {
+        return nativeGestureEvent(static_cast<QNativeGestureEvent*>(e));
+    }
+
     return QWidget::event(e);
 }
 
@@ -140,6 +144,7 @@ bool RGraphicsViewQt::event(QEvent* e) {
  * Handle gesture events.
  */
 bool RGraphicsViewQt::gestureEvent(QGestureEvent* event) {
+    qDebug() << "RGraphicsViewQt::gestureEvent";
     if (QGesture* swipe = event->gesture(Qt::SwipeGesture)) {
         RGraphicsView::handleSwipeGestureEvent(*static_cast<QSwipeGesture *>(swipe));
     }
@@ -150,6 +155,27 @@ bool RGraphicsViewQt::gestureEvent(QGestureEvent* event) {
 
     else if (QGesture* pinch = event->gesture(Qt::PinchGesture)) {
         RGraphicsView::handlePinchGestureEvent(*static_cast<QPinchGesture *>(pinch));
+    }
+
+    event->accept();
+
+    return true;
+}
+
+/**
+ * Handls native gestures (macOS only?)
+ */
+bool RGraphicsViewQt::nativeGestureEvent(QNativeGestureEvent* event) {
+    qDebug() << "RGraphicsViewQt::nativeGestureEvent";
+    if (event->gestureType()==Qt::ZoomNativeGesture) {
+        double z = event->value();
+        qDebug() << "z: " << z;
+    }
+    else if (event->gestureType()==Qt::SmartZoomNativeGesture) {
+
+    }
+    else if (event->gestureType()==Qt::RotateNativeGesture) {
+
     }
 
     event->accept();
