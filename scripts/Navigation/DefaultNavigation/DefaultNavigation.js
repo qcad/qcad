@@ -288,7 +288,6 @@ DefaultNavigation.prototype.panGestureEvent = function(gesture) {
  * Zooms in / out.
  */
 DefaultNavigation.prototype.pinchGestureEvent = function(gesture) {
-    qDebug("DefaultNavigation.prototype.pinchGestureEvent");
     if (isNull(this.view)) {
         return;
     }
@@ -304,8 +303,16 @@ DefaultNavigation.prototype.pinchGestureEvent = function(gesture) {
         // rotation does nothing
     }
     if (typeof(QPinchGesture)!=="undefined" && (changeFlags & QPinchGesture.ScaleFactorChanged)) {
-        var value = gesture.property("scaleFactor");
-        qDebug("value: ", value);
+        var value;
+        if (RSettings.isQt(5)) {
+            // Qt 5:
+            value = gesture.totalScaleFactor;
+        }
+        else {
+            // Qt 4:
+            value = gesture.property("scaleFactor");
+        }
+
         if (value<=0.0) {
             return;
         }
