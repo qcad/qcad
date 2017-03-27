@@ -703,11 +703,13 @@ void RGraphicsView::handlePanGestureEvent(QPanGesture& gesture) {
 }
 
 void RGraphicsView::handlePinchGestureEvent(QPinchGesture& gesture) {
+    qDebug() << "RGraphicsView::handlePinchGestureEvent";
     if (scene == NULL) {
         return;
     }
     scene->handlePinchGestureEvent(gesture);
     if (navigationAction!=NULL) {
+        qDebug() << "RGraphicsView::handlePinchGestureEvent: fwd to navigation action";
         navigationAction->pinchGestureEvent(gesture);
     }
 }

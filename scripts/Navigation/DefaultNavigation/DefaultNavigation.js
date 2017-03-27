@@ -288,6 +288,7 @@ DefaultNavigation.prototype.panGestureEvent = function(gesture) {
  * Zooms in / out.
  */
 DefaultNavigation.prototype.pinchGestureEvent = function(gesture) {
+    qDebug("DefaultNavigation.prototype.pinchGestureEvent");
     if (isNull(this.view)) {
         return;
     }
@@ -304,6 +305,7 @@ DefaultNavigation.prototype.pinchGestureEvent = function(gesture) {
     }
     if (typeof(QPinchGesture)!=="undefined" && (changeFlags & QPinchGesture.ScaleFactorChanged)) {
         var value = gesture.property("scaleFactor");
+        qDebug("value: ", value);
         if (value<=0.0) {
             return;
         }
