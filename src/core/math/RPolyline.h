@@ -53,7 +53,7 @@ public:
     RPolyline(const QList<QSharedPointer<RShape> >& segments);
     virtual ~RPolyline();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Polyline;
     }
 

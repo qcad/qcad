@@ -49,6 +49,9 @@ public:
                     const RVector& extensionLine2Start,
                     const RVector& dimArcPosition);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityDimAngular;
+    }
     virtual bool isValid() const;
 
     void setExtensionLine1Start(const RVector& p) {

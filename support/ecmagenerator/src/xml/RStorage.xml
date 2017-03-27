@@ -1008,6 +1008,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isLayerOff" cppName="isLayerOff"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isLayerOffOrFrozen" cppName="isLayerOffOrFrozen"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="isLayerFrozen" cppName="isLayerFrozen"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

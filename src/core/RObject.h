@@ -204,7 +204,7 @@ public:
         Q_UNUSED(on)
     }
 
-    void dump() {
+    void dump() const {
         qDebug() << *this;
     }
 

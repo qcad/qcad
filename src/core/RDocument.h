@@ -203,6 +203,8 @@ public:
     bool isParentLayerLocked(RLayer::Id layerId) const;
     bool isEntityEditable(REntity::Id entityId) const;
     //bool isEntityLayerLocked(REntity::Id entityId) const;
+    bool isLayerOff(RLayer::Id layerId) const;
+    bool isLayerOffOrFrozen(RLayer::Id layerId) const;
     bool isLayerFrozen(RLayer::Id layerId) const;
     bool isParentLayerFrozen(RLayer::Id layerId) const;
     bool isBlockFrozen(RBlock::Id blockId) const;

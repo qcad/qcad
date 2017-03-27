@@ -182,7 +182,7 @@ QSet<REntity::Id> RMemoryStorage::queryAllVisibleEntities() {
         }
 
         RLayer::Id layerId = e->getLayerId();
-        if (isLayerFrozen(layerId)) {
+        if (isLayerOffOrFrozen(layerId)) {
             continue;
         }
 
@@ -891,7 +891,7 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
     for (it = entityIds.constBegin(); it != entityIds.constEnd(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (!e.isNull() && !e->isSelected() &&
-            !isLayerLocked(e->getLayerId()) && !isLayerFrozen(e->getLayerId())) {
+            !isLayerLocked(e->getLayerId()) && !isLayerOffOrFrozen(e->getLayerId())) {
 
             setEntitySelected(e, true, affectedEntities);
         }
@@ -1001,7 +1001,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
         //if (ignoreHiddenLayers) {
         bool layerHidden = false;
             QSharedPointer<RLayer> layer = queryLayerDirect(e->getLayerId());
-            if (layer.isNull() || layer->isFrozen()) {
+            if (layer.isNull() || layer->isOffOrFrozen()) {
                 layerHidden = true;
             }
         //}

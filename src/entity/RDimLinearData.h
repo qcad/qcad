@@ -45,6 +45,9 @@ public:
                    const RVector& extensionPoint1,
                    const RVector& extensionPoint2);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityDimLinear;
+    }
     virtual bool isValid() const;
 
     virtual void setDefinitionPoint(const RVector& p) {

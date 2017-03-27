@@ -16,6 +16,10 @@ TrimTest09.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
+    this.setToolOption('ShapePolygonPP/Corners', '3');
+    this.setToolOption('Shape/CreatePolyline', 'false');
+    this.setToolOption('Shape/Fill', 'false');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(19.7, 20);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

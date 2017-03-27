@@ -49,6 +49,9 @@ public:
     RSolidData(const RVector& p1, const RVector& p2, const RVector& p3);
     RSolidData(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntitySolid;
+    }
     RVector getStartPoint() const {
         return RPolyline::getStartPoint();
     }

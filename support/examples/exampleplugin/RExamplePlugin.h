@@ -38,9 +38,60 @@ class MyClass : public QObject {
 Q_OBJECT
 public:
     MyClass() : QObject() {}
+
+    virtual int getInt() const {
+        return i;
+    }
+
+    virtual double getDouble() const {
+        return d;
+    }
+
+    virtual QString getString() const {
+        return s;
+    }
+
+    virtual void setInt(int v) {
+        i = v;
+    }
+
+    virtual void setDouble(int v) {
+        d = v;
+    }
+
+    virtual void setString(const QString& v) {
+        s = v;
+    }
+
+private:
+    int i;
+    double d;
+    QString s;
 };
 
 Q_DECLARE_METATYPE(MyClass*)
+
+/**
+ * Script binding for MyClass.
+ */
+class EcmaMyClass {
+public:
+    static void initEcma(QScriptEngine& engine);
+
+    static QScriptValue createMyClass(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue myClassToString(QScriptContext *context, QScriptEngine *engine);
+    static MyClass* getSelfMyClass(const QString& fName, QScriptContext* context);
+
+    static QScriptValue getInt(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue getDouble(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue getString(QScriptContext* context, QScriptEngine* engine);
+
+    static QScriptValue setInt(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue setDouble(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue setString(QScriptContext* context, QScriptEngine* engine);
+};
+
+
 
 class RExamplePlugin : public QObject, public RPluginInterface
 {
@@ -57,7 +108,5 @@ public:
     virtual void initScriptExtensions(QScriptEngine& engine);
     virtual RPluginInfo getPluginInfo();
 
-    static QScriptValue createMyClass(QScriptContext* context, QScriptEngine* engine);
-    static QScriptValue myClassToString(QScriptContext *context, QScriptEngine *engine);
-    static MyClass* getSelfMyClass(const QString& fName, QScriptContext* context);
 };
+

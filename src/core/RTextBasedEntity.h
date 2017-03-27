@@ -78,10 +78,6 @@ public:
         return RPropertyTypeId::getPropertyTypeIds(typeid(RTextBasedEntity));
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityTextBased;
-    }
-
     virtual RTextBasedData& getData() = 0;
 
     virtual const RTextBasedData& getData() const = 0;

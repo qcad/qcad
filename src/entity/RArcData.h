@@ -50,6 +50,9 @@ public:
     RArcData(const RVector& center, double radius, double startAngle,
             double endAngle, bool reversed = false);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityArc;
+    }
     RArc getArc() {
         return *this;
     }

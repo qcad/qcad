@@ -45,6 +45,9 @@ public:
                     const RVector& leaderEndPoint,
                     const RVector& definingPoint);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityDimOrdinate;
+    }
     virtual bool isValid() const;
 
     void setLeaderEndPoint(const RVector& p) {

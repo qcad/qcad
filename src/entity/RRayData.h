@@ -45,6 +45,9 @@ public:
     RRayData(const RRay& ray);
     RRayData(const RVector& basePoint, const RVector& dir);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityRay;
+    }
     RRay getRay() {
         return *this;
     }

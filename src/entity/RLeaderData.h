@@ -44,6 +44,9 @@ public:
     RLeaderData();
     RLeaderData(const RPolyline& polyline, bool arrowHead);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityLeader;
+    }
     virtual RShape* castToShape() {
         return this;
     }

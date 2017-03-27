@@ -193,6 +193,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isEntityEditable, "isEntityEditable");
             
+            REcmaHelper::registerFunction(&engine, proto, isLayerOff, "isLayerOff");
+            
+            REcmaHelper::registerFunction(&engine, proto, isLayerOffOrFrozen, "isLayerOffOrFrozen");
+            
             REcmaHelper::registerFunction(&engine, proto, isLayerFrozen, "isLayerFrozen");
             
             REcmaHelper::registerFunction(&engine, proto, isParentLayerFrozen, "isParentLayerFrozen");
@@ -6277,6 +6281,126 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::isEntityEditable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::isLayerOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::isLayerOff", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::isLayerOff";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("isLayerOff", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isLayerOff(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.isLayerOff().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::isLayerOff", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::isLayerOffOrFrozen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::isLayerOffOrFrozen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::isLayerOffOrFrozen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("isLayerOffOrFrozen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isLayerOffOrFrozen(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.isLayerOffOrFrozen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::isLayerOffOrFrozen", context, engine);
             return result;
         }
          QScriptValue

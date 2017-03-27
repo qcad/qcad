@@ -107,7 +107,7 @@ public:
     virtual REntity* clone() const = 0;
 
     virtual RS::EntityType getType() const {
-        return RS::EntityUnknown;
+        return getData().getType();
     }
 
     static bool isComplex(const RS::EntityType type);

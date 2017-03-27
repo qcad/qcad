@@ -53,6 +53,9 @@ public:
     RHatchData(const RHatchData& other);
     RHatchData(bool solid, double scaleFactor, double angle, const QString& patternName);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityHatch;
+    }
     RHatchData& operator=(const RHatchData& other);
 
     void clearBoundary();

@@ -47,7 +47,7 @@ public:
     RRay(const RVector& basePoint, double angle, double distance);
     virtual ~RRay();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Ray;
     }
 

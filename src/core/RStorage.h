@@ -542,6 +542,8 @@ public:
 
     virtual bool isLayerLocked(RLayer::Id layerId) const;
     virtual bool isParentLayerLocked(RLayer::Id layerId) const;
+    virtual bool isLayerOff(RLayer::Id layerId) const;
+    virtual bool isLayerOffOrFrozen(RLayer::Id layerId) const;
     virtual bool isLayerFrozen(RLayer::Id layerId) const;
     virtual bool isParentLayerFrozen(RLayer::Id layerId) const;
 

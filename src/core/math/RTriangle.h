@@ -49,7 +49,7 @@ public:
     RTriangle(const RVector& p1, const RVector& p2, const RVector& p3);
     virtual ~RTriangle();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Triangle;
     }
 

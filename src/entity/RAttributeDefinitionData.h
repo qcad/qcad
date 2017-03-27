@@ -47,6 +47,9 @@ public:
     RAttributeDefinitionData(const RTextBasedData& textData, const QString& tag, const QString& prompt);
     virtual ~RAttributeDefinitionData() {}
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityAttributeDefinition;
+    }
     QString getTag() const {
         return tag;
     }

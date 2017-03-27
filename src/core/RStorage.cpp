@@ -869,6 +869,27 @@ bool RStorage::isParentLayerLocked(RLayer::Id layerId) const {
 }
 
 /**
+ * \return True if this layer is off.
+ */
+bool RStorage::isLayerOff(RLayer::Id layerId) const {
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
+    if (l->isOff()) {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * \return True if this layer is off or frozen.
+ */
+bool RStorage::isLayerOffOrFrozen(RLayer::Id layerId) const {
+    return isLayerOff(layerId) || isLayerFrozen(layerId);
+}
+
+/**
  * \return True if this layer or one of its parent layers are frozen.
  */
 bool RStorage::isLayerFrozen(RLayer::Id layerId) const {

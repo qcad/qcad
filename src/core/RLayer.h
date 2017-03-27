@@ -53,6 +53,7 @@ public:
     static RPropertyTypeId PropertyProtected;
 
     static RPropertyTypeId PropertyName;
+    static RPropertyTypeId PropertyOff;
     static RPropertyTypeId PropertyFrozen;
     static RPropertyTypeId PropertyLocked;
     static RPropertyTypeId PropertyColor;
@@ -65,7 +66,8 @@ public:
     RLayer(RDocument* document, const QString& name, bool frozen = false,
         bool locked = false, const RColor& color = Qt::black,
         RLinetype::Id linetypeId = RLinetype::INVALID_ID,
-        RLineweight::Lineweight lineweight = RLineweight::Weight000);
+        RLineweight::Lineweight lineweight = RLineweight::Weight000,
+        bool off = false);
 
     RLayer(const RLayer& other);
     virtual ~RLayer();
@@ -85,6 +87,18 @@ public:
     }
 
     void setName(const QString& n);
+
+    bool isOffOrFrozen() const {
+        return isOff() || isFrozen();
+    }
+
+    bool isOff() const {
+        return off;
+    }
+
+    void setOff(bool on) {
+        off = on;
+    }
 
     bool isFrozen() const {
         return frozen;
@@ -238,6 +252,7 @@ public:
 
 private:
     QString name;
+    bool off;
     bool frozen;
     bool locked;
     RColor color;

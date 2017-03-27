@@ -38,16 +38,17 @@ struct DXFLIB_EXPORT DL_LayerData {
      * Constructor.
      * Parameters: see member variables.
      */
-    DL_LayerData(const std::string& lName,
-                 int lFlags) {
-        name = lName;
-        flags = lFlags;
+    DL_LayerData(const std::string& name,
+                 int flags, bool off = false) :
+        name(name), flags(flags), off(off) {
     }
 
     /** Layer name. */
     std::string name;
     /** Layer flags. (1 = frozen, 2 = frozen by default, 4 = locked) */
     int flags;
+    /** Layer is off */
+    bool off;
 };
 
 

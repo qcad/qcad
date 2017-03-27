@@ -82,10 +82,6 @@ public:
         return new RArcEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityArc;
-    }
-
     void setShape(const RArc& a);
 
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

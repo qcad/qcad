@@ -46,7 +46,7 @@ public:
             double endAngle, bool reversed = false);
     virtual ~RArc();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Arc;
     }
 

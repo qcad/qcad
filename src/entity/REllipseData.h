@@ -54,6 +54,9 @@ public:
         double startParam, double endParam, 
         bool reversed = false);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityEllipse;
+    }
     REllipse getEllipse() {
         return *this;
     }

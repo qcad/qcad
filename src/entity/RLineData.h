@@ -48,6 +48,10 @@ public:
     RLineData(const RLine& line);
     RLineData(const RVector& startPoint, const RVector& endPoint);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityLine;
+    }
+
     RLine getLine() {
         return *this;
     }

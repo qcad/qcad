@@ -42,7 +42,7 @@ public:
     RPoint(const RVector& position);
     virtual ~RPoint();
 
-    virtual RShape::Type getType() const {
+    virtual RShape::Type getShapeType() const {
         return Point;
     }
 

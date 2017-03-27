@@ -3742,6 +3742,10 @@ void DL_Dxf::writeLayer(DL_WriterA& dw,
         std::cerr << "Layer color cannot be " << color << ". Changed to 7.\n";
         color = 7;
     }
+    if (data.off) {
+        // negative color value means layer is off:
+        color = -color;
+    }
 
     if (data.name == "0") {
         dw.tableLayerEntry(0x10);

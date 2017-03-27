@@ -90,10 +90,6 @@ public:
         return new RDimDiametricEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityDimDiametric;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

@@ -58,6 +58,10 @@ public:
               bool italic,
               double angle,
               bool simple);
+
+    virtual RS::EntityType getType() const {
+        return RS::EntityText;
+    }
 };
 
 Q_DECLARE_METATYPE(RTextData)

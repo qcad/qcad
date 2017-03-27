@@ -39,21 +39,7 @@ void RExamplePlugin::postInit(InitStatus status) {
 }
 
 void RExamplePlugin::initScriptExtensions(QScriptEngine& engine) {
-    QScriptValue* proto = new QScriptValue(engine.newVariant(qVariantFromValue((MyClass*)0)));
-
-    // base class:
-    QScriptValue dpt = engine.defaultPrototype(qMetaTypeId<QObject*>());
-    proto->setPrototype(dpt);
-
-    REcmaHelper::registerFunction(&engine, proto, RExamplePlugin::myClassToString, "toString");
-
-    engine.setDefaultPrototype(qMetaTypeId<MyClass*>(), *proto);
-                        
-    //qScriptRegisterMetaType<MyClass*>(&engine, toScriptValue, fromScriptValue, *proto);
-
-    QScriptValue ctor = engine.newFunction(RExamplePlugin::createMyClass, *proto, 0);
-
-    engine.globalObject().setProperty("MyClass", ctor, QScriptValue::SkipInEnumeration);
+    EcmaMyClass::initEcma(engine);
 }
 
 RPluginInfo RExamplePlugin::getPluginInfo() {
@@ -66,10 +52,45 @@ RPluginInfo RExamplePlugin::getPluginInfo() {
     return ret;
 }
 
+
+
+void EcmaMyClass::initEcma(QScriptEngine& engine) {
+    QScriptValue* proto = new QScriptValue(engine.newVariant(qVariantFromValue((MyClass*)0)));
+
+    // base class:
+    QScriptValue dpt = engine.defaultPrototype(qMetaTypeId<QObject*>());
+    proto->setPrototype(dpt);
+
+    REcmaHelper::registerFunction(&engine, proto, myClassToString, "toString");
+
+    engine.setDefaultPrototype(qMetaTypeId<MyClass*>(), *proto);
+                        
+    QScriptValue ctor = engine.newFunction(createMyClass, *proto, 0);
+
+    engine.globalObject().setProperty("MyClass", ctor, QScriptValue::SkipInEnumeration);
+
+    // register function getInt:
+    REcmaHelper::registerFunction(
+        &engine, 
+        proto,            // prototype
+        getInt,           // reference to static function
+        "getInt");        // name in ECMAScript
+
+    REcmaHelper::registerFunction(&engine, proto, getDouble, "getDouble");
+    REcmaHelper::registerFunction(&engine, proto, getString, "getString");
+
+    REcmaHelper::registerFunction(&engine, proto, setInt,    "setInt");
+    REcmaHelper::registerFunction(&engine, proto, setDouble, "setDouble");
+    REcmaHelper::registerFunction(&engine, proto, setString, "setString");
+}
+
 /**
- * Constructor for MyClass:
+ * Constructor for MyClass.
+ * Allows instantiation in ECMAScript as:
+ * 
+ * var v = new MyClass();
  */
-QScriptValue RExamplePlugin::createMyClass(QScriptContext* context, QScriptEngine* engine) {
+QScriptValue EcmaMyClass::createMyClass(QScriptContext* context, QScriptEngine* engine) {
     if (context->thisObject().strictlyEquals(engine->globalObject())) {
         return REcmaHelper::throwError(QString::fromLatin1("MyClass(): Did you forget to construct with 'new'?"), context);
     }
@@ -85,16 +106,26 @@ QScriptValue RExamplePlugin::createMyClass(QScriptContext* context, QScriptEngin
 }
 
 /**
- * MyClass::toString
+ * Allows implicit converstion of MyClass objects to strings:
+ *
+ * var v = new MyClass();
+ * qDebug(v);
+ * // MyClass(0x12345678)
  */
-QScriptValue RExamplePlugin::myClassToString(QScriptContext *context, QScriptEngine *engine) {
+QScriptValue EcmaMyClass::myClassToString(QScriptContext *context, QScriptEngine *engine) {
     Q_UNUSED(engine)
 
     MyClass* self = getSelfMyClass("toString", context);
-    return QScriptValue(QString("MyClass(0x%1)").arg((unsigned long int)self, 0, 16));
+    if (self!=NULL) {
+        return QScriptValue(QString("MyClass(0x%1)").arg((unsigned long int)self, 0, 16));
+    }
+    return QScriptValue();
 }
 
-MyClass* RExamplePlugin::getSelfMyClass(const QString& fName, QScriptContext* context) {
+/**
+ * \return MyClass object from given script context. Helper function.
+ */
+MyClass* EcmaMyClass::getSelfMyClass(const QString& fName, QScriptContext* context) {
     MyClass* self = REcmaHelper::scriptValueTo<MyClass >(context->thisObject());
     if (self == NULL){
         if (fName!="toString") {
@@ -104,6 +135,93 @@ MyClass* RExamplePlugin::getSelfMyClass(const QString& fName, QScriptContext* co
     }
     
     return self;
+}
+
+/**
+ * Binding for getInt.
+ */
+QScriptValue EcmaMyClass::getInt(QScriptContext* context, QScriptEngine* engine) {
+    MyClass* self = getSelfMyClass("getInt", context);
+    if (self!=NULL) {
+        int i = self->getInt();
+        return QScriptValue(engine, i);
+    }
+    return QScriptValue();
+}
+
+/**
+ * Binding for getDouble.
+ */
+QScriptValue EcmaMyClass::getDouble(QScriptContext* context, QScriptEngine* engine) {
+    MyClass* self = getSelfMyClass("getDouble", context);
+    if (self!=NULL) {
+        double d = self->getDouble();
+        return QScriptValue(engine, d);
+    }
+    return QScriptValue();
+}
+
+/**
+ * Binding for getString.
+ */
+QScriptValue EcmaMyClass::getString(QScriptContext* context, QScriptEngine* engine) {
+    MyClass* self = getSelfMyClass("getString", context);
+    if (self!=NULL) {
+        QString s = self->getString();
+        return QScriptValue(engine, s);
+    }
+    return QScriptValue();
+}
+
+/**
+ * Binding for setInt.
+ */
+QScriptValue EcmaMyClass::setInt(QScriptContext* context, QScriptEngine* engine) {
+    MyClass* self = getSelfMyClass("setInt", context);
+    if (self!=NULL) {
+        if (context->argumentCount()==1 && context->argument(0).isNumber()) {
+            int a0 = (int)context->argument(0).toNumber();
+            self->setInt(a0);
+        } 
+        else {
+            return REcmaHelper::throwError("Wrong number/types of arguments for EcmaMyClass.setInt().", context);
+        }
+    }
+    return QScriptValue();
+}
+
+/**
+ * Binding for setDouble.
+ */
+QScriptValue EcmaMyClass::setDouble(QScriptContext* context, QScriptEngine* engine) {
+    MyClass* self = getSelfMyClass("setDouble", context);
+    if (self!=NULL) {
+        if (context->argumentCount()==1 && context->argument(0).isNumber()) {
+            double a0 = (double)context->argument(0).toNumber();
+            self->setDouble(a0);
+        } 
+        else {
+            return REcmaHelper::throwError("Wrong number/types of arguments for EcmaMyClass.setDouble().", context);
+        }
+    }
+    return QScriptValue();
+}
+
+/**
+ * Binding for setString.
+ */
+QScriptValue EcmaMyClass::setString(QScriptContext* context, QScriptEngine* engine) {
+    MyClass* self = getSelfMyClass("setString", context);
+    if (self!=NULL) {
+        if (context->argumentCount()==1 && context->argument(0).isString()) {
+            QString a0 = context->argument(0).toString();
+            self->setString(a0);
+        } 
+        else {
+            return REcmaHelper::throwError("Wrong number/types of arguments for EcmaMyClass.setString().", context);
+        }
+    }
+    return QScriptValue();
 }
 
 #if QT_VERSION < 0x050000

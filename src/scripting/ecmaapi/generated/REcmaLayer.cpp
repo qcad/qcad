@@ -77,6 +77,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, setName, "setName");
             
+            REcmaHelper::registerFunction(&engine, proto, isOffOrFrozen, "isOffOrFrozen");
+            
+            REcmaHelper::registerFunction(&engine, proto, isOff, "isOff");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOff, "setOff");
+            
             REcmaHelper::registerFunction(&engine, proto, isFrozen, "isFrozen");
             
             REcmaHelper::registerFunction(&engine, proto, setFrozen, "setFrozen");
@@ -164,6 +170,10 @@
             
             ctor.setProperty("PropertyName",
                 qScriptValueFromValue(&engine, RLayer::PropertyName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyOff",
+                qScriptValueFromValue(&engine, RLayer::PropertyOff),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyFrozen",
@@ -973,6 +983,198 @@
     } else 
 
     if( context->argumentCount() ==
+        8
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RDocument * */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isString()
+                ) /* type: QString */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isBool()
+                ) /* type: bool */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isBool()
+                ) /* type: bool */
+            
+                && (
+                
+                        context->argument(
+                        4
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        4
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        4
+                        ).isNull()
+                ) /* type: RColor */
+            
+                && (
+                
+                        context->argument(
+                        5
+                        ).isNumber()
+                ) /* type: RLinetype::Id */
+            
+                && (
+                
+                        context->argument(
+                        6
+                        ).isNumber()
+                ) /* type: RLineweight::Lineweight */
+            
+                && (
+                
+                        context->argument(
+                        7
+                        ).isBool()
+                ) /* type: bool */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RLayer: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RLayer: Argument 4 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a4 = 
+                    *ap4;
+                
+                    // argument isStandardType
+                    RLinetype::Id
+                    a5 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 5 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RLineweight::Lineweight
+                    a6 =
+                    (RLineweight::Lineweight)
+                    (int)
+                    context->argument( 6 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a7 =
+                    (bool)
+                    
+                    context->argument( 7 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RLayer
+                    * cppResult =
+                    new
+                    RLayer
+                    (
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6
+        ,
+    a7
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    if( context->argumentCount() ==
         1
                 && (
                 
@@ -1358,6 +1560,159 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLayer::setName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::isOffOrFrozen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::isOffOrFrozen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isOffOrFrozen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("isOffOrFrozen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOffOrFrozen();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isOffOrFrozen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::isOffOrFrozen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::isOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::isOff", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isOff";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("isOff", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOff();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isOff().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::isOff", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::setOff
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::setOff", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setOff";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("setOff", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOff(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setOff().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::setOff", context, engine);
             return result;
         }
          QScriptValue

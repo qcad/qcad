@@ -366,27 +366,82 @@ bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
 }
 
 /**
- * \return true if this entity is visible (i.e. is not on a frozen layer
+ * \return true if this entity is visible (i.e. is not on a frozen or hidden layer
  * or in a frozen block).
  */
 bool REntity::isVisible() const {
-    if (getDocument()==NULL) {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
         return true;
     }
 
-    // check if layer is frozen:
-    if (getDocument()->isLayerFrozen(getLayerId())) {
-        return false;
+    RLayer::Id layerId = getLayerId();
+    bool isLayer0 = doc->getLayerName(layerId)=="0";
+
+    // delegate attribute visibility to block reference:
+    // only show block attributes of visible blocks:
+    if (RSettings::getHideAttributeWithBlock()) {
+        if (getType()==RS::EntityAttribute) {
+            REntity::Id blockRefId = getParentId();
+            QSharedPointer<REntity> parentEntity = doc->queryEntityDirect(blockRefId);
+            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
+            if (!blockRef.isNull()) {
+                // delegate visibility of block attribute to block reference:
+                return blockRef->isVisible();
+            }
+        }
     }
 
+    bool ignoreLayerVisibility = false;
+
+//    qDebug() << "entity: ";
+//    dump();
+//    qDebug() << "layer: " << doc->getLayerName(layerId);
+//    qDebug() << "model space: " << doc->getModelSpaceBlockId();
+//    qDebug() << "block ID: " << getBlockId();
+//    qDebug() << "layer 0 compat: " << RSettings::isLayer0CompatibilityOn();
+
+    if (isLayer0 &&
+        RSettings::isLayer0CompatibilityOn() &&
+        doc->getModelSpaceBlockId()!=getBlockId()) {
+
+        // entity is on layer 0 and not in model space block:
+        // if layer 0 compatibility is on, the visibility of layer 0
+        // does not affect the visibility of the entity:
+        ignoreLayerVisibility = true;
+    }
+
+//    qDebug() << "ignoreLayerVisibility:" << ignoreLayerVisibility;
+
+    // check if layer is frozen:
+    if (doc->isLayerFrozen(layerId) && !ignoreLayerVisibility) {
+        if (getType()!=RS::EntityViewport) {
+            return false;
+        }
+    }
+
+    // check if layer is off and this is not a block reference:
+    // block references on layer X remain visible if X is off but not frozen:
+    if (doc->isLayerOff(layerId) && !ignoreLayerVisibility) {
+        if (getType()!=RS::EntityBlockRef) {
+            return false;
+        }
+    }
+
+    // if entity is on layer 0 and layer of current rendering context block reference
+    // is off, entity is off:
+    // -> this is implemented in RBlockReference::exportEntity
+
     // check if block is frozen:
-    const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(this);
-    if (blockRef!=NULL) {
-        RBlock::Id blockId = blockRef->getReferencedBlockId();
-        if (blockId!=RBlock::INVALID_ID) {
-            QSharedPointer<RBlock> block = getDocument()->queryBlockDirect(blockId);
-            if (!block.isNull() && block->isFrozen()) {
-                return false;
+    if (getType()==RS::EntityBlockRef) {
+        const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(this);
+        if (blockRef!=NULL) {
+            RBlock::Id blockId = blockRef->getReferencedBlockId();
+            if (blockId!=RBlock::INVALID_ID) {
+                QSharedPointer<RBlock> block = doc->queryBlockDirect(blockId);
+                if (!block.isNull() && block->isFrozen()) {
+                    return false;
+                }
             }
         }
     }

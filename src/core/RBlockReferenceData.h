@@ -52,6 +52,10 @@ public:
             int columnCount=1, int rowCount=1,
             double columnSpacing=0, double rowSpacing=0);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityBlockRef;
+    }
+
     virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const;
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 

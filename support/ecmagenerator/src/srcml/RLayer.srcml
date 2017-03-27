@@ -54,6 +54,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyOff</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFrozen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLocked</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyColor</name></decl>;</decl_stmt>
@@ -66,7 +67,8 @@
     <constructor_decl><name>RLayer</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>, <param><decl><type><name>bool</name></type> <name>frozen</name> =<init> <expr><name>false</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>locked</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name> =<init> <expr><name><name>Qt</name>::<name>black</name></name></expr></init></decl></param>,
         <param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name> =<init> <expr><name><name>RLinetype</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
-        <param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name> =<init> <expr><name><name>RLineweight</name>::<name>Weight000</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+        <param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name> =<init> <expr><name><name>RLineweight</name>::<name>Weight000</name></name></expr></init></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>off</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <constructor_decl><name>RLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>RLayer</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RLayer</name><parameter_list>()</parameter_list>;</destructor_decl>
@@ -86,6 +88,18 @@
     }</block></function>
 
     <function_decl><type><name>void</name></type> <name>setName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>isOffOrFrozen</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>isOff</name><argument_list>()</argument_list></call> || <call><name>isFrozen</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isOff</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>off</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setOff</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>off</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
 
     <function><type><name>bool</name></type> <name>isFrozen</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>frozen</name></expr>;</return>
@@ -239,6 +253,7 @@
 
 </public><private>private:
     <decl_stmt><decl><type><name>QString</name></type> <name>name</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>off</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>frozen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>locked</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RColor</name></type> <name>color</name></decl>;</decl_stmt>

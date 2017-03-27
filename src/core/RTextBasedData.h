@@ -65,6 +65,10 @@ public:
               bool simple);
     virtual ~RTextBasedData() {}
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityTextBased;
+    }
+
     bool isValid() const {
         return !text.isNull();
     }

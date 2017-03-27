@@ -96,10 +96,6 @@ public:
         return new RDimAngularEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityDimAngular;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

@@ -81,10 +81,6 @@ public:
         return new RFaceEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityFace;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

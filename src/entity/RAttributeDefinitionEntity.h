@@ -84,10 +84,6 @@ public:
         return new RAttributeDefinitionEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityAttributeDefinition;
-    }
-
     virtual RAttributeDefinitionData& getData() {
         return data;
     }

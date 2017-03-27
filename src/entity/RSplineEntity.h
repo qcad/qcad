@@ -91,10 +91,6 @@ public:
         return new RSplineEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntitySpline;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

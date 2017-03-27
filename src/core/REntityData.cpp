@@ -69,9 +69,18 @@ double REntityData::getLineweightInUnits(const QStack<REntity*>& blockRefStack) 
  * \param resolve Resolve color if ByLayer or ByBlock.
  */
 RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack) const {
-
     if (!resolve) {
         return getColor();
+    }
+
+    if (getType()==RS::EntityAttribute) {
+        REntity::Id blockRefId = getParentId();
+        QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
+        QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
+        if (!blockRef.isNull()) {
+            // delegate color of block attribute to block reference:
+            return blockRef->getColor(true, blockRefStack);
+        }
     }
 
     if (color.isByLayer()) {

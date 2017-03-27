@@ -81,10 +81,6 @@ public:
         return new RTraceEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityTrace;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

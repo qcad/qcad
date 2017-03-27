@@ -49,6 +49,9 @@ public:
     RCircleData(const RCircle& circle);
     RCircleData(const RVector& center, double radius);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityCircle;
+    }
     RCircle getCircle() {
         return *this;
     }

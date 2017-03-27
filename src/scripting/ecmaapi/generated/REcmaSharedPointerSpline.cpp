@@ -680,7 +680,7 @@
     // return type 'RShape::Type'
     RShape::Type cppResult =
         
-               self->getType();
+               self->getShapeType();
         // return type: RShape::Type
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);

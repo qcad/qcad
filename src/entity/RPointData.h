@@ -48,6 +48,9 @@ public:
     RPointData();
     RPointData(const RVector& point);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityPoint;
+    }
     RVector getPosition() const {
        return RPoint::getPosition();
     }

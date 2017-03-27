@@ -74,10 +74,6 @@ public:
         return new RCircleEntity(*this);
     }
 
-    virtual RS::EntityType getType() const {
-        return RS::EntityCircle;
-    }
-
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(

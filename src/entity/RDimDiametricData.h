@@ -44,6 +44,9 @@ public:
     RDimDiametricData(const RDimensionData& dimData,
                     const RVector& choordPoint);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityDimDiametric;
+    }
     virtual bool isValid() const;
 
     void setChordPoint(const RVector& p) {

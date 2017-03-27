@@ -578,7 +578,7 @@ void RDxfExporter::writeLayer(const RLayer& l) {
     qDebug() << "RS_FilterDxf::writeLayer: " << l.getName();
 
     int colorSign = 1;
-    if (l.isFrozen()) {
+    if (l.isOff()) {
         colorSign = -1;
     }
 
@@ -591,7 +591,7 @@ void RDxfExporter::writeLayer(const RLayer& l) {
     dxf.writeLayer(
         *dw,
         DL_LayerData((const char*)RDxfExporter::escapeUnicode(l.getName()),
-                     l.isFrozen() + (l.isLocked()<<2)),
+                     l.isFrozen() + (l.isLocked()<<2), l.isOff()),
         DL_Attributes(std::string(""),
                       colorSign * RDxfServices::colorToNumber(l.getColor(), dxfColors),
                       RDxfServices::colorToNumber24(l.getColor()),

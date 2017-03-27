@@ -51,6 +51,9 @@ public:
     RPolylineData();
     RPolylineData(const RPolyline& polyline);
 
+    virtual RS::EntityType getType() const {
+        return RS::EntityPolyline;
+    }
     virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const;
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
