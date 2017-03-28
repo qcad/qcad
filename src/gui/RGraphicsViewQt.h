@@ -113,9 +113,6 @@ protected:
     bool event(QEvent* e);
 
     bool gestureEvent(QGestureEvent* event);
-    bool nativeGestureEvent(QNativeGestureEvent* event);
-    //void pinchTriggered(QPinchGesture* gesture);
-    //void panTriggered(QPanGesture* gesture);
 
     virtual void focusInEvent(QFocusEvent* event);
     virtual void focusOutEvent(QFocusEvent* event);
