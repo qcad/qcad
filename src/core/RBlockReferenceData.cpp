@@ -19,6 +19,7 @@
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
+#include "RMainWindow.h"
 #include "RMouseEvent.h"
 
 RBlockReferenceData::RBlockReferenceData() :
@@ -587,6 +588,18 @@ bool RBlockReferenceData::scale(const RVector& scaleFactors, const RVector& cent
 void RBlockReferenceData::setReferencedBlockId(RBlock::Id blockId) {
     referencedBlockId = blockId;
     update();
+}
+
+void RBlockReferenceData::groundReferencedBlockId() const {
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+    if (mainWindow!=NULL) {
+        mainWindow->handleUserWarning(QT_TRANSLATE_NOOP("REntity", "Circular (recursive) block referencing detected:") + );
+        if (document!=NULL) {
+            mainWindow->handleUserWarning(QT_TRANSLATE_NOOP("REntity", "Block name:") + QString(" ") + document->getBlockName(referencedBlockId));
+        }
+    }
+
+    referencedBlockId = RBlock::INVALID_ID;
 }
 
 void RBlockReferenceData::setPosition(const RVector& p) {
