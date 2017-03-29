@@ -217,33 +217,8 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
 
     QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
 
-//    RBox baseBBox;
-//    QSet<REntity::Id>::iterator it;
-//    for (it = ids.begin(); it != ids.end(); it++) {
-//        QSharedPointer<REntity> entity = queryEntity(*it);
-//        if (entity.isNull()) {
-//            continue;
-//        }
-
-//        RBox b = entity->getBoundingBox(ignoreEmpty);
-//        baseBBox.growToInclude(b);
-//    }
-
-//    if (columnCount==1 && rowCount==1) {
-//        boundingBoxes.append(baseBBox);
-//    }
-//    else {
-//        // add bounding boxes for rows and columns:
-//        for (int col=0; col<columnCount; col++) {
-//            for (int row=0; row<rowCount; row++) {
-//                RVector offset = getColumnRowOffset(col, row);
-//                RBox b = baseBBox;
-//                b.c1 += offset;
-//                b.c2 += offset;
-//                boundingBoxes.append(b);
-//            }
-//        }
-//    }
+    // TODO: take into account block references in all instances of block array:
+    //QSet<REntity::Id> attributeIds = document->queryChildEntities(getId(), RS::EntityAttribute);
 
     QSet<REntity::Id>::iterator it;
     for (int col=0; col<columnCount; col++) {
