@@ -593,7 +593,7 @@ void RBlockReferenceData::setReferencedBlockId(RBlock::Id blockId) {
 void RBlockReferenceData::groundReferencedBlockId() const {
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
     if (mainWindow!=NULL) {
-        mainWindow->handleUserWarning(QT_TRANSLATE_NOOP("REntity", "Circular (recursive) block referencing detected:") + );
+        mainWindow->handleUserWarning(QT_TRANSLATE_NOOP("REntity", "Circular (recursive) block referencing detected:"));
         if (document!=NULL) {
             mainWindow->handleUserWarning(QT_TRANSLATE_NOOP("REntity", "Block name:") + QString(" ") + document->getBlockName(referencedBlockId));
         }
