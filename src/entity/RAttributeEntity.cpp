@@ -127,9 +127,33 @@ QPair<QVariant, RPropertyAttributes> RAttributeEntity::getProperty(
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
+bool RAttributeEntity::isVisible() const {
+    // delegate attribute visibility to block reference:
+    // only show block attributes of visible blocks:
+    if (RSettings::getHideAttributeWithBlock()) {
+        REntity::Id blockRefId = getParentId();
+        const RDocument* document = getDocument();
+        if (document!=NULL) {
+            QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
+            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
+            if (!blockRef.isNull()) {
+                // delegate visibility of block attribute to block reference:
+                if (!blockRef->isVisible()) {
+                    return false;
+                }
+            }
+        }
+    }
+
+    return REntity::isVisible();
+}
+
 void RAttributeEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
+    Q_UNUSED(e);
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
+
+    // attributes are exported as part of the block reference
 
     if (!isInvisible()) {
         if (e.isTextRenderedAsText()) {

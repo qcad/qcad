@@ -377,21 +377,6 @@ bool REntity::isVisible() const {
 
     RLayer::Id layerId = getLayerId();
     bool isLayer0 = doc->getLayerName(layerId)=="0";
-
-    // delegate attribute visibility to block reference:
-    // only show block attributes of visible blocks:
-    if (RSettings::getHideAttributeWithBlock()) {
-        if (getType()==RS::EntityAttribute) {
-            REntity::Id blockRefId = getParentId();
-            QSharedPointer<REntity> parentEntity = doc->queryEntityDirect(blockRefId);
-            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
-            if (!blockRef.isNull()) {
-                // delegate visibility of block attribute to block reference:
-                return blockRef->isVisible();
-            }
-        }
-    }
-
     bool ignoreLayerVisibility = false;
 
 //    qDebug() << "entity: ";

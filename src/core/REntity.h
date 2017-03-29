@@ -608,8 +608,8 @@ public:
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
             const QVariant& value, RTransaction* transaction=NULL);
 
-    bool isVisible() const;
-    bool isEditable(bool allowInvisible = false) const;
+    virtual bool isVisible() const;
+    virtual bool isEditable(bool allowInvisible = false) const;
 
     virtual int getComplexity() const {
         return 1;
