@@ -73,15 +73,17 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
         return getColor();
     }
 
-    if (getType()==RS::EntityAttribute) {
-        REntity::Id blockRefId = getParentId();
-        QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
-        QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
-        if (!blockRef.isNull()) {
-            // delegate color of block attribute to block reference:
-            return blockRef->getColor(true, blockRefStack);
-        }
-    }
+//    if (getType()==RS::EntityAttribute) {
+//        REntity::Id blockRefId = getParentId();
+//        QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
+//        QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
+//        if (!blockRef.isNull()) {
+//            // delegate color of block attribute to block reference:
+//            qDebug() << "delegate color to block ref:";
+//            qDebug() << "color of block ref: " << blockRef->getColor(true, blockRefStack);
+//            return blockRef->getColor(true, blockRefStack);
+//        }
+//    }
 
     if (color.isByLayer()) {
         if (document==NULL) {
