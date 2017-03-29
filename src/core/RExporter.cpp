@@ -629,45 +629,44 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
         blockRefOrViewportSet = true;
     }
 
-//    REntity* entity = getEntity();
-//    if (entity!=NULL) {
-        bool skip = false;
+    bool skip = false;
 
-        // if this exporter exports a visual
-        // representation of the drawing (scene, view, print)...
-        if (isVisualExporter()) {
-            skip = !isVisible(entity);
+    // if this exporter exports a visual
+    // representation of the drawing (scene, view, print)...
+    if (isVisualExporter()) {
+        skip = !isVisible(entity);
+    }
+
+    if (!skip) {
+        setEntityAttributes(forceSelected);
+
+        if ((forceSelected || entity.isSelected()) && RSettings::getUseSecondarySelectionColor()) {
+            // first part of two color selection:
+            twoColorSelectedMode = true;
         }
 
-        if (!skip) {
-            setEntityAttributes(forceSelected);
+        startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefViewportStack.isEmpty());
+        exportCurrentEntity(preview, forceSelected);
+        endEntity();
 
-            if ((forceSelected || entity.isSelected()) && RSettings::getUseSecondarySelectionColor()) {
-                // first part of two color selection:
-                twoColorSelectedMode = true;
+        // export again, with secondary selection color:
+        if (visualExporter) {
+            if ((forceSelected || entity.isSelected()) &&
+                RSettings::getUseSecondarySelectionColor() &&
+                entity.getType()!=RS::EntityBlockRef &&
+                entity.getType()!=RS::EntityText &&
+                entity.getType()!=RS::EntityAttribute &&
+                entity.getType()!=RS::EntityAttributeDefinition) {
+
+                RColor secondarySelectionColor = RSettings::getColor("GraphicsViewColors/SecondarySelectionColor", RColor(Qt::white));
+                setColor(secondarySelectionColor);
+                //setStyle(Qt::CustomDashLine);
+                setDashPattern(QVector<qreal>() << 2 << 3);
+                entity.exportEntity(*this, preview, forceSelected);
             }
-
-            startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefViewportStack.isEmpty());
-            exportCurrentEntity(preview, forceSelected);
-            endEntity();
-
-            if (visualExporter) {
-                if ((forceSelected || entity.isSelected()) &&
-                    RSettings::getUseSecondarySelectionColor() &&
-                    entity.getType()!=RS::EntityBlockRef &&
-                    entity.getType()!=RS::EntityText &&
-                    entity.getType()!=RS::EntityAttribute &&
-                    entity.getType()!=RS::EntityAttributeDefinition) {
-
-                    RColor secondarySelectionColor = RSettings::getColor("GraphicsViewColors/SecondarySelectionColor", RColor(Qt::white));
-                    setColor(secondarySelectionColor);
-                    //setStyle(Qt::CustomDashLine);
-                    setDashPattern(QVector<qreal>() << 2 << 3);
-                    entity.exportEntity(*this, preview, forceSelected);
-                }
-            }
-            twoColorSelectedMode = false;
         }
+        twoColorSelectedMode = false;
+    }
 //    }
 
     if (blockRefOrViewportSet) {
