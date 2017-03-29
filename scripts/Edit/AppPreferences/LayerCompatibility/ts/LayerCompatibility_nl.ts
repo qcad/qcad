@@ -25,8 +25,17 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Layer 0 behaves differently (best compatibility)</source>
+        <translation>Laag 0 gedraagt zich anders (beste compatibiliteit)</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
+        <translation>Objecten in blokken op laag 0 nemen attributen en zichtbaarheid van blok referentie aan.</translation>
+    </message>
+    <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
-        <translation>Objecten in blokken op laag 0 nemen attributen van blok referentie aan (compatibiliteit)</translation>
+        <translation type="vanished">Objecten in blokken op laag 0 nemen attributen van blok referentie aan (compatibiliteit)</translation>
     </message>
 </context>
 </TS>

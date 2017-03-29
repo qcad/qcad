@@ -501,9 +501,8 @@ Carregando plugins...</translatorcomment>
         <translation>Iniciando add-on...</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Pós-inicialização de add-ons...</translation>
+        <translation type="vanished">Pós-inicialização de add-ons...</translation>
     </message>
     <message>
         <source>Loading add-on translations ...</source>
@@ -518,7 +517,7 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Inicializar add-ons ...</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="+11"/>
         <source>Initializing add-ons:</source>
         <translation>Iniciando add-ons:</translation>
     </message>

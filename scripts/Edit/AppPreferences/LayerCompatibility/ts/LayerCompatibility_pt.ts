@@ -25,8 +25,17 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Layer 0 behaves differently (best compatibility)</source>
+        <translation>A camada 0 comporta-se de forma diferente (melhor compatibilidade)</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
+        <translation>Entidades em blocos na camada 0 utilizar os atributos e visibilidade de referência do bloco.</translation>
+    </message>
+    <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
-        <translation>Entidades em blocos na camada 0 utilizar os atributos de referência do bloco (compatibilidade)</translation>
+        <translation type="vanished">Entidades em blocos na camada 0 utilizar os atributos de referência do bloco (compatibilidade)</translation>
     </message>
 </context>
 </TS>

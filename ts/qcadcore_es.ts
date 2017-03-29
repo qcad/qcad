@@ -803,6 +803,16 @@ Colores
         <source>Max Extents</source>
         <translation>Max extensión</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+571"/>
+        <source>Circular (recursive) block referencing detected:</source>
+        <translation>Se detectó una referencia de bloque circular (recursiva):</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block name:</source>
+        <translation>Nombre del bloque:</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>

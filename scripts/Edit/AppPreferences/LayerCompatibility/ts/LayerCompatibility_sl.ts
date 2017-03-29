@@ -25,8 +25,17 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Layer 0 behaves differently (best compatibility)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
-        <translation>Entitete in bloki na plasti 0 dobijo atriubte blokovnih referenc (komaptibilnost)</translation>
+        <translation type="vanished">Entitete in bloki na plasti 0 dobijo atriubte blokovnih referenc (komaptibilnost)</translation>
     </message>
 </context>
 </TS>

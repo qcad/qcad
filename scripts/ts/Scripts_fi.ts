@@ -395,9 +395,8 @@
         <translation>Alustetaan lisäosat:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Jälki-alustetaan lisäosat...</translation>
+        <translation type="vanished">Jälki-alustetaan lisäosat...</translation>
     </message>
 </context>
 <context>

@@ -437,9 +437,8 @@
         <translation>Inizializzazione add-ons...</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Post-inizializzazione...</translation>
+        <translation type="vanished">Post-inizializzazione...</translation>
     </message>
     <message>
         <source>Loading add-on translations ...</source>
@@ -454,7 +453,7 @@
         <translation type="obsolete">Inizializzazione add-ons ...</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="+11"/>
         <source>Initializing add-ons:</source>
         <translation>Inizializzazione add-ons:</translation>
     </message>

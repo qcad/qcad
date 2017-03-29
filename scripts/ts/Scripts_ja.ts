@@ -395,9 +395,8 @@
         <translation>初期化中のアドオン:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Post-initializing add-ons...</source>
-        <translation>アドオンの初期化後処理...</translation>
+        <translation type="vanished">アドオンの初期化後処理...</translation>
     </message>
 </context>
 <context>

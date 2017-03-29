@@ -395,9 +395,8 @@
         <translation>Инициализация add-ons...</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Пост-инициализация add-ons...</translation>
+        <translation type="vanished">Пост-инициализация add-ons...</translation>
     </message>
 </context>
 <context>

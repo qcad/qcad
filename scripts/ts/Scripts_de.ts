@@ -430,9 +430,8 @@
         <translation>Initialisiere Add-ons...</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Post-Initialisierung von Add-ons...</translation>
+        <translation type="vanished">Post-Initialisierung von Add-ons...</translation>
     </message>
     <message>
         <source>Loading add-on translations ...</source>
@@ -447,7 +446,7 @@
         <translation type="obsolete">Initialisiere Add-ons ...</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="+11"/>
         <source>Initializing add-ons:</source>
         <translation>Initialisiere Add-ons:</translation>
     </message>
