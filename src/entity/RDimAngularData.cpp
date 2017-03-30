@@ -55,6 +55,14 @@ bool RDimAngularData::isValid() const {
             dimArcPosition.isValid();
 }
 
+bool RDimAngularData::isSane() const {
+    return RDimensionData::isSane() &&
+            extensionLine1Start.isSane() &&
+            extensionLine1End.isSane() &&
+            extensionLine2Start.isSane() &&
+            dimArcPosition.isSane();
+}
+
 QList<RRefPoint> RDimAngularData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     QList<RRefPoint> ret = RDimensionData::getReferencePoints(hint);
 

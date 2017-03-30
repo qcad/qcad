@@ -59,6 +59,10 @@ bool RDimRotatedData::isValid() const {
     return RDimLinearData::isValid() && RMath::isNormal(rotation);
 }
 
+bool RDimRotatedData::isSane() const {
+    return RDimLinearData::isSane() && RMath::isSane(rotation);
+}
+
 QList<RRefPoint> RDimRotatedData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     QList<RRefPoint> ret = RDimLinearData::getReferencePoints(hint);
 

@@ -48,6 +48,7 @@ public:
         return RS::EntityDimRadial;
     }
     virtual bool isValid() const;
+    virtual bool isSane() const;
 
     void setCenter(const RVector& p) {
         setDefinitionPoint(p);

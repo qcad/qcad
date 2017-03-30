@@ -59,6 +59,7 @@ public:
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual bool isValid() const;
+    virtual bool isSane() const;
 
     virtual void setDefinitionPoint(const RVector& p) {
         definitionPoint = p;

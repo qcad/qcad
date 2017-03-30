@@ -53,6 +53,12 @@ bool RDimLinearData::isValid() const {
             extensionPoint2.isValid();
 }
 
+bool RDimLinearData::isSane() const {
+    return RDimensionData::isSane() &&
+            extensionPoint1.isSane() &&
+            extensionPoint2.isSane();
+}
+
 bool RDimLinearData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
 

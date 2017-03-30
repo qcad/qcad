@@ -53,6 +53,7 @@ public:
         return RS::EntityDimAngular;
     }
     virtual bool isValid() const;
+    virtual bool isSane() const;
 
     void setExtensionLine1Start(const RVector& p) {
         extensionLine1Start = p;
