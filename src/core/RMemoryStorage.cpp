@@ -998,12 +998,13 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
             continue;
         }
 
+        bool visible = e->isVisible();
         //if (ignoreHiddenLayers) {
-        bool layerHidden = false;
-            QSharedPointer<RLayer> layer = queryLayerDirect(e->getLayerId());
-            if (layer.isNull() || layer->isOffOrFrozen()) {
-                layerHidden = true;
-            }
+//        bool layerHidden = false;
+//            QSharedPointer<RLayer> layer = queryLayerDirect(e->getLayerId());
+//            if (layer.isNull() || layer->isOffOrFrozen()) {
+//                layerHidden = true;
+//            }
         //}
 
         if (e->getBlockId() == currentBlockId) {
@@ -1018,7 +1019,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
 
             boundingBox[0][0].growToInclude(bb);
             boundingBox[0][1].growToInclude(bbIgnoreEmpty);
-            if (!layerHidden) {
+            if (visible) {
                 boundingBox[1][0].growToInclude(bb);
                 boundingBox[1][1].growToInclude(bbIgnoreEmpty);
             }
