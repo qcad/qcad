@@ -88,7 +88,9 @@ public:
     }
 
     void setTextPosition(const RVector& p) {
-        textPositionCenter = p;
+        if (p.isSane()) {
+            textPositionCenter = p;
+        }
         textPositionSide = RVector::invalid;
         update();
     }
