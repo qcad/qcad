@@ -281,15 +281,15 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 
     // export text label:
     RTextData& textData = data.getTextData();
-    //qDebug() << "export dim: angle: " << textData.getAngle();
-
-    if (e.isTextRenderedAsText()) {
-        QList<RPainterPath> paths = e.exportText(textData, forceSelected);
-        e.exportPainterPaths(paths);
-    }
-    else {
-        e.setBrush(brush);
-        e.exportPainterPathSource(textData);
+    if (textData.isSane()) {
+        if (e.isTextRenderedAsText()) {
+            QList<RPainterPath> paths = e.exportText(textData, forceSelected);
+            e.exportPainterPaths(paths);
+        }
+        else {
+            e.setBrush(brush);
+            e.exportPainterPathSource(textData);
+        }
     }
 
     e.setBrush(Qt::NoBrush);
