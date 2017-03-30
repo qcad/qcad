@@ -69,9 +69,10 @@ public:
         return RS::EntityTextBased;
     }
 
-    bool isValid() const {
+    virtual bool isValid() const {
         return !text.isNull();
     }
+    virtual bool isSane() const;
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
     double getWidth() const;

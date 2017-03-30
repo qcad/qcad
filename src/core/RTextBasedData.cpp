@@ -113,6 +113,10 @@ RTextBasedData::RTextBasedData(const RVector& position,
     setText(text);
 }
 
+bool RTextBasedData::isSane() const {
+    return position.isSane() && alignmentPoint.isSane();
+}
+
 RBox RTextBasedData::getBoundingBox(bool ignoreEmpty) const {
     if (!boundingBox.isValid() || dirty) {
         getPainterPaths(gotDraft);
