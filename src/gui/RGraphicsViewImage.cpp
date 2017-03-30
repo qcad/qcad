@@ -899,6 +899,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             continue;
         }
 
+        // painter path:
         RPainterPath path = drawable.getPainterPath();
         if (!path.isSane()) {
             continue;
