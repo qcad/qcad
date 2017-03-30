@@ -52,6 +52,7 @@ public:
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual bool isValid() const;
+    virtual bool isSane() const;
 
     void setRotation(double r) {
         rotation = r;
