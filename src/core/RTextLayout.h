@@ -29,14 +29,27 @@
 
 #include "RPainterPath.h"
 
+/**
+ * \scriptable
+ * \copyable
+ */
 class QCADCORE_EXPORT RTextLayout {
 public:
     RTextLayout() {}
+
+    /**
+     * \nonscriptable
+     */
     RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) : layout(layout), transform(transform), color(color) {}
+
     RTextLayout(const QList<RPainterPath>& pps, const QColor& color) : painterPaths(pps), color(color) {}
 
     bool isEmpty() const {
         return layout.isNull() && painterPaths.isEmpty();
+    }
+
+    bool hasLayout() const {
+        return !layout.isNull();
     }
 
     QSharedPointer<QTextLayout> layout;
