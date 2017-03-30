@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -32,7 +32,7 @@
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation>presledek</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -96,7 +96,7 @@
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">Enota risbe mora biti v inčih, za prikaz kotiranj ter napisov v arhitekturni ali inžinerski obliki. Zapis spremenljen v desetiški.</translation>
+        <translation>Enota risbe mora biti v inčih, za prikaz kotiranj ter napisov v arhitekturni ali inžinerski obliki. Zapis spremenljen v desetiški.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
