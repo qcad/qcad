@@ -123,6 +123,13 @@ public:
      */
     virtual const REntityData& getData() const = 0;
 
+    virtual bool isValid() const {
+        return getData().isValid();
+    }
+    virtual bool isSane() const {
+        return getData().isSane();
+    }
+
     /**
      * Reimplemented by entities that are part of a block reference but not stored
      * as part of the block definition (currently only block attributes).
