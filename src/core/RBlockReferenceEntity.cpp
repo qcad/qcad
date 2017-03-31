@@ -380,7 +380,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
     QSet<REntity::Id> entityIds = document->queryBlockEntities(data.referencedBlockId);
     QList<REntity::Id> entityList = document->getStorage().orderBackToFront(entityIds);
 
-    // TODO: block attributes:
+    // TODO: block attributes for rest of array:
 //    QSet<REntity::Id> attributeIds = document->queryChildEntities(getId(), RS::EntityAttribute);
 //    QList<REntity::Id> attributeList = document->getStorage().orderBackToFront(attributeIds);
 
@@ -422,7 +422,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
             /*
             TODO:
-            // export block attributes:
+            // export block attributes for rest of array:
             for (it=attributeList.begin(); it!=attributeList.end(); it++) {
                 i++;
                 if (preview && i>RSettings::getPreviewEntities()) {
