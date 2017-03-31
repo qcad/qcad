@@ -52,6 +52,10 @@ public:
         return !layout.isNull();
     }
 
+    QSharedPointer<QTextLayout> getLayout() {
+        return layout;
+    }
+
     QSharedPointer<QTextLayout> layout;
     QTransform transform;
     QList<RPainterPath> painterPaths;
