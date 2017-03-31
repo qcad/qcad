@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>BehaviorPreferences</name>
     <message>
@@ -59,7 +59,7 @@
     <message>
         <location line="+126"/>
         <source>Highlight entity within range</source>
-        <translation type="unfinished"></translation>
+        <translation>Označi entiteto znotraj območja</translation>
     </message>
     <message>
         <location line="-211"/>
@@ -73,7 +73,7 @@
     </message>
     <message>
         <source>Right-click on entity shows context menu</source>
-        <translation type="vanished">Desni klik na entiteto prikaže kontekstni meni</translation>
+        <translation>Desni klik na entiteto prikaže kontekstni meni</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -82,7 +82,7 @@
     </message>
     <message>
         <source>Block Selection</source>
-        <translation type="vanished">Blokovni izbor</translation>
+        <translation>Blokovni izbor</translation>
     </message>
     <message>
         <location line="+43"/>
