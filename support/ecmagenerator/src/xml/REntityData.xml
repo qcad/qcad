@@ -31,6 +31,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="document" isConst="false" />
       </variant>
     </method>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isSane" cppName="isSane" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getShapes" cppName="getShapes" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"

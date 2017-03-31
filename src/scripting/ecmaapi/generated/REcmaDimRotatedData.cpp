@@ -74,9 +74,13 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, proto, setRotation, "setRotation");
             
@@ -379,6 +383,55 @@
 
     // public methods:
      QScriptValue
+        REcmaDimRotatedData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimRotatedData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimRotatedData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimRotatedData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimRotatedData::getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -506,6 +559,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimRotatedData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimRotatedData::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimRotatedData::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimRotatedData* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimRotatedData::isSane", context, engine);
             return result;
         }
          QScriptValue

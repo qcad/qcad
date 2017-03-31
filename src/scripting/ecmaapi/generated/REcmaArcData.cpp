@@ -71,6 +71,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, getArc, "getArc");
             
             REcmaHelper::registerFunction(&engine, proto, getCenter, "getCenter");
@@ -508,6 +510,55 @@
 
     // public methods:
      QScriptValue
+        REcmaArcData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArcData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArcData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArcData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArcData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArcData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaArcData::getArc
         (QScriptContext* context, QScriptEngine* engine) 
         

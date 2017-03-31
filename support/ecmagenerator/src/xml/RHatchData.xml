@@ -24,6 +24,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="patternName" isConst="true" />
       </variant>
     </constructor>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
     <method name="operator=" cppName="operator=" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RHatchData &amp;" isPureVirtual="false">

@@ -78,7 +78,7 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            REcmaHelper::registerFunction(&engine, proto, getShapeType, "getShapeType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
@@ -378,19 +378,19 @@
 
     // public methods:
      QScriptValue
-        REcmaSharedPointerPoint::getType
+        REcmaSharedPointerPoint::getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerPoint::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPoint::getType";
+            //REcmaHelper::functionStart("REcmaSharedPointerPoint::getShapeType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPoint::getShapeType";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RPoint* self = 
-                        getSelf("getType", context);
+                        getSelf("getShapeType", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -420,10 +420,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getType().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getShapeType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerPoint::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPoint::getShapeType", context, engine);
             return result;
         }
          QScriptValue

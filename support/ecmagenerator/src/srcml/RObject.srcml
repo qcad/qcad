@@ -205,7 +205,7 @@
         <macro><name>Q_UNUSED</name><argument_list>(<argument>on</argument>)</argument_list></macro>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>dump</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>dump</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; *<name>this</name></expr>;</expr_stmt>
     }</block></function>
 

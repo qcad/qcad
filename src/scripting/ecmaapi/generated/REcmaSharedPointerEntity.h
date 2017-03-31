@@ -74,6 +74,12 @@
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

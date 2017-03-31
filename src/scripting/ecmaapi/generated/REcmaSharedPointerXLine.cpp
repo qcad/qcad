@@ -90,7 +90,7 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            REcmaHelper::registerFunction(&engine, proto, getShapeType, "getShapeType");
             
             REcmaHelper::registerFunction(&engine, proto, getLineShape, "getLineShape");
             
@@ -606,19 +606,19 @@
 
     // public methods:
      QScriptValue
-        REcmaSharedPointerXLine::getType
+        REcmaSharedPointerXLine::getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerXLine::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLine::getType";
+            //REcmaHelper::functionStart("REcmaSharedPointerXLine::getShapeType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLine::getShapeType";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RXLine* self = 
-                        getSelf("getType", context);
+                        getSelf("getShapeType", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -648,10 +648,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RXLine.getType().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLine.getShapeType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerXLine::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLine::getShapeType", context, engine);
             return result;
         }
          QScriptValue

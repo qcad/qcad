@@ -71,7 +71,11 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, proto, setLeaderEndPoint, "setLeaderEndPoint");
             
@@ -362,6 +366,55 @@
 
     // public methods:
      QScriptValue
+        REcmaDimOrdinateData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimOrdinateData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimOrdinateData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimOrdinateData::isValid
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -408,6 +461,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimOrdinateData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimOrdinateData::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimOrdinateData::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimOrdinateData* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimOrdinateData::isSane", context, engine);
             return result;
         }
          QScriptValue

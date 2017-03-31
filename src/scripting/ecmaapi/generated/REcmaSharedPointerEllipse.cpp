@@ -120,7 +120,7 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            REcmaHelper::registerFunction(&engine, proto, getShapeType, "getShapeType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
@@ -762,19 +762,19 @@
 
     // public methods:
      QScriptValue
-        REcmaSharedPointerEllipse::getType
+        REcmaSharedPointerEllipse::getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::getType";
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::getShapeType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::getShapeType";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     REllipse* self = 
-                        getSelf("getType", context);
+                        getSelf("getShapeType", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -804,10 +804,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getType().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getShapeType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getShapeType", context, engine);
             return result;
         }
          QScriptValue

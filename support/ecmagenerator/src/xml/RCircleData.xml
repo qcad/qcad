@@ -20,6 +20,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
     <method name="getCircle" cppName="getCircle" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RCircle" isPureVirtual="false" />

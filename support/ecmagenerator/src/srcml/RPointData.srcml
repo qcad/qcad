@@ -49,6 +49,9 @@
     <constructor_decl><name>RPointData</name><parameter_list>()</parameter_list>;</constructor_decl>
     <constructor_decl><name>RPointData</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityPoint</name></name></expr>;</return>
+    }</block></function>
     <function><type><name>RVector</name></type> <name>getPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
        <return>return <expr><call><name><name>RPoint</name>::<name>getPosition</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>

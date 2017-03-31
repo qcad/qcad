@@ -50,7 +50,7 @@
     <constructor_decl><name>RTriangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p3</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RTriangle</name><parameter_list>()</parameter_list>;</destructor_decl>
 
-    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getShapeType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>Triangle</name></expr>;</return>
     }</block></function>
 

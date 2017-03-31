@@ -53,6 +53,10 @@
             <param><decl><type><name>int</name></type> <name>columnCount</name>=<init><expr>1</expr></init></decl></param>, <param><decl><type><name>int</name></type> <name>rowCount</name>=<init><expr>1</expr></init></decl></param>,
             <param><decl><type><name>double</name></type> <name>columnSpacing</name>=<init><expr>0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>rowSpacing</name>=<init><expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityBlockRef</name></name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>getBoundingBoxes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -76,9 +80,7 @@
 
     <function_decl><type><name>void</name></type> <name>setReferencedBlockId</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>void</name></type> <name>groundReferencedBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <expr_stmt><expr><name>referencedBlockId</name> = <name><name>RBlock</name>::<name>INVALID_ID</name></name></expr>;</expr_stmt>
-    }</block></function>
+    <function_decl><type><name>void</name></type> <name>groundReferencedBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>getReferencedBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>referencedBlockId</name></expr>;</return>

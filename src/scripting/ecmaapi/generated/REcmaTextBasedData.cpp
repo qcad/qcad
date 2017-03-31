@@ -82,7 +82,11 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
@@ -722,6 +726,55 @@
 
     // public methods:
      QScriptValue
+        REcmaTextBasedData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaTextBasedData::isValid
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -768,6 +821,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::isSane", context, engine);
             return result;
         }
          QScriptValue

@@ -43,6 +43,10 @@
 </protected><public>public:
     <constructor_decl><name>RTraceData</name><parameter_list>()</parameter_list>;</constructor_decl>
     <constructor_decl><name>RTraceData</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p3</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p4</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityTrace</name></name></expr>;</return>
+    }</block></function>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTraceData</argument>)</argument_list></macro>

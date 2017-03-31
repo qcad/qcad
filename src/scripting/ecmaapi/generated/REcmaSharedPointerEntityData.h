@@ -54,6 +54,15 @@
         setDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

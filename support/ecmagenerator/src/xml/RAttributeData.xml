@@ -19,6 +19,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </constructor>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
     <method name="getRenderedText" cppName="getRenderedText"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

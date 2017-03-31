@@ -52,7 +52,7 @@
 
     // public methods:
     static  QScriptValue
-        getType
+        getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLineShape

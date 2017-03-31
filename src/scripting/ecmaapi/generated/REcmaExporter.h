@@ -82,6 +82,9 @@
         getBrush
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setEntityAttributes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

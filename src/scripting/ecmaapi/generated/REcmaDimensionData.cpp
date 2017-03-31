@@ -65,9 +65,13 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, proto, setDefinitionPoint, "setDefinitionPoint");
             
@@ -546,6 +550,55 @@
 
     // public methods:
      QScriptValue
+        REcmaDimensionData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimensionData::getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -673,6 +726,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::isSane", context, engine);
             return result;
         }
          QScriptValue

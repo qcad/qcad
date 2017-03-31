@@ -29,8 +29,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
-    <method name="getType" cppName="getType" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+    <method name="getShapeType" cppName="getShapeType"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
       <variant returnType="RShape::Type" isPureVirtual="false" />
     </method>
     <method name="clone" cppName="clone" specifier="public"

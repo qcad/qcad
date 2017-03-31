@@ -56,6 +56,10 @@
 <comment type="line">//        const RVector&amp; viewCenter,</comment>
 <comment type="line">//        const RVector&amp; viewTarget);</comment>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityViewport</name></name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

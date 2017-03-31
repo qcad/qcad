@@ -61,9 +61,6 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

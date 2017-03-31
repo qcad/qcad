@@ -51,6 +51,9 @@
     <constructor_decl><name>RArcData</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>, <param><decl><type><name>double</name></type> <name>radius</name></decl></param>, <param><decl><type><name>double</name></type> <name>startAngle</name></decl></param>,
             <param><decl><type><name>double</name></type> <name>endAngle</name></decl></param>, <param><decl><type><name>bool</name></type> <name>reversed</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityArc</name></name></expr>;</return>
+    }</block></function>
     <function><type><name>RArc</name></type> <name>getArc</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr>*<name>this</name></expr>;</return>
     }</block></function>

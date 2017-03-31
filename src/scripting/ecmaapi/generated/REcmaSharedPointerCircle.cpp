@@ -88,7 +88,7 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            REcmaHelper::registerFunction(&engine, proto, getShapeType, "getShapeType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
@@ -489,19 +489,19 @@
 
     // public methods:
      QScriptValue
-        REcmaSharedPointerCircle::getType
+        REcmaSharedPointerCircle::getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getType";
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getShapeType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getShapeType";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RCircle* self = 
-                        getSelf("getType", context);
+                        getSelf("getShapeType", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -531,10 +531,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getType().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getShapeType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getShapeType", context, engine);
             return result;
         }
          QScriptValue

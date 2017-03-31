@@ -59,9 +59,6 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

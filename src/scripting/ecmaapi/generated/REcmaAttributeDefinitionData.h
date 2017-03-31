@@ -52,6 +52,9 @@
 
     // public methods:
     static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

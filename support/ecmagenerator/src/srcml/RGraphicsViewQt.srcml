@@ -114,8 +114,6 @@
     <function_decl><type><name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>gestureEvent</name><parameter_list>(<param><decl><type><name>QGestureEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
-    <comment type="line">//void pinchTriggered(QPinchGesture* gesture);</comment>
-    <comment type="line">//void panTriggered(QPanGesture* gesture);</comment>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>focusInEvent</name><parameter_list>(<param><decl><type><name>QFocusEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>focusOutEvent</name><parameter_list>(<param><decl><type><name>QFocusEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>

@@ -59,6 +59,10 @@
               <param><decl><type><name>bool</name></type> <name>italic</name></decl></param>,
               <param><decl><type><name>double</name></type> <name>angle</name></decl></param>,
               <param><decl><type><name>bool</name></type> <name>simple</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityText</name></name></expr>;</return>
+    }</block></function>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextData</argument>)</argument_list></macro>

@@ -49,8 +49,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
     <method name="isValid" cppName="isValid" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isSane" cppName="isSane" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getBoundingBox" cppName="getBoundingBox"

@@ -14,6 +14,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="polyline" isConst="true" />
       </variant>
     </constructor>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
     <method name="getBoundingBoxes" cppName="getBoundingBoxes"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

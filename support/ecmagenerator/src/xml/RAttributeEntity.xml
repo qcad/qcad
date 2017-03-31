@@ -31,10 +31,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RAttributeEntity *"
       isPureVirtual="false" />
     </method>
-    <method name="getType" cppName="getType" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RS::EntityType" isPureVirtual="false" />
-    </method>
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RAttributeData &amp;"
@@ -75,6 +71,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="noAttributes"
         hasDefault="true" default="false" isConst="false" />
       </variant>
+    </method>
+    <method name="isVisible" cppName="isVisible" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="exportEntity" cppName="exportEntity"
     specifier="public" isStatic="false" isVirtual="false"

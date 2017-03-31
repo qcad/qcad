@@ -48,7 +48,7 @@
     <constructor_decl><name>RXLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>basePoint</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name></decl></param>, <param><decl><type><name>double</name></type> <name>distance</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RXLine</name><parameter_list>()</parameter_list>;</destructor_decl>
 
-    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getShapeType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>XLine</name></expr>;</return>
     }</block></function>
 

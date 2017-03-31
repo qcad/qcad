@@ -54,6 +54,9 @@
 
     // public methods:
     static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getRenderedText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

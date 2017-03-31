@@ -48,6 +48,9 @@
 
     // public methods:
     static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEllipse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

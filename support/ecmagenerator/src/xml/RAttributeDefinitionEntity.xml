@@ -32,10 +32,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RAttributeDefinitionEntity *"
       isPureVirtual="false" />
     </method>
-    <method name="getType" cppName="getType" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RS::EntityType" isPureVirtual="false" />
-    </method>
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RAttributeDefinitionData &amp;"

@@ -30,10 +30,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RTextEntity *" isPureVirtual="false" />
     </method>
-    <method name="getType" cppName="getType" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RS::EntityType" isPureVirtual="false" />
-    </method>
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RTextData &amp;"

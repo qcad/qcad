@@ -58,9 +58,6 @@
         getStaticPropertyTypeIds
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

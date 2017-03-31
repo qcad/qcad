@@ -51,6 +51,9 @@
     <constructor_decl><name>RAttributeData</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>textData</name></decl></param>, <param><decl><type><name><name>RBlockReferenceEntity</name>::<name>Id</name></name></type> <name>blockReferenceId</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>tag</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor><specifier>virtual</specifier> <name>~RAttributeData</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityAttribute</name></name></expr>;</return>
+    }</block></function>
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getRenderedText</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>escUnicode</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>QString</name></type> <name>getTag</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

@@ -45,6 +45,9 @@
     <constructor_decl><name>RLeaderData</name><parameter_list>()</parameter_list>;</constructor_decl>
     <constructor_decl><name>RLeaderData</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>, <param><decl><type><name>bool</name></type> <name>arrowHead</name></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityLeader</name></name></expr>;</return>
+    }</block></function>
     <function><type><name>virtual</name> <name>RShape</name>*</type> <name>castToShape</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>this</name></expr>;</return>
     }</block></function>

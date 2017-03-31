@@ -76,8 +76,6 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
-            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -519,55 +517,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPointEntity::clone", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerPointEntity::getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerPointEntity::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPointEntity::getType";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPointEntity* self = 
-                        getSelf("getType", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RS::EntityType'
-    RS::EntityType cppResult =
-        
-               self->getType();
-        // return type: RS::EntityType
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPointEntity.getType().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerPointEntity::getType", context, engine);
             return result;
         }
          QScriptValue

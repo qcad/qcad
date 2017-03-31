@@ -52,6 +52,9 @@
     <constructor_decl><name>RPolylineData</name><parameter_list>()</parameter_list>;</constructor_decl>
     <constructor_decl><name>RPolylineData</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityPolyline</name></name></expr>;</return>
+    }</block></function>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>getBoundingBoxes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>getReferencePoints</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name> =<init> <expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

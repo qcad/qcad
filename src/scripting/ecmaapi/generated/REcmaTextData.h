@@ -51,7 +51,10 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy
     (QScriptContext *context, QScriptEngine *engine)
