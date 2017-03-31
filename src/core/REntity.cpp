@@ -396,8 +396,6 @@ bool REntity::isVisible() const {
         ignoreLayerVisibility = true;
     }
 
-//    qDebug() << "ignoreLayerVisibility:" << ignoreLayerVisibility;
-
     // check if layer is frozen:
     if (doc->isLayerFrozen(layerId) && !ignoreLayerVisibility) {
         if (getType()!=RS::EntityViewport) {
