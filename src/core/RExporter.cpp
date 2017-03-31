@@ -307,6 +307,15 @@ QBrush RExporter::getBrush() {
     return currentBrush;
 }
 
+RColor RExporter::getColor(bool resolve) {
+    REntity* currentEntity = getEntity();
+    if (currentEntity == NULL) {
+        return RColor();
+    }
+
+    return currentEntity->getColor(resolve, blockRefViewportStack);
+}
+
 void RExporter::setEntityAttributes(bool forceSelected) {
     REntity* currentEntity = getEntity();
     if (currentEntity == NULL) {
