@@ -113,6 +113,7 @@
 #include <QTextBrowser>
 #include <QTextCodec>
 #include <QTextEdit>
+#include <QTextLayout>
 #include <QThread>
 #include <QTimer>
 #include <QToolBar>
@@ -273,6 +274,8 @@ Q_DECLARE_METATYPE(QTemporaryFile*)
 Q_DECLARE_METATYPE(QTextBrowser*)
 Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(QTextEdit*)
+Q_DECLARE_METATYPE(QTextLayout*)
+Q_DECLARE_METATYPE(QSharedPointer<QTextLayout>)
 Q_DECLARE_METATYPE(QThread*)
 Q_DECLARE_METATYPE(QTimer*)
 Q_DECLARE_METATYPE(QToolBar*)
