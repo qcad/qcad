@@ -388,7 +388,7 @@ bool REntity::isVisible() const {
 
     if (isLayer0 &&
         RSettings::isLayer0CompatibilityOn() &&
-        doc->getModelSpaceBlockId()!=getBlockId()) {
+        doc->getCurrentBlockId()!=getBlockId()) {
 
         // entity is on layer 0 and not in model space block:
         // if layer 0 compatibility is on, the visibility of layer 0
