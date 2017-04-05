@@ -121,6 +121,7 @@ public:
     virtual REntity* getEntity();
     virtual REntity* getCurrentBlockRef() const;
     virtual RViewportEntity* getCurrentViewport() const;
+    virtual QStack<REntity*> getBlockRefViewportStack() const;
 
     /**
      * \nonscriptable

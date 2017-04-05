@@ -379,6 +379,10 @@ RViewportEntity* RExporter::getCurrentViewport() const {
     return NULL;
 }
 
+QStack<REntity*> RExporter::getBlockRefViewportStack() const {
+    return blockRefViewportStack;
+}
+
 /**
  * Sets the current export color in RGB and Alpha.
  * All components are in the range of 0.0 <= component <= 1.0.
