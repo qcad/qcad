@@ -423,10 +423,14 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                         if (blockRef==NULL) {
                             continue;
                         }
+
                         if (document->getLayerName(blockRef->getLayerId())!="0" || i==0) {
                             if (document->isLayerOff(blockRef->getLayerId())) {
-                                skip = true;
+                                if (entity->getType()!=RS::EntityBlockRef) {
+                                    skip = true;
+                                }
                             }
+                            break;
                         }
                     }
                     if (skip) {
