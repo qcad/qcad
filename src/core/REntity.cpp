@@ -468,8 +468,8 @@ void REntity::print(QDebug dbg) const {
     RObject::print(dbg);
     dbg.nospace() 
         << ", type: " << getType()
-        << ", layerId: " << getLayerId()
-        << ", blockId: " << getBlockId()
+        << ", layerName: " << getLayerName()
+        << ", blockName: " << getBlockName()
         << ", parentId: " << getParentId()
         << ", childIds: " << getDocument()->queryChildEntities(getId())
         << ", lineweight: " << getLineweight()
