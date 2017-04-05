@@ -373,6 +373,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
     RLayer::Id layer0Id = document->getLayerId("0");
     bool layerIsOff = document->isLayerOff(getLayerId());
+    bool layer0IsOff = document->isLayerOff(layer0Id);
 
     data.update();
 
@@ -412,9 +413,25 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
                 // special visibility case:
                 // if entity is on layer 0 and rendered in the context of a block reference
-                // which is off, entity is off:
-                if (entity->getLayerId()==layer0Id && layerIsOff) {
-                    continue;
+                // which is off, then entity is off:
+                if (entity->getLayerId()==layer0Id) {
+                    QStack<REntity*> blockRefStack = e.getBlockRefViewportStack();
+                    bool skip = false;
+                    for (int i=blockRefStack.length()-1; i>=0; i--) {
+                        REntity* ent = blockRefStack.at(i);
+                        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(ent);
+                        if (blockRef==NULL) {
+                            continue;
+                        }
+                        if (document->getLayerName(blockRef->getLayerId())!="0" || i==0) {
+                            if (document->isLayerOff(blockRef->getLayerId())) {
+                                skip = true;
+                            }
+                        }
+                    }
+                    if (skip) {
+                        continue;
+                    }
                 }
 
                 e.exportEntity(*entity, preview, true, isSelected() || forceSelected);
