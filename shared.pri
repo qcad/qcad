@@ -102,6 +102,10 @@ macx {
     }
 }
 
+linux-* {
+    QMAKE_LFLAGS += -Wl,-rpath,"'\$$ORIGIN'"
+}
+
 win32 {
     RLIBPRE =
     RLIBPOST = .lib
