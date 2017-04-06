@@ -11,12 +11,12 @@
     <message>
         <location line="+44"/>
         <source>Three Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Tre punti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw three points</source>
-        <translation type="unfinished"></translation>
+        <translation>Disegnare tre punti</translation>
     </message>
 </context>
 </TS>

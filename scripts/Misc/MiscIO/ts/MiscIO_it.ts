@@ -21,7 +21,7 @@
     <message>
         <location line="+17"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Import/Export</translation>
     </message>
 </context>
 </TS>

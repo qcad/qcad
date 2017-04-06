@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExRegisterFileExporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>File di esempio %1</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -16,12 +16,12 @@
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Registrato un esportatore di file per il tipo di file &apos;example&apos;. Utilizzare File &gt; Salva con nome per vedere il filtro in azione.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Exporter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Registrati Esportatore File</translation>
     </message>
 </context>
 </TS>

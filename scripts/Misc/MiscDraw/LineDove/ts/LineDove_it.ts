@@ -21,12 +21,12 @@
     <message>
         <location filename="../LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Giunto a coda di rondine da 2 Punti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation>Disegnare giunto a coda di rondine</translation>
     </message>
 </context>
 </TS>

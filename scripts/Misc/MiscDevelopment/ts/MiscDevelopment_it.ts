@@ -21,7 +21,7 @@
     <message>
         <location line="+18"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;viluppo</translation>
     </message>
 </context>
 </TS>

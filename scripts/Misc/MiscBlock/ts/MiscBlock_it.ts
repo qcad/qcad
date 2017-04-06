@@ -11,7 +11,7 @@
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Varie strumenti di blocco</translation>
     </message>
     <message>
         <location line="+5"/>

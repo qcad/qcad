@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExAddLayer.js" line="+44"/>
         <source>Added layer &apos;MyLayer&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiunta layer &apos;MyLayer&apos;</translation>
     </message>
     <message>
         <location line="+13"/>

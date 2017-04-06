@@ -16,12 +16,12 @@
     <message>
         <location filename="../ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Coda di rondine comune</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation>Disegnare un giunto a coda di rondine</translation>
     </message>
 </context>
 </TS>

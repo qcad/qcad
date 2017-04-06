@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>Line</name>
     <message>
         <source>Line Tools</source>
-        <translation>Orodja črte</translation>
+        <translation type="vanished">Orodja črte</translation>
     </message>
     <message>
         <source>Show line tools</source>
-        <translation>Prikaži orodja črte</translation>
+        <translation type="vanished">Prikaži orodja črte</translation>
     </message>
     <message>
         <source>&amp;Line</source>
-        <translation>&amp;Črta</translation>
+        <translation type="vanished">&amp;Črta</translation>
     </message>
     <message>
         <source>Line Segment</source>
-        <translation>Segment črte</translation>
+        <translation type="vanished">Segment črte</translation>
     </message>
     <message>
         <source>Infinite Line</source>
-        <translation>Neskončna črta</translation>
+        <translation type="vanished">Neskončna črta</translation>
     </message>
     <message>
         <source>Ray</source>
-        <translation>Poltrak</translation>
+        <translation type="vanished">Poltrak</translation>
     </message>
 </context>
 <context>

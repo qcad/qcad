@@ -41,7 +41,7 @@
     <message>
         <location filename="../RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Esegui script</translation>
     </message>
     <message>
         <location line="+6"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ridimensionare la finestra</translation>
     </message>
     <message>
         <location filename="../ExResizeWindow.ui" line="+14"/>

@@ -16,7 +16,7 @@
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Esportare l&apos;elenco di blocco</translation>
     </message>
 </context>
 </TS>

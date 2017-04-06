@@ -41,7 +41,7 @@
     <message>
         <location filename="../CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Contatore</translation>
     </message>
     <message>
         <location line="+4"/>

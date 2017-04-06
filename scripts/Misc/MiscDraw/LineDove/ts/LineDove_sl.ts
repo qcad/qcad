@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>LineDove</name>
     <message>
@@ -33,23 +33,23 @@
     <name>LineDove2</name>
     <message>
         <source>First point</source>
-        <translation>Prva točka</translation>
+        <translation type="vanished">Prva točka</translation>
     </message>
     <message>
         <source>Second point</source>
-        <translation>Druga točka</translation>
+        <translation type="vanished">Druga točka</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation>Končaj</translation>
+        <translation type="vanished">Končaj</translation>
     </message>
     <message>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>Spoj &amp;rogličenja iz 2 točk</translation>
+        <translation type="vanished">Spoj &amp;rogličenja iz 2 točk</translation>
     </message>
     <message>
         <source>Draw a dovetail joint</source>
-        <translation>Nariši spoj za rogljičenje</translation>
+        <translation type="vanished">Nariši spoj za rogljičenje</translation>
     </message>
 </context>
 </TS>

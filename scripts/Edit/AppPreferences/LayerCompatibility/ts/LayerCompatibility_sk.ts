@@ -26,12 +26,12 @@
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrstva 0 sa správa odlišne (najlepšia kompatibilita)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvky v bloku na vrstve 0 prevezmú vlastnosti a viditeľnosť bloku.</translation>
     </message>
     <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
