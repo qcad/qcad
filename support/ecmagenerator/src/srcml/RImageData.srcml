@@ -58,6 +58,9 @@
         <param><decl><type><name>int</name></type> <name>fade</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RImageData</name><parameter_list>()</parameter_list>;</destructor_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityImage</name></name></expr>;</return>
+    }</block></function>
     <function_decl><type><name>RImageData</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

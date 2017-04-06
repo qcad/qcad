@@ -745,7 +745,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
 
     ids = document->queryIntersectedEntitiesXY(qb, true);
 
-    //qDebug() << "RGraphicsViewImage::paintEntities: ids: " << ids.size();
+    //qDebug() << "RGraphicsViewImage::paintEntities: ids: " << ids;
 
     mutexSi.unlock();
     //RDebug::stopTimer("spatial index");
@@ -899,6 +899,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             continue;
         }
 
+        // painter path:
         RPainterPath path = drawable.getPainterPath();
         if (!path.isSane()) {
             continue;

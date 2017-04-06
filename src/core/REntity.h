@@ -123,6 +123,13 @@ public:
      */
     virtual const REntityData& getData() const = 0;
 
+    virtual bool isValid() const {
+        return getData().isValid();
+    }
+    virtual bool isSane() const {
+        return getData().isSane();
+    }
+
     /**
      * Reimplemented by entities that are part of a block reference but not stored
      * as part of the block definition (currently only block attributes).
@@ -608,8 +615,8 @@ public:
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
             const QVariant& value, RTransaction* transaction=NULL);
 
-    bool isVisible() const;
-    bool isEditable(bool allowInvisible = false) const;
+    virtual bool isVisible() const;
+    virtual bool isEditable(bool allowInvisible = false) const;
 
     virtual int getComplexity() const {
         return 1;

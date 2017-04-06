@@ -47,6 +47,11 @@ bool RDimRadialData::isValid() const {
             chordPoint.isValid();
 }
 
+bool RDimRadialData::isSane() const {
+    return RDimensionData::isSane() &&
+            chordPoint.isSane();
+}
+
 QList<RRefPoint> RDimRadialData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     QList<RRefPoint> ret = RDimensionData::getReferencePoints(hint);
 

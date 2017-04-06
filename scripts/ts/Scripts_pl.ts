@@ -488,11 +488,6 @@ Dzielenie (÷)</translatorcomment>
         <source>Initializing add-ons:</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+13"/>
-        <source>Post-initializing add-ons...</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>library</name>

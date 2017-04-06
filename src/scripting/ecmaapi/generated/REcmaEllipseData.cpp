@@ -71,6 +71,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, getEllipse, "getEllipse");
             
             REcmaHelper::registerFunction(&engine, proto, getFoci, "getFoci");
@@ -584,6 +586,55 @@
 
     // public methods:
      QScriptValue
+        REcmaEllipseData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEllipseData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEllipseData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipseData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEllipseData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaEllipseData::getEllipse
         (QScriptContext* context, QScriptEngine* engine) 
         

@@ -48,6 +48,7 @@ public:
         return RS::EntityDimDiametric;
     }
     virtual bool isValid() const;
+    virtual bool isSane() const;
 
     void setChordPoint(const RVector& p) {
         chordPoint = p;

@@ -79,10 +79,6 @@
         <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name>typeid</name><argument_list>(<argument><expr><name>RTextBasedEntity</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name><name>RS</name>::<name>EntityTextBased</name></name></expr>;</return>
-    }</block></function>
-
     <function_decl><type><name>virtual</name> <name>RTextBasedData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>const</name> <name>RTextBasedData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>

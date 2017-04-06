@@ -79,9 +79,7 @@ public:
 
     void setReferencedBlockId(RBlock::Id blockId);
 
-    void groundReferencedBlockId() const {
-        referencedBlockId = RBlock::INVALID_ID;
-    }
+    void groundReferencedBlockId() const;
 
     RBlock::Id getReferencedBlockId() const {
         return referencedBlockId;

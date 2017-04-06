@@ -61,9 +61,6 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -74,6 +71,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isVisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportEntity

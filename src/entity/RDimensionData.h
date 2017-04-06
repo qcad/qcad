@@ -59,6 +59,7 @@ public:
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual bool isValid() const;
+    virtual bool isSane() const;
 
     virtual void setDefinitionPoint(const RVector& p) {
         definitionPoint = p;
@@ -87,7 +88,9 @@ public:
     }
 
     void setTextPosition(const RVector& p) {
-        textPositionCenter = p;
+        if (p.isSane()) {
+            textPositionCenter = p;
+        }
         textPositionSide = RVector::invalid;
         update();
     }

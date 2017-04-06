@@ -84,10 +84,6 @@
         <return>return <expr>new <call><name>RTextEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name><name>RS</name>::<name>EntityText</name></name></expr>;</return>
-    }</block></function>
-
     <function><type><name>virtual</name> <name>RTextData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>data</name></expr>;</return>
     }</block></function>

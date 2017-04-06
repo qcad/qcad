@@ -998,12 +998,13 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
             continue;
         }
 
+        bool visible = e->isVisible();
         //if (ignoreHiddenLayers) {
-        bool layerHidden = false;
-            QSharedPointer<RLayer> layer = queryLayerDirect(e->getLayerId());
-            if (layer.isNull() || layer->isOffOrFrozen()) {
-                layerHidden = true;
-            }
+//        bool layerHidden = false;
+//            QSharedPointer<RLayer> layer = queryLayerDirect(e->getLayerId());
+//            if (layer.isNull() || layer->isOffOrFrozen()) {
+//                layerHidden = true;
+//            }
         //}
 
         if (e->getBlockId() == currentBlockId) {
@@ -1018,7 +1019,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
 
             boundingBox[0][0].growToInclude(bb);
             boundingBox[0][1].growToInclude(bbIgnoreEmpty);
-            if (!layerHidden) {
+            if (visible) {
                 boundingBox[1][0].growToInclude(bb);
                 boundingBox[1][1].growToInclude(bbIgnoreEmpty);
             }
@@ -1171,11 +1172,13 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
             setObjectHandle(*object, getNewObjectHandle());
         }
 
-        // assign draw order to new entities:
-        if (!entity.isNull() && entity->getDrawOrder()==REntityData::getDefaultDrawOrder()) {
-            entity->setDrawOrder(getMaxDrawOrder());
-            setMaxDrawOrder(getMaxDrawOrder()+1);
-        }
+    }
+
+    // assign draw order to new entities and
+    // entities for which we want a new drawing order:
+    if (!entity.isNull() && entity->getDrawOrder()==REntityData::getDefaultDrawOrder()) {
+        entity->setDrawOrder(getMaxDrawOrder());
+        setMaxDrawOrder(getMaxDrawOrder()+1);
     }
 
     // TODO: save original object for rollback:

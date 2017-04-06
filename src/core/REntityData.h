@@ -87,6 +87,13 @@ public:
         return RS::EntityUnknown;
     }
 
+    virtual bool isValid() const {
+        return true;
+    }
+    virtual bool isSane() const {
+        return true;
+    }
+
     /**
      * \return Shapes that represent the geometry of this entity.
      *

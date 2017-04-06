@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>LayerCompatibility</name>
     <message>
@@ -25,6 +25,15 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Layer 0 behaves differently (best compatibility)</source>
+        <translation>Plast 0 se obnaša drugače (največja kompatibilnost)</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
+        <translation>Entitete in bloki na plasti 0 prevzamejo atribute in vidnost blokovne reference.</translation>
+    </message>
+    <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
         <translation>Entitete in bloki na plasti 0 dobijo atriubte blokovnih referenc (komaptibilnost)</translation>
     </message>

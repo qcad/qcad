@@ -71,6 +71,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RFaceData*>(), *proto);
 
@@ -360,7 +362,56 @@
     
 
     // public methods:
-     QScriptValue REcmaFaceData::toString
+     QScriptValue
+        REcmaFaceData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFaceData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFaceData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFaceData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFaceData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFaceData::getType", context, engine);
+            return result;
+        }
+         QScriptValue REcmaFaceData::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {

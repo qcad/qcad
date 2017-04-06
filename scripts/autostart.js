@@ -386,10 +386,10 @@ function initAddOns(addOns, splash) {
 }
 
 function postInitAddOns(addOns, splash) {
-    if (!isNull(splash)) {
-        splash.showMessage(qsTr("Post-initializing add-ons...") + "\n", Qt.AlignBottom);
-        QCoreApplication.processEvents();
-    }
+//    if (!isNull(splash)) {
+//        splash.showMessage(qsTr("Post-initializing add-ons...") + "\n", Qt.AlignBottom);
+//        QCoreApplication.processEvents();
+//    }
 
     var addOn;
     var i;
@@ -586,6 +586,7 @@ function main() {
 
         var pixmap = new QPixmap(fn);
         splash = new QSplashScreen(pixmap);
+        splash.objectName = "Splash";
         if (!QCoreApplication.arguments().contains("-no-show")) {
             splash.show();
         }
@@ -699,13 +700,13 @@ function main() {
         appWin.show();
     }
 
-    postInitAddOns(addOns, splash);
-    RPluginLoader.postInitPlugins(RPluginInterface.GotMainWindow);
-
     if (!isNull(splash)) {
         splash.close();
         splash.destroy();
     }
+
+    postInitAddOns(addOns);
+    RPluginLoader.postInitPlugins(RPluginInterface.GotMainWindow);
 
     // if the window position / size was not read from a config file,
     // automatically position property editor and library browser (first start):

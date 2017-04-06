@@ -99,10 +99,6 @@ public:
 
     virtual const RDimensionData& getData() const = 0;
 
-    virtual bool isValid() const {
-        return getData().isValid();
-    }
-
     void setDefinitionPoint(const RVector& p) {
         getData().setDefinitionPoint(p);
     }

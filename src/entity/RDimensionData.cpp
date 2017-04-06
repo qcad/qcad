@@ -101,7 +101,11 @@ RBox RDimensionData::getBoundingBox(bool ignoreEmpty) const {
 }
 
 bool RDimensionData::isValid() const {
-    return definitionPoint.isValid();
+    return REntityData::isValid() && definitionPoint.isValid();
+}
+
+bool RDimensionData::isSane() const {
+    return REntityData::isSane() && definitionPoint.isSane();
 }
 
 double RDimensionData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {

@@ -193,6 +193,9 @@ public:
 protected:
     mutable RLineweight::Lineweight maxLineweight;
 
+    /**
+     * Bounding boxes for ignoreHiddenLayers on/off and ignoreEmpty on/off
+     */
     mutable RBox boundingBox[2][2];
     mutable bool boundingBoxDirty;
     //mutable bool boundingBoxIgnoreHiddenLayers;

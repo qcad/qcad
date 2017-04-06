@@ -47,7 +47,7 @@
             <param><decl><type><name>double</name></type> <name>endAngle</name></decl></param>, <param><decl><type><name>bool</name></type> <name>reversed</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RArc</name><parameter_list>()</parameter_list>;</destructor_decl>
 
-    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getShapeType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>Arc</name></expr>;</return>
     }</block></function>
 

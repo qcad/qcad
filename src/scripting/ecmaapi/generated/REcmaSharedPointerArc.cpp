@@ -114,7 +114,7 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            REcmaHelper::registerFunction(&engine, proto, getShapeType, "getShapeType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
@@ -987,19 +987,19 @@
 
     // public methods:
      QScriptValue
-        REcmaSharedPointerArc::getType
+        REcmaSharedPointerArc::getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getType";
+            //REcmaHelper::functionStart("REcmaSharedPointerArc::getShapeType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getShapeType";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RArc* self = 
-                        getSelf("getType", context);
+                        getSelf("getShapeType", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1029,10 +1029,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getType().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getShapeType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getShapeType", context, engine);
             return result;
         }
          QScriptValue

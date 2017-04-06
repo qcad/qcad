@@ -25,7 +25,12 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
+        <source>Layer 0 behaves differently (best compatibility)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

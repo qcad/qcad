@@ -46,6 +46,9 @@
     <constructor_decl><name>RRayData</name><parameter_list>(<param><decl><type><name>const</name> <name>RRay</name>&amp;</type> <name>ray</name></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RRayData</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>basePoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dir</name></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityRay</name></name></expr>;</return>
+    }</block></function>
     <function><type><name>RRay</name></type> <name>getRay</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr>*<name>this</name></expr>;</return>
     }</block></function>

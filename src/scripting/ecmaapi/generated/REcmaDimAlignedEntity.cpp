@@ -77,8 +77,6 @@
     
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
-            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -554,55 +552,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAlignedEntity::clone", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimAlignedEntity::getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimAlignedEntity::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedEntity::getType";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimAlignedEntity* self = 
-                        getSelf("getType", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RS::EntityType'
-    RS::EntityType cppResult =
-        
-               self->getType();
-        // return type: RS::EntityType
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getType().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimAlignedEntity::getType", context, engine);
             return result;
         }
          QScriptValue

@@ -395,9 +395,8 @@
         <translation>Inicializácia doplnkov:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Post-inicializácia doplnkov...</translation>
+        <translation type="vanished">Post-inicializácia doplnkov...</translation>
     </message>
 </context>
 <context>

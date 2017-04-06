@@ -162,6 +162,11 @@
             );
         
     
+      RColor getColor(
+                bool resolve
+            );
+        
+    
       void setEntityAttributes(
                 bool forceSelected
         = false

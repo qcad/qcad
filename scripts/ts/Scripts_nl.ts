@@ -391,9 +391,8 @@
         <translation>Initialiseren van add-ons:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Post-initialiseren van add-ons...</translation>
+        <translation type="vanished">Post-initialiseren van add-ons...</translation>
     </message>
 </context>
 <context>

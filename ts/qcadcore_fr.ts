@@ -797,6 +797,16 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <source>Max Extents</source>
         <translation>Max extents</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+571"/>
+        <source>Circular (recursive) block referencing detected:</source>
+        <translation>Une référence de bloc circulaire (récursive) a été détectée :</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block name:</source>
+        <translation>Nom du bloc :</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>

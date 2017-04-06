@@ -74,8 +74,6 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
-            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
@@ -83,8 +81,6 @@
             REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
             
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
-            
-            REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
             REcmaHelper::registerFunction(&engine, proto, setDefinitionPoint, "setDefinitionPoint");
             
@@ -402,55 +398,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getStaticPropertyTypeIds", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerDimensionEntity::getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::getType";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimensionEntity* self = 
-                        getSelf("getType", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RS::EntityType'
-    RS::EntityType cppResult =
-        
-               self->getType();
-        // return type: RS::EntityType
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getType().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -1130,55 +1077,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getData", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerDimensionEntity::isValid
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::isValid", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::isValid";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimensionEntity* self = 
-                        getSelf("isValid", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isValid();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.isValid().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::isValid", context, engine);
             return result;
         }
          QScriptValue

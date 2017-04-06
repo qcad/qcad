@@ -71,7 +71,11 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, proto, setExtensionLine1Start, "setExtensionLine1Start");
             
@@ -442,6 +446,55 @@
 
     // public methods:
      QScriptValue
+        REcmaDimAngularData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimAngularData::isValid
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -488,6 +541,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAngularData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularData::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularData::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularData::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularData* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularData.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularData::isSane", context, engine);
             return result;
         }
          QScriptValue

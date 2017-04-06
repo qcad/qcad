@@ -82,7 +82,7 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            REcmaHelper::registerFunction(&engine, proto, getShapeType, "getShapeType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
@@ -394,19 +394,19 @@
 
     // public methods:
      QScriptValue
-        REcmaTriangle::getType
+        REcmaTriangle::getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getType";
+            //REcmaHelper::functionStart("REcmaTriangle::getShapeType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getShapeType";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RTriangle* self = 
-                        getSelf("getType", context);
+                        getSelf("getShapeType", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -436,10 +436,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getType().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getShapeType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaTriangle::getShapeType", context, engine);
             return result;
         }
          QScriptValue

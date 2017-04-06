@@ -82,7 +82,7 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            REcmaHelper::registerFunction(&engine, proto, getShapeType, "getShapeType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
@@ -524,19 +524,19 @@
 
     // public methods:
      QScriptValue
-        REcmaPolyline::getType
+        REcmaPolyline::getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPolyline::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getType";
+            //REcmaHelper::functionStart("REcmaPolyline::getShapeType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getShapeType";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RPolyline* self = 
-                        getSelf("getType", context);
+                        getSelf("getShapeType", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -566,10 +566,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getType().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getShapeType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPolyline::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolyline::getShapeType", context, engine);
             return result;
         }
          QScriptValue

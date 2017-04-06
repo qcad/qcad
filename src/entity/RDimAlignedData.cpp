@@ -97,6 +97,10 @@ void RDimAlignedData::recomputeDefinitionPoint(
 
     RLine dLine(oldExtPoint1, oldExtPoint2);
     double d = dLine.getDistanceTo(definitionPoint, false);
+    if (!RMath::isSane(d)) {
+        definitionPoint = RVector::nullVector;
+        return;
+    }
     RS::Side s = dLine.getSideOfPoint(definitionPoint);
 
     double a = newExtPoint1.getAngleTo(newExtPoint2);
@@ -155,7 +159,12 @@ QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, 
 
     refDefinitionPoint1 = extensionPoint1 + e1*extLength;
     refDefinitionPoint2 = extensionPoint2 + e1*extLength;
-    definitionPoint = refDefinitionPoint1;
+    if (refDefinitionPoint1.isSane()) {
+        definitionPoint = refDefinitionPoint1;
+    }
+    else {
+        definitionPoint = RVector::nullVector;
+    }
 
     // extension line 1:
     line = RLine(extensionPoint1 + v1, extensionPoint1 + e1*extLength + v2);

@@ -373,18 +373,26 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
     RLayer::Id layer0Id = document->getLayerId("0");
     bool layerIsOff = document->isLayerOff(getLayerId());
+    bool layer0IsOff = document->isLayerOff(layer0Id);
 
     data.update();
 
-    QSet<REntity::Id> ids = document->queryBlockEntities(data.referencedBlockId);
+    // block entities:
+    QSet<REntity::Id> entityIds = document->queryBlockEntities(data.referencedBlockId);
+    QList<REntity::Id> entityList = document->getStorage().orderBackToFront(entityIds);
 
-    QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
+    // TODO: block attributes for rest of array:
+//    QSet<REntity::Id> attributeIds = document->queryChildEntities(getId(), RS::EntityAttribute);
+//    QList<REntity::Id> attributeList = document->getStorage().orderBackToFront(attributeIds);
+
     int i;
     QList<REntity::Id>::iterator it;
 
+    i = 0;
     for (int col=0; col<data.columnCount; col++) {
         for (int row=0; row<data.rowCount; row++) {
-            for (it = list.begin(), i = 0; it != list.end(); it++, i++) {
+            for (it = entityList.begin(); it != entityList.end(); it++) {
+                i++;
                 if (preview && i>RSettings::getPreviewEntities()) {
                     break;
                 }
@@ -398,12 +406,60 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                 if (col!=0 || row!=0) {
                     entity = QSharedPointer<REntity>(entityBase->clone());
                     data.applyColumnRowOffsetTo(*entity, col, row);
-//                    RVector offset(col*data.columnSpacing, row*data.rowSpacing);
-//                    offset.rotate(data.rotation);
-//                    entity->move(offset);
                 }
                 else {
                     entity = entityBase;
+                }
+
+                // special visibility case:
+                // if entity is on layer 0 and rendered in the context of a block reference
+                // which is off, then entity is off:
+                if (entity->getLayerId()==layer0Id) {
+                    QStack<REntity*> blockRefStack = e.getBlockRefViewportStack();
+                    bool skip = false;
+                    for (int i=blockRefStack.length()-1; i>=0; i--) {
+                        REntity* ent = blockRefStack.at(i);
+                        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(ent);
+                        if (blockRef==NULL) {
+                            continue;
+                        }
+
+                        if (document->getLayerName(blockRef->getLayerId())!="0" || i==0) {
+                            if (document->isLayerOff(blockRef->getLayerId())) {
+                                if (entity->getType()!=RS::EntityBlockRef) {
+                                    skip = true;
+                                }
+                            }
+                            break;
+                        }
+                    }
+                    if (skip) {
+                        continue;
+                    }
+                }
+
+                e.exportEntity(*entity, preview, true, isSelected() || forceSelected);
+            }
+
+            /*
+            TODO:
+            // export block attributes for rest of array:
+            for (it=attributeList.begin(); it!=attributeList.end(); it++) {
+                i++;
+                if (preview && i>RSettings::getPreviewEntities()) {
+                    break;
+                }
+
+                QSharedPointer<REntity> entityBase = document->queryEntity(*it);
+
+                QSharedPointer<REntity> entity;
+                if (col!=0 || row!=0) {
+                    entity = QSharedPointer<REntity>(entityBase->clone());
+                    data.applyColumnRowOffsetTo(*entity, col, row);
+                }
+                else {
+                    // entity at row/col 0/0 is exported from REntityAttribute:
+                    continue;
                 }
 
                 // special visibility case:
@@ -413,8 +469,10 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                     continue;
                 }
 
+                // export copy of attribute at row!=0 or col!=0:
                 e.exportEntity(*entity, preview, true, isSelected() || forceSelected);
             }
+            */
         }
     }
 

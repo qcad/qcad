@@ -71,7 +71,11 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, proto, setChordPoint, "setChordPoint");
             
@@ -315,6 +319,55 @@
 
     // public methods:
      QScriptValue
+        REcmaDimDiametricData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimDiametricData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimDiametricData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimDiametricData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimDiametricData::isValid
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -361,6 +414,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimDiametricData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimDiametricData::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimDiametricData::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricData::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimDiametricData* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricData.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimDiametricData::isSane", context, engine);
             return result;
         }
          QScriptValue

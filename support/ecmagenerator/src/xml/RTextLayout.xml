@@ -2,8 +2,31 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RTextLayout"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="false"
-  isScriptable="false" />
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="QList &lt; RPainterPath &gt; &amp;"
+        typeName="QList &lt; RPainterPath &gt;" name="pps"
+        isConst="true" />
+        <arg type="QColor &amp;" typeName="QColor" name="color"
+        isConst="true" />
+      </variant>
+    </constructor>
+    <method name="isEmpty" cppName="isEmpty" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="hasLayout" cppName="hasLayout" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getLayout" cppName="getLayout" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; QTextLayout &gt;"
+      isPureVirtual="false" />
+    </method>
+  </class>
 </unit>

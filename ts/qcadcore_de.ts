@@ -631,6 +631,16 @@
         <source>Max Extents</source>
         <translation>Max Ausmass</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+571"/>
+        <source>Circular (recursive) block referencing detected:</source>
+        <translation>Circuläre (rekursive) Blockreferenzierung detektiert:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block name:</source>
+        <translation>Blockname:</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>

@@ -324,6 +324,7 @@
 #include "REcmaTextEdit.h"
 #include "REcmaTextEntity.h"
 #include "REcmaTextLabel.h"
+#include "REcmaTextLayout.h"
 #include "REcmaTextRenderer.h"
 #include "REcmaThread.h"
 #include "REcmaToolMatrixItemDelegate.h"
@@ -901,6 +902,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaPropertyAttributes::initEcma(*engine);
 
     REcmaFileSystemModel::initEcma(*engine);
+
+    REcmaTextLayout::initEcma(*engine);
 
 //#if QT_VERSION < 0x050600
 //#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)

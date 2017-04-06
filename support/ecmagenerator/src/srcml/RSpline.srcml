@@ -59,7 +59,7 @@
     <constructor_decl><name>RSpline</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>controlPoints</name></decl></param>, <param><decl><type><name>int</name></type> <name>degree</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RSpline</name><parameter_list>()</parameter_list>;</destructor_decl>
 
-    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getShapeType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>Spline</name></expr>;</return>
     }</block></function>
 

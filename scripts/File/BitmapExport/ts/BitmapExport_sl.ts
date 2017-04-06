@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>BitmapExport</name>
     <message>
@@ -120,7 +120,7 @@
     <message>
         <location filename="../BitmapExportWorker.js" line="+92"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neveljavna velikost slike (širina * višina mora biti manj kot %1)</translation>
     </message>
 </context>
 </TS>

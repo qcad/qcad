@@ -99,6 +99,8 @@ public:
     virtual QBrush getBrush(const RPainterPath& path);
     virtual QBrush getBrush();
 
+    virtual RColor getColor(bool resolve);
+
     virtual void setEntityAttributes(bool forceSelected=false);
 
     virtual void setStyle(Qt::PenStyle penStyle);
@@ -119,6 +121,7 @@ public:
     virtual REntity* getEntity();
     virtual REntity* getCurrentBlockRef() const;
     virtual RViewportEntity* getCurrentViewport() const;
+    virtual QStack<REntity*> getBlockRefViewportStack() const;
 
     /**
      * \nonscriptable

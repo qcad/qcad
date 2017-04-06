@@ -194,6 +194,9 @@
 </public><protected>protected:
     <decl_stmt><decl><type><name>mutable</name> <name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>maxLineweight</name></decl>;</decl_stmt>
 
+    <comment type="block">/**
+     * Bounding boxes for ignoreHiddenLayers on/off and ignoreEmpty on/off
+     */</comment>
     <decl_stmt><decl><type><name>mutable</name> <name>RBox</name></type> <name><name>boundingBox</name><index>[<expr>2</expr>]</index><index>[<expr>2</expr>]</index></name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>boundingBoxDirty</name></decl>;</decl_stmt>
     <comment type="line">//mutable bool boundingBoxIgnoreHiddenLayers;</comment>

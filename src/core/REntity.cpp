@@ -377,21 +377,6 @@ bool REntity::isVisible() const {
 
     RLayer::Id layerId = getLayerId();
     bool isLayer0 = doc->getLayerName(layerId)=="0";
-
-    // delegate attribute visibility to block reference:
-    // only show block attributes of visible blocks:
-    if (RSettings::getHideAttributeWithBlock()) {
-        if (getType()==RS::EntityAttribute) {
-            REntity::Id blockRefId = getParentId();
-            QSharedPointer<REntity> parentEntity = doc->queryEntityDirect(blockRefId);
-            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
-            if (!blockRef.isNull()) {
-                // delegate visibility of block attribute to block reference:
-                return blockRef->isVisible();
-            }
-        }
-    }
-
     bool ignoreLayerVisibility = false;
 
 //    qDebug() << "entity: ";
@@ -403,15 +388,13 @@ bool REntity::isVisible() const {
 
     if (isLayer0 &&
         RSettings::isLayer0CompatibilityOn() &&
-        doc->getModelSpaceBlockId()!=getBlockId()) {
+        doc->getCurrentBlockId()!=getBlockId()) {
 
         // entity is on layer 0 and not in model space block:
         // if layer 0 compatibility is on, the visibility of layer 0
         // does not affect the visibility of the entity:
         ignoreLayerVisibility = true;
     }
-
-//    qDebug() << "ignoreLayerVisibility:" << ignoreLayerVisibility;
 
     // check if layer is frozen:
     if (doc->isLayerFrozen(layerId) && !ignoreLayerVisibility) {
@@ -485,8 +468,8 @@ void REntity::print(QDebug dbg) const {
     RObject::print(dbg);
     dbg.nospace() 
         << ", type: " << getType()
-        << ", layerId: " << getLayerId()
-        << ", blockId: " << getBlockId()
+        << ", layerName: " << getLayerName()
+        << ", blockName: " << getBlockName()
         << ", parentId: " << getParentId()
         << ", childIds: " << getDocument()->queryChildEntities(getId())
         << ", lineweight: " << getLineweight()

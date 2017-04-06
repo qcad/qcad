@@ -73,40 +73,40 @@
     <destructor><specifier>virtual</specifier> <name>~RShape</name><parameter_list>()</parameter_list> <block>{
     }</block></destructor>
 
-    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getShapeType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>Unknown</name></expr>;</return>
     }</block></function>
 
     <function><type><name>static</name> <name>bool</name></type> <name>isPointShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Point</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Point</name></name></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>isLineShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Line</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Line</name></name></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>isArcShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Arc</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Arc</name></name></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>isCircleShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Circle</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Circle</name></name></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>isEllipseShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Ellipse</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Ellipse</name></name></expr>;</return>
     }</block></function>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isFullEllipseShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
     <function><type><name>static</name> <name>bool</name></type> <name>isPolylineShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Polyline</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Polyline</name></name></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>isSplineShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Spline</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Spline</name></name></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>isTriangleShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Triangle</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Triangle</name></name></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>isXLineShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>XLine</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>XLine</name></name></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>bool</name></type> <name>isRayShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>s</name>.<call><name>getType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Ray</name></name></expr>;</return>
+        <return>return <expr><name>s</name>.<call><name>getShapeType</name><argument_list>()</argument_list></call>==<name><name>RShape</name>::<name>Ray</name></name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>RShape</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>

@@ -49,6 +49,7 @@ public:
         return RS::EntityDimOrdinate;
     }
     virtual bool isValid() const;
+    virtual bool isSane() const;
 
     void setLeaderEndPoint(const RVector& p) {
         leaderEndPoint = p;

@@ -68,7 +68,11 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, proto, setDefinitionPoint, "setDefinitionPoint");
             
@@ -182,6 +186,55 @@
 
     // public methods:
      QScriptValue
+        REcmaDimLinearData::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimLinearData::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimLinearData::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimLinearData* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimLinearData.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimLinearData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimLinearData::isValid
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -228,6 +281,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimLinearData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimLinearData::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimLinearData::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimLinearData::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimLinearData* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimLinearData.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimLinearData::isSane", context, engine);
             return result;
         }
          QScriptValue

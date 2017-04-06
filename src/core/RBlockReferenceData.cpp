@@ -19,6 +19,7 @@
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
+#include "RMainWindow.h"
 #include "RMouseEvent.h"
 
 RBlockReferenceData::RBlockReferenceData() :
@@ -216,33 +217,8 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
 
     QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
 
-//    RBox baseBBox;
-//    QSet<REntity::Id>::iterator it;
-//    for (it = ids.begin(); it != ids.end(); it++) {
-//        QSharedPointer<REntity> entity = queryEntity(*it);
-//        if (entity.isNull()) {
-//            continue;
-//        }
-
-//        RBox b = entity->getBoundingBox(ignoreEmpty);
-//        baseBBox.growToInclude(b);
-//    }
-
-//    if (columnCount==1 && rowCount==1) {
-//        boundingBoxes.append(baseBBox);
-//    }
-//    else {
-//        // add bounding boxes for rows and columns:
-//        for (int col=0; col<columnCount; col++) {
-//            for (int row=0; row<rowCount; row++) {
-//                RVector offset = getColumnRowOffset(col, row);
-//                RBox b = baseBBox;
-//                b.c1 += offset;
-//                b.c2 += offset;
-//                boundingBoxes.append(b);
-//            }
-//        }
-//    }
+    // TODO: take into account block references in all instances of block array:
+    //QSet<REntity::Id> attributeIds = document->queryChildEntities(getId(), RS::EntityAttribute);
 
     QSet<REntity::Id>::iterator it;
     for (int col=0; col<columnCount; col++) {
@@ -587,6 +563,18 @@ bool RBlockReferenceData::scale(const RVector& scaleFactors, const RVector& cent
 void RBlockReferenceData::setReferencedBlockId(RBlock::Id blockId) {
     referencedBlockId = blockId;
     update();
+}
+
+void RBlockReferenceData::groundReferencedBlockId() const {
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+    if (mainWindow!=NULL) {
+        mainWindow->handleUserWarning(QT_TRANSLATE_NOOP("REntity", "Circular (recursive) block referencing detected:"));
+        if (document!=NULL) {
+            mainWindow->handleUserWarning(QT_TRANSLATE_NOOP("REntity", "Block name:") + QString(" ") + document->getBlockName(referencedBlockId));
+        }
+    }
+
+    referencedBlockId = RBlock::INVALID_ID;
 }
 
 void RBlockReferenceData::setPosition(const RVector& p) {

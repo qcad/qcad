@@ -30,10 +30,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RFaceEntity *" isPureVirtual="false" />
     </method>
-    <method name="getType" cppName="getType" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RS::EntityType" isPureVirtual="false" />
-    </method>
     <method name="setProperty" cppName="setProperty"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -50,6 +50,12 @@ bool RDimOrdinateData::isValid() const {
             definingPoint.isValid();
 }
 
+bool RDimOrdinateData::isSane() const {
+    return RDimensionData::isSane() &&
+            leaderEndPoint.isSane() &&
+            definingPoint.isSane();
+}
+
 QList<RRefPoint> RDimOrdinateData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     QList<RRefPoint> ret = RDimensionData::getReferencePoints(hint);
 

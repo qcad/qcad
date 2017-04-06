@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Crea blocco</translation>
     </message>
 </context>
 </TS>

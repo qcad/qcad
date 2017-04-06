@@ -97,11 +97,14 @@ public:
         data = d;
     }
 
+
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
+
+    virtual bool isVisible() const;
 
     void exportEntity(RExporter& e, bool preview, bool forceSelected=false) const;
 

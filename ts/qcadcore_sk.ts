@@ -623,6 +623,16 @@
         <source>Max Extents</source>
         <translation>Maximálne</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+571"/>
+        <source>Circular (recursive) block referencing detected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block name:</source>
+        <translation>Názov bloku:</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>

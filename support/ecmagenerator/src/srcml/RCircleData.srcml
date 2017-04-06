@@ -50,6 +50,9 @@
     <constructor_decl><name>RCircleData</name><parameter_list>(<param><decl><type><name>const</name> <name>RCircle</name>&amp;</type> <name>circle</name></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RCircleData</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>, <param><decl><type><name>double</name></type> <name>radius</name></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityCircle</name></name></expr>;</return>
+    }</block></function>
     <function><type><name>RCircle</name></type> <name>getCircle</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr>*<name>this</name></expr>;</return>
     }</block></function>

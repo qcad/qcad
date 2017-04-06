@@ -72,8 +72,6 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
-            
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -427,55 +425,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedEntity::getStaticPropertyTypeIds", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaTextBasedEntity::getType
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaTextBasedEntity::getType", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedEntity::getType";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RTextBasedEntity* self = 
-                        getSelf("getType", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RS::EntityType'
-    RS::EntityType cppResult =
-        
-               self->getType();
-        // return type: RS::EntityType
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.getType().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaTextBasedEntity::getType", context, engine);
             return result;
         }
          QScriptValue

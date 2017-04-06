@@ -49,6 +49,7 @@ public:
         return RS::EntityDimLinear;
     }
     virtual bool isValid() const;
+    virtual bool isSane() const;
 
     virtual void setDefinitionPoint(const RVector& p) {
         definitionPoint = p;
