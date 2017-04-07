@@ -147,6 +147,11 @@ PrintPreview.prototype.beginEvent = function() {
     else if (this.initialAction==="PdfExport") {
         this.slotPdfExport();
     }
+
+    // create listener to update preview when preferences changed:
+    this.pAdapter = new RPreferencesListenerAdapter();
+    appWin.addPreferencesListener(this.pAdapter);
+    this.pAdapter.preferencesUpdated.connect(this, "updateFromPreferences");
 };
 
 /**
@@ -209,6 +214,11 @@ PrintPreview.prototype.finishEvent = function() {
         if (!isNull(this.savedOffset)) {
             Print.setOffset(this.getDocument(), this.savedOffset);
         }
+    }
+
+    var appWin = RMainWindowQt.getMainWindow();
+    if (!isNull(this.pAdapter)) {
+        appWin.removePreferencesListener(this.pAdapter);
     }
 };
 
@@ -804,3 +814,10 @@ PrintPreview.prototype.slotAutoZoomToPage = function() {
     }
 };
 
+/**
+ * Updates the background (paper preview) transform when page settings
+ * are changed (e.g. offset).
+ */
+PrintPreview.prototype.updateFromPreferences = function() {
+    this.updateBackgroundTransform();
+};
