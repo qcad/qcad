@@ -55,11 +55,11 @@ void RDockWidget::hideEvent(QHideEvent* event) {
 #ifdef Q_OS_MAC
 #if QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602
 void RDockWidget::closeEvent(QCloseEvent* event) {
-    // remember that this dock was open:
+    // remember that this dock was closed by this event:
     RMainWindowQt* mw = RMainWindowQt::getMainWindow();
     if (mw) {
         QStringList closedDocks = mw->property("ClosedDocks").toStringList();
-        closedDocks.append(objectName());
+        closedDocks.append(QString("0x%1|%2").arg((qulonglong)event, 0, 16).arg(objectName()));
         mw->setProperty("ClosedDocks", closedDocks);
     }
     QDockWidget::closeEvent(event);

@@ -83,30 +83,6 @@ RGraphicsViewQt* RMdiChildQt::getLastKnownViewWithFocus() {
 }
 
 void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
-
-// workaround for Qt 5.6.1, 5.6.2 bug:
-// dock widget closes before close dialog is shown
-// dock widget state not persistent between sessions
-// dock widget closes if user cancels close dialog
-#ifdef Q_OS_MAC
-#if QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602
-    // restore that this dock was open:
-    RMainWindowQt* mw = RMainWindowQt::getMainWindow();
-    if (mw) {
-        // restore closed docks:
-        QStringList closedDocks = mw->property("ClosedDocks").toStringList();
-        for (int i=0; i<closedDocks.length(); i++) {
-            QString closedDock = closedDocks[i];
-            QWidget* w = mw->findChild<QWidget*>(closedDock);
-            if (w) {
-                w->setVisible(true);
-            }
-        }
-        mw->setProperty("ClosedDocks", QStringList());
-    }
-#endif
-#endif
-
     // ask before closing (document was modified):
     if (documentInterface != NULL) {
         emit closeRequested(this);
