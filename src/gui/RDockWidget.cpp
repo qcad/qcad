@@ -21,6 +21,7 @@
 #include <QWidgetAction>
 
 #include "RDockWidget.h"
+#include "RMainWindowQt.h"
 
 
 RDockWidget::RDockWidget(const QString& title, QWidget* parent, Qt::WindowFlags flags) :
@@ -46,6 +47,25 @@ void RDockWidget::hideEvent(QHideEvent* event) {
     emit hidden();
     QDockWidget::hideEvent(event);
 }
+
+// workaround for Qt 5.6.1, 5.6.2 bug:
+// dock widget closes before close dialog is shown
+// dock widget state not persistent between sessions
+// dock widget closes if user cancels close dialog
+#ifdef Q_OS_MAC
+#if QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602
+void RDockWidget::closeEvent(QCloseEvent* event) {
+    // remember that this dock was open:
+    RMainWindowQt* mw = RMainWindowQt::getMainWindow();
+    if (mw) {
+        QStringList closedDocks = mw->property("ClosedDocks").toStringList();
+        closedDocks.append(objectName());
+        mw->setProperty("ClosedDocks", closedDocks);
+    }
+    QDockWidget::closeEvent(event);
+}
+#endif
+#endif
 
 void RDockWidget::actionEvent(QActionEvent* event) {
     QAction* action = event->action();
