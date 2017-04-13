@@ -127,6 +127,9 @@
         getCurrentViewport
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBlockRefViewportStack
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isEntitySelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

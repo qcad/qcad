@@ -40,6 +40,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="event" isConst="false" />
       </variant>
     </method>
+    <method name="closeEvent" cppName="closeEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QCloseEvent *" typeName="QCloseEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
     <method name="actionEvent" cppName="actionEvent"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

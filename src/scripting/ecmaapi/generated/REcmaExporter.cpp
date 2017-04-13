@@ -135,6 +135,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentViewport, "getCurrentViewport");
             
+            REcmaHelper::registerFunction(&engine, proto, getBlockRefViewportStack, "getBlockRefViewportStack");
+            
             REcmaHelper::registerFunction(&engine, proto, isEntitySelected, "isEntitySelected");
             
             REcmaHelper::registerFunction(&engine, proto, startExport, "startExport");
@@ -2038,6 +2040,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getCurrentViewport", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getBlockRefViewportStack
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getBlockRefViewportStack", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getBlockRefViewportStack";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getBlockRefViewportStack", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStack < REntity * >'
+    QStack < REntity * > cppResult =
+        
+               self->getBlockRefViewportStack();
+        // return type: QStack < REntity * >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getBlockRefViewportStack().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getBlockRefViewportStack", context, engine);
             return result;
         }
          QScriptValue

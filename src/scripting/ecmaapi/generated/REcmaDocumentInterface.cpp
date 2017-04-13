@@ -81,6 +81,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, notifyCoordinateListeners, "notifyCoordinateListeners");
             
+            REcmaHelper::registerFunction(&engine, proto, addLayerListener, "addLayerListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeLayerListener, "removeLayerListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyLayerListeners, "notifyLayerListeners");
+            
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, isScriptRunning, "isScriptRunning");
@@ -866,6 +872,174 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::notifyCoordinateListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::addLayerListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::addLayerListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::addLayerListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("addLayerListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLayerListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RLayerListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RLayerListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RLayerListener *RLayerListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addLayerListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.addLayerListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::addLayerListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::removeLayerListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::removeLayerListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::removeLayerListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("removeLayerListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLayerListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RLayerListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RLayerListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RLayerListener *RLayerListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeLayerListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.removeLayerListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::removeLayerListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::notifyLayerListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::notifyLayerListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::notifyLayerListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("notifyLayerListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyLayerListeners();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.notifyLayerListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::notifyLayerListeners", context, engine);
             return result;
         }
          QScriptValue

@@ -67,6 +67,15 @@
         notifyCoordinateListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addLayerListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeLayerListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyLayerListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

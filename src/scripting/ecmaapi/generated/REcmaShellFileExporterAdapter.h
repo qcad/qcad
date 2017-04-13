@@ -243,6 +243,11 @@
             );
         
     
+      QStack < REntity * > getBlockRefViewportStack(
+                
+            );
+        
+    
       bool isEntitySelected(
                 
             );

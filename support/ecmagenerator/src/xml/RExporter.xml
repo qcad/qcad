@@ -233,6 +233,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RViewportEntity *"
       isPureVirtual="false" />
     </method>
+    <method name="getBlockRefViewportStack"
+    cppName="getBlockRefViewportStack" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QStack &lt; REntity * &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="isEntitySelected" cppName="isEntitySelected"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -47,6 +47,11 @@
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>showEvent</name><parameter_list>(<param><decl><type><name>QShowEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>hideEvent</name><parameter_list>(<param><decl><type><name>QHideEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+<cpp:ifdef>#<cpp:directive>ifdef</cpp:directive> <name>Q_OS_MAC</name></cpp:ifdef>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x050601 &amp;&amp; <name>QT_VERSION</name> &lt;= 0x050602</expr></cpp:if>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>closeEvent</name><parameter_list>(<param><decl><type><name>QCloseEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>actionEvent</name><parameter_list>(<param><decl><type><name>QActionEvent</name> *</type><name>event</name></decl></param>)</parameter_list>;</function_decl>
 
 </protected><private>private:

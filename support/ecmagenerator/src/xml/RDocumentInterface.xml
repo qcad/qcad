@@ -72,6 +72,27 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="addLayerListener" cppName="addLayerListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLayerListener *" typeName="RLayerListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeLayerListener"
+    cppName="removeLayerListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLayerListener *" typeName="RLayerListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyLayerListeners"
+    cppName="notifyLayerListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="clear" cppName="clear" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
