@@ -72,7 +72,7 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     suspended(false),
     allowUpdate(true),
     allowRegeneration(true),
-    notifyListeners(true),
+    notifyGlobalListeners(true),
     deleting(false),
     cursorOverride(false),
     keepPreviewOnce(false),
@@ -204,7 +204,7 @@ void RDocumentInterface::addCoordinateListener(RCoordinateListener* l) {
  * Notifies all coordinate listeners that the coordinate has changed to \c position.
  */
 void RDocumentInterface::notifyCoordinateListeners() {
-    if (!notifyListeners) {
+    if (!notifyGlobalListeners) {
         return;
     }
 
@@ -216,6 +216,30 @@ void RDocumentInterface::notifyCoordinateListeners() {
     if (RMainWindow::hasMainWindow()) {
         RMainWindow::getMainWindow()->notifyCoordinateListeners(this);
     }
+}
+
+void RDocumentInterface::addLayerListener(RLayerListener* l) {
+    layerListeners.push_back(l);
+}
+
+void RDocumentInterface::removeLayerListener(RLayerListener* l) {
+    layerListeners.removeAll(l);
+}
+
+void RDocumentInterface::notifyLayerListeners() {
+//    if (!notifyListeners) {
+//        return;
+//    }
+
+    QList<RLayerListener*>::iterator it;
+    for (it = layerListeners.begin(); it != layerListeners.end(); ++it) {
+        qDebug() << "RDocumentInterface::notifyLayerListeners";
+        (*it)->updateLayers(this);
+    }
+
+//    if (RMainWindow::hasMainWindow()) {
+//        RMainWindow::getMainWindow()->notifyLayerListeners(this);
+//    }
 }
 
 /**
@@ -1125,7 +1149,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     QString previousFileName = document.getFileName();
     document.setFileName(fileName);
 
-    if (mainWindow!=NULL && notify==true && notifyListeners==true) {
+    if (mainWindow!=NULL && notify==true && notifyGlobalListeners==true) {
         mainWindow->notifyImportListenersPre(this);
     }
 
@@ -1139,7 +1163,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
 
     delete fileImporter;
 
-    if (mainWindow!=NULL && notify==true && notifyListeners==true) {
+    if (mainWindow!=NULL && notify==true && notifyGlobalListeners==true) {
         mainWindow->notifyListeners();
         mainWindow->notifyImportListenersPost(this);
     }
@@ -1166,7 +1190,7 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
 
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
 
-    if (mainWindow!=NULL && notifyListeners==true) {
+    if (mainWindow!=NULL && notifyGlobalListeners==true) {
         mainWindow->notifyExportListenersPre(this);
     }
 
@@ -1197,7 +1221,7 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
             document.setModified(false);
         }
 
-        if (mainWindow!=NULL && notifyListeners==true) {
+        if (mainWindow!=NULL && notifyGlobalListeners==true) {
             mainWindow->notifyExportListenersPost(this);
         }
     }
@@ -1761,7 +1785,7 @@ void RDocumentInterface::keepPreview() {
  * be shown.
  */
 void RDocumentInterface::showPropertiesOf(REntity& entity) {
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyPropertyListeners(document, entity);
     }
 }
@@ -1772,7 +1796,7 @@ void RDocumentInterface::showPropertiesOf(REntity& entity) {
  * listeners.
  */
 void RDocumentInterface::clearProperties() {
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyPropertyListeners();
     }
 }
@@ -1915,7 +1939,7 @@ RTransaction RDocumentInterface::applyOperation(const ROperation* operation) {
 
     objectChangeEvent(objectIds);
 
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->postTransactionEvent(transaction,
                     transaction.hasOnlyChanges(), operation->getEntityTypeFilter());
     }
@@ -2016,8 +2040,13 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         }
     }
 
-    // notify listeners if this is not the clipboard document interface:
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    // notify local listeners:
+    if (layerHasChanged) {
+        notifyLayerListeners();
+    }
+
+    // notify global listeners if this is not the clipboard document interface:
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         if (ucsHasChanged) {
             RMainWindow::getMainWindow()->notifyUcsListeners(this);
         }
@@ -2088,14 +2117,14 @@ RLinetypePattern RDocumentInterface::getCurrentLinetypePattern() {
  */
 void RDocumentInterface::setCurrentLayer(const QString& layerName) {
     document.setCurrentLayer(layerName);
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyLayerListenersCurrentLayer(this);
     }
 }
 
 void RDocumentInterface::setCurrentLayer(RLayer::Id layerId) {
     document.setCurrentLayer(layerId);
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyLayerListenersCurrentLayer(this);
     }
 }
@@ -2114,7 +2143,7 @@ void RDocumentInterface::setCurrentLayer(const RLayer& layer) {
 void RDocumentInterface::setCurrentBlock(const QString& blockName) {
     clearSelection();
     document.setCurrentBlock(blockName);
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyBlockListeners(this);
     }
     regenerateScenes();
@@ -2133,7 +2162,7 @@ void RDocumentInterface::setCurrentBlock(const RBlock& block) {
  */
 void RDocumentInterface::setCurrentView(const QString& viewName) {
     document.setCurrentView(viewName);
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyViewListeners(this);
     }
 }
@@ -2162,7 +2191,7 @@ void RDocumentInterface::setCurrentUcs(const QString& ucsName) {
 void RDocumentInterface::setCurrentUcs(const RUcs& ucs) {
     currentUcs = ucs;
     regenerateViews(true);
-    if (RMainWindow::hasMainWindow() && notifyListeners) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyUcsListeners(this);
     }
 }

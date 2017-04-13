@@ -34,11 +34,12 @@
 #include <QPinchGesture>
 
 #include "RAction.h"
-#include "RCoordinateEvent.h"
 #include "RCommandEvent.h"
+#include "RCoordinateEvent.h"
 #include "RCoordinateListener.h"
 #include "RDocument.h"
 #include "RExporter.h"
+#include "RLayerListener.h"
 #include "RStorage.h"
 #include "RTerminateEvent.h"
 #include "RTextLabel.h"
@@ -125,6 +126,10 @@ public:
 
     void addCoordinateListener(RCoordinateListener* l);
     void notifyCoordinateListeners();
+
+    void addLayerListener(RLayerListener* l);
+    void removeLayerListener(RLayerListener* l);
+    void notifyLayerListeners();
 
     void clear();
 
@@ -322,7 +327,7 @@ public:
         return suspended;
     }
     void setNotifyListeners(bool on) {
-        notifyListeners = on;
+        notifyGlobalListeners = on;
     }
 
     bool isDeleting() const {
@@ -346,6 +351,7 @@ private:
     QQueue<RAction*> queuedActions;
 
     QList<RCoordinateListener*> coordinateListeners;
+    QList<RLayerListener*> layerListeners;
 
     RSnap* currentSnap;
     RSnapRestriction* currentSnapRestriction;
@@ -364,7 +370,7 @@ private:
 
     static RDocumentInterface* clipboard;
 
-    bool notifyListeners;
+    bool notifyGlobalListeners;
     bool deleting;
     bool cursorOverride;
 
