@@ -34,7 +34,7 @@ RemoveLayer.prototype = new Layer();
 RemoveLayer.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
-    var layer = this.getDocument().queryCurrentLayer();
+    var layer = this.getCurrentLayer();
         
     var operation = new RDeleteObjectOperation(layer);
     var di = this.getDocumentInterface();

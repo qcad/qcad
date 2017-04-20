@@ -33,7 +33,7 @@ ToggleLayerVisibility.prototype = new Layer();
 ToggleLayerVisibility.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
-    var layer = this.getDocument().queryCurrentLayer();
+    var layer = this.getCurrentLayer();
 
     layer.setFrozen(!layer.isFrozen());
 
