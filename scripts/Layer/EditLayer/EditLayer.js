@@ -57,10 +57,6 @@ EditLayer.prototype.beginEvent = function() {
     this.terminate();
 };
 
-EditLayer.prototype.getCurrentLayer = function() {
-    return this.getDocument().queryCurrentLayer();
-};
-
 /**
  * Hook for derived classes to add more objects to operation.
  */
