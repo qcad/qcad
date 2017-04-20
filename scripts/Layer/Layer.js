@@ -33,6 +33,12 @@ include("../EAction.js");
  */
 function Layer(guiAction) {
     EAction.call(this, guiAction);
+
+    this.documentInterface = undefined;
+
+    if (!isNull(guiAction) && !isNull(guiAction.getDocumentInterface())) {
+        this.setDocumentInterface(guiAction.getDocumentInterface());
+    }
 }
 
 Layer.prototype = new EAction();
@@ -46,6 +52,31 @@ Layer.prototype.beginEvent = function() {
         this.terminate();
     }
 };
+
+Layer.prototype.setDocumentInterface = function(di) {
+    this.documentInterface = di;
+};
+
+Layer.prototype.getDocumentInterface = function() {
+    if (!isNull(this.documentInterface)) {
+        return this.documentInterface;
+    }
+    return EAction.prototype.getDocumentInterface.call(this);
+};
+
+Layer.prototype.getDocument = function() {
+    if (!isNull(this.documentInterface)) {
+        return this.documentInterface.getDocument();
+    }
+    return EAction.prototype.getDocument.call(this);
+};
+
+Layer.prototype.getCurrentLayer = function() {
+    // get current or override document:
+    var doc = this.getDocument();
+    return doc.queryCurrentLayer();
+};
+
 
 Layer.getMenu = function() {
     var menu = EAction.getMenu(Layer.getTitle(), "LayerMenu");
