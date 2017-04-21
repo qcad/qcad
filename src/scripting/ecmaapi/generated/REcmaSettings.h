@@ -85,6 +85,9 @@
         getPluginPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getThemePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStandardLocation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

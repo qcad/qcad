@@ -328,7 +328,7 @@
         <return>return <expr><name>suspended</name></expr>;</return>
     }</block></function>
     <function><type><name>void</name></type> <name>setNotifyListeners</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>notifyListeners</name> = <name>on</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>notifyGlobalListeners</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isDeleting</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -371,7 +371,7 @@
 
     <decl_stmt><decl><type><name>static</name> <name>RDocumentInterface</name>*</type> <name>clipboard</name></decl>;</decl_stmt>
 
-    <decl_stmt><decl><type><name>bool</name></type> <name>notifyListeners</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>notifyGlobalListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>deleting</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>cursorOverride</name></decl>;</decl_stmt>
 

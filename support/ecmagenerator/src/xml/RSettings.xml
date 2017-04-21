@@ -83,6 +83,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getThemePath" cppName="getThemePath"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getStandardLocation"
     cppName="getStandardLocation" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

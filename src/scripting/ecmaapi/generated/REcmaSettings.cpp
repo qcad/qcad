@@ -83,6 +83,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getPluginPath, "getPluginPath");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getThemePath, "getThemePath");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getStandardLocation, "getStandardLocation");
             
             REcmaHelper::registerFunction(&engine, &ctor, getCacheLocation, "getCacheLocation");
@@ -1005,6 +1007,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getPluginPath", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getThemePath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getThemePath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getThemePath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getThemePath();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getThemePath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getThemePath", context, engine);
             return result;
         }
          QScriptValue
