@@ -194,14 +194,25 @@ QString RGuiAction::getShortcutText() const {
 }
 
 void RGuiAction::setIcon(const QString& iconFile) {
-    if (iconFile.isEmpty()) {
+    // look up theme specific icon:
+    QString iconFileName = QFileInfo(iconFile).fileName();
+    QString themePath = RSettings::getThemePath();
+    QString themeIconFile = iconFile;
+    if (!themePath.isEmpty()) {
+        themeIconFile = themePath + "/icons/" + iconFileName;
+        if (!QFileInfo(themeIconFile).exists()) {
+            themeIconFile = iconFile;
+        }
+    }
+
+    if (themeIconFile.isEmpty()) {
         QAction::setIcon(QIcon());
     }
     else {
-        QString fileName = iconFile;
+        QString fileName = themeIconFile;
 
         if (RSettings::hasDarkGuiBackground()) {
-            QFileInfo fi(iconFile);
+            QFileInfo fi(themeIconFile);
             QString iconFileDark = fi.absolutePath() + QDir::separator() + fi.baseName() + "-inverse." + fi.suffix();
             if (QFileInfo(iconFileDark).exists()) {
                 fileName = iconFileDark;
@@ -231,7 +242,7 @@ void RGuiAction::setIcon(const QString& iconFile) {
             QAction::setIcon(icon);
         }
         else {
-            QAction::setIcon(QIcon(iconFile));
+            QAction::setIcon(QIcon(themeIconFile));
         }
     }
 }
