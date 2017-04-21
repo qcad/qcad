@@ -626,7 +626,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+571"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation>Kruhový (rekurzívny) blok zistený:</translation>
+        <translation type="unfinished">Kruhový (rekurzívny) blok zistený:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -711,7 +711,7 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation>Spojité</translation>
+        <translation>Súvislá</translation>
     </message>
     <message>
         <location line="+2"/>

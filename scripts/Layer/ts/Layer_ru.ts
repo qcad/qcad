@@ -4,7 +4,7 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../Layer.js" line="+66"/>
+        <location filename="../Layer.js" line="+97"/>
         <source>Layer Tools</source>
         <translation>Инструменты слоёв</translation>
     </message>
