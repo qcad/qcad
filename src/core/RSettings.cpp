@@ -41,6 +41,7 @@ bool RSettings::noWrite = false;
 QVariantMap RSettings::cache;
 
 QString RSettings::launchPath;
+QString RSettings::themePath;
 
 QFont* RSettings::rulerFont = NULL;
 QFont* RSettings::snapLabelFont = NULL;
@@ -224,6 +225,24 @@ QString RSettings::getPluginPath() {
     }
 
     return appDir.path();
+}
+
+/**
+ * \return Path to current theme or empty to use the default theme.
+ */
+QString RSettings::getThemePath() {
+    if (!themePath.isNull()) {
+        return themePath;
+    }
+
+    QString theme = RSettings::getStringValue("Theme/ThemeName", "");
+    if (theme.isEmpty() || theme=="Default") {
+        return "";
+    }
+
+    themePath = "themes/" + theme;
+
+    return themePath;
 }
 
 /**
@@ -1377,6 +1396,7 @@ void RSettings::resetCache() {
     hideAttributeWithBlock = -1;
     importRecomputedDimBlocks = -1;
     mouseThreshold = -1;
+    themePath = QString();
     cache.clear();
 }
 

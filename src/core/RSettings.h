@@ -65,6 +65,7 @@ public:
     static QString getApplicationPath();
     static QStringList getPluginPaths();
     static QString getPluginPath();
+    static QString getThemePath();
 
     static QString getStandardLocation(int sl);
     static QString getCacheLocation();
@@ -310,6 +311,7 @@ private:
     static QString applicationNameOverride;
 
     static QString launchPath;
+    static QString themePath;
 
     static QSettings* qSettings;
 
