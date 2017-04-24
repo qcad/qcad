@@ -258,6 +258,7 @@ InsertBlock.prototype.slotRotationChanged = function(value) {
     } else {
         this.blockReferenceData.setRotation(0);
     }
+    this.updatePreview(true);
 };
 
 InsertBlock.prototype.slotFlipHorizontal = function() {
