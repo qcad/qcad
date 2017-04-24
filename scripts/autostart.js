@@ -58,7 +58,7 @@ function usage() {
           + "-enable-script-debugger          Enables the script debugger.\n"
           + "                                 NOT recommended as this may cause unexpected\n"
           + "                                 behavior when using QCAD.\n"
-          + "-debug-action-order              Print action oder information in menus\n"
+          + "-debug-action-order              Print action order information in menus\n"
           + "-exec [script file] [options]    Executes the given script file directly\n"
           + "                                 after staring QCAD. Options after the script\n"
           + "                                 file are passed on to the script.\n"
