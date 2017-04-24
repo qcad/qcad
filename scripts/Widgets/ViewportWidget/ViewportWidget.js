@@ -285,8 +285,15 @@ EventHandler.prototype.drop = function(event) {
 
     var appWin = RMainWindowQt.getMainWindow();
     if (!isNull(appWin)) {
+        appWin.activateWindow();
         appWin.raise();
-        appWin.setFocus(Qt.OtherFocusReason);
+        var view = EAction.getGraphicsView();
+        if (!isNull(view)) {
+            view.setFocus(Qt.OtherFocusReason);
+        }
+        else {
+            appWin.setFocus(Qt.OtherFocusReason);
+        }
     }
 
     var action;
