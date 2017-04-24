@@ -206,8 +206,8 @@ QString RDxfServices::collectVersion2Info(const QString& fileName) {
         return QString();
     }
 
-    //QTemporaryFile* tmpFile = new QTemporaryFile("qcad_temp_XXXXXX.dxf");
-    QTemporaryFile* tmpFile = new QTemporaryFile();
+    QTemporaryFile* tmpFile = new QTemporaryFile("qcad_temp_XXXXXX.dxf");
+//    QTemporaryFile* tmpFile = new QTemporaryFile();
     if (!tmpFile->open()) {
         qWarning() << "RDxfServices::collectVersion2Info: cannot write to temporary file: " << tmpFile->fileName();
         delete tmpFile;
