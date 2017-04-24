@@ -99,8 +99,20 @@ Text.prototype.pickCoordinate = function(event, preview) {
     }
     this.textData.setAlignmentPoint(pos);
 
-    var text;
+    if (preview) {
+        this.updatePreview();
+    }
+    else {
+        this.applyOperation();
+    }
+};
 
+Text.prototype.getOperation = function(preview) {
+    if (isNull(this.textData)) {
+        return undefined;
+    }
+
+    var text;
     if (isOfType(this.textData, RAttributeDefinitionData)) {
         text = new RAttributeDefinitionEntity(this.getDocument(), this.textData);
     }
@@ -108,13 +120,7 @@ Text.prototype.pickCoordinate = function(event, preview) {
         text = new RTextEntity(this.getDocument(), this.textData);
     }
 
-    var op = new RAddObjectOperation(text, this.getToolTitle());
-    if (preview) {
-        di.previewOperation(op);
-    }
-    else {
-        di.applyOperation(op);
-    }
+    return new RAddObjectOperation(text, this.getToolTitle());
 };
 
 Text.prototype.slotContentsChanged = function(value) {
@@ -123,7 +129,7 @@ Text.prototype.slotContentsChanged = function(value) {
     }
 
     this.textData.setText(value);
-
+    this.updatePreview(true);
 };
 
 Text.prototype.slotHeightChanged = function(value) {
@@ -132,6 +138,7 @@ Text.prototype.slotHeightChanged = function(value) {
     }
 
     this.textData.setTextHeight(value);
+    this.updatePreview(true);
 };
 
 Text.prototype.slotAngleChanged = function(value) {
@@ -140,5 +147,5 @@ Text.prototype.slotAngleChanged = function(value) {
     }
 
     this.textData.setAngle(value);
-
+    this.updatePreview(true);
 };
