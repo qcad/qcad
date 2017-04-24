@@ -230,7 +230,7 @@ public:
     virtual int getWidth() const;
     virtual int getHeight() const;
     void resizeImage(int w, int h);
-    
+
     virtual void paintGridPoint(const RVector& ucsPosition);
     virtual void paintGridLine(const RLine& ucsPosition);
     //virtual void paintCursorLine(const RLine& ucsPosition);

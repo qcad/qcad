@@ -194,6 +194,14 @@ public:
      */
     virtual int getHeight() const = 0;
 
+    /**
+     * \return True if this view is considered to be active and needs updates
+     * (for example if a view is visible).
+     */
+    virtual int isActive() const {
+        return true;
+    }
+
     virtual bool getSignalsBlocked() const {
         return false;
     }
