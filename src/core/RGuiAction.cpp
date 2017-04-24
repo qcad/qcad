@@ -195,13 +195,21 @@ QString RGuiAction::getShortcutText() const {
 
 void RGuiAction::setIcon(const QString& iconFile) {
     // look up theme specific icon:
-    QString iconFileName = QFileInfo(iconFile).fileName();
+    QFileInfo fi(iconFile);
+    QString iconFileName = fi.fileName();
     QString themePath = RSettings::getThemePath();
     QString themeIconFile = iconFile;
     if (!themePath.isEmpty()) {
+        // look up svg in theme:
         themeIconFile = themePath + "/icons/" + iconFileName;
         if (!QFileInfo(themeIconFile).exists()) {
-            themeIconFile = iconFile;
+            // no SVG found, look up PNG:
+            QString iconBaseName = fi.baseName();
+            themeIconFile = themePath + "/icons/" + iconBaseName + ".png";
+            if (!QFileInfo(themeIconFile).exists()) {
+                // no PNG found, use default icon:
+                themeIconFile = iconFile;
+            }
         }
     }
 
