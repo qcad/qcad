@@ -35,6 +35,7 @@ function InsertBlockItem(guiAction) {
     this.docItem = undefined;
 
     this.blockName = undefined;
+    this.offset = new RVector(0,0);
     this.scale = 1.0;
     this.rotation = 0.0;
 
@@ -175,12 +176,28 @@ InsertBlockItem.prototype.generate = function() {
 InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
 
-    this.generate();
+    if (this.state===InsertBlockItem.State.SettingPosition) {
+        this.generate();
+        this.offset = event.getModelPosition();
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            var op = this.getOperation();
+            if (!isNull(op)) {
+                di.applyOperation(op);
+                di.clearPreview();
+                di.repaintViews();
+            }
+        }
+    }
+};
 
+InsertBlockItem.prototype.getOperation = function(preview) {
     var op = new RPasteOperation(this.docItem);
     op.setText(this.getToolTitle());
 
-    op.setOffset(event.getModelPosition());
+    op.setOffset(this.offset);
     if (!isNull(this.blockName)) {
         op.setBlockName(this.blockName);
     }
@@ -206,15 +223,7 @@ InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
             op.setAttribute(tag, this.attributes[tag]);
         }
     }
-
-    if (preview) {
-        di.previewOperation(op);
-    }
-    else {
-        di.applyOperation(op);
-        di.clearPreview();
-        di.repaintViews();
-    }
+    return op;
 };
 
 //InsertBlockItem.prototype.coordinateEventPreview = function(event) {
@@ -230,6 +239,7 @@ InsertBlockItem.prototype.slotScaleChanged = function(value) {
     } else {
         this.scale = 1.0;
     }
+    this.updatePreview(true);
 };
 
 InsertBlockItem.prototype.slotRotationChanged = function(value) {
@@ -239,24 +249,30 @@ InsertBlockItem.prototype.slotRotationChanged = function(value) {
     } else {
         this.rotation = 0.0;
     }
+    this.updatePreview(true);
 };
 
 InsertBlockItem.prototype.slotFlipHorizontalChanged = function(value) {
     this.flipHorizontal = value;
+    this.updatePreview(true);
 };
 
 InsertBlockItem.prototype.slotFlipVerticalChanged = function(value) {
     this.flipVertical = value;
+    this.updatePreview(true);
 };
 
 InsertBlockItem.prototype.slotToCurrentLayerChanged = function(value) {
     this.toCurrentLayer = value;
+    this.updatePreview(true);
 };
 
 InsertBlockItem.prototype.slotOverwriteLayersChanged = function(value) {
     this.overwriteLayers = value;
+    this.updatePreview(true);
 };
 
 InsertBlockItem.prototype.slotOverwriteBlocksChanged = function(value) {
     this.overwriteBlocks = value;
+    this.updatePreview(true);
 };
