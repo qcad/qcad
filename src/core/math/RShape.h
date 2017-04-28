@@ -210,6 +210,10 @@ public:
         Q_UNUSED(from)
         return RNANDOUBLE;
     }
+    virtual double getAngleAtPoint(const RVector& pos) const {
+        double d = getDistanceFromStart(pos);
+        return getAngleAt(d);
+    }
 
     virtual RVector getPointAtPercent(double p) const;
 
