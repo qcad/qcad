@@ -211,6 +211,9 @@
         getHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isActive
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSignalsBlocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

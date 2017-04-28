@@ -55,10 +55,16 @@
         setModelPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setScreenPosition
+        getCursorPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCursorPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScreenPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getGraphicsView

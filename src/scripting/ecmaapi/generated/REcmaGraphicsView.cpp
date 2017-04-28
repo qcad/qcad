@@ -186,6 +186,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
             
+            REcmaHelper::registerFunction(&engine, proto, isActive, "isActive");
+            
             REcmaHelper::registerFunction(&engine, proto, getSignalsBlocked, "getSignalsBlocked");
             
             REcmaHelper::registerFunction(&engine, proto, setSignalsBlocked, "setSignalsBlocked");
@@ -4044,6 +4046,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::getHeight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::isActive
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::isActive", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::isActive";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("isActive", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->isActive();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.isActive().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::isActive", context, engine);
             return result;
         }
          QScriptValue

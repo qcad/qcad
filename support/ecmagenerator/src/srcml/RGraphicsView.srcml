@@ -195,6 +195,14 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * \return True if this view is considered to be active and needs updates
+     * (for example if a view is visible).
+     */</comment>
+    <function><type><name>virtual</name> <name>int</name></type> <name>isActive</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>true</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>virtual</name> <name>bool</name></type> <name>getSignalsBlocked</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>

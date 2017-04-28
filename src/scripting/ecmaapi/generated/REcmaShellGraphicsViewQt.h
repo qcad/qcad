@@ -742,6 +742,11 @@
             );
         
     
+      int isActive(
+                
+            );
+        
+    
       RRefPoint getClosestReferencePoint(
                 const RVector & screenPosition, int range
             );

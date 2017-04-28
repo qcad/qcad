@@ -231,7 +231,7 @@
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>getWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>resizeImage</name><parameter_list>(<param><decl><type><name>int</name></type> <name>w</name></decl></param>, <param><decl><type><name>int</name></type> <name>h</name></decl></param>)</parameter_list>;</function_decl>
-    
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintGridPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>ucsPosition</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintGridLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>ucsPosition</name></decl></param>)</parameter_list>;</function_decl>
     <comment type="line">//virtual void paintCursorLine(const RLine&amp; ucsPosition);</comment>

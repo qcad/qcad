@@ -766,6 +766,11 @@
             );
         
     
+      int isActive(
+                
+            );
+        
+    
       bool getSignalsBlocked(
                 
             );

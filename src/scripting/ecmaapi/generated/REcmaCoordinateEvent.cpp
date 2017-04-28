@@ -77,9 +77,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, setModelPosition, "setModelPosition");
             
-            REcmaHelper::registerFunction(&engine, proto, setScreenPosition, "setScreenPosition");
+            REcmaHelper::registerFunction(&engine, proto, getCursorPosition, "getCursorPosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCursorPosition, "setCursorPosition");
             
             REcmaHelper::registerFunction(&engine, proto, getScreenPosition, "getScreenPosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, setScreenPosition, "setScreenPosition");
             
             REcmaHelper::registerFunction(&engine, proto, getGraphicsView, "getGraphicsView");
             
@@ -442,6 +446,171 @@
             return result;
         }
          QScriptValue
+        REcmaCoordinateEvent::getCursorPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCoordinateEvent::getCursorPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateEvent::getCursorPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCoordinateEvent* self = 
+                        getSelf("getCursorPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getCursorPosition();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateEvent.getCursorPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCoordinateEvent::getCursorPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCoordinateEvent::setCursorPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCoordinateEvent::setCursorPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateEvent::setCursorPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCoordinateEvent* self = 
+                        getSelf("setCursorPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RInputEvent: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCursorPosition(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateEvent.setCursorPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCoordinateEvent::setCursorPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCoordinateEvent::getScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCoordinateEvent::getScreenPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateEvent::getScreenPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCoordinateEvent* self = 
+                        getSelf("getScreenPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getScreenPosition();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateEvent.getScreenPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCoordinateEvent::getScreenPosition", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaCoordinateEvent::setScreenPosition
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -506,55 +675,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaCoordinateEvent::setScreenPosition", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaCoordinateEvent::getScreenPosition
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaCoordinateEvent::getScreenPosition", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateEvent::getScreenPosition";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RCoordinateEvent* self = 
-                        getSelf("getScreenPosition", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
-        
-               self->getScreenPosition();
-        // return type: RVector
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateEvent.getScreenPosition().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaCoordinateEvent::getScreenPosition", context, engine);
             return result;
         }
          QScriptValue
