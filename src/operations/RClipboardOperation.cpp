@@ -300,6 +300,10 @@ void RClipboardOperation::copyEntity(
 
     Q_ASSERT(destBlock->getId()!=RBlock::INVALID_ID);
 
+    if (entity.getCustomBoolProperty("QCAD", "Ignore", false)==true) {
+        return;
+    }
+
     // entity is a block reference:
     // add entities of the block the block reference refers to (the block
     // definition is then added automatically):
