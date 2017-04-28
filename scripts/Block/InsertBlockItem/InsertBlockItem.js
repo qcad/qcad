@@ -44,6 +44,7 @@ function InsertBlockItem(guiAction) {
     this.toCurrentLayer = false;
     this.overwriteLayers = false;
     this.overwriteBlocks = false;
+    this.referencePoint = new RVector(0,0);
 
     this.attributes = {};
     this.attributeTags = [];
@@ -112,13 +113,15 @@ InsertBlockItem.prototype.beginEvent = function() {
         this.blockName = undefined;
     }
 
+    var i, id;
+
     // init block attribute inputs to options tool bar:
     // assign values to attributes:
     var first = true;
     var optionsToolBar = EAction.getOptionsToolBar();
     var ids = this.docItem.queryAllEntities();
-    for (var i=0; i<ids.length; i++) {
-        var id = ids[i];
+    for (i=0; i<ids.length; i++) {
+        id = ids[i];
         var attDef = this.docItem.queryEntity(id);
         if (!isAttributeDefinitionEntity(attDef)) {
             continue;
@@ -135,6 +138,23 @@ InsertBlockItem.prototype.beginEvent = function() {
 
         var tagCombo = optionsToolBar.findChild("AttributeTag");
         tagCombo.addItem(prompt, [tag, defaultValue]);
+    }
+
+    // find explicit reference point for positioning:
+    // that is a point entity with custom property "ReferencePoint" set to 1:
+    this.referencePoint = new RVector(0,0);
+    for (i=0; i<ids.length; i++) {
+        id = ids[i];
+        var point = this.docItem.queryEntity(id);
+        if (!isPointEntity(point)) {
+            continue;
+        }
+
+        if (point.getCustomBoolProperty("QCAD", "ReferencePoint", false)!==true) {
+            continue;
+        }
+
+        this.referencePoint = point.getPosition();
     }
 
     this.setState(InsertBlockItem.State.SettingPosition);
@@ -193,16 +213,42 @@ InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
+InsertBlockItem.prototype.getRotation = function(preview) {
+    return this.rotation;
+};
+
 InsertBlockItem.prototype.getOperation = function(preview) {
+    var rotation = this.getRotation();
+
+    if (isNull(rotation)) {
+        return undefined;
+    }
+
     var op = new RPasteOperation(this.docItem);
     op.setText(this.getToolTitle());
 
-    op.setOffset(this.offset);
+    if (this.referencePoint.isZero()) {
+        op.setOffset(this.offset);
+    }
+    else {
+        var off1 = this.offset;
+        var off2 = this.referencePoint.copy();
+        if (this.flipHorizontal) {
+            off2.flipHorizontal();
+        }
+        if (this.flipVertical) {
+            off2.flipVertical();
+        }
+        off2.scale(this.scale);
+        off2.rotate(rotation);
+        op.setOffset(off1.operator_subtract(off2));
+    }
+
     if (!isNull(this.blockName)) {
         op.setBlockName(this.blockName);
     }
     op.setScale(this.scale);
-    op.setRotation(this.rotation);
+    op.setRotation(rotation);
     op.setFlipHorizontal(this.flipHorizontal);
     op.setFlipVertical(this.flipVertical);
     op.setToCurrentLayer(this.toCurrentLayer);
@@ -225,12 +271,6 @@ InsertBlockItem.prototype.getOperation = function(preview) {
     }
     return op;
 };
-
-//InsertBlockItem.prototype.coordinateEventPreview = function(event) {
-//    var di = this.getDocumentInterface();
-//    this.operation.setOffset(event.getModelPosition());
-//    di.previewOperation(this.operation);
-//};
 
 InsertBlockItem.prototype.slotScaleChanged = function(value) {
     var scale = RMath.eval(value);
