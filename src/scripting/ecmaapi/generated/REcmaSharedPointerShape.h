@@ -153,6 +153,9 @@
         getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAngleAtPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPointAtPercent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
