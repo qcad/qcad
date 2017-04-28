@@ -45,9 +45,14 @@ public:
 
     RVector getModelPosition() const;
     void setModelPosition(const RVector& v);
-    void setScreenPosition(const RVector& v);
-//  RVector getUcsPosition() const;
+
+    RVector getCursorPosition() const;
+    void setCursorPosition(const RVector& v);
+
     RVector getScreenPosition() const;
+    void setScreenPosition(const RVector& v);
+
+//  RVector getUcsPosition() const;
 
     RGraphicsView& getGraphicsView() const;
     RGraphicsScene& getGraphicsScene() const;
@@ -61,6 +66,7 @@ public:
 
 protected:
     RVector modelPosition;
+    RVector cursorPosition;
 //  RVector ucsPosition;
     RVector screenPosition;
 

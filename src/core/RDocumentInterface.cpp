@@ -866,6 +866,7 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
         case RAction::PickCoordinateNoSnap: {
                 RCoordinateEvent ce(RVector(), event.getGraphicsScene(), event.getGraphicsView());
                 ce.setModifiers(event.modifiers());
+                ce.setCursorPosition(event.getModelPosition());
                 if (action.getClickMode()==RAction::PickCoordinateNoSnap) {
                     ce.setModelPosition(event.getModelPosition());
                 }
@@ -910,6 +911,7 @@ void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) 
         case RAction::PickCoordinateNoSnap: {
             RCoordinateEvent ce(RVector(), event.getGraphicsScene(), event.getGraphicsView());
             ce.setModifiers(event.modifiers());
+            ce.setCursorPosition(event.getModelPosition());
             if (action.getClickMode()==RAction::PickCoordinateNoSnap) {
                 ce.setModelPosition(event.getModelPosition());
             }

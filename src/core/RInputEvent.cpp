@@ -44,6 +44,14 @@ void RInputEvent::setModelPosition(const RVector& v) {
     modelPosition = v;
 }
 
+RVector RInputEvent::getCursorPosition() const {
+    return cursorPosition;
+}
+
+void RInputEvent::setCursorPosition(const RVector& v) {
+    cursorPosition = v;
+}
+
 void RInputEvent::setScreenPosition(const RVector& v) {
     screenPosition = v;
 }
