@@ -982,6 +982,8 @@ LibraryBrowser.directoryChanged = function(selected, deselected) {
     setOverrideWaitCursor();
     LibraryBrowser.updateFsView(dirPath, model);
     restoreOverrideCursor();
+
+    RSettings.setValue("LibraryBrowser/Path", dirPath);
 };
 
 /**
@@ -2019,5 +2021,8 @@ LibraryBrowser.showFirstTime = function() {
         }
         //LibraryBrowser.firstShow = false;
         appWin.setProperty("LibraryBrowser/FirstShow", true);
+
+        var initialPath = RSettings.getStringValue("LibraryBrowser/Path", "");
+        LibraryBrowser.showDirectory(initialPath);
     }
 };
