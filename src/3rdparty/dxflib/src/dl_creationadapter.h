@@ -70,6 +70,7 @@ public:
     virtual void addMText(const DL_MTextData&) {}
     virtual void addMTextChunk(const std::string&) {}
     virtual void addText(const DL_TextData&) {}
+    virtual void addArcAlignedText(const DL_ArcAlignedTextData&) {}
     virtual void addAttribute(const DL_AttributeData&) {}
     
     virtual void addDimAlign(const DL_DimensionData&,

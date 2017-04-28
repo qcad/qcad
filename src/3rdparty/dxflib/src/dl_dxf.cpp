@@ -488,6 +488,10 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
             addText(creationInterface);
             break;
 
+        case DL_ENTITY_ARCALIGNEDTEXT:
+            addArcAlignedText(creationInterface);
+            break;
+
         case DL_ENTITY_ATTRIB:
             addAttribute(creationInterface);
             break;
@@ -645,6 +649,8 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
             currentObjectType = DL_ENTITY_TEXT;
         } else if (groupValue=="MTEXT") {
             currentObjectType = DL_ENTITY_MTEXT;
+        } else if (groupValue=="ARCALIGNEDTEXT") {
+            currentObjectType = DL_ENTITY_ARCALIGNEDTEXT;
         } else if (groupValue=="ATTRIB") {
             currentObjectType = DL_ENTITY_ATTRIB;
         } else if (groupValue=="DIMENSION") {
@@ -1645,6 +1651,40 @@ void DL_Dxf::addText(DL_CreationInterface* creationInterface) {
         (getRealValue(50, 0.0)*2*M_PI)/360.0);
 
     creationInterface->addText(d);
+}
+
+
+/**
+ * Adds an arc aligned text entity that was read from the file via the creation interface.
+ */
+void DL_Dxf::addArcAlignedText(DL_CreationInterface* creationInterface) {
+    DL_ArcAlignedTextData d;
+    d.cx = getRealValue(10, 0.0);
+    d.cy = getRealValue(20, 0.0);
+    d.cz = getRealValue(30, 0.0);
+    d.radius = getRealValue(40, 0.0);
+    d.xScaleFactor = getRealValue(41, 0.0);
+    d.height = getRealValue(42, 0.0);
+    d.spacing = getRealValue(43, 0.0);
+    d.offset = getRealValue(44, 0.0);
+    d.rightOffset = getRealValue(45, 0.0);
+    d.leftOffset = getRealValue(46, 0.0);
+    d.startAngle = getRealValue(50, 0.0);
+    d.endAngle = getRealValue(51, 0.0);
+    d.characterOrder = getIntValue(70, 0);
+    d.direction = getIntValue(71, 0);
+    d.alignment = getIntValue(72, 0);
+    d.side = getIntValue(73, 0);
+    d.bold = getIntValue(74, 0);
+    d.italic = getIntValue(75, 0);
+    d.underline = getIntValue(76, 0);
+    d.characerSet = getIntValue(77, 0);
+    d.pitch = getIntValue(78, 0);
+    d.fontType = getIntValue(79, 0);
+    d.wizard = getIntValue(280, 0);
+    d.arcHandle = getIntValue(330, 0);
+
+    creationInterface->addArcAlignedText(d);
 }
 
 

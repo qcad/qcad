@@ -145,7 +145,7 @@ public:
     virtual void addSolid(const DL_SolidData& data) = 0;
 
 
-    /** Called for every Multi Text entity. */
+    /** Called for every multi Text entity. */
     virtual void addMText(const DL_MTextData& data) = 0;
 
     /**
@@ -155,10 +155,13 @@ public:
      */
     virtual void addMTextChunk(const std::string& text) = 0;
 
-    /** Called for every Text entity. */
+    /** Called for every text entity. */
     virtual void addText(const DL_TextData& data) = 0;
 
-    /** Called for every Block Attribute entity. */
+    /** Called for every arc aligned text entity. */
+    virtual void addArcAlignedText(const DL_ArcAlignedTextData& data) = 0;
+
+    /** Called for every block Attribute entity. */
     virtual void addAttribute(const DL_AttributeData& data) = 0;
 
     /**

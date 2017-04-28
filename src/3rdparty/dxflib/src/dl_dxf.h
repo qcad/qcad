@@ -96,7 +96,8 @@ class DL_WriterA;
 #define DL_ENTITY_3DFACE       122
 #define DL_ENTITY_XLINE        123
 #define DL_ENTITY_RAY          124
-#define DL_ENTITY_SEQEND       125
+#define DL_ENTITY_ARCALIGNEDTEXT 125
+#define DL_ENTITY_SEQEND       126
 #define DL_XRECORD             200
 #define DL_DICTIONARY          210
 
@@ -169,6 +170,7 @@ public:
 
     void addMText(DL_CreationInterface* creationInterface);
     void addText(DL_CreationInterface* creationInterface);
+    void addArcAlignedText(DL_CreationInterface* creationInterface);
 
     void addAttribute(DL_CreationInterface* creationInterface);
 

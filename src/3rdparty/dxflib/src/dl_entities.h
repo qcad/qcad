@@ -864,6 +864,68 @@ struct DXFLIB_EXPORT DL_TextData {
     double angle;
 };
 
+/**
+ * Arc Aligned Text Data.
+ */
+struct DXFLIB_EXPORT DL_ArcAlignedTextData {
+
+    /*! Text string */
+    std::string text;
+    /*! Font name */
+    std::string font;
+    /*! Style */
+    std::string style;
+
+    /*! X coordinate of arc center point. */
+    double cx;
+    /*! Y coordinate of arc center point. */
+    double cy;
+    /*! Z coordinate of arc center point. */
+    double cz;
+    /*! Arc radius. */
+    double radius;
+
+    /*! Relative X scale factor. */
+    double xScaleFactor;
+    /*! Text height */
+    double height;
+    /*! Character spacing */
+    double spacing;
+    /*! Offset from arc */
+    double offset;
+    /*! Right offset */
+    double rightOffset;
+    /*! Left offset */
+    double leftOffset;
+    /*! Start angle (radians) */
+    double startAngle;
+    /*! End angle (radians) */
+    double endAngle;
+    /*! Character order:  0 = normal; 1 = reverse */
+    bool characterOrder;
+    /*! Direction flag */
+    bool direction;
+    /*! Alignment flag */
+    bool alignment;
+    /*! Side flag */
+    bool side;
+    /*! Bold flag */
+    bool bold;
+    /*! Italic flag */
+    bool italic;
+    /*! Underline flag */
+    bool underline;
+    /*! Character set value */
+    int characerSet;
+    /*! Pitch and family value */
+    int pitch;
+    /*! Font type: 0 = TTF; 1 = SHX */
+    bool fontType;
+    /*! Wizard flag */
+    bool wizard;
+    /*! Arc handle/ID */
+    int arcHandle;
+};
 
 /**
  * Block attribute data.
