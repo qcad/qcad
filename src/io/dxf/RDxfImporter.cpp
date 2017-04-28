@@ -938,6 +938,18 @@ void RDxfImporter::addText(const DL_TextData& data) {
     importEntity(entity);
 }
 
+void RDxfImporter::addArcAlignedText(const DL_ArcAlignedTextData& data) {
+    // TODO
+//    qDebug() << "addArcAlignedText";
+//    qDebug() << "text" << data.text.c_str();
+//    qDebug() << "x" << data.cx;
+//    qDebug() << "y" << data.cy;
+//    qDebug() << "z" << data.cz;
+//    qDebug() << "font" << data.font.c_str();
+//    qDebug() << "style" << data.style.c_str();
+}
+
+
 /**
  * Implementation of the method which handles
  * block attributes (ATTRIB).

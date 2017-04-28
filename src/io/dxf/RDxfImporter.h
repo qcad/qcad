@@ -99,6 +99,7 @@ private:
     virtual void addMText(const DL_MTextData& data);
     RTextBasedData getTextBasedData(const DL_TextData& data);
     virtual void addText(const DL_TextData& data);
+    virtual void addArcAlignedText(const DL_ArcAlignedTextData& data);
     virtual void addAttribute(const DL_AttributeData& data);
     virtual RDimensionData convDimensionData(const DL_DimensionData& data);
     virtual void addDimAlign(const DL_DimensionData& data, const DL_DimAlignedData& edata);
