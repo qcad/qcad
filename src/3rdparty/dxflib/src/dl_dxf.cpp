@@ -1659,6 +1659,9 @@ void DL_Dxf::addText(DL_CreationInterface* creationInterface) {
  */
 void DL_Dxf::addArcAlignedText(DL_CreationInterface* creationInterface) {
     DL_ArcAlignedTextData d;
+    d.text = getStringValue(1, "");
+    d.font = getStringValue(2, "");
+    d.style = getStringValue(7, "");
     d.cx = getRealValue(10, 0.0);
     d.cy = getRealValue(20, 0.0);
     d.cz = getRealValue(30, 0.0);
