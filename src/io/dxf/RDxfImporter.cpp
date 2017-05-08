@@ -940,13 +940,17 @@ void RDxfImporter::addText(const DL_TextData& data) {
 
 void RDxfImporter::addArcAlignedText(const DL_ArcAlignedTextData& data) {
     // TODO
-//    qDebug() << "addArcAlignedText";
-//    qDebug() << "text" << data.text.c_str();
-//    qDebug() << "x" << data.cx;
-//    qDebug() << "y" << data.cy;
-//    qDebug() << "z" << data.cz;
-//    qDebug() << "font" << data.font.c_str();
-//    qDebug() << "style" << data.style.c_str();
+    qDebug() << "addArcAlignedText";
+    qDebug() << "text" << data.text.c_str();
+    qDebug() << "cx" << data.cx;
+    qDebug() << "cy" << data.cy;
+    qDebug() << "cz" << data.cz;
+    qDebug() << "radius" << data.radius;
+    qDebug() << "font" << data.font.c_str();
+    qDebug() << "style" << data.style.c_str();
+    qDebug() << "alignment" << data.alignment;
+    qDebug() << "char set" << data.characerSet;
+    qDebug() << "char order" << data.reversedCharacterOrder;
 }
 
 

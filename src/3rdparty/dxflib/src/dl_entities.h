@@ -901,26 +901,43 @@ struct DXFLIB_EXPORT DL_ArcAlignedTextData {
     double startAngle;
     /*! End angle (radians) */
     double endAngle;
-    /*! Character order:  0 = normal; 1 = reverse */
-    bool characterOrder;
-    /*! Direction flag */
-    bool direction;
-    /*! Alignment flag */
-    bool alignment;
-    /*! Side flag */
-    bool side;
+    /*! Reversed character order:
+     * false: normal
+     * true: reversed
+     */
+    bool reversedCharacterOrder;
+    /*! Direction
+     * 1: outward from center
+     * 2: inward from center
+     */
+    int direction;
+    /*! Alignment:
+     * 1: fit
+     * 2: left
+     * 3: right
+     * 4: center
+     */
+    int alignment;
+    /*! Side
+     * 1: convex
+     * 2: concave
+     */
+    int side;
     /*! Bold flag */
     bool bold;
     /*! Italic flag */
     bool italic;
     /*! Underline flag */
     bool underline;
-    /*! Character set value */
+    /*! Character set value. Windows character set identifier. */
     int characerSet;
-    /*! Pitch and family value */
+    /*! Pitch and family value. Windows pitch and character family identifier. */
     int pitch;
-    /*! Font type: 0 = TTF; 1 = SHX */
-    bool fontType;
+    /*! Font type:
+     * false: TTF
+     * true: SHX
+     */
+    bool shxFont;
     /*! Wizard flag */
     bool wizard;
     /*! Arc handle/ID */

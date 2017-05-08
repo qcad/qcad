@@ -1674,7 +1674,7 @@ void DL_Dxf::addArcAlignedText(DL_CreationInterface* creationInterface) {
     d.leftOffset = getRealValue(46, 0.0);
     d.startAngle = getRealValue(50, 0.0);
     d.endAngle = getRealValue(51, 0.0);
-    d.characterOrder = getIntValue(70, 0);
+    d.reversedCharacterOrder = getIntValue(70, 0);
     d.direction = getIntValue(71, 0);
     d.alignment = getIntValue(72, 0);
     d.side = getIntValue(73, 0);
@@ -1683,7 +1683,7 @@ void DL_Dxf::addArcAlignedText(DL_CreationInterface* creationInterface) {
     d.underline = getIntValue(76, 0);
     d.characerSet = getIntValue(77, 0);
     d.pitch = getIntValue(78, 0);
-    d.fontType = getIntValue(79, 0);
+    d.shxFont = getIntValue(79, 0);
     d.wizard = getIntValue(280, 0);
     d.arcHandle = getIntValue(330, 0);
 
