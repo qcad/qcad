@@ -926,7 +926,7 @@ RTextBasedData RDxfImporter::getTextBasedData(const DL_TextData& data) {
     }
 
     return textBasedData;
-};
+}
 
 /**
  * Implementation of the method which handles
