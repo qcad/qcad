@@ -271,6 +271,7 @@ function setUpDragAndDrop(appWin) {
     });
 
     appWin.drop.connect(function(evt) {
+        // workaround for Qt keyboard focus bug:
         var appWin = RMainWindowQt.getMainWindow();
         if (!isNull(appWin)) {
             appWin.activateWindow();
