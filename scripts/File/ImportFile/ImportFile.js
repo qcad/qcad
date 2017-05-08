@@ -39,6 +39,15 @@ ImportFile.prototype.beginEvent = function() {
     Paste.prototype.beginEvent.call(this);
 
     var fileDialogInfo = this.getFileName();
+
+    // workaround for Qt keyboard focus bug:
+    var appWin = RMainWindowQt.getMainWindow();
+    if (!isNull(appWin)) {
+        appWin.activateWindow();
+        appWin.raise();
+        appWin.setFocus(Qt.OtherFocusReason);
+    }
+
     if (isNull(fileDialogInfo)) {
         this.sourceDi.destroy();
         this.sourceDi = undefined;
