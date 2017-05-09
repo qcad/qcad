@@ -34,6 +34,7 @@ EllipseCPPTest00.prototype.test00 = function() {
     this.setUp();
     this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::ShapeToolsPanel::ShapePolygonCPButton');
+    this.setToolOption('Shape/Fill', 'false');
     this.setToolOption('ShapePolygonCP/Corners', '8');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0) );
