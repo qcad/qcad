@@ -382,17 +382,17 @@ void RClipboardOperation::copyEntity(
         destEntity->flipVertical();
     }
     if (blockRef!=NULL) {
+        // don't scale block ref, scale block contents:
         destEntity->scale(scale);
+
+        // scale block ref position:
+        destEntity->move(-blockRef->getPosition());
+        destEntity->move(blockRef->getPosition() * unitScale);
     }
     else {
         destEntity->scale(scale * unitScale);
     }
     destEntity->rotate(rotation);
-    // correct block reference offset. necessary for unit conversion:
-    if (blockRef!=NULL && src.getUnit()!=dest.getUnit()) {
-        destEntity->move(-blockRef->getPosition());
-        destEntity->move(blockRef->getPosition() * unitScale);
-    }
     destEntity->move(offset);
 
     destEntity->setDocument(&dest);
