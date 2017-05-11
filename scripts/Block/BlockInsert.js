@@ -43,14 +43,22 @@ BlockInsert.prototype.beginEvent = function() {
 
 BlockInsert.prototype.showAttributeControls = function(show) {
     var optionsToolBar = EAction.getOptionsToolBar();
-    optionsToolBar.findChild("AttributeLabelAction").visible = show;
-    optionsToolBar.findChild("AttributeTagAction").visible = show;
-    var w = optionsToolBar.findChild("AttributeEqualLabelAction");
-    if (!isNull(w)) {
-        w.visible = show;
+    var widgetActionNames = [
+                "AttributeLabelAction",
+                "AttributeTagAction",
+                "AttributeEqualLabelAction",
+                "AttributeValueAction",
+                "AttributeSeparatorAction"
+            ];
+
+    for (var i=0; i<widgetActionNames.length; i++) {
+        var widgetActionName = widgetActionNames[i];
+
+        var w = optionsToolBar.findChild(widgetActionName);
+        if (!isNull(w)) {
+            w.visible = show;
+        }
     }
-    optionsToolBar.findChild("AttributeValueAction").visible = show;
-    optionsToolBar.findChild("AttributeSeparatorAction").visible = show;
 };
 
 BlockInsert.prototype.slotReset = function() {
