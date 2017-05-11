@@ -41,7 +41,6 @@ function InsertScriptItem(guiAction) {
 InsertScriptItem.prototype = new InsertBlockItem();
 
 InsertScriptItem.prototype.beginEvent = function() {
-    
     var ms = new RMemoryStorage();
     var si = new RSpatialIndexNavel();
     this.docItem = new RDocument(ms, si);
@@ -51,29 +50,19 @@ InsertScriptItem.prototype.beginEvent = function() {
     
     Block.prototype.beginEvent.call(this);
 
-    var url = this.guiAction.data();
-    if (isNull(url) || !url.isLocalFile()) {
+    if (isNull(this.url) || !this.url.isLocalFile()) {
         this.terminate();
         return;
     }
 
-    this.file = url.toLocalFile();
+    this.file = this.url.toLocalFile();
     include(this.file);
     
     InsertScriptItem.evalInit(this.file);
 
     this.generate();
 
-    var di = this.getDocumentInterface();
-    di.setClickMode(RAction.PickCoordinate);
-
-    this.setCrosshairCursor();
-    var trPos = qsTr("Position");
-    this.setCommandPrompt(trPos);
-    this.setLeftMouseTip(trPos);
-    this.setRightMouseTip(EAction.trCancel);
-
-    EAction.showSnapTools();
+    this.setState(InsertBlockItem.State.SettingPosition);
 };
 
 InsertScriptItem.prototype.finishEvent = function() {
@@ -112,8 +101,7 @@ InsertScriptItem.getUiFilePath = function(file) {
 };
 
 InsertScriptItem.getWidget = function(file) {
-    return objectFromPath("MainWindow::" + InsertScriptItem.getObjectName(file))
-            .widget();
+    return objectFromPath("MainWindow::" + InsertScriptItem.getObjectName(file)).widget();
 };
 
 InsertScriptItem.getObjectName = function(file) {
