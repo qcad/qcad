@@ -4,4 +4,5 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setUniqueGroup("InsertBlockItem");
     action.setScriptFile(basePath + "/InsertScriptItem.js");
+    action.setIcon(basePath + "/InsertScriptItem.svg");
 }
