@@ -146,6 +146,8 @@ Layer.showHide = function(show, obj, layerId, showProgress) {
         }
     }
 
+    var showFrozen = RSettings.getBoolValue("LayerListPro/ShowFrozen", false);
+
     var operation = new RModifyObjectsOperation();
     var layers = obj.getDocument().queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
@@ -155,7 +157,52 @@ Layer.showHide = function(show, obj, layerId, showProgress) {
 
         var layer = obj.getDocument().queryLayer(layers[l]);
         if (layers[l] !== layerId) {
-            layer.setFrozen(!show);
+            if (showFrozen) {
+                layer.setOff(!show);
+            }
+            else {
+                layer.setFrozen(!show);
+            }
+        } else {
+            if (showFrozen) {
+                layer.setOff(false);
+            }
+            else {
+                layer.setFrozen(false);
+            }
+        }
+        operation.addObject(layer);
+    }
+    var di = obj.getDocumentInterface();
+    di.applyOperation(operation);
+    di.clearPreview();
+    di.repaintViews();
+
+    if (showProgress===true) {
+        EAction.setProgressEnd();
+    }
+};
+
+Layer.thawFreeze = function(freeze, obj, layerId, showProgress) {
+    if (showProgress===true) {
+        if (freeze) {
+            EAction.setProgressText(qsTr("Thawing all layers"));
+        }
+        else {
+            EAction.setProgressText(qsTr("Freezing all layers"));
+        }
+    }
+
+    var operation = new RModifyObjectsOperation();
+    var layers = obj.getDocument().queryAllLayers();
+    for (var l = 0; l < layers.length; ++l) {
+        if (showProgress===true) {
+            EAction.setProgress(100/layers.length*l);
+        }
+
+        var layer = obj.getDocument().queryLayer(layers[l]);
+        if (layers[l] !== layerId) {
+            layer.setFrozen(!freeze);
         } else {
             layer.setFrozen(false);
         }
