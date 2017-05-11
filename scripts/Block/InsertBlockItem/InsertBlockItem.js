@@ -48,6 +48,11 @@ function InsertBlockItem(guiAction) {
 
     this.attributes = {};
     this.attributeTags = [];
+
+    this.url = undefined;
+    if (!isNull(guiAction)) {
+        this.url = this.guiAction.data();
+    }
 }
 
 InsertBlockItem.State = {
@@ -67,27 +72,25 @@ InsertBlockItem.prototype.beginEvent = function() {
     // TODO refactor
     BlockInsert.prototype.beginEvent.call(this);
 
-    var url = this.guiAction.data();
-
     var path;
     var err;
-    if (url.isLocalFile()) {
-        path = url.toLocalFile();
+    if (this.url.isLocalFile()) {
+        path = this.url.toLocalFile();
         err = this.diItem.importFile(path, "", false);
     }
     else {
-        if (isFunction(url.encodedPath)) {
-            path = QUrl.fromPercentEncoding(url.encodedPath());
+        if (isFunction(this.url.encodedPath)) {
+            path = QUrl.fromPercentEncoding(this.url.encodedPath());
         }
         else {
-            path = url.path();
+            path = this.url.path();
         }
 
-        err = this.diItem.importUrl(url, "", false);
+        err = this.diItem.importUrl(this.url, "", false);
     }
 
     if (err!==RDocumentInterface.IoErrorNoError) {
-        EAction.handleUserWarning(qsTr("Cannot import file from URL: ") + url.toString());
+        EAction.handleUserWarning(qsTr("Cannot import file from URL: ") + this.url.toString());
         this.terminate();
     }
 
@@ -138,23 +141,6 @@ InsertBlockItem.prototype.beginEvent = function() {
 
         var tagCombo = optionsToolBar.findChild("AttributeTag");
         tagCombo.addItem(prompt, [tag, defaultValue]);
-    }
-
-    // find explicit reference point for positioning:
-    // that is a point entity with custom property "ReferencePoint" set to 1:
-    this.referencePoint = new RVector(0,0);
-    for (i=0; i<ids.length; i++) {
-        id = ids[i];
-        var point = this.docItem.queryEntity(id);
-        if (!isPointEntity(point)) {
-            continue;
-        }
-
-        if (point.getCustomBoolProperty("QCAD", "ReferencePoint", false)!==true) {
-            continue;
-        }
-
-        this.referencePoint = point.getPosition();
     }
 
     this.setState(InsertBlockItem.State.SettingPosition);
