@@ -29,6 +29,16 @@
         <translation>Skrytie všetkých vrstiev</translation>
     </message>
     <message>
+        <location line="+44"/>
+        <source>Thawing all layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Freezing all layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+32"/>
         <source>Locking all layers</source>
         <translation>Uzamknutie všetkých vrstiev</translation>

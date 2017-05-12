@@ -155,7 +155,7 @@ Points uniques</translatorcomment>
         <translation>Données insérées pas pris en charge</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation>Importation fichier: </translation>
     </message>

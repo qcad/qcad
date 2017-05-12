@@ -99,7 +99,7 @@
         <translation>Опущенные данные не поддерживаются</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation>Импортирование файла:</translation>
     </message>

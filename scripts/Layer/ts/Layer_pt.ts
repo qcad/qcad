@@ -33,6 +33,16 @@ Utilize a &amp;camada atual</translatorcomment>
         <translation>Ocultar todas as camadas</translation>
     </message>
     <message>
+        <location line="+44"/>
+        <source>Thawing all layers</source>
+        <translation>Descongelação todas as camadas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Freezing all layers</source>
+        <translation>Congelando todas as camadas</translation>
+    </message>
+    <message>
         <location line="+32"/>
         <source>Locking all layers</source>
         <translation>Bloqueie todas as camadas</translation>

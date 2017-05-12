@@ -155,7 +155,7 @@ Seleziona Singolo Oggetto</translatorcomment>
         <translation>I dati inseriti non sono supportati</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation>File importazione: </translation>
     </message>

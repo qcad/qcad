@@ -4,7 +4,7 @@
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../InsertBlockItem.js" line="+88"/>
+        <location filename="../InsertBlockItem.js" line="+93"/>
         <source>Cannot import file from URL: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Neispravan naziv bloka ispravljen u &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+57"/>
         <source>Position</source>
         <translation>Pozicija</translation>
     </message>

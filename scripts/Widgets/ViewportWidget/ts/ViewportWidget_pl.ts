@@ -154,7 +154,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation type="unfinished"></translation>
     </message>

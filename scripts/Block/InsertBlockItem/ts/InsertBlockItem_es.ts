@@ -66,7 +66,7 @@
         <translation>Sobreescribir los bloques</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+88"/>
+        <location filename="../InsertBlockItem.js" line="+93"/>
         <source>Cannot import file from URL: </source>
         <translation>No puedo importar archivos desde la URL: </translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Ajustado nombre de bloque no válido &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+57"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>

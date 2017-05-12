@@ -86,7 +86,7 @@ Zastępcze widżety</translatorcomment>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1153"/>
+        <location line="+1155"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translatorcomment>--exact match--
@@ -95,7 +95,7 @@ Przeglądarka bibliotek</translatorcomment>
         <translation type="unfinished">Przeglądarka bibliotek</translation>
     </message>
     <message>
-        <location line="-1145"/>
+        <location line="-1147"/>
         <source>Icon</source>
         <translatorcomment>--google--
 XX ikona wybrana wyłączona
@@ -127,7 +127,7 @@ Strona %1 z %2</translatorcomment>
         <translation type="unfinished">Strona %1 z %2</translation>
     </message>
     <message>
-        <location line="+235"/>
+        <location line="+237"/>
         <source>Updating icons...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktualizowanie ikony ...</translation>

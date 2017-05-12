@@ -29,6 +29,16 @@
         <translation>Ocultar todas las capas</translation>
     </message>
     <message>
+        <location line="+44"/>
+        <source>Thawing all layers</source>
+        <translation>Descongelación todas las capas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Freezing all layers</source>
+        <translation>Congelar todas las capas</translation>
+    </message>
+    <message>
         <location line="+32"/>
         <source>Locking all layers</source>
         <translation>Bloquear todas las capas</translation>

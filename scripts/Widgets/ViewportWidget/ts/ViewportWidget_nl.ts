@@ -99,7 +99,7 @@
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation>Importeren bestand: </translation>
     </message>

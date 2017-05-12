@@ -4,7 +4,7 @@
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../InsertBlockItem.js" line="+88"/>
+        <location filename="../InsertBlockItem.js" line="+93"/>
         <source>Cannot import file from URL: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -15,7 +15,7 @@
         <translation type="unfinished">Skorygowany nieprawidłową nazwę bloku do&apos;&amp;#39;</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+57"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

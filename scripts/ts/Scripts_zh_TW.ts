@@ -363,7 +363,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+320"/>
+        <location filename="../autostart.js" line="+321"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>

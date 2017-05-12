@@ -155,7 +155,7 @@ Selecione Entidades singulares</translatorcomment>
         <translation>Dados inseridos não suportados</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation>Importando o arquivo: </translation>
     </message>

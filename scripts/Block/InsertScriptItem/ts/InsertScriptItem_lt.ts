@@ -4,11 +4,6 @@
 <context>
     <name>InsertScriptItem</name>
     <message>
-        <location filename="../InsertScriptItem.js" line="+71"/>
-        <source>Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
         <translation type="unfinished"></translation>

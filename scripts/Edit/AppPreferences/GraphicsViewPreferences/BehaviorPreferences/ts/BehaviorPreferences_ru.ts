@@ -62,7 +62,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="+28"/>
+        <source>Keyboard Operations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Angle step for rotating:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-245"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>

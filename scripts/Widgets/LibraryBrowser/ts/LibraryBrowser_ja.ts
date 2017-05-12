@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1153"/>
+        <location line="+1155"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>ライブラリブラウザ</translation>
     </message>
     <message>
-        <location line="-1145"/>
+        <location line="-1147"/>
         <source>Icon</source>
         <translation>アイコン</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>ページ %1 / %2</translation>
     </message>
     <message>
-        <location line="+235"/>
+        <location line="+237"/>
         <source>Updating icons...</source>
         <translation>アイコンをアップデート...</translation>
     </message>

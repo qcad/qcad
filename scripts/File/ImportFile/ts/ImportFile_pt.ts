@@ -4,7 +4,7 @@
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../ImportFile.js" line="+50"/>
+        <location filename="../ImportFile.js" line="+68"/>
         <source>Error while importing file %1</source>
         <translation>Erro ao importar o arquivo %1</translation>
     </message>

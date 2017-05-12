@@ -91,7 +91,7 @@ Utilize a camada atual</translatorcomment>
         <translation>Substitua Blocos</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+88"/>
+        <location filename="../InsertBlockItem.js" line="+93"/>
         <source>Cannot import file from URL: </source>
         <translation>Não consigo importar arquivo da URL: </translation>
     </message>
@@ -101,7 +101,7 @@ Utilize a camada atual</translatorcomment>
         <translation>Ajustado o nome do Bloco inválido para &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+57"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>

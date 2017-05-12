@@ -155,7 +155,7 @@ Selecciona entidades solas</translatorcomment>
         <translation>Datos insertados no compatibles</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation>Importación de archivo: </translation>
     </message>

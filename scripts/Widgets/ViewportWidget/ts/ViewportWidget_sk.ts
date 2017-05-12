@@ -99,7 +99,7 @@
         <translation>Vložené údaje nie sú podporované</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation>Importuje sa súbor:</translation>
     </message>

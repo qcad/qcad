@@ -143,7 +143,7 @@
         <translation>Eingefügte Daten nicht unterstützt</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Importing file: </source>
         <translation>Importiere Datei: </translation>
     </message>

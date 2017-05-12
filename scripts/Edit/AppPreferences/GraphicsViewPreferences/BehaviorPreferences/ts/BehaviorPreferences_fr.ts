@@ -62,7 +62,17 @@
         <translation>Mettre en surbrillance l&apos;entité dans la plage</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="+28"/>
+        <source>Keyboard Operations</source>
+        <translation>Opérations de clavier</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Angle step for rotating:</source>
+        <translation>Etape d&apos;angle pour la rotation :</translation>
+    </message>
+    <message>
+        <location line="-245"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>

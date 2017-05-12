@@ -29,6 +29,16 @@
         <translation>Alle Layer verbergen</translation>
     </message>
     <message>
+        <location line="+44"/>
+        <source>Thawing all layers</source>
+        <translation>Alle Layer auftauen</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Freezing all layers</source>
+        <translation>Alle Layer einfrieren</translation>
+    </message>
+    <message>
         <location line="+32"/>
         <source>Locking all layers</source>
         <translation>Alle Layer sperren</translation>

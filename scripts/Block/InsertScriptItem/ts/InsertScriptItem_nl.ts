@@ -4,9 +4,8 @@
 <context>
     <name>InsertScriptItem</name>
     <message>
-        <location filename="../InsertScriptItem.js" line="+71"/>
         <source>Position</source>
-        <translation>Positie</translation>
+        <translation type="vanished">Positie</translation>
     </message>
     <message>
         <location filename="../InsertScriptItemInit.js" line="+2"/>

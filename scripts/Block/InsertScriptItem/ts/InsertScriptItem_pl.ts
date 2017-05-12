@@ -4,14 +4,13 @@
 <context>
     <name>InsertScriptItem</name>
     <message>
-        <location filename="../InsertScriptItem.js" line="+71"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Wskaż położenie linii wymiarowej lub wprowadź kąt:
 Wskaż położenie linii wymiarowej lub wprowadź kąt
 Wskaż pozycje</translatorcomment>
-        <translation type="unfinished">Położenie</translation>
+        <translation type="obsolete">Położenie</translation>
     </message>
     <message>
         <location filename="../InsertScriptItemInit.js" line="+2"/>
