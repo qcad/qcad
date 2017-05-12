@@ -25,12 +25,15 @@ include("scripts/Edit/Paste/Paste.js");
  * The target point is specified by the user.
  * \ingroup ecma_edit
  */
-function ImportFile(guiAction) {
+function ImportFile(guiAction, fileName) {
     Paste.call(this, guiAction);
 
     this.sourceDocument = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
     this.sourceDi = new RDocumentInterface(this.sourceDocument);
     this.sourceDi.setNotifyListeners(false);
+
+    // unit tests pass file name directly to action:
+    this.fileName = fileName;
 }
 
 ImportFile.prototype = new Paste();
@@ -38,7 +41,13 @@ ImportFile.prototype = new Paste();
 ImportFile.prototype.beginEvent = function() {
     Paste.prototype.beginEvent.call(this);
 
-    var fileDialogInfo = this.getFileName();
+    var fileDialogInfo;
+    if (!isNull(this.fileName)) {
+        fileDialogInfo = [ this.fileName, "" ];
+    }
+    else {
+        fileDialogInfo = this.getFileName();
+    }
 
     // workaround for Qt keyboard focus bug:
     var appWin = RMainWindowQt.getMainWindow();
