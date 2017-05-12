@@ -62,17 +62,7 @@
         <translation>Označi entiteto znotraj območja</translation>
     </message>
     <message>
-        <location line="+28"/>
-        <source>Keyboard Operations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Angle step for rotating:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-245"/>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>

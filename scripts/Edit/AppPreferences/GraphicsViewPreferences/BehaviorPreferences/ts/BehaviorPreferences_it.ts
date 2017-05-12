@@ -62,17 +62,15 @@
         <translation>Evidenziare entità entro il raggio</translation>
     </message>
     <message>
-        <location line="+28"/>
         <source>Keyboard Operations</source>
-        <translation>Operazioni di tastiera</translation>
+        <translation type="vanished">Operazioni di tastiera</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Angle step for rotating:</source>
-        <translation>Passo angolare per ruotare:</translation>
+        <translation type="vanished">Passo angolare per ruotare:</translation>
     </message>
     <message>
-        <location line="-245"/>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Pulsante destro del mouse</translation>
     </message>

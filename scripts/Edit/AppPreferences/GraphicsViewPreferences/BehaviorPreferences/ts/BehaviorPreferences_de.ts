@@ -62,17 +62,15 @@
         <translation>Objekt in Reichweite hervorheben</translation>
     </message>
     <message>
-        <location line="+28"/>
         <source>Keyboard Operations</source>
-        <translation>Tastatur Operationen</translation>
+        <translation type="vanished">Tastatur Operationen</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Angle step for rotating:</source>
-        <translation>Winkelschritt zum Drehen:</translation>
+        <translation type="vanished">Winkelschritt zum Drehen:</translation>
     </message>
     <message>
-        <location line="-245"/>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>

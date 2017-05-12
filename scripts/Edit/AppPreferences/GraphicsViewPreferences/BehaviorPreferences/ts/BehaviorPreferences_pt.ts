@@ -62,17 +62,15 @@
         <translation>Realçar entidade dentro do intervalo</translation>
     </message>
     <message>
-        <location line="+28"/>
         <source>Keyboard Operations</source>
-        <translation>Operações de teclado</translation>
+        <translation type="vanished">Operações de teclado</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Angle step for rotating:</source>
-        <translation>Passo angular para rotação:</translation>
+        <translation type="vanished">Passo angular para rotação:</translation>
     </message>
     <message>
-        <location line="-245"/>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>

@@ -62,17 +62,15 @@
         <translation>Highlight object binnen bereik</translation>
     </message>
     <message>
-        <location line="+28"/>
         <source>Keyboard Operations</source>
-        <translation>Toetsenbord Operaties</translation>
+        <translation type="vanished">Toetsenbord Operaties</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Angle step for rotating:</source>
-        <translation>Hoekstap bij rotatie:</translation>
+        <translation type="vanished">Hoekstap bij rotatie:</translation>
     </message>
     <message>
-        <location line="-245"/>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Rechtsklik</translation>
     </message>

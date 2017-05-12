@@ -62,17 +62,15 @@
         <translation>Resaltar entidad dentro del rango</translation>
     </message>
     <message>
-        <location line="+28"/>
         <source>Keyboard Operations</source>
-        <translation>Operaciones del teclado</translation>
+        <translation type="vanished">Operaciones del teclado</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Angle step for rotating:</source>
-        <translation>Paso de ángulo para rotación:</translation>
+        <translation type="vanished">Paso de ángulo para rotación:</translation>
     </message>
     <message>
-        <location line="-245"/>
+        <location line="-211"/>
         <source>Right-Click</source>
         <translation>Botão direito do mouse</translation>
     </message>

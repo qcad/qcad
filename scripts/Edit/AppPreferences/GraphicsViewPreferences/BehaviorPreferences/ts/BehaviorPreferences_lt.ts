@@ -87,17 +87,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+28"/>
-        <source>Keyboard Operations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Angle step for rotating:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-48"/>
+        <location line="-14"/>
         <source>Cursor range for picking entities:</source>
         <translation type="unfinished"></translation>
     </message>
