@@ -214,7 +214,7 @@ Image.prototype.getOperation = function(preview) {
     if (isNull(this.image)) {
         return undefined;
     }
-    if (isNull(this.width) || isNull(this.height) || isNull(this.angle)) {
+    if (isNull(this.width) || isNull(this.height) || isNull(this.angle) || isNull(this.pos)) {
         return;
     }
 
