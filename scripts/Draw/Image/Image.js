@@ -215,7 +215,7 @@ Image.prototype.getOperation = function(preview) {
         return undefined;
     }
     if (isNull(this.width) || isNull(this.height) || isNull(this.angle) || isNull(this.pos)) {
-        return;
+        return undefined;
     }
 
     this.image.setInsertionPoint(this.pos);
