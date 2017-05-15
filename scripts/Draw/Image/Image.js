@@ -39,6 +39,7 @@ function Image(guiAction) {
     this.width = undefined;
     this.height = undefined;
     this.angle = undefined;
+    this.pos = undefined;
 
     this.setUiOptions("scripts/Draw/Image/Image.ui");
 }
@@ -195,25 +196,34 @@ Image.prototype.setState = function(state) {
 };
 
 Image.prototype.pickCoordinate = function(event, preview) {
+    this.pos = event.getModelPosition();
+    this.getDocumentInterface().setRelativeZero(this.pos);
+
+    var op = this.getOperation();
+    if (!isNull(op)) {
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            this.applyOperation();
+        }
+    }
+};
+
+Image.prototype.getOperation = function(preview) {
+    if (isNull(this.image)) {
+        return undefined;
+    }
     if (isNull(this.width) || isNull(this.height) || isNull(this.angle)) {
         return;
     }
 
-    var pos = event.getModelPosition();
-    this.getDocumentInterface().setRelativeZero(pos);
-
-    this.image.setInsertionPoint(pos);
+    this.image.setInsertionPoint(this.pos);
     this.image.setWidth(this.width);
     this.image.setHeight(this.height);
     this.image.setAngle(this.angle);
 
-    var op = new RAddObjectOperation(this.image.clone(), this.getToolTitle());
-    if (preview) {
-        this.getDocumentInterface().previewOperation(op);
-    }
-    else {
-        this.getDocumentInterface().applyOperation(op);
-    }
+    return new RAddObjectOperation(this.image.clone(), this.getToolTitle());
 };
 
 Image.prototype.slotKeepProportionsChanged = function(value) {
@@ -239,6 +249,8 @@ Image.prototype.slotKeepProportionsChanged = function(value) {
         //heightLabel.enabled = true;
         keepProportionsSwitch.icon = new QIcon(Image.includeBasePath + "/KeepProportionsOff.svg");
     }
+
+    this.updatePreview(true);
 }
 
 Image.prototype.slotWidthChanged = function(value) {
@@ -262,6 +274,8 @@ Image.prototype.slotWidthChanged = function(value) {
         heightEdit.setValue(this.height);
         heightEdit.blockSignals(false);
     }
+
+    this.updatePreview(true);
 };
 
 Image.prototype.slotHeightChanged = function(value) {
@@ -283,6 +297,8 @@ Image.prototype.slotHeightChanged = function(value) {
         widthEdit.setValue(this.width);
         widthEdit.blockSignals(false);
     }
+
+    this.updatePreview(true);
 };
 
 Image.prototype.slotAngleChanged = function(value) {
@@ -290,5 +306,7 @@ Image.prototype.slotAngleChanged = function(value) {
     if (!isNull(this.image)) {
         this.image.setAngle(value);
     }
+
+    this.updatePreview(true);
 };
 
