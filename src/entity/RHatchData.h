@@ -214,7 +214,10 @@ private:
      */
     QList<QList<QSharedPointer<RShape> > > boundary;
 
-    // custom pattern loaded from DXF file, not LIN file:
+    /**
+     * Custom pattern loaded from DXF file, not LIN file.
+     * Pattern is stored independent of pattern origin point.
+     */
     mutable RPattern pattern;
 
     mutable RPainterPath boundaryPath;
