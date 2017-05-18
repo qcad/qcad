@@ -162,12 +162,14 @@ Layer.showHide = function(show, obj, layerId, showProgress) {
             }
             else {
                 layer.setFrozen(!show);
+                layer.setOff(!show);
             }
         } else {
             if (showFrozen) {
                 layer.setOff(false);
             }
             else {
+                layer.setOff(false);
                 layer.setFrozen(false);
             }
         }
