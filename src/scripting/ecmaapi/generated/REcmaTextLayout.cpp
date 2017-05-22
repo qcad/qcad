@@ -56,6 +56,22 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLayout, "getLayout");
             
+            REcmaHelper::registerFunction(&engine, proto, getTransform, "getTransform");
+            
+            REcmaHelper::registerFunction(&engine, proto, getColor, "getColor");
+            
+            REcmaHelper::registerFunction(&engine, proto, getText, "getText");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFont, "getFont");
+            
+            REcmaHelper::registerFunction(&engine, proto, isBold, "isBold");
+            
+            REcmaHelper::registerFunction(&engine, proto, isItalic, "isItalic");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPosition, "getPosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTextLayout*>(), *proto);
 
@@ -365,6 +381,398 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextLayout::getLayout", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::getTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::getTransform", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::getTransform";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("getTransform", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QTransform'
+    QTransform cppResult =
+        
+               self->getTransform();
+        // return type: QTransform
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.getTransform().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::getTransform", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::getColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::getColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("getColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QColor'
+    QColor cppResult =
+        
+               self->getColor();
+        // return type: QColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.getColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::getColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::getText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::getText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::getText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("getText", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getText();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.getText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::getText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::getFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::getFont", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::getFont";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("getFont", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getFont();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.getFont().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::getFont", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::isBold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::isBold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::isBold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("isBold", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isBold();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.isBold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::isBold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::isItalic
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::isItalic", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::isItalic";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("isItalic", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isItalic();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.isItalic().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::isItalic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::getPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::getPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::getPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("getPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPosition();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.getPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::getPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::getHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::getHeight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::getHeight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("getHeight", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getHeight();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.getHeight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::getHeight", context, engine);
             return result;
         }
          QScriptValue REcmaTextLayout::toString

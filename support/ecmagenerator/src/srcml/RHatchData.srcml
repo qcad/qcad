@@ -215,7 +215,10 @@
      */</comment>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>boundary</name></decl>;</decl_stmt>
 
-    <comment type="line">// custom pattern loaded from DXF file, not LIN file:</comment>
+    <comment type="block">/**
+     * Custom pattern loaded from DXF file, not LIN file.
+     * Pattern is stored independent of pattern origin point.
+     */</comment>
     <decl_stmt><decl><type><name>mutable</name> <name>RPattern</name></type> <name>pattern</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>mutable</name> <name>RPainterPath</name></type> <name>boundaryPath</name></decl>;</decl_stmt>

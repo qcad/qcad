@@ -54,6 +54,30 @@
         ;static  QScriptValue
         getLayout
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFont
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isBold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isItalic
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHeight
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy
