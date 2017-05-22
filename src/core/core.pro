@@ -76,6 +76,7 @@ SOURCES += \
     RTabletEvent.cpp \
     RTextBasedData.cpp \
     RTextBasedEntity.cpp \
+    RTextLayout.cpp \
     RTextRenderer.cpp \
     RThread.cpp \
     RTransaction.cpp \

@@ -35,21 +35,25 @@
  */
 class QCADCORE_EXPORT RTextLayout {
 public:
-    RTextLayout() : height(0.0) {}
+    RTextLayout() : ttf(false), height(0.0) {}
 
     /**
      * \nonscriptable
      */
-    RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) : layout(layout), transform(transform), color(color), height(0.0) {}
+    RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) : ttf(true), layout(layout), transform(transform), color(color), height(0.0) {}
 
-    RTextLayout(const QList<RPainterPath>& pps, const QColor& color) : painterPaths(pps), color(color), height(0.0) {}
+    RTextLayout(const QList<RPainterPath>& pps, const QColor& color) : ttf(false), painterPaths(pps), color(color), height(0.0) {}
 
     bool isEmpty() const {
         return layout.isNull() && painterPaths.isEmpty();
     }
 
-    bool hasLayout() const {
-        return !layout.isNull();
+    bool isTTF() const {
+        return ttf;
+    }
+
+    bool hasPainterPath() const {
+        return !painterPaths.isEmpty();
     }
 
     QSharedPointer<QTextLayout> getLayout() const {
@@ -92,22 +96,27 @@ public:
         return layout->font().italic();
     }
 
-    RVector getPosition() const {
-        if (layout.isNull()) {
-            return RVector::invalid;
-        }
-        return RVector(layout->position().x(), layout->position().y());
-    }
+//    RVector getPosition() const {
+//        return position;
+//    }
 
     double getHeight() const {
         return height;
     }
 
+    RBox getBoundingBox() const {
+        return boundingBox;
+    }
+
+public:
+    bool ttf;
     QSharedPointer<QTextLayout> layout;
     QTransform transform;
     QList<RPainterPath> painterPaths;
     QColor color;
     double height;
+    //RVector position;
+    RBox boundingBox;
 };
 
 Q_DECLARE_METATYPE(RTextLayout)
