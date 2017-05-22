@@ -84,6 +84,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, toCompat, "toCompat");
             
+            REcmaHelper::registerFunction(&engine, proto, setCompat, "setCompat");
+            
             REcmaHelper::registerFunction(&engine, proto, equals, "equals");
             
             REcmaHelper::registerFunction(&engine, proto, operator_not_assign, "operator_not_assign");
@@ -1524,6 +1526,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaColor::toCompat", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaColor::setCompat
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaColor::setCompat", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaColor::setCompat";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RColor* self = 
+                        getSelf("setCompat", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant()
+        ) /* type: QColor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    QColor*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QColor*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RColor: Argument 0 is not of type QColor.",
+                               context);                    
+                    }
+                    QColor 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCompat(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RColor.setCompat().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaColor::setCompat", context, engine);
             return result;
         }
          QScriptValue

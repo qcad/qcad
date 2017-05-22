@@ -1175,7 +1175,7 @@ void RScriptHandlerEcma::createActionApplicationLevel(
     eval("var __a__ = new " + className + "(guiAction);"
          "if (typeof(__a__.beginEvent)===\"function\") __a__.beginEvent();"
          "if (typeof(__a__.finishEvent)===\"function\") __a__.finishEvent();"
-         "__a__.destroy();");
+         "if (typeof(__a__.destroy)===\"function\") __a__.destroy();");
          //"if (!isNull(guiAction) && guiAction.hasNoState()) a.destroy();");
 
     /*

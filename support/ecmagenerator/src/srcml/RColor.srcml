@@ -95,6 +95,7 @@
     <function_decl><type><name>bool</name></type> <name>isFixed</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QColor</name></type> <name>toCompat</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCompat</name><parameter_list>(<param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getHighlighted</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>, <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>bgColor</name></decl></param>, <param><decl><type><name>int</name></type> <name>minDist</name> =<init> <expr>75</expr></init></decl></param>)</parameter_list>;</function_decl>
 

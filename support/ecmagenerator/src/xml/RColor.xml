@@ -131,6 +131,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QColor" isPureVirtual="false" />
     </method>
+    <method name="setCompat" cppName="setCompat" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QColor &amp;" typeName="QColor" name="col"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getHighlighted" cppName="getHighlighted"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

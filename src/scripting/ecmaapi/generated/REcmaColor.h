@@ -93,6 +93,9 @@
         toCompat
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCompat
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHighlighted
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

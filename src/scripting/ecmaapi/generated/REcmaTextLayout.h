@@ -49,7 +49,10 @@
         isEmpty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        hasLayout
+        isTTF
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasPainterPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLayout
@@ -73,10 +76,10 @@
         isItalic
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getPosition
+        getHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getHeight
+        getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
