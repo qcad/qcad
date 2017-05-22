@@ -209,83 +209,156 @@ Explode.explodeSelection = function(di, action) {
 
         // explode text entities into lines, arcs and splines:
         else if (isTextEntity(entity)) {
-            var painterPaths = entity.getPainterPaths();
-            for (k=0; k<painterPaths.length; k++) {
-                var p = painterPaths[k].getPen();
-                var b = painterPaths[k].getBrush();
-                var col = undefined;
+            // explode multi-block text into simple text blocks:
+            // TODO
+            /*
+            if (!entity.isSimple()) {
+                var renderer = new RTextRenderer(entity.getData(), false, RTextRenderer.PainterPaths);
+                var layouts = renderer.getTextLayouts();
+                var offX=0.0;
+                var offY=0.0;
+                for (k=0; k<layouts.length; k++) {
+                    var layout = layouts[k];
+                    var t = layout.getTransform();
+                    qDebug("text:", layout.getText());
+                    //qDebug("pos:", layout.getPosition());
+                    //qDebug("transform:", t);
+                    qDebug("scale x:", t.m11());
+                    qDebug("scale y:", t.m22());
+                    var x = t.m31();
+                    var y = t.m32();
+                    qDebug("x:", x);
+                    qDebug("y:", y);
 
-                if (p.style()!==Qt.NoPen) {
-                    if (p.color().isValid()) {
-                        col = p.color().name();
-                    }
-                }
-                else if (b.style()!==Qt.NoBrush) {
-                    if (b.color().isValid()) {
-                        col = b.color().name();
-                    }
-                }
-
-                // ignore text bounding box, used only to display instead of
-                // text at small zoom factors:
-                if (painterPaths[k].getFeatureSize()<0) {
-                    continue;
-                }
-
-                var plText = undefined;
-
-                shapes = painterPaths[k].getShapes();
-                for (n=0; n<shapes.length; n++) {
-                    shape = shapes[n];
-                    if (isSplineShape(shape)) {
-                        // spline to arc or line or spline:
-                        shape = ShapeAlgorithms.splineToLineOrArc(shape, splineTolerance);
-
-                        if (textToPolylines) {
-                            // spline to polyline with arcs:
-                            if (isSplineShape(shape)) {
-                                if (RSpline.hasProxy() && !splinesToLineSegments) {
-                                    shape = shape.approximateWithArcs(splineTolerance);
-                                }
-                                else {
-                                    shape = shape.toPolyline(splineSegments);
-                                }
-                            }
+                    if (k>0) {
+                        if (!RMath.fuzzyCompare(y - entity.getPosition(), offY)) {
+//                            //x += offX;
+                            //y += offY;
                         }
                     }
-
-                    if (!isNull(shape)) {
-                        var sc = shape.clone();
-                        sc.color = col;
-
-                        if (textToPolylines) {
-                            // explode to polylines:
-                            if (!isNull(plText) && plText.getEndPoint().equalsFuzzy(shape.getStartPoint())) {
-                                plText.appendShape(sc);
-                            }
-                            else {
-                                if (!isNull(plText)) {
-                                    plText.toLogicallyClosed();
-                                }
-
-                                plText = new RPolyline();
-                                newShapes.push(plText);
-                                plText.appendShape(sc);
-                            }
-                        }
-                        else {
-                            // explode to lines, arcs, polylines:
-                            newShapes.push(sc);
-                        }
+                    else {
+                        offX = x;
+                        offY = entity.getPosition().y - y;
+//                        offY = -y;
+//                        //x = 0.0;
+//                        //y = 0.0;
+//                        //x += firstX;
+//                        y -= offY;
                     }
-                }
 
-                if (textToPolylines) {
-                    if (!isNull(plText)) {
-                        plText.toLogicallyClosed();
-                    }
+                    x += offX;
+                    y += offY;
+
+//                    var v0 = new RVector(0,0);
+//                    var vt = v0.transform2D(t);
+//                    qDebug("0,0 transformed: ", vt);
+
+//                    var vbb = new RVector(-0.00146484,-0.189336);
+//                    vt = vbb.transform2D(t);
+//                    qDebug("-0.00146484,-0.189336 transformed: ", vt);
+
+                    var d = new RTextData(
+//                                new RVector(t.m31(), t.m32()),
+//                                new RVector(t.m31(), t.m32()),
+                                new RVector(x, y),
+                                new RVector(x, y),
+                                layout.getHeight(),
+                                100.0,
+                                RS.VAlignTop,
+                                RS.HAlignLeft,
+                                RS.LeftToRight,
+                                RS.Exact,
+                                1.0,
+                                layout.getText(),
+                                layout.getFont(),
+                                layout.isBold(),
+                                layout.isItalic(),
+                                entity.getAngle(),
+                                true
+                                );
+                    newEntities.push(new RTextEntity(document, d));
                 }
             }
+            else {
+            */
+                var painterPaths = entity.getPainterPaths();
+                for (k=0; k<painterPaths.length; k++) {
+                    var p = painterPaths[k].getPen();
+                    var b = painterPaths[k].getBrush();
+                    var col = undefined;
+
+                    if (p.style()!==Qt.NoPen) {
+                        if (p.color().isValid()) {
+                            col = p.color().name();
+                        }
+                    }
+                    else if (b.style()!==Qt.NoBrush) {
+                        if (b.color().isValid()) {
+                            col = b.color().name();
+                        }
+                    }
+
+                    // ignore text bounding box, used only to display instead of
+                    // text at small zoom factors:
+                    if (painterPaths[k].getFeatureSize()<0) {
+                        continue;
+                    }
+
+                    var plText = undefined;
+
+                    shapes = painterPaths[k].getShapes();
+                    for (n=0; n<shapes.length; n++) {
+                        shape = shapes[n];
+                        if (isSplineShape(shape)) {
+                            // spline to arc or line or spline:
+                            shape = ShapeAlgorithms.splineToLineOrArc(shape, splineTolerance);
+
+                            if (textToPolylines) {
+                                // spline to polyline with arcs:
+                                if (isSplineShape(shape)) {
+                                    if (RSpline.hasProxy() && !splinesToLineSegments) {
+                                        shape = shape.approximateWithArcs(splineTolerance);
+                                    }
+                                    else {
+                                        shape = shape.toPolyline(splineSegments);
+                                    }
+                                }
+                            }
+                        }
+
+                        if (!isNull(shape)) {
+                            var sc = shape.clone();
+                            sc.color = col;
+
+                            if (textToPolylines) {
+                                // explode to polylines:
+                                if (!isNull(plText) && plText.getEndPoint().equalsFuzzy(shape.getStartPoint())) {
+                                    plText.appendShape(sc);
+                                }
+                                else {
+                                    if (!isNull(plText)) {
+                                        plText.toLogicallyClosed();
+                                    }
+
+                                    plText = new RPolyline();
+                                    newShapes.push(plText);
+                                    plText.appendShape(sc);
+                                }
+                            }
+                            else {
+                                // explode to lines, arcs, polylines:
+                                newShapes.push(sc);
+                            }
+                        }
+                    }
+
+                    if (textToPolylines) {
+                        if (!isNull(plText)) {
+                            plText.toLogicallyClosed();
+                        }
+                    }
+                }
+            //}
         }
 
         // explode attribute entities into texts:
