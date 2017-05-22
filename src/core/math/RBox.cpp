@@ -445,6 +445,6 @@ bool RBox::operator ==(const RBox& other) const {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, const RBox& b) {
-    dbg.nospace() << "RBox(" << b.c1 << " - " << b.c2 << ")";
+    dbg.nospace() << "RBox(" << b.c1.x << "," << b.c1.y << ": " << b.getWidth() << "x" << b.getHeight() << ")";
     return dbg.space();
 }
