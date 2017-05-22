@@ -134,6 +134,7 @@ RTextRenderer::RTextRenderer(const RTextBasedData& textData, bool draft, Target 
 void RTextRenderer::renderSimple() {
     boundingBox = RBox();
     painterPaths.clear();
+    textLayouts.clear();
     richText = "";
 
     if (textData.getText().isEmpty()) {
@@ -384,6 +385,7 @@ void RTextRenderer::renderSimple() {
 void RTextRenderer::render() {
     boundingBox = RBox();
     painterPaths.clear();
+    textLayouts.clear();
     richText = "";
 
     QString text = textData.getRenderedText();
@@ -614,7 +616,7 @@ void RTextRenderer::render() {
                     //qDebug() << "xCursor" << xCursor;
                     //qDebug() << "yCursor" << yCursor;
 
-                    xCursor += horizontalAdvance * getBlockHeight();
+                    xCursor += horizontalAdvance * getBlockHeight() * textData.getXScale();
                 }
             }
 
@@ -691,6 +693,11 @@ void RTextRenderer::render() {
                         // transform to scale text from 1.0 to current text height * 0.4:
                         QTransform sizeTransform;
                         sizeTransform.scale(getBlockHeight()*heightFactor*textData.getXScale(), getBlockHeight()*heightFactor);
+
+                        // adjust height stored in layout accordingly:
+                        if (!textLayouts.isEmpty()) {
+                            textLayouts.last().height = getBlockHeight()*heightFactor;
+                        }
 
                         // move top text more to the right for italic texts:
                         double xOffset = 0.0;
@@ -852,6 +859,7 @@ void RTextRenderer::render() {
                 lineBlockTransforms.clear();
 
                 // add current text line to result set:
+                // one painter path per text block:
                 QPen pen;
                 for (int i=0; i<linePaths.size(); ++i) {
                     RPainterPath p = linePaths[i];
@@ -870,12 +878,14 @@ void RTextRenderer::render() {
                     boundingBox.growToInclude(p.getBoundingBox());
                 }
 
+                // add bounding box painter path for whole line for speedy rendering of very small texts:
                 RPainterPath bbPath;
                 bbPath.addBox(lineBoundingBox);
                 bbPath.transform(lineTransform);
                 bbPath.setFeatureSize(-featureSize);
                 bbPath.setPen(pen);
                 painterPaths.append(bbPath);
+                textLayouts.append(RTextLayout());
 
                 lineCounter++;
                 xCursor = 0.0;
@@ -1200,6 +1210,9 @@ void RTextRenderer::render() {
 
         height = boundingBox.getHeight();
 
+        //qDebug() << "painterPaths: " << painterPaths.length();
+        //qDebug() << "textLayouts: " << textLayouts.length();
+
         // apply global transform for position, angle and vertical alignment:
         boundingBox = RBox();
         for (int i=0; i<painterPaths.length(); ++i) {
@@ -1207,8 +1220,9 @@ void RTextRenderer::render() {
             boundingBox.growToInclude(painterPaths[i].getBoundingBox());
         }
 
-        for (int i=0; i<textLayouts.length(); ++i) {
+        for (int i=0; i<textLayouts.length() && i<painterPaths.length(); ++i) {
             textLayouts[i].transform *= globalTransform;
+            textLayouts[i].boundingBox = painterPaths[i].getBoundingBox();
         }
     }
 
@@ -1322,7 +1336,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     if (blockText=="") {
         horizontalAdvance = 0.0;
         textLayouts.append(RTextLayout());
-        return QList<RPainterPath>();
+        return QList<RPainterPath>() << RPainterPath();
     }
 
     // render text into painter paths using a QTextLayout:
@@ -1339,7 +1353,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
         horizontalAdvance = 0.0;
         textLayouts.append(RTextLayout());
         qWarning("RTextRenderer::getPainterPathsForBlock: got not a single line");
-        return QList<RPainterPath>();
+        return QList<RPainterPath>() << RPainterPath();
     }
     layout->endLayout();
 
@@ -1350,17 +1364,17 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     layout->draw(&ppPainter, QPoint(0,0));
     ppPainter.end();
 
+    QColor currentColor = currentFormat.top().foreground().color();
+
     // transform to exactly 1.0 height for an 'A',
     // reference point is bottom left (to make sure that texts of different
     // heights are aligned at the bottom, not top):
-    QColor currentColor = currentFormat.top().foreground().color();
     RTextLayout tl(QSharedPointer<QTextLayout>(layout), QTransform(), currentColor);
     tl.height = getBlockHeight();
     //tl.position = RVector(horizontalAdvance, ascent);
     //getBlockFont();
     //getBlockBold();
     //getBlockItalic();
-    textLayouts.append(tl);
 
 //    qDebug() << "text:" << blockText;
 //    qDebug() << "bounding box for an A:" << boxA;
@@ -1376,7 +1390,10 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
         RPainterPath p = paths.at(i);
         p.transform(t);
         ret.append(p);
+        bbox.growToInclude(p.getBoundingBox());
     }
+
+    textLayouts.append(tl);
 
     return ret;
 }
@@ -1407,7 +1424,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
         font = RFontList::get("standard");
         if (font==NULL) {
             qWarning() << "standard font not found";
-            return QList<RPainterPath>();
+            return QList<RPainterPath>() << RPainterPath();
         }
     }
 
@@ -1420,6 +1437,9 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     QMap<int, double> indexToCursorStart;
     QMap<int, double> indexToCursorEnd;
     QList<int> underlinedIndices;
+
+    RPainterPath ppBlock;
+    preparePathColor(ppBlock, currentColor);
 
     for (int i=0; i<blockText.length(); ++i) {
         QChar ch = blockText.at(i);
@@ -1471,8 +1491,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
         // if question mark is not available, show nothing:
         if (glyph.elementCount()>0) {
             RPainterPath path(glyph);
-            preparePath(path, currentColor, cursor, cxfScale);
-            ret.append(path);
+            preparePathTransform(path, cursor, cxfScale);
+            ppBlock.addPath(path);
 
             // letter spacing:
             cursor += path.boundingRect().width();
@@ -1504,8 +1524,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
                 RPainterPath path;
                 path.moveTo(line.getStartPoint());
                 path.lineTo(line.getEndPoint());
-                preparePath(path, currentColor, 0.0, 1.0);
-                ret.append(path);
+                preparePathTransform(path, 0.0, 1.0);
+                ppBlock.addPath(path);
                 line = RLine();
             }
             if (idx!=-1) {
@@ -1523,6 +1543,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
         //qDebug() << "cxfScale: " << cxfScale;
     }
 
+    ret.append(ppBlock);
+
     horizontalAdvance = cursor;
     horizontalAdvanceNoSpacing = cursor - font->getLetterSpacing() * cxfScale;
     ascent = 1.08;
@@ -1530,12 +1552,20 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
 
     // add text layout with paths to indicate we have to use painter paths for this text block:
     lineBlockTransforms.append(QTransform());
-    textLayouts.append(RTextLayout(ret, currentColor));
+    RTextLayout tl(ret, currentColor);
+    tl.layout = QSharedPointer<QTextLayout>(new QTextLayout(blockText, QFont(getBlockFont())));
+    tl.height = getBlockHeight();
+    textLayouts.append(tl);
 
     return ret;
 }
 
 void RTextRenderer::preparePath(RPainterPath& path, const RColor& color, double cursor, double cxfScale) {
+    preparePathColor(path, color);
+    preparePathTransform(path, cursor, cxfScale);
+}
+
+void RTextRenderer::preparePathColor(RPainterPath& path, const RColor& color) {
     QPen pen = path.getPen();
     pen.setStyle(Qt::SolidLine);
     pen.setColor(color);
@@ -1545,7 +1575,9 @@ void RTextRenderer::preparePath(RPainterPath& path, const RColor& color, double 
         // fixed color:
         path.setFixedPenColor(true);
     }
+}
 
+void RTextRenderer::preparePathTransform(RPainterPath& path, double cursor, double cxfScale) {
     QTransform transform;
     transform.translate(cursor, 0);
     transform.scale(cxfScale, cxfScale);

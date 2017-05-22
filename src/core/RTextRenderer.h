@@ -112,6 +112,9 @@ private:
         double cursor,
         double cxfScale);
 
+    void preparePathColor(RPainterPath& path, const RColor& color);
+    void preparePathTransform(RPainterPath& path, double cursor, double cxfScale);
+
     QRectF getCharacterRect(const QString& fontName, const QChar& ch) const;
     QRectF getCharacterRect(const QFont& font, const QChar& ch) const;
 
