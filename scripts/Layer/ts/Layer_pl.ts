@@ -33,7 +33,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Thawing all layers</source>
         <translation type="unfinished"></translation>
     </message>

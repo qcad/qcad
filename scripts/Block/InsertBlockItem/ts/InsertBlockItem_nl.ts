@@ -29,7 +29,7 @@
         <translation>Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>Schaal:</translation>
     </message>

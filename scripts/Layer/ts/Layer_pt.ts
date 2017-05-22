@@ -33,7 +33,7 @@ Utilize a &amp;camada atual</translatorcomment>
         <translation>Ocultar todas as camadas</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Thawing all layers</source>
         <translation>Descongelação todas as camadas</translation>
     </message>

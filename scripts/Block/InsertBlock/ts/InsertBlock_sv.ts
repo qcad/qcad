@@ -19,7 +19,7 @@
         <translation>Rotera block&lt;br&gt;med denna vinkeln</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Skala X:</translation>
     </message>

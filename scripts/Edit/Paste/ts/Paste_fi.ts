@@ -29,7 +29,7 @@
         <translation>Kierrä liitetyt kohteet&lt;br&gt;tämän kulman mukaan</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale:</source>
         <translation>Mittakaava:</translation>
     </message>

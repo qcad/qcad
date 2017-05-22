@@ -19,7 +19,7 @@
         <translation>Rotace bloku&lt;br&gt;dle tohoto úhlu</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Měřítko X:</translation>
     </message>

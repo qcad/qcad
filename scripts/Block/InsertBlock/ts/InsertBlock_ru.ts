@@ -19,7 +19,7 @@
         <translation>Вращать блок&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Масштаб по X:</translation>
     </message>

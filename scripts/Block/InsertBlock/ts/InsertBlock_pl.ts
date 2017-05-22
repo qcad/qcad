@@ -31,7 +31,7 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Obróć blok &lt;br&gt; przez to kąt</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation type="unfinished">Skala X:</translation>
     </message>

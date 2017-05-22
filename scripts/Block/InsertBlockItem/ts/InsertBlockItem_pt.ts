@@ -27,7 +27,7 @@ _Rotação</translatorcomment>
         <translation>Rotacione as entidades coladas &lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

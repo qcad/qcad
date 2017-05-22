@@ -19,7 +19,7 @@
         <translation>Blokk forgatása&lt;br&gt;ezzel a szöggel</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>X skála:</translation>
     </message>

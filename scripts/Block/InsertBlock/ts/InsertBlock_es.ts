@@ -35,7 +35,7 @@
         <translation>Girar bloque de&lt;br&gt;este punto de vista</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Escala X:</translation>
     </message>

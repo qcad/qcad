@@ -29,7 +29,7 @@
         <translation>Alle Layer verbergen</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Thawing all layers</source>
         <translation>Alle Layer auftauen</translation>
     </message>

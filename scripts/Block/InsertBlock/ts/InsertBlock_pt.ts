@@ -43,7 +43,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Rotacione o Bloco&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Escala X:</translation>
     </message>

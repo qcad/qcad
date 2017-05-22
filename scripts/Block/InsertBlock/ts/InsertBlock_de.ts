@@ -35,7 +35,7 @@
         <translation>Block rotieren&lt;br&gt;um diesen Winkel</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Skalierung X:</translation>
     </message>

@@ -48,7 +48,7 @@ Girar entidades colado&lt;br&gt;por este ângulo</translatorcomment>
         <translation>Rotacione as entidades coladas&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

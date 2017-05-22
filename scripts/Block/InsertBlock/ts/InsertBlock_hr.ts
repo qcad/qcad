@@ -19,7 +19,7 @@
         <translation>Rotiraj blok&lt;br&gt;za kut</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Omjer X:</translation>
     </message>

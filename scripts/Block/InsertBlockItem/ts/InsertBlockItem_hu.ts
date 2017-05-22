@@ -29,7 +29,7 @@
         <translation>Beillesztett elemek forgatása&lt;br&gt;ezzel a szöggel</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>Arány:</translation>
     </message>

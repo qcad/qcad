@@ -4,7 +4,7 @@
 <context>
     <name>Image</name>
     <message>
-        <location filename="../Image.js" line="+132"/>
+        <location filename="../Image.js" line="+133"/>
         <source>Files</source>
         <translation>Archivos</translation>
     </message>

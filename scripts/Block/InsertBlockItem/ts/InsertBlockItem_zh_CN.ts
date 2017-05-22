@@ -29,7 +29,7 @@
         <translation>用这个角度旋转粘贴的实体</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>缩放比例：</translation>
     </message>

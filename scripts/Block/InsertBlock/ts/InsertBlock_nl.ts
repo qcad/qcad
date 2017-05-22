@@ -19,7 +19,7 @@
         <translation>Blok roteren&lt;br&gt;om deze hoek</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Schaal X:</translation>
     </message>

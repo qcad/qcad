@@ -29,7 +29,7 @@
         <translation>貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>縮尺:</translation>
     </message>

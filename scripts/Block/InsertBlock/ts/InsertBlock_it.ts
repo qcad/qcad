@@ -35,7 +35,7 @@
         <translation>Ruotare blocco&lt;br&gt;da questo angolo</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Scala X:</translation>
     </message>

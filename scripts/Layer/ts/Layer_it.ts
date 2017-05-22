@@ -29,7 +29,7 @@
         <translation>Nascondere tutti i layers</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Thawing all layers</source>
         <translation>Scongiurare tutti i layers</translation>
     </message>

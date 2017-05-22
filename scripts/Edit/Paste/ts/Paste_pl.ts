@@ -38,7 +38,7 @@ Obracanie:</translatorcomment>
         <translation type="unfinished">Obróć wklejone podmioty &lt;br&gt; przez to kąt</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

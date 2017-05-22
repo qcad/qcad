@@ -19,7 +19,7 @@
         <translation>Kierrä lohkoa&lt;br&gt;kulmaan</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Skaala X:</translation>
     </message>

@@ -29,7 +29,7 @@
         <translation>Kierrä liitetyt kohteet&lt;br&gt;kulmaan</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>Skaala:</translation>
     </message>

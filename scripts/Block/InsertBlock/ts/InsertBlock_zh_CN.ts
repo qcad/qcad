@@ -19,7 +19,7 @@
         <translation>根据角度旋转块</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>缩放 X：</translation>
     </message>

@@ -24,7 +24,7 @@
         <translation>ブロック回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>スケールX:</translation>
     </message>

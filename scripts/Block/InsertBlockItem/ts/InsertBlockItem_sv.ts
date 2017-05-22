@@ -29,7 +29,7 @@
         <translation>Rotera klistrade objekt&lt;br&gt;med denna vinkel</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>Skala:</translation>
     </message>

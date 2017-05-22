@@ -29,7 +29,7 @@
         <translation>Skrytie všetkých vrstiev</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Thawing all layers</source>
         <translation type="unfinished"></translation>
     </message>

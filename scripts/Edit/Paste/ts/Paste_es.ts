@@ -14,7 +14,7 @@
         <translation>Girar las entidades&lt;br&gt;pegadas por este ángulo</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale:</source>
         <translation>Escala:</translation>
     </message>

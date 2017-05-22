@@ -19,7 +19,7 @@
         <translation>Natočiť blok&lt;br&gt;pod týmto uhlom</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Mierka osi X:</translation>
     </message>

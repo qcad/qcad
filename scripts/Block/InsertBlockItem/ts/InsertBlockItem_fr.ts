@@ -18,7 +18,7 @@
         <translation>Pivoter les entités&lt;br&gt;collées par cet angle</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>Echelle :</translation>
     </message>

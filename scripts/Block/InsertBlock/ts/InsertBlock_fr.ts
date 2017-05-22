@@ -35,7 +35,7 @@
         <translation>Faire pivoter le&lt;br&gt;bloc par cet angle</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale X:</source>
         <translation>Echelle X:</translation>
     </message>

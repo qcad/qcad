@@ -29,7 +29,7 @@
         <translation>Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+107"/>
         <source>Scale:</source>
         <translation>Масштаб:</translation>
     </message>

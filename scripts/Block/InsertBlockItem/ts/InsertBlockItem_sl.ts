@@ -29,7 +29,7 @@
         <translation>Rotiraj prilepljene entitete&lt;br&gt;za ta kot</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>Razmerje:</translation>
     </message>

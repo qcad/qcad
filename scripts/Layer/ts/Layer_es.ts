@@ -29,7 +29,7 @@
         <translation>Ocultar todas las capas</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Thawing all layers</source>
         <translation>Descongelación todas las capas</translation>
     </message>

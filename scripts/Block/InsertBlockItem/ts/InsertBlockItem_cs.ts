@@ -29,7 +29,7 @@
         <translation>Natočení spojených prvků&lt;br&gt;dle daného úhlu</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+100"/>
         <source>Scale:</source>
         <translation>Měřítko:</translation>
     </message>
