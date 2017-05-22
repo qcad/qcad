@@ -35,14 +35,14 @@
  */
 class QCADCORE_EXPORT RTextLayout {
 public:
-    RTextLayout() {}
+    RTextLayout() : height(0.0) {}
 
     /**
      * \nonscriptable
      */
-    RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) : layout(layout), transform(transform), color(color) {}
+    RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) : layout(layout), transform(transform), color(color), height(0.0) {}
 
-    RTextLayout(const QList<RPainterPath>& pps, const QColor& color) : painterPaths(pps), color(color) {}
+    RTextLayout(const QList<RPainterPath>& pps, const QColor& color) : painterPaths(pps), color(color), height(0.0) {}
 
     bool isEmpty() const {
         return layout.isNull() && painterPaths.isEmpty();
@@ -52,14 +52,62 @@ public:
         return !layout.isNull();
     }
 
-    QSharedPointer<QTextLayout> getLayout() {
+    QSharedPointer<QTextLayout> getLayout() const {
         return layout;
+    }
+
+    QTransform getTransform() const {
+        return transform;
+    }
+
+    QColor getColor() const {
+        return color;
+    }
+
+    QString getText() const {
+        if (layout.isNull()) {
+            return QString();
+        }
+        return layout->text();
+    }
+
+    QString getFont() const {
+        if (layout.isNull()) {
+            return QString();
+        }
+        return layout->font().family();
+    }
+
+    bool isBold() const {
+        if (layout.isNull()) {
+            return false;
+        }
+        return layout->font().bold();
+    }
+
+    bool isItalic() const {
+        if (layout.isNull()) {
+            return false;
+        }
+        return layout->font().italic();
+    }
+
+    RVector getPosition() const {
+        if (layout.isNull()) {
+            return RVector::invalid;
+        }
+        return RVector(layout->position().x(), layout->position().y());
+    }
+
+    double getHeight() const {
+        return height;
     }
 
     QSharedPointer<QTextLayout> layout;
     QTransform transform;
     QList<RPainterPath> painterPaths;
     QColor color;
+    double height;
 };
 
 Q_DECLARE_METATYPE(RTextLayout)

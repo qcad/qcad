@@ -573,7 +573,7 @@ void RTextRenderer::render() {
                     double descent = 0.0;
                     QList<RPainterPath> paths;
 
-                    // get painter paths for current text block at height 1.0:
+                    // get painter paths for current text block at height 1.0, position 0,0:
                     paths = getPainterPathsForBlock(
                                 textBlock, formats,
                                 horizontalAdvance,
@@ -600,6 +600,9 @@ void RTextRenderer::render() {
                     maxAscent = qMax(maxAscent, ascent * getBlockHeight());
                     minDescent = qMin(minDescent, descent * getBlockHeight());
 
+                    //qDebug() << "maxAscent" << maxAscent;
+                    //qDebug() << "minDescent" << minDescent;
+
                     // transform paths of current block and append to paths
                     // of current text line:
                     for (int i=0; i<paths.size(); ++i) {
@@ -607,6 +610,9 @@ void RTextRenderer::render() {
                         p.transform(allTransforms);
                         linePaths.append(p);
                     }
+
+                    //qDebug() << "xCursor" << xCursor;
+                    //qDebug() << "yCursor" << yCursor;
 
                     xCursor += horizontalAdvance * getBlockHeight();
                 }
@@ -1348,7 +1354,21 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     // reference point is bottom left (to make sure that texts of different
     // heights are aligned at the bottom, not top):
     QColor currentColor = currentFormat.top().foreground().color();
-    textLayouts.append(RTextLayout(QSharedPointer<QTextLayout>(layout), QTransform(), currentColor));
+    RTextLayout tl(QSharedPointer<QTextLayout>(layout), QTransform(), currentColor);
+    tl.height = getBlockHeight();
+    //tl.position = RVector(horizontalAdvance, ascent);
+    //getBlockFont();
+    //getBlockBold();
+    //getBlockItalic();
+    textLayouts.append(tl);
+
+//    qDebug() << "text:" << blockText;
+//    qDebug() << "bounding box for an A:" << boxA;
+//    qDebug() << "x cursor" << xCursor;
+//    qDebug() << "transform: " << t;
+
+//    qDebug() << "x:" << horizontalAdvance;
+//    qDebug() << "y:" << ascent;
 
     QList<RPainterPath> ret;
     QList<RPainterPath> paths = ppd.getPainterPaths();
