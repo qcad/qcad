@@ -94,6 +94,7 @@ public:
     bool isFixed() const;
 
     QColor toCompat() const;
+    void setCompat(const QColor& col);
 
     static RColor getHighlighted(const RColor& color, const QColor& bgColor, int minDist = 75);
 

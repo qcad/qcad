@@ -373,7 +373,7 @@ QIcon RColor::getIcon(const RColor& color, const QSize& size) {
 }
 
 /**
- * \return QColor compatibility equivlent of the current color.
+ * \return QColor compatibility equivalent of the current color.
  */
 QColor RColor::toCompat() const {
     if (isByLayer()) {
@@ -384,6 +384,22 @@ QColor RColor::toCompat() const {
     }
 
     return *this;
+}
+
+/**
+ * Initializes this color based on the given compatibility color.
+ */
+void RColor::setCompat(const QColor& col) {
+    if (col==CompatByLayer) {
+        *this = RColor(ByLayer);
+    }
+    else if (col==CompatByBlock) {
+        *this = RColor(ByBlock);
+    }
+    else {
+        *this = col;
+        mode = Fixed;
+    }
 }
 
 /**
