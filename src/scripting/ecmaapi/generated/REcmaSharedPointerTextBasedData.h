@@ -279,6 +279,12 @@
         getTextLayouts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSimpleTextBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         toEscapedText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

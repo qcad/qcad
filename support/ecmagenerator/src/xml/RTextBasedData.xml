@@ -567,6 +567,16 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RTextLayout &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getSimpleTextBlocks"
+    cppName="getSimpleTextBlocks" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RTextBasedData &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="hasProxy" cppName="hasProxy" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="toEscapedText" cppName="toEscapedText"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

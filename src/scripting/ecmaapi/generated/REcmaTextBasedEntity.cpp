@@ -160,6 +160,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, sync, "sync");
             
+            REcmaHelper::registerFunction(&engine, proto, getSimpleTextBlocks, "getSimpleTextBlocks");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTextBasedEntity*>(), *proto);
 
@@ -3430,6 +3432,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedEntity::sync", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedEntity::getSimpleTextBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedEntity::getSimpleTextBlocks", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedEntity::getSimpleTextBlocks";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("getSimpleTextBlocks", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RTextBasedData >'
+    QList < RTextBasedData > cppResult =
+        
+               self->getSimpleTextBlocks();
+        // return type: QList < RTextBasedData >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.getSimpleTextBlocks().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedEntity::getSimpleTextBlocks", context, engine);
             return result;
         }
          QScriptValue REcmaTextBasedEntity::toString

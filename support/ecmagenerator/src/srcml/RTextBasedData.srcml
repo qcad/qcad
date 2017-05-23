@@ -29,6 +29,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextLayout.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextProxy.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>QTextDocument</name>;</class_decl>
 
@@ -320,9 +321,32 @@
 
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name></type> <name>getTextLayouts</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>getSimpleTextBlocks</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
 <comment type="line">//    virtual RTextBasedData getRenderedTextData() const {</comment>
 <comment type="line">//        return *this;</comment>
 <comment type="line">//    }</comment>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>textProxy</name>!=<name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>void</name></type> <name>setTextProxy</name><parameter_list>(<param><decl><type><name>RTextProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>splineProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr>delete <name>splineProxy</name></expr>;</expr_stmt>
+        }</block></then></if>
+        <expr_stmt><expr><name>splineProxy</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>RTextProxy</name>*</type> <name>getTextProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>splineProxy</name></expr>;</return>
+    }</block></function>
 
     <function_decl><type><name>static</name> <name>QString</name></type> <name>toEscapedText</name><parameter_list>(<param><decl><type><name>const</name> <name>QTextDocument</name>&amp;</type> <name>textDocument</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>initialColor</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name>=<init><expr>1.0</expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>toRichText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>escapedText</name></decl></param>, <param><decl><type><name>const</name> <name>QFont</name>&amp;</type> <name>mainFont</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name>=<init><expr>1.0</expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -355,7 +379,10 @@
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>dirty</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>gotDraft</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name></type> <name>textLayouts</name></decl>;</decl_stmt>
-</protected>}</block>;</class>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>RTextProxy</name>*</type> <name>textProxy</name></decl>;</decl_stmt>
+</private>}</block>;</class>
 
 <function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
 

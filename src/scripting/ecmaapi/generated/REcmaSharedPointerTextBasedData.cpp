@@ -230,6 +230,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTextLayouts, "getTextLayouts");
             
+            REcmaHelper::registerFunction(&engine, proto, getSimpleTextBlocks, "getSimpleTextBlocks");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTextBasedDataPointer>(), *proto);
       
@@ -240,6 +242,8 @@
     // static methods:
     
             REcmaHelper::registerFunction(&engine, &ctor, escapeUnicode, "escapeUnicode");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
             REcmaHelper::registerFunction(&engine, &ctor, toEscapedText, "toEscapedText");
             
@@ -5892,6 +5896,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getTextLayouts", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextBasedData::getSimpleTextBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getSimpleTextBlocks", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getSimpleTextBlocks";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("getSimpleTextBlocks", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RTextBasedData >'
+    QList < RTextBasedData > cppResult =
+        
+               self->getSimpleTextBlocks();
+        // return type: QList < RTextBasedData >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getSimpleTextBlocks().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getSimpleTextBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextBasedData::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RTextBasedData::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::hasProxy", context, engine);
             return result;
         }
          QScriptValue

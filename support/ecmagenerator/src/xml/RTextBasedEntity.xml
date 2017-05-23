@@ -320,6 +320,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RTextBasedEntity" name="other" isConst="true" />
       </variant>
     </method>
+    <method name="getSimpleTextBlocks"
+    cppName="getSimpleTextBlocks" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RTextBasedData &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

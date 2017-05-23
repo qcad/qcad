@@ -113,6 +113,9 @@
         <param><decl><type><name>double</name></type> <name>cursor</name></decl></param>,
         <param><decl><type><name>double</name></type> <name>cxfScale</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>preparePathColor</name><parameter_list>(<param><decl><type><name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>preparePathTransform</name><parameter_list>(<param><decl><type><name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>double</name></type> <name>cursor</name></decl></param>, <param><decl><type><name>double</name></type> <name>cxfScale</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>QRectF</name></type> <name>getCharacterRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>, <param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QRectF</name></type> <name>getCharacterRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QFont</name>&amp;</type> <name>font</name></decl></param>, <param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -265,11 +268,6 @@
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name></type> <name>textLayouts</name></decl>;</decl_stmt>
     <comment type="line">// list of block transforms of all QTextLayout blocks of the current line:</comment>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QTransform</name></argument>&gt;</argument_list></name></type> <name>lineBlockTransforms</name></decl>;</decl_stmt>
-
-    <comment type="line">//int currentBlock;</comment>
-    <comment type="line">//QMap&lt;int, int&gt; blockToPainterPath;</comment>
-    <comment type="line">//QMap&lt;int, int&gt; blockToLayout;</comment>
-    <comment type="line">//QMap&lt;int, int&gt; ppIndex;</comment>
 
     <decl_stmt><decl><type><name>RBox</name></type> <name>boundingBox</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>height</name></decl>;</decl_stmt>
