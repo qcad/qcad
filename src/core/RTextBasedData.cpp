@@ -31,6 +31,7 @@
 #include "RSettings.h"
 #include "RTextRenderer.h"
 
+RTextProxy* RTextBasedData::textProxy = NULL;
 
 RTextBasedData::RTextBasedData(RDocument *document)
  : REntityData(document),
@@ -507,6 +508,18 @@ QList<RTextLayout> RTextBasedData::getTextLayouts() const {
     }
 
     return textLayouts;
+}
+
+/**
+ * \return List of text data objects representing simple texts.
+ * Complex formatted texts are split up into smaller text blocks,
+ * each with unique formatting, color, etc.
+ */
+QList<RTextBasedData> RTextBasedData::getSimpleTextBlocks() const {
+    if (hasProxy()) {
+        return getTextProxy()->getSimpleTextBlocks(*this);
+    }
+    return QList<RTextBasedData>();
 }
 
 /**

@@ -28,6 +28,7 @@
 #include "RPainterPathSource.h"
 #include "RVector.h"
 #include "RTextLayout.h"
+#include "RTextProxy.h"
 
 class QTextDocument;
 
@@ -319,9 +320,32 @@ public:
 
     QList<RTextLayout> getTextLayouts() const;
 
+    QList<RTextBasedData> getSimpleTextBlocks() const;
+
 //    virtual RTextBasedData getRenderedTextData() const {
 //        return *this;
 //    }
+
+    static bool hasProxy() {
+        return textProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setTextProxy(RTextProxy* p) {
+        if (textProxy!=NULL) {
+            delete textProxy;
+        }
+        textProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RTextProxy* getTextProxy() {
+        return textProxy;
+    }
 
     static QString toEscapedText(const QTextDocument& textDocument, const RColor& initialColor, double fontHeightFactor=1.0);
     static QString toRichText(const QString& escapedText, const QFont& mainFont, double fontHeightFactor=1.0);
@@ -354,6 +378,9 @@ protected:
     mutable bool dirty;
     mutable bool gotDraft;
     mutable QList<RTextLayout> textLayouts;
+
+private:
+    static RTextProxy* textProxy;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RTextBasedData& t);

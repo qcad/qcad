@@ -253,6 +253,10 @@ public:
         getData().sync(other.getData());
     }
 
+    QList<RTextBasedData> getSimpleTextBlocks() const {
+        return getData().getSimpleTextBlocks();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 };
