@@ -1390,7 +1390,6 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
         RPainterPath p = paths.at(i);
         p.transform(t);
         ret.append(p);
-        bbox.growToInclude(p.getBoundingBox());
     }
 
     textLayouts.append(tl);
