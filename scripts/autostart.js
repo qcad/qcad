@@ -595,11 +595,17 @@ function main() {
 
     RFontList.initSubstitutions();
 
-    RPluginLoader.postInitPlugins(RPluginInterface.GotSplashWindow);
-
     // mark config file with current version number:
     var previousVersion = RSettings.getStringValue("Application/Version", "");
     RSettings.setValue("Application/Version", RSettings.getNumericalVersionString());
+
+    // save first start information:
+    RSettings.setFirstStart(isFirstStart);
+    // save new version information:
+    RSettings.setNewVersion(newVersion);
+    RSettings.setPreviousVersion(parseInt(previousVersion, 10));
+
+    RPluginLoader.postInitPlugins(RPluginInterface.GotSplashWindow);
 
     // scan for script add-ons (forced for first start, first start after
     // update, if configured):
@@ -641,12 +647,6 @@ function main() {
     }
     appWin.objectName = "MainWindow";
     appWin.windowTitle = qApp.applicationName;
-
-    // save first start information:
-    RSettings.setFirstStart(isFirstStart);
-    // save new version information:
-    RSettings.setNewVersion(newVersion);
-    RSettings.setPreviousVersion(parseInt(previousVersion, 10));
 
     // save locale
     appWin.setProperty("Locale", RSettings.getLocale());
