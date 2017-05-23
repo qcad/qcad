@@ -13,6 +13,60 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="QComboBox" name="SplineTolerance">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">0.001</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.005</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.01</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.05</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">0.5</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Spline approximation tolerance:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Spline segments:</string>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="1">
       <widget class="QComboBox" name="SplineSegments">
        <property name="currentIndex">
@@ -70,44 +124,14 @@
        </item>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="SplineTolerance">
-       <property name="editable">
+     <item row="4" column="0" colspan="2">
+      <widget class="QCheckBox" name="TextToPolylines">
+       <property name="text">
+        <string>Explode text glyphs to polylines</string>
+       </property>
+       <property name="checked">
         <bool>true</bool>
        </property>
-       <property name="currentIndex">
-        <number>2</number>
-       </property>
-       <item>
-        <property name="text">
-         <string notr="true">0.001</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.005</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.01</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.05</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.1</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">0.5</string>
-        </property>
-       </item>
       </widget>
      </item>
      <item row="3" column="1">
@@ -170,30 +194,6 @@
        </item>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Spline approximation tolerance:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0" colspan="2">
-      <widget class="QCheckBox" name="TextToPolylines">
-       <property name="text">
-        <string>Explode text glyphs to polylines</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Spline segments:</string>
-       </property>
-      </widget>
-     </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
@@ -205,6 +205,16 @@
       <widget class="QCheckBox" name="SplinesToLineSegments">
        <property name="text">
         <string>Explode splines to polylines with line segments</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QCheckBox" name="MultilineTextToSimpleText">
+       <property name="text">
+        <string>Explode multiline texts into multiple simple text blocks</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

@@ -30,6 +30,14 @@ Explode.getPreferencesCategory = function() {
     return [qsTr("Modify"), qsTr("Explode")];
 };
 
+Explode.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    var widgets = getWidgets(pageWidget);
+    if (!RTextBasedData.hasProxy()) {
+        // remove MultilineTextToSimpleText option:
+        widgets["MultilineTextToSimpleText"].visible = false;
+    }
+};
+
 Explode.prototype.beginEvent = function() {
     Modify.prototype.beginEvent.call(this);
     var di = this.getDocumentInterface();
@@ -54,6 +62,7 @@ Explode.explodeSelection = function(di, action) {
     var ellipseSegments = RSettings.getIntValue("Explode/EllipseSegments", 32);
     var splinesToLineSegments = RSettings.getBoolValue("Explode/SplinesToLineSegments", false);
     var textToPolylines = RSettings.getBoolValue("Explode/TextToPolylines", true);
+    var multilineTextToSimpleText = RSettings.getBoolValue("Explode/MultilineTextToSimpleText", true);
 
     var op = new RAddObjectsOperation();
 
@@ -209,78 +218,17 @@ Explode.explodeSelection = function(di, action) {
 
         // explode text entities into lines, arcs and splines:
         else if (isTextEntity(entity)) {
-            // explode multi-block text into simple text blocks:
-            // TODO
-            /*
-            if (!entity.isSimple()) {
-                var renderer = new RTextRenderer(entity.getData(), false, RTextRenderer.PainterPaths);
-                var layouts = renderer.getTextLayouts();
-                var offX=0.0;
-                var offY=0.0;
-                for (k=0; k<layouts.length; k++) {
-                    var layout = layouts[k];
-                    var t = layout.getTransform();
-                    qDebug("text:", layout.getText());
-                    //qDebug("pos:", layout.getPosition());
-                    //qDebug("transform:", t);
-                    qDebug("scale x:", t.m11());
-                    qDebug("scale y:", t.m22());
-                    var x = t.m31();
-                    var y = t.m32();
-                    qDebug("x:", x);
-                    qDebug("y:", y);
+            // explode multi-block text into simple text entities:
+            // each text block with the same format is converted into one individual simple text entity:
+            if (!entity.isSimple() && multilineTextToSimpleText && RTextBasedData.hasProxy()) {
+                var textDatas = entity.getSimpleTextBlocks();
 
-                    if (k>0) {
-                        if (!RMath.fuzzyCompare(y - entity.getPosition(), offY)) {
-//                            //x += offX;
-                            //y += offY;
-                        }
-                    }
-                    else {
-                        offX = x;
-                        offY = entity.getPosition().y - y;
-//                        offY = -y;
-//                        //x = 0.0;
-//                        //y = 0.0;
-//                        //x += firstX;
-//                        y -= offY;
-                    }
-
-                    x += offX;
-                    y += offY;
-
-//                    var v0 = new RVector(0,0);
-//                    var vt = v0.transform2D(t);
-//                    qDebug("0,0 transformed: ", vt);
-
-//                    var vbb = new RVector(-0.00146484,-0.189336);
-//                    vt = vbb.transform2D(t);
-//                    qDebug("-0.00146484,-0.189336 transformed: ", vt);
-
-                    var d = new RTextData(
-//                                new RVector(t.m31(), t.m32()),
-//                                new RVector(t.m31(), t.m32()),
-                                new RVector(x, y),
-                                new RVector(x, y),
-                                layout.getHeight(),
-                                100.0,
-                                RS.VAlignTop,
-                                RS.HAlignLeft,
-                                RS.LeftToRight,
-                                RS.Exact,
-                                1.0,
-                                layout.getText(),
-                                layout.getFont(),
-                                layout.isBold(),
-                                layout.isItalic(),
-                                entity.getAngle(),
-                                true
-                                );
-                    newEntities.push(new RTextEntity(document, d));
+                for (k=0; k<textDatas.length; k++) {
+                    var d = textDatas[k];
+                    newEntities.push(new RTextEntity(document, new RTextData(d)));
                 }
             }
             else {
-            */
                 var painterPaths = entity.getPainterPaths();
                 for (k=0; k<painterPaths.length; k++) {
                     var p = painterPaths[k].getPen();
@@ -358,7 +306,7 @@ Explode.explodeSelection = function(di, action) {
                         }
                     }
                 }
-            //}
+            }
         }
 
         // explode attribute entities into texts:
