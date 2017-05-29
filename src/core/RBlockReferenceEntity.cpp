@@ -417,7 +417,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                 if (entity->getLayerId()==layer0Id) {
                     QStack<REntity*> blockRefStack = e.getBlockRefViewportStack();
                     bool skip = false;
-                    for (int i=blockRefStack.length()-1; i>=0; i--) {
+                    for (int i=blockRefStack.size()-1; i>=0; i--) {
                         REntity* ent = blockRefStack.at(i);
                         RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(ent);
                         if (blockRef==NULL) {
