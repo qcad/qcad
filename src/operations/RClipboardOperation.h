@@ -70,7 +70,8 @@ public:
         bool selectionOnly, bool clear,
         bool toModelSpaceBlock,
         bool preview,
-        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
+        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING,
+        const RQMapQStringQString& properties = RDEFAULT_QMAP_QSTRING_QSTRING
     ) const;
 
     /**

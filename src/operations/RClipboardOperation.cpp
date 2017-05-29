@@ -30,8 +30,7 @@
 RClipboardOperation::RClipboardOperation() {
 }
 
-void RClipboardOperation::copy(
-        RDocument& src, RDocument& dest,
+void RClipboardOperation::copy(RDocument& src, RDocument& dest,
         const RVector& offset,
         double scale,
         double rotation,
@@ -47,7 +46,8 @@ void RClipboardOperation::copy(
         bool selectionOnly, bool clear,
         bool toModelSpaceBlock,
         bool preview,
-        const RQMapQStringQString& attributes) const {
+        const RQMapQStringQString& attributes,
+        const RQMapQStringQString& properties) const {
 
     bool overwriteLinetypes = false;
 
@@ -121,6 +121,13 @@ void RClipboardOperation::copy(
         refp->scale(scale);
         refp->rotate(rotation);
         refp->move(offset);
+
+        QStringList propertyNames = properties.keys();
+        for (int i=0; i<propertyNames.length(); i++) {
+            QString name = propertyNames[i];
+            QString value = properties[name];
+            refp->setCustomProperty(RSettings::getAppId(), name, value);
+        }
 
         // create attribute for each attribute definition in block with
         // invalid parent ID (fixed later, when block reference ID is known):

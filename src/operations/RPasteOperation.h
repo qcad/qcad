@@ -131,6 +131,9 @@ public:
     void setAttribute(const QString& tag, const QString& value) {
         attributes.insert(tag, value);
     }
+    void setProperty(const QString& name, const QString& value) {
+        properties.insert(name, value);
+    }
 
     virtual RTransaction apply(RDocument& document, bool preview = false) const;
 
@@ -149,6 +152,7 @@ private:
     QString blockName;
     QString layerName;
     QMap<QString, QString> attributes;
+    QMap<QString, QString> properties;
 };
 
 Q_DECLARE_METATYPE(RPasteOperation*)
