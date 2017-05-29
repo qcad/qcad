@@ -71,7 +71,8 @@
         <param><decl><type><name>bool</name></type> <name>selectionOnly</name></decl></param>, <param><decl><type><name>bool</name></type> <name>clear</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>toModelSpaceBlock</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>,
-        <param><decl><type><name>const</name> <name>RQMapQStringQString</name>&amp;</type> <name>attributes</name> =<init> <expr><name>RDEFAULT_QMAP_QSTRING_QSTRING</name></expr></init></decl></param>
+        <param><decl><type><name>const</name> <name>RQMapQStringQString</name>&amp;</type> <name>attributes</name> =<init> <expr><name>RDEFAULT_QMAP_QSTRING_QSTRING</name></expr></init></decl></param>,
+        <param><decl><type><name>const</name> <name>RQMapQStringQString</name>&amp;</type> <name>properties</name> =<init> <expr><name>RDEFAULT_QMAP_QSTRING_QSTRING</name></expr></init></decl></param>
     )</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**

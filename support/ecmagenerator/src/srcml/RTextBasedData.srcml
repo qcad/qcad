@@ -335,17 +335,17 @@
      * \nonscriptable
      */</comment>
     <function><type><name>static</name> <name>void</name></type> <name>setTextProxy</name><parameter_list>(<param><decl><type><name>RTextProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
-        <if>if <condition>(<expr><name>splineProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <expr_stmt><expr>delete <name>splineProxy</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><name>textProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr>delete <name>textProxy</name></expr>;</expr_stmt>
         }</block></then></if>
-        <expr_stmt><expr><name>splineProxy</name> = <name>p</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>textProxy</name> = <name>p</name></expr>;</expr_stmt>
     }</block></function>
 
     <comment type="block">/**
      * \nonscriptable
      */</comment>
     <function><type><name>static</name> <name>RTextProxy</name>*</type> <name>getTextProxy</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><name>splineProxy</name></expr>;</return>
+        <return>return <expr><name>textProxy</name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>static</name> <name>QString</name></type> <name>toEscapedText</name><parameter_list>(<param><decl><type><name>const</name> <name>QTextDocument</name>&amp;</type> <name>textDocument</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>initialColor</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name>=<init><expr>1.0</expr></init></decl></param>)</parameter_list>;</function_decl>

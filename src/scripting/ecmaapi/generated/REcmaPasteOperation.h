@@ -121,6 +121,9 @@
         setAttribute
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         apply
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

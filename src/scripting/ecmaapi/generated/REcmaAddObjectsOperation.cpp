@@ -74,6 +74,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getObject, "getObject");
             
+            REcmaHelper::registerFunction(&engine, proto, countObjects, "countObjects");
+            
+            REcmaHelper::registerFunction(&engine, proto, getObjectAt, "getObjectAt");
+            
             REcmaHelper::registerFunction(&engine, proto, endCycle, "endCycle");
             
             REcmaHelper::registerFunction(&engine, proto, addObject, "addObject");
@@ -631,6 +635,115 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAddObjectsOperation::getObject", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAddObjectsOperation::countObjects
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::countObjects", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::countObjects";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAddObjectsOperation* self = 
+                        getSelf("countObjects", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->countObjects();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.countObjects().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::countObjects", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAddObjectsOperation::getObjectAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::getObjectAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::getObjectAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAddObjectsOperation* self = 
+                        getSelf("getObjectAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RObject >'
+    QSharedPointer < RObject > cppResult =
+        
+               self->getObjectAt(a0);
+        // return type: QSharedPointer < RObject >
+                // Shared pointer to object, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.getObjectAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::getObjectAt", context, engine);
             return result;
         }
          QScriptValue
