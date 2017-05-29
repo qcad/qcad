@@ -101,17 +101,17 @@
         <translation>Esplodi</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+183"/>
+        <location filename="../PreferencesPage.ui" line="+130"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Esplodere testo delinea in polilinee</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-64"/>
         <source>Spline segments:</source>
         <translation>Segmenti di spline:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+134"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmenti di ellisse:</translation>
     </message>
@@ -121,7 +121,12 @@
         <translation>Explode spline in polilinee con segmenti di linea</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+7"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-155"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolleranza:</translation>
     </message>

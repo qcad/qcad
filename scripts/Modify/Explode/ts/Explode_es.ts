@@ -105,17 +105,17 @@ Sombreado/Relleno</translatorcomment>
         <translation>Expota</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+183"/>
+        <location filename="../PreferencesPage.ui" line="+130"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Explotar contornos de texto en polilíneas</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-64"/>
         <source>Spline segments:</source>
         <translation>Segmentos de spline:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+134"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmentos de elipse:</translation>
     </message>
@@ -125,7 +125,12 @@ Sombreado/Relleno</translatorcomment>
         <translation>Explotar splines a polilíneas con segmentos de línea</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+7"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-155"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolerancia:</translation>
     </message>

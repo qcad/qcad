@@ -98,23 +98,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-134"/>
         <source>Spline segments:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="-7"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+71"/>
         <source>Explode text glyphs to polylines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+77"/>
         <source>Explode splines to polylines with line segments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -93,17 +93,17 @@
         <translation>&amp;Разрушить</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+183"/>
+        <location filename="../PreferencesPage.ui" line="+130"/>
         <source>Explode text glyphs to polylines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-64"/>
         <source>Spline segments:</source>
         <translation>Сегменты кривых:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+134"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Сегменты эллипса (от полного эллипса):</translation>
     </message>
@@ -113,7 +113,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+7"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-155"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>

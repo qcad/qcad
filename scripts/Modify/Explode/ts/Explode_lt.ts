@@ -93,17 +93,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+176"/>
+        <location filename="../PreferencesPage.ui" line="+59"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+71"/>
         <source>Explode text glyphs to polylines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+70"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation type="unfinished"></translation>
     </message>
@@ -113,7 +113,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="+7"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-148"/>
         <source>Spline segments:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -93,17 +93,17 @@
         <translation>&amp;Razbij</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+183"/>
+        <location filename="../PreferencesPage.ui" line="+130"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Razbij črke besedila v lomljenke </translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-64"/>
         <source>Spline segments:</source>
         <translation>Segmenti krivulj:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+134"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmenti elips (za cele elipse):</translation>
     </message>
@@ -113,7 +113,12 @@
         <translation>Razbij krivulje v lomljenke z črtnimi segmenti</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+7"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-155"/>
         <source>Spline approximation tolerance:</source>
         <translation>Toleranca približka krivulje:</translation>
     </message>

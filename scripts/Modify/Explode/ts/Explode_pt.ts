@@ -129,17 +129,17 @@ Oculte (congele) todos os carimbos</translatorcomment>
         <translation>Fragmente</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+183"/>
+        <location filename="../PreferencesPage.ui" line="+130"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Fragmente contornos de texto em polilinhas</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-64"/>
         <source>Spline segments:</source>
         <translation>Segmentos de spline:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+134"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmentos de elipse (por elipse inteira):</translation>
     </message>
@@ -149,7 +149,12 @@ Oculte (congele) todos os carimbos</translatorcomment>
         <translation>Fragmente splines para polilinhas com segmentos de linha</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+7"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-155"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolerância:</translation>
     </message>
