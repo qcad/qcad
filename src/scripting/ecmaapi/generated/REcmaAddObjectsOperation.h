@@ -56,12 +56,6 @@
         getObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        countObjects
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getObjectAt
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         endCycle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

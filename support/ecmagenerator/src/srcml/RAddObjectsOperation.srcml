@@ -86,17 +86,6 @@
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>getObject</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>int</name></type> <name>countObjects</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>addedObjects</name>.<call><name>count</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
-
-    <function><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>getObjectAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>pos</name></decl></param>)</parameter_list> <block>{
-        <if>if <condition>(<expr><name>pos</name>&lt;<name>addedObjects</name>.<call><name>count</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><name>addedObjects</name>.<call><name>at</name><argument_list>(<argument><expr><name>pos</name></expr></argument>)</argument_list></call>.<name>object</name></expr>;</return>
-        }</block></then></if>
-        <return>return <expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
-
     <function_decl><type><name>void</name></type> <name>endCycle</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addObject</name><parameter_list>(<param><decl><type><name>const</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name>&amp;</type> <name>object</name></decl></param>,
