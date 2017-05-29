@@ -129,14 +129,14 @@ bool DL_Dxf::in(const std::string& file, DL_CreationInterface* creationInterface
 /**
  * Reads a DXF file from an existing stream.
  *
- * @param stream The string stream.
+ * @param stream The input stream.
  * @param creationInterface
  *      Pointer to the class which takes care of the entities in the file.
  *
  * @retval true If \p file could be opened.
  * @retval false If \p file could not be opened.
  */
-bool DL_Dxf::in(std::stringstream& stream,
+bool DL_Dxf::in(std::istream& stream,
                 DL_CreationInterface* creationInterface) {
     
     if (stream.good()) {
@@ -193,9 +193,9 @@ bool DL_Dxf::readDxfGroups(FILE *fp, DL_CreationInterface* creationInterface) {
 
 
 /**
- * Same as above but for stringstreams.
+ * Same as above but for input streams.
  */
-bool DL_Dxf::readDxfGroups(std::stringstream& stream,
+bool DL_Dxf::readDxfGroups(std::istream& stream,
                            DL_CreationInterface* creationInterface) {
 
     static int line = 1;
@@ -263,10 +263,10 @@ bool DL_Dxf::getStrippedLine(std::string& s, unsigned int size, FILE *fp, bool s
 
 
 /**
- * Same as above but for stringstreams.
+ * Same as above but for input streams.
  */
 bool DL_Dxf::getStrippedLine(std::string &s, unsigned int size,
-                            std::stringstream& stream, bool stripSpace) {
+                            std::istream& stream, bool stripSpace) {
 
     if (!stream.eof()) {
         // Only the useful part of the line
