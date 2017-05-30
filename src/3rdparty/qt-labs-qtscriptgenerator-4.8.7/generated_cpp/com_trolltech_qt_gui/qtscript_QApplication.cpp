@@ -404,21 +404,21 @@ static QScriptValue qtscript_QApplication_prototype_call(QScriptContext *context
 
     case 1:
     if (context->argumentCount() == 0) {
-        bool _q_result = _q_self->isSessionRestored();
+        bool _q_result = false; //_q_self->isSessionRestored();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 2:
     if (context->argumentCount() == 0) {
-        QString _q_result = _q_self->sessionId();
+        QString _q_result = ""; //_q_self->sessionId();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
 
     case 3:
     if (context->argumentCount() == 0) {
-        QString _q_result = _q_self->sessionKey();
+        QString _q_result = ""; //_q_self->sessionKey();
         return QScriptValue(context->engine(), _q_result);
     }
     break;
