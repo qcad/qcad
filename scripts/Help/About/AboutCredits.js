@@ -34,6 +34,7 @@ var credits =
                               "Snap > Distance Manual<br>" +
                               "Misc > Draw > Centerline Cross<br>" +
                               "Misc > Draw > Counter<br>" +
+                              "Misc > Draw > Text Along<br>" +
                               "Misc > Development > Run Script<br>" +
                               "<i>Significant contributions to:</i><br>" +
                               "Draw > Line > Line from 2 Points<br>" +
