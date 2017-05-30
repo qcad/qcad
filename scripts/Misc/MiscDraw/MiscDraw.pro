@@ -11,5 +11,6 @@ SUBDIRS = \
     LineSimilarityAxes \
     PointPole \
     PointPowerCenter \
+    TextAlong \
     XLineHorizontal \
     XLineVertical
