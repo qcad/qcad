@@ -1,0 +1,28 @@
+This tool is for drawing text aligned along a line, arc or circle. It is limited to using simple text as I could not find a quick and easy way
+to find the format of individual characters.
+
+Command: 'textalong', or 'tg'
+Shortcut: TG
+
+Figure 1. Options toolbar.
+Contents:  This shows the text to be aligned. You can edit it at any time to change the text.
+Height:    This is the height of the text. Again you can change it at any time.
+Direction: These two buttons indicate whether to draw the text clockwise or counterclockwise.
+Fit:       If checked then the text is adjusted to fit the length of the line, arc or circle.
+
+This starts by opening the standard text dialogue, letting you enter the text you want, and the font and height.
+When you click OK, you are prompted to select an entity. If you select an entity that is not a line, arc or circle, then a warning is printed in the command line. Once a valid entity is selected, you are prompted for the position for the text, and a preview is shown of the text.  
+Once you click to place the text, the prompt continues to ask for position. If you click another point, another copy of the text is placed at that point. You can change the options in the toolbar to alter the text, height, direction and fit of the text before clicking again. In fact, you can alter these before clicking for the first time.
+
+Figure 2. Text Along a Line
+The line was drawn from left to right, so it's angle is zero. The text above the line is drawn clockwise, and the text below the line is drawn counterclockwise. If the angle of the line was 180 degrees then the text below the line is drawn clockwise, and the text above the line is drawn counterclockwise. Use the direction keys to alter this.
+I produced this in one use of the command. I entered the text in the text dialogue and then chose the line. I chose the clockwise direction key, and unchecked 'Fit' (if it was checked). Then I chose the left point of the line. Next I chose the counterclockwise button, and clicked the right point of the line. Then I checked 'Fit' and chose the point for the counterclockwise text under the line. I then chose the clockwise button, and selected the point for 'Fit' text above the line. I could have also altered the text and its height in the same command.
+Finally, you are not constrained to placing the text along the line. You can actually place it anywhere in the drawing.
+
+
+Figure 3. Text Along an Arc or Circle
+This shows you can place text along an arc, but you are not constrained to placing the text on the arc. But this alters the radius of the arc, so as the mouse pointer gets closer, or further away from the centre of the arc, the arc gets smaller, or bigger, and the text is adjusted to that arc.
+This was also produced in one use of the command, like the line drawing above. This time I changed the text in the contents box. 
+You can place this anywhere in the drawing, but remember the arc radius gets bigger or smaller.
+If you select a circle, this works exactly the same. But because the circle has no startpoint or endpoint, if you use 'Fit', the last character of the text is placed immediately before the first charcter of the text. To get a gap, add one or more spaces to the start or end of the text.
+
