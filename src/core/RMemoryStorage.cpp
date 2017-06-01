@@ -1481,7 +1481,7 @@ QVariant RMemoryStorage::getKnownVariable(RS::KnownVariable key) const {
 }
 
 QString RMemoryStorage::getLayerName(RLayer::Id layerId) const {
-    QSharedPointer<RLayer> l = queryLayer(layerId);
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
     if (l.isNull()) {
         return QString();
     }
