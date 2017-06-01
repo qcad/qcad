@@ -2007,9 +2007,11 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
             layerHasChanged = true;
 
             // deselect entities on locked or invisible layer:
-            QSet<RObject::Id> ids = document.queryLayerEntities(*it);
             if (layer->isLocked() || layer->isOffOrFrozen()) {
-                deselectEntities(ids);
+                if (document.hasSelection()) {
+                    QSet<RObject::Id> ids = document.queryLayerEntities(*it);
+                    deselectEntities(ids);
+                }
             }
             continue;
         }
