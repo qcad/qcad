@@ -376,7 +376,7 @@ bool REntity::isVisible() const {
     }
 
     RLayer::Id layerId = getLayerId();
-    bool isLayer0 = doc->getLayerName(layerId)=="0";
+    bool isLayer0 = (layerId==doc->getLayer0Id());
     bool ignoreLayerVisibility = false;
 
 //    qDebug() << "entity: ";

@@ -134,7 +134,7 @@ bool RAttributeEntity::isVisible() const {
         REntity::Id blockRefId = getParentId();
         const RDocument* document = getDocument();
         if (document!=NULL) {
-            RLayer::Id layer0Id = document->getLayerId("0");
+            RLayer::Id layer0Id = document->getLayer0Id();
             bool onLayer0 = getLayerId()==layer0Id;
             QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
             QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();

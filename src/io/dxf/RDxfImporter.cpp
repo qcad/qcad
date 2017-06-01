@@ -427,7 +427,7 @@ void RDxfImporter::importEntity(QSharedPointer<REntity> entity) {
     QString layerName = decode(attributes.getLayer().c_str());
     if (layerName.isEmpty()) {
         qWarning() << "RDxfImporter::importEntity: default to layer: '0'";
-        entity->setLayerId(document->getLayerId("0"));
+        entity->setLayerId(document->getLayer0Id());
     } else {
         // add layer in case it doesn't exist:
         if (document->queryLayer(layerName).isNull()) {

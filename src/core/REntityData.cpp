@@ -74,7 +74,7 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
     }
 
     if (getType()==RS::EntityAttribute && document!=NULL) {
-        if (getLayerId()==document->getLayerId("0")) {
+        if (getLayerId()==document->getLayer0Id()) {
             REntity::Id blockRefId = getParentId();
             QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
             QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();

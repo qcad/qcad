@@ -380,6 +380,12 @@ public:
     virtual QString getLayerName(RLayer::Id layerId) const = 0;
     virtual QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
     virtual RLayer::Id getLayerId(const QString& layerName) const = 0;
+    virtual void setLayer0Id(RLayer::Id id) {
+        layer0Id = id;
+    }
+    virtual RLayer::Id getLayer0Id() const {
+        return layer0Id;
+    }
     virtual bool hasLayer(const QString& layerName) const;
 
     virtual QString getLayoutName(RLayout::Id layoutId) const = 0;
@@ -736,6 +742,7 @@ private:
     RView::Id currentViewId;
     RBlock::Id currentBlockId;
     RBlock::Id modelSpaceBlockId;
+    RLayer::Id layer0Id;
 
     int lastTransactionId;
     int lastTransactionGroup;

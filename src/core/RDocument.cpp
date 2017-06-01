@@ -122,6 +122,8 @@ void RDocument::init() {
         //qDebug() << "id of layer 0: " << getLayerId("0");
     }
 
+    storage.setLayer0Id(getLayerId("0"));
+
     // add model space block with layout:
     if (!storageIsLinked && queryBlock(RBlock::modelSpaceName).isNull()) {
         QSharedPointer<RLayout> modelLayout(
@@ -959,6 +961,10 @@ bool RDocument::hasLayer(const QString& layerName) const {
  */
 RLayer::Id RDocument::getLayerId(const QString& layerName) const {
     return storage.getLayerId(layerName);
+}
+
+RLayer::Id RDocument::getLayer0Id() const {
+    return storage.getLayer0Id();
 }
 
 /**

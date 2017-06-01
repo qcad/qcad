@@ -295,6 +295,7 @@ public:
     bool hasLinetype(const QString& linetypeName) const;
 
     RLayer::Id getLayerId(const QString& layerName) const;
+    RLayer::Id getLayer0Id() const;
     RBlock::Id getBlockId(const QString& blockName) const;
     RBlock::Id getModelSpaceBlockId() const;
 
