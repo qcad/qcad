@@ -51,7 +51,7 @@ IsoProjectTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Left');
-    this.setToolOption('IsoProject/TrueScale', 'false');
+    this.setToolOption('IsoProject/Method', RS.Isometric);
     this.updateToolOptions();
     this.setZoom(4.0939001386114695, new RVector(13.8842, 33.1877, 0) );
     var p = new RVector(57.929972, 29.58859);
@@ -74,7 +74,7 @@ IsoProjectTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Bottom');
-    this.setToolOption('IsoProject/TrueScale', 'false');
+    this.setToolOption('IsoProject/Method', RS.Isometric);
     this.updateToolOptions();
     this.setZoom(4.0939001386114695, new RVector(13.8842, 33.1877, 0) );
     var p = new RVector(73.562987, 22.749146);
@@ -97,7 +97,7 @@ IsoProjectTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Left');
-    this.setToolOption('IsoProject/TrueScale', 'false');
+    this.setToolOption('IsoProject/Method', RS.Isometric);
     this.updateToolOptions();
     this.setZoom(4.0939001386114695, new RVector(13.8842, 33.1877, 0) );
     var p = new RVector(87.48614, 31.054185);
@@ -120,7 +120,7 @@ IsoProjectTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Top');
-    this.setToolOption('IsoProject/TrueScale', 'false');
+    this.setToolOption('IsoProject/Method', RS.Isometric);
     this.updateToolOptions();
     this.setZoom(4.0939001386114695, new RVector(13.8842, 33.1877, 0) );
     var p = new RVector(67.700606, 50.595453);
@@ -163,7 +163,7 @@ IsoProjectTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Right');
-    this.setToolOption('IsoProject/TrueScale', 'false');
+    this.setToolOption('IsoProject/Method', RS.Isometric);
     this.updateToolOptions();
     this.setZoom(4.0939001386114695, new RVector(13.8842, 33.1877, 0) );
     var p = new RVector(66.723543, 50.106922);
