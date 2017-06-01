@@ -154,7 +154,9 @@ public:
     RVector flipHorizontal();
     RVector flipVertical();
     RVector stretch(const RPolyline& area, const RVector& offset);
-    RVector isoProject(RS::IsoProjectionType type, bool trueScale);
+    RVector isoProject(RS::IsoProjectionType type);
+    RVector axonometricProjection(RS::IsoProjectionType type);
+    RVector obliqueProjection(RS::IsoProjectionType type);
     RVector transform(const RMatrix& m);
     RVector transform2DM(const RMatrix& m);
     RVector transform2D(const QTransform& t);

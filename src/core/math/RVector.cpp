@@ -24,6 +24,7 @@
 #include "RMath.h"
 #include "RMatrix.h"
 #include "RPolyline.h"
+#include "RSettings.h"
 #include "RVector.h"
 
 const RVector RVector::invalid = RVector(0, 0, 0, false);
@@ -446,7 +447,7 @@ RVector RVector::stretch(const RPolyline& area, const RVector& offset) {
  * Changes this vector into its isometric projection.
  * \todo refactor
  */
-RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
+RVector RVector::isoProject(RS::IsoProjectionType type) {
 //    static RMatrix iso =
 //            RMatrix::create3x3(
 //                sqrt(3.0), 0.0,        -sqrt(3.0),
@@ -454,74 +455,114 @@ RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
 //                sqrt(2.0), -sqrt(2.0), sqrt(2.0)
 //            ) * (1.0 / sqrt(6.0));
 
-    double a, b, sx, sy, sz;
+    int method = type&0xffff0000;
 
-    switch (type&0xf000) {
+    if (method==RS::Cavalier || method==RS::Cabinet) {
+        return obliqueProjection(type);
+    }
+
+    else {
+        return axonometricProjection(type);
+    }
+}
+
+/**
+ * Axonometric projection (isometric, dimetric, trimetric).
+ */
+RVector RVector::axonometricProjection(RS::IsoProjectionType type) {
+    int method = type&0xffff0000;
+    int projection = type&0x0000ffff;
+
+    double a, b, sx, sy, sz, f;
+
+    f = 1.0;
+
+    switch (method) {
     default:
     case RS::Isometric:
+        f = cos(RMath::deg2rad(35.0 + 16.0/60.0));
         a = RMath::deg2rad(30.0);
         b = RMath::deg2rad(30.0);
         sx = 1.0;
         sy = 1.0;
         sz = 1.0;
         break;
-    case RS::Cabinet:
-        a = RMath::deg2rad(45.0);
-        b = RMath::deg2rad(0.0);
-        sx = 0.5;
-        sy = 1.0;
-        sz = 1.0;
-        break;
-    case RS::Cavalier:
-        a = RMath::deg2rad(45.0);
-        b = RMath::deg2rad(0.0);
+    case RS::IsometricTrue:
+        a = RMath::deg2rad(30.0);
+        b = RMath::deg2rad(30.0);
         sx = 1.0;
         sy = 1.0;
         sz = 1.0;
         break;
     case RS::Planometric:
-        a = RMath::deg2rad(45.0);
-        b = RMath::deg2rad(45.0);
+        a = RMath::deg2rad(60.0);
+        b = RMath::deg2rad(30.0);
         sx = 1.0;
         sy = 1.0;
         sz = 1.0;
         break;
+    case RS::User1:
+        a = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User1A", 45.0));
+        b = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User1B", 15.0));
+        sx = RSettings::getDoubleValue("IsoProject/User1SX", 1.0);
+        sy = RSettings::getDoubleValue("IsoProject/User1SY", 1.0);
+        sz = RSettings::getDoubleValue("IsoProject/User1SZ", 1.0);
+        break;
+    case RS::User2:
+        a = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User2A", 15.0));
+        b = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User2B", 45.0));
+        sx = RSettings::getDoubleValue("IsoProject/User2SX", 1.0);
+        sy = RSettings::getDoubleValue("IsoProject/User2SY", 1.0);
+        sz = RSettings::getDoubleValue("IsoProject/User2SZ", 1.0);
+        break;
+    case RS::User3:
+        a = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User3A", 22.5));
+        b = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User3B", 22.5));
+        sx = RSettings::getDoubleValue("IsoProject/User3SX", 1.0);
+        sy = RSettings::getDoubleValue("IsoProject/User3SY", 1.0);
+        sz = RSettings::getDoubleValue("IsoProject/User3SZ", 1.0);
+        break;
+    case RS::User4:
+        a = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User4A", 15.0));
+        b = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User4B", 15.0));
+        sx = RSettings::getDoubleValue("IsoProject/User4SX", 1.0);
+        sy = RSettings::getDoubleValue("IsoProject/User4SY", 1.0);
+        sz = RSettings::getDoubleValue("IsoProject/User4SZ", 1.0);
+        break;
     }
 
-
-    RMatrix iso =
-        RMatrix::create3x3(
-            sx*cos(a), -sy*cos(b), 0,
-            sx*sin(a),  sy*sin(b), sz,
-                    0,          0, 0
-        );
-
+    RMatrix iso = RMatrix::create3x3(
+                sx*cos(a), -sy*cos(b),  0,
+                sx*sin(a),  sy*sin(b), sz,
+                0,          0,  0
+                );
     RMatrix input;
-
-    switch (type) {
-    case RS::IsoRight:
-        //input = RMatrix::create3x1(x, y, -z);
-        input = RMatrix::create3x1(x, -z, y);
-        break;
-    case RS::IsoRightBack:
-        //input = RMatrix::create3x1(-x, y, z);
-        input = RMatrix::create3x1(-x, -z, y);
-        break;
-    case RS::IsoTop:
+    switch (projection) {
+    case RS::Top:
         //input = RMatrix::create3x1(y, z, -x);
         input = RMatrix::create3x1(y, -x, z);
+        //input = RMatrix::create3x1(x, y, z);
         break;
-    case RS::IsoBottom:
+    case RS::Bottom:
         //input = RMatrix::create3x1(y, z, x);
         input = RMatrix::create3x1(y, x, z);
         break;
-    case RS::IsoLeft:
+    case RS::Left:
         //input = RMatrix::create3x1(z, y, -x);
         input = RMatrix::create3x1(z, -x, y);
+        //input = RMatrix::create3x1(x, z, y);
         break;
-    case RS::IsoLeftBack:
+    case RS::LeftBack:
         //input = RMatrix::create3x1(z, y, x);
         input = RMatrix::create3x1(z, x, y);
+        break;
+    case RS::Right:
+        //input = RMatrix::create3x1(x, y, -z);
+        input = RMatrix::create3x1(x, -z, y);
+        break;
+    case RS::RightBack:
+        //input = RMatrix::create3x1(-x, y, z);
+        input = RMatrix::create3x1(-x, -z, y);
         break;
     default:
         input = RMatrix::create3x1(x, y, z);
@@ -529,16 +570,56 @@ RVector RVector::isoProject(RS::IsoProjectionType type, bool trueScale) {
     }
 
     RMatrix res = iso * input;
-
-    x = res.get(0, 0);
-    y = res.get(1, 0);
+    x = res.get(0, 0) * f;
+    y = res.get(1, 0) * f;
     z = 0.0;
 
-    if (!trueScale) {
-        double f = cos(RMath::deg2rad(35.0 + 16.0/60.0));
-        x *= f;
-        y *= f;
+    return *this;
+}
+
+RVector RVector::obliqueProjection(RS::IsoProjectionType type) {
+    int method = type&0xffff0000;
+
+    double f = 1.0;
+
+    if (method==RS::Cabinet) {
+        f = 0.5;
     }
+
+    int projection = type&0x0000ffff;
+    double a = RMath::deg2rad(45);
+    RVector p;
+
+    switch (projection) {
+    case RS::Top:
+        p.x = x + f * y * cos(a);
+        p.y = f * y * sin(a);
+        break;
+    case RS::Bottom:
+        p.x = -x + f * y * cos(a);
+        p.y = f * y * sin(a);
+        break;
+    case RS::Left:
+        p.x = x;
+        p.y = y;
+        break;
+    case RS::LeftBack:
+        p.x = -x;
+        p.y = y;
+        break;
+    case RS::Right:
+        p.x = f * x * cos(a);
+        p.y = y + f * x * sin(a);
+        break;
+    case RS::RightBack:
+        p.x = -(f * x * cos(a));
+        p.y = y - f * x * sin(a);
+        break;
+    default:
+        break;
+    }
+
+    *this = p;
 
     return *this;
 }

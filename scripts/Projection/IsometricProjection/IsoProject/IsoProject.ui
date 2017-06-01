@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>443</width>
+    <width>518</width>
     <height>50</height>
    </rect>
   </property>
@@ -167,17 +167,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="TrueScale">
-     <property name="toolTip">
-      <string>Scale projection to original size ('isometric drawing')</string>
-     </property>
-     <property name="text">
-      <string>True scale</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
+    <widget class="QComboBox" name="Method"/>
    </item>
   </layout>
  </widget>
