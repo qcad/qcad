@@ -164,6 +164,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isoProject, "isoProject");
             
+            REcmaHelper::registerFunction(&engine, proto, axonometricProjection, "axonometricProjection");
+            
+            REcmaHelper::registerFunction(&engine, proto, obliqueProjection, "obliqueProjection");
+            
             REcmaHelper::registerFunction(&engine, proto, transform, "transform");
             
             REcmaHelper::registerFunction(&engine, proto, transform2DM, "transform2DM");
@@ -3534,12 +3538,9 @@
                 
     
     if( context->argumentCount() ==
-    2 && (
+    1 && (
             context->argument(0).isNumber()
         ) /* type: RS::IsoProjectionType */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
     
     ){
     // prepare arguments:
@@ -3552,23 +3553,13 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
-                
     // end of arguments
 
     // call C++ function:
     // return type 'RVector'
     RVector cppResult =
         
-               self->isoProject(a0
-        ,
-    a1);
+               self->isoProject(a0);
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -3582,6 +3573,126 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::isoProject", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::axonometricProjection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::axonometricProjection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::axonometricProjection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("axonometricProjection", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::IsoProjectionType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::IsoProjectionType
+                    a0 =
+                    (RS::IsoProjectionType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->axonometricProjection(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.axonometricProjection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::axonometricProjection", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::obliqueProjection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::obliqueProjection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::obliqueProjection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("obliqueProjection", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::IsoProjectionType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::IsoProjectionType
+                    a0 =
+                    (RS::IsoProjectionType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->obliqueProjection(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.obliqueProjection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::obliqueProjection", context, engine);
             return result;
         }
          QScriptValue

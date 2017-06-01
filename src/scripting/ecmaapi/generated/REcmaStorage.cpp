@@ -239,6 +239,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLayerId, "getLayerId");
             
+            REcmaHelper::registerFunction(&engine, proto, setLayer0Id, "setLayer0Id");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayer0Id, "getLayer0Id");
+            
             REcmaHelper::registerFunction(&engine, proto, hasLayer, "hasLayer");
             
             REcmaHelper::registerFunction(&engine, proto, getLayoutName, "getLayoutName");
@@ -6326,6 +6330,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getLayerId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::setLayer0Id
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::setLayer0Id", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setLayer0Id";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("setLayer0Id", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLayer0Id(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setLayer0Id().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setLayer0Id", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getLayer0Id
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getLayer0Id", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getLayer0Id";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getLayer0Id", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLayer::Id'
+    RLayer::Id cppResult =
+        
+               self->getLayer0Id();
+        // return type: RLayer::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getLayer0Id().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getLayer0Id", context, engine);
             return result;
         }
          QScriptValue

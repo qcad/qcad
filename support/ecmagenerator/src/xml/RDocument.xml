@@ -1044,6 +1044,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="layerName" isConst="true" />
       </variant>
     </method>
+    <method name="getLayer0Id" cppName="getLayer0Id"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLayer::Id" isPureVirtual="false" />
+    </method>
     <method name="getBlockId" cppName="getBlockId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

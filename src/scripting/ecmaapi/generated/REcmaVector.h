@@ -168,6 +168,12 @@
         isoProject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        axonometricProjection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        obliqueProjection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         transform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

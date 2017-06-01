@@ -408,6 +408,9 @@
         getLayerId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLayer0Id
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -744,6 +744,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="layerName" isConst="true" />
       </variant>
     </method>
+    <method name="setLayer0Id" cppName="setLayer0Id"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="id"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getLayer0Id" cppName="getLayer0Id"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RLayer::Id" isPureVirtual="false" />
+    </method>
     <method name="hasLayer" cppName="hasLayer" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

@@ -311,6 +311,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLayerId, "getLayerId");
             
+            REcmaHelper::registerFunction(&engine, proto, getLayer0Id, "getLayer0Id");
+            
             REcmaHelper::registerFunction(&engine, proto, getBlockId, "getBlockId");
             
             REcmaHelper::registerFunction(&engine, proto, getModelSpaceBlockId, "getModelSpaceBlockId");
@@ -9927,6 +9929,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getLayerId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getLayer0Id
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getLayer0Id", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getLayer0Id";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getLayer0Id", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLayer::Id'
+    RLayer::Id cppResult =
+        
+               self->getLayer0Id();
+        // return type: RLayer::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getLayer0Id().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getLayer0Id", context, engine);
             return result;
         }
          QScriptValue

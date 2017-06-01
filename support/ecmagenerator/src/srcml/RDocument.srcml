@@ -296,6 +296,7 @@
     <function_decl><type><name>bool</name></type> <name>hasLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getLayerId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getLayer0Id</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>getBlockId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>getModelSpaceBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 

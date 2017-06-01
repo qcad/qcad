@@ -209,17 +209,26 @@
      * Projection type for isometric projections.
      */</comment>
     <enum>enum <name>IsoProjectionType</name> <block>{
-        <expr><name>Top</name> = 0x1</expr>,          <comment type="line">//!&lt; Top projection (x/y)</comment>
-        <expr><name>Bottom</name> = 0x2</expr>,       <comment type="line">//!&lt; Bottom projection (x/y)</comment>
-        <expr><name>Left</name> = 0x4</expr>,         <comment type="line">//!&lt; Front left projection (x/z)</comment>
-        <expr><name>LeftBack</name> = 0x8</expr>,     <comment type="line">//!&lt; Back left projection (x/z)</comment>
-        <expr><name>Right</name> = 0x10</expr>,       <comment type="line">//!&lt; Front right projection (y/z)</comment>
-        <expr><name>RightBack</name> = 0x20</expr>,   <comment type="line">//!&lt; Back right projection (y/z)</comment>
+        <expr><name>Top</name> =           0x00000001</expr>,      <comment type="line">//!&lt; Top projection (x/y)</comment>
+        <expr><name>Bottom</name> =        0x00000002</expr>,      <comment type="line">//!&lt; Bottom projection (x/y)</comment>
+        <expr><name>Left</name> =          0x00000004</expr>,      <comment type="line">//!&lt; Front left projection (x/z)</comment>
+        <expr><name>LeftBack</name> =      0x00000008</expr>,      <comment type="line">//!&lt; Back left projection (x/z)</comment>
+        <expr><name>Right</name> =         0x00000010</expr>,      <comment type="line">//!&lt; Front right projection (y/z)</comment>
+        <expr><name>RightBack</name> =     0x00000020</expr>,      <comment type="line">//!&lt; Back right projection (y/z)</comment>
 
-        <expr><name>Isometric</name> = 0x1000</expr>,   <comment type="line">//!&lt; Isometric</comment>
-        <expr><name>Cabinet</name> = 0x2000</expr>,     <comment type="line">//!&lt; Cabinet</comment>
-        <expr><name>Cavalier</name> = 0x4000</expr>,    <comment type="line">//!&lt; Cavalier</comment>
-        <expr><name>Planometric</name> = 0x8000</expr>, <comment type="line">//!&lt; Cavalier</comment>
+        <expr><name>Isometric</name> =     0x00010000</expr>,      <comment type="line">//!&lt; Isometric</comment>
+        <expr><name>IsometricTrue</name> = 0x00020000</expr>,      <comment type="line">//!&lt; Isometric</comment>
+        <comment type="line">//Dimetric =      0x00040000,      //!&lt; Dimetric</comment>
+        <comment type="line">//Trimetric =     0x00080000,      //!&lt; Trimetric</comment>
+        <expr><name>Planometric</name> =   0x00040000</expr>,      <comment type="line">//!&lt; Planometric</comment>
+
+        <expr><name>Cabinet</name> =       0x00100000</expr>,      <comment type="line">//!&lt; Cabinet</comment>
+        <expr><name>Cavalier</name> =      0x00200000</expr>,      <comment type="line">//!&lt; Cavalier</comment>
+
+        <expr><name>User1</name> =         0x01000000</expr>,      <comment type="line">//!&lt; User defined 1</comment>
+        <expr><name>User2</name> =         0x02000000</expr>,      <comment type="line">//!&lt; User defined 2</comment>
+        <expr><name>User3</name> =         0x04000000</expr>,      <comment type="line">//!&lt; User defined 3</comment>
+        <expr><name>User4</name> =         0x08000000</expr>,      <comment type="line">//!&lt; User defined 4</comment>
 
         <comment type="line">// backwards compatibility:</comment>
         <expr><name>IsoTop</name> = <name>Top</name> | <name>Isometric</name></expr>,

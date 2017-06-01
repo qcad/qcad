@@ -303,7 +303,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RS::IsoProjectionType"
         typeName="RS::IsoProjectionType" name="type"
         isConst="false" />
-        <arg type="bool" typeName="bool" name="trueScale"
+      </variant>
+    </method>
+    <method name="axonometricProjection"
+    cppName="axonometricProjection" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RS::IsoProjectionType"
+        typeName="RS::IsoProjectionType" name="type"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="obliqueProjection" cppName="obliqueProjection"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RS::IsoProjectionType"
+        typeName="RS::IsoProjectionType" name="type"
         isConst="false" />
       </variant>
     </method>

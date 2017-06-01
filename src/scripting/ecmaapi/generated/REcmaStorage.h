@@ -303,6 +303,12 @@
         getLayerId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setLayer0Id
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayer0Id
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasLayer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -533,6 +533,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("IsometricTrue",
+    QScriptValue(RS::IsometricTrue),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Planometric",
+    QScriptValue(RS::Planometric),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("Cabinet",
     QScriptValue(RS::Cabinet),
     QScriptValue::ReadOnly);
@@ -543,8 +553,23 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Planometric",
-    QScriptValue(RS::Planometric),
+    ctor.setProperty("User1",
+    QScriptValue(RS::User1),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("User2",
+    QScriptValue(RS::User2),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("User3",
+    QScriptValue(RS::User3),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("User4",
+    QScriptValue(RS::User4),
     QScriptValue::ReadOnly);
 
 
