@@ -86,7 +86,6 @@ void RMdiArea::updateAddButtonLocation() {
     QList<QToolButton*> buttons = tabBar->findChildren<QToolButton*>();
     for (int i=0; i<buttons.length(); i++) {
         if (buttons[i]->isVisible()) {
-            qDebug() << "buttons[i]->rect().right(): " << buttons[i]->rect().right();
             r = qMax(buttons[i]->x()+buttons[i]->width(), r);
         }
     }
