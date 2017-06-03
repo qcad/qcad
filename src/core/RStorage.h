@@ -547,11 +547,17 @@ public:
     }
 
     virtual bool isLayerLocked(RLayer::Id layerId) const;
+    virtual bool isLayerLocked(const RLayer& layer) const;
     virtual bool isParentLayerLocked(RLayer::Id layerId) const;
+    virtual bool isParentLayerLocked(const RLayer& layer) const;
     virtual bool isLayerOff(RLayer::Id layerId) const;
+    virtual bool isLayerOff(const RLayer& layer) const;
     virtual bool isLayerOffOrFrozen(RLayer::Id layerId) const;
+    virtual bool isLayerOffOrFrozen(const RLayer& layer) const;
     virtual bool isLayerFrozen(RLayer::Id layerId) const;
+    virtual bool isLayerFrozen(const RLayer& layer) const;
     virtual bool isParentLayerFrozen(RLayer::Id layerId) const;
+    virtual bool isParentLayerFrozen(const RLayer& layer) const;
 
     virtual bool isBlockFrozen(RBlock::Id blockId) const {
         QSharedPointer<RBlock> b = queryBlockDirect(blockId);

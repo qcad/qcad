@@ -842,10 +842,14 @@ bool RStorage::isLayerLocked(RLayer::Id layerId) const {
     if (l.isNull()) {
         return false;
     }
-    if (l->isLocked()) {
+    return isLayerLocked(*l);
+}
+
+bool RStorage::isLayerLocked(const RLayer& layer) const {
+    if (layer.isLocked()) {
         return true;
     }
-    return isParentLayerLocked(layerId);
+    return isParentLayerLocked(layer);
 }
 
 /**
@@ -856,7 +860,11 @@ bool RStorage::isParentLayerLocked(RLayer::Id layerId) const {
     if (l.isNull()) {
         return false;
     }
-    RLayer::Id parentLayerId = l->getParentLayerId();
+    return isParentLayerLocked(*l);
+}
+
+bool RStorage::isParentLayerLocked(const RLayer& layer) const {
+    RLayer::Id parentLayerId = layer.getParentLayerId();
     if (parentLayerId==RLayer::INVALID_ID) {
         // no parent:
         return false;
@@ -865,7 +873,7 @@ bool RStorage::isParentLayerLocked(RLayer::Id layerId) const {
     if (pl->isLocked()) {
         return true;
     }
-    return isParentLayerLocked(parentLayerId);
+    return isParentLayerLocked(*pl);
 }
 
 /**
@@ -876,7 +884,11 @@ bool RStorage::isLayerOff(RLayer::Id layerId) const {
     if (l.isNull()) {
         return false;
     }
-    if (l->isOff()) {
+    return isLayerOff(*l);
+}
+
+bool RStorage::isLayerOff(const RLayer& layer) const {
+    if (layer.isOff()) {
         return true;
     }
     return false;
@@ -886,7 +898,16 @@ bool RStorage::isLayerOff(RLayer::Id layerId) const {
  * \return True if this layer is off or frozen.
  */
 bool RStorage::isLayerOffOrFrozen(RLayer::Id layerId) const {
-    return isLayerOff(layerId) || isLayerFrozen(layerId);
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
+
+    return isLayerOff(*l) || isLayerFrozen(*l);
+}
+
+bool RStorage::isLayerOffOrFrozen(const RLayer& layer) const {
+    return isLayerOff(layer) || isLayerFrozen(layer);
 }
 
 /**
@@ -897,10 +918,17 @@ bool RStorage::isLayerFrozen(RLayer::Id layerId) const {
     if (l.isNull()) {
         return false;
     }
-    if (l->isFrozen()) {
+    return isLayerFrozen(*l);
+}
+
+/**
+ * \return True if this layer or one of its parent layers are frozen.
+ */
+bool RStorage::isLayerFrozen(const RLayer& layer) const {
+    if (layer.isFrozen()) {
         return true;
     }
-    return isParentLayerFrozen(layerId);
+    return isParentLayerFrozen(layer);
 }
 
 /**
@@ -911,7 +939,11 @@ bool RStorage::isParentLayerFrozen(RLayer::Id layerId) const {
     if (l.isNull()) {
         return false;
     }
-    RLayer::Id parentLayerId = l->getParentLayerId();
+    return isParentLayerFrozen(*l);
+}
+
+bool RStorage::isParentLayerFrozen(const RLayer& layer) const {
+    RLayer::Id parentLayerId = layer.getParentLayerId();
     if (parentLayerId==RLayer::INVALID_ID) {
         // no parent:
         return false;
@@ -920,5 +952,5 @@ bool RStorage::isParentLayerFrozen(RLayer::Id layerId) const {
     if (pl->isFrozen()) {
         return true;
     }
-    return isParentLayerFrozen(parentLayerId);
+    return isParentLayerFrozen(*pl);
 }
