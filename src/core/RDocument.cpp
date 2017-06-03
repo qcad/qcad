@@ -1929,10 +1929,24 @@ bool RDocument::isLayerLocked(RLayer::Id layerId) const {
 }
 
 /**
+ * \copydoc RStorage::isLayerLocked
+ */
+bool RDocument::isLayerLocked(const RLayer& layer) const {
+    return storage.isLayerLocked(layer);
+}
+
+/**
  * \copydoc RStorage::isParentLayerLocked
  */
 bool RDocument::isParentLayerLocked(RLayer::Id layerId) const {
     return storage.isParentLayerLocked(layerId);
+}
+
+/**
+ * \copydoc RStorage::isParentLayerLocked
+ */
+bool RDocument::isParentLayerLocked(const RLayer& layer) const {
+    return storage.isParentLayerLocked(layer);
 }
 
 bool RDocument::isEntityEditable(REntity::Id entityId) const {
@@ -1961,10 +1975,24 @@ bool RDocument::isLayerOff(RLayer::Id layerId) const {
 }
 
 /**
+ * \copydoc RStorage::isLayerOff
+ */
+bool RDocument::isLayerOff(const RLayer& layer) const {
+    return storage.isLayerOff(layer);
+}
+
+/**
  * \copydoc RStorage::isLayerOffOrFrozen
  */
 bool RDocument::isLayerOffOrFrozen(RLayer::Id layerId) const {
     return storage.isLayerOffOrFrozen(layerId);
+}
+
+/**
+ * \copydoc RStorage::isLayerOffOrFrozen
+ */
+bool RDocument::isLayerOffOrFrozen(const RLayer& layer) const {
+    return storage.isLayerOffOrFrozen(layer);
 }
 
 /**
@@ -1975,10 +2003,24 @@ bool RDocument::isLayerFrozen(RLayer::Id layerId) const {
 }
 
 /**
+ * \copydoc RStorage::isLayerFrozen
+ */
+bool RDocument::isLayerFrozen(const RLayer& layer) const {
+    return storage.isLayerFrozen(layer);
+}
+
+/**
  * \copydoc RStorage::isParentLayerFrozen
  */
 bool RDocument::isParentLayerFrozen(RLayer::Id layerId) const {
     return storage.isParentLayerFrozen(layerId);
+}
+
+/**
+ * \copydoc RStorage::isParentLayerFrozen
+ */
+bool RDocument::isParentLayerFrozen(const RLayer& layer) const {
+    return storage.isParentLayerFrozen(layer);
 }
 
 /**

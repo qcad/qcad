@@ -200,13 +200,19 @@ public:
     );
     bool isSelected(REntity::Id entityId);
     bool isLayerLocked(RLayer::Id layerId) const;
+    bool isLayerLocked(const RLayer& layer) const;
     bool isParentLayerLocked(RLayer::Id layerId) const;
+    bool isParentLayerLocked(const RLayer& layer) const;
     bool isEntityEditable(REntity::Id entityId) const;
     //bool isEntityLayerLocked(REntity::Id entityId) const;
     bool isLayerOff(RLayer::Id layerId) const;
+    bool isLayerOff(const RLayer& layer) const;
     bool isLayerOffOrFrozen(RLayer::Id layerId) const;
+    bool isLayerOffOrFrozen(const RLayer& layer) const;
     bool isLayerFrozen(RLayer::Id layerId) const;
+    bool isLayerFrozen(const RLayer& layer) const;
     bool isParentLayerFrozen(RLayer::Id layerId) const;
+    bool isParentLayerFrozen(const RLayer& layer) const;
     bool isBlockFrozen(RBlock::Id blockId) const;
     bool isEntityLayerFrozen(REntity::Id entityId) const;
 

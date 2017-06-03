@@ -379,6 +379,8 @@ bool REntity::isVisible() const {
     bool isLayer0 = (layerId==doc->getLayer0Id());
     bool ignoreLayerVisibility = false;
 
+    QSharedPointer<RLayer> layer = doc->queryLayerDirect(layerId);
+
 //    qDebug() << "entity: ";
 //    dump();
 //    qDebug() << "layer: " << doc->getLayerName(layerId);
@@ -397,7 +399,7 @@ bool REntity::isVisible() const {
     }
 
     // check if layer is frozen:
-    if (doc->isLayerFrozen(layerId) && !ignoreLayerVisibility) {
+    if (doc->isLayerFrozen(*layer) && !ignoreLayerVisibility) {
         if (getType()!=RS::EntityViewport) {
             return false;
         }
@@ -405,7 +407,7 @@ bool REntity::isVisible() const {
 
     // check if layer is off and this is not a block reference:
     // block references on layer X remain visible if X is off but not frozen:
-    if (doc->isLayerOff(layerId) && !ignoreLayerVisibility) {
+    if (doc->isLayerOff(*layer) && !ignoreLayerVisibility) {
         if (getType()!=RS::EntityBlockRef) {
             return false;
         }
