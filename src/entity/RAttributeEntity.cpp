@@ -171,7 +171,8 @@ void RAttributeEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
 
-    // attributes are exported as part of the block reference
+    // TODO:
+    // export attributes as part of the block reference, repeat for array
 
     if (!isInvisible()) {
         if (e.isTextRenderedAsText()) {
