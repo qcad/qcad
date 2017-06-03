@@ -153,7 +153,7 @@ public:
         if (doc==NULL) {
             return false;
         }
-        return RLayer::hasChildLayersStatic(doc, getName());
+        return RLayer::hasChildLayersStatic(doc, name);
     }
 
     QList<QString> getChildLayerNames(bool recursive = true) const {
@@ -161,23 +161,23 @@ public:
         if (doc==NULL) {
             return QList<QString>();
         }
-        return RLayer::getChildLayerNamesStatic(doc, getName(), recursive);
+        return RLayer::getChildLayerNamesStatic(doc, name, recursive);
     }
 
     QString getParentLayerName() const {
-        return RLayer::getParentLayerNameStatic(getName());
+        return RLayer::getParentLayerNameStatic(name);
     }
 
     QString getShortLayerName() const {
-        return RLayer::getShortLayerNameStatic(getName());
+        return RLayer::getShortLayerNameStatic(name);
     }
 
     QList<QString> getLayerNameHierarchy() const {
-        return RLayer::getLayerNameHierarchyStatic(getName());
+        return RLayer::getLayerNameHierarchyStatic(name);
     }
 
     bool isChildLayerOf(const QString& layerName) const {
-        return RLayer::isChildLayerOfStatic(getName(), layerName);
+        return RLayer::isChildLayerOfStatic(name, layerName);
     }
 
     static QString getHierarchySeparator() {
