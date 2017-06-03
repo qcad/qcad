@@ -372,8 +372,8 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
     }
 
     RLayer::Id layer0Id = document->getLayer0Id();
-    bool layerIsOff = document->isLayerOff(getLayerId());
-    bool layer0IsOff = document->isLayerOff(layer0Id);
+    //bool layerIsOff = document->isLayerOff(getLayerId());
+    //bool layer0IsOff = document->isLayerOff(layer0Id);
 
     data.update();
 
