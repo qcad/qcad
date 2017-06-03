@@ -226,20 +226,16 @@ void RDocumentInterface::removeLayerListener(RLayerListener* l) {
     layerListeners.removeAll(l);
 }
 
+/**
+ * Notifies local layer listeners only interesed in layer events from this
+ * particular document. Used for layer lists other than the global one
+ * (e.g. in preferences).
+ */
 void RDocumentInterface::notifyLayerListeners() {
-//    if (!notifyListeners) {
-//        return;
-//    }
-
     QList<RLayerListener*>::iterator it;
     for (it = layerListeners.begin(); it != layerListeners.end(); ++it) {
-        qDebug() << "RDocumentInterface::notifyLayerListeners";
         (*it)->updateLayers(this);
     }
-
-//    if (RMainWindow::hasMainWindow()) {
-//        RMainWindow::getMainWindow()->notifyLayerListeners(this);
-//    }
 }
 
 /**
