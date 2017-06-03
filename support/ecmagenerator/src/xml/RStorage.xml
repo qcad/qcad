@@ -1012,6 +1012,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
       </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer &amp;" typeName="RLayer" name="layer"
+        isConst="true" />
+      </variant>
     </method>
     <method name="isParentLayerLocked"
     cppName="isParentLayerLocked" specifier="public"
@@ -1019,6 +1023,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer &amp;" typeName="RLayer" name="layer"
+        isConst="true" />
       </variant>
     </method>
     <method name="isLayerOff" cppName="isLayerOff"
@@ -1028,6 +1036,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
       </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer &amp;" typeName="RLayer" name="layer"
+        isConst="true" />
+      </variant>
     </method>
     <method name="isLayerOffOrFrozen" cppName="isLayerOffOrFrozen"
     specifier="public" isStatic="false" isVirtual="true"
@@ -1035,6 +1047,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer &amp;" typeName="RLayer" name="layer"
+        isConst="true" />
       </variant>
     </method>
     <method name="isLayerFrozen" cppName="isLayerFrozen"
@@ -1044,6 +1060,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
       </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer &amp;" typeName="RLayer" name="layer"
+        isConst="true" />
+      </variant>
     </method>
     <method name="isParentLayerFrozen"
     cppName="isParentLayerFrozen" specifier="public"
@@ -1051,6 +1071,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer &amp;" typeName="RLayer" name="layer"
+        isConst="true" />
       </variant>
     </method>
     <method name="isBlockFrozen" cppName="isBlockFrozen"

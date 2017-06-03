@@ -218,8 +218,6 @@
 
         <expr><name>Isometric</name> =     0x00010000</expr>,      <comment type="line">//!&lt; Isometric</comment>
         <expr><name>IsometricTrue</name> = 0x00020000</expr>,      <comment type="line">//!&lt; Isometric</comment>
-        <comment type="line">//Dimetric =      0x00040000,      //!&lt; Dimetric</comment>
-        <comment type="line">//Trimetric =     0x00080000,      //!&lt; Trimetric</comment>
         <expr><name>Planometric</name> =   0x00040000</expr>,      <comment type="line">//!&lt; Planometric</comment>
 
         <expr><name>Cabinet</name> =       0x00100000</expr>,      <comment type="line">//!&lt; Cabinet</comment>

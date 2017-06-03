@@ -718,6 +718,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QStack &lt; REntity * &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="pushEntity" cppName="pushEntity"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity *" typeName="REntity *" name="e"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="popEntity" cppName="popEntity" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="setDraftMode" cppName="setDraftMode"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

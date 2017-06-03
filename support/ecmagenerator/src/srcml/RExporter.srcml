@@ -285,6 +285,9 @@
 
     <function_decl><type><name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name></type> <name>getEntityStack</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>pushEntity</name><parameter_list>(<param><decl><type><name>REntity</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>popEntity</name><parameter_list>()</parameter_list>;</function_decl>
+
     <function_decl><type><name>void</name></type> <name>setDraftMode</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>void</name></type> <name>toggleDraftMode</name><parameter_list>()</parameter_list> <block>{

@@ -286,6 +286,12 @@
         getEntityStack
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        pushEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        popEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setDraftMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

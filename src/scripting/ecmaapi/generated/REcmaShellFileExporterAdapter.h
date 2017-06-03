@@ -526,6 +526,16 @@
             );
         
     
+      void pushEntity(
+                REntity * e
+            );
+        
+    
+      void popEntity(
+                
+            );
+        
+    
       void setDraftMode(
                 bool on
             );

@@ -241,6 +241,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEntityStack, "getEntityStack");
             
+            REcmaHelper::registerFunction(&engine, proto, pushEntity, "pushEntity");
+            
+            REcmaHelper::registerFunction(&engine, proto, popEntity, "popEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, setDraftMode, "setDraftMode");
             
             REcmaHelper::registerFunction(&engine, proto, toggleDraftMode, "toggleDraftMode");
@@ -6816,6 +6820,112 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getEntityStack", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::pushEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::pushEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::pushEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("pushEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    REntity * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<REntity >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RExporter: Argument 0 is not of type REntity *REntity *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->pushEntity(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.pushEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::pushEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::popEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::popEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::popEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("popEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->popEntity();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.popEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::popEntity", context, engine);
             return result;
         }
          QScriptValue
