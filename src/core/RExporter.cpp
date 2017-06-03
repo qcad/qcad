@@ -1671,6 +1671,14 @@ QStack<REntity*> RExporter::getEntityStack() {
     return entityStack;
 }
 
+void RExporter::pushEntity(REntity* e) {
+    entityStack.push(e);
+}
+
+void RExporter::popEntity() {
+    entityStack.pop();
+}
+
 /**
  * Exports the given shapes as part of the geometry of the current entity.
  * \todo support more shapes.

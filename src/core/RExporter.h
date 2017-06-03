@@ -284,6 +284,9 @@ public:
 
     QStack<REntity*> getEntityStack();
 
+    void pushEntity(REntity* e);
+    void popEntity();
+
     void setDraftMode(bool on);
 
     void toggleDraftMode() {
