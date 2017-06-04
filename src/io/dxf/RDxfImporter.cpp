@@ -129,6 +129,10 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
 
     document->setFileVersion("R15 (2000) DXF Drawing (dxflib) (*.dxf)");
 
+    // make sure dimension font is set to standard,
+    // the only dimension font supported by the QCAD CE:
+    document->setDimensionFont("Standard");
+
     // lock locked layers now. they are unlocked during import to load
     // the entities on them:
     for (int i=0; i<lockedLayers.size(); i++) {
@@ -699,8 +703,11 @@ void RDxfImporter::addTextStyle(const DL_StyleData& data) {
     RDxfTextStyle s;
 
     s.font = decode(data.primaryFontFile.c_str());
+    qDebug() << "text style: name:" << (const char*)data.name.c_str();
+    qDebug() << "text style: s.font:" << s.font;
     if (s.font.isEmpty()) {
         s.font = xDataFont;
+        qDebug() << "text style: xDataFont:" << xDataFont;
     }
 
     s.italic = xDataFlags&0x1000000;
@@ -1021,7 +1028,7 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
                        valign, halign,
                        lss,
                        data.lineSpacingFactor,
-                       t, "standard",
+                       t, "Standard",
                        data.angle);
     ret.setUpperTolerance(uTol);
     ret.setLowerTolerance(lTol);
