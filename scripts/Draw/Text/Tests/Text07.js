@@ -17,6 +17,7 @@ Text07.prototype.test00 = function() {
     this.importFile('scripts/Draw/Text/Tests/data/text07.dxf');
     this.selectAll();
     this.triggerCommand('explode');
+    this.triggerCommand('explode');
     this.deselectAll();
     this.verifyDrawing('Text07_000.dxf');
     this.tearDown();

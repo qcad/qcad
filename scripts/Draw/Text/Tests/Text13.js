@@ -17,8 +17,10 @@ Text13.prototype.test00 = function() {
     this.importFile('scripts/Draw/Text/Tests/data/text13.dxf');
     this.selectAll();
     this.triggerCommand('explode');
-    this.deselectAll();
     this.verifyDrawing('Text13_000.dxf');
+    this.triggerCommand('explode');
+    this.deselectAll();
+    this.verifyDrawing('Text13_001.dxf');
     this.tearDown();
     qDebug('finished Text13.test00()');
 };
