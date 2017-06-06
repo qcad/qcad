@@ -225,7 +225,10 @@ Explode.explodeSelection = function(di, action) {
 
                 for (k=0; k<textDatas.length; k++) {
                     var d = textDatas[k];
-                    newEntities.push(new RTextEntity(document, new RTextData(d)));
+                    e = new RTextEntity(document, new RTextData(d))
+                    e.setSelected(true);
+                    e.copyAttributesFrom(entity.data());
+                    newEntities.push(e);
                 }
             }
             else {
@@ -315,7 +318,10 @@ Explode.explodeSelection = function(di, action) {
             var d = new RTextData(entity.getData());
             // unlink from parent (block ref):
             d.setParentId(RObject.INVALID_ID);
-            newEntities.push(new RTextEntity(document, d));
+            e = new RTextEntity(document, d);
+            e.setSelected(true);
+            e.copyAttributesFrom(entity.data());
+            newEntities.push(e);
         }
 
         // explode block reference or block reference array:
