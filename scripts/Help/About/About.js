@@ -420,7 +420,7 @@ About.prototype.initAboutSystem = function(textEdit) {
         text += "Windows";
     }
     if (RS.getSystemId()==="osx") {
-        text += "Mac";
+        text += "macOS";
     }
     if (RS.getSystemId()==="linux") {
         text += "Linux";
