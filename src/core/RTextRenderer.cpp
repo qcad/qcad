@@ -1220,9 +1220,24 @@ void RTextRenderer::render() {
             boundingBox.growToInclude(painterPaths[i].getBoundingBox());
         }
 
-        for (int i=0; i<textLayouts.length() && i<painterPaths.length(); ++i) {
+        int k=0;
+        for (int i=0; i<textLayouts.length(); ++i) {
             textLayouts[i].transform *= globalTransform;
-            textLayouts[i].boundingBox = painterPaths[i].getBoundingBox();
+            textLayouts[i].boundingBox = RBox();
+            if (textLayouts[i].correspondingPainterPaths==0) {
+                if (k<painterPaths.length()) {
+                    textLayouts[i].boundingBox.growToInclude(painterPaths[k].getBoundingBox());
+                }
+                k++;
+            }
+            else {
+                for (int n=0; n<textLayouts[i].correspondingPainterPaths; n++) {
+                    if (k<painterPaths.length()) {
+                        textLayouts[i].boundingBox.growToInclude(painterPaths[k].getBoundingBox());
+                        k++;
+                    }
+                }
+            }
         }
     }
 
@@ -1392,6 +1407,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
         ret.append(p);
     }
 
+    tl.correspondingPainterPaths = paths.size();
     textLayouts.append(tl);
 
     return ret;
