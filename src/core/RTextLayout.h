@@ -35,14 +35,25 @@
  */
 class QCADCORE_EXPORT RTextLayout {
 public:
-    RTextLayout() : ttf(false), height(0.0) {}
+    RTextLayout() : ttf(false), correspondingPainterPaths(0), height(0.0) {}
 
     /**
      * \nonscriptable
      */
-    RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) : ttf(true), layout(layout), transform(transform), color(color), height(0.0) {}
+    RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) :
+        ttf(true),
+        layout(layout),
+        transform(transform),
+        correspondingPainterPaths(0),
+        color(color),
+        height(0.0) {}
 
-    RTextLayout(const QList<RPainterPath>& pps, const QColor& color) : ttf(false), painterPaths(pps), color(color), height(0.0) {}
+    RTextLayout(const QList<RPainterPath>& pps, const QColor& color) :
+        ttf(false),
+        painterPaths(pps),
+        correspondingPainterPaths(0),
+        color(color),
+        height(0.0) {}
 
     bool isEmpty() const {
         return layout.isNull() && painterPaths.isEmpty();
@@ -113,6 +124,9 @@ public:
     QSharedPointer<QTextLayout> layout;
     QTransform transform;
     QList<RPainterPath> painterPaths;
+    // number of painter paths corresponding to this layout
+    // used to keep track of painter path and layout relationships
+    int correspondingPainterPaths;
     QColor color;
     double height;
     //RVector position;
