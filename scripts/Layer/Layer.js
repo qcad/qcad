@@ -136,7 +136,15 @@ Layer.init = function() {
     Layer.getToolMatrixPanel();
 };
 
-Layer.showHide = function(show, obj, layerId, showProgress) {
+/**
+ * Show / hide all layers.
+ *
+ * \param show True to show, false to hide all
+ * \param di RDocumentInterface
+ * \param layerId ID of layer to excempt from the action
+ * \param showProgress True to show progress information to progress listeners
+ */
+Layer.showHide = function(show, di, layerId, showProgress) {
     if (showProgress===true) {
         if (show) {
             EAction.setProgressText(qsTr("Showing all layers"));
@@ -149,13 +157,13 @@ Layer.showHide = function(show, obj, layerId, showProgress) {
     var showFrozen = RSettings.getBoolValue("LayerListPro/ShowFrozen", false);
 
     var operation = new RModifyObjectsOperation();
-    var layers = obj.getDocument().queryAllLayers();
+    var layers = di.getDocument().queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
         if (showProgress===true) {
             EAction.setProgress(100/layers.length*l);
         }
 
-        var layer = obj.getDocument().queryLayer(layers[l]);
+        var layer = di.getDocument().queryLayer(layers[l]);
         if (layers[l] !== layerId) {
             if (showFrozen) {
                 layer.setOff(!show);
@@ -175,7 +183,6 @@ Layer.showHide = function(show, obj, layerId, showProgress) {
         }
         operation.addObject(layer);
     }
-    var di = obj.getDocumentInterface();
     di.applyOperation(operation);
     di.clearPreview();
     di.repaintViews();
@@ -185,7 +192,7 @@ Layer.showHide = function(show, obj, layerId, showProgress) {
     }
 };
 
-Layer.thawFreeze = function(freeze, obj, layerId, showProgress) {
+Layer.thawFreeze = function(freeze, di, layerId, showProgress) {
     if (showProgress===true) {
         if (freeze) {
             EAction.setProgressText(qsTr("Thawing all layers"));
@@ -196,13 +203,13 @@ Layer.thawFreeze = function(freeze, obj, layerId, showProgress) {
     }
 
     var operation = new RModifyObjectsOperation();
-    var layers = obj.getDocument().queryAllLayers();
+    var layers = di.getDocument().queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
         if (showProgress===true) {
             EAction.setProgress(100/layers.length*l);
         }
 
-        var layer = obj.getDocument().queryLayer(layers[l]);
+        var layer = di.getDocument().queryLayer(layers[l]);
         if (layers[l] !== layerId) {
             layer.setFrozen(!freeze);
         } else {
@@ -210,7 +217,6 @@ Layer.thawFreeze = function(freeze, obj, layerId, showProgress) {
         }
         operation.addObject(layer);
     }
-    var di = obj.getDocumentInterface();
     di.applyOperation(operation);
     di.clearPreview();
     di.repaintViews();

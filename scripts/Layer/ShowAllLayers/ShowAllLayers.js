@@ -34,7 +34,7 @@ ShowAllLayers.prototype = new Layer();
 ShowAllLayers.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
-    Layer.showHide(true, this);
+    Layer.showHide(true, this.getDocumentInterface());
     
     this.terminate();
 };

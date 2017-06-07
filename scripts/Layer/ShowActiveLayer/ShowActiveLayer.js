@@ -34,7 +34,7 @@ ShowActiveLayer.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
     var layerId = this.getDocument().getCurrentLayerId();
-    Layer.showHide(false, this, layerId);
+    Layer.showHide(false, this.getDocumentInterface(), layerId);
     
     this.terminate();
 };
