@@ -33,7 +33,7 @@
  *  properties["quality"]: Export quality (0..100), JPEG only
  *  properties["monochrome"]: true: Export as black / white
  *  properties["grayscale"]: true: Export as grayscale
- *  properties["window"]: RBox: window to export in drawing coorirdinates
+ *  properties["window"]: RBox: window to export in drawing coordinates
  * \param view Optional graphics view to use.
  */
 function exportBitmap(doc, scene, fileName, properties, view) {
@@ -74,6 +74,10 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         properties["noweightmargin"] = false;
     }
 
+    if (typeof(properties["zoomall"])==="undefined") {
+        properties["zoomall"] = false;
+    }
+
     if (properties["resolution"]) {
         var bb = doc.getBoundingBox(true, true);
         properties["width"] = Math.ceil(bb.getWidth() * properties["resolution"] + 2 * properties["margin"]);
@@ -99,12 +103,18 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         view.zoomTo(properties["window"], properties["margin"]);
     }
     else {
-        view.autoZoom(properties["margin"], true, properties["noweightmargin"]);
+        if (properties["zoomall"]) {
+            var bbz = doc.getBoundingBox(false);
+            view.zoomTo(bbz, properties["margin"]);
+        }
+        else {
+            view.autoZoom(properties["margin"], true, properties["noweightmargin"]);
 
-        // make sure we use the desired resolution:
-        // auto zoom might be slightly off, due to rounding canvas to pixels:
-        if (properties["resolution"]) {
-            view.setFactor(properties["resolution"]);
+            // make sure we use the desired resolution:
+            // auto zoom might be slightly off, due to rounding canvas to pixels:
+            if (properties["resolution"]) {
+                view.setFactor(properties["resolution"]);
+            }
         }
     }
 
