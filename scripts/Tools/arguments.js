@@ -149,3 +149,44 @@ function printGenericUsage() {
         print("  QT_QPA_FONTDIR          Set to fonts directory in a server environment, e.g. 'fonts/qt'.");
     }
 }
+
+/**
+ * Process -layer argument.
+ * List of comma-separated list of layers to show.
+ */
+function processLayerArgument(di, args) {
+    // comma-separated layer names (e.g. "0,layer1,layer2")
+    var layerNameList = getArgument(args, "", "-layer");
+    if (layerNameList===undefined) {
+        return;
+    }
+
+    var doc = di.getDocument();
+    var op = undefined;
+    var layerNamePatterns = layerNameList.split(",");
+
+    var allLayerNames = doc.getLayerNames();
+    for (var i=0; i<allLayerNames.length; i++) {
+        var layerName = allLayerNames[i];
+        var layerOn = false;
+        for (var k=0; k<layerNamePatterns.length; k++) {
+            var re = new RegExp("^" + layerNamePatterns[k] + "$", "i");
+            if (re.test(layerName)) {
+                layerOn = true;
+                break;
+            }
+        }
+
+        var layer = doc.queryLayer(layerName);
+        if (!isNull(layer)) {
+            layer.setFrozen(!layerOn);
+        }
+        if (op===undefined) {
+            op = new RAddObjectsOperation();
+        }
+        op.addObject(layer);
+    }
+    if (op!==undefined) {
+        di.applyOperation(op);
+    }
+}
