@@ -217,6 +217,9 @@ public:
     static QString rxAlignmentLeft;
     static QString rxAlignmentCenter;
     static QString rxAlignmentRight;
+    static QString rxXAlignmentLeft;
+    static QString rxXAlignmentCenter;
+    static QString rxXAlignmentRight;
     static QString rxParagraphFeed;
     static QString rxXFeed;
     static QString rxHeightChange;
@@ -229,6 +232,8 @@ public:
     static QString rxOverlineOff;
     static QString rxUnderlineOn;
     static QString rxUnderlineOff;
+    static QString rxStrikethroughOn;
+    static QString rxStrikethroughOff;
     static QString rxWidthChange;
     static QString rxObliqueAngleChange;
     static QString rxTrackChange;

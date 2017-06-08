@@ -36,9 +36,12 @@ QChar RTextRenderer::chPlusMinus = QChar(0x00b1);
 QChar RTextRenderer::chDiameter = QChar(0x00f8);
 
 QString RTextRenderer::rxLineFeed = "\\\\p(?:x?i(\\d*\\.?\\d+);)?";
-QString RTextRenderer::rxAlignmentLeft = "\\\\pxql;";
-QString RTextRenderer::rxAlignmentCenter = "\\\\pxqc;";
-QString RTextRenderer::rxAlignmentRight = "\\\\pxqr;";
+QString RTextRenderer::rxAlignmentLeft = "\\\\pql;";
+QString RTextRenderer::rxAlignmentCenter = "\\\\pqc;";
+QString RTextRenderer::rxAlignmentRight = "\\\\pqr;";
+QString RTextRenderer::rxXAlignmentLeft = "\\\\pxql;";
+QString RTextRenderer::rxXAlignmentCenter = "\\\\pxqc;";
+QString RTextRenderer::rxXAlignmentRight = "\\\\pxqr;";
 QString RTextRenderer::rxParagraphFeed = "\\\\P";
 QString RTextRenderer::rxXFeed = "\\\\X";
 QString RTextRenderer::rxHeightChange = "\\\\H(\\d*\\.?\\d+)(x?);";
@@ -53,6 +56,8 @@ QString RTextRenderer::rxOverlineOn = "\\\\O";
 QString RTextRenderer::rxOverlineOff = "\\\\o";
 QString RTextRenderer::rxUnderlineOn = "\\\\L";
 QString RTextRenderer::rxUnderlineOff = "\\\\l";
+QString RTextRenderer::rxStrikethroughOn = "\\\\K";
+QString RTextRenderer::rxStrikethroughOff = "\\\\k";
 QString RTextRenderer::rxWidthChange = "\\\\W(\\d*\\.?\\d+)x?;";
 QString RTextRenderer::rxObliqueAngleChange = "\\\\Q(\\d*\\.?\\d+);";
 QString RTextRenderer::rxTrackChange = "\\\\T(\\d*\\.?\\d+);";
@@ -84,6 +89,9 @@ QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxAlignmentLeft + "|"
     + RTextRenderer::rxAlignmentCenter + "|"
     + RTextRenderer::rxAlignmentRight + "|"
+    + RTextRenderer::rxXAlignmentLeft + "|"
+    + RTextRenderer::rxXAlignmentCenter + "|"
+    + RTextRenderer::rxXAlignmentRight + "|"
     + RTextRenderer::rxParagraphFeed + "|"
     + RTextRenderer::rxXFeed + "|"
     + RTextRenderer::rxHeightChange + "|"
@@ -95,6 +103,8 @@ QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxOverlineOff + "|"
     + RTextRenderer::rxUnderlineOn + "|"
     + RTextRenderer::rxUnderlineOff + "|"
+    + RTextRenderer::rxStrikethroughOn + "|"
+    + RTextRenderer::rxStrikethroughOff + "|"
     + RTextRenderer::rxWidthChange + "|"
     + RTextRenderer::rxObliqueAngleChange + "|"
     + RTextRenderer::rxTrackChange + "|"
