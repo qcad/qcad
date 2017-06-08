@@ -637,11 +637,16 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
         document.setKnownVariable(RS.DIMTSZ, document.getKnownVariable(RS.DIMASZ), transaction);
         //document.setKnownVariable(RS.DIMBLK, "ArchTick", transaction);
     }
+    else if (widgets["Dot"].checked) {
+        document.setKnownVariable(RS.DIMTSZ, -document.getKnownVariable(RS.DIMASZ));
+        //document.setKnownVariable(RS.DIMBLK, "Dot");
+    }
     else {
         document.setKnownVariable(RS.DIMTSZ, 0.0, transaction);
         //document.setKnownVariable(RS.DIMBLK, "", transaction);
     }
     widgets["ArchitecturalTick"].setProperty("Saved", true);
+    widgets["Dot"].setProperty("Saved", true);
     widgets["Arrow"].setProperty("Saved", true);
 
     // decimal point:

@@ -18,7 +18,7 @@
  */
 #include "RDimensionData.h"
 #include "RUnit.h"
-
+#include "RCircle.h"
 
 
 RDimensionData::RDimensionData(RDocument* document) :
@@ -306,6 +306,17 @@ bool RDimensionData::useArchTick() const {
     return ret;
 }
 
+bool RDimensionData::useDot() const {
+    bool ret = false;
+
+    if (document!=NULL) {
+        ret = document->getKnownVariable(RS::DIMBLK, "").toString().toLower()=="dot" ||
+              document->getKnownVariable(RS::DIMTSZ, 0.0).toDouble() < -RS::PointTolerance;
+    }
+
+    return ret;
+}
+
 bool RDimensionData::hasCustomTextPosition() const {
     return !autoTextPos;
 }
@@ -407,6 +418,12 @@ QList<QSharedPointer<RShape> > RDimensionData::getArrow(
         line.rotate(direction, RVector(0,0));
         line.move(position);
         ret.append(QSharedPointer<RLine>(new RLine(line)));
+    }
+    
+    // dot:
+    else if (useDot()) {
+        RCircle circle(position, arrowSize/3);
+        ret.append(QSharedPointer<RCircle>(new RCircle(circle)));
     }
 
     // standard arrow:
