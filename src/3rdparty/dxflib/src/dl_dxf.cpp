@@ -1108,14 +1108,34 @@ void DL_Dxf::addSpline(DL_CreationInterface* creationInterface) {
  * Adds an arc entity that was read from the file via the creation interface.
  */
 void DL_Dxf::addArc(DL_CreationInterface* creationInterface) {
-    DL_ArcData d(getRealValue(10, 0.0),
-                 getRealValue(20, 0.0),
-                 getRealValue(30, 0.0),
-                 getRealValue(40, 0.0),
-                 getRealValue(50, 0.0),
-                 getRealValue(51, 0.0));
 
-    creationInterface->addArc(d);
+    double *extrusionDirection = creationInterface->getExtrusion()->getDirection();
+
+    //Check to see if the extrusion direction is on the negative z axis.
+    if(   fabs(extrusionDirection[0]) < 0.015625
+       && fabs(extrusionDirection[1]) < 0.015625
+       && extrusionDirection[2] < 0.0) {
+        //If we get here, the extrusion vector has caused the angles to be
+        //reversed.
+        DL_ArcData d(-getRealValue(10, 0.0),
+                     getRealValue(20, 0.0),
+                     getRealValue(30, 0.0),
+                     getRealValue(40, 0.0),
+                     -180.0-getRealValue(51, 0.0),
+                     -180.0-getRealValue(50, 0.0));
+
+        creationInterface->addArc(d);
+    }else
+    {
+        DL_ArcData d(getRealValue(10, 0.0),
+                     getRealValue(20, 0.0),
+                     getRealValue(30, 0.0),
+                     getRealValue(40, 0.0),
+                     getRealValue(50, 0.0),
+                     getRealValue(51, 0.0));
+
+        creationInterface->addArc(d);
+    }
 }
 
 
