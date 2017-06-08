@@ -203,7 +203,7 @@
         <translation>Programación</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+48"/>
         <source>Translations</source>
         <translation>Traducciones</translation>
     </message>

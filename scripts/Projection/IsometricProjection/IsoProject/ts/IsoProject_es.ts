@@ -80,23 +80,46 @@ Proyección &amp;Isométrica</translatorcomment>
         <translation type="obsolete">Rotar dirección reloj</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Proyección escala con el tamaño original</translation>
+        <translation type="vanished">Proyección escala con el tamaño original</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>True scale</source>
-        <translation>Escala real</translation>
+        <translation type="vanished">Escala real</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-93"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
     <message>
         <source>Front</source>
         <translation type="obsolete">Frente</translation>
+    </message>
+    <message>
+        <location filename="../IsoProject.js" line="+50"/>
+        <source>Isometric</source>
+        <translation>Isométrica</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Isometric True Scale</source>
+        <translation>Isométrica escala real</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Planometric</source>
+        <translation>Planimétrico</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cabinet</source>
+        <translation>Cabinet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cavalier</source>
+        <translation>Cavalier</translation>
     </message>
 </context>
 </TS>

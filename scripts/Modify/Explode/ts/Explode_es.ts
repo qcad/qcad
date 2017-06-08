@@ -127,7 +127,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location line="+7"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Descomponer texto de varias líneas en varios bloques de texto simples</translation>
     </message>
     <message>
         <location line="-155"/>

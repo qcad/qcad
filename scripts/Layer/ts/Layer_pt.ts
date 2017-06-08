@@ -23,7 +23,7 @@ Utilize a &amp;camada atual</translatorcomment>
         <translation>&amp;Camada</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Showing all layers</source>
         <translation>Exibir todas as camadas</translation>
     </message>
@@ -33,7 +33,7 @@ Utilize a &amp;camada atual</translatorcomment>
         <translation>Ocultar todas as camadas</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+45"/>
         <source>Thawing all layers</source>
         <translation>Descongelação todas as camadas</translation>
     </message>
@@ -43,7 +43,7 @@ Utilize a &amp;camada atual</translatorcomment>
         <translation>Congelando todas as camadas</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+31"/>
         <source>Locking all layers</source>
         <translation>Bloqueie todas as camadas</translation>
     </message>

@@ -44,19 +44,42 @@
         <translation>Draai selectie met de klok voor projectie</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Schaal projectie op oorspronkelijke grootte (&quot;isometrische tekening&quot;)</translation>
+        <translation type="vanished">Schaal projectie op oorspronkelijke grootte (&quot;isometrische tekening&quot;)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>True scale</source>
-        <translation>Ware grootte</translation>
+        <translation type="vanished">Ware grootte</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
         <translation>&amp;Isometrische projectie</translation>
+    </message>
+    <message>
+        <location filename="../IsoProject.js" line="+50"/>
+        <source>Isometric</source>
+        <translation>Isometrisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Isometric True Scale</source>
+        <translation>Isometrisch ware grootte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Planometric</source>
+        <translation>Planometric</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cabinet</source>
+        <translation>Kabinet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cavalier</source>
+        <translation>Cavalier</translation>
     </message>
 </context>
 </TS>

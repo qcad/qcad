@@ -115,7 +115,7 @@
     <message>
         <location line="+7"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Teksten met meerdere regels in meerdere eenvoudige tekstblokken opbreken</translation>
     </message>
     <message>
         <location line="-155"/>

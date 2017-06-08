@@ -44,19 +44,42 @@
         <translation>投影前に選択を時計回りに回転</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>オリジナルサイズに対する拡縮投影（等角投影図面）</translation>
+        <translation type="vanished">オリジナルサイズに対する拡縮投影（等角投影図面）</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>True scale</source>
-        <translation>本来の縮尺</translation>
+        <translation type="vanished">本来の縮尺</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
         <translation>&amp;I 等角投影</translation>
+    </message>
+    <message>
+        <location filename="../IsoProject.js" line="+50"/>
+        <source>Isometric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Isometric True Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Planometric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cabinet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cavalier</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

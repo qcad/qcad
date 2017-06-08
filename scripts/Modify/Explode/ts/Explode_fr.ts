@@ -128,7 +128,7 @@ Combiner hachures</translatorcomment>
     <message>
         <location line="+7"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Décomposer texte multiligne dans plusieurs blocs de texte simple</translation>
     </message>
     <message>
         <location line="-155"/>

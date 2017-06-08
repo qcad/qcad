@@ -19,7 +19,7 @@
         <translation>&amp;Calque</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Showing all layers</source>
         <translation>Afficher toutes les calques</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Cachez tous les calques</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+45"/>
         <source>Thawing all layers</source>
         <translation>Décongeler toutes les calques</translation>
     </message>
@@ -39,7 +39,7 @@
         <translation>Congélation tous les calques</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+31"/>
         <source>Locking all layers</source>
         <translation>Verrouiller tous les calques</translation>
     </message>

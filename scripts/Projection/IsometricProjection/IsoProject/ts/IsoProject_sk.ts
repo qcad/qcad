@@ -44,19 +44,42 @@
         <translation>Otočiť výber v smere hodinových ručičiek</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Mierka premietania v pôvodnej veľkosti (&apos;izometrický výkres&apos;)</translation>
+        <translation type="vanished">Mierka premietania v pôvodnej veľkosti (&apos;izometrický výkres&apos;)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>True scale</source>
-        <translation>Skutočná mierka</translation>
+        <translation type="vanished">Skutočná mierka</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
         <translation>&amp;Izometrický Pohľad</translation>
+    </message>
+    <message>
+        <location filename="../IsoProject.js" line="+50"/>
+        <source>Isometric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Isometric True Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Planometric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cabinet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cavalier</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

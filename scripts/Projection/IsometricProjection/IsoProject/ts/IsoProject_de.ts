@@ -60,17 +60,15 @@
         <translation type="obsolete">Im Uhrzeigersinn rotieren</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Projektion in Originalgrösse (&quot;Isometrische Zeichnung&quot;)</translation>
+        <translation type="vanished">Projektion in Originalgrösse (&quot;Isometrische Zeichnung&quot;)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>True scale</source>
-        <translation>Wahre Skalierung</translation>
+        <translation type="vanished">Wahre Skalierung</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-93"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
@@ -89,6 +87,31 @@
     <message>
         <source>ProjectionType</source>
         <translation type="obsolete">ProjectionType</translation>
+    </message>
+    <message>
+        <location filename="../IsoProject.js" line="+50"/>
+        <source>Isometric</source>
+        <translation>Isometrisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Isometric True Scale</source>
+        <translation>Isometrisch wahre Skalierung</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Planometric</source>
+        <translation>Planometrisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cabinet</source>
+        <translation>Kabinett</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cavalier</source>
+        <translation>Kavalier</translation>
     </message>
 </context>
 </TS>

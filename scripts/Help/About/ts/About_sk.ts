@@ -195,7 +195,7 @@
         <translation>Programovanie</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+48"/>
         <source>Translations</source>
         <translation>Preklady</translation>
     </message>

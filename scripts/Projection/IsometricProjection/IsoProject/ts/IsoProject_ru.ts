@@ -44,19 +44,42 @@
         <translation>Повернуть выделение по часовой стрелке до проекции</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Масштабировать проекцию к исходному размеру (&apos;изометрической рисунок&apos;)</translation>
+        <translation type="vanished">Масштабировать проекцию к исходному размеру (&apos;изометрической рисунок&apos;)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>True scale</source>
-        <translation>Истинная шкала</translation>
+        <translation type="vanished">Истинная шкала</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
         <translation>&amp;Изометрическая проекция</translation>
+    </message>
+    <message>
+        <location filename="../IsoProject.js" line="+50"/>
+        <source>Isometric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Isometric True Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Planometric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cabinet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cavalier</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

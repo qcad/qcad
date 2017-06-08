@@ -19,7 +19,7 @@
         <translation>&amp;Vrstva</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Showing all layers</source>
         <translation>Zobrazenie všetkých vrstiev</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Skrytie všetkých vrstiev</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+45"/>
         <source>Thawing all layers</source>
         <translation>Rozmraziť všetky vrstvy</translation>
     </message>
@@ -39,7 +39,7 @@
         <translation>Zmraziť všetky vrstvy</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+31"/>
         <source>Locking all layers</source>
         <translation>Uzamknutie všetkých vrstiev</translation>
     </message>

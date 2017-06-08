@@ -88,17 +88,15 @@ Em baixo à direita</translatorcomment>
         <translation type="obsolete">Rotacione horário</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Escalone a projeção para o tamanho original (&quot;desenho isométrico&quot;)</translation>
+        <translation type="vanished">Escalone a projeção para o tamanho original (&quot;desenho isométrico&quot;)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>True scale</source>
-        <translation>Escala verdadeira</translation>
+        <translation type="vanished">Escala verdadeira</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-93"/>
         <source>Left</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -124,6 +122,31 @@ Traz entidades para a frente de outras entidades</translatorcomment>
 Anterior
 Retorna ao último menu</translatorcomment>
         <translation type="obsolete">Trás</translation>
+    </message>
+    <message>
+        <location filename="../IsoProject.js" line="+50"/>
+        <source>Isometric</source>
+        <translation>Isométrica</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Isometric True Scale</source>
+        <translation>Isométrica escala verdadeira</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Planometric</source>
+        <translation>Planométrico</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cabinet</source>
+        <translation>Cabinet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cavalier</source>
+        <translation>Cavalier</translation>
     </message>
 </context>
 </TS>

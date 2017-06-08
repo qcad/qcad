@@ -19,7 +19,7 @@
         <translation>&amp;Layer</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Showing all layers</source>
         <translation>Visualizzare tutti i layers</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Nascondere tutti i layers</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+45"/>
         <source>Thawing all layers</source>
         <translation>Scongiurare tutti i layers</translation>
     </message>
@@ -39,7 +39,7 @@
         <translation>Congelare tutti i livelli</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+31"/>
         <source>Locking all layers</source>
         <translation>Blocca tutti i layers</translation>
     </message>

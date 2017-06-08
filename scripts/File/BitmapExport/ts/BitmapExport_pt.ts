@@ -157,7 +157,7 @@ Preto</translatorcomment>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+92"/>
+        <location filename="../BitmapExportWorker.js" line="+96"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamanho de imagem inválido (largura x altura deve ser menor que %1)</translation>
     </message>

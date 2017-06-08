@@ -23,7 +23,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
         <translation type="unfinished">Wars&amp;twa</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+25"/>
         <source>Showing all layers</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33,7 +33,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+45"/>
         <source>Thawing all layers</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43,7 +43,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+31"/>
         <source>Locking all layers</source>
         <translation type="unfinished"></translation>
     </message>

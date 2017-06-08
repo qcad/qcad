@@ -64,16 +64,14 @@ Góra - prawo
         <translation type="unfinished">Obróć wybrane prawo przed projekcją</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Skala projekcji do oryginalnego rozmiaru (&quot;izometryczny rysunek&amp;quot;)</translation>
+        <translation type="obsolete">Skala projekcji do oryginalnego rozmiaru (&quot;izometryczny rysunek&amp;quot;)</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>True scale</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Prawdziwa skala</translation>
+        <translation type="obsolete">Prawdziwa skala</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>
@@ -82,6 +80,31 @@ Góra - prawo
 --file: qcadactions_pl.ts--
 Rzutowanie &amp;izometryczne</translatorcomment>
         <translation type="unfinished">Rzutowanie &amp;izometryczne</translation>
+    </message>
+    <message>
+        <location filename="../IsoProject.js" line="+50"/>
+        <source>Isometric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Isometric True Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Planometric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cabinet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cavalier</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

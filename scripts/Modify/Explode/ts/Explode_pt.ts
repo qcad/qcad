@@ -151,7 +151,7 @@ Oculte (congele) todos os carimbos</translatorcomment>
     <message>
         <location line="+7"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Fragmente texto com várias linhas em vários blocos de texto simples</translation>
     </message>
     <message>
         <location line="-155"/>
