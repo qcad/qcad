@@ -28,8 +28,6 @@ include("../BlockDialog.js");
  */
 function CreateBlock(guiAction) {
     Block.call(this, guiAction);
-
-    this.referencePoint = undefined;
 }
 
 CreateBlock.prototype = new Block();
@@ -57,9 +55,8 @@ CreateBlock.prototype.setState = function(state) {
 };
 
 CreateBlock.prototype.coordinateEvent = function(event) {
-    var pos = event.getModelPosition();
-    this.getDocumentInterface().setRelativeZero(pos);
-    this.referencePoint = pos;
+    var referencePoint = event.getModelPosition();
+    this.getDocumentInterface().setRelativeZero(referencePoint);
 
     var dlg = new BlockDialog(this.getDocument());
     var block = dlg.show();
@@ -68,25 +65,46 @@ CreateBlock.prototype.coordinateEvent = function(event) {
         return;
     }
 
-    var i, entity;
     var di = this.getDocumentInterface();
-    var document = this.getDocument();
-    var storage = document.getStorage();
-    var ids = document.querySelectedEntities();
+    var doc = di.getDocument();
+    var ids = doc.querySelectedEntities();
+    CreateBlock.createBlock(di, block, referencePoint, ids, this.getToolTitle(), true);
+
+    this.terminate();
+};
+
+/**
+ * Adds the given block to the drawing based on the given entities.
+ *
+ * \param di RDocumentInterface
+ * \param block RBlock block data.
+ * \param referencePoint RVector reference point for block reference.
+ * \param entityIds Entity IDs.
+ * \param title Tool title (used for transaction log).
+ * \param select True to select created block reference.
+ */
+CreateBlock.createBlock = function(di, block, referencePoint, entityIds, title, select) {
+    if (isNull(select)) {
+        select = false;
+    }
+
+    var i, entity;
+    var doc = di.getDocument();
+    var storage = doc.getStorage();
 
     var op = new RAddObjectsOperation();
-    op.setText(this.getToolTitle());
+    op.setText(title);
     op.addObject(block);
 
     var blockId;
-    if (document.hasBlock(block.getName())) {
-        // add selection to existing block:
-        blockId = document.getBlockId(block.getName());
+    if (doc.hasBlock(block.getName())) {
+        // add selection to existing block / overwrite block:
+        blockId = doc.getBlockId(block.getName());
 
         // clear existing block:
-        var oldIds = document.queryBlockEntities(blockId);
+        var oldIds = doc.queryBlockEntities(blockId);
         for (i=0; i<oldIds.length; i++) {
-            entity = document.queryEntity(oldIds[i]);
+            entity = doc.queryEntity(oldIds[i]);
             if (isNull(entity)) {
                 continue;
             }
@@ -94,17 +112,17 @@ CreateBlock.prototype.coordinateEvent = function(event) {
         }
     }
     else {
-        // add selection to new block:
         blockId = storage.getMaxObjectId();
     }
 
-    for (i=0; i<ids.length; i++) {
-        var id = ids[i];
+    // add selection to new block:
+    for (i=0; i<entityIds.length; i++) {
+        var id = entityIds[i];
 
         // deselect original entity:
         di.deselectEntity(id);
 
-        entity = document.queryEntity(id);
+        entity = doc.queryEntity(id);
         if (isNull(entity)) {
             continue;
         }
@@ -113,18 +131,18 @@ CreateBlock.prototype.coordinateEvent = function(event) {
         // note that the original entity is moved to the new block (same id)
         entity.setBlockId(blockId);
 
-        // deselect entity which is part of the new block (avoid selected entities inside blocks):
-        entity.move(pos.getNegated());
+        entity.move(referencePoint.getNegated());
 
         op.addObject(entity, false);
     }
 
     // create block reference from selection:
-    var blockReference = new RBlockReferenceEntity(document, new RBlockReferenceData(blockId, pos, new RVector(1,1,1), 0.0));
-    blockReference.setSelected(true);
+    var blockReference = new RBlockReferenceEntity(doc, new RBlockReferenceData(blockId, referencePoint, new RVector(1,1,1), 0.0));
+    if (select) {
+        blockReference.setSelected(true);
+    }
     op.addObject(blockReference, false);
 
     di.applyOperation(op);
-
-    this.terminate();
+    return blockReference.getId();
 };
