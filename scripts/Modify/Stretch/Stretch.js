@@ -176,10 +176,10 @@ Stretch.prototype.getOperation = function(preview) {
     }
 
     // increase box slightly (see FS#435)
-    var minX = Math.min(this.corner1.x, this.corner2.x) - RS.PointTolerance;
-    var minY = Math.min(this.corner1.y, this.corner2.y) - RS.PointTolerance;
-    var maxX = Math.max(this.corner1.x, this.corner2.x) + RS.PointTolerance;
-    var maxY = Math.max(this.corner1.y, this.corner2.y) + RS.PointTolerance;
+    var minX = Math.min(this.corner1.x, this.corner2.x);
+    var minY = Math.min(this.corner1.y, this.corner2.y);
+    var maxX = Math.max(this.corner1.x, this.corner2.x);
+    var maxY = Math.max(this.corner1.y, this.corner2.y);
 
     var corners = new Array(
         new RVector(minX, minY),
@@ -250,7 +250,7 @@ Stretch.getStrechOperation = function(document, polygon, preview, offset, layerI
             // this is the case if one point on the entity is inside the polygon
             // and the entity does not intersect with the polygon.
             var pointOnEntity = entity.getPointOnEntity();
-            if (polygon.contains(pointOnEntity)) {
+            if (polygon.contains(pointOnEntity, true)) {
                 // move entity:
                 entity.move(offset);
                 op.addObject(entity, false);

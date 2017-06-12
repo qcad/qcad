@@ -437,7 +437,7 @@ RVector RVector::flipVertical() {
  * Moves this vector by offset if it is inside the given area.
  */
 RVector RVector::stretch(const RPolyline& area, const RVector& offset) {
-    if (area.contains(*this)) {
+    if (area.contains(*this, true)) {
         return move(offset);
     }
     return *this;

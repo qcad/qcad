@@ -108,7 +108,7 @@ QList<RVector> RRay::getPointsWithDistanceToEnd(double distance, int from) const
 bool RRay::stretch(const RPolyline& area, const RVector& offset) {
     bool ret = false;
 
-    if (area.contains(basePoint)) {
+    if (area.contains(basePoint, true)) {
         basePoint += offset;
         ret = true;
     }

@@ -335,11 +335,11 @@ bool RLine::reverse() {
 bool RLine::stretch(const RPolyline& area, const RVector& offset) {
     bool ret = false;
 
-    if (area.contains(startPoint)) {
+    if (area.contains(startPoint, true)) {
         startPoint += offset;
         ret = true;
     }
-    if (area.contains(endPoint)) {
+    if (area.contains(endPoint, true)) {
         endPoint += offset;
         ret = true;
     }

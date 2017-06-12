@@ -725,15 +725,15 @@ bool RArc::reverse() {
 bool RArc::stretch(const RPolyline& area, const RVector& offset) {
     bool ret = false;
 
-    if (area.contains(getStartPoint()) && area.contains(getEndPoint())) {
+    if (area.contains(getStartPoint(), true) && area.contains(getEndPoint(), true)) {
         return move(offset);
     }
 
-    if (area.contains(getStartPoint())) {
+    if (area.contains(getStartPoint(), true)) {
         moveStartPoint(getStartPoint() + offset);
         ret = true;
     }
-    else if (area.contains(getEndPoint())) {
+    else if (area.contains(getEndPoint(), true)) {
         moveEndPoint(getEndPoint() + offset);
         ret = true;
     }
