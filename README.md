@@ -8,7 +8,7 @@ interface (ECMAScript/JavaScript).
 History
 -------
 QCAD started as version 1 in October 1999 and has since evolved through version 2 (September 2003) 
-and the current version 3 (July 2012).
+and the current version 3 (from July 2012).
 
 License
 -------
