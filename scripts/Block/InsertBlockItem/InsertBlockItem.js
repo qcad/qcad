@@ -35,6 +35,7 @@ function InsertBlockItem(guiAction) {
     this.docItem = undefined;
 
     this.blockName = undefined;
+    this.layerName = undefined;
     this.offset = new RVector(0,0);
     this.scale = 1.0;
     this.rotation = 0.0;
@@ -232,6 +233,9 @@ InsertBlockItem.prototype.getOperation = function(preview) {
 
     if (!isNull(this.blockName)) {
         op.setBlockName(this.blockName);
+    }
+    if (!isNull(this.layerName)) {
+        op.setLayerName(this.layerName);
     }
     op.setScale(this.scale);
     op.setRotation(rotation);

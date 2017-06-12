@@ -205,6 +205,7 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
                         toCurrentLayer, toCurrentBlock,
                         overwriteLayers, overwriteBlocks,
                         blockName,
+                        layerName,
                         transaction,
                         toModelSpaceBlock,      // to model space: true for copy
                                                 // (allow copy from inside any block definition),
@@ -292,13 +293,22 @@ void RClipboardOperation::copyEntity(
         bool overwriteLayers,
         bool overwriteBlocks,
         const QString& blockName,
+        const QString& layerName,
         RTransaction& transaction,
         bool toModelSpaceBlock,
         const RQMapQStringQString& attributes) const {
 
     bool overwriteLinetypes = false;
 
-    QSharedPointer<RLayer> destLayer = copyEntityLayer(entity, src, dest, overwriteLayers, transaction);
+    QSharedPointer<RLayer> destLayer;
+    if (!layerName.isEmpty()) {
+        // to given, fixed layer:
+        destLayer = dest.queryLayer(layerName);
+    }
+    if (destLayer.isNull()) {
+        // copy layer:
+        destLayer = copyEntityLayer(entity, src, dest, overwriteLayers, transaction);
+    }
     QSharedPointer<RLinetype> destLinetype = copyEntityLinetype(entity, src, dest, overwriteLinetypes, transaction);
 
     // add block the entity belongs to, if the block exists it is overwritten
@@ -353,6 +363,7 @@ void RClipboardOperation::copyEntity(
                     false, false, // no flips
                     false, false, // keep original block and layer
                     overwriteLayers, first && overwriteBlocks,
+                    QString(),
                     QString(),
                     transaction,
                     false,         // not to model space but actual block

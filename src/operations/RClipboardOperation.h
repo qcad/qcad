@@ -91,6 +91,7 @@ public:
         bool overwriteLayers,
         bool overwriteBlocks,
         const QString& blockName,
+        const QString& layerName,
         RTransaction& transaction,
         bool toModelSpaceBlock,
         const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
