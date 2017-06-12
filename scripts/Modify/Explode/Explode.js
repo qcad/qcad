@@ -228,6 +228,9 @@ Explode.explodeSelection = function(di, action) {
                     e = new RTextEntity(document, new RTextData(d))
                     e.setSelected(true);
                     e.copyAttributesFrom(entity.data());
+                    if (e.getColor()!==d.getColor()) {
+                        e.setColor(d.getColor());
+                    }
                     newEntities.push(e);
                 }
             }
