@@ -56,6 +56,12 @@ RHatchData::RHatchData(const RHatchData& other) : REntityData(other), RPainterPa
     *this = other;
 }
 
+/**
+ * \param solid True for a solid fill, false for a hatch pattern.
+ * \param scaleFactor Scale factor of the hatch pattern.
+ * \param angle Rotation angle of the hatch pattern.
+ * \param patternName Name of the hatch pattern. "SOLID" for solid fills.
+ */
 RHatchData::RHatchData(bool solid, double scaleFactor, double angle, const QString& patternName) :
     solid(solid),
     scaleFactor(scaleFactor),
