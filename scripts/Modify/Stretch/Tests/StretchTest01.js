@@ -41,6 +41,8 @@ StretchTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
     this.triggerCommand('stretch');
+    this.setToolOption('StretchPro/Mode', 'RectangleArea');
+    this.updateToolOptions();
     this.setZoom(5.56930693069307, new RVector(5.51863, 9.22254, 0) );
     var p = new RVector(-2.825292, 33.332123);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
