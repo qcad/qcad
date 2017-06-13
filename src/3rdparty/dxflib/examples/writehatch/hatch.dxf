@@ -1,5 +1,5 @@
 999
-dxflib 3.12.2.0
+dxflib 3.17.0.0
   0
 SECTION
   2
@@ -572,6 +572,8 @@ ENTITIES
 HATCH
   5
 32
+100
+AcDbEntity
   8
 0
  62
@@ -584,8 +586,6 @@ HATCH
 1.0
   6
 BYLAYER
-100
-AcDbEntity
 100
 AcDbHatch
  10
