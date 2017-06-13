@@ -66,7 +66,7 @@
         <translation>Ecraser les blocs</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+93"/>
+        <location filename="../InsertBlockItem.js" line="+94"/>
         <source>Cannot import file from URL: </source>
         <translation>Ne peux pas importer le fichier depuis l&apos;URL : </translation>
     </message>
