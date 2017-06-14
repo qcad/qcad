@@ -81,6 +81,9 @@
         getOrigin
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isModelSpace
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isLayout
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

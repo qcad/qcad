@@ -36,14 +36,25 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTextLayout</name> <block>{<private type="default">
 </private><public>public:
-    <constructor><name>RTextLayout</name><parameter_list>()</parameter_list> <member_list>: <call><name>ttf</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>height</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor><name>RTextLayout</name><parameter_list>()</parameter_list> <member_list>: <call><name>ttf</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>correspondingPainterPaths</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>height</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
 
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <constructor><name>RTextLayout</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>QTextLayout</name></argument>&gt;</argument_list></name></type> <name>layout</name></decl></param>, <param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>transform</name></decl></param>, <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list> <member_list>: <call><name>ttf</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call>, <call><name>layout</name><argument_list>(<argument><expr><name>layout</name></expr></argument>)</argument_list></call>, <call><name>transform</name><argument_list>(<argument><expr><name>transform</name></expr></argument>)</argument_list></call>, <call><name>color</name><argument_list>(<argument><expr><name>color</name></expr></argument>)</argument_list></call>, <call><name>height</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor><name>RTextLayout</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>QTextLayout</name></argument>&gt;</argument_list></name></type> <name>layout</name></decl></param>, <param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>transform</name></decl></param>, <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list> <member_list>:
+        <call><name>ttf</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call>,
+        <call><name>layout</name><argument_list>(<argument><expr><name>layout</name></expr></argument>)</argument_list></call>,
+        <call><name>transform</name><argument_list>(<argument><expr><name>transform</name></expr></argument>)</argument_list></call>,
+        <call><name>correspondingPainterPaths</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>,
+        <call><name>color</name><argument_list>(<argument><expr><name>color</name></expr></argument>)</argument_list></call>,
+        <call><name>height</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
 
-    <constructor><name>RTextLayout</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>pps</name></decl></param>, <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list> <member_list>: <call><name>ttf</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>painterPaths</name><argument_list>(<argument><expr><name>pps</name></expr></argument>)</argument_list></call>, <call><name>color</name><argument_list>(<argument><expr><name>color</name></expr></argument>)</argument_list></call>, <call><name>height</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor><name>RTextLayout</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>pps</name></decl></param>, <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list> <member_list>:
+        <call><name>ttf</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>,
+        <call><name>painterPaths</name><argument_list>(<argument><expr><name>pps</name></expr></argument>)</argument_list></call>,
+        <call><name>correspondingPainterPaths</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>,
+        <call><name>color</name><argument_list>(<argument><expr><name>color</name></expr></argument>)</argument_list></call>,
+        <call><name>height</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
 
     <function><type><name>bool</name></type> <name>isEmpty</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>layout</name>.<call><name>isNull</name><argument_list>()</argument_list></call> &amp;&amp; <name>painterPaths</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
@@ -114,6 +125,9 @@
     <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>QTextLayout</name></argument>&gt;</argument_list></name></type> <name>layout</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QTransform</name></type> <name>transform</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
+    <comment type="line">// number of painter paths corresponding to this layout</comment>
+    <comment type="line">// used to keep track of painter path and layout relationships</comment>
+    <decl_stmt><decl><type><name>int</name></type> <name>correspondingPainterPaths</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QColor</name></type> <name>color</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>height</name></decl>;</decl_stmt>
     <comment type="line">//RVector position;</comment>

@@ -80,7 +80,7 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setFrozen</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <if>if <condition>(<expr><call><name><name>QString</name>::<name>compare</name></name><argument_list>(<argument><expr><name>name</name></expr></argument>, <argument><expr><name>modelSpaceName</name></expr></argument>, <argument><expr><name><name>Qt</name>::<name>CaseInsensitive</name></name></expr></argument>)</argument_list></call>!=0</expr>)</condition><then> <block>{
+        <if>if <condition>(<expr>!<call><name>isModelSpace</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
             <expr_stmt><expr><name>frozen</name> = <name>on</name></expr>;</expr_stmt>
         }</block></then></if>
     }</block></function>
@@ -90,7 +90,7 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setAnonymous</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <if>if <condition>(<expr><call><name><name>QString</name>::<name>compare</name></name><argument_list>(<argument><expr><name>name</name></expr></argument>, <argument><expr><name>modelSpaceName</name></expr></argument>, <argument><expr><name><name>Qt</name>::<name>CaseInsensitive</name></name></expr></argument>)</argument_list></call>!=0</expr>)</condition><then> <block>{
+        <if>if <condition>(<expr>!<call><name>isModelSpace</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
             <expr_stmt><expr><name>anonymous</name> = <name>on</name></expr>;</expr_stmt>
         }</block></then></if>
     }</block></function>
@@ -101,6 +101,10 @@
 
     <function><type><name>RVector</name></type> <name>getOrigin</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>origin</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isModelSpace</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>QString</name>::<name>compare</name></name><argument_list>(<argument><expr><name>name</name></expr></argument>, <argument><expr><name>modelSpaceName</name></expr></argument>, <argument><expr><name><name>Qt</name>::<name>CaseInsensitive</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isLayout</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

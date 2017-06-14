@@ -92,6 +92,18 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentRight),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxXAlignmentLeft",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentLeft),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxXAlignmentCenter",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentCenter),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxXAlignmentRight",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentRight),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxParagraphFeed",
                 qScriptValueFromValue(&engine, RTextRenderer::rxParagraphFeed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -134,6 +146,14 @@
             
             ctor.setProperty("rxUnderlineOff",
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineOff),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxStrikethroughOn",
+                qScriptValueFromValue(&engine, RTextRenderer::rxStrikethroughOn),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxStrikethroughOff",
+                qScriptValueFromValue(&engine, RTextRenderer::rxStrikethroughOff),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxWidthChange",

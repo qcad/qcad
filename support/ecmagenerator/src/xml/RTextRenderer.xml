@@ -70,6 +70,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="rxAlignmentRight" type="QString"
     isConst="false" isStatic="true" />
+    <property name="rxXAlignmentLeft" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxXAlignmentCenter" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxXAlignmentRight" type="QString"
+    isConst="false" isStatic="true" />
     <property name="rxParagraphFeed" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxXFeed" type="QString" isConst="false"
@@ -92,6 +98,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="rxUnderlineOff" type="QString" isConst="false"
     isStatic="true" />
+    <property name="rxStrikethroughOn" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxStrikethroughOff" type="QString"
+    isConst="false" isStatic="true" />
     <property name="rxWidthChange" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxObliqueAngleChange" type="QString"

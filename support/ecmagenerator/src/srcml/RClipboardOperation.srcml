@@ -92,6 +92,7 @@
         <param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>overwriteBlocks</name></decl></param>,
         <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>,
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>toModelSpaceBlock</name></decl></param>,
         <param><decl><type><name>const</name> <name>RQMapQStringQString</name>&amp;</type> <name>attributes</name> =<init> <expr><name>RDEFAULT_QMAP_QSTRING_QSTRING</name></expr></init></decl></param>

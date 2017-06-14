@@ -218,6 +218,9 @@
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxAlignmentLeft</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxAlignmentCenter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxAlignmentRight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxXAlignmentLeft</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxXAlignmentCenter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxXAlignmentRight</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxParagraphFeed</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxXFeed</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxHeightChange</name></decl>;</decl_stmt>
@@ -230,6 +233,8 @@
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxOverlineOff</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxUnderlineOn</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxUnderlineOff</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxStrikethroughOn</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxStrikethroughOff</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxWidthChange</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxObliqueAngleChange</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxTrackChange</name></decl>;</decl_stmt>

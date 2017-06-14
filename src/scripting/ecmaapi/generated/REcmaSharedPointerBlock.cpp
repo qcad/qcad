@@ -91,6 +91,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getOrigin, "getOrigin");
             
+            REcmaHelper::registerFunction(&engine, proto, isModelSpace, "isModelSpace");
+            
             REcmaHelper::registerFunction(&engine, proto, isLayout, "isLayout");
             
             REcmaHelper::registerFunction(&engine, proto, setLayoutId, "setLayoutId");
@@ -926,6 +928,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBlock::getOrigin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::isModelSpace
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::isModelSpace", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::isModelSpace";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("isModelSpace", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isModelSpace();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isModelSpace().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::isModelSpace", context, engine);
             return result;
         }
          QScriptValue
