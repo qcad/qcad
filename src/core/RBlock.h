@@ -79,7 +79,7 @@ public:
     }
 
     void setFrozen(bool on) {
-        if (QString::compare(name, modelSpaceName, Qt::CaseInsensitive)!=0) {
+        if (!isModelSpace()) {
             frozen = on;
         }
     }
@@ -89,7 +89,7 @@ public:
     }
 
     void setAnonymous(bool on) {
-        if (QString::compare(name, modelSpaceName, Qt::CaseInsensitive)!=0) {
+        if (!isModelSpace()) {
             anonymous = on;
         }
     }
@@ -100,6 +100,10 @@ public:
 
     RVector getOrigin() const {
         return origin;
+    }
+
+    bool isModelSpace() const {
+        return QString::compare(name, modelSpaceName, Qt::CaseInsensitive)==0;
     }
 
     bool isLayout() const {
