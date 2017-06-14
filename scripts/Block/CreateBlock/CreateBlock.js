@@ -82,10 +82,18 @@ CreateBlock.prototype.coordinateEvent = function(event) {
  * \param entityIds Entity IDs.
  * \param title Tool title (used for transaction log).
  * \param select True to select created block reference.
+ * \param copy True to copy the entities into the new block, false to move entities.
+ * \param createReference True to create a block reference in place of the entities.
  */
-CreateBlock.createBlock = function(di, block, referencePoint, entityIds, title, select) {
+CreateBlock.createBlock = function(di, block, referencePoint, entityIds, title, select, copy, createReference) {
     if (isNull(select)) {
         select = false;
+    }
+    if (isNull(copy)) {
+        copy = false;
+    }
+    if (isNull(createReference)) {
+        createReference = true;
     }
 
     var i, entity;
@@ -133,16 +141,25 @@ CreateBlock.createBlock = function(di, block, referencePoint, entityIds, title, 
 
         entity.move(referencePoint.getNegated());
 
-        op.addObject(entity, false);
+        op.addObject(entity, false, copy);
     }
 
     // create block reference from selection:
-    var blockReference = new RBlockReferenceEntity(doc, new RBlockReferenceData(blockId, referencePoint, new RVector(1,1,1), 0.0));
-    if (select) {
-        blockReference.setSelected(true);
+    var blockReference = undefined;
+    if (createReference) {
+        blockReference = new RBlockReferenceEntity(doc, new RBlockReferenceData(blockId, referencePoint, new RVector(1,1,1), 0.0));
+        if (select) {
+            blockReference.setSelected(true);
+        }
+        op.addObject(blockReference, false);
     }
-    op.addObject(blockReference, false);
 
     di.applyOperation(op);
-    return blockReference.getId();
+
+    if (isNull(blockReference)) {
+        return RObject.INVALID_ID;
+    }
+    else {
+        return blockReference.getId();
+    }
 };
