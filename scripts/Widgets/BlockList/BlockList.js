@@ -77,6 +77,40 @@ function RBlockListQt(parent, addListener, showHeader) {
 
 RBlockListQt.prototype = new RTreeWidget();
 
+RBlockListQt.getBlockList = function() {
+    var appWin = EAction.getMainWindow();
+    return appWin.findChild("BlockList");
+};
+
+/**
+ * Add an additional action to be used in the context menu.
+ * Can be used by plugins to hook into the block list context menu.
+ */
+RBlockListQt.addContextMenuScriptFile = function(scriptFile) {
+    var blockList = RBlockListQt.getBlockList();
+    if (isNull(blockList)) {
+        return;
+    }
+    qDebug("got blocklist");
+
+    var scriptFiles = RBlockListQt.getContextMenuScriptFiles();
+    scriptFiles.push(scriptFile);
+    blockList.setProperty("ContextMenuScriptFiles", scriptFiles);
+};
+
+RBlockListQt.getContextMenuScriptFiles = function() {
+    var blockList = RBlockListQt.getBlockList();
+    if (isNull(blockList)) {
+        return [];
+    }
+
+    var scriptFiles = blockList.property("ContextMenuScriptFiles");
+    if (isNull(scriptFiles)) {
+        scriptFiles = [];
+    }
+    return scriptFiles;
+};
+
 RBlockListQt.prototype.contextMenuEvent = function(e) {
     var item = this.itemAt(e.pos());
     if (!isNull(item)) {
@@ -84,6 +118,7 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
     }
 
     var menu = new QMenu();
+
     RGuiAction.getByScriptFile("scripts/Block/ToggleBlockVisibility/ToggleBlockVisibility.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/ShowAllBlocks/ShowAllBlocks.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/HideAllBlocks/HideAllBlocks.js").addToMenu(menu);
@@ -94,6 +129,16 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
     RGuiAction.getByScriptFile("scripts/Block/InsertBlock/InsertBlock.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/SelectBlockReferences/SelectBlockReferences.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/DeselectBlockReferences/DeselectBlockReferences.js").addToMenu(menu);
+
+    // add addtional context menu actions provided by plugins:
+    var scriptFiles = RBlockListQt.getContextMenuScriptFiles();
+    for (var i=0; i<scriptFiles.length; i++) {
+        var scriptFile = scriptFiles[i];
+        var a = RGuiAction.getByScriptFile(scriptFile);
+        if (!isNull(a)) {
+            a.addToMenu(menu);
+        }
+    }
 
     menu.exec(QCursor.pos());
 
