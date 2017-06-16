@@ -44,7 +44,7 @@
 
     <destructor><specifier>virtual</specifier> <name>~RScaleSelectionOperation</name><parameter_list>()</parameter_list> <block>{ }</block></destructor>
     
-    <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
 </public><private>private:
     <decl_stmt><decl><type><name>RVector</name></type> <name>referencePoint</name></decl>;</decl_stmt>

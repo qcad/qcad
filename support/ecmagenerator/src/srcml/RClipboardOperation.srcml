@@ -46,7 +46,7 @@
     <constructor_decl><name>RClipboardOperation</name><parameter_list>()</parameter_list>;</constructor_decl>
     <destructor><specifier>virtual</specifier> <name>~RClipboardOperation</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
-    <function><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>document</argument>)</argument_list></macro>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>preview</argument>)</argument_list></macro>
         <return>return <expr><call><name>RTransaction</name><argument_list>()</argument_list></call></expr>;</return>
@@ -73,7 +73,7 @@
         <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>,
         <param><decl><type><name>const</name> <name>RQMapQStringQString</name>&amp;</type> <name>attributes</name> =<init> <expr><name>RDEFAULT_QMAP_QSTRING_QSTRING</name></expr></init></decl></param>,
         <param><decl><type><name>const</name> <name>RQMapQStringQString</name>&amp;</type> <name>properties</name> =<init> <expr><name>RDEFAULT_QMAP_QSTRING_QSTRING</name></expr></init></decl></param>
-    )</parameter_list> <specifier>const</specifier>;</function_decl>
+    )</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
@@ -96,7 +96,7 @@
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>toModelSpaceBlock</name></decl></param>,
         <param><decl><type><name>const</name> <name>RQMapQStringQString</name>&amp;</type> <name>attributes</name> =<init> <expr><name>RDEFAULT_QMAP_QSTRING_QSTRING</name></expr></init></decl></param>
-    )</parameter_list> <specifier>const</specifier>;</function_decl>
+    )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>copyEntityBlock</name><parameter_list>(
         <param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>,
@@ -106,7 +106,7 @@
         <param><decl><type><name>bool</name></type> <name>toCurrentBlock</name></decl></param>,
         <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>,
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
-    )</parameter_list> <specifier>const</specifier>;</function_decl>
+    )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>copyBlock</name><parameter_list>(
         <param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>,
@@ -116,7 +116,7 @@
         <param><decl><type><name>bool</name></type> <name>toCurrentBlock</name></decl></param>,
         <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>,
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
-    )</parameter_list> <specifier>const</specifier>;</function_decl>
+    )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>copyEntityLayer</name><parameter_list>(
         <param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>,
@@ -124,14 +124,14 @@
         <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>,
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
-    )</parameter_list> <specifier>const</specifier>;</function_decl>
+    )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>copyLayer</name><parameter_list>(
         <param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>,
         <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>overwriteLayers</name></decl></param>,
         <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
-    )</parameter_list> <specifier>const</specifier>;</function_decl>
+    )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>copyEntityLinetype</name><parameter_list>(
             <param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>,
@@ -139,20 +139,20 @@
             <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>overwriteLinetypes</name></decl></param>,
             <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
-            )</parameter_list> <specifier>const</specifier>;</function_decl>
+            )</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>copyLinetype</name><parameter_list>(
             <param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>,
             <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>dest</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>overwriteLinetypes</name></decl></param>,
             <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
-            )</parameter_list> <specifier>const</specifier>;</function_decl>
+            )</parameter_list>;</function_decl>
 
 </public><private>private:
-    <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLayers</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLinetypes</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedBlocks</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>mutable</name> <name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>copiedBlockContents</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLayers</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLinetypes</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedBlocks</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>copiedBlockContents</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RClipboardOperation*</argument>)</argument_list></macro>

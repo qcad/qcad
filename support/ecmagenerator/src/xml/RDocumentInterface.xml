@@ -774,7 +774,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="ROperation *" typeName="ROperation *"
-        name="operation" isConst="true" />
+        name="operation" isConst="false" />
       </variant>
     </method>
     <method name="applyOperation" cppName="applyOperation"
@@ -782,7 +782,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RTransaction" isPureVirtual="false">
         <arg type="ROperation *" typeName="ROperation *"
-        name="operation" isConst="true" />
+        name="operation" isConst="false" />
       </variant>
     </method>
     <method name="objectChangeEvent" cppName="objectChangeEvent"

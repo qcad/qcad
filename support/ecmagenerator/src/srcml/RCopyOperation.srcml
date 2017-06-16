@@ -42,8 +42,7 @@
     <constructor_decl><name>RCopyOperation</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>src</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor><specifier>virtual</specifier> <name>~RCopyOperation</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
     
-    <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>preview</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>RExporter</name>&amp;</type> <name>exporter</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>void</name></type> <name>setClear</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>clear</name> = <name>on</name></expr>;</expr_stmt>

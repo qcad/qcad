@@ -72,8 +72,6 @@
     
             REcmaHelper::registerFunction(&engine, proto, apply, "apply");
             
-            REcmaHelper::registerFunction(&engine, proto, preview, "preview");
-            
         engine.setDefaultPrototype(
             qMetaTypeId<RDeleteAllEntitiesOperation*>(), *proto);
 
@@ -357,94 +355,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDeleteAllEntitiesOperation::apply", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDeleteAllEntitiesOperation::preview
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDeleteAllEntitiesOperation::preview", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDeleteAllEntitiesOperation::preview";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDeleteAllEntitiesOperation* self = 
-                        getSelf("preview", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RDocument */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RExporter */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is reference
-                    RDocument*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RDocument*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDeleteAllEntitiesOperation: Argument 0 is not of type RDocument*.",
-                               context);                    
-                    }
-                    RDocument& a0 = *ap0;
-                
-                    // argument is reference
-                    RExporter*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RExporter*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDeleteAllEntitiesOperation: Argument 1 is not of type RExporter*.",
-                               context);                    
-                    }
-                    RExporter& a1 = *ap1;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->preview(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDeleteAllEntitiesOperation.preview().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDeleteAllEntitiesOperation::preview", context, engine);
             return result;
         }
          QScriptValue REcmaDeleteAllEntitiesOperation::toString

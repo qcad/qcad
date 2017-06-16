@@ -55,9 +55,6 @@
         apply
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        preview
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setClear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
