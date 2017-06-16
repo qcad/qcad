@@ -41,16 +41,16 @@ Explode.initPreferences = function(pageWidget, calledByPrefDialog, document) {
 Explode.prototype.beginEvent = function() {
     Modify.prototype.beginEvent.call(this);
     var di = this.getDocumentInterface();
-    Explode.explodeSelection(di, this);
+    Explode.explodeSelection(di, this.getToolTitle());
     this.terminate();
 };
 
 /**
  * Explodes all selected entities.
  * \param di Document interface
- * \param action Action object (used to assign text to transaction), optional
+ * \param toolTitle Tool title used for undo/redo information.
  */
-Explode.explodeSelection = function(di, action) {
+Explode.explodeSelection = function(di, toolTitle) {
     var document = di.getDocument();
     var storage = document.getStorage();
     var ids = document.querySelectedEntities();
@@ -66,8 +66,8 @@ Explode.explodeSelection = function(di, action) {
 
     var op = new RAddObjectsOperation();
 
-    if (!isNull(action)) {
-        op.setText(action.getToolTitle());
+    if (!isNull(toolTitle)) {
+        op.setText(toolTitle);
     }
 
     for (i=0; i<ids.length; i++) {
