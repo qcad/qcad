@@ -163,36 +163,56 @@ LayerDialog.prototype.show = function() {
  * Layer name validation.
  */
 LayerDialog.prototype.validate = function() {
-    var widgets = getWidgets(this.dialog);
+    var layerName = this.getLayerName(this.dialog);
+    return LayerDialog.validate(this.layer, layerName, this.document, this.dialog, this.validator);
+};
+
+LayerDialog.validate = function(layer, layerName, document, dialog, validator) {
+    var widgets = getWidgets(dialog);
 
     var leLayerName = widgets["LayerName"];
-    var message = widgets["Message"];
+    if (isNull(leLayerName)) {
+        return false;
+    }
+
     var pos = 0;
     var acceptable = true;
-    message.clear();
-    var layerName = this.getLayerName(this.dialog);
+
+    var lMessage = widgets["Message"];
+    if (!isNull(lMessage)) {
+        lMessage.clear();
+    }
 
     if (layerName!==layerName.trim()) {
-        message.text = "<font color='red'>" + qsTr("Leading or trailing spaces.") + "</font>";
+        if (!isNull(lMessage)) {
+            lMessage.text = "<font color='red'>" + qsTr("Leading or trailing spaces.") + "</font>";
+        }
         acceptable = false;
     }
 
-    if (this.validator.validate(layerName, pos) != QValidator.Acceptable) {
-        message.text = "<font color='red'>" + qsTr("Layer name is empty.") + "</font>";
+    if (validator.validate(layerName, pos) != QValidator.Acceptable) {
+        if (!isNull(lMessage)) {
+            lMessage.text = "<font color='red'>" + qsTr("Layer name is empty.") + "</font>";
+        }
         acceptable = false;
     }
 
     // layer exists: check if name exists:
-    if (this.document.hasLayer(layerName)) {
+    if (document.hasLayer(layerName)) {
         // error if we're creating a new layer and the layer name is taken or
         // we're trying to rename a layer to an existing name
-        if (isNull(this.layer) ||
-            this.layer.getName().toLowerCase() !== layerName.toLowerCase()) {
+        if (isNull(layer) ||
+            layer.getName().toLowerCase() !== layerName.toLowerCase()) {
 
-            message.text = "<font color='red'>" + qsTr("Layer already exists.") + "</font>";
+            if (!isNull(lMessage)) {
+                lMessage.text = "<font color='red'>" + qsTr("Layer already exists.") + "</font>";
+            }
             acceptable = false;
         }
     }
-    widgets["ButtonBox"].button(QDialogButtonBox.Ok).enabled = acceptable;
+    if (!isNull(widgets["ButtonBox"])) {
+        widgets["ButtonBox"].button(QDialogButtonBox.Ok).enabled = acceptable;
+    }
+
     return acceptable;
 };
