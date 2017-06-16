@@ -95,10 +95,14 @@ InsertBlockItem.prototype.beginEvent = function() {
         this.terminate();
     }
 
-    this.blockName = new QFileInfo(path).completeBaseName();
+    // no block name given:
+    // create block name from file name:
+    if (isNull(this.blockName)) {
+        this.blockName = new QFileInfo(path).completeBaseName();
 
-    // fix block name if necessary:
-    this.blockName = fixSymbolTableName(this.blockName);
+        // fix block name if necessary:
+        this.blockName = fixSymbolTableName(this.blockName);
+    }
 
     // invalid block name characters:
     if (isNull(this.blockName)) {
@@ -123,25 +127,27 @@ InsertBlockItem.prototype.beginEvent = function() {
     // assign values to attributes:
     var first = true;
     var optionsToolBar = EAction.getOptionsToolBar();
-    var ids = this.docItem.queryAllEntities();
-    for (i=0; i<ids.length; i++) {
-        id = ids[i];
-        var attDef = this.docItem.queryEntity(id);
-        if (!isAttributeDefinitionEntity(attDef)) {
-            continue;
+    var tagCombo = optionsToolBar.findChild("AttributeTag");
+    if (!isNull(tagCombo)) {
+        var ids = this.docItem.queryAllEntities();
+        for (i=0; i<ids.length; i++) {
+            id = ids[i];
+            var attDef = this.docItem.queryEntity(id);
+            if (!isAttributeDefinitionEntity(attDef)) {
+                continue;
+            }
+
+            if (first) {
+                this.showAttributeControls(true);
+                first = false;
+            }
+
+            var tag = attDef.getTag();
+            var prompt = attDef.getPrompt();
+            var defaultValue = attDef.getEscapedText();
+
+            tagCombo.addItem(prompt, [tag, defaultValue]);
         }
-
-        if (first) {
-            this.showAttributeControls(true);
-            first = false;
-        }
-
-        var tag = attDef.getTag();
-        var prompt = attDef.getPrompt();
-        var defaultValue = attDef.getEscapedText();
-
-        var tagCombo = optionsToolBar.findChild("AttributeTag");
-        tagCombo.addItem(prompt, [tag, defaultValue]);
     }
 
     this.setState(InsertBlockItem.State.SettingPosition);
@@ -152,9 +158,13 @@ InsertBlockItem.prototype.initUiOptions = function(resume, optionsToolBar) {
     //var optionsToolBar = EAction.getOptionsToolBar();
 
     var combo = optionsToolBar.findChild("Scale");
-    combo.setCompleter(null);
+    if (!isNull(combo)) {
+        combo.setCompleter(null);
+    }
     combo = optionsToolBar.findChild("Rotation");
-    combo.setCompleter(null);
+    if (!isNull(combo)) {
+        combo.setCompleter(null);
+    }
 };
 
 InsertBlockItem.prototype.setState = function(state) {
