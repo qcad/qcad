@@ -36,7 +36,7 @@ function InsertBlockItem(guiAction) {
 
     this.blockName = undefined;
     this.layerName = undefined;
-    this.offset = new RVector(0,0);
+    this.offset = undefined;
     this.scale = 1.0;
     this.rotation = 0.0;
 
@@ -218,6 +218,9 @@ InsertBlockItem.prototype.getOperation = function(preview) {
     var rotation = this.getRotation();
 
     if (isNull(rotation)) {
+        return undefined;
+    }
+    if (isNull(this.offset)) {
         return undefined;
     }
 
