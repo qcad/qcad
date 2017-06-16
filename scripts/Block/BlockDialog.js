@@ -102,10 +102,20 @@ BlockDialog.prototype.show = function() {
  * Block name validation.
  */
 BlockDialog.prototype.validate = function() {
-    var creatingBlock = isNull(this.block);
     var widgets = getWidgets(this.dialog);
+    var leBlockName = widgets["BlockName"];
+    return BlockDialog.validate(this.block, leBlockName.text, this.document, this.dialog, this.validator, this.allowOverwrite);
+};
+
+BlockDialog.validate = function(block, blockName, document, dialog, validator, allowOverwrite) {
+    var creatingBlock = isNull(block);
+    var widgets = getWidgets(dialog);
 
     var leBlockName = widgets["BlockName"];
+    if (isNull(leBlockName)) {
+        return false;
+    }
+
     var message = widgets["Message"];
     var pos = 0;
     var acceptable = true;
@@ -121,7 +131,7 @@ BlockDialog.prototype.validate = function() {
         acceptable = false;
     }
     else {
-        if (this.validator.validate(leBlockName.text, pos) != QValidator.Acceptable) {
+        if (validator.validate(leBlockName.text, pos) != QValidator.Acceptable) {
             message.text = "<font color='red'>" + qsTr("Block name is invalid.") + "</font>";
             acceptable = false;
         }
@@ -130,13 +140,13 @@ BlockDialog.prototype.validate = function() {
     var ret = acceptable;
 
     // block already exists:
-    if (this.document.hasBlock(leBlockName.text)) {
-        if (creatingBlock && this.allowOverwrite===true) {
+    if (document.hasBlock(leBlockName.text)) {
+        if (creatingBlock && allowOverwrite===true) {
             // warning: overwriting an existing block:
             message.text += "<font color='red'>" + qsTr("Block '%1' already exists<br>and will be overwritten.").arg(leBlockName.text.toString())  + "</font>";
             acceptable = true;
         }
-        else if (isNull(this.block) || this.block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) {
+        else if (isNull(block) || block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) {
             // error: renaming existing block to existing block name (not allowed):
             message.text = "<font color='red'>" + qsTr("Block already exists.") + "</font>";
             acceptable = false;
@@ -144,7 +154,9 @@ BlockDialog.prototype.validate = function() {
         ret = false;
     }
 
-    widgets["ButtonBox"].button(QDialogButtonBox.Ok).enabled = acceptable;
+    if (!isNull(widgets["ButtonBox"])) {
+        widgets["ButtonBox"].button(QDialogButtonBox.Ok).enabled = acceptable;
+    }
 
     return ret;
 };
