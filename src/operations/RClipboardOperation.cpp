@@ -47,7 +47,7 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
         bool toModelSpaceBlock,
         bool preview,
         const RQMapQStringQString& attributes,
-        const RQMapQStringQString& properties) const {
+        const RQMapQStringQString& properties) {
 
     bool overwriteLinetypes = false;
 
@@ -296,7 +296,7 @@ void RClipboardOperation::copyEntity(
         const QString& layerName,
         RTransaction& transaction,
         bool toModelSpaceBlock,
-        const RQMapQStringQString& attributes) const {
+        const RQMapQStringQString& attributes) {
 
     bool overwriteLinetypes = false;
 
@@ -462,7 +462,7 @@ QSharedPointer<RBlock> RClipboardOperation::copyEntityBlock(
     bool overwriteBlocks,
     bool toCurrentBlock,
     const QString& blockName,
-    RTransaction& transaction) const {
+    RTransaction& transaction) {
 
     return copyBlock(entity.getBlockId(), src, dest, overwriteBlocks, toCurrentBlock, blockName, transaction);
 }
@@ -474,7 +474,7 @@ QSharedPointer<RBlock> RClipboardOperation::copyBlock(
     bool overwriteBlocks,
     bool toCurrentBlock,
     const QString& blockName,
-    RTransaction& transaction) const {
+    RTransaction& transaction) {
 
     QSharedPointer<RBlock> srcBlock = src.queryBlock(blockId);
     if (srcBlock.isNull()) {
@@ -527,7 +527,7 @@ QSharedPointer<RLayer> RClipboardOperation::copyEntityLayer(
     REntity& entity,
     RDocument& src, RDocument& dest,
     bool overwriteLayers,
-    RTransaction& transaction) const {
+    RTransaction& transaction) {
 
     return copyLayer(entity.getLayerId(), src, dest, overwriteLayers, transaction);
 }
@@ -536,7 +536,7 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
         RLayer::Id layerId,
         RDocument& src, RDocument& dest,
         bool overwriteLayers,
-        RTransaction& transaction) const {
+        RTransaction& transaction) {
 
     // copy parent layers:
     QString layerName = src.getLayerName(layerId);
@@ -604,7 +604,7 @@ QSharedPointer<RLinetype> RClipboardOperation::copyEntityLinetype(
         REntity& entity,
         RDocument& src, RDocument& dest,
         bool overwriteLinetypes,
-        RTransaction& transaction) const {
+        RTransaction& transaction) {
 
     return copyLinetype(entity.getLinetypeId(), src, dest, overwriteLinetypes, transaction);
 }
@@ -613,7 +613,7 @@ QSharedPointer<RLinetype> RClipboardOperation::copyLinetype(
         RLinetype::Id linetypeId,
         RDocument& src, RDocument& dest,
         bool overwriteLinetypes,
-        RTransaction& transaction) const {
+        RTransaction& transaction) {
 
     // add linetype of entity, if the linetype exists it is overwritten
     // if overwriteLinetypes is true:

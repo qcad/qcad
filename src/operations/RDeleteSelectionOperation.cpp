@@ -26,7 +26,7 @@
 RDeleteSelectionOperation::RDeleteSelectionOperation() {
 }
 
-RTransaction RDeleteSelectionOperation::apply(RDocument& document, bool preview) const {
+RTransaction RDeleteSelectionOperation::apply(RDocument& document, bool preview) {
     Q_UNUSED(preview)
 
     RTransaction transaction(document.getStorage(), text);
@@ -41,7 +41,3 @@ RTransaction RDeleteSelectionOperation::apply(RDocument& document, bool preview)
     transaction.end();
     return transaction;
 }
-
-void RDeleteSelectionOperation::preview(RDocument& /*document*/, RExporter& /*exporter*/) const {
-}
-

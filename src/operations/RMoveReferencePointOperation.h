@@ -43,7 +43,7 @@ public:
     );
     virtual ~RMoveReferencePointOperation() {}
     
-    virtual RTransaction apply(RDocument& document, bool preview = false) const;
+    virtual RTransaction apply(RDocument& document, bool preview = false);
 
 private:
     RVector referencePoint;

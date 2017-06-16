@@ -63,7 +63,7 @@ public:
     void deleteObject(const QSharedPointer<RObject>& obj);
     void endCycle();
 
-    virtual RTransaction apply(RDocument& document, bool preview = false) const;
+    virtual RTransaction apply(RDocument& document, bool preview = false);
 
 //    int getPreviewCounter() const {
 //        return previewCounter;

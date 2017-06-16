@@ -41,8 +41,7 @@ public:
     RDeleteSelectionOperation();
     virtual ~RDeleteSelectionOperation() {}
     
-    virtual RTransaction apply(RDocument& document, bool preview = false) const;
-    virtual void preview(RDocument& document, RExporter& exporter) const;
+    virtual RTransaction apply(RDocument& document, bool preview = false);
 };
 
 Q_DECLARE_METATYPE(RDeleteSelectionOperation*)

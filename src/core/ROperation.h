@@ -67,7 +67,7 @@ public:
      * a storage that is linked to the real document for realistic
      * condiditions for the preview.
      */
-    virtual RTransaction apply(RDocument& document, bool preview = false) const = 0;
+    virtual RTransaction apply(RDocument& document, bool preview = false) = 0;
 
     RS::EntityType getEntityTypeFilter() const {
         return entityTypeFilter;

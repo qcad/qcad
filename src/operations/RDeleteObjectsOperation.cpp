@@ -32,7 +32,7 @@ void RDeleteObjectsOperation::deleteObject(const QSharedPointer<RObject>& o) {
     list.append(o);
 }
 
-RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) const {
+RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) {
     Q_UNUSED(preview)
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setRecordAffectedObjects(recordAffectedObjects);
@@ -51,8 +51,4 @@ RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) c
     }
     transaction.end();
     return transaction;
-}
-
-void RDeleteObjectsOperation::preview(RDocument& /*document*/,
-        RExporter& /*exporter*/) const {
 }

@@ -105,7 +105,7 @@ void RAddObjectsOperation::deleteObject(const QSharedPointer<RObject>& object) {
     addedObjects.append(RModifiedObjects(object));
 }
 
-RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) const {
+RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) {
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setRecordAffectedObjects(recordAffectedObjects);
     transaction.setSpatialIndexDisabled(spatialIndexDisabled);

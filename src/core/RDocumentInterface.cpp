@@ -1861,7 +1861,7 @@ void RDocumentInterface::zoomPrevious() {
  * Previews the given operation by applying the operation to a
  * temporary document that is linked to the (read only) document.
  */
-void RDocumentInterface::previewOperation(const ROperation* operation) {
+void RDocumentInterface::previewOperation(ROperation* operation) {
     if (operation==NULL) {
         qWarning() << "RDocumentInterface::previewOperation: operation is NULL";
         return;
@@ -1916,7 +1916,7 @@ void RDocumentInterface::previewOperation(const ROperation* operation) {
  * Applies the given operation to the document. The operation might
  * for example do something with the current selection.
  */
-RTransaction RDocumentInterface::applyOperation(const ROperation* operation) {
+RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
     if (operation==NULL) {
         qWarning() << "RDocumentInterface::applyOperation: operation is NULL";
         return RTransaction();

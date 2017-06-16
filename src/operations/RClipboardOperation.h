@@ -45,7 +45,7 @@ public:
     RClipboardOperation();
     virtual ~RClipboardOperation() {}
 
-    virtual RTransaction apply(RDocument& document, bool preview = false) const {
+    virtual RTransaction apply(RDocument& document, bool preview = false) {
         Q_UNUSED(document)
         Q_UNUSED(preview)
         return RTransaction();
@@ -72,7 +72,7 @@ public:
         bool preview,
         const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING,
         const RQMapQStringQString& properties = RDEFAULT_QMAP_QSTRING_QSTRING
-    ) const;
+    );
 
     /**
      * \nonscriptable
@@ -95,7 +95,7 @@ public:
         RTransaction& transaction,
         bool toModelSpaceBlock,
         const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
-    ) const;
+    );
 
     QSharedPointer<RBlock> copyEntityBlock(
         REntity& entity,
@@ -105,7 +105,7 @@ public:
         bool toCurrentBlock,
         const QString& blockName,
         RTransaction& transaction
-    ) const;
+    );
 
     QSharedPointer<RBlock> copyBlock(
         RBlock::Id blockId,
@@ -115,7 +115,7 @@ public:
         bool toCurrentBlock,
         const QString& blockName,
         RTransaction& transaction
-    ) const;
+    );
 
     QSharedPointer<RLayer> copyEntityLayer(
         REntity& entity,
@@ -123,14 +123,14 @@ public:
         RDocument& dest,
         bool overwriteLayers,
         RTransaction& transaction
-    ) const;
+    );
 
     QSharedPointer<RLayer> copyLayer(
         RLayer::Id layerId,
         RDocument& src, RDocument& dest,
         bool overwriteLayers,
         RTransaction& transaction
-    ) const;
+    );
 
     QSharedPointer<RLinetype> copyEntityLinetype(
             REntity& entity,
@@ -138,20 +138,20 @@ public:
             RDocument& dest,
             bool overwriteLinetypes,
             RTransaction& transaction
-            ) const;
+            );
 
     QSharedPointer<RLinetype> copyLinetype(
             RLinetype::Id linetypeId,
             RDocument& src, RDocument& dest,
             bool overwriteLinetypes,
             RTransaction& transaction
-            ) const;
+            );
 
 private:
-    mutable QMap<QString, QSharedPointer<RLayer> > copiedLayers;
-    mutable QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
-    mutable QMap<QString, QSharedPointer<RBlock> > copiedBlocks;
-    mutable QSet<RBlock::Id> copiedBlockContents;
+    QMap<QString, QSharedPointer<RLayer> > copiedLayers;
+    QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
+    QMap<QString, QSharedPointer<RBlock> > copiedBlocks;
+    QSet<RBlock::Id> copiedBlockContents;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)

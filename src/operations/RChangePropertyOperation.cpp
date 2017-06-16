@@ -40,7 +40,7 @@ RChangePropertyOperation::RChangePropertyOperation(
     value(event.getValue()) {
 }
 
-RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) const {
+RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) {
     Q_UNUSED(preview)
     RTransaction transaction(document.getStorage(), text);
 
@@ -96,8 +96,4 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
     //RDebug::stopTimer("RChangePropertyOperation::apply");
 
     return transaction;
-}
-
-void RChangePropertyOperation::preview(RDocument& /*document*/, RExporter& /*exporter*/) const {
-    // No preview for property editing
 }

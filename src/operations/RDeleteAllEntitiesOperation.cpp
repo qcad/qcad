@@ -23,7 +23,7 @@ RDeleteAllEntitiesOperation::RDeleteAllEntitiesOperation(bool undoable) :
     ROperation(undoable) {
 }
 
-RTransaction RDeleteAllEntitiesOperation::apply(RDocument& document, bool preview) const {
+RTransaction RDeleteAllEntitiesOperation::apply(RDocument& document, bool preview) {
     Q_UNUSED(preview)
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
@@ -37,7 +37,4 @@ RTransaction RDeleteAllEntitiesOperation::apply(RDocument& document, bool previe
 
     transaction.end();
     return transaction;
-}
-
-void RDeleteAllEntitiesOperation::preview(RDocument& /*document*/, RExporter& /*exporter*/) const {
 }

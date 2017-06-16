@@ -29,7 +29,7 @@ RCopyOperation::RCopyOperation(const RVector& offset, RDocument& src)
 
 
 
-RTransaction RCopyOperation::apply(RDocument& document, bool preview) const {
+RTransaction RCopyOperation::apply(RDocument& document, bool preview) {
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
 
@@ -55,9 +55,3 @@ RTransaction RCopyOperation::apply(RDocument& document, bool preview) const {
     transaction.end();
     return transaction;
 }
-
-
-
-void RCopyOperation::preview(RDocument& /*document*/, RExporter& /*exporter*/) const {
-}
-

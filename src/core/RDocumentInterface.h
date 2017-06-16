@@ -265,8 +265,8 @@ public:
     void zoomTo(const RBox& region, int margin = 0);
     void zoomPrevious();
 
-    void previewOperation(const ROperation* operation);
-    RTransaction applyOperation(const ROperation* operation);
+    void previewOperation(ROperation* operation);
+    RTransaction applyOperation(ROperation* operation);
 
     void objectChangeEvent(QList<RObject::Id>& objectIds);
 

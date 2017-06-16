@@ -135,7 +135,7 @@ public:
         properties.insert(name, value);
     }
 
-    virtual RTransaction apply(RDocument& document, bool preview = false) const;
+    virtual RTransaction apply(RDocument& document, bool preview = false);
 
     RPolyline getBoundary(double unitFactor);
 

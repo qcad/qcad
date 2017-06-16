@@ -34,7 +34,7 @@ RPasteOperation::RPasteOperation(RDocument& sourceDocument)
     overwriteBlocks(false) {
 }
 
-RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
+RTransaction RPasteOperation::apply(RDocument& document, bool preview) {
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
 

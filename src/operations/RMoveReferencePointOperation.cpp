@@ -33,7 +33,7 @@ RMoveReferencePointOperation::RMoveReferencePointOperation(
 
 
 
-RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool preview) const {
+RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool preview) {
     Q_UNUSED(preview)
 
     RTransaction transaction(document.getStorage(), text);

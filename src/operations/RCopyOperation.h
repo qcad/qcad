@@ -41,8 +41,7 @@ public:
     RCopyOperation(const RVector& offset, RDocument& src);
     virtual ~RCopyOperation() {}
     
-    virtual RTransaction apply(RDocument& document, bool preview = false) const;
-    virtual void preview(RDocument& document, RExporter& exporter) const;
+    virtual RTransaction apply(RDocument& document, bool preview = false);
 
     void setClear(bool on) {
         clear = on;

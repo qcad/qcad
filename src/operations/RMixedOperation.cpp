@@ -73,7 +73,7 @@ void RMixedOperation::endCycle() {
     list.append(QPair<QSharedPointer<RObject>, Modes>(QSharedPointer<RObject>(), modes));
 }
 
-RTransaction RMixedOperation::apply(RDocument& document, bool preview) const {
+RTransaction RMixedOperation::apply(RDocument& document, bool preview) {
     Q_UNUSED(preview)
 
     RTransaction transaction(document.getStorage(), text, undoable);
