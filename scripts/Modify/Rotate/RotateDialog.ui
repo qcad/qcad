@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>422</width>
-    <height>295</height>
+    <height>297</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -161,6 +161,9 @@
          </item>
          <item>
           <widget class="QToolButton" name="AngleByMouse">
+           <property name="toolTip">
+            <string>Define angle using mouse cursor</string>
+           </property>
            <property name="icon">
             <iconset>
              <normaloff>ByMouse.svg</normaloff>ByMouse.svg</iconset>
