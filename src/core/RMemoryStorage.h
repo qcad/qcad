@@ -173,6 +173,9 @@ public:
     virtual QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const;
     virtual QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
 
+    virtual void setObjectHandle(RObject& object, RObject::Handle objectHandle);
+    virtual RObject::Handle getNewObjectHandle();
+
     virtual void setLastTransactionId(int transactionId);
 
     virtual RLineweight::Lineweight getMaxLineweight() const;

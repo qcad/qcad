@@ -686,6 +686,24 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlockDirect(RBlock::Id blockId) cons
     return blockMap[blockId].dynamicCast<RBlock>();
 }
 
+void RMemoryStorage::setObjectHandle(RObject& object, RObject::Handle objectHandle) {
+    if (objectHandleMap.contains(objectHandle)) {
+        objectHandle = getNewObjectHandle();
+    }
+    Q_ASSERT(!objectHandleMap.contains(objectHandle));
+    RStorage::setObjectHandle(object, objectHandle);
+}
+
+RObject::Handle RMemoryStorage::getNewObjectHandle() {
+    RObject::Handle candidate = RStorage::getNewObjectHandle();
+    while (objectHandleMap.contains(candidate)) {
+        candidate++;
+    }
+    handleCounter = candidate;
+    Q_ASSERT(!objectHandleMap.contains(candidate));
+    return candidate;
+}
+
 QSharedPointer<RBlock> RMemoryStorage::queryBlock(const QString& blockName) const {
     QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
     for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
@@ -1186,8 +1204,12 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         //transactionObjectMap[object->getId()] = object;
     //}
 
-    objectMap[object->getId()] = object;
-    objectHandleMap[object->getHandle()] = object;
+    if (object->getId()!=RObject::INVALID_ID) {
+        objectMap[object->getId()] = object;
+    }
+    if (object->getHandle()!=RObject::INVALID_HANDLE) {
+        objectHandleMap[object->getHandle()] = object;
+    }
 
     if (!entity.isNull()) {
         entityMap[entity->getId()] = entity;
