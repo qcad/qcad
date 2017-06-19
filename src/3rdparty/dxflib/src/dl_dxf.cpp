@@ -3664,7 +3664,7 @@ void DL_Dxf::writeHatchEdge(DL_WriterA& dw,
  *
  * @return IMAGEDEF handle. Needed for the IMAGEDEF counterpart.
  */
-int DL_Dxf::writeImage(DL_WriterA& dw,
+unsigned long DL_Dxf::writeImage(DL_WriterA& dw,
                        const DL_ImageData& data,
                        const DL_Attributes& attrib) {
 
@@ -3704,8 +3704,7 @@ int DL_Dxf::writeImage(DL_WriterA& dw,
     dw.dxfReal(23, data.height);
 
     // handle of IMAGEDEF object
-    int handle = dw.incHandle();
-    dw.dxfHex(340, handle);
+    unsigned long handle = dw.handle(340);
 
     // flags
     dw.dxfInt(70, 15);
@@ -4353,7 +4352,6 @@ void DL_Dxf::writeObjects(DL_WriterA& dw, const std::string& appDictionaryName) 
     dw.dxfString(  0, "SECTION");
     dw.dxfString(  2, "OBJECTS");
 
-
     dw.dxfString(  0, "DICTIONARY");
     dw.dxfHex(5, 0xC);
     dw.dxfString(100, "AcDbDictionary");
@@ -4703,12 +4701,9 @@ void DL_Dxf::writeAppDictionary(DL_WriterA& dw) {
     dw.dxfInt(281, 1);
 }
 
-int DL_Dxf::writeDictionaryEntry(DL_WriterA& dw, const std::string& name) {
+unsigned long DL_Dxf::writeDictionaryEntry(DL_WriterA& dw, const std::string& name) {
     dw.dxfString(  3, name);
-    int handle = dw.getNextHandle();
-    dw.dxfHex(350, handle);
-    dw.incHandle();
-    return handle;
+    return dw.handle(350);
 }
 
 void DL_Dxf::writeXRecord(DL_WriterA& dw, int handle, int value) {
