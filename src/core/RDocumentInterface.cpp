@@ -1053,19 +1053,17 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
 
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
 
-    QNetworkAccessManager* manager = new QNetworkAccessManager();
-    QNetworkReply* reply = manager->get(QNetworkRequest(url));
-    mainWindow->disable();
-    do {
-        // dangerous: processing events here allows user to 'interrupt'
-        // by sending events (mouse moves, etc)
-        QApplication::processEvents();
-    } while (reply->isRunning());
-    mainWindow->enable();
+    QNetworkAccessManager manager;
+    QEventLoop loop;
+    QNetworkReply* reply = manager.get(QNetworkRequest(url));
+    QObject::connect(reply, SIGNAL(finished()), &loop, SLOT(quit()));
+    QTimer::singleShot(10000, &loop, SLOT(quit()));
+    loop.exec();
+    if (reply->error()!=QNetworkReply::NoError) {
+        qDebug() << "Cannot download " << url << ": "<< reply->errorString();
+    }
+
     QByteArray data = reply->readAll();
-
-    //QString suffix = QFileInfo(url.path()).suffix();
-
 
     QString fileName;
 #if QT_VERSION >= 0x050000
@@ -1074,7 +1072,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     QTemporaryDir dir;
     fileName = "qcad_downloaded_file.dxf";
     if (!dir.isValid()) {
-        qWarning() << "cannot create temporary directory";
+        qWarning() << "cannot create temporary directory:" << dir.path();
         return RDocumentInterface::IoErrorGeneralImportUrlError;
     }
 #else
@@ -1087,18 +1085,20 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     RDocumentInterface::IoErrorCode ret = RDocumentInterface::IoErrorGeneralImportUrlError;
 
     QFile file(dir.path() + QDir::separator() + fileName);
-    if (file.setPermissions(QFile::ReadOwner | QFile::WriteOwner)) {
-        if (file.open(QIODevice::WriteOnly)) {
-            file.write(data);
-            file.close();
-            ret = importFile(file.fileName(), nameFilter, notify);
-            if (!file.remove()) {
-                qWarning() << "cannot remove file " << file.fileName();
-            }
+    if (!file.setPermissions(QFile::ReadOwner | QFile::WriteOwner)) {
+        qWarning() << "cannot set permissions for " << dir.path() + QDir::separator() + fileName;
+    }
+
+    if (file.open(QIODevice::WriteOnly)) {
+        file.write(data);
+        file.close();
+        ret = importFile(file.fileName(), nameFilter, notify);
+        if (!file.remove()) {
+            qWarning() << "cannot remove file " << file.fileName();
         }
-        else {
-            qWarning() << "cannot open file " << file.fileName();
-        }
+    }
+    else {
+        qWarning() << "cannot open file " << file.fileName();
     }
 
     return ret;
