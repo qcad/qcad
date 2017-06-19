@@ -324,7 +324,7 @@ public:
     void writeHatchEdge(DL_WriterA& dw,
                         const DL_HatchEdgeData& data);
 
-    int writeImage(DL_WriterA& dw,
+    unsigned long writeImage(DL_WriterA& dw,
                    const DL_ImageData& data,
                    const DL_Attributes& attrib);
 
@@ -355,7 +355,7 @@ public:
     void writeBlockRecord(DL_WriterA& dw, const std::string& name);
     void writeObjects(DL_WriterA& dw, const std::string& appDictionaryName = "");
     void writeAppDictionary(DL_WriterA& dw);
-    int writeDictionaryEntry(DL_WriterA& dw, const std::string& name);
+    unsigned long writeDictionaryEntry(DL_WriterA& dw, const std::string& name);
     void writeXRecord(DL_WriterA& dw, int handle, int value);
     void writeXRecord(DL_WriterA& dw, int handle, double value);
     void writeXRecord(DL_WriterA& dw, int handle, bool value);
