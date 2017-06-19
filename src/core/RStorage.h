@@ -736,12 +736,12 @@ public:
 protected:
     QDateTime lastModified;
     bool modified;
+    RObject::Handle handleCounter;
 
 private:
     RDocument* document;
     int maxDrawOrder;
     RObject::Id idCounter;
-    RObject::Handle handleCounter;
     RColor currentColor;
     RLineweight::Lineweight currentLineweight;
     RLinetype::Id currentLinetypeId;
