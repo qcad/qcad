@@ -76,10 +76,12 @@ InsertBlockItem.prototype.beginEvent = function() {
     var path;
     var err;
     if (this.url.isLocalFile()) {
+        qDebug("importing file: " + this.url);
         path = this.url.toLocalFile();
         err = this.diItem.importFile(path, "", false);
     }
     else {
+        qDebug("importing URL: " + this.url);
         if (isFunction(this.url.encodedPath)) {
             path = QUrl.fromPercentEncoding(this.url.encodedPath());
         }
