@@ -1,1 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="124.02" height="131.1" viewBox="18 -42 35 37" style="fill:none;stroke-linecap:round;stroke-linejoin:round"><g transform="scale(1-1)"><g style="stroke:#000;stroke-width:.847"><circle cx="30" cy="30" r="10.296"/><path d="m33 5l20 35"/></g><g style="stroke:#f00"><circle cx="36.13" cy="26.496" r=".01" style="stroke-width:2.258"/><g style="stroke-width:.847"><path d="m30 42v-3.5m0-1.5v-1.5m0-1.5v-8m0-1.5v-1.5m0-1.5v-3.5"/><path d="m42 30h-3.5m-1.5 0h-1.5m-1.5 0h-8m-1.5 0h-1.5m-1.5 0h-3.5"/></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   viewBox="18 -42 144.49283 144.50037"
+   style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="PointPole.svg">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs24" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2001"
+     inkscape:window-height="1203"
+     id="namedview22"
+     showgrid="false"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="289.21298"
+     inkscape:cy="255.25616"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g12" />
+  <g
+     transform="matrix(3,0,0,-3,-16.249059,100.75137)"
+     id="g4">
+    <g
+       style="stroke:#000000;stroke-width:0.847"
+       id="g6">
+      <circle
+         cx="30"
+         cy="30"
+         r="10.296"
+         id="circle8"
+         style="stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         d="M 33,5 53,40"
+         id="path10"
+         inkscape:connector-curvature="0"
+         style="stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+    <g
+       style="stroke:#ff0000;stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none"
+       id="g12">
+      <g
+         style="stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none"
+         id="g16">
+        <path
+           d="m 30,42 0,-3.5 m 0,-1.5 0,-1.5 m 0,-1.5 0,-8 m 0,-1.5 0,-1.5 m 0,-1.5 0,-3.5"
+           id="path18"
+           inkscape:connector-curvature="0"
+           style="stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none" />
+        <path
+           d="m 42,30 -3.5,0 m -1.5,0 -1.5,0 m -1.5,0 -8,0 m -1.5,0 -1.5,0 m -1.5,0 -3.5,0"
+           id="path20"
+           inkscape:connector-curvature="0"
+           style="stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none" />
+      </g>
+      <circle
+         style="opacity:1;fill:none;fill-opacity:0.1254902;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.75260609;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4157"
+         cx="36.595654"
+         cy="-26.06361"
+         r="0.89804167"
+         transform="scale(1,-1)" />
+    </g>
+  </g>
+</svg>
