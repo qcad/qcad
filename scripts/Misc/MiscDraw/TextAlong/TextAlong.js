@@ -50,6 +50,7 @@ function TextAlong(guiAction, mode) {
     this.ccw = false;
     this.fit = false;
     this.CharWidths = [];
+    this.totalCharWidth = 0.0;
 
     this.setUiOptions("TextAlong.ui");
 }
@@ -193,6 +194,7 @@ TextAlong.prototype.getCharWidths = function() {
     var txt = this.text.getPlainText();
     var num = txt.length;
     this.CharWidths = [];
+    this.totalCharWidth = 0.0;
 
     for (var i = 0; i < num; i++) {
         var char = txt[i];
@@ -202,7 +204,8 @@ TextAlong.prototype.getCharWidths = function() {
         }
         var td = this.getTextData(char);
         var wid = td.getWidth();
-        this.CharWidths.push(wid);
+        this.CharWidths.push(wid + this.spacing);
+        this.totalCharWidth += wid + this.spacing;
     }
 }
 
@@ -249,6 +252,7 @@ TextAlong.prototype.slotHeightChanged = function(value) {
 
 TextAlong.prototype.slotSpacingChanged = function(value) {
     this.spacing = value;
+    this.getCharWidths();
 };
 
 TextAlong.prototype.slotDirectionChanged = function(button) {
@@ -331,19 +335,54 @@ TextAlong.prototype.alongArc = function(arc) {
     var pt = this.pos;
     ang = arc.center.getAngleTo(this.pos);
 
+    var arcrad = arc.getRadius();
+
+    // calculate spacing for 'Fit' option
     if (this.fit) {
-        var fitAngle = arc.getSweep() / (num - 1);
+        // subtract half the width of first character and last character
+        var firstcharAngle = ((this.CharWidths[0]) / arcrad) / 2.0;
+        var lastcharAngle = ((this.CharWidths[num - 1]) / arcrad) / 2.0;
+        var fitAngle = (arc.getSweep() - firstcharAngle - lastcharAngle) / (num - 1);
+    }
+
+    var td = this.getTextData(txt[0]);
+    var te = new RTextEntity(this.getDocument(), td);
+    var h = te.getHAlign();
+    var v = te.getVAlign();
+
+    // set rotation angle for first character
+    var rotateAngle, sweep;
+    var width = this.totalCharWidth;
+    if (this.fit) {
+        sweep = arc.getSweep();
+    } else {
+        sweep = width / arcrad;
+    }
+    if (h === RS.HAlignLeft) {
+        rotateAngle = 0.0;
+    } else if (h === RS.HAlignCenter) {
+        rotateAngle = sweep / 2.0;
+    } else {
+        rotateAngle = sweep;
+    }
+
+    // get angle for half the first characters width
+    // and subtract from rotateAngle
+    var halfAngle = ((this.CharWidths[0]) / arcrad) / 2.0;
+    rotateAngle -= halfAngle;
+
+    if (this.ccw) {
+        rotateAngle = -rotateAngle;
     }
 
     for (var i = 0; i < num; i++) {
-        var td = this.getTextData(txt[i]);
-        var te = new RTextEntity(this.getDocument(), td);
+        td = this.getTextData(txt[i]);
+        te = new RTextEntity(this.getDocument(), td);
+        h = te.getHAlign();
+        v = te.getVAlign();
 
         te.setHAlign(RS.HAlignCenter);
-        te.setVAlign(RS.VAlignBottom);
-
         te.setSimple(true);     // This is required so 'base' and 'bottom' points are correct
-
         te.setAlignmentPoint(pt);
         if (this.ccw) {
             te.setAngle(ang + (Math.PI / 2.0));
@@ -351,28 +390,30 @@ TextAlong.prototype.alongArc = function(arc) {
             te.setAngle(ang - (Math.PI / 2.0));
         }
 
+        // draw each character at 'this.pos', and rotate to match alignment point
+        te.rotate(rotateAngle, arc.center);
+
+        op.addObject(te);
+
         // adjust point and angle for next character
-        var currentcharAngle = (this.CharWidths[i] + this.spacing) / arc.getRadius();
-        var nextcharAngle = (this.CharWidths[i + 1] + this.spacing) / arc.getRadius();
+        // function 'getCharWidths' handles spacing
+        var currentcharAngle = (this.CharWidths[i]) / arcrad;
+        var nextcharAngle = (this.CharWidths[i + 1]) / arcrad;
         var charAngle = (currentcharAngle / 2.0) + (nextcharAngle / 2.0);
 
         if (this.ccw) {
             if (this.fit) {
-                ang = ang + fitAngle;
+                rotateAngle = rotateAngle + fitAngle;
             } else {
-                ang = ang + charAngle;
+                rotateAngle = rotateAngle + charAngle;
             }
         } else {
             if (this.fit) {
-                ang = ang - fitAngle;
+                rotateAngle = rotateAngle - fitAngle;
             } else {
-                ang = ang - charAngle;
+                rotateAngle = rotateAngle - charAngle;
             }
         }
-
-        pt = arc.getPointAtAngle(ang);
-
-        op.addObject(te);
     }
 
     return op;
