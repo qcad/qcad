@@ -100,7 +100,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     dw = dxf.out((const char*)QFile::encodeName(fileName), exportVersion);
 
     if (dw==NULL) {
-        qWarning() << "RS_FilterDxf::fileExport: cannot open file for writing";
+        qWarning() << "RDxfExporter::exportFile: cannot open file for writing";
         return false;
     }
 
@@ -575,7 +575,7 @@ void RDxfExporter::writeLinetype(const RLinetypePattern& lt) {
 }
 
 void RDxfExporter::writeLayer(const RLayer& l) {
-    qDebug() << "RS_FilterDxf::writeLayer: " << l.getName();
+    qDebug() << "RDxfExporter::writeLayer: " << l.getName();
 
     int colorSign = 1;
     if (l.isOff()) {
