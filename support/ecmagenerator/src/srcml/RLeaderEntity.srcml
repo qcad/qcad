@@ -182,6 +182,10 @@
         <return>return <expr><name>data</name>.<call><name>isClosed</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>double</name></type> <name>getDimScale</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>fromDocument</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getDimScale</name><argument_list>(<argument><expr><name>fromDocument</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getExploded</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getExploded</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>

@@ -60,10 +60,10 @@
         setDimaszOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDimscale
+        getDimScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDimscaleOverride
+        setDimScaleOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setArrowHead

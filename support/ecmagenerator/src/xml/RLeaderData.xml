@@ -37,13 +37,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="getDimscale" cppName="getDimscale"
+    <method name="getDimScale" cppName="getDimScale"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="fromDocument"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
     </method>
-    <method name="setDimscaleOverride"
-    cppName="setDimscaleOverride" specifier="public"
+    <method name="setDimScaleOverride"
+    cppName="setDimScaleOverride" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="double" typeName="double" name="v"

@@ -326,6 +326,12 @@
         queryBlockDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setObjectHandle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNewObjectHandle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setLastTransactionId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

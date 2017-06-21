@@ -137,6 +137,9 @@
         isClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -252,6 +252,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryBlockDirect, "queryBlockDirect");
             
+            REcmaHelper::registerFunction(&engine, proto, setObjectHandle, "setObjectHandle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getNewObjectHandle, "getNewObjectHandle");
+            
             REcmaHelper::registerFunction(&engine, proto, setLastTransactionId, "setLastTransactionId");
             
             REcmaHelper::registerFunction(&engine, proto, getMaxLineweight, "getMaxLineweight");
@@ -7357,6 +7361,133 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryBlockDirect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::setObjectHandle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::setObjectHandle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::setObjectHandle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("setObjectHandle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RObject */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RObject::Handle */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RObject*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RObject*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type RObject*.",
+                               context);                    
+                    }
+                    RObject& a0 = *ap0;
+                
+                    // argument isStandardType
+                    RObject::Handle
+                    a1 =
+                    (RObject::Handle)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setObjectHandle(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.setObjectHandle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::setObjectHandle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::getNewObjectHandle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::getNewObjectHandle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::getNewObjectHandle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("getNewObjectHandle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RObject::Handle'
+    RObject::Handle cppResult =
+        
+               self->getNewObjectHandle();
+        // return type: RObject::Handle
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.getNewObjectHandle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::getNewObjectHandle", context, engine);
             return result;
         }
          QScriptValue

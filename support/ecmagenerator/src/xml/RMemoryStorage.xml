@@ -833,6 +833,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setObjectHandle" cppName="setObjectHandle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject &amp;" typeName="RObject" name="object"
+        isConst="false" />
+        <arg type="RObject::Handle" typeName="RObject::Handle"
+        name="objectHandle" isConst="false" />
+      </variant>
+    </method>
+    <method name="getNewObjectHandle" cppName="getNewObjectHandle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RObject::Handle"
+      isPureVirtual="false" />
+    </method>
     <method name="setLastTransactionId"
     cppName="setLastTransactionId" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

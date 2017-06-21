@@ -737,12 +737,12 @@
 </public><protected>protected:
     <decl_stmt><decl><type><name>QDateTime</name></type> <name>lastModified</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>modified</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>handleCounter</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>maxDrawOrder</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>idCounter</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>handleCounter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RColor</name></type> <name>currentColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>currentLineweight</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>currentLinetypeId</name></decl>;</decl_stmt>
