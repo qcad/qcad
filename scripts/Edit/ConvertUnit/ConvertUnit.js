@@ -108,10 +108,12 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
             var p = entity.getPosition();
             entity.setPosition(p.operator_multiply(factor));
         } else if (isDimensionEntity(entity)) {
-            var s = entity.getDimScale();
-            s = s * factor;
+            var s = entity.getDimScale(false);
             entity.scale(factor);
-            entity.setDimScale(s);
+            if (!RMath.fuzzyCompare(0.0, s)) {
+                // dimension has individual scale factor (property, override):
+                entity.setDimScale(s*factor);
+            }
         } else {
             entity.scale(factor);
         }
