@@ -58,24 +58,24 @@ double RLeaderData::getDimasz() const {
         qWarning() << "RLeaderData::getDimasz: no document set";
     }
 
-    return dimasz * getDimscale();
+    return dimasz * getDimScale();
 }
 
-void RLeaderData::setDimscaleOverride(double v) {
+void RLeaderData::setDimScaleOverride(double v) {
     dimscaleOverride = v;
 }
 
-double RLeaderData::getDimscale() const {
+double RLeaderData::getDimScale(bool fromDocument) const {
     double dimscale = 1.0;
 
     if (!RMath::isNaN(dimscaleOverride)) {
         dimscale = dimscaleOverride;
     }
-    else if (document!=NULL) {
+    else if (document!=NULL && fromDocument) {
         dimscale = document->getKnownVariable(RS::DIMSCALE, dimscale).toDouble();
     }
     else {
-        qWarning() << "RLeaderData::getDimscale: no document set";
+        qWarning() << "RLeaderData::getDimScale: no document set";
     }
 
     return dimscale;

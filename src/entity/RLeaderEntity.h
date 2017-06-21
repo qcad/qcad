@@ -181,6 +181,10 @@ public:
         return data.isClosed();
     }
 
+    double getDimScale(bool fromDocument=true) const {
+        return data.getDimScale(fromDocument);
+    }
+
     QList<QSharedPointer<RShape> > getExploded() const {
         return data.getExploded();
     }

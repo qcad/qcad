@@ -54,8 +54,8 @@ public:
     double getDimasz() const;
     void setDimaszOverride(double v);
 
-    double getDimscale() const;
-    void setDimscaleOverride(double v);
+    double getDimScale(bool fromDocument=true) const;
+    void setDimScaleOverride(double v);
 
     void setArrowHead(bool on);
     bool hasArrowHead() const {

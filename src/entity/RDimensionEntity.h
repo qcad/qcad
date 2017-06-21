@@ -167,8 +167,8 @@ public:
         getData().setLinearFactor(f);
     }
 
-    double getDimScale() const {
-        return getData().getDimScale();
+    double getDimScale(bool fromDocument=true) const {
+        return getData().getDimScale(fromDocument);
     }
 
     void setDimScale(double f) {

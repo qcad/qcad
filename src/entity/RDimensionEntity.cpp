@@ -131,7 +131,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().upperTolerance, value, PropertyUpperTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().lowerTolerance, value, PropertyLowerTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().linearFactor, value, PropertyLinearFactor == propertyTypeId);
-    ret = ret || RObject::setMember(getData().dimScale, value, PropertyDimScale == propertyTypeId);
+    ret = ret || RObject::setMember(getData().dimScaleOverride, value, PropertyDimScale == propertyTypeId);
     ret = ret || RObject::setMember(getData().dimBlockName, value, PropertyDimBlockName == propertyTypeId);
     ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
 //    if (RPluginLoader::hasPlugin("DWG")) {
@@ -209,7 +209,7 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
     } else if (propertyTypeId == PropertyLinearFactor) {
         return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDimScale) {
-        return qMakePair(QVariant(getData().dimScale), RPropertyAttributes());
+        return qMakePair(QVariant(getData().dimScaleOverride), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDimBlockName) {
         return qMakePair(QVariant(getData().dimBlockName), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyAutoTextPos) {
@@ -308,7 +308,7 @@ void RDimensionEntity::print(QDebug dbg) const {
                   << ", lower tolerance: " << getData().lowerTolerance
                   << ", measurement (label): " << getData().getMeasurement(true)
                   << ", measurement (stored): " << getData().getMeasurement(false)
-                  << ", dimscale: " << getData().getDimScale()
+                  << ", dimscale: " << getData().getDimScale(false)
                   << ")";
 }
 

@@ -130,10 +130,10 @@ public:
         linearFactor = f;
     }
 
-    double getDimScale() const;
+    double getDimScale(bool fromDocument=true) const;
 
     void setDimScale(double f) {
-        dimScale = f;
+        dimScaleOverride = f;
         update();
     }
 
@@ -150,7 +150,6 @@ public:
     virtual void scaleVisualProperties(double scaleFactor);
     virtual bool mirror(const RLine& axis);
 
-    //double getDimscale() const;
     double getDimexo() const;
     double getDimexe() const;
     double getDimasz() const;
@@ -230,7 +229,7 @@ protected:
     double textAngle;
 
     double linearFactor;
-    double dimScale;
+    double dimScaleOverride;
 
     mutable bool dirty;
     mutable RTextData textData;

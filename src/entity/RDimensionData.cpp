@@ -32,7 +32,7 @@ RDimensionData::RDimensionData(RDocument* document) :
     defaultAngle(RNANDOUBLE),
     textAngle(0.0),
     linearFactor(1.0),
-    dimScale(0.0),
+    dimScaleOverride(0.0),
     dirty(true),
     dimLineLength(0.0),
     autoTextPos(true) {
@@ -83,7 +83,7 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       defaultAngle(RNANDOUBLE),
       textAngle(angle),
       linearFactor(1.0),
-      dimScale(0.0),
+      dimScaleOverride(0.0),
       dirty(true),
       dimLineLength(0.0),
       autoTextPos(true) {
@@ -200,7 +200,7 @@ bool RDimensionData::scale(const RVector& scaleFactors, const RVector& center) {
 }
 
 void RDimensionData::scaleVisualProperties(double scaleFactor) {
-    setDimScale(dimScale * scaleFactor);
+    setDimScale(dimScaleOverride * scaleFactor);
     if (!RMath::fuzzyCompare(scaleFactor, 0.0)) {
         setLinearFactor(linearFactor / scaleFactor);
     }
@@ -216,11 +216,11 @@ bool RDimensionData::mirror(const RLine& axis) {
     return true;
 }
 
-double RDimensionData::getDimScale() const {
-    double ret = dimScale;
+double RDimensionData::getDimScale(bool fromDocument) const {
+    double ret = dimScaleOverride;
 
     // dimScale is 0.0 (not set): use dimScale of document
-    if (document!=NULL && RMath::fuzzyCompare(ret, 0.0)) {
+    if (fromDocument && document!=NULL && RMath::fuzzyCompare(ret, 0.0)) {
         ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
     }
 
