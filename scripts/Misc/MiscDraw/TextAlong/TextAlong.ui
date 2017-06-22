@@ -91,7 +91,7 @@
    <item>
     <widget class="QToolButton" name="CounterClockwise">
      <property name="toolTip">
-      <string>CounterClockwise</string>
+      <string>Counter Clockwise</string>
      </property>
      <property name="text">
       <string/>
