@@ -42,6 +42,7 @@ LanguagePreferences.localLanguageName["ru"] = "ру́сский язы́к";
 LanguagePreferences.localLanguageName["sk"] = "Slovenčina";
 LanguagePreferences.localLanguageName["sl"] = "Slovenščina";
 LanguagePreferences.localLanguageName["sv"] = "Svenska";
+LanguagePreferences.localLanguageName["zh_TW"] = "臺灣話";
 LanguagePreferences.localLanguageName["zh_ZN"] = "普通话";
 
 function LanguagePreferences(guiAction) {
