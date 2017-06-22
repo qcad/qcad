@@ -22,7 +22,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+125"/>
+        <location filename="../BlockDialog.js" line="+134"/>
         <source>Leading or trailing spaces.</source>
         <translation>Presledki spredaj ali zadaj.</translation>
     </message>

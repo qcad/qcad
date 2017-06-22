@@ -11,7 +11,7 @@
     <message>
         <location line="+6"/>
         <source>Add new empty block</source>
-        <translation>Přidat nový prázdný blok</translation>
+        <translation>Boş Blok Ekle</translation>
     </message>
 </context>
 </TS>

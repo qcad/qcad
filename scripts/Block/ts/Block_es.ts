@@ -37,7 +37,7 @@
         <translation>block 1</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.js" line="+125"/>
+        <location filename="../BlockDialog.js" line="+134"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espacios iniciales o finales.</translation>
     </message>
