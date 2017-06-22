@@ -28,7 +28,7 @@ Idioma GUI:</translatorcomment>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="+45"/>
+        <location filename="../LanguagePreferences.js" line="+54"/>
         <source>Language Settings</source>
         <translation>Configurações de Linguagem</translation>
     </message>

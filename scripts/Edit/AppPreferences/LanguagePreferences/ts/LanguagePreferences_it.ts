@@ -24,7 +24,7 @@ Per favore riavvia Photivo per cambiare le impostazioni della lingua</translator
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="+45"/>
+        <location filename="../LanguagePreferences.js" line="+54"/>
         <source>Language Settings</source>
         <translation>Impostazioni della lingua</translation>
     </message>
