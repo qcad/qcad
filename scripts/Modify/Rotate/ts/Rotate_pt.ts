@@ -94,7 +94,12 @@ Cópias &amp;Múltiplas</translatorcomment>
         <translation>Â&amp;ngulo (a):</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+20"/>
+        <source>Define angle using mouse cursor</source>
+        <translation>Defina o ângulo usando o cursor do mouse</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--exact match--
 --file: Mirror_pt.ts--

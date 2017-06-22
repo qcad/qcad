@@ -65,7 +65,12 @@ Punto objetivo</translatorcomment>
         <translation>Á&amp;ngulo (a):</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+20"/>
+        <source>Define angle using mouse cursor</source>
+        <translation>Definir ángulo con el cursor del ratón</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--exact match--
 --file: Mirror_es.ts--

@@ -57,7 +57,12 @@
         <translation>&amp;Hoek (a):</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+20"/>
+        <source>Define angle using mouse cursor</source>
+        <translation>Definieer hoek met behulp van de muis cursor</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>

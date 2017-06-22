@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+54"/>
         <source>Converted drawing from %1 to %2</source>
         <translation type="unfinished"></translation>
     </message>

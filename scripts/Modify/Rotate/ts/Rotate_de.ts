@@ -52,11 +52,16 @@
         <translation>&amp;Mehrere Kopien</translation>
     </message>
     <message>
+        <location line="+114"/>
+        <source>Define angle using mouse cursor</source>
+        <translation>Winkel mit dem Mauszeiger definieren</translation>
+    </message>
+    <message>
         <source>10</source>
         <translation type="obsolete">10</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="-20"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Winkel (a):</translation>
     </message>
@@ -65,7 +70,7 @@
         <translation type="obsolete">45.0</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+36"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Aktueller Layer / &amp;Attribute</translation>
     </message>

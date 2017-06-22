@@ -86,17 +86,17 @@
         <translation>Tipo di linea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+176"/>
+        <location filename="../LayerDialog.js" line="+188"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spazi iniziali o finali.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Layer name is empty.</source>
         <translation>Nome del layer è vuoto.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Layer already exists.</source>
         <translation>Layer già esistente.</translation>
     </message>

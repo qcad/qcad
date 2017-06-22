@@ -25,7 +25,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+115"/>
+        <location filename="../BlockDialog.js" line="+125"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaços no início ou no fim.</translation>
     </message>

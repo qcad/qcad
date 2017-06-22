@@ -52,17 +52,17 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+176"/>
+        <location filename="../LayerDialog.js" line="+188"/>
         <source>Leading or trailing spaces.</source>
         <translation>Na začiatku alebo na konci nesmie byť medzera.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Layer name is empty.</source>
         <translation>Zadajte názov vrstvy.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Layer already exists.</source>
         <translation>Zadajte iný názov. Takýto už existuje.</translation>
     </message>

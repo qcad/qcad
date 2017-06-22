@@ -92,18 +92,18 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Tipo de línea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+176"/>
+        <location filename="../LayerDialog.js" line="+188"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espacios iniciales o finales.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nombre de la capa está vacía.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Layer already exists.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Capa ya existe.</translation>

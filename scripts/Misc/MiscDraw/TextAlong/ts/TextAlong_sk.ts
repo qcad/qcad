@@ -45,7 +45,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>CounterClockwise</source>
+        <source>Counter Clockwise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -67,7 +67,7 @@
 <context>
     <name>TextAlong</name>
     <message>
-        <location filename="../TextAlong.js" line="+98"/>
+        <location filename="../TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
         <translation type="unfinished"></translation>
@@ -76,6 +76,11 @@
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Selected entity is not a Line, Arc or Circle!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

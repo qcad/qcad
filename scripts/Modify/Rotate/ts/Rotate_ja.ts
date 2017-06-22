@@ -57,7 +57,12 @@
         <translation>&amp;A 角度(a):</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+20"/>
+        <source>Define angle using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>

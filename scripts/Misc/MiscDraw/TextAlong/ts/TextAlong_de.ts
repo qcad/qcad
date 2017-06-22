@@ -21,12 +21,12 @@
     <message>
         <location line="+7"/>
         <source>Text height</source>
-        <translation>Texthöhe:</translation>
+        <translation>Texthöhe</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation>Abstand:</translation>
+        <translation>Abstand</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -45,13 +45,17 @@
     </message>
     <message>
         <location line="+7"/>
+        <source>Counter Clockwise</source>
+        <translation>Gegenuhrzeigersinn</translation>
+    </message>
+    <message>
         <source>CounterClockwise</source>
-        <translation>CounterClockwise</translation>
+        <translation type="vanished">CounterClockwise</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation>Clockwise</translation>
+        <translation>Uhrzeigersinn</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -67,7 +71,7 @@
 <context>
     <name>TextAlong</name>
     <message>
-        <location filename="../TextAlong.js" line="+98"/>
+        <location filename="../TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
         <translation>Objekt selektieren</translation>
@@ -77,6 +81,11 @@
         <location line="+1"/>
         <source>Position</source>
         <translation>Position</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Selected entity is not a Line, Arc or Circle!</source>
+        <translation>Element ist keine Linie und kein Bogen oder Kreis.</translation>
     </message>
     <message>
         <location filename="../TextAlongInit.js" line="+2"/>

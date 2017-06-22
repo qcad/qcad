@@ -90,18 +90,18 @@
         <translation>Type de ligne :</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+176"/>
+        <location filename="../LayerDialog.js" line="+188"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nom du calque est vide.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Layer already exists.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Calque existe déjà.</translation>

@@ -22,7 +22,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+115"/>
+        <location filename="../BlockDialog.js" line="+125"/>
         <source>Leading or trailing spaces.</source>
         <translation>前导或尾随空格。</translation>
     </message>

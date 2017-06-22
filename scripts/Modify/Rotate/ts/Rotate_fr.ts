@@ -60,7 +60,12 @@ Indiquer le point cible</translatorcomment>
         <translation>&amp;Angle (a) :</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+20"/>
+        <source>Define angle using mouse cursor</source>
+        <translation>Définir l&apos;angle à l&apos;aide du curseur de la souris</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
