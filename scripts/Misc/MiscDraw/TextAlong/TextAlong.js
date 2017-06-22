@@ -123,9 +123,9 @@ TextAlong.prototype.pickEntity = function(event, preview) {
         return;
     } else {
         if (!preview) {
-            var type = entityTypeToString(entity.getType(), false);
-            if (type !== "Line" && type !== "Arc" && type !== "Circle") {
-                EAction.handleUserWarning("Selected entity is not a Line, Arc or Circle!");
+            var type = entity.getType();
+            if (type !== RS.EntityLine && type !== RS.EntityArc && type !== RS.EntityCircle) {
+                EAction.handleUserWarning(qsTr("Selected entity is not a Line, Arc or Circle!"));
                 return;
             }
 
@@ -162,22 +162,22 @@ TextAlong.prototype.getOperation = function(preview) {
     var type;
 
     if (!isNull(this.entity)) {
-        type = entityTypeToString(this.entity.getType(), false);
+        type = this.entity.getType();
     } else {
         return undefined;
     }
 
     var op = undefined;
     switch(type) {
-    case "Line" :
+    case RS.EntityLine :
         op = this.alongLine();
         break;
-    case "Arc" :
+    case RS.EntityArc :
         // 'this.entity' is a pointer to the arc, so get the actual arc object
         var arc = this.entity.getData().getArc();
         op = this.alongArc(arc);
         break;
-    case "Circle" :
+    case RS.EntityCircle :
         // create a circular arc and use 'alongArc'.
         // when using 'fit', add one or more spaces to the start or end of the text
         var arc = new RArc(this.entity.getCenter(), this.entity.getRadius(), 0.0, 0.0);
