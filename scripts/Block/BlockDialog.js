@@ -28,15 +28,19 @@ include("../WidgetFactory.js");
  * \param document RDocument the block is in.
  * \param block RBlock object to edit or undefined to create and return a new block.
  */
-function BlockDialog(document, block, allowOverwrite) {
+function BlockDialog(document, block, allowOverwrite, allowSameName) {
     if (isNull(allowOverwrite)) {
         allowOverwrite = true;
+    }
+    if (isNull(allowSameName)) {
+        allowSameName = false;
     }
 
     this.dialog = null;
     this.document = document;
     this.block = block;
     this.allowOverwrite = allowOverwrite;
+    this.allowSameName = allowSameName;
 }
 
 BlockDialog.includeBasePath = includeBasePath;
@@ -61,6 +65,11 @@ BlockDialog.prototype.show = function() {
         leBlockName.text = this.block.getName();
         if (leBlockName.text.startsWith("*")) {
             leBlockName.enabled = false;
+        }
+        if (!this.allowSameName) {
+            // creating copy of block:
+            // select name:
+            leBlockName.selectAll();
         }
     }
 
@@ -146,7 +155,7 @@ BlockDialog.validate = function(block, blockName, document, dialog, validator, a
             message.text += "<font color='red'>" + qsTr("Block '%1' already exists<br>and will be overwritten.").arg(leBlockName.text.toString())  + "</font>";
             acceptable = true;
         }
-        else if (isNull(block) || block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) {
+        else if (isNull(block) || block.getName().toLowerCase() !== leBlockName.text.toLowerCase() || !this.allowSameName) {
             // error: renaming existing block to existing block name (not allowed):
             message.text = "<font color='red'>" + qsTr("Block already exists.") + "</font>";
             acceptable = false;
