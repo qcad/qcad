@@ -3,7 +3,7 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/CloseFile.js");
     action.setIcon(basePath + "/CloseFile.svg");
-    if (RS.getSystemId()!=="linux") {
+    if (RS.getSystemId()!=="linux" || RSettings.isQt(5)) {
         action.setDefaultShortcut(new QKeySequence(QKeySequence.Close));
     }
     action.setDefaultCommands(["close"]);
