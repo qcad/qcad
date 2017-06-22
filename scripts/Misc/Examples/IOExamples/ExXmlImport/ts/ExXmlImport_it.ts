@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="it">
 <context>
     <name>ExXmlImport</name>
     <message>
@@ -11,12 +11,12 @@
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa XML</translation>
     </message>
     <message>
         <location filename="../ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Import XML</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="it">
 <context>
     <name>LineBoxJoint</name>
     <message>
@@ -26,32 +26,32 @@
     <message>
         <location line="+23"/>
         <source>Finger Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spessore linea:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rapporto Linea/Slot:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Style:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation type="unfinished"></translation>
+        <translation>Prima Linea</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation type="unfinished"></translation>
+        <translation>Primo slot</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tennons</source>
-        <translation type="unfinished"></translation>
+        <translation>Tennons</translation>
     </message>
     <message>
         <location filename="../LineBoxJointInit.js" line="+2"/>

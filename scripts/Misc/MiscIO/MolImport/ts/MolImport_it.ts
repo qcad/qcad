@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="it">
 <context>
     <name>MolImport</name>
     <message>
         <location filename="../MolImport.js" line="+38"/>
         <source>Import MOL</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa MOL</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>MOL Files</source>
-        <translation type="unfinished"></translation>
+        <translation>File MOL</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../MolImportInit.js" line="+2"/>
         <source>Leetro MOL Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>Leetro MOL Importa...</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Importare Leetro MOL file...</translation>
     </message>
     <message>
         <location line="+1"/>

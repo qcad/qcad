@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="it">
 <context>
     <name>MenusAndToolBars</name>
     <message>
         <location filename="../MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished"></translation>
+        <translation>MenusAndToolBars() avviato...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Menus e Toolbar</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Script personali</translation>
     </message>
 </context>
 </TS>

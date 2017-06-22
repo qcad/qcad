@@ -16,7 +16,7 @@
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation>Zoznam</translation>
+        <translation>Zoznam Pohľadov</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -52,7 +52,7 @@
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation>Zoznam</translation>
+        <translation>Zoznam pohľadov</translation>
     </message>
 </context>
 <context>

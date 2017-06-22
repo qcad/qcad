@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="it">
 <context>
     <name>Cross</name>
     <message>
@@ -39,17 +39,17 @@
     <message>
         <location line="+5"/>
         <source>Total length</source>
-        <translation type="unfinished"></translation>
+        <translation>Lunghezza totale</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <translation>Percentuale</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angolo:</translation>
     </message>
 </context>
 </TS>

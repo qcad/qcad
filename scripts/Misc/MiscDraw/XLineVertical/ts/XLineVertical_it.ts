@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="it">
 <context>
     <name>XLineVertical</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+4"/>
         <source>Draw vertical construction line</source>
-        <translation type="unfinished"></translation>
+        <translation>Disegna linea di costruzione verticale</translation>
     </message>
 </context>
 </TS>

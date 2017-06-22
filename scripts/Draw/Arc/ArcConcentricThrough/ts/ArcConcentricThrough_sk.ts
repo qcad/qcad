@@ -11,7 +11,7 @@
     <message>
         <location filename="../ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>Sús&amp;tredný (cez bod)</translation>
+        <translation>Sús&amp;tredný (s pomocou bodu)</translation>
     </message>
     <message>
         <location line="+5"/>

@@ -29,7 +29,7 @@
     <message>
         <location filename="../EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation>Elipsa s &amp;Dĺžkami</translation>
+        <translation>Elipsa z &amp;Dĺžok</translation>
     </message>
     <message>
         <location line="+5"/>

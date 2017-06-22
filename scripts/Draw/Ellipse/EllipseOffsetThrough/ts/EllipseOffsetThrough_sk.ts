@@ -11,7 +11,7 @@
     <message>
         <location filename="../EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Paralelná elipsa (&amp;cez Bod)</translation>
+        <translation>Paralelná elipsa (&amp;s pomocou Bodu)</translation>
     </message>
     <message>
         <location line="+4"/>

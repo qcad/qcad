@@ -123,7 +123,7 @@
     <message>
         <location line="+7"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation>Esplodere testo multilinea in più blocchi di testo semplice</translation>
+        <translation>Esploda i testi multilinea in più blocchi di testo semplici</translation>
     </message>
     <message>
         <location line="-155"/>

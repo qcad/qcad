@@ -21,12 +21,12 @@
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>&amp;Tangenciálne pripojený</translation>
+        <translation>&amp;Dotyčnicovo pripojený</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation>Nakreslite dotyčnicový oblúk k základným prvkom</translation>
+        <translation>Nakreslite dotyčnicový oblúk k základnému prvku</translation>
     </message>
 </context>
 </TS>

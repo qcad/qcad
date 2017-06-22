@@ -79,7 +79,7 @@
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Každý prvok obrysu musí byť úsečka, oblúk, kružnica, elipsový oblúk, elipsa, krivka alebo spline. Nájdené:</translation>
+        <translation>&amp;Šrafovanie/Výplň z výberu</translation>
     </message>
     <message>
         <location line="+5"/>

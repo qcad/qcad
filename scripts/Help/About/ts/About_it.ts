@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT">
+<TS version="2.1" language="it">
 <context>
     <name>About</name>
     <message>
@@ -34,7 +34,7 @@
     <message>
         <location line="+9"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation>Questo programma è distribuito nella speranza che sia utile, ma SENZA ALCUNA GARANZIA; senza neppure la garanzia implicita di NEGOZIABILITÀ o di APPLICABILITÀ PER UN PARTICOLARE SCOPO.</translation>
+        <translation>Questo programma è distribuito SENZA ALCUNA GARANZIA, INCLUSA la garanzia implicita PER DISEGNO, COMMERCIABILITÀ E IDONEITÀ AD UNO SCOPO PARTICOLARE.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -78,7 +78,7 @@
         <location line="-95"/>
         <location line="+99"/>
         <source>Qt Version:</source>
-        <translation>Qt Versione:</translation>
+        <translation>Versione Qt:</translation>
     </message>
     <message>
         <location line="-74"/>
@@ -100,7 +100,7 @@
     <message>
         <location line="-128"/>
         <source>Build Date:</source>
-        <translation>Data corporatura:</translation>
+        <translation>Data Compilazione:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -110,7 +110,7 @@
     <message>
         <location line="+3"/>
         <source>Compiler:</source>
-        <translation>Compiler:</translation>
+        <translation>Compilatore:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -120,17 +120,17 @@
     <message>
         <location line="+7"/>
         <source>%1 is free (open source) software.</source>
-        <translation>%1 è software libero (open source).</translation>
+        <translation>%1 è un software libero (open source).</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Plugins e script add-ons sono soggetti alle rispettive licenze (vedi &quot;Plugin&quot; scheda).</translation>
+        <translation>Plugins e script add-ons sono soggetti alle rispettive licenze (vedi scheda &quot;Plugins&quot;).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation>Tutti i nomi di incendio o di prodotto sono marchi o marchi registrati dei rispettivi proprietari.</translation>
+        <translation>Tutti i nomi di marchio o di prodotto sono diritti registrati dai rispettivi proprietari.</translation>
     </message>
     <message>
         <source>Portions of this software © 2013 Digia Plc.</source>
@@ -182,12 +182,12 @@
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation>Nessuno script add-on disponibili.</translation>
+        <translation>Nessuno script add-on disponibile.</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation>Crediti</translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="+2"/>
@@ -220,7 +220,7 @@
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation>Testing, feedback e correzioni minori</translation>
+        <translation>Test, feedback e correzioni minori</translation>
     </message>
 </context>
 <context>
@@ -247,7 +247,7 @@
     <message>
         <location line="+67"/>
         <source>Scripts</source>
-        <translation>Scripts</translation>
+        <translation>Script</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -257,7 +257,7 @@
     <message>
         <location line="-201"/>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation>Crediti</translation>
     </message>
     <message>
         <source>About Plugins</source>

@@ -7,13 +7,13 @@
         <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
-        <translation>&amp;Šírka:</translation>
+        <translation>&amp;Šírka (os X):</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
-        <translation>&amp;Výška:</translation>
+        <translation>&amp;Výška (os Y):</translation>
     </message>
     <message>
         <location line="+30"/>
