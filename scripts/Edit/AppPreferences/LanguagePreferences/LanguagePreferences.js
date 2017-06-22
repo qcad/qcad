@@ -21,19 +21,28 @@ include("../../EAction.js");
 include("../../WidgetFactory.js");
 
 LanguagePreferences.localLanguageName = [];
-LanguagePreferences.localLanguageName["en"] = "English";
-LanguagePreferences.localLanguageName["en_US"] = "English";
+LanguagePreferences.localLanguageName["cs"] = "Čeština";
 LanguagePreferences.localLanguageName["de"] = "Deutsch";
 LanguagePreferences.localLanguageName["de_DE"] = "Deutsch";
-LanguagePreferences.localLanguageName["fr"] = "Français";
-LanguagePreferences.localLanguageName["pt"] = "Português";
-LanguagePreferences.localLanguageName["pt_BR"] = "Português Brasileiro";
+LanguagePreferences.localLanguageName["en"] = "English";
+LanguagePreferences.localLanguageName["en_US"] = "English";
 LanguagePreferences.localLanguageName["es"] = "Español";
+LanguagePreferences.localLanguageName["fi"] = "Suomi";
+LanguagePreferences.localLanguageName["fr"] = "Français";
+LanguagePreferences.localLanguageName["hu"] = "Magyar";
+LanguagePreferences.localLanguageName["hr"] = "Hrvatski";
 LanguagePreferences.localLanguageName["it"] = "Italiano";
 LanguagePreferences.localLanguageName["ja"] = "日本語";
+LanguagePreferences.localLanguageName["lt"] = "Lietuvių kalba";
+LanguagePreferences.localLanguageName["nl"] = "Nederlands";
 LanguagePreferences.localLanguageName["pl"] = "Polski";
+LanguagePreferences.localLanguageName["pt"] = "Português";
+LanguagePreferences.localLanguageName["pt_BR"] = "Português Brasileiro";
 LanguagePreferences.localLanguageName["ru"] = "ру́сский язы́к";
+LanguagePreferences.localLanguageName["sk"] = "Slovenčina";
 LanguagePreferences.localLanguageName["sl"] = "Slovenščina";
+LanguagePreferences.localLanguageName["sv"] = "Svenska";
+LanguagePreferences.localLanguageName["zh_ZN"] = "普通话";
 
 function LanguagePreferences(guiAction) {
     EAction.call(this, guiAction);
