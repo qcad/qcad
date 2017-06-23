@@ -91,7 +91,6 @@ RBlockListQt.addContextMenuScriptFile = function(scriptFile) {
     if (isNull(blockList)) {
         return;
     }
-    qDebug("got blocklist");
 
     var scriptFiles = RBlockListQt.getContextMenuScriptFiles();
     scriptFiles.push(scriptFile);
