@@ -24,7 +24,7 @@ QStringList RDxfExporterFactory::getFilterStrings() {
 
     QString sDrawing = QObject::tr("Drawing");
 
-    ret << QString("R15 (2000/LT2000) DXF %1 (dxflib) (*.dxf)").arg(sDrawing);
+    ret << QString("R15 [2000/LT2000] DXF %1 [dxflib] (*.dxf)").arg(sDrawing);
     //ret << QString("R12 (LT2) DXF %1 (dxflib) (*.dxf)").arg(sDrawing);
 
     return ret;
