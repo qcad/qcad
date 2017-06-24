@@ -115,7 +115,7 @@
     <message>
         <location line="+7"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Napísať(vykresliť) text pozdĺž prvku</translation>
     </message>
     <message>
         <location line="-155"/>

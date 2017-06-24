@@ -59,7 +59,7 @@
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Definujte uhol pomocou kurzora myši</translation>
     </message>
     <message>
         <location line="+16"/>
