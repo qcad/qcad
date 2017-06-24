@@ -206,7 +206,7 @@ InsertBlock.prototype.slotKeepProportionsChanged = function(value) {
     var keepProportionsSwitch = optionsToolBar.findChild("KeepProportions");
 
     if (value===true) {
-        scaleYCombo.currentText = scaleXCombo.currentText;
+        scaleYCombo.setEditText(scaleXCombo.currentText);
         scaleYCombo.enabled = false;
         scaleYLabel.enabled = false;
         keepProportionsSwitch.icon = new QIcon(InsertBlock.includeBasePath + "/KeepProportionsOn.svg");

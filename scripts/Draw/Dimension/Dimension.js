@@ -106,7 +106,7 @@ Dimension.prototype.initScaleCombo = function() {
     for (var i=0; i<scales.length; ++i) {
         scaleCombo.addItem(scales[i]);
     }
-    scaleCombo.currentText = prev;
+    scaleCombo.setEditText(prev);
     scaleCombo.blockSignals(false);
 };
 
