@@ -116,7 +116,12 @@ Block.getActiveBlockId = function() {
         return RObject.INVALID_ID;
     }
 
-    var item = blockList.currentItem();
+    var list = blockList.selectedItems();
+    if (list.length === 0) {
+        return RObject.INVALID_ID;
+    }
+
+    var item = list[0];
     if (isNull(item)) {
         return RObject.INVALID_ID;
     }
