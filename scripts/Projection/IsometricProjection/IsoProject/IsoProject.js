@@ -52,13 +52,27 @@ IsoProject.prototype.initUiOptions = function(resume, optionsToolBar) {
     methodCombo.addItem(qsTr("Planometric"), RS.Planometric);
     methodCombo.addItem(qsTr("Cabinet"), RS.Cabinet);
     methodCombo.addItem(qsTr("Cavalier"), RS.Cavalier);
-    var n = "%1 (%2/%3)"
+    var n;
+    n = "%1 (%2/%3)"
         .arg(RSettings.getStringValue("IsoProject/User1Name", "User 1"))
-        .arg();
+        .arg(RSettings.getDoubleValue("IsoProject/User1A", 45))
+        .arg(RSettings.getDoubleValue("IsoProject/User1B", 15));
     methodCombo.addItem(n, RS.User1);
-    methodCombo.addItem(RSettings.getStringValue("IsoProject/User2Name", "User 2"), RS.User2);
-    methodCombo.addItem(RSettings.getStringValue("IsoProject/User3Name", "User 3"), RS.User3);
-    methodCombo.addItem(RSettings.getStringValue("IsoProject/User4Name", "User 4"), RS.User4);
+    n = "%1 (%2/%3)"
+        .arg(RSettings.getStringValue("IsoProject/User2Name", "User 2"))
+        .arg(RSettings.getDoubleValue("IsoProject/User2A", 15))
+        .arg(RSettings.getDoubleValue("IsoProject/User2B", 45));
+    methodCombo.addItem(n, RS.User2);
+    n = "%1 (%2/%3)"
+        .arg(RSettings.getStringValue("IsoProject/User3Name", "User 3"))
+        .arg(RSettings.getDoubleValue("IsoProject/User3A", 22.5))
+        .arg(RSettings.getDoubleValue("IsoProject/User3B", 22.5));
+    methodCombo.addItem(n, RS.User3);
+    n = "%1 (%2/%3)"
+        .arg(RSettings.getStringValue("IsoProject/User4Name", "User 4"))
+        .arg(RSettings.getDoubleValue("IsoProject/User4A", 15))
+        .arg(RSettings.getDoubleValue("IsoProject/User4B", 15));
+    methodCombo.addItem(n, RS.User4);
 
     methodCombo.blockSignals(false);
 
