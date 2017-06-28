@@ -7,8 +7,8 @@
  * \ingroup ecma_simple
  *
  * \code
- * addLayer("MyLayer")
- * addLayer("MyLayer", "white", "CONTINUOUS", RLineweight.Weight025)
+ * addLayer("MyLayer1")
+ * addLayer("MyLayer2", "white", "CONTINUOUS", RLineweight.Weight025)
  * \endcode
  */
 function addLayer(name, colorName, linetypeName, lineWeight) {
