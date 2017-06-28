@@ -36,6 +36,10 @@ function PropertyWatcher(propertyEditor, sender, propertyType) {
  * that match the current entity type filter.
  */
 PropertyWatcher.prototype.propertyChanged = function(value) {
+    // TODO:
+    // only do something if the value has actually changed
+    // remember edited status of widgets
+
     var attributes = this.propertyEditor.getPropertyAttributes(this.propertyType);
 
     var typeHint = 0;
@@ -466,45 +470,45 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 
             // layer:
             else if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
-                this.initControls(propertyTypeId, onlyChanges, layerCombo);
+                this.initControls(propertyTypeId, true, layerCombo);
                 gotLayerProperty = true;
             }
 
             // color:
             else if (propertyTypeId.getId()===REntity.PropertyColor.getId()) {
-                this.initControls(propertyTypeId, onlyChanges, colorCombo);
+                this.initControls(propertyTypeId, true, colorCombo);
             }
 
             // lineweight:
             else if (propertyTypeId.getId()===REntity.PropertyLineweight.getId()) {
-                this.initControls(propertyTypeId, onlyChanges, lineweightCombo);
+                this.initControls(propertyTypeId, true, lineweightCombo);
             }
 
             // linetype:
             else if (propertyTypeId.getId()===REntity.PropertyLinetype.getId()) {
-                this.initControls(propertyTypeId, onlyChanges, linetypeCombo);
+                this.initControls(propertyTypeId, true, linetypeCombo);
             }
 
             // linetype scale:
             else if (propertyTypeId.getId()===REntity.PropertyLinetypeScale.getId()) {
-                this.initControls(propertyTypeId, onlyChanges, linetypeScaleEdit);
+                this.initControls(propertyTypeId, true, linetypeScaleEdit);
                 gotLinetypeScaleProperty = true;
             }
 
             // draw order:
             else if (propertyTypeId.getId()===REntity.PropertyDrawOrder.getId()) {
-                this.initControls(propertyTypeId, onlyChanges, drawOrderEdit);
+                this.initControls(propertyTypeId, true, drawOrderEdit);
                 gotDrawOrderProperty = true;
             }
 
             // handle:
             else if (propertyTypeId.getId()===RObject.PropertyHandle.getId()) {
-                this.initControls(propertyTypeId, onlyChanges, handleEdit);
+                this.initControls(propertyTypeId, true, handleEdit);
             }
 
             // protected:
             else if (propertyTypeId.getId()===RObject.PropertyProtected.getId()) {
-                this.initControls(propertyTypeId, onlyChanges, protectedCombo);
+                this.initControls(propertyTypeId, true, protectedCombo);
             }
 
             // other properties:
