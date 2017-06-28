@@ -305,7 +305,7 @@ void RClipboardOperation::copyEntity(
         // to given, fixed layer:
         destLayer = dest.queryLayer(layerName);
     }
-    if (destLayer.isNull()) {
+    if (destLayer.isNull() && !toCurrentLayer) {
         // copy layer:
         destLayer = copyEntityLayer(entity, src, dest, overwriteLayers, transaction);
     }
