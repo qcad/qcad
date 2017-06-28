@@ -107,6 +107,9 @@ public:
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
     virtual bool intersectsWith(const RShape& shape) const;
 
+    /**
+     * \return Position of the reference point of the text.
+     */
     RVector getPosition() const {
         return position;
     }
@@ -115,6 +118,10 @@ public:
         this->position = position;
     }
 
+    /**
+     * \return Alignment point of the reference point of the text.
+     * This is usually the same as the position.
+     */
     RVector getAlignmentPoint() const {
         return alignmentPoint;
     }
