@@ -29,7 +29,6 @@ void RPainterPathExporter::exportLineSegment(const RLine& line, double angle) {
         else {
             // Qt won't export a zero length line as point:
             // e.g. dot in a dash/dot line:
-            qDebug() << "creating 0.01 hatch dot: " << line;
             RVector startPoint = line.startPoint - RVector::createPolar(0.01, angle);
             RVector endPoint = line.endPoint + RVector::createPolar(0.01, angle);
             path.moveTo(startPoint);
