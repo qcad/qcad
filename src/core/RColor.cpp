@@ -55,7 +55,7 @@ RColor::RColor(RColor::Mode mode) :
     QColor(), mode(mode) {
 }
 
-RColor::RColor(const QString & name, RColor::Mode mode) :
+RColor::RColor(const QString& name, RColor::Mode mode) :
     QColor(name), mode(mode) {
 }
 

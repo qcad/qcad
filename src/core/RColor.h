@@ -57,7 +57,7 @@ public:
     RColor();
     RColor(int r, int g, int b, int a = 255, RColor::Mode mode = RColor::Fixed);
     RColor(RColor::Mode mode);
-    RColor(const QString & name, RColor::Mode mode = RColor::Fixed);
+    RColor(const QString& name, RColor::Mode mode = RColor::Fixed);
 
     /**
      * \nonscriptable
