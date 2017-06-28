@@ -1968,19 +1968,21 @@ LibraryBrowser.showDirectory = function(dirName) {
     }
 
     var dirModel = dirTree.model();
-    var treeIndex = dirModel.pathIndex(dirName);
-    LibraryBrowser.deselectAllDirs();
-    var selectionModel = dirTree.selectionModel();
-    var flags = new QItemSelectionModel.SelectionFlags(QItemSelectionModel.Select);
-    var idxList = LibraryBrowser.getSelectedIndexes(selectionModel);
-    selectionModel.select(treeIndex, flags);
-    while (treeIndex.isValid()) {
-        dirTree.setExpanded(treeIndex, true);
-        treeIndex = treeIndex.parent();
-        QCoreApplication.processEvents();
+    if (!isNull(dirModel)) {
+        var treeIndex = dirModel.pathIndex(dirName);
+        LibraryBrowser.deselectAllDirs();
+        var selectionModel = dirTree.selectionModel();
+        var flags = new QItemSelectionModel.SelectionFlags(QItemSelectionModel.Select);
+        var idxList = LibraryBrowser.getSelectedIndexes(selectionModel);
+        selectionModel.select(treeIndex, flags);
+        while (treeIndex.isValid()) {
+            dirTree.setExpanded(treeIndex, true);
+            treeIndex = treeIndex.parent();
+            QCoreApplication.processEvents();
+        }
+        treeIndex = dirModel.pathIndex(dirName);
+        dirTree.scrollTo(treeIndex);
     }
-    treeIndex = dirModel.pathIndex(dirName);
-    dirTree.scrollTo(treeIndex);
     listView.scrollToTop();
 };
 
