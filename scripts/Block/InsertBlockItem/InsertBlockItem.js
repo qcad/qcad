@@ -184,7 +184,9 @@ InsertBlockItem.prototype.setState = function(state) {
 };
 
 InsertBlockItem.prototype.finishEvent = function() {
-    this.diItem.destroy();
+    if (!isNull(this.diItem)) {
+        this.diItem.destroy();
+    }
     BlockInsert.prototype.finishEvent.call(this);
 };
 
