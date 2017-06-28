@@ -330,7 +330,7 @@ function addShape(shape) {
  * transaction.
  */
 function addEntity(entity) {
-    addObject(entity);
+    return addObject(entity);
 }
 
 /**
