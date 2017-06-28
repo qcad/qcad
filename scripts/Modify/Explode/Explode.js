@@ -36,6 +36,23 @@ Explode.initPreferences = function(pageWidget, calledByPrefDialog, document) {
         // remove MultilineTextToSimpleText option:
         widgets["MultilineTextToSimpleText"].visible = false;
     }
+
+    if (!RSpline.hasProxy()) {
+        widgets["SplineTolerance"].visible = false;
+        widgets["SplineTolerance_Label"].visible = false;
+        widgets["SplinesToLineSegments"].visible = false;
+        widgets["Indent"].destroy();
+        pageWidget.findChild("GridLayout").addWidget(widgets["SplineSegments_Label"], 2, 0, 1, 2);
+    }
+    else {
+        widgets["SplinesToLineSegments"].toggled.connect(function(state) {
+            widgets["SplineSegments"].enabled = state;
+            widgets["SplineSegments_Label"].enabled = state;
+        });
+
+        widgets["SplineSegments"].enabled = widgets["SplinesToLineSegments"].checked;
+        widgets["SplineSegments_Label"].enabled = widgets["SplinesToLineSegments"].checked;
+    }
 };
 
 Explode.prototype.beginEvent = function() {
