@@ -3,6 +3,45 @@
  */
 
 /**
+ * Adds a layer to the drawing.
+ * \ingroup ecma_simple
+ *
+ * \code
+ * addLayer("MyLayer")
+ * addLayer("MyLayer", "white", "CONTINUOUS", RLineweight.Weight025)
+ * \endcode
+ */
+function addLayer(name, colorName, linetypeName, lineWeight) {
+    var doc = getTransactionDocument();
+    if (isNull(doc)) {
+        return undefined;
+    }
+
+    if (isNull(colorName)) {
+        colorName = "white";
+    }
+    if (isNull(linetypeName)) {
+        linetypeName = "CONTINUOUS";
+    }
+    if (isNull(lineWeight)) {
+        lineWeight = RLineweight.Weight000;
+    }
+
+    if (doc.hasLayer(name)) {
+        return undefined;
+    }
+
+    var layer = new RLayer(
+        doc, name, false, false,
+        new RColor(colorName),
+        doc.getLinetypeId(linetypeName),
+        lineWeight, false
+    );
+
+    return addObject(layer);
+}
+
+/**
  * Adds a point to the drawing.
  * \ingroup ecma_simple
  *
@@ -291,22 +330,31 @@ function addShape(shape) {
  * transaction.
  */
 function addEntity(entity) {
-    if (isFunction(entity.data)) {
-        return addEntity(entity.data().clone());
+    addObject(entity);
+}
+
+/**
+ * Adds the given RObject to the drawing.
+ * \ingroup ecma_simple
+ *
+ * \return The added object. The object does not yet have a valid ID if it was added within a
+ * transaction.
+ */
+function addObject(obj) {
+    if (isFunction(obj.data)) {
+        return addObject(obj.data().clone());
     }
 
     if (__simpleUseOp===true) {
         if (isNull(__simpleOp)) {
             __simpleOp = new RAddObjectsOperation();
-            qDebug("create op");
         }
-        __simpleOp.addObject(entity, false);
-        return entity.clone();
+        __simpleOp.addObject(obj, false);
+        return obj.clone();
     }
     else {
         var di = getDocumentInterface();
-        di.applyOperation(new RAddObjectOperation(entity, false));
-        qDebug("apply local op");
-        return entity.clone();
+        di.applyOperation(new RAddObjectOperation(obj, false));
+        return obj.clone();
     }
 }
