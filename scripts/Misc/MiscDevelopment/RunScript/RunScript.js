@@ -95,7 +95,7 @@ RunScript.prototype.beginEvent = function() {
     }
 
     for (i=0; i<fileNames.length; i++) {
-        // user chose an action (derrived from EAction and already initialized):
+        // user chose an action (derived from EAction and already initialized):
         var action = RGuiAction.getByScriptFile(fileNames[i]);
         if (!isNull(action)) {
             action.slotTrigger();

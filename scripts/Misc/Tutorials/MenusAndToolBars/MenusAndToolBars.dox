@@ -39,7 +39,7 @@ The folder structure should now look as shown below:
 
 The file "MyScripts.js" defines the base class for all scripts that will be 
 placed in this hierarchy. It also defines the top-level menu title and 
-tool bar name. All actions inside our 'MyScripts' folder are derrived from
+tool bar name. All actions inside our 'MyScripts' folder are derived from
 class 'MyScripts' and use functionality of this base class to define in
 which menu / tool bar they are shown. For this example, we want the menu to 
 be labeled "My Scripts". Here's the complete code for 'MyScripts.js':
