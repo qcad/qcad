@@ -744,10 +744,14 @@ void RPolyline::stripWidths() {
 
 void RPolyline::setMinimumWidth(double w) {
     for (int i=0; i<startWidths.length(); i++) {
-        startWidths[i] = qMax(startWidths[i], w);
+        if (startWidths[i]>RS::PointTolerance) {
+            startWidths[i] = qMax(startWidths[i], w);
+        }
     }
     for (int i=0; i<endWidths.length(); i++) {
-        endWidths[i] = qMax(endWidths[i], w);
+        if (endWidths[i]>RS::PointTolerance) {
+            endWidths[i] = qMax(endWidths[i], w);
+        }
     }
 }
 
