@@ -119,6 +119,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Planometric" />
       <value name="Dimetric" />
       <value name="Cabinet" />
+      <value name="Cabinet30" />
       <value name="Cavalier" />
       <value name="User1" />
       <value name="User2" />

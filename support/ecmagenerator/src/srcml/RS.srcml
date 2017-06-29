@@ -222,7 +222,8 @@
         <expr><name>Dimetric</name> =      0x00080000</expr>,      <comment type="line">//!&lt; Dimetric</comment>
 
         <expr><name>Cabinet</name> =       0x00100000</expr>,      <comment type="line">//!&lt; Cabinet</comment>
-        <expr><name>Cavalier</name> =      0x00200000</expr>,      <comment type="line">//!&lt; Cavalier</comment>
+        <expr><name>Cabinet30</name> =     0x00200000</expr>,      <comment type="line">//!&lt; Cabinet30</comment>
+        <expr><name>Cavalier</name> =      0x00400000</expr>,      <comment type="line">//!&lt; Cavalier</comment>
 
         <expr><name>User1</name> =         0x01000000</expr>,      <comment type="line">//!&lt; User defined 1</comment>
         <expr><name>User2</name> =         0x02000000</expr>,      <comment type="line">//!&lt; User defined 2</comment>

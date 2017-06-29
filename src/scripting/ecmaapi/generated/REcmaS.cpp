@@ -553,6 +553,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Cabinet30",
+    QScriptValue(RS::Cabinet30),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("Cavalier",
     QScriptValue(RS::Cavalier),
     QScriptValue::ReadOnly);
