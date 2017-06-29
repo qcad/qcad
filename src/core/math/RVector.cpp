@@ -457,7 +457,7 @@ RVector RVector::isoProject(RS::IsoProjectionType type) {
 
     int method = type&0xffff0000;
 
-    if (method==RS::Cavalier || method==RS::Cabinet) {
+    if (method==RS::Cavalier || method==RS::Cabinet || method==RS::Cabinet30) {
         return obliqueProjection(type);
     }
 
@@ -589,12 +589,18 @@ RVector RVector::obliqueProjection(RS::IsoProjectionType type) {
 
     double f = 1.0;
 
-    if (method==RS::Cabinet) {
+    if (method==RS::Cabinet || method==RS::Cabinet30) {
         f = 0.5;
     }
 
     int projection = type&0x0000ffff;
-    double a = RMath::deg2rad(45);
+    double a;
+    if (method==RS::Cabinet30) {
+        a = RMath::deg2rad(30);
+    }
+    else {
+        a = RMath::deg2rad(45);
+    }
     RVector p;
 
     switch (projection) {

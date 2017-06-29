@@ -221,7 +221,8 @@ public:
         Dimetric =      0x00080000,      //!< Dimetric
 
         Cabinet =       0x00100000,      //!< Cabinet
-        Cavalier =      0x00200000,      //!< Cavalier
+        Cabinet30 =     0x00200000,      //!< Cabinet30
+        Cavalier =      0x00400000,      //!< Cavalier
 
         User1 =         0x01000000,      //!< User defined 1
         User2 =         0x02000000,      //!< User defined 2
