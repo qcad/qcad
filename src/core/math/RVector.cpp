@@ -501,6 +501,13 @@ RVector RVector::axonometricProjection(RS::IsoProjectionType type) {
         sy = 1.0;
         sz = 1.0;
         break;
+    case RS::Dimetric:
+        a = RMath::deg2rad(42.0);
+        b = RMath::deg2rad(7.0);
+        sx = 0.5;
+        sy = 1.0;
+        sz = 1.0;
+        break;
     case RS::User1:
         a = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User1A", 45.0));
         b = RMath::deg2rad(RSettings::getDoubleValue("IsoProject/User1B", 15.0));

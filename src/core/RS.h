@@ -218,6 +218,7 @@ public:
         Isometric =     0x00010000,      //!< Isometric
         IsometricTrue = 0x00020000,      //!< Isometric
         Planometric =   0x00040000,      //!< Planometric
+        Dimetric =      0x00080000,      //!< Dimetric
 
         Cabinet =       0x00100000,      //!< Cabinet
         Cavalier =      0x00200000,      //!< Cavalier
