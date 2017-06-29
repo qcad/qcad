@@ -217,6 +217,7 @@ public:
     QList<RVector> verifyTangency(double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4);
 
     void stripWidths();
+    void setMinimumWidth(double w);
 
     int getSegmentAtDist(double dist);
     bool relocateStartPoint(const RVector& p);

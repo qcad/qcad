@@ -178,6 +178,14 @@ public:
         data.setBulgeAt(i, b);
     }
 
+    void stripWidths() {
+        data.stripWidths();
+    }
+
+    void setMinimumWidth(double w) {
+        data.setMinimumWidth(w);
+    }
+
     double getStartWidthAt(int i) const {
         return data.getStartWidthAt(i);
     }

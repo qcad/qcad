@@ -742,6 +742,15 @@ void RPolyline::stripWidths() {
     }
 }
 
+void RPolyline::setMinimumWidth(double w) {
+    for (int i=0; i<startWidths.length(); i++) {
+        startWidths[i] = qMax(startWidths[i], w);
+    }
+    for (int i=0; i<endWidths.length(); i++) {
+        endWidths[i] = qMax(endWidths[i], w);
+    }
+}
+
 int RPolyline::getSegmentAtDist(double dist) {
     if (polylineProxy!=NULL) {
         return polylineProxy->getSegmentAtDist(*this, dist);
