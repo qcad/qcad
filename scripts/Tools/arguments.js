@@ -190,3 +190,39 @@ function processLayerArgument(di, args) {
         di.applyOperation(op);
     }
 }
+
+/**
+ * Process -plwidth argument.
+ * Minimum value for polyline width.
+ */
+function processPolylineWidthArgument(di, args) {
+    var plWidthPx = getFloatArgument(args, "", "-plwidth", undefined);
+    if (plWidthPx===undefined) {
+        return;
+    }
+
+    var view = di.getGraphicsViewWithFocus();
+    var plWidth = view.mapDistanceFromView(plWidthPx);
+
+    var doc = di.getDocument();
+    var op = undefined;
+
+    var ids = doc.queryAllEntities(false, true, RS.EntityPolyline);
+    for (var i=0; i<ids.length; i++) {
+        var id = ids[i];
+        var e = doc.queryEntity(id);
+        if (!isPolylineEntity(e)) {
+            continue;
+        }
+
+        e.setMinimumWidth(plWidth);
+
+        if (op===undefined) {
+            op = new RAddObjectsOperation();
+        }
+        op.addObject(e);
+    }
+    if (op!==undefined) {
+        di.applyOperation(op);
+    }
+}
