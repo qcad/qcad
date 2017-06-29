@@ -642,17 +642,8 @@ QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue
  * \copydoc RStorage::setKnownVariable
  */
 void RDocument::setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction) {
-//    bool wasMetric = true;
-
-//    if (key==RS::INSUNITS) {
-//        wasMetric = RUnit::isMetric(getUnit());
-//    }
-
     storage.setKnownVariable(key, value, transaction);
 
-//    if (key==RS::INSUNITS && wasMetric!=RUnit::isMetric(getUnit())) {
-//        initLinetypes(transaction);
-//    }
     if (key==RS::MEASUREMENT) {
         initLinetypes(transaction);
     }
