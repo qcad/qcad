@@ -109,17 +109,17 @@ Proyección &amp;Isométrica</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation>Planimétrico</translation>
+        <translation>Planimétrica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation>Cabinet</translation>
+        <translation>Caballera</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation>Cavalier</translation>
+        <translation>Caballera especial</translation>
     </message>
 </context>
 </TS>
