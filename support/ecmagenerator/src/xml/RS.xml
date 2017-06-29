@@ -117,6 +117,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Isometric" />
       <value name="IsometricTrue" />
       <value name="Planometric" />
+      <value name="Dimetric" />
       <value name="Cabinet" />
       <value name="Cavalier" />
       <value name="User1" />

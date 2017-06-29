@@ -543,6 +543,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Dimetric",
+    QScriptValue(RS::Dimetric),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("Cabinet",
     QScriptValue(RS::Cabinet),
     QScriptValue::ReadOnly);
