@@ -367,6 +367,9 @@
         stripWidths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setMinimumWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSegmentAtDist
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

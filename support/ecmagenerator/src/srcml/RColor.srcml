@@ -58,7 +58,7 @@
     <constructor_decl><name>RColor</name><parameter_list>()</parameter_list>;</constructor_decl>
     <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>, <param><decl><type><name>int</name></type> <name>g</name></decl></param>, <param><decl><type><name>int</name></type> <name>b</name></decl></param>, <param><decl><type><name>int</name></type> <name>a</name> =<init> <expr>255</expr></init></decl></param>, <param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name> =<init> <expr><name><name>RColor</name>::<name>Fixed</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name></decl></param>)</parameter_list>;</constructor_decl>
-    <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name> &amp;</type> <name>name</name></decl></param>, <param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name> =<init> <expr><name><name>RColor</name>::<name>Fixed</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>, <param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name> =<init> <expr><name><name>RColor</name>::<name>Fixed</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <comment type="block">/**
      * \nonscriptable

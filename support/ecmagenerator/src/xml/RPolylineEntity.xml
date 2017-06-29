@@ -230,6 +230,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="stripWidths" cppName="stripWidths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setMinimumWidth" cppName="setMinimumWidth"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getStartWidthAt" cppName="getStartWidthAt"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

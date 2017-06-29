@@ -124,6 +124,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setBulgeAt, "setBulgeAt");
             
+            REcmaHelper::registerFunction(&engine, proto, stripWidths, "stripWidths");
+            
+            REcmaHelper::registerFunction(&engine, proto, setMinimumWidth, "setMinimumWidth");
+            
             REcmaHelper::registerFunction(&engine, proto, getStartWidthAt, "getStartWidthAt");
             
             REcmaHelper::registerFunction(&engine, proto, getEndWidthAt, "getEndWidthAt");
@@ -2886,6 +2890,105 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::setBulgeAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::stripWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::stripWidths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::stripWidths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("stripWidths", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->stripWidths();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.stripWidths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::stripWidths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::setMinimumWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::setMinimumWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::setMinimumWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("setMinimumWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMinimumWidth(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.setMinimumWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::setMinimumWidth", context, engine);
             return result;
         }
          QScriptValue

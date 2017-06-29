@@ -288,6 +288,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, stripWidths, "stripWidths");
             
+            REcmaHelper::registerFunction(&engine, proto, setMinimumWidth, "setMinimumWidth");
+            
             REcmaHelper::registerFunction(&engine, proto, getSegmentAtDist, "getSegmentAtDist");
             
             REcmaHelper::registerFunction(&engine, proto, relocateStartPoint, "relocateStartPoint");
@@ -8455,6 +8457,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::stripWidths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::setMinimumWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::setMinimumWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::setMinimumWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("setMinimumWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMinimumWidth(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setMinimumWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::setMinimumWidth", context, engine);
             return result;
         }
          QScriptValue

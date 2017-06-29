@@ -179,6 +179,14 @@
         <expr_stmt><expr><name>data</name>.<call><name>setBulgeAt</name><argument_list>(<argument><expr><name>i</name></expr></argument>, <argument><expr><name>b</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>stripWidths</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>stripWidths</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setMinimumWidth</name><parameter_list>(<param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setMinimumWidth</name><argument_list>(<argument><expr><name>w</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>double</name></type> <name>getStartWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getStartWidthAt</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

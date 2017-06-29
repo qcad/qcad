@@ -130,6 +130,12 @@
         setBulgeAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        stripWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMinimumWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStartWidthAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

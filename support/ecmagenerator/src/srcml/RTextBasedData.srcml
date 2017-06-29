@@ -108,6 +108,9 @@
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDistanceTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>range</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>intersectsWith</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>shape</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * \return Position of the reference point of the text.
+     */</comment>
     <function><type><name>RVector</name></type> <name>getPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>position</name></expr>;</return>
     }</block></function>
@@ -116,6 +119,10 @@
         <expr_stmt><expr><name>this</name>-&gt;<name>position</name> = <name>position</name></expr>;</expr_stmt>
     }</block></function>
 
+    <comment type="block">/**
+     * \return Alignment point of the reference point of the text.
+     * This is usually the same as the position.
+     */</comment>
     <function><type><name>RVector</name></type> <name>getAlignmentPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>alignmentPoint</name></expr>;</return>
     }</block></function>
