@@ -331,7 +331,7 @@ AbstractPreferences.prototype.save = function() {
     var transaction = undefined;
     if (!this.appPreferences) {
         document = EAction.getDocument();
-        transaction = new RTransaction(document.getStorage(), "Apply preferences", true);
+        transaction = new RTransaction(document.getStorage(), qsTr("Apply preferences"), true);
     }
 
     for (var i = 0; i < this.addOns.length; ++i) {
