@@ -52,6 +52,7 @@ IsoProject.prototype.initUiOptions = function(resume, optionsToolBar) {
     methodCombo.addItem(qsTr("Planometric"), RS.Planometric);
     methodCombo.addItem(qsTr("Dimetric"), RS.Dimetric);
     methodCombo.addItem(qsTr("Cabinet"), RS.Cabinet);
+    methodCombo.addItem(qsTr("Cabinet") + " 30°", RS.Cabinet30);
     methodCombo.addItem(qsTr("Cavalier"), RS.Cavalier);
     var n;
     n = "%1 (%2/%3)"
