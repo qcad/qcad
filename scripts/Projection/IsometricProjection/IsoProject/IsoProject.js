@@ -50,6 +50,7 @@ IsoProject.prototype.initUiOptions = function(resume, optionsToolBar) {
     methodCombo.addItem(qsTr("Isometric"), RS.Isometric);
     methodCombo.addItem(qsTr("Isometric True Scale"), RS.IsometricTrue);
     methodCombo.addItem(qsTr("Planometric"), RS.Planometric);
+    methodCombo.addItem(qsTr("Dimetric"), RS.Dimetric);
     methodCombo.addItem(qsTr("Cabinet"), RS.Cabinet);
     methodCombo.addItem(qsTr("Cavalier"), RS.Cavalier);
     var n;
