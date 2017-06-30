@@ -1616,6 +1616,13 @@ void RDocumentInterface::addEntityToPreview(REntity& entity) {
     }
 }
 
+void RDocumentInterface::addDrawableToPreview(RGraphicsSceneDrawable& drawable) {
+    QList<RGraphicsScene*>::iterator it;
+    for (it=scenes.begin(); it!=scenes.end(); it++) {
+        (*it)->addToPreview(REntity::INVALID_ID, drawable);
+    }
+}
+
 /**
  * \return The relative zero position in model coordinates.
  */

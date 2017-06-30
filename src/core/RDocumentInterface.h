@@ -51,6 +51,7 @@
 #endif
 
 class RGraphicsScene;
+class RGraphicsSceneDrawable;
 class RGraphicsView;
 class RMouseEvent;
 class ROperation;
@@ -249,6 +250,7 @@ public:
             Qt::PenStyle style, const QList<qreal>& dashValues = RDEFAULT_QLIST_QREAL);
     void addAuxShapeToPreview(RShape& shape);
     void addEntityToPreview(REntity& entity);
+    void addDrawableToPreview(RGraphicsSceneDrawable& drawable);
     void beginPreview();
     void endPreview();
     void clearPreview();
