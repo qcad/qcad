@@ -30,6 +30,7 @@
 #include "RPolyline.h"
 #include "RSettings.h"
 #include "RTextRenderer.h"
+#include "RUnit.h"
 
 RTextProxy* RTextBasedData::textProxy = NULL;
 
@@ -329,7 +330,51 @@ bool RTextBasedData::scale(const RVector& scaleFactors, const RVector& center) {
     alignmentPoint.scale(scaleFactors, center);
     textWidth*=scaleFactors.x;
     textHeight*=scaleFactors.x;
-    update(false);
+
+    if (!isSimple()) {
+        // change height in height tags inside MText entities:
+        bool foundInline = false;
+        QString txt = getEscapedText(false);
+        QRegExp rx("\\\\H(\\d*\\.?\\d+);");
+        int pos = 0;
+        int c = 0;
+        while ((pos = rx.indexIn(txt, pos)) != -1) {
+            double h = rx.cap(1).toDouble();
+
+            foundInline = true;
+
+            // tag to replace (e.g. "\H2.5;")
+            QString tag = rx.cap(0);
+
+            // new tag (e.g. "\H5.0;")
+            QString subTag = "\\H" + RUnit::doubleToStringDec(h*scaleFactors.x, 3) + ";";
+
+//            qDebug() << "txt: " << txt;
+//            qDebug() << "replacing: " << tag;
+//            qDebug() << "     with: " << subTag;
+//            qDebug() << "pos: " << pos;
+
+//            qDebug() << "substring 1: " << txt.mid(0, pos);
+//            qDebug() << "substring 2: " << txt.mid(pos+tag.length());
+
+            txt = txt.mid(0, pos) + subTag + txt.mid(pos+tag.length());
+
+            pos += rx.matchedLength();
+            pos = pos - tag.length() + subTag.length();
+//            qDebug() << "pos:" << pos;
+
+            if (c++>1000) {
+                // safety break:
+                break;
+            }
+        }
+
+        if (foundInline) {
+            setText(txt);
+        }
+    }
+
+    update(true);
     return true;
 }
 
