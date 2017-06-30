@@ -9,6 +9,8 @@
         
                 #include "RGraphicsScene.h"
             
+                #include "RGraphicsSceneDrawable.h"
+            
                 #include "RGraphicsView.h"
             
                 #include "RMouseEvent.h"
@@ -240,6 +242,8 @@
             REcmaHelper::registerFunction(&engine, proto, addAuxShapeToPreview, "addAuxShapeToPreview");
             
             REcmaHelper::registerFunction(&engine, proto, addEntityToPreview, "addEntityToPreview");
+            
+            REcmaHelper::registerFunction(&engine, proto, addDrawableToPreview, "addDrawableToPreview");
             
             REcmaHelper::registerFunction(&engine, proto, beginPreview, "beginPreview");
             
@@ -6657,6 +6661,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::addEntityToPreview", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::addDrawableToPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::addDrawableToPreview", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::addDrawableToPreview";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("addDrawableToPreview", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RGraphicsSceneDrawable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RGraphicsSceneDrawable*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RGraphicsSceneDrawable*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RGraphicsSceneDrawable.",
+                               context);                    
+                    }
+                    RGraphicsSceneDrawable 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addDrawableToPreview(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.addDrawableToPreview().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::addDrawableToPreview", context, engine);
             return result;
         }
          QScriptValue
