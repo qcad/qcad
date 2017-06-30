@@ -76,8 +76,8 @@ InsertBlockItem.prototype.beginEvent = function() {
     var path;
     var err;
     if (this.url.isLocalFile()) {
-        qDebug("importing file: " + this.url);
         path = this.url.toLocalFile();
+        qDebug("importing file: " + path);
         err = this.diItem.importFile(path, "", false);
     }
     else {
