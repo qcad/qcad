@@ -259,7 +259,32 @@
              </item>
              <item>
               <property name="text">
+               <string notr="true">4.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
                <string notr="true">5.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">6.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">7.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">8.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">9.0</string>
               </property>
              </item>
              <item>
@@ -279,7 +304,37 @@
              </item>
              <item>
               <property name="text">
+               <string notr="true">16.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">18.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
                <string notr="true">20.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">22.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">25.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">50.0</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">100.0</string>
               </property>
              </item>
             </widget>
