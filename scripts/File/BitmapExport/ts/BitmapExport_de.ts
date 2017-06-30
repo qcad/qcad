@@ -126,7 +126,7 @@
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+96"/>
+        <location filename="../BitmapExportWorker.js" line="+97"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ungültige Bildgrösse (Breite x Höhe muss kleiner sein als %1)</translation>
     </message>

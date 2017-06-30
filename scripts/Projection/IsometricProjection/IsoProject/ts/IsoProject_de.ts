@@ -105,6 +105,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Dimetric</source>
+        <translation>Dimetrisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Cabinet</source>
         <translation>Kabinett</translation>
     </message>

@@ -137,34 +137,34 @@ Wybuch
         <translation type="unfinished">&amp;Rozbij</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+130"/>
+        <location filename="../PreferencesPage.ui" line="+197"/>
         <source>Explode text glyphs to polylines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="+20"/>
         <source>Spline segments:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Segmenty splajnu:</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="-27"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Segmenty elipsy (na pełnej elipsy):</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-7"/>
         <source>Explode splines to polylines with line segments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+24"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-155"/>
+        <location line="-31"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>

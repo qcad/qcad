@@ -206,18 +206,18 @@
     </message>
     <message>
         <location line="+18"/>
-        <location line="+213"/>
+        <location line="+268"/>
         <source>Bold</source>
         <translation>Grassetto</translation>
     </message>
     <message>
-        <location line="-206"/>
-        <location line="+219"/>
+        <location line="-261"/>
+        <location line="+274"/>
         <source>Italic</source>
         <translation>Corsivo</translation>
     </message>
     <message>
-        <location line="-202"/>
+        <location line="-257"/>
         <source>Simple text
 (one line, no formatting)</source>
         <translation>Testo semplice</translation>
@@ -252,7 +252,7 @@
         <translation>Incolla </translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+170"/>
         <source>Ctrl+B</source>
         <translation>CTRL+B</translation>
     </message>

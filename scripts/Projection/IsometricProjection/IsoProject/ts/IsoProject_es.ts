@@ -113,6 +113,12 @@ Proyección &amp;Isométrica</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>Dimetric</source>
+        <translation>Dimétrico</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Cabinet</source>
         <translation>Caballera</translation>
     </message>

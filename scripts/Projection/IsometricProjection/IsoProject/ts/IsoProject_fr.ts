@@ -108,6 +108,12 @@ Indiquer le point cible</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>Dimetric</source>
+        <translation>Dimétrique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Cabinet</source>
         <translation>Cabinet</translation>
     </message>

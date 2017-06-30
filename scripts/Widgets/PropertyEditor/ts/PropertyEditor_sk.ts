@@ -32,7 +32,7 @@
         <translation>Zobrazenie vlastností aktuálneho bloku a aktuálnej vrstvy</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1317"/>
+        <location filename="../PropertyEditor.js" line="+1321"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>

@@ -294,7 +294,7 @@ Altura:
     </message>
     <message>
         <location line="+18"/>
-        <location line="+213"/>
+        <location line="+268"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -303,8 +303,8 @@ Al_ternar</translatorcomment>
         <translation>Negrito</translation>
     </message>
     <message>
-        <location line="-206"/>
-        <location line="+219"/>
+        <location line="-261"/>
+        <location line="+274"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -313,7 +313,7 @@ Itálico</translatorcomment>
         <translation>Itálico</translation>
     </message>
     <message>
-        <location line="-202"/>
+        <location line="-257"/>
         <source>Simple text
 (one line, no formatting)</source>
         <translation>Texto simples
@@ -368,7 +368,7 @@ Cole o conteúdo da área de transferência</translatorcomment>
         <translation>Cole</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+170"/>
         <source>Ctrl+B</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ctrl+B</translation>

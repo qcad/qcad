@@ -206,18 +206,18 @@
     </message>
     <message>
         <location line="+18"/>
-        <location line="+213"/>
+        <location line="+268"/>
         <source>Bold</source>
         <translation>Fet</translation>
     </message>
     <message>
-        <location line="-206"/>
-        <location line="+219"/>
+        <location line="-261"/>
+        <location line="+274"/>
         <source>Italic</source>
         <translation>Kursiv</translation>
     </message>
     <message>
-        <location line="-205"/>
+        <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
         <translation>Texten får plats på en linje och har ingen formatering</translation>
     </message>
@@ -249,7 +249,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+170"/>
         <source>Ctrl+B</source>
         <translation type="unfinished"></translation>
     </message>

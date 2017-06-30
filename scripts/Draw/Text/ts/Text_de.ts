@@ -159,7 +159,7 @@
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location line="+234"/>
+        <location line="+289"/>
         <source>Attribute Details</source>
         <translation>Attributdetails</translation>
     </message>
@@ -347,7 +347,7 @@
         <translation>Kubik</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="-982"/>
+        <location filename="../TextDialog/TextDialog.ui" line="-1037"/>
         <source>Main Font</source>
         <translation>Hauptschriftart</translation>
     </message>
@@ -362,13 +362,13 @@
     </message>
     <message>
         <location line="+18"/>
-        <location line="+213"/>
+        <location line="+268"/>
         <source>Bold</source>
         <translation>Fett</translation>
     </message>
     <message>
-        <location line="-206"/>
-        <location line="+219"/>
+        <location line="-261"/>
+        <location line="+274"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: qt_de.ts--
@@ -377,7 +377,7 @@ Kursiv
         <translation>Kursiv</translation>
     </message>
     <message>
-        <location line="-181"/>
+        <location line="-236"/>
         <source>Rich Text</source>
         <translation>Text</translation>
     </message>
@@ -435,7 +435,7 @@ Kursiv
         <translation type="obsolete">20.0</translation>
     </message>
     <message>
-        <location line="+195"/>
+        <location line="+250"/>
         <source>Ctrl+B</source>
         <translation>Ctrl-F</translation>
     </message>

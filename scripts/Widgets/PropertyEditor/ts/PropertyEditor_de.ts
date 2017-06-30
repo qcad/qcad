@@ -26,7 +26,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1317"/>
+        <location filename="../PropertyEditor.js" line="+1321"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>

@@ -14,7 +14,12 @@
         <translation>Zeichnungseinstellungen</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+286"/>
+        <source>Apply preferences</source>
+        <translation>Einstellungen anwenden</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Restart required</source>
         <translation>Neustart</translation>
     </message>

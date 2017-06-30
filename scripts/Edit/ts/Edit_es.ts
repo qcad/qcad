@@ -14,7 +14,12 @@
         <translation>Preferencias del dibujo</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+286"/>
+        <source>Apply preferences</source>
+        <translation>Aplicar preferencias</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Restart required</source>
         <translation>Se requiere reiniciar</translation>
     </message>

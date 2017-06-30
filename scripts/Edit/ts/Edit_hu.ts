@@ -14,7 +14,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+286"/>
+        <source>Apply preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Restart required</source>
         <translation type="unfinished"></translation>
     </message>

@@ -140,6 +140,12 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>Dimetric</source>
+        <translation>Dimetric</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Cabinet</source>
         <translation>Cabinet</translation>
     </message>

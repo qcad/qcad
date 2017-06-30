@@ -297,7 +297,7 @@ Wysokość tekstu:</translatorcomment>
     </message>
     <message>
         <location line="+18"/>
-        <location line="+213"/>
+        <location line="+268"/>
         <source>Bold</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -306,8 +306,8 @@ Na wpół pogrubiony</translatorcomment>
         <translation type="unfinished">Pogrubiony</translation>
     </message>
     <message>
-        <location line="-206"/>
-        <location line="+219"/>
+        <location line="-261"/>
+        <location line="+274"/>
         <source>Italic</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -316,7 +316,7 @@ Old Italic</translatorcomment>
         <translation type="unfinished">Kursywa</translation>
     </message>
     <message>
-        <location line="-205"/>
+        <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Tekst wpisuje się w jednej linii i nie ma formatowania</translation>
@@ -366,7 +366,7 @@ Wklej
         <translation type="unfinished">Wklej</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+170"/>
         <source>Ctrl+B</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

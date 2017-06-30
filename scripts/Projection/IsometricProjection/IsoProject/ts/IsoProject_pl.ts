@@ -98,6 +98,12 @@ Rzutowanie &amp;izometryczne</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>Dimetric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Cabinet</source>
         <translation type="unfinished"></translation>
     </message>

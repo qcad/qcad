@@ -24,7 +24,12 @@ Preferências do Desenho Atual...</translatorcomment>
         <translation>Preferências de Desenho</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+286"/>
+        <source>Apply preferences</source>
+        <translation>Aplicar preferências</translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>É necessário reiniciar</translation>
