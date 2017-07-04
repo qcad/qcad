@@ -35,7 +35,15 @@ ToggleLayerVisibility.prototype.beginEvent = function() {
 
     var layer = this.getCurrentLayer();
 
-    layer.setFrozen(!layer.isFrozen());
+    var showFrozen = RSettings.getBoolValue("LayerListPro/ShowFrozen", false);
+    var freezeLayer = RSettings.getBoolValue("LayerListPro/FreezeLayer", false);
+
+    if (!showFrozen && !freezeLayer) {
+        layer.setOff(!layer.isOff());
+    }
+    else {
+        layer.setFrozen(!layer.isFrozen());
+    }
 
     var operation = new RModifyObjectOperation(layer);
     var di = this.getDocumentInterface();
