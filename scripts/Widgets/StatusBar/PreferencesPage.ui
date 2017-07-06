@@ -37,6 +37,12 @@
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="RFontChooserWidget" name="Font" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>20</height>
+       </size>
+      </property>
       <property name="font">
        <font>
         <family>Helvetica</family>
@@ -95,6 +101,16 @@
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="ShowTips">
+      <property name="text">
+       <string>Show status tips in status bar </string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item>

@@ -298,8 +298,10 @@ void RGuiAction::setToolTip(const QString& tip) {
 //}
 
 void RGuiAction::setStatusTip(const QString& tip) {
-    QAction::setStatusTip(tip);
-    initTexts();
+    if (RSettings::getBoolValue("StatusBar/ShowTips", true)) {
+        QAction::setStatusTip(tip);
+        initTexts();
+    }
 }
 
 void RGuiAction::setEnabled(bool on) {
