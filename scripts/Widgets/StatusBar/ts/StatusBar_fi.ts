@@ -4,7 +4,7 @@
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+47"/>
+        <location filename="../PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
         <translation>Tilarivin kirjasin:</translation>
     </message>
@@ -31,6 +31,11 @@
     <message>
         <location line="+10"/>
         <source>Progress display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Show status tips</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
