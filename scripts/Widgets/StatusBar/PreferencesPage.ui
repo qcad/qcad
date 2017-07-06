@@ -106,7 +106,7 @@
     <item>
      <widget class="QCheckBox" name="ShowTips">
       <property name="text">
-       <string>Show status tips in status bar </string>
+       <string>Show status tips</string>
       </property>
       <property name="checked">
        <bool>true</bool>
