@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RGraphicsScene" />
+  <class_decl name="RGraphicsSceneDrawable" />
   <class_decl name="RGraphicsView" />
   <class_decl name="RMouseEvent" />
   <class_decl name="ROperation" />
@@ -693,6 +694,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity &amp;" typeName="REntity" name="entity"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addDrawableToPreview"
+    cppName="addDrawableToPreview" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsSceneDrawable &amp;"
+        typeName="RGraphicsSceneDrawable" name="drawable"
         isConst="false" />
       </variant>
     </method>

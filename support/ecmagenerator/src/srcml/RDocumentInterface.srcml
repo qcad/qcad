@@ -52,6 +52,7 @@
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RGraphicsSceneDrawable</name>;</class_decl>
 <class_decl>class <name>RGraphicsView</name>;</class_decl>
 <class_decl>class <name>RMouseEvent</name>;</class_decl>
 <class_decl>class <name>ROperation</name>;</class_decl>
@@ -250,6 +251,7 @@
             <param><decl><type><name><name>Qt</name>::<name>PenStyle</name></name></type> <name>style</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>qreal</name></argument>&gt;</argument_list></name>&amp;</type> <name>dashValues</name> =<init> <expr><name>RDEFAULT_QLIST_QREAL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addAuxShapeToPreview</name><parameter_list>(<param><decl><type><name>RShape</name>&amp;</type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addEntityToPreview</name><parameter_list>(<param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addDrawableToPreview</name><parameter_list>(<param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>beginPreview</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>endPreview</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>clearPreview</name><parameter_list>()</parameter_list>;</function_decl>

@@ -307,6 +307,9 @@
         addEntityToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addDrawableToPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         beginPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

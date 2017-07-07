@@ -4,7 +4,7 @@
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+47"/>
+        <location filename="../PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
         <translation>Schrift der Statusleiste:</translation>
     </message>
@@ -32,6 +32,15 @@
         <location line="+10"/>
         <source>Progress display</source>
         <translation>Fortschrittsanzeige</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Show status tips</source>
+        <translation>Statustips anzeigen</translation>
+    </message>
+    <message>
+        <source>Show status tips in status bar </source>
+        <translation type="obsolete">Status tips anzeigen in der Statusleiste</translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+32"/>
