@@ -54,6 +54,8 @@ function InsertBlockItem(guiAction) {
     if (!isNull(guiAction)) {
         this.url = this.guiAction.data();
     }
+
+    this.autoTerminate = false;
 }
 
 InsertBlockItem.State = {
@@ -64,37 +66,41 @@ InsertBlockItem.prototype = new BlockInsert();
 
 InsertBlockItem.prototype.beginEvent = function() {
     // part library item is loaded into this document:
-    var ms = new RMemoryStorage();
-    var si = new RSpatialIndexNavel();
-    this.docItem = new RDocument(ms, si);
-    this.diItem = new RDocumentInterface(this.docItem);
-    this.diItem.setNotifyListeners(false);
+    if (isNull(this.diItem)) {
+        var ms = new RMemoryStorage();
+        var si = new RSpatialIndexNavel();
+        this.docItem = new RDocument(ms, si);
+        this.diItem = new RDocumentInterface(this.docItem);
+        this.diItem.setNotifyListeners(false);
+    }
 
     // TODO refactor
     BlockInsert.prototype.beginEvent.call(this);
 
-    var path;
-    var err;
-    if (this.url.isLocalFile()) {
-        path = this.url.toLocalFile();
-        qDebug("importing file: " + path);
-        err = this.diItem.importFile(path, "", false);
-    }
-    else {
-        qDebug("importing URL: " + this.url);
-        if (isFunction(this.url.encodedPath)) {
-            path = QUrl.fromPercentEncoding(this.url.encodedPath());
+    if (!isNull(this.url)) {
+        var path;
+        var err;
+        if (this.url.isLocalFile()) {
+            path = this.url.toLocalFile();
+            qDebug("importing file: " + path);
+            err = this.diItem.importFile(path, "", false);
         }
         else {
-            path = this.url.path();
+            qDebug("importing URL: " + this.url);
+            if (isFunction(this.url.encodedPath)) {
+                path = QUrl.fromPercentEncoding(this.url.encodedPath());
+            }
+            else {
+                path = this.url.path();
+            }
+
+            err = this.diItem.importUrl(this.url, "", false);
         }
 
-        err = this.diItem.importUrl(this.url, "", false);
-    }
-
-    if (err!==RDocumentInterface.IoErrorNoError) {
-        EAction.handleUserWarning(qsTr("Cannot import file from URL: ") + this.url.toString());
-        this.terminate();
+        if (err!==RDocumentInterface.IoErrorNoError) {
+            EAction.handleUserWarning(qsTr("Cannot import file from URL: ") + this.url.toString());
+            this.terminate();
+        }
     }
 
     // no block name given:
@@ -204,11 +210,17 @@ InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
+            var prev = true;
             var op = this.getOperation();
             if (!isNull(op)) {
-                di.applyOperation(op);
+                var t = di.applyOperation(op);
+                prev = t.isPreview();
                 di.clearPreview();
                 di.repaintViews();
+            }
+
+            if (this.autoTerminate===true && !prev) {
+                this.terminate();
             }
         }
     }
