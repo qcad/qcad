@@ -2139,8 +2139,76 @@ function restoreOverrideCursor() {
     }
 }
 
+function initUserShortcuts() {
+    var settings = RSettings.getQSettings();
+    var keys = RSettings.getAllKeys("Shortcuts");
+
+    var i, key, action;
+
+    for (i=0; i<keys.length; i++) {
+        key = keys[i];
+        action = RGuiAction.getByScriptFile(key);
+        if (isNull(action)) {
+            continue;
+        }
+        var scStringList = settings.value("Shortcuts/" + key);
+
+        // explicitely no shortcuts:
+        if (isNull(scStringList)) {
+            action.setShortcuts([]);
+            continue;
+        }
+
+        var scList = [];
+        for (var k=0; k<scStringList.length; k++) {
+            var sc = new QKeySequence(scStringList[k]);
+            scList.push(sc);
+        }
+        action.setShortcuts(scList);
+    }
+
+    keys = RSettings.getAllKeys("Commands");
+
+    for (i=0; i<keys.length; i++) {
+        key = keys[i];
+        action = RGuiAction.getByScriptFile(key);
+        if (isNull(action)) {
+            continue;
+        }
+        var cmStringList = settings.value("Commands/" + key);
+
+        // explicitely no commands:
+        if (isNull(cmStringList)) {
+            action.setCommands([]);
+            continue;
+        }
+
+        action.setCommands(cmStringList);
+    }
+}
+
 function addActionsToWidgets() {
+    initUserShortcuts();
+
     var appWin = RMainWindowQt.getMainWindow();
+
+    // delete previous shortcut delegates:
+    // part of workaround for QTBUG-38256, QTBUG-57990:
+    if ((RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) ||
+        (RSettings.getQtVersion()===0x050800 && RS.getSystemId()==="linux")) {
+
+        var scObjs = appWin.property("DelegatedShortcutsObjs");
+        if (!isNull(scObjs)) {
+            for (var si=0; si<scObjs.length; si++) {
+                if (isNull(scObjs[si])) {
+                    continue;
+                }
+                scObjs[si].destroy();
+            }
+        }
+        appWin.setProperty("DelegatedShortcutsObjs", []);
+    }
+
     var actions = RGuiAction.getActions();
     var widgetTypes = ["Menu", "ToolBar", "MatrixPanel", "Panel"];
     for (var c=0; c<actions.length; ++c) {
@@ -2191,25 +2259,30 @@ function addActionsToWidgets() {
                 if ((RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) ||
                     (RSettings.getQtVersion()===0x050800 && RS.getSystemId()==="linux")) {
 
-                    if (isOfType(w.parentWidget(), QMenu) || RSettings.getQtVersion()===0x050800) {
-                        //new QShortcut(a.shortcut, a.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(a, "trigger");
-
+                    if (k===0) {
                         var shortcuts = a.shortcuts();
-                        for (var si=0; si<shortcuts.length; si++) {
-                            new QShortcut(shortcuts[si], a.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(a, "trigger");
-                        }
 
-                        // avoid 'Ambiguous shortcut overload' when tool buttons visible:
+                        var scObjs = appWin.property("DelegatedShortcutsObjs");
+                        if (isNull(scObjs)) {
+                            scObjs=[];
+                        }
+                        for (var si=0; si<shortcuts.length; si++) {
+                            var scObj = new QShortcut(shortcuts[si], a.parentWidget(), 0, 0, Qt.WindowShortcut)
+                            scObj.activated.connect(a, "trigger");
+                            scObjs.push(scObj);
+                        }
+                        appWin.setProperty("DelegatedShortcutsObjs", scObjs);
+
                         var sc = a.shortcut.toString();
                         if (sc.length>0) {
                             if (RS.getSystemId()==="linux") {
                                 a.setShortcutText("[" + sc + "]");
-                                //a.setShortcutText("\t" + sc);
                             }
                             else {
                                 a.setShortcutText(" " + sc);
                             }
                         }
+                        a.setProperty("DelegatedShortcuts", shortcuts);
                         a.setDefaultShortcuts([]);
                     }
                 }
