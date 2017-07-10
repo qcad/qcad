@@ -304,6 +304,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getConcaveVertices, "getConcaveVertices");
             
+            REcmaHelper::registerFunction(&engine, proto, splitAtDiscontinuities, "splitAtDiscontinuities");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPolyline*>(), *proto);
 
@@ -9186,6 +9188,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::getConcaveVertices", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::splitAtDiscontinuities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::splitAtDiscontinuities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::splitAtDiscontinuities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("splitAtDiscontinuities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPolyline >'
+    QList < RPolyline > cppResult =
+        
+               self->splitAtDiscontinuities(a0);
+        // return type: QList < RPolyline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.splitAtDiscontinuities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::splitAtDiscontinuities", context, engine);
             return result;
         }
          QScriptValue

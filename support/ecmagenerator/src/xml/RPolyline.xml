@@ -885,6 +885,15 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="splitAtDiscontinuities"
+    cppName="splitAtDiscontinuities" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPolyline &gt;"
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="tolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

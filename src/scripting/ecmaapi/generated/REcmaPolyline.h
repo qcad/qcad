@@ -391,6 +391,9 @@
         getConcaveVertices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        splitAtDiscontinuities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
