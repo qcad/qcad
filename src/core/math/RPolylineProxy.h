@@ -54,6 +54,8 @@ public:
     virtual QList<RVector> verifyTangency(const RPolyline& polyline, double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4) = 0;
     virtual double getArea(const RPolyline& polyline, double segmentLength) = 0;
     virtual RVector getPointInside(const RPolyline& polyline) = 0;
+
+    virtual QList<RPolyline> splitAtDiscontinuities(const RPolyline& polyline, double tolerance) = 0;
 };
 
 #endif

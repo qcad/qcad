@@ -233,6 +233,8 @@ public:
     QList<RVector> getConvexVertices(bool convex = true) const;
     QList<RVector> getConcaveVertices() const;
 
+    QList<RPolyline> splitAtDiscontinuities(double tolerance) const;
+
     static bool hasProxy() {
         return polylineProxy!=NULL;
     }

@@ -24,6 +24,8 @@
 #include "RLine.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
+#include "RSettings.h"
+#include "RSpline.h"
 
 RPolylineProxy* RPolyline::polylineProxy = NULL;
 
@@ -144,6 +146,14 @@ bool RPolyline::prependShape(const RShape& shape) {
 
 bool RPolyline::appendShape(const RShape& shape, bool prepend) {
     bool ret = true;
+
+    // append spline as polyline approximation:
+    const RSpline* spl = dynamic_cast<const RSpline*>(&shape);
+    if (spl!=NULL) {
+        double tol = RSettings::getDoubleValue("Explode/SplineTolerance", 0.01);
+        RPolyline pl = spl->approximateWithArcs(tol);
+        return appendShape(pl, prepend);
+    }
 
     const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
     if (pl!=NULL) {
@@ -1855,4 +1865,11 @@ QList<RVector> RPolyline::getConvexVertices(bool convex) const {
 
 QList<RVector> RPolyline::getConcaveVertices() const {
     return getConvexVertices(false);
+}
+
+QList<RPolyline> RPolyline::splitAtDiscontinuities(double tolerance) const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->splitAtDiscontinuities(*this, tolerance);
+    }
+    return QList<RPolyline>() << *this;
 }
