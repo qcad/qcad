@@ -231,18 +231,17 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     // set up default action:
     var defaultGuiAction = RGuiAction.getByScriptFile("scripts/Reset/Reset.js");
     var defaultActionFile = RSettings.getStringValue("NewFile/DefaultAction", "");
-    if (defaultActionFile.length>0) {
-        include(defaultActionFile);
-    }
-    var defaultActionClass = new QFileInfo(defaultActionFile).baseName();
+    var defaultActionFileInfo = new QFileInfo(defaultActionFile);
     var defaultAction = undefined;
-    if (defaultActionFile.length>0 && typeof(global[defaultActionClass])!=="undefined") {
-        defaultAction = new global[defaultActionClass](defaultGuiAction);
-    }
-    else {
-        if (typeof(DefaultAction)!=="undefined") {
-            defaultAction = new DefaultAction(defaultGuiAction);
+    if (defaultActionFile.length>0 && defaultActionFileInfo.exists()) {
+        include(defaultActionFile);
+        var defaultActionClass = new QFileInfo(defaultActionFile).baseName();
+        if (defaultActionFile.length>0 && typeof(global[defaultActionClass])!=="undefined") {
+            defaultAction = new global[defaultActionClass](defaultGuiAction);
         }
+    }
+    if (isNull(defaultAction) && typeof(DefaultAction)!=="undefined") {
+        defaultAction = new DefaultAction(defaultGuiAction);
     }
     if (!isNull(defaultAction)) {
         documentInterface.setDefaultAction(defaultAction);
