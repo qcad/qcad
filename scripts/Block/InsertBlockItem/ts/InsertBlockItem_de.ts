@@ -66,12 +66,12 @@
         <translation>Blöcke überschreiben</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+96"/>
+        <location filename="../InsertBlockItem.js" line="+101"/>
         <source>Cannot import file from URL: </source>
         <translation>Kann Datei von URL nicht importieren: </translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ungültiger Blockname angepasst in &apos;%1&apos;</translation>
     </message>
