@@ -232,6 +232,9 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     var defaultGuiAction = RGuiAction.getByScriptFile("scripts/Reset/Reset.js");
     var defaultActionFile = RSettings.getStringValue("NewFile/DefaultAction", "");
     var defaultActionFileInfo = new QFileInfo(defaultActionFile);
+    if (!defaultActionFileInfo.exists()) {
+        defaultActionFileInfo = new QFileInfo(":/" + defaultActionFile);
+    }
     var defaultAction = undefined;
     if (defaultActionFile.length>0 && defaultActionFileInfo.exists()) {
         include(defaultActionFile);
