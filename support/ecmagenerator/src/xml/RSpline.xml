@@ -171,6 +171,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
       </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="t"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+      </variant>
     </method>
     <method name="removeFitPointAt" cppName="removeFitPointAt"
     specifier="public" isStatic="false" isVirtual="false"
