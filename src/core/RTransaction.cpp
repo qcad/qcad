@@ -23,6 +23,7 @@
 #include "RMainWindow.h"
 #include "RMemoryStorage.h"
 #include "RStorage.h"
+#include "RSpline.h"
 #include "RTransaction.h"
 
 RTransaction::RTransaction()
@@ -557,6 +558,19 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             if (entity->getType()==RS::EntityHatch && modifiedPropertyTypeIds.isEmpty()) {
                 // entity is hatch and not only one property has changed:
                 mustClone = true;
+            }
+        }
+
+        if (!mustClone) {
+            if (entity->getType()==RS::EntitySpline) {
+                RSpline* oldSpline = dynamic_cast<RSpline*>(oldEntity->castToShape());
+                RSpline* spline = dynamic_cast<RSpline*>(entity->castToShape());
+                if (spline!=NULL && oldSpline!=NULL) {
+                    // entity is spline and has changed from fit points to control points or vice versa:
+                    if (spline->hasFitPoints()!=oldSpline->hasFitPoints()) {
+                        mustClone = true;
+                    }
+                }
             }
         }
     }
