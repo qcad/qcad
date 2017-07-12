@@ -91,8 +91,21 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
 
     var factor = RUnit.convert(1.0, fromUnit, toUnit);
 
+    doc.startTransactionGroup();
+
+    var docVars = doc.queryDocumentVariables();
+    docVars.setUnit(toUnit);
+    docVars.setKnownVariable(RS.DIMSCALE, doc.getKnownVariable(RS.DIMSCALE, 1.0) * factor);
+
     var op = new RAddObjectsOperation();
+    op.setTransactionGroup(doc.getTransactionGroup());
+    op.addObject(docVars);
+    di.applyOperation(op);
+
+    op = new RAddObjectsOperation();
+    op.setTransactionGroup(doc.getTransactionGroup());
     op.setAllowAll(true);
+
     // all entities on all blocks:
     var ids = doc.queryAllEntities(false, true);
 
@@ -119,11 +132,6 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
         }
         op.addObject(entity, false);
     }
-
-    var docVars = doc.queryDocumentVariables();
-    docVars.setUnit(toUnit);
-    docVars.setKnownVariable(RS.DIMSCALE, doc.getKnownVariable(RS.DIMSCALE, 1.0) * factor);
-    op.addObject(docVars);
 
     // adjust view:
     var view = di.getLastKnownViewWithFocus();
