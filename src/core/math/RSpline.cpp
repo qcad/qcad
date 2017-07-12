@@ -327,7 +327,7 @@ void RSpline::prependFitPoint(const RVector& point) {
 }
 
 /**
- * Inserts a git point at the point on the spline closest to the given position.
+ * Inserts a fit point at the point on the spline closest to the given position.
  */
 void RSpline::insertFitPointAt(const RVector& point) {
     RVector p = getClosestPointOnShape(point);
@@ -335,6 +335,10 @@ void RSpline::insertFitPointAt(const RVector& point) {
     // find out T at the point closest to point:
     double t = getTAtPoint(p);
 
+    insertFitPointAt(t, p);
+}
+
+void RSpline::insertFitPointAt(double t, const RVector& p) {
     // find out index of fit point before t:
     int index = -1;
     for (int i=0; i<fitPoints.length(); i++) {

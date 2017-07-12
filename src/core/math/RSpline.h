@@ -100,6 +100,7 @@ public:
     void appendFitPoint(const RVector& point);
     void prependFitPoint(const RVector& point);
     void insertFitPointAt(const RVector& point);
+    void insertFitPointAt(double t, const RVector& point);
     void removeFitPointAt(const RVector& point);
     void removeLastFitPoint();
     void setFitPoints(const QList<RVector>& points);
