@@ -137,7 +137,12 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
         wdp.addItem(". (" + qsTr("point") + ")", '.'.charCodeAt(0));
         wdp.addItem(", (" + qsTr("comma") + ")", ','.charCodeAt(0));
         wdp.addItem("  (" + qsTr("space") + ")", ' '.charCodeAt(0));
-        wdp.currentIndex = wdp.findData(RSettings.getIntValue(settingsName + "/DecimalPoint", '.'.charCodeAt(0)));
+        var dimdsep = RSettings.getIntValue(settingsName + "/DecimalPoint", '.'.charCodeAt(0));
+        if (dimdsep===0) {
+            dimdsep = '.'.charCodeAt(0);
+        }
+
+        wdp.currentIndex = wdp.findData(dimdsep);
 
         wdp["activated(int)"].connect(function() {
             DimensionSettings.updateLinearPreview(widgets);
@@ -336,8 +341,12 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     // decimal separator:
-    var dimdsep = document.getKnownVariable(RS.DIMDSEP, '.');
     if (!isNull(wdp)) {
+        var dimdsep = document.getKnownVariable(RS.DIMDSEP, '.');
+        if (dimdsep===0) {
+            dimdsep = '.'.charCodeAt(0);
+        }
+
         wdp.currentIndex = wdp.findData(dimdsep);
         wdp.setProperty("Loaded", true);
     }
@@ -567,7 +576,10 @@ DimensionSettings.updateAngularPrecision = function(widgets) {
 DimensionSettings.updateLinearPreview = function(widgets) {
     var wFormat = widgets["LinearFormat"];
     var showTrailingZeros = isNull(widgets["LinearShowTrailingZeros"]) ? false : widgets["LinearShowTrailingZeros"].checked;
-    var dimsep = isNull(widgets["DecimalPoint"]) ? '.' : widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex);
+    var dimdsep = isNull(widgets["DecimalPoint"]) ? '.'.charCodeAt(0) : widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex);
+    if (isNull(dimdsep)) {
+        dimdsep = '.'.charCodeAt(0);
+    }
     var value = 14.43112351;
     if (showTrailingZeros===true && RUnit.isMetric(DimensionSettings.unit)) {
         value = 10.0;
@@ -584,7 +596,7 @@ DimensionSettings.updateLinearPreview = function(widgets) {
                 false, false,
                 showTrailingZeros,
                 false,
-                dimsep);
+                dimdsep);
         if (prev==="") {
             prev = "N/A";
         }
@@ -595,7 +607,10 @@ DimensionSettings.updateLinearPreview = function(widgets) {
 DimensionSettings.updateAngularPreview = function(widgets) {
     var wFormat = widgets["AngularFormat"];
     var showTrailingZeros = widgets["AngularShowTrailingZeros"].checked;
-    var dimsep = isNull(widgets["DecimalPoint"]) ? '.' : widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex);
+    var dimdsep = isNull(widgets["DecimalPoint"]) ? '.'.charCodeAt(0) : widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex);
+    if (isNull(dimdsep)) {
+        dimdsep = '.'.charCodeAt(0);
+    }
     var value = RMath.deg2rad(37.15357578);
     if (showTrailingZeros===true) {
         value = RMath.deg2rad(60.0);
@@ -610,7 +625,7 @@ DimensionSettings.updateAngularPreview = function(widgets) {
                 wFormat.itemData(wFormat.currentIndex),
                 widgets["AngularPrecision"].currentIndex,
                 true, showTrailingZeros,
-                dimsep);
+                dimdsep);
         if (prev==="") {
             prev = "N/A";
         }

@@ -591,9 +591,14 @@ int RDocument::getAnglePrecision() {
 /**
  * \return The decimal separator for this document.
  * This is determined by the variable "$DIMDSEP".
+ * 0 means '.'.
  */
 char RDocument::getDecimalSeparator() {
-    return (char)getKnownVariable(RS::DIMDSEP, (int)'.').toInt();
+    int ret = (char)getKnownVariable(RS::DIMDSEP, (int)'.').toInt();
+    if (ret==0) {
+        ret = '.';
+    }
+    return ret;
 }
 
 /**
