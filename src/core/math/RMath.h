@@ -149,8 +149,9 @@ public:
     static void toFraction(double v, int maxDenominator, int& number, int& numerator, int& denominator);
     static void simplify(int numerator, int denominator, int& numeratorRes, int& denominatorRes);
 
-    static bool fuzzyCompare(double v1, double v2, double tolerance =
-            RS::PointTolerance);
+    static bool fuzzyCompare(double v1, double v2, double tolerance = RS::PointTolerance);
+
+    static bool containsFuzzy(const QList<double>& values, double v, double tol = RS::PointTolerance);
 
     static double parseScale(const QString& scaleString);
     static RVector parseCoordinate(const QString& coordinateString, const RVector& relativeZero = RVector::nullVector);

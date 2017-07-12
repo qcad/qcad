@@ -798,6 +798,16 @@ bool RMath::fuzzyCompare(double v1, double v2, double tolerance) {
     return fabs(v1-v2) < tolerance;
 }
 
+bool RMath::containsFuzzy(const QList<double>& values, double v, double tol) {
+    for (int i=0; i<values.length(); i++) {
+        if (RMath::fuzzyCompare(v, values[i], tol)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 /**
  * \return Value given as drawing scale (#:#).
  */
