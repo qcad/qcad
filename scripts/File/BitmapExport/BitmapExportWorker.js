@@ -120,7 +120,10 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     }
 
     view.clear();
-    scene.regenerate();
+
+    if (properties["regen"]!==false) {
+        scene.regenerate();
+    }
 
     if (isFunction(properties["initView"])) {
         properties["initView"](view);
