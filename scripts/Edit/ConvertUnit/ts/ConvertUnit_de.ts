@@ -14,7 +14,7 @@
         <translation>Einheit &apos;%1&apos; gewählt - keine Konvertierung nötig</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+62"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Zeichnung konvertiert von %1 in %2</translation>
     </message>

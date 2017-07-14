@@ -35,7 +35,7 @@
         <translation>presledek</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+16"/>
         <source>Scientific</source>
         <translation>Znanstveno</translation>
     </message>
@@ -85,7 +85,7 @@
         <translation>Geodetske enote</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+209"/>
         <source>Unit / Format</source>
         <translation>Enota / Zapis</translation>
     </message>

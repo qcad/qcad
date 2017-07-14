@@ -39,7 +39,7 @@
         <translation>Spazio</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+16"/>
         <source>Scientific</source>
         <translation>Scientifica</translation>
     </message>
@@ -89,7 +89,7 @@
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+209"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>

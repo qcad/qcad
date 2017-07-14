@@ -16,7 +16,7 @@
     <message>
         <location line="+286"/>
         <source>Apply preferences</source>
-        <translation>Použiť nastavenia</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>

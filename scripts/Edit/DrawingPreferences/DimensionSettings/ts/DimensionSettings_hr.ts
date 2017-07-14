@@ -35,7 +35,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+16"/>
         <source>Scientific</source>
         <translation type="unfinished"></translation>
     </message>
@@ -85,7 +85,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+209"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
     </message>

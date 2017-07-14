@@ -14,7 +14,7 @@
         <translation>Unité &apos;%1&apos; sélectionné - rien à faire</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+62"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Dessin converti de %1 à %2</translation>
     </message>

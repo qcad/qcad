@@ -35,7 +35,7 @@
         <translation>Spatie</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+16"/>
         <source>Scientific</source>
         <translation>Wetenschappelijk</translation>
     </message>
@@ -85,7 +85,7 @@
         <translation>Te meten eenheid</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+209"/>
         <source>Unit / Format</source>
         <translation>Eenheid / Formaat</translation>
     </message>

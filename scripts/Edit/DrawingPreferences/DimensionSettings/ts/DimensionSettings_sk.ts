@@ -35,7 +35,7 @@
         <translation>medzera</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+16"/>
         <source>Scientific</source>
         <translation>Vedecký</translation>
     </message>
@@ -85,7 +85,7 @@
         <translation>Prehľad</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+209"/>
         <source>Unit / Format</source>
         <translation>Jednotka / Formát</translation>
     </message>

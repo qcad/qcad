@@ -39,7 +39,7 @@
         <translation>Leerzeichen</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+16"/>
         <source>Scientific</source>
         <translation>Wissenschaftlich</translation>
     </message>
@@ -89,7 +89,7 @@
         <translation>Vermessung</translation>
     </message>
     <message>
-        <location line="+206"/>
+        <location line="+210"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translation>Die Zeichnungseinheit muss &apos;Inch&apos; oder &apos;Foot&apos; sein, damit Bemassungsbeschriftungen in den Formaten &apos;Architektur&apos; oder &apos;Technisch&apos; angezeigt werden können. Format zurückgesetzt auf &apos;Dezimal&apos;.</translation>
     </message>

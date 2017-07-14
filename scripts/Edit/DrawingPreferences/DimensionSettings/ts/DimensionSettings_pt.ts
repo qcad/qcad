@@ -46,7 +46,7 @@ Dimensão Alinhada</translatorcomment>
         <translation>Espaço</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+16"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -130,7 +130,7 @@ Unidades de topógrafo</translatorcomment>
         <translation>Unidades de topografia</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+209"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Unidade / Formato</translation>

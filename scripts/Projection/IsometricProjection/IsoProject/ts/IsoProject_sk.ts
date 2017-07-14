@@ -74,7 +74,7 @@
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation>Dimetric</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
