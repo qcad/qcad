@@ -507,6 +507,15 @@ bool RMainWindowQt::readSettings() {
 
     restoreState(RSettings::getQSettings()->value("Appearance/DockappWindows").toByteArray());
 
+    bool maximized = RSettings::getQSettings()->value("Appearance/Maximized", false).toBool();
+    if (bool(windowState() & Qt::WindowMaximized) != maximized) {
+        if (maximized) {
+            setWindowState(windowState() | Qt::WindowMaximized);
+        } else {
+            setWindowState(windowState() & ~Qt::WindowMaximized);
+        }
+    }
+
     bool fullScreen = RSettings::getQSettings()->value("Appearance/FullScreen", false).toBool();
     if (bool(windowState() & Qt::WindowFullScreen) != fullScreen) {
         if (fullScreen) {
@@ -551,6 +560,7 @@ void RMainWindowQt::writeSettings() {
     RMainWindow::writeSettings();
     RSettings::getQSettings()->setValue("Appearance/DockappWindows", saveState());
     RSettings::getQSettings()->setValue("Appearance/FullScreen", isFullScreen());
+    RSettings::getQSettings()->setValue("Appearance/Maximized", isMaximized());
     RSettings::getQSettings()->setValue("Appearance/StatusBar", statusBar()->isVisible());
 }
 
