@@ -452,10 +452,14 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend) {
         cutPos2 = undefined;
     }
 
-    return ShapeAlgorithms.autoSplitManual(shape, cutDist1, cutDist2, cutPos1, cutPos2, position);
+    return ShapeAlgorithms.autoSplitManual(shape, cutDist1, cutDist2, cutPos1, cutPos2, position, extend);
 };
 
-ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, cutPos2, position) {
+ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, cutPos2, position, extend) {
+    if (isNull(extend)) {
+        extend = false;
+    }
+
 //    if (!isCircleShape(shape) && !isFullEllipseShape(shape) &&
 //        !isXLineShape(shape) && !isRayShape(shape)) {
 
@@ -624,31 +628,33 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         rest2.trimStartPoint(cutDist2);
 
         segment = shape.clone();
-        var l1 = segment.getLength();
-        segment.trimStartPoint(cutDist1);
-        var l2 = segment.getLength();
-        segment.trimEndPoint(cutDist2 - (l1-l2));
+        //var l1 = segment.getLength();
+        segment.setStartAngle(segment.getCenter().getAngleTo(cutPos1));
+        //segment.trimStartPoint(cutDist1);
+        //var l2 = segment.getLength();
+        //segment.trimEndPoint(cutDist2 - (l1-l2));
+        segment.setEndAngle(segment.getCenter().getAngleTo(cutPos2));
 
-        var angleLength1 = rest1.getAngleLength(true);
-        var angleLength2 = rest2.getAngleLength(true);
+        if (!extend) {
+            var angleLength1 = rest1.getAngleLength(true);
+            var angleLength2 = rest2.getAngleLength(true);
+            if (angleLength1+angleLength2 > shape.getAngleLength()) {
+                rest1.trimEndPoint(cutDist2);
+                rest2.trimStartPoint(cutDist1);
 
-        if (angleLength1+angleLength2 > shape.getAngleLength()) {
-            rest1.trimEndPoint(cutDist2);
-            rest2.trimStartPoint(cutDist1);
+                segment.trimStartPoint(cutDist2);
+                segment.trimEndPoint(cutDist1);
 
-            segment.trimStartPoint(cutDist2);
-            segment.trimEndPoint(cutDist1);
+                angleLength1 = rest1.getAngleLength(true);
+                angleLength2 = rest2.getAngleLength(true);
+            }
+            if (angleLength1<1.0e-5) {
+                rest1 = undefined;
+            }
 
-            angleLength1 = rest1.getAngleLength(true);
-            angleLength2 = rest2.getAngleLength(true);
-        }
-
-        if (angleLength1<1.0e-5) {
-            rest1 = undefined;
-        }
-
-        if (angleLength2<1.0e-5) {
-            rest2 = undefined;
+            if (angleLength2<1.0e-5) {
+                rest2 = undefined;
+            }
         }
     }
 
@@ -1022,6 +1028,10 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
     if (isPolylineShape(shape) && shape.isGeometricallyClosed()) {
         circular = true;
     }
+    if (isArcShape(shape)) {
+        circular = true;
+    }
+
 //    if (isSplineShape(shape) && shape.isGeometricallyClosed()) {
 //        circular = true;
 //    }
@@ -1097,12 +1107,23 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
                 }
 
                 if (circular) {
-                    if (isNull(cutDistMin) || dist<cutDistMin) {
+                    if (isNull(cutDistMin) || (dist<cutDistMin && (dist>pDist || isPolylineShape(shape)))) {
                         cutDistMin = dist;
                         cutPosMin = ip;
                     }
                 }
             }
+        }
+    }
+
+    if (circular) {
+        if (isNull(cutDist1)) {
+            cutDist1 = cutDistMax;
+            cutPos1 = cutPosMax;
+        }
+        if (isNull(cutDist2)) {
+            cutDist2 = cutDistMin;
+            cutPos2 = cutPosMin;
         }
     }
 
@@ -1128,16 +1149,6 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
         shape.reverse();
     }
 
-    if (circular) {
-        if (isNull(cutDist1)) {
-            cutDist1 = cutDistMax;
-            cutPos1 = cutPosMax;
-        }
-        if (isNull(cutDist2)) {
-            cutDist2 = cutDistMin;
-            cutPos2 = cutPosMin;
-        }
-    }
 
     return [ [cutDist1, cutDist2], [cutPos1, cutPos2] ];
 
