@@ -77,8 +77,8 @@ InsertBlockItem.prototype.beginEvent = function() {
     // TODO refactor
     BlockInsert.prototype.beginEvent.call(this);
 
+    var path = undefined;
     if (!isNull(this.url)) {
-        var path;
         var err;
         if (this.url.isLocalFile()) {
             path = this.url.toLocalFile();
@@ -100,12 +100,17 @@ InsertBlockItem.prototype.beginEvent = function() {
         if (err!==RDocumentInterface.IoErrorNoError) {
             EAction.handleUserWarning(qsTr("Cannot import file from URL: ") + this.url.toString());
             this.terminate();
+            return;
         }
     }
 
     // no block name given:
     // create block name from file name:
     if (isNull(this.blockName)) {
+        if (isNull(path)) {
+            this.terminate();
+            return;
+        }
         this.blockName = new QFileInfo(path).completeBaseName();
 
         // fix block name if necessary:
