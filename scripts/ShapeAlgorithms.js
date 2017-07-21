@@ -1056,7 +1056,7 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
     var cutPos1 = undefined;
     var cutPos2 = undefined;
 
-    // for circular shapes, also find intersections closest to start point:
+    // for circular shapes, also find intersections closest to and furthest from start point:
     var cutDistMax = undefined;
     var cutDistMin = undefined;
     var cutPosMax = undefined;
@@ -1067,11 +1067,11 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
 
         if (isEllipseShape(shape)) {
             dist = RMath.getAngleDifference(orthoLine.getAngle(), shape.getCenter().getAngleTo(ip));
-            if (isNull(cutDist1) || dist>cutDist1) {
+            if (isNull(cutDist1) || dist<cutDist1) {
                 cutPos1 = ip;
                 cutDist1 = dist;
             }
-            if (isNull(cutDist2) || dist<cutDist2) {
+            if (isNull(cutDist2) || dist>cutDist2) {
                 cutPos2 = ip;
                 cutDist2 = dist;
             }
@@ -1127,6 +1127,16 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
         }
     }
 
+    if (isEllipseShape(shape) && shape.isReversed()) {
+        var dummy = cutPos1;
+        cutPos1 = cutPos2;
+        cutPos2 = dummy;
+
+        dummy = cutDist1;
+        cutDist1 = cutDist2;
+        cutDist2 = dummy;
+    }
+
     // open shape: cut to start or end point:
     if (!isCircleShape(shape) &&
         !isFullEllipseShape(shape) &&
@@ -1148,7 +1158,6 @@ ShapeAlgorithms.getClosestIntersectionPointDistances = function(shape, intersect
     if (reversedShape) {
         shape.reverse();
     }
-
 
     return [ [cutDist1, cutDist2], [cutPos1, cutPos2] ];
 
