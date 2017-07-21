@@ -398,7 +398,16 @@ bool RLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bo
 }
 
 double RLine::getDistanceFromStart(const RVector& p) const {
-    return startPoint.getDistanceTo(p);
+    double ret = startPoint.getDistanceTo(p);
+
+    RVector p2 = getClosestPointOnShape(p, false);
+    double angle = startPoint.getAngleTo(p2);
+    if (RMath::isSameDirection(getAngle(), angle, M_PI/2)) {
+        return ret;
+    }
+    else {
+        return -ret;
+    }
 }
 
 QList<QSharedPointer<RShape> > RLine::splitAt(const QList<RVector>& points) const {
