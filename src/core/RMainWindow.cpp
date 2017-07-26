@@ -714,14 +714,29 @@ void RMainWindow::ucsSetEvent(const QString& ucsName) {
  */
 bool RMainWindow::readSettings() {
     bool ret = false;
+    double factor = 0.75;
+
+    QRect desktopRect = QApplication::desktop()->availableGeometry();
+
+    if (desktopRect.width()<2000) {
+        factor = 0.9;
+    }
+
+    int width = desktopRect.width()*factor - 320;
+    int height = desktopRect.height()*factor;
 
     int x = RSettings::getQSettings()->value("Appearance/Position.X", -1).toInt();
     int y = RSettings::getQSettings()->value("Appearance/Position.Y", -1).toInt();
-    int width = RSettings::getQSettings()->value("Appearance/Width", 1024).toInt();
-    int height = RSettings::getQSettings()->value("Appearance/Height", 800).toInt();
+    width = RSettings::getQSettings()->value("Appearance/Width", width).toInt();
+    height = RSettings::getQSettings()->value("Appearance/Height", height).toInt();
     if (x>=0 && y>=0) {
         move(x, y);
         ret = true;
+    }
+    else {
+        x = desktopRect.width()*((1.0-factor)/2);
+        y = desktopRect.height()*((1.0-factor)/2);
+        move(x,y);
     }
 
     resize(width, height);
