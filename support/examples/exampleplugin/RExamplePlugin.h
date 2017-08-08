@@ -37,7 +37,7 @@ public:
 class MyClass : public QObject {
 Q_OBJECT
 public:
-    MyClass() : QObject() {}
+    MyClass() : QObject(), i(0), d(0.0) {}
 
     virtual int getInt() const {
         return i;
@@ -62,6 +62,13 @@ public:
     virtual void setString(const QString& v) {
         s = v;
     }
+
+    void emitSignal() {
+        emit mySignal(i);
+    }
+
+signals:
+    void mySignal(int code);
 
 private:
     int i;
@@ -89,6 +96,8 @@ public:
     static QScriptValue setInt(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue setDouble(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue setString(QScriptContext* context, QScriptEngine* engine);
+
+    static QScriptValue emitSignal(QScriptContext* context, QScriptEngine* engine);
 };
 
 

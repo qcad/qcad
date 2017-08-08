@@ -82,6 +82,8 @@ void EcmaMyClass::initEcma(QScriptEngine& engine) {
     REcmaHelper::registerFunction(&engine, proto, setInt,    "setInt");
     REcmaHelper::registerFunction(&engine, proto, setDouble, "setDouble");
     REcmaHelper::registerFunction(&engine, proto, setString, "setString");
+
+    REcmaHelper::registerFunction(&engine, proto, emitSignal, "emitSignal");
 }
 
 /**
@@ -219,6 +221,22 @@ QScriptValue EcmaMyClass::setString(QScriptContext* context, QScriptEngine* engi
         } 
         else {
             return REcmaHelper::throwError("Wrong number/types of arguments for EcmaMyClass.setString().", context);
+        }
+    }
+    return QScriptValue();
+}
+
+/**
+ * Binding for emitSignal.
+ */
+QScriptValue EcmaMyClass::emitSignal(QScriptContext* context, QScriptEngine* engine) {
+    MyClass* self = getSelfMyClass("emitSignal", context);
+    if (self!=NULL) {
+        if (context->argumentCount()==0) {
+            self->emitSignal();
+        }
+        else {
+            return REcmaHelper::throwError("Wrong number/types of arguments for EcmaMyClass.emitSignal().", context);
         }
     }
     return QScriptValue();
