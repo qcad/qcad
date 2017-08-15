@@ -94,6 +94,7 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
                             appWin,
                             qsTr("File Format Version Not Recommended"),
                             qsTr("The file format version you are using is not recommended: '%1'.").arg(fileVersion) + "\n"
+                            + qsTr("Custom properties will not be saved.") + "\n"
                             + qsTr("All black entities and layers will be saved as white.") + "\n"
                             + qsTr("All custom colors will be 'rounded' to the nearest fixed color.") + " " + qsTr("Proceed?"), buttons);
                 if (ret!=QMessageBox.Yes) {
