@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>RemoveLayer</name>
     <message>
@@ -10,7 +10,7 @@
     <message>
         <location filename="../RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>レイヤーの削除</translation>
     </message>
 </context>
 </TS>

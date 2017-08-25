@@ -21,7 +21,7 @@
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="unfinished"></translation>
+        <translation>オリジナルと同じエンティティタイプ</translation>
     </message>
     <message>
         <location line="+23"/>

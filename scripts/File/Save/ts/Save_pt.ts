@@ -16,12 +16,12 @@
         <translation>O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Todas as cores personalizadas serão aproximadas para a cor fixa mais próxima.</translation>
     </message>
     <message>
-        <location line="-3"/>
+        <location line="-4"/>
         <source>File Format Version Not Recommended</source>
         <translation>Versão de Formato de Arquivo Não Recomendada</translation>
     </message>
@@ -29,6 +29,11 @@
         <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
         <translation>A versão de formato de arquivo que você está usando não é recomendada: &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Custom properties will not be saved.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

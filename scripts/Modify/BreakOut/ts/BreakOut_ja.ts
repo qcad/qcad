@@ -10,7 +10,7 @@
     <message>
         <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation type="unfinished"></translation>
+        <translation>線分、弧、円、楕円、スプラインまたはポリラインの断片を選択して下さい</translation>
     </message>
     <message>
         <source>Choose line, arc, circle, ellipse or spline segment</source>

@@ -36,7 +36,7 @@
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>正接</translation>
     </message>
     <message>
         <location line="+10"/>

@@ -26,7 +26,7 @@
     <message>
         <location line="+6"/>
         <source>Shortcut Prefix Character:</source>
-        <translation type="unfinished"></translation>
+        <translation>ショートカット前置文字:</translation>
     </message>
 </context>
 <context>

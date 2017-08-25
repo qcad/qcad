@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Arc2PL</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location line="+81"/>
         <source>Invalid length</source>
-        <translation type="unfinished"></translation>
+        <translation>無効な長さ</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -26,7 +26,7 @@
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation type="unfinished"></translation>
+        <translation>２点の距離は弧の長さより小さくなければなりません。</translation>
     </message>
     <message>
         <location filename="../Arc2PL.ui" line="+17"/>
@@ -51,12 +51,12 @@
     <message>
         <location filename="../Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation type="unfinished"></translation>
+        <translation>２点と長さ</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and length</source>
-        <translation type="unfinished"></translation>
+        <translation>２点と長さから弧を描く</translation>
     </message>
 </context>
 </TS>

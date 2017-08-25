@@ -196,7 +196,7 @@
         <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1390"/>
+        <location filename="../ShapeAlgorithms.js" line="+1410"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>

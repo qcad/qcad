@@ -56,7 +56,7 @@
     <message>
         <location line="+218"/>
         <source>Invalid value:</source>
-        <translation type="unfinished"></translation>
+        <translation>不正な値:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -76,7 +76,7 @@
     <message>
         <location line="+19"/>
         <source>Expression</source>
-        <translation type="unfinished"></translation>
+        <translation>評価式</translation>
     </message>
     <message>
         <location line="+3"/>

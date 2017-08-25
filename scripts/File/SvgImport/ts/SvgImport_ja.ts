@@ -6,7 +6,7 @@
     <message>
         <location filename="../SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -47,12 +47,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation>スプライン曲線</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation>もし適当であればスプラインを線分・弧に自動コンバート</translation>
     </message>
 </context>
 </TS>

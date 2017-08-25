@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>CircleConcentric</name>
     <message>
@@ -46,12 +46,12 @@
     <message>
         <location filename="../EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>並行曲線（距離指定）</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>楕円の並行曲線を描く</translation>
     </message>
 </context>
 </TS>

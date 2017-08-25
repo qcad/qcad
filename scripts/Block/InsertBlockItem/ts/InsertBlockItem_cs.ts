@@ -9,7 +9,7 @@
         <translation>Nelze importovat soubor z URL:</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Chybně nastavené jméno bloku na &apos;%1&apos;</translation>
     </message>

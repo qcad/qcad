@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Hatch</name>
     <message>
@@ -18,12 +18,12 @@
     <message>
         <location filename="../Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>ハッチングツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation type="unfinished"></translation>
+        <translation>ハッチングツールを表示</translation>
     </message>
     <message>
         <location line="+22"/>

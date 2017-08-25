@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Dialog</name>
     <message>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+197"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished"></translation>
+        <translation>テキストのグリフをポリラインに分解</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -110,17 +110,17 @@
     <message>
         <location line="-7"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation>スプラインを線分セグメントのポリラインに分解</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>マルチラインテキストを複数の1行テキストに分解する</translation>
     </message>
     <message>
         <location line="-31"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation>スプライン近似公差:</translation>
     </message>
 </context>
 </TS>

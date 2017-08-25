@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>AbstractPreferences</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location line="+286"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>設定を適用</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -33,22 +33,22 @@ QCADを再起動してください。</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation type="unfinished"></translation>
+        <translation>デフォルト</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>新規図面のためのデフォルト設定あり</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>現在の図面の設定は以下で変更できます。&lt;br/&gt;&lt;i&gt;編集 &amp;gt; 図面設定&lt;/i&gt;</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>変更は新規図面に反映され、現在の図面には反映されません。</translation>
     </message>
 </context>
 <context>

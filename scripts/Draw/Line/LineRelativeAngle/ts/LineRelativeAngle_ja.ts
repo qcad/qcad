@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>LineRelativeAngle</name>
     <message>
@@ -10,7 +10,7 @@
     <message>
         <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>ベースの線分、弧、円、楕円またはポリラインを選択してください</translation>
     </message>
     <message>
         <location line="+8"/>

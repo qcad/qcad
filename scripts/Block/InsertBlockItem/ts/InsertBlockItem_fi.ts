@@ -9,7 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Säädetty puutteellinen lohkonimi &apos;%1&apos; :een</translation>
     </message>

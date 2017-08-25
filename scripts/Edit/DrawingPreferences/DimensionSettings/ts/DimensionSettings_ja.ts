@@ -22,17 +22,17 @@
     <message>
         <location line="+108"/>
         <source>point</source>
-        <translation type="unfinished"></translation>
+        <translation>点</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation type="unfinished"></translation>
+        <translation>コンマ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation>スペース</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -166,12 +166,12 @@
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation type="unfinished"></translation>
+        <translation>数字の書式</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>小数点:</translation>
     </message>
     <message>
         <location line="+26"/>

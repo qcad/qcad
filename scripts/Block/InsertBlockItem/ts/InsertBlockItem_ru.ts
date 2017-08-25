@@ -9,7 +9,7 @@
         <translation>Невозможно импортировать файл по URL: </translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Неверное имя блока было скорректировано на &apos;%1&apos;</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>AddLayer</name>
     <message>
@@ -24,12 +24,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+26"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>新規レイヤーのデフォルト色:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>新規レイヤーのデフォルト線太さ:</translation>
     </message>
 </context>
 </TS>

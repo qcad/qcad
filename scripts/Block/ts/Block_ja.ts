@@ -39,7 +39,7 @@
     <message>
         <location line="+11"/>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック &apos;%1&apos;は既に存在します。&lt;br&gt;そのため上書きされます。</translation>
     </message>
     <message>
         <location line="+5"/>

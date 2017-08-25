@@ -25,6 +25,11 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Custom properties will not be saved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
         <translation>全ての黒いエンティティ及び画層は白色で保存されます。</translation>
     </message>

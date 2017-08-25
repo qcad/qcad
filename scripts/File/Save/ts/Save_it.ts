@@ -19,12 +19,12 @@
         <translation>Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Tutti i colori personalizzati verra &apos;arrotondato&apos; per il colore più vicino fisso.</translation>
     </message>
     <message>
-        <location line="-3"/>
+        <location line="-4"/>
         <source>File Format Version Not Recommended</source>
         <translation>File formato versione non raccomandato</translation>
     </message>
@@ -32,6 +32,11 @@
         <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
         <translation>La versione del formato del file in uso non è raccomandato: &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Custom properties will not be saved.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

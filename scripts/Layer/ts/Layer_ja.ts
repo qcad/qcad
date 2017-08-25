@@ -21,32 +21,32 @@
     <message>
         <location line="+25"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのレイヤーを表示</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのレイヤーを非表示</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのレイヤの解凍</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのレイヤの凍結</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのレイヤーをロック</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのレイヤーをアンロック</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>属性</translation>
     </message>
     <message>
         <location line="+9"/>

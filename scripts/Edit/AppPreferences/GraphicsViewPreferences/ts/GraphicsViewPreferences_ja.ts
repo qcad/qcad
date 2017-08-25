@@ -61,7 +61,7 @@
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished"></translation>
+        <translation>原点軸の表示</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -76,7 +76,7 @@
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation type="unfinished"></translation>
+        <translation>読み込み時に自動拡縮</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -106,7 +106,7 @@
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>線分太さによるラインタイプパターンのスケール</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -116,37 +116,37 @@
     <message>
         <location line="+36"/>
         <source>Display and Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>表示と性能</translation>
     </message>
     <message>
         <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティをこの数以上の連続点として表示する</translation>
     </message>
     <message>
         <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
         <location line="-134"/>
         <source>Use full resolution for Retina display</source>
-        <translation type="unfinished"></translation>
+        <translation>Retinaディスプレイでフル解像度を用いる</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished"></translation>
+        <translation>デフォルトでアンチエイリアスする</translation>
     </message>
     <message>
         <location line="+327"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation type="unfinished"></translation>
+        <translation>表示される参照点の最大数</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished"></translation>
+        <translation>ハッチング表示のタイムアウト:</translation>
     </message>
     <message>
         <location line="-343"/>

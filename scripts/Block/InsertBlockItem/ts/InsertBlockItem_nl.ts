@@ -9,7 +9,7 @@
         <translation>Kan bestand niet importeren vanuit URL: </translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ongeldig blok naam gecorrigeerd in &apos;%1&apos;</translation>
     </message>

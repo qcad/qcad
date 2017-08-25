@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>ShapePolygonAFCP</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation type="unfinished"></translation>
+        <translation>辺の中央</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>多角形（中心、辺）</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation type="unfinished"></translation>
+        <translation>中心と辺の中心から正多角形を描く</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFCP.ui" line="+17"/>

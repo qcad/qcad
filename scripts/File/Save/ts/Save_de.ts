@@ -9,12 +9,12 @@
         <translation>Die Datei &apos;%1&apos; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation>Alle Benutzerdefinierten Farben werden auf die nächste verfügbare Farbe gerundet.</translation>
     </message>
     <message>
-        <location line="-3"/>
+        <location line="-4"/>
         <source>File Format Version Not Recommended</source>
         <translation>Dateiversion nicht empfohlen</translation>
     </message>
@@ -22,6 +22,11 @@
         <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
         <translation>Die benutzte Dateiformatversion wird nicht empfohlen: &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Custom properties will not be saved.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -72,7 +77,7 @@
         <translation>&amp;Speichern</translation>
     </message>
     <message>
-        <location filename="../Save.js" line="-42"/>
+        <location filename="../Save.js" line="-43"/>
         <source>Overwrite File?</source>
         <translation>Datei überschreiben?</translation>
     </message>
@@ -81,7 +86,7 @@
         <translation type="obsolete">Die Datei &quot;%1&quot; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+38"/>
         <source>Saving...</source>
         <translation>Speichern...</translation>
     </message>

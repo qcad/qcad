@@ -6,7 +6,7 @@
     <message>
         <location filename="../BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation>分解のために線分、弧、円、楕円、スプラインまたはポリラインを選択して下さい。</translation>
     </message>
     <message>
         <location line="+3"/>

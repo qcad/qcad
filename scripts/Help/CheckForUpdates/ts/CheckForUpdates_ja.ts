@@ -12,12 +12,12 @@
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>バージョン情報が見つかりません。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation type="unfinished"></translation>
+        <translation>サーバへの接続が無いか、ファイルが見つかりません。後ほど、再度お試し下さい。</translation>
     </message>
     <message>
         <source>about:blank</source>

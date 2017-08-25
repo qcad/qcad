@@ -147,12 +147,12 @@ Database file: %3
     <message>
         <location line="+43"/>
         <source>Source removed from part library: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>一部のライブラリからソースが削除されました: %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished"></translation>
+        <translation>データベースのアップデートを強制する</translation>
     </message>
     <message>
         <location line="+393"/>
@@ -286,7 +286,7 @@ shown in search results:</source>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>検索</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -320,7 +320,7 @@ shown in search results:</source>
     <message>
         <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>選択されたアイテムを図面に挿入</translation>
     </message>
     <message>
         <location line="+27"/>

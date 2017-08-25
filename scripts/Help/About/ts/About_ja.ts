@@ -11,17 +11,17 @@
     <message>
         <location line="+47"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>リビジョン:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <translation>これは、誰でも&lt;a href=&apos;%1&apos;&gt;参加&lt;/a&gt;できることを意味します!</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation>プログラムは現状のまま提供され、設計、商品性、および特定の目的への適合性を含む、いかなる保証もありません。</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -41,7 +41,7 @@
     <message>
         <location line="+25"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -82,52 +82,52 @@
     <message>
         <location line="-128"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>ビルド日付:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>アーキテクチャー:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>コンパイラ:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 は、 コンピュータ支援設計computer-aided design (CAD)のアプリケーションです。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 はQCADに基づき、自由で（オープンソースな）ソフトウェアです。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1は自由で（オープンソースな）ソフトウェアです。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>プラグインとスクリプト拡張機能は個別のライセンスが適用されます（&apos;プラグイン&apos;タブ参照）</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>すべてのブランドまたは製品名は、それぞれの所有者の商標または登録商標です。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>No plugins found.</source>
-        <translation type="unfinished"></translation>
+        <translation>プラグインがありません</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -162,7 +162,7 @@
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation>スクリプト拡張機能がありません。</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -180,27 +180,27 @@
     <message>
         <location filename="../AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>プログラミング</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>翻訳</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>テンプレート</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>アイコン</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>テスト、フィードバック及び小規模調整</translation>
     </message>
 </context>
 <context>

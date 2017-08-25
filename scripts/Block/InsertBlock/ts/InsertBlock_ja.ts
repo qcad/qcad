@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>InsertBlock</name>
     <message>
@@ -61,13 +61,13 @@
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation type="unfinished"></translation>
+        <translation>１つのブロック</translation>
     </message>
     <message>
         <location line="+17"/>
         <location filename="../InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロックの配列</translation>
     </message>
     <message>
         <location filename="../InsertBlockDialog.ui" line="+12"/>

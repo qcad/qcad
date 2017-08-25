@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>ShowAllLayers</name>
     <message>
@@ -17,7 +17,7 @@
     <message>
         <location filename="../UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのレイヤーをアンロック</translation>
     </message>
 </context>
 </TS>

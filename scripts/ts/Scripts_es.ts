@@ -214,7 +214,7 @@
         <translation type="vanished">Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1383"/>
+        <location filename="../ShapeAlgorithms.js" line="+1403"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

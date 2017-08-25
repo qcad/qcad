@@ -14,7 +14,7 @@
     <message>
         <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>線分、弧、円、楕円、スプラインまたはポリラインを選択して下さい</translation>
     </message>
     <message>
         <location line="+3"/>

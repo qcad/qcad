@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>EllipseCPP</name>
     <message>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation type="unfinished"></translation>
+        <translation>楕円（中心,点,比率）</translation>
     </message>
     <message>
         <location line="+4"/>

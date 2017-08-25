@@ -53,12 +53,12 @@
     <message>
         <location filename="../CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>正接,点,半径</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>指定した半径で点を通る、エンティティに接する円を描く</translation>
     </message>
     <message>
         <location filename="../CircleTPR.ui" line="+17"/>

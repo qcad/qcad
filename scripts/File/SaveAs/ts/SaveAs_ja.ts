@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>SaveAs</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルダイアログ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>システムのファイル選択ダイアログを使用</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Saving</source>
-        <translation type="unfinished"></translation>
+        <translation>保存中</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -44,7 +44,7 @@
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル</translation>
     </message>
     <message>
         <location line="+24"/>

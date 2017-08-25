@@ -6,7 +6,7 @@
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>画像表示</translation>
+        <translation>グラフィックビュー</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -29,7 +29,7 @@
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>ダブルクリックでハッチング修正</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -39,7 +39,7 @@
     <message>
         <location line="+20"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>右ダブルクリックでリセット</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -49,47 +49,47 @@
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック参照を属性と一緒に選択する</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>参照が非表示の時に属性を隠す</translation>
     </message>
     <message>
         <location line="+126"/>
         <source>Highlight entity within range</source>
-        <translation type="unfinished"></translation>
+        <translation>範囲内のエンティティをハイライト</translation>
     </message>
     <message>
         <location line="-211"/>
         <source>Right-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>右クリック</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>右クリックでエンティティを選択解除</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Double-click to select contour</source>
-        <translation type="unfinished"></translation>
+        <translation>ダブルクリックで輪郭を選択</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation>カーソル範囲</translation>
     </message>
     <message>
         <location line="+109"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation>スナップするカーソル範囲:</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティを拾うためにカーソルで範囲指定</translation>
     </message>
 </context>
 </TS>

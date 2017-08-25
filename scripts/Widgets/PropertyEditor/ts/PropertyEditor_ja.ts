@@ -43,7 +43,7 @@
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>固有のプロパティ</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -123,12 +123,12 @@
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>一般プロパティ</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>色:</translation>
     </message>
     <message>
         <source>Move Selection to a New Layer</source>
@@ -137,12 +137,12 @@
     <message>
         <location line="+104"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインタイプスケール:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Protected:</source>
-        <translation type="unfinished"></translation>
+        <translation>保護されています:</translation>
     </message>
     <message>
         <location line="-143"/>
@@ -152,12 +152,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Z座標の表示</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>現在のブロックと現在のレイヤーのプロパティを表示</translation>
     </message>
 </context>
 </TS>

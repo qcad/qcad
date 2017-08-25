@@ -32,12 +32,12 @@
     <message>
         <location filename="../ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>正接,点,半径</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>指定した半径で点を通る、エンティティに接する弧を描く</translation>
     </message>
 </context>
 <context>

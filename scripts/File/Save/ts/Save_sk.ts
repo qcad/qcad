@@ -25,6 +25,11 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Custom properties will not be saved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
         <translation>Všetky čierne prvky a vrstvy budú uložené ako biele.</translation>
     </message>

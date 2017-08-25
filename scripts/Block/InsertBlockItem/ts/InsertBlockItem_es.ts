@@ -71,7 +71,7 @@
         <translation>No puedo importar archivos desde la URL: </translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajustado nombre de bloque no válido &apos;%1&apos;</translation>
     </message>

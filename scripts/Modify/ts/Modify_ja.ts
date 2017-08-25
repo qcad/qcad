@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Modify</name>
     <message>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation>角を選択</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -39,7 +39,7 @@
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation>点を設定</translation>
     </message>
 </context>
 <context>

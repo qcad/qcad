@@ -188,7 +188,7 @@
         <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1383"/>
+        <location filename="../ShapeAlgorithms.js" line="+1403"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>

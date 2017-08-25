@@ -6,12 +6,12 @@
     <message>
         <location filename="../Apollonius.js" line="+1769"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation>無効な半径</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>解決法がありません</translation>
     </message>
 </context>
 <context>
@@ -49,22 +49,22 @@
     <message>
         <location line="+355"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>参照点の移動</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>選択範囲を移動</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティを移動</translation>
     </message>
     <message>
         <location line="+124"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック&apos;%1&apos;を編集中。&lt;br&gt;終了するには&lt;i&gt;ブロック&gt;メイン図面に戻る&lt;/i&gt;を選択して下さい</translation>
     </message>
 </context>
 <context>
@@ -118,7 +118,7 @@
     <message>
         <location line="+232"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>長さ:</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -133,7 +133,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティは線分、弧またはポリラインではありません。 </translation>
     </message>
     <message>
         <location line="+4"/>
@@ -163,7 +163,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティは線分、弧、円、楕円またはポリラインではありません。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -173,7 +173,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティは線分、弧、円、楕円、スプラインまたはポリラインではありません。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -192,7 +192,7 @@
         <translation type="vanished">%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1383"/>
+        <location filename="../ShapeAlgorithms.js" line="+1403"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -238,7 +238,7 @@
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished">弧</translation>
+        <translation>円弧</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -268,32 +268,32 @@
     <message>
         <location line="+1"/>
         <source>Square root</source>
-        <translation type="unfinished"></translation>
+        <translation>平方根</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"></translation>
+        <translation>アルト ファイ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>オーム</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation>オメガ</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -404,72 +404,72 @@
     <message>
         <location filename="../library.js" line="+768"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>オブジェクト</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>オブジェクト</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>未知のオブジェクト</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation>未知のオブジェクト</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>ブロック</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>レイヤー</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>レイヤー</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation type="unfinished"></translation>
+        <translation>レイアウト</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>レイアウト</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインタイプ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>ラインタイプ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation>ビュー</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>表示</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -724,22 +724,22 @@
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"></translation>
+        <translation>トレース</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"></translation>
+        <translation>トレース</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"></translation>
+        <translation>フェイス</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation>フェイス</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -792,17 +792,17 @@
     <message>
         <location filename="../simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>最初のエンティティはトリムできません。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティはトリムできません。</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>２つ目のエンティティはトリムできません。</translation>
     </message>
 </context>
 </TS>

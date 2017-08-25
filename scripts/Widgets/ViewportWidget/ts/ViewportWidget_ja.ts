@@ -136,17 +136,17 @@
     <message>
         <location filename="../ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
-        <translation type="unfinished"></translation>
+        <translation>ドロップされたデータはサポートされていません</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Importing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>インポートファイル:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>インポートURL:</translation>
     </message>
     <message>
         <source>Grid</source>

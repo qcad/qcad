@@ -16,12 +16,12 @@
         <translation type="unfinished">&apos;&amp;#39; Plik już istnieje. Czy chcesz go zastąpić?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-3"/>
+        <location line="-4"/>
         <source>File Format Version Not Recommended</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wersja formatu pliku Nie poleca</translation>
@@ -31,6 +31,11 @@
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wersja formatu używasz nie jest zalecane:&apos;&amp;#39;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Custom properties will not be saved.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

@@ -234,7 +234,7 @@ Ferramentas CAD</translatorcomment>
         <translation type="vanished">O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1383"/>
+        <location filename="../ShapeAlgorithms.js" line="+1403"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

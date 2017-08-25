@@ -192,7 +192,7 @@
         <translation type="vanished">Polomer klesol pod 0.0 po %1 sústredných oblúkoch.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1383"/>
+        <location filename="../ShapeAlgorithms.js" line="+1403"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minimálne dva body sú rovnaké.</translation>

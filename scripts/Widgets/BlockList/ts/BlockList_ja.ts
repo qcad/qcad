@@ -18,12 +18,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>内側のブロックを非表示</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation>行の交互色を使用する</translation>
     </message>
 </context>
 </TS>

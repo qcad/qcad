@@ -57,7 +57,7 @@
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>塗りつぶし</translation>
     </message>
 </context>
 </TS>

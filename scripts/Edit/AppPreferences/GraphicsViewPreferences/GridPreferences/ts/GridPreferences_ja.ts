@@ -29,7 +29,7 @@
     <message>
         <location filename="../GridPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>グラフィック表示</translation>
+        <translation>グラフィックビュー</translation>
     </message>
     <message>
         <location line="+0"/>

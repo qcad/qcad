@@ -39,12 +39,12 @@
     <message>
         <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>拡大縮小の際にマウスホイールの向きを反転する</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>マウスホイールズーム倍率:</translation>
     </message>
     <message>
         <location line="-34"/>

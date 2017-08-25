@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>ColorPreferences</name>
     <message>
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>グラフィックスビュー</translation>
+        <translation>グラフィックビュー</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation>グラフィックスビュー</translation>
+        <translation>グラフィックビュー</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -69,27 +69,27 @@
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>主要な選択色:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation>2番目の選択色を使用する</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>2番目の選択色:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>ドラッグ可能な基準点:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>2番目の基準点:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -109,12 +109,12 @@
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished"></translation>
+        <translation>開始点:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation type="unfinished"></translation>
+        <translation>終了点:</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -124,7 +124,7 @@
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation>スナップラベル:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -134,12 +134,12 @@
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation>測定とラベル:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>描画ツール</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -149,7 +149,7 @@
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>拡大ツール</translation>
     </message>
     <message>
         <location line="+12"/>

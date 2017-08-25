@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja_JP">
+<TS version="2.1" language="ja">
 <context>
     <name>Rotate2</name>
     <message>
@@ -21,17 +21,17 @@
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished">主要な角度:</translation>
+        <translation>１つ目の角度:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished">２つ目の角度:</translation>
+        <translation>２つ目の角度:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished">コピー:</translation>
+        <translation>コピー数:</translation>
     </message>
 </context>
 <context>
