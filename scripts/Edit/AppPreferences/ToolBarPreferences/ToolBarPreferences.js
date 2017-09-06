@@ -41,9 +41,11 @@ ToolBarPreferences.applyPreferences = function(doc) {
         }
     }
 
-    // TODO:
-    //var optionsToolBar = EAction.getOptionsToolBar();
-    //optionsToolBar.setFixedHeight(h);
+    var optionsToolBar = EAction.getOptionsToolBar();
+    if (RS.getSystemId()==="osx") {
+        s+=6;
+    }
+    optionsToolBar.setFixedHeight(s);
 };
 
 ToolBarPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
