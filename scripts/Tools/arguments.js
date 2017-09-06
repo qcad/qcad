@@ -66,6 +66,45 @@ function getIntArgument(args, shortFlag, longFlag, def) {
     return parseInt(ret, 10);
 }
 
+function getIntListArgument(args, shortFlag, longFlag, def) {
+    var arg = getArgument(args, shortFlag, longFlag);
+    if (arg===undefined) {
+        return def;
+    }
+
+    var ret = [];
+    var tokens = arg.split(",");
+
+    var singleInt = false;
+    if (tokens.length===1) {
+        singleInt = true;
+    }
+
+    for (var i=0; i<tokens.length; i++) {
+        var token = tokens[i];
+        var range = token.split("-");
+        var start, stop;
+
+        if (range.length===1) {
+            start = singleInt ? 0 : parseInt(range[0]);
+            stop = parseInt(range[0]);
+        }
+        else if (range.length===2) {
+            start = parseInt(range[0]);
+            stop = parseInt(range[1]);
+        }
+        else {
+            qWarning("invalid token in list: ", token);
+            continue;
+        }
+
+        for (var k=start; k<=stop; k++) {
+            ret.push(k);
+        }
+    }
+    return ret;
+}
+
 function getFloatArgument(args, shortFlag, longFlag, def) {
     var ret = getArgument(args, shortFlag, longFlag);
     if (ret===undefined) {
