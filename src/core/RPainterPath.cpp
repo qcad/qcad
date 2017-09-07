@@ -88,7 +88,8 @@ void RPainterPath::addArc(const RArc& arc) {
 
     QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
     for (int i=0; i<splines.length(); i++) {
-        addSpline(splines[i]);
+        RSpline spline = splines[i];
+        cubicTo(spline.getControlPointAt(1), spline.getControlPointAt(2), spline.getControlPointAt(3));
     }
 
     // very imprecise for arcs with large radii:
