@@ -83,6 +83,27 @@ void RPainterPath::addLine(const RLine& line) {
     lineTo(line.endPoint);
 }
 
+void RPainterPath::addArc(const RArc& arc) {
+    //moveToOrNop(arc.getStartPoint());
+
+    QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
+    for (int i=0; i<splines.length(); i++) {
+        addSpline(splines[i]);
+    }
+
+    // very imprecise for arcs with large radii:
+    /*
+    RCircle c(arc.getCenter(), arc.getRadius());
+    RBox bb = c.getBoundingBox();
+    arcTo(bb.getMinimum().x,
+          bb.getMinimum().y,
+          bb.getSize().x,
+          bb.getSize().y,
+          -RMath::rad2deg(arc.getStartAngle()),
+          -RMath::rad2deg(arc.getSweep()));
+    */
+}
+
 void RPainterPath::addPolyline(const RPolyline& pl) {
     //moveToOrNop(line.startPoint);
     for (int i=0; i<pl.countSegments(); i++) {
@@ -100,20 +121,6 @@ void RPainterPath::addPolyline(const RPolyline& pl) {
             continue;
         }
     }
-}
-
-void RPainterPath::addArc(const RArc& arc) {
-    //moveToOrNop(arc.getStartPoint());
-
-    RCircle c(arc.getCenter(), arc.getRadius());
-    RBox bb = c.getBoundingBox();
-
-    arcTo(bb.getMinimum().x,
-          bb.getMinimum().y,
-          bb.getSize().x,
-          bb.getSize().y,
-          -RMath::rad2deg(arc.getStartAngle()),
-          -RMath::rad2deg(arc.getSweep()));
 }
 
 void RPainterPath::addSpline(const RSpline& spline) {
