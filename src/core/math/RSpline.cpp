@@ -77,7 +77,9 @@ void RSpline::copySpline(const RSpline& other) {
  */
 QList<RSpline> RSpline::createSplinesFromArc(const RArc& arc) {
     RArc a = arc;
+    bool reversed = false;
     if (a.isReversed()) {
+        reversed = true;
         a.reverse();
     }
 
@@ -113,7 +115,13 @@ QList<RSpline> RSpline::createSplinesFromArc(const RArc& arc) {
         double a2 = a1 + sgn * qMin(totalAngle, segmentationAngle);
         RSpline sp = RSpline::createBezierFromSmallArc(radius, a1, a2);
         sp.move(a.getCenter());
-        curves.append(sp);
+        if (reversed) {
+            sp.reverse();
+            curves.prepend(sp);
+        }
+        else {
+            curves.append(sp);
+        }
         totalAngle -= qAbs(a2 - a1);
         a1 = a2;
     }
@@ -187,7 +195,7 @@ RSpline RSpline::createBezierFromSmallArc(double r, double a1, double a2) {
 //    qDebug() << "ctrlPts: " << ctrlPts[2];
 //    qDebug() << "ctrlPts: " << ctrlPts[3];
 
-    return RSpline(ctrlPts, 2);
+    return RSpline(ctrlPts, 3);
 }
 
 void RSpline::to2D() {
