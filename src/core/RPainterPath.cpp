@@ -86,14 +86,14 @@ void RPainterPath::addLine(const RLine& line) {
 void RPainterPath::addArc(const RArc& arc) {
     //moveToOrNop(arc.getStartPoint());
 
-    QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
-    for (int i=0; i<splines.length(); i++) {
-        RSpline spline = splines[i];
-        cubicTo(spline.getControlPointAt(1), spline.getControlPointAt(2), spline.getControlPointAt(3));
-    }
+    // more precise, but not desirable for SVG export:
+//    QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
+//    for (int i=0; i<splines.length(); i++) {
+//        RSpline spline = splines[i];
+//        cubicTo(spline.getControlPointAt(1), spline.getControlPointAt(2), spline.getControlPointAt(3));
+//    }
 
-    // very imprecise for arcs with large radii:
-    /*
+    // NOTE: very imprecise for short arcs with large radii:
     RCircle c(arc.getCenter(), arc.getRadius());
     RBox bb = c.getBoundingBox();
     arcTo(bb.getMinimum().x,
@@ -102,7 +102,6 @@ void RPainterPath::addArc(const RArc& arc) {
           bb.getSize().y,
           -RMath::rad2deg(arc.getStartAngle()),
           -RMath::rad2deg(arc.getSweep()));
-    */
 }
 
 void RPainterPath::addPolyline(const RPolyline& pl) {
