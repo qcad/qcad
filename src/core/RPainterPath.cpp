@@ -35,7 +35,7 @@ RPainterPath::RPainterPath() :
     modes(RPainterPath::NoModes),
     featureSize(0.0),
     pixelSizeHint(-1) {
-    RDebug::incCounter("RPainterPath");
+    //RDebug::incCounter("RPainterPath");
 }
 
 RPainterPath::RPainterPath(const QPainterPath& path) :
@@ -46,7 +46,7 @@ RPainterPath::RPainterPath(const QPainterPath& path) :
     modes(RPainterPath::NoModes),
     featureSize(0.0),
     pixelSizeHint(-1) {
-    RDebug::incCounter("RPainterPath");
+    //RDebug::incCounter("RPainterPath");
 }
 
 RPainterPath::RPainterPath(const RPainterPath& other) :
@@ -60,11 +60,11 @@ RPainterPath::RPainterPath(const RPainterPath& other) :
     pixelSizeHint(other.pixelSizeHint),
     originalShapes(other.originalShapes) {
 
-    RDebug::incCounter("RPainterPath");
+    //RDebug::incCounter("RPainterPath");
 }
 
 RPainterPath::~RPainterPath() {
-    RDebug::decCounter("RPainterPath");
+    //RDebug::decCounter("RPainterPath");
 }
 
 void RPainterPath::setPath(const QPainterPath& path) {

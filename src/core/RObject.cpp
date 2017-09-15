@@ -40,11 +40,11 @@ RObject::RObject(RDocument* document) :
     undone(false),
     protect(false) {
 
-    RDebug::incCounter("RObject");
+    //RDebug::incCounter("RObject");
 }
 
 RObject::RObject(const RObject& other) {
-    RDebug::incCounter("RObject");
+    //RDebug::incCounter("RObject");
 
     document = other.document;
     objectId = other.objectId;
@@ -55,7 +55,7 @@ RObject::RObject(const RObject& other) {
 }
 
 RObject::~RObject() {
-    RDebug::decCounter("RObject");
+    //RDebug::decCounter("RObject");
 }
 
 void RObject::init() {
