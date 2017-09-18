@@ -56,6 +56,7 @@ SaveAs.initPreferences = function(pageWidget, calledByPrefDialog, document) {
 SaveAs.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
     var appWin = EAction.getMainWindow();
+    var i;
 
     var nameFilters = RFileExporterRegistry.getFilterStrings();
     if (nameFilters.length===0) {
@@ -97,10 +98,13 @@ SaveAs.prototype.beginEvent = function() {
 
         var suffix = fileInfo.suffix().toLowerCase();
 
+        // select first name filter in case everything else fails:
+        fileDialog.selectNameFilter(nameFilters[0]);
+
         if (suffix.length!==0 && !defaultNameFilter.containsIgnoreCase(suffix)) {
             // preselect first name filter that matches current extension:
-            for (var i=0; i<nameFilters.length; ++i) {
-                if (nameFilters[i].contains("*." + suffix)) {
+            for (i=0; i<nameFilters.length; ++i) {
+                if (nameFilters[i].contains("R27") && nameFilters[i].contains("*." + suffix)) {
                     fileDialog.selectNameFilter(nameFilters[i]);
                     break;
                 }
@@ -109,7 +113,13 @@ SaveAs.prototype.beginEvent = function() {
         else {
             // preselect configured name filter:
             if (defaultNameFilter.length===0) {
-                fileDialog.selectNameFilter(nameFilters[0]);
+                // preselect default name filter DXF R27:
+                for (i=0; i<nameFilters.length; ++i) {
+                    if (nameFilters[i].contains("R27") && nameFilters[i].contains("*.dxf")) {
+                        fileDialog.selectNameFilter(nameFilters[i]);
+                        break;
+                    }
+                }
             }
             else {
                 fileDialog.selectNameFilter(defaultNameFilter);
