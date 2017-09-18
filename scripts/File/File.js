@@ -244,6 +244,9 @@ File.isRecommendedVersion = function(version) {
     else if (version.indexOf("R27")!==-1) {
         return true;
     }
+    else if (version.indexOf("R32")!==-1) {
+        return true;
+    }
     else {
         return true;
     }
