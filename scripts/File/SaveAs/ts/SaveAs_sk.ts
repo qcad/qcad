@@ -43,12 +43,12 @@
         <translation>Súbor</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+25"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Žiadne exportné filtre sa nenašli. Ukončujem...</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+74"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>

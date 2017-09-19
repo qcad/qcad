@@ -47,12 +47,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+25"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Vientisuodattimia ei löydetty. Keskeytetään...</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+74"/>
         <source>Format:</source>
         <translation>Muoto:</translation>
     </message>

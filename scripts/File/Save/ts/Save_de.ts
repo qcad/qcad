@@ -26,7 +26,7 @@
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Benutzerdefinierte Eigenschaften werden nicht gespeichert.</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -36,7 +36,7 @@
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le proprietà personalizzate non vengono salvate.</translation>
     </message>
     <message>
         <location line="+1"/>
