@@ -272,7 +272,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
             continue;
         }
 
-        var item = this.getBlockItem(block);
+        var item = this.createBlockItem(block);
         this.addTopLevelItem(item);
         if (blockName===selectedBlockName) {
             selectedItem = item;
@@ -303,7 +303,7 @@ RBlockListQt.getBlockTitle = function(block) {
     return title;
 };
 
-RBlockListQt.prototype.getBlockItem = function(block) {
+RBlockListQt.prototype.createBlockItem = function(block) {
     var item = new QTreeWidgetItem();
     var name = block.getName();
 
