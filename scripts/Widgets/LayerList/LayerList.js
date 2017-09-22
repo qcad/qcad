@@ -102,10 +102,10 @@ RLayerListQt.prototype.updateLayers = function(documentInterface) {
 
     layer = doc.queryCurrentLayer();
     if (!layer.isNull()) {
-        var list = this.findItems(layer.getName(), Qt.MatchExactly);
-        if (list.length !== 0) {
+        var items = this.findItems(layer.getName(), Qt.MatchExactly);
+        if (items.length !== 0) {
             this.blockSignals(true);
-            this.setCurrentItem(list[0]);
+            this.setCurrentItem(items[0]);
             this.blockSignals(false);
         }
     }
