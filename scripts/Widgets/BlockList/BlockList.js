@@ -415,6 +415,19 @@ RBlockListQt.prototype.getBlockName = function(item) {
 };
 
 /**
+ * \return The list item for the block with the given block name.
+ */
+RBlockListQt.getItem = function(widget, blockName) {
+    for (var i=0; i<widget.topLevelItemCount; i++) {
+        var item = widget.topLevelItem(i);
+        if (item.data(BlockList.colName, Qt.UserRole)===blockName) {
+            return item;
+        }
+    }
+    return undefined;
+};
+
+/**
  * Enable / disable buttons that edit, remove or insert the active block.
  */
 RBlockListQt.prototype.enableActions = function(enable) {
