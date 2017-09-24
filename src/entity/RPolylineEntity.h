@@ -250,6 +250,10 @@ public:
         return data.getOrientation(implicitelyClosed);
     }
 
+    double getArea() const {
+        return data.getArea();
+    }
+
     double getLength() const {
         return data.getLength();
     }
