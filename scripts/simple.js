@@ -51,7 +51,7 @@ function getDocumentInterface() {
 }
 
 /**
- * \return the current RDocument or undefined.
+ * Returns the current RDocument or undefined.
  * \ingroup ecma_simple
  */
 function getDocument() {
@@ -63,7 +63,7 @@ function getDocument() {
 }
 
 /**
- * \return the current or last active RGraphicsView.
+ * Returns the current or last active RGraphicsView.
  * \ingroup ecma_simple
  */
 function getGraphicsView() {
