@@ -121,6 +121,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, fuzzyCompare, "fuzzyCompare");
             
+            REcmaHelper::registerFunction(&engine, &ctor, containsFuzzy, "containsFuzzy");
+            
             REcmaHelper::registerFunction(&engine, &ctor, parseScale, "parseScale");
             
             REcmaHelper::registerFunction(&engine, &ctor, parseCoordinate, "parseCoordinate");
@@ -2305,6 +2307,129 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMath::fuzzyCompare", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMath::containsFuzzy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMath::containsFuzzy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMath::containsFuzzy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < double > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMath::
+       containsFuzzy(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isArray()
+        ) /* type: QList < double > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMath::
+       containsFuzzy(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMath.containsFuzzy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMath::containsFuzzy", context, engine);
             return result;
         }
          QScriptValue

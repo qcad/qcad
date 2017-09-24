@@ -278,6 +278,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="containsFuzzy" cppName="containsFuzzy"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="values"
+        isConst="true" />
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+        <arg type="double" typeName="double" name="tol"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="parseScale" cppName="parseScale"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

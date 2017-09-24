@@ -251,6 +251,10 @@
         <return>return <expr><name>data</name>.<call><name>getOrientation</name><argument_list>(<argument><expr><name>implicitelyClosed</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>double</name></type> <name>getArea</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getArea</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>double</name></type> <name>getLength</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getLength</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
