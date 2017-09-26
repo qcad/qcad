@@ -272,7 +272,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
             continue;
         }
 
-        var item = this.getBlockItem(block);
+        var item = this.createBlockItem(block);
         this.addTopLevelItem(item);
         if (blockName===selectedBlockName) {
             selectedItem = item;
@@ -303,7 +303,7 @@ RBlockListQt.getBlockTitle = function(block) {
     return title;
 };
 
-RBlockListQt.prototype.getBlockItem = function(block) {
+RBlockListQt.prototype.createBlockItem = function(block) {
     var item = new QTreeWidgetItem();
     var name = block.getName();
 
@@ -412,6 +412,19 @@ RBlockListQt.prototype.blockActivated = function() {
  */
 RBlockListQt.prototype.getBlockName = function(item) {
     return item.data(BlockList.colName, Qt.UserRole);
+};
+
+/**
+ * \return The list item for the block with the given block name.
+ */
+RBlockListQt.getItem = function(widget, blockName) {
+    for (var i=0; i<widget.topLevelItemCount; i++) {
+        var item = widget.topLevelItem(i);
+        if (item.data(BlockList.colName, Qt.UserRole)===blockName) {
+            return item;
+        }
+    }
+    return undefined;
 };
 
 /**

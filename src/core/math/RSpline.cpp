@@ -195,7 +195,8 @@ RSpline RSpline::createBezierFromSmallArc(double r, double a1, double a2) {
 //    qDebug() << "ctrlPts: " << ctrlPts[2];
 //    qDebug() << "ctrlPts: " << ctrlPts[3];
 
-    return RSpline(ctrlPts, 3);
+    // this should be cubic but appears to be far off if cubic
+    return RSpline(ctrlPts, 2);
 }
 
 void RSpline::to2D() {

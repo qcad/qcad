@@ -38,6 +38,7 @@ function startTransaction(d) {
 }
 
 /**
+ * Ends a transaction.
  * \see startTransaction
  * \ingroup ecma_simple
  *
@@ -74,7 +75,8 @@ function endTransaction() {
 }
 
 /**
- * \return The RDocument the current transaction applies to or the current document or undefined.
+ * Returns the RDocument the current transaction applies to or the current document or undefined.
+ * \ingroup ecma_simple
  */
 function getTransactionDocument() {
     if (!isNull(__simpleDoc)) {
@@ -86,8 +88,8 @@ function getTransactionDocument() {
 }
 
 /**
+ * Returns the current operation if we are in a transaction or a new operation.
  * \ingroup ecma_simple
- * \return Current operation if we are in a transaction or a new operation.
  */
 function getOperation() {
     if (!isNull(__simpleOp)) {

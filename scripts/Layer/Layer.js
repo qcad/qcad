@@ -136,12 +136,30 @@ Layer.init = function() {
     Layer.getToolMatrixPanel();
 };
 
+Layer.getShowFrozen = function() {
+    if (hasPlugin("PROTOOLS")) {
+        return RSettings.getBoolValue("LayerListPro/ShowFrozen", false);
+    }
+    else {
+        return false;
+    }
+};
+
+Layer.getFreezeLayer = function() {
+    if (hasPlugin("PROTOOLS")) {
+        return RSettings.getBoolValue("LayerListPro/FreezeLayer", true);
+    }
+    else {
+        return true;
+    }
+};
+
 /**
  * Show / hide all layers.
  *
  * \param show True to show, false to hide all
  * \param di RDocumentInterface
- * \param layerId ID of layer to excempt from the action
+ * \param layerId ID of layer to exempt from the action
  * \param showProgress True to show progress information to progress listeners
  */
 Layer.showHide = function(show, di, layerId, showProgress) {
@@ -154,7 +172,8 @@ Layer.showHide = function(show, di, layerId, showProgress) {
         }
     }
 
-    var showFrozen = RSettings.getBoolValue("LayerListPro/ShowFrozen", false);
+    var showFrozen = Layer.getShowFrozen();
+    var freezeLayer = Layer.getFreezeLayer();
 
     var operation = new RModifyObjectsOperation();
     var layers = di.getDocument().queryAllLayers();

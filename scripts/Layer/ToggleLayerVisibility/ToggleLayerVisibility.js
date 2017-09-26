@@ -35,14 +35,31 @@ ToggleLayerVisibility.prototype.beginEvent = function() {
 
     var layer = this.getCurrentLayer();
 
-    var showFrozen = RSettings.getBoolValue("LayerListPro/ShowFrozen", false);
-    var freezeLayer = RSettings.getBoolValue("LayerListPro/FreezeLayer", true);
+    var showFrozen = Layer.getShowFrozen();
+    var freezeLayer = Layer.getFreezeLayer();
 
-    if (!showFrozen && !freezeLayer) {
+    // separate column for frozen is shown:
+    // always toggle off:
+    if (showFrozen) {
         layer.setOff(!layer.isOff());
     }
     else {
-        layer.setFrozen(!layer.isFrozen());
+        // freeze layers:
+        if (freezeLayer) {
+            if (!layer.isFrozen() && !layer.isOff()) {
+                layer.setFrozen(true);
+            }
+            else {
+                layer.setFrozen(false);
+                layer.setOff(false);
+            }
+        }
+
+        // never freeze layers:
+        else {
+            layer.setFrozen(false);
+            layer.setOff(!layer.isOff());
+        }
     }
 
     var operation = new RModifyObjectOperation(layer);

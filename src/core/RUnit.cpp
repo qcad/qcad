@@ -781,21 +781,22 @@ QString RUnit::doubleToString(double value, double prec,
     QString ret;
     QString exaStr;
     int dotPos;
-    int num;
+    long int num;
     if (prec>1.0e-12) {
-        num = RMath::mround(value / prec);
+        num = (long int)round(value / prec);
     }
     else {
         num = RMath::mround(value);
     }
 
-    exaStr = doubleToString(prec, 10);
+    exaStr = doubleToStringDec(prec, 10);
     dotPos = exaStr.indexOf('.');
 
     if (dotPos==-1) {
         ret.sprintf("%d", RMath::mround(num*prec));
     } else {
         int digits = exaStr.length() - dotPos - 1;
+        // num*prec to allow rounding to multiples of 0.2 or 0.5, etc.
         ret = doubleToString(num*prec, digits, showLeadingZeroes, showTrailingZeroes, decimalSeparator);
     }
 
@@ -832,6 +833,7 @@ QString RUnit::doubleToString(double value, int prec,
     }
 
     ret.sprintf(formatString.toLatin1(), value + fuzz);
+    //ret = "%1".arg(value+fuzz, 0, 'f', prec);
 
     if (!showTrailingZeroes) {
         if (ret.contains('.')) {
