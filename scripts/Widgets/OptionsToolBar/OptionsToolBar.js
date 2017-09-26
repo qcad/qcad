@@ -77,9 +77,9 @@ OptionsToolBar.postInit = function(basePath) {
 
     // fixed height to prevent FS#652 (can happen at least on Windows and Linux):
     var h = RSettings.getIntValue("ToolBar/IconSize", 38);
-    if (RS.getSystemId()==="osx") {
+    //if (RS.getSystemId()==="osx") {
         h+=6;
-    }
+    //}
     optionsToolBar.setFixedHeight(h);
 
     var flags = new Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea);
@@ -94,9 +94,10 @@ OptionsToolBar.postInit = function(basePath) {
     iconLabel.setContentsMargins(6, 0, 6, 0);
 
     if (!RSettings.hasCustomStyleSheet()) {
+        var w = optionsToolBar.iconSize.width() < 20 ? 1 : 2;
         iconLabel.styleSheet =
             "QLabel {"
-            + "border-radius: 6px; "
+            + "border-radius: %1px; ".arg(w*3)
             + "background-color: "
             + "    qlineargradient(spread:pad, "
             + "        x1: 0, y1: 0, "
@@ -105,15 +106,15 @@ OptionsToolBar.postInit = function(basePath) {
             + "        stop: 0.5 rgba(255,255,255,192), "
             + "        stop: 1 rgba(255,255,255,0) "
             + "    ); "
-            + "border: 2px solid #8f8f8f;"
-            + "margin: 2px 2px 2px 2px;"
+            + "border: %1px solid #8f8f8f;".arg(w)
+            + "margin: %1px %1px %1px %1px;".arg(w)
             + "}";
     }
 
     // avoid empty label after startup, before initializing new document:
     iconLabel.pixmap =
             new QIcon(autoPath("scripts/Reset/Reset.svg")).pixmap(
-                optionsToolBar.iconSize
+                new QSize(optionsToolBar.iconSize.width()*0.8, optionsToolBar.iconSize.height()*0.8)
             );
     optionsToolBar.addWidget(iconLabel);
     optionsToolBar.addSeparator();

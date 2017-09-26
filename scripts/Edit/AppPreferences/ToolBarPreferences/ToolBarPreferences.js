@@ -42,9 +42,9 @@ ToolBarPreferences.applyPreferences = function(doc) {
     }
 
     var optionsToolBar = EAction.getOptionsToolBar();
-    if (RS.getSystemId()==="osx") {
+    //if (RS.getSystemId()==="osx") {
         s+=6;
-    }
+    //}
     optionsToolBar.setFixedHeight(s);
 };
 
