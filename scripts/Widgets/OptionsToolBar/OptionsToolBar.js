@@ -77,10 +77,7 @@ OptionsToolBar.postInit = function(basePath) {
 
     // fixed height to prevent FS#652 (can happen at least on Windows and Linux):
     var h = RSettings.getIntValue("ToolBar/IconSize", 38);
-    //if (RS.getSystemId()==="osx") {
-        h+=6;
-    //}
-    optionsToolBar.setFixedHeight(h);
+    optionsToolBar.setFixedHeight(h+6);
 
     var flags = new Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea);
     optionsToolBar.setAllowedAreas(flags);
