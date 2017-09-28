@@ -408,7 +408,7 @@ bool REntity::isVisible() const {
     // check if layer is off and this is not a block reference:
     // block references on layer X remain visible if X is off but not frozen:
     if (doc->isLayerOff(*layer) && !ignoreLayerVisibility) {
-        if (getType()!=RS::EntityBlockRef) {
+        if (getType()!=RS::EntityBlockRef && getType()!=RS::EntityViewport) {
             return false;
         }
     }
