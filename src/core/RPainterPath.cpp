@@ -231,6 +231,7 @@ QList<QSharedPointer<RShape> > RPainterPath::getShapes() const {
 void RPainterPath::addPath(const RPainterPath& path) {
     QPainterPath::addPath(path);
     points.append(path.getPoints());
+    originalShapes.append(path.originalShapes);
 }
 
 void RPainterPath::appendPath(const RPainterPath& path) {
