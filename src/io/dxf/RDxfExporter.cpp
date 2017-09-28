@@ -1311,16 +1311,19 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
  */
 void RDxfExporter::writeLeader(const RLeaderEntity& l) {
     if (l.countSegments()>0) {
+        DL_LeaderData leaderData(l.hasArrowHead(),
+                      0,
+                      3,
+                      0,
+                      0,
+                      1.0,
+                      10.0,
+                      l.countVertices(),
+                      l.getDimScale());
+
         dxf.writeLeader(
             *dw,
-            DL_LeaderData(l.hasArrowHead(),
-                          0,
-                          3,
-                          0,
-                          0,
-                          1.0,
-                          10.0,
-                          l.countVertices()),
+            leaderData,
             attributes);
         bool first = true;
         for (int i=0; i<l.countSegments(); i++) {
@@ -1348,6 +1351,8 @@ void RDxfExporter::writeLeader(const RLeaderEntity& l) {
                                     line->getEndPoint().y,
                                     0.0));
         }
+
+        dxf.writeLeaderEnd(*dw, leaderData);
     } else {
         qWarning() << "RDxfExporter::writeLeader: "
             << "dropping leader without segments";

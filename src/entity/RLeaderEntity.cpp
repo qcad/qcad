@@ -40,6 +40,8 @@ RPropertyTypeId RLeaderEntity::PropertyVertexNX;
 RPropertyTypeId RLeaderEntity::PropertyVertexNY;
 RPropertyTypeId RLeaderEntity::PropertyVertexNZ;
 
+RPropertyTypeId RLeaderEntity::PropertyDimScale;
+
 
 RLeaderEntity::RLeaderEntity(RDocument* document, const RLeaderData& data) :
     REntity(document), data(document, data) {
@@ -74,6 +76,8 @@ void RLeaderEntity::init() {
     RLeaderEntity::PropertyVertexNX.generateId(typeid(RLeaderEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"));
     RLeaderEntity::PropertyVertexNY.generateId(typeid(RLeaderEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RLeaderEntity::PropertyVertexNZ.generateId(typeid(RLeaderEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"));
+
+    RLeaderEntity::PropertyDimScale.generateId(typeid(RLeaderEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
 }
 
 bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -105,6 +109,8 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMemberX(data.vertices, value, PropertyVertexNX == propertyTypeId);
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.vertices, value, PropertyVertexNZ == propertyTypeId);
+
+    ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
 
     return ret;
 }
@@ -153,6 +159,9 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
         QVariant v;
         v.setValue(RVector::getZList(data.vertices));
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+    }
+    else if (propertyTypeId == PropertyDimScale) {
+        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

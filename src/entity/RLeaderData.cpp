@@ -21,8 +21,8 @@
 
 RLeaderData::RLeaderData()
     : arrowHead(true),
-      dimaszOverride(RNANDOUBLE),
-      dimscaleOverride(RNANDOUBLE),
+      dimaszOverride(0.0),
+      dimScaleOverride(0.0),
       dimLeaderBlockId(REntity::INVALID_ID) {
 }
 
@@ -37,7 +37,7 @@ RLeaderData::RLeaderData(RDocument* document, const RLeaderData& data)
 
 RLeaderData::RLeaderData(const RPolyline& polyline, bool arrowHead)
     : RPolyline(polyline),
-      arrowHead(arrowHead), dimaszOverride(-1), dimscaleOverride(1.0), dimLeaderBlockId(REntity::INVALID_ID) {
+      arrowHead(arrowHead), dimaszOverride(-1), dimScaleOverride(1.0), dimLeaderBlockId(REntity::INVALID_ID) {
 
 }
 
@@ -48,10 +48,7 @@ void RLeaderData::setDimaszOverride(double v) {
 double RLeaderData::getDimasz() const {
     double dimasz = 2.5;
 
-    if (!RMath::isNaN(dimaszOverride)) {
-        dimasz = dimaszOverride;
-    }
-    else if (document!=NULL) {
+    if (document!=NULL) {
         dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
     }
     else {
@@ -62,23 +59,26 @@ double RLeaderData::getDimasz() const {
 }
 
 void RLeaderData::setDimScaleOverride(double v) {
-    dimscaleOverride = v;
+    dimScaleOverride = v;
 }
 
 double RLeaderData::getDimScale(bool fromDocument) const {
-    double dimscale = 1.0;
+    double ret = dimScaleOverride;
 
-    if (!RMath::isNaN(dimscaleOverride)) {
-        dimscale = dimscaleOverride;
+    if (document!=NULL && fromDocument && RMath::fuzzyCompare(ret, 0.0)) {
+        ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
     }
-    else if (document!=NULL && fromDocument) {
-        dimscale = document->getKnownVariable(RS::DIMSCALE, dimscale).toDouble();
+
+    return ret;
+}
+
+void RLeaderData::scaleVisualProperties(double scaleFactor) {
+    if (dimScaleOverride>RS::PointTolerance) {
+        setDimScaleOverride(dimScaleOverride * scaleFactor);
     }
     else {
-        qWarning() << "RLeaderData::getDimScale: no document set";
+        setDimScaleOverride(scaleFactor);
     }
-
-    return dimscale;
 }
 
 void RLeaderData::setArrowHead(bool on) {

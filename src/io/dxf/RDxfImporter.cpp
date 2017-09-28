@@ -1158,6 +1158,21 @@ void RDxfImporter::addDimOrdinate(const DL_DimensionData& data,
 void RDxfImporter::addLeader(const DL_LeaderData& data) {
     leader = RLeaderData();
     leader.setDocument(document);
+
+    if (xData.contains("ACAD")) {
+        QList<QPair<int, QVariant> > list = xData["ACAD"];
+        for (int i=0; i<list.size(); i++) {
+            QPair<int, QVariant> tuple = list[i];
+            // dimension scale (DIMSCALE):
+            if (tuple.first==1070 && tuple.second==40 && i<list.size()-1) {
+                tuple = list[i+1];
+                if (tuple.first==1040) {
+                    leader.setDimScaleOverride(tuple.second.toDouble());
+                }
+            }
+        }
+    }
+
     leaderArrowHead = data.arrowHeadFlag==1;
 }
 

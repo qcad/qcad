@@ -58,6 +58,8 @@ public:
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
 
+    static RPropertyTypeId PropertyDimScale;
+
 public:
     RLeaderEntity(RDocument* document, const RLeaderData& data);
     RLeaderEntity(const RLeaderEntity& other);

@@ -57,6 +57,8 @@ public:
     double getDimScale(bool fromDocument=true) const;
     void setDimScaleOverride(double v);
 
+    virtual void scaleVisualProperties(double scaleFactor);
+
     void setArrowHead(bool on);
     bool hasArrowHead() const {
         return arrowHead;
@@ -124,7 +126,7 @@ private:
     /** Arrow size */
     double dimaszOverride;
     /** Dimension scale */
-    double dimscaleOverride;
+    double dimScaleOverride;
     /** Block to use instead of arrow */
     RBlock::Id dimLeaderBlockId;
 };
