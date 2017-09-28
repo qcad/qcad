@@ -200,7 +200,12 @@ bool RDimensionData::scale(const RVector& scaleFactors, const RVector& center) {
 }
 
 void RDimensionData::scaleVisualProperties(double scaleFactor) {
-    setDimScale(dimScaleOverride * scaleFactor);
+    if (dimScaleOverride>RS::PointTolerance) {
+        setDimScale(dimScaleOverride * scaleFactor);
+    }
+    else {
+        setDimScale(scaleFactor);
+    }
     if (!RMath::fuzzyCompare(scaleFactor, 0.0)) {
         setLinearFactor(linearFactor / scaleFactor);
     }
