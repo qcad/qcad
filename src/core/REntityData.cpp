@@ -102,12 +102,15 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
         }
 
         if (RSettings::isLayer0CompatibilityOn()) {
-            // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
-            if (l->getName()=="0") {
-                if (blockRefStack.isEmpty()) {
-                    return l->getColor();
+            // never inherit color from viewport:
+            if (blockRefStack.isEmpty() || blockRefStack.top()->getType()!=RS::EntityViewport) {
+                // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
+                if (l->getName()=="0") {
+                    if (blockRefStack.isEmpty()) {
+                        return l->getColor();
+                    }
+                    return blockRefStack.top()->getColor(true, blockRefStack);
                 }
-                return blockRefStack.top()->getColor(true, blockRefStack);
             }
         }
 
