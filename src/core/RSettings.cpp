@@ -641,6 +641,10 @@ bool RSettings::getColorCorrection() {
     return getValue("GraphicsView/ColorCorrection", true).toBool();
 }
 
+bool RSettings::getColorCorrectionDisableForPrinting() {
+    return getValue("GraphicsView/ColorCorrectionDisableForPrinting", false).toBool();
+}
+
 int RSettings::getColorThreshold() {
     return getValue("GraphicsView/ColorThreshold", 10).toInt();
 }

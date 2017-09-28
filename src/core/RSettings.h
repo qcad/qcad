@@ -109,6 +109,7 @@ public:
     static bool getAutoScalePatterns();
     static bool getAutoZoomOnLoad();
     static bool getColorCorrection();
+    static bool getColorCorrectionDisableForPrinting();
     static int getColorThreshold();
     static int getTextHeightThreshold();
     static double getArcAngleLengthThreshold();
