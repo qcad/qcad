@@ -724,6 +724,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
     }
 
     colorCorrection = RSettings::getColorCorrection();
+    colorCorrectionDisableForPrinting = RSettings::getColorCorrectionDisableForPrinting();
     colorThreshold = RSettings::getColorThreshold();
 
     updateTextHeightThreshold();
@@ -1181,6 +1182,10 @@ void RGraphicsViewImage::applyMinimumLineweight(QPen& pen) {
 }
 
 void RGraphicsViewImage::applyColorCorrection(QPen& pen) {
+    if (colorCorrectionDisableForPrinting && (printing || printPreview)) {
+        return;
+    }
+
     if (colorCorrection || colorCorrectionOverride) {
         if (pen.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
             pen.setColor(Qt::white);
@@ -1191,6 +1196,10 @@ void RGraphicsViewImage::applyColorCorrection(QPen& pen) {
 }
 
 void RGraphicsViewImage::applyColorCorrection(QBrush& brush) {
+    if (colorCorrectionDisableForPrinting && (printing || printPreview)) {
+        return;
+    }
+
     if (colorCorrection || colorCorrectionOverride) {
         if (brush.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
             brush.setColor(Qt::white);

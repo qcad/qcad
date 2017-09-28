@@ -350,6 +350,7 @@ protected:
 
     bool colorCorrectionOverride;
     bool colorCorrection;
+    bool colorCorrectionDisableForPrinting;
     int colorThreshold;
 
     double minimumLineweight;
