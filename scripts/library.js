@@ -2079,6 +2079,13 @@ function addDirtyFlag(title) {
 }
 
 function hasPlugin(name) {
+    if (name==="PROTOOLS") {
+        if (new QFileInfo("scripts/Pro").exists()) {
+            // PROTOOLS available not as plugins but as scripts folder:
+            return true;
+        }
+    }
+
     return RPluginLoader.hasPlugin(name);
 }
 
