@@ -99,6 +99,108 @@
         getMaxExtents
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setPlotPaperMarginLeftMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperMarginBottomMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperMarginRightMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperMarginTopMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotOrigin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotWindowAreaMin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotWindowAreaMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNumeratorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDenominatorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperUnits
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUseStandardScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setStandardScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setStandardScaleType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCanonicalMediaName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperMarginLeftMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperMarginBottomMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperMarginRightMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperMarginTopMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotOrigin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotWindowAreaMin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotWindowAreaMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNumeratorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDenominatorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperUnits
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getUseStandardScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getStandardScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getStandardScaleType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCanonicalMediaName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -116,6 +218,10 @@
     ;static  void fromScriptValueEnumPlotPaperUnits(const QScriptValue& value, RLayout::PlotPaperUnits& out)
     ;static  QScriptValue toScriptValueEnumPlotRotation(QScriptEngine* engine, const RLayout::PlotRotation& value)
     ;static  void fromScriptValueEnumPlotRotation(const QScriptValue& value, RLayout::PlotRotation& out)
+    ;static  QScriptValue toScriptValueEnumPlotType(QScriptEngine* engine, const RLayout::PlotType& value)
+    ;static  void fromScriptValueEnumPlotType(const QScriptValue& value, RLayout::PlotType& out)
+    ;static  QScriptValue toScriptValueEnumStandardScaleType(QScriptEngine* engine, const RLayout::StandardScaleType& value)
+    ;static  void fromScriptValueEnumStandardScaleType(const QScriptValue& value, RLayout::StandardScaleType& out)
     ;};
     #endif
     

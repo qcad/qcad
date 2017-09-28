@@ -110,6 +110,7 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getAutoScalePatterns</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getAutoZoomOnLoad</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getColorCorrection</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>getColorCorrectionModelSpace</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getColorThreshold</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getTextHeightThreshold</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>double</name></type> <name>getArcAngleLengthThreshold</name><parameter_list>()</parameter_list>;</function_decl>

@@ -184,6 +184,9 @@
         getColorCorrection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getColorCorrectionModelSpace
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getColorThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

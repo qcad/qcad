@@ -63,36 +63,90 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMaxExtentsY</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMaxExtentsZ</name></decl>;</decl_stmt>
 
-<comment type="line">//    static RPropertyTypeId PropertyPlotPaperMarginLeftMM;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotPaperMarginBottomMM;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotPaperMarginRightMM;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotPaperMarginTopMM;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotPaperSizeWidth;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotPaperSizeHeight;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotOriginX;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotOriginY;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotWindowAreaMinX;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotWindowAreaMinY;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotWindowAreaMaxX;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotWindowAreaMaxY;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyNumeratorCustomScale;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyDenominatorCustomScale;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotPaperUnits;</comment>
-<comment type="line">//    static RPropertyTypeId PropertyPlotRotation;</comment>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperMarginLeftMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperMarginBottomMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperMarginRightMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperMarginTopMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperSizeWidth</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperSizeHeight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotOriginX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotOriginY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotWindowAreaMinX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotWindowAreaMinY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotWindowAreaMaxX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotWindowAreaMaxY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyNumeratorCustomScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDenominatorCustomScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperUnits</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotRotation</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyUseStandardScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyStandardScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyStandardScaleType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCanonicalMediaName</name></decl>;</decl_stmt>
 
     <enum>enum <name>PlotPaperUnits</name>
     <block>{
-      <expr><name>Inches</name>         = 0</expr>,   <comment type="line">// Inches</comment>
-      <expr><name>Millimeters</name>    = 1</expr>,   <comment type="line">// Millimeters</comment>
-      <expr><name>Pixels</name>         = 2</expr>    <comment type="line">// Pixels</comment>
+        <expr><name>Inches</name>         = 0</expr>,   <comment type="line">// Inches</comment>
+        <expr><name>Millimeters</name>    = 1</expr>,   <comment type="line">// Millimeters</comment>
+        <expr><name>Pixels</name>         = 2</expr>    <comment type="line">// Pixels</comment>
     }</block>;</enum>
 
     <enum>enum <name>PlotRotation</name>
     <block>{
-      <expr><name>Zero</name>              = 0</expr>,   <comment type="line">// No rotation (0)</comment>
-      <expr><name>CounterClockWise</name>  = 1</expr>,   <comment type="line">// 90 CCW      (90)</comment>
-      <expr><name>Inverted</name>          = 2</expr>,   <comment type="line">// Inverted    (180)</comment>
-      <expr><name>ClockWise</name>         = 3</expr>    <comment type="line">// 90 CW       (270)</comment>
+        <expr><name>Zero</name>              = 0</expr>,   <comment type="line">// No rotation (0)</comment>
+        <expr><name>CounterClockWise</name>  = 1</expr>,   <comment type="line">// 90 CCW      (90)</comment>
+        <expr><name>Inverted</name>          = 2</expr>,   <comment type="line">// Inverted    (180)</comment>
+        <expr><name>ClockWise</name>         = 3</expr>    <comment type="line">// 90 CW       (270)</comment>
+    }</block>;</enum>
+
+    <enum>enum <name>PlotType</name>
+    <block>{
+        <expr><name>Display</name>        = 0</expr>,   <comment type="line">// Display</comment>
+        <expr><name>Extents</name>        = 1</expr>,   <comment type="line">// Extents</comment>
+        <expr><name>Limits</name>         = 2</expr>,   <comment type="line">// Limits</comment>
+        <expr><name>View</name>           = 3</expr>,   <comment type="line">// View</comment>
+        <expr><name>Window</name>         = 4</expr>,   <comment type="line">// Window</comment>
+        <expr><name>Layout</name>         = 5</expr>    <comment type="line">// Layout</comment>
+    }</block>;</enum>
+
+    <enum>enum <name>StandardScaleType</name>
+    <block>{
+      <expr><name>Scale_ScaleToFit</name>     = 0</expr>,   <comment type="line">// Scaled to Fit</comment>
+      <expr><name>Scale_1_128in_1ft</name>    = 1</expr>,   <comment type="line">// 1/128" = 1'</comment>
+      <expr><name>Scale_1_64in_1ft</name>     = 2</expr>,   <comment type="line">// 1/64" = 1'</comment>
+      <expr><name>Scale_1_32in_1ft</name>     = 3</expr>,   <comment type="line">// 1/32" = 1'</comment>
+      <expr><name>Scale_1_16in_1ft</name>     = 4</expr>,   <comment type="line">// 1/16" = 1'</comment>
+      <expr><name>Scale_3_32in_1ft</name>     = 5</expr>,   <comment type="line">// 3/32" = 1'</comment>
+      <expr><name>Scale_1_8in_1ft</name>      = 6</expr>,   <comment type="line">// 1/8" = 1'</comment>
+      <expr><name>Scale_3_16in_1ft</name>     = 7</expr>,   <comment type="line">// 3/16" = 1'</comment>
+      <expr><name>Scale_1_4in_1ft</name>      = 8</expr>,   <comment type="line">// 1/4" = 1'</comment>
+      <expr><name>Scale_3_8in_1ft</name>      = 9</expr>,   <comment type="line">// 3/8" = 1'</comment>
+      <expr><name>Scale_1_2in_1ft</name>      = 10</expr>,  <comment type="line">// 1/2" = 1'</comment>
+      <expr><name>Scale_3_4in_1ft</name>      = 11</expr>,  <comment type="line">// 3/4" = 1'</comment>
+      <expr><name>Scale_1in_1ft</name>        = 12</expr>,  <comment type="line">// 1" = 1'</comment>
+      <expr><name>Scale_3in_1ft</name>        = 13</expr>,  <comment type="line">// 3" = 1'</comment>
+      <expr><name>Scale_6in_1ft</name>        = 14</expr>,  <comment type="line">// 6" = 1'</comment>
+      <expr><name>Scale_1ft_1ft</name>        = 15</expr>,  <comment type="line">// 1' = 1'</comment>
+      <expr><name>Scale_1_1</name>            = 16</expr>,  <comment type="line">// 1:1</comment>
+      <expr><name>Scale_1_2</name>            = 17</expr>,  <comment type="line">// 1:2</comment>
+      <expr><name>Scale_1_4</name>            = 18</expr>,  <comment type="line">// 1:4</comment>
+      <expr><name>Scale_1_5</name>            = 19</expr>,  <comment type="line">// 1:5</comment>
+      <expr><name>Scale_1_8</name>            = 20</expr>,  <comment type="line">// 1:8</comment>
+      <expr><name>Scale_1_10</name>           = 21</expr>,  <comment type="line">// 1:10</comment>
+      <expr><name>Scale_1_16</name>           = 22</expr>,  <comment type="line">// 1:16</comment>
+      <expr><name>Scale_1_20</name>           = 23</expr>,  <comment type="line">// 1:20</comment>
+      <expr><name>Scale_1_30</name>           = 24</expr>,  <comment type="line">// 1:30</comment>
+      <expr><name>Scale_1_40</name>           = 25</expr>,  <comment type="line">// 1:40</comment>
+      <expr><name>Scale_1_50</name>           = 26</expr>,  <comment type="line">// 1:50</comment>
+      <expr><name>Scale_1_100</name>          = 27</expr>,  <comment type="line">// 1:100</comment>
+      <expr><name>Scale_2_1</name>            = 28</expr>,  <comment type="line">// 2:1</comment>
+      <expr><name>Scale_4_1</name>            = 29</expr>,  <comment type="line">// 4:1</comment>
+      <expr><name>Scale_8_1</name>            = 30</expr>,  <comment type="line">// 8:1</comment>
+      <expr><name>Scale_10_1</name>           = 31</expr>,  <comment type="line">// 10:1</comment>
+      <expr><name>Scale_100_1</name>          = 32</expr>,  <comment type="line">// 100:1</comment>
+      <expr><name>Scale_1000_1</name>         = 33</expr>,  <comment type="line">// 1000:1</comment>
+      <expr><name>Scale_1and1_2in_1ft</name>  = 34</expr>  <comment type="line">// 1.5"= 1'</comment>
     }</block>;</enum>
 
 </public><public>public:
@@ -164,101 +218,145 @@
         <return>return <expr><name>maxExtents</name></expr>;</return>
     }</block></function>
 
-<comment type="line">//    void setPlotPaperMarginLeftMM(double v) {</comment>
-<comment type="line">//        plotPaperMarginLeftMM = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotPaperMarginLeftMM</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperMarginLeftMM</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotPaperMarginBottomMM(double v) {</comment>
-<comment type="line">//        plotPaperMarginBottomMM = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotPaperMarginBottomMM</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperMarginBottomMM</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotPaperMarginRightMM(double v) {</comment>
-<comment type="line">//        plotPaperMarginRightMM = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotPaperMarginRightMM</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperMarginRightMM</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotPaperMarginTopMM(double v) {</comment>
-<comment type="line">//        plotPaperMarginTopMM = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotPaperMarginTopMM</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperMarginTopMM</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotPaperSize(const RVector&amp; v) {</comment>
-<comment type="line">//        plotPaperSize = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotPaperSize</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperSize</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotOrigin(const RVector&amp; v) {</comment>
-<comment type="line">//        plotOrigin = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotOrigin</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotOrigin</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotWindowAreaMin(const RVector&amp; v) {</comment>
-<comment type="line">//        plotWindowAreaMin = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotWindowAreaMin</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotWindowAreaMin</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotWindowAreaMax(const RVector&amp; v) {</comment>
-<comment type="line">//        plotWindowAreaMax = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotWindowAreaMax</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotWindowAreaMax</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setNumeratorCustomScale(double v) {</comment>
-<comment type="line">//        numeratorCustomScale = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setNumeratorCustomScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>numeratorCustomScale</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setDenominatorCustomScale(double v) {</comment>
-<comment type="line">//        denominatorCustomScale = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setDenominatorCustomScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>denominatorCustomScale</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotPaperUnits(RLayout::PlotPaperUnits v) {</comment>
-<comment type="line">//        plotPaperUnits = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotPaperUnits</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>PlotPaperUnits</name></name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperUnits</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    void setPlotRotation(RLayout::PlotRotation v) {</comment>
-<comment type="line">//        plotRotation = v;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotRotation</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>PlotRotation</name></name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotRotation</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    double getPlotPaperMarginLeftMM() const {</comment>
-<comment type="line">//        return plotPaperMarginLeftMM;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setPlotType</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>PlotType</name></name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotType</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    double getPlotPaperMarginBottomMM() const {</comment>
-<comment type="line">//        return plotPaperMarginBottomMM;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setUseStandardScale</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>useStandardScale</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    double getPlotPaperMarginRightMM() const {</comment>
-<comment type="line">//        return plotPaperMarginRightMM;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setStandardScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>standardScale</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    double getPlotPaperMarginTopMM() const {</comment>
-<comment type="line">//        return plotPaperMarginTopMM;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setStandardScaleType</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>StandardScaleType</name></name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>standardScaleType</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    RVector getPlotPaperSize() const {</comment>
-<comment type="line">//        return plotPaperSize;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setCanonicalMediaName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>canonicalMediaName</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    RVector getPlotOrigin() const {</comment>
-<comment type="line">//        return plotOrigin;</comment>
-<comment type="line">//    }</comment>
 
-<comment type="line">//    RVector getPlotWindowAreaMin() const {</comment>
-<comment type="line">//        return plotWindowAreaMin;</comment>
-<comment type="line">//    }</comment>
 
-<comment type="line">//    RVector getPlotWindowAreaMax() const {</comment>
-<comment type="line">//        return plotWindowAreaMax;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>double</name></type> <name>getPlotPaperMarginLeftMM</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperMarginLeftMM</name></expr>;</return>
+    }</block></function>
 
-<comment type="line">//    double getNumeratorCustomScale() const {</comment>
-<comment type="line">//        return numeratorCustomScale;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>double</name></type> <name>getPlotPaperMarginBottomMM</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperMarginBottomMM</name></expr>;</return>
+    }</block></function>
 
-<comment type="line">//    double getDenominatorCustomScale() const {</comment>
-<comment type="line">//        return denominatorCustomScale;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>double</name></type> <name>getPlotPaperMarginRightMM</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperMarginRightMM</name></expr>;</return>
+    }</block></function>
 
-<comment type="line">//    RLayout::PlotPaperUnits getPlotPaperUnits() const {</comment>
-<comment type="line">//        return plotPaperUnits;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>double</name></type> <name>getPlotPaperMarginTopMM</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperMarginTopMM</name></expr>;</return>
+    }</block></function>
 
-<comment type="line">//    RLayout::PlotRotation getPlotRotation() const {</comment>
-<comment type="line">//        return plotRotation;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>RVector</name></type> <name>getPlotPaperSize</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperSize</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPlotOrigin</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotOrigin</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPlotWindowAreaMin</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotWindowAreaMin</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPlotWindowAreaMax</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotWindowAreaMax</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getNumeratorCustomScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>numeratorCustomScale</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDenominatorCustomScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>denominatorCustomScale</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RLayout</name>::<name>PlotPaperUnits</name></name></type> <name>getPlotPaperUnits</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperUnits</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RLayout</name>::<name>PlotRotation</name></name></type> <name>getPlotRotation</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotRotation</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RLayout</name>::<name>PlotType</name></name></type> <name>getPlotType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotType</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getUseStandardScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>useStandardScale</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getStandardScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>standardScale</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RLayout</name>::<name>StandardScaleType</name></name></type> <name>getStandardScaleType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>standardScaleType</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getCanonicalMediaName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>canonicalMediaName</name></expr>;</return>
+    }</block></function>
+
+
 
     <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -284,18 +382,23 @@
     <decl_stmt><decl><type><name>RVector</name></type> <name>maxExtents</name></decl>;</decl_stmt>
 
     <comment type="line">// TODO: split into base class 'RPlotSettings':</comment>
-<comment type="line">//    double plotPaperMarginLeftMM;</comment>
-<comment type="line">//    double plotPaperMarginBottomMM;</comment>
-<comment type="line">//    double plotPaperMarginRightMM;</comment>
-<comment type="line">//    double plotPaperMarginTopMM;</comment>
-<comment type="line">//    RVector plotPaperSize;</comment>
-<comment type="line">//    RVector plotOrigin;</comment>
-<comment type="line">//    RVector plotWindowAreaMin;</comment>
-<comment type="line">//    RVector plotWindowAreaMax;</comment>
-<comment type="line">//    double numeratorCustomScale;</comment>
-<comment type="line">//    double denominatorCustomScale;</comment>
-<comment type="line">//    PlotPaperUnits plotPaperUnits;</comment>
-<comment type="line">//    PlotRotation plotRotation;</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>plotPaperMarginLeftMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>plotPaperMarginBottomMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>plotPaperMarginRightMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>plotPaperMarginTopMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>plotPaperSize</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>plotOrigin</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>plotWindowAreaMin</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>plotWindowAreaMax</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>numeratorCustomScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>denominatorCustomScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>PlotPaperUnits</name></type> <name>plotPaperUnits</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>PlotRotation</name></type> <name>plotRotation</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>PlotType</name></type> <name>plotType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>useStandardScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>standardScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>StandardScaleType</name></type> <name>standardScaleType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>canonicalMediaName</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 
@@ -307,6 +410,10 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotPaperUnits*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotRotation</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotRotation*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotType</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotType*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::StandardScaleType</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::StandardScaleType*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

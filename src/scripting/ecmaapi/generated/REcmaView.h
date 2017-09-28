@@ -84,6 +84,9 @@
         getBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

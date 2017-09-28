@@ -91,6 +91,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBox, "getBox");
             
+            REcmaHelper::registerFunction(&engine, proto, scale, "scale");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -973,6 +975,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerView::getBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerView::scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerView::scale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::scale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RView* self = 
+                        getSelf("scale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->scale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RView.scale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::scale", context, engine);
             return result;
         }
          QScriptValue

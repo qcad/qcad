@@ -101,6 +101,74 @@
             
             REcmaHelper::registerFunction(&engine, proto, getMaxExtents, "getMaxExtents");
             
+            REcmaHelper::registerFunction(&engine, proto, setPlotPaperMarginLeftMM, "setPlotPaperMarginLeftMM");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotPaperMarginBottomMM, "setPlotPaperMarginBottomMM");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotPaperMarginRightMM, "setPlotPaperMarginRightMM");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotPaperMarginTopMM, "setPlotPaperMarginTopMM");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotPaperSize, "setPlotPaperSize");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotOrigin, "setPlotOrigin");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotWindowAreaMin, "setPlotWindowAreaMin");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotWindowAreaMax, "setPlotWindowAreaMax");
+            
+            REcmaHelper::registerFunction(&engine, proto, setNumeratorCustomScale, "setNumeratorCustomScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDenominatorCustomScale, "setDenominatorCustomScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotPaperUnits, "setPlotPaperUnits");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotRotation, "setPlotRotation");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlotType, "setPlotType");
+            
+            REcmaHelper::registerFunction(&engine, proto, setUseStandardScale, "setUseStandardScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setStandardScale, "setStandardScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setStandardScaleType, "setStandardScaleType");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCanonicalMediaName, "setCanonicalMediaName");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotPaperMarginLeftMM, "getPlotPaperMarginLeftMM");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotPaperMarginBottomMM, "getPlotPaperMarginBottomMM");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotPaperMarginRightMM, "getPlotPaperMarginRightMM");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotPaperMarginTopMM, "getPlotPaperMarginTopMM");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotPaperSize, "getPlotPaperSize");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotOrigin, "getPlotOrigin");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotWindowAreaMin, "getPlotWindowAreaMin");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotWindowAreaMax, "getPlotWindowAreaMax");
+            
+            REcmaHelper::registerFunction(&engine, proto, getNumeratorCustomScale, "getNumeratorCustomScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDenominatorCustomScale, "getDenominatorCustomScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotPaperUnits, "getPlotPaperUnits");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotRotation, "getPlotRotation");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPlotType, "getPlotType");
+            
+            REcmaHelper::registerFunction(&engine, proto, getUseStandardScale, "getUseStandardScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getStandardScale, "getStandardScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getStandardScaleType, "getStandardScaleType");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCanonicalMediaName, "getCanonicalMediaName");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -194,6 +262,90 @@
                 qScriptValueFromValue(&engine, RLayout::PropertyMaxExtentsZ),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyPlotPaperMarginLeftMM",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotPaperMarginLeftMM),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotPaperMarginBottomMM",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotPaperMarginBottomMM),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotPaperMarginRightMM",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotPaperMarginRightMM),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotPaperMarginTopMM",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotPaperMarginTopMM),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotPaperSizeWidth",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotPaperSizeWidth),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotPaperSizeHeight",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotPaperSizeHeight),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotOriginX",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotOriginX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotOriginY",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotOriginY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotWindowAreaMinX",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotWindowAreaMinX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotWindowAreaMinY",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotWindowAreaMinY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotWindowAreaMaxX",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotWindowAreaMaxX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotWindowAreaMaxY",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotWindowAreaMaxY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyNumeratorCustomScale",
+                qScriptValueFromValue(&engine, RLayout::PropertyNumeratorCustomScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDenominatorCustomScale",
+                qScriptValueFromValue(&engine, RLayout::PropertyDenominatorCustomScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotPaperUnits",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotPaperUnits),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotRotation",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotRotation),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyPlotType",
+                qScriptValueFromValue(&engine, RLayout::PropertyPlotType),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyUseStandardScale",
+                qScriptValueFromValue(&engine, RLayout::PropertyUseStandardScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyStandardScale",
+                qScriptValueFromValue(&engine, RLayout::PropertyStandardScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyStandardScaleType",
+                qScriptValueFromValue(&engine, RLayout::PropertyStandardScaleType),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyCanonicalMediaName",
+                qScriptValueFromValue(&engine, RLayout::PropertyCanonicalMediaName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
@@ -233,6 +385,211 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Display",
+    QScriptValue(RLayout::Display),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Extents",
+    QScriptValue(RLayout::Extents),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Limits",
+    QScriptValue(RLayout::Limits),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("View",
+    QScriptValue(RLayout::View),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Window",
+    QScriptValue(RLayout::Window),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Layout",
+    QScriptValue(RLayout::Layout),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_ScaleToFit",
+    QScriptValue(RLayout::Scale_ScaleToFit),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_128in_1ft",
+    QScriptValue(RLayout::Scale_1_128in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_64in_1ft",
+    QScriptValue(RLayout::Scale_1_64in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_32in_1ft",
+    QScriptValue(RLayout::Scale_1_32in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_16in_1ft",
+    QScriptValue(RLayout::Scale_1_16in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_3_32in_1ft",
+    QScriptValue(RLayout::Scale_3_32in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_8in_1ft",
+    QScriptValue(RLayout::Scale_1_8in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_3_16in_1ft",
+    QScriptValue(RLayout::Scale_3_16in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_4in_1ft",
+    QScriptValue(RLayout::Scale_1_4in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_3_8in_1ft",
+    QScriptValue(RLayout::Scale_3_8in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_2in_1ft",
+    QScriptValue(RLayout::Scale_1_2in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_3_4in_1ft",
+    QScriptValue(RLayout::Scale_3_4in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1in_1ft",
+    QScriptValue(RLayout::Scale_1in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_3in_1ft",
+    QScriptValue(RLayout::Scale_3in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_6in_1ft",
+    QScriptValue(RLayout::Scale_6in_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1ft_1ft",
+    QScriptValue(RLayout::Scale_1ft_1ft),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_1",
+    QScriptValue(RLayout::Scale_1_1),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_2",
+    QScriptValue(RLayout::Scale_1_2),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_4",
+    QScriptValue(RLayout::Scale_1_4),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_5",
+    QScriptValue(RLayout::Scale_1_5),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_8",
+    QScriptValue(RLayout::Scale_1_8),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_10",
+    QScriptValue(RLayout::Scale_1_10),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_16",
+    QScriptValue(RLayout::Scale_1_16),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_20",
+    QScriptValue(RLayout::Scale_1_20),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_30",
+    QScriptValue(RLayout::Scale_1_30),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_40",
+    QScriptValue(RLayout::Scale_1_40),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_50",
+    QScriptValue(RLayout::Scale_1_50),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1_100",
+    QScriptValue(RLayout::Scale_1_100),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_2_1",
+    QScriptValue(RLayout::Scale_2_1),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_4_1",
+    QScriptValue(RLayout::Scale_4_1),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_8_1",
+    QScriptValue(RLayout::Scale_8_1),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_10_1",
+    QScriptValue(RLayout::Scale_10_1),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_100_1",
+    QScriptValue(RLayout::Scale_100_1),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1000_1",
+    QScriptValue(RLayout::Scale_1000_1),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale_1and1_2in_1ft",
+    QScriptValue(RLayout::Scale_1and1_2in_1ft),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RLayout::PlotPaperUnits>(
@@ -246,6 +603,20 @@
         &engine,
         toScriptValueEnumPlotRotation,
         fromScriptValueEnumPlotRotation,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RLayout::PlotType>(
+        &engine,
+        toScriptValueEnumPlotType,
+        fromScriptValueEnumPlotType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RLayout::StandardScaleType>(
+        &engine,
+        toScriptValueEnumStandardScaleType,
+        fromScriptValueEnumStandardScaleType,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -1332,6 +1703,1862 @@
             return result;
         }
          QScriptValue
+        REcmaLayout::setPlotPaperMarginLeftMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotPaperMarginLeftMM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotPaperMarginLeftMM";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotPaperMarginLeftMM", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotPaperMarginLeftMM(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotPaperMarginLeftMM().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotPaperMarginLeftMM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotPaperMarginBottomMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotPaperMarginBottomMM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotPaperMarginBottomMM";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotPaperMarginBottomMM", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotPaperMarginBottomMM(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotPaperMarginBottomMM().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotPaperMarginBottomMM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotPaperMarginRightMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotPaperMarginRightMM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotPaperMarginRightMM";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotPaperMarginRightMM", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotPaperMarginRightMM(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotPaperMarginRightMM().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotPaperMarginRightMM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotPaperMarginTopMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotPaperMarginTopMM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotPaperMarginTopMM";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotPaperMarginTopMM", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotPaperMarginTopMM(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotPaperMarginTopMM().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotPaperMarginTopMM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotPaperSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotPaperSize", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotPaperSize";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotPaperSize", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotPaperSize(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotPaperSize().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotPaperSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotOrigin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotOrigin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotOrigin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotOrigin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotOrigin(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotOrigin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotOrigin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotWindowAreaMin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotWindowAreaMin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotWindowAreaMin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotWindowAreaMin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotWindowAreaMin(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotWindowAreaMin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotWindowAreaMin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotWindowAreaMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotWindowAreaMax", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotWindowAreaMax";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotWindowAreaMax", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotWindowAreaMax(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotWindowAreaMax().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotWindowAreaMax", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setNumeratorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setNumeratorCustomScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setNumeratorCustomScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setNumeratorCustomScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNumeratorCustomScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setNumeratorCustomScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setNumeratorCustomScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setDenominatorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setDenominatorCustomScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setDenominatorCustomScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setDenominatorCustomScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDenominatorCustomScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setDenominatorCustomScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setDenominatorCustomScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotPaperUnits
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotPaperUnits", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotPaperUnits";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotPaperUnits", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLayout::PlotPaperUnits */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RLayout::PlotPaperUnits*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLayout::PlotPaperUnits*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotPaperUnits*.",
+                               context);                    
+                    }
+                    RLayout::PlotPaperUnits& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotPaperUnits(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotPaperUnits().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotPaperUnits", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotRotation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotRotation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLayout::PlotRotation */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RLayout::PlotRotation*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLayout::PlotRotation*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotRotation*.",
+                               context);                    
+                    }
+                    RLayout::PlotRotation& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotRotation(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotRotation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotRotation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setPlotType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setPlotType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setPlotType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setPlotType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLayout::PlotType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RLayout::PlotType*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLayout::PlotType*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::PlotType*.",
+                               context);                    
+                    }
+                    RLayout::PlotType& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlotType(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setPlotType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setPlotType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setUseStandardScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setUseStandardScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setUseStandardScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setUseStandardScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setUseStandardScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setUseStandardScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setUseStandardScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setStandardScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setStandardScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setStandardScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setStandardScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStandardScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setStandardScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setStandardScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setStandardScaleType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setStandardScaleType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setStandardScaleType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setStandardScaleType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLayout::StandardScaleType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RLayout::StandardScaleType*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLayout::StandardScaleType*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RLayout: Argument 0 is not of type RLayout::StandardScaleType*.",
+                               context);                    
+                    }
+                    RLayout::StandardScaleType& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStandardScaleType(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setStandardScaleType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setStandardScaleType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::setCanonicalMediaName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::setCanonicalMediaName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::setCanonicalMediaName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("setCanonicalMediaName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCanonicalMediaName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.setCanonicalMediaName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::setCanonicalMediaName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotPaperMarginLeftMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotPaperMarginLeftMM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotPaperMarginLeftMM";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotPaperMarginLeftMM", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getPlotPaperMarginLeftMM();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotPaperMarginLeftMM().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotPaperMarginLeftMM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotPaperMarginBottomMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotPaperMarginBottomMM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotPaperMarginBottomMM";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotPaperMarginBottomMM", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getPlotPaperMarginBottomMM();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotPaperMarginBottomMM().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotPaperMarginBottomMM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotPaperMarginRightMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotPaperMarginRightMM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotPaperMarginRightMM";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotPaperMarginRightMM", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getPlotPaperMarginRightMM();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotPaperMarginRightMM().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotPaperMarginRightMM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotPaperMarginTopMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotPaperMarginTopMM", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotPaperMarginTopMM";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotPaperMarginTopMM", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getPlotPaperMarginTopMM();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotPaperMarginTopMM().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotPaperMarginTopMM", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotPaperSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotPaperSize", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotPaperSize";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotPaperSize", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPlotPaperSize();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotPaperSize().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotPaperSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotOrigin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotOrigin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotOrigin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotOrigin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPlotOrigin();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotOrigin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotOrigin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotWindowAreaMin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotWindowAreaMin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotWindowAreaMin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotWindowAreaMin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPlotWindowAreaMin();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotWindowAreaMin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotWindowAreaMin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotWindowAreaMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotWindowAreaMax", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotWindowAreaMax";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotWindowAreaMax", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPlotWindowAreaMax();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotWindowAreaMax().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotWindowAreaMax", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getNumeratorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getNumeratorCustomScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getNumeratorCustomScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getNumeratorCustomScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getNumeratorCustomScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getNumeratorCustomScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getNumeratorCustomScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getDenominatorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getDenominatorCustomScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getDenominatorCustomScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getDenominatorCustomScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDenominatorCustomScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getDenominatorCustomScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getDenominatorCustomScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotPaperUnits
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotPaperUnits", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotPaperUnits";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotPaperUnits", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLayout::PlotPaperUnits'
+    RLayout::PlotPaperUnits cppResult =
+        
+               self->getPlotPaperUnits();
+        // return type: RLayout::PlotPaperUnits
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotPaperUnits().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotPaperUnits", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotRotation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotRotation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotRotation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLayout::PlotRotation'
+    RLayout::PlotRotation cppResult =
+        
+               self->getPlotRotation();
+        // return type: RLayout::PlotRotation
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotRotation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotRotation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getPlotType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getPlotType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getPlotType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getPlotType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLayout::PlotType'
+    RLayout::PlotType cppResult =
+        
+               self->getPlotType();
+        // return type: RLayout::PlotType
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getPlotType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getPlotType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getUseStandardScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getUseStandardScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getUseStandardScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getUseStandardScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getUseStandardScale();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getUseStandardScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getUseStandardScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getStandardScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getStandardScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getStandardScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getStandardScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getStandardScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getStandardScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getStandardScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getStandardScaleType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getStandardScaleType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getStandardScaleType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getStandardScaleType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLayout::StandardScaleType'
+    RLayout::StandardScaleType cppResult =
+        
+               self->getStandardScaleType();
+        // return type: RLayout::StandardScaleType
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getStandardScaleType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getStandardScaleType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayout::getCanonicalMediaName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayout::getCanonicalMediaName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayout::getCanonicalMediaName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayout* self = 
+                        getSelf("getCanonicalMediaName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getCanonicalMediaName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayout.getCanonicalMediaName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayout::getCanonicalMediaName", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaLayout::getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1905,5 +4132,25 @@
     
         {
             out = qvariant_cast<RLayout::PlotRotation>(value.toVariant());
+        }
+         QScriptValue REcmaLayout::toScriptValueEnumPlotType(QScriptEngine* engine, const RLayout::PlotType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaLayout::fromScriptValueEnumPlotType(const QScriptValue& value, RLayout::PlotType& out)
+    
+        {
+            out = qvariant_cast<RLayout::PlotType>(value.toVariant());
+        }
+         QScriptValue REcmaLayout::toScriptValueEnumStandardScaleType(QScriptEngine* engine, const RLayout::StandardScaleType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaLayout::fromScriptValueEnumStandardScaleType(const QScriptValue& value, RLayout::StandardScaleType& out)
+    
+        {
+            out = qvariant_cast<RLayout::StandardScaleType>(value.toVariant());
         }
         

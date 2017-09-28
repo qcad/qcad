@@ -351,6 +351,7 @@
 
     <decl_stmt><decl><type><name>bool</name></type> <name>colorCorrectionOverride</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>colorCorrection</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>colorCorrectionModelSpace</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>colorThreshold</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>double</name></type> <name>minimumLineweight</name></decl>;</decl_stmt>
