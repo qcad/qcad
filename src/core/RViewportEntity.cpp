@@ -165,7 +165,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
     // if layer is visible, export viewport frame
     // viewport contents is always exported (unless viewport if off):
-    if (isVisible()) {
+    RLayer::Id layerId = getLayerId();
+    if (!doc->isLayerOff(layerId)) {
         // export viewport frame to layer of viewport:
         e.setBrush(Qt::NoBrush);
         QList<RLine> lines = viewportBox.getLines2d();
@@ -216,12 +217,13 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             continue;
         }
 
-        entity->rotate(data.rotation, data.position);
-
         // prevent recursions:
         if (entity->getType()==RS::EntityViewport) {
             continue;
         }
+
+        // transform according to viewport settings:
+        entity->rotate(data.rotation, data.position);
 
         RBox bb = entity->getBoundingBox();
         if (!viewportBox.intersects(bb)) {
