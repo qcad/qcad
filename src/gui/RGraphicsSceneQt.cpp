@@ -790,9 +790,14 @@ void RGraphicsSceneQt::highlightEntity(REntity& entity) {
     beginPreview();
     // get painter paths for closest entity:
     QList<RGraphicsSceneDrawable> drawables = getDrawables(entity.getId());
+    RBox clipRectangle = getClipRectangle(entity.getId());
     for (int i = 0; i < drawables.size(); ++i) {
         drawables[i].setSelected(entity.isSelected());
         drawables[i].setHighlighted(true);
+    }
+    if (clipRectangle.isValid()) {
+        previewClipRectangles.insert(entity.getId(), clipRectangle);
+        //exportClipRectangle(clipRect);
     }
     // highlighted entities are previews on top of original entities:
     addToPreview(entity.getId(), drawables);
