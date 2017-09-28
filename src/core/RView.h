@@ -99,6 +99,12 @@ public:
                 + RVector(width, height) / 2);
     }
 
+    void scale(double factor) {
+        centerPoint.scale(factor);
+        width*=factor;
+        height*=factor;
+    }
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
