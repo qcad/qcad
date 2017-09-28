@@ -39,22 +39,27 @@ RPropertyTypeId RLayout::PropertyMaxExtentsX;
 RPropertyTypeId RLayout::PropertyMaxExtentsY;
 RPropertyTypeId RLayout::PropertyMaxExtentsZ;
 
-//RPropertyTypeId RLayout::PropertyPlotPaperMarginLeftMM;
-//RPropertyTypeId RLayout::PropertyPlotPaperMarginBottomMM;
-//RPropertyTypeId RLayout::PropertyPlotPaperMarginRightMM;
-//RPropertyTypeId RLayout::PropertyPlotPaperMarginTopMM;
-//RPropertyTypeId RLayout::PropertyPlotPaperSizeWidth;
-//RPropertyTypeId RLayout::PropertyPlotPaperSizeHeight;
-//RPropertyTypeId RLayout::PropertyPlotOriginX;
-//RPropertyTypeId RLayout::PropertyPlotOriginY;
-//RPropertyTypeId RLayout::PropertyPlotWindowAreaMinX;
-//RPropertyTypeId RLayout::PropertyPlotWindowAreaMinY;
-//RPropertyTypeId RLayout::PropertyPlotWindowAreaMaxX;
-//RPropertyTypeId RLayout::PropertyPlotWindowAreaMaxY;
-//RPropertyTypeId RLayout::PropertyNumeratorCustomScale;
-//RPropertyTypeId RLayout::PropertyDenominatorCustomScale;
-//RPropertyTypeId RLayout::PropertyPlotPaperUnits;
-//RPropertyTypeId RLayout::PropertyPlotRotation;
+RPropertyTypeId RLayout::PropertyPlotPaperMarginLeftMM;
+RPropertyTypeId RLayout::PropertyPlotPaperMarginBottomMM;
+RPropertyTypeId RLayout::PropertyPlotPaperMarginRightMM;
+RPropertyTypeId RLayout::PropertyPlotPaperMarginTopMM;
+RPropertyTypeId RLayout::PropertyPlotPaperSizeWidth;
+RPropertyTypeId RLayout::PropertyPlotPaperSizeHeight;
+RPropertyTypeId RLayout::PropertyPlotOriginX;
+RPropertyTypeId RLayout::PropertyPlotOriginY;
+RPropertyTypeId RLayout::PropertyPlotWindowAreaMinX;
+RPropertyTypeId RLayout::PropertyPlotWindowAreaMinY;
+RPropertyTypeId RLayout::PropertyPlotWindowAreaMaxX;
+RPropertyTypeId RLayout::PropertyPlotWindowAreaMaxY;
+RPropertyTypeId RLayout::PropertyNumeratorCustomScale;
+RPropertyTypeId RLayout::PropertyDenominatorCustomScale;
+RPropertyTypeId RLayout::PropertyPlotPaperUnits;
+RPropertyTypeId RLayout::PropertyPlotRotation;
+RPropertyTypeId RLayout::PropertyPlotType;
+RPropertyTypeId RLayout::PropertyUseStandardScale;
+RPropertyTypeId RLayout::PropertyStandardScale;
+RPropertyTypeId RLayout::PropertyStandardScaleType;
+RPropertyTypeId RLayout::PropertyCanonicalMediaName;
 
 RLayout::RLayout() :
     RObject(),
@@ -90,22 +95,27 @@ void RLayout::init() {
     RLayout::PropertyMaxExtentsY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Max Extents"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RLayout::PropertyMaxExtentsZ.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Max Extents"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-//    RLayout::PropertyPlotPaperMarginLeftMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Left"));
-//    RLayout::PropertyPlotPaperMarginBottomMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
-//    RLayout::PropertyPlotPaperMarginRightMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Right"));
-//    RLayout::PropertyPlotPaperMarginTopMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Top"));
-//    RLayout::PropertyPlotPaperSizeWidth.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Paper Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
-//    RLayout::PropertyPlotPaperSizeHeight.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Paper Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
-//    RLayout::PropertyPlotOriginX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
-//    RLayout::PropertyPlotOriginY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
-//    RLayout::PropertyPlotWindowAreaMinX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Min"), QT_TRANSLATE_NOOP("REntity", "X"));
-//    RLayout::PropertyPlotWindowAreaMinY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Min"), QT_TRANSLATE_NOOP("REntity", "Y"));
-//    RLayout::PropertyPlotWindowAreaMaxX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Max"), QT_TRANSLATE_NOOP("REntity", "X"));
-//    RLayout::PropertyPlotWindowAreaMaxY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Max"), QT_TRANSLATE_NOOP("REntity", "Y"));
-//    RLayout::PropertyNumeratorCustomScale.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Custom Scale"), QT_TRANSLATE_NOOP("REntity", "Numerator"));
-//    RLayout::PropertyDenominatorCustomScale.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Custom Scale"), QT_TRANSLATE_NOOP("REntity", "Denominator"));
-//    RLayout::PropertyPlotPaperUnits.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Plot Paper Units"));
-//    RLayout::PropertyPlotRotation.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Plot Rotation"));
+    RLayout::PropertyPlotPaperMarginLeftMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Left"));
+    RLayout::PropertyPlotPaperMarginBottomMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
+    RLayout::PropertyPlotPaperMarginRightMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Right"));
+    RLayout::PropertyPlotPaperMarginTopMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Top"));
+    RLayout::PropertyPlotPaperSizeWidth.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Paper Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
+    RLayout::PropertyPlotPaperSizeHeight.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Paper Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
+    RLayout::PropertyPlotOriginX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RLayout::PropertyPlotOriginY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RLayout::PropertyPlotWindowAreaMinX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Min"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RLayout::PropertyPlotWindowAreaMinY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Min"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RLayout::PropertyPlotWindowAreaMaxX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Max"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RLayout::PropertyPlotWindowAreaMaxY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Max"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RLayout::PropertyNumeratorCustomScale.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Custom Scale"), QT_TRANSLATE_NOOP("REntity", "Numerator"));
+    RLayout::PropertyDenominatorCustomScale.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Custom Scale"), QT_TRANSLATE_NOOP("REntity", "Denominator"));
+    RLayout::PropertyPlotPaperUnits.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Plot Paper Units"));
+    RLayout::PropertyPlotRotation.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Plot Rotation"));
+    RLayout::PropertyPlotType.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Plot Type"));
+    RLayout::PropertyUseStandardScale.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Use Standard Scale"));
+    RLayout::PropertyStandardScale.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Standard Scale"));
+    RLayout::PropertyStandardScaleType.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Standard Scale Type"));
+    RLayout::PropertyCanonicalMediaName.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Media Name"));
 }
 
 RLayout* RLayout::clone() const {
@@ -151,22 +161,27 @@ bool RLayout::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(maxExtents.y, value, PropertyMaxExtentsY == propertyTypeId);
     ret = ret || RObject::setMember(maxExtents.z, value, PropertyMaxExtentsZ == propertyTypeId);
 
-//    ret = ret || RObject::setMember(plotPaperMarginLeftMM, value, PropertyPlotPaperMarginLeftMM == propertyTypeId);
-//    ret = ret || RObject::setMember(plotPaperMarginBottomMM, value, PropertyPlotPaperMarginBottomMM == propertyTypeId);
-//    ret = ret || RObject::setMember(plotPaperMarginRightMM, value, PropertyPlotPaperMarginRightMM == propertyTypeId);
-//    ret = ret || RObject::setMember(plotPaperMarginTopMM, value, PropertyPlotPaperMarginTopMM == propertyTypeId);
-//    ret = ret || RObject::setMember(plotPaperSize.x, value, PropertyPlotPaperSizeWidth == propertyTypeId);
-//    ret = ret || RObject::setMember(plotPaperSize.y, value, PropertyPlotPaperSizeHeight == propertyTypeId);
-//    ret = ret || RObject::setMember(plotOrigin.x, value, PropertyPlotOriginX == propertyTypeId);
-//    ret = ret || RObject::setMember(plotOrigin.y, value, PropertyPlotOriginY == propertyTypeId);
-//    ret = ret || RObject::setMember(plotWindowAreaMin.x, value, PropertyPlotWindowAreaMinX == propertyTypeId);
-//    ret = ret || RObject::setMember(plotWindowAreaMin.y, value, PropertyPlotWindowAreaMinY == propertyTypeId);
-//    ret = ret || RObject::setMember(plotWindowAreaMax.x, value, PropertyPlotWindowAreaMaxX == propertyTypeId);
-//    ret = ret || RObject::setMember(plotWindowAreaMax.y, value, PropertyPlotWindowAreaMaxY == propertyTypeId);
-//    ret = ret || RObject::setMember(numeratorCustomScale, value, PropertyNumeratorCustomScale == propertyTypeId);
-//    ret = ret || RObject::setMember(denominatorCustomScale, value, PropertyDenominatorCustomScale == propertyTypeId);
-//    ret = ret || RObject::setMember(plotPaperUnits, value, PropertyPlotPaperUnits == propertyTypeId);
-//    ret = ret || RObject::setMember(plotRotation, value, PropertyPlotRotation == propertyTypeId);
+    ret = ret || RObject::setMember(plotPaperMarginLeftMM, value, PropertyPlotPaperMarginLeftMM == propertyTypeId);
+    ret = ret || RObject::setMember(plotPaperMarginBottomMM, value, PropertyPlotPaperMarginBottomMM == propertyTypeId);
+    ret = ret || RObject::setMember(plotPaperMarginRightMM, value, PropertyPlotPaperMarginRightMM == propertyTypeId);
+    ret = ret || RObject::setMember(plotPaperMarginTopMM, value, PropertyPlotPaperMarginTopMM == propertyTypeId);
+    ret = ret || RObject::setMember(plotPaperSize.x, value, PropertyPlotPaperSizeWidth == propertyTypeId);
+    ret = ret || RObject::setMember(plotPaperSize.y, value, PropertyPlotPaperSizeHeight == propertyTypeId);
+    ret = ret || RObject::setMember(plotOrigin.x, value, PropertyPlotOriginX == propertyTypeId);
+    ret = ret || RObject::setMember(plotOrigin.y, value, PropertyPlotOriginY == propertyTypeId);
+    ret = ret || RObject::setMember(plotWindowAreaMin.x, value, PropertyPlotWindowAreaMinX == propertyTypeId);
+    ret = ret || RObject::setMember(plotWindowAreaMin.y, value, PropertyPlotWindowAreaMinY == propertyTypeId);
+    ret = ret || RObject::setMember(plotWindowAreaMax.x, value, PropertyPlotWindowAreaMaxX == propertyTypeId);
+    ret = ret || RObject::setMember(plotWindowAreaMax.y, value, PropertyPlotWindowAreaMaxY == propertyTypeId);
+    ret = ret || RObject::setMember(numeratorCustomScale, value, PropertyNumeratorCustomScale == propertyTypeId);
+    ret = ret || RObject::setMember(denominatorCustomScale, value, PropertyDenominatorCustomScale == propertyTypeId);
+    ret = ret || RObject::setMember(plotPaperUnits, value, PropertyPlotPaperUnits == propertyTypeId);
+    ret = ret || RObject::setMember(plotRotation, value, PropertyPlotRotation == propertyTypeId);
+    ret = ret || RObject::setMember(plotType, value, PropertyPlotType == propertyTypeId);
+    ret = ret || RObject::setMember(useStandardScale, value, PropertyUseStandardScale == propertyTypeId);
+    ret = ret || RObject::setMember(standardScale, value, PropertyStandardScale == propertyTypeId);
+    ret = ret || RObject::setMember(standardScaleType, value, PropertyStandardScaleType == propertyTypeId);
+    ret = ret || RObject::setMember(canonicalMediaName, value, PropertyCanonicalMediaName == propertyTypeId);
 
     return ret;
 }
@@ -227,54 +242,69 @@ QPair<QVariant, RPropertyAttributes> RLayout::getProperty(
         return qMakePair(QVariant(maxExtents.z), RPropertyAttributes());
     }
 
-//    else if (propertyTypeId == PropertyPlotPaperMarginLeftMM) {
-//        return qMakePair(QVariant(plotPaperMarginLeftMM), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotPaperMarginBottomMM) {
-//        return qMakePair(QVariant(plotPaperMarginBottomMM), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotPaperMarginRightMM) {
-//        return qMakePair(QVariant(plotPaperMarginRightMM), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotPaperMarginTopMM) {
-//        return qMakePair(QVariant(plotPaperMarginTopMM), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotPaperSizeWidth) {
-//        return qMakePair(QVariant(plotPaperSize.x), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotPaperSizeHeight) {
-//        return qMakePair(QVariant(plotPaperSize.y), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotOriginX) {
-//        return qMakePair(QVariant(plotOrigin.x), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotOriginY) {
-//        return qMakePair(QVariant(plotOrigin.y), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotWindowAreaMinX) {
-//        return qMakePair(QVariant(plotWindowAreaMin.x), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotWindowAreaMinY) {
-//        return qMakePair(QVariant(plotWindowAreaMin.y), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotWindowAreaMaxX) {
-//        return qMakePair(QVariant(plotWindowAreaMax.x), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotWindowAreaMaxY) {
-//        return qMakePair(QVariant(plotWindowAreaMax.y), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyNumeratorCustomScale) {
-//        return qMakePair(QVariant(numeratorCustomScale), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyDenominatorCustomScale) {
-//        return qMakePair(QVariant(denominatorCustomScale), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotPaperUnits) {
-//        return qMakePair(QVariant(plotPaperUnits), RPropertyAttributes());
-//    }
-//    else if (propertyTypeId == PropertyPlotRotation) {
-//        return qMakePair(QVariant(plotRotation), RPropertyAttributes());
-//    }
+    else if (propertyTypeId == PropertyPlotPaperMarginLeftMM) {
+        return qMakePair(QVariant(plotPaperMarginLeftMM), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotPaperMarginBottomMM) {
+        return qMakePair(QVariant(plotPaperMarginBottomMM), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotPaperMarginRightMM) {
+        return qMakePair(QVariant(plotPaperMarginRightMM), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotPaperMarginTopMM) {
+        return qMakePair(QVariant(plotPaperMarginTopMM), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotPaperSizeWidth) {
+        return qMakePair(QVariant(plotPaperSize.x), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotPaperSizeHeight) {
+        return qMakePair(QVariant(plotPaperSize.y), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotOriginX) {
+        return qMakePair(QVariant(plotOrigin.x), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotOriginY) {
+        return qMakePair(QVariant(plotOrigin.y), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotWindowAreaMinX) {
+        return qMakePair(QVariant(plotWindowAreaMin.x), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotWindowAreaMinY) {
+        return qMakePair(QVariant(plotWindowAreaMin.y), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotWindowAreaMaxX) {
+        return qMakePair(QVariant(plotWindowAreaMax.x), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotWindowAreaMaxY) {
+        return qMakePair(QVariant(plotWindowAreaMax.y), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyNumeratorCustomScale) {
+        return qMakePair(QVariant(numeratorCustomScale), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyDenominatorCustomScale) {
+        return qMakePair(QVariant(denominatorCustomScale), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotPaperUnits) {
+        return qMakePair(QVariant(plotPaperUnits), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotRotation) {
+        return qMakePair(QVariant(plotRotation), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPlotType) {
+        return qMakePair(QVariant(plotType), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyUseStandardScale) {
+        return qMakePair(QVariant(useStandardScale), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyStandardScale) {
+        return qMakePair(QVariant(standardScale), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyStandardScaleType) {
+        return qMakePair(QVariant(standardScaleType), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyCanonicalMediaName) {
+        return qMakePair(QVariant(canonicalMediaName), RPropertyAttributes());
+    }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
