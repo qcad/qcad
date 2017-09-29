@@ -128,7 +128,9 @@ RLayerListQt.prototype.iconClickedSlot = function(x, item) {
     }
 
     if (x < this.iconSize.width() / 2) {
-        layer.setFrozen(!layer.isFrozen());
+        var off = !layer.isFrozen();
+        layer.setFrozen(off);
+        layer.setOff(off);
     } else {
         layer.setLocked(!layer.isLocked());
     }
