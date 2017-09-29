@@ -783,7 +783,7 @@ QString RUnit::doubleToString(double value, double prec,
     int dotPos;
     long int num;
     if (prec>1.0e-12) {
-        num = (long int)round(value / prec);
+        num = (long int)::round(value / prec);
     }
     else {
         num = RMath::mround(value);
