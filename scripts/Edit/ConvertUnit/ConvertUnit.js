@@ -106,11 +106,12 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
     op.setTransactionGroup(doc.getTransactionGroup());
     op.setAllowAll(true);
 
-    // all entities on all blocks:
-    var ids = doc.queryAllEntities(false, true);
+    var ids, i, id;
 
-    for (var i=0; i<ids.length; i++) {
-        var id = ids[i];
+    // all entities on all blocks:
+    ids = doc.queryAllEntities(false, true);
+    for (i=0; i<ids.length; i++) {
+        id = ids[i];
         var entity = doc.queryEntity(id);
         if (isNull(entity)) {
             continue;
@@ -131,6 +132,15 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
             entity.scale(factor);
         }
         op.addObject(entity, false);
+    }
+
+    // adjust views:
+    ids = doc.queryAllViews();
+    for (i=0; i<ids.length; i++) {
+        id = ids[i];
+        var v = doc.queryView(id);
+        v.scale(factor);
+        op.addObject(v, false);
     }
 
     // adjust view:
