@@ -258,9 +258,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="getColorCorrectionModelSpace"
-    cppName="getColorCorrectionModelSpace" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+    <method name="getColorCorrectionDisableForPrinting"
+    cppName="getColorCorrectionDisableForPrinting"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getColorThreshold" cppName="getColorThreshold"

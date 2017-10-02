@@ -66,6 +66,9 @@
         setDimScaleOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        scaleVisualProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setArrowHead
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

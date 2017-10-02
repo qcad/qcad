@@ -217,6 +217,10 @@
                 qScriptValueFromValue(&engine, RLeaderEntity::PropertyVertexNZ),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDimScale",
+                qScriptValueFromValue(&engine, RLeaderEntity::PropertyDimScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

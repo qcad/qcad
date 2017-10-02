@@ -149,7 +149,7 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getColorCorrection, "getColorCorrection");
             
-            REcmaHelper::registerFunction(&engine, &ctor, getColorCorrectionModelSpace, "getColorCorrectionModelSpace");
+            REcmaHelper::registerFunction(&engine, &ctor, getColorCorrectionDisableForPrinting, "getColorCorrectionDisableForPrinting");
             
             REcmaHelper::registerFunction(&engine, &ctor, getColorThreshold, "getColorThreshold");
             
@@ -2343,12 +2343,12 @@
             return result;
         }
          QScriptValue
-        REcmaSettings::getColorCorrectionModelSpace
+        REcmaSettings::getColorCorrectionDisableForPrinting
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSettings::getColorCorrectionModelSpace", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getColorCorrectionModelSpace";
+            //REcmaHelper::functionStart("REcmaSettings::getColorCorrectionDisableForPrinting", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getColorCorrectionDisableForPrinting";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -2375,10 +2375,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getColorCorrectionModelSpace().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getColorCorrectionDisableForPrinting().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSettings::getColorCorrectionModelSpace", context, engine);
+            //REcmaHelper::functionEnd("REcmaSettings::getColorCorrectionDisableForPrinting", context, engine);
             return result;
         }
          QScriptValue
