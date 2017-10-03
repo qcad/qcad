@@ -51,7 +51,7 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+614"/>
+        <location line="+616"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1128"/>
+        <location line="-1130"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -150,7 +150,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+128"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utilisez la mesure automatique</translation>

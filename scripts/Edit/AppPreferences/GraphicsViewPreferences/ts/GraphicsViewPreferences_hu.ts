@@ -64,17 +64,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="-29"/>
         <source>Color lightness threshold:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+49"/>
         <source>Linetypes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -119,7 +119,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="-16"/>
+        <source>Disable for printing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+108"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -85,7 +85,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2059"/>
+        <location line="+2063"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -94,8 +94,8 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1786"/>
-        <location line="+137"/>
+        <location line="-1790"/>
+        <location line="+141"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
     </message>

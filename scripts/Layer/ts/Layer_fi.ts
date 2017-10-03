@@ -19,7 +19,7 @@
         <translation>&amp;Taso</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+43"/>
         <source>Showing all layers</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29,7 +29,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Thawing all layers</source>
         <translation type="unfinished"></translation>
     </message>

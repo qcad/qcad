@@ -82,7 +82,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+128"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>

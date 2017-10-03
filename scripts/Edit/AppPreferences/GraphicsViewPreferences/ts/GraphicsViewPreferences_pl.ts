@@ -114,19 +114,24 @@ Autozoom
         <translation type="unfinished">Regulacja kolorów</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zapobiec biały na biały / czarny na czarnym ekranie</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="-29"/>
         <source>Color lightness threshold:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Próg lekkość Kolor:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
+        <source>Disable for printing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Linetypes</source>
         <translation type="unfinished"></translation>
     </message>

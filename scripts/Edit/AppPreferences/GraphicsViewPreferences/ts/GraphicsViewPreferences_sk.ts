@@ -64,17 +64,22 @@
         <translation>Prispôsobenie Farieb</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
         <translation>Zamedziť zobrazeniu čierne na čiernom / biele na bielom</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="-29"/>
         <source>Color lightness threshold:</source>
         <translation>Hranica svetlosti farby:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
+        <source>Disable for printing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Linetypes</source>
         <translation>Typy čiar</translation>
     </message>

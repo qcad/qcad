@@ -256,7 +256,7 @@
         <location filename="../src/core/RBlock.cpp" line="+62"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+77"/>
+        <location filename="../src/core/RLayout.cpp" line="+82"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -403,21 +403,25 @@
     </message>
     <message>
         <location line="-3"/>
+        <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
         <translation>Vasen</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
         <translation>Alapuoli</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
         <translation>Oikea</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
         <translation>Yläpuoli</translation>
     </message>
@@ -439,6 +443,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Leveys</translation>
@@ -451,6 +456,7 @@
     </message>
     <message>
         <location line="+0"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Korkeus</translation>
@@ -559,7 +565,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
         <location filename="../src/core/RLayer.cpp" line="-4"/>
-        <location filename="../src/core/RLayout.cpp" line="-16"/>
+        <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Nimi</translation>
     </message>

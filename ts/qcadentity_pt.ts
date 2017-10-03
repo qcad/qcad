@@ -60,7 +60,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+88"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+76"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+69"/>
@@ -681,6 +681,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+2"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -692,7 +693,7 @@ Escalone entidades</translatorcomment>
         <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>

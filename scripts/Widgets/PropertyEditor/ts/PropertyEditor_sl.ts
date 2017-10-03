@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1321"/>
+        <location filename="../PropertyEditor.js" line="+1323"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1128"/>
+        <location line="-1130"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+614"/>
+        <location line="+616"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -117,12 +117,12 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-478"/>
+        <location line="-480"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+128"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>

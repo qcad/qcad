@@ -372,7 +372,7 @@ Liste des blocs</translatorcomment>
         <location filename="../src/core/RBlock.cpp" line="+62"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+77"/>
+        <location filename="../src/core/RLayout.cpp" line="+82"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -577,21 +577,25 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     </message>
     <message>
         <location line="-3"/>
+        <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
         <translation>En bas</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
         <translation>Droite</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
         <translation>En haut</translation>
     </message>
@@ -613,6 +617,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Largeur</translation>
@@ -625,6 +630,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     </message>
     <message>
         <location line="+0"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Hauteur</translation>
@@ -733,7 +739,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
         <location filename="../src/core/RLayer.cpp" line="-4"/>
-        <location filename="../src/core/RLayout.cpp" line="-16"/>
+        <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
@@ -796,6 +802,10 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <location line="+1"/>
         <source>Max Extents</source>
         <translation>Max extents</translation>
+    </message>
+    <message>
+        <source>Plot Margins</source>
+        <translation type="vanished">Marges des tracés</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+571"/>

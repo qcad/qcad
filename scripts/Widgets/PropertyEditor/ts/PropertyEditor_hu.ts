@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1321"/>
+        <location filename="../PropertyEditor.js" line="+1323"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1128"/>
+        <location line="-1130"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -77,7 +77,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+128"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>

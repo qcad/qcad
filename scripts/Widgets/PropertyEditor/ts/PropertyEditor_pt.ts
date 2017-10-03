@@ -35,13 +35,13 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1321"/>
+        <location filename="../PropertyEditor.js" line="+1323"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1128"/>
+        <location line="-1130"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -107,7 +107,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+636"/>
+        <location line="+638"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -117,7 +117,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-614"/>
+        <location line="-616"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -210,7 +210,7 @@ Salta automaticamente</translatorcomment>
         <translation>Automático</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+128"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Use medição automática</translation>

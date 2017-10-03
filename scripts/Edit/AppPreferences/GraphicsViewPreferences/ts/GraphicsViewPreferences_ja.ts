@@ -84,17 +84,22 @@
         <translation>色調節</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
         <translation>白に白/黒に黒の表示を防ぐ</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="-29"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
+        <source>Disable for printing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Linetypes</source>
         <translation>ラインタイプ</translation>
     </message>

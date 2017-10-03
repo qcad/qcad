@@ -14,7 +14,7 @@
         <translation>Zvolená jednotka &apos;%1&apos; - sa nedá konvertovať</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+72"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Konvertované z &quot;%1&quot; na &quot;%2&quot;</translation>
     </message>

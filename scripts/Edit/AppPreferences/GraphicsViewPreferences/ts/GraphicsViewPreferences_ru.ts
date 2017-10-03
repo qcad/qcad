@@ -64,17 +64,22 @@
         <translation>Регулировка цвета</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
         <translation>Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="-29"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
+        <source>Disable for printing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Linetypes</source>
         <translation>Тип линии</translation>
     </message>

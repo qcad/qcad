@@ -84,17 +84,22 @@
         <translation>Ajuste de Cor</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
         <translation>Auto corrigir cores preto-no-preto e branco-no-branco</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="-29"/>
         <source>Color lightness threshold:</source>
         <translation>Limites para a luminosidade da cor:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
+        <source>Disable for printing</source>
+        <translation>Desativar durante a impressão</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Linetypes</source>
         <translation>Tipos de Linha</translation>
     </message>

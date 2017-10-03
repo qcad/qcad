@@ -19,7 +19,7 @@
         <translation>&amp;Layer</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+43"/>
         <source>Showing all layers</source>
         <translation>Alle Layer anzeigen</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Alle Layer verbergen</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Thawing all layers</source>
         <translation>Alle Layer auftauen</translation>
     </message>

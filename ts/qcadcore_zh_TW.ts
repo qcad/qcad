@@ -240,7 +240,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+60"/>
         <location filename="../src/core/RLayer.cpp" line="+82"/>
-        <location filename="../src/core/RLayout.cpp" line="+75"/>
+        <location filename="../src/core/RLayout.cpp" line="+80"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
@@ -415,21 +415,25 @@
     </message>
     <message>
         <location line="-3"/>
+        <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
         <translation>左邊</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
         <translation>底端</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
         <translation>右邊</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
         <translation>最上層</translation>
     </message>
@@ -441,12 +445,14 @@
     </message>
     <message>
         <location line="-1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>寬度</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>高度</translation>
@@ -584,7 +590,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RLayout.cpp" line="-15"/>
+        <location filename="../src/core/RLayout.cpp" line="-23"/>
         <source>Tab Order</source>
         <translation type="unfinished"></translation>
     </message>

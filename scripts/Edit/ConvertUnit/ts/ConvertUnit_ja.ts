@@ -14,7 +14,7 @@
         <translation>単位&apos;%1&apos;が選択されました-何もされませんでした</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+72"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1 から %2 にコンバートされた図面</translation>
     </message>
