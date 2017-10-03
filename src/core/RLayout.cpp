@@ -95,27 +95,28 @@ void RLayout::init() {
     RLayout::PropertyMaxExtentsY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Max Extents"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RLayout::PropertyMaxExtentsZ.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Max Extents"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    RLayout::PropertyPlotPaperMarginLeftMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Left"));
-    RLayout::PropertyPlotPaperMarginBottomMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
-    RLayout::PropertyPlotPaperMarginRightMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Right"));
-    RLayout::PropertyPlotPaperMarginTopMM.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Margins"), QT_TRANSLATE_NOOP("REntity", "Top"));
-    RLayout::PropertyPlotPaperSizeWidth.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Paper Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
-    RLayout::PropertyPlotPaperSizeHeight.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Paper Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
-    RLayout::PropertyPlotOriginX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RLayout::PropertyPlotOriginY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RLayout::PropertyPlotWindowAreaMinX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Min"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RLayout::PropertyPlotWindowAreaMinY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Min"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RLayout::PropertyPlotWindowAreaMaxX.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Max"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RLayout::PropertyPlotWindowAreaMaxY.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Plot Window Area Max"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RLayout::PropertyNumeratorCustomScale.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Custom Scale"), QT_TRANSLATE_NOOP("REntity", "Numerator"));
-    RLayout::PropertyDenominatorCustomScale.generateId(typeid(RLayout), QT_TRANSLATE_NOOP("REntity", "Custom Scale"), QT_TRANSLATE_NOOP("REntity", "Denominator"));
-    RLayout::PropertyPlotPaperUnits.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Plot Paper Units"));
-    RLayout::PropertyPlotRotation.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Plot Rotation"));
-    RLayout::PropertyPlotType.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Plot Type"));
-    RLayout::PropertyUseStandardScale.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Use Standard Scale"));
-    RLayout::PropertyStandardScale.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Standard Scale"));
-    RLayout::PropertyStandardScaleType.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Standard Scale Type"));
-    RLayout::PropertyCanonicalMediaName.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Media Name"));
+    // TODO: make these properties translatable
+    RLayout::PropertyPlotPaperMarginLeftMM.generateId(typeid(RLayout), "Plot Margins", QT_TRANSLATE_NOOP("REntity", "Left"));
+    RLayout::PropertyPlotPaperMarginBottomMM.generateId(typeid(RLayout), "Plot Margins", QT_TRANSLATE_NOOP("REntity", "Bottom"));
+    RLayout::PropertyPlotPaperMarginRightMM.generateId(typeid(RLayout), "Plot Margins", QT_TRANSLATE_NOOP("REntity", "Right"));
+    RLayout::PropertyPlotPaperMarginTopMM.generateId(typeid(RLayout), "Plot Margins", QT_TRANSLATE_NOOP("REntity", "Top"));
+    RLayout::PropertyPlotPaperSizeWidth.generateId(typeid(RLayout), "Plot Paper Size", QT_TRANSLATE_NOOP("REntity", "Width"));
+    RLayout::PropertyPlotPaperSizeHeight.generateId(typeid(RLayout), "Plot Paper Size", QT_TRANSLATE_NOOP("REntity", "Height"));
+    RLayout::PropertyPlotOriginX.generateId(typeid(RLayout), "Plot Origin", "X");
+    RLayout::PropertyPlotOriginY.generateId(typeid(RLayout), "Plot Origin", "Y");
+    RLayout::PropertyPlotWindowAreaMinX.generateId(typeid(RLayout), "Plot Window Area Min", "X");
+    RLayout::PropertyPlotWindowAreaMinY.generateId(typeid(RLayout), "Plot Window Area Min", "Y");
+    RLayout::PropertyPlotWindowAreaMaxX.generateId(typeid(RLayout), "Plot Window Area Max", "X");
+    RLayout::PropertyPlotWindowAreaMaxY.generateId(typeid(RLayout), "Plot Window Area Max", "Y");
+    RLayout::PropertyNumeratorCustomScale.generateId(typeid(RLayout), "Custom Scale", "Numerator");
+    RLayout::PropertyDenominatorCustomScale.generateId(typeid(RLayout), "Custom Scale", "Denominator");
+    RLayout::PropertyPlotPaperUnits.generateId(typeid(RLayout), "", "Plot Paper Units");
+    RLayout::PropertyPlotRotation.generateId(typeid(RLayout), "", "Plot Rotation");
+    RLayout::PropertyPlotType.generateId(typeid(RLayout), "", "Plot Type");
+    RLayout::PropertyUseStandardScale.generateId(typeid(RLayout), "", "Use Standard Scale");
+    RLayout::PropertyStandardScale.generateId(typeid(RLayout), "", "Standard Scale");
+    RLayout::PropertyStandardScaleType.generateId(typeid(RLayout), "", "Standard Scale Type");
+    RLayout::PropertyCanonicalMediaName.generateId(typeid(RLayout), "", "Media Name");
 }
 
 RLayout* RLayout::clone() const {
