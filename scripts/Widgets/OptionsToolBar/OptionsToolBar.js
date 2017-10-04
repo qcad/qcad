@@ -120,12 +120,12 @@ OptionsToolBar.postInit = function(basePath) {
 OptionsToolBar.setIcon = function(fileNameOrIcon) {
     var optionsToolBar = EAction.getOptionsToolBar();
     var iconLabel = optionsToolBar.findChild("Icon");
-    var f = 0.8;
-    if (RS.getSystemId()==="linux") {
-        f = 1.0;
+    var f = 1.0;
+    if (RS.getSystemId()==="win") {
+        f = 0.8;
     }
-    if (RS.getSystemId()==="osx") {
-        f = 1.0;
+    else if (RS.getSystemId()==="osx") {
+        f = 0.9;
     }
 
     if (isOfType(fileNameOrIcon, QIcon)) {
