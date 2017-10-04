@@ -335,9 +335,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
             var iconLabel = optionsToolBar.findChild("Icon");
             if (!isNull(iconLabel)) {
                 iconLabel.toolTip = qsTr("Active Tool:") + " " + guiAction.text.replace("&", "");
-                iconLabel.pixmap = guiAction.icon.pixmap(
-                    new QSize(optionsToolBar.iconSize.width()*0.8, optionsToolBar.iconSize.height()*0.8)
-                );
+                OptionsToolBar.setIcon(guiAction.icon);
                 iconLabel.setFixedWidth(iconLabel.height + 12);
             }
         }
@@ -471,10 +469,7 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
         if (!this.getGuiAction().icon.isNull()) {
             var iconLabel = optionsToolBar.findChild("Icon");
             if (!isNull(iconLabel)) {
-                var icon = new QIcon(autoPath("scripts/Reset/Reset.svg"));
-                iconLabel.pixmap = icon.pixmap(
-                    new QSize(optionsToolBar.iconSize.width()*0.8, optionsToolBar.iconSize.height()*0.8)
-                );
+                OptionsToolBar.setIcon("scripts/Reset/Reset.svg");
                 iconLabel.toolTip = qsTr("Active Tool:") + " " + qsTr("None");
             }
         }

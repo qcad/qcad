@@ -109,10 +109,34 @@ OptionsToolBar.postInit = function(basePath) {
     }
 
     // avoid empty label after startup, before initializing new document:
-    iconLabel.pixmap =
-            new QIcon(autoPath("scripts/Reset/Reset.svg")).pixmap(
-                new QSize(optionsToolBar.iconSize.width()*0.8, optionsToolBar.iconSize.height()*0.8)
-            );
+    OptionsToolBar.setIcon("scripts/Reset/Reset.svg");
     optionsToolBar.addWidget(iconLabel);
     optionsToolBar.addSeparator();
+};
+
+/**
+ * Sets the icon at the left of the options toolbar, typically indicating the current tool.
+ */
+OptionsToolBar.setIcon = function(fileNameOrIcon) {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var iconLabel = optionsToolBar.findChild("Icon");
+    var f = 0.8;
+    if (RS.getSystemId()==="linux") {
+        f = 1.0;
+    }
+    if (RS.getSystemId()==="osx") {
+        f = 1.0;
+    }
+
+    if (isOfType(fileNameOrIcon, QIcon)) {
+        iconLabel.pixmap = fileNameOrIcon.pixmap(
+            new QSize(optionsToolBar.iconSize.width()*f, optionsToolBar.iconSize.height()*f)
+        );
+    }
+    else {
+        iconLabel.pixmap =
+                new QIcon(autoPath(fileNameOrIcon)).pixmap(
+                    new QSize(optionsToolBar.iconSize.width()*f, optionsToolBar.iconSize.height()*f)
+                );
+    }
 };
