@@ -231,6 +231,7 @@ void RGuiAction::setIcon(const QString& iconFile) {
             !QCoreApplication::arguments().contains("-max-icon-res")) {
 
             int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
+            iconSize = qMax(iconSize, RSettings::getIntValue("ToolBar/IconSize", 32));
             iconSize = qMax(iconSize, RSettings::getIntValue("CadToolMatrix/IconSize", 24));
 
             // retina icons:
