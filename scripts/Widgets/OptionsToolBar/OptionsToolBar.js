@@ -127,16 +127,13 @@ OptionsToolBar.setIcon = function(fileNameOrIcon) {
     else if (RS.getSystemId()==="osx") {
         f = 0.9;
     }
+    var w = optionsToolBar.iconSize.width()*f;
+    var h = optionsToolBar.iconSize.height()*f;
 
     if (isOfType(fileNameOrIcon, QIcon)) {
-        iconLabel.pixmap = fileNameOrIcon.pixmap(
-            new QSize(optionsToolBar.iconSize.width()*f, optionsToolBar.iconSize.height()*f)
-        );
+        iconLabel.pixmap = fileNameOrIcon.pixmap(new QSize(w, h));
     }
     else {
-        iconLabel.pixmap =
-                new QIcon(autoPath(fileNameOrIcon)).pixmap(
-                    new QSize(optionsToolBar.iconSize.width()*f, optionsToolBar.iconSize.height()*f)
-                );
+        iconLabel.pixmap = new QIcon(autoPath(fileNameOrIcon)).pixmap(new QSize(w, h));
     }
 };
