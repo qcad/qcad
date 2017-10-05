@@ -343,6 +343,14 @@ public:
         pixelUnit = on;
     }
 
+    bool getPixelWidth() const {
+        return pixelWidth;
+    }
+
+    void setPixelWidth(bool on) {
+        pixelWidth = on;
+    }
+
 protected:
     RDocument* document;
     QPen currentPen;
@@ -361,6 +369,7 @@ protected:
     double pixelSizeHint;
     bool pixelUnit;
     bool clipping;
+    bool pixelWidth;
 
 private:
     RS::ProjectionRenderingHint projectionRenderingHint;

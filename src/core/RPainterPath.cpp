@@ -385,6 +385,14 @@ bool RPainterPath::getNoClipping() const {
     return getMode(RPainterPath::NoClipping);
 }
 
+void RPainterPath::setPixelWidth(bool on) {
+    setMode(RPainterPath::PixelWidth, on);
+}
+
+bool RPainterPath::getPixelWidth() const {
+    return getMode(RPainterPath::PixelWidth);
+}
+
 void RPainterPath::setFeatureSize(double s) {
     featureSize = s;
 }

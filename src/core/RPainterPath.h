@@ -57,7 +57,8 @@ public:
         AlwaysRegen = 0x040,
         InheritPen = 0x080,            //!< inherit pen from entity / context
         PixelUnit = 0x100,             //!< path displayed in pixel (not drawing units)
-        NoClipping = 0x200             //!< disable clipping for this path
+        NoClipping = 0x200,            //!< disable clipping for this path
+        PixelWidth = 0x400             //!< interpret width in pixels
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -209,6 +210,9 @@ public:
 
     void setNoClipping(bool on);
     bool getNoClipping() const;
+
+    void setPixelWidth(bool on);
+    bool getPixelWidth() const;
 
     void setFeatureSize(double s);
     double getFeatureSize() const;

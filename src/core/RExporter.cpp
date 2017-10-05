@@ -57,6 +57,7 @@ RExporter::RExporter()
       pixelSizeHint(0.5),
       pixelUnit(false),
       clipping(false),
+      pixelWidth(false),
       projectionRenderingHint(RS::RenderThreeD) {
 
     currentPen.setColor(Qt::white);
@@ -81,6 +82,7 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       pixelSizeHint(0.5),
       pixelUnit(false),
       clipping(false),
+      pixelWidth(false),
       projectionRenderingHint(RS::RenderThreeD) {
 
     Q_UNUSED(messageHandler)
