@@ -938,7 +938,11 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         QBrush brush = path.getBrush();
 
         if (pen.style() != Qt::NoPen) {
-            if (isPrinting()) {
+            if (path.getPixelWidth()) {
+                // use width of path pen
+                pen.setWidthF(pen.widthF() / getFactor());
+            }
+            else if (isPrinting()) {
                 if (hairlineMode) {
                     //pen.setWidthF(0.05 / drawingScale);
                     pen.setWidthF(0.0);

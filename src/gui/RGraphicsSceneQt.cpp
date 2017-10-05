@@ -166,6 +166,7 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath.setBrush(QBrush(Qt::NoBrush));
     currentPainterPath.setPixelSizeHint(pixelSizeHint);
     currentPainterPath.setPixelUnit(pixelUnit);
+    currentPainterPath.setPixelWidth(pixelWidth);
 
     // experimental: allow entity display in pixel units:
     // this would probably need an additional property to define the center of the entity...
