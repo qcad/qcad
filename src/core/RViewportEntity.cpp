@@ -163,15 +163,32 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
     RBox viewportBox(data.position, data.width, data.height);
 
-    // if layer is visible, export viewport frame
+    bool active = getId()==doc->getCurrentViewportId();
+
+    // if layer is visible or active, export viewport frame
     // viewport contents is always exported (unless viewport if off):
     RLayer::Id layerId = getLayerId();
-    if (!doc->isLayerOff(layerId)) {
+    if (!doc->isLayerOff(layerId) || active) {
         // export viewport frame to layer of viewport:
         e.setBrush(Qt::NoBrush);
+
+        // export active viewport with fixed pixel width thick frame:
+        if (active) {
+            QPen pen = e.getPen();
+            pen.setWidthF(4);
+            QVector<qreal> pat;
+            pat << 5.0 << 5.0;
+            pen.setDashPattern(pat);
+            e.setPen(pen);
+
+            e.setPixelWidth(true);
+        }
         QList<RLine> lines = viewportBox.getLines2d();
         for (int i=0; i<lines.length(); i++) {
             e.exportLine(lines[i]);
+        }
+        if (active) {
+            e.setPixelWidth(false);
         }
     }
 
