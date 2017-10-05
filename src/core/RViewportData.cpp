@@ -110,6 +110,17 @@ bool RViewportData::moveReferencePoint(const RVector& referencePoint,
     return ret;
 }
 
+double RViewportData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
+    double ret = RMAXDOUBLE;
+
+    RBox viewportBox(position, width, height);
+    if (viewportBox.contains(point)) {
+        ret = strictRange;
+    }
+
+    return qMin(ret, REntityData::getDistanceTo(point, limited, range, draft, strictRange));
+}
+
 QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
@@ -123,4 +134,9 @@ QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bo
     }
 
     return ret;
+}
+
+QList<RLine> RViewportData::getEdges() const {
+    RBox viewportBox(position, width, height);
+    return viewportBox.getLines2d();
 }
