@@ -2164,6 +2164,27 @@ void RDocumentInterface::setCurrentBlock(const RBlock& block) {
     setCurrentBlock(block.getName());
 }
 
+void RDocumentInterface::setCurrentViewport(const RViewportEntity& viewport) {
+    RViewportEntity::Id prevViewportId = document.getCurrentViewportId();
+
+    document.setCurrentViewport(viewport.getId());
+
+    regenerateScenes(prevViewportId, true);
+    regenerateScenes(viewport.getId(), true);
+
+//    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
+//        RMainWindow::getMainWindow()->notifyBlockListeners(this);
+//    }
+}
+
+void RDocumentInterface::unsetCurrentViewport() {
+    RViewportEntity::Id prevViewportId = document.getCurrentViewportId();
+
+    document.unsetCurrentViewport();
+
+    regenerateScenes(prevViewportId, true);
+}
+
 /**
  * Sets the current view based on the given view name.
  */

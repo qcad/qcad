@@ -857,6 +857,18 @@ void RDocument::setCurrentBlock(const QString& blockName) {
     setCurrentBlock(id);
 }
 
+void RDocument::setCurrentViewport(RObject::Id viewportId) {
+    storage.setCurrentViewport(viewportId);
+}
+
+RObject::Id RDocument::getCurrentViewportId() {
+    return storage.getCurrentViewportId();
+}
+
+void RDocument::unsetCurrentViewport() {
+    storage.unsetCurrentViewport();
+}
+
 QString RDocument::getTempBlockName() const {
     do {
         int p1 = qrand() % 100000;

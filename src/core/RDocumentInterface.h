@@ -310,6 +310,9 @@ public:
     void setCurrentBlock(const RBlock& block);
     void setCurrentBlock(const QString& blockName);
 
+    void setCurrentViewport(const RViewportEntity& viewport);
+    void unsetCurrentViewport();
+
     void setCurrentView(const QString& viewName);
 
     void setCurrentUcs(const RUcs& ucs);

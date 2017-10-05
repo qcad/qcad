@@ -39,6 +39,7 @@
 #include "RTransaction.h"
 #include "RUcs.h"
 #include "RView.h"
+#include "RViewportEntity.h"
 
 class RDocument;
 
@@ -333,6 +334,18 @@ public:
 
     virtual RBlock::Id getCurrentBlockId() const {
         return currentBlockId;
+    }
+
+    virtual void setCurrentViewport(RObject::Id viewportId) {
+        currentViewportId = viewportId;
+    }
+
+    virtual void unsetCurrentViewport() {
+        currentViewportId = RViewportEntity::INVALID_ID;
+    }
+
+    virtual RObject::Id getCurrentViewportId() const {
+        return currentViewportId;
     }
 
     virtual void setModelSpaceBlockId(RBlock::Id id) {
@@ -747,6 +760,7 @@ private:
     RLinetype::Id currentLinetypeId;
     RView::Id currentViewId;
     RBlock::Id currentBlockId;
+    RObject::Id currentViewportId;
     RBlock::Id modelSpaceBlockId;
     RLayer::Id layer0Id;
 

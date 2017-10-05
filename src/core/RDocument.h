@@ -278,6 +278,10 @@ public:
     RBlock::Id getCurrentBlockId() const;
     QString getCurrentBlockName() const;
 
+    void setCurrentViewport(RObject::Id viewportId);
+    RObject::Id getCurrentViewportId();
+    void unsetCurrentViewport();
+
 //    void setSelectedBlock(RBlock::Id blockId);
 //    void setSelectedBlock(const QString& blockName);
 //    RBlock::Id getSelectedBlockId() const;

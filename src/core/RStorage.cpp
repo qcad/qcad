@@ -33,6 +33,7 @@ RStorage::RStorage() :
     //currentLayerId(RLayer::INVALID_ID),
     currentViewId(RView::INVALID_ID),
     currentBlockId(RBlock::INVALID_ID),
+    currentViewportId(RViewportEntity::INVALID_ID),
     lastTransactionId(-1),
     lastTransactionGroup(1) {
 }
@@ -48,6 +49,7 @@ void RStorage::clear() {
     currentLinetypeId = RLinetype::INVALID_ID;
     currentViewId = RView::INVALID_ID;
     currentBlockId = RBlock::INVALID_ID;
+    currentViewportId = RViewportEntity::INVALID_ID;
     lastTransactionId = -1;
     lastTransactionGroup = 1;
 }
