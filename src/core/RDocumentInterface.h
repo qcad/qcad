@@ -381,9 +381,6 @@ private:
 
     bool keepPreviewOnce;
     bool mouseTrackingEnabled;
-
-    // used to use mouse button press (not release) to define points
-    //RMouseEvent* pressEvent;
 };
 
 Q_DECLARE_METATYPE(RDocumentInterface::IoErrorCode)
