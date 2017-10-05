@@ -145,7 +145,7 @@ void RGraphicsView::setScene(RGraphicsScene* scene, bool regen) {
 /**
  * \return Reference to the graphics scene that is visualized by this view.
  */
-RGraphicsScene* RGraphicsView::getScene() {
+RGraphicsScene* RGraphicsView::getScene() const {
     return scene;
 }
 
@@ -176,7 +176,7 @@ RDocument* RGraphicsView::getDocument() const {
 /**
  * \return Reference to the document interface.
  */
-RDocumentInterface* RGraphicsView::getDocumentInterface() {
+RDocumentInterface* RGraphicsView::getDocumentInterface() const {
     if (scene == NULL) {
         return NULL;
     }

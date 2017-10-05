@@ -78,9 +78,9 @@ public:
     void setDisplayOnlyCurrentUcs(bool on);
 
     virtual void setScene(RGraphicsScene* scene, bool regen=true);
-    RGraphicsScene* getScene();
+    RGraphicsScene* getScene() const;
     RDocument* getDocument() const;
-    RDocumentInterface* getDocumentInterface();
+    RDocumentInterface* getDocumentInterface() const;
 
     /**
      * Maps the given view coordinate in pixels to a model coordinate.
