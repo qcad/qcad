@@ -280,6 +280,7 @@ public:
 
     void setCurrentViewport(RObject::Id viewportId);
     RObject::Id getCurrentViewportId();
+    bool hasCurrentViewport();
     void unsetCurrentViewport();
 
 //    void setSelectedBlock(RBlock::Id blockId);

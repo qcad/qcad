@@ -865,6 +865,10 @@ RObject::Id RDocument::getCurrentViewportId() {
     return storage.getCurrentViewportId();
 }
 
+bool RDocument::hasCurrentViewport() {
+    return getCurrentViewportId()!=RObject::INVALID_ID;
+}
+
 void RDocument::unsetCurrentViewport() {
     storage.unsetCurrentViewport();
 }
