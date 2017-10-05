@@ -311,6 +311,9 @@
     <function_decl><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>RBlock</name>&amp;</type> <name>block</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>setCurrentViewport</name><parameter_list>(<param><decl><type><name>const</name> <name>RViewportEntity</name>&amp;</type> <name>viewport</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>unsetCurrentViewport</name><parameter_list>()</parameter_list>;</function_decl>
+
     <function_decl><type><name>void</name></type> <name>setCurrentView</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>viewName</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setCurrentUcs</name><parameter_list>(<param><decl><type><name>const</name> <name>RUcs</name>&amp;</type> <name>ucs</name></decl></param>)</parameter_list>;</function_decl>

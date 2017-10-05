@@ -191,6 +191,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentBlockId, "getCurrentBlockId");
             
+            REcmaHelper::registerFunction(&engine, proto, setCurrentViewport, "setCurrentViewport");
+            
+            REcmaHelper::registerFunction(&engine, proto, unsetCurrentViewport, "unsetCurrentViewport");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCurrentViewportId, "getCurrentViewportId");
+            
             REcmaHelper::registerFunction(&engine, proto, setModelSpaceBlockId, "setModelSpaceBlockId");
             
             REcmaHelper::registerFunction(&engine, proto, getModelSpaceBlockId, "getModelSpaceBlockId");
@@ -4645,6 +4651,154 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getCurrentBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::setCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::setCurrentViewport", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setCurrentViewport";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("setCurrentViewport", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentViewport(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setCurrentViewport().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setCurrentViewport", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::unsetCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::unsetCurrentViewport", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::unsetCurrentViewport";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("unsetCurrentViewport", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->unsetCurrentViewport();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.unsetCurrentViewport().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::unsetCurrentViewport", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getCurrentViewportId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getCurrentViewportId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getCurrentViewportId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getCurrentViewportId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RObject::Id'
+    RObject::Id cppResult =
+        
+               self->getCurrentViewportId();
+        // return type: RObject::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getCurrentViewportId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getCurrentViewportId", context, engine);
             return result;
         }
          QScriptValue

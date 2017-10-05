@@ -363,6 +363,15 @@
         getCurrentBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentViewportId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unsetCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

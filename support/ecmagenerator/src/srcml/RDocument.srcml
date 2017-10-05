@@ -279,6 +279,10 @@
     <function_decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>getCurrentBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getCurrentBlockName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>setCurrentViewport</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>viewportId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getCurrentViewportId</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>unsetCurrentViewport</name><parameter_list>()</parameter_list>;</function_decl>
+
 <comment type="line">//    void setSelectedBlock(RBlock::Id blockId);</comment>
 <comment type="line">//    void setSelectedBlock(const QString&amp; blockName);</comment>
 <comment type="line">//    RBlock::Id getSelectedBlockId() const;</comment>

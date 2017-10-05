@@ -970,6 +970,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="blockName" isConst="true" />
       </variant>
     </method>
+    <method name="setCurrentViewport" cppName="setCurrentViewport"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RViewportEntity &amp;"
+        typeName="RViewportEntity" name="viewport"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="unsetCurrentViewport"
+    cppName="unsetCurrentViewport" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="setCurrentView" cppName="setCurrentView"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

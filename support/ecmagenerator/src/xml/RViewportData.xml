@@ -180,6 +180,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="targetPoint" isConst="true" />
       </variant>
     </method>
+    <method name="getDistanceTo" cppName="getDistanceTo"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        hasDefault="true" default="true" isConst="false" />
+        <arg type="double" typeName="double" name="range"
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="bool" typeName="bool" name="draft"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="double" typeName="double" name="strictRange"
+        hasDefault="true" default="RMAXDOUBLE" isConst="false" />
+      </variant>
+    </method>
     <method name="getShapes" cppName="getShapes" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
@@ -191,6 +207,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="segment"
         hasDefault="true" default="false" isConst="false" />
       </variant>
+    </method>
+    <method name="getEdges" cppName="getEdges" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RLine &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="setStatusFlag" cppName="setStatusFlag"
     specifier="protected" isStatic="false" isVirtual="false"

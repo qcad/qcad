@@ -174,6 +174,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getNoClipping, "getNoClipping");
             
+            REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPixelWidth, "getPixelWidth");
+            
             REcmaHelper::registerFunction(&engine, proto, setFeatureSize, "setFeatureSize");
             
             REcmaHelper::registerFunction(&engine, proto, getFeatureSize, "getFeatureSize");
@@ -299,6 +303,11 @@
 
     ctor.setProperty("NoClipping",
     QScriptValue(RPainterPath::NoClipping),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PixelWidth",
+    QScriptValue(RPainterPath::PixelWidth),
     QScriptValue::ReadOnly);
 
 
@@ -3915,6 +3924,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getNoClipping", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setPixelWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setPixelWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setPixelWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setPixelWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPixelWidth(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setPixelWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setPixelWidth", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getPixelWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getPixelWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getPixelWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getPixelWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getPixelWidth();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getPixelWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getPixelWidth", context, engine);
             return result;
         }
          QScriptValue

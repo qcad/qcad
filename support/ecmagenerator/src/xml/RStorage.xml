@@ -545,6 +545,24 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBlock::Id" isPureVirtual="false" />
     </method>
+    <method name="setCurrentViewport" cppName="setCurrentViewport"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="viewportId" isConst="false" />
+      </variant>
+    </method>
+    <method name="unsetCurrentViewport"
+    cppName="unsetCurrentViewport" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getCurrentViewportId"
+    cppName="getCurrentViewportId" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RObject::Id" isPureVirtual="false" />
+    </method>
     <method name="setModelSpaceBlockId"
     cppName="setModelSpaceBlockId" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

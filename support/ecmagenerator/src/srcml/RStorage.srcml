@@ -40,6 +40,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransaction.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RUcs.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RView.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RViewportEntity.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 
@@ -334,6 +335,18 @@
 
     <function><type><name>virtual</name> <name><name>RBlock</name>::<name>Id</name></name></type> <name>getCurrentBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>currentBlockId</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setCurrentViewport</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>viewportId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>currentViewportId</name> = <name>viewportId</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>unsetCurrentViewport</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>currentViewportId</name> = <name><name>RViewportEntity</name>::<name>INVALID_ID</name></name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name><name>RObject</name>::<name>Id</name></name></type> <name>getCurrentViewportId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>currentViewportId</name></expr>;</return>
     }</block></function>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>setModelSpaceBlockId</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
@@ -748,6 +761,7 @@
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>currentLinetypeId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>currentViewId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>currentBlockId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>currentViewportId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>modelSpaceBlockId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layer0Id</name></decl>;</decl_stmt>
 

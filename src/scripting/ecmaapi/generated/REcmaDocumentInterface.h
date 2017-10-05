@@ -433,6 +433,12 @@
         setCurrentBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unsetCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

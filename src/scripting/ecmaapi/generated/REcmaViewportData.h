@@ -129,7 +129,13 @@
         moveReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDistanceTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEdges
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -273,6 +273,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPixelUnit, "setPixelUnit");
             
+            REcmaHelper::registerFunction(&engine, proto, getPixelWidth, "getPixelWidth");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RExporter*>(), *proto);
 
@@ -7638,6 +7642,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::setPixelUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getPixelWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getPixelWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getPixelWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getPixelWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getPixelWidth();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getPixelWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getPixelWidth", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::setPixelWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::setPixelWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setPixelWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("setPixelWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPixelWidth(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setPixelWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::setPixelWidth", context, engine);
             return result;
         }
          QScriptValue REcmaExporter::toString

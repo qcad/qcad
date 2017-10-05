@@ -201,6 +201,12 @@
         getNoClipping
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setPixelWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPixelWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFeatureSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
