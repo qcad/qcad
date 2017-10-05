@@ -416,6 +416,9 @@ DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
         var strictRange = view.mapDistanceFromView(10);
         var entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
         if (entityId===RObject.INVALID_ID) {
+            if (this.document.getCurrentViewportId()!==RObject.INVALID_ID) {
+                this.di.unsetCurrentViewport();
+            }
             return;
         }
 
@@ -672,5 +675,8 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
                 this.di.deselectEntities(matchingEntities);
             }
         }
-    };
+    }
+    else if (isViewportEntity(entity)) {
+        this.di.setCurrentViewport(entity.data());
+    }
 };
