@@ -147,15 +147,15 @@ public:
         return RGraphicsView::getAntialiasing();
     }
 
-    RGraphicsScene* getScene() {
+    RGraphicsScene* getScene() const {
         return RGraphicsView::getScene();
     }
 
-    RDocument* getDocument() {
+    RDocument* getDocument() const {
         return RGraphicsView::getDocument();
     }
 
-    RDocumentInterface* getDocumentInterface() {
+    RDocumentInterface* getDocumentInterface() const {
         return RGraphicsView::getDocumentInterface();
     }
 
