@@ -126,23 +126,27 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
             RDocument* document = getData().getDocument();
             if (document != NULL) {
                 RPropertyAttributes attr;
-                if (!noAttributes) {
-                    QSet<QString> blockNames = document->getBlockNames();
-                    QSet<QString> filtered;
-                    QSet<QString>::iterator it;
-                    for (it=blockNames.begin(); it!=blockNames.end(); it++) {
-                        if (!(*it).startsWith("*")) {
-                            filtered.insert(*it);
-                        }
-                    }
-                    attr.setChoices(filtered);
-                }
+//                if (!noAttributes) {
+//                    QSet<QString> blockNames = document->getBlockNames();
+//                    QSet<QString> filtered;
+//                    QSet<QString>::iterator it;
+//                    for (it=blockNames.begin(); it!=blockNames.end(); it++) {
+//                        if (!(*it).startsWith("*")) {
+//                            filtered.insert(*it);
+//                        }
+//                    }
+//                    attr.setChoices(filtered);
+//                }
+                // invisible property for now (cannot be written back to file):
+                attr.setInvisible(true);
                 return qMakePair(QVariant(document->getBlockName(
                         getData().getDimLeaderBlockId())), attr);
             }
         } else {
-            return qMakePair(QVariant(getData().getDimLeaderBlockId()),
-                    RPropertyAttributes());
+            RPropertyAttributes attr;
+            //attr.setReadOnly(true);
+            attr.setInvisible(true);
+            return qMakePair(QVariant(getData().getDimLeaderBlockId()), attr);
         }
     }
     else if (propertyTypeId == PropertyVertexNX) {
