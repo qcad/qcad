@@ -75,14 +75,32 @@ function getGraphicsView() {
 }
 
 /**
- * Creates an off-screen document. Such a document can be filled with
+ * \deprecated
+ */
+function createOffScreenDocument() {
+    return createDocument();
+}
+
+/**
+ * Creates an (off-screen) document. Such a document can be filled with
  * objects and saved to disk, pasted into the current document, etc.
  * \ingroup ecma_simple
  *
  * \return new empty RDocument with default settings
  */
-function createOffScreenDocument() {
+function createDocument() {
     return new RDocument(new RMemoryStorage(), new RSpatialIndexSimple());
+}
+
+/**
+ * Creates an (off-screen) document with a document interface that can be used
+ * to import / export to / from files or graphics scenes and views.
+ * \ingroup ecma_simple
+ *
+ * \return new empty RDocumentInterface with default settings
+ */
+function createDocumentInterface() {
+    return new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexSimple()));
 }
 
 /**
