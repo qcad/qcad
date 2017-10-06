@@ -13,4 +13,4 @@ endTransaction();
 
 // export the document to a DXF file:
 var di = new RDocumentInterface(doc);
-di.exportFile("qcad_output.dxf");
+di.exportFile("qcad_createdrawing.dxf");
