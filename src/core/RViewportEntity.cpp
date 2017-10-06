@@ -200,16 +200,18 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     // clip rectangle export
     e.exportClipRectangle(viewportBox);
 
-    RVector offset(0,0);
-    offset -= data.viewCenter * data.scale;
-    offset -= data.viewTarget * data.scale;
+    RVector offset = getViewOffset();
+    //RVector offset(0,0);
+    //offset -= data.viewCenter * data.scale;
+    //offset -= data.viewTarget * data.scale;
 
     // create temporary block reference to model space block:
     RBlockReferenceData modelSpaceData(
         doc,
         RBlockReferenceData(
             doc->getModelSpaceBlockId(),
-            data.position + offset,
+            //data.position + offset,
+            offset,
             RVector(data.scale, data.scale),
             0.0
         )

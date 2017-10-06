@@ -186,6 +186,14 @@ public:
         data.setOff(v);
     }
 
+    RVector getViewOffset() const {
+        return data.getViewOffset();
+    }
+
+    RVector getPosition() const {
+        return data.getPosition();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

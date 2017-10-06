@@ -157,6 +157,8 @@ public:
         setStatusFlag(Off, v);
     }
 
+    RVector getViewOffset() const;
+
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
     virtual bool moveReferencePoint(const RVector& referencePoint,  const RVector& targetPoint);

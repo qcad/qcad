@@ -55,6 +55,16 @@ RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
     return RBox(position, width, height);
 }
 
+/**
+ * \return Offset or position of 0/0 of view (model space block) for this viewport.
+ */
+RVector RViewportData::getViewOffset() const {
+    RVector offset(0,0);
+    offset -= viewCenter * scale;
+    offset -= viewTarget * scale;
+    return position + offset;
+}
+
 QList<RRefPoint> RViewportData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
