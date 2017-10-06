@@ -497,7 +497,8 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         Q_ASSERT(false);
         return false;
     }
-    if (object->getDocument()==NULL) {
+    RDocument* doc = object->getDocument();
+    if (doc==NULL) {
         qWarning() << "RTransaction::addObject: "
             "Object is not linked to a document.";
         fail();
@@ -518,7 +519,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
     RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(storage);
     bool storageIsLinked = (ls!=NULL);
-    RStorage* objectStorage = &object->getDocument()->getStorage();
+    RStorage* objectStorage = &doc->getStorage();
 
     if (objectStorage==NULL) {
         qWarning() << "RTransaction::addObject: "
@@ -597,19 +598,25 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     // place entity on current layer / block, set current pen attributes:
     if (!entity.isNull()) {
         if (useCurrentAttributes || entity->getLayerId()==RLayer::INVALID_ID) {
-            entity->setLayerId(object->getDocument()->getCurrentLayerId());
+            entity->setLayerId(doc->getCurrentLayerId());
         }
         if (useCurrentAttributes || entity->getBlockId()==RBlock::INVALID_ID) {
-            entity->setBlockId(object->getDocument()->getCurrentBlockId());
+//            if (doc->hasCurrentViewport()) {
+//                // got an active viewport: always add to model space:
+//                entity->setBlockId(doc->getModelSpaceBlockId());
+//            }
+//            else {
+                entity->setBlockId(doc->getCurrentBlockId());
+//            }
         }
         if (useCurrentAttributes || !entity->getColor().isValid()) {
-            entity->setColor(object->getDocument()->getCurrentColor());
+            entity->setColor(doc->getCurrentColor());
         }
         if (useCurrentAttributes || entity->getLineweight()==RLineweight::WeightInvalid) {
-            entity->setLineweight(object->getDocument()->getCurrentLineweight());
+            entity->setLineweight(doc->getCurrentLineweight());
         }
         if (useCurrentAttributes || entity->getLinetypeId()==RLinetype::INVALID_ID) {
-            entity->setLinetypeId(object->getDocument()->getCurrentLinetypeId());
+            entity->setLinetypeId(doc->getCurrentLinetypeId());
         }
 
         // allowAll to make sure entities on hidden / locked layers can be imported:
@@ -619,7 +626,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             return false;
         }
 
-        Q_ASSERT_X(!object->getDocument()->queryLayerDirect(entity->getLayerId()).isNull(),
+        Q_ASSERT_X(!doc->queryLayerDirect(entity->getLayerId()).isNull(),
             "RTransaction::addObject",
             "layer of entity is NULL");
     }
@@ -768,15 +775,13 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             // remove old entity from storage (only if it has actually changed):
             storage->removeObject(oldObject);
 
-            if (object->getDocument()!=NULL) {
-                // only remove from si, if not linked storage / preview
-                if (!storage->isInBackStorage(oldObject->getId())) {
-                    QSharedPointer<REntity> oldEntity = oldObject.dynamicCast<REntity>();
-                    if (!spatialIndexDisabled && !oldEntity.isNull()) {
-                        QSharedPointer<RBlockReferenceEntity> blockRef = oldEntity.dynamicCast<RBlockReferenceEntity>();
-                        if (blockRef.isNull() || blockRef->getReferencedBlockId()!=RObject::INVALID_ID) {
-                            object->getDocument()->removeFromSpatialIndex(oldEntity);
-                        }
+            // only remove from si, if not linked storage / preview
+            if (!storage->isInBackStorage(oldObject->getId())) {
+                QSharedPointer<REntity> oldEntity = oldObject.dynamicCast<REntity>();
+                if (!spatialIndexDisabled && !oldEntity.isNull()) {
+                    QSharedPointer<RBlockReferenceEntity> blockRef = oldEntity.dynamicCast<RBlockReferenceEntity>();
+                    if (blockRef.isNull() || blockRef->getReferencedBlockId()!=RObject::INVALID_ID) {
+                        doc->removeFromSpatialIndex(oldEntity);
                     }
                 }
             }
@@ -811,21 +816,19 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
             addAffectedObject(object);
 
-            if (object->getDocument()!=NULL) {
-                // only add to si, if not linked storage / preview
-                if (!storageIsLinked) {
-                    QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
-                    if (!spatialIndexDisabled && !entity.isNull()) {
-                        QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
-                        if (blockRef.isNull() || blockRef->getReferencedBlockId()!=RObject::INVALID_ID) {
-                            object->getDocument()->addToSpatialIndex(entity);
-                        }
+            // only add to si, if not linked storage / preview
+            if (!storageIsLinked) {
+                QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+                if (!spatialIndexDisabled && !entity.isNull()) {
+                    QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+                    if (blockRef.isNull() || blockRef->getReferencedBlockId()!=RObject::INVALID_ID) {
+                        doc->addToSpatialIndex(entity);
+                    }
 
-                        // update block references if entity has been changed inside a block
-                        // that is not the current block (in block editing):
-                        if (entity->getBlockId()!=storage->getCurrentBlockId()) {
-                            affectedBlockReferenceIds.unite(storage->queryBlockReferences(entity->getBlockId()));
-                        }
+                    // update block references if entity has been changed inside a block
+                    // that is not the current block (in block editing):
+                    if (entity->getBlockId()!=storage->getCurrentBlockId()) {
+                        affectedBlockReferenceIds.unite(storage->queryBlockReferences(entity->getBlockId()));
                     }
                 }
             }
