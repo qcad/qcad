@@ -742,13 +742,13 @@ Print.getTransformed = function(document, rect) {
 };
 
 Print.getColorMode = function(document) {
-    var colorModeString = EAction.getValue("ColorSettings/ColorMode", "FullColor", document);
+    var colorModeString = Print.getValue("ColorSettings/ColorMode", "FullColor", document);
     return Print.getColorModeEnum(colorModeString);
 };
 
 Print.setColorMode = function(document, colorMode) {
     if (isString(colorMode)) {
-        document.setVariable("ColorSettings/ColorMode", colorMode);
+        Print.setValue("ColorSettings/ColorMode", colorMode, document);
     }
     else {
         Print.setColorMode(document, Print.getColorModeString(colorMode));
@@ -760,7 +760,7 @@ Print.getHairlineMode = function(document) {
 };
 
 Print.setHairlineMode = function(document, onOff) {
-    document.setVariable("Print/HairlineMode", onOff);
+    Print.setValue("Print/HairlineMode", onOff, document);
 };
 
 /**
@@ -841,8 +841,57 @@ Print.getDefaultPaperRect = function(document, paperUnit) {
     return new QRectF(x, y, w, h);
 };
 
+/**
+ * \return Value for given variable from current layout block, document or settings.
+ */
+Print.getValue = function(key, def, document) {
+    var ret = undefined;
+    if (isNull(document) || document.getCurrentBlockId()===document.getModelSpaceBlockId()) {
+        ret = EAction.getValue(key, def, document);
+    }
+    else {
+        var block = document.queryCurrentBlock();
+        if (block.isLayout()) {
+            ret = block.getCustomProperty("QCAD", key, def);
+        }
+    }
+
+    return ret;
+};
+
+Print.getDoubleValue = function(key, def, document) {
+    var val = Print.getValue(key, def, document);
+    return parseFloat(val);
+};
+
+Print.getIntValue = function(key, def, document) {
+    var val = Print.getValue(key, def, document);
+    return parseInt(val);
+};
+
+Print.setValue = function(key, val, document) {
+    if (isNull(document) || document.getCurrentBlockId()===document.getModelSpaceBlockId()) {
+        qDebug("setting " + key + " of model to " + val);
+        document.setVariable(key, val);
+    }
+    else {
+        var block = document.queryCurrentBlock();
+        if (block.isLayout()) {
+            qDebug("setting " + key + " of layout " + block.getLayoutName() + " to " + val);
+            block.setCustomProperty("QCAD", key, val);
+            var di = EAction.getDocumentInterface();
+            if (!isNull(di)) {
+                var op = new RAddObjectOperation(block);
+                op.setRecordAffectedObjects(false);
+                op.setSpatialIndexDisabled(true);
+                di.applyOperation(op);
+            }
+        }
+    }
+};
+
 Print.getGlueMarginLeft = function(document) {
-    return EAction.getDoubleValue("MultiPageSettings/GlueMarginsLeft", Print.getDefaultPrintMarginLeft(document), document);
+    return Print.getDoubleValue("MultiPageSettings/GlueMarginsLeft", Print.getDefaultPrintMarginLeft(document), document);
 };
 
 Print.getDefaultPrintMarginLeft = function(document, paperUnit) {
@@ -851,7 +900,7 @@ Print.getDefaultPrintMarginLeft = function(document, paperUnit) {
 };
 
 Print.getGlueMarginTop = function(document) {
-    return EAction.getDoubleValue( "MultiPageSettings/GlueMarginsTop", Print.getDefaultPrintMarginTop(document), document);
+    return Print.getDoubleValue("MultiPageSettings/GlueMarginsTop", Print.getDefaultPrintMarginTop(document), document);
 };
 
 Print.getDefaultPrintMarginTop = function(document, paperUnit) {
@@ -860,7 +909,7 @@ Print.getDefaultPrintMarginTop = function(document, paperUnit) {
 };
 
 Print.getGlueMarginRight = function(document) {
-    return EAction.getDoubleValue( "MultiPageSettings/GlueMarginsRight", Print.getDefaultPrintMarginRight(document), document);
+    return Print.getDoubleValue("MultiPageSettings/GlueMarginsRight", Print.getDefaultPrintMarginRight(document), document);
 };
 
 Print.getDefaultPrintMarginRight = function(document, paperUnit) {
@@ -870,7 +919,7 @@ Print.getDefaultPrintMarginRight = function(document, paperUnit) {
 };
 
 Print.getGlueMarginBottom = function(document) {
-    return EAction.getDoubleValue( "MultiPageSettings/GlueMarginsBottom", Print.getDefaultPrintMarginBottom(document), document);
+    return Print.getDoubleValue("MultiPageSettings/GlueMarginsBottom", Print.getDefaultPrintMarginBottom(document), document);
 };
 
 Print.getDefaultPrintMarginBottom = function(document, paperUnit) {
@@ -880,16 +929,16 @@ Print.getDefaultPrintMarginBottom = function(document, paperUnit) {
 };
 
 Print.getOffset = function(document) {
-    var x = EAction.getDoubleValue("PageSettings/OffsetX", 0, document);
-    var y = EAction.getDoubleValue("PageSettings/OffsetY", 0, document);
+    var x = Print.getDoubleValue("PageSettings/OffsetX", 0, document);
+    var y = Print.getDoubleValue("PageSettings/OffsetY", 0, document);
 //    x += Print.getGlueMarginLeft();
 //    y += Print.getGlueMarginBottom();
     return new RVector(x, y);
 };
 
 Print.setOffset = function(document, offset) {
-    document.setVariable("PageSettings/OffsetX", offset.x);
-    document.setVariable("PageSettings/OffsetY", offset.y);
+    Print.setValue("PageSettings/OffsetX", offset.x, document);
+    Print.setValue("PageSettings/OffsetY", offset.y, document);
 };
 
 /**
@@ -933,7 +982,7 @@ Print.getPaperWidth = function(document) {
     var dwMM = defaultPaperSizeMM.width();
     var dw = RUnit.convert(dwMM, RS.Millimeter, Print.getPaperUnit(document));
 
-    var w = EAction.getValue("PageSettings/PaperWidth", dw, document);
+    var w = Print.getValue("PageSettings/PaperWidth", dw, document);
 
     // compat:
     if (isArray(w)) {
@@ -955,7 +1004,7 @@ Print.getPaperHeight = function(document) {
     var dhMM = defaultPaperSizeMM.height();
     var dh = RUnit.convert(dhMM, RS.Millimeter, Print.getPaperUnit(document));
 
-    var h = EAction.getValue("PageSettings/PaperHeight", dh, document);
+    var h = Print.getValue("PageSettings/PaperHeight", dh, document);
     // compat:
     if (isArray(h)) {
         h = h[0];
@@ -972,7 +1021,7 @@ Print.getPaperHeight = function(document) {
  * \return Paper unit enum.
  */
 Print.getPaperUnit = function(document) {
-    return EAction.getIntValue("UnitSettings/PaperUnit", RS.Millimeter, document);
+    return Print.getIntValue("UnitSettings/PaperUnit", RS.Millimeter, document);
 };
 
 Print.getDefaultPaperUnit = function() {
@@ -1108,6 +1157,8 @@ Print.getDefaultPaperSizeName = function(document) {
  */
 Print.getPageOrientationEnum = function(document) {
     var pageOrientationString = Print.getPageOrientationString(document);
+    qDebug("pageOrientationString:", pageOrientationString);
+    qDebug("document:", document);
     if (pageOrientationString==="Landscape") {
         return QPrinter.Landscape;
     }
@@ -1117,15 +1168,15 @@ Print.getPageOrientationEnum = function(document) {
 };
 
 Print.getPageOrientationString = function(document) {
-    return EAction.getValue("PageSettings/PageOrientation", "Portrait", document);
+    return Print.getValue("PageSettings/PageOrientation", "Portrait", document);
 };
 
 Print.setPageOrientationString = function(document, pageOrientation) {
-    document.setVariable("PageSettings/PageOrientation", pageOrientation);
+    Print.setValue("PageSettings/PageOrientation", pageOrientation, document);
 };
 
 Print.setPageOrientationEnum = function(document, pageOrientation) {
-    if (pageOrientation==QPrinter.Landscape) {
+    if (pageOrientation.valueOf()===QPrinter.Landscape.valueOf()) {
         Print.setPageOrientationString(document, "Landscape");
     }
     else {
@@ -1138,7 +1189,7 @@ Print.getShowPaperBorders = function(document) {
 };
 
 Print.setShowPaperBorders = function(document, showPaperBorders) {
-    document.setVariable("PageSettings/ShowPaperBorders", showPaperBorders);
+    Print.setValue("PageSettings/ShowPaperBorders", showPaperBorders, document);
 };
 
 Print.getPrintCropMarks = function(document) {
@@ -1146,7 +1197,7 @@ Print.getPrintCropMarks = function(document) {
 };
 
 Print.setPrintCropMarks = function(document, printCropMarks) {
-    document.setVariable("MultiPageSettings/PrintCropMarks", printCropMarks);
+    Print.setValue("MultiPageSettings/PrintCropMarks", printCropMarks, document);
 };
 
 Print.getScaleString = function(document) {
@@ -1204,7 +1255,7 @@ Print.setScale = function(document, scale) {
 };
 
 Print.setScaleString = function(document, scaleString) {
-    document.setVariable("PageSettings/Scale", scaleString);
+    Print.setValue("PageSettings/Scale", scaleString, document);
 };
 
 Print.getColumns = function(document) {
@@ -1213,11 +1264,11 @@ Print.getColumns = function(document) {
         return 1;
     }
 
-    return EAction.getIntValue("MultiPageSettings/Columns", 1, document);
+    return Print.getIntValue("MultiPageSettings/Columns", 1, document);
 };
 
 Print.setColumns = function(document, columns) {
-    document.setVariable("MultiPageSettings/Columns", columns);
+    Print.setValue("MultiPageSettings/Columns", columns, document);
 };
 
 Print.getRows = function(document) {
@@ -1226,16 +1277,16 @@ Print.getRows = function(document) {
         return 1;
     }
 
-    return EAction.getIntValue("MultiPageSettings/Rows", 1, document);
+    return Print.getIntValue("MultiPageSettings/Rows", 1, document);
 };
 
 Print.setRows = function(document, rows) {
-    document.setVariable("MultiPageSettings/Rows", rows);
+    Print.setValue("MultiPageSettings/Rows", rows, document);
 };
 
 Print.getBackgroundColor = function(document) {
     // this might return a string or an RColor object:
-    var color = EAction.getValue("ColorSettings/BackgroundColor", new RColor("white"), document);
+    var color = Print.getValue("ColorSettings/BackgroundColor", new RColor("white"), document);
 
     if (isOfType(color, RColor)) {
         return color;
@@ -1263,7 +1314,7 @@ Print.getIdentifyPageTags = function(document) {
 };
 
 Print.getTagFont = function(document) {
-    var ret = EAction.getValue("PageTagSettings/TagFont", new QFont(), document);
+    var ret = Print.getValue("PageTagSettings/TagFont", new QFont(), document);
     if (isOfType(ret, QFont)) {
         return ret;
     }
@@ -1279,11 +1330,11 @@ Print.getTagFont = function(document) {
 };
 
 Print.getTagPosition = function(document) {
-    return EAction.getValue("PageTagSettings/TagPosition", "TopLeft", document);
+    return Print.getValue("PageTagSettings/TagPosition", "TopLeft", document);
 };
 
 Print.getTagAlignment = function(document) {
-    return EAction.getValue("PageTagSettings/TagAlignment", "Inside", document);
+    return Print.getValue("PageTagSettings/TagAlignment", "Inside", document);
 };
 
 /**

@@ -152,6 +152,12 @@ PrintPreview.prototype.beginEvent = function() {
     this.pAdapter = new RPreferencesListenerAdapter();
     appWin.addPreferencesListener(this.pAdapter);
     this.pAdapter.preferencesUpdated.connect(this, "updateFromPreferences");
+
+    this.bAdapter = new RBlockListenerAdapter();
+    appWin.addBlockListener(this.bAdapter);
+    this.bAdapter.blocksUpdated.connect(this, "updateBackgroundTransform");
+    this.bAdapter.blocksUpdated.connect(this, "updateBackgroundDecoration");
+    this.bAdapter.blocksUpdated.connect(function() { qDebug("blocks changed, update");});
 };
 
 /**
@@ -219,6 +225,9 @@ PrintPreview.prototype.finishEvent = function() {
     var appWin = RMainWindowQt.getMainWindow();
     if (!isNull(this.pAdapter)) {
         appWin.removePreferencesListener(this.pAdapter);
+    }
+    if (!isNull(this.bAdapter)) {
+        appWin.removeBlockListener(this.bAdapter);
     }
 };
 
@@ -354,7 +363,7 @@ PrintPreview.prototype.showUiOptions = function(resume) {
 
     widgets["Portrait"].blockSignals(true);
     widgets["Landscape"].blockSignals(true);
-    if (Print.getPageOrientationEnum() == QPrinter.Portrait) {
+    if (Print.getPageOrientationEnum(document).valueOf() === QPrinter.Portrait.valueOf()) {
         widgets["Portrait"].checked=true;
     } else {
         widgets["Landscape"].checked=true;
