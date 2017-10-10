@@ -98,7 +98,8 @@ Explode.explodeSelection = function(di, toolTitle) {
         if (isPointEntity(entity) ||
             isLineEntity(entity) ||
             isArcEntity(entity) ||
-            isCircleEntity(entity)) {
+            isCircleEntity(entity) ||
+            isViewportEntity(entity)) {
             continue;
         }
 
