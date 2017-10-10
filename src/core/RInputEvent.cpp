@@ -27,7 +27,13 @@ RInputEvent::RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsVi
 
     modelPosition = view.mapFromView(screenPosition);
 
-//  RDocumentInterface& documentInterface = scene.getDocumentInterface();
+    // apply input transform (used if viewport is active):
+//    RDocumentInterface& di = scene.getDocumentInterface();
+//    if (di.getDocument().hasCurrentViewport()) {
+//        QTransform t = di.getInputTransform();
+//        modelPosition.transform2D(t);
+//    }
+
 //  RUcs ucs = documentInterface.getCurrentUcs();
 //  ucsPosition = ucs.mapToUcs(modelPosition);
 }
