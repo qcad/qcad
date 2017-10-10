@@ -2145,15 +2145,23 @@ void RDocumentInterface::setCurrentLayer(const RLayer& layer) {
 }
 
 /**
- * Sets the current block based on the given block name.
+ * Sets the current block that is in use for all views attached to
+ * this document interface.
  */
-void RDocumentInterface::setCurrentBlock(const QString& blockName) {
+void RDocumentInterface::setCurrentBlock(RBlock::Id blockId) {
     clearSelection();
-    document.setCurrentBlock(blockName);
+    document.setCurrentBlock(blockId);
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyBlockListeners(this);
     }
     regenerateScenes();
+}
+
+/**
+ * Sets the current block based on the given block name.
+ */
+void RDocumentInterface::setCurrentBlock(const QString& blockName) {
+    setCurrentBlock(document.getBlockId(blockName));
 }
 
 /**
@@ -2169,8 +2177,21 @@ void RDocumentInterface::setCurrentViewport(const RViewportEntity& viewport) {
 
     document.setCurrentViewport(viewport.getId());
 
+//    inputTransform.reset();
+
+//    inputTransform.translate(viewport.getViewCenter().x, viewport.getViewCenter().y);
+//    inputTransform.translate(viewport.getViewTarget().x, viewport.getViewTarget().y);
+
+//    inputTransform.rotateRadians(-viewport.getRotation());
+//    if (!RMath::fuzzyCompare(viewport.getScale(), RS::PointTolerance)) {
+//        inputTransform.scale(1.0/viewport.getScale(), 1.0/viewport.getScale());
+//    }
+
+//    inputTransform.translate(-viewport.getPosition().x, -viewport.getPosition().y);
+
     regenerateScenes(prevViewportId, true);
     regenerateScenes(viewport.getId(), true);
+
 
 //    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
 //        RMainWindow::getMainWindow()->notifyBlockListeners(this);
@@ -2181,6 +2202,8 @@ void RDocumentInterface::unsetCurrentViewport() {
     RViewportEntity::Id prevViewportId = document.getCurrentViewportId();
 
     document.unsetCurrentViewport();
+
+//    inputTransform.reset();
 
     regenerateScenes(prevViewportId, true);
 }

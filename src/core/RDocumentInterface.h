@@ -307,6 +307,7 @@ public:
     void setCurrentLayer(const RLayer& layer);
     void setCurrentLayer(const QString& layerName);
 
+    void setCurrentBlock(RBlock::Id blockId);
     void setCurrentBlock(const RBlock& block);
     void setCurrentBlock(const QString& blockName);
 
@@ -341,6 +342,14 @@ public:
 
     QVariant eval(const QString& ext, const QString& script);
 
+//    QTransform getInputTransform() const {
+//        return inputTransform;
+//    }
+
+//    void setInputTransform(const QTransform& t) {
+//        inputTransform = t;
+//    }
+
 private:
     void handleClickEvent(RAction& action, RMouseEvent& event);
     void previewClickEvent(RAction& action, RMouseEvent& event);
@@ -373,14 +382,17 @@ private:
     bool allowUpdate;
     bool allowRegeneration;
 
-    static RDocumentInterface* clipboard;
-
     bool notifyGlobalListeners;
     bool deleting;
     bool cursorOverride;
 
     bool keepPreviewOnce;
     bool mouseTrackingEnabled;
+
+    // transform for all input coordinates:
+//    QTransform inputTransform;
+
+    static RDocumentInterface* clipboard;
 };
 
 Q_DECLARE_METATYPE(RDocumentInterface::IoErrorCode)
