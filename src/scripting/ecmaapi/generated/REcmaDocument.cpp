@@ -285,6 +285,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentViewportId, "getCurrentViewportId");
             
+            REcmaHelper::registerFunction(&engine, proto, hasCurrentViewport, "hasCurrentViewport");
+            
             REcmaHelper::registerFunction(&engine, proto, unsetCurrentViewport, "unsetCurrentViewport");
             
             REcmaHelper::registerFunction(&engine, proto, queryCurrentView, "queryCurrentView");
@@ -9366,6 +9368,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getCurrentViewportId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::hasCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::hasCurrentViewport", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::hasCurrentViewport";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("hasCurrentViewport", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasCurrentViewport();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.hasCurrentViewport().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::hasCurrentViewport", context, engine);
             return result;
         }
          QScriptValue

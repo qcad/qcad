@@ -962,6 +962,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
         <arg type="RBlock &amp;" typeName="RBlock" name="block"
         isConst="true" />
       </variant>

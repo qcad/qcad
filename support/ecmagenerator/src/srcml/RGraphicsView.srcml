@@ -79,9 +79,9 @@
     <function_decl><type><name>void</name></type> <name>setDisplayOnlyCurrentUcs</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setScene</name><parameter_list>(<param><decl><type><name>RGraphicsScene</name>*</type> <name>scene</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RGraphicsScene</name>*</type> <name>getScene</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RGraphicsScene</name>*</type> <name>getScene</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * Maps the given view coordinate in pixels to a model coordinate.

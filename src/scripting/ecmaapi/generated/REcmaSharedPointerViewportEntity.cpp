@@ -130,6 +130,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setOff, "setOff");
             
+            REcmaHelper::registerFunction(&engine, proto, getViewOffset, "getViewOffset");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPosition, "getPosition");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RViewportEntityPointer>(), *proto);
       
@@ -2471,6 +2475,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::setOff", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerViewportEntity::getViewOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerViewportEntity::getViewOffset", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerViewportEntity::getViewOffset";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getViewOffset", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getViewOffset();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getViewOffset().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::getViewOffset", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerViewportEntity::getPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerViewportEntity::getPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerViewportEntity::getPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPosition();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerViewportEntity::getPosition", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerViewportEntity::toString

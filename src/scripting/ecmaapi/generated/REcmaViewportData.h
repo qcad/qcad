@@ -123,6 +123,9 @@
         setOff
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getViewOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

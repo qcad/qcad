@@ -369,6 +369,9 @@
         getCurrentViewportId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         unsetCurrentViewport
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

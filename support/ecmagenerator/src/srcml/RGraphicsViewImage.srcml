@@ -148,15 +148,15 @@
         <return>return <expr><call><name><name>RGraphicsView</name>::<name>getAntialiasing</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>RGraphicsScene</name>*</type> <name>getScene</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>RGraphicsScene</name>*</type> <name>getScene</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RGraphicsView</name>::<name>getScene</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RGraphicsView</name>::<name>getDocument</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RGraphicsView</name>::<name>getDocumentInterface</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 

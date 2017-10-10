@@ -281,6 +281,7 @@
 
     <function_decl><type><name>void</name></type> <name>setCurrentViewport</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>viewportId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getCurrentViewportId</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasCurrentViewport</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>unsetCurrentViewport</name><parameter_list>()</parameter_list>;</function_decl>
 
 <comment type="line">//    void setSelectedBlock(RBlock::Id blockId);</comment>
