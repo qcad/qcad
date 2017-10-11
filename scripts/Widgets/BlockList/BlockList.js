@@ -186,17 +186,17 @@ RBlockListQt.prototype.sortBlockNames = function(blockNames) {
         }
 
         // layouts always before other blocks:
-        var blockAIsLayout = blockA.isLayout();
-        var blockBIsLayout = blockB.isLayout();
-        if (blockAIsLayout && !blockBIsLayout) {
+        var blockAHasLayout = blockA.hasLayout();
+        var blockBHasLayout = blockB.hasLayout();
+        if (blockAHasLayout && !blockBHasLayout) {
             return -1;
         }
-        if (!blockAIsLayout && blockBIsLayout) {
+        if (!blockAHasLayout && blockBHasLayout) {
             return 1;
         }
 
         // sort among layouts by tab order:
-        if (blockAIsLayout && blockBIsLayout) {
+        if (blockAHasLayout && blockBHasLayout) {
             var layoutAId = blockA.getLayoutId();
             var layoutBId = blockB.getLayoutId();
             var layoutA = doc.queryLayout(layoutAId);
@@ -404,7 +404,8 @@ RBlockListQt.prototype.blockActivated = function() {
 
     // prevent removal or insertion of current block:
     var insertable = currentBlock.getName().toLowerCase()!==blockName.toLowerCase() && !blockName.startsWith("*");
-    this.enableActions(insertable);
+    var renamable = document.getBlockId(blockName)!==document.getModelSpaceBlockId();
+    this.enableActions(insertable, renamable);
 };
 
 /**
@@ -430,9 +431,13 @@ RBlockListQt.getItem = function(widget, blockName) {
 /**
  * Enable / disable buttons that edit, remove or insert the active block.
  */
-RBlockListQt.prototype.enableActions = function(enable) {
+RBlockListQt.prototype.enableActions = function(insertable, renamable) {
+    if (isNull(renamable)) {
+        renamable = insertable;
+    }
+
     var override;
-    if (enable===true) {
+    if (insertable===true) {
         override = 1;
     }
     else {
@@ -441,13 +446,14 @@ RBlockListQt.prototype.enableActions = function(enable) {
 
     var action;
     action = RGuiAction.getByScriptFile("scripts/Block/ToggleBlockVisibility/ToggleBlockVisibility.js");
-    action.setEnabledOverride(enable, override);
+    action.setEnabledOverride(insertable, override);
     action = RGuiAction.getByScriptFile("scripts/Block/InsertBlock/InsertBlock.js");
-    action.setEnabledOverride(enable, override);
+    action.setEnabledOverride(insertable, override);
     action = RGuiAction.getByScriptFile("scripts/Block/RemoveBlock/RemoveBlock.js");
-    action.setEnabledOverride(enable, override);
+    action.setEnabledOverride(insertable, override);
+
     action = RGuiAction.getByScriptFile("scripts/Block/RenameBlock/RenameBlock.js");
-    action.setEnabledOverride(enable, override);
+    action.setEnabledOverride(renamable, renamable ? 1 : 0);
 };
 
 /**
