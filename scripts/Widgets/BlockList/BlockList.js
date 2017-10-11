@@ -405,7 +405,8 @@ RBlockListQt.prototype.blockActivated = function() {
     // prevent removal or insertion of current block:
     var insertable = currentBlock.getName().toLowerCase()!==blockName.toLowerCase() && !blockName.startsWith("*");
     var renamable = document.getBlockId(blockName)!==document.getModelSpaceBlockId();
-    this.enableActions(insertable, renamable);
+    var removable = document.getBlockId(blockName)!==document.getModelSpaceBlockId();
+    this.enableActions(insertable, renamable, removable);
 };
 
 /**
@@ -431,9 +432,12 @@ RBlockListQt.getItem = function(widget, blockName) {
 /**
  * Enable / disable buttons that edit, remove or insert the active block.
  */
-RBlockListQt.prototype.enableActions = function(insertable, renamable) {
+RBlockListQt.prototype.enableActions = function(insertable, renamable, removable) {
     if (isNull(renamable)) {
         renamable = insertable;
+    }
+    if (isNull(removable)) {
+        removable = insertable;
     }
 
     var override;
@@ -449,8 +453,9 @@ RBlockListQt.prototype.enableActions = function(insertable, renamable) {
     action.setEnabledOverride(insertable, override);
     action = RGuiAction.getByScriptFile("scripts/Block/InsertBlock/InsertBlock.js");
     action.setEnabledOverride(insertable, override);
+
     action = RGuiAction.getByScriptFile("scripts/Block/RemoveBlock/RemoveBlock.js");
-    action.setEnabledOverride(insertable, override);
+    action.setEnabledOverride(removable, removable ? 1 : 0);
 
     action = RGuiAction.getByScriptFile("scripts/Block/RenameBlock/RenameBlock.js");
     action.setEnabledOverride(renamable, renamable ? 1 : 0);
