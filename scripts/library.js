@@ -241,6 +241,15 @@ function isBlock(obj) {
 }
 
 /**
+ * Checks if the given object is a layout (RLayout).
+ *
+ * \return true if the given object is a layout.
+ */
+function isLayout(obj) {
+    return isOfType(obj, RLayout) || isOfType(obj, RLayoutPointer);
+}
+
+/**
  * Checks if the given object is a graphics entity.
  *
  * \return true if the given object is an entity (derived from REntity).
