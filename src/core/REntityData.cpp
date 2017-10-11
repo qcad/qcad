@@ -163,10 +163,13 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RE
             return RLineweight::Weight000;
         }
         if (RSettings::isLayer0CompatibilityOn()) {
-            // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
-            if (l->getName()=="0") {
-                if (!blockRefStack.isEmpty()) {
-                    lw = blockRefStack.top()->getLineweight(true, blockRefStack);
+            // never inherit from viewport:
+            if (blockRefStack.isEmpty() || blockRefStack.top()->getType()!=RS::EntityViewport) {
+                // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
+                if (l->getName()=="0") {
+                    if (!blockRefStack.isEmpty()) {
+                        lw = blockRefStack.top()->getLineweight(true, blockRefStack);
+                    }
                 }
             }
         }
@@ -210,12 +213,15 @@ RLinetype::Id REntityData::getLinetypeId(bool resolve, const QStack<REntity*>& b
                 return RLinetype::INVALID_ID;
             }
             if (RSettings::isLayer0CompatibilityOn()) {
-                // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
-                if (l->getName()=="0") {
-                    if (blockRefStack.isEmpty()) {
-                        return l->getLinetypeId();
+                // never inherit from viewport:
+                if (blockRefStack.isEmpty() || blockRefStack.top()->getType()!=RS::EntityViewport) {
+                    // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
+                    if (l->getName()=="0") {
+                        if (blockRefStack.isEmpty()) {
+                            return l->getLinetypeId();
+                        }
+                        return blockRefStack.top()->getLinetypeId(true, blockRefStack);
                     }
-                    return blockRefStack.top()->getLinetypeId(true, blockRefStack);
                 }
             }
             return l->getLinetypeId();
