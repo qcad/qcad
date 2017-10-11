@@ -302,6 +302,7 @@ public:
 
     bool hasLayer(const QString& layerName) const;
     bool hasBlock(const QString& blockName) const;
+    bool hasLayout(const QString& layoutName) const;
     bool hasView(const QString& viewName) const;
     bool hasLinetype(const QString& linetypeName) const;
 

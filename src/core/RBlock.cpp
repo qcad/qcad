@@ -74,7 +74,7 @@ void RBlock::setName(const QString& n) {
 }
 
 QString RBlock::getLayoutName() const {
-    if (!isLayout()) {
+    if (!hasLayout()) {
         return "";
     }
 

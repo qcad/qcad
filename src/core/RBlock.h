@@ -106,7 +106,7 @@ public:
         return QString::compare(name, modelSpaceName, Qt::CaseInsensitive)==0;
     }
 
-    bool isLayout() const {
+    bool hasLayout() const {
         return layoutId!=RLayout::INVALID_ID;
     }
 

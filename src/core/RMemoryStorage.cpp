@@ -280,7 +280,7 @@ QSet<RBlock::Id> RMemoryStorage::queryAllLayoutBlocks(bool undone) {
     QHash<RObject::Id, QSharedPointer<RBlock> >::iterator it;
     for (it = blockMap.begin(); it != blockMap.end(); ++it) {
         QSharedPointer<RBlock> b = *it;
-        if (!b.isNull() && (undone || !b->isUndone()) && b->isLayout()) {
+        if (!b.isNull() && (undone || !b->isUndone()) && b->hasLayout()) {
             result.insert(b->getId());
         }
     }

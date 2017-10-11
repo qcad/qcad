@@ -852,7 +852,7 @@ Print.getValue = function(key, def, document) {
     }
     else {
         var block = document.queryCurrentBlock();
-        //if (block.isLayout()) {
+        //if (block.hasLayout()) {
             ret = block.getCustomProperty("QCAD", key, def);
         //}
     }
@@ -889,7 +889,7 @@ Print.setValue = function(key, val, document) {
     }
     else {
         var block = document.queryCurrentBlock();
-        //if (block.isLayout()) {
+        //if (block.hasLayout()) {
             qDebug("setting " + key + " of layout " + block.getLayoutName() + " to " + val);
             block.setCustomProperty("QCAD", key, val);
             var di = EAction.getDocumentInterface();

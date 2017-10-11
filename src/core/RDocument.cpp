@@ -987,6 +987,13 @@ bool RDocument::hasBlock(const QString& blockName) const {
 }
 
 /**
+ * \copydoc RStorage::hasLayout
+ */
+bool RDocument::hasLayout(const QString& layoutName) const {
+    return storage.hasLayout(layoutName);
+}
+
+/**
  * \copydoc RStorage::hasLinetype
  */
 bool RDocument::hasLinetype(const QString& linetypeName) const {
@@ -1697,7 +1704,7 @@ QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
             // expose properties of layout associated with current block:
             QSharedPointer<RBlock> block = queryBlock(blockId);
             if (!block.isNull()) {
-                if (block->isLayout()) {
+                if (block->hasLayout()) {
                     RLayout::Id layoutId = block->getLayoutId();
                     objectIds.insert(layoutId);
 //                    QSharedPointer<RLayout> layout = queryLayout(layoutId);
