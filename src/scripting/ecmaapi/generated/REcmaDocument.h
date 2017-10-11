@@ -411,6 +411,9 @@
         hasBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

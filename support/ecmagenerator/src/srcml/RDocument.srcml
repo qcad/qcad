@@ -303,6 +303,7 @@
 
     <function_decl><type><name>bool</name></type> <name>hasLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasLayout</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layoutName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasView</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>viewName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

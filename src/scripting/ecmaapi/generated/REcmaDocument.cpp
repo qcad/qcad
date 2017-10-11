@@ -313,6 +313,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasBlock, "hasBlock");
             
+            REcmaHelper::registerFunction(&engine, proto, hasLayout, "hasLayout");
+            
             REcmaHelper::registerFunction(&engine, proto, hasView, "hasView");
             
             REcmaHelper::registerFunction(&engine, proto, hasLinetype, "hasLinetype");
@@ -10206,6 +10208,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::hasBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::hasLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::hasLayout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::hasLayout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("hasLayout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasLayout(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.hasLayout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::hasLayout", context, engine);
             return result;
         }
          QScriptValue

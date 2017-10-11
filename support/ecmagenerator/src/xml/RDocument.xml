@@ -1068,6 +1068,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="blockName" isConst="true" />
       </variant>
     </method>
+    <method name="hasLayout" cppName="hasLayout" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layoutName" isConst="true" />
+      </variant>
+    </method>
     <method name="hasView" cppName="hasView" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

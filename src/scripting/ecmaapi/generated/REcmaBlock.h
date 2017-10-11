@@ -84,7 +84,7 @@
         isModelSpace
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isLayout
+        hasLayout
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setLayoutId

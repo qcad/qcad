@@ -91,7 +91,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, isModelSpace, "isModelSpace");
             
-            REcmaHelper::registerFunction(&engine, proto, isLayout, "isLayout");
+            REcmaHelper::registerFunction(&engine, proto, hasLayout, "hasLayout");
             
             REcmaHelper::registerFunction(&engine, proto, setLayoutId, "setLayoutId");
             
@@ -979,19 +979,19 @@
             return result;
         }
          QScriptValue
-        REcmaBlock::isLayout
+        REcmaBlock::hasLayout
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::isLayout", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaBlock::isLayout";
+            //REcmaHelper::functionStart("REcmaBlock::hasLayout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlock::hasLayout";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RBlock* self = 
-                        getSelf("isLayout", context);
+                        getSelf("hasLayout", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1011,7 +1011,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->isLayout();
+               self->hasLayout();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1021,10 +1021,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isLayout().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.hasLayout().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::isLayout", context, engine);
+            //REcmaHelper::functionEnd("REcmaBlock::hasLayout", context, engine);
             return result;
         }
          QScriptValue
