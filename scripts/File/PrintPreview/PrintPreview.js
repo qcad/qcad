@@ -106,13 +106,6 @@ PrintPreview.prototype.beginEvent = function() {
         var document = this.getDocument();
         this.bgColor = this.view.getBackgroundColor();
 
-        // background needs to be set to white (or other user preference)
-        // for printing / preview:
-        this.view.setBackgroundColor(Print.getBackgroundColor(document));
-        this.view.setColorMode(Print.getColorMode(document));
-        this.view.setHairlineMode(Print.getHairlineMode(document));
-        this.view.setPrintPreview(true);
-
         this.updateBackgroundDecoration();
 
         if (!isNull(this.view.getScene())) {
@@ -157,7 +150,6 @@ PrintPreview.prototype.beginEvent = function() {
     appWin.addBlockListener(this.bAdapter);
     this.bAdapter.blocksUpdated.connect(this, "updateBackgroundTransform");
     this.bAdapter.blocksUpdated.connect(this, "updateBackgroundDecoration");
-    this.bAdapter.blocksUpdated.connect(function() { qDebug("blocks changed, update");});
 };
 
 /**
@@ -402,9 +394,16 @@ PrintPreview.prototype.hideUiOptions = function() {
  * or paper settings change.
  */
 PrintPreview.prototype.updateBackgroundDecoration = function() {
+    var document = this.getDocument();
+
+    // initialize graphics view for printing / print preview:
+    this.view.setBackgroundColor(Print.getBackgroundColor(document));
+    this.view.setColorMode(Print.getColorMode(document));
+    this.view.setHairlineMode(Print.getHairlineMode(document));
+    this.view.setPrintPreview(true);
+
     this.view.clearBackground();
 
-    var document = this.getDocument();
     var pages = Print.getPages(document);
     var backgroundColor = Print.getBackgroundColor(document);
     var i, color, path;
@@ -701,7 +700,7 @@ PrintPreview.prototype.slotGrayscaleChanged = function(checked) {
 
 PrintPreview.prototype.colorModeUpdate = function() {
     if (!isNull(this.view)) {
-        this.view.setColorMode(Print.getColorMode());
+        this.view.setColorMode(Print.getColorMode(EAction.getDocument()));
         this.view.regenerate(true);
     }    
 };
@@ -712,7 +711,6 @@ PrintPreview.prototype.slotHairlineChanged = function(checked) {
     }
     Print.setHairlineMode(EAction.getDocument(), checked);
     if (!isNull(this.view)) {
-        qDebug("hairline mode: ", checked);
         this.view.setHairlineMode(checked)
         this.view.regenerate(true);
     }

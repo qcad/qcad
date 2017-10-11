@@ -756,7 +756,7 @@ Print.setColorMode = function(document, colorMode) {
 };
 
 Print.getHairlineMode = function(document) {
-    return EAction.getBoolValue("Print/HairlineMode", false, document);
+    return Print.getBoolValue("Print/HairlineMode", false, document);
 };
 
 Print.setHairlineMode = function(document, onOff) {
@@ -845,15 +845,16 @@ Print.getDefaultPaperRect = function(document, paperUnit) {
  * \return Value for given variable from current layout block, document or settings.
  */
 Print.getValue = function(key, def, document) {
-    var ret = undefined;
+    var ret = def;
+
     if (isNull(document) || document.getCurrentBlockId()===document.getModelSpaceBlockId()) {
         ret = EAction.getValue(key, def, document);
     }
     else {
         var block = document.queryCurrentBlock();
-        if (block.isLayout()) {
+        //if (block.isLayout()) {
             ret = block.getCustomProperty("QCAD", key, def);
-        }
+        //}
     }
 
     return ret;
@@ -869,6 +870,18 @@ Print.getIntValue = function(key, def, document) {
     return parseInt(val);
 };
 
+Print.getBoolValue = function(key, def, document) {
+    var val = Print.getValue(key, def, document);
+    if (typeof(val)==="string") {
+        return val==="true" || val==="yes";
+    }
+    if (typeof(val)==="number") {
+        return parseInt(val)===1
+    }
+
+    return val;
+};
+
 Print.setValue = function(key, val, document) {
     if (isNull(document) || document.getCurrentBlockId()===document.getModelSpaceBlockId()) {
         qDebug("setting " + key + " of model to " + val);
@@ -876,7 +889,7 @@ Print.setValue = function(key, val, document) {
     }
     else {
         var block = document.queryCurrentBlock();
-        if (block.isLayout()) {
+        //if (block.isLayout()) {
             qDebug("setting " + key + " of layout " + block.getLayoutName() + " to " + val);
             block.setCustomProperty("QCAD", key, val);
             var di = EAction.getDocumentInterface();
@@ -886,7 +899,7 @@ Print.setValue = function(key, val, document) {
                 op.setSpatialIndexDisabled(true);
                 di.applyOperation(op);
             }
-        }
+        //}
     }
 };
 
@@ -1185,7 +1198,7 @@ Print.setPageOrientationEnum = function(document, pageOrientation) {
 };
 
 Print.getShowPaperBorders = function(document) {
-    return EAction.getBoolValue("PageSettings/ShowPaperBorders", true, document);
+    return Print.getBoolValue("PageSettings/ShowPaperBorders", true, document);
 };
 
 Print.setShowPaperBorders = function(document, showPaperBorders) {
@@ -1193,7 +1206,7 @@ Print.setShowPaperBorders = function(document, showPaperBorders) {
 };
 
 Print.getPrintCropMarks = function(document) {
-    return EAction.getBoolValue("MultiPageSettings/PrintCropMarks", true, document);
+    return Print.getBoolValue("MultiPageSettings/PrintCropMarks", true, document);
 };
 
 Print.setPrintCropMarks = function(document, printCropMarks) {
@@ -1201,7 +1214,7 @@ Print.setPrintCropMarks = function(document, printCropMarks) {
 };
 
 Print.getScaleString = function(document) {
-    var str = EAction.getStringValue("PageSettings/Scale", "1:1", document);
+    var str = Print.getValue("PageSettings/Scale", "1:1", document);
 
     // round:
     if (/^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/.test(str)) {
@@ -1306,11 +1319,11 @@ Print.getBackgroundColor = function(document) {
 };
 
 Print.getEnablePageTags = function(document) {
-    return EAction.getBoolValue("PageTagSettings/EnablePageTags", false, document);
+    return Print.getBoolValue("PageTagSettings/EnablePageTags", false, document);
 };
 
 Print.getIdentifyPageTags = function(document) {
-    return EAction.getBoolValue("PageTagSettings/IdentifyPageTags", false, document);
+    return Print.getBoolValue("PageTagSettings/IdentifyPageTags", false, document);
 };
 
 Print.getTagFont = function(document) {
@@ -1341,5 +1354,8 @@ Print.getTagAlignment = function(document) {
  * Parses the given scale string (e.g. "1:2") and returns the scale as number (e.g. 0.5).
  */
 Print.parseScale = function(scaleString) {
+    if (!isString(scaleString)) {
+        return 1.0;
+    }
     return RMath.parseScale(scaleString);
 };
