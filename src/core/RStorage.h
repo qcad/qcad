@@ -103,6 +103,9 @@ public:
      */
     virtual QList<REntity::Id> orderBackToFront(const QSet<REntity::Id>& entityIds) const;
 
+    /**
+     * \nonscriptable
+     */
     static bool lessThan(const QPair<REntity::Id, int>& p1, const QPair<REntity::Id, int>& p2);
 
     /**
