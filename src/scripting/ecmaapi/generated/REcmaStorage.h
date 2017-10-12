@@ -69,9 +69,6 @@
         orderBackToFront
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        lessThan
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         queryAllObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

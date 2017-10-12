@@ -397,8 +397,6 @@
     
     // static methods:
     
-            REcmaHelper::registerFunction(&engine, &ctor, lessThan, "lessThan");
-            
             REcmaHelper::registerFunction(&engine, &ctor, getKnownVariableName, "getKnownVariableName");
             
 
@@ -811,89 +809,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::orderBackToFront", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaStorage::lessThan
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaStorage::lessThan", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::lessThan";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPair < REntity::Id , int > */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: QPair < REntity::Id , int > */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is reference
-                    QPair < REntity::Id , int >*
-                    ap0 =
-                    qscriptvalue_cast<
-                    QPair < REntity::Id , int >*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type QPair < REntity::Id , int >*.",
-                               context);                    
-                    }
-                    QPair < REntity::Id , int >& a0 = *ap0;
-                
-                    // argument is reference
-                    QPair < REntity::Id , int >*
-                    ap1 =
-                    qscriptvalue_cast<
-                    QPair < REntity::Id , int >*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RStorage: Argument 1 is not of type QPair < REntity::Id , int >*.",
-                               context);                    
-                    }
-                    QPair < REntity::Id , int >& a1 = *ap1;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        RStorage::
-       lessThan(a0
-        ,
-    a1);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.lessThan().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaStorage::lessThan", context, engine);
             return result;
         }
          QScriptValue
