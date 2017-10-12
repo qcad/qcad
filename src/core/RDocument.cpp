@@ -1224,8 +1224,8 @@ QSet<RBlock::Id> RDocument::queryAllBlocks() const {
 /**
  * \copydoc RStorage::queryAllLayoutBlocks
  */
-QSet<RBlock::Id> RDocument::queryAllLayoutBlocks() const {
-    return storage.queryAllLayoutBlocks();
+QSet<RBlock::Id> RDocument::queryAllLayoutBlocks(bool includeModelSpace) const {
+    return storage.queryAllLayoutBlocks(includeModelSpace);
 }
 
 /*

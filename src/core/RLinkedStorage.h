@@ -50,7 +50,7 @@ public:
     virtual QSet<RUcs::Id> queryAllUcs();
     virtual QSet<RLayer::Id> queryAllLayers(bool undone = false);
     virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false);
-    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool undone = false);
+    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false);
     virtual QSet<RView::Id> queryAllViews(bool undone = false);
     virtual QSet<RLinetype::Id> queryAllLinetypes();
     virtual QSet<REntity::Id> queryInfiniteEntities();

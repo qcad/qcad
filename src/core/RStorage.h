@@ -139,7 +139,7 @@ public:
     /**
      * \return A set of all block IDs of layout blocks of the document.
      */
-    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool undone = false) = 0;
+    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) = 0;
 
     /**
      * \return A set of all view IDs of the document.
