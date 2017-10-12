@@ -101,6 +101,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSet &lt; RBlock::Id &gt;"
       isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="includeModelSpace"
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="undone"
         hasDefault="true" default="false" isConst="false" />
       </variant>

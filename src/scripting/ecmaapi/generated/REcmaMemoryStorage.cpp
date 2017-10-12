@@ -1257,6 +1257,52 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RBlock::Id >'
+    QSet < RBlock::Id > cppResult =
+        
+               self->queryAllLayoutBlocks(a0
+        ,
+    a1);
+        // return type: QSet < RBlock::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryAllLayoutBlocks().",
                    context);

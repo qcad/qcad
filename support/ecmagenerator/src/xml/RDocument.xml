@@ -162,7 +162,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="queryAllLayoutBlocks" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QSet &lt; RBlock::Id &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="includeModelSpace"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
     </method>
     <method name="queryAllViews" cppName="queryAllViews"
     specifier="public" isStatic="false" isVirtual="false"

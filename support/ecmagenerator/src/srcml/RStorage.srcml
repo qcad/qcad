@@ -104,6 +104,8 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>orderBackToFront</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>lessThan</name><parameter_list>(<param><decl><type><name>const</name> <name>QPair<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>QPair<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>p2</name></decl></param>)</parameter_list>;</function_decl>
+
     <comment type="block">/**
      * \return A set of all object IDs of the document.
      */</comment>
@@ -138,7 +140,7 @@
     <comment type="block">/**
      * \return A set of all block IDs of layout blocks of the document.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllLayoutBlocks</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllLayoutBlocks</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>includeModelSpace</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * \return A set of all view IDs of the document.

@@ -2204,6 +2204,39 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RBlock::Id >'
+    QSet < RBlock::Id > cppResult =
+        
+               self->queryAllLayoutBlocks(a0);
+        // return type: QSet < RBlock::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryAllLayoutBlocks().",
                    context);
