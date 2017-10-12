@@ -76,7 +76,7 @@ LayoutDialog.prototype.show = function() {
         var c = 0;
         while (!this.validate()) {
             ++c;
-            leLayoutName.text = "layout " + c;
+            leLayoutName.text = qsTr("Layout") + c;
         }
     }
 
@@ -97,7 +97,11 @@ LayoutDialog.prototype.show = function() {
     }
     else {
         // create new layout:
-        var layout = new RLayout(this.document, text, new RVector(0,0));
+        var layout = new RLayout(this.document, text);
+        //var block = new RBlock(this.document, "*Paper_Space", new RVector(0,0));
+        //block.setLayoutId();
+
+        //var layout = new RLayout(this.document, text, new RVector(0,0));
         this.dialog.destroy();
         EAction.activateMainWindow();
         return layout;
