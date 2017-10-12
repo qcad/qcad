@@ -216,17 +216,50 @@ bool RStorage::hasLinetype(const QString& linetypeName) const {
 }
 
 QList<REntity::Id> RStorage::orderBackToFront(const QSet<REntity::Id>& entityIds) const {
+    // new draw order definition:
+    // based on draw order property and entity ID if draw order is identical
+
+    // list of <ID, draw order> tuples:
+    QList<QPair<REntity::Id, int> > res;
+    QSet<REntity::Id>::const_iterator it;
+    for (it = entityIds.begin(); it != entityIds.end(); ++it) {
+        QSharedPointer<REntity> e = queryEntityDirect(*it);
+        if (!e.isNull()) {
+            res.append(QPair<REntity::Id, int>(*it, e->getDrawOrder()));
+        }
+    }
+
+    // sort by draw order and enitty ID:
+    qSort(res.begin(), res.end(), lessThan);
+
+    // copy into list of sorted IDs:
+    QList<REntity::Id> ret;
+    QList<QPair<REntity::Id, int> >::const_iterator it2;
+    for (it2=res.begin(); it2!=res.end(); it2++) {
+        ret.append((*it2).first);
+    }
+    return ret;
+
+    /*
+    // old draw order definition:
+    // only based on draw order property
     QMap<int, REntity::Id> res;
     QSet<REntity::Id>::const_iterator it;
-    //maxDrawOrder = 0;
     for (it = entityIds.begin(); it != entityIds.end(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (!e.isNull()) {
             res.insertMulti(e->getDrawOrder(), *it);
-            //maxDrawOrder = qMax(e->getDrawOrder()+1, maxDrawOrder);
         }
     }
     return res.values();
+    */
+}
+
+bool RStorage::lessThan(const QPair<REntity::Id, int>& p1, const QPair<REntity::Id, int>& p2) {
+    if (p1.second==p2.second) {
+        return p1.first < p2.first;
+    }
+    return p1.second < p2.second;
 }
 
 int RStorage::getMinDrawOrder() {
