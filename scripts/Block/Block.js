@@ -219,4 +219,20 @@ Block.editBlock = function(di, blockName) {
             //print("restored zoom for block: ", blockId, ", view: ", i, ", factor: ", view.getFactor());
         }
     }
+
+    if (RSettings.getBoolValue("PrintPreview/AutoPrintPreview", true)===true) {
+        var block = doc.queryBlock(blockName);
+        if (!isNull(block)) {
+            var printPreviewOn = block.hasLayout() && !block.isModelSpace();
+
+            // activate print preview if this is a layout block:
+            var action = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js");
+            var scriptFile = action.getScriptFile();
+            include(scriptFile);
+            var clazz = new QFileInfo(scriptFile).baseName();
+            if (printPreviewOn!==PrintPreview.isRunning()) {
+                di.setCurrentAction(eval("new " + clazz + "()"));
+            }
+        }
+    }
 };
