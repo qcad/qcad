@@ -220,7 +220,7 @@ Block.editBlock = function(di, blockName) {
         }
     }
 
-    if (RSettings.getBoolValue("PrintPreview/AutoPrintPreview", true)===true) {
+    if (RSettings.getBoolValue("PrintPreviewPro/AutoPrintPreview", true)===true) {
         var block = doc.queryBlock(blockName);
         if (!isNull(block)) {
             var printPreviewOn = block.hasLayout() && !block.isModelSpace();
