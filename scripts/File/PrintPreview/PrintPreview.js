@@ -71,6 +71,10 @@ PrintPreview.getInstance = function() {
     return printPreviewInstance;
 };
 
+PrintPreview.getPreferencesCategory = function() {
+    return [ qsTr("File"), qsTr("Print Preview")];
+};
+
 PrintPreview.prototype.beginEvent = function() {
     if (PrintPreview.isRunning()) {
         // allows use of print preview button to close print preview:
