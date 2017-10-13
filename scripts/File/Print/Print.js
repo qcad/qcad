@@ -1168,8 +1168,6 @@ Print.getDefaultPaperSizeName = function(document) {
  */
 Print.getPageOrientationEnum = function(document) {
     var pageOrientationString = Print.getPageOrientationString(document);
-    qDebug("pageOrientationString:", pageOrientationString);
-    qDebug("document:", document);
     if (pageOrientationString==="Landscape") {
         return QPrinter.Landscape;
     }

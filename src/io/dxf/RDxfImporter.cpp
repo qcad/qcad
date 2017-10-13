@@ -703,11 +703,11 @@ void RDxfImporter::addTextStyle(const DL_StyleData& data) {
     RDxfTextStyle s;
 
     s.font = decode(data.primaryFontFile.c_str());
-    qDebug() << "text style: name:" << (const char*)data.name.c_str();
-    qDebug() << "text style: s.font:" << s.font;
+    //qDebug() << "text style: name:" << (const char*)data.name.c_str();
+    //qDebug() << "text style: s.font:" << s.font;
     if (s.font.isEmpty()) {
         s.font = xDataFont;
-        qDebug() << "text style: xDataFont:" << xDataFont;
+        //qDebug() << "text style: xDataFont:" << xDataFont;
     }
 
     s.italic = xDataFlags&0x1000000;
