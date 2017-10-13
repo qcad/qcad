@@ -884,13 +884,11 @@ Print.getBoolValue = function(key, def, document) {
 
 Print.setValue = function(key, val, document) {
     if (isNull(document) || document.getCurrentBlockId()===document.getModelSpaceBlockId()) {
-        qDebug("setting " + key + " of model to " + val);
         document.setVariable(key, val);
     }
     else {
         var block = document.queryCurrentBlock();
         //if (block.hasLayout()) {
-            qDebug("setting " + key + " of layout " + block.getLayoutName() + " to " + val);
             block.setCustomProperty("QCAD", key, val);
             var di = EAction.getDocumentInterface();
             if (!isNull(di)) {
