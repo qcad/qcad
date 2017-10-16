@@ -50,6 +50,7 @@ NewFile.includeBasePath = includeBasePath;
 
 // list of actions to trigger after opening file:
 NewFile.postOpenActions = [];
+NewFile.postNewActions = [];
 
 NewFile.getScriptFileName = function(scriptFile) {
     if (scriptFile.startsWith(":/")) {
@@ -76,6 +77,26 @@ NewFile.addPostOpenAction = function(scriptFile) {
 NewFile.removePostOpenAction = function(scriptFile) {
     var sf = NewFile.getScriptFileName(scriptFile)
     NewFile.postOpenActions.remove(sf);
+};
+
+/**
+ * Adds the given script file as action to be triggered after a new document
+ * has been created.
+ */
+NewFile.addPostNewAction = function(scriptFile) {
+    var sf = NewFile.getScriptFileName(scriptFile);
+    if (!NewFile.postNewActions.contains(sf)) {
+        NewFile.postNewActions.push(sf);
+    }
+};
+
+/**
+ * Removes the given script file as action to be triggered after a new document
+ * has been created.
+ */
+NewFile.removePostNewAction = function(scriptFile) {
+    var sf = NewFile.getScriptFileName(scriptFile)
+    NewFile.postNewActions.remove(sf);
 };
 
 /**
@@ -280,13 +301,29 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         ViewportWidget.updateViewports(viewports);
     }
 
+    var k, action;
     if (isOpen) {
         // trigger post open actions (actions configured by the user to be
         // run whenever a file is opened, for example to show a font
         // replacement dialog, etc):
-        for (var k=0; k<NewFile.postOpenActions.length; k++) {
+        for (k=0; k<NewFile.postOpenActions.length; k++) {
             if (!isNull(NewFile.postOpenActions[k])) {
-                var action = RGuiAction.getByScriptFile(NewFile.postOpenActions[k]);
+                action = RGuiAction.getByScriptFile(NewFile.postOpenActions[k]);
+                if (!isNull(action)) {
+                    action.slotTrigger();
+                }
+            }
+        }
+    }
+    else {
+        // trigger post new action (e.g. to load template file):
+        for (k=0; k<NewFile.postNewActions.length; k++) {
+            if (!isNull(NewFile.postNewActions[k])) {
+                include(NewFile.postNewActions[k]);
+                if (isFunction(initNewFile)) {
+                    initNewFile(mdiChild);
+                }
+                action = RGuiAction.getByScriptFile(NewFile.postNewActions[k]);
                 if (!isNull(action)) {
                     action.slotTrigger();
                 }
