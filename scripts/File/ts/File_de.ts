@@ -20,20 +20,26 @@
     </message>
     <message>
         <location line="+63"/>
+        <location line="+68"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="-31"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translation>Die Datei &apos;%1&apos; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>All Files</source>
+        <translation>Alle Dateien</translation>
     </message>
     <message>
         <source>File</source>
         <translation type="obsolete">Datei</translation>
     </message>
     <message>
-        <location line="-1"/>
+        <location line="-21"/>
         <source>Overwrite File?</source>
         <translation>Datei überschreiben?</translation>
     </message>

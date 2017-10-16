@@ -62,4 +62,48 @@
         <translation>blok 1</translation>
     </message>
 </context>
+<context>
+    <name>LayoutDialog</name>
+    <message>
+        <location filename="../LayoutDialog.js" line="+79"/>
+        <location filename="../LayoutDialog.ui" line="+36"/>
+        <source>Layout</source>
+        <translation>Layout</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Spaties voor of na.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout name is empty.</source>
+        <translation>De layoutnaam is leeg.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout name is invalid.</source>
+        <translation>De layoutnaam is onjuist.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Layout &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation>Layout &quot;%1&quot; bestaat al&lt;br&gt;en zal worden overschreven.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout already exists.</source>
+        <translation>Layout bestaat al.</translation>
+    </message>
+    <message>
+        <location filename="../LayoutDialog.ui" line="-19"/>
+        <source>Layout Data</source>
+        <translation>Layout gegevens</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Layout name:</source>
+        <translation>Layoutnaam:</translation>
+    </message>
+</context>
 </TS>

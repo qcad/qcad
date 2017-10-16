@@ -89,23 +89,22 @@ um die Änderungen zu übernehmen.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../AbstractPreferences.ui" line="+14"/>
-        <location line="+85"/>
+        <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-74"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Clear Search</source>
-        <translation>Suche zurücksetzen</translation>
+        <translation type="vanished">Suche zurücksetzen</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Expand Tree</source>
         <translation>Übersicht aufklappen</translation>
     </message>

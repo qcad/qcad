@@ -29,18 +29,22 @@
         <translation>Показать предупреждение при сохранении в формате, который не поддерживает 24-битные цвета</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>Загрузить/Сохранить</translation>
+        <translation type="vanished">Загрузить/Сохранить</translation>
     </message>
     <message>
         <source>Save as</source>
         <translation type="vanished">Сохранить как</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
         <translation>Файл</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>

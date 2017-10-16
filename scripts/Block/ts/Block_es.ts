@@ -62,4 +62,48 @@
         <translation>Bloque ya existe.</translation>
     </message>
 </context>
+<context>
+    <name>LayoutDialog</name>
+    <message>
+        <location filename="../LayoutDialog.js" line="+79"/>
+        <location filename="../LayoutDialog.ui" line="+36"/>
+        <source>Layout</source>
+        <translation>Presentación</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Espacios iniciales o finales.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout name is empty.</source>
+        <translation>Nombre del presentación está vacío.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout name is invalid.</source>
+        <translation>Nombre del presentación no es válida.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Layout &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation>Presentación &quot;%1&quot; ya existe&lt;br&gt;y se sobrescribirá.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout already exists.</source>
+        <translation>Presentación ya existe.</translation>
+    </message>
+    <message>
+        <location filename="../LayoutDialog.ui" line="-19"/>
+        <source>Layout Data</source>
+        <translation>Datos del presentación</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Layout name:</source>
+        <translation>Nombre del presentación:</translation>
+    </message>
+</context>
 </TS>

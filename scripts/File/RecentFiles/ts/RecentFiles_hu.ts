@@ -5,12 +5,12 @@
     <name>RecentFiles</name>
     <message>
         <location filename="../RecentFiles.js" line="+37"/>
-        <source>Load/Save</source>
+        <source>Recent Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Recent Files</source>
+        <source>Open/Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

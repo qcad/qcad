@@ -35,7 +35,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Load/Save</source>
+        <source>Open/Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

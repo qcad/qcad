@@ -26,7 +26,7 @@ Nienazwany
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../NewFile.js" line="+119"/>
+        <location filename="../NewFile.js" line="+140"/>
         <source>Opening drawing:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -90,7 +90,7 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+159"/>
         <source>Untitled %1</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Untitled</translation>

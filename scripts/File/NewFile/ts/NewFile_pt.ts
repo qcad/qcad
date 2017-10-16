@@ -31,7 +31,7 @@ Sem Título</translatorcomment>
         <translation type="obsolete">Sem título %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+119"/>
+        <location filename="../NewFile.js" line="+140"/>
         <source>Opening drawing:</source>
         <translation>Abrindo o desenho:</translation>
     </message>
@@ -89,7 +89,7 @@ Sem Título</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+159"/>
         <source>Untitled %1</source>
         <translation>Sem título %1</translation>
     </message>

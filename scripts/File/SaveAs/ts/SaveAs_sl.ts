@@ -29,9 +29,8 @@
         <translation>Prikaži opozorilo, ob shranjevanju v datotečni format, ki ne podpira 24bitne barve</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>Naloži/Shrani</translation>
+        <translation type="vanished">Naloži/Shrani</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -42,9 +41,14 @@
         <translation type="vanished">Ni filtrov za izvoz</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
         <translation>Datoteka</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>

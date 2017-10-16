@@ -27,14 +27,18 @@
         <translation type="obsolete">auto</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="+35"/>
         <source>Load/Save</source>
-        <translation>Charger/Enregistrer</translation>
+        <translation type="vanished">Charger/Enregistrer</translation>
+    </message>
+    <message>
+        <location filename="../AutoSave.js" line="+35"/>
+        <source>Autosave</source>
+        <translation>Sauvegarde automatique</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Autosave</source>
-        <translation>Sauvegarde automatique</translation>
+        <source>Open/Save</source>
+        <translation>Charger/Enregistrer</translation>
     </message>
     <message>
         <location line="+115"/>

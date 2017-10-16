@@ -85,23 +85,22 @@ para aplicar los cambios.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../AbstractPreferences.ui" line="+14"/>
-        <location line="+85"/>
+        <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
         <translation>Preferencias</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-74"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Clear Search</source>
-        <translation>Limpiar búsqueda</translation>
+        <translation type="vanished">Limpiar búsqueda</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Expand Tree</source>
         <translation>Ampliar la navegación</translation>
     </message>

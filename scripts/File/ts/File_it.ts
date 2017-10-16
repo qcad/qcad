@@ -20,11 +20,12 @@
     </message>
     <message>
         <location line="+63"/>
+        <location line="+68"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-32"/>
         <source>Overwrite File?</source>
         <translatorcomment>--exact match--
 --file: Save_it.ts--
@@ -41,6 +42,11 @@ Sovrascrivere?</translatorcomment>
 --file: Save_it.ts--
 Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translatorcomment>
         <translation>Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>All Files</source>
+        <translation>Tutti i file</translation>
     </message>
 </context>
 </TS>

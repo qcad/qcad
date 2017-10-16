@@ -62,4 +62,48 @@
         <translation>Blocco già esistente.</translation>
     </message>
 </context>
+<context>
+    <name>LayoutDialog</name>
+    <message>
+        <location filename="../LayoutDialog.js" line="+79"/>
+        <location filename="../LayoutDialog.ui" line="+36"/>
+        <source>Layout</source>
+        <translation>Layout</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Leading or trailing spaces.</source>
+        <translation>Spazi iniziali o finali.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout name is empty.</source>
+        <translation>Nome del layout è vuoto.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout name is invalid.</source>
+        <translation>Nome layout non è valido.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Layout &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation>Layout &quot;%1&quot; esiste già&lt;br&gt;e sarà sovrascritto.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Layout already exists.</source>
+        <translation>Layout già esistente.</translation>
+    </message>
+    <message>
+        <location filename="../LayoutDialog.ui" line="-19"/>
+        <source>Layout Data</source>
+        <translation>Dati del layout</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Layout name:</source>
+        <translation>Nome del layout:</translation>
+    </message>
+</context>
 </TS>

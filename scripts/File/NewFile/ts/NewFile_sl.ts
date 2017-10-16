@@ -20,7 +20,7 @@
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../NewFile.js" line="+119"/>
+        <location filename="../NewFile.js" line="+140"/>
         <source>Opening drawing:</source>
         <translation>Odpiram risbo:</translation>
     </message>
@@ -78,7 +78,7 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+159"/>
         <source>Untitled %1</source>
         <translation>Brez naslova %1</translation>
     </message>

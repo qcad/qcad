@@ -29,9 +29,8 @@
         <translation>２４ビットカラーをサポートしない形式の時警告を出す</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>ロード/セーブ</translation>
+        <translation type="vanished">ロード/セーブ</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -42,9 +41,14 @@
         <translation type="vanished">エクスポートフィルタがありません</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
         <translation>ファイル</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>

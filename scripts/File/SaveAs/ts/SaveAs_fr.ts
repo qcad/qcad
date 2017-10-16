@@ -4,9 +4,8 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>Charger/Enregistrer</translation>
+        <translation type="vanished">Charger/Enregistrer</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -17,9 +16,14 @@
         <translation type="vanished">Pas de filtres d&apos;exportation</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
         <translation>Fichier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
+        <translation>Charger/Enregistrer</translation>
     </message>
     <message>
         <location line="+25"/>

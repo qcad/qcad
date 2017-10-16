@@ -20,11 +20,12 @@
     </message>
     <message>
         <location line="+63"/>
+        <location line="+68"/>
         <source>Format:</source>
         <translation>Формат:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-32"/>
         <source>Overwrite File?</source>
         <translation>Перезаписать файл?</translation>
     </message>
@@ -32,6 +33,11 @@
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translation>Файл с именем «%1» уже существует. Заменить его?</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>All Files</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

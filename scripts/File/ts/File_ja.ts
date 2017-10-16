@@ -20,11 +20,12 @@
     </message>
     <message>
         <location line="+63"/>
+        <location line="+68"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-32"/>
         <source>Overwrite File?</source>
         <translation>ファイルを上書きしますか?</translation>
     </message>
@@ -32,6 +33,11 @@
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translation>ファイル&apos;%1&apos;は既に存在します。 上書きしますか?</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>All Files</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

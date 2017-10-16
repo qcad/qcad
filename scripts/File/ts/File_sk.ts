@@ -20,11 +20,12 @@
     </message>
     <message>
         <location line="+63"/>
+        <location line="+68"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-32"/>
         <source>Overwrite File?</source>
         <translation>Prepísať súbor?</translation>
     </message>
@@ -32,6 +33,11 @@
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translation>Súbor &apos;%1&apos; už existuje. Chcete ho prepísať?</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>All Files</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

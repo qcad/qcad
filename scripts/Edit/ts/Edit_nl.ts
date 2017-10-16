@@ -85,23 +85,22 @@ de wijzigingen door te voeren.</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../AbstractPreferences.ui" line="+14"/>
-        <location line="+85"/>
+        <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
         <translation>Voorkeuren</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-74"/>
         <source>Filter</source>
         <translation>Filter</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Clear Search</source>
-        <translation>Zoekopdracht terugzetten</translation>
+        <translation type="vanished">Zoekopdracht terugzetten</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Expand Tree</source>
         <translation>Navigatiestructuur ontvouwen</translation>
     </message>

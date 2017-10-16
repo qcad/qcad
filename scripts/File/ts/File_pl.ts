@@ -24,6 +24,7 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
     </message>
     <message>
         <location line="+63"/>
+        <location line="+68"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -32,7 +33,7 @@ Format:</translatorcomment>
         <translation type="unfinished">Format:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-32"/>
         <source>Overwrite File?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nadpisz plik?</translation>
@@ -42,6 +43,11 @@ Format:</translatorcomment>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">&apos;&amp;#39; Plik już istnieje. Czy chcesz go zastąpić?</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>All Files</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

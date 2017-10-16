@@ -4,14 +4,18 @@
 <context>
     <name>AutoSave</name>
     <message>
-        <location filename="../AutoSave.js" line="+35"/>
         <source>Load/Save</source>
-        <translation>Laden/opslaan</translation>
+        <translation type="vanished">Laden/opslaan</translation>
+    </message>
+    <message>
+        <location filename="../AutoSave.js" line="+35"/>
+        <source>Autosave</source>
+        <translation>Auto-opslaan</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Autosave</source>
-        <translation>Auto-opslaan</translation>
+        <source>Open/Save</source>
+        <translation>Laden/opslaan</translation>
     </message>
     <message>
         <location line="+95"/>

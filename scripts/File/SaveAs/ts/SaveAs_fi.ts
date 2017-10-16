@@ -29,9 +29,8 @@
         <translation>Näytä varoitus, kun tallennetaan tiedostomuotoon, joka ei tue 24bittisiä värejä</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>Lataa/tallenna</translation>
+        <translation type="vanished">Lataa/tallenna</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -42,8 +41,13 @@
         <translation type="vanished">Ei vientisuodattimia</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

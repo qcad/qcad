@@ -30,12 +30,12 @@
     </message>
     <message>
         <location filename="../SaveAs.js" line="+38"/>
-        <source>Load/Save</source>
+        <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>File</source>
+        <source>Open/Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

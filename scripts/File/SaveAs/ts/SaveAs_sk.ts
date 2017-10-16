@@ -29,18 +29,22 @@
         <translation>Zobraziť varovanie pri ukladaní súboru do formátu, ktorý nepodporuje 24 bitové farby</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>Načítať/Uložiť</translation>
+        <translation type="vanished">Načítať/Uložiť</translation>
     </message>
     <message>
         <source>Save as</source>
         <translation type="vanished">Uložiť ako</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
         <translation>Súbor</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>

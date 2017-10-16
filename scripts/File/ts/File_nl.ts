@@ -20,11 +20,12 @@
     </message>
     <message>
         <location line="+63"/>
+        <location line="+68"/>
         <source>Format:</source>
         <translation>Formaat:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="-32"/>
         <source>Overwrite File?</source>
         <translation>Bestand overschrijven?</translation>
     </message>
@@ -32,6 +33,11 @@
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translation>Het bestand &apos;%1&apos; bestaat al. Wilt u het overschrijven?</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>All Files</source>
+        <translation>Alle bestanden</translation>
     </message>
 </context>
 </TS>

@@ -4,16 +4,20 @@
 <context>
     <name>AutoSave</name>
     <message>
-        <location filename="../AutoSave.js" line="+35"/>
         <source>Load/Save</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Load / Save</translation>
+        <translation type="obsolete">Load / Save</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../AutoSave.js" line="+35"/>
         <source>Autosave</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Autozapis</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+95"/>

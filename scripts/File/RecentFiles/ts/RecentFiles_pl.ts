@@ -4,16 +4,20 @@
 <context>
     <name>RecentFiles</name>
     <message>
-        <location filename="../RecentFiles.js" line="+37"/>
         <source>Load/Save</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Load / Save</translation>
+        <translation type="obsolete">Load / Save</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../RecentFiles.js" line="+37"/>
         <source>Recent Files</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nowe pliki</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../RecentFilesInit.js" line="+51"/>

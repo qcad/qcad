@@ -31,10 +31,9 @@
         <translation type="unfinished">Pokaż ostrzeżenie podczas zapisywania w formacie pliku, który nie obsługuje 24bit kolory</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Load / Save</translation>
+        <translation type="obsolete">Load / Save</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -47,8 +46,13 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation type="obsolete">Zachowaj jako</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

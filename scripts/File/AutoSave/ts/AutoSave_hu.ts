@@ -5,12 +5,12 @@
     <name>AutoSave</name>
     <message>
         <location filename="../AutoSave.js" line="+35"/>
-        <source>Load/Save</source>
+        <source>Autosave</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Autosave</source>
+        <source>Open/Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

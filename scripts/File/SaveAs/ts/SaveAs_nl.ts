@@ -29,18 +29,22 @@
         <translation>Toon waarschuwing bij het opslaan naar een bestandsformaat dat 24-bits kleuren niet ondersteunt</translation>
     </message>
     <message>
-        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation>Laden/opslaan</translation>
+        <translation type="vanished">Laden/opslaan</translation>
     </message>
     <message>
         <source>Save as</source>
         <translation type="vanished">Bewaar als</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
         <translation>Bestand</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open/Save</source>
+        <translation>Laden/opslaan</translation>
     </message>
     <message>
         <location line="+25"/>

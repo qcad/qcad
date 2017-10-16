@@ -99,7 +99,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../AbstractPreferences.ui" line="+14"/>
-        <location line="+85"/>
+        <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
         <translatorcomment>--exact match--
@@ -110,7 +110,7 @@ Preferencje &amp;aplikacji</translatorcomment>
         <translation type="unfinished">Preferencje…</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-74"/>
         <source>Filter</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -120,13 +120,12 @@ Brak argumentu dla filtru.</translatorcomment>
         <translation type="unfinished">Filtr</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Clear Search</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wyczyść wyszukiwanie</translation>
+        <translation type="obsolete">Wyczyść wyszukiwanie</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Expand Tree</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rozwiń drzewo</translation>

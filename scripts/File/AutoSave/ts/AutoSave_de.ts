@@ -35,14 +35,18 @@
         <translation type="obsolete">Verzeichnis:</translation>
     </message>
     <message>
-        <location filename="../AutoSave.js" line="+35"/>
         <source>Load/Save</source>
-        <translation>Laden/Speichern</translation>
+        <translation type="vanished">Laden/Speichern</translation>
+    </message>
+    <message>
+        <location filename="../AutoSave.js" line="+35"/>
+        <source>Autosave</source>
+        <translation>Auto Speichern</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Autosave</source>
-        <translation>Auto Speichern</translation>
+        <source>Open/Save</source>
+        <translation>Laden/Speichern</translation>
     </message>
     <message>
         <location line="+115"/>

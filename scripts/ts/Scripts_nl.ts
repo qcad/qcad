@@ -47,7 +47,7 @@
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+358"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -76,13 +76,13 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2063"/>
+        <location line="+2058"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1790"/>
-        <location line="+141"/>
+        <location line="-1785"/>
+        <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
     </message>
@@ -398,7 +398,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+768"/>
+        <location filename="../library.js" line="+777"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>

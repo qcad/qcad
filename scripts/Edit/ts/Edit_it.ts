@@ -89,23 +89,22 @@ Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment
     <name>PreferencesDialog</name>
     <message>
         <location filename="../AbstractPreferences.ui" line="+14"/>
-        <location line="+85"/>
+        <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
         <translation>Preferenze</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-74"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Clear Search</source>
-        <translation>Cancella ricerca</translation>
+        <translation type="vanished">Cancella ricerca</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Expand Tree</source>
         <translation>Espandi navigazione</translation>
     </message>

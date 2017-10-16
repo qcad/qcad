@@ -81,23 +81,22 @@ QCADを再起動してください。</translation>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../AbstractPreferences.ui" line="+14"/>
-        <location line="+85"/>
+        <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-74"/>
         <source>Filter</source>
         <translation>フィルタ</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Clear Search</source>
-        <translation>検索結果をクリア</translation>
+        <translation type="vanished">検索結果をクリア</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Expand Tree</source>
         <translation>ツリーを広げる</translation>
     </message>

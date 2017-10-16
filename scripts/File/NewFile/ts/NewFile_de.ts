@@ -37,7 +37,7 @@
         <translation type="vanished">Lade...</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+142"/>
+        <location filename="../NewFile.js" line="+163"/>
         <source>Import Error</source>
         <translation>Import Fehler</translation>
     </message>
@@ -103,7 +103,7 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+159"/>
         <source>Untitled %1</source>
         <translation>Unbenannt %1</translation>
     </message>

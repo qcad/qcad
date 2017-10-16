@@ -105,7 +105,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../AbstractPreferences.ui" line="+14"/>
-        <location line="+85"/>
+        <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
         <translatorcomment>--exact match--
@@ -116,7 +116,7 @@ Preferências do &amp;Aplicativo</translatorcomment>
         <translation>Preferências</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-74"/>
         <source>Filter</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -126,13 +126,12 @@ Administrar efeitos de filtro SVG</translatorcomment>
         <translation>Filtro</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Clear Search</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Limpe a Pesquisa</translation>
+        <translation type="vanished">Limpe a Pesquisa</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Expand Tree</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Expanda a  Árvore</translation>

@@ -4,14 +4,18 @@
 <context>
     <name>RecentFiles</name>
     <message>
-        <location filename="../RecentFiles.js" line="+37"/>
         <source>Load/Save</source>
-        <translation>Lataus ja tallennus</translation>
+        <translation type="vanished">Lataus ja tallennus</translation>
+    </message>
+    <message>
+        <location filename="../RecentFiles.js" line="+37"/>
+        <source>Recent Files</source>
+        <translation>Viimeisimmät tiedostot</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Recent Files</source>
-        <translation>Viimeisimmät tiedostot</translation>
+        <source>Open/Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../RecentFilesInit.js" line="+51"/>
