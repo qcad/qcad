@@ -32,7 +32,7 @@ function AutoSave(guiAction) {
 AutoSave.prototype = new File();
 
 AutoSave.getPreferencesCategory = function() {
-    return [ qsTr("Load/Save"), qsTr("Autosave")];
+    return [ qsTr("Open/Save"), qsTr("Autosave")];
 };
 
 /**
