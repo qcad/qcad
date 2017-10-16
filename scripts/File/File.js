@@ -201,6 +201,46 @@ File.getSaveFileName = function(parentWidget, caption, dir, filterStrings) {
 };
 
 /**
+ * Show file dialog and let user choose a file to open.
+ *
+ * \return path and file name chosen by the user
+ */
+File.getOpenFileName = function(parentWidget, caption, dir, filterStrings) {
+    if (isNull(filterStrings)) {
+        filterStrings = RFileImporterRegistry.getFilterStrings();
+    }
+    filterStrings = new Array(qsTr("All Files") + " (*)").concat(filterStrings);
+
+    var fileDialog = new QFileDialog(parentWidget, caption, dir, "");
+    var allFilter = filterStrings[0];
+    fileDialog.setNameFilters(filterStrings);
+    fileDialog.selectNameFilter(allFilter);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
+    if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
+        fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
+    }
+    fileDialog.fileMode = QFileDialog.ExistingFiles;
+    fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
+    if (!fileDialog.exec()) {
+        fileDialog.destroy();
+        return undefined;
+    }
+
+    var fileNames = fileDialog.selectedFiles();
+    if (fileNames.length===0) {
+        fileDialog.destroy();
+        return undefined;
+    }
+
+    var fileName = fileNames[0];
+
+    var suffix = new QFileInfo(fileName).suffix();
+    suffix = suffix.toUpperCase();
+
+    return [ fileNames[0], fileDialog.selectedNameFilter() ];
+};
+
+/**
  * \return True if the file version is recommendable (supports 24bit colors).
  * \param version String from the file version drop down in the save as dialog.
  */
