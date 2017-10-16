@@ -14,8 +14,12 @@
     </message>
     <message>
         <location line="+0"/>
+        <source>File</source>
+        <translation>Bestand</translation>
+    </message>
+    <message>
         <source>Open/Save</source>
-        <translation>Laden/opslaan</translation>
+        <translation type="vanished">Laden/opslaan</translation>
     </message>
     <message>
         <location filename="../RecentFilesInit.js" line="+51"/>

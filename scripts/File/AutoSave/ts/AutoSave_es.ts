@@ -36,9 +36,13 @@
         <translation>Guardado automático</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Open/Save</source>
-        <translation>Cargar/Guardar</translation>
+        <translation type="vanished">Cargar/Guardar</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation>Fichero</translation>
     </message>
     <message>
         <location line="+115"/>

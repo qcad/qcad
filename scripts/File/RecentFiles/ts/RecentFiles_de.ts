@@ -23,8 +23,12 @@
     </message>
     <message>
         <location line="+0"/>
+        <source>File</source>
+        <translation>Datei</translation>
+    </message>
+    <message>
         <source>Open/Save</source>
-        <translation>Laden/Speichern</translation>
+        <translation type="vanished">Laden/Speichern</translation>
     </message>
     <message>
         <location filename="../RecentFilesInit.js" line="+10"/>

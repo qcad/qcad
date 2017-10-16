@@ -13,9 +13,13 @@
         <translation>Grave Automaticamente</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Open/Save</source>
-        <translation>Carregue/Grave</translation>
+        <translation type="vanished">Carregue/Grave</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation>Ficheiro</translation>
     </message>
     <message>
         <location line="+115"/>

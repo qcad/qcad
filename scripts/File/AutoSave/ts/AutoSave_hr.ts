@@ -10,7 +10,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Open/Save</source>
+        <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -36,9 +36,13 @@
         <translation>Sauvegarde automatique</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Open/Save</source>
-        <translation>Charger/Enregistrer</translation>
+        <translation type="vanished">Charger/Enregistrer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation>Fichier</translation>
     </message>
     <message>
         <location line="+115"/>
