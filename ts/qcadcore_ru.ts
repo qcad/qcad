@@ -537,12 +537,12 @@
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>вращение</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>вкл</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -577,7 +577,7 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>выкл</translation>
     </message>
     <message>
         <location line="+1"/>

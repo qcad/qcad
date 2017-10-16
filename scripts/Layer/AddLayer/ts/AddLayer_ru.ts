@@ -24,7 +24,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+26"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет новых слоёв по умолчанию:</translation>
     </message>
     <message>
         <location line="+17"/>
