@@ -31,21 +31,7 @@
            <property name="placeholderText">
             <string>Filter</string>
            </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QToolButton" name="btClearFilter">
-           <property name="toolTip">
-            <string>Clear Search</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>Clear.svg</normaloff>Clear.svg</iconset>
-           </property>
-           <property name="autoRaise">
+           <property name="clearButtonEnabled">
             <bool>true</bool>
            </property>
           </widget>
@@ -222,22 +208,6 @@
     <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btClearFilter</sender>
-   <signal>clicked()</signal>
-   <receiver>leFilter</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>473</x>
-     <y>21</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>235</x>
-     <y>21</y>
     </hint>
    </hints>
   </connection>
