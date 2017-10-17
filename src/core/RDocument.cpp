@@ -111,11 +111,13 @@ void RDocument::init() {
 
     // add default layer:
     if (!storageIsLinked && queryLayer("0").isNull()) {
+        RColor c = RSettings::getColorValue("Layer/DefaultColor", RColor(Qt::white));
+        RLineweight::Lineweight lw = (RLineweight::Lineweight)RSettings::getIntValue("Layer/DefaultLineweight", RLineweight::Weight025);
         QSharedPointer<RLayer> layer0 = QSharedPointer<RLayer>(
             new RLayer(
                 this, "0", false, false,
-                RColor(Qt::white), getLinetypeId("CONTINUOUS"),
-                RLineweight::Weight025
+                c, getLinetypeId("CONTINUOUS"),
+                lw
             )
         );
         transaction.addObject(layer0);
