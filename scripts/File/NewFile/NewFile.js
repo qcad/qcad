@@ -437,6 +437,9 @@ NewFile.closeRequested = function(mdiChild) {
     var discardButton = buttonBox.button(QDialogButtonBox.Discard);
     discardButton.autoDefault = false;
     discardButton['default'] = false;
+    // this would allow the user to not save by pressing the space bar
+    // seems dangerous though
+    //discardButton.setFocus();
 
     var saveButton = buttonBox.button(QDialogButtonBox.Save);
     saveButton.autoDefault = true;
