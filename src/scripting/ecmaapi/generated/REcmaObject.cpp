@@ -2276,6 +2276,67 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RObject * */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RObject * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RObject >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RObject: Argument 0 is not of type RObject *RObject *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isArray
+                    QStringList
+                    a2;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(2),
+                        a2
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copyCustomPropertiesFrom(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.copyCustomPropertiesFrom().",
                    context);

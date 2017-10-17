@@ -236,6 +236,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="title"
         hasDefault="true" default="RDEFAULT_QSTRING"
         isConst="true" />
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="ignoreList" hasDefault="true"
+        default="RDEFAULT_QSTRINGLIST" isConst="true" />
       </variant>
     </method>
     <method name="getComplexity" cppName="getComplexity"
