@@ -33,8 +33,6 @@
 #include "RUcs.h"
 #include "RUnit.h"
 #include "RPolyline.h"
-#include "RViewportEntity.h"
-//#include "RLinetypePatternMap.h"
 
 RDocument* RDocument::clipboard = NULL;
 
