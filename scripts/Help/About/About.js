@@ -120,7 +120,7 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<p>" + qsTr("%1 is an application for computer-aided design (CAD).").arg(this.applicationName) + "</p>"
             + "<p/>";
 
-            if (this.applicationName!=="QCAD" && !this.applicationName.startsWith("QCAD ")) {
+            if (this.applicationName!=="QCAD") {
                 html += "<p>" + qsTr("%1 is based on QCAD, a free (open source) software.").arg(this.applicationName) + "</p>";
             }
             else {
