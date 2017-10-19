@@ -660,6 +660,14 @@ RS::Side RSpline::getSideOfPoint(const RVector& point) const {
 }
 
 RVector RSpline::getStartPoint() const {
+//    if (!isClosed()) {
+//        if (hasFitPoints()) {
+//            return fitPoints.first();
+//        }
+//        else if (!controlPoints.isEmpty()) {
+//            return controlPoints.first();
+//        }
+//    }
     return getPointAt(getTMin());
 }
 
@@ -669,6 +677,14 @@ void RSpline::setStartPoint(const RVector& v) {
 }
 
 RVector RSpline::getEndPoint() const {
+//    if (!isClosed()) {
+//        if (hasFitPoints()) {
+//            return fitPoints.last();
+//        }
+//        else if (!controlPoints.isEmpty()) {
+//            return controlPoints.last();
+//        }
+//    }
     return getPointAt(getTMax());
 }
 
