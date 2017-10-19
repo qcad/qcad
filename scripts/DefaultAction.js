@@ -666,13 +666,13 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
 
         if (RSettings.getBoolValue("GraphicsView/DoubleClickSelectContour", true)===true) {
             include("scripts/Select/SelectContour/SelectContour.js");
-            var matchingEntities = SelectContour.getConnectedEntities(this.document, entityId, 0.001);
+            var matchingEntityIds = SelectContour.getConnectedEntities(this.document, entityId, 0.001);
             var add = (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf());
             if (entity.isSelected()) {
-                this.di.selectEntities(matchingEntities, add);
+                this.di.selectEntities(matchingEntityIds, add);
             }
             else {
-                this.di.deselectEntities(matchingEntities);
+                this.di.deselectEntities(matchingEntityIds);
             }
         }
     }
