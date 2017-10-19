@@ -84,10 +84,12 @@ function usage() {
 }
 
 /**
- * Open files given as arguments args or creates a new document if
- * no files are given and createNew is true.
+ * Open files given as arguments args
+ *
+ * \param createNew Creates a new document if no files are given
+ * \param close Closes existing open MDI widgets
  */
-function openFiles(args, createNew) {
+function openFiles(args, createNew, close) {
     var appWin = RMainWindowQt.getMainWindow();
     if (isNull(appWin)) {
         // application is shutting down..
@@ -176,7 +178,12 @@ function openFiles(args, createNew) {
 
                 if (fileInfo.absoluteFilePath()===argFileInfo.absoluteFilePath()) {
                     mdiArea.setActiveSubWindow(mdiChildren[k]);
-                    foundExisting = true;
+                    if (close) {
+                        mdiArea.closeActiveSubWindow();
+                    }
+                    else {
+                        foundExisting = true;
+                    }
                     break;
                 }
             }
