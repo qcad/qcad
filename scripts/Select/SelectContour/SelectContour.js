@@ -115,7 +115,7 @@ SelectContour.getConnectedEntities = function(doc, entityId, tolerance, recursio
 
         // find connected entities:
         // candidates intersect with small box around end point:
-        var candidates = doc.queryIntersectedEntitiesXY(box);
+        var candidates = doc.queryIntersectedEntitiesXY(box, true);
 
         // filter out candidates with end points outside range:
         var connectedEntities = [];
