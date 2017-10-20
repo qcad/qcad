@@ -537,6 +537,15 @@ function isTextEntity(obj) {
 }
 
 /**
+ * Checks if the given object is a simple text entity.
+ *
+ * \return true if the given object is a text entity (RTextEntity) and simple.
+ */
+function isSimpleTextEntity(obj) {
+    return isTextEntity(obj) && obj.isSimple();
+}
+
+/**
  * Checks if the given object is a block reference entity.
  *
  * \return true if the given object is a block reference entity (RBlockReferenceEntity).
