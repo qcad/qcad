@@ -127,6 +127,9 @@ OptionsToolBar.setIcon = function(fileNameOrIcon) {
     else if (RS.getSystemId()==="osx") {
         f = 0.9;
     }
+    else if (RS.getSystemId()==="linux") {
+        f = 0.8;
+    }
     var w = optionsToolBar.iconSize.width()*f;
     var h = optionsToolBar.iconSize.height()*f;
 
