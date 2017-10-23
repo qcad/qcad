@@ -584,7 +584,6 @@ PrintPreview.slotPdfExport = function() {
 };
 
 PrintPreview.prototype.slotPrint = function(pdfFile) {
-    qDebug("slotPrint of STD");
     return PrintPreview.slotPrint(pdfFile);
 };
 
@@ -592,7 +591,6 @@ PrintPreview.prototype.slotPrint = function(pdfFile) {
  * Prints the drawing or exports it to the given PDF file.
  */
 PrintPreview.slotPrint = function(pdfFile) {
-    qDebug("static slotPrint");
     var mdiChild = EAction.getMdiChild();
     var view = mdiChild.getLastKnownViewWithFocus();
     var print = new Print(undefined, EAction.getDocument(), view);

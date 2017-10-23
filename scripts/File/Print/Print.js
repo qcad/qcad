@@ -298,11 +298,6 @@ Print.prototype.print = function(pdfFile) {
  * \param rect QRectF object that represents the page border.
  */
 Print.prototype.printPage = function(painter, rect) {
-    qDebug("printPage STD");
-    //var document = EAction.getDocument();
-    //var mdiChild = EAction.getMdiChild();
-    //var view = mdiChild.getLastKnownViewWithFocus();
-
     this.view.paintEntities(
         painter,
         new RBox(
