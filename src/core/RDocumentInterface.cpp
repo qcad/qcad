@@ -1419,6 +1419,10 @@ void RDocumentInterface::highlightEntity(REntity::Id entityId) {
         return;
     }
 
+    if (entity->getType()==RS::EntityViewport && document.isLayerOffOrFrozen(entity->getLayerId())) {
+        return;
+    }
+
     QList<RGraphicsScene*>::iterator it;
     for (it=scenes.begin(); it!=scenes.end(); it++) {
         (*it)->highlightEntity(*entity);
