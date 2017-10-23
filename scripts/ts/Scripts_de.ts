@@ -415,7 +415,7 @@
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+321"/>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>
@@ -458,7 +458,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+777"/>
+        <location filename="../library.js" line="+786"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>

@@ -375,7 +375,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+321"/>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
         <translation>Nahrávanie prekladového doplnku...</translation>
     </message>
@@ -402,7 +402,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+777"/>
+        <location filename="../library.js" line="+786"/>
         <source>Objects</source>
         <translation>Objekty</translation>
     </message>

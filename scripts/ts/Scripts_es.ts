@@ -426,7 +426,7 @@
         <translation type="obsolete">Después de la inicialización...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+321"/>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
         <translation>Cargando complemento traducciones...</translation>
     </message>
@@ -469,7 +469,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+777"/>
+        <location filename="../library.js" line="+786"/>
         <source>Objects</source>
         <translation>Objetos</translation>
     </message>
