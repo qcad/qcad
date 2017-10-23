@@ -544,13 +544,6 @@ PrintPreview.prototype.drawShadow = function(path, border) {
 };
 
 PrintPreview.prototype.slotPdfExport = function() {
-    PrintPreview.slotPdfExport();
-};
-
-/**
- * Called when user clicks the PDF export button in the options toolbar.
- */
-PrintPreview.slotPdfExport = function() {
     var appWin = EAction.getMainWindow();
     var fileName = EAction.getDocument().getFileName();
     var initialFileName = QDir.homePath();
@@ -572,7 +565,7 @@ PrintPreview.slotPdfExport = function() {
 
     appWin.handleUserMessage(qsTr("Exporting to %1...").arg(pdfFile));
 
-    var success = PrintPreview.slotPrint(pdfFile);
+    var success = this.slotPrint(pdfFile);
 
     if (success) {
         appWin.handleUserMessage(qsTr("Export complete: %1").arg(pdfFile));
@@ -582,7 +575,16 @@ PrintPreview.slotPdfExport = function() {
     }
 };
 
+/**
+ * Called when user clicks the PDF export button in the options toolbar.
+ */
+PrintPreview.slotPdfExport = function() {
+    var pp = PrintPreview.getInstance();
+    pp.slotPdfExport();
+};
+
 PrintPreview.prototype.slotPrint = function(pdfFile) {
+    qDebug("slotPrint of STD");
     return PrintPreview.slotPrint(pdfFile);
 };
 
@@ -590,6 +592,7 @@ PrintPreview.prototype.slotPrint = function(pdfFile) {
  * Prints the drawing or exports it to the given PDF file.
  */
 PrintPreview.slotPrint = function(pdfFile) {
+    qDebug("static slotPrint");
     var mdiChild = EAction.getMdiChild();
     var view = mdiChild.getLastKnownViewWithFocus();
     var print = new Print(undefined, EAction.getDocument(), view);

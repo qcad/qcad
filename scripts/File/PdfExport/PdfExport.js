@@ -37,12 +37,15 @@ PdfExport.prototype.beginEvent = function() {
         action.initialAction = "PdfExport";
         var di = this.getDocumentInterface();
         di.setCurrentAction(action);
-        this.terminate();
     }
     else {
-        PrintPreview.slotPdfExport();
-        this.terminate();
+        //PrintPreview.slotPdfExport();
+        //this.terminate();
+        var pp = PrintPreview.getInstance();
+        pp.slotPdfExport();
     }
+
+    this.terminate();
 };
 
 PdfExport.prototype.getPrintPreviewAction = function() {
