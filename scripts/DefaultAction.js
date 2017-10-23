@@ -676,7 +676,9 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
             }
         }
     }
-    else if (isViewportEntity(entity)) {
-        this.di.setCurrentViewport(entity.data());
-    }
+
+    // TODO:
+//    else if (isViewportEntity(entity)) {
+//        this.di.setCurrentViewport(entity.data());
+//    }
 };
