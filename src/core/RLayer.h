@@ -56,6 +56,7 @@ public:
     static RPropertyTypeId PropertyOff;
     static RPropertyTypeId PropertyFrozen;
     static RPropertyTypeId PropertyLocked;
+    static RPropertyTypeId PropertyCollapsed;
     static RPropertyTypeId PropertyColor;
     static RPropertyTypeId PropertyLinetype;
     static RPropertyTypeId PropertyLineweight;
@@ -114,6 +115,14 @@ public:
 
     void setLocked(bool on) {
         locked = on;
+    }
+
+    bool isCollapsed() const {
+        return collapsed;
+    }
+
+    void setCollapsed(bool on) {
+        collapsed = on;
     }
 
     RColor getColor() const {
@@ -255,6 +264,7 @@ private:
     bool off;
     bool frozen;
     bool locked;
+    bool collapsed;
     RColor color;
     RLinetype::Id linetypeId;
     RLineweight::Lineweight lineweight;
