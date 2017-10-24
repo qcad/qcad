@@ -541,7 +541,7 @@ Lista Layer</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+87"/>
+        <location filename="../src/core/RLayer.cpp" line="+91"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_it.ts--
@@ -753,7 +753,7 @@ Colore G&amp;riglia:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
-        <location filename="../src/core/RLayer.cpp" line="-4"/>
+        <location filename="../src/core/RLayer.cpp" line="-5"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Nome</translation>
@@ -777,6 +777,11 @@ Colore G&amp;riglia:</translatorcomment>
         <location line="+1"/>
         <source>Locked</source>
         <translation>Bloccato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Collapsed</source>
+        <translation>Piegato</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>

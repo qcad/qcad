@@ -239,7 +239,7 @@
     <name>REntity</name>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+60"/>
-        <location filename="../src/core/RLayer.cpp" line="+82"/>
+        <location filename="../src/core/RLayer.cpp" line="+85"/>
         <location filename="../src/core/RLayout.cpp" line="+80"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
@@ -374,7 +374,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+5"/>
+        <location filename="../src/core/RLayer.cpp" line="+6"/>
         <source>Linetype</source>
         <translation type="unfinished"></translation>
     </message>
@@ -458,7 +458,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <location filename="../src/core/RLayer.cpp" line="-4"/>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
@@ -470,6 +470,11 @@
     <message>
         <location line="+1"/>
         <source>Locked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Collapsed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

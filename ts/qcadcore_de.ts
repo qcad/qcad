@@ -370,7 +370,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+87"/>
+        <location filename="../src/core/RLayer.cpp" line="+91"/>
         <source>Linetype</source>
         <translation>Linientyp</translation>
     </message>
@@ -572,7 +572,7 @@
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
-        <location filename="../src/core/RLayer.cpp" line="-4"/>
+        <location filename="../src/core/RLayer.cpp" line="-5"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Name</translation>
@@ -596,6 +596,11 @@
         <location line="+1"/>
         <source>Locked</source>
         <translation>Gesperrt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Collapsed</source>
+        <translation>Eingeklappt</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>

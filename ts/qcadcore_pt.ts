@@ -530,7 +530,7 @@ Lista de Camadas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+87"/>
+        <location filename="../src/core/RLayer.cpp" line="+91"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tipo de Linha</translation>
@@ -739,7 +739,7 @@ Abre diálogo de cores</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
-        <location filename="../src/core/RLayer.cpp" line="-4"/>
+        <location filename="../src/core/RLayer.cpp" line="-5"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Nome</translation>
@@ -763,6 +763,11 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <source>Locked</source>
         <translation>Bloqueado</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Collapsed</source>
+        <translation>Guardada</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>

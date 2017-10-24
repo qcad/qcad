@@ -60,7 +60,7 @@
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../DrawBasedOnRectanglePP.js" line="+63"/>
+        <location filename="../DrawBasedOnRectanglePP.js" line="+69"/>
         <source>First corner</source>
         <translation>Prvi kot</translation>
     </message>

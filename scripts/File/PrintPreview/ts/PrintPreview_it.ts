@@ -19,7 +19,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+165"/>
+        <location filename="../PrintPreview.js" line="+168"/>
         <source>Drag to move paper</source>
         <translation>Trascinare per spostare la carta</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+400"/>
         <source>Export to PDF</source>
         <translation>Esporta PDF</translation>
     </message>
