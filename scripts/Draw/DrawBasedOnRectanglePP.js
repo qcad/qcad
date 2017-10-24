@@ -54,7 +54,12 @@ DrawBasedOnRectanglePP.prototype.beginEvent = function() {
 DrawBasedOnRectanglePP.prototype.setState = function(state) {
     EAction.prototype.setState.call(this, state);
 
-    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
+    var di = this.getDocumentInterface();
+    if (isNull(di)) {
+        return;
+    }
+
+    di.setClickMode(RAction.PickCoordinate);
     this.setCrosshairCursor();
 
     var appWin = RMainWindowQt.getMainWindow();
