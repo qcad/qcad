@@ -55,6 +55,9 @@ PrintPreview.includeBasePath = includeBasePath;
 if (typeof(printPreviewRunning)==="undefined") {
     printPreviewRunning = false;
 }
+if (typeof(printPreviewInstance)==="undefined") {
+    printPreviewInstance = undefined;
+}
 
 /**
  * Additional states of PrintPreview compared with base class DefaultAction.
@@ -179,7 +182,7 @@ PrintPreview.prototype.suspendEvent = function() {
 
 PrintPreview.prototype.finishEvent = function() {
     DefaultAction.prototype.finishEvent.call(this);
-        
+
     if (!isNull(this.view)) {
         this.view.setPrintPreview(false);
         this.view.setBackgroundColor(this.bgColor);
@@ -396,6 +399,10 @@ PrintPreview.prototype.hideUiOptions = function() {
 PrintPreview.prototype.updateBackgroundDecoration = function() {
     var document = this.getDocument();
 
+    if (isNull(document) || isNull(this.view)) {
+        return;
+    }
+
     // initialize graphics view for printing / print preview:
     this.view.setBackgroundColor(Print.getBackgroundColor(document));
     this.view.setColorMode(Print.getColorMode(document));
@@ -496,6 +503,11 @@ PrintPreview.prototype.addDecorations = function(pages) {};
  */
 PrintPreview.prototype.updateBackgroundTransform = function() {
     var document = EAction.getDocument();
+
+    if (isNull(document)) {
+        return;
+    }
+
     var scale = Print.getScale(document);
     var offset = Print.getOffset(document);
 
