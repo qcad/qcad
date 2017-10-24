@@ -91,6 +91,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLocked, "setLocked");
             
+            REcmaHelper::registerFunction(&engine, proto, isCollapsed, "isCollapsed");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCollapsed, "setCollapsed");
+            
             REcmaHelper::registerFunction(&engine, proto, getColor, "getColor");
             
             REcmaHelper::registerFunction(&engine, proto, setColor, "setColor");
@@ -182,6 +186,10 @@
             
             ctor.setProperty("PropertyLocked",
                 qScriptValueFromValue(&engine, RLayer::PropertyLocked),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyCollapsed",
+                qScriptValueFromValue(&engine, RLayer::PropertyCollapsed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyColor",
@@ -1921,6 +1929,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLayer::setLocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::isCollapsed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::isCollapsed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isCollapsed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("isCollapsed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isCollapsed();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isCollapsed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::isCollapsed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::setCollapsed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::setCollapsed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setCollapsed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("setCollapsed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCollapsed(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setCollapsed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::setCollapsed", context, engine);
             return result;
         }
          QScriptValue

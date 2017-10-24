@@ -101,6 +101,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isCollapsed" cppName="isCollapsed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setCollapsed" cppName="setCollapsed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getColor" cppName="getColor" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false" />
@@ -292,6 +305,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyFrozen" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyLocked" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCollapsed" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyColor" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

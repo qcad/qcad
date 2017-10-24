@@ -57,6 +57,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyOff</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFrozen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLocked</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCollapsed</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLinetype</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLineweight</name></decl>;</decl_stmt>
@@ -115,6 +116,14 @@
 
     <function><type><name>void</name></type> <name>setLocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>locked</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isCollapsed</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>collapsed</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCollapsed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>collapsed</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
     <function><type><name>RColor</name></type> <name>getColor</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -256,6 +265,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>off</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>frozen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>locked</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>collapsed</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RColor</name></type> <name>color</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl>;</decl_stmt>

@@ -89,6 +89,12 @@
         setLocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isCollapsed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCollapsed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
