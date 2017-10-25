@@ -145,6 +145,11 @@ public:
     virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) = 0;
 
     /**
+     * \return A set of all layout IDs of layouts of the document.
+     */
+    virtual QSet<RLayout::Id> queryAllLayouts(bool undone = false) = 0;
+
+    /**
      * \return A set of all view IDs of the document.
      */
     virtual QSet<RView::Id> queryAllViews(bool undone = false) = 0;
@@ -577,12 +582,26 @@ public:
     virtual bool isParentLayerFrozen(RLayer::Id layerId) const;
     virtual bool isParentLayerFrozen(const RLayer& layer) const;
 
+    /**
+     * \return True if the given block is frozen.
+     */
     virtual bool isBlockFrozen(RBlock::Id blockId) const {
         QSharedPointer<RBlock> b = queryBlockDirect(blockId);
         if (b.isNull()) {
             return false;
         }
         return b->isFrozen();
+    }
+
+    /**
+     * \return True if the given block is a layout block (i.e. paper space block).
+     */
+    virtual bool isLayoutBlock(RBlock::Id blockId) const {
+        QSharedPointer<RBlock> b = queryBlockDirect(blockId);
+        if (b.isNull()) {
+            return false;
+        }
+        return b->hasLayout();
     }
 
     virtual void setObjectId(RObject& object, RObject::Id objectId) const;

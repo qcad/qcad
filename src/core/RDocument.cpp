@@ -1228,6 +1228,13 @@ QSet<RBlock::Id> RDocument::queryAllLayoutBlocks(bool includeModelSpace) const {
     return storage.queryAllLayoutBlocks(includeModelSpace);
 }
 
+/**
+ * \copydoc RStorage::queryAllLayouts
+ */
+QSet<RLayout::Id> RDocument::queryAllLayouts() const {
+    return storage.queryAllLayouts();
+}
+
 /*
 QList<RBlock::Id> RDocument::queryAllBlocks() const {
     QSet<RBlock::Id> result;
@@ -2047,6 +2054,13 @@ bool RDocument::isParentLayerFrozen(const RLayer& layer) const {
  */
 bool RDocument::isBlockFrozen(RBlock::Id blockId) const {
     return storage.isBlockFrozen(blockId);
+}
+
+/**
+ * \copydoc RStorage::isLayoutBlock
+ */
+bool RDocument::isLayoutBlock(RBlock::Id blockId) const {
+    return storage.isLayoutBlock(blockId);
 }
 
 bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {

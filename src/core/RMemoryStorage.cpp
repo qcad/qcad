@@ -289,6 +289,18 @@ QSet<RBlock::Id> RMemoryStorage::queryAllLayoutBlocks(bool includeModelSpace, bo
     return result;
 }
 
+QSet<RBlock::Id> RMemoryStorage::queryAllLayouts(bool undone) {
+    QSet<RLayout::Id> result;
+    QHash<RObject::Id, QSharedPointer<RLayout> >::iterator it;
+    for (it = layoutMap.begin(); it != layoutMap.end(); ++it) {
+        QSharedPointer<RLayout> l = *it;
+        if (!l.isNull() && (undone || !l->isUndone())) {
+            result.insert(l->getId());
+        }
+    }
+    return result;
+}
+
 QSet<RView::Id> RMemoryStorage::queryAllViews(bool undone) {
     QSet<RView::Id> result;
     QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;

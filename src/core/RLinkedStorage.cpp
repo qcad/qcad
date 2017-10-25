@@ -71,6 +71,11 @@ QSet<RBlock::Id> RLinkedStorage::queryAllLayoutBlocks(bool includeModelSpace, bo
             .unite(backStorage->queryAllLayoutBlocks(includeModelSpace, undone));
 }
 
+QSet<RLayout::Id> RLinkedStorage::queryAllLayouts(bool undone) {
+    return RMemoryStorage::queryAllLayouts(undone)
+            .unite(backStorage->queryAllLayouts(undone));
+}
+
 QSet<RView::Id> RLinkedStorage::queryAllViews(bool undone) {
     return RMemoryStorage::queryAllViews(undone)
             .unite(backStorage->queryAllViews(undone));

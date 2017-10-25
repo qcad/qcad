@@ -106,6 +106,7 @@ public:
     QSet<RLayer::Id> queryAllLayers() const;
     QSet<RBlock::Id> queryAllBlocks() const;
     QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false) const;
+    QSet<RBlock::Id> queryAllLayouts() const;
     QSet<RView::Id> queryAllViews() const;
     QSet<RLinetype::Id> queryAllLinetypes() const;
 
@@ -214,6 +215,7 @@ public:
     bool isParentLayerFrozen(RLayer::Id layerId) const;
     bool isParentLayerFrozen(const RLayer& layer) const;
     bool isBlockFrozen(RBlock::Id blockId) const;
+    bool isLayoutBlock(RBlock::Id blockId) const;
     bool isEntityLayerFrozen(REntity::Id entityId) const;
 
     bool hasSelection() const;
