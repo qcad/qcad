@@ -171,8 +171,8 @@ RBlockListQt.prototype.sortBlockNames = function(blockNames) {
 
     //var self = this;
     blockNames.sort(function(a, b) {
-        var blockA = doc.queryBlock(a);
-        var blockB = doc.queryBlock(b);
+        var blockA = doc.queryBlockDirect(a);
+        var blockB = doc.queryBlockDirect(b);
         if (isNull(blockA) || isNull(blockB)) {
             return 0;
         }
