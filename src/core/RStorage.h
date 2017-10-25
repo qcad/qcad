@@ -331,7 +331,12 @@ public:
     }
 
     virtual void setCurrentBlock(RBlock::Id blockId) {
-        currentBlockId = blockId;
+        if (queryBlockDirect(blockId).isNull()) {
+            currentBlockId = modelSpaceBlockId;
+        }
+        else {
+            currentBlockId = blockId;
+        }
     }
 
     void setCurrentBlock(const QString& blockName) {
