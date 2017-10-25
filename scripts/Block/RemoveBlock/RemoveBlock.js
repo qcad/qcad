@@ -47,16 +47,23 @@ RemoveBlock.prototype.beginEvent = function() {
         return;
     }
 
-    var block = this.getDocument().queryBlock(item.data(BlockList.colName, Qt.UserRole));
+    var di = this.getDocumentInterface();
+    var doc = di.getDocument();
+
+    var block = doc.queryBlock(item.data(BlockList.colName, Qt.UserRole));
 
     if (isNull(block)) {
         this.terminate();
         return;
     }
 
+    if (block.getId()===doc.getCurrentBlockId()) {
+        // deleting current block: activate model space:
+        Block.editBlock(di, doc.getBlockName(doc.getModelSpaceBlockId()));
+    }
+
     var op = new RDeleteObjectOperation(block);
     op.setText(this.getToolTitle());
-    var di = this.getDocumentInterface();
     di.applyOperation(op);
     di.clearPreview();
     di.repaintViews();
