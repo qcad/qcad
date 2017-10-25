@@ -19,7 +19,6 @@
 
 include("../Block.js");
 include("../BlockDialog.js");
-include("../LayoutDialog.js");
 
 /**
  * \class RenameBlock
@@ -42,29 +41,21 @@ RenameBlock.prototype.beginEvent = function() {
     }
 
     var doc = this.getDocument();
-    var dlg;
 
     var block = doc.queryBlock(blockId);
-    if (block.hasLayout()) {
-        var layoutId = block.getLayoutId();
-        var layout = doc.queryLayout(layoutId);
-        if (isNull(layout)) {
-            this.terminate();
-            return;
-        }
-        dlg = new LayoutDialog(doc, layout);
-    }
-    else {
-        dlg = new BlockDialog(doc, block);
-    }
-
-    var newBlockOrLayout = dlg.show();
-    if (isNull(newBlockOrLayout)) {
+    var dlg = this.createDialog(doc, block);
+    if (isNull(dlg)) {
         this.terminate();
         return;
     }
 
-    var op = new RAddObjectOperation(newBlockOrLayout);
+    var newBlock = dlg.show();
+    if (isNull(newBlock)) {
+        this.terminate();
+        return;
+    }
+
+    var op = new RAddObjectOperation(newBlock);
     op.setText(this.getToolTitle());
     var di = this.getDocumentInterface();
     di.applyOperation(op);
@@ -72,4 +63,8 @@ RenameBlock.prototype.beginEvent = function() {
     di.repaintViews();
 
     this.terminate();
+};
+
+RenameBlock.prototype.createDialog = function(doc, block) {
+    return new BlockDialog(doc, block);
 };
