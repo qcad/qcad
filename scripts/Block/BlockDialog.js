@@ -113,10 +113,10 @@ BlockDialog.prototype.show = function() {
 BlockDialog.prototype.validate = function() {
     var widgets = getWidgets(this.dialog);
     var leBlockName = widgets["BlockName"];
-    return BlockDialog.validate(this.block, leBlockName.text, this.document, this.dialog, this.validator, this.allowOverwrite);
+    return BlockDialog.validate(this.block, leBlockName.text, this.document, this.dialog, this.validator, this.allowOverwrite, this.allowSameName);
 };
 
-BlockDialog.validate = function(block, blockName, document, dialog, validator, allowOverwrite) {
+BlockDialog.validate = function(block, blockName, document, dialog, validator, allowOverwrite, allowSameName) {
     var creatingBlock = isNull(block);
     var widgets = getWidgets(dialog);
 
@@ -155,7 +155,7 @@ BlockDialog.validate = function(block, blockName, document, dialog, validator, a
             message.text += "<font color='red'>" + qsTr("Block '%1' already exists<br>and will be overwritten.").arg(leBlockName.text.toString())  + "</font>";
             acceptable = true;
         }
-        else if (isNull(block) || block.getName().toLowerCase() !== leBlockName.text.toLowerCase() || !this.allowSameName) {
+        else if ((isNull(block) || block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) && !allowSameName) {
             // error: renaming existing block to existing block name (not allowed):
             message.text = "<font color='red'>" + qsTr("Block already exists.") + "</font>";
             acceptable = false;
