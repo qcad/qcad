@@ -1323,8 +1323,14 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
     if (blockMap.contains(objectId)) {
         blockMap.remove(objectId);
     }
+    if (layoutMap.contains(objectId)) {
+        layoutMap.remove(objectId);
+    }
     if (layerMap.contains(objectId)) {
         layerMap.remove(objectId);
+    }
+    if (linetypeMap.contains(objectId)) {
+        linetypeMap.remove(objectId);
     }
     if (childMap.contains(objectId)) {
         childMap.remove(objectId);
