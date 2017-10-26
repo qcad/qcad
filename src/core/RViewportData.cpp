@@ -71,6 +71,8 @@ QList<RRefPoint> RViewportData::getReferencePoints(RS::ProjectionRenderingHint h
     QList<RRefPoint> ret;
     ret.append(RRefPoint(position, RRefPoint::Center));
 
+    ret.append(RRefPoint(position + RVector(0,height/4), RRefPoint::Center));
+
     ret.append(position + RVector( width/2,  height/2));
     ret.append(position + RVector(-width/2,  height/2));
     ret.append(position + RVector(-width/2, -height/2));
@@ -87,6 +89,10 @@ bool RViewportData::moveReferencePoint(const RVector& referencePoint,
 
     if (referencePoint.equalsFuzzy(position)) {
         position = targetPoint;
+        ret = true;
+    }
+    else if (referencePoint.equalsFuzzy(position + RVector(0,height/4))) {
+        viewCenter -= offset/scale;
         ret = true;
     }
     else if (referencePoint.equalsFuzzy(position + RVector(width/2, height/2))) {
