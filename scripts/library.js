@@ -250,6 +250,17 @@ function isLayout(obj) {
 }
 
 /**
+ * Checks if the given object is an RObject.
+ *
+ * \return true if the given object is an object (derived from RObject).
+ */
+function isObject(obj) {
+    return !isNull(obj) &&
+        isFunction(obj.getType) &&
+        isNumber(obj.getType());
+}
+
+/**
  * Checks if the given object is a graphics entity.
  *
  * \return true if the given object is an entity (derived from REntity).
@@ -257,6 +268,7 @@ function isLayout(obj) {
 function isEntity(obj) {
     return !isNull(obj) &&
         isFunction(obj.getType) && 
+        isFunction(obj.getData) &&
         isNumber(obj.getType());
 }
 
