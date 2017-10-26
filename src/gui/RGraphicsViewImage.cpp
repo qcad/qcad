@@ -1000,8 +1000,10 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             }
         }
 
-        applyColorMode(pen);
-        applyColorMode(brush);
+        if (!path.getNoColorMode()) {
+            applyColorMode(pen);
+            applyColorMode(brush);
+        }
 
         painter->setBrush(brush);
         painter->setPen(pen);

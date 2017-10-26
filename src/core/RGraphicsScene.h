@@ -113,6 +113,16 @@ public:
         Q_UNUSED(drawable)
     }
 
+    void beginNoColorMode() {
+        colorMode = false;
+    }
+    void endNoColorMode() {
+        colorMode = true;
+    }
+    bool getNoColorMode() const {
+        return !colorMode;
+    }
+
     RRefPoint getHighlightedReferencePoint();
 
     /**
@@ -154,6 +164,8 @@ protected:
     RDocumentInterface& documentInterface;
     QList<RGraphicsView*> views;
     bool exportToPreview;
+    // enable / disable color mode:
+    bool colorMode;
     bool previewIsEmpty;
     RRefPoint highlightedReferencePoint;
 

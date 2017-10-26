@@ -112,6 +112,7 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath = RPainterPath();
     currentPainterPath.setZLevel(0);
     currentPainterPath.setNoClipping(!getClipping());
+    currentPainterPath.setNoColorMode(getNoColorMode());
 
     REntity* entity = getEntity();
     QSharedPointer<RLayer> layer;

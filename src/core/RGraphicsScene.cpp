@@ -28,6 +28,7 @@ RGraphicsScene::RGraphicsScene(RDocumentInterface& documentInterface)
     : RExporter(documentInterface.getDocument()),
       documentInterface(documentInterface),
       exportToPreview(false),
+      colorMode(true),
       previewIsEmpty(true),
       highlightedReferencePoint(RVector::invalid),
       deleting(false) {

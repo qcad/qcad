@@ -385,6 +385,14 @@ bool RPainterPath::getNoClipping() const {
     return getMode(RPainterPath::NoClipping);
 }
 
+void RPainterPath::setNoColorMode(bool on) {
+    setMode(RPainterPath::NoColorMode, on);
+}
+
+bool RPainterPath::getNoColorMode() const {
+    return getMode(RPainterPath::NoColorMode);
+}
+
 void RPainterPath::setPixelWidth(bool on) {
     setMode(RPainterPath::PixelWidth, on);
 }

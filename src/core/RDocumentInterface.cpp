@@ -1584,15 +1584,18 @@ void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,
     for (it = scenes.begin(); it != scenes.end(); it++) {
         RGraphicsScene* scene = *it;
         scene->beginPreview();
+        scene->beginNoColorMode();
         scene->setColor(color);
         scene->setBrush(brush);
         scene->setLineweight(lineweight);
         scene->setStyle(style);
         scene->setDashPattern(dashes.toVector());
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
+        // ignore color mode for this preview (selection rectangle, zoom box, etc):
 
         scene->exportShape(QSharedPointer<RShape>(shape.clone()));
 
+        scene->endNoColorMode();
         scene->endPreview();
     }
 }
