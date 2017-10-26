@@ -142,7 +142,7 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
     } else if (propertyTypeId == PropertyViewTargetZ) {
         return qMakePair(QVariant(data.viewTarget.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyOverall) {
-        return qMakePair(QVariant(data.overall), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        return qMakePair(QVariant(data.overall), RPropertyAttributes(RPropertyAttributes::ReadOnly|RPropertyAttributes::Invisible));
     }
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
