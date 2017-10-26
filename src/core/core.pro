@@ -73,6 +73,7 @@ SOURCES += \
     RSpatialIndex.cpp \
     RSpatialIndexSimple.cpp \
     RStorage.cpp \
+    RStorageBlockSort.cpp \
     RTabletEvent.cpp \
     RTextBasedData.cpp \
     RTextBasedEntity.cpp \
@@ -224,6 +225,7 @@ HEADERS = \
     RSpatialIndexSimple.h \
     RSpatialIndexVisitor.h \
     RStorage.h \
+    RStorageBlockSort.h \
     RTabletEvent.h \
     RTerminateEvent.h \
     RTextBasedData.h \
