@@ -516,7 +516,9 @@ PrintPreview.prototype.updateBackgroundTransform = function() {
     var unitScale = RUnit.convert(1.0, RS.Millimeter, document.getUnit());
     var factor = 1.0 / scale * unitScale;
 
-    this.view.setBackgroundTransform(factor, offset);
+    if (!isNull(this.view)) {
+        this.view.setBackgroundTransform(factor, offset);
+    }
 };
 
 /**
