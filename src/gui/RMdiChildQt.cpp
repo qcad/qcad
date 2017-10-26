@@ -118,7 +118,9 @@ void RMdiChildQt::closeEvent(QCloseEvent* closeEvent) {
         RAction* action = documentInterface->getCurrentAction();
         if (action!=NULL) {
             action->suspendEvent();
+            action->terminate();
         }
+        documentInterface->deleteTerminatedActions();
 
         emit closeAccepted(this);
 

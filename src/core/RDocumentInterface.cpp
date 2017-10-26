@@ -97,6 +97,8 @@ RDocumentInterface::~RDocumentInterface() {
     while (!currentActions.isEmpty()) {
         // make sure that UI options are removed, etc:
         currentActions.top()->suspendEvent();
+        currentActions.top()->finishEvent();
+        currentActions.top()->terminate();
         delete currentActions.pop();
     }
 
