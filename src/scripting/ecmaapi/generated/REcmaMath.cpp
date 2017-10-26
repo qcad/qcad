@@ -121,6 +121,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, fuzzyCompare, "fuzzyCompare");
             
+            REcmaHelper::registerFunction(&engine, &ctor, fuzzyAngleCompare, "fuzzyAngleCompare");
+            
             REcmaHelper::registerFunction(&engine, &ctor, containsFuzzy, "containsFuzzy");
             
             REcmaHelper::registerFunction(&engine, &ctor, parseScale, "parseScale");
@@ -2307,6 +2309,127 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMath::fuzzyCompare", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMath::fuzzyAngleCompare
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMath::fuzzyAngleCompare", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMath::fuzzyAngleCompare";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMath::
+       fuzzyAngleCompare(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMath::
+       fuzzyAngleCompare(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMath.fuzzyAngleCompare().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMath::fuzzyAngleCompare", context, engine);
             return result;
         }
          QScriptValue

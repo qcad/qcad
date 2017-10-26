@@ -142,6 +142,9 @@
         fuzzyCompare
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        fuzzyAngleCompare
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         containsFuzzy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -332,7 +332,12 @@
     }</block></function>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>currentBlockId</name> = <name>blockId</name></expr>;</expr_stmt>
+        <if>if <condition>(<expr><call><name>queryBlockDirect</name><argument_list>(<argument><expr><name>blockId</name></expr></argument>)</argument_list></call>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>currentBlockId</name> = <name>modelSpaceBlockId</name></expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block>{
+            <expr_stmt><expr><name>currentBlockId</name> = <name>blockId</name></expr>;</expr_stmt>
+        }</block></else></if>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <block>{
