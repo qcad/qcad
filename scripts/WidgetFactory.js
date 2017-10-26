@@ -180,7 +180,7 @@ WidgetFactory.getKeyString = function(group, obj) {
  * Saves the current state of the given \c widget and all its child widgets.
  *
  * \param group Used internally for recursive calls.
- * \param document RDocument object to store settings or \c undefined to store
+ * \param document RDocument or RObject to store settings or \c undefined to store
  *          settings in RSettings (user scope, config file).
  * \param map Array to use to store settings in. Used by the testing dashboard
  *          recorder only.
@@ -312,7 +312,12 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             if (!isNull(data)) {
                 var dataKey = key + ".data";
                 if (document) {
-                    document.setVariable(dataKey, data);
+                    if (isObject(document)) {
+                        document.setCustomProperty("QCAD", dataKey, data);
+                    }
+                    else {
+                        document.setVariable(dataKey, data);
+                    }
                 } else {
                     RSettings.setValue(dataKey, data);
                 }
@@ -350,8 +355,14 @@ WidgetFactory.saveState = function(widget, group, document, map) {
 
         if (saveContents) {
             if (document) {
-                // save key / value pair to document:
-                document.setVariable(key, value);
+                if (isObject(document)) {
+                    // save key / value pair to object:
+                    document.setCustomProperty("QCAD", key, value);
+                }
+                else {
+                    // save key / value pair to document:
+                    document.setVariable(key, value);
+                }
             } else if (map) {
                 // save key / value pair to map:
                 map.put(key, value);
@@ -371,7 +382,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
  *      changes its value.
  * \param reset True: Reset values to original values as defined in
  *      designer (.ui file). \see resetState
- * \param document RDocument object to restore settings from or \c undefined
+ * \param document RDocument object or RObject to restore settings from or \c undefined
  *      to restore settings from RSettings (user scope, config file).
  * \param map Map object to restore settings from.
  */
@@ -458,9 +469,14 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 value = map.get(key);                
             } else {
                 if (!isNull(document)) {
-                    value = document.getVariable(key);
+                    if (isObject(document)) {
+                        value = document.getCustomProperty("QCAD", key, undefined);
+                    }
+                    else {
+                        value = document.getVariable(key);
+                    }
                 }
-                // document has no value for key, try settings for default value:
+                // document / object has no value for key, try settings for default value:
                 if (isNull(document) || isNull(value)) {
                     value = RSettings.getValue(key);
                 }
@@ -477,8 +493,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 !isOfType(c, QPlainTextEdit) &&
                 !isOfType(c, RMathLineEdit)) {
 
-                WidgetFactory.restoreState(c, group, signalReceiver, reset,
-                        document, map);
+                WidgetFactory.restoreState(c, group, signalReceiver, reset, document, map);
             }
         }
 
@@ -829,7 +844,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                     var data;
                     var dataKey = key + ".data";
                     if (!isNull(document)) {
-                        data = document.getVariable(dataKey);
+                        if (isObject(document)) {
+                            data = document.getCustomProperty("QCAD", key, undefined);
+                        }
+                        else {
+                            data = document.getVariable(dataKey);
+                        }
                     }
                     // document has no value for key,
                     // try settings for default value
