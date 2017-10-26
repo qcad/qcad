@@ -85,6 +85,7 @@ public:
     virtual QSharedPointer<RLayout> queryLayout(const QString& layoutName) const;
     virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;
     virtual QSharedPointer<RBlock> queryBlock(const QString& blockName) const;
+    virtual QSharedPointer<RBlock> queryBlockDirect(const QString& blockName) const;
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const;
     virtual QSharedPointer<RView> queryView(const QString& viewName) const;
     virtual QSharedPointer<RUcs> queryUcs(RUcs::Id ucsId) const;

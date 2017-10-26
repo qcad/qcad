@@ -729,6 +729,17 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlock(const QString& blockName) cons
     return QSharedPointer<RBlock>();
 }
 
+QSharedPointer<RBlock> RMemoryStorage::queryBlockDirect(const QString& blockName) const {
+    QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
+    for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
+        QSharedPointer<RBlock> b = *it;
+        if (!b.isNull() && b->getName().compare(blockName, Qt::CaseInsensitive)==0 && !b->isUndone()) {
+            return b;
+        }
+    }
+    return QSharedPointer<RBlock>();
+}
+
 QString RMemoryStorage::getBlockName(RBlock::Id blockId) const {
     QSharedPointer<RBlock> l = queryBlock(blockId);
     if (l.isNull()) {
