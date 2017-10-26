@@ -144,12 +144,12 @@ void RDocument::init() {
 
     // add first default paper space with layout and viewport:
     if (!storageIsLinked && queryBlock(RBlock::paperSpaceName).isNull()) {
-        QSharedPointer<RLayout> paperLayout(
+        QSharedPointer<RLayout> layout(
             new RLayout(
                 this, "Layout1"
             )
         );
-        transaction.addObject(paperLayout);
+        transaction.addObject(layout);
 
         QSharedPointer<RBlock> paperSpace(
             new RBlock(
@@ -157,7 +157,7 @@ void RDocument::init() {
             )
         );
         transaction.addObject(paperSpace);
-        paperSpace->setLayoutId(paperLayout->getId());
+        paperSpace->setLayoutId(layout->getId());
 
 //        QSharedPointer<RViewportEntity> viewport(
 //            new RViewportEntity(
