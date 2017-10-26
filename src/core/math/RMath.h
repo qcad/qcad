@@ -150,6 +150,7 @@ public:
     static void simplify(int numerator, int denominator, int& numeratorRes, int& denominatorRes);
 
     static bool fuzzyCompare(double v1, double v2, double tolerance = RS::PointTolerance);
+    static bool fuzzyAngleCompare(double v1, double v2, double tolerance = RS::AngleTolerance);
 
     static bool containsFuzzy(const QList<double>& values, double v, double tol = RS::PointTolerance);
 
