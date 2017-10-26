@@ -103,6 +103,8 @@ public:
      */
     virtual QList<REntity::Id> orderBackToFront(const QSet<REntity::Id>& entityIds) const;
 
+    QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
+
     /**
      * \nonscriptable
      */

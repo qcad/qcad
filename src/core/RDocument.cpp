@@ -898,6 +898,10 @@ QSet<QString> RDocument::getBlockNames(const QString& rxStr) const {
     return storage.getBlockNames(rxStr);
 }
 
+QList<RBlock::Id> RDocument::sortBlocks(const QList<RBlock::Id>& blockIds) const {
+    return storage.sortBlocks(blockIds);
+}
+
 /**
  * \copydoc RStorage::setCurrentView
  */

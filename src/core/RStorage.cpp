@@ -19,6 +19,7 @@
 #include "RDocument.h"
 #include "RSettings.h"
 #include "RStorage.h"
+#include "RStorageBlockSort.h"
 #include "RMainWindow.h"
 
 RStorage::RStorage() :
@@ -253,6 +254,13 @@ QList<REntity::Id> RStorage::orderBackToFront(const QSet<REntity::Id>& entityIds
     }
     return res.values();
     */
+}
+
+QList<RBlock::Id> RStorage::sortBlocks(const QList<RBlock::Id>& blockIds) const {
+    QList<RBlock::Id> ret = blockIds;
+    RStorageBlockSort s(this);
+    qSort(ret.begin(), ret.end(), s);
+    return ret;
 }
 
 bool RStorage::lessThan(const QPair<REntity::Id, int>& p1, const QPair<REntity::Id, int>& p2) {

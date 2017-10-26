@@ -297,6 +297,7 @@ public:
     QString getTempBlockName() const;
     QString getBlockName(RBlock::Id blockId) const;
     QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
+    QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
     QString getLayerName(RLayer::Id layerId) const;
     QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     QString getLayoutName(RLayout::Id layoutId) const;

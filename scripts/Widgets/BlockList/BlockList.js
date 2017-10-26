@@ -240,15 +240,15 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
 
     var doc = documentInterface.getDocument();
 
-    var blockNameCandidates = doc.getBlockNames();
+    var blockCandidateIds = doc.queryAllBlocks();
 
     var i;
 
     // filter block names:
-    var blockNames = [];
-    for (i=0; i<blockNameCandidates.length; i++) {
-        var blockNameCandidate = blockNameCandidates[i];
-        var blockCandidate = doc.queryBlockDirect(blockNameCandidate);
+    var blockIds = [];
+    for (i=0; i<blockCandidateIds.length; i++) {
+        var blockCandidateId = blockCandidateIds[i];
+        var blockCandidate = doc.queryBlockDirect(blockCandidateId);
         if (blockCandidate.isNull()) {
             continue;
         }
@@ -257,20 +257,25 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
             continue;
         }
 
-        blockNames.push(blockNameCandidate);
+        blockIds.push(blockCandidateId);
     }
 
-    this.sortBlockNames(blockNames);
+    RDebug.startTimer();
+    blockIds = doc.sortBlocks(blockIds);
+    //this.sortBlockNames(blockNames);
+    RDebug.stopTimer("sort");
 
     var currentBlockId = doc.getCurrentBlockId();
     var currentItem = undefined;
     var selectedItem = undefined;
-    for (i=0; i<blockNames.length; ++i) {
-        var blockName = blockNames[i];
-        var block = doc.queryBlockDirect(blockName);
+    for (i=0; i<blockIds.length; ++i) {
+        var blockId = blockIds[i];
+        var block = doc.queryBlockDirect(blockId);
         if (block.isNull()) {
             continue;
         }
+
+        var blockName = block.getName();
 
         var item = this.createBlockItem(block);
         this.addTopLevelItem(item);
