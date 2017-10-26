@@ -97,6 +97,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllLayoutBlocks, "queryAllLayoutBlocks");
             
+            REcmaHelper::registerFunction(&engine, proto, queryAllLayouts, "queryAllLayouts");
+            
             REcmaHelper::registerFunction(&engine, proto, queryAllViews, "queryAllViews");
             
             REcmaHelper::registerFunction(&engine, proto, queryAllLinetypes, "queryAllLinetypes");
@@ -318,6 +320,8 @@
             REcmaHelper::registerFunction(&engine, proto, isParentLayerFrozen, "isParentLayerFrozen");
             
             REcmaHelper::registerFunction(&engine, proto, isBlockFrozen, "isBlockFrozen");
+            
+            REcmaHelper::registerFunction(&engine, proto, isLayoutBlock, "isLayoutBlock");
             
             REcmaHelper::registerFunction(&engine, proto, setObjectId, "setObjectId");
             
@@ -1502,6 +1506,89 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::queryAllLayoutBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryAllLayouts
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryAllLayouts", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryAllLayouts";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryAllLayouts", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RLayout::Id >'
+    QSet < RLayout::Id > cppResult =
+        
+               self->queryAllLayouts();
+        // return type: QSet < RLayout::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RLayout::Id >'
+    QSet < RLayout::Id > cppResult =
+        
+               self->queryAllLayouts(a0);
+        // return type: QSet < RLayout::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryAllLayouts().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryAllLayouts", context, engine);
             return result;
         }
          QScriptValue
@@ -9443,6 +9530,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::isBlockFrozen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::isLayoutBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::isLayoutBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::isLayoutBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("isLayoutBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isLayoutBlock(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.isLayoutBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::isLayoutBlock", context, engine);
             return result;
         }
          QScriptValue

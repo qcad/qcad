@@ -87,6 +87,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllLayoutBlocks, "queryAllLayoutBlocks");
             
+            REcmaHelper::registerFunction(&engine, proto, queryAllLayouts, "queryAllLayouts");
+            
             REcmaHelper::registerFunction(&engine, proto, queryAllViews, "queryAllViews");
             
             REcmaHelper::registerFunction(&engine, proto, queryAllLinetypes, "queryAllLinetypes");
@@ -1114,6 +1116,89 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllLayoutBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::queryAllLayouts
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllLayouts", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllLayouts";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("queryAllLayouts", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RLayout::Id >'
+    QSet < RLayout::Id > cppResult =
+        
+               self->queryAllLayouts();
+        // return type: QSet < RLayout::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RLayout::Id >'
+    QSet < RLayout::Id > cppResult =
+        
+               self->queryAllLayouts(a0);
+        // return type: QSet < RLayout::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllLayouts().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllLayouts", context, engine);
             return result;
         }
          QScriptValue

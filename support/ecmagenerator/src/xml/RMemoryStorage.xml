@@ -107,6 +107,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="queryAllLayouts" cppName="queryAllLayouts"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RBlock::Id &gt;"
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="undone"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="queryAllViews" cppName="queryAllViews"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

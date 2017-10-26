@@ -99,6 +99,9 @@
         queryAllLayoutBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryAllLayouts
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllViews
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -244,6 +247,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isBlockFrozen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isLayoutBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isEntityLayerFrozen

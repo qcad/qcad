@@ -167,6 +167,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="queryAllLayouts" cppName="queryAllLayouts"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RBlock::Id &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryAllViews" cppName="queryAllViews"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -674,6 +680,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="isBlockFrozen" cppName="isBlockFrozen"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isLayoutBlock" cppName="isLayoutBlock"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

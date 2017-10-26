@@ -146,6 +146,11 @@
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllLayoutBlocks</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>includeModelSpace</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
+     * \return A set of all layout IDs of layouts of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RLayout</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllLayouts</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
      * \return A set of all view IDs of the document.
      */</comment>
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RView</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllViews</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
@@ -578,12 +583,26 @@
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isParentLayerFrozen</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isParentLayerFrozen</name><parameter_list>(<param><decl><type><name>const</name> <name>RLayer</name>&amp;</type> <name>layer</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * \return True if the given block is frozen.
+     */</comment>
     <function><type><name>virtual</name> <name>bool</name></type> <name>isBlockFrozen</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>b</name> =<init> <expr><call><name>queryBlockDirect</name><argument_list>(<argument><expr><name>blockId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
         <if>if <condition>(<expr><name>b</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
             <return>return <expr><name>false</name></expr>;</return>
         }</block></then></if>
         <return>return <expr><name>b</name>-&gt;<call><name>isFrozen</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return True if the given block is a layout block (i.e. paper space block).
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isLayoutBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>b</name> =<init> <expr><call><name>queryBlockDirect</name><argument_list>(<argument><expr><name>blockId</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>b</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>b</name>-&gt;<call><name>hasLayout</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setObjectId</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
