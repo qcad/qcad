@@ -848,9 +848,9 @@ Print.getValue = function(key, def, document) {
     }
     else {
         var block = document.queryCurrentBlock();
-        //if (block.hasLayout()) {
+        if (!isNull(block)) {
             ret = block.getCustomProperty("QCAD", key, def);
-        //}
+        }
     }
 
     return ret;
@@ -885,6 +885,7 @@ Print.setValue = function(key, val, document) {
     else {
         var block = document.queryCurrentBlock();
         //if (block.hasLayout()) {
+        if (block.getCustomProperty("QCAD", key, undefined)!==val) {
             block.setCustomProperty("QCAD", key, val);
             var di = EAction.getDocumentInterface();
             if (!isNull(di)) {
@@ -893,6 +894,7 @@ Print.setValue = function(key, val, document) {
                 op.setSpatialIndexDisabled(true);
                 di.applyOperation(op);
             }
+        }
         //}
     }
 };
