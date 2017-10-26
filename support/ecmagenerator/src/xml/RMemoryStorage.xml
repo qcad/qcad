@@ -307,6 +307,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="blockName" isConst="true" />
       </variant>
     </method>
+    <method name="queryBlockDirect" cppName="queryBlockDirect"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RBlock &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+      </variant>
+      <variant returnType="QSharedPointer &lt; RBlock &gt;"
+      isPureVirtual="false">
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="queryView" cppName="queryView" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RView &gt;"
@@ -833,15 +847,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RLayout::Id" typeName="RLayout::Id"
         name="layoutId" isConst="false" />
-      </variant>
-    </method>
-    <method name="queryBlockDirect" cppName="queryBlockDirect"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QSharedPointer &lt; RBlock &gt;"
-      isPureVirtual="false">
-        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
-        isConst="false" />
       </variant>
     </method>
     <method name="setObjectHandle" cppName="setObjectHandle"

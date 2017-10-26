@@ -201,6 +201,12 @@
         getNoClipping
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPixelWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

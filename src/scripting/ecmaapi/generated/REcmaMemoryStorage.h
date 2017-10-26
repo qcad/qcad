@@ -152,6 +152,9 @@
         queryBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryBlockDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -324,9 +327,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryLayoutDirect
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        queryBlockDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setObjectHandle

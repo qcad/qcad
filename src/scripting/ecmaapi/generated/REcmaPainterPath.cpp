@@ -174,6 +174,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getNoClipping, "getNoClipping");
             
+            REcmaHelper::registerFunction(&engine, proto, setNoColorMode, "setNoColorMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, getNoColorMode, "getNoColorMode");
+            
             REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
             
             REcmaHelper::registerFunction(&engine, proto, getPixelWidth, "getPixelWidth");
@@ -308,6 +312,11 @@
 
     ctor.setProperty("PixelWidth",
     QScriptValue(RPainterPath::PixelWidth),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("NoColorMode",
+    QScriptValue(RPainterPath::NoColorMode),
     QScriptValue::ReadOnly);
 
 
@@ -3924,6 +3933,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getNoClipping", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setNoColorMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setNoColorMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setNoColorMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNoColorMode(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setNoColorMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setNoColorMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getNoColorMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getNoColorMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getNoColorMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getNoColorMode();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getNoColorMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getNoColorMode", context, engine);
             return result;
         }
          QScriptValue

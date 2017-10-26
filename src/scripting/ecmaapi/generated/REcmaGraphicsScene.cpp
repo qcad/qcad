@@ -123,6 +123,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, addToPreview, "addToPreview");
             
+            REcmaHelper::registerFunction(&engine, proto, beginNoColorMode, "beginNoColorMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, endNoColorMode, "endNoColorMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, getNoColorMode, "getNoColorMode");
+            
             REcmaHelper::registerFunction(&engine, proto, getHighlightedReferencePoint, "getHighlightedReferencePoint");
             
             REcmaHelper::registerFunction(&engine, proto, highlightEntity, "highlightEntity");
@@ -2039,6 +2045,143 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsScene::addToPreview", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsScene::beginNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsScene::beginNoColorMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::beginNoColorMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsScene* self = 
+                        getSelf("beginNoColorMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->beginNoColorMode();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.beginNoColorMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsScene::beginNoColorMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsScene::endNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsScene::endNoColorMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::endNoColorMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsScene* self = 
+                        getSelf("endNoColorMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->endNoColorMode();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.endNoColorMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsScene::endNoColorMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsScene::getNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsScene::getNoColorMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::getNoColorMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsScene* self = 
+                        getSelf("getNoColorMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getNoColorMode();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.getNoColorMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsScene::getNoColorMode", context, engine);
             return result;
         }
          QScriptValue

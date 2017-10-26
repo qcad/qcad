@@ -238,6 +238,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="beginNoColorMode" cppName="beginNoColorMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="endNoColorMode" cppName="endNoColorMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getNoColorMode" cppName="getNoColorMode"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getHighlightedReferencePoint"
     cppName="getHighlightedReferencePoint" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

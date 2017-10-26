@@ -69,6 +69,9 @@
         orderBackToFront
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        sortBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

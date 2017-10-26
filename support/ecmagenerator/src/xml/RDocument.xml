@@ -1039,6 +1039,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="sortBlocks" cppName="sortBlocks"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RBlock::Id &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RBlock::Id &gt; &amp;"
+        typeName="QList &lt; RBlock::Id &gt;" name="blockIds"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getLayerName" cppName="getLayerName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

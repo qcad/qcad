@@ -305,6 +305,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBlockNames, "getBlockNames");
             
+            REcmaHelper::registerFunction(&engine, proto, sortBlocks, "sortBlocks");
+            
             REcmaHelper::registerFunction(&engine, proto, getLayerName, "getLayerName");
             
             REcmaHelper::registerFunction(&engine, proto, getLayerNames, "getLayerNames");
@@ -9982,6 +9984,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getBlockNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::sortBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::sortBlocks", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::sortBlocks";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("sortBlocks", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RBlock::Id > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RBlock::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RBlock::Id >'
+    QList < RBlock::Id > cppResult =
+        
+               self->sortBlocks(a0);
+        // return type: QList < RBlock::Id >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.sortBlocks().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::sortBlocks", context, engine);
             return result;
         }
          QScriptValue

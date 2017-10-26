@@ -132,6 +132,15 @@
         addToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        beginNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        endNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNoColorMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHighlightedReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

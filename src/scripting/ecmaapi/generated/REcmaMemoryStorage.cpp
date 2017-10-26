@@ -136,6 +136,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryBlock, "queryBlock");
             
+            REcmaHelper::registerFunction(&engine, proto, queryBlockDirect, "queryBlockDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryView, "queryView");
             
             REcmaHelper::registerFunction(&engine, proto, queryUcs, "queryUcs");
@@ -251,8 +253,6 @@
             REcmaHelper::registerFunction(&engine, proto, queryLayerDirect, "queryLayerDirect");
             
             REcmaHelper::registerFunction(&engine, proto, queryLayoutDirect, "queryLayoutDirect");
-            
-            REcmaHelper::registerFunction(&engine, proto, queryBlockDirect, "queryBlockDirect");
             
             REcmaHelper::registerFunction(&engine, proto, setObjectHandle, "setObjectHandle");
             
@@ -2798,6 +2798,98 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::queryBlockDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::queryBlockDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryBlockDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("queryBlockDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RBlock >'
+    QSharedPointer < RBlock > cppResult =
+        
+               self->queryBlockDirect(a0);
+        // return type: QSharedPointer < RBlock >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RBlock >'
+    QSharedPointer < RBlock > cppResult =
+        
+               self->queryBlockDirect(a0);
+        // return type: QSharedPointer < RBlock >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryBlockDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryBlockDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -7410,66 +7502,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryLayoutDirect", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaMemoryStorage::queryBlockDirect
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaMemoryStorage::queryBlockDirect", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryBlockDirect";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RMemoryStorage* self = 
-                        getSelf("queryBlockDirect", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: RBlock::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RBlock::Id
-                    a0 =
-                    (RBlock::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QSharedPointer < RBlock >'
-    QSharedPointer < RBlock > cppResult =
-        
-               self->queryBlockDirect(a0);
-        // return type: QSharedPointer < RBlock >
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryBlockDirect().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryBlockDirect", context, engine);
             return result;
         }
          QScriptValue
