@@ -27,6 +27,9 @@ ColorSettings.getPreferencesCategory = function(appPreferences) {
     return [ qsTr("Printing"), qsTr("Colors") ];
 };
 
+ColorSettings.getPreferencesScope = function() {
+    return "block";
+};
 
 ColorSettings.applyPreferences = function(doc, mdiChild) {
     if (isNull(doc) || isNull(mdiChild)) {

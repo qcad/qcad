@@ -160,6 +160,10 @@ PageSettings.updatePaperUnit = function(unit) {
 };
 
 
+PageSettings.getPreferencesScope = function() {
+    return "block";
+};
+
 PageSettings.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     var widgets = PageSettings.widgets = getWidgets(pageWidget);
 
@@ -282,7 +286,7 @@ PageSettings.postInitPreferences = function(pageWidget, calledByPrefDialog, docu
     else {
         //debugger;
         //paperName = RSettings.getStringValue("PageSettings/PaperSizeName", "ISO A4");
-        paperName = Print.getDefaultPaperSizeName();
+        paperName = Print.getDefaultPaperSizeName(document);
     }
 
     var index = paperSizeNameCombo.findText(paperName);
