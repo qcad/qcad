@@ -315,7 +315,17 @@ AbstractPreferences.prototype.load = function(addOn) {
         global[className].initPreferences(widget, true, document, this);
     }
 
-    WidgetFactory.restoreState(widget, undefined, undefined, false, document);
+    // check if preferences apply to block:
+    var preferencesScope = "document";
+    if (!isNull(global[className]) && isFunction(global[className].getPreferencesScope)) {
+        preferencesScope = global[className].getPreferencesScope();
+    }
+    var store = document;
+    if (preferencesScope==="block") {
+        store = document.queryCurrentBlock();
+    }
+
+    WidgetFactory.restoreState(widget, undefined, undefined, false, store);
 
     if (!isNull(global[className]) && isFunction(global[className].postInitPreferences)) {
         global[className].postInitPreferences(widget, true, document, this);
@@ -345,7 +355,20 @@ AbstractPreferences.prototype.save = function() {
         if (!isNull(global[className]) && isFunction(global[className].savePreferences)) {
             global[className].savePreferences(widget, true, document, transaction);
         }
-        WidgetFactory.saveState(widget, undefined, document);
+
+        // check if preferences apply to block:
+        var preferencesScope = "document";
+        if (!isNull(global[className]) && isFunction(global[className].getPreferencesScope)) {
+            preferencesScope = global[className].getPreferencesScope();
+        }
+        var store = document;
+        if (preferencesScope==="block") {
+            store = document.queryCurrentBlock();
+        }
+        WidgetFactory.saveState(widget, undefined, store);
+        if (preferencesScope==="block") {
+            transaction.addObject(store);
+        }
     }
 
     if (!this.appPreferences) {
