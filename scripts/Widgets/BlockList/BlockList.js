@@ -166,60 +166,6 @@ RBlockListQt.prototype.filter = function(block) {
     return true;
 };
 
-RBlockListQt.prototype.sortBlockNames = function(blockNames) {
-    var doc = this.di.getDocument();
-
-    //var self = this;
-    blockNames.sort(function(a, b) {
-        var blockA = doc.queryBlockDirect(a);
-        var blockB = doc.queryBlockDirect(b);
-        if (isNull(blockA) || isNull(blockB)) {
-            return 0;
-        }
-
-        // model space always first:
-        if (blockA.getName()===RBlock.modelSpaceName) {
-            return -1;
-        }
-        if (blockB.getName()===RBlock.modelSpaceName) {
-            return 1;
-        }
-
-        // layouts always before other blocks:
-        var blockAHasLayout = blockA.hasLayout();
-        var blockBHasLayout = blockB.hasLayout();
-        if (blockAHasLayout && !blockBHasLayout) {
-            return -1;
-        }
-        if (!blockAHasLayout && blockBHasLayout) {
-            return 1;
-        }
-
-        // sort among layouts by tab order:
-        if (blockAHasLayout && blockBHasLayout) {
-            var layoutAId = blockA.getLayoutId();
-            var layoutBId = blockB.getLayoutId();
-            var layoutA = doc.queryLayout(layoutAId);
-            var layoutB = doc.queryLayout(layoutBId);
-            if (!isNull(layoutA) && !isNull(layoutB)) {
-                return layoutA.getTabOrder() - layoutB.getTabOrder();
-            }
-        }
-
-        // sort by layout name or block name (ignoring * at start):
-        var blockTitleA = RBlockListQt.getBlockTitle(blockA);
-        var blockTitleB = RBlockListQt.getBlockTitle(blockB);
-        if (blockTitleA.startsWith("*")) {
-            blockTitleA = blockTitleA.substring(1);
-        }
-        if (blockTitleB.startsWith("*")) {
-            blockTitleB = blockTitleB.substring(1);
-        }
-
-        return Array.alphaNumericalSorter(blockTitleA, blockTitleB);
-    });
-};
-
 /**
  * Called when blocks are addded, edited or deleted. Updates the block list.
  */
@@ -260,10 +206,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
         blockIds.push(blockCandidateId);
     }
 
-    RDebug.startTimer();
     blockIds = doc.sortBlocks(blockIds);
-    //this.sortBlockNames(blockNames);
-    RDebug.stopTimer("sort");
 
     var currentBlockId = doc.getCurrentBlockId();
     var currentItem = undefined;
