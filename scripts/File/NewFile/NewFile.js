@@ -283,13 +283,13 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     // Qt 5 / Unity bug workaround:
     // breaks Ubuntu Unity menu on start:
-    if (RS.getSystemId()!=="linux" || !RSettings.isQt(5)) {
+    if (RS.getSystemId()!=="linux" || !RSettings.isQt(5) || appWin.property("starting")!==true) {
         appWin.enabled = false;
     }
     for (var i=0; i<5; i++) {
         QCoreApplication.processEvents();
     }
-    if (RS.getSystemId()!=="linux" || !RSettings.isQt(5)) {
+    if (!appWin.enabled) {
         appWin.enabled = true;
     }
 

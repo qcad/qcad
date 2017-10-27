@@ -749,7 +749,9 @@ function main() {
     // open files given on command line:
     var clickedFilesAndArgs = filesToOpen.concat(args.slice(1));
     QCoreApplication.processEvents();
+    appWin.setProperty("starting", true);
     openFiles(clickedFilesAndArgs, !recovered);
+    appWin.setProperty("starting", false);
 
     RPluginLoader.postInitPlugins(RPluginInterface.LoadedFiles);
 
