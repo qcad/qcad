@@ -1533,13 +1533,11 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     }
 
     // use alternative algorithm for splines if we don't have a spline proxy:
-    double dist;
-
     for (int i=0; i<sub.length(); i++) {
         QSharedPointer<RLine> lineP = sub[i].dynamicCast<RLine>();
         if (!lineP.isNull()) {
             RLine line = *lineP.data();
-            dist = exportLine(line, offset);
+            exportLine(line, offset);
             offset -= lineP->getLength();
             continue;
         }
