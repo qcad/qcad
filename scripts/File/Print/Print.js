@@ -271,7 +271,7 @@ Print.prototype.print = function(pdfFile) {
             );
         }
 
-        if (Print.getEnablePageTags()) {
+        if (Print.getEnablePageTags(this.document)) {
             Print.drawPageTags(this.document, painter, i, pageBorderTransformed, true, printerFactor);
         }
     }
@@ -520,12 +520,12 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
     correctedBorder.setTop(correctedBorder.bottom());
     correctedBorder.setBottom(top);
 
-    font = Print.getTagFont();
+    font = Print.getTagFont(document);
     font.setPointSizeF(1.0);
 
     var sf = 1.0;
     // font size is given in points:
-    sf *= Print.getTagFont().pointSizeF();
+    sf *= Print.getTagFont(document).pointSizeF();
     // convert points to mm:
     sf = sf * 25.4 / 72;
 
@@ -550,12 +550,12 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
     t.scale(sf,-sf);
     path = t.map(path);
 
-    var outside = (Print.getTagAlignment() === "Outside");
+    var outside = (Print.getTagAlignment(document) === "Outside");
 
     width = path.boundingRect().width();
     height = path.boundingRect().height();
 
-    switch (Print.getTagPosition()) {
+    switch (Print.getTagPosition(document)) {
     case "Top":
     case "Bottom":
         x = (correctedBorder.left() + correctedBorder.right()) / 2 - width / 2;
@@ -579,7 +579,7 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
         break;
     }
 
-    switch (Print.getTagPosition()) {
+    switch (Print.getTagPosition(document)) {
     case "Top":
     case "TopLeft":
     case "TopRight":
@@ -858,12 +858,20 @@ Print.getValue = function(key, def, document) {
 
 Print.getDoubleValue = function(key, def, document) {
     var val = Print.getValue(key, def, document);
-    return parseFloat(val);
+    val = parseFloat(val);
+    if (!RMath.isSane(val)) {
+        val = def;
+    }
+    return val;
 };
 
 Print.getIntValue = function(key, def, document) {
     var val = Print.getValue(key, def, document);
-    return parseInt(val);
+    val = parseInt(val);
+    if (!RMath.isSane(val)) {
+        val = def;
+    }
+    return val;
 };
 
 Print.getBoolValue = function(key, def, document) {
@@ -940,8 +948,8 @@ Print.getDefaultPrintMarginBottom = function(document, paperUnit) {
 Print.getOffset = function(document) {
     var x = Print.getDoubleValue("PageSettings/OffsetX", 0, document);
     var y = Print.getDoubleValue("PageSettings/OffsetY", 0, document);
-//    x += Print.getGlueMarginLeft();
-//    y += Print.getGlueMarginBottom();
+//    x += Print.getGlueMarginLeft(document);
+//    y += Print.getGlueMarginBottom(document);
     return new RVector(x, y);
 };
 
@@ -1316,9 +1324,9 @@ Print.getEnablePageTags = function(document) {
     return Print.getBoolValue("PageTagSettings/EnablePageTags", false, document);
 };
 
-Print.getIdentifyPageTags = function(document) {
-    return Print.getBoolValue("PageTagSettings/IdentifyPageTags", false, document);
-};
+//Print.getIdentifyPageTags = function(document) {
+//    return Print.getBoolValue("PageTagSettings/IdentifyPageTags", false, document);
+//};
 
 Print.getTagFont = function(document) {
     var ret = Print.getValue("PageTagSettings/TagFont", new QFont(), document);
