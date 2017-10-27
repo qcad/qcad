@@ -65,45 +65,36 @@
 <context>
     <name>LayoutDialog</name>
     <message>
-        <location filename="../LayoutDialog.js" line="+79"/>
-        <location filename="../LayoutDialog.ui" line="+36"/>
         <source>Layout</source>
-        <translation>Layout</translation>
+        <translation type="vanished">Layout</translation>
     </message>
     <message>
-        <location line="+56"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Spaties voor of na.</translation>
+        <translation type="vanished">Spaties voor of na.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Layout name is empty.</source>
-        <translation>De layoutnaam is leeg.</translation>
+        <translation type="vanished">De layoutnaam is leeg.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Layout name is invalid.</source>
-        <translation>De layoutnaam is onjuist.</translation>
+        <translation type="vanished">De layoutnaam is onjuist.</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Layout &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Layout &quot;%1&quot; bestaat al&lt;br&gt;en zal worden overschreven.</translation>
+        <translation type="vanished">Layout &quot;%1&quot; bestaat al&lt;br&gt;en zal worden overschreven.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Layout already exists.</source>
-        <translation>Layout bestaat al.</translation>
+        <translation type="vanished">Layout bestaat al.</translation>
     </message>
     <message>
-        <location filename="../LayoutDialog.ui" line="-19"/>
         <source>Layout Data</source>
-        <translation>Layout gegevens</translation>
+        <translation type="vanished">Layout gegevens</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Layout name:</source>
-        <translation>Layoutnaam:</translation>
+        <translation type="vanished">Layoutnaam:</translation>
     </message>
 </context>
 </TS>

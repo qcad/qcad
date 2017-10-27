@@ -29,7 +29,7 @@
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+402"/>
         <source>Export to PDF</source>
         <translation>Exporter vers PDF</translation>
     </message>

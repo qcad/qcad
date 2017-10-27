@@ -14,12 +14,12 @@
         <translation>Preferenze Disegno</translation>
     </message>
     <message>
-        <location line="+286"/>
+        <location line="+296"/>
         <source>Apply preferences</source>
         <translation>Applica preferenze</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+39"/>
         <source>Restart required</source>
         <translation>Riavvio richiesto</translation>
     </message>

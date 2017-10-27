@@ -65,45 +65,36 @@
 <context>
     <name>LayoutDialog</name>
     <message>
-        <location filename="../LayoutDialog.js" line="+79"/>
-        <location filename="../LayoutDialog.ui" line="+36"/>
         <source>Layout</source>
-        <translation>Présentation</translation>
+        <translation type="vanished">Présentation</translation>
     </message>
     <message>
-        <location line="+56"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Espaces avant ou après.</translation>
+        <translation type="vanished">Espaces avant ou après.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Layout name is empty.</source>
-        <translation>Nom du présentation est vide.</translation>
+        <translation type="vanished">Nom du présentation est vide.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Layout name is invalid.</source>
-        <translation>Nom du présentation n&apos;est pas valide.</translation>
+        <translation type="vanished">Nom du présentation n&apos;est pas valide.</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Layout &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Présentation &quot;%1&quot; existe&lt;br&gt;et sera écrasé.</translation>
+        <translation type="vanished">Présentation &quot;%1&quot; existe&lt;br&gt;et sera écrasé.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Layout already exists.</source>
-        <translation>Présentation existe déjà.</translation>
+        <translation type="vanished">Présentation existe déjà.</translation>
     </message>
     <message>
-        <location filename="../LayoutDialog.ui" line="-19"/>
         <source>Layout Data</source>
-        <translation>Données du présentation</translation>
+        <translation type="vanished">Données du présentation</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Layout name:</source>
-        <translation>Nom du présentation :</translation>
+        <translation type="vanished">Nom du présentation :</translation>
     </message>
 </context>
 </TS>

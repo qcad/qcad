@@ -14,7 +14,7 @@
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+402"/>
         <source>Export to PDF</source>
         <translation>Izvozi v PDF</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+402"/>
         <source>Export to PDF</source>
         <translation>PDFにエクスポート</translation>
     </message>

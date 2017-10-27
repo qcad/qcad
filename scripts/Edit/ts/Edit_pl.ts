@@ -23,12 +23,12 @@ Preferencje bieżącego rysunku
         <translation type="unfinished">Preferencje rysowania</translation>
     </message>
     <message>
-        <location line="+286"/>
+        <location line="+296"/>
         <source>Apply preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+39"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymaga ponownego uruchomienia</translation>

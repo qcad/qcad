@@ -14,12 +14,12 @@
         <translation>図面設定</translation>
     </message>
     <message>
-        <location line="+286"/>
+        <location line="+296"/>
         <source>Apply preferences</source>
         <translation>設定を適用</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+39"/>
         <source>Restart required</source>
         <translation>再起動が必要</translation>
     </message>

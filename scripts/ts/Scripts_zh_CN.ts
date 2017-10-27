@@ -209,7 +209,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+975"/>
+        <location filename="../WidgetFactory.js" line="+995"/>
         <source>Restore defaults</source>
         <translation type="unfinished"></translation>
     </message>
@@ -386,7 +386,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+786"/>
+        <location filename="../library.js" line="+798"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>

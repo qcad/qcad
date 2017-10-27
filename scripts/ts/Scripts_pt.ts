@@ -267,7 +267,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+975"/>
+        <location filename="../WidgetFactory.js" line="+995"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
@@ -529,7 +529,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+786"/>
+        <location filename="../library.js" line="+798"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>

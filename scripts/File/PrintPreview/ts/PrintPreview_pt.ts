@@ -48,7 +48,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+402"/>
         <source>Export to PDF</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Exporte para PDF</translation>

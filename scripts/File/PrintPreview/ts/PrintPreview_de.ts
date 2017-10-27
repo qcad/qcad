@@ -44,7 +44,7 @@
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.js" line="+400"/>
+        <location filename="../PrintPreview.js" line="+402"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -54,12 +54,12 @@
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.js" line="-401"/>
+        <location filename="../PrintPreview.js" line="-403"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+410"/>
+        <location line="+412"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>

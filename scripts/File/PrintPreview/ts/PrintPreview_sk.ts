@@ -14,7 +14,7 @@
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+402"/>
         <source>Export to PDF</source>
         <translation>Exportovať do PDF</translation>
     </message>
