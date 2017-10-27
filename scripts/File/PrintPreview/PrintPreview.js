@@ -649,7 +649,7 @@ PrintPreview.updateScaleString = function(document) {
     var scaleCombo = optionsToolBar.findChild("Scale");
     if (Print.getScale(document) != RMath.parseScale(scaleCombo.currentText)) {
         scaleCombo.blockSignals(true);
-        scaleCombo.setEditText(Print.getScaleString());
+        scaleCombo.setEditText(Print.getScaleString(document));
         scaleCombo.blockSignals(false);
     }
 };
@@ -773,6 +773,7 @@ PrintPreview.prototype.slotAutoFitBox = function(box) {
     this.updateBackgroundTransform();
     //this.slotAutoZoomToPage();
     this.updateBackgroundDecoration();
+    this.showUiOptions(true);
 };
 
 /**
@@ -790,6 +791,7 @@ PrintPreview.prototype.slotAutoFitDrawing = function() {
     this.updateBackgroundTransform();
     this.slotAutoZoomToPage();
     this.updateBackgroundDecoration();
+    this.showUiOptions(true);
 };
 
 PrintPreview.prototype.slotAutoCenter = function() {
@@ -841,5 +843,7 @@ PrintPreview.prototype.slotAutoZoomToPage = function() {
  * are changed (e.g. offset).
  */
 PrintPreview.prototype.updateFromPreferences = function() {
+    this.showUiOptions(true);
+    this.updateBackgroundDecoration();
     this.updateBackgroundTransform();
 };
