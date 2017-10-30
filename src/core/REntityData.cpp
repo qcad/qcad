@@ -488,8 +488,10 @@ QList<RVector> REntityData::getIntersectionPoints(
 //                }
 //            }
 
+            // the two shapes might originate from block references in which case
+            // same is considered to be false:
             ret.append(
-                shapes1.at(i)->getIntersectionPoints(*shapes2.at(k), limited, same)
+                shapes1.at(i)->getIntersectionPoints(*shapes2.at(k), limited, false)
             );
         }
     }

@@ -212,6 +212,10 @@ QList<RVector> REntity::getIntersectionPoints(
             same = true;
         }
 
+        if (getType()==RS::EntityBlockRef || getType()==RS::EntityViewport) {
+            same = true;
+        }
+
         // if entity is not interpolated and not a polyline, there are no intersections in entity self:
         if (!same) {
             return QList<RVector>();
