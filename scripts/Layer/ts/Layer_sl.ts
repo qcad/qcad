@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Layer</name>
     <message>
@@ -31,12 +31,12 @@
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Odtajam vse plasti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmrzujem vse plasti</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -78,7 +78,7 @@
     </message>
     <message>
         <source>Pen</source>
-        <translation type="vanished">Pisalo</translation>
+        <translation>Pisalo</translation>
     </message>
     <message>
         <location line="+28"/>

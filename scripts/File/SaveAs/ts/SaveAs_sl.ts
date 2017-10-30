@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>SaveAs</name>
     <message>
@@ -30,15 +30,15 @@
     </message>
     <message>
         <source>Load/Save</source>
-        <translation type="vanished">Naloži/Shrani</translation>
+        <translation>Naloži/Shrani</translation>
     </message>
     <message>
         <source>Save as</source>
-        <translation type="vanished">Shrani kot</translation>
+        <translation>Shrani kot</translation>
     </message>
     <message>
         <source>No export filters</source>
-        <translation type="vanished">Ni filtrov za izvoz</translation>
+        <translation>Ni filtrov za izvoz</translation>
     </message>
     <message>
         <location filename="../SaveAs.js" line="+38"/>
@@ -48,7 +48,7 @@
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpri/Shrani</translation>
     </message>
     <message>
         <location line="+25"/>

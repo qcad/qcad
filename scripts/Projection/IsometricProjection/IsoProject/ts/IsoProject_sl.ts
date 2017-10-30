@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>IsoProject</name>
     <message>
@@ -45,11 +45,11 @@
     </message>
     <message>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation type="vanished">Povečaj projekcijo na dejansko velikost (izometrična risba)</translation>
+        <translation>Povečaj projekcijo na dejansko velikost (izometrična risba)</translation>
     </message>
     <message>
         <source>True scale</source>
-        <translation type="vanished">Dejanska velikost</translation>
+        <translation>Dejanska velikost</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>
@@ -59,33 +59,33 @@
     <message>
         <location filename="../IsoProject.js" line="+50"/>
         <source>Isometric</source>
-        <translation type="unfinished"></translation>
+        <translation>Izometrično</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Izometrično prave mere</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimetrično</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation type="unfinished"></translation>
+        <translation>Demetrična</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation type="unfinished"></translation>
+        <translation>Kabinet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation type="unfinished"></translation>
+        <translation>Kavalir</translation>
     </message>
 </context>
 </TS>
