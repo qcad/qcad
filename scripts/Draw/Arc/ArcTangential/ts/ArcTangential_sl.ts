@@ -16,7 +16,7 @@
     <message>
         <location filename="../ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Radij:</translation>
+        <translation>Polmer:</translation>
     </message>
     <message>
         <source>&amp;Tangentially connected</source>

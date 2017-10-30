@@ -37,7 +37,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Nariši lok tangencialno na entiteto, skozi točko z polmerom</translation>
+        <translation>Nariši lok tangencialno na entiteto, skozi točko s polmerom</translation>
     </message>
 </context>
 <context>

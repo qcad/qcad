@@ -78,7 +78,7 @@
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>Nariši krog tangencialno na entiteto, skozi točko z polmerom</translation>
+        <translation>Nariši krog tangencialno na entiteto, skozi točko s polmerom</translation>
     </message>
     <message>
         <location filename="../CircleTPR.ui" line="+17"/>

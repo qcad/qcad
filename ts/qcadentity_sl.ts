@@ -205,7 +205,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation>Radij</translation>
+        <translation>Polmer</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -229,7 +229,7 @@
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation>Polmer</translation>
+        <translation>Premer</translation>
     </message>
     <message>
         <location line="+1"/>
