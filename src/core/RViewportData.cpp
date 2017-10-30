@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RViewportData.h"
+#include "RMouseEvent.h"
 
 RViewportData::RViewportData()
     : viewportId(RObject::INVALID_ID),
@@ -138,15 +139,66 @@ double RViewportData::getDistanceTo(const RVector& point, bool limited, double r
 }
 
 QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
-    Q_UNUSED(queryBox)
-    Q_UNUSED(ignoreComplex)
+    //Q_UNUSED(queryBox)
+    //Q_UNUSED(ignoreComplex)
     Q_UNUSED(segment)
 
     QList<QSharedPointer<RShape> > ret;
 
+    // border:
     QList<RLine> lines = RBox(position, width, height).getLines2d();
     for (int i=0; i<lines.length(); i++) {
         ret.append(QSharedPointer<RShape>(lines[i].clone()));
+    }
+
+    // shapes inside viewport:
+
+    // query entities in query box that are part of the block definition:
+    QSet<REntity::Id> ids;
+    if (queryBox.isValid()) {
+        RBox queryBoxNeutral;
+
+        QList<RVector> corners;
+        corners.append(position + RVector( width/2,  height/2));
+        corners.append(position + RVector(-width/2,  height/2));
+        corners.append(position + RVector(-width/2, -height/2));
+        corners.append(position + RVector( width/2, -height/2));
+        RVector::rotateList(corners, -rotation, position);
+        RVector::moveList(corners, -getViewOffset());
+        RVector::scaleList(corners, 1/scale);
+        queryBoxNeutral = RBox(RVector::getMinimum(corners), RVector::getMaximum(corners));
+
+        ids = document->queryIntersectedEntitiesXY(queryBoxNeutral, true, true, document->getModelSpaceBlockId());
+    }
+    else {
+        ids = document->queryBlockEntities(document->getModelSpaceBlockId());
+    }
+
+    QSet<REntity::Id>::iterator it;
+    for (it = ids.begin(); it != ids.end(); it++) {
+        if (RMouseEvent::hasMouseMoved()) {
+            //recursionDepth--;
+            return QList<QSharedPointer<RShape> >();
+        }
+
+        QSharedPointer<REntity> entity = document->queryEntity(*it);
+        if (entity.isNull()) {
+            continue;
+        }
+
+        entity->scale(scale);
+        entity->move(getViewOffset());
+
+        entity->rotate(rotation, position);
+
+        RS::EntityType t = entity->getType();
+
+        // ignore complex entities for operations like snap (hatches, texts):
+        if (ignoreComplex && REntity::isComplex(t)) {
+            continue;
+        }
+
+        ret.append(entity->getShapes(queryBox, ignoreComplex));
     }
 
     return ret;
