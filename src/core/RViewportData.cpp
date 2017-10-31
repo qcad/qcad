@@ -139,8 +139,6 @@ double RViewportData::getDistanceTo(const RVector& point, bool limited, double r
 }
 
 QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
-    //Q_UNUSED(queryBox)
-    //Q_UNUSED(ignoreComplex)
     Q_UNUSED(segment)
 
     QList<QSharedPointer<RShape> > ret;
@@ -155,24 +153,27 @@ QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bo
 
     // query entities in query box that are part of the block definition:
     QSet<REntity::Id> ids;
-    if (queryBox.isValid()) {
-        RBox queryBoxNeutral;
+    RBox queryBoxNeutral;
+    QList<RVector> corners;
 
-        QList<RVector> corners;
+    if (queryBox.isValid()) {
+        corners.append(RVector(queryBox.c1.x, queryBox.c1.y));
+        corners.append(RVector(queryBox.c1.x, queryBox.c2.y));
+        corners.append(RVector(queryBox.c2.x, queryBox.c1.y));
+        corners.append(RVector(queryBox.c2.x, queryBox.c2.y));
+    }
+    else {
         corners.append(position + RVector( width/2,  height/2));
         corners.append(position + RVector(-width/2,  height/2));
         corners.append(position + RVector(-width/2, -height/2));
         corners.append(position + RVector( width/2, -height/2));
-        RVector::rotateList(corners, -rotation, position);
-        RVector::moveList(corners, -getViewOffset());
-        RVector::scaleList(corners, 1/scale);
-        queryBoxNeutral = RBox(RVector::getMinimum(corners), RVector::getMaximum(corners));
+    }
+    RVector::rotateList(corners, -rotation, position);
+    RVector::moveList(corners, -getViewOffset());
+    RVector::scaleList(corners, 1/scale);
+    queryBoxNeutral = RBox(RVector::getMinimum(corners), RVector::getMaximum(corners));
 
-        ids = document->queryIntersectedEntitiesXY(queryBoxNeutral, true, true, document->getModelSpaceBlockId());
-    }
-    else {
-        ids = document->queryBlockEntities(document->getModelSpaceBlockId());
-    }
+    ids = document->queryIntersectedEntitiesXY(queryBoxNeutral, true, true, document->getModelSpaceBlockId());
 
     QSet<REntity::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
