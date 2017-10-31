@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>IsoProject</name>
     <message>
@@ -45,11 +45,11 @@
     </message>
     <message>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Povečaj projekcijo na dejansko velikost (izometrična risba)</translation>
+        <translation type="vanished">Povečaj projekcijo na dejansko velikost (izometrična risba)</translation>
     </message>
     <message>
         <source>True scale</source>
-        <translation>Dejanska velikost</translation>
+        <translation type="vanished">Dejanska velikost</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>

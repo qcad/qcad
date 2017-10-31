@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>AbstractPreferences</name>
     <message>
@@ -93,7 +93,7 @@ da bodo spremembe začele delovat.</translation>
     </message>
     <message>
         <source>Clear Search</source>
-        <translation>Počisti iskanje</translation>
+        <translation type="vanished">Počisti iskanje</translation>
     </message>
     <message>
         <location line="+10"/>
