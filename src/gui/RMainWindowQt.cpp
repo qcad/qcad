@@ -414,9 +414,6 @@ RMdiChildQt* RMainWindowQt::getMdiChild() {
         return NULL;
     }
 
-    Q_ASSERT(false);
-    qWarning() << "no current subwindow. fall back to last subwindow in stack";
-
     //return dynamic_cast<RMdiChildQt*> (currentSubWindow->widget());
     return dynamic_cast<RMdiChildQt*> (currentSubWindow);
 }
