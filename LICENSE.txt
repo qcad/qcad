@@ -6,11 +6,15 @@ See files:
 - gpl-3.0-exceptions.txt (if available)
 
 Hershey fonts are released under the terms described in fonts/hershey.readme.
-Other CXF fonts in directory 'fonts' are released as public domain (all copyright
-is waived).
+
+The font osifont is released under GPL version 3 with optional 
+exceptions as outlined in fonts/osifont_license.txt.
 
 The font VL-Gothic-Regular is released under the terms of the license contained 
-in file VL-Gothic-Regular_license.txt.
+in file fonts/VL-Gothic-Regular_license.txt.
+
+Other CXF fonts in directory 'fonts' are released as public domain (all copyright
+is waived).
 
 Fonts in directory fonts/qt are released under their respective licenses.
 See fonts/qt/LICENSES.txt.
