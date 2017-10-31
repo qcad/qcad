@@ -58,6 +58,9 @@
         updateBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

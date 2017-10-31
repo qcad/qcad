@@ -250,6 +250,9 @@
         notifyBlockListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        notifyBlockListenersCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addViewListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
