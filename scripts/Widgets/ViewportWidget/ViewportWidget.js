@@ -26,7 +26,7 @@ if (new QFileInfo(autoPath("scripts/Navigation/DefaultNavigation/DefaultNavigati
 ViewportWidget.templateDir = autoPath("scripts/Widgets/ViewportWidget/Templates");
 
 /**
- * A viewport encapsulates one graphics view and might provide means to navigate
+ * A viewport widget encapsulates one graphics view and might provide means to navigate
  * (scroll bars) and other widgets that are available for every graphics view.
  *
  * \param vpNumber Number of viewport. There can be up to four viewports
