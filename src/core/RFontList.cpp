@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 
+#include <QFontDatabase>
+
 #include "RFontList.h"
 #include "RSettings.h"
 
@@ -45,6 +47,12 @@ void RFontList::init() {
     res.resSubstitutionMap.insert("txt", "standard");
     res.resSubstitutionMap.insert("iso", "standard");
     res.resSubstitutionMap.insert("isocp", "standard");
+
+    // load local TTF application fonts:
+    QStringList ttfFiles = RS::getFileList("fonts", "ttf");
+    for (int i=0; i<ttfFiles.length(); i++) {
+        QFontDatabase::addApplicationFont(ttfFiles[i]);
+    }
 }
 
 void RFontList::initSubstitutions() {
