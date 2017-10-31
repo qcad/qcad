@@ -1,0 +1,13 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ql="http://qcad.org/ql/elements/1.0/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/">
+  <rdf:Description rdf:about="Poenostavljena predloga primerna za OŠ">
+    <dc:title xml:lang="en">Template for Slowenian primary schools</dc:title>
+    <dc:title xml:lang="sl">Predloga za tehnološki list na A4</dc:title>
+    <dcterms:license>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:license>
+    <dcterms:created>2017-08-03</dcterms:created>
+    <dc:creator>Miharix</dc:creator>
+    <ql:standard>OŠ</ql:standard>
+  </rdf:Description>
+</rdf:RDF>

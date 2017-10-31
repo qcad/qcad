@@ -185,11 +185,11 @@
     <name>ShapeAlgorithms</name>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="vanished">Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
+        <translation type="vanished">Polmer je padel pod 0.0 po %1 kocentričnih krogih.</translation>
     </message>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="vanished">Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
+        <translation type="vanished">Polmer je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
         <location filename="../ShapeAlgorithms.js" line="+1403"/>

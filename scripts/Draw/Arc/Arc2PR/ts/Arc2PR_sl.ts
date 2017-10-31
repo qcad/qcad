@@ -16,7 +16,7 @@
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>Neveljaven radij</translation>
+        <translation>Neveljaven polmer</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Radij:</translation>
+        <translation>Polmer:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -73,12 +73,12 @@
     <message>
         <location filename="../Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>&amp;2 točki in radij</translation>
+        <translation>&amp;2 točki in polmer</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Nariši lok iz dveh točk in radiusa</translation>
+        <translation>Nariši lok iz dveh točk in polmera</translation>
     </message>
 </context>
 </TS>

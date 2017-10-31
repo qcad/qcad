@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation>Glavna točka elipse ali velik radij</translation>
+        <translation>Glavna točka elipse ali velik polmer</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation>Druga točka elipse ali mali radij</translation>
+        <translation>Druga točka elipse ali mali polmer</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -46,12 +46,12 @@
     <message>
         <location line="+269"/>
         <source>Invalid major radius.</source>
-        <translation>Neveljaven velik radij.</translation>
+        <translation>Neveljaven velik polmer.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation>Velik radij:</translation>
+        <translation>Velik polmer:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation>Majhen radij:</translation>
+        <translation>Majhen polmer:</translation>
     </message>
     <message>
         <location line="+25"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>AutoSave</name>
     <message>
         <source>Load/Save</source>
-        <translation type="vanished">Naloži/Shrani</translation>
+        <translation>Naloži/Shrani</translation>
     </message>
     <message>
         <location filename="../AutoSave.js" line="+35"/>
@@ -15,7 +15,7 @@
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka</translation>
     </message>
     <message>
         <location line="+95"/>

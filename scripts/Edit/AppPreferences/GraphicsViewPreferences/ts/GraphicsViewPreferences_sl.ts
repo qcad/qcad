@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -76,7 +76,7 @@
     <message>
         <location line="+39"/>
         <source>Disable for printing</source>
-        <translation type="unfinished"></translation>
+        <translation>Onemogoči za tiskanje</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -144,7 +144,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation type="vanished">Optimizacija</translation>
+        <translation>Optimizacija</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -153,7 +153,7 @@
     </message>
     <message>
         <source>Text height display threshold (px):</source>
-        <translation type="vanished">Prag prikaza višine besedila (px):</translation>
+        <translation>Prag prikaza višine besedila (px):</translation>
     </message>
     <message>
         <location line="+58"/>

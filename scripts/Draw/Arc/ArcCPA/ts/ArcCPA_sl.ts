@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
-        <translation>Točka na loku ali radiu</translation>
+        <translation>Točka na loku ali polmer</translation>
     </message>
     <message>
         <location line="+1"/>
