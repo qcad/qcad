@@ -45,6 +45,11 @@ public:
     virtual void updateBlocks(RDocumentInterface* documentInterface) = 0;
 
     /**
+     * This method is called when a different block becomes the new current block.
+     */
+    virtual void setCurrentBlock(RDocumentInterface* documentInterface) = 0;
+
+    /**
      * This method is called to signal that no document is currently active.
      */
     virtual void clearBlocks() = 0;

@@ -66,6 +66,7 @@ function RBlockListQt(parent, addListener, showHeader) {
         var adapter = new RBlockListenerAdapter();
         appWin.addBlockListener(adapter);
         adapter.blocksUpdated.connect(this, "updateBlocks");
+        adapter.currentBlockSet.connect(this, "updateBlocks");
         adapter.blocksCleared.connect(this, "clearBlocks");
     }
 

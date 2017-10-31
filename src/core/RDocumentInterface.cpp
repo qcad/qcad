@@ -2161,7 +2161,7 @@ void RDocumentInterface::setCurrentBlock(RBlock::Id blockId) {
     clearSelection();
     document.setCurrentBlock(blockId);
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
-        RMainWindow::getMainWindow()->notifyBlockListeners(this);
+        RMainWindow::getMainWindow()->notifyBlockListenersCurrentBlock(this);
     }
     regenerateScenes();
 }
@@ -2178,7 +2178,7 @@ void RDocumentInterface::setCurrentBlock(const QString& blockName) {
  * this document interface.
  */
 void RDocumentInterface::setCurrentBlock(const RBlock& block) {
-    setCurrentBlock(block.getName());
+    setCurrentBlock(block.getId());
 }
 
 void RDocumentInterface::setCurrentViewport(const RViewportEntity& viewport) {
