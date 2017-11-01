@@ -340,6 +340,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 
     // no properties to show or 'No Selection' chosen:
     if (groups.length===0 /*|| selectionCombo.currentIndex===0*/) {
+        selectionCombo.clear();
         selectionCombo.insertItem(0, qsTr("No Selection"));
         layerCombo.clear();
         colorCombo.currentIndex = 0;
