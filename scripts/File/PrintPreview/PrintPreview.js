@@ -199,7 +199,9 @@ PrintPreview.prototype.finishEvent = function() {
 
         // needed to update pattern scaling without using drawing scale:
         var di = EAction.getDocumentInterface();
-        di.regenerateScenes();
+        if (isNull(di)) {
+            di.regenerateScenes();
+        }
 
         var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
         action.triggered.disconnect(this, "updateBackgroundDecoration");
