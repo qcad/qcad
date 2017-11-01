@@ -894,7 +894,7 @@ Print.setValue = function(key, val, document) {
         var block = document.queryCurrentBlock();
         //if (block.hasLayout()) {
         if (block.getCustomProperty("QCAD", key, undefined)!==val) {
-            block.setCustomProperty("QCAD", key, val);
+            block.setCustomProperty("QCAD", key, val.toString());
             var di = EAction.getDocumentInterface();
             if (!isNull(di)) {
                 var op = new RAddObjectOperation(block);
