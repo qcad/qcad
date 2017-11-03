@@ -221,8 +221,32 @@
      </item>
     </widget>
    </item>
+   <item>
+    <widget class="QCheckBox" name="AutoScale">
+     <property name="text">
+      <string>Auto</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>AutoScale</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Scale</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>680</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>605</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -85,6 +85,18 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     WidgetFactory.initLineEdit(lowerToleranceLineEdit, true);
 
     this.initScaleCombo();
+
+    // not a layout block: hide auto checkbox:
+    var doc = this.getDocument();
+    if (!isNull(doc)) {
+        var block = doc.queryCurrentBlock();
+        if (!isNull(block) && block.hasLayout() && block.isModelSpace()) {
+            var cbAuto = optionsToolBar.findChild("AutoScaleAction");
+            if (!isNull(cbAuto)) {
+                cbAuto.visible = false;
+            }
+        }
+    }
     
     // if we are resuming, restore previous values (automatic)
     // it not, keep them empty.
@@ -236,4 +248,49 @@ Dimension.prototype.getScaleString = function() {
  */
 Dimension.prototype.parseScale = function(scaleString) {
     return RMath.parseScale(scaleString);
+};
+
+/**
+ * Automatically adjust the dimension scale based on the context of a viewport.
+ */
+Dimension.prototype.autoAdjustScale = function(pos) {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var cbAuto = optionsToolBar.findChild("AutoScale");
+    if (isNull(cbAuto) || !cbAuto.checked) {
+        return;
+    }
+
+    var doc = this.getDocument();
+
+    // are we in a layout block:
+    var block = doc.queryCurrentBlock();
+    if (isNull(block) || !block.hasLayout()) {
+        return;
+    }
+
+    // get scale of underlying viewport:
+    var scale = undefined;
+    var viewportIds = doc.queryAllEntities(false, false, RS.EntityViewport);
+    for (var i=0; i<viewportIds.length; i++) {
+        var viewportId = viewportIds[i];
+        var viewport = doc.queryEntityDirect(viewportId);
+        var box = viewport.getBoundingBox();
+        if (box.containsPoint(pos)) {
+            scale = viewport.getScale();
+            break;
+        }
+    }
+
+    // no viewport under pos:
+    if (isNull(scale)) {
+        scale = 1.0;
+    }
+
+    // set scale of dimension according to viewport:
+    var scaleCombo = optionsToolBar.findChild("Scale");
+    if (isNull(scaleCombo)) {
+        return;
+    }
+
+    scaleCombo.currentText = RUnit.doubleToStringDec(scale, 3);
 };
