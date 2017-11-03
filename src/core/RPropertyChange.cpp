@@ -83,8 +83,8 @@ RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldVal
     }
 
     else {
-        if (oldValue.type()!=newValue.type()) {
-            qWarning() << "old and new properties have different types:" << oldValue.typeName() << " vs. " << newValue.typeName();
+        if (oldValue.type()!=newValue.type() && oldValue.isValid()) {
+            qWarning() << "old and new property values for property " << propertyTypeId.getPropertyTitle() << " have different types:" << oldValue.typeName() << " vs. " << newValue.typeName();
         }
         this->oldValue = oldValue;
         this->newValue = newValue;
