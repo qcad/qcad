@@ -102,18 +102,20 @@ DimRotated.prototype.escapeEvent = function() {
 
 DimRotated.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
+    var pos = event.getModelPosition();
 
     switch (this.state) {
     case DimRotated.State.SettingPoint1:
-        this.data.setExtensionPoint1(event.getModelPosition());
+        this.autoAdjustScale(pos);
+        this.data.setExtensionPoint1(pos);
         if (!preview) {
-            di.setRelativeZero(event.getModelPosition());
+            di.setRelativeZero(pos);
             this.setState(DimRotated.State.SettingPoint2);
         }
         break;
 
     case DimRotated.State.SettingPoint2:
-        this.data.setExtensionPoint2(event.getModelPosition());
+        this.data.setExtensionPoint2(pos);
 
         // set definition point (dimension line position) to something
         // reasonable for the preview:
@@ -131,13 +133,13 @@ DimRotated.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            di.setRelativeZero(event.getModelPosition());
+            di.setRelativeZero(pos);
             this.setState(DimRotated.State.SettingDimPos);
         }
         break;
 
     case DimRotated.State.SettingDimPos:
-        this.data.setDefinitionPoint(event.getModelPosition());
+        this.data.setDefinitionPoint(pos);
         if (preview) {
             this.updatePreview();
         }
@@ -145,12 +147,11 @@ DimRotated.prototype.pickCoordinate = function(event, preview) {
             var op = this.getOperation(false);
             if (!isNull(op)) {
                 di.applyOperation(op);
-                di.setRelativeZero(event.getModelPosition());
+                di.setRelativeZero(pos);
                 this.setState(DimRotated.State.SettingPoint1);
             }
         }
         break;
-
     }
 };
 

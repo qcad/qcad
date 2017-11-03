@@ -97,6 +97,7 @@ DimDiametric.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case DimDiametric.State.SettingEntity:
+        this.autoAdjustScale(pos);
         var shape = entity.getClosestSimpleShape(pos);
 
         if (isArcShape(shape) ||
