@@ -203,7 +203,7 @@ void RDocument::init() {
 
         // point display:
         docVars->setKnownVariable(RS::PDMODE, RSettings::getIntValue("PointDisplaySettings/Mode", 0));
-        docVars->setKnownVariable(RS::PDSIZE, RSettings::getIntValue("PointDisplaySettings/Size", 0));
+        docVars->setKnownVariable(RS::PDSIZE, RSettings::getDoubleValue("PointDisplaySettings/Size", 0.0));
 
         // dimension properties:
         docVars->setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
