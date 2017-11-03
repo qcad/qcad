@@ -130,7 +130,7 @@ void RDxfServices::fixBlockName(QString& blockName) {
     // fix invalid block names (mainly from QCAD 2):
     if (!blockName.startsWith("*")) {
         QString oldBlockName = blockName;
-        blockName.replace(QRegExp("[<>/\":;?*|,=`\\\\]"), "_");
+        blockName.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
         blockName.replace(QChar(0x0083), "_");
         version2BlockMapping.insert(oldBlockName, blockName);
     }
@@ -139,7 +139,7 @@ void RDxfServices::fixBlockName(QString& blockName) {
 void RDxfServices::fixLayerName(QString& layerName) {
     // fix invalid layer names (mainly from QCAD 2):
     QString oldLayerName = layerName;
-    layerName.replace(QRegExp("[<>/\":;?*|,=`\\\\]"), "_");
+    layerName.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
     layerName.replace(QChar(0x0083), "_");
     version2LayerMapping.insert(oldLayerName, layerName);
 }
