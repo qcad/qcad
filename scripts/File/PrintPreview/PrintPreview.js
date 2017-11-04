@@ -152,7 +152,9 @@ PrintPreview.prototype.beginEvent = function() {
     this.bAdapter = new RBlockListenerAdapter();
     appWin.addBlockListener(this.bAdapter);
     this.bAdapter.blocksUpdated.connect(this, "updateBackgroundTransform");
+    this.bAdapter.currentBlockSet.connect(this, "updateBackgroundTransform");
     this.bAdapter.blocksUpdated.connect(this, "updateBackgroundDecoration");
+    this.bAdapter.currentBlockSet.connect(this, "updateBackgroundDecoration");
 };
 
 /**
