@@ -201,7 +201,7 @@ PrintPreview.prototype.finishEvent = function() {
 
         // needed to update pattern scaling without using drawing scale:
         var di = EAction.getDocumentInterface();
-        if (isNull(di)) {
+        if (!isNull(di)) {
             di.regenerateScenes();
         }
 
