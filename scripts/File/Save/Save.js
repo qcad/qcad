@@ -31,6 +31,7 @@ function Save(guiAction) {
 }
 
 Save.prototype = new File();
+Save.includeBasePath = includeBasePath;
 
 Save.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
@@ -45,7 +46,7 @@ Save.prototype.beginEvent = function() {
     if (fileName === "" || new QFileInfo(fileName).completeBaseName().startsWith("~") ||
         !this.save(fileName, fileVersion, false)) {
 
-        include("scripts/File/SaveAs/SaveAs.js");
+        include(Save.includeBasePath + "../SaveAs/SaveAs.js");
         var saveAsAction = new SaveAs();
         this.getDocumentInterface().queueAction(saveAsAction);
         this.terminate();
