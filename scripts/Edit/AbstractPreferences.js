@@ -316,13 +316,15 @@ AbstractPreferences.prototype.load = function(addOn) {
     }
 
     // check if preferences apply to block:
-    var preferencesScope = "document";
-    if (!isNull(global[className]) && isFunction(global[className].getPreferencesScope)) {
-        preferencesScope = global[className].getPreferencesScope();
-    }
     var store = document;
-    if (preferencesScope==="block") {
-        store = document.queryCurrentBlock();
+    if (!this.appPreferences) {
+        var preferencesScope = "document";
+        if (!isNull(global[className]) && isFunction(global[className].getPreferencesScope)) {
+            preferencesScope = global[className].getPreferencesScope();
+        }
+        if (!isNull(document) && preferencesScope==="block") {
+            store = document.queryCurrentBlock();
+        }
     }
 
     WidgetFactory.restoreState(widget, undefined, undefined, false, store);
@@ -357,17 +359,21 @@ AbstractPreferences.prototype.save = function() {
         }
 
         // check if preferences apply to block:
-        var preferencesScope = "document";
-        if (!isNull(global[className]) && isFunction(global[className].getPreferencesScope)) {
-            preferencesScope = global[className].getPreferencesScope();
-        }
         var store = document;
-        if (preferencesScope==="block") {
-            store = document.queryCurrentBlock();
+        var preferencesScope = "document";
+        if (!this.appPreferences) {
+            if (!isNull(global[className]) && isFunction(global[className].getPreferencesScope)) {
+                preferencesScope = global[className].getPreferencesScope();
+            }
+            if (!isNull(document) && preferencesScope==="block") {
+                store = document.queryCurrentBlock();
+            }
         }
         WidgetFactory.saveState(widget, undefined, store);
-        if (preferencesScope==="block") {
-            transaction.addObject(store);
+        if (!this.appPreferences) {
+            if (preferencesScope==="block") {
+                transaction.addObject(store);
+            }
         }
     }
 
