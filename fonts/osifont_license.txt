@@ -1,0 +1,189 @@
+Hi
+
+This is osifont project. Free technical font. Feel free to use it or even better,
+joint the project. Any questions, suggestions or ideas please send to project admin.
+
+Project admin:     hikikomori82@gmail.com. 
+Project hosted on: http://code.google.com/p/osifont/
+                   https://github.com/hikikomori82/osifont
+Created with:      FontForge, Gimp, Inkscape
+
+Font is distributed under GNU GPL licence version 3 with GPL font exception:
+
+"Linking this font statically or dynamically with other software or
+documents is making a combined work based on this library. Thus, the
+terms and conditions of the GNU General Public License cover the
+whole combination.
+
+As a special exception, the copyright holders of this font give
+you permission to link this library with independent software or
+documents to produce an executable, regardless of the license terms
+of these independent software or documents, and to copy and
+distribute the resulting executable under terms of your choice,
+provided that you also meet, for each linked independent module, the
+terms and conditions of the license of that module. An independent
+software or documents is not derived from or based on this font. If
+you modify this font, you may extend this exception to your version of the
+font, but you are not obligated to do so. If you do not wish to do
+so, delete this exception statement from your version."
+
+
+  FontForge notes and tips
+
+- Recommended bearing (space on the sides of the glyphs):
+
+    100 a 130
+    130 o 130
+    150 b 130
+    150 U 150
+
+    So stright full height (left B, left L, both U) have 150
+    Straight but half height (right b, right a, left d) have 130
+    No straight line (both v, left a, right c) have 100
+
+- Shortcuts
+
+    Ctrl+2 - Curve point  ( )
+    Ctrl+3 - Corner point [ ]
+    Ctrl+4 - Tangent point -->
+    Cltr+Shift+> - goto glyph
+    Ctrl+Shhift+_ - Round to int
+    Ctrl+e - Find problems
+
+- When creating straight lines
+
+    Select 2 points
+    Edit-Make line
+    Ctrl+4
+
+- When you create composed font, e.g. D + ˇ = Ď, sometimes width may be 
+too small, "Ď" is ok, but when you create "Ǐ", it might be too narrow. 
+You can't imediatelly move left/right bearings because they are locked
+(small lock icon appears next to them). You must first unlock it:
+
+  Edit->Unlock reference
+
+- After this you might also need this:
+
+  Element->Round->To int
+  Element->Find problems
+
+- Kerning. When you use Metrics->Auto kern, or Metrics->Kern pair closeup,
+  it wont work. You have to do this:
+
+    Element->Font info->Lookups->Gpos: 
+     - If there are any previous attempts about kerning, erase them
+     - Click button "Add lookup"
+     - In combo "Type" choose "Pair position (kerning)"
+     - In first column "Feature" click on white rectangle, then gray rectangle and choose "Horizontal kerning", type name, e.g. "kern"
+     - Press "ok", dialog will dissapear
+     - Press "add subtable", name it, choose "horizontal", then choose "pairs"
+     - Click blue <new> and type "T" in first column, "e" in second, -350 in thrird column
+     - Add other pairs as needed
+     - Click ok, ok
+     - File->Generate fonts, choose TTF
+
+  Achieved kerning results:
+
+     Gedit 2.30.3 - works
+     Firefox >= 3.6 - works     
+     Chrome 25 - works
+     PHP GD - broken
+
+  Osifont since 2014-03-10 contains 2 special kerning characters "Ȩȩ" (U+0228 U+0229). 
+  They together form "Kon" if kerning is supported, or "Kno" if it is not supported.
+  Firefox is currently the only browser that supports kerning.
+
+- Ligatures: 
+
+    1. Element->Font info->Lookups->GSUB->Add lookup
+        Choose "Ligature substitution" in combo
+        (this needs to be done only once, osifont has it since 2014-03-15)
+        Name it "liga" as maximal name length is 4 characters.
+
+    2. Encoding->Add encoding slots->1
+       (New slot will be added to the very end, edit it)
+    3. Element->Glyph info->Unicode->Glyph name
+       (choose e.h. f_f_i for ffi ligature, I recomend using _ as separator as this will be autodetected later in step 5)
+    4. Element->Glyph info->Unicode->OT Glyph Class
+       (choose "Base lig")	
+    5. Close this dialog by pressing "OK" and reopen it
+       Element->Glyph info->Ligatures-> Click on blue <New Lig...>, choose "liga" table, "f f i" will be automatically added (if you used underscores in name)
+       If you have ligature for non latin glyphs, use e.g. "uni023B uni023B"
+    6. Element->Build->Composite font
+       If you want to change shape, use Edit->Unlink reference or clear it and start from the scratch
+    7. When you are done, close glyph and reopen it. On the left, at [0] position there is "Lig caret", use mouse and move it between 2 characters
+       of glyph. Three glyph ligature like ffi would have 2 of those "Lig caret". Move one between ff and one between fi.
+
+  Osifont since 2014-03-15 contains special ligature made of characters "Ȼȼ" (U+023B U+023C). 
+  They together form ligature "Lon" if ligatures are supported, or "Kno" if they are not supported.
+  Firefox is currently the only browser that supports ligatures.
+
+- Fixing errors and cleaning up glyphs
+
+    When new glyph is done or after you modify glyph, you can
+    do certain tasks to make it more correct.
+
+    1. entire glyph should be rounded to int. Usually it 
+    already is, but sometimes it slips from int to float. Hit
+    Ctrl+A to select all points, then Element->Round->Int
+    or press Ctrl+Shift+_
+
+    2. Make sure the outer outline of the font is clockwise and
+    inner outline is counter clockwise. It it is not, select
+    those olive colored points and change their orientation
+    by Element->Clockwise or Element->Counter clockwise.
+
+    3. Make sure font width is correct and it is centered correctly
+    with just the right amount of space on the sides. This is 
+    called "bearing" and correct values are mentioned above, but
+    there is some room for adjustment, it is better to make it
+    consistent among related glyphs than to blindliy obey some
+    magic numbers.
+
+    4. Run tool "Find problems" (Ctrl+E). In the dialog click 
+    on "Set all" and on "BB" tab:
+
+        - uncheck "Check advance" (because we have variable width font).
+        - uncheck "Check BB above" (esp. for accented glyps because 
+          they all taller than normal glyph)
+
+    Then click "Ok", it should say "No problems found".
+    Otherwise it will tell you what is 
+    wrong and allow you to fix it. Some problems has to be fixed
+    manually. Sometimes it is good to stop and "round to int"
+    again and then continue in finding problems.
+
+    Error: The hint does not control any points
+    Solution: Run autohint again (Ctrl+Shift+H)
+
+    Error: The glyps extend left further than desired
+    Solution: Adjust bearing (step 3). Sometimes, this is
+    not an error, see for example glyph Ħ (Hbar), the bar extends
+    left and right, but capital letter is usually followed by
+    small letter so it will not interfere.
+
+    Error: The selected points are too close to each other.
+    Solution: very often you just accidentaly clicked and added
+    another point next to already existing point (sometimes
+    there is one above other). Zoom in and move them a bit.
+    You can merge them by Edit->Merge (Ctrl+M). Or do it by hand.
+
+    ---------[]---------[]-------- 2 poins
+
+    ---------[]----*----[]-------- add thrid point (add a cornder point)
+
+    ---------[]         []-------- delete it (del)
+
+    --------------------()-------- move first point to second
+
+    --------------------[]-------- restore correct point type (e.g. corner point in this case, Point->Corner (Ctrl+3))
+
+    5. Run autohint (Ctrl+Shift+H), then run "Find problems" again.
+    Sometimes hints are too close to point that are not related to that
+    hint, this is generally not a problem and you can ignore it.
+
+    6. Make sure tangent points are where they should be (e.g. 
+    look at the top of the letter T). Convert those points to 
+    tangent "Point->Tangent" (Ctrl+4). Usefull tools for this
+    is sometimes selecting two points and "Point->Make line".
