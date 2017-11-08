@@ -141,10 +141,13 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
                 continue;
             }
 
+            RAttributeDefinitionData ad = attDef->getData();
+            ad.setDocument(&dest);
+            ad.setBlockId(RBlock::INVALID_ID);
             QSharedPointer<RAttributeEntity> att(
                 new RAttributeEntity(
                     &dest,
-                    RAttributeData(attDef->getData(), REntity::INVALID_ID, attDef->getTag())
+                    RAttributeData(ad, REntity::INVALID_ID, attDef->getTag())
                 )
             );
             att->scale(unitScale);
