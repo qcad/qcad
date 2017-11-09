@@ -387,7 +387,7 @@ bool REntity::isVisible() const {
 
 //    qDebug() << "entity: ";
 //    dump();
-//    qDebug() << "layer: " << doc->getLayerName(layerId);
+//    qDebug() << "layer: " << layer->getName();
 //    qDebug() << "model space: " << doc->getModelSpaceBlockId();
 //    qDebug() << "block ID: " << getBlockId();
 //    qDebug() << "layer 0 compat: " << RSettings::isLayer0CompatibilityOn();
