@@ -126,11 +126,11 @@ public:
     }
 
     double getScale() const {
-        return scale;
+        return scaleFactor;
     }
 
     void setScale(double s) {
-        scale = s;
+        scaleFactor = s;
     }
 
     double getRotation() const {
@@ -169,6 +169,8 @@ public:
 
     QList<RLine> getEdges() const;
 
+    virtual bool scale(const RVector& scaleFactors, const RVector& center);
+
 protected:
     void setStatusFlag(Status s, bool on) {
         if (on) {
@@ -187,7 +189,7 @@ private:
     int status;
     double width;
     double height;
-    double scale;
+    double scaleFactor;
     double rotation;
 
     RVector viewCenter;

@@ -24,7 +24,7 @@ RViewportData::RViewportData()
       status(0),
       width(0.0),
       height(0.0),
-      scale(1.0),
+      scaleFactor(1.0),
       rotation(0.0),
       overall(false) {
 }
@@ -44,7 +44,7 @@ RViewportData::RViewportData(RDocument* document, const RViewportData& data)
 
 //    center(center),
 //    width(width), height(height),
-//    scale(scale),
+//    scaleFactor(scale),
 //    viewCenter(viewCenterPoint),
 //    viewTarget(viewTargetPoint) {
 
@@ -61,8 +61,8 @@ RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
  */
 RVector RViewportData::getViewOffset() const {
     RVector offset(0,0);
-    offset -= viewCenter * scale;
-    offset -= viewTarget * scale;
+    offset -= viewCenter * scaleFactor;
+    offset -= viewTarget * scaleFactor;
     return position + offset;
 }
 
@@ -93,7 +93,7 @@ bool RViewportData::moveReferencePoint(const RVector& referencePoint,
         ret = true;
     }
     else if (referencePoint.equalsFuzzy(position + RVector(0,height/4))) {
-        viewCenter -= offset/scale;
+        viewCenter -= offset/scaleFactor;
         ret = true;
     }
     else if (referencePoint.equalsFuzzy(position + RVector(width/2, height/2))) {
@@ -170,7 +170,7 @@ QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bo
     }
     RVector::rotateList(corners, -rotation, position);
     RVector::moveList(corners, -getViewOffset());
-    RVector::scaleList(corners, 1/scale);
+    RVector::scaleList(corners, 1/scaleFactor);
     queryBoxNeutral = RBox(RVector::getMinimum(corners), RVector::getMaximum(corners));
 
     ids = document->queryIntersectedEntitiesXY(queryBoxNeutral, true, true, document->getModelSpaceBlockId());
@@ -187,7 +187,7 @@ QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bo
             continue;
         }
 
-        entity->scale(scale);
+        entity->scale(scaleFactor);
         entity->move(getViewOffset());
 
         entity->rotate(rotation, position);
@@ -208,4 +208,17 @@ QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bo
 QList<RLine> RViewportData::getEdges() const {
     RBox viewportBox(position, width, height);
     return viewportBox.getLines2d();
+}
+
+bool RViewportData::scale(const RVector& scaleFactors, const RVector& center) {
+    width*=scaleFactors.x;
+    height*=scaleFactors.y;
+    scaleFactor*=scaleFactors.x;
+
+    position.scale(scaleFactors, center);
+
+    return true;
+
+    // TODO: crashes:
+    //return REntityData::scale(scaleFactors, center);
 }

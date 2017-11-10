@@ -95,7 +95,7 @@ bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.position.z, value, PropertyCenterZ == propertyTypeId);
     ret = ret || RObject::setMember(data.width, value, PropertyWidth == propertyTypeId);
     ret = ret || RObject::setMember(data.height, value, PropertyHeight == propertyTypeId);
-    ret = ret || RObject::setMember(data.scale, value, PropertyScale == propertyTypeId);
+    ret = ret || RObject::setMember(data.scaleFactor, value, PropertyScale == propertyTypeId);
     ret = ret || RObject::setMember(data.rotation, value, PropertyRotation == propertyTypeId);
     ret = ret || RObject::setMember(data.viewCenter.x, value, PropertyViewCenterX == propertyTypeId);
     ret = ret || RObject::setMember(data.viewCenter.y, value, PropertyViewCenterY == propertyTypeId);
@@ -126,7 +126,7 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
     } else if (propertyTypeId == PropertyHeight) {
         return qMakePair(QVariant(data.height), RPropertyAttributes());
     } else if (propertyTypeId == PropertyScale) {
-        return qMakePair(QVariant(data.scale), RPropertyAttributes());
+        return qMakePair(QVariant(data.scaleFactor), RPropertyAttributes());
     } else if (propertyTypeId == PropertyRotation) {
         return qMakePair(QVariant(data.rotation), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyOn) {
@@ -212,7 +212,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             doc->getModelSpaceBlockId(),
             //data.position + offset,
             offset,
-            RVector(data.scale, data.scale),
+            RVector(data.scaleFactor, data.scaleFactor),
             0.0
         )
     );
@@ -249,7 +249,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             continue;
         }
 
-        entity->scaleVisualProperties(data.scale);
+        entity->scaleVisualProperties(data.scaleFactor);
 
         e.exportEntity(*entity, preview, true);
 
