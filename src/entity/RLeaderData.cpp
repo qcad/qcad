@@ -77,7 +77,8 @@ void RLeaderData::scaleVisualProperties(double scaleFactor) {
         setDimScaleOverride(dimScaleOverride * scaleFactor);
     }
     else {
-        setDimScaleOverride(scaleFactor);
+        double s = getDimScale();
+        setDimScaleOverride(scaleFactor * s);
     }
 }
 

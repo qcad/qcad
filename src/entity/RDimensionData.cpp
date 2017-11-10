@@ -204,9 +204,10 @@ void RDimensionData::scaleVisualProperties(double scaleFactor) {
         setDimScale(dimScaleOverride * scaleFactor);
     }
     else {
-        setDimScale(scaleFactor);
+        double s = getDimScale();
+        setDimScale(scaleFactor * s);
     }
-    if (!RMath::fuzzyCompare(scaleFactor, 0.0)) {
+    if (!RMath::fuzzyCompare(scaleFactor, 0.0) && !RMath::fuzzyCompare(scaleFactor, 1.0)) {
         setLinearFactor(linearFactor / scaleFactor);
     }
 }
