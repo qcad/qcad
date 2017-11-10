@@ -656,9 +656,8 @@ void RMainWindow::notifyBlockListeners(RDocumentInterface* documentInterface) {
 }
 
 void RMainWindow::notifyBlockListenersCurrentBlock(RDocumentInterface* documentInterface) {
-    QList<RBlockListener*>::iterator it;
-    for (it = blockListeners.begin(); it != blockListeners.end(); ++it) {
-        (*it)->setCurrentBlock(documentInterface);
+    for (int i=0; i<blockListeners.length(); i++) {
+        blockListeners[i]->setCurrentBlock(documentInterface);
     }
 }
 
