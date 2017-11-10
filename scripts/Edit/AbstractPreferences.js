@@ -320,7 +320,9 @@ AbstractPreferences.prototype.load = function(addOn) {
     if (!this.appPreferences) {
         var preferencesScope = "document";
         if (!isNull(global[className]) && isFunction(global[className].getPreferencesScope)) {
-            preferencesScope = global[className].getPreferencesScope();
+            if (document.getCurrentBlockId()!==document.getModelSpaceBlockId()) {
+                preferencesScope = global[className].getPreferencesScope();
+            }
         }
         if (!isNull(document) && preferencesScope==="block") {
             store = document.queryCurrentBlock();
@@ -363,7 +365,9 @@ AbstractPreferences.prototype.save = function() {
         var preferencesScope = "document";
         if (!this.appPreferences) {
             if (!isNull(global[className]) && isFunction(global[className].getPreferencesScope)) {
-                preferencesScope = global[className].getPreferencesScope();
+                if (document.getCurrentBlockId()!==document.getModelSpaceBlockId()) {
+                    preferencesScope = global[className].getPreferencesScope();
+                }
             }
             if (!isNull(document) && preferencesScope==="block") {
                 store = document.queryCurrentBlock();
