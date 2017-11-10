@@ -121,6 +121,16 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
         if (isBlockReferenceEntity(entity)) {
             var p = entity.getPosition();
             entity.setPosition(p.operator_multiply(factor));
+        } else if (isViewportEntity(entity)) {
+            var s = entity.getScale();
+            entity.scale(factor);
+            entity.setScale(s);
+            var vc = entity.getViewCenter();
+            vc.scale(factor);
+            entity.setViewCenter(vc);
+            var tc = entity.getViewTarget();
+            tc.scale(factor);
+            entity.setViewTarget(tc);
         } else if (isDimensionEntity(entity)) {
             var s = entity.getDimScale(false);
             entity.scale(factor);
