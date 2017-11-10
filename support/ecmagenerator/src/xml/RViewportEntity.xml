@@ -222,6 +222,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
+    <method name="setPosition" cppName="setPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
