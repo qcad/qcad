@@ -194,6 +194,10 @@ public:
         return data.getPosition();
     }
 
+    void setPosition(const RVector& p) {
+        data.setPosition(p);
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 
