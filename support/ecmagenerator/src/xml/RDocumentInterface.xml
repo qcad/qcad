@@ -98,6 +98,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getScriptHandler" cppName="getScriptHandler"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RScriptHandler *" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="extension" isConst="true" />
+      </variant>
+    </method>
     <method name="isScriptRunning" cppName="isScriptRunning"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -5,6 +5,126 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RScriptHandler"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="true"
-  isScriptable="false" />
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="getSupportedFileExtensions"
+    cppName="getSupportedFileExtensions" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QString &gt;"
+      isPureVirtual="true" />
+    </method>
+    <method name="init" cppName="init" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="autostartFile" hasDefault="true"
+        default="QString :: null" isConst="true" />
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="arguments" hasDefault="true"
+        default="RDEFAULT_QSTRINGLIST" isConst="true" />
+      </variant>
+    </method>
+    <method name="doScript" cppName="doScript" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString"
+        name="scriptFile" isConst="true" />
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="arguments" hasDefault="true"
+        default="RDEFAULT_QSTRINGLIST" isConst="true" />
+      </variant>
+    </method>
+    <method name="evalScript" cppName="evalScript"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="script"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" hasDefault="true"
+        default="RDEFAULT_QSTRING" isConst="true" />
+      </variant>
+    </method>
+    <method name="eval" cppName="eval" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString" name="script"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" hasDefault="true"
+        default="RDEFAULT_QSTRING" isConst="true" />
+      </variant>
+    </method>
+    <method name="evalGlobal" cppName="evalGlobal"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString" name="script"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="fileName" hasDefault="true"
+        default="RDEFAULT_QSTRING" isConst="true" />
+      </variant>
+    </method>
+    <method name="createFileImporter" cppName="createFileImporter"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RFileImporterAdapter *"
+      isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString"
+        name="className" isConst="true" />
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="document" isConst="false" />
+      </variant>
+    </method>
+    <method name="isRunning" cppName="isRunning" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="true" />
+    </method>
+    <method name="abort" cppName="abort" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+    <method name="hasUncaughtExceptions"
+    cppName="hasUncaughtExceptions" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="true" />
+    </method>
+    <method name="triggerActionApplicationLevel"
+    cppName="triggerActionApplicationLevel" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="scriptFile" isConst="true" />
+        <arg type="RGuiAction *" typeName="RGuiAction *"
+        name="guiAction" hasDefault="true" default="NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="createActionDocumentLevel"
+    cppName="createActionDocumentLevel" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString"
+        name="scriptFile" isConst="true" />
+        <arg type="RGuiAction *" typeName="RGuiAction *"
+        name="guiAction" isConst="false" />
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        hasDefault="true" default="NULL" isConst="false" />
+      </variant>
+    </method>
+    <method name="createActionApplicationLevel"
+    cppName="createActionApplicationLevel" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString"
+        name="scriptFile" isConst="true" />
+        <arg type="RGuiAction *" typeName="RGuiAction *"
+        name="guiAction" isConst="false" />
+      </variant>
+    </method>
+  </class>
 </unit>

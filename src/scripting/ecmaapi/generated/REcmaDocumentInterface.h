@@ -79,6 +79,9 @@
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getScriptHandler
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isScriptRunning
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

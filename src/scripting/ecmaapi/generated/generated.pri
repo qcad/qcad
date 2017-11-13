@@ -199,6 +199,7 @@ HEADERS += \
     $$PWD/REcmaS.h \
     $$PWD/REcmaScaleSelectionOperation.h \
     $$PWD/REcmaScriptAction.h \
+    $$PWD/REcmaScriptHandler.h \
     $$PWD/REcmaSelectionChangedEvent.h \
     $$PWD/REcmaSelectionListener.h \
     $$PWD/REcmaSelectionListenerAdapter.h \
@@ -556,6 +557,7 @@ SOURCES += \
     $$PWD/REcmaS.cpp \
     $$PWD/REcmaScaleSelectionOperation.cpp \
     $$PWD/REcmaScriptAction.cpp \
+    $$PWD/REcmaScriptHandler.cpp \
     $$PWD/REcmaSelectionChangedEvent.cpp \
     $$PWD/REcmaSelectionListener.cpp \
     $$PWD/REcmaSelectionListenerAdapter.cpp \

@@ -36,10 +36,19 @@
 
 <class_decl>class <name>RFileImporterAdapter</name>;</class_decl>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSTRING</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSTRING</name> <name>QString</name>()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSTRINGLIST</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSTRINGLIST</name> <name>QStringList</name>()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 
 <comment type="block">/**
  * Abstract base class for all script handlers.
  *
+ * \scriptable
  * \ingroup core
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RScriptHandler</name> <block>{<private type="default">
@@ -56,22 +65,26 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getSupportedFileExtensions</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>init</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>autostartFile</name> = <name><name>QString</name>::<name>null</name></name></expr></argument>, <argument><expr><name>const</name> <name>QStringList</name>&amp; <name>arguments</name> = <call><name>QStringList</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>init</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>autostartFile</name> =<init> <expr><name><name>QString</name>::<name>null</name></name></expr></init></decl></param>, <param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>arguments</name> =<init> <expr><name>RDEFAULT_QSTRINGLIST</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Runs the given script file.
      */</comment>
-    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>doScript</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>scriptFile</name></expr></argument>, <argument><expr><name>const</name> <name>QStringList</name>&amp; <name>arguments</name> = <call><name>QStringList</name><argument_list>()</argument_list></call></expr></argument>)</argument_list> =<init> <expr>0</expr></init></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>doScript</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>, <param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>arguments</name> =<init> <expr><name>RDEFAULT_QSTRINGLIST</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>QVariant</name></type> <name>evalScript</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>script</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>eval</name><parameter_list>(<param><decl><type><name>script</name></type></decl></param>, <param><decl><type><name>fileName</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
 
     <comment type="block">/**
      * Evaluates the given script code.
      */</comment>
-    <decl_stmt><decl><type><name>virtual</name> <name>QVariant</name></type> <name>eval</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>script</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list> =<init> <expr>0</expr></init></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>QVariant</name></type> <name>eval</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>script</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * Evaluates the given script code in a global context.
      */</comment>
-    <decl_stmt><decl><type><name>virtual</name> <name>QVariant</name></type> <name>evalGlobal</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>script</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list> =<init> <expr>0</expr></init></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>QVariant</name></type> <name>evalGlobal</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>script</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * Creates a file importer from the given class name and for the given document.
@@ -88,24 +101,20 @@
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasUncaughtExceptions</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <function_decl><type><name>static</name> <name>void</name></type> <name>triggerActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
-            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>triggerActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>, <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Creates a script based action for this script handler.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>void</name></type>
-            <name>createActionDocumentLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
-                    <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>,
-                    <param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>createActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
-            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>createActionDocumentLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>, <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>, <param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>createActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>, <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * Creates a new document level action by instantiating class T and attaching the
      * action to the document interface of the currently active document.
      * Document level actions typically effect only the current document.
      * Document level actions stay active until they are explicitly finished.
+     * \nonscriptable
      */</comment>
     <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
     <function><type><name>void</name></type> <name>createActionDocumentLevelT</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
@@ -129,6 +138,7 @@
      * be attached to a document interface or anywhere else, so the action is instantiated,
      * \ref beginEvent is called and then the action is terminated immediately
      * (\ref finishEvent is called).
+     * \nonscriptable
      */</comment>
     <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
     <function><type><name>void</name></type> <name>createActionApplicationLevelT</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>, <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>)</parameter_list> <block>{
@@ -140,6 +150,8 @@
 </public><protected>protected:
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>autostartScriptName</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RScriptHandler*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>
