@@ -164,7 +164,44 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
         view.zoomTo(new RBox(c1, c2));
     }
 
+    // convert all print offsets in all blocks:
+    // convert all stored block zoom factors / offsets:
+    var views = EAction.getGraphicsViews(di);
+    var blockIds = doc.queryAllBlocks();
+    for (var k=0; k<blockIds.length; k++) {
+        var blockId = blockIds[k];
+        var block = doc.queryBlock(blockId);
+        var offsetX = block.getCustomProperty("QCAD", "PageSettings/OffsetX", undefined);
+        var offsetY = block.getCustomProperty("QCAD", "PageSettings/OffsetY", undefined);
+
+        if (!isNull(offsetX)) {
+            block.setCustomProperty("QCAD", "PageSettings/OffsetX", offsetX*factor);
+            block.setCustomProperty("QCAD", "PageSettings/OffsetY", offsetY*factor);
+        }
+        op.addObject(block);
+
+        for (i=0; i<views.length; i++) {
+            view = views[i];
+
+            if (!isFunction(view.property)) {
+                continue;
+            }
+
+            var blockZoom = view.property("blockZoom");
+            if (isNull(blockZoom)) {
+                continue;
+            }
+
+            blockZoom[blockId] = [view.getFactor() * factor, view.getOffset().operator_multiply(factor)];
+            view.setProperty("blockZoom", blockZoom);
+        }
+    }
+
     di.applyOperation(op);
+
+    //var offset = Print.getOffset(doc);
+    //offset.scale(factor);
+    //Print.setOffset(doc, offset);
 
     doc.rebuildSpatialIndex();
 
