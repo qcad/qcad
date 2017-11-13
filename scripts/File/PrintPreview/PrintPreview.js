@@ -52,11 +52,11 @@ function PrintPreview(guiAction) {
 PrintPreview.prototype = new DefaultAction();
 PrintPreview.includeBasePath = includeBasePath;
 
-if (typeof(printPreviewRunning)==="undefined") {
-    printPreviewRunning = false;
+if (typeof(global.printPreviewRunning)==="undefined") {
+    global.printPreviewRunning = false;
 }
-if (typeof(printPreviewInstance)==="undefined") {
-    printPreviewInstance = undefined;
+if (typeof(global.printPreviewInstance)==="undefined") {
+    global.printPreviewInstance = undefined;
 }
 
 /**
@@ -67,19 +67,33 @@ PrintPreview.State = {
 };
 
 PrintPreview.isRunning = function() {
-    return printPreviewRunning;
+    return global.printPreviewRunning;
 };
 
 PrintPreview.getInstance = function() {
-    return printPreviewInstance;
+    return global.printPreviewInstance;
+};
+
+PrintPreview.setRunning = function(v) {
+    global.printPreviewRunning = v;
+};
+
+PrintPreview.setInstance = function(inst) {
+    global.printPreviewInstance = inst;
+};
+
+PrintPreview.terminate = function() {
+    var inst = PrintPreview.getInstance();
+    if (!isNull(inst)) {
+        inst.terminate();
+    }
 };
 
 PrintPreview.prototype.beginEvent = function() {
+    var di = this.getDocumentInterface();
     if (PrintPreview.isRunning()) {
         // allows use of print preview button to close print preview:
-        if (!isNull(printPreviewInstance)) {
-            printPreviewInstance.terminate();
-        }
+        PrintPreview.terminate();
         if (!isNull(this.guiAction)) {
             this.guiAction.setChecked(false);
         }
@@ -97,8 +111,8 @@ PrintPreview.prototype.beginEvent = function() {
     }
 
     // globals:
-    printPreviewRunning = true;
-    printPreviewInstance = this;
+    PrintPreview.setRunning(true);
+    PrintPreview.setInstance(this);
 
     var mdiChild = EAction.getMdiChild();
     this.view = mdiChild.getLastKnownViewWithFocus();
@@ -121,7 +135,6 @@ PrintPreview.prototype.beginEvent = function() {
         }
 
         // needed to update pattern scaling according to drawing scale:
-        var di = EAction.getDocumentInterface();
         di.regenerateScenes();
     }
 
@@ -184,6 +197,7 @@ PrintPreview.prototype.suspendEvent = function() {
 
 PrintPreview.prototype.finishEvent = function() {
     DefaultAction.prototype.finishEvent.call(this);
+    var di = this.getDocumentInterface();
 
     if (!isNull(this.view)) {
         this.view.setPrintPreview(false);
@@ -200,7 +214,6 @@ PrintPreview.prototype.finishEvent = function() {
         }
 
         // needed to update pattern scaling without using drawing scale:
-        var di = EAction.getDocumentInterface();
         if (!isNull(di)) {
             di.regenerateScenes();
         }
@@ -209,15 +222,15 @@ PrintPreview.prototype.finishEvent = function() {
         action.triggered.disconnect(this, "updateBackgroundDecoration");
     }
 
-    printPreviewRunning = false;
-    printPreviewInstance = undefined;
+    PrintPreview.setRunning(false);
+    PrintPreview.setInstance(undefined);
 
     if (this.saveView===true) {
         if (!isNull(this.savedScale)) {
-            Print.setScale(this.getDocument(), this.savedScale);
+            Print.setScale(di.getDocument(), this.savedScale);
         }
         if (!isNull(this.savedOffset)) {
-            Print.setOffset(this.getDocument(), this.savedOffset);
+            Print.setOffset(di.getDocument(), this.savedOffset);
         }
     }
 
