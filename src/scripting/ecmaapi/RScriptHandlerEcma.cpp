@@ -231,6 +231,7 @@
 #include "REcmaS.h"
 #include "REcmaScaleSelectionOperation.h"
 #include "REcmaScriptAction.h"
+#include "REcmaScriptHandler.h"
 #include "REcmaSelectionListener.h"
 #include "REcmaSelectionListenerAdapter.h"
 #include "REcmaSettings.h"
@@ -668,6 +669,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaActionAdapter::initEcma(*engine);
     REcmaNavigationAction::initEcma(*engine);
     REcmaScriptAction::initEcma(*engine);
+
+    REcmaScriptHandler::initEcma(*engine);
 
     REcmaEventFilter::initEcma(*engine);
     REcmaEventHandler::initEcma(*engine);
