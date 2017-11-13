@@ -87,18 +87,13 @@ public:
 
     virtual bool hasUncaughtExceptions() = 0;
 
-    static void triggerActionApplicationLevel(const QString& scriptFile,
-            RGuiAction* guiAction = NULL);
+    static void triggerActionApplicationLevel(const QString& scriptFile, RGuiAction* guiAction = NULL);
 
     /**
      * Creates a script based action for this script handler.
      */
-    virtual void
-            createActionDocumentLevel(const QString& scriptFile,
-                    RGuiAction* guiAction,
-                    RDocumentInterface* documentInterface = NULL) = 0;
-    virtual void createActionApplicationLevel(const QString& scriptFile,
-            RGuiAction* guiAction) = 0;
+    virtual void createActionDocumentLevel(const QString& scriptFile, RGuiAction* guiAction, RDocumentInterface* documentInterface = NULL) = 0;
+    virtual void createActionApplicationLevel(const QString& scriptFile, RGuiAction* guiAction) = 0;
 
     /**
      * Creates a new document level action by instantiating class T and attaching the
