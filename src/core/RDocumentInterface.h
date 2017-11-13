@@ -134,9 +134,6 @@ public:
 
     void clear();
 
-    /**
-     * \nonscriptable
-     */
     RScriptHandler* getScriptHandler(const QString& extension);
     bool isScriptRunning();
 

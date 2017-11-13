@@ -35,10 +35,19 @@
 
 class RFileImporterAdapter;
 
+#ifndef RDEFAULT_QSTRING
+#define RDEFAULT_QSTRING QString()
+#endif
+
+#ifndef RDEFAULT_QSTRINGLIST
+#define RDEFAULT_QSTRINGLIST QStringList()
+#endif
+
 
 /**
  * Abstract base class for all script handlers.
  *
+ * \scriptable
  * \ingroup core
  */
 class QCADCORE_EXPORT RScriptHandler {
@@ -55,22 +64,22 @@ public:
      */
     virtual QList<QString> getSupportedFileExtensions() = 0;
 
-    virtual void init(const QString& autostartFile = QString::null, const QStringList& arguments = QStringList());
+    virtual void init(const QString& autostartFile = QString::null, const QStringList& arguments = RDEFAULT_QSTRINGLIST);
 
     /**
      * Runs the given script file.
      */
-    virtual void doScript(const QString& scriptFile, const QStringList& arguments = QStringList()) = 0;
+    virtual void doScript(const QString& scriptFile, const QStringList& arguments = RDEFAULT_QSTRINGLIST) = 0;
 
     /**
      * Evaluates the given script code.
      */
-    virtual QVariant eval(const QString& script, const QString& fileName = QString()) = 0;
+    virtual QVariant eval(const QString& script, const QString& fileName = RDEFAULT_QSTRING) = 0;
 
     /**
      * Evaluates the given script code in a global context.
      */
-    virtual QVariant evalGlobal(const QString& script, const QString& fileName = QString()) = 0;
+    virtual QVariant evalGlobal(const QString& script, const QString& fileName = RDEFAULT_QSTRING) = 0;
 
     /**
      * Creates a file importer from the given class name and for the given document.
@@ -100,6 +109,7 @@ public:
      * action to the document interface of the currently active document.
      * Document level actions typically effect only the current document.
      * Document level actions stay active until they are explicitly finished.
+     * \nonscriptable
      */
     template<class T>
     void createActionDocumentLevelT(const QString& scriptFile,
@@ -123,6 +133,7 @@ public:
      * be attached to a document interface or anywhere else, so the action is instantiated,
      * \ref beginEvent is called and then the action is terminated immediately
      * (\ref finishEvent is called).
+     * \nonscriptable
      */
     template<class T>
     void createActionApplicationLevelT(const QString& scriptFile, RGuiAction* guiAction) {
@@ -134,5 +145,7 @@ public:
 protected:
     static QString autostartScriptName;
 };
+
+Q_DECLARE_METATYPE(RScriptHandler*)
 
 #endif
