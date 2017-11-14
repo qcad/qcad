@@ -4,7 +4,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+168"/>
+        <location filename="../PrintPreview.js" line="+183"/>
         <source>Drag to move paper</source>
         <translation>用紙を移動するためドラッグしてください</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+402"/>
+        <location line="+404"/>
         <source>Export to PDF</source>
         <translation>PDFにエクスポート</translation>
     </message>

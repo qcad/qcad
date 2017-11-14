@@ -38,7 +38,7 @@ Tipo de línea:</translatorcomment>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+710"/>
+        <location filename="../PropertyEditor.js" line="+711"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -73,7 +73,7 @@ Tipo de línea:</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1130"/>
+        <location line="-1131"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -82,7 +82,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+151"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--

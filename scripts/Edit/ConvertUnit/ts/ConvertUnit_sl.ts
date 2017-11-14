@@ -14,7 +14,7 @@
         <translation>Izbrana enota &apos;%1&apos; - Nič ni za naredit</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+119"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Pretvori risbo iz %1 v %2 </translation>
     </message>

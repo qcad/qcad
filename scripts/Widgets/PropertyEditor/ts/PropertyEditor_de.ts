@@ -26,17 +26,17 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1323"/>
+        <location filename="../PropertyEditor.js" line="+1324"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1130"/>
+        <location line="-1131"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+151"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>

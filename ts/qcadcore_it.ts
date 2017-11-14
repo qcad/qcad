@@ -515,7 +515,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
-        <location filename="../src/core/RObject.cpp" line="+63"/>
+        <location filename="../src/core/RObject.cpp" line="+61"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -541,7 +541,7 @@ Lista Layer</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+91"/>
+        <location filename="../src/core/RLayer.cpp" line="+92"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_it.ts--

@@ -14,12 +14,12 @@
         <translation>Nastavenia Kreslenia</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+300"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť nastavenia</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+45"/>
         <source>Restart required</source>
         <translation>Vyžaduje reštart</translation>
     </message>

@@ -35,13 +35,13 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1323"/>
+        <location filename="../PropertyEditor.js" line="+1324"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1130"/>
+        <location line="-1131"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -50,7 +50,7 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+151"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nenhuma Seleção</translation>

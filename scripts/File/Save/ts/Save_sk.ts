@@ -4,7 +4,7 @@
 <context>
     <name>Save</name>
     <message>
-        <location filename="../Save.js" line="+77"/>
+        <location filename="../Save.js" line="+78"/>
         <source>Overwrite File?</source>
         <translation>Prepísať súbor?</translation>
     </message>
@@ -26,7 +26,7 @@
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vlastné vlastnosti nebudú uložené.</translation>
     </message>
     <message>
         <location line="+1"/>

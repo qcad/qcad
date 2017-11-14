@@ -14,12 +14,12 @@
         <translation>Tekenings Voorkeursinstellingen</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+300"/>
         <source>Apply preferences</source>
         <translation>Voorkeursinstellingen toepassen</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+45"/>
         <source>Restart required</source>
         <translation>Herstart nodig</translation>
     </message>

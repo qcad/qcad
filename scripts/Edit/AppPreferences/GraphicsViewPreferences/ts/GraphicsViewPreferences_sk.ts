@@ -76,7 +76,7 @@
     <message>
         <location line="+39"/>
         <source>Disable for printing</source>
-        <translation type="unfinished"></translation>
+        <translation>Zakázať tlač</translation>
     </message>
     <message>
         <location line="+10"/>

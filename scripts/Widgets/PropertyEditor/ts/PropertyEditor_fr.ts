@@ -31,7 +31,7 @@
         <translation type="vanished">Géométrie</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+394"/>
+        <location filename="../PropertyEditor.js" line="+395"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1130"/>
+        <location line="-1131"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -95,7 +95,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation> :</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+151"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aucune sélection</translation>

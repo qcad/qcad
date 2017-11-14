@@ -54,7 +54,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+70"/>
         <source>Dimension Tools</source>
         <translation>尺寸工具</translation>
     </message>
@@ -102,6 +102,11 @@
         <location line="+13"/>
         <source>Drawing Scale</source>
         <translation>绘图的显示比例</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Auto</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

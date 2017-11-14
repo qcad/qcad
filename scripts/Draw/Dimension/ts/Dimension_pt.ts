@@ -70,7 +70,7 @@ Delta Y</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+70"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas de Dimensão</translation>
@@ -137,6 +137,11 @@ Tolerância Inferior</translatorcomment>
         <location line="+13"/>
         <source>Drawing Scale</source>
         <translation>Escala de Desenho</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Auto</source>
+        <translation>Auto</translation>
     </message>
 </context>
 </TS>

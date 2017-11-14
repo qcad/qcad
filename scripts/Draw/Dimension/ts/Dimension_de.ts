@@ -58,7 +58,7 @@
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+70"/>
         <source>Dimension Tools</source>
         <translation>Bemassungswerkzeuge</translation>
     </message>
@@ -106,6 +106,11 @@
         <location line="+13"/>
         <source>Drawing Scale</source>
         <translation>Zeichnungsskalierung</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Auto</source>
+        <translation>Auto</translation>
     </message>
 </context>
 </TS>

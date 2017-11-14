@@ -32,17 +32,17 @@
         <translation>Zobrazenie vlastností aktuálneho bloku a aktuálnej vrstvy</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1323"/>
+        <location filename="../PropertyEditor.js" line="+1324"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1130"/>
+        <location line="-1131"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+151"/>
         <source>No Selection</source>
         <translation>Nič nie je vybraté</translation>
     </message>

@@ -54,7 +54,7 @@
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+70"/>
         <source>Dimension Tools</source>
         <translation>Bematinggereedschap</translation>
     </message>
@@ -102,6 +102,11 @@
         <location line="+13"/>
         <source>Drawing Scale</source>
         <translation>Tekenschaal</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Auto</source>
+        <translation>Auto</translation>
     </message>
 </context>
 </TS>

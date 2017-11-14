@@ -14,12 +14,12 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+296"/>
+        <location line="+300"/>
         <source>Apply preferences</source>
         <translation>Uveljavi nastavitve</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+45"/>
         <source>Restart required</source>
         <translation>Potreben je ponovni zagon</translation>
     </message>

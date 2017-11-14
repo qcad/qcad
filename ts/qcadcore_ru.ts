@@ -346,7 +346,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
-        <location filename="../src/core/RObject.cpp" line="+63"/>
+        <location filename="../src/core/RObject.cpp" line="+61"/>
         <source>Type</source>
         <translation>Тип</translation>
     </message>
@@ -362,7 +362,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+91"/>
+        <location filename="../src/core/RLayer.cpp" line="+92"/>
         <source>Linetype</source>
         <translation>Тип линии</translation>
     </message>

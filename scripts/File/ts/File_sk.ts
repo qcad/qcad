@@ -37,7 +37,7 @@
     <message>
         <location line="+20"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Všetky súbory</translation>
     </message>
 </context>
 </TS>

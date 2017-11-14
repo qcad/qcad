@@ -4,7 +4,7 @@
 <context>
     <name>Save</name>
     <message>
-        <location filename="../Save.js" line="+78"/>
+        <location filename="../Save.js" line="+79"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translation>Die Datei &apos;%1&apos; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
     </message>

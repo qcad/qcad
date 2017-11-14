@@ -36,7 +36,7 @@
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zobraziť typy</translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+32"/>

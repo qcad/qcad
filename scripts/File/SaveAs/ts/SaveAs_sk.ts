@@ -44,7 +44,7 @@
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvoriť/Uložiť</translation>
     </message>
     <message>
         <location line="+25"/>

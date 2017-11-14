@@ -346,7 +346,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
-        <location filename="../src/core/RObject.cpp" line="+63"/>
+        <location filename="../src/core/RObject.cpp" line="+61"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -362,7 +362,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+91"/>
+        <location filename="../src/core/RLayer.cpp" line="+92"/>
         <source>Linetype</source>
         <translation>Typ čiary</translation>
     </message>
@@ -592,7 +592,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished"></translation>
+        <translation>Zvinuté</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>

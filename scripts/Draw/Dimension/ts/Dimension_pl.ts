@@ -68,7 +68,7 @@ Przełącz znak średnicy
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+70"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia wymiarowe</translation>
@@ -135,6 +135,11 @@ Dolna tolerancja</translatorcomment>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
