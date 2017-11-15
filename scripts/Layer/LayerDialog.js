@@ -150,8 +150,7 @@ LayerDialog.prototype.show = function() {
     }
     //this.dialog.setAttribute(Qt.WA_DeleteOnClose);
     //this.dialog.close();
-    var layer = new RLayer(this.document, text, false, false,
-            clr, ltId, lw);
+    var layer = new RLayer(this.document, text, false, false, clr, ltId, lw);
     this.initLayer(this.dialog, layer);
     this.dialog.destroy();
     EAction.activateMainWindow();
