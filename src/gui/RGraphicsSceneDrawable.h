@@ -39,6 +39,12 @@ public:
         Text
     };
 
+    enum Mode {
+        NoPlot = 0x0001                //!< not plotted (from not plottable layers)
+    };
+    Q_DECLARE_FLAGS(Modes, Mode)
+
+public:
     RGraphicsSceneDrawable() : type(Invalid), painterPath(NULL), image(NULL), text(NULL) {}
     RGraphicsSceneDrawable(const RGraphicsSceneDrawable& other);
 
@@ -67,6 +73,24 @@ public:
 
     RGraphicsSceneDrawable::Type getType() const {
         return type;
+    }
+
+    void setMode(RGraphicsSceneDrawable::Mode mode, bool on = true) {
+        if (on) {
+            modes |= mode;
+        } else {
+            modes &= ~mode;
+        }
+    }
+    bool getMode(RGraphicsSceneDrawable::Mode mode) const {
+        return (modes & mode) == mode;
+    }
+
+    void setNoPlot(bool on) {
+        setMode(RGraphicsSceneDrawable::NoPlot, on);
+    }
+    bool getNoPlot() const {
+        return getMode(RGraphicsSceneDrawable::NoPlot);
     }
 
     RPainterPath& getPainterPath() const {
@@ -100,6 +124,7 @@ public:
 protected:
      Type type;
      RVector offset;
+     Modes modes;
 
     //union {
         RPainterPath* painterPath;
@@ -113,5 +138,7 @@ QCADGUI_EXPORT QDebug operator<<(QDebug dbg, const RGraphicsSceneDrawable& d);
 Q_DECLARE_METATYPE(RGraphicsSceneDrawable)
 Q_DECLARE_METATYPE(RGraphicsSceneDrawable*)
 Q_DECLARE_METATYPE(RGraphicsSceneDrawable::Type)
+Q_DECLARE_METATYPE(RGraphicsSceneDrawable::Mode)
+Q_DECLARE_METATYPE(RGraphicsSceneDrawable::Mode*)
 
 #endif
