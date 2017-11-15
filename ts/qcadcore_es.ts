@@ -532,7 +532,7 @@ Lista de Capas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+92"/>
+        <location filename="../src/core/RLayer.cpp" line="+99"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_es.ts--
@@ -744,7 +744,7 @@ Colores
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
-        <location filename="../src/core/RLayer.cpp" line="-5"/>
+        <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Nombre</translation>
@@ -773,6 +773,21 @@ Colores
         <location line="+1"/>
         <source>Collapsed</source>
         <translation>Doblado</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plottable</source>
+        <translation>Trazable</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Snappable</source>
+        <translation>Ajustable</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Off is Freeze</source>
+        <translation>Apagado es congelarse</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>

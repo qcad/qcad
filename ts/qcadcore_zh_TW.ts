@@ -239,7 +239,7 @@
     <name>REntity</name>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+60"/>
-        <location filename="../src/core/RLayer.cpp" line="+86"/>
+        <location filename="../src/core/RLayer.cpp" line="+90"/>
         <location filename="../src/core/RLayout.cpp" line="+80"/>
         <source>Name</source>
         <translation>名稱</translation>
@@ -374,7 +374,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+6"/>
+        <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
         <translation type="unfinished"></translation>
     </message>
@@ -458,7 +458,7 @@
         <translation>高度</translation>
     </message>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="-4"/>
+        <location filename="../src/core/RLayer.cpp" line="-7"/>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
@@ -475,6 +475,21 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plottable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Snappable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Off is Freeze</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -526,7 +526,7 @@ Liste des calques</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+92"/>
+        <location filename="../src/core/RLayer.cpp" line="+99"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_fr.ts--
@@ -738,7 +738,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
-        <location filename="../src/core/RLayer.cpp" line="-5"/>
+        <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Nom</translation>
@@ -767,6 +767,21 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <location line="+1"/>
         <source>Collapsed</source>
         <translation>Plié</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plottable</source>
+        <translation>Traçable</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Snappable</source>
+        <translation>Accrochable</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Off is Freeze</source>
+        <translation>Éteint est gelé</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>

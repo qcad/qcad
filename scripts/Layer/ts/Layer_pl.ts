@@ -56,7 +56,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+188"/>
+        <location filename="../LayerDialog.js" line="+187"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished"></translation>
     </message>

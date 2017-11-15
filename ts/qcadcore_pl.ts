@@ -366,7 +366,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+92"/>
+        <location filename="../src/core/RLayer.cpp" line="+99"/>
         <source>Linetype</source>
         <translation>Rodzaj linii</translation>
     </message>
@@ -569,7 +569,7 @@
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
-        <location filename="../src/core/RLayer.cpp" line="-5"/>
+        <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation type="unfinished">Nazwa</translation>
@@ -597,6 +597,21 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plottable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Snappable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Off is Freeze</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

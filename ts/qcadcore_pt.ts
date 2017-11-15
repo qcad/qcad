@@ -530,7 +530,7 @@ Lista de Camadas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+92"/>
+        <location filename="../src/core/RLayer.cpp" line="+99"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tipo de Linha</translation>
@@ -739,7 +739,7 @@ Abre diálogo de cores</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
-        <location filename="../src/core/RLayer.cpp" line="-5"/>
+        <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Nome</translation>
@@ -768,6 +768,21 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <source>Collapsed</source>
         <translation>Guardada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Plottable</source>
+        <translation>Plotável</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Snappable</source>
+        <translation>Ajustável</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Off is Freeze</source>
+        <translation>Inativo está congelado</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>

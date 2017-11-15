@@ -56,7 +56,7 @@ Utilize a &amp;camada atual</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+188"/>
+        <location filename="../LayerDialog.js" line="+187"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaços à esquerda ou à direita.</translation>
     </message>
