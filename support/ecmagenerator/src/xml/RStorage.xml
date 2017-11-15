@@ -1116,6 +1116,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="isParentLayerSnappable"
+    cppName="isParentLayerSnappable" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer &amp;" typeName="RLayer" name="layer"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="isParentLayerPlottable"
     cppName="isParentLayerPlottable" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
