@@ -79,6 +79,13 @@ RVector RSnapEntityBase::snap(
             continue;
         }
 
+        // check if layer is snappable:
+        RLayer::Id layerId = e->getLayerId();
+        QSharedPointer<RLayer> layer = document->queryLayerDirect(layerId);
+        if (!layer->isSnappable()) {
+            continue;
+        }
+
         RVector candidate =
             position.getClosest2D(
                 snapEntity(e, position, queryBox, view)
