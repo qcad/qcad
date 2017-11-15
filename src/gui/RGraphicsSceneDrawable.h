@@ -40,12 +40,13 @@ public:
     };
 
     enum Mode {
+        NoMode = 0x0000,
         NoPlot = 0x0001                //!< not plotted (from not plottable layers)
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
 public:
-    RGraphicsSceneDrawable() : type(Invalid), painterPath(NULL), image(NULL), text(NULL) {}
+    RGraphicsSceneDrawable() : type(Invalid), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {}
     RGraphicsSceneDrawable(const RGraphicsSceneDrawable& other);
 
     /**

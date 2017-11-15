@@ -1,18 +1,26 @@
 #include "RGraphicsSceneDrawable.h"
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RGraphicsSceneDrawable& other) : type(Invalid), painterPath(NULL), image(NULL), text(NULL) {
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RGraphicsSceneDrawable& other) :
+    type(Invalid), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {
+
     operator =(other);
 }
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RPainterPath& pp, const RVector& os) : type(PainterPath), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RPainterPath& pp, const RVector& os) :
+    type(PainterPath), modes(NoMode), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+
     painterPath = new RPainterPath(pp);
 }
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RImageData& img, const RVector& os) : type(Image), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RImageData& img, const RVector& os) :
+    type(Image), modes(NoMode), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+
     image = new RImageData(img);
 }
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTextBasedData& txt, const RVector& os) : type(Text), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTextBasedData& txt, const RVector& os) :
+    type(Text), modes(NoMode), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+
     text = new RTextBasedData(txt);
 }
 
@@ -47,6 +55,7 @@ void RGraphicsSceneDrawable::uninit() {
     image = NULL;
     text = NULL;
     type = Invalid;
+    modes = NoMode;
 }
 
 void RGraphicsSceneDrawable::setSelected(bool on) {
@@ -96,6 +105,7 @@ RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDr
         text = new RTextBasedData(*other.text);
     }
     type = other.type;
+    modes = other.modes;
     offset = other.offset;
 
     return *this;
