@@ -829,13 +829,13 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
 //        paintText(painter, texts[k]);
 //    }
 
-    // get painter paths for vector graphics entity:
+    // get drawables for vector graphics entity:
     QList<RGraphicsSceneDrawable> drawables;
     if (preview) {
-        // get painter paths of the current preview:
+        // get drawables of the current preview:
         drawables = sceneQt->getPreviewDrawables(id);
     } else {
-        // get painter paths of the given entity:
+        // get drawables of the given entity:
         drawables = sceneQt->getDrawables(id);
 
         // if at least one arc path is too detailed or not detailed enough,
@@ -878,6 +878,11 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
     QListIterator<RGraphicsSceneDrawable> i(drawables);
     while (i.hasNext()) {
         RGraphicsSceneDrawable drawable = i.next();
+
+        // drawable is not plottable (from layer for which plottable is off):
+        if (drawable.getNoPlot() && (isPrinting() /*|| isPrintPreview()*/)) {
+            continue;
+        }
 
         // image:
         if (drawable.getType()==RGraphicsSceneDrawable::Image) {
