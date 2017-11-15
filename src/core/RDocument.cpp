@@ -2077,6 +2077,20 @@ bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {
 }
 
 /**
+ * \copydoc RStorage::isParentLayerSnappable
+ */
+bool RDocument::isParentLayerSnappable(RLayer::Id layerId) const {
+    return storage.isParentLayerSnappable(layerId);
+}
+
+/**
+ * \copydoc RStorage::isParentLayerSnappable
+ */
+bool RDocument::isParentLayerSnappable(const RLayer& layer) const {
+    return storage.isParentLayerSnappable(layer);
+}
+
+/**
  * \copydoc RStorage::isParentLayerPlottable
  */
 bool RDocument::isParentLayerPlottable(RLayer::Id layerId) const {

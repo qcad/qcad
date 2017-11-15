@@ -222,6 +222,9 @@ public:
     bool isLayoutBlock(RBlock::Id blockId) const;
     bool isEntityLayerFrozen(REntity::Id entityId) const;
 
+    bool isParentLayerSnappable(RLayer::Id layerId) const;
+    bool isParentLayerSnappable(const RLayer& layer) const;
+
     bool isParentLayerPlottable(RLayer::Id layerId) const;
     bool isParentLayerPlottable(const RLayer& layer) const;
 

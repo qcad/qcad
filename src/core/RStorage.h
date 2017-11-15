@@ -592,6 +592,9 @@ public:
     virtual bool isParentLayerFrozen(RLayer::Id layerId) const;
     virtual bool isParentLayerFrozen(const RLayer& layer) const;
 
+    virtual bool isParentLayerSnappable(RLayer::Id layerId) const;
+    virtual bool isParentLayerSnappable(const RLayer& layer) const;
+
     virtual bool isParentLayerPlottable(RLayer::Id layerId) const;
     virtual bool isParentLayerPlottable(const RLayer& layer) const;
 

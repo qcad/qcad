@@ -84,6 +84,13 @@ RVector RSnapIntersection::snap(
             continue;
         }
 
+        // check if layer is snappable:
+        RLayer::Id layer1Id = e1->getLayerId();
+        QSharedPointer<RLayer> layer1 = document->queryLayerDirect(layer1Id);
+        if (!layer1->isSnappable()) {
+            continue;
+        }
+
         QMap<REntity::Id, QSet<int> >::const_iterator it2;
         for (it2=it1; it2!=candidates.end(); it2++) {
             if (RMouseEvent::hasMouseMoved()) {
@@ -97,6 +104,12 @@ RVector RSnapIntersection::snap(
             if (e2->getType()==RS::EntityText ||
                 e2->getType()==RS::EntityAttribute ||
                 e2->getType()==RS::EntityAttributeDefinition) {
+                continue;
+            }
+            // check if layer is snappable:
+            RLayer::Id layer2Id = e2->getLayerId();
+            QSharedPointer<RLayer> layer2 = document->queryLayerDirect(layer2Id);
+            if (!layer2->isSnappable()) {
                 continue;
             }
 
