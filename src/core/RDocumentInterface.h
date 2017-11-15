@@ -332,6 +332,9 @@ public:
     void setNotifyListeners(bool on) {
         notifyGlobalListeners = on;
     }
+    bool getNotifyListeners() const {
+        return notifyGlobalListeners;
+    }
 
     bool isDeleting() const {
         return deleting;
