@@ -114,7 +114,7 @@ public:
     bool hasClipRectangleFor(REntity::Id entityId, bool preview = false);
     RBox getClipRectangle(REntity::Id entityId, bool preview = false);
 
-    void addPath(REntity::Id entityId, const RGraphicsSceneDrawable& path, bool draft);
+    void addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft);
 
     virtual void startEntity(bool topLevelEntity);
 
