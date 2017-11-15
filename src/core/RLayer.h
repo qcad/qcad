@@ -146,7 +146,9 @@ public:
     }
 
     void setPlottable(bool on) {
-        setFlag(RLayer::Plottable, on);
+        if (name.toLower()!="defpoints") {
+            setFlag(RLayer::Plottable, on);
+        }
     }
 
     bool isSnappable() const {
