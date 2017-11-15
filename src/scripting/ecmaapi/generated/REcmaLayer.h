@@ -93,6 +93,24 @@
         setCollapsed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isPlottable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlottable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSnappable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSnappable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isOffIsFreeze
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOffIsFreeze
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -166,6 +184,8 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RLayer* getSelf(const QString& fName, QScriptContext* context)
     ;static RLayer* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static  QScriptValue toScriptValueEnumLayerFlag(QScriptEngine* engine, const RLayer::LayerFlag& value)
+    ;static  void fromScriptValueEnumLayerFlag(const QScriptValue& value, RLayer::LayerFlag& out)
     ;};
     #endif
     

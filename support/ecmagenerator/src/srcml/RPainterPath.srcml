@@ -60,7 +60,8 @@
         <expr><name>PixelUnit</name> = 0x100</expr>,             <comment type="line">//!&lt; path displayed in pixel (not drawing units)</comment>
         <expr><name>NoClipping</name> = 0x200</expr>,            <comment type="line">//!&lt; disable clipping for this path</comment>
         <expr><name>PixelWidth</name> = 0x400</expr>,            <comment type="line">//!&lt; interpret width in pixels</comment>
-        <expr><name>NoColorMode</name> = 0x800</expr>            <comment type="line">//!&lt; disable color mode</comment>
+        <expr><name>NoColorMode</name> = 0x800</expr>           <comment type="line">//!&lt; disable color mode</comment>
+        <comment type="line">//NoPlot = 0x1000                //!&lt; not plotted (from not plottable layers)</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Modes</argument>, <argument>Mode</argument>)</argument_list></macro>
 
@@ -215,6 +216,9 @@
 
     <function_decl><type><name>void</name></type> <name>setNoColorMode</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getNoColorMode</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="line">//void setNoPlot(bool on);</comment>
+    <comment type="line">//bool getNoPlot() const;</comment>
 
     <function_decl><type><name>void</name></type> <name>setPixelWidth</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getPixelWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

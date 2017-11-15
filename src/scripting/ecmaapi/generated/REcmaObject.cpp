@@ -59,6 +59,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDocument, "setDocument");
             
+            REcmaHelper::registerFunction(&engine, proto, setFlag, "setFlag");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFlag, "getFlag");
+            
             REcmaHelper::registerFunction(&engine, proto, getId, "getId");
             
             REcmaHelper::registerFunction(&engine, proto, getHandle, "getHandle");
@@ -167,12 +171,34 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("NoFlags",
+    QScriptValue(RObject::NoFlags),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Undone",
+    QScriptValue(RObject::Undone),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Protect",
+    QScriptValue(RObject::Protect),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RObject::XYZ>(
         &engine,
         toScriptValueEnumXYZ,
         fromScriptValueEnumXYZ,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RObject::ObjectFlag>(
+        &engine,
+        toScriptValueEnumObjectFlag,
+        fromScriptValueEnumObjectFlag,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -482,6 +508,161 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::setDocument", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::setFlag
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::setFlag", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::setFlag";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("setFlag", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFlag(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFlag(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setFlag().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::setFlag", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::getFlag
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::getFlag", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::getFlag";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("getFlag", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getFlag(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getFlag().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::getFlag", context, engine);
             return result;
         }
          QScriptValue
@@ -2578,5 +2759,15 @@
     
         {
             out = qvariant_cast<RObject::XYZ>(value.toVariant());
+        }
+         QScriptValue REcmaObject::toScriptValueEnumObjectFlag(QScriptEngine* engine, const RObject::ObjectFlag& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaObject::fromScriptValueEnumObjectFlag(const QScriptValue& value, RObject::ObjectFlag& out)
+    
+        {
+            out = qvariant_cast<RObject::ObjectFlag>(value.toVariant());
         }
         

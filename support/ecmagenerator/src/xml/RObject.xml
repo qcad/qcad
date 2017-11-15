@@ -12,6 +12,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Y" />
       <value name="Z" />
     </enum>
+    <enum name="ObjectFlag">
+      <value name="NoFlags" />
+      <value name="Undone" />
+      <value name="Protect" />
+    </enum>
     <constructor>
       <variant>
         <arg type="RDocument *" typeName="RDocument *"
@@ -48,6 +53,22 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
+      </variant>
+    </method>
+    <method name="setFlag" cppName="setFlag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="flag"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
+    <method name="getFlag" cppName="getFlag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="flag"
+        isConst="false" />
       </variant>
     </method>
     <method name="getId" cppName="getId" specifier="public"

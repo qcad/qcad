@@ -140,7 +140,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClipRectangle, "getClipRectangle");
             
-            REcmaHelper::registerFunction(&engine, proto, addPath, "addPath");
+            REcmaHelper::registerFunction(&engine, proto, addDrawable, "addDrawable");
             
             REcmaHelper::registerFunction(&engine, proto, startEntity, "startEntity");
             
@@ -3163,19 +3163,19 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsSceneQt::addPath
+        REcmaGraphicsSceneQt::addDrawable
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::addPath", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::addPath";
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::addDrawable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::addDrawable";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsSceneQt* self = 
-                        getSelf("addPath", context);
+                        getSelf("addDrawable", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3239,7 +3239,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->addPath(a0
+               self->addDrawable(a0
         ,
     a1
         ,
@@ -3249,10 +3249,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.addPath().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.addDrawable().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::addPath", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::addDrawable", context, engine);
             return result;
         }
          QScriptValue

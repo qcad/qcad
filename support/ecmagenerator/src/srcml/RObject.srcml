@@ -74,6 +74,14 @@
     }</block>;</enum>
 
 </public><public>public:
+    <enum>enum <name>ObjectFlag</name> <block>{
+        <expr><name>NoFlags</name> = 0x000</expr>,
+        <expr><name>Undone</name> = 0x001</expr>,           <comment type="line">//!&lt; object is undone</comment>
+        <expr><name>Protect</name> = 0x002</expr>          <comment type="line">//!&lt; object is protected</comment>
+    }</block>;</enum>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>ObjectFlag</argument>)</argument_list></macro>
+
+</public><public>public:
     <constructor_decl><name>RObject</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RObject</name><parameter_list>(<param><decl><type><name>const</name> <name>RObject</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RObject</name><parameter_list>()</parameter_list>;</destructor_decl>
@@ -96,6 +104,17 @@
         <expr_stmt><expr><name>this</name>-&gt;<name>document</name> = <name>document</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setFlag</name><parameter_list>(<param><decl><type><name>int</name></type> <name>flag</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>flags</name> |= (<name>ObjectFlag</name>)<name>flag</name></expr>;</expr_stmt>
+        }</block></then> <else>else <block>{
+            <expr_stmt><expr><name>flags</name> &amp;= ~(<name>ObjectFlag</name>)<name>flag</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getFlag</name><parameter_list>(<param><decl><type><name>int</name></type> <name>flag</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>(<name>flags</name> &amp; <name>flag</name>) == <name>flag</name></expr>;</return>
+    }</block></function>
+
     <comment type="line">//  static double variantToDouble(const QVariant&amp; v, double defaultValue,</comment>
     <comment type="line">//          bool ignoreError = true);</comment>
     <comment type="line">//  static int variantToInt(const QVariant&amp; v, int defaultValue,</comment>
@@ -105,9 +124,7 @@
      * \nonscriptable
      */</comment>
     <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
-    <function><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>T</name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
-        <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
-
+    <function><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>T</name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr>!<name>condition</name></expr>)</condition><then> <block>{
             <return>return <expr><name>false</name></expr>;</return>
         }</block></then></if>
@@ -129,15 +146,15 @@
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isProtected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>protect</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RObject</name>::<name>Protect</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setProtected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>protect</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Protect</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isUndone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>undone</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RObject</name>::<name>Undone</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -147,10 +164,8 @@
      * \return The value and attributes of the given property or an invalid
      *      property if this property owner has no property with the given ID.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type>
-            <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
-                    <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>,
-                    <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Sets the given property to the given value. If this property owner
@@ -253,6 +268,10 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
+    <function_decl><type><name>bool</name></type> <name>setMemberFlag</name><parameter_list>(<param><decl><type><name>int</name></type> <name>flag</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name></decl></param>)</parameter_list>;</function_decl>
     <comment type="block">/**
      * \nonscriptable
@@ -282,14 +301,15 @@
      * Handle of this object (from DXF / DWG).
      */</comment>
     <decl_stmt><decl><type><name>Handle</name></type> <name>handle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>Flags</name></type> <name>flags</name></decl>;</decl_stmt>
     <comment type="block">/**
      * True if this object has been undone (deleted).
      */</comment>
-    <decl_stmt><decl><type><name>bool</name></type> <name>undone</name></decl>;</decl_stmt>
+    <comment type="line">//bool undone;</comment>
     <comment type="block">/**
      * True if this object is protected (undeletable).
      */</comment>
-    <decl_stmt><decl><type><name>bool</name></type> <name>protect</name></decl>;</decl_stmt>
+    <comment type="line">//bool protect;</comment>
     <comment type="block">/**
      * AppID -&gt; key -&gt; value
      * e.g. 'QCAD' -&gt; 'wall thickness' -&gt; 12.0;
@@ -309,6 +329,8 @@
 <typedef>typedef <type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>_RMapIntObjectPointer</name>;</typedef>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RMapIntObjectPointer</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject::ObjectFlag</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;RObject::ObjectFlag&gt;</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

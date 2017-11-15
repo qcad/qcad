@@ -95,6 +95,18 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCollapsed, "setCollapsed");
             
+            REcmaHelper::registerFunction(&engine, proto, isPlottable, "isPlottable");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPlottable, "setPlottable");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSnappable, "isSnappable");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSnappable, "setSnappable");
+            
+            REcmaHelper::registerFunction(&engine, proto, isOffIsFreeze, "isOffIsFreeze");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOffIsFreeze, "setOffIsFreeze");
+            
             REcmaHelper::registerFunction(&engine, proto, getColor, "getColor");
             
             REcmaHelper::registerFunction(&engine, proto, setColor, "setColor");
@@ -192,6 +204,18 @@
                 qScriptValueFromValue(&engine, RLayer::PropertyCollapsed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyPlottable",
+                qScriptValueFromValue(&engine, RLayer::PropertyPlottable),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertySnappable",
+                qScriptValueFromValue(&engine, RLayer::PropertySnappable),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyOffIsFreeze",
+                qScriptValueFromValue(&engine, RLayer::PropertyOffIsFreeze),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RLayer::PropertyColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -208,8 +232,50 @@
     // enum values:
     
 
+    ctor.setProperty("Off",
+    QScriptValue(RLayer::Off),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Frozen",
+    QScriptValue(RLayer::Frozen),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Locked",
+    QScriptValue(RLayer::Locked),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Collapsed",
+    QScriptValue(RLayer::Collapsed),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Plottable",
+    QScriptValue(RLayer::Plottable),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Snappable",
+    QScriptValue(RLayer::Snappable),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OffIsFreeze",
+    QScriptValue(RLayer::OffIsFreeze),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
+    qScriptRegisterMetaType<RLayer::LayerFlag>(
+        &engine,
+        toScriptValueEnumLayerFlag,
+        fromScriptValueEnumLayerFlag,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
         
     // init class:
     engine.globalObject().setProperty("RLayer",
@@ -2036,6 +2102,318 @@
             return result;
         }
          QScriptValue
+        REcmaLayer::isPlottable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::isPlottable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isPlottable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("isPlottable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPlottable();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isPlottable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::isPlottable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::setPlottable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::setPlottable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setPlottable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("setPlottable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPlottable(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setPlottable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::setPlottable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::isSnappable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::isSnappable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isSnappable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("isSnappable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSnappable();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isSnappable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::isSnappable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::setSnappable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::setSnappable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setSnappable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("setSnappable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSnappable(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setSnappable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::setSnappable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::isOffIsFreeze
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::isOffIsFreeze", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isOffIsFreeze";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("isOffIsFreeze", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOffIsFreeze();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isOffIsFreeze().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::isOffIsFreeze", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::setOffIsFreeze
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::setOffIsFreeze", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setOffIsFreeze";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayer* self = 
+                        getSelf("setOffIsFreeze", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOffIsFreeze(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setOffIsFreeze().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::setOffIsFreeze", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaLayer::getColor
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3752,5 +4130,15 @@
             
 
 
+        }
+         QScriptValue REcmaLayer::toScriptValueEnumLayerFlag(QScriptEngine* engine, const RLayer::LayerFlag& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaLayer::fromScriptValueEnumLayerFlag(const QScriptValue& value, RLayer::LayerFlag& out)
+    
+        {
+            out = qvariant_cast<RLayer::LayerFlag>(value.toVariant());
         }
         

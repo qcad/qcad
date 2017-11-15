@@ -155,7 +155,7 @@
         getClipRectangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        addPath
+        addDrawable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         startEntity

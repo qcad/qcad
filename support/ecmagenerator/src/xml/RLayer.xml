@@ -7,6 +7,15 @@ xmlns:rs="http://www.ribbonsoft.com">
   isQObject="false" hasStreamOperator="true" isAbstract="false"
   isScriptable="true">
     <baseClass name="RObject" specifier="public" />
+    <enum name="LayerFlag">
+      <value name="Off" />
+      <value name="Frozen" />
+      <value name="Locked" />
+      <value name="Collapsed" />
+      <value name="Plottable" />
+      <value name="Snappable" />
+      <value name="OffIsFreeze" />
+    </enum>
     <constructor>
       <variant />
       <variant>
@@ -107,6 +116,45 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setCollapsed" cppName="setCollapsed"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isPlottable" cppName="isPlottable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setPlottable" cppName="setPlottable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isSnappable" cppName="isSnappable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setSnappable" cppName="setSnappable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isOffIsFreeze" cppName="isOffIsFreeze"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setOffIsFreeze" cppName="setOffIsFreeze"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -307,6 +355,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyLocked" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyCollapsed" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyPlottable" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertySnappable" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOffIsFreeze" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyColor" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

@@ -72,10 +72,6 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>doScript</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>, <param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>arguments</name> =<init> <expr><name>RDEFAULT_QSTRINGLIST</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <function><type><name>virtual</name> <name>QVariant</name></type> <name>evalScript</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>script</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>eval</name><parameter_list>(<param><decl><type><name>script</name></type></decl></param>, <param><decl><type><name>fileName</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
-
     <comment type="block">/**
      * Evaluates the given script code.
      */</comment>

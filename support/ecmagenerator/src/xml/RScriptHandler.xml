@@ -36,17 +36,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RDEFAULT_QSTRINGLIST" isConst="true" />
       </variant>
     </method>
-    <method name="evalScript" cppName="evalScript"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QVariant" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="script"
-        isConst="true" />
-        <arg type="QString &amp;" typeName="QString"
-        name="fileName" hasDefault="true"
-        default="RDEFAULT_QSTRING" isConst="true" />
-      </variant>
-    </method>
     <method name="eval" cppName="eval" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QVariant" isPureVirtual="true">

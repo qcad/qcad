@@ -58,9 +58,25 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFrozen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLocked</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCollapsed</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlottable</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySnappable</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyOffIsFreeze</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLinetype</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLineweight</name></decl>;</decl_stmt>
+
+
+</public><public>public:
+    <enum>enum <name>LayerFlag</name> <block>{
+        <expr><name>Off</name> = 0x010</expr>,              <comment type="line">//!&lt; layer is off</comment>
+        <expr><name>Frozen</name> = 0x020</expr>,           <comment type="line">//!&lt; layer is frozen</comment>
+        <expr><name>Locked</name> = 0x040</expr>,           <comment type="line">//!&lt; layer is locked</comment>
+        <expr><name>Collapsed</name> = 0x080</expr>,        <comment type="line">//!&lt; layer is collapsed</comment>
+        <expr><name>Plottable</name> = 0x100</expr>,        <comment type="line">//!&lt; printing disabled for this layer</comment>
+        <expr><name>Snappable</name> = 0x200</expr>,        <comment type="line">//!&lt; snap disabled for this layer</comment>
+        <expr><name>OffIsFreeze</name> = 0x400</expr>       <comment type="line">//!&lt; off means freeze for this layer</comment>
+    }</block>;</enum>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>LayerFlag</argument>)</argument_list></macro>
 
 </public><public>public:
     <constructor_decl><name>RLayer</name><parameter_list>()</parameter_list>;</constructor_decl>
@@ -95,35 +111,59 @@
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isOff</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>off</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RLayer</name>::<name>Off</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setOff</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>off</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Off</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isFrozen</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>frozen</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RLayer</name>::<name>Frozen</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setFrozen</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>frozen</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Frozen</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isLocked</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>locked</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RLayer</name>::<name>Locked</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setLocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>locked</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Locked</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isCollapsed</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>collapsed</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RLayer</name>::<name>Collapsed</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setCollapsed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>collapsed</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Collapsed</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isPlottable</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RLayer</name>::<name>Plottable</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlottable</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Plottable</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isSnappable</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RLayer</name>::<name>Snappable</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setSnappable</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Snappable</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isOffIsFreeze</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RLayer</name>::<name>OffIsFreeze</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setOffIsFreeze</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>OffIsFreeze</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>RColor</name></type> <name>getColor</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -262,10 +302,7 @@
 
 </public><private>private:
     <decl_stmt><decl><type><name>QString</name></type> <name>name</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>off</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>frozen</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>locked</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>collapsed</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>Flags</name></type> <name>flags</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RColor</name></type> <name>color</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl>;</decl_stmt>
@@ -279,6 +316,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RLayer&gt;*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayer</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayer*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayer::LayerFlag</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;RLayer::LayerFlag&gt;</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

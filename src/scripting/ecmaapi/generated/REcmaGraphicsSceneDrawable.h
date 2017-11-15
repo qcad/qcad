@@ -61,6 +61,18 @@
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNoPlot
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNoPlot
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPainterPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -93,6 +105,8 @@
     ;static RGraphicsSceneDrawable* getSelfShell(const QString& fName, QScriptContext* context)
     ;static  QScriptValue toScriptValueEnumType(QScriptEngine* engine, const RGraphicsSceneDrawable::Type& value)
     ;static  void fromScriptValueEnumType(const QScriptValue& value, RGraphicsSceneDrawable::Type& out)
+    ;static  QScriptValue toScriptValueEnumMode(QScriptEngine* engine, const RGraphicsSceneDrawable::Mode& value)
+    ;static  void fromScriptValueEnumMode(const QScriptValue& value, RGraphicsSceneDrawable::Mode& out)
     ;};
     #endif
     

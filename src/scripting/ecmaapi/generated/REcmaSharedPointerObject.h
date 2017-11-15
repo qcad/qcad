@@ -63,6 +63,12 @@
         setDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setFlag
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFlag
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -148,6 +154,8 @@
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue toScriptValueEnumXYZ(QScriptEngine* engine, const RObject::XYZ& value)
     ;static  void fromScriptValueEnumXYZ(const QScriptValue& value, RObject::XYZ& out)
+    ;static  QScriptValue toScriptValueEnumObjectFlag(QScriptEngine* engine, const RObject::ObjectFlag& value)
+    ;static  void fromScriptValueEnumObjectFlag(const QScriptValue& value, RObject::ObjectFlag& out)
     ;};
     #endif
     

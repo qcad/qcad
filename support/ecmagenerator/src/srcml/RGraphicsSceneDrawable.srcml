@@ -40,6 +40,12 @@
         <expr><name>Text</name></expr>
     }</block>;</enum>
 
+    <enum>enum <name>Mode</name> <block>{
+        <expr><name>NoPlot</name> = 0x0001</expr>                <comment type="line">//!&lt; not plotted (from not plottable layers)</comment>
+    }</block>;</enum>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Modes</argument>, <argument>Mode</argument>)</argument_list></macro>
+
+</public><public>public:
     <constructor><name>RGraphicsSceneDrawable</name><parameter_list>()</parameter_list> <member_list>: <call><name>type</name><argument_list>(<argument><expr><name>Invalid</name></expr></argument>)</argument_list></call>, <call><name>painterPath</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>image</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>text</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
 
@@ -68,6 +74,24 @@
 
     <function><type><name><name>RGraphicsSceneDrawable</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>type</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsSceneDrawable</name>::<name>Mode</name></name></type> <name>mode</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>modes</name> |= <name>mode</name></expr>;</expr_stmt>
+        }</block></then> <else>else <block>{
+            <expr_stmt><expr><name>modes</name> &amp;= ~<name>mode</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsSceneDrawable</name>::<name>Mode</name></name></type> <name>mode</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>(<name>modes</name> &amp; <name>mode</name>) == <name>mode</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setNoPlot</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsSceneDrawable</name>::<name>NoPlot</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getNoPlot</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name><name>RGraphicsSceneDrawable</name>::<name>NoPlot</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>RPainterPath</name>&amp;</type> <name>getPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

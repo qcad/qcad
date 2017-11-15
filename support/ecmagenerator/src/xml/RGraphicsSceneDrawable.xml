@@ -11,6 +11,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Image" />
       <value name="Text" />
     </enum>
+    <enum name="Mode">
+      <value name="NoPlot" />
+    </enum>
     <constructor>
       <variant />
       <variant>
@@ -63,6 +66,35 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RGraphicsSceneDrawable::Type"
       isPureVirtual="false" />
+    </method>
+    <method name="setMode" cppName="setMode" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsSceneDrawable::Mode"
+        typeName="RGraphicsSceneDrawable::Mode" name="mode"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
+    <method name="getMode" cppName="getMode" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RGraphicsSceneDrawable::Mode"
+        typeName="RGraphicsSceneDrawable::Mode" name="mode"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setNoPlot" cppName="setNoPlot" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getNoPlot" cppName="getNoPlot" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getPainterPath" cppName="getPainterPath"
     specifier="public" isStatic="false" isVirtual="false"

@@ -54,6 +54,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
+            REcmaHelper::registerFunction(&engine, proto, setMode, "setMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, getMode, "getMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, setNoPlot, "setNoPlot");
+            
+            REcmaHelper::registerFunction(&engine, proto, getNoPlot, "getNoPlot");
+            
             REcmaHelper::registerFunction(&engine, proto, getPainterPath, "getPainterPath");
             
             REcmaHelper::registerFunction(&engine, proto, getImage, "getImage");
@@ -117,12 +125,24 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("NoPlot",
+    QScriptValue(RGraphicsSceneDrawable::NoPlot),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RGraphicsSceneDrawable::Type>(
         &engine,
         toScriptValueEnumType,
         fromScriptValueEnumType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RGraphicsSceneDrawable::Mode>(
+        &engine,
+        toScriptValueEnumMode,
+        fromScriptValueEnumMode,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -746,6 +766,295 @@
             return result;
         }
          QScriptValue
+        REcmaGraphicsSceneDrawable::setMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::setMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::setMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("setMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RGraphicsSceneDrawable::Mode */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RGraphicsSceneDrawable::Mode*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RGraphicsSceneDrawable::Mode*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode*.",
+                               context);                    
+                    }
+                    RGraphicsSceneDrawable::Mode& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMode(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RGraphicsSceneDrawable::Mode */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RGraphicsSceneDrawable::Mode*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RGraphicsSceneDrawable::Mode*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode*.",
+                               context);                    
+                    }
+                    RGraphicsSceneDrawable::Mode& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMode(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.setMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::setMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::getMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::getMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::getMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("getMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RGraphicsSceneDrawable::Mode */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RGraphicsSceneDrawable::Mode*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RGraphicsSceneDrawable::Mode*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RGraphicsSceneDrawable::Mode*.",
+                               context);                    
+                    }
+                    RGraphicsSceneDrawable::Mode& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getMode(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.getMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::getMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::setNoPlot
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::setNoPlot", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::setNoPlot";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("setNoPlot", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNoPlot(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.setNoPlot().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::setNoPlot", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::getNoPlot
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::getNoPlot", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::getNoPlot";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("getNoPlot", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getNoPlot();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.getNoPlot().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::getNoPlot", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGraphicsSceneDrawable::getPainterPath
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1293,5 +1602,15 @@
     
         {
             out = qvariant_cast<RGraphicsSceneDrawable::Type>(value.toVariant());
+        }
+         QScriptValue REcmaGraphicsSceneDrawable::toScriptValueEnumMode(QScriptEngine* engine, const RGraphicsSceneDrawable::Mode& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaGraphicsSceneDrawable::fromScriptValueEnumMode(const QScriptValue& value, RGraphicsSceneDrawable::Mode& out)
+    
+        {
+            out = qvariant_cast<RGraphicsSceneDrawable::Mode>(value.toVariant());
         }
         

@@ -55,9 +55,6 @@
         doScript
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        evalScript
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         eval
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

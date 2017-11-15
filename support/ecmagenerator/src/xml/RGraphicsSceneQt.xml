@@ -310,14 +310,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
-    <method name="addPath" cppName="addPath" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    <method name="addDrawable" cppName="addDrawable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
         <arg type="RGraphicsSceneDrawable &amp;"
-        typeName="RGraphicsSceneDrawable" name="path"
-        isConst="true" />
+        typeName="RGraphicsSceneDrawable" name="drawable"
+        isConst="false" />
         <arg type="bool" typeName="bool" name="draft"
         isConst="false" />
       </variant>
