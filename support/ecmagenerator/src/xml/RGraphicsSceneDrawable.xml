@@ -12,6 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Text" />
     </enum>
     <enum name="Mode">
+      <value name="NoMode" />
       <value name="NoPlot" />
     </enum>
     <constructor>

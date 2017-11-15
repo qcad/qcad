@@ -703,6 +703,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
+    <method name="isParentLayerPlottable"
+    cppName="isParentLayerPlottable" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        isConst="false" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLayer &amp;" typeName="RLayer" name="layer"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="hasSelection" cppName="hasSelection"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

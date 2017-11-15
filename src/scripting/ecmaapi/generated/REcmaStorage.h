@@ -426,6 +426,9 @@
         isParentLayerFrozen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isParentLayerPlottable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isBlockFrozen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

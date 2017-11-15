@@ -125,6 +125,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("NoMode",
+    QScriptValue(RGraphicsSceneDrawable::NoMode),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("NoPlot",
     QScriptValue(RGraphicsSceneDrawable::NoPlot),
     QScriptValue::ReadOnly);

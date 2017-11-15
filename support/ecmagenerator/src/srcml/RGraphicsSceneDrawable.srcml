@@ -41,12 +41,13 @@
     }</block>;</enum>
 
     <enum>enum <name>Mode</name> <block>{
+        <expr><name>NoMode</name> = 0x0000</expr>,
         <expr><name>NoPlot</name> = 0x0001</expr>                <comment type="line">//!&lt; not plotted (from not plottable layers)</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Modes</argument>, <argument>Mode</argument>)</argument_list></macro>
 
 </public><public>public:
-    <constructor><name>RGraphicsSceneDrawable</name><parameter_list>()</parameter_list> <member_list>: <call><name>type</name><argument_list>(<argument><expr><name>Invalid</name></expr></argument>)</argument_list></call>, <call><name>painterPath</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>image</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>text</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor><name>RGraphicsSceneDrawable</name><parameter_list>()</parameter_list> <member_list>: <call><name>type</name><argument_list>(<argument><expr><name>Invalid</name></expr></argument>)</argument_list></call>, <call><name>modes</name><argument_list>(<argument><expr><name>NoMode</name></expr></argument>)</argument_list></call>, <call><name>painterPath</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>image</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>text</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <comment type="block">/**
@@ -125,6 +126,7 @@
 </public><protected>protected:
      <decl_stmt><decl><type><name>Type</name></type> <name>type</name></decl>;</decl_stmt>
      <decl_stmt><decl><type><name>RVector</name></type> <name>offset</name></decl>;</decl_stmt>
+     <decl_stmt><decl><type><name>Modes</name></type> <name>modes</name></decl>;</decl_stmt>
 
     <comment type="line">//union {</comment>
         <decl_stmt><decl><type><name>RPainterPath</name>*</type> <name>painterPath</name></decl>;</decl_stmt>
@@ -138,6 +140,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable::Type</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable::Mode</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable::Mode*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

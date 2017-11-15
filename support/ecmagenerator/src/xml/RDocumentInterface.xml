@@ -1069,6 +1069,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getNotifyListeners" cppName="getNotifyListeners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="isDeleting" cppName="isDeleting"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

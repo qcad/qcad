@@ -147,7 +147,9 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setPlottable</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Plottable</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <if>if <condition>(<expr><name>name</name>.<call><name>toLower</name><argument_list>()</argument_list></call>!="defpoints"</expr>)</condition><then> <block>{
+            <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Plottable</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        }</block></then></if>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isSnappable</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
