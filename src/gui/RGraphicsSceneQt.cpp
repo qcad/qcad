@@ -742,7 +742,6 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         QSharedPointer<RLayer> layer = getEntityLayer(*entity);
         if (!layer.isNull()) {
             if (!layer->isPlottable()) {
-                //qDebug() << "drawable is not plottable";
                 drawable.setNoPlot(true);
             }
         }
