@@ -82,7 +82,7 @@ RVector RSnapEntityBase::snap(
         // check if layer is snappable:
         RLayer::Id layerId = e->getLayerId();
         QSharedPointer<RLayer> layer = document->queryLayerDirect(layerId);
-        if (!layer->isSnappable()) {
+        if (!layer->isSnappable() || !document->isParentLayerSnappable(*layer)) {
             continue;
         }
 

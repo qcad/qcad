@@ -87,7 +87,7 @@ RVector RSnapIntersection::snap(
         // check if layer is snappable:
         RLayer::Id layer1Id = e1->getLayerId();
         QSharedPointer<RLayer> layer1 = document->queryLayerDirect(layer1Id);
-        if (!layer1->isSnappable()) {
+        if (!layer1->isSnappable() || !document->isParentLayerSnappable(*layer1)) {
             continue;
         }
 
@@ -109,7 +109,7 @@ RVector RSnapIntersection::snap(
             // check if layer is snappable:
             RLayer::Id layer2Id = e2->getLayerId();
             QSharedPointer<RLayer> layer2 = document->queryLayerDirect(layer2Id);
-            if (!layer2->isSnappable()) {
+            if (!layer2->isSnappable() || !document->isParentLayerSnappable(*layer2)) {
                 continue;
             }
 
