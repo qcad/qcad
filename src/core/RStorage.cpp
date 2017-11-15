@@ -1004,7 +1004,7 @@ bool RStorage::isParentLayerFrozen(const RLayer& layer) const {
 bool RStorage::isParentLayerSnappable(RLayer::Id layerId) const {
     QSharedPointer<RLayer> l = queryLayerDirect(layerId);
     if (l.isNull()) {
-        return false;
+        return true;
     }
     return isParentLayerSnappable(*l);
 }
