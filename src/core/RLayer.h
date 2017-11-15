@@ -57,9 +57,25 @@ public:
     static RPropertyTypeId PropertyFrozen;
     static RPropertyTypeId PropertyLocked;
     static RPropertyTypeId PropertyCollapsed;
+    static RPropertyTypeId PropertyPlottable;
+    static RPropertyTypeId PropertySnappable;
+    static RPropertyTypeId PropertyOffIsFreeze;
     static RPropertyTypeId PropertyColor;
     static RPropertyTypeId PropertyLinetype;
     static RPropertyTypeId PropertyLineweight;
+
+
+public:
+    enum LayerFlag {
+        Off = 0x010,              //!< layer is off
+        Frozen = 0x020,           //!< layer is frozen
+        Locked = 0x040,           //!< layer is locked
+        Collapsed = 0x080,        //!< layer is collapsed
+        Plottable = 0x100,        //!< printing disabled for this layer
+        Snappable = 0x200,        //!< snap disabled for this layer
+        OffIsFreeze = 0x400       //!< off means freeze for this layer
+    };
+    Q_DECLARE_FLAGS(Flags, LayerFlag)
 
 public:
     RLayer();
@@ -94,35 +110,59 @@ public:
     }
 
     bool isOff() const {
-        return off;
+        return getFlag(RLayer::Off);
     }
 
     void setOff(bool on) {
-        off = on;
+        setFlag(RLayer::Off, on);
     }
 
     bool isFrozen() const {
-        return frozen;
+        return getFlag(RLayer::Frozen);
     }
 
     void setFrozen(bool on) {
-        frozen = on;
+        setFlag(RLayer::Frozen, on);
     }
 
     bool isLocked() const {
-        return locked;
+        return getFlag(RLayer::Locked);
     }
 
     void setLocked(bool on) {
-        locked = on;
+        setFlag(RLayer::Locked, on);
     }
 
     bool isCollapsed() const {
-        return collapsed;
+        return getFlag(RLayer::Collapsed);
     }
 
     void setCollapsed(bool on) {
-        collapsed = on;
+        setFlag(RLayer::Collapsed, on);
+    }
+
+    bool isPlottable() const {
+        return getFlag(RLayer::Plottable);
+    }
+
+    void setPlottable(bool on) {
+        setFlag(RLayer::Plottable, on);
+    }
+
+    bool isSnappable() const {
+        return getFlag(RLayer::Snappable);
+    }
+
+    void setSnappable(bool on) {
+        setFlag(RLayer::Snappable, on);
+    }
+
+    bool isOffIsFreeze() const {
+        return getFlag(RLayer::OffIsFreeze);
+    }
+
+    void setOffIsFreeze(bool on) {
+        setFlag(RLayer::OffIsFreeze, on);
     }
 
     RColor getColor() const {
@@ -261,10 +301,7 @@ public:
 
 private:
     QString name;
-    bool off;
-    bool frozen;
-    bool locked;
-    bool collapsed;
+    Flags flags;
     RColor color;
     RLinetype::Id linetypeId;
     RLineweight::Lineweight lineweight;
@@ -278,5 +315,7 @@ Q_DECLARE_METATYPE(QSharedPointer<RLayer>)
 Q_DECLARE_METATYPE(QSharedPointer<RLayer>*)
 Q_DECLARE_METATYPE(RLayer)
 Q_DECLARE_METATYPE(RLayer*)
+Q_DECLARE_METATYPE(RLayer::LayerFlag)
+Q_DECLARE_METATYPE(QFlags<RLayer::LayerFlag>)
 
 #endif

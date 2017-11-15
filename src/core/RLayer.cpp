@@ -31,16 +31,17 @@ RPropertyTypeId RLayer::PropertyOff;
 RPropertyTypeId RLayer::PropertyFrozen;
 RPropertyTypeId RLayer::PropertyLocked;
 RPropertyTypeId RLayer::PropertyCollapsed;
+RPropertyTypeId RLayer::PropertyPlottable;
+RPropertyTypeId RLayer::PropertySnappable;
+RPropertyTypeId RLayer::PropertyOffIsFreeze;
 RPropertyTypeId RLayer::PropertyColor;
 RPropertyTypeId RLayer::PropertyLinetype;
 RPropertyTypeId RLayer::PropertyLineweight;
 
+
 RLayer::RLayer() :
         RObject(),
-        off(false),
-        frozen(false),
-        locked(false),
-        collapsed(false),
+        flags(RLayer::Plottable|RLayer::Snappable),
         linetypeId(RLinetype::INVALID_ID),
         lineweight(RLineweight::WeightInvalid) {
 
@@ -51,8 +52,15 @@ RLayer::RLayer(RDocument* document, const QString& name,
     bool frozen, bool locked, const RColor& color,
     RLinetype::Id linetype, RLineweight::Lineweight lineweight, bool off) :
 
-    RObject(document), name(name.trimmed()), off(off), frozen(frozen), locked(locked), collapsed(false),
+    RObject(document), name(name.trimmed()),
     color(color), linetypeId(linetype), lineweight(lineweight) {
+
+    setOff(off);
+    setFrozen(frozen);
+    setLocked(locked);
+    setCollapsed(false);
+    setPlottable(true);
+    setSnappable(true);
 
     RDebug::incCounter("RLayer");
 }
@@ -60,10 +68,7 @@ RLayer::RLayer(RDocument* document, const QString& name,
 RLayer::RLayer(const RLayer& other) :
     RObject(other),
     name(other.name),
-    off(other.off),
-    frozen(other.frozen),
-    locked(other.locked),
-    collapsed(other.collapsed),
+    flags(other.flags),
     color(other.color),
     linetypeId(other.linetypeId),
     lineweight(other.lineweight) {
@@ -87,6 +92,8 @@ void RLayer::init() {
     RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Frozen"));
     RLayer::PropertyLocked.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Locked"));
     RLayer::PropertyCollapsed.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Collapsed"));
+    RLayer::PropertyPlottable.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Plottable"));
+    RLayer::PropertySnappable.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Snappable"));
     RLayer::PropertyColor.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Color"));
     RLayer::PropertyLinetype.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
     RLayer::PropertyLineweight.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
@@ -132,10 +139,13 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
     }
 
     ret = ret || RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
-    ret = ret || RObject::setMember(off, value, PropertyOff == propertyTypeId);
-    ret = ret || RObject::setMember(frozen, value, PropertyFrozen == propertyTypeId);
-    ret = ret || RObject::setMember(locked, value, PropertyLocked == propertyTypeId);
-    ret = ret || RObject::setMember(collapsed, value, PropertyCollapsed == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RLayer::Off, value, PropertyOff == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RLayer::Frozen, value, PropertyFrozen == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RLayer::Locked, value, PropertyLocked == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RLayer::Collapsed, value, PropertyCollapsed == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RLayer::Plottable, value, PropertyPlottable == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RLayer::Snappable, value, PropertySnappable == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RLayer::OffIsFreeze, value, PropertyOffIsFreeze == propertyTypeId);
     ret = ret || RObject::setMember(color, value, PropertyColor == propertyTypeId);
 
     if (propertyTypeId == PropertyLinetype) {
@@ -169,16 +179,25 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& proper
         return qMakePair(QVariant(name), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyOff) {
-        return qMakePair(QVariant(off), RPropertyAttributes());
+        return qMakePair(QVariant(isOff()), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyFrozen) {
-        return qMakePair(QVariant(frozen), RPropertyAttributes());
+        return qMakePair(QVariant(isFrozen()), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyLocked) {
-        return qMakePair(QVariant(locked), RPropertyAttributes());
+        return qMakePair(QVariant(isLocked()), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyCollapsed) {
-        return qMakePair(QVariant(collapsed), RPropertyAttributes(RPropertyAttributes::Invisible));
+        return qMakePair(QVariant(isCollapsed()), RPropertyAttributes(RPropertyAttributes::Invisible));
+    }
+    if (propertyTypeId == PropertyPlottable) {
+        return qMakePair(QVariant(isPlottable()), RPropertyAttributes());
+    }
+    if (propertyTypeId == PropertySnappable) {
+        return qMakePair(QVariant(isSnappable()), RPropertyAttributes());
+    }
+    if (propertyTypeId == PropertyOffIsFreeze) {
+        return qMakePair(QVariant(isOffIsFreeze()), RPropertyAttributes());
     }
     if (propertyTypeId == PropertyColor) {
         QVariant v;
