@@ -997,3 +997,27 @@ bool RStorage::isParentLayerFrozen(const RLayer& layer) const {
     }
     return isParentLayerFrozen(*pl);
 }
+
+/**
+ * \return True if a parent layer of the given layer is plottable.
+ */
+bool RStorage::isParentLayerPlottable(RLayer::Id layerId) const {
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
+    return isParentLayerPlottable(*l);
+}
+
+bool RStorage::isParentLayerPlottable(const RLayer& layer) const {
+    RLayer::Id parentLayerId = layer.getParentLayerId();
+    if (parentLayerId==RLayer::INVALID_ID) {
+        // no parent:
+        return true;
+    }
+    QSharedPointer<RLayer> pl = queryLayerDirect(parentLayerId);
+    if (!pl->isPlottable()) {
+        return false;
+    }
+    return isParentLayerPlottable(*pl);
+}

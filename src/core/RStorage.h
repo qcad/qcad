@@ -580,14 +580,20 @@ public:
     virtual bool isLayerLocked(const RLayer& layer) const;
     virtual bool isParentLayerLocked(RLayer::Id layerId) const;
     virtual bool isParentLayerLocked(const RLayer& layer) const;
+
     virtual bool isLayerOff(RLayer::Id layerId) const;
     virtual bool isLayerOff(const RLayer& layer) const;
+
     virtual bool isLayerOffOrFrozen(RLayer::Id layerId) const;
     virtual bool isLayerOffOrFrozen(const RLayer& layer) const;
+
     virtual bool isLayerFrozen(RLayer::Id layerId) const;
     virtual bool isLayerFrozen(const RLayer& layer) const;
     virtual bool isParentLayerFrozen(RLayer::Id layerId) const;
     virtual bool isParentLayerFrozen(const RLayer& layer) const;
+
+    virtual bool isParentLayerPlottable(RLayer::Id layerId) const;
+    virtual bool isParentLayerPlottable(const RLayer& layer) const;
 
     /**
      * \return True if the given block is frozen.

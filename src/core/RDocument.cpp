@@ -2077,6 +2077,20 @@ bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {
 }
 
 /**
+ * \copydoc RStorage::isParentLayerPlottable
+ */
+bool RDocument::isParentLayerPlottable(RLayer::Id layerId) const {
+    return storage.isParentLayerPlottable(layerId);
+}
+
+/**
+ * \copydoc RStorage::isParentLayerPlottable
+ */
+bool RDocument::isParentLayerPlottable(const RLayer& layer) const {
+    return storage.isParentLayerPlottable(layer);
+}
+
+/**
  * \copydoc RStorage::countSelectedEntities
  */
 int RDocument::countSelectedEntities() const {
