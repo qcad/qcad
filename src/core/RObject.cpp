@@ -37,8 +37,7 @@ RObject::RObject(RDocument* document) :
     document(document),
     objectId(INVALID_ID),
     handle(INVALID_HANDLE),
-    undone(false),
-    protect(false) {
+    flags(NoFlags){
 
     //RDebug::incCounter("RObject");
 }
@@ -49,8 +48,7 @@ RObject::RObject(const RObject& other) {
     document = other.document;
     objectId = other.objectId;
     handle = other.handle;
-    undone = other.undone;
-    protect = other.protect;
+    flags = other.flags;
     customProperties = other.customProperties;
 }
 
@@ -66,14 +64,16 @@ void RObject::init() {
 }
 
 void RObject::setUndone(bool on) {
-    undone = on;
+    //undone = on;
+    setFlag(RObject::Undone, on);
 
     if (document==NULL) {
         return;
     }
 
     if (on==true) {
-        // make sure that the current layer is not undone:
+        // current layer is undone:
+        // change current layer:
         RLayer* layer = dynamic_cast<RLayer*>(this);
         if (layer!=NULL) {
             if (layer->getId()==document->getCurrentLayerId()) {
@@ -81,7 +81,8 @@ void RObject::setUndone(bool on) {
             }
         }
 
-        // make sure that the current block is not undone:
+        // current block is undone:
+        // change current block:
         RBlock* block = dynamic_cast<RBlock*>(this);
         if (block!=NULL) {
             if (block->getId()==document->getCurrentBlockId()) {
@@ -103,7 +104,7 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     }
     if (propertyTypeId == PropertyProtected) {
         //return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::Invisible));
-        return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        return qMakePair(QVariant(isProtected()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
     if (propertyTypeId.isCustom()) {
         QString appId = propertyTypeId.getCustomPropertyTitle();
@@ -131,7 +132,7 @@ bool RObject::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
 
     bool ret = false;
 
-    ret = ret || RObject::setMember(protect, value, PropertyProtected == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RObject::Protect, value, PropertyProtected == propertyTypeId);
 
     // set custom property:
     if (propertyTypeId.getId()==RPropertyTypeId::INVALID_ID) {
@@ -219,6 +220,17 @@ bool RObject::setMember(bool& variable, const QVariant& value, bool condition) {
         return false;
     }
     variable = value.toBool();
+    return true;
+}
+
+/**
+ * \overload
+ */
+bool RObject::setMemberFlag(int flag, const QVariant& value, bool condition) {
+    if (!condition) {
+        return false;
+    }
+    setFlag(flag, value.toBool());
     return true;
 }
 

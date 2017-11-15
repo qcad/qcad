@@ -73,6 +73,14 @@ public:
     };
 
 public:
+    enum ObjectFlag {
+        NoFlags = 0x000,
+        Undone = 0x001,           //!< object is undone
+        Protect = 0x002          //!< object is protected
+    };
+    Q_DECLARE_FLAGS(Flags, ObjectFlag)
+
+public:
     RObject(RDocument* document=NULL);
     RObject(const RObject& other);
     virtual ~RObject();
@@ -95,6 +103,17 @@ public:
         this->document = document;
     }
 
+    void setFlag(int flag, bool on = true) {
+        if (on) {
+            flags |= (ObjectFlag)flag;
+        } else {
+            flags &= ~(ObjectFlag)flag;
+        }
+    }
+    bool getFlag(int flag) const {
+        return (flags & flag) == flag;
+    }
+
     //  static double variantToDouble(const QVariant& v, double defaultValue,
     //          bool ignoreError = true);
     //  static int variantToInt(const QVariant& v, int defaultValue,
@@ -104,9 +123,7 @@ public:
      * \nonscriptable
      */
     template<class T>
-    static bool setMember(T& variable, const QVariant& value,
-        bool condition = true) {
-
+    static bool setMember(T& variable, const QVariant& value, bool condition = true) {
         if (!condition) {
             return false;
         }
@@ -128,15 +145,15 @@ public:
     }
 
     bool isProtected() const {
-        return protect;
+        return getFlag(RObject::Protect);
     }
 
     void setProtected(bool on) {
-        protect = on;
+        setFlag(RObject::Protect, on);
     }
 
     bool isUndone() const {
-        return undone;
+        return getFlag(RObject::Undone);
     }
 
     virtual QSet<RPropertyTypeId> getPropertyTypeIds() const;
@@ -146,10 +163,8 @@ public:
      * \return The value and attributes of the given property or an invalid
      *      property if this property owner has no property with the given ID.
      */
-    virtual QPair<QVariant, RPropertyAttributes>
-            getProperty(RPropertyTypeId& propertyTypeId,
-                    bool humanReadable = false,
-                    bool noAttributes = false);
+    virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
+        bool humanReadable = false, bool noAttributes = false);
 
     /**
      * Sets the given property to the given value. If this property owner
@@ -252,6 +267,10 @@ protected:
     /**
      * \nonscriptable
      */
+    bool setMemberFlag(int flag, const QVariant& value, bool condition = true);
+    /**
+     * \nonscriptable
+     */
     static bool setMember(QList<double>& variable, const QVariant& value, bool condition);
     /**
      * \nonscriptable
@@ -281,14 +300,15 @@ private:
      * Handle of this object (from DXF / DWG).
      */
     Handle handle;
+    Flags flags;
     /**
      * True if this object has been undone (deleted).
      */
-    bool undone;
+    //bool undone;
     /**
      * True if this object is protected (undeletable).
      */
-    bool protect;
+    //bool protect;
     /**
      * AppID -> key -> value
      * e.g. 'QCAD' -> 'wall thickness' -> 12.0;
@@ -308,5 +328,7 @@ Q_DECLARE_METATYPE(QSharedPointer<RObject>*)
 typedef QMap<int, QSharedPointer<RObject> > _RMapIntObjectPointer;
 Q_DECLARE_METATYPE(_RMapIntObjectPointer)
 Q_DECLARE_METATYPE(RObject*)
+Q_DECLARE_METATYPE(RObject::ObjectFlag)
+Q_DECLARE_METATYPE(QFlags<RObject::ObjectFlag>)
 
 #endif
