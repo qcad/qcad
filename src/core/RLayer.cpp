@@ -94,7 +94,7 @@ void RLayer::init() {
     RLayer::PropertyCollapsed.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Collapsed"));
     RLayer::PropertyPlottable.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Plottable"));
     RLayer::PropertySnappable.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Snappable"));
-    RLayer::PropertyOffIsFreeze.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Freeze"));
+    RLayer::PropertyOffIsFreeze.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Off is Freeze"));
     RLayer::PropertyColor.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Color"));
     RLayer::PropertyLinetype.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
     RLayer::PropertyLineweight.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
