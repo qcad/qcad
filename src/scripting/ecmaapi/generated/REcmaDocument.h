@@ -150,6 +150,9 @@
         querySelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryConnectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryPropertyEditorObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

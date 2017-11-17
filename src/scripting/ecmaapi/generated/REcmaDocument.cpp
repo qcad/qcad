@@ -139,6 +139,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, querySelectedEntities, "querySelectedEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, queryConnectedEntities, "queryConnectedEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryPropertyEditorObjects, "queryPropertyEditorObjects");
             
             REcmaHelper::registerFunction(&engine, proto, queryDocumentVariables, "queryDocumentVariables");
@@ -4212,6 +4214,113 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::querySelectedEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::queryConnectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryConnectedEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryConnectedEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryConnectedEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryConnectedEntities(a0);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryConnectedEntities(a0
+        ,
+    a1);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryConnectedEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryConnectedEntities", context, engine);
             return result;
         }
          QScriptValue

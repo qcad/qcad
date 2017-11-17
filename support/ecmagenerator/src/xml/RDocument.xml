@@ -335,6 +335,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryConnectedEntities"
+    cppName="queryConnectedEntities" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="queryPropertyEditorObjects"
     cppName="queryPropertyEditorObjects" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
