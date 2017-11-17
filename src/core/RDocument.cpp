@@ -1438,6 +1438,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
         const QList<RS::EntityType>& filter, bool selectedOnly) {
 
+    QSet<RS::EntityType> filterSet = filter.toSet();
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
     boxExpanded.c2.z = RMAXDOUBLE;
@@ -1573,7 +1574,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 //        }
 
         // apply filter:
-        if (filter.contains(entity->getType())) {
+        if (filterSet.contains(entity->getType())) {
             continue;
         }
 
@@ -1697,6 +1698,79 @@ QSet<REntity::Id> RDocument::queryEntitiesContainedXYIntersectedZ(const RBox& bo
  */
 QSet<REntity::Id> RDocument::querySelectedEntities() {
     return storage.querySelectedEntities();
+}
+
+QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double tolerance) {
+    QSet<REntity::Id> ret;
+
+    QSharedPointer<REntity> entity = queryEntityDirect(entityId);
+    if (entity.isNull()) {
+        return ret;
+    }
+
+    RVector vTolerance = RVector(tolerance, tolerance);
+
+    ret.insert(entityId);
+
+    // select all connected entities:
+    QList<RVector> connectionPoints = entity->getEndPoints();
+
+    do {
+        QList<RVector> newConnectionPoints;
+
+        for (int i=0; i<connectionPoints.length(); ++i) {
+            RVector cp = connectionPoints[i];
+
+            RBox box(cp - vTolerance, cp + vTolerance);
+
+            // find connected entities:
+            // candidates intersect with small box around end point:
+            QSet<REntity::Id> candidates = queryIntersectedEntitiesXY(box, true, false, RBlock::INVALID_ID);
+                      //QList<RS::EntityType>() << RS::EntityLine << RS::EntityArc << RS::EntityEllipse << RS::EntityPolyline << RS::EntitySpline);
+
+            candidates.remove(entityId);
+            candidates.subtract(ret);
+
+            // filter out candidates with end points outside range:
+            QList<REntity::Id> connectedEntities;
+            QList<RVector> connectedPoints;
+            QSet<REntity::Id>::iterator it;
+            for (it=candidates.begin(); it!=candidates.end() /*&& found<=10*/; ++it) {
+                REntity::Id candidateId = *it;
+                QSharedPointer<REntity> candidate = queryEntityDirect(candidateId);
+                QList<RVector> eps = candidate->getEndPoints();
+                for (int k=0; k<eps.length(); ++k) {
+                    RVector ep = eps[k];
+                    if (ep.getDistanceTo(cp) <= tolerance) {
+                        connectedEntities.append(candidateId);
+                        connectedPoints.append(ep);
+                        break;
+                    }
+                }
+            }
+
+            // select connected entities and find new connection points:
+            for (int q = 0; q<connectedEntities.length(); ++q) {
+                REntity::Id cEntityId = connectedEntities[q];
+                RVector connectedPoint = connectedPoints[q];
+
+                ret.insert(cEntityId);
+
+                QSharedPointer<REntity> cEntity = queryEntityDirect(cEntityId);
+                QList<RVector> eps = cEntity->getEndPoints();
+                for (int ck=0; ck<eps.length(); ck++) {
+                    RVector ep = eps[ck];
+                    if (connectedPoint.equalsFuzzy(ep)) {
+                        continue;
+                    }
+                    newConnectionPoints.append(ep);
+                }
+            }
+        }
+        connectionPoints = newConnectionPoints;
+    } while (!connectionPoints.isEmpty());
+
+    return ret;
 }
 
 QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {

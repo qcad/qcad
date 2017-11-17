@@ -119,9 +119,7 @@ public:
     QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
     QSet<REntity::Id> queryAllBlockReferences() const;
 
-    QSet<REntity::Id> queryContainedEntities(
-        const RBox& box
-    );
+    QSet<REntity::Id> queryContainedEntities(const RBox& box);
 
     QSet<REntity::Id> queryInfiniteEntities();
     QSet<REntity::Id> queryIntersectedEntitiesXY(
@@ -147,6 +145,9 @@ public:
     );
 
     QSet<REntity::Id> querySelectedEntities();
+
+    QSet<REntity::Id> queryConnectedEntities(REntity::Id entityId, double tolerance = RS::PointTolerance);
+
     QSet<RObject::Id> queryPropertyEditorObjects();
 
     QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
