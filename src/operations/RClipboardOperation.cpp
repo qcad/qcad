@@ -34,6 +34,7 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
         const RVector& offset,
         double scale,
         double rotation,
+        const RVector& center,
         bool flipHorizontal,
         bool flipVertical,
         bool toCurrentLayer,
@@ -119,7 +120,7 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
         }
         //ref->scale(scale * unitScale);
         refp->scale(scale);
-        refp->rotate(rotation);
+        refp->rotate(rotation, center);
         refp->move(offset);
 
         QStringList propertyNames = properties.keys();
@@ -203,7 +204,7 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
             copyEntity(
                         *entity.data(),
                         src, dest,
-                        off, scale, unitScale, rotation,
+                        off, scale, unitScale, rotation, center,
                         flipHorizontal, flipVertical,
                         toCurrentLayer, toCurrentBlock,
                         overwriteLayers, overwriteBlocks,
@@ -289,6 +290,7 @@ void RClipboardOperation::copyEntity(
         double scale,
         double unitScale,
         double rotation,
+        const RVector& center,
         bool flipHorizontal,
         bool flipVertical,
         bool toCurrentLayer,
@@ -363,6 +365,7 @@ void RClipboardOperation::copyEntity(
                                   // but to block reference
                     unitScale, 
                     0.0,
+                    RDEFAULT_RVECTOR,
                     false, false, // no flips
                     false, false, // keep original block and layer
                     overwriteLayers, first && overwriteBlocks,
@@ -413,7 +416,7 @@ void RClipboardOperation::copyEntity(
     else {
         destEntity->scale(scale * unitScale);
     }
-    destEntity->rotate(rotation);
+    destEntity->rotate(rotation, center);
     destEntity->move(offset);
 
     destEntity->setDocument(&dest);

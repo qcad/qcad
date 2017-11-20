@@ -52,10 +52,18 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) {
         rotation = rotations[0];
     }
 
+    RVector center;
+    if (centers.length()==1) {
+        // same center for all pasted instances:
+        center = centers[0];
+    }
+
     for (int i=0; i<iMax; i++) {
         copy(
             sourceDocument, document,
-            offsets[i], scale, i < rotations.length() ? rotations[i] : rotation,
+            offsets[i], scale,
+            i < rotations.length() ? rotations[i] : rotation,
+            i < centers.length() ? centers[i] : center,
             flipHorizontal, flipVertical,
             toCurrentLayer, /*toCurrentBlock=*/ true,
             overwriteLayers && i==0, overwriteBlocks && i==0,
