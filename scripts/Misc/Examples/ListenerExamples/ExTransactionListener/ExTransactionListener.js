@@ -48,8 +48,36 @@ ExTransactionListener.prototype.beginEvent = function() {
 
         var objIds = transaction.getAffectedObjects();
         EAction.handleUserMessage("Transaction affected %1 objects.".arg(objIds.length));
-        if (objIds.length<50) {
+        if (objIds.length<10) {
             EAction.handleUserMessage("Object IDs: " + objIds.join(','));
+        }
+
+        // show property changes of first 10 entities:
+        for (var i=0; i<objIds.length && i<10; i++) {
+            var objId = objIds[i];
+
+            EAction.handleUserMessage("Object ID: " + objId);
+
+            var pre = "&nbsp;&nbsp;&nbsp;";
+
+            var changes = transaction.getPropertyChanges(objId);
+            for (var k=0; k<changes.length; k++) {
+                var change = changes[k];
+                var pid = change.getPropertyTypeId();
+
+                if (pid.isCustom()) {
+                    // custom property was changed:
+                    EAction.handleUserMessage(pre + "custom property:" + pid.getPropertyTitle(), false);
+                }
+                else {
+                    // other property:
+                    // see RObject::Property*, REntity::Property*, RLineEntity::Property*, etc:
+                    EAction.handleUserMessage(pre + "property type:" + pid, false);
+                }
+
+                EAction.handleUserMessage(pre + "old value:" + change.getOldValue(), false);
+                EAction.handleUserMessage(pre + "new value:" + change.getNewValue(), false);
+            }
         }
     });
 
