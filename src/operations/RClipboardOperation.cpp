@@ -365,7 +365,7 @@ void RClipboardOperation::copyEntity(
                                   // but to block reference
                     unitScale, 
                     0.0,
-                    RDEFAULT_RVECTOR,
+                    RVector(0,0),
                     false, false, // no flips
                     false, false, // keep original block and layer
                     overwriteLayers, first && overwriteBlocks,

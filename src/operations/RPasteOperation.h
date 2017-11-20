@@ -99,7 +99,7 @@ public:
     }
     RVector getCenter() {
         if (this->centers.isEmpty()) {
-            return RDEFAULT_RVECTOR;
+            return RVector(0,0);
         }
         else {
             return this->centers[0];
