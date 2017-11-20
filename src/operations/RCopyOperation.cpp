@@ -37,6 +37,7 @@ RTransaction RCopyOperation::apply(RDocument& document, bool preview) {
         src, document,
         offset,
         1.0, 0.0,             // scale, angle
+        RDEFAULT_RVECTOR,     // center
         false,                // flipHorizontal
         false,                // flipVertical
         false,                // toCurrentLayer

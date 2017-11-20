@@ -47,6 +47,9 @@ public:
     void setRotations(const QList<double>& rotations) {
         this->rotations = rotations;
     }
+    void setCenters(const QList<RVector>& centers) {
+        this->centers = centers;
+    }
 
     void setOffset(const RVector& offset) {
         if (this->offsets.isEmpty()) {
@@ -84,6 +87,22 @@ public:
         }
         else {
             return this->rotations[0];
+        }
+    }
+    void setCenter(const RVector& centers) {
+        if (this->centers.isEmpty()) {
+            this->centers << centers;
+        }
+        else {
+            this->centers[0] = centers;
+        }
+    }
+    RVector getCenter() {
+        if (this->centers.isEmpty()) {
+            return RDEFAULT_RVECTOR;
+        }
+        else {
+            return this->centers[0];
         }
     }
     void setFlipHorizontal(bool flipHorizontal) {
@@ -144,6 +163,7 @@ private:
     QList<RVector> offsets;
     double scale;
     QList<double> rotations;
+    QList<RVector> centers;
     bool flipHorizontal;
     bool flipVertical;
     bool toCurrentLayer;
