@@ -68,7 +68,7 @@ public:
         KnownVariable = 0x20000,         //!< Property is a known DXF variable
         NumericallySorted = 0x40000,     //!< Sort choices for this property numerically
         Percentage = 0x80000 | Integer,  //!< Property is a percentage (0...100), implies Integer
-        Sum = 0x100000 | ReadOnly        //!< Sum up this property when multiple entities are selected (area, lenght), implies ReadOnly
+        Sum = 0x100000 | ReadOnly | Redundant  //!< Sum up this property when multiple entities are selected (area, lenght), implies ReadOnly and Redundant
     };
     Q_DECLARE_FLAGS(Options, Option)
 
