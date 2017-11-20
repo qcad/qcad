@@ -59,7 +59,10 @@ PointDisplaySettings.initPreferences = function(pageWidget, calledByPrefDialog, 
         sizeEdit.text = pdsize.toString();
     }
 
-    var values = [0,1,2,3,4,32,33,34,35,36,64,65,66,67,68,96,97,98,100];
+    var values = [ 0, 1, 2, 3, 4,
+                  32,33,34,35,36,
+                  64,65,66,67,68,
+                  96,97,98,99,100];
     for (var i=0; i<values.length; i++) {
         var f = function() { modeEdit.text = values[arguments.callee.i].toString(); };
         f.i = i;
