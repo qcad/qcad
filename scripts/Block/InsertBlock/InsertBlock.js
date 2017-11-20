@@ -184,6 +184,7 @@ InsertBlock.prototype.getOperation = function(preview) {
                     doc,
                     new RAttributeData(e.getData(), blockRefId, e.getTag())
                     );
+        att.setBlockId(doc.getCurrentBlockId());
         blockRef.applyTransformationTo(att);
 
         // assign values to attributes:
@@ -192,7 +193,7 @@ InsertBlock.prototype.getOperation = function(preview) {
             att.setText(this.attributes[tag]);
         }
 
-        op.addObject(att);
+        op.addObject(att, false);
     }
 
     return op;
