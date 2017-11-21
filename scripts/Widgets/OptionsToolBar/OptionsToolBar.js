@@ -122,7 +122,7 @@ OptionsToolBar.setIcon = function(fileNameOrIcon) {
     var iconLabel = optionsToolBar.findChild("Icon");
     var f = 1.0;
     if (RS.getSystemId()==="win") {
-        f = 0.8;
+        f = 1.0;
     }
     else if (RS.getSystemId()==="osx") {
         f = 0.9;
