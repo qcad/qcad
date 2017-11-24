@@ -58,6 +58,9 @@
         setRotations
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCenters
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -74,6 +77,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCenter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setFlipHorizontal

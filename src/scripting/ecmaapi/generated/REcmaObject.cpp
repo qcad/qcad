@@ -2468,7 +2468,70 @@
             context->argument(1).isString()
         ) /* type: QString */
      && (
-            context->argument(2).isArray()
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RObject * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RObject >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RObject: Argument 0 is not of type RObject *RObject *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copyCustomPropertiesFrom(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RObject * */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isArray()
         ) /* type: QStringList */
     
     ){
@@ -2495,13 +2558,21 @@
                     context->argument( 1 ).
                     toString();
                 
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
                     // argument isArray
                     QStringList
-                    a2;
+                    a3;
                     REcmaHelper::fromScriptValue(
                         engine,
-                        context->argument(2),
-                        a2
+                        context->argument(3),
+                        a3
                     );
                 
     // end of arguments
@@ -2513,7 +2584,9 @@
         ,
     a1
         ,
-    a2);
+    a2
+        ,
+    a3);
     } else
 
 

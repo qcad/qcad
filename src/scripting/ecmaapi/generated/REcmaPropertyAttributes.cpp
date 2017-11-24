@@ -269,6 +269,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Redundant",
+    QScriptValue(RPropertyAttributes::Redundant),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RPropertyAttributes::Option>(

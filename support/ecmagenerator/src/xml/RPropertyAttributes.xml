@@ -30,6 +30,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Integer" />
       <value name="Sum" />
       <value name="ReadOnly" />
+      <value name="Redundant" />
     </enum>
     <constructor>
       <variant />
