@@ -208,7 +208,7 @@ public:
     void removeCustomProperty(const QString& title, const QString& key);
     QStringList getCustomPropertyTitles() const;
     QStringList getCustomPropertyKeys(const QString& title) const;
-    void copyCustomPropertiesFrom(RObject* other, const QString& title = RDEFAULT_QSTRING, const QStringList& ignoreList = RDEFAULT_QSTRINGLIST);
+    void copyCustomPropertiesFrom(RObject* other, const QString& title = RDEFAULT_QSTRING, bool overwrite = false, const QStringList& ignoreList = RDEFAULT_QSTRINGLIST);
 
     /**
      * \nonscriptable
