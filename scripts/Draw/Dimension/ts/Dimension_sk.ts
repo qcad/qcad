@@ -106,7 +106,7 @@
     <message>
         <location line="+18"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto</translation>
     </message>
 </context>
 </TS>
