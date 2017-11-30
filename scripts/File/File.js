@@ -103,6 +103,37 @@ File.init = function() {
     File.getToolMatrixPanel();
 };
 
+/**
+ * \return Suggestion for initial file path for saving the given file or
+ * a file related to the given file.
+ *
+ * \param filePath Typically the path and file name of the drawing file.
+ * \param extension File extension to use for exported file (bmd, pdf, dxf, etc).
+ */
+File.getInitialSaveAsPath = function(filePath, extension) {
+    var ret = "";
+
+    var fi;
+
+    if (isNull(filePath) || filePath.length === 0) {
+        var mdiChild = EAction.getMdiChild();
+        var fn;
+        if (!isNull(mdiChild)) {
+            fn = stripDirtyFlag(EAction.getMdiChild().windowTitle)
+        }
+        else {
+            fn = "File";
+        }
+
+        fi = new QFileInfo(QDir.homePath());
+        ret = fi.absoluteFilePath() + QDir.separator + fn + "." + extension;
+    } else {
+        fi = new QFileInfo(filePath);
+        ret = fi.path() + QDir.separator + fi.completeBaseName() + "." + extension;
+    }
+    return ret;
+};
+
 
 /**
  * Advanced file save as dialog with extension completion.
@@ -110,13 +141,13 @@ File.init = function() {
  *
  * \param parentWidget Parent widget or null
  * \param caption Dialog caption
- * \param dir Initial directory of the dialog
+ * \param path Initial path of the dialog
  * \param fileName Initial file name to suggest to user
  * \param filterStrings Array of filter strings in the format 'My File Type (*.mft *.mftype)'
  *
  * \return Array with complete file path and selected name filter or undefined.
  */
-File.getSaveFileName = function(parentWidget, caption, dir, filterStrings) {
+File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
     var fileDialog = new QFileDialog(parentWidget);
     
     // use native dialog:
@@ -129,7 +160,7 @@ File.getSaveFileName = function(parentWidget, caption, dir, filterStrings) {
         fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
     }
 
-    var fiDir = new QFileInfo(dir);
+    var fiDir = new QFileInfo(path);
 
     fileDialog.setDirectory(fiDir.absolutePath());
     fileDialog.fileMode = QFileDialog.AnyFile;

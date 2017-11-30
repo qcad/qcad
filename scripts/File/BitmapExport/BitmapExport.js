@@ -91,17 +91,8 @@ BitmapExport.prototype.getFilename = function() {
 
     var drawingFileName = this.getDocument().getFileName();
     var lastUsedExtension = RSettings.getStringValue("BitmapExport/Extension", "bmp");
-    var initialPath = "";
-    //var initialFile = "";
-    if (drawingFileName.length === 0) {
-        fi = new QFileInfo(QDir.homePath());
-        initialPath = fi.absoluteFilePath() + QDir.separator
-                + stripDirtyFlag(EAction.getMdiChild().windowTitle) + "." + lastUsedExtension;;
-        //initialFile = fi.completeBaseName();
-    } else {
-        fi = new QFileInfo(drawingFileName);
-        initialPath = fi.path() + QDir.separator + fi.completeBaseName() + "." + lastUsedExtension;
-    }
+
+    var initialPath = File.getInitialSaveAsPath(drawingFileName, lastUsedExtension);
 
     var formats = QImageWriter.supportedImageFormats();
     var filters = [];
