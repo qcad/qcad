@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+128"/>
+        <location filename="../BitmapExport.js" line="+119"/>
         <source>Files</source>
         <translation>Dateien</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Exportieren als Bitmap</translation>
     </message>
     <message>
-        <location line="-60"/>
+        <location line="-51"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation>Fehler beim Generieren der Bitmap Datei &quot;%1&quot;: %2</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+36"/>
         <source>Files</source>
         <translation type="unfinished"></translation>
     </message>

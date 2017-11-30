@@ -14,7 +14,7 @@
         <translation>Bittikartta on viety &apos;%1&apos;een</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+36"/>
         <source>Files</source>
         <translation>Tiedostot</translation>
     </message>

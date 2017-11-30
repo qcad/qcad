@@ -14,7 +14,7 @@
         <translation>Obrázkový súbor bol exportovaný do &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+36"/>
         <source>Files</source>
         <translation>Súbory</translation>
     </message>

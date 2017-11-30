@@ -4,7 +4,7 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+128"/>
+        <location filename="../BitmapExport.js" line="+119"/>
         <source>Files</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-60"/>
+        <location line="-51"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translation type="unfinished"></translation>
     </message>

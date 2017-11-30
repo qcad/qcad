@@ -19,7 +19,7 @@
         <translation>&amp;File</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+87"/>
         <location line="+68"/>
         <source>Format:</source>
         <translation>Formato:</translation>
