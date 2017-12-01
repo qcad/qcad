@@ -62,8 +62,17 @@ RemoveBlock.prototype.beginEvent = function() {
         Block.editBlock(di, doc.getBlockName(doc.getModelSpaceBlockId()));
     }
 
-    var op = new RDeleteObjectOperation(block);
+    var op = new RDeleteObjectsOperation();
     op.setText(this.getToolTitle());
+    op.deleteObject(block);
+
+    if (block.hasLayout()) {
+        var layout = doc.queryLayout(block.getLayoutId());
+        if (!isNull(layout)) {
+            op.deleteObject(layout);
+        }
+    }
+
     di.applyOperation(op);
     di.clearPreview();
     di.repaintViews();
