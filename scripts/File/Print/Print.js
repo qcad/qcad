@@ -995,7 +995,7 @@ Print.getDefaultPaperSizeMM = function() {
  * \return Paper width in PaperUnit.
  */
 Print.getPaperWidth = function(document) {
-    var defaultPaperSizeMM = Print.defaultPrinter.paperSize(QPrinter.Millimeter);
+    var defaultPaperSizeMM = Print.getDefaultPaperSizeMM();
     var dwMM = defaultPaperSizeMM.width();
     var dw = RUnit.convert(dwMM, RS.Millimeter, Print.getPaperUnit(document));
 
@@ -1017,7 +1017,7 @@ Print.getPaperWidth = function(document) {
  * \return Paper height in PaperUnit.
  */
 Print.getPaperHeight = function(document) {
-    var defaultPaperSizeMM = Print.defaultPrinter.paperSize(QPrinter.Millimeter);
+    var defaultPaperSizeMM = Print.getDefaultPaperSizeMM();
     var dhMM = defaultPaperSizeMM.height();
     var dh = RUnit.convert(dhMM, RS.Millimeter, Print.getPaperUnit(document));
 
@@ -1038,7 +1038,9 @@ Print.getPaperHeight = function(document) {
  * \return Paper unit enum.
  */
 Print.getPaperUnit = function(document) {
-    return Print.getIntValue("UnitSettings/PaperUnit", RS.Millimeter, document);
+    //qDebug("paper unit:", Print.getIntValue("UnitSettings/PaperUnit", RS.Millimeter, document));
+    var def = Print.getDefaultPaperUnit();
+    return Print.getIntValue("UnitSettings/PaperUnit", def, document);
 };
 
 Print.getDefaultPaperUnit = function() {
