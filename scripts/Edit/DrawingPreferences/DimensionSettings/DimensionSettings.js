@@ -390,7 +390,7 @@ DimensionSettings.keepProportions = function(value, widgets) {
  */
 DimensionSettings.updateLinearFormatFromUnit = function(widgets) {
     var linearFormat = widgets["LinearFormat"].currentIndex+1;
-    if ((DimensionSettings.unit!==RS.Inch && DimensionSettings.unit!==RS.Foot) &&
+    if (DimensionSettings.unit!==RS.Inch &&
         (linearFormat===RS.ArchitecturalStacked || linearFormat===RS.Engineering)) {
 
         widgets["LinearFormat"].currentIndex = 1;
@@ -402,7 +402,7 @@ DimensionSettings.showLinearFormatWarning = function() {
     var appWin = EAction.getMainWindow();
     QMessageBox.warning(appWin,
                         qsTr("Unit / Format"),
-                        qsTr("The drawing unit must be 'Inch' or 'Foot' to display dimension labels in "
+                        qsTr("The drawing unit must be 'Inch' to display dimension labels in "
                              + "formats 'Architectural' or 'Engineering'. "
                              + "Format changed to 'Decimal'."));
 };
