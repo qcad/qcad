@@ -1192,7 +1192,18 @@ double RSettings::getDoubleValue(const QString& key, double defaultValue) {
         }
     }
 
-    double d = ret.toDouble();
+    QString str = ret.toString();
+    double d;
+    if (str.isEmpty()) {
+        return defaultValue;
+    }
+    else if (QRegExp("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$").exactMatch(str)) {
+        d = ret.toDouble();
+    }
+    else {
+        d = RMath::eval(str);
+    }
+
     if (RMath::isNaN(d)) {
         return defaultValue;
     }
