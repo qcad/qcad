@@ -214,7 +214,10 @@ Stretch.prototype.getOperation = function(preview) {
 Stretch.getStrechOperation = function(document, polygon, preview, offset, layerId, op) {
     // limit search to bounding box of polygon:
     var box = polygon.getBoundingBox();
-    var entities = document.queryIntersectedEntitiesXY(box);
+
+    // only stretch selected if there is a selection,
+    // otherwise stretch all:
+    var entities = document.queryIntersectedEntitiesXY(box, false, false, RObject.INVALID_ID, [], document.hasSelection());
 
     if (isNull(op)) {
         op = new RAddObjectsOperation();
