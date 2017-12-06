@@ -1084,9 +1084,9 @@ void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
                    << "guiAction is NULL";
     }
 
-    if (documentInterface == NULL && guiAction!=NULL) {
-        documentInterface = guiAction->getDocumentInterface();
-    }
+//    if (documentInterface == NULL && guiAction!=NULL) {
+//        documentInterface = guiAction->getDocumentInterface();
+//    }
     if (documentInterface == NULL) {
         documentInterface = RMainWindow::getDocumentInterfaceStatic();
     }
