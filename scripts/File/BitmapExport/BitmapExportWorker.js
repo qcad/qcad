@@ -35,6 +35,7 @@
  *  properties["monochrome"]: true: Export as black / white
  *  properties["grayscale"]: true: Export as grayscale
  *  properties["window"]: RBox: window to export in drawing coordinates
+ *  properties["entityids"]: Array: zoom to bounding box of given entities
  *  properties["initView"]: Callback to initialize view
  *
  * \param view Optional graphics view to use.
