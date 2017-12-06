@@ -155,6 +155,7 @@ BitmapExport.prototype.getProperties = function() {
 
     var whiteRadio = this.dialog.findChild("WhiteBackground");
     var blackRadio = this.dialog.findChild("BlackBackground");
+    var transparentRadio = this.dialog.findChild("TransparentBackground");
 
     var monoRadio = this.dialog.findChild("ColorMonochrome");
     var grayRadio = this.dialog.findChild("ColorGrayscale");
@@ -162,6 +163,7 @@ BitmapExport.prototype.getProperties = function() {
 
     var antiAliasingCheckbox = this.dialog.findChild("AntiAliasing");
 
+    var selectionCheckbox = this.dialog.findChild("Selection");
     var weightMarginCheckbox = this.dialog.findChild("WeightMargin");
 
     widthEdit.valueChanged.connect(
@@ -195,9 +197,13 @@ BitmapExport.prototype.getProperties = function() {
     if (whiteRadio.checked) {
         ret["backgroundColor"] = new QColor("white");
     }
-    else {
+    else if (blackRadio.checked) {
         ret["backgroundColor"] = new QColor("black");
     }
+    else {
+        ret["backgroundColor"] = new QColor("#000000ff");
+    }
+
     ret["margin"] = RMath.eval(marginCombo.currentText);
     ret["antialiasing"] = antiAliasingCheckbox.checked;
     if (monoRadio.checked) {
@@ -207,7 +213,12 @@ BitmapExport.prototype.getProperties = function() {
       ret["grayscale"] = true;
     }
 
-    ret["noweightmargin"] = !weightMarginCheckbox.checked
+    ret["noweightmargin"] = !weightMarginCheckbox.checked;
+
+    if (selectionCheckbox.checked) {
+        var doc = this.getDocument();
+        ret["entityids"] = doc.querySelectedEntities();
+    }
 
     this.dialog.destroy();
     EAction.activateMainWindow();
@@ -226,11 +237,19 @@ BitmapExport.prototype.resolutionChanged = function(str) {
 
     var widthEdit = this.dialog.findChild("Width");
     var heightEdit = this.dialog.findChild("Height");
+    var selectionCheckbox = this.dialog.findChild("Selection");
 
     if (isNull(this.documentWidth) || isNull(this.documentHeight)) {
         var document = this.getDocument();
-        this.documentWidth = document.getBoundingBox(true, true).getWidth();
-        this.documentHeight = document.getBoundingBox(true, true).getHeight();
+        var bb;
+        if (selectionCheckbox.checked) {
+            bb = document.getSelectionBox();
+        }
+        else {
+            bb = document.getBoundingBox(true, true);
+        }
+        this.documentWidth = bb.getWidth();
+        this.documentHeight = bb.getHeight();
     }
 
     widthEdit.setValue(Math.ceil(res * this.documentWidth));
@@ -243,6 +262,13 @@ BitmapExport.prototype.exportBitmap = function(di, fileName, properties) {
     var view = di.getLastKnownViewWithFocus();
     var scene = view.getScene();
 
-    return exportBitmap(di.getDocument(), scene, fileName, properties);
+    var ret = exportBitmap(di.getDocument(), scene, fileName, properties);
+
+    // restore selection before export:
+    if (!isNull(properties["entityids"])) {
+        di.selectEntities(properties["entityids"]);
+    }
+
+    return ret;
 };
 
