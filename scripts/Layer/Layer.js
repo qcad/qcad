@@ -36,9 +36,9 @@ function Layer(guiAction) {
 
     this.documentInterface = undefined;
 
-    if (!isNull(guiAction) && !isNull(guiAction.getDocumentInterface())) {
-        this.setDocumentInterface(guiAction.getDocumentInterface());
-    }
+//    if (!isNull(guiAction) && !isNull(guiAction.getDocumentInterface())) {
+//        this.setDocumentInterface(guiAction.getDocumentInterface());
+//    }
 }
 
 Layer.prototype = new EAction();
