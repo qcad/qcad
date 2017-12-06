@@ -727,7 +727,14 @@
         
     
       bool zoomToSelection(
-                
+                int margin
+        = RDEFAULT_MIN1
+            );
+        
+    
+      bool zoomToEntities(
+                QSet < REntity::Id > & ids, int margin
+        = RDEFAULT_MIN1
             );
         
     

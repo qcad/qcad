@@ -759,6 +759,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBox" isPureVirtual="false" />
     </method>
+    <method name="getEntitiesBox" cppName="getEntitiesBox"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RBox" isPureVirtual="false">
+        <arg type="QSet &lt; REntity::Id &gt; &amp;"
+        typeName="QSet &lt; REntity::Id &gt;" name="ids"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="clearSpatialIndices"
     cppName="clearSpatialIndices" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

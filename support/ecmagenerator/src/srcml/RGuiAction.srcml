@@ -86,8 +86,8 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>formatToolTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>oriText</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getToolTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>oriText</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>setDocumentInterface</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>di</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <comment type="line">//void setDocumentInterface(RDocumentInterface* di);</comment>
+    <comment type="line">//RDocumentInterface* getDocumentInterface() const;</comment>
 
     <comment type="block">/**
      * Sets the shortcut(s) for this action.
@@ -387,7 +387,7 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>toolTip</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>iconDisabled</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>enabledOverride</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl>;</decl_stmt>
+    <comment type="line">//RDocumentInterface* documentInterface;</comment>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGuiAction*</argument>)</argument_list></macro>

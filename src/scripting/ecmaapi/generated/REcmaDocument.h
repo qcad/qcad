@@ -273,6 +273,9 @@
         getSelectionBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getEntitiesBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearSpatialIndices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

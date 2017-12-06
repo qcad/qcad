@@ -55,21 +55,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="shortcut" isConst="true" />
       </variant>
     </method>
-    <method name="setDocumentInterface"
-    cppName="setDocumentInterface" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RDocumentInterface *"
-        typeName="RDocumentInterface *" name="di"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="getDocumentInterface"
-    cppName="getDocumentInterface" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RDocumentInterface *"
-      isPureVirtual="false" />
-    </method>
     <method name="setShortcut" cppName="setShortcut"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

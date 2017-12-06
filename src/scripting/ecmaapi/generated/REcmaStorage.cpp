@@ -343,6 +343,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSelectionBox, "getSelectionBox");
             
+            REcmaHelper::registerFunction(&engine, proto, getEntitiesBox, "getEntitiesBox");
+            
             REcmaHelper::registerFunction(&engine, proto, removeObject, "removeObject");
             
             REcmaHelper::registerFunction(&engine, proto, saveObject, "saveObject");
@@ -10442,6 +10444,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getSelectionBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getEntitiesBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getEntitiesBox", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getEntitiesBox";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getEntitiesBox", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QSet < REntity::Id > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QSet < REntity::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBox'
+    RBox cppResult =
+        
+               self->getEntitiesBox(a0);
+        // return type: RBox
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getEntitiesBox().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getEntitiesBox", context, engine);
             return result;
         }
          QScriptValue

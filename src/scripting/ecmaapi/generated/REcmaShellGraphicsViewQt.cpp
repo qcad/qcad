@@ -8704,7 +8704,7 @@
         
     
       bool REcmaShellGraphicsViewQt::zoomToSelection(
-                
+                int margin
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewQt::zoomToSelection", engine);
@@ -8717,7 +8717,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=0*/
+                    || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewQt::zoomToSelection";
@@ -8731,7 +8731,7 @@
                         //}
                         bool ret =
                         RGraphicsViewQt::zoomToSelection(
-                            
+                            margin
                         );
 
                         // block recursion again:
@@ -8753,7 +8753,19 @@
                             bool
                           >(
                         
-                            _q_function.call(__qtscript_self)
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: int, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        margin
+        )
+      
+                            )
                         
                       )
                     
@@ -8761,6 +8773,92 @@
                     _q_function.setData(QScriptValue(engine, prev));
 
                     //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomToSelection", engine);
+
+                    
+                            return res;
+                          
+            }
+        
+    
+      bool REcmaShellGraphicsViewQt::zoomToEntities(
+                QSet < REntity::Id > & ids, int margin
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewQt::zoomToEntities", engine);
+                QScriptValue _q_function = __qtscript_self.property("zoomToEntities");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=2*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewQt::zoomToEntities";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        bool ret =
+                        RGraphicsViewQt::zoomToEntities(
+                            ids, margin
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomToEntities", engine);
+
+                        
+                            return ret;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QSet < REntity::Id > &, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        &ids
+        )
+      
+
+
+
+    // type: int, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        margin
+        )
+      
+                            )
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewQt::zoomToEntities", engine);
 
                     
                             return res;

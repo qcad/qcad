@@ -84,12 +84,6 @@
         getToolTip
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDocumentInterface
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDocumentInterface
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setShortcut
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

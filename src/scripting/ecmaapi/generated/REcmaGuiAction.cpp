@@ -113,10 +113,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getToolTip, "getToolTip");
             
-            REcmaHelper::registerFunction(&engine, proto, setDocumentInterface, "setDocumentInterface");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDocumentInterface, "getDocumentInterface");
-            
             REcmaHelper::registerFunction(&engine, proto, setShortcut, "setShortcut");
             
             REcmaHelper::registerFunction(&engine, proto, setDefaultShortcut, "setDefaultShortcut");
@@ -802,117 +798,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::getToolTip", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGuiAction::setDocumentInterface
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGuiAction::setDocumentInterface", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setDocumentInterface";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGuiAction* self = 
-                        getSelf("setDocumentInterface", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RDocumentInterface * */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    RDocumentInterface * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<RDocumentInterface >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RGuiAction: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDocumentInterface(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setDocumentInterface().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setDocumentInterface", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGuiAction::getDocumentInterface
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGuiAction::getDocumentInterface", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getDocumentInterface";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGuiAction* self = 
-                        getSelf("getDocumentInterface", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RDocumentInterface *'
-    RDocumentInterface * cppResult =
-        
-               self->getDocumentInterface();
-        // return type: RDocumentInterface *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getDocumentInterface().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getDocumentInterface", context, engine);
             return result;
         }
          QScriptValue
