@@ -2272,6 +2272,13 @@ RBox RDocument::getSelectionBox() const {
     return storage.getSelectionBox();
 }
 
+/**
+ * \copydoc RStorage::getEntitiesBox
+ */
+RBox RDocument::getEntitiesBox(QSet<REntity::Id>& ids) const {
+    return storage.getEntitiesBox(ids);
+}
+
 void RDocument::clearSpatialIndices() {
     spatialIndex.clear();
     QMap<RBlock::Id, RSpatialIndex*>::iterator it;

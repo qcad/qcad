@@ -233,6 +233,7 @@ public:
 
     RBox getBoundingBox(bool ignoreHiddenLayers = true, bool ignoreEmpty = false) const;
     RBox getSelectionBox() const;
+    RBox getEntitiesBox(QSet<REntity::Id>& ids) const;
 
     //void addToSpatialIndex(RObject& object, bool isNew = false);
     void clearSpatialIndices();
