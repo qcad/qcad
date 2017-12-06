@@ -56,8 +56,8 @@ RGuiAction::RGuiAction(const QString& text, QObject* parent)
     noState(false),
     toggleable(false),
     iconDisabled(false),
-    enabledOverride(-1),
-    documentInterface(NULL) {
+    enabledOverride(-1) {
+    //documentInterface(NULL) {
     
     initTexts();
     
@@ -99,16 +99,17 @@ RGuiAction::~RGuiAction() {
     }
 
     actions.removeAll(this);
+    //documentInterface = NULL;
 }
 
 
-void RGuiAction::setDocumentInterface(RDocumentInterface* di) {
-    documentInterface = di;
-}
+//void RGuiAction::setDocumentInterface(RDocumentInterface* di) {
+//    documentInterface = di;
+//}
 
-RDocumentInterface* RGuiAction::getDocumentInterface() const {
-    return documentInterface;
-}
+//RDocumentInterface* RGuiAction::getDocumentInterface() const {
+//    return documentInterface;
+//}
 
 void RGuiAction::setText(const QString& text) {
     this->oriText = text;
@@ -1001,12 +1002,14 @@ bool RGuiAction::slotTrigger(const QString& command) {
         // call action factory of script handler:
         if (requiresDocument) {
             RDocumentInterface* di;
-            if (documentInterface!=NULL) {
-                di = documentInterface;
-            }
-            else {
+//            if (documentInterface!=NULL) {
+//                di = documentInterface;
+//                //qDebug() << "got di: " << (unsigned long int)di;
+//            }
+//            else {
                 di = RMainWindow::getDocumentInterfaceStatic();
-            }
+                //qDebug() << "getting di statically: " << (unsigned long int)di;
+//            }
             if (di == NULL) {
                 qWarning() << "This action requires a document to be open: " << scriptFile;
                 return true;

@@ -85,8 +85,8 @@ public:
     static QString formatToolTip(const QString& oriText, const QString& shortcut);
     QString getToolTip(const QString& oriText, const QString& shortcut);
 
-    void setDocumentInterface(RDocumentInterface* di);
-    RDocumentInterface* getDocumentInterface() const;
+    //void setDocumentInterface(RDocumentInterface* di);
+    //RDocumentInterface* getDocumentInterface() const;
 
     /**
      * Sets the shortcut(s) for this action.
@@ -386,7 +386,7 @@ protected:
     QString toolTip;
     bool iconDisabled;
     int enabledOverride;
-    RDocumentInterface* documentInterface;
+    //RDocumentInterface* documentInterface;
 };
 
 Q_DECLARE_METATYPE(RGuiAction*)
