@@ -117,6 +117,7 @@ public:
 
     virtual RBox getBoundingBox(bool ignoreHiddenLayers = true, bool ignoreEmpty=false) const;
     virtual RBox getSelectionBox() const;
+    virtual RBox getEntitiesBox(QSet<REntity::Id>& ids) const;
 
     virtual bool removeObject(QSharedPointer<RObject> object);
     virtual bool saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion = true, bool keepHandles = false);

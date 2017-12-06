@@ -1102,6 +1102,19 @@ RBox RMemoryStorage::getSelectionBox() const {
     return ret;
 }
 
+RBox RMemoryStorage::getEntitiesBox(QSet<REntity::Id>& ids) const {
+    RBox ret;
+    QSet<REntity::Id>::const_iterator it;
+    for (it = ids.constBegin(); it != ids.constEnd(); ++it) {
+        REntity::Id id = *it;
+        QSharedPointer<REntity> e = queryEntityDirect(id);
+        if (!e.isNull()) {
+            ret.growToInclude(e->getBoundingBox());
+        }
+    }
+    return ret;
+}
+
 bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
     if (object.isNull()) {
         return false;
