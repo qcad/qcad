@@ -640,6 +640,7 @@ public:
     virtual RBox getBoundingBox(bool ignoreHiddenLayers = true, bool ignoreEmpty = false) const = 0;
 
     virtual RBox getSelectionBox() const = 0;
+    virtual RBox getEntitiesBox(QSet<REntity::Id>& ids) const = 0;
 
     virtual bool removeObject(QSharedPointer<RObject> object) = 0;
 
