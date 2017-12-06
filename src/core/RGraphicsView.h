@@ -147,7 +147,8 @@ public:
     virtual void zoomTo(const RBox& window, int margin = 0);
     void zoomPrevious();
     void autoZoom(int margin = RDEFAULT_MIN1, bool ignoreEmpty=false, bool ignoreLineweight=false);
-    bool zoomToSelection();
+    bool zoomToSelection(int margin = RDEFAULT_MIN1);
+    bool zoomToEntities(const QSet<REntity::Id>& ids, int margin = RDEFAULT_MIN1);
 
     virtual void centerToPoint(const RVector& point);
     virtual void centerToBox(const RBox& box);

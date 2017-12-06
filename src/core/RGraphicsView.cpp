@@ -204,14 +204,35 @@ void RGraphicsView::autoZoom(int margin, bool ignoreEmpty, bool ignoreLineweight
     zoomTo(bb, (margin!=-1 ? margin : getMargin()));
 }
 
-bool RGraphicsView::zoomToSelection() {
+bool RGraphicsView::zoomToSelection(int margin) {
     RDocument* document = getDocument();
     if (document == NULL) {
         return false;
     }
     RBox selectionBox = document->getSelectionBox();
     if (selectionBox.isValid() && (selectionBox.getWidth()>RS::PointTolerance || selectionBox.getHeight()>RS::PointTolerance)) {
-        zoomTo(selectionBox, getMargin());
+        zoomTo(selectionBox, (margin!=-1 ? margin : getMargin()));
+        return true;
+    }
+    return false;
+}
+
+bool RGraphicsView::zoomToEntities(const QSet<REntity::Id>& ids, int margin) {
+    RDocument* document = getDocument();
+    if (document == NULL) {
+        return false;
+    }
+    RBox bb;
+    QSet<REntity::Id>::const_iterator it;
+    for (it=ids.constBegin(); it!=ids.constEnd(); it++) {
+        REntity::Id id = *it;
+        QSharedPointer<REntity> e = document->queryEntityDirect(id);
+        if (!e.isNull()) {
+            bb.growToInclude(e->getBoundingBox());
+        }
+    }
+    if (bb.isValid() && (bb.getWidth()>RS::PointTolerance || bb.getHeight()>RS::PointTolerance)) {
+        zoomTo(bb, (margin!=-1 ? margin : getMargin()));
         return true;
     }
     return false;
