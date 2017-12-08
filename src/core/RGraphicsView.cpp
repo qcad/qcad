@@ -563,7 +563,7 @@ void RGraphicsView::handleKeyPressEvent(QKeyEvent& event) {
     if (navigationAction != NULL) {
         navigationAction->keyPressEvent(event);
     }
-    event.ignore();
+    //event.ignore();
 }
 
 void RGraphicsView::handleKeyReleaseEvent(QKeyEvent& event) {
