@@ -849,6 +849,9 @@ Print.getValue = function(key, def, document) {
     else {
         var block = document.queryCurrentBlock();
         if (!isNull(block)) {
+            // fall back on document wide value for blocks:
+            def = EAction.getValue(key, def, document);
+
             ret = block.getCustomProperty("QCAD", key, def);
         }
     }
@@ -1038,7 +1041,6 @@ Print.getPaperHeight = function(document) {
  * \return Paper unit enum.
  */
 Print.getPaperUnit = function(document) {
-    //qDebug("paper unit:", Print.getIntValue("UnitSettings/PaperUnit", RS.Millimeter, document));
     var def = Print.getDefaultPaperUnit();
     return Print.getIntValue("UnitSettings/PaperUnit", def, document);
 };
