@@ -1280,6 +1280,12 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         documentVariables = docVars;
     }
 
+    // entity changed:
+    // selection map needs update:
+    if (!entity.isNull()) {
+        clearSelectionCache();
+    }
+
     return true;
 }
 
