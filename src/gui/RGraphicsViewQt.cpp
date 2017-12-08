@@ -315,6 +315,8 @@ void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
     if (event==NULL) {
         return;
     }
+    event->ignore();
+
     RGraphicsView::handleKeyPressEvent(*event);
 
     // we're NOT accepting the event here to make sure the
@@ -326,6 +328,8 @@ void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {
     if (event==NULL) {
         return;
     }
+    event->ignore();
+
     RGraphicsView::handleKeyReleaseEvent(*event);
 
     // we're NOT accepting the event here to make sure the
