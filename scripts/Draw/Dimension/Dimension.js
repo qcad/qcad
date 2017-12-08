@@ -91,9 +91,13 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     if (!isNull(doc)) {
         var block = doc.queryCurrentBlock();
         if (!isNull(block) && block.hasLayout() && block.isModelSpace()) {
-            var cbAuto = optionsToolBar.findChild("AutoScaleAction");
-            if (!isNull(cbAuto)) {
-                cbAuto.visible = false;
+            var cbAutoAction = optionsToolBar.findChild("AutoScaleAction");
+            if (!isNull(cbAutoAction)) {
+                cbAutoAction.visible = false;
+                var cbAuto = optionsToolBar.findChild("AutoScale");
+                cbAuto.checked = false;
+                var scaleCombo = optionsToolBar.findChild("Scale");
+                scaleCombo.setEnabled(true);
             }
         }
     }
