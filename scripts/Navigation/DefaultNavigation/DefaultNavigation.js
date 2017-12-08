@@ -69,6 +69,10 @@ DefaultNavigation.prototype.setGraphicsView = function(v) {
 DefaultNavigation.prototype.finishEvent = function() {
 };
 
+/**
+ * Implement panning with arrow keys.
+ * Only has an effect if no actions are triggered using arrows as shortcuts.
+ */
 DefaultNavigation.prototype.keyPressEvent = function(event) {
     var v = undefined;
 
