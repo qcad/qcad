@@ -693,7 +693,8 @@ EAction.prototype.keyPressEvent = function(event) {
     }
 
     if ((event.key() >= Qt.Key_0.valueOf() && event.key() <= Qt.Key_9.valueOf()) || event.key() === Qt.Key_Period.valueOf()) {
-        // number or dot entered: give focus to first input widget in options tool bar and set text to number entered:
+        // number or dot entered:
+        // give focus to first input widget in options tool bar and set text to number entered:
         var w = OptionsToolBar.getFirstInputWidget();
         if (!isNull(w)) {
             w.setFocus(Qt.OtherFocusReason);
@@ -1073,7 +1074,9 @@ EAction.getToolBar = function(title, objectName, toolBarArea, category, before) 
             }
         }
         tb.objectName = objectName;
-        tb.setProperty("Category", category);
+        if (!isNull(category)) {
+            tb.setProperty("Category", category);
+        }
         var s = RSettings.getIntValue("ToolBar/IconSize", tb.iconSize.width());
         tb.iconSize = new QSize(s,s);
         if (isNull(before)) {
