@@ -78,7 +78,7 @@ function RBlockListQt(parent, addListener, showHeader) {
 
 RBlockListQt.prototype = new RTreeWidget();
 
-RBlockListQt.getBlockList = function() {
+RBlockListQt.getWidget = function() {
     var appWin = EAction.getMainWindow();
     return appWin.findChild("BlockList");
 };
@@ -87,19 +87,19 @@ RBlockListQt.getBlockList = function() {
  * Add an additional action to be used in the context menu.
  * Can be used by plugins to hook into the block list context menu.
  */
-RBlockListQt.addContextMenuScriptFile = function(scriptFile) {
-    var blockList = RBlockListQt.getBlockList();
+RBlockListQt.addContextMenuScriptFile = function(scriptFile, blockList) {
+    //var blockList = RBlockListQt.getWidget();
     if (isNull(blockList)) {
         return;
     }
 
-    var scriptFiles = RBlockListQt.getContextMenuScriptFiles();
+    var scriptFiles = RBlockListQt.getContextMenuScriptFiles(blockList);
     scriptFiles.push(scriptFile);
     blockList.setProperty("ContextMenuScriptFiles", scriptFiles);
 };
 
-RBlockListQt.getContextMenuScriptFiles = function() {
-    var blockList = RBlockListQt.getBlockList();
+RBlockListQt.getContextMenuScriptFiles = function(blockList) {
+    //var blockList = RBlockListQt.getWidget();
     if (isNull(blockList)) {
         return [];
     }
@@ -130,8 +130,16 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
     RGuiAction.getByScriptFile("scripts/Block/SelectBlockReferences/SelectBlockReferences.js").addToMenu(menu);
     RGuiAction.getByScriptFile("scripts/Block/DeselectBlockReferences/DeselectBlockReferences.js").addToMenu(menu);
 
+    RBlockListQt.complementContextMenu(menu, RBlockListQt.getWidget());
+
+    menu.exec(QCursor.pos());
+
+    e.ignore();
+};
+
+RBlockListQt.complementContextMenu = function(menu, blockList) {
     // add addtional context menu actions provided by plugins:
-    var scriptFiles = RBlockListQt.getContextMenuScriptFiles();
+    var scriptFiles = RBlockListQt.getContextMenuScriptFiles(RBlockListQt.getWidget());
     for (var i=0; i<scriptFiles.length; i++) {
         var scriptFile = scriptFiles[i];
         var a = RGuiAction.getByScriptFile(scriptFile);
@@ -139,10 +147,6 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
             a.addToMenu(menu);
         }
     }
-
-    menu.exec(QCursor.pos());
-
-    e.ignore();
 };
 
 RBlockListQt.prototype.filter = function(block) {
