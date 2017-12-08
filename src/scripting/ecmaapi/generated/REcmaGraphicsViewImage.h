@@ -72,6 +72,9 @@
         zoom
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        pan
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         centerToBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

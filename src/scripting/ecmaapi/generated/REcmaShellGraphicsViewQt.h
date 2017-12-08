@@ -313,6 +313,12 @@
             );
         
     
+      void pan(
+                const RVector & delta, bool regen
+        = true
+            );
+        
+    
       void centerToBox(
                 const RBox & box
             );
@@ -733,14 +739,8 @@
         
     
       bool zoomToEntities(
-                QSet < REntity::Id > & ids, int margin
+                const QSet < REntity::Id > & ids, int margin
         = RDEFAULT_MIN1
-            );
-        
-    
-      void pan(
-                const RVector & delta, bool regen
-        = true
             );
         
     

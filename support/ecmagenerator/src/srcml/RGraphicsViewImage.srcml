@@ -88,6 +88,10 @@
         <constructor_decl><name>RGraphicsView::zoom</name><parameter_list>(<param><decl><type><name>center</name></type></decl></param>, <param><decl><type><name>factor</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>pan</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>delta</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regen</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::pan</name><parameter_list>(<param><decl><type><name>delta</name></type></decl></param>, <param><decl><type><name>regen</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>centerToBox</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>RGraphicsView::centerToBox</name><parameter_list>(<param><decl><type><name>box</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>

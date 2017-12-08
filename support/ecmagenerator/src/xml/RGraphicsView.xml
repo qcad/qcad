@@ -331,7 +331,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"
         typeName="QSet &lt; REntity::Id &gt;" name="ids"
-        isConst="false" />
+        isConst="true" />
         <arg type="int" typeName="int" name="margin"
         hasDefault="true" default="RDEFAULT_MIN1"
         isConst="false" />
