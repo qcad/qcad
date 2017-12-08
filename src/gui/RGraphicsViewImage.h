@@ -87,6 +87,10 @@ public:
         RGraphicsView::zoom(center, factor);
     }
 
+    void pan(const RVector& delta, bool regen=true) {
+        RGraphicsView::pan(delta, regen);
+    }
+
     void centerToBox(const RBox& box) {
         RGraphicsView::centerToBox(box);
     }
