@@ -17,5 +17,6 @@ TARGET = $${RLIBNAME}spatialindex
 LIBS += -l$${RLIBNAME}core -lspatialindexnavel
 OTHER_FILES += spatialindex.dox
 DEFINES += QCADSPATIALINDEX_LIBRARY
+RC_FILE = spatialindex.rc
 
 #POST_TARGETDEPS += ../../$$ROUTDIR/$${RLIBPRE}spatialindexnavel$${RLIBPOSTDLL}

@@ -1,0 +1,7 @@
+#ifndef SPATIALINDEX_RC
+#define SPATIALINDEX_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadspatialindex.dll"
+#include "../../shared.rc"
+
+#endif // SPATIALINDEX_RC
