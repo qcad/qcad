@@ -282,6 +282,7 @@ else {
 NAME = $${RLIBNAME}core
 TARGET = $${NAME}
 RESOURCES = resources/core.qrc
+RC_FILE = core.rc
 OTHER_FILES += core.dox math/math.dox
 DEFINES += QCADCORE_LIBRARY
 

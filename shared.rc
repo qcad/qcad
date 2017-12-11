@@ -1,0 +1,52 @@
+#ifndef SHARED_RC
+#define SHARED_RC
+
+#include <windows.h>
+#include "src/core/RVersion.h"
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+#define VER_FILEVERSION             R_QCAD_VERSION_MAJOR,R_QCAD_VERSION_MINOR,R_QCAD_VERSION_REV,R_QCAD_VERSION_BUILD
+#define VER_FILEVERSION_STR         R_QCAD_VERSION_STRING
+
+#define VER_PRODUCTVERSION          R_QCAD_VERSION_MAJOR,R_QCAD_VERSION_MINOR,R_QCAD_VERSION_REV,R_QCAD_VERSION_BUILD
+#define VER_PRODUCTVERSION_STR      R_QCAD_VERSION_STRING
+
+#define VER_COMPANYNAME_STR         "RibbonSoft, GmbH"
+#define VER_FILEDESCRIPTION_STR     "QCAD"
+#define VER_INTERNALNAME_STR        "QCAD"
+#define VER_LEGALCOPYRIGHT_STR      "Copyright (c) 2017 RibbonSoft, GmbH"
+#define VER_LEGALTRADEMARKS1_STR    "All Rights Reserved"
+#define VER_LEGALTRADEMARKS2_STR    VER_LEGALTRADEMARKS1_STR
+#define VER_PRODUCTNAME_STR         "QCAD"
+
+#define VER_COMPANYDOMAIN_STR       "https://qcad.org"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION VER_FILEVERSION
+PRODUCTVERSION VER_PRODUCTVERSION
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName",        VER_COMPANYNAME_STR
+            VALUE "FileDescription",    VER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",        VER_FILEVERSION_STR
+            VALUE "InternalName",       VER_INTERNALNAME_STR
+            VALUE "LegalCopyright",     VER_LEGALCOPYRIGHT_STR
+            VALUE "LegalTrademarks1",   VER_LEGALTRADEMARKS1_STR
+            VALUE "LegalTrademarks2",   VER_LEGALTRADEMARKS2_STR
+            VALUE "OriginalFilename",   VER_ORIGINALFILENAME_STR
+            VALUE "ProductName",        VER_PRODUCTNAME_STR
+            VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
+            //VALUE "Rev",     I_SVNREV
+            //VALUE "Date",     I_SVN_CLOCKDATE
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+#endif // SHARED_RC

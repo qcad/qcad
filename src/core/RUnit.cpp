@@ -781,11 +781,11 @@ QString RUnit::doubleToString(double value, double prec,
     QString ret;
     QString exaStr;
     int dotPos;
-    long int num;
+    double num;
     if (prec>1.0e-12) {
         // note: msvc does not have round:
         double v = value / prec;
-        num = (v-floor(v)<0.5 ? (long int)floor(v) : (long int)ceil(v));
+        num = (v-floor(v)<0.5 ? floor(v) : ceil(v));
     }
     else {
         num = RMath::mround(value);
