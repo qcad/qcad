@@ -28,3 +28,4 @@ TEMPLATE = lib
 CONFIG += staticlib
 CONFIG -= qt
 DEFINES += DXFLIB_LIBRARY
+RC_FILE = dxflib.rc
