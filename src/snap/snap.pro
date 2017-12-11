@@ -48,3 +48,4 @@ TARGET = $${RLIBNAME}snap
 LIBS += -l$${RLIBNAME}core -l$${RLIBNAME}grid -l$${RLIBNAME}entity
 OTHER_FILES += snap.dox
 DEFINES += QCADSNAP_LIBRARY
+RC_FILE = snap.rc

@@ -1,0 +1,7 @@
+#ifndef SNAP_RC
+#define SNAP_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadsnap.dll"
+#include "../../shared.rc"
+
+#endif // SNAP_RC
