@@ -1,0 +1,7 @@
+#ifndef ENTITY_RC
+#define ENTITY_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadentity.dll"
+#include "../../shared.rc"
+
+#endif // ENTITY_RC

@@ -119,6 +119,7 @@ NAME = $${RLIBNAME}entity
 TARGET = $${NAME}
 OTHER_FILES += entity.dox
 DEFINES += QCADENTITY_LIBRARY
+RC_FILE = entity.rc
 LIBS += -l$${RLIBNAME}core -lopennurbs
 !win32 {
     include( ../../shared_ts.pri )
