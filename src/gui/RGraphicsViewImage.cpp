@@ -892,7 +892,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             paintImage(painter, image);
         }
 
-        // text:
+        // TTF text block (CAD text block is painter path):
         if (drawable.getType()==RGraphicsSceneDrawable::Text) {
             RTextBasedData text = drawable.getText();
             text.move(drawable.getOffset());
@@ -1445,13 +1445,14 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
     QList<RTextLayout> textLayouts = text.getTextLayouts();
 
     for (int i=0; i<textLayouts.length(); i++) {
-        QTransform t = textLayouts[i].transform;
+        RTextLayout& textLayout = textLayouts[i];
+        QTransform t = textLayout.transform;
         //double h = text.getTextHeight();
 
         // CAD font text block:
-//        if (textLayouts[i].layout.isNull()) {
+//        if (textLayout.layout.isNull()) {
              // painter paths:
-//            QList<RPainterPath> pps = textLayouts[i].painterPaths;
+//            QList<RPainterPath> pps = textLayout.painterPaths;
 //            for (int k=0; k<pps.length(); k++) {
 //                if (pps[k].getFeatureSize()<0) {
 //                    continue;
@@ -1474,7 +1475,7 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
 
         // TTF font text block:
 //        else {
-        if (!textLayouts[i].layout.isNull()) {
+        if (!textLayout.layout.isNull()) {
             painter->save();
             painter->setTransform(t, true);
 
@@ -1487,12 +1488,12 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
                 o.setFlags(QTextOption::SuppressColors);
                 //painter->setPen(QPen(QString("#%1%10000").arg(255-i*10, 0, 16)));
                 //painter->setPen(QPen("red"));
-                //if (textLayouts[i].color==RColor::CompatByLayer) {
+                //if (textLayout.color==RColor::CompatByLayer) {
                 //    painter->setPen(QPen(text.getLayerId()));
                 //}
-                //painter->setPen(QPen(textLayouts[i].color));
+                //painter->setPen(QPen(textLayout.color));
                 //QPen pen(text.getColor());
-                QColor col = textLayouts[i].color;
+                QColor col = textLayout.color;
                 QPen pen;
                 if (col.isValid() && col!=RColor::CompatByLayer && col!=RColor::CompatByBlock) {
                     pen.setColor(col);
@@ -1509,9 +1510,9 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
 
                 painter->setPen(pen);
             }
-            textLayouts[i].layout->setTextOption(o);
+            textLayout.layout->setTextOption(o);
 
-            textLayouts[i].layout->draw(painter, QPoint(0,0));
+            textLayout.layout->draw(painter, QPoint(0,0));
 
             painter->restore();
         }
