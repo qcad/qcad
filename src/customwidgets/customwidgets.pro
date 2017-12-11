@@ -39,3 +39,4 @@ TEMPLATE = lib
 LIBS += -l$${RLIBNAME}gui -l$${RLIBNAME}core
 DESTDIR = ../../plugins/designer
 OTHER_FILES += customwidgets.dox
+RC_FILE = customwidgets.rc

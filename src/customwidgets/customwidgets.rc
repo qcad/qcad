@@ -1,0 +1,7 @@
+#ifndef CUSTOMWIDGETS_RC
+#define CUSTOMWIDGETS_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadcustomwidgets.dll"
+#include "../../shared.rc"
+
+#endif // CUSTOMWIDGETS_RC
