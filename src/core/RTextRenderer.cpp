@@ -274,7 +274,8 @@ void RTextRenderer::renderSimple() {
     // transform paths of text:
     boundingBox = RBox();
     for (int i=0; i<painterPaths.size(); ++i) {
-        painterPaths[i].transform(sizeTransform);
+//        painterPaths[i].transform(sizeTransform);
+        painterPaths[i].scale(textHeight * textData.getXScale(), textHeight);
         boundingBox.growToInclude(painterPaths[i].getBoundingBox());
     }
 
@@ -380,7 +381,11 @@ void RTextRenderer::renderSimple() {
     // apply global transform for position, angle and vertical alignment:
     boundingBox = RBox();
     for (int i=0; i<painterPaths.size(); ++i) {
-        painterPaths[i].transform(globalTransform);
+//        painterPaths[i].transform(globalTransform);
+        painterPaths[i].rotate(angle);
+        painterPaths[i].move(pos);
+        painterPaths[i].move(RVector(xOffset, yOffset));
+
         boundingBox.growToInclude(painterPaths[i].getBoundingBox());
     }
 
@@ -1603,10 +1608,13 @@ void RTextRenderer::preparePathColor(RPainterPath& path, const RColor& color) {
 }
 
 void RTextRenderer::preparePathTransform(RPainterPath& path, double cursor, double cxfScale) {
-    QTransform transform;
-    transform.translate(cursor, 0);
-    transform.scale(cxfScale, cxfScale);
-    path.transform(transform);
+    path.scale(cxfScale, cxfScale);
+    path.move(RVector(cursor, 0));
+
+//    QTransform transform;
+//    transform.translate(cursor, 0);
+//    transform.scale(cxfScale, cxfScale);
+//    path.transform(transform);
 }
 
 /**
