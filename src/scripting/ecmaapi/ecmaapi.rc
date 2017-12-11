@@ -1,0 +1,7 @@
+#ifndef ECMAAPI_RC
+#define ECMAAPI_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadecmaapi.dll"
+#include "../../shared.rc"
+
+#endif // ECMAAPI_RC
