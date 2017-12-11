@@ -1,0 +1,7 @@
+#ifndef STEMMER_RC
+#define STEMMER_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadstemmer.dll"
+#include "../../shared.rc"
+
+#endif // STEMMER_RC
