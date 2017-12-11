@@ -8,6 +8,7 @@ CONFIG += precompile_header
 PRECOMPILED_HEADER = stable.h
 OTHER_FILES += ecmaapi.dox
 DEFINES += QCADECMAAPI_LIBRARY
+RC_FILE = ecmaapi.rc
 HEADERS += \
     RAutoLoadEcma.h \
     REcmaHelper.h \

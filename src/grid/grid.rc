@@ -1,0 +1,7 @@
+#ifndef GRID_RC
+#define GRID_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadgrid.dll"
+#include "../../shared.rc"
+
+#endif // GRID_RC

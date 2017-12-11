@@ -26,5 +26,6 @@ TARGET = $${RLIBNAME}zip
 LIBS += -l$${RLIBNAME}core -lquazip
 OTHER_FILES += zip.dox
 DEFINES += QCADZIP_LIBRARY
+RC_FILE = zip.rc
 
 #POST_TARGETDEPS += ../../$$ROUTDIR/$${RLIBPRE}zip$${RLIBPOSTDLL}
