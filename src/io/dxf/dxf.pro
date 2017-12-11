@@ -16,6 +16,7 @@ SOURCES = \
     RDxfPlugin.cpp
 TEMPLATE = lib
 DEFINES += QCADDXF_LIBRARY
+RC_FILE = dxf.rc
 LIBS += -l$${RLIBNAME}core -l$${RLIBNAME}entity -ldxflib -l$${RLIBNAME}operations
 r_static_libs {
     CONFIG -= plugin
