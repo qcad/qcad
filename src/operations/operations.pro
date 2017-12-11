@@ -44,3 +44,4 @@ TARGET = $${RLIBNAME}operations
 LIBS += -l$${RLIBNAME}core -l$${RLIBNAME}entity
 OTHER_FILES += operations.dox
 DEFINES += QCADOPERATIONS_LIBRARY
+RC_FILE = operations.rc

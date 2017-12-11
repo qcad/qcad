@@ -1,0 +1,7 @@
+#ifndef OPERATIONS_RC
+#define OPERATIONS_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadoperations.dll"
+#include "../../shared.rc"
+
+#endif // OPERATIONS_RC
