@@ -57,8 +57,20 @@ RPainterPath::RPainterPath(const RPainterPath& other) :
     modes(other.modes),
     points(other.points),
     featureSize(other.featureSize),
-    pixelSizeHint(other.pixelSizeHint),
-    originalShapes(other.originalShapes) {
+    pixelSizeHint(other.pixelSizeHint) {
+
+    // detach original shapes:
+    for (int i=0; i<other.originalShapes.length(); i++) {
+        QSharedPointer<RShape> originalShape = other.originalShapes[i];
+        QSharedPointer<RLine> originalLine = originalShape.dynamicCast<RLine>();
+        QSharedPointer<RArc> originalArc = originalShape.dynamicCast<RArc>();
+        if (!originalLine.isNull()) {
+            originalShapes.append(QSharedPointer<RShape>(new RLine(*originalLine)));
+        }
+        if (!originalArc.isNull()) {
+            originalShapes.append(QSharedPointer<RShape>(new RArc(*originalArc)));
+        }
+    }
 
     //RDebug::incCounter("RPainterPath");
 }
@@ -548,17 +560,32 @@ void RPainterPath::transform(const QTransform& t) {
     }
 
     if (!originalShapes.isEmpty()) {
-        QList<QSharedPointer<RShape> > os;
+        bool hasArcs = false;
         for (int i=0; i<originalShapes.length(); i++) {
-            os.append(originalShapes[i]->getTransformed(t));
+            if (originalShapes[i]->getShapeType()!=RShape::Line) {
+                hasArcs = true;
+                break;
+            }
         }
-        originalShapes = os;
+
+        if (hasArcs) {
+            originalShapes.clear();
+        }
+        else {
+            QList<QSharedPointer<RShape> > os;
+            for (int i=0; i<originalShapes.length(); i++) {
+                os.append(originalShapes[i]->getTransformed(t));
+            }
+            originalShapes = os;
+        }
     }
 }
 
 void RPainterPath::move(const RVector& offset) {
     translate(offset.x, offset.y);
+
     RVector::moveList(points, offset);
+
     for (int i=0; i<originalShapes.length(); i++) {
         originalShapes[i]->move(offset);
     }
@@ -567,13 +594,33 @@ void RPainterPath::move(const RVector& offset) {
 void RPainterPath::rotate(double angle) {
     QTransform t;
     t.rotate(RMath::rad2deg(angle));
-    transform(t);
+    QPainterPath qp = t.map(*this);
+    (*(QPainterPath*)this) = qp;
+
+    RVector::rotateList(points, angle);
+
+    for (int i=0; i<originalShapes.length(); i++) {
+        originalShapes[i]->rotate(angle);
+    }
 }
 
 void RPainterPath::scale(double fx, double fy) {
     QTransform t;
     t.scale(fx, fy);
-    transform(t);
+    QPainterPath qp = t.map(*this);
+    (*(QPainterPath*)this) = qp;
+
+    RVector::scaleList(points, RVector(fx, fy, 1));
+
+    if (RMath::fuzzyCompare(fx, fy)) {
+        for (int i=0; i<originalShapes.length(); i++) {
+            originalShapes[i]->scale(fx, RVector(0,0));
+        }
+    }
+    else {
+        // non-uniform scale looses original shapes:
+        originalShapes.clear();
+    }
 }
 
 int RPainterPath::getElementCount() const {
