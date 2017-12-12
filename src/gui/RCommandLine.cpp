@@ -37,7 +37,9 @@ QString RCommandLine::getLastCommand() {
 }
 
 void RCommandLine::appendCommand(const QString& cmd) {
-    history.append(cmd);
+    if (!cmd.isEmpty() && (history.isEmpty() || history.last() != cmd)) {
+        history.append(cmd);
+    }
     it = history.end();
 }
 
@@ -98,9 +100,9 @@ void RCommandLine::keyPressEvent(QKeyEvent* event) {
     case Qt::Key_Enter:
     case Qt::Key_Return: {
         QString t = text();
-        if (!t.isEmpty() && (history.isEmpty() || history.last() != t)) {
-            history.append(t);
-        }
+//        if (!t.isEmpty() && (history.isEmpty() || history.last() != t)) {
+//            history.append(t);
+//        }
         it = history.end();
         emit commandConfirmed(t);
         }
