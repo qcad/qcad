@@ -560,24 +560,24 @@ void RPainterPath::transform(const QTransform& t) {
     }
 
     if (!originalShapes.isEmpty()) {
-        bool hasArcs = false;
-        for (int i=0; i<originalShapes.length(); i++) {
-            if (originalShapes[i]->getShapeType()!=RShape::Line) {
-                hasArcs = true;
-                break;
-            }
-        }
+//        bool hasArcs = false;
+//        for (int i=0; i<originalShapes.length(); i++) {
+//            if (originalShapes[i]->getShapeType()!=RShape::Line) {
+//                hasArcs = true;
+//                break;
+//            }
+//        }
 
-        if (hasArcs) {
-            originalShapes.clear();
-        }
-        else {
+//        if (hasArcs) {
+//            originalShapes.clear();
+//        }
+//        else {
             QList<QSharedPointer<RShape> > os;
             for (int i=0; i<originalShapes.length(); i++) {
                 os.append(originalShapes[i]->getTransformed(t));
             }
             originalShapes = os;
-        }
+//        }
     }
 }
 
