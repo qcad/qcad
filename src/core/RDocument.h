@@ -254,8 +254,20 @@ public:
     QList<RTransaction> redo();
     bool isUndoAvailable() const;
     bool isRedoAvailable() const;
+
     void startTransactionGroup();
     int getTransactionGroup() const;
+
+    /**
+     * True: add all operations to the current transaction group
+     */
+    void setAutoTransactionGroup(bool on) {
+        autoTransactionGroup = on;
+    }
+    bool getAutoTransactionGroup() const {
+        return autoTransactionGroup;
+    }
+
     void resetTransactionStack();
 
     void setFileName(const QString& fn);
@@ -421,6 +433,8 @@ private:
     //RBlock::Id modelSpaceBlockId;
     RLinetype::Id linetypeByLayerId;
     RLinetype::Id linetypeByBlockId;
+
+    bool autoTransactionGroup;
 };
 
 Q_DECLARE_METATYPE(RDocument*)

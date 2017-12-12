@@ -51,7 +51,8 @@ RDocument::RDocument(
       disableSpatialIndicesByBlock(false),
       transactionStack(storage),
       linetypeByLayerId(RObject::INVALID_ID),
-      linetypeByBlockId(RObject::INVALID_ID) {
+      linetypeByBlockId(RObject::INVALID_ID),
+      autoTransactionGroup(false) {
 
     storage.setDocument(this);
     init();

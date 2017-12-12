@@ -1938,6 +1938,10 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
         return RTransaction();
     }
 
+    if (document.getAutoTransactionGroup()) {
+        operation->setTransactionGroup(document.getTransactionGroup());
+    }
+
     RTransaction transaction = operation->apply(document, false);
     if (transaction.isFailed()) {
         qWarning() << "RDocumentInterface::applyOperation: "
