@@ -59,6 +59,12 @@
         ;static  QScriptValue
         setHistory
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        triggerCommand
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paste
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
