@@ -33,7 +33,7 @@ MiscModify.includeBasePath = includeBasePath;
 MiscModify.getMenu = function() {
     var menu = EAction.getSubMenu(
         Misc.getMenu(),
-        51100, 400,
+        51100, 350,
         MiscModify.getTitle(),
         "MiscModifyMenu"
     );
@@ -60,7 +60,7 @@ MiscModify.getCadToolBarPanel = function() {
         action.setNoState();
         action.setDefaultCommands(["miscmodifymenu"]);
         action.setGroupSortOrder(90);
-        action.setSortOrder(400);
+        action.setSortOrder(350);
         action.setWidgetNames(["MiscToolsPanel"]);
     }
 
