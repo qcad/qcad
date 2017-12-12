@@ -251,6 +251,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTransactionGroup, "getTransactionGroup");
             
+            REcmaHelper::registerFunction(&engine, proto, setAutoTransactionGroup, "setAutoTransactionGroup");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAutoTransactionGroup, "getAutoTransactionGroup");
+            
             REcmaHelper::registerFunction(&engine, proto, resetTransactionStack, "resetTransactionStack");
             
             REcmaHelper::registerFunction(&engine, proto, setFileName, "setFileName");
@@ -8524,6 +8528,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getTransactionGroup", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::setAutoTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::setAutoTransactionGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::setAutoTransactionGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("setAutoTransactionGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAutoTransactionGroup(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.setAutoTransactionGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::setAutoTransactionGroup", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getAutoTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getAutoTransactionGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getAutoTransactionGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getAutoTransactionGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getAutoTransactionGroup();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getAutoTransactionGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getAutoTransactionGroup", context, engine);
             return result;
         }
          QScriptValue

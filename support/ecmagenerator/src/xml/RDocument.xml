@@ -863,6 +863,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="setAutoTransactionGroup"
+    cppName="setAutoTransactionGroup" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAutoTransactionGroup"
+    cppName="getAutoTransactionGroup" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="resetTransactionStack"
     cppName="resetTransactionStack" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

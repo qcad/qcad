@@ -318,6 +318,12 @@
         getTransactionGroup
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAutoTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAutoTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         resetTransactionStack
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
