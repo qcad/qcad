@@ -274,7 +274,11 @@ void RTextRenderer::renderSimple() {
     // transform paths of text:
     boundingBox = RBox();
     for (int i=0; i<painterPaths.size(); ++i) {
-//        painterPaths[i].transform(sizeTransform);
+
+        // we don't use transform here:
+        // a non-uniform scaling operation here drops the original shapes in
+        // the painterpath:
+        //painterPaths[i].transform(sizeTransform);
         painterPaths[i].scale(textHeight * textData.getXScale(), textHeight);
         boundingBox.growToInclude(painterPaths[i].getBoundingBox());
     }
@@ -381,10 +385,7 @@ void RTextRenderer::renderSimple() {
     // apply global transform for position, angle and vertical alignment:
     boundingBox = RBox();
     for (int i=0; i<painterPaths.size(); ++i) {
-//        painterPaths[i].transform(globalTransform);
-        painterPaths[i].rotate(angle);
-        painterPaths[i].move(pos);
-        painterPaths[i].move(RVector(xOffset, yOffset));
+        painterPaths[i].transform(globalTransform);
 
         boundingBox.growToInclude(painterPaths[i].getBoundingBox());
     }
@@ -624,6 +625,7 @@ void RTextRenderer::render() {
                     // of current text line:
                     for (int i=0; i<paths.size(); ++i) {
                         RPainterPath p = paths.at(i);
+                        // ### TODO ###:
                         p.transform(allTransforms);
                         linePaths.append(p);
                     }
@@ -738,6 +740,7 @@ void RTextRenderer::render() {
                         // of current text line:
                         for (int i=0; i<paths.size(); ++i) {
                             RPainterPath p = paths.at(i);
+                            // ### TODO ###:
                             p.transform(allTransforms);
                             linePaths.append(p);
                         }
@@ -1608,13 +1611,10 @@ void RTextRenderer::preparePathColor(RPainterPath& path, const RColor& color) {
 }
 
 void RTextRenderer::preparePathTransform(RPainterPath& path, double cursor, double cxfScale) {
-    path.scale(cxfScale, cxfScale);
-    path.move(RVector(cursor, 0));
-
-//    QTransform transform;
-//    transform.translate(cursor, 0);
-//    transform.scale(cxfScale, cxfScale);
-//    path.transform(transform);
+    QTransform transform;
+    transform.translate(cursor, 0);
+    transform.scale(cxfScale, cxfScale);
+    path.transform(transform);
 }
 
 /**
