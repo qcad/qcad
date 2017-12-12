@@ -16,7 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QClipboard>
 #include <QDebug>
+#include <QGuiApplication>
 #include <QEvent>
 #include <QKeyEvent>
 
@@ -48,6 +50,26 @@ void RCommandLine::setHistory(QStringList& h) {
     it = history.end();
 }
 
+void RCommandLine::paste() {
+    QClipboard* cb = QGuiApplication::clipboard();
+    //qDebug("pasting: " + cb.text());
+
+    QString text = cb->text();
+
+    // multi line paste and enter:
+    if (text.contains("\n")) {
+        QStringList lines = text.split('\n');
+        for (int i=0; i<lines.length(); i++) {
+            //qDebug("line: " + lines[i]);
+            emit commandConfirmed(lines[i]);
+        }
+    }
+    else {
+        // single line paste only:
+        QLineEdit::paste();
+    }
+}
+
 bool RCommandLine::event(QEvent* event) {
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*> (event);
@@ -69,7 +91,7 @@ void RCommandLine::keyPressEvent(QKeyEvent* event) {
         break;
     case Qt::Key_V:
         if (event->modifiers() == Qt::ControlModifier) {
-            emit multiLinePaste();
+            paste();
             return;
         }
         break;
