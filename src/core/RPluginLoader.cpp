@@ -139,7 +139,9 @@ void RPluginLoader::loadPlugin(QObject* plugin, bool init, const QString& fileNa
         RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
         if (p) {
             if (init) {
-                p->init();
+                if (!p->init()) {
+                    qDebug() << "plugin not initialized";
+                }
             }
             info = p->getPluginInfo();
         }
