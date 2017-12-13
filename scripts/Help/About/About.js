@@ -267,7 +267,8 @@ About.prototype.initAboutPlugins = function(textBrowser) {
             // plugin error:
             text = pluginInfo.get("Error");
             if (!isNull(text)) {
-                html += this.getTableRow(qsTr("Error:"), text);
+                html += this.getTableRow(qsTr("Error:"),
+                    "<span style='color:red'>" + text + "</span>", false);
             }
             html += "</table>";
             html += "<hr/>";
