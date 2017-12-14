@@ -438,6 +438,13 @@ bool RSpline::hasFitPoints() const {
     return !fitPoints.isEmpty();
 }
 
+RVector RSpline::getFitPointAt(int i) const {
+    if (i>=0 && i<fitPoints.size()) {
+        return fitPoints.at(i);
+    }
+    return RVector::invalid;
+}
+
 /**
  * \return Knot vector, internally calculated and updated.
  */

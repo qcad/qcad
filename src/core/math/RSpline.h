@@ -107,6 +107,7 @@ public:
     QList<RVector> getFitPoints() const;
     int countFitPoints() const;
     bool hasFitPoints() const;
+    RVector getFitPointAt(int i) const;
 
     QList<double> getKnotVector() const;
     QList<double> getActualKnotVector() const;
