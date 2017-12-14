@@ -224,6 +224,10 @@ public:
         return data.countControlPoints();
     }
 
+    RVector getControlPointAt(int i) const {
+        return data.getControlPointAt(i);
+    }
+
     QList<RVector> getFitPoints() const {
         return data.getFitPoints();
     }
@@ -234,6 +238,10 @@ public:
 
     int countFitPoints() const {
         return data.countFitPoints();
+    }
+
+    RVector getFitPointAt(int i) const {
+        return data.getFitPointAt(i);
     }
 
     QList<double> getKnotVector() const {
