@@ -500,16 +500,17 @@ double REllipse::getLength() const {
  * \return Length of the ellipse segment from angle a1 to angle a2.
  */
 double REllipse::getSimpsonLength(double a1, double a2) const {
-    double df = (a2-a1) / 20;
+    int interval = 20;
+    double df = (a2-a1) / interval;
     double R = getMajorRadius();
     double r = getMinorRadius();
 
     double sum = 0.0;
     double q = 1.0;
 
-    for (int i=0; i<=20; ++i) {
+    for (int i=0; i<=interval; ++i) {
         double y = sqrt(::pow(R * sin(a1 + i * df), 2) + ::pow(r * cos(a1 + i * df), 2));
-        if (i==0 || i==20) {
+        if (i==0 || i==interval) {
             q = 1.0;
         }
         else {
