@@ -172,6 +172,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasFitPoints, "hasFitPoints");
             
+            REcmaHelper::registerFunction(&engine, proto, getFitPointAt, "getFitPointAt");
+            
             REcmaHelper::registerFunction(&engine, proto, getKnotVector, "getKnotVector");
             
             REcmaHelper::registerFunction(&engine, proto, getActualKnotVector, "getActualKnotVector");
@@ -2283,6 +2285,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::hasFitPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::getFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::getFitPointAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::getFitPointAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getFitPointAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getFitPointAt(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getFitPointAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getFitPointAt", context, engine);
             return result;
         }
          QScriptValue

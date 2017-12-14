@@ -152,6 +152,9 @@
         hasFitPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getKnotVector
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
