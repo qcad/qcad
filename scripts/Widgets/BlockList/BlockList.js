@@ -137,9 +137,9 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
     e.ignore();
 };
 
-RBlockListQt.complementContextMenu = function(menu, blockList) {
+RBlockListQt.complementContextMenu = function(menu, blockListWidget) {
     // add addtional context menu actions provided by plugins:
-    var scriptFiles = RBlockListQt.getContextMenuScriptFiles(RBlockListQt.getWidget());
+    var scriptFiles = RBlockListQt.getContextMenuScriptFiles(blockListWidget);
     for (var i=0; i<scriptFiles.length; i++) {
         var scriptFile = scriptFiles[i];
         var a = RGuiAction.getByScriptFile(scriptFile);
