@@ -50,7 +50,7 @@
         <translation>È possibile modificare il formato numero e coordinate nelle preferenze dell&apos;applicazione.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+68"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Cercando di disegnare o modificare le entità su un layer bloccato.</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation type="obsolete">Cercando di disegnare o modificare le entità su un layer bloccato.</translation>
     </message>
     <message>
-        <location line="-362"/>
+        <location line="-342"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -79,7 +79,7 @@
         <translation>Non valido coordinate o distanza &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+117"/>
         <source>Warning</source>
         <translation>Attenzione</translation>
     </message>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Draw</name>
     <message>
         <location filename="../Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>Rysowanie</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -15,7 +15,7 @@
 --file: qcadactions_pl.ts--
 &amp;Rysuj
 &amp;Preferencje bieżącego rysunku</translatorcomment>
-        <translation type="unfinished">&amp;Rysuj</translation>
+        <translation>&amp;Rysowanie</translation>
     </message>
 </context>
 <context>
@@ -23,12 +23,12 @@
     <message>
         <location filename="../DrawBasedOnRectanglePP.js" line="+69"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Pierwsze naroże</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugie naroże</translation>
     </message>
 </context>
 <context>
@@ -36,52 +36,52 @@
     <message>
         <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Górny lewy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Górny</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Górny prawy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Lewy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Środkowy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolny lewy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolny</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolny prawy</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Położenie</translation>
     </message>
 </context>
 <context>
@@ -89,17 +89,17 @@
     <message>
         <location filename="../DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Pierwszy łuk lub okrąg</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugi łuk lub okrąg</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Trzeci łuk lub okrąg</translation>
     </message>
 </context>
 </TS>

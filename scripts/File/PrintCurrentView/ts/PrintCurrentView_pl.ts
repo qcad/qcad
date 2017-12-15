@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Print</name>
     <message>
@@ -22,12 +22,12 @@ Wy&amp;drukuj</translatorcomment>
     <message>
         <location filename="../PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished"></translation>
+        <translation>Drukuj &amp;aktualny widok</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current view</source>
-        <translation type="unfinished"></translation>
+        <translation>Drukuje aktualny widok</translation>
     </message>
 </context>
 </TS>

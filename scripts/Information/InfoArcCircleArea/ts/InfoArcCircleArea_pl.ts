@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>InfoArcCircleArea</name>
     <message>
         <location filename="../InfoArcCircleArea.js" line="+70"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatwierdź</translation>
     </message>
     <message>
         <location line="+233"/>
@@ -16,7 +16,7 @@
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Obszar</translation>
     </message>
     <message>
         <location line="-108"/>
@@ -36,7 +36,7 @@
         <location line="+43"/>
         <location line="+22"/>
         <source>arc length:</source>
-        <translation type="unfinished"></translation>
+        <translation>długość łuku:</translation>
     </message>
     <message>
         <location line="-88"/>
@@ -57,17 +57,17 @@
     <message>
         <location line="+65"/>
         <source>radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>promień:</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Promień</translation>
     </message>
     <message>
         <location line="-104"/>
         <source>Circle area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obszar koła:</translation>
     </message>
     <message>
         <location line="-245"/>

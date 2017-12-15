@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LineAngle</name>
     <message>
@@ -11,7 +11,7 @@
 Wskaż położenie linii wymiarowej lub wprowadź kąt:
 Wskaż położenie linii wymiarowej lub wprowadź kąt
 Wskaż pozycje</translatorcomment>
-        <translation type="unfinished">Położenie</translation>
+        <translation>Położenie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -27,19 +27,19 @@ Wskaż pozycję [kąt/długość]</translatorcomment>
         <source>&amp;Angle:</source>
         <translatorcomment>--ignored colon--
 --file: qcadguiqt_pl.ts--</translatorcomment>
-        <translation type="unfinished">&amp;Kąt:</translation>
+        <translation>&amp;Kąt:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Length:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Długość:</translation>
+        <translation>&amp;Długość:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Reference Point:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia:</translation>
+        <translation>Punkt &amp;odniesienia:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -49,7 +49,7 @@ Wskaż pozycję [kąt/długość]</translatorcomment>
 Wskaż kąt początkowy:
 Wskaż kąt początkowy
 Wskaż punkt początkowy lub [środek]</translatorcomment>
-        <translation type="unfinished">Początek</translation>
+        <translation>Początek</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -59,7 +59,7 @@ Wskaż punkt początkowy lub [środek]</translatorcomment>
 &amp;Punkt centralny
 Środek
 Przyciągaj do punktów pośrednich</translatorcomment>
-        <translation type="unfinished">Środek</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -68,19 +68,19 @@ Przyciągaj do punktów pośrednich</translatorcomment>
 --file: qt_pl.ts--
 Wskaż punkt końcowy odnośnika
 Wskaż kąt końcowy lub [kąt/długość cięciwy]</translatorcomment>
-        <translation type="unfinished">End</translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Linia od kąta</translation>
+        <translation>Linia pod &amp;kątem</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysować linię pod zadanym kątem absolutnym</translation>
+        <translation>Rysuje linię pod zadanym kątem absolutnym</translation>
     </message>
 </context>
 </TS>

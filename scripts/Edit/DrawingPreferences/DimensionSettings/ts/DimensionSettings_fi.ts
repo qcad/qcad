@@ -91,8 +91,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>Piirroksen yksikkö pitää olla &apos;tuuma&apos; tai &apos;jalka&apos; jotta näytetään mittaselitteet muodossa &apos;arkkitehtuurinen&apos; tai &apos;tekninen&apos;. Muoto vaihdettu &apos;desimaaliseksi&apos;.</translation>
+        <translation type="vanished">Piirroksen yksikkö pitää olla &apos;tuuma&apos; tai &apos;jalka&apos; jotta näytetään mittaselitteet muodossa &apos;arkkitehtuurinen&apos; tai &apos;tekninen&apos;. Muoto vaihdettu &apos;desimaaliseksi&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

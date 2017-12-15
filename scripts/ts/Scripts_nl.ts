@@ -76,12 +76,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2058"/>
+        <location line="+2061"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1785"/>
+        <location line="-1788"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
@@ -92,7 +92,7 @@
         <translation>Geen</translation>
     </message>
     <message>
-        <location line="+645"/>
+        <location line="+648"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>

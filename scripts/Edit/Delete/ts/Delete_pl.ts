@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Delete</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qt_pl.ts--
 &amp;Skasuj
 &amp;Usuń swobodny</translatorcomment>
-        <translation type="unfinished">&amp;Skasuj</translation>
+        <translation>&amp;Usuń</translation>
     </message>
 </context>
 </TS>

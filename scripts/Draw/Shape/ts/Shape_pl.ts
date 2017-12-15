@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Line</name>
     <message>
@@ -45,17 +45,17 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     <message>
         <location line="+22"/>
         <source>&amp;Shape</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Figura</translation>
     </message>
     <message>
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Utworzenie linii łamanej</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Wypełnienie</translation>
     </message>
 </context>
 </TS>

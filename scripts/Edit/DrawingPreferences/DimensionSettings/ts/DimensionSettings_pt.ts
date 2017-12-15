@@ -136,14 +136,14 @@ Unidades de topógrafo</translatorcomment>
         <translation>Unidade / Formato</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>A unidade de desenho deve ser &apos;Polegada&apos; ou &apos;Pé&apos; para exibir rótulos de dimensões nos formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;Decimal&apos;.</translation>
+        <translation type="vanished">A unidade de desenho deve ser &apos;Polegada&apos; ou &apos;Pé&apos; para exibir rótulos de dimensões nos formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;Decimal&apos;.</translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">A unidade de desenho deve ser &apos;Polegada&apos; para exibir rótulos de dimensões em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;Decimal&apos;.</translation>
+        <translation>A unidade de desenho deve ser &apos;Polegada&apos; para exibir rótulos de dimensões em formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;Decimal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

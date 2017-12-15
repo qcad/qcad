@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Frame</name>
     <message>
@@ -53,19 +53,19 @@ Zrobione
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Wyeksportuj do PDF</translatorcomment>
-        <translation type="unfinished">Wyeksportuj do PDF</translation>
+        <translation>Wyeksportuj do PDF</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Exporting to %1...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Eksport do ...</translation>
+        <translation>Eksportowanie do %1...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Eksport wypełnić:</translation>
+        <translation>Zakończono eksportowanie: %1</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -85,7 +85,7 @@ Wyeksportuj do PDF</translatorcomment>
 --file: linguist_pl.ts--
 Wy&amp;drukuj...
 Wydrukuj...</translatorcomment>
-        <translation type="unfinished">Wydrukuj...</translation>
+        <translation>Wydrukuj...</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -98,13 +98,13 @@ Wydrukuj...</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Skala:</translatorcomment>
-        <translation type="unfinished">Skala:</translation>
+        <translation>Podziałka:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rysowanie Scale</translation>
+        <translation>Podziałka rysunku</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -142,7 +142,7 @@ Skala:</translatorcomment>
 Portret
 QVGA portret (240x320)
 VGA portret (480x640)</translatorcomment>
-        <translation type="unfinished">Portret</translation>
+        <translation>Pionowo</translation>
     </message>
     <message>
         <source>PageOrientation</source>
@@ -157,7 +157,7 @@ VGA portret (480x640)</translatorcomment>
 &amp;Poziomo
 Pejzaż
 QVGA pejzaż (320x240)</translatorcomment>
-        <translation type="unfinished">Pejzaż</translation>
+        <translation>Poziomo</translation>
     </message>
     <message>
         <source>Single Page</source>
@@ -229,7 +229,7 @@ Przełącz tryb czarno-biały</translatorcomment>
         <location line="+6"/>
         <source>Preview how current drawing would be printed</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Podgląd jak bieżący rysunek będzie drukowany</translation>
+        <translation>Wyświetla podgląd wydruku aktualnego rysunku</translation>
     </message>
 </context>
 </TS>

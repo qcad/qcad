@@ -70,7 +70,7 @@ Delta Y</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+74"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas de Dimensão</translation>

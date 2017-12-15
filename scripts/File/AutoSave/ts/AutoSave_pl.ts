@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>AutoSave</name>
     <message>
@@ -12,30 +12,30 @@
         <location filename="../AutoSave.js" line="+35"/>
         <source>Autosave</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Autozapis</translation>
+        <translation>Automatyczne zapisywanie</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Plik</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Autosaving to:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Autozapis do:</translation>
+        <translation>Położenie automatycznego zapisywania:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Autosave failed:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Automatyczne zapisywanie nie powiodło się:</translation>
+        <translation>Nie udało się zapisać automatycznie:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Autozapis zakończyć.</translation>
+        <translation>Zakończono automatyczne zapisywanie.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -55,26 +55,27 @@ Do you wish to recover them?</source>
         <location line="+6"/>
         <source>Recover Files?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Odzyskać pliki?</translation>
+        <translation>Odzyskać pliki?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Odzyskane</translation>
+        <translation>Odzyskano</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Odzyskaj plik?</translation>
+        <translation>Odzyskać plik?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Plik kopii zapasowej o &quot;autozapis&amp;quot; dla&apos;&amp;#39; istnieje. Czy chcesz je odzyskać?</translation>
+        <translation>Istnieje automatyczna kopia zapasowa pliku „%1”.
+Odzyskać ją?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -82,37 +83,37 @@ Do you wish to recover it?</source>
         <location line="+5"/>
         <source>Cannot rename file:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nie można zmienić nazwy pliku:</translation>
+        <translation>Nie można zmienić nazwy pliku:</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przeniesiony plik kopii autozapisu do:</translation>
+        <translation>Przeniesiono plik automatycznej kopii zapasowej do:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przeniesiony oryginalnego pliku do:</translation>
+        <translation>Przeniesiono pierwotny plik do:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nie można usunąć plik:</translation>
+        <translation>Nie można usunąć pliku:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Włącz autozapis</translation>
+        <translation>Włączenie automatycznego zapisywania</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Interval autozapis:</translation>
+        <translation>Interwał automatycznego zapisywania:</translation>
     </message>
     <message>
         <location line="+54"/>
@@ -121,7 +122,7 @@ Do you wish to recover it?</source>
 Wskaż punkt końcowy osi podrzędnej:
 Wskaż punkt końcowy osi podrzędnej
 Zakończ</translatorcomment>
-        <translation type="unfinished">min</translation>
+        <translation>min</translation>
     </message>
 </context>
 </TS>

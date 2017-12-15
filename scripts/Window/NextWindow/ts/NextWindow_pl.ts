@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>NextWindow</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qt_pl.ts--
 Znajdź &amp;następne
 &amp;Dalej</translatorcomment>
-        <translation type="unfinished">&amp;Dalej</translation>
+        <translation>&amp;Następne</translation>
     </message>
 </context>
 </TS>

@@ -54,7 +54,7 @@
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+74"/>
         <source>Dimension Tools</source>
         <translation>Kótovacie Nástroje</translation>
     </message>

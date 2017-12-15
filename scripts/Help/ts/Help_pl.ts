@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Help</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qtconfig_pl.ts--
 &amp;Pomoc
 Pomo&amp;c Qt Designer</translatorcomment>
-        <translation type="unfinished">&amp;Pomoc</translation>
+        <translation>Pomo&amp;c</translation>
     </message>
 </context>
 </TS>

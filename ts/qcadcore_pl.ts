@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>QObject</name>
     <message>
@@ -124,7 +124,7 @@
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation>Czerwień</translation>
+        <translation>Czerwony</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -134,7 +134,7 @@
     <message>
         <location line="-4"/>
         <source>Green</source>
-        <translation>Zieleń</translation>
+        <translation>Zielony</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -144,7 +144,7 @@
     <message>
         <location line="-1"/>
         <source>Blue</source>
-        <translation>Błękit</translation>
+        <translation>Niebieski</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -159,12 +159,12 @@
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation>Ciemnoczerwony</translation>
+        <translation>Ciemny czerwony</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation>Ciemnozielone</translation>
+        <translation>Ciemny zielony</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -174,7 +174,7 @@
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation>Ciemny błękit</translation>
+        <translation>Ciemny niebieski</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -189,7 +189,7 @@
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation>Bardzo gruby</translation>
+        <translation>Czarny</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -204,7 +204,7 @@
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation>Jasnoszary</translation>
+        <translation>Jasny szary</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Czcionka wymiaru</translation>
     </message>
 </context>
 <context>
@@ -308,7 +308,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Układ</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -326,22 +326,22 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolumny</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiersze</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstępy kolumn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstępy wierszy</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
@@ -390,7 +390,7 @@
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlany kolor</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -457,7 +457,7 @@
         <location line="+0"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -511,7 +511,7 @@
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation>Pogrubiony</translation>
+        <translation>Pogrubienie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -542,7 +542,7 @@
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrót</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -572,12 +572,12 @@
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
-        <translation type="unfinished">Nazwa</translation>
+        <translation>Nazwa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukryty</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
@@ -592,7 +592,7 @@
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">Zamknięty</translation>
+        <translation>Zablokowany</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -617,7 +617,7 @@
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolejność kart</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -668,7 +668,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+180"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wymaga doboru</translation>
@@ -800,7 +800,7 @@
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metryczny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -830,7 +830,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation>Obwódka</translation>
+        <translation>Obramowanie</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -872,7 +872,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ukryty</translation>
     </message>
     <message>
         <location line="+2"/>

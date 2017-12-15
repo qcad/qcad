@@ -177,7 +177,7 @@
         <translation type="vanished">Community Edition</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+37"/>
         <source>Script Add-Ons</source>
         <translation>Scripts de Add-Ons</translation>
     </message>

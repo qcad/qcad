@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Apollonius</name>
     <message>
@@ -85,7 +85,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2058"/>
+        <location line="+2061"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -94,7 +94,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-1785"/>
+        <location line="-1788"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -110,7 +110,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+645"/>
+        <location line="+648"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -471,22 +471,22 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation>Wczytywanie tłumaczeń dodatków...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Wczytywanie dodatków....</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicjowanie dodatków...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inicjowanie dodatków:</translation>
     </message>
 </context>
 <context>
@@ -494,52 +494,52 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location filename="../library.js" line="+798"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Obiekty</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Obiekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieznane obiekty</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieznany obiekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Warstwy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Warstwa</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation type="unfinished"></translation>
+        <translation>Układy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Układ</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -554,12 +554,12 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation>Widoki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Widok</translation>
     </message>
     <message>
         <location line="+3"/>

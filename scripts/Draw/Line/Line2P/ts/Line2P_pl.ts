@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Line2P</name>
     <message>
@@ -10,7 +10,7 @@
 Wskaż pierwszy punkt
 Wskaż pierwszy punkt wieloboku
 Wskaż pierwszy punkt odległości</translatorcomment>
-        <translation type="unfinished">Pierwszy punkt</translation>
+        <translation>Pierwszy punkt</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -19,7 +19,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
 Wskaż następny punkt
 Wskaż następny punkt lub [%1]
 Wskaż następny punkt wieloboku</translatorcomment>
-        <translation type="unfinished">Następny punkt</translation>
+        <translation>Następny punkt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -37,7 +37,7 @@ Zrobione
         <translatorcomment>--google--
 Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych obiektów.
 Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych obiektów</translatorcomment>
-        <translation type="unfinished">Zamknij Sequence</translation>
+        <translation>Zamknij sekwencję</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -48,7 +48,7 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
         <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Cofnąć poprzedni segment</translation>
+        <translation>Cofnij poprzedni segment</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -58,7 +58,7 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponów segment</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -68,19 +68,19 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
     <message>
         <location line="+20"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogranicz długość lub kąt</translation>
     </message>
     <message>
         <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Linia z 2 punktów</translation>
+        <translation>Linia z &amp;2 punktów</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj jeden wiersz lub sekwencję linii</translation>
+        <translation>Rysuje jedną linię lub sekwencję linii</translation>
     </message>
 </context>
 </TS>

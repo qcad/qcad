@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>BitmapExport</name>
     <message>
@@ -10,7 +10,7 @@
 --file: assistant_pl.ts--
 Wszystkie pliki obrazów (%1)
 Wszystkie pliki (*.*)</translatorcomment>
-        <translation type="unfinished">Pliki</translation>
+        <translation>Pliki</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -22,13 +22,13 @@ Wszystkie pliki (*.*)</translatorcomment>
         <location line="-51"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Błąd podczas generowania pliku bitmapy&apos;&amp;#39;:</translation>
+        <translation>Błąd podczas generowania pliku bitmapy „%1”: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Bitmap file został wywieziony do&apos;&amp;#39;</translation>
+        <translation>Wyeksportowano bitmapę do pliku „%1”</translation>
     </message>
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>
@@ -45,7 +45,7 @@ Eksportuj bitmapę...</translatorcomment>
 &amp;Debuguj zmianę rozmiaru
 Debuguj zmianę rozmiaru
 Zmienia rozmiar okna aplikacji</translatorcomment>
-        <translation type="unfinished">Rozmiar</translation>
+        <translation>Rozmiar</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -54,7 +54,7 @@ Zmienia rozmiar okna aplikacji</translatorcomment>
 --file: qt_pl.ts--
 Szerokość:
 &amp;Szerokość papieru:</translatorcomment>
-        <translation type="unfinished">Szerokość:</translation>
+        <translation>Szerokość:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -63,44 +63,54 @@ Szerokość:
 --file: qt_pl.ts--
 Wysokość:
 Wysokość tekstu:</translatorcomment>
-        <translation type="unfinished">Wysokość:</translation>
+        <translation>Wysokość:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pikseli na jednostkę rysunku:</translation>
+        <translation>Liczba pikseli na jednostkę rysunku:</translation>
     </message>
     <message>
-        <location line="+104"/>
-        <location line="+23"/>
-        <source>Color</source>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-17"/>
-        <source>Monochrome</source>
+        <location line="+36"/>
+        <source>Transparent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
+        <location line="+23"/>
+        <source>Color</source>
+        <translation>Kolor</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Monochrome</source>
+        <translation>Monochromatyczny</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Grayscale</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala szarości</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Antyaliasing</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Użycie antyaliasingu</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Margines</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -109,7 +119,7 @@ Wysokość tekstu:</translatorcomment>
 --file: designer_pl.ts--
 &amp;Marginesy:
 Marginesy:</translatorcomment>
-        <translation type="unfinished">Marginesy:</translation>
+        <translation>Margines:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -117,22 +127,22 @@ Marginesy:</translatorcomment>
         <translatorcomment>--google--
 Minimalny odstęp siatki (piksele):
 Minimalny odstęp siatki (piksele)</translatorcomment>
-        <translation type="unfinished">px</translation>
+        <translation>pikseli</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodanie dodatkowego marginesu, aby skompensować grubość linii</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-170"/>
         <source>Background</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Tło
 Tło:
 Tło rysunku:</translatorcomment>
-        <translation type="unfinished">Tło</translation>
+        <translation>Tło</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -141,7 +151,7 @@ Tło rysunku:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Czarny / Biały
 Biały</translatorcomment>
-        <translation type="unfinished">Biały</translation>
+        <translation>Białe</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -150,21 +160,21 @@ Biały</translatorcomment>
 --file: qt_pl.ts--
 Czarny / Biały
 Bardzo gruby</translatorcomment>
-        <translation type="unfinished">Bardzo gruby</translation>
+        <translation>Czarne</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Bitmap Export ...</translation>
+        <translation>Eksportuj &amp;bitmapę...</translation>
     </message>
 </context>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+97"/>
+        <location filename="../BitmapExportWorker.js" line="+106"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieprawidłowy rozmiar obrazu (szerokość x wysokość musi być mniejsze niż %1)</translation>
     </message>
 </context>
 </TS>

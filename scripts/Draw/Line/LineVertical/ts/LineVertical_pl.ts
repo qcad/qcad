@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LineVertical</name>
     <message>
         <location filename="../LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pionowa linia</translation>
+        <translation>Linia p&amp;ionowa</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical line</source>
         <translatorcomment>--google--
 Rysuj pionowe linie</translatorcomment>
-        <translation type="unfinished">Narysuj pionową linię</translation>
+        <translation>Rysuje linię pionową</translation>
     </message>
 </context>
 </TS>

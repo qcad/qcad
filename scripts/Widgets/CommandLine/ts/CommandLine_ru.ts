@@ -51,7 +51,7 @@
         <translation>Вы можете изменить формат числа/координат в настройках приложения.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+68"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Транзакция не удалась. Пожалуйста, проверьте рекурсии блоков и блокировки, или невидимые слои, или блоки.</translation>
     </message>

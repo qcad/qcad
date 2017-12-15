@@ -91,8 +91,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>Единицы измерения чертежа должны быть дюймами или футами для отображения меток в форматах Архитектуры или Инженеринга. Формат был изменён на десятичный.</translation>
+        <translation type="vanished">Единицы измерения чертежа должны быть дюймами или футами для отображения меток в форматах Архитектуры или Инженеринга. Формат был изменён на десятичный.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

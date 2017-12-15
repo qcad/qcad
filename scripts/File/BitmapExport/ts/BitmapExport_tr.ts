@@ -49,7 +49,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Background</source>
         <translation type="unfinished"></translation>
     </message>
@@ -64,7 +69,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
+        <source>Transparent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
         <translation type="unfinished"></translation>
@@ -118,7 +128,7 @@
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+97"/>
+        <location filename="../BitmapExportWorker.js" line="+106"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation type="unfinished"></translation>
     </message>

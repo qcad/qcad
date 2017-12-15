@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LineTangent1</name>
     <message>
@@ -32,7 +32,7 @@
         <location filename="../LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Tangent (Point, Circle)</translation>
+        <translation>&amp;Styczna (punkt, okrąg)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -40,7 +40,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Rysuj styczną (punkt, okrąg)</translatorcomment>
-        <translation type="unfinished">Rysuj styczną (punkt, okrąg)</translation>
+        <translation>Rysuje linię styczną do okręgu przez obrany punkt</translation>
     </message>
 </context>
 </TS>

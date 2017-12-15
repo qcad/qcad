@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>File</name>
     <message>
@@ -20,7 +20,7 @@
 --file: qtconfig_pl.ts--
 &amp;Plik
 Os&amp;tatnio otwierane pliki</translatorcomment>
-        <translation type="unfinished">&amp;Plik</translation>
+        <translation>&amp;Plik</translation>
     </message>
     <message>
         <location line="+94"/>
@@ -30,24 +30,24 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
 --file: qcadguiqt_pl.ts--
 &amp;Format:
 Format:</translatorcomment>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location line="-32"/>
         <source>Overwrite File?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nadpisz plik?</translation>
+        <translation>Zastąpić plik?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">&apos;&amp;#39; Plik już istnieje. Czy chcesz go zastąpić?</translation>
+        <translation>Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Wszystkie pliki</translation>
     </message>
 </context>
 </TS>

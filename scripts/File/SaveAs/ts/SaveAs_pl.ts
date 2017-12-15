@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SaveAs</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Okno dialogowe</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Używanie systemowego okna dialogowego</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisywanie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default format:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Domyślny format:</translation>
+        <translation>Domyślny format:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż ostrzeżenie podczas zapisywania w formacie pliku, który nie obsługuje 24bit kolory</translation>
+        <translation>Wyświetlanie ostrzeżenia podczas zapisywania pliku w formacie, który nie obsługuje 24-bitowej palety barw</translation>
     </message>
     <message>
         <source>Load/Save</source>
@@ -48,17 +48,17 @@ Zachowaj jako &amp;szablon...</translatorcomment>
     <message>
         <location filename="../SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Plik</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwieranie/Zapisywanie</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie odnaleziono filtrów eksportowania. Anulowanie...</translation>
     </message>
     <message>
         <location line="+74"/>
@@ -67,7 +67,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
 --file: qcadguiqt_pl.ts--
 &amp;Format:
 Format:</translatorcomment>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../SaveAsInit.js" line="+2"/>
@@ -76,7 +76,7 @@ Format:</translatorcomment>
 --file: linguist_pl.ts--
 Zapisz &amp;jako...
 Zachowaj j&amp;ako...</translatorcomment>
-        <translation type="unfinished">Zachowaj j&amp;ako...</translation>
+        <translation>Zapisz j&amp;ako...</translation>
     </message>
 </context>
 </TS>

@@ -58,7 +58,17 @@
         <translation>Pixel pro Zeichnungseinheit:</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
+        <translation>Umrandungsbox der Selektion exportieren</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Transparent</source>
+        <translation>Transparent</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
         <translation>Farbe</translation>
@@ -104,7 +114,7 @@
         <translation>Zusätzlichen Rand hinzufügen für Linienbreite</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-170"/>
         <source>Background</source>
         <translation>Hintergrund</translation>
     </message>
@@ -126,7 +136,7 @@
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+97"/>
+        <location filename="../BitmapExportWorker.js" line="+106"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ungültige Bildgrösse (Breite x Höhe muss kleiner sein als %1)</translation>
     </message>

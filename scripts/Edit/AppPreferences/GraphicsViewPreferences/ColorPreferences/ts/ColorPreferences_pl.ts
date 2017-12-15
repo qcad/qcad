@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -65,7 +65,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Siatka</translation>
     </message>
     <message>
         <location line="+48"/>

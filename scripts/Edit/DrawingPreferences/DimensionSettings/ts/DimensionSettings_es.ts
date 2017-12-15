@@ -94,13 +94,13 @@
         <translation>Unidades / formato</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>La unidad de dibujo debe ser &apos;Inch&apos; o &apos;Foot&apos; para mostrar las etiquetas de dimensión en los formatos &apos;Arquitectónico&apos; o &apos;Ingenieril&apos;. Formato cambiado a &apos;decimal&apos;.</translation>
+        <translation type="vanished">La unidad de dibujo debe ser &apos;Inch&apos; o &apos;Foot&apos; para mostrar las etiquetas de dimensión en los formatos &apos;Arquitectónico&apos; o &apos;Ingenieril&apos;. Formato cambiado a &apos;decimal&apos;.</translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">La unidad de dibujo debe ser &apos;Inch&apos; para mostrar las etiquetas de dimensión en los formatos &apos;Arquitectónico&apos; o &apos;Ingenieril&apos;. Formato cambiado a &apos;decimal&apos;.</translation>
+        <translation>La unidad de dibujo debe ser &apos;Inch&apos; para mostrar las etiquetas de dimensión en los formatos &apos;Arquitectónico&apos; o &apos;Ingenieril&apos;. Formato cambiado a &apos;decimal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

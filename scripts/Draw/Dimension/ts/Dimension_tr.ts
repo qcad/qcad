@@ -54,7 +54,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+74"/>
         <source>Dimension Tools</source>
         <translation type="unfinished"></translation>
     </message>

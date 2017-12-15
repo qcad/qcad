@@ -167,7 +167,7 @@
         <translation>Napaka:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+37"/>
         <source>Script Add-Ons</source>
         <translation>Dodatki skript</translation>
     </message>

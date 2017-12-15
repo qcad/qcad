@@ -78,7 +78,17 @@ Altura:
         <translation>Pixels por unidade de desenho:</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
+        <translation>Exporte a área retangular em torno da seleção</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Transparent</source>
+        <translation>Transparente</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
         <translation>Cor</translation>
@@ -124,7 +134,7 @@ Altura:
         <translation>Adicione uma margem extra para compensar o peso da linha</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-170"/>
         <source>Background</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -157,7 +167,7 @@ Preto</translatorcomment>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+97"/>
+        <location filename="../BitmapExportWorker.js" line="+106"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamanho de imagem inválido (largura x altura deve ser menor que %1)</translation>
     </message>

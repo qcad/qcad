@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ExitTrialDialog</name>
     <message>
@@ -47,12 +47,12 @@ Własne filtry</translatorcomment>
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+195"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Siatka</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Koniec</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -62,12 +62,12 @@ Własne filtry</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Prostopadle</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>Stycznie</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -77,17 +77,17 @@ Własne filtry</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished"></translation>
+        <translation>Przecięcie</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Odniesienie</translation>
     </message>
 </context>
 <context>
@@ -95,7 +95,7 @@ Własne filtry</translatorcomment>
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+156"/>
         <source>Invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieprawidłowy</translation>
     </message>
 </context>
 <context>

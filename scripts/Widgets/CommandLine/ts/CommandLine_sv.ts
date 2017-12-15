@@ -51,7 +51,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+68"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation type="unfinished"></translation>
     </message>

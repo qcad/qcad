@@ -51,7 +51,7 @@
         <translation>Fromat zapisa števil / koordintat lahko spremenite v nastavitvah aplikacije.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+68"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Prenos je spodletel. Preverite za rekurzije blokov ter zaklenjenih ali nevidnih slovjev oz blokov.</translation>
     </message>

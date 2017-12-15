@@ -62,7 +62,17 @@
         <translation>Píxeles por unidad de dibujo:</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
+        <translation>Exportar área rectangular alrededor de la selección</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Transparent</source>
+        <translation>Transparente</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
         <translation>Color</translation>
@@ -108,7 +118,7 @@
         <translation>Agregue un margen adicional para compensar el peso de la línea</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-170"/>
         <source>Background</source>
         <translation>Fondo</translation>
     </message>
@@ -126,7 +136,7 @@
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+97"/>
+        <location filename="../BitmapExportWorker.js" line="+106"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamaño de imagen no válido (anchura x altura debe ser menor que %1)</translation>
     </message>

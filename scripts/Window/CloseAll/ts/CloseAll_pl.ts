@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CloseAll</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
 Zam&amp;knij wszystko</translatorcomment>
-        <translation type="unfinished">Zam&amp;knij wszystko</translation>
+        <translation>Za&amp;mknij wszystkie</translation>
     </message>
 </context>
 </TS>

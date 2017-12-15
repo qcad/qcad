@@ -51,7 +51,7 @@
         <translation>Formát čísiel / súradníc môžete zmeniť v nastaveniach programu.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+68"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Úkon zlyhal. Prosím, skontrolujte blokové rekurzie a zamknuté alebo neviditeľné vrstvy alebo bloky.</translation>
     </message>

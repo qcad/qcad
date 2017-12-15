@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ZoomIn</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qcadguiqt_pl.ts--
 &amp;Powiększ
 Po&amp;większ</translatorcomment>
-        <translation type="unfinished">&amp;Powiększ</translation>
+        <translation>&amp;Przybliż</translation>
     </message>
 </context>
 </TS>

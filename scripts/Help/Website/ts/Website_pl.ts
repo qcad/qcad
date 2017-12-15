@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Website</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 Odwiedź &amp;stronę</translatorcomment>
-        <translation type="unfinished">Odwiedź &amp;stronę</translation>
+        <translation>Odwiedź &amp;stronę</translation>
     </message>
 </context>
 </TS>

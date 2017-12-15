@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Line</name>
     <message>
@@ -26,7 +26,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
 --file: qcad_pl.ts--
 &amp;Linia
 &amp;Liniowy</translatorcomment>
-        <translation type="unfinished">&amp;Linia</translation>
+        <translation>&amp;Linia</translation>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
@@ -36,17 +36,17 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Odcinek</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Prosta</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Półprosta</translation>
     </message>
 </context>
 </TS>

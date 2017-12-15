@@ -50,7 +50,7 @@
         <translation>Vous pouvez changer le format de nombre et coordonnées dans les préférences de l&apos;application.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+68"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation type="obsolete">Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="-362"/>
+        <location line="-342"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -79,7 +79,7 @@
         <translation>Invalid coordonner ou distance &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+117"/>
         <source>Warning</source>
         <translation>Avertissement</translation>
     </message>

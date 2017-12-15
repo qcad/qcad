@@ -49,7 +49,17 @@
         <translation>Pixels per tekening eenheid:</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
+        <translation>Exporteer rechthoekige zone rond selectie</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Transparent</source>
+        <translation>Transparant</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
         <translation>Kleur</translation>
@@ -95,7 +105,7 @@
         <translation>Voeg extra marge toe voor lijndikte</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-170"/>
         <source>Background</source>
         <translation>Achtergrond</translation>
     </message>
@@ -118,7 +128,7 @@
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+97"/>
+        <location filename="../BitmapExportWorker.js" line="+106"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ongeldige beeldformaat (breedte x hoogte moet kleiner zijn dan %1)</translation>
     </message>

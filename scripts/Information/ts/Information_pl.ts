@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Information</name>
     <message>
@@ -21,7 +21,7 @@
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 &amp;Info</translatorcomment>
-        <translation type="unfinished">&amp;Info</translation>
+        <translation>&amp;Informacja</translation>
     </message>
     <message>
         <location filename="../Information.ui" line="+17"/>
@@ -31,7 +31,7 @@
     <message>
         <location line="+17"/>
         <source>Text height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wysokość tekstu:</translation>
     </message>
 </context>
 </TS>

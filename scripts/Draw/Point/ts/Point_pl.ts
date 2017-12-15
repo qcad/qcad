@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Point</name>
     <message>
@@ -22,7 +22,7 @@
 --file: qcad_pl.ts--
 &amp;Punkt
 Środek, &amp;punkt</translatorcomment>
-        <translation type="unfinished">&amp;Punkt</translation>
+        <translation>&amp;Punkt</translation>
     </message>
 </context>
 </TS>

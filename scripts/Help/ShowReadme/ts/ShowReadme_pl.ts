@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ReadmeDialog</name>
     <message>
         <location filename="../ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Readme</translation>
+        <translation>Plik Readme</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nie wyświetlaj tego okna przy uruchamianiu</translation>
+        <translation>Pomijanie wyświetlania tego okna podczas uruchamiania</translation>
     </message>
 </context>
 <context>
@@ -22,13 +22,13 @@
         <location filename="../ShowReadme.js" line="+46"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">&apos;&amp;#39; Plik nie istnieje.</translation>
+        <translation>Plik „%1” nie istnieje.</translation>
     </message>
     <message>
         <location filename="../ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Show Readme</translation>
+        <translation>Wyświetl plik &amp;Readme</translation>
     </message>
 </context>
 </TS>

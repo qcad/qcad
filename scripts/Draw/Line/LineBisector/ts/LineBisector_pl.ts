@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LineBisector</name>
     <message>
@@ -10,7 +10,7 @@
 Zaznacz pierwszą linię
 Zaznacz pierwszą linię lub łuk
 Wskaż pierwszą linie</translatorcomment>
-        <translation type="unfinished">Pierwsza linia</translation>
+        <translation>Pierwsza linia</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -19,13 +19,13 @@ Wskaż pierwszą linie</translatorcomment>
 Zaznacz drugą linię
 Wskaż drugą linię [długość/liczba]
 Wskaż drugą linie</translatorcomment>
-        <translation type="unfinished">Druga linia</translation>
+        <translation>Druga linia</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Linie nie przecinają się.</translation>
+        <translation>Linie nie przecinają się.</translation>
     </message>
     <message>
         <location filename="../LineBisector.ui" line="+17"/>
@@ -34,7 +34,7 @@ Wskaż drugą linie</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź długość cięciwy:
 Wprowadź długość:</translatorcomment>
-        <translation type="unfinished">Długość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -49,7 +49,7 @@ Liczba:</translatorcomment>
         <location filename="../LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Kąt Dwusieczna</translation>
+        <translation>&amp;Dwusieczna kąta</translation>
     </message>
     <message>
         <location line="+4"/>

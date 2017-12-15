@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>About</name>
     <message>
@@ -10,12 +10,12 @@
 --file: qt_pl.ts--
 &amp;O aplikacji %1
 %1…</translatorcomment>
-        <translation type="unfinished">%1…</translation>
+        <translation>O programie %1…</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -30,78 +30,78 @@
     <message>
         <location line="+12"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczki</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>Brak dostępnych informacji</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczka:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Identyfikator:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Opis:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieznany</translation>
     </message>
     <message>
         <location line="-115"/>
         <location line="+108"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja:</translation>
     </message>
     <message>
         <location line="-95"/>
         <location line="+99"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja Qt:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencja:</translation>
     </message>
     <message>
         <location line="-109"/>
         <location line="+118"/>
         <location line="+12"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>Strona internetowa:</translation>
     </message>
     <message>
         <location line="-128"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Data kompilacji:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>Architektura:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kompilator:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 jest programem służącym do komputerowego wspomagania projektowania (CAD).</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -131,7 +131,7 @@
     <message>
         <location line="+19"/>
         <source>No plugins found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie odnaleziono wtyczek.</translation>
     </message>
     <message>
         <location line="+93"/>
@@ -141,37 +141,37 @@
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieaktywny (ponowne uruchomienie)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wersja testowa:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Plik:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+37"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodatki skryptów</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie odnaleziono dodatków skryptów.</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Twórcy</translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="+2"/>
@@ -179,7 +179,7 @@
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 &amp;O programie...</translatorcomment>
-        <translation type="unfinished">&amp;O programie...</translation>
+        <translation>&amp;O programie...</translation>
     </message>
 </context>
 <context>
@@ -187,27 +187,27 @@
     <message>
         <location filename="../AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programowanie</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Tłumaczenia</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Szablony</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikony</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Testowanie, komentarze i naprawa mniejszych błędów</translation>
     </message>
 </context>
 <context>
@@ -215,27 +215,27 @@
     <message>
         <location filename="../AboutDialog.ui" line="+105"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>O programie</translation>
     </message>
     <message>
         <location line="+134"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Wtyczki</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrypty</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>System</translation>
     </message>
     <message>
         <location line="-201"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Twórcy</translation>
     </message>
 </context>
 </TS>

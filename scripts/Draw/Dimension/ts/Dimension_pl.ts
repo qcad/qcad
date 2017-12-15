@@ -68,7 +68,7 @@ Przełącz znak średnicy
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+74"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia wymiarowe</translation>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -8,7 +8,7 @@
         <source>Closing Drawing...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
-        <translation type="unfinished">Zamykanie rysunku...</translation>
+        <translation>Zamykanie rysunku...</translation>
     </message>
 </context>
 <context>
@@ -20,7 +20,7 @@
 --file: qt_help_pl.ts--
 Nienazwany
 (Nienazwany)</translatorcomment>
-        <translation type="unfinished">Nienazwany</translation>
+        <translation>Bez nazwy</translation>
     </message>
 </context>
 <context>
@@ -28,7 +28,7 @@ Nienazwany
     <message>
         <location filename="../NewFile.js" line="+140"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwieranie rysunku:</translation>
     </message>
     <message>
         <source>Loading...</source>
@@ -41,7 +41,7 @@ Nienazwany
         <location line="+23"/>
         <source>Import Error</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Błąd importu</translation>
+        <translation>Błąd importowania</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -50,50 +50,50 @@ Nienazwany
 Nie można otworzyć pliku &apos;%1&apos;
 Nie można otworzyć pliku %1! Zostaje on opuszczony.
 Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
-        <translation type="unfinished">Nie można otworzyć pliku</translation>
+        <translation>Nie można otworzyć pliku</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nie nadaje Importer znaleziono. Proszę sprawdzić format pliku i rozszerzenie.</translation>
+        <translation type="unfinished">Nie odnaleziono pasującego importera. Proszę sprawdzić format pliku i rozszerzenie.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie odnaleziono pliku.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Proszę sprawdzić prawa dostępu, format pliku i rozszerzenie pliku.</translation>
+        <translation>Proszę sprawdzić uprawnienia dostępu, format i rozszerzenie pliku.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie udało się zaimportować.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Plik jest pusty.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wczytano rysunek:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location line="+159"/>
         <source>Untitled %1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Untitled</translation>
+        <translation>Bez nazwy %1</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -109,13 +109,13 @@ Tylko do odczytu</translatorcomment>
         <location line="+58"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Czy chcesz zapisać zmiany wprowadzone w &lt;br&gt; dokument?&apos;&amp;#39;</translation>
+        <translation>Zapisać zmiany wprowadzone w &lt;br&gt;dokumencie „%1”?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Twoje zmiany zostaną utracone, jeśli nie je zapisać.</translation>
+        <translation>Wprowadzone zmiany zostaną porzucone jeśli nie zostaną zapisane.</translation>
     </message>
     <message>
         <location filename="../NewFileInit.js" line="+2"/>
@@ -124,7 +124,7 @@ Tylko do odczytu</translatorcomment>
 --file: designer_pl.ts--
 &amp;Nowy
 Nowy &amp;formularz</translatorcomment>
-        <translation type="unfinished">&amp;Nowy</translation>
+        <translation>&amp;Nowy</translation>
     </message>
 </context>
 </TS>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>OpenFile</name>
     <message>
         <location filename="../OpenFile.js" line="+46"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie odnaleziono filtrów importowania. Anulowanie...</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -14,7 +14,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Otwórz rysunek</translatorcomment>
-        <translation type="unfinished">Otwórz rysunek</translation>
+        <translation>Otwieranie rysunku</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -24,7 +24,7 @@ Wszystkie pliki (*.*)
 Pliki Designer UI (*.%1);;Wszystkie pliki (*)
 Pliki z wydanymi tłumaczeniami (*.qm)
 Wszystkie pliki (*)</translatorcomment>
-        <translation type="unfinished">Wszystkie pliki</translation>
+        <translation>Wszystkie pliki</translation>
     </message>
     <message>
         <source>Format:</source>
@@ -41,13 +41,13 @@ Format:</translatorcomment>
 --file: qt_pl.ts--
 &amp;Otwórz IDE
 &amp;Otwórz...</translatorcomment>
-        <translation type="unfinished">&amp;Otwórz</translation>
+        <translation>&amp;Otwórz</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open an existing drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Otwórz istniejący rysunek</translation>
+        <translation>Otwiera istniejący rysunek</translation>
     </message>
 </context>
 </TS>
