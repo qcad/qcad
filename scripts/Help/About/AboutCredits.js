@@ -60,6 +60,7 @@ var credits =
         [ "Евгений, AlexL",    "Russian (ru) translation" ],
         [ "Ján Jamriška",      "Slovak (sk) translation" ],
         [ "Miha ('miharix')",  "Slovenian (sl) translation" ],
+        [ "psokol",            "Polish (pl) translation" ],
         [ "Eduardo Passeto",   "Portuguese (pt) translation" ],
     ],
     [
