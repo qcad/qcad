@@ -180,11 +180,13 @@ RCadToolMatrixTree.prototype.handleItemPress = function(item) {
     }
 
     if (isFunction(QApplication.mouseButtons)) {
+        // Qt 4:
         if (QApplication.mouseButtons().valueOf() !== Qt.LeftButton.valueOf()) {
             return;
         }
     }
     else {
+        // Qt 5:
         if (QGuiApplication.mouseButtons().valueOf() !== Qt.LeftButton.valueOf()) {
             return;
         }

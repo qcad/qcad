@@ -18,9 +18,14 @@
  */
 #include <QClipboard>
 #include <QDebug>
-#include <QGuiApplication>
 #include <QEvent>
 #include <QKeyEvent>
+
+#if QT_VERSION >= 0x050000
+  #include <QGuiApplication>
+#else
+  #include <QApplication>
+#endif
 
 #include "RCommandLine.h"
 #include "RDebug.h"
@@ -53,7 +58,11 @@ void RCommandLine::setHistory(QStringList& h) {
 }
 
 void RCommandLine::paste() {
+#if QT_VERSION >= 0x050000
     QClipboard* cb = QGuiApplication::clipboard();
+#else
+    QClipboard* cb = QApplication::clipboard();
+#endif
     //qDebug("pasting: " + cb.text());
 
     QString text = cb->text();
