@@ -55,7 +55,7 @@ Liczba:</translatorcomment>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj kąt bisector, trisector ...</translation>
+        <translation>Rysuje dwusieczną, trzysieczną kąta,..</translation>
     </message>
 </context>
 </TS>

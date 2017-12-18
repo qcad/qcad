@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LinePolygonCP</name>
     <message>
@@ -46,12 +46,12 @@ Zrobione
     <message>
         <location filename="../ShapePolygonCP.js" line="+58"/>
         <source>Center</source>
-        <translation type="unfinished">Wyśrodkuj</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished">Punkt narożny</translation>
+        <translation>Punkt naroża</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,7 +61,7 @@ Zrobione
     <message>
         <location filename="../ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished">Rogi:</translation>
+        <translation>Liczba naroży:</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
@@ -70,12 +70,12 @@ Zrobione
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation type="unfinished"></translation>
+        <translation>Wi&amp;elokąt (środek, naroże)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation type="unfinished">Rysowanie wielokąta foremnego od punktu środkowego i narożny</translation>
+        <translation>Rysuje wielokąt foremny ze środka i przez punkt naroża</translation>
     </message>
 </context>
 </TS>

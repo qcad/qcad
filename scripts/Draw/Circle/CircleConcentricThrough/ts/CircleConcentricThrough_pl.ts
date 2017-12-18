@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CircleConcentricThrough</name>
     <message>
@@ -10,19 +10,19 @@
 --file: qcadguiqt_pl.ts--
 Wprowadź liczbę:
 Liczba:</translatorcomment>
-        <translation type="unfinished">Liczba:</translation>
+        <translation>Ilość:</translation>
     </message>
     <message>
         <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Koncentryczny (poprzez Point)</translation>
+        <translation>Koncentryczny (przez p&amp;unkt)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Remis koncentryczny okrąg przez punkt</translation>
+        <translation>Rysuje koncentryczny okrąg przez punkt</translation>
     </message>
 </context>
 </TS>

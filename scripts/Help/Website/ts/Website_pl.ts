@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 Odwiedź &amp;stronę</translatorcomment>
-        <translation>Odwiedź &amp;stronę</translation>
+        <translation>Otwórz &amp;stronę programu</translation>
     </message>
 </context>
 </TS>

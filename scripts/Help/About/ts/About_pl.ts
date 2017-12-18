@@ -106,12 +106,12 @@
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 jest oparty na QCAD, wolne (otwarto-źródłowe) oprogramowanie.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 jest wolnym (otwarto-źródłowym) oprogramowaniem.</translation>
     </message>
     <message>
         <location line="+4"/>

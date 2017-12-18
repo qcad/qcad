@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Hatch</name>
     <message>
@@ -35,7 +35,7 @@
 --file: qcadguiqt_pl.ts--
 &amp;Kreskowanie
 Wzory &amp;kreskowania:</translatorcomment>
-        <translation type="unfinished">&amp;Kreskowanie</translation>
+        <translation>&amp;Kreskowanie</translation>
     </message>
     <message>
         <source>Draw hatch or solid fill</source>
@@ -52,7 +52,7 @@ Wzory &amp;kreskowania:</translatorcomment>
 --file: qcadlib_pl.ts--
 Kreskowanie
 &amp;Kreskowanie</translatorcomment>
-        <translation type="unfinished">Kreskowanie</translation>
+        <translation>Kreskowanie</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -62,7 +62,7 @@ Kreskowanie
 Typ linii:
 Typ linii
 Typ</translatorcomment>
-        <translation type="unfinished">Typ</translation>
+        <translation>Rodzaj</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -71,7 +71,7 @@ Typ</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Rysuj kreskowanie i jednolite wypełnienia
 Kreskowanie / całkowite Wypełnienia</translatorcomment>
-        <translation type="unfinished">Wypełnienie jednolite</translation>
+        <translation>Jednolite wypełnienie</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -79,7 +79,7 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
         <translatorcomment>--google--
 Wzory kreskowania:
 Wzory kreskowania</translatorcomment>
-        <translation type="unfinished">Wzór Hatch</translation>
+        <translation>Wzór kreskowania</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -89,7 +89,7 @@ Wzory kreskowania</translatorcomment>
 Podgląd wydruku dla %1
 Podgląd wydruku
 Pokazuje podgląd wydruku</translatorcomment>
-        <translation type="unfinished">Podgląd</translation>
+        <translation>Podgląd</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -98,7 +98,7 @@ Pokazuje podgląd wydruku</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wzór
 Wzory kreskowania:</translatorcomment>
-        <translation type="unfinished">Wzór</translation>
+        <translation>Wzór</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -107,7 +107,7 @@ Wzory kreskowania:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź kąt:
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt:</translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location line="+7"/>

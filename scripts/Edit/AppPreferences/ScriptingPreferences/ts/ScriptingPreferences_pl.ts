@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Scripting</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przeskanuj skrypty folder na starcie</translation>
+        <translation>Skanowanie katalogu skryptów podczas uruchamiania</translation>
     </message>
 </context>
 <context>
@@ -17,7 +17,7 @@
         <source>Scripting</source>
         <translatorcomment>--google--
 Otwiera zintegrowane środowisko do budowy skryptów</translatorcomment>
-        <translation type="unfinished">Scripting</translation>
+        <translation>Skrypty</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LineOrthogonal</name>
     <message>
@@ -10,27 +10,27 @@
 --file: qcadguiqt_pl.ts--
 Wprowadź długość cięciwy:
 Wprowadź długość:</translatorcomment>
-        <translation type="unfinished">Długość:</translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt &amp;odniesienia:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Początek</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Koniec</translation>
     </message>
     <message>
         <location filename="../LineOrthogonalInit.js" line="+2"/>
@@ -39,13 +39,13 @@ Wprowadź długość:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 &amp;Prostopadła
 Ograniczaj &amp;prostopadle</translatorcomment>
-        <translation type="unfinished">&amp;Prostopadła</translation>
+        <translation>&amp;Prostopadła</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rysowanie linii prostopadłych do jednostki bazowej</translation>
+        <translation>Rysuje linie prostopadłe do obiektu</translation>
     </message>
 </context>
 </TS>

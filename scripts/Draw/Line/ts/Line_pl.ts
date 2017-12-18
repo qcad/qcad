@@ -9,7 +9,7 @@
         <translatorcomment>--google--
 Pokaż menu &quot;Linie&quot;
 Pokaż menu &quot;Łamane&quot;</translatorcomment>
-        <translation type="unfinished">Narzędzia linii</translation>
+        <translation>Narzędzia linii</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -31,7 +31,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Ten sam element co pierwotny</translation>
     </message>
     <message>
         <location line="+23"/>

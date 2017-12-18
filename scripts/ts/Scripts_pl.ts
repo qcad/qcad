@@ -81,7 +81,7 @@
 --file: qt_pl.ts--
 Back
 Powrót do poprzedniego menu</translatorcomment>
-        <translation type="unfinished">Back</translation>
+        <translation>Wstecz</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -91,7 +91,7 @@ Powrót do poprzedniego menu</translatorcomment>
 --file: qvfb_pl.ts--
 Anuluj
 &amp;Anuluj</translatorcomment>
-        <translation type="unfinished">Anuluj</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location line="-1788"/>
@@ -116,7 +116,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
 --file: qt_pl.ts--
 Opcje narzędzi
 Opcje łuku</translatorcomment>
-        <translation type="unfinished">Opcje</translation>
+        <translation>Opcje</translation>
     </message>
     <message>
         <source>Block Options</source>
@@ -146,7 +146,7 @@ Narzędzia CAD</translatorcomment>
     <message>
         <location line="+232"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Długość:</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -158,63 +158,63 @@ Narzędzia CAD</translatorcomment>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka nie linii lub łuku.</translation>
+        <translation>Obiekt nie jest linią ani łukiem.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Obiekt nie jest linią, łukiem ani linią łamaną.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka nie jest wiersz.</translation>
+        <translation>Obiekt nie jest linią.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka nie łuk lub okrąg.</translation>
+        <translation>Obiekt nie jest łukiem ani okręgiem.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka nie linia, łuk lub okrąg.</translation>
+        <translation>Obiekt nie jest linią, łukiem ani okręgiem.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka nie łuk, okrąg lub elipsa jest.</translation>
+        <translation>Obiekt nie jest łukiem, okręgiem ani elipsą.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka nie linia, łuk, okrąg lub elipsa jest.</translation>
+        <translation>Obiekt nie jest linią, łukiem, okręgiem ani elipsą.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Obiekt nie jest linią, łukiem, okręgiem, elipsą ani linią łamaną.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Obiekt nie jest linią, łukiem, okręgiem, elipsą ani splajnem.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Obiekt nie jest linią, łukiem, okręgiem, elipsą ani linią łamaną.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka nie polilinia jest.</translation>
+        <translation>Obiekt nie jest linią łamaną.</translation>
     </message>
 </context>
 <context>
@@ -234,7 +234,7 @@ Narzędzia CAD</translatorcomment>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Co najmniej dwa punkty są identyczne.</translation>
+        <translation>Co najmniej dwa punkty są takie same.</translation>
     </message>
     <message>
         <location line="-22"/>
@@ -252,7 +252,7 @@ Narzędzia CAD</translatorcomment>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nieprawidłowa liczba segmentów:.</translation>
+        <translation>Nieprawidłowa liczba segmentów: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -269,7 +269,7 @@ Narzędzia CAD</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
 Przywróć ustawienia</translatorcomment>
-        <translation type="unfinished">Przywróć ustawienia</translation>
+        <translation>Przywróć domyślne</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -287,7 +287,7 @@ Wstaw symbol</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Przełącz znak średnicy
 ø (Średnica)</translatorcomment>
-        <translation type="unfinished">Średnica</translation>
+        <translation>Średnica</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -301,7 +301,7 @@ Przełącz znak średnicy
 --file: qcadlib_pl.ts--
 ° (Stopień)
 Stopnie dziesiętne</translatorcomment>
-        <translation type="unfinished">Stopień</translation>
+        <translation>Stopień</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>DrawPolyline</name>
     <message>
@@ -106,13 +106,13 @@ Zrobione
         <location filename="../DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj łamaną</translation>
+        <translation>Ł&amp;amana</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj polilinię z segmentów linii i łuku</translation>
+        <translation>Rysuje linię łamaną z segmentów linii i łuków</translation>
     </message>
 </context>
 </TS>

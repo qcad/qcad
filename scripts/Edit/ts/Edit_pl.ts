@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>AbstractPreferences</name>
     <message>
@@ -11,7 +11,7 @@
 Preferencje &amp;aplikacji
 Preferencje aplikacji
 Ogólne ustawienia aplikacji</translatorcomment>
-        <translation type="unfinished">Preferencje aplikacji</translation>
+        <translation>Preferencje programu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -31,7 +31,7 @@ Preferencje bieżącego rysunku
         <location line="+45"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wymaga ponownego uruchomienia</translation>
+        <translation>Wymagane ponowne uruchomienie programu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -92,7 +92,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 --file: linguist_pl.ts--
 &amp;Edycja
 &amp;Edytuj blok</translatorcomment>
-        <translation type="unfinished">&amp;Edycja</translation>
+        <translation>&amp;Edycja</translation>
     </message>
 </context>
 <context>
@@ -107,7 +107,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 &amp;Preferencje
 Preferencje…
 Preferencje &amp;aplikacji</translatorcomment>
-        <translation type="unfinished">Preferencje…</translation>
+        <translation>Preferencje</translation>
     </message>
     <message>
         <location line="-74"/>
@@ -117,7 +117,7 @@ Preferencje &amp;aplikacji</translatorcomment>
 Filtr:
 Filtr
 Brak argumentu dla filtru.</translatorcomment>
-        <translation type="unfinished">Filtr</translation>
+        <translation>Filtr</translation>
     </message>
     <message>
         <source>Clear Search</source>
@@ -134,7 +134,7 @@ Brak argumentu dla filtru.</translatorcomment>
         <location line="+17"/>
         <source>Collapse Tree</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Drzewo Collapse</translation>
+        <translation>Zwiń drzewo</translation>
     </message>
     <message>
         <location line="+67"/>

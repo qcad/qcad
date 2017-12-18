@@ -26,7 +26,7 @@
     <message>
         <location filename="../Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodanie pomiaru do rysunku</translation>
     </message>
     <message>
         <location line="+17"/>

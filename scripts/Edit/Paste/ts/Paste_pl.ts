@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Wklej</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -21,7 +21,7 @@
 Wskaż położenie linii wymiarowej lub wprowadź kąt:
 Wskaż położenie linii wymiarowej lub wprowadź kąt
 Wskaż pozycje</translatorcomment>
-        <translation type="unfinished">Położenie</translation>
+        <translation>Położenie</translation>
     </message>
     <message>
         <location filename="../Paste.ui" line="+17"/>
@@ -29,13 +29,13 @@ Wskaż pozycje</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Obracanie:</translatorcomment>
-        <translation type="unfinished">Obracanie:</translation>
+        <translation>Obrót:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Obróć wklejone podmioty &lt;br&gt; przez to kąt</translation>
+        <translation>Obraca wklejone elementy&lt;br&gt;o kąt</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -43,13 +43,13 @@ Obracanie:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Skala:</translatorcomment>
-        <translation type="unfinished">Skala:</translation>
+        <translation>Skala:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Skala wklejone podmioty &lt;br&gt; tym czynnikiem</translation>
+        <translation type="unfinished">Skaluje wklejone elementy&lt;br&gt; tym czynnikiem</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -76,7 +76,7 @@ Skala:</translatorcomment>
 --file: qcadactions_pl.ts--
 Do bieżącej warstwy
 Użyj bieżącej warstwy</translatorcomment>
-        <translation type="unfinished">Do bieżącej warstwy</translation>
+        <translation>Do aktualnej warstwy</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -88,7 +88,7 @@ Użyj bieżącej warstwy</translatorcomment>
         <location line="+3"/>
         <source>Overwrite layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zastąp warstw</translation>
+        <translation>Zastąpienie warstw</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -100,7 +100,7 @@ Użyj bieżącej warstwy</translatorcomment>
         <location line="+3"/>
         <source>Overwrite blocks</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zastąp bloki</translation>
+        <translation>Zastąpienie bloków</translation>
     </message>
     <message>
         <location filename="../PasteInit.js" line="+2"/>
@@ -108,7 +108,7 @@ Użyj bieżącej warstwy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 &amp;Wklej</translatorcomment>
-        <translation type="unfinished">&amp;Wklej</translation>
+        <translation>&amp;Wklej</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

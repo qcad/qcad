@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Dimension</name>
     <message>
@@ -8,7 +8,7 @@
         <source>No prefix</source>
         <translatorcomment>--google--
 &lt;brak przedrostka&gt;</translatorcomment>
-        <translation type="unfinished">Bez prefiksu</translation>
+        <translation>Bez prefiksu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -17,13 +17,13 @@
 --file: designer_pl.ts--
 Wskaż promień
 Łuk styczny do głównego obiektu z promieniem</translatorcomment>
-        <translation type="unfinished">Promień</translation>
+        <translation>Promień</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wkręt metryczny</translation>
+        <translation>Gwint metryczny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -32,46 +32,46 @@ Wskaż promień
 --file: qcadguiqt_pl.ts--
 Przełącz znak średnicy
 ø (Średnica)</translatorcomment>
-        <translation type="unfinished">Średnica</translation>
+        <translation>Średnica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Łuk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Plus / Minus</translation>
+        <translation>Plus/Minus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Prawie równe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Asymptotycznie równe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Kwadrat</translation>
+        <translation>Kwadrat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narzędzia wymiarowe</translation>
+        <translation>Narzędzia wymiarów</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -83,7 +83,7 @@ Przełącz znak średnicy
         <location line="+22"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wymiar</translation>
+        <translation>&amp;Wymiar</translation>
     </message>
     <message>
         <location filename="../Dimension.ui" line="+29"/>
@@ -92,7 +92,7 @@ Przełącz znak średnicy
 --file: qcadguiqt_pl.ts--
 Etykieta:
 Etykieta wymiarowania:</translatorcomment>
-        <translation type="unfinished">Etykieta:</translation>
+        <translation>Etykieta:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -101,7 +101,7 @@ Etykieta wymiarowania:</translatorcomment>
 Przedrostek globalny:
 Przedrostek globalny
 Wywiedź przedrostek z nazw plików</translatorcomment>
-        <translation type="unfinished">Prefiks</translation>
+        <translation>Prefiks</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -117,7 +117,7 @@ Wprowadź stałą etykietę lub pozostaw puste aby otrzymać etykietę automatyc
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Górna tolerancja</translatorcomment>
-        <translation type="unfinished">Górna tolerancja</translation>
+        <translation>Górna odchyłka</translation>
     </message>
     <message>
         <location line="+54"/>
@@ -125,17 +125,17 @@ Górna tolerancja</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Dolna tolerancja</translatorcomment>
-        <translation type="unfinished">Dolna tolerancja</translation>
+        <translation>Dolna odchyłka</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Podziałka</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Podziałka rysunku</translation>
     </message>
     <message>
         <location line="+18"/>

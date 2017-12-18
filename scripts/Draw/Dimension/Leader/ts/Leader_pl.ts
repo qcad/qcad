@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Leader</name>
     <message>
         <location filename="../Leader.js" line="+60"/>
         <source>Arrow position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pozycja główna</translation>
+        <translation>Położenie strzałki</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -31,7 +31,7 @@ Zrobione
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Odnośnik</translatorcomment>
-        <translation type="unfinished">&amp;Odnośnik</translation>
+        <translation>&amp;Odnośnik</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -47,7 +47,7 @@ Zrobione
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation type="unfinished"></translation>
+        <translation>Grot strzałki</translation>
     </message>
 </context>
 </TS>

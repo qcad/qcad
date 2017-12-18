@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Arc</name>
     <message>
@@ -8,7 +8,7 @@
         <source>Arc Tools</source>
         <translatorcomment>--google--
 Pokaż menu &quot;Łuki&quot;</translatorcomment>
-        <translation type="unfinished">Narzędzia Arc</translation>
+        <translation>Narzędzia łuku</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -24,7 +24,7 @@ Pokaż menu &quot;Łuki&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 Ł&amp;uk</translatorcomment>
-        <translation type="unfinished">Ł&amp;uk</translation>
+        <translation>Ł&amp;uk</translation>
     </message>
 </context>
 </TS>

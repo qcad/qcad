@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>DimAligned</name>
     <message>
@@ -22,7 +22,7 @@ Wskaż początek drugiej linii rozszerzenia</translatorcomment>
         <source>Dimension line location</source>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej</translatorcomment>
-        <translation type="unfinished">Położenie linii wymiarowej</translation>
+        <translation>Położenie linii wymiarowej</translation>
     </message>
     <message>
         <location filename="../DimAlignedInit.js" line="+2"/>
@@ -30,13 +30,13 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Wyrównany</translatorcomment>
-        <translation type="unfinished">&amp;Wyrównany</translation>
+        <translation>&amp;Wyrównany</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw aligned dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Remis wyrównany wymiar</translation>
+        <translation>Rysuje wymiar wyrównany</translation>
     </message>
 </context>
 </TS>

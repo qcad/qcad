@@ -7,7 +7,7 @@
         <location filename="../Point.js" line="+71"/>
         <source>Point Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narzędzia punkt</translation>
+        <translation>Narzędzia punktu</translation>
     </message>
     <message>
         <location line="+5"/>

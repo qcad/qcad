@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Copy</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qt_pl.ts--
 S&amp;kopiuj
 Kopiuj z punktem &amp;odniesienia</translatorcomment>
-        <translation type="unfinished">S&amp;kopiuj</translation>
+        <translation>S&amp;kopiuj</translation>
     </message>
 </context>
 </TS>

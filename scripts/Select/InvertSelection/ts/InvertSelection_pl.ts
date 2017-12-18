@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>InvertSelection</name>
     <message>
@@ -9,13 +9,13 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Odwróć zaznaczenie</translatorcomment>
-        <translation type="unfinished">&amp;Odwróć zaznaczenie</translation>
+        <translation>O&amp;dwróć zaznaczenie</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Invert the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Odwrócić bieżący wybór</translation>
+        <translation>Odwraca aktualne zaznaczenie</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Form</name>
     <message>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../View.js" line="+64"/>
         <source>View Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia widoku</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -33,7 +33,7 @@
 --file: linguist_pl.ts--
 &amp;Widok
 &amp;Podgląd wydruku</translatorcomment>
-        <translation type="unfinished">&amp;Widok</translation>
+        <translation>&amp;Widok</translation>
     </message>
 </context>
 <context>

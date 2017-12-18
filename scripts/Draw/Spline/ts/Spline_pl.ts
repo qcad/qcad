@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Spline</name>
     <message>
         <location filename="../Spline.js" line="+72"/>
         <source>Spline Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Spline Tools</translation>
+        <translation>Narzędzia splajów</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -22,7 +22,7 @@
 --file: qcadactions_pl.ts--
 &amp;Krzywa składana
 Krzywe &amp;składane</translatorcomment>
-        <translation type="unfinished">&amp;Krzywa składana</translation>
+        <translation>&amp;Splajn</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CircleConcentric</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qcadguiqt_pl.ts--
 Odległość: %1
 Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
-        <translation type="unfinished">Odległość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -19,19 +19,19 @@ Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź liczbę:
 Liczba:</translatorcomment>
-        <translation type="unfinished">Liczba:</translation>
+        <translation>Ilość:</translation>
     </message>
     <message>
         <location filename="../CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Koncentryczny (z Distance)</translation>
+        <translation>&amp;Koncentryczny (w odległości)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj okrąg koncentryczny</translation>
+        <translation>Rysuje koncentryczny okrąg</translation>
     </message>
 </context>
 </TS>

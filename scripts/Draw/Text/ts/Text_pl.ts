@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Tablica znaków</translation>
+        <translation>Tablica znaków</translation>
     </message>
 </context>
 <context>
@@ -20,7 +20,7 @@
 Wskaż położenie linii wymiarowej lub wprowadź kąt:
 Wskaż położenie linii wymiarowej lub wprowadź kąt
 Wskaż pozycje</translatorcomment>
-        <translation type="unfinished">Położenie</translation>
+        <translation>Położenie</translation>
     </message>
     <message>
         <location filename="../Text.ui" line="+17"/>
@@ -47,7 +47,7 @@ Wysokość tekstu:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź kąt:
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt:</translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location filename="../TextInit.js" line="+2"/>
@@ -56,7 +56,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
 --file: designer_pl.ts--
 &amp;Tekst
 &amp;Tekst:</translatorcomment>
-        <translation type="unfinished">&amp;Tekst</translation>
+        <translation>&amp;Tekst</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -79,7 +79,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 &amp;Cofnij</translatorcomment>
-        <translation type="unfinished">&amp;Cofnij</translation>
+        <translation>&amp;Cofnij</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -87,7 +87,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 &amp;Przywróć</translatorcomment>
-        <translation type="unfinished">&amp;Przywróć</translation>
+        <translation>&amp;Ponów</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -96,7 +96,7 @@ Rysuj obiekty tekstowe</translatorcomment>
 --file: qt_pl.ts--
 W&amp;ytnij
 Wy&amp;tnij z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">W&amp;ytnij</translation>
+        <translation>Wy&amp;tnij</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -105,7 +105,7 @@ Wy&amp;tnij z punktem odniesienia</translatorcomment>
 --file: qt_pl.ts--
 S&amp;kopiuj
 Kopiuj z punktem &amp;odniesienia</translatorcomment>
-        <translation type="unfinished">S&amp;kopiuj</translation>
+        <translation>S&amp;kopiuj</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -113,19 +113,19 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 &amp;Wklej</translatorcomment>
-        <translation type="unfinished">&amp;Wklej</translation>
+        <translation>Wkl&amp;ej</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Śmiały</translation>
+        <translation>&amp;Pogrubienie</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Italic</translation>
+        <translation>&amp;Kursywa</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -143,7 +143,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <location line="+18"/>
         <source>&amp;Color...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Kolor ...</translation>
+        <translation>&amp;Kolor...</translation>
     </message>
     <message>
         <location line="+4"/>

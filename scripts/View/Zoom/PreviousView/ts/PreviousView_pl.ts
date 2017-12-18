@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>PreviousView</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Poprze&amp;dni widok</translatorcomment>
-        <translation type="unfinished">Poprze&amp;dni widok</translation>
+        <translation>Poprze&amp;dni widok</translation>
     </message>
 </context>
 </TS>

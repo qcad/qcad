@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LineRectangle</name>
     <message>
@@ -60,12 +60,12 @@ Wskaż drugi wierzchołek</translatorcomment>
     <message>
         <location filename="../ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished">&amp;Prostokąt</translation>
+        <translation>&amp;Prostokąt</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translation type="unfinished">Narysuj prostokąt od dwóch rogach</translation>
+        <translation>Rysuje prostokąt z dwóch naroży</translation>
     </message>
 </context>
 </TS>

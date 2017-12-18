@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SnapFree</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qcadguiqt_pl.ts--
 &amp;Zablokuj wszystko
 &amp;Odręczna linia</translatorcomment>
-        <translation type="unfinished">&amp;Swobodnie</translation>
+        <translation>&amp;Swobodnie</translation>
     </message>
 </context>
 </TS>

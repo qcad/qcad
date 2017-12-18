@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>DimOrdinate</name>
     <message>
@@ -21,13 +21,13 @@ Wskaż punkt końcowy odnośnika</translatorcomment>
         <location filename="../DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rzędna (X / Y)</translation>
+        <translation>Ł&amp;ańcuchowy (X/Y)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Remis koordynować wymiar</translation>
+        <translation>Rysuje wymiar łańcuchowy</translation>
     </message>
 </context>
 </TS>

@@ -19,14 +19,14 @@
         <location line="+83"/>
         <source>No tangent possible.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">No styczna możliwe.</translation>
+        <translation>Brak możliwej stycznej.</translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nie można narysować styczną z punktu wewnątrz okręgu do okręgu</translation>
+        <translation>Nie można narysować stycznej z punktu wewnątrz okręgu do okręgu</translation>
     </message>
     <message>
         <location filename="../LineTangent1Init.js" line="+2"/>

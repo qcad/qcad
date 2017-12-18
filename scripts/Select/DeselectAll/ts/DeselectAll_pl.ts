@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>DeselectAll</name>
     <message>
@@ -9,13 +9,13 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Odznacz w&amp;szystko</translatorcomment>
-        <translation type="unfinished">Odznacz w&amp;szystko</translation>
+        <translation>&amp;Odznacz wszystko</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Deselect all entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Odznacz wszystkie podmioty</translation>
+        <translation>Odznacza wszystkie obiekty</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ArcConcentricThrough</name>
     <message>
@@ -16,13 +16,13 @@ Liczba:</translatorcomment>
         <location filename="../ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Koncentryczny (poprzez Point)</translation>
+        <translation>Koncentryczny (p&amp;rzez punkt)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc through point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Remis koncentryczną łuk przez punkt</translation>
+        <translation>Rysuje koncentryczny łuk przez punkt</translation>
     </message>
 </context>
 </TS>

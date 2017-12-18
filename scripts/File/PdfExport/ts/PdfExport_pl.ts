@@ -7,13 +7,13 @@
         <location filename="../PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wyeksportuj do P&amp;DF</translation>
+        <translation>Eksportuj do P&amp;DF...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Eksportuje aktualny rysunek w formacie PDF</translation>
+        <translation>Eksportuje aktualny rysunek do formatu PDF</translation>
     </message>
 </context>
 </TS>

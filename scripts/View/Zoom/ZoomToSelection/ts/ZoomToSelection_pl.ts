@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ZoomToSelection</name>
     <message>
         <location filename="../ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Brak wyboru znaleziono.</translation>
+        <translation>Nie odnaleziono zaznaczenia.</translation>
     </message>
     <message>
         <location filename="../ZoomToSelectionInit.js" line="+2"/>
@@ -15,7 +15,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Zoom wg &amp;wyboru</translatorcomment>
-        <translation type="unfinished">Zoom wg &amp;wyboru</translation>
+        <translation>Przybliż do &amp;zaznaczenia</translation>
     </message>
 </context>
 </TS>

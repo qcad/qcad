@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>StatusBar</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Font Status Bar:</translation>
+        <translation>Czcionka paska stanu:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widżety paska stanu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlanie współrzędnych</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -46,7 +46,7 @@
 --file: designer_pl.ts--
 Własne widżety
 Zastępcze widżety</translatorcomment>
-        <translation type="unfinished">Widżety</translation>
+        <translation>Widżety</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -54,12 +54,12 @@ Zastępcze widżety</translatorcomment>
         <translatorcomment>--google--
 Utwórz pasek stanu
 Usuń pasek stanu</translatorcomment>
-        <translation type="unfinished">Status Bar</translation>
+        <translation>Pasek stanu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasek &amp;stanu</translation>
     </message>
 </context>
 </TS>

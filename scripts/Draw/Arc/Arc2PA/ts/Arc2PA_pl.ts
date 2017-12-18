@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Arc2PA</name>
     <message>
@@ -10,7 +10,7 @@
 Punkt początkowy (y):
 Punkt początkowy (y)
 Punkt początkowy (x):</translatorcomment>
-        <translation type="unfinished">Punkt startowy</translation>
+        <translation>Punkt początkowy</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -19,19 +19,19 @@ Punkt początkowy (x):</translatorcomment>
 Punkt końcowy (x):
 Punkt końcowy (x)
 Punkt końcowy (y):</translatorcomment>
-        <translation type="unfinished">Punkt końcowy</translation>
+        <translation>Punkt końcowy</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nieprawidłowy kąt</translation>
+        <translation>Nieprawidłowy kąt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Te dwa punkty są identyczne</translation>
+        <translation>Te dwa punkty są takie same</translation>
     </message>
     <message>
         <location filename="../Arc2PA.ui" line="+17"/>
@@ -40,7 +40,7 @@ Punkt końcowy (y):</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź kąt:
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt:</translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -48,13 +48,13 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
 Kierunek widoku:</translatorcomment>
-        <translation type="unfinished">Kierunek:</translation>
+        <translation>Kierunek:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Counter Clockwise (Positive)</translation>
+        <translation>Przeciwnie do ruchu wskazówek zegara (w lewo)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -65,25 +65,25 @@ Kierunek widoku:</translatorcomment>
 Kierunek widoku:
 Kierunek widoku
 LTR</translatorcomment>
-        <translation type="unfinished">Kierunek</translation>
+        <translation>Kierunek</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ruchu wskazówek zegara (Negative)</translation>
+        <translation>Zgodnie z ruchem wskazówek zegara (w lewo)</translation>
     </message>
     <message>
         <location filename="../Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">2 Punkty i kątowe</translation>
+        <translation>&amp;2 punkty i kąt</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj łuk z 2 punktów i kąta</translation>
+        <translation>Rysuje łuk przez 2 punkty i o danym kącie</translation>
     </message>
 </context>
 </TS>

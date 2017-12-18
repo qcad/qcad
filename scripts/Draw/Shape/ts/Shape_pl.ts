@@ -31,7 +31,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     <message>
         <location filename="../Shape.js" line="+75"/>
         <source>Shape Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia figur</translation>
     </message>
     <message>
         <location line="+5"/>

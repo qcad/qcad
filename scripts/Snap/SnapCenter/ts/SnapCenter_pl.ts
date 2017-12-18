@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SnapCenter</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qcadguiqt_pl.ts--
 ś&amp;rodek, punkt, kąty
 Ś&amp;rodek</translatorcomment>
-        <translation type="unfinished">Ś&amp;rodek</translation>
+        <translation>Ś&amp;rodek</translation>
     </message>
 </context>
 </TS>

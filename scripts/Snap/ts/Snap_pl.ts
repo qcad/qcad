@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Snap</name>
     <message>
         <location filename="../Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narzędzia Snap</translation>
+        <translation>Narzędzia przyciągania</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -20,7 +20,7 @@
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 Prz&amp;yciąganie</translatorcomment>
-        <translation type="unfinished">Prz&amp;yciąganie</translation>
+        <translation>Przyciąga&amp;nie</translation>
     </message>
 </context>
 </TS>

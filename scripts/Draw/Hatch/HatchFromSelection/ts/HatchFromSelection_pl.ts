@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Hatch</name>
     <message>
@@ -104,7 +104,7 @@ Skala:</translatorcomment>
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">No granica zaznaczona.</translation>
+        <translation>Nie zaznaczono granicy.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -119,7 +119,7 @@ Skala:</translatorcomment>
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kreskowanie z zaznaczenia</translation>
     </message>
     <message>
         <location line="+5"/>

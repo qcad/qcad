@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CircleT2P</name>
     <message>
         <location filename="../CircleT2P.js" line="+75"/>
         <source>Line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Linia, łuk lub okrąg</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>Pierwszy punkt na okręgu</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugi punkt na okręgu</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Wybór rozwiązania</translation>
     </message>
     <message>
         <location line="+134"/>
         <location line="+48"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Brak rozwiązania</translation>
     </message>
     <message>
         <location filename="../CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Styczny przez 2 punkty</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Rysuje okrąg przez dwa punkty, styczny do jednego elementu</translation>
     </message>
 </context>
 </TS>

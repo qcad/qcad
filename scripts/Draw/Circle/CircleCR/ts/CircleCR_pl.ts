@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CircleCR</name>
     <message>
@@ -24,18 +24,18 @@ Wskaż środek
 --file: qcadguiqt_pl.ts--
 Wprowadź promień:
 Promień:</translatorcomment>
-        <translation type="unfinished">Promień:</translation>
+        <translation>Promień:</translation>
     </message>
     <message>
         <location line="+33"/>
         <location filename="../CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt odniesienia:</translation>
     </message>
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>
@@ -43,13 +43,13 @@ Promień:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Środek, &amp;promień</translatorcomment>
-        <translation type="unfinished">Środek, &amp;promień</translation>
+        <translation>Środek, p&amp;romień</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj koło od środka i promienia</translation>
+        <translation>Rysuje okrąg od środka i danym promieniu</translation>
     </message>
 </context>
 </TS>

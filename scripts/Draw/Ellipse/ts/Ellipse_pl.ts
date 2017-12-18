@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Ellipse</name>
     <message>
@@ -8,7 +8,7 @@
         <source>Ellipse Tools</source>
         <translatorcomment>--google--
 Pokaz menu &quot;Elipsy&quot;</translatorcomment>
-        <translation type="unfinished">Narzędzia Elipsa</translation>
+        <translation>Narzędzia elipsy</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -25,7 +25,7 @@ Pokaz menu &quot;Elipsy&quot;</translatorcomment>
 --file: qcad_pl.ts--
 &amp;Elipsa
 Łuk &amp;elipsoidalny (oś)</translatorcomment>
-        <translation type="unfinished">&amp;Elipsa</translation>
+        <translation>&amp;Elipsa</translation>
     </message>
 </context>
 </TS>

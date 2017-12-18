@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Circle</name>
     <message>
@@ -24,7 +24,7 @@ Pokaż menu &quot;Okręgi&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 &amp;Okrąg</translatorcomment>
-        <translation type="unfinished">&amp;Okrąg</translation>
+        <translation>&amp;Okrąg</translation>
     </message>
 </context>
 </TS>

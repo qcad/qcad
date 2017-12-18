@@ -7,7 +7,7 @@
         <location filename="../ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Zgłoś &amp;błąd</translation>
+        <translation>Zgłoś &amp;błąd programu</translation>
     </message>
 </context>
 </TS>

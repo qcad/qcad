@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SnapReference</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 &amp;Odniesienie</translatorcomment>
-        <translation type="unfinished">&amp;Odniesienie</translation>
+        <translation>&amp;Odniesienie</translation>
     </message>
 </context>
 </TS>

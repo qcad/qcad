@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ArcConcentric</name>
     <message>
@@ -10,7 +10,7 @@
 --file: qcadguiqt_pl.ts--
 Odległość: %1
 Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
-        <translation type="unfinished">Odległość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -25,13 +25,13 @@ Liczba:</translatorcomment>
         <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Koncentryczny (z Distance)</translation>
+        <translation>&amp;Koncentryczny (w odległości)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj łuk koncentryczny</translation>
+        <translation>Rysuje łuk koncentryczny</translation>
     </message>
 </context>
 </TS>

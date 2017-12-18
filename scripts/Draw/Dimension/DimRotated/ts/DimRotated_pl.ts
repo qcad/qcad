@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>DimRotated</name>
     <message>
@@ -22,7 +22,7 @@ Wskaż początek drugiej linii rozszerzenia</translatorcomment>
         <source>Dimension line location</source>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej</translatorcomment>
-        <translation type="unfinished">Położenie linii wymiarowej</translation>
+        <translation>Położenie linii wymiarowej</translation>
     </message>
     <message>
         <location filename="../DimRotated.ui" line="+17"/>
@@ -31,19 +31,19 @@ Wskaż położenie linii wymiarowej</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź kąt:
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt:</translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location filename="../DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Obracać (liniowy)</translation>
+        <translation>&amp;Obrócony (liniowy)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj wymiar liniowy na stałym kątem</translation>
+        <translation>Rysuje wymiar liniowy pod ustalonym kątem</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>RestrictHorizontal</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Ograniczaj &amp;poziomo</translatorcomment>
-        <translation type="unfinished">Ograniczaj &amp;poziomo</translation>
+        <translation>Ograniczenie p&amp;oziome</translation>
     </message>
 </context>
 </TS>

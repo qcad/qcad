@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>DimVertical</name>
     <message>
@@ -10,13 +10,13 @@
 --file: qcadguiqt_pl.ts--
 &amp;Pionowa
 Ograniczenie &amp;pionowo</translatorcomment>
-        <translation type="unfinished">&amp;Pionowa</translation>
+        <translation>P&amp;ionowy</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw vertical dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj wymiar pionowy</translation>
+        <translation>Rysuje wymiar pionowy</translation>
     </message>
 </context>
 </TS>

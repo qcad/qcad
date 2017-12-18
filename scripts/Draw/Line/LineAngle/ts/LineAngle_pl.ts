@@ -20,7 +20,7 @@ Wskaż pozycje</translatorcomment>
 --file: qcadactions_pl.ts--
 Wskaż pozycje
 Wskaż pozycję [kąt/długość]</translatorcomment>
-        <translation type="unfinished">Wskaż pozycje</translation>
+        <translation>Proszę określić położenie</translation>
     </message>
     <message>
         <location filename="../LineAngle.ui" line="+17"/>
@@ -68,7 +68,7 @@ Przyciągaj do punktów pośrednich</translatorcomment>
 --file: qt_pl.ts--
 Wskaż punkt końcowy odnośnika
 Wskaż kąt końcowy lub [kąt/długość cięciwy]</translatorcomment>
-        <translation>End</translation>
+        <translation>Koniec</translation>
     </message>
     <message>
         <location filename="../LineAngleInit.js" line="+2"/>

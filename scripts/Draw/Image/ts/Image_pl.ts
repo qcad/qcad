@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Image</name>
     <message>
@@ -10,7 +10,7 @@
 --file: assistant_pl.ts--
 Wszystkie pliki obrazów (%1)
 Wszystkie pliki (*.*)</translatorcomment>
-        <translation type="unfinished">Pliki</translation>
+        <translation>Pliki</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -18,7 +18,7 @@ Wszystkie pliki (*.*)</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wszystkie pliki obrazów (%1)</translatorcomment>
-        <translation type="unfinished">Wszystkie pliki obrazów (%1)</translation>
+        <translation>Wszystkie pliki obrazów (%1)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -28,13 +28,13 @@ Wszystkie pliki (*.*)
 Pliki Designer UI (*.%1);;Wszystkie pliki (*)
 Pliki z wydanymi tłumaczeniami (*.qm)
 Wszystkie pliki (*)</translatorcomment>
-        <translation type="unfinished">Wszystkie pliki</translation>
+        <translation>Wszystkie pliki</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Import Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Bitmap import</translation>
+        <translation>Importowanie bitmapy</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -43,7 +43,7 @@ Wszystkie pliki (*)</translatorcomment>
 --file: qcadguiqt_pl.ts--
 &amp;Format:
 Format:</translatorcomment>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -53,7 +53,7 @@ Format:</translatorcomment>
 Wskaż położenie linii wymiarowej lub wprowadź kąt:
 Wskaż położenie linii wymiarowej lub wprowadź kąt
 Wskaż pozycje</translatorcomment>
-        <translation type="unfinished">Położenie</translation>
+        <translation>Położenie</translation>
     </message>
     <message>
         <location filename="../Image.ui" line="+17"/>
@@ -62,7 +62,7 @@ Wskaż pozycje</translatorcomment>
 --file: qt_pl.ts--
 Szerokość:
 &amp;Szerokość papieru:</translatorcomment>
-        <translation type="unfinished">Szerokość:</translation>
+        <translation>Szerokość:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -70,7 +70,7 @@ Szerokość:
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Zachowaj proporcje</translatorcomment>
-        <translation type="unfinished">Zachowaj proporcje</translation>
+        <translation>Zachowanie proporcji</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -79,7 +79,7 @@ Zachowaj proporcje</translatorcomment>
 --file: qt_pl.ts--
 Wysokość:
 Wysokość tekstu:</translatorcomment>
-        <translation type="unfinished">Wysokość:</translation>
+        <translation>Wysokość:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -88,13 +88,13 @@ Wysokość tekstu:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź kąt:
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt:</translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wstaw bitmapę</translation>
+        <translation>Wstaw bitmapę</translation>
     </message>
 </context>
 </TS>

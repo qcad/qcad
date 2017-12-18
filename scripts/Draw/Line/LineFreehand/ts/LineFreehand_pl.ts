@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LineFreehand</name>
     <message>
@@ -21,14 +21,14 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Odręczna linia</translatorcomment>
-        <translation type="unfinished">&amp;Odręczna linia</translation>
+        <translation>Linia &amp;odręczna</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
         <translatorcomment>--google--
 Rysuj linie odręczne</translatorcomment>
-        <translation type="unfinished">Narysować linię odręczną</translation>
+        <translation>Rysuje linię odręczną</translation>
     </message>
 </context>
 </TS>
