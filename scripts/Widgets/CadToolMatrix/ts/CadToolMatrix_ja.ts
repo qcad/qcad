@@ -4,7 +4,7 @@
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../CadToolMatrix.js" line="+366"/>
+        <location filename="../CadToolMatrix.js" line="+368"/>
         <source>Expand all</source>
         <translation>全て広げる</translation>
     </message>

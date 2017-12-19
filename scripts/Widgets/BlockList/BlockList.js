@@ -211,7 +211,7 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
         blockIds.push(blockCandidateId);
     }
 
-    blockIds = doc.sortBlocks(blockIds);
+    blockIds = this.sortBlocks(doc, blockIds);
 
     var currentBlockId = doc.getCurrentBlockId();
     var currentItem = undefined;
@@ -245,6 +245,10 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     }
 
     this.blockActivated();
+};
+
+RBlockListQt.prototype.sortBlocks = function(doc, blockIds) {
+    return doc.sortBlocks(blockIds);
 };
 
 RBlockListQt.getBlockTitle = function(block) {

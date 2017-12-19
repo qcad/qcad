@@ -208,7 +208,7 @@
         <translation>Traducciones</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Templates</source>
         <translation>Plantillas</translation>
     </message>
