@@ -157,12 +157,22 @@ double RGraphicsViewImage::mapDistanceFromView(double d) const {
  */
 void RGraphicsViewImage::updateImage() {
     RDocumentInterface* di = getDocumentInterface();
-    if (di==NULL || sceneQt==NULL) {
+    RDocument* doc = getDocument();
+    if (di==NULL || doc==NULL || sceneQt==NULL) {
         return;
     }
 
     // update drawing scale from document setting:
-    QString scaleString = getDocument()->getVariable("PageSettings/Scale", "1:1").toString();
+    QString scaleString;
+    if (doc->getCurrentBlockId()==doc->getModelSpaceBlockId()) {
+        scaleString = doc->getVariable("PageSettings/Scale", "1:1").toString();
+    }
+    else {
+        QSharedPointer<RBlock> blk = doc->queryCurrentBlock();
+        if (!blk.isNull()) {
+            blk->getCustomProperty("QCAD", "PageSettings/Scale", "1:1").toString();
+        }
+    }
     drawingScale = RMath::parseScale(scaleString);
     if (RMath::isNaN(drawingScale) || drawingScale<1.0e-6) {
         drawingScale = 1.0;
