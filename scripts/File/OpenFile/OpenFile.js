@@ -88,15 +88,11 @@ OpenFile.prototype.beginEvent = function() {
         qcadInitFileDialog(fileDialog);
     }
 
-    qDebug("mt1: ", EAction.getGraphicsView().mouseTracking);
-
     if (!fileDialog.exec()) {
         fileDialog.destroy();
         EAction.activateMainWindow();
-        qDebug("mt2: ", EAction.getGraphicsView().mouseTracking);
         return;
     }
-    qDebug("mt3: ", EAction.getGraphicsView().mouseTracking);
     EAction.activateMainWindow();
     RSettings.setValue("OpenFile/Path", fileDialog.directory().absolutePath());
     
