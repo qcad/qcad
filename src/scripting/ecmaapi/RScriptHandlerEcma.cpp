@@ -524,8 +524,12 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 # endif
     classQFile.property("prototype").setProperty("readAll",
             engine->newFunction(ecmaQFileReadAll));
+
+# if QT_VERSION < 0x050A00
+    // causes crash in autosave under Qt 5.10:
     classQFile.property("prototype").setProperty("fileName",
             engine->newFunction(ecmaQFileFileName));
+# endif
 #endif
 
     QScriptValue classQt = globalObject.property("Qt");
