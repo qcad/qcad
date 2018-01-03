@@ -149,7 +149,7 @@ AutoSave.autoSave = function() {
         EAction.handleUserWarning("[" + AutoSave.getTimestamp() + "] "
             + qsTr("Autosave failed:") + " "
             + QDir.toNativeSeparators(bakFileName));
-         return undefined;
+        return undefined;
     }
     else {
         EAction.handleUserMessage("[" + AutoSave.getTimestamp() + "] "
