@@ -96,6 +96,11 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
                 cbAutoAction.visible = false;
                 var cbAuto = optionsToolBar.findChild("AutoScale");
                 cbAuto.checked = false;
+                if (!resume) {
+                    // don't (re-)initialize or save state of auto checkbox:
+                    cbAuto.setProperty("Loaded", true);
+                    cbAuto.setProperty("Saved", true);
+                }
                 var scaleCombo = optionsToolBar.findChild("Scale");
                 scaleCombo.setEnabled(true);
             }
