@@ -107,12 +107,14 @@ ImportFile.prototype.getFileName = function() {
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
     if (!fileDialog.exec()) {
         fileDialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
     var fileNames = fileDialog.selectedFiles();
     if (fileNames.length===0) {
         fileDialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
@@ -137,5 +139,10 @@ ImportFile.prototype.getFileName = function() {
 
     RSettings.setValue("ImportFile/Path", fileDialog.directory().absolutePath());
 
-    return [ fileNames[0], fileDialog.selectedNameFilter() ];
+    var nameFilter = fileDialog.selectedNameFilter();
+
+    fileDialog.destroy();
+    EAction.activateMainWindow();
+
+    return [ fileNames[0], nameFilter ];
 };

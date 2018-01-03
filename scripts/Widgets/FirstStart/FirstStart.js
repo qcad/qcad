@@ -166,6 +166,7 @@ FirstStart.prototype.showDialog = function() {
     }
 
     this.dialog.destroy();
+    EAction.activateMainWindow();
 };
 
 FirstStart.prototype.changeLanguage = function(code) {

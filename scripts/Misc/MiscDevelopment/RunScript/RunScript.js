@@ -66,12 +66,14 @@ RunScript.prototype.beginEvent = function() {
         //fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
         if (!fileDialog.exec()) {
             fileDialog.destroy();
+            EAction.activateMainWindow();
             return;
         }
         RSettings.setValue("RunScript/Path", fileDialog.directory().absolutePath());
 
         fileNames = fileDialog.selectedFiles();
         fileDialog.destroy();
+        EAction.activateMainWindow();
 
         // show warning:
         if (RSettings.getBoolValue("RunScript/DontShowDialog", false)!==true) {

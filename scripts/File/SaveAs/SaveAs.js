@@ -144,6 +144,7 @@ SaveAs.prototype.beginEvent = function() {
 
         if (!fileDialog.exec()) {
             fileDialog.destroy();
+            EAction.activateMainWindow();
             this.terminate();
             return;
         }
@@ -152,6 +153,7 @@ SaveAs.prototype.beginEvent = function() {
         file = fileDialog.selectedFiles()[0];
         nameFilter = fileDialog.selectedNameFilter();
         fileDialog.destroy();
+        EAction.activateMainWindow();
     }
 
     this.save(file, nameFilter, !forceOverwrite);

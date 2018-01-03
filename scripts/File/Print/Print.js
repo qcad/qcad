@@ -107,6 +107,7 @@ Print.prototype.print = function(pdfFile) {
             Print.printDialog.rejected.connect(function() { Print.cancel = true; });
             Print.printDialog.exec();
             Print.printDialog.destroy();
+            EAction.activateMainWindow();
         }
         else {
             // Mac, Win: exec() never returns without destroying the dialog through these signals:
@@ -117,6 +118,7 @@ Print.prototype.print = function(pdfFile) {
                             Print.printDialog.close();
                             if (RS.getSystemId()==="osx") {
                                 Print.printDialog.destroy();
+                                EAction.activateMainWindow();
                             }
                         });
 
@@ -126,6 +128,7 @@ Print.prototype.print = function(pdfFile) {
                             Print.printDialog.close();
                             if (RS.getSystemId()==="osx") {
                                 Print.printDialog.destroy();
+                                EAction.activateMainWindow();
                             }
                         });
 

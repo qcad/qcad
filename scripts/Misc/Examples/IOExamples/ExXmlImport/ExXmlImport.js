@@ -78,6 +78,7 @@ ExXmlImport.prototype.beginEvent = function() {
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     if (!fileDialog.exec()) {
         fileDialog.destroy();
+        EAction.activateMainWindow();
         this.terminate();
         return;
     }
@@ -85,9 +86,13 @@ ExXmlImport.prototype.beginEvent = function() {
     var files = fileDialog.selectedFiles();
     if (files.length===0) {
         fileDialog.destroy();
+        EAction.activateMainWindow();
         this.terminate();
         return;
     }
+
+    fileDialog.destroy();
+    EAction.activateMainWindow();
 
     var fileName = files[0];
 

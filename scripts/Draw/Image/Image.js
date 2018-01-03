@@ -168,12 +168,14 @@ Image.prototype.getFileName = function() {
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
     if (!fileDialog.exec()) {
         fileDialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
     var files = fileDialog.selectedFiles();
     if (files.length===0) {
         fileDialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
