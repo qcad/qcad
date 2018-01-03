@@ -52,6 +52,12 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
 
     setFocusPolicy(Qt::WheelFocus);
     setMouseTracking(true);
+
+    // has no effect for now (Qt <= 5.10):
+//#if QT_VERSION >= 0x050A00
+//    setTabletTracking(true);
+//#endif
+
     lastButtonState = Qt::NoButton;
     setAutoFillBackground(false);
 
@@ -132,6 +138,18 @@ bool RGraphicsViewQt::event(QEvent* e) {
     if (e->type() == QEvent::Gesture) {
         return gestureEvent(static_cast<QGestureEvent*>(e));
     }
+
+#if QT_VERSION >= 0x050A00
+    // workaround for Qt 5.10 bug QTBUG-65559:
+    // TabletMove events are triggered instead of mouseMoveEvents if pen does NOT
+    // hover over tablet when application is started:
+    // convert to mouseMoveEvents here:
+    if (e->type() == QEvent::TabletMove) {
+        QTabletEvent* tabletEvent = dynamic_cast<QTabletEvent*>(e);
+        QMouseEvent* mouseEvent = new QMouseEvent(QEvent::MouseMove, tabletEvent->posF(), tabletEvent->button(), tabletEvent->buttons(), tabletEvent->modifiers());
+        QCoreApplication::postEvent(this, mouseEvent);
+    }
+#endif
 
     return QWidget::event(e);
 }
