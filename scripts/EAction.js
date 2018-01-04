@@ -836,6 +836,7 @@ EAction.getMainWindow = function() {
 /**
  * Reactivates the main window after showing a dialog.
  * This is necessary with Qt>=5.
+ * Not necessary with Qt>=5.10.
  */
 EAction.activateMainWindow = function() {
 //    if (RSettings.isQt(5)) {
