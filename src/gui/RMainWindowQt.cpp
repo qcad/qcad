@@ -568,10 +568,6 @@ QWidget* RMainWindowQt::getChildWidget(const QString& name) {
     return findChild<QWidget*>(name);
 }
 
-void RMainWindowQt::clearKeyLog() {
-    keyLog.clear();
-}
-
 QMenu* RMainWindowQt::createPopupMenu() {
     QMenu* menu = new QMenu();
     emit toolBarContextMenu(menu);
@@ -580,6 +576,11 @@ QMenu* RMainWindowQt::createPopupMenu() {
         menu = NULL;
     }
     return menu;
+}
+
+void RMainWindowQt::clearKeyLog() {
+    keyLog.clear();
+    qDebug() << "keyLog" << keyLog;
 }
 
 bool RMainWindowQt::event(QEvent* e) {
@@ -607,7 +608,7 @@ bool RMainWindowQt::event(QEvent* e) {
             }
             else {
                 if (ke->key()<128) {
-                    if (keyTimeOut.elapsed()>2000) {
+                    if (keyTimeOut.elapsed()>RSettings::getIntValue("Keyboard/Timeout", 2000)) {
                         keyLog.clear();
                     }
                     keyLog += QChar(ke->key());
