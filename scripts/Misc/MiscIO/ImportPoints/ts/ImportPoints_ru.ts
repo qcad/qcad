@@ -14,7 +14,7 @@
         <translation>Импорт точек</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+68"/>
         <source>&amp;Import Points</source>
         <translation>&amp;Импорт точек</translation>
     </message>

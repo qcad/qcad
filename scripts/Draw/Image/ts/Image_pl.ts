@@ -46,7 +46,7 @@ Format:</translatorcomment>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

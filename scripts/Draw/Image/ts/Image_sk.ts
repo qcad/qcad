@@ -29,7 +29,7 @@
         <translation>Typ formátu:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>Position</source>
         <translation>Poloha</translation>
     </message>

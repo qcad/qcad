@@ -19,7 +19,7 @@
         <translation>File ECMAScript</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+21"/>
         <source>Run Script</source>
         <translation>Avvia Script</translation>
     </message>

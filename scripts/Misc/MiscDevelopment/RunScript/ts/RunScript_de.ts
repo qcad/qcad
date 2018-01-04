@@ -19,7 +19,7 @@
         <translation>ECMAScript Dateien</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+21"/>
         <source>Run Script</source>
         <translation>Skript starten</translation>
     </message>

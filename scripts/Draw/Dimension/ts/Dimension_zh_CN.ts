@@ -54,7 +54,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+79"/>
         <source>Dimension Tools</source>
         <translation>尺寸工具</translation>
     </message>

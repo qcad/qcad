@@ -29,7 +29,7 @@
         <translation>Formaat:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>Position</source>
         <translation>Positie</translation>
     </message>

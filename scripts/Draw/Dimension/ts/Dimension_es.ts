@@ -58,7 +58,7 @@
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+79"/>
         <source>Dimension Tools</source>
         <translation>Herramientas dimensión</translation>
     </message>

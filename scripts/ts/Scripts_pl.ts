@@ -85,7 +85,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2061"/>
+        <location line="+2062"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -94,7 +94,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-1788"/>
+        <location line="-1789"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -110,7 +110,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+648"/>
+        <location line="+649"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

@@ -54,7 +54,7 @@
         <translation>デルタ</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+79"/>
         <source>Dimension Tools</source>
         <translation>寸法ツール</translation>
     </message>

@@ -41,7 +41,7 @@ Todos os Ficheiros (*)</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

@@ -81,12 +81,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2061"/>
+        <location line="+2062"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-1788"/>
+        <location line="-1789"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -98,7 +98,7 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+648"/>
+        <location line="+649"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>

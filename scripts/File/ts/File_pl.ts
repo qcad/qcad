@@ -24,7 +24,7 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
     </message>
     <message>
         <location line="+94"/>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

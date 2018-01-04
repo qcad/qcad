@@ -20,7 +20,7 @@
     </message>
     <message>
         <location line="+94"/>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>

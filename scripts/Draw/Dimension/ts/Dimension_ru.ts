@@ -54,7 +54,7 @@
         <translation>Дельта</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+79"/>
         <source>Dimension Tools</source>
         <translation>Утилиты размеров</translation>
     </message>

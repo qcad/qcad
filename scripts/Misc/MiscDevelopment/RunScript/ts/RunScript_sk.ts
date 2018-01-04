@@ -19,7 +19,7 @@
         <translation>Súbory ECMAScript</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+21"/>
         <source>Run Script</source>
         <translation>Spustiť skript</translation>
     </message>

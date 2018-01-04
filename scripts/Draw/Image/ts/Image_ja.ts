@@ -29,7 +29,7 @@
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
