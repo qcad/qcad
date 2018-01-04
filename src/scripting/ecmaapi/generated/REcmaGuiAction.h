@@ -288,6 +288,9 @@
         triggerByCommand
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        triggerByShortcut
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getByScriptFile
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

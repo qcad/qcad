@@ -124,6 +124,8 @@
         <return>return <expr><call><name>findChildren<argument_list>&lt;<argument><name>QToolBar</name>*</argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>void</name></type> <name>clearKeyLog</name><parameter_list>()</parameter_list>;</function_decl>
+
 </public><public>public slots:
     <function_decl><type><name>void</name></type> <name>quit</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>currentTabChanged</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
@@ -189,6 +191,9 @@
     <decl_stmt><decl><type><name>RMdiArea</name>*</type> <name>mdiArea</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>int</name></type> <name>disableCounter</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QString</name></type> <name>keyLog</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QTime</name></type> <name>keyTimeOut</name></decl>;</decl_stmt>
 
 <comment type="line">//private:</comment>
 <comment type="line">//    bool objectWasDestroyed;</comment>

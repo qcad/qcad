@@ -553,6 +553,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="triggerByShortcut" cppName="triggerByShortcut"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="sc"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getByScriptFile" cppName="getByScriptFile"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

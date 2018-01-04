@@ -368,6 +368,9 @@
         getToolBars
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearKeyLog
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         quit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

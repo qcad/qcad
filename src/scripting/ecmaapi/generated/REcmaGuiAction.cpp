@@ -283,6 +283,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, triggerByCommand, "triggerByCommand");
             
+            REcmaHelper::registerFunction(&engine, &ctor, triggerByShortcut, "triggerByShortcut");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getByScriptFile, "getByScriptFile");
             
             REcmaHelper::registerFunction(&engine, &ctor, getByClassName, "getByClassName");
@@ -4708,6 +4710,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::triggerByCommand", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::triggerByShortcut
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::triggerByShortcut", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::triggerByShortcut";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RGuiAction::
+       triggerByShortcut(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.triggerByShortcut().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::triggerByShortcut", context, engine);
             return result;
         }
          QScriptValue

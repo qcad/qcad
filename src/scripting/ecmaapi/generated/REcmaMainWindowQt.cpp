@@ -319,6 +319,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getToolBars, "getToolBars");
             
+            REcmaHelper::registerFunction(&engine, proto, clearKeyLog, "clearKeyLog");
+            
             REcmaHelper::registerFunction(&engine, proto, quit, "quit");
             
             REcmaHelper::registerFunction(&engine, proto, currentTabChanged, "currentTabChanged");
@@ -7276,6 +7278,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::getToolBars", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::clearKeyLog
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::clearKeyLog", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::clearKeyLog";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("clearKeyLog", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearKeyLog();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.clearKeyLog().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::clearKeyLog", context, engine);
             return result;
         }
          QScriptValue
