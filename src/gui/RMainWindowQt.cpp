@@ -568,6 +568,10 @@ QWidget* RMainWindowQt::getChildWidget(const QString& name) {
     return findChild<QWidget*>(name);
 }
 
+void RMainWindowQt::clearKeyLog() {
+    keyLog.clear();
+}
+
 QMenu* RMainWindowQt::createPopupMenu() {
     QMenu* menu = new QMenu();
     emit toolBarContextMenu(menu);
@@ -598,6 +602,21 @@ bool RMainWindowQt::event(QEvent* e) {
                     QWidget* parent = w->parentWidget();
                     if (dynamic_cast<QToolBar*>(parent)!=NULL) {
                         emit enterPressed();
+                    }
+                }
+            }
+            else {
+                if (ke->key()<128) {
+                    if (keyTimeOut.elapsed()>2000) {
+                        keyLog.clear();
+                    }
+                    keyLog += QChar(ke->key());
+                    qDebug() << "keyLog" << keyLog;
+                    if (RGuiAction::triggerByShortcut(keyLog)) {
+                        keyLog.clear();
+                    }
+                    else {
+                        keyTimeOut.restart();
                     }
                 }
             }

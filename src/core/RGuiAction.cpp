@@ -34,6 +34,7 @@
 
 
 QMap<QString, RGuiAction*> RGuiAction::actionsByCommand;
+QMap<QString, RGuiAction*> RGuiAction::actionsByShortcut;
 QMap<QString, RGuiAction*> RGuiAction::actionsByPrimaryCommand;
 QMap<QString, RGuiAction*> RGuiAction::actionsByScriptFile;
 QMultiMap<QString, RGuiAction*> RGuiAction::actionsByGroup;
@@ -75,6 +76,7 @@ RGuiAction::RGuiAction(const QString& text, QObject* parent)
 RGuiAction::~RGuiAction() {
     QList<QMap<QString, RGuiAction*>*> maps;
     maps << &actionsByCommand;
+    maps << &actionsByShortcut;
     maps << &actionsByPrimaryCommand;
     maps << &actionsByScriptFile;
     maps << &actionsByGroup;
@@ -280,12 +282,38 @@ void RGuiAction::setDefaultShortcut(const QKeySequence& shortcut) {
 }
 
 void RGuiAction::setShortcut(const QKeySequence& shortcut) {
-    QAction::setShortcut(shortcut);
+    if (shortcut.count()==1) {
+        QAction::setShortcut(shortcut);
+    }
+    else {
+        QString key;
+        for (int i=0; i<shortcut.count(); i++) {
+            key += QChar(shortcut[i]);
+        }
+        key = key.toLower();
+        actionsByShortcut.insert(key, this);
+
+        if (shortcutText.isEmpty()) {
+            shortcutText = key;
+        }
+    }
+
     initTexts();
 }
 
 void RGuiAction::setShortcuts(const QList<QKeySequence>& shortcuts) {
-    QAction::setShortcuts(shortcuts);
+    QList<QKeySequence> scs;
+
+    for (int i=0; i<shortcuts.length(); i++) {
+        if (shortcuts[i].count()==1) {
+            scs.append(shortcuts[i]);
+        }
+        else {
+            setShortcut(shortcuts[i]);
+        }
+    }
+
+    QAction::setShortcuts(scs);
     initTexts();
 }
 
@@ -843,7 +871,17 @@ bool RGuiAction::triggerByCommand(const QString& cmd) {
     }
 }
 
-
+bool RGuiAction::triggerByShortcut(const QString& sc) {
+    QString scLower = sc.toLower();
+    if (actionsByShortcut.count(scLower)!=0 && actionsByShortcut[scLower]!=NULL) {
+        if (actionsByShortcut[scLower]->isEnabled()) {
+            actionsByShortcut[scLower]->slotTrigger();
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
 
 /**
  * Triggers the first action in the list of actions that is based
@@ -976,10 +1014,13 @@ QStringList RGuiAction::getAvailableCommands(const QString& start, bool primaryO
  */
 bool RGuiAction::slotTrigger(const QString& command) {
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
-    if (mainWindow != NULL && !getMainCommand().isEmpty()) {
+    if (mainWindow != NULL) {
         // display main command somewhere, e.g. in command line:
         if (command.isNull()) {
-            mainWindow->handleUserCommand(getMainCommand());
+            QString mainCommand = getMainCommand();
+            if (!mainCommand.isEmpty()) {
+                mainWindow->handleUserCommand(mainCommand);
+            }
         }
         else {
             mainWindow->handleUserCommand(command);

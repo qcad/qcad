@@ -320,6 +320,7 @@ public:
     }
 
     static bool triggerByCommand(const QString& cmd);
+    static bool triggerByShortcut(const QString& sc);
     static RGuiAction* getByScriptFile(const QString& scriptFile);
     static RGuiAction* getByClassName(const QString& className);
     static RGuiAction* getByCommand(const QString& command);
@@ -355,6 +356,7 @@ signals:
 
 protected:
     static QMap<QString, RGuiAction*> actionsByCommand;
+    static QMap<QString, RGuiAction*> actionsByShortcut;
     static QMap<QString, RGuiAction*> actionsByPrimaryCommand;
     static QMap<QString, RGuiAction*> actionsByScriptFile;
     static QMultiMap<QString, RGuiAction*> actionsByGroup;

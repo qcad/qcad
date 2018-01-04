@@ -30,6 +30,7 @@ Esc.prototype.beginEvent = function() {
 
     var returnFocus = false;
 
+    var appWin = EAction.getMainWindow();
     var w = QApplication.focusWidget();
 
     // focus in RMathLineEdit (e.g. in options toolbar)
@@ -110,7 +111,6 @@ Esc.prototype.beginEvent = function() {
             }
         }
         else {
-            var appWin = EAction.getMainWindow();
             appWin.setFocus(Qt.OtherFocusReason);
             this.terminate();
             return;
@@ -122,6 +122,10 @@ Esc.prototype.beginEvent = function() {
     if (!isNull(base)) {
         base.escapeEvent();
     }
+
+    // clear key log of recorded keystrokes:
+    appWin.clearKeyLog();
+
     this.terminate();
 };
 

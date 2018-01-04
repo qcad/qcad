@@ -123,6 +123,8 @@ public:
         return findChildren<QToolBar*>();
     }
 
+    void clearKeyLog();
+
 public slots:
     void quit();
     void currentTabChanged(int index);
@@ -188,6 +190,9 @@ protected:
     RMdiArea* mdiArea;
 
     int disableCounter;
+
+    QString keyLog;
+    QTime keyTimeOut;
 
 //private:
 //    bool objectWasDestroyed;
