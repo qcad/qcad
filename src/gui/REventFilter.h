@@ -37,7 +37,7 @@ public:
     REventFilter(QEvent::Type type = QEvent::None, bool forward = true);
 
 protected:
-    bool eventFilter(QObject *obj, QEvent *event);
+    bool eventFilter(QObject* obj, QEvent* e);
 
 private:
     QEvent::Type type;

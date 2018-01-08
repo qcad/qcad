@@ -27,17 +27,19 @@
 REventFilter::REventFilter(QEvent::Type type, bool forward) : type(type), forward(forward) {
 }
 
-bool REventFilter::eventFilter(QObject* obj, QEvent* event) {
-    if (type==QEvent::None || event->type() == type) {
+bool REventFilter::eventFilter(QObject* obj, QEvent* e) {
+    if (type==QEvent::None || e->type()==type) {
         if (forward) {
             QObject* parent = obj->parent();
             if (parent!=NULL) {
-                QCoreApplication::sendEvent(parent, event);
+                QCoreApplication::sendEvent(parent, e);
             }
         }
         return true;
-    } else {
+    }
+
+    else {
         // standard event processing
-        return QObject::eventFilter(obj, event);
+        return QObject::eventFilter(obj, e);
     }
 }
