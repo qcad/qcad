@@ -108,3 +108,23 @@ void RDockWidget::actionEvent(QActionEvent* event) {
             Q_ASSERT_X(false, "RDockWidget::actionEvent", "internal error");
     }
 }
+
+bool RDockWidget::event(QEvent* e) {
+    if (e->type()==QEvent::KeyPress || e->type()==QEvent::KeyRelease) {
+        //if (!appWin->isAncestorOf(this)) {
+        if (isFloating()) {
+            // dock widget is in undocked, floating:
+            // forward event to main window:
+            QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
+            RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+            qApp->postEvent(appWin, new QKeyEvent(ke->type(), ke->key(), ke->modifiers(), ke->text(), ke->isAutoRepeat(), ke->count()));
+            e->accept();
+            return true;
+        }
+
+        e->ignore();
+        return false;
+    }
+
+    return QDockWidget::event(e);
+}

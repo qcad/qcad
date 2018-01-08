@@ -53,6 +53,8 @@ protected:
 #endif
     virtual void actionEvent(QActionEvent *event);
 
+    virtual bool event(QEvent* e);
+
 private:
     RFlowLayout* layout;
 };
