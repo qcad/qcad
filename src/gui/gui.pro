@@ -19,6 +19,7 @@ SOURCES += \
     RLinetypeCombo.cpp \
     RLinetypeComboDelegate.cpp \
     RLineweightCombo.cpp \
+    RListView.cpp \
     RListWidget.cpp \
     RMainWindowQt.cpp \
     RMathLineEdit.cpp \

@@ -37,11 +37,8 @@ class QCADGUI_EXPORT RListView: public QListView {
 Q_OBJECT
 
 public:
-    RListView(QWidget* parent = 0) :
-        QListView(parent) {
-    }
-    virtual ~RListView() {
-    }
+    RListView(QWidget* parent = 0);
+    virtual ~RListView() {}
 
 signals:
     void signalContextMenuEvent(QContextMenuEvent* e);
@@ -103,15 +100,7 @@ protected:
     /**
      * \nonscriptable
      */
-    virtual bool event(QEvent* event) {
-        QHelpEvent* helpEvent = dynamic_cast<QHelpEvent*>(event);
-        if (event->type()==QEvent::ToolTip && helpEvent!=NULL) {
-            emit signalToolTipRequested(helpEvent);
-            event->accept();
-            return true;
-        }
-        return QListView::event(event);
-    }
+    virtual bool event(QEvent* event);
 };
 
 Q_DECLARE_METATYPE(RListView*)

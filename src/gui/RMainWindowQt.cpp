@@ -588,7 +588,10 @@ bool RMainWindowQt::event(QEvent* e) {
         return false;
     }
 
+    //qDebug() << "Event: " << e->type();
+
     if (e->type()==QEvent::KeyPress) {
+        qDebug() << "KeyPress";
         QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
         if (ke!=NULL) {
             if (ke->key()==Qt::Key_Enter || ke->key()==Qt::Key_Return) {
@@ -620,8 +623,10 @@ bool RMainWindowQt::event(QEvent* e) {
                         keyTimeOut.restart();
                     }
                 }
+                e->accept();
             }
         }
+        return true;
     }
 
     RSelectionChangedEvent* sce = dynamic_cast<RSelectionChangedEvent*>(e);
@@ -638,6 +643,7 @@ bool RMainWindowQt::event(QEvent* e) {
         if (di!=NULL) {
             di->coordinateEvent(*coe);
         }
+        return true;
     }
 
     RTransactionEvent* te = dynamic_cast<RTransactionEvent*>(e);

@@ -16,8 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "REventFilter.h"
 #include "RListWidget.h"
-#include "RDebug.h"
+#include "RMainWindowQt.h"
 
 #include <QContextMenuEvent>
 
@@ -31,6 +32,9 @@ RListWidget::RListWidget(QWidget* parent) :
 //#else
 //    iconOffset = 0;
 //#endif
+
+    installEventFilter(new REventFilter(QEvent::KeyPress, true));
+    installEventFilter(new REventFilter(QEvent::KeyRelease, true));
 }
 
 /**

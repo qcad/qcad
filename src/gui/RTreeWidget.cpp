@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "REventFilter.h"
 #include "RTreeWidget.h"
-#include "RDebug.h"
 
 #include <QContextMenuEvent>
 #include <QHeaderView>
@@ -32,6 +32,9 @@ RTreeWidget::RTreeWidget(QWidget* parent) :
 //#else
 //    iconOffset = 0;
 //#endif
+
+    installEventFilter(new REventFilter(QEvent::KeyPress, true));
+    installEventFilter(new REventFilter(QEvent::KeyRelease, true));
 }
 
 /**
