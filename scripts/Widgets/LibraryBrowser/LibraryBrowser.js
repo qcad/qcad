@@ -307,6 +307,9 @@ LibraryBrowser.initFileSystemTab = function() {
             var menu = LibraryBrowser.createItemContextMenu(dirTree, filePath, undefined, index);
             menu.exec(QCursor.pos());
         });
+
+    dirTree.installEventFilter(new REventFilter(QEvent.KeyPress.valueOf(), true));
+    dirTree.installEventFilter(new REventFilter(QEvent.KeyRelease.valueOf(), true));
 };
 
 LibraryBrowser.updateFileSystemTab = function() {
