@@ -41,6 +41,7 @@
 #include "REcmaHelper.h"
 #include "RMetaTypes.h"
 #include "RScriptHandlerEcma.h"
+#include "RScriptHandlerRegistry.h"
 #include "RSingleApplication.h"
 
 #include "REcmaAction.h"
@@ -413,6 +414,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     
     QScriptValue globalObject = engine->globalObject();
     globalObject.setProperty("include", engine->newFunction(ecmaInclude, 1));
+    globalObject.setProperty("evalAppEngine", engine->newFunction(ecmaEvalAppEngine, 1));
     globalObject.setProperty("print", engine->newFunction(ecmaPrint));
     globalObject.setProperty("qDebug", engine->newFunction(ecmaDebug));
     globalObject.setProperty("qWarning", engine->newFunction(ecmaWarning));
@@ -1267,7 +1269,6 @@ QScriptValue RScriptHandlerEcma::ecmaInclude(QScriptContext* context, QScriptEng
     return doInclude(engine, arg, trContext, force);
 }
 
-
 bool RScriptHandlerEcma::isIncluded(QScriptEngine* engine, const QString& className) {
     if (alwaysLoadScripts && className!="library" && className!="EAction" && className!="WidgetFactory") {
         // always include (again) to reload potential changes:
@@ -1388,9 +1389,25 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
                                    context->argument(0).toString()));
 }
 
-QScriptValue RScriptHandlerEcma::ecmaExit(QScriptContext* context,
-                                           QScriptEngine* engine) {
+QScriptValue RScriptHandlerEcma::ecmaEvalAppEngine(QScriptContext* context, QScriptEngine* engine) {
+    QString arg;
+    if (context->argumentCount() == 1 && context->argument(0).isString()) {
+        arg = context->argument(0).toString();
 
+        RScriptHandler* sh = RScriptHandlerRegistry::getGlobalScriptHandler("js");
+        if (sh) {
+            sh->eval(arg);
+        }
+        else {
+            qWarning() << "no script handler found for JS";
+        }
+    }
+    else {
+        return context->throwError(QString("evalAppEngine: wrong number / type of arguments"));
+    }
+}
+
+QScriptValue RScriptHandlerEcma::ecmaExit(QScriptContext* context, QScriptEngine* engine) {
     qWarning() << "Exit called from script. Closing application.";
 
     if (context->argumentCount() == 0) {
