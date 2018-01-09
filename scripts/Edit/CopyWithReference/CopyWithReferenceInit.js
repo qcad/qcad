@@ -2,6 +2,7 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("CopyWithReference", "&Copy with Reference"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
+    action.setAllowInterrupt();
     action.setScriptFile(basePath + "/CopyWithReference.js");
     action.setIcon(basePath + "/CopyWithReference.svg");
     action.setDefaultShortcuts([

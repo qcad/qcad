@@ -1,6 +1,7 @@
 function init(basePath) {
     var action = new RGuiAction(qsTranslate("Paste", "&Paste"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
+    action.setAllowInterrupt();
     action.setScriptFile(basePath + "/Paste.js");
     action.setIcon(basePath + "/Paste.svg");
     action.setDefaultShortcuts([

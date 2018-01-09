@@ -2,6 +2,7 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("CutWithReference", "&Cut with Reference"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
+    action.setAllowInterrupt();
     action.setScriptFile(basePath + "/CutWithReference.js");
     action.setIcon(basePath + "/CutWithReference.svg");
     action.setDefaultShortcuts([

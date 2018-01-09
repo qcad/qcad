@@ -56,7 +56,7 @@ DefaultAction.prototype.beginEvent = function() {
     this.d2Model = RVector.invalid;
     this.d2Screen = RVector.invalid;
     this.di = this.getDocumentInterface();
-    this.document = this.getDocument();
+    this.document = this.di.getDocument();
     this.setState(DefaultAction.State.Neutral);
     this.blockRefId = RObject.INVALID_ID;
     this.entityInBlockId = RObject.INVALID_ID;

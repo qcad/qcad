@@ -29,19 +29,93 @@ include("scripts/sprintf.js");
  * the drawing.
  */
 function PrintPreview(guiAction) {
+    EAction.call(this, guiAction);
+}
+
+PrintPreview.prototype = new EAction();
+PrintPreview.includeBasePath = includeBasePath;
+
+PrintPreview.isRunning = function() {
+    //return global.printPreviewRunning;
+    var di = EAction.getDocumentInterface();
+    if (isNull(di)) {
+        return false;
+    }
+
+    var a = di.getDefaultAction();
+    var ga = a.getGuiAction();
+    if (isNull(ga)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+
+/**
+ * Starts the print preview.
+ */
+PrintPreview.start = function() {
+    var di = EAction.getDocumentInterface();
+    var a = di.getDefaultAction();
+    a.finishEvent();
+    di.setDefaultAction(new PrintPreviewImpl());
+
+    var ga = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js")
+    if (!isNull(ga)) {
+        ga.setChecked(true);
+    }
+};
+
+/**
+ * Exits the print preview.
+ */
+PrintPreview.exit = function() {
+    var di = EAction.getDocumentInterface();
+    var a = di.getDefaultAction();
+    a.finishEvent();
+    di.setDefaultAction(new DefaultAction(RGuiAction.getByScriptFile("scripts/Reset/Reset.js")));
+
+    var ga = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js")
+    if (!isNull(ga)) {
+        ga.setChecked(false);
+    }
+};
+
+PrintPreview.prototype.beginEvent = function() {
+    if (PrintPreview.isRunning()) {
+        // exit print preview:
+        PrintPreview.exit();
+    }
+    else {
+        // start print preview:
+        PrintPreview.start();
+    }
+
+    this.terminate();
+    return;
+};
+
+
+
+/**
+ * Implementation of interactive print preview action.
+ * Intended to be used as default action.
+ */
+function PrintPreviewImpl(guiAction) {
     DefaultAction.call(this, guiAction);
 
     this.enableSlotPaperSizeChanged = false;
-    
-    this.setUiOptions(PrintPreview.includeBasePath + "/PrintPreview.ui");
-    
+
+    this.setUiOptions(PrintPreviewImpl.includeBasePath + "/PrintPreview.ui");
+
     this.panningOffset = false;
     this.panOffsetOrigin = new RVector();
 
     this.updateDisabled = false;
 
-    var bitmap = new QBitmap(PrintPreview.includeBasePath + "/PrintPreviewOffsetCursor.png", "PNG");
-    var mask = new QBitmap(PrintPreview.includeBasePath + "/PrintPreviewOffsetCursorMask.png", "PNG");
+    var bitmap = new QBitmap(PrintPreviewImpl.includeBasePath + "/PrintPreviewOffsetCursor.png", "PNG");
+    var mask = new QBitmap(PrintPreviewImpl.includeBasePath + "/PrintPreviewOffsetCursorMask.png", "PNG");
     this.cursor = new QCursor(bitmap, mask, 15, 13);
     this.view = undefined;
     this.saveView = false;
@@ -49,70 +123,28 @@ function PrintPreview(guiAction) {
     this.savedOffset = undefined;
 }
 
-PrintPreview.prototype = new DefaultAction();
-PrintPreview.includeBasePath = includeBasePath;
+PrintPreviewImpl.prototype = new DefaultAction();
+PrintPreviewImpl.includeBasePath = includeBasePath;
 
-if (typeof(global.printPreviewRunning)==="undefined") {
-    global.printPreviewRunning = false;
-}
-if (typeof(global.printPreviewInstance)==="undefined") {
-    global.printPreviewInstance = undefined;
-}
-
-/**
- * Additional states of PrintPreview compared with base class DefaultAction.
- */
-PrintPreview.State = {
+PrintPreviewImpl.State = {
     SettingOffset : 100
 };
 
-PrintPreview.isRunning = function() {
-    return global.printPreviewRunning;
-};
-
-PrintPreview.getInstance = function() {
-    return global.printPreviewInstance;
-};
-
-PrintPreview.setRunning = function(v) {
-    global.printPreviewRunning = v;
-};
-
-PrintPreview.setInstance = function(inst) {
-    global.printPreviewInstance = inst;
-};
-
-PrintPreview.terminate = function() {
-    var inst = PrintPreview.getInstance();
-    if (!isNull(inst)) {
-        inst.terminate();
-    }
-};
-
-PrintPreview.prototype.beginEvent = function() {
+PrintPreviewImpl.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
-    if (PrintPreview.isRunning()) {
-        // allows use of print preview button to close print preview:
-        PrintPreview.terminate();
-        if (!isNull(this.guiAction)) {
-            this.guiAction.setChecked(false);
-        }
-        this.terminate();
-        return;
-    }
 
     if (this.saveView===true) {
         this.savedScale = Print.getScale(this.getDocument());
         this.savedOffset = Print.getOffset(this.getDocument());
     }
 
-    if (!isNull(this.guiAction)) {
-        this.guiAction.setChecked(true);
-    }
+//    if (!isNull(this.guiAction)) {
+//        this.guiAction.setChecked(true);
+//    }
 
     // globals:
-    PrintPreview.setRunning(true);
-    PrintPreview.setInstance(this);
+    //PrintPreview.setRunning(true);
+    //PrintPreview.setInstance(this);
 
     var mdiChild = EAction.getMdiChild();
     this.view = mdiChild.getLastKnownViewWithFocus();
@@ -173,10 +205,10 @@ PrintPreview.prototype.beginEvent = function() {
 /**
  * Handles additional state changes for offset moving state.
  */
-PrintPreview.prototype.setState = function(state) {
+PrintPreviewImpl.prototype.setState = function(state) {
     DefaultAction.prototype.setState.call(this, state);
 
-    if (this.state === PrintPreview.State.SettingOffset) {
+    if (this.state === PrintPreviewImpl.State.SettingOffset) {
         EAction.getDocumentInterface().setClickMode(RAction.PickingDisabled);
         this.setCursor(this.cursor, "PrintPreviewOffsetCursor");
         EAction.showMainTools();
@@ -187,15 +219,16 @@ PrintPreview.prototype.setState = function(state) {
     var optionsToolBar = EAction.getOptionsToolBar();
     var offsetButton = optionsToolBar.findChild("Offset");
     if (offsetButton) {
-        offsetButton.checked = (this.state == PrintPreview.State.SettingOffset);
+        offsetButton.checked = (this.state == PrintPreviewImpl.State.SettingOffset);
     }
 };
 
-PrintPreview.prototype.suspendEvent = function() {
+PrintPreviewImpl.prototype.suspendEvent = function() {
     EAction.prototype.suspendEvent.call(this);
 };
 
-PrintPreview.prototype.finishEvent = function() {
+PrintPreviewImpl.prototype.finishEvent = function() {
+    qDebug("PrintPreviewImpl.prototype.finishEvent");
     DefaultAction.prototype.finishEvent.call(this);
     var di = this.getDocumentInterface();
 
@@ -222,8 +255,8 @@ PrintPreview.prototype.finishEvent = function() {
         action.triggered.disconnect(this, "updateBackgroundDecoration");
     }
 
-    PrintPreview.setRunning(false);
-    PrintPreview.setInstance(undefined);
+    //PrintPreviewImpl.setRunning(false);
+    //PrintPreviewImpl.setInstance(undefined);
 
     if (this.saveView===true) {
         if (!isNull(this.savedScale)) {
@@ -246,8 +279,8 @@ PrintPreview.prototype.finishEvent = function() {
 /**
  * Implements moving of paper (offset).
  */
-PrintPreview.prototype.mousePressEvent = function(event) {
-    if (this.state === PrintPreview.State.SettingOffset) {
+PrintPreviewImpl.prototype.mousePressEvent = function(event) {
+    if (this.state === PrintPreviewImpl.State.SettingOffset) {
         if (event.button() == Qt.LeftButton &&
             event.modifiers().valueOf() != Qt.ControlModifier.valueOf()) {
 
@@ -264,7 +297,7 @@ PrintPreview.prototype.mousePressEvent = function(event) {
  * Reimplemented from EAction to prevent that a right-click closes the
  * print preview.
  */
-//PrintPreview.prototype.mouseReleaseEvent = function(event) {
+//PrintPreviewImpl.prototype.mouseReleaseEvent = function(event) {
 //    if (event.button() == Qt.RightButton) {
 //        if (this.state!=DefaultAction.State.Neutral) {
 //            EAction.getDocumentInterface().clearPreview();
@@ -280,8 +313,8 @@ PrintPreview.prototype.mousePressEvent = function(event) {
 /**
  * Implements moving of paper (offset).
  */
-PrintPreview.prototype.mouseMoveEvent = function(event) {
-    if (this.state !== PrintPreview.State.SettingOffset) {
+PrintPreviewImpl.prototype.mouseMoveEvent = function(event) {
+    if (this.state !== PrintPreviewImpl.State.SettingOffset) {
         DefaultAction.prototype.mouseMoveEvent.call(this, event);
         return;
     }
@@ -318,7 +351,7 @@ PrintPreview.prototype.mouseMoveEvent = function(event) {
  * Reimplementation from EAction. Implements initialization of options
  * toolbar from member variables.
  */
-PrintPreview.prototype.showUiOptions = function(resume) {
+PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     this.updateDisabled = true;
     EAction.prototype.showUiOptions.call(this, resume);
     this.updateDisabled = false;
@@ -387,11 +420,11 @@ PrintPreview.prototype.showUiOptions = function(resume) {
 /**
  * Initializes the scale combo box in the options toolbar with defaults.
  */
-PrintPreview.prototype.initUiOptions = function(resume, optionsToolBar) {
+PrintPreviewImpl.prototype.initUiOptions = function(resume, optionsToolBar) {
     this.initScaleCombo();
 };
 
-PrintPreview.prototype.initScaleCombo = function() {
+PrintPreviewImpl.prototype.initScaleCombo = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleCombo = optionsToolBar.findChild("Scale");
     scaleCombo.blockSignals(true);
@@ -405,7 +438,7 @@ PrintPreview.prototype.initScaleCombo = function() {
     scaleCombo.blockSignals(false);
 };
 
-PrintPreview.prototype.hideUiOptions = function() {
+PrintPreviewImpl.prototype.hideUiOptions = function() {
     EAction.prototype.hideUiOptions.call(this, false);
 };
 
@@ -413,7 +446,7 @@ PrintPreview.prototype.hideUiOptions = function() {
  * Called to update the background decoration (paper borders) if the scale
  * or paper settings change.
  */
-PrintPreview.prototype.updateBackgroundDecoration = function() {
+PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     var document = this.getDocument();
 
     if (isNull(document) || isNull(this.view)) {
@@ -433,7 +466,7 @@ PrintPreview.prototype.updateBackgroundDecoration = function() {
     var i, color, path;
 
     if (pages.length===0) {
-        qWarning("PrintPreview.prototype.updateBackgroundDecoration: no pages");
+        qWarning("PrintPreviewImpl.prototype.updateBackgroundDecoration: no pages");
         return;
     }
 
@@ -487,7 +520,7 @@ PrintPreview.prototype.updateBackgroundDecoration = function() {
     }
 
     if (pages.length===0) {
-        qWarning("PrintPreview.js: no pages");
+        qWarning("PrintPreviewImpl.js: no pages");
     }
 
     for (i = 0; i < pages.length; ++i) {
@@ -513,12 +546,12 @@ PrintPreview.prototype.updateBackgroundDecoration = function() {
 /**
  * Overwritable hook to add more decorations to the print preview.
  */
-PrintPreview.prototype.addDecorations = function(pages) {};
+PrintPreviewImpl.prototype.addDecorations = function(pages) {};
 
 /**
  * Updates the background decoration transformation.
  */
-PrintPreview.prototype.updateBackgroundTransform = function() {
+PrintPreviewImpl.prototype.updateBackgroundTransform = function() {
     var document = EAction.getDocument();
 
     if (isNull(document)) {
@@ -541,7 +574,7 @@ PrintPreview.prototype.updateBackgroundTransform = function() {
 /**
  * Draws the paper border for the given page.
  */
-PrintPreview.prototype.drawPaper = function(path, border) {
+PrintPreviewImpl.prototype.drawPaper = function(path, border) {
     var document = EAction.getDocument();
     var paperBorder = Print.getPaperBorder(document, border);
     if (!paperBorder.isValid()) {
@@ -553,7 +586,7 @@ PrintPreview.prototype.drawPaper = function(path, border) {
 /**
  * Draws the glue margins for the given page.
  */
-PrintPreview.prototype.drawGlueMargins = function(path, border) {
+PrintPreviewImpl.prototype.drawGlueMargins = function(path, border) {
     if (!border.isValid()) {
         return;
     }
@@ -563,7 +596,7 @@ PrintPreview.prototype.drawGlueMargins = function(path, border) {
 /**
  * Draws the shadow for the given page.
  */
-PrintPreview.prototype.drawShadow = function(path, border) {
+PrintPreviewImpl.prototype.drawShadow = function(path, border) {
     var document = EAction.getDocument();
     var paper = Print.getPaperBorder(document, border);
     var offset = Print.getPaperSizeMM(document).width() * 0.02;
@@ -574,7 +607,7 @@ PrintPreview.prototype.drawShadow = function(path, border) {
     path.addRect(shadow);
 };
 
-PrintPreview.prototype.slotPdfExport = function() {
+PrintPreviewImpl.prototype.slotPdfExport = function() {
     var appWin = EAction.getMainWindow();
     var fileName = EAction.getDocument().getFileName();
     var initialFileName = QDir.homePath();
@@ -609,19 +642,19 @@ PrintPreview.prototype.slotPdfExport = function() {
 /**
  * Called when user clicks the PDF export button in the options toolbar.
  */
-PrintPreview.slotPdfExport = function() {
-    var pp = PrintPreview.getInstance();
+PrintPreviewImpl.slotPdfExport = function() {
+    var pp = PrintPreviewImpl.getInstance();
     pp.slotPdfExport();
 };
 
-PrintPreview.prototype.slotPrint = function(pdfFile) {
-    return PrintPreview.slotPrint(pdfFile);
+PrintPreviewImpl.prototype.slotPrint = function(pdfFile) {
+    return PrintPreviewImpl.slotPrint(pdfFile);
 };
 
 /**
  * Prints the drawing or exports it to the given PDF file.
  */
-PrintPreview.slotPrint = function(pdfFile) {
+PrintPreviewImpl.slotPrint = function(pdfFile) {
     var mdiChild = EAction.getMdiChild();
     var view = mdiChild.getLastKnownViewWithFocus();
     var print = new Print(undefined, EAction.getDocument(), view);
@@ -631,7 +664,7 @@ PrintPreview.slotPrint = function(pdfFile) {
 /**
  * Called whenever the user changes the drawing scale in the print preview.
  */
-PrintPreview.prototype.slotScaleChanged = function(scaleString) {
+PrintPreviewImpl.prototype.slotScaleChanged = function(scaleString) {
     if (this.updateDisabled===true) {
         return;
     }
@@ -651,17 +684,17 @@ PrintPreview.prototype.slotScaleChanged = function(scaleString) {
     di.regenerateScenes();
 };
 
-PrintPreview.setScale = function(document, scale) {
-    PrintPreview.setScaleString(document, sprintf("%.6f", scale));
+PrintPreviewImpl.setScale = function(document, scale) {
+    PrintPreviewImpl.setScaleString(document, sprintf("%.6f", scale));
 };
 
-PrintPreview.setScaleString = function(document, scaleString) {
+PrintPreviewImpl.setScaleString = function(document, scaleString) {
     Print.setScaleString(document, scaleString);
 
-    PrintPreview.updateScaleString(document);
+    PrintPreviewImpl.updateScaleString(document);
 };
 
-PrintPreview.updateScaleString = function(document) {
+PrintPreviewImpl.updateScaleString = function(document) {
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleCombo = optionsToolBar.findChild("Scale");
     if (Print.getScale(document) != RMath.parseScale(scaleCombo.currentText)) {
@@ -675,13 +708,13 @@ PrintPreview.updateScaleString = function(document) {
  * Triggered by the offset tool button in the options toolbar.
  * Activates / deactivates the offset tool.
  */
-PrintPreview.prototype.slotOffsetChanged = function(checked) {
+PrintPreviewImpl.prototype.slotOffsetChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
 
     if (checked) {
-        this.setState(PrintPreview.State.SettingOffset);
+        this.setState(PrintPreviewImpl.State.SettingOffset);
     }
     else {
         this.setState(DefaultAction.State.Neutral);
@@ -692,15 +725,15 @@ PrintPreview.prototype.slotOffsetChanged = function(checked) {
  * Triggered by the "Done" button in the options toolbar.
  * Terminates this action and returns to normal drawing mode.
  */
-PrintPreview.prototype.slotDone = function() {
-    this.terminate();
+PrintPreviewImpl.prototype.slotDone = function() {
+    PrintPreview.exit();
 };
 
 /**
  * Triggered by the b/w button in the options toolbar.
  * Activates / deactivates the black white mode.
  */
-PrintPreview.prototype.slotFullColorChanged = function(checked) {
+PrintPreviewImpl.prototype.slotFullColorChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
@@ -710,7 +743,7 @@ PrintPreview.prototype.slotFullColorChanged = function(checked) {
     }
 };
 
-PrintPreview.prototype.slotBlackWhiteChanged = function(checked) {
+PrintPreviewImpl.prototype.slotBlackWhiteChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
@@ -720,7 +753,7 @@ PrintPreview.prototype.slotBlackWhiteChanged = function(checked) {
     }
 };
 
-PrintPreview.prototype.slotGrayscaleChanged = function(checked) {
+PrintPreviewImpl.prototype.slotGrayscaleChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
@@ -730,14 +763,14 @@ PrintPreview.prototype.slotGrayscaleChanged = function(checked) {
     }
 };
 
-PrintPreview.prototype.colorModeUpdate = function() {
+PrintPreviewImpl.prototype.colorModeUpdate = function() {
     if (!isNull(this.view)) {
         this.view.setColorMode(Print.getColorMode(EAction.getDocument()));
         this.view.regenerate(true);
     }    
 };
 
-PrintPreview.prototype.slotHairlineChanged = function(checked) {
+PrintPreviewImpl.prototype.slotHairlineChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
@@ -752,7 +785,7 @@ PrintPreview.prototype.slotHairlineChanged = function(checked) {
 /**
  * Page borders toggled in options toolbar.
  */
-PrintPreview.prototype.slotShowPaperBordersChanged = function(checked) {
+PrintPreviewImpl.prototype.slotShowPaperBordersChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
@@ -765,7 +798,7 @@ PrintPreview.prototype.slotShowPaperBordersChanged = function(checked) {
 /**
  * Crop marks toggled in options toolbar.
  */
-PrintPreview.prototype.slotPrintCropMarksChanged = function(checked) {
+PrintPreviewImpl.prototype.slotPrintCropMarksChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
@@ -778,10 +811,10 @@ PrintPreview.prototype.slotPrintCropMarksChanged = function(checked) {
 /**
  * Auto fit box to page.
  */
-PrintPreview.prototype.slotAutoFitBox = function(box) {
+PrintPreviewImpl.prototype.slotAutoFitBox = function(box) {
     var document = this.getDocument();
     Print.autoFitBox(document, box);
-    PrintPreview.updateScaleString(document);
+    PrintPreviewImpl.updateScaleString(document);
 
     // needed to update pattern scaling according to drawing scale:
     var di = this.getDocumentInterface();
@@ -796,10 +829,10 @@ PrintPreview.prototype.slotAutoFitBox = function(box) {
 /**
  * Auto fit drawing button clicked in options toolbar.
  */
-PrintPreview.prototype.slotAutoFitDrawing = function() {
+PrintPreviewImpl.prototype.slotAutoFitDrawing = function() {
     var document = this.getDocument();
     Print.autoFitDrawing(document);
-    PrintPreview.updateScaleString(document);
+    PrintPreviewImpl.updateScaleString(document);
 
     // needed to update pattern scaling according to drawing scale:
     var di = this.getDocumentInterface();
@@ -811,7 +844,7 @@ PrintPreview.prototype.slotAutoFitDrawing = function() {
     this.showUiOptions(true);
 };
 
-PrintPreview.prototype.slotAutoCenter = function() {
+PrintPreviewImpl.prototype.slotAutoCenter = function() {
     Print.autoCenter(this.getDocument());
 
     this.updateBackgroundTransform();
@@ -819,7 +852,7 @@ PrintPreview.prototype.slotAutoCenter = function() {
     this.updateBackgroundDecoration();
 };
 
-PrintPreview.prototype.slotPortraitChanged = function() {
+PrintPreviewImpl.prototype.slotPortraitChanged = function() {
     if (this.updateDisabled===true) {
         return;
     }
@@ -830,7 +863,7 @@ PrintPreview.prototype.slotPortraitChanged = function() {
     this.slotAutoZoomToPage();
 };
 
-PrintPreview.prototype.slotLandscapeChanged = function() {
+PrintPreviewImpl.prototype.slotLandscapeChanged = function() {
     if (this.updateDisabled===true) {
         return;
     }
@@ -844,11 +877,11 @@ PrintPreview.prototype.slotLandscapeChanged = function() {
 /**
  * \return Maximum extents of paper
  */
-PrintPreview.prototype.getPaperBox = function() {
+PrintPreviewImpl.prototype.getPaperBox = function() {
     return Print.getPaperBox(this.getDocument());
 };
 
-PrintPreview.prototype.slotAutoZoomToPage = function() {
+PrintPreviewImpl.prototype.slotAutoZoomToPage = function() {
     if (!isNull(this.view)) {
         var pBox = this.getPaperBox();
         this.view.zoomTo(pBox, 10);
@@ -859,7 +892,7 @@ PrintPreview.prototype.slotAutoZoomToPage = function() {
  * Updates the background (paper preview) transform when page settings
  * are changed (e.g. offset).
  */
-PrintPreview.prototype.updateFromPreferences = function() {
+PrintPreviewImpl.prototype.updateFromPreferences = function() {
     this.showUiOptions(true);
     this.updateBackgroundDecoration();
     this.updateBackgroundTransform();

@@ -2,6 +2,7 @@ function init(basePath) {
     var action = new RGuiAction(qsTranslate("Cut", "&Cut"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
+    action.setAllowInterrupt();
     action.setScriptFile(basePath + "/Cut.js");
     action.setIcon(basePath + "/Cut.svg");
     action.setDefaultShortcuts([
