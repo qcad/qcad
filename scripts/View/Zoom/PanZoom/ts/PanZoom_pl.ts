@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>PanZoom</name>
     <message>
@@ -9,7 +8,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Przesuń-zoom</translatorcomment>
-        <translation type="unfinished">&amp;Przesuń-zoom</translation>
+        <translation>&amp;Przesuń przybliżenie</translation>
     </message>
 </context>
 </TS>

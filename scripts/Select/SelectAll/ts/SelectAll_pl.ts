@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SelectAll</name>
     <message>
@@ -10,13 +9,13 @@
 --file: linguist_pl.ts--
 Zaznacz &amp;wszystko
 Odznacz &amp;wszystko</translatorcomment>
-        <translation type="unfinished">Zaznacz &amp;wszystko</translation>
+        <translation>Zaznacz &amp;wszystko</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Select all visible entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zaznacz wszystkie widoczne jednostki</translation>
+        <translation>Zaznacza wszystkie widoczne obiekty</translation>
     </message>
 </context>
 </TS>

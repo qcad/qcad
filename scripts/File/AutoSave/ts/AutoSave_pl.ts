@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -23,7 +22,7 @@
         <location line="+95"/>
         <source>Autosaving to:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Położenie automatycznego zapisywania:</translation>
+        <translation>Automatyczne zapisywanie do pliku:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -39,18 +38,19 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
+        <source>An 'autosave' backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Plik kopii zapasowej o &quot;autozapis&amp;quot; dla bez tytułu rysunku został znaleziony. Czy chcesz je odzyskać?</translation>
+        <translation>Odnaleziono plik automatycznej kopii zapasowej dla rysunku bez nazwy.
+Odzyskać go?</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
+        <source>%1 'autosave' backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pliki kopii zapasowej &quot;autozapis&amp;quot; dla untitled rysunków znalazła. Czy chcesz je odzyskać?</translation>
-    </message>
+        <translation>Odnaleziono %1 pliki automatycznej kopii zapasowej dla rysunków bez nazwy.
+Odzyskać je?</translation>
+    <translatorcomment>Plural form should be used.</translatorcomment></message>
     <message>
         <location line="+6"/>
         <source>Recover Files?</source>
@@ -71,7 +71,7 @@ Do you wish to recover them?</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
+        <source>An 'autosave' backup file for '%1' exists.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Istnieje automatyczna kopia zapasowa pliku „%1”.

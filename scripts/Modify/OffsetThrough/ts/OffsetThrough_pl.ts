@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LineParallelThrough</name>
     <message>
@@ -39,22 +38,22 @@ Liczba:</translatorcomment>
     <message>
         <location filename="../OffsetThrough.js" line="+67"/>
         <source>Specify point</source>
-        <translation type="unfinished">Wskaż punkt</translation>
+        <translation>Proszę wskazać punkt</translation>
     </message>
     <message>
         <location filename="../OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Liczba:</translation>
+        <translation>Liczba kopii:</translation>
     </message>
     <message>
         <location filename="../OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Odsuń przez punkt</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Odsuwa linię, łuk, okrąg lub elipsę przez punkt</translation>
     </message>
 </context>
 </TS>

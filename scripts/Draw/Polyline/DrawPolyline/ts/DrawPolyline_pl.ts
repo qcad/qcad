@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -7,13 +6,13 @@
         <location filename="../DrawPolyline.js" line="+69"/>
         <source>First vertex</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pierwszy wierzchołek</translation>
+        <translation>Pierwszy wierzchołek</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Następny wierzchołek</translation>
+        <translation>Następny wierzchołek</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -23,79 +22,79 @@
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location line="+418"/>
         <source>close</source>
-        <translation type="unfinished"></translation>
+        <translation>zamknij</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation type="unfinished"></translation>
+        <translation>cofnij</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation type="unfinished"></translation>
+        <translation>ponów</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>arc</source>
-        <translation type="unfinished"></translation>
+        <translation>łuk</translation>
     </message>
     <message>
         <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zamknij polilinia</translation>
+        <translation>Zamknij linię łamaną</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished"></translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Cofnąć poprzedni segment</translation>
+        <translation>Cofnij poprzedni segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished"></translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponów segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished"></translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Łuk z promieniem:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished"></translation>
+        <translation>,A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozwarcie</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogranicz długość lub kąt</translation>
     </message>
     <message>
         <source>Arc segment with radius:</source>

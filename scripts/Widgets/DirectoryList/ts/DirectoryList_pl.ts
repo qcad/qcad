@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>DirectoryList</name>
     <message>
         <location filename="../DirectoryList.js" line="+57"/>
         <source>The folder
-&apos;%1&apos;
+'%1'
 is already in the list.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">&apos;&amp;#39; Folder jest już na liście.</translation>
+        <translation>Katalog
+„%1”
+jest już na liście.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Folder nie dodał</translation>
+        <translation>Nie dodano katalogu</translation>
     </message>
 </context>
 </TS>

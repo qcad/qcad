@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SelectLayer</name>
     <message>
@@ -56,17 +55,17 @@
     <message>
         <location filename="../SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished">Wybierz jednostkę na warstwie</translation>
+        <translation>Proszę wybrać obiekt na warstwie</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished">Tryb:</translation>
+        <translation>Tryb:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">Zamień bieżące zaznaczenie</translation>
+        <translation>Zamień aktualne zaznaczenie</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -79,27 +78,27 @@
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">Dodać do wyboru bieżących</translation>
+        <translation>Dodaj do aktualnego zaznaczenia</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">Odejmij od bieżącego zaznaczenia</translation>
+        <translation>Odejmij od aktualnego zaznaczenia</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">Przecięcie z bieżącego zaznaczenia</translation>
+        <translation>Wyznacz część wspólną z aktualnym zaznaczeniem</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished">(Za/Od)znacz wa&amp;rstwy</translation>
+        <translation>Zaznacz &amp;warstwę</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished">(De-) wybrać wszystkie elementy tej samej warstwy</translation>
+        <translation>Zaznacza lub odznacza wszystkie obiekty na tej samej warstwie</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Dialog</name>
     <message>
@@ -16,19 +15,19 @@ Otwórz okno wyboru koloru</translatorcomment>
         <location line="+8"/>
         <source>Arcs and Circles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Łuki i okręgi</translation>
+        <translation>Łuki i okręgi</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">do odcinków (o stałej długości)</translation>
+        <translation>na odcinki (o stałej długości)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">na segmenty linii (kąt stały)</translation>
+        <translation>na odcinki (o stałym kącie)</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -37,20 +36,20 @@ Otwórz okno wyboru koloru</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Rysuj elipsy
 Elipsy</translatorcomment>
-        <translation type="unfinished">Elipsy</translation>
+        <translation>Elipsy</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">do polilinii z segmentami łuku</translation>
+        <translation>na linie łamaną z segmentami łuków</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">do polilinii z odcinków</translation>
+        <translation type="unfinished">na linię łamaną z segmentami linii</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -68,8 +67,8 @@ Rysuj krzywe składane (NURBS)</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wymiary
 Wymiarowanie
-Pokaż menu &quot;Wymiarowanie&quot;</translatorcomment>
-        <translation type="unfinished">Wymiary</translation>
+Pokaż menu "Wymiarowanie"</translatorcomment>
+        <translation>Wymiary</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -83,13 +82,13 @@ Pokaż menu &quot;Wymiarowanie&quot;</translatorcomment>
         <translatorcomment>--google--
 Rysuj kreskowanie i jednolite wypełnienia
 Kreskowanie / całkowite Wypełnienia</translatorcomment>
-        <translation type="unfinished">Włazy</translation>
+        <translation>Kreskowanie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">na linie</translation>
+        <translation>na linie</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -97,13 +96,13 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
         <translatorcomment>--google--
 Rozbij bloki oraz inne grupy obiektów
 Zablokuj wszystkie bloki</translatorcomment>
-        <translation type="unfinished">Bloki</translation>
+        <translation>Bloki</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">do podmiotów</translation>
+        <translation>na obiekty</translation>
     </message>
 </context>
 <context>
@@ -116,7 +115,7 @@ Zablokuj wszystkie bloki</translatorcomment>
 &amp;Modyfikuj
 Zmień
 Zmień atrybuty obiektu</translatorcomment>
-        <translation type="unfinished">Zmień</translation>
+        <translation>Modyfikowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -125,7 +124,7 @@ Zmień atrybuty obiektu</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wybuch
 &amp;Rozbij</translatorcomment>
-        <translation type="unfinished">Wybuch</translation>
+        <translation type="unfinished">Rozbij</translation>
     </message>
     <message>
         <location filename="../ExplodeInit.js" line="+2"/>
@@ -134,39 +133,39 @@ Wybuch
 --file: qcadguiqt_pl.ts--
 &amp;Rozbij
 &amp;Rozbij tekst na litery</translatorcomment>
-        <translation type="unfinished">&amp;Rozbij</translation>
+        <translation>&amp;Rozbij</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+197"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+20"/>
         <source>Spline segments:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Segmenty splajnu:</translation>
+        <translation>Liczba segmentów splajnu:</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Segmenty elipsy (na pełnej elipsy):</translation>
+        <translation>Liczba segmentów elipsy (dla pełnej elipsy):</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-31"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

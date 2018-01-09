@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -7,8 +6,8 @@
         <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
         <translatorcomment>--google--
-Pokaż menu &quot;Linie&quot;
-Pokaż menu &quot;Łamane&quot;</translatorcomment>
+Pokaż menu "Linie"
+Pokaż menu "Łamane"</translatorcomment>
         <translation>Narzędzia linii</translation>
     </message>
     <message>
@@ -16,8 +15,8 @@ Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <source>Show line tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
-Pokaż menu &quot;Linie&quot;</translatorcomment>
-        <translation type="unfinished">Pokaż menu &quot;Linie&quot;</translation>
+Pokaż menu "Linie"</translatorcomment>
+        <translation>Wyświetla narzędzia linii</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -31,7 +30,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Ten sam element co pierwotny</translation>
+        <translation>Ten sam obiekt co pierwotny</translation>
     </message>
     <message>
         <location line="+23"/>

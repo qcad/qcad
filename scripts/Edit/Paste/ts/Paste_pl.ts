@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -35,7 +34,7 @@ Obracanie:</translatorcomment>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Obraca wklejone elementy&lt;br&gt;o kąt</translation>
+        <translation>Obraca wklejone obiekty o zadany kąt</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -49,25 +48,25 @@ Skala:</translatorcomment>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Skaluje wklejone elementy&lt;br&gt; tym czynnikiem</translation>
+        <translation>Skaluje wklejone obiekty przez zadany współczynnik</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przerzuć wklejone podmioty &lt;br&gt; poziomo</translation>
+        <translation>Odbija lustrzanie wklejony obiekty poziomo</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przerzuć wklejone podmioty &lt;br&gt; pionowo</translation>
+        <translation>Odbija lustrzanie wklejone obiekty pionowo</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wklej wszystkie podmioty &lt;br&gt; do bieżącej warstwy &lt;br&gt; Zamiast warstwy pierwotnego</translation>
+        <translation>Wkleja wszystkie obiekty do aktualnej warstwy zamiast pierwotnej warstwy</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -82,7 +81,7 @@ Użyj bieżącej warstwy</translatorcomment>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zastąp istniejące warstwy &lt;br&gt; w rysowanie &lt;br&gt; warstwy ze schowka</translation>
+        <translation>Zastępuje istniejące warstwy rysunku warstwami ze schowka</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -94,7 +93,7 @@ Użyj bieżącej warstwy</translatorcomment>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zastąp istniejące bloki &lt;br&gt; w rysowanie &lt;br&gt; bloki z schowka</translation>
+        <translation>Zastępuje istniejące bloki rysunku blokami ze schowka</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -113,7 +112,7 @@ Użyj bieżącej warstwy</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="unfinished"></translation>
+        <translation>Przywrócenie ustawień domyślnych za każdym użyciem narzędzia</translation>
     </message>
 </context>
 </TS>

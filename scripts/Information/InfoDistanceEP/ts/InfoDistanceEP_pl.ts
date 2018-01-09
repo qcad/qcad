@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>InfoDistanceEP</name>
     <message>
@@ -10,7 +9,7 @@
 --file: qcadactions_pl.ts--
 Wprowadź obiekt
 Wskaż obiekt do cięcia</translatorcomment>
-        <translation type="unfinished">Wprowadź obiekt</translation>
+        <translation>Proszę określić obiekt</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -18,7 +17,7 @@ Wskaż obiekt do cięcia</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Wskaż punkt</translatorcomment>
-        <translation type="unfinished">Wskaż punkt</translation>
+        <translation>Proszę określić punkt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -28,7 +27,7 @@ Wskaż punkt</translatorcomment>
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -37,13 +36,13 @@ Zrobione
 --file: qcadguiqt_pl.ts--
 Odległość: %1
 Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
-        <translation type="unfinished">Odległość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location filename="../InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Podmiot odległość do punktu</translation>
+        <translation>Odległość &amp;obiektu do punktu</translation>
     </message>
 </context>
 </TS>

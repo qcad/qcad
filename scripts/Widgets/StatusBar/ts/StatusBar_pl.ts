@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -17,27 +16,27 @@
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation>Wyświetlanie współrzędnych</translation>
+        <translation>Współrzędne</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="unfinished"></translation>
+        <translation>Mysz</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaznaczenie</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation type="unfinished"></translation>
+        <translation>Postęp</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation type="unfinished"></translation>
+        <translation>Podpowiedzi stanu</translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+32"/>

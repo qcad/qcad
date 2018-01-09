@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -9,7 +8,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Ograniczenie &amp;pionowo</translatorcomment>
-        <translation>Ograniczenie p&amp;ionowe</translation>
+        <translation>Ograniczanie p&amp;ionowo</translation>
     </message>
 </context>
 </TS>

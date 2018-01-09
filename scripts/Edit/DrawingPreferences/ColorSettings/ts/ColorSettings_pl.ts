@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ColorSettings</name>
     <message>
@@ -9,13 +8,13 @@
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Domyślne dla nowych rysunków</translatorcomment>
-        <translation type="unfinished">Domyślne dla nowych rysunków</translation>
+        <translation>Domyślne dla nowych rysunków</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Colors</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Drukowanie - Colors</translation>
+        <translation>Drukowanie - Kolory</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -25,7 +24,7 @@ Domyślne dla nowych rysunków</translatorcomment>
 Drukowanie...
 Drukowanie
 Drukowanie zakończone</translatorcomment>
-        <translation type="unfinished">Drukowanie</translation>
+        <translation>Drukowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -34,13 +33,13 @@ Drukowanie zakończone</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Kolory
 &amp;Dodaj do własnych kolorów</translatorcomment>
-        <translation type="unfinished">Kolory</translation>
+        <translation>Kolory</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Kolor tła:</translation>
+        <translation>Kolor tła:</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -48,13 +47,13 @@ Kolory
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Tryb koloru</translatorcomment>
-        <translation type="unfinished">Tryb koloru</translation>
+        <translation>Tryb koloru</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pełny kolor</translation>
+        <translation>Pełny kolor</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -64,7 +63,7 @@ Tryb koloru</translatorcomment>
 Skala szarości
 4 bitowa skala szarości
 2 bitowa skala szarości</translatorcomment>
-        <translation type="unfinished">Skala szarości</translation>
+        <translation>Skala szarości</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -73,7 +72,7 @@ Skala szarości
 --file: qcadguiqt_pl.ts--
 Czarny / Biały
 Przełącz tryb czarno-biały</translatorcomment>
-        <translation type="unfinished">Czarny / Biały</translation>
+        <translation>Czarny / biały</translation>
     </message>
 </context>
 </TS>

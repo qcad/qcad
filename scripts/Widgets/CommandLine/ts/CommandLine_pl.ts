@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CommandLine</name>
     <message>
@@ -8,7 +7,7 @@
         <source>&amp;Command Line</source>
         <translatorcomment>--google--
 Aktywuj linię &amp;poleceń</translatorcomment>
-        <translation type="unfinished">Command Line</translation>
+        <translation>Wiersz p&amp;oleceń</translation>
     </message>
     <message>
         <location line="-30"/>
@@ -19,41 +18,41 @@ Aktywuj linię &amp;poleceń</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Aktywuj linię poleceń
 Aktywuj linię &amp;poleceń</translatorcomment>
-        <translation type="unfinished">Linia poleceń</translation>
+        <translation>Wiersz poleceń</translation>
     </message>
     <message>
-        <source>Invalid coordinate &apos;%1&apos;.</source>
+        <source>Invalid coordinate '%1'.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
+        <translation type="obsolete">Nieprawidłowy koordynować'&amp;#39;.</translation>
     </message>
     <message>
         <location line="+207"/>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
+        <source>Unknown command or invalid coordinate or value: '%1'</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nieznane polecenie lub nieprawidłowy współrzędnych lub wartość:&apos;&amp;#39;</translation>
+        <translation>Nieznane polecenie lub nieprawidłowa współrzędna bądź wartość: „%1”</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
+        <source>Numbers may be entered as: '%1'</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Liczby mogą być wprowadzane jako:&apos;&amp;#39;</translation>
+        <translation>Liczby mogą być wprowadzane jako: „%1”</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
+        <source>Coordinates may be entered as: '%1' (absolute) or '%2' (relative) or '%3' (polar) or '%4' (relative polar)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Współrzędne mogą być wpisane jako:&apos;&amp;#39; (absolutny) lub&amp;#39;&amp;#39; (względne) lub&amp;#39;&amp;#39; (polar) lub&amp;#39;&amp;#39; (względna polar)</translation>
+        <translation>Współrzędne mogą być wprowadzane jako: „%1” (absolutnie), „%2” (względnie), „%3” (biegunowo) lub „%4”; (biegunowo względnie)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Możesz zmienić numer / format współrzędnych w preferencjach aplikacji.</translation>
+        <translation>Format liczb i współrzędnych można zmienić w preferencjach programu.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+88"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
@@ -61,28 +60,28 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-362"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widżety</translation>
     </message>
     <message>
         <location line="+218"/>
         <source>Invalid value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieprawidłowa wartość:</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation type="unfinished"></translation>
+        <source>Invalid coordinate or distance '%1'.</source>
+        <translation>Nieprawidłowa współrzędna lub odległość „%1”.</translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+137"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Ostrzeżenie
 Ostrzeżenie: %1</translatorcomment>
-        <translation type="unfinished">Ostrzeżenie</translation>
+        <translation>Ostrzeżenie</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -92,12 +91,12 @@ Ostrzeżenie: %1</translatorcomment>
 &amp;Info
 Informacja
 Wypisuje informację debugowania obiektów</translatorcomment>
-        <translation type="unfinished">Informacja</translation>
+        <translation>Informacja</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyrażenie</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -107,7 +106,7 @@ Wypisuje informację debugowania obiektów</translatorcomment>
 &amp;Współrzędne
 Współrzędne
 Przyciągaj do danej współrzędnej</translatorcomment>
-        <translation type="unfinished">Współrzędne</translation>
+        <translation>Współrzędna</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -116,7 +115,7 @@ Przyciągaj do danej współrzędnej</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Aktywuj linię poleceń
 Aktywuj linię &amp;poleceń</translatorcomment>
-        <translation type="unfinished">Polecenie</translation>
+        <translation>Polecenie</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -125,7 +124,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Polecenie:
 Odebrano komendę: %1 %2</translatorcomment>
-        <translation type="unfinished">Polecenie:</translation>
+        <translation>Polecenie:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -134,25 +133,25 @@ Odebrano komendę: %1 %2</translatorcomment>
 --file: qt_pl.ts--
 Załadowany dokument:
 Wersja: </translatorcomment>
-        <translation type="unfinished">:</translation>
+        <translation>:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rozmiar Historia:</translation>
+        <translation>Rozmiar historii:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż ostrzeżenia jak Dialog</translation>
+        <translation>Ostrzeżenia w oknach dialogowych</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż informacje jako dialog</translation>
+        <translation>Informacje w oknach dialogowych</translation>
     </message>
 </context>
 </TS>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -11,14 +10,14 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
+        <source>The file '%1' already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <source>All custom colors will be 'rounded' to the nearest fixed color.</source>
+        <translation>Wszystkie dostosowane kolory zostaną przybliżone najbliższymi ustalonymi kolorami.</translation>
     </message>
     <message>
         <location line="-4"/>
@@ -28,7 +27,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
+        <source>The file format version you are using is not recommended: '%1'.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Używana wersja formatu pliku nie jest zalecana: „%1”.</translation>
     </message>
@@ -59,9 +58,9 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color. Proceed?</source>
+        <source>All custom colors will be 'rounded' to the nearest fixed color. Proceed?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Wszystkie niestandardowe kolory zostaną &quot;zaokrąglone&amp;quot; do najbliższego stałego koloru. Kontynuować?</translation>
+        <translation type="obsolete">Wszystkie niestandardowe kolory zostaną "zaokrąglone&amp;quot; do najbliższego stałego koloru. Kontynuować?</translation>
     </message>
     <message>
         <location line="-29"/>
@@ -73,21 +72,21 @@ Zapisywanie... </translatorcomment>
     </message>
     <message>
         <location line="+3"/>
-        <source>Saving to file format version &apos;%1&apos;.</source>
+        <source>Saving to file format version '%1'.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Zapisywanie do pliku w wersji formatu &apos;%1&apos;.</translation>
+        <translation>Zapisywanie do pliku w wersji formatu '%1'.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Czarne podmioty i warstwy są zapisywane jako białe.</translation>
+        <translation>Czarne obiekty i warstwy są zapisywane jako białe.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
+        <source>Custom colors are 'rounded' to the nearest fixed color.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Niestandardowe kolory są &quot;zaokrąglone&amp;quot; do najbliższego stałego koloru.</translation>
+        <translation>Dostosowane kolory są przybliżane najbliższymi ustalonymi kolorami.</translation>
     </message>
     <message>
         <location line="+6"/>

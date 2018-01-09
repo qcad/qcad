@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>ArcCPA</name>
     <message>
@@ -10,19 +9,19 @@
 --file: qt_pl.ts--
 Wskaż środek
 Łuk: środek, punkt, kąty</translatorcomment>
-        <translation type="unfinished">Wyśrodkuj</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Punkt na łuku lub promienia</translation>
+        <translation>Punkt na łuku lub promień</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point on arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Punkt na łuku</translation>
+        <translation>Punkt na łuku</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -31,7 +30,7 @@ Wskaż środek
 --file: qcadguiqt_pl.ts--
 Wskaż kąt początkowy:
 Wskaż kąt początkowy</translatorcomment>
-        <translation type="unfinished">Kąt początkowy</translation>
+        <translation>Kąt początkowy</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -40,7 +39,7 @@ Wskaż kąt początkowy</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wskaż kąt końcowy lub [kąt/długość cięciwy]
 Wskaż kąt końcowy</translatorcomment>
-        <translation type="unfinished">Kąt końcowy</translation>
+        <translation>Kąt końcowy</translation>
     </message>
     <message>
         <location filename="../ArcCPA.ui" line="+17"/>
@@ -48,13 +47,13 @@ Wskaż kąt końcowy</translatorcomment>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
 Kierunek widoku:</translatorcomment>
-        <translation type="unfinished">Kierunek:</translation>
+        <translation>Kierunek:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Counter Clockwise (pozytywny)</translation>
+        <translation>Przeciwnie do ruchu wskazówek zegara (w lewo)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -65,13 +64,13 @@ Kierunek widoku:</translatorcomment>
 Kierunek widoku:
 Kierunek widoku
 LTR</translatorcomment>
-        <translation type="unfinished">Kierunek</translation>
+        <translation>Kierunek</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ruchu wskazówek zegara (Negative)</translation>
+        <translation>Zgodnie z ruchem wskazówek zegara (w prawo)</translation>
     </message>
     <message>
         <location filename="../ArcCPAInit.js" line="+2"/>
@@ -79,13 +78,13 @@ LTR</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 ś&amp;rodek, punkt, kąty</translatorcomment>
-        <translation type="unfinished">ś&amp;rodek, punkt, kąty</translation>
+        <translation>Ś&amp;rodek, punkt, kąty</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj łuk od centrum, punktu na łuku i kąty</translation>
+        <translation>Rysuje łuk od środka, przez punkt i o podanych kątach</translation>
     </message>
 </context>
 </TS>

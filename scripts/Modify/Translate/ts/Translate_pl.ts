@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Translate</name>
     <message>
         <location filename="../Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Modyfikowanie</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Przenieś / skopiuj</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -20,14 +19,14 @@
 Wskaż punkt odniesienia
 Kopiuje obiekty do schowka z punktem odniesienia
 Wycina obiekty z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia</translation>
+        <translation>Punkt odniesienia</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>
-        <translation type="unfinished">Punkt docelowy</translation>
+        <translation>Punkt docelowy</translation>
     </message>
     <message>
         <location filename="../TranslateInit.js" line="+2"/>
@@ -35,33 +34,33 @@ Wskaż punkt docelowy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 &amp;Przesuń / kopiuj</translatorcomment>
-        <translation type="unfinished">&amp;Przesuń / kopiuj</translation>
+        <translation>&amp;Przenieś / skopiuj</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przenoszenie lub kopiowanie jednostek raz lub kilka razy</translation>
+        <translation>Przenosi lub kopiuje obiekty raz lub wiele razy</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Wprowadzanie opcji w oknie dialogowym</translation>
     </message>
     <message>
         <location filename="../Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Skopiowanie</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Liczba kopii:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>
+        <translation>Użycie aktualnej warstwy i &amp;atrybutów</translation>
     </message>
 </context>
 <context>
@@ -72,7 +71,7 @@ Wskaż punkt docelowy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Opcje przemieszczania</translatorcomment>
-        <translation type="unfinished">Opcje przemieszczania</translation>
+        <translation>Opcje przenoszenia / kopiowania</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -81,7 +80,7 @@ Opcje przemieszczania</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Liczba kopii
 Wprowadź liczbę kopii</translatorcomment>
-        <translation type="unfinished">Liczba kopii</translation>
+        <translation>Liczba kopii</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -89,7 +88,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Usuń oryginał</translatorcomment>
-        <translation type="unfinished">&amp;Usuń oryginał</translation>
+        <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -97,7 +96,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Zachowaj oryginał</translatorcomment>
-        <translation type="unfinished">&amp;Zachowaj oryginał</translation>
+        <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -106,13 +105,13 @@ Wprowadź liczbę kopii</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Kopie &amp;wielokrotne
 Kopie &amp;wielokrotne:</translatorcomment>
-        <translation type="unfinished">Kopie &amp;wielokrotne</translation>
+        <translation>&amp;Wielokrotne skopiowanie</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>
+        <translation>Użycie aktualnej warstwy i &amp;atrybutów</translation>
     </message>
 </context>
 </TS>

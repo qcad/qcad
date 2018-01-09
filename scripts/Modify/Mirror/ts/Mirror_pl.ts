@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Mirror</name>
     <message>
@@ -8,14 +7,14 @@
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt linii odbicia</translatorcomment>
-        <translation type="unfinished">Pierwszy punkt osi symetrii</translation>
+        <translation>Proszę wskazać pierwszy punkt osi symetrii</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--
 Wskaż drugi punkt linii odbicia</translatorcomment>
-        <translation type="unfinished">Drugi punkt osi symetrii</translation>
+        <translation>Proszę wskazać drugi punkt osi symetrii</translation>
     </message>
     <message>
         <location filename="../MirrorInit.js" line="+2"/>
@@ -23,7 +22,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Odbijaj</translatorcomment>
-        <translation type="unfinished">&amp;Odbijaj</translation>
+        <translation>&amp;Odbij lustrzanie</translation>
     </message>
 </context>
 <context>
@@ -34,7 +33,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Opcje odbić</translatorcomment>
-        <translation type="unfinished">Opcje odbić</translation>
+        <translation>Opcje odbicia</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -43,7 +42,7 @@ Opcje odbić</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Liczba kopii
 Wprowadź liczbę kopii</translatorcomment>
-        <translation type="unfinished">Liczba kopii</translation>
+        <translation>Liczba kopii</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -51,7 +50,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Usuń oryginał</translatorcomment>
-        <translation type="unfinished">&amp;Usuń oryginał</translation>
+        <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -59,13 +58,13 @@ Wprowadź liczbę kopii</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Zachowaj oryginał</translatorcomment>
-        <translation type="unfinished">&amp;Zachowaj oryginał</translation>
+        <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>
+        <translation>Użycie bieżącej warstwy i &amp;atrybutów</translation>
     </message>
 </context>
 </TS>

@@ -1,28 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Select</name>
     <message>
         <location filename="../Select.js" line="+216"/>
         <source>Selection Tools</source>
         <translatorcomment>--google--
-Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
-        <translation type="unfinished">Narzędzia wyboru</translation>
+Pokaż menu "Zaznacz"</translatorcomment>
+        <translation>Narzędzia zaznaczania</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show selection tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
-Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
-        <translation type="unfinished">Pokaż menu &quot;Zaznacz&quot;</translation>
+Pokaż menu "Zaznacz"</translatorcomment>
+        <translation>Wyświetla narzędzia zaznaczania</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Selection Tools Panel</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybór panelu Narzędzia</translation>
+        <translation type="unfinished">Panel narzędzi zaznaczania</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -31,7 +30,7 @@ Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
 --file: qcad_pl.ts--
 &amp;Zaznacz
 &amp;Wskaźnik do zaznaczania</translatorcomment>
-        <translation type="unfinished">&amp;Zaznacz</translation>
+        <translation>&amp;Zaznaczanie</translation>
     </message>
 </context>
 </TS>

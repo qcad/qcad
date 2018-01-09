@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Rotate</name>
     <message>
@@ -8,7 +7,7 @@
         <source>Center point</source>
         <translatorcomment>--google--
 Przyciągaj do punktów centralnych</translatorcomment>
-        <translation type="unfinished">Srodek</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -17,14 +16,14 @@ Przyciągaj do punktów centralnych</translatorcomment>
 Wskaż punkt odniesienia
 Kopiuje obiekty do schowka z punktem odniesienia
 Wycina obiekty z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia</translation>
+        <translation>Punkt odniesienia</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>
-        <translation type="unfinished">Punkt docelowy</translation>
+        <translation>Punkt docelowy</translation>
     </message>
     <message>
         <location filename="../RotateInit.js" line="+2"/>
@@ -32,7 +31,7 @@ Wskaż punkt docelowy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Obracaj</translatorcomment>
-        <translation type="unfinished">&amp;Obracaj</translation>
+        <translation>&amp;Obróć</translation>
     </message>
 </context>
 <context>
@@ -44,7 +43,7 @@ Wskaż punkt docelowy</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Opcje przesuwania/obrotów
 Opcje przesuwania/obracania</translatorcomment>
-        <translation type="unfinished">Opcje obrotów</translation>
+        <translation>Opcje obracania</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -53,7 +52,7 @@ Opcje przesuwania/obracania</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Liczba kopii
 Wprowadź liczbę kopii</translatorcomment>
-        <translation type="unfinished">Liczba kopii</translation>
+        <translation>Liczba kopii</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -61,7 +60,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Usuń oryginał</translatorcomment>
-        <translation type="unfinished">&amp;Usuń oryginał</translation>
+        <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -69,7 +68,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Zachowaj oryginał</translatorcomment>
-        <translation type="unfinished">&amp;Zachowaj oryginał</translation>
+        <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -78,7 +77,7 @@ Wprowadź liczbę kopii</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Kopie &amp;wielokrotne
 Kopie &amp;wielokrotne:</translatorcomment>
-        <translation type="unfinished">Kopie &amp;wielokrotne</translation>
+        <translation>&amp;Wielokrotne skopiowanie</translation>
     </message>
     <message>
         <location line="+94"/>
@@ -86,18 +85,18 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Kąt (a):</translatorcomment>
-        <translation type="unfinished">&amp;Kąt (a):</translation>
+        <translation>&amp;Kąt (a):</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Określ kąt za pomocą wskaźnika myszy</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>
+        <translation>Użycie aktualnej warstwy i &amp;atrybutów</translation>
     </message>
 </context>
 </TS>

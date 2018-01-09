@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LayerList</name>
     <message>
         <location filename="../LayerList.js" line="+197"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widżety</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>&amp;Layer List</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Lista warstwa</translation>
+        <translation>Lista &amp;warstw</translation>
     </message>
     <message>
         <location line="-54"/>
@@ -21,12 +20,12 @@
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 Lista warstw</translatorcomment>
-        <translation type="unfinished">Lista warstw</translation>
+        <translation>Lista warstw</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Naprzemienne kolory wierszy</translation>
     </message>
 </context>
 </TS>

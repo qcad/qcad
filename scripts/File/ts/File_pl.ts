@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -6,12 +5,12 @@
     <message>
         <location filename="../File.js" line="+65"/>
         <source>File Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia pliku</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show file tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetla narzędzia pliku</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -24,7 +23,7 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
     </message>
     <message>
         <location line="+94"/>
-        <location line="+69"/>
+        <location line="+68"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -40,7 +39,7 @@ Format:</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
+        <source>The file '%1' already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>

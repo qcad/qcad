@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -26,7 +25,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location filename="../SplineControlPoints.ui" line="+23"/>
@@ -34,7 +33,7 @@ Zrobione
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Cofnij ostatni punkt kontrolny</translatorcomment>
-        <translation type="unfinished">Cofnij ostatni punkt kontrolny</translation>
+        <translation>Cofnij ostatni punkt kontrolny</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -55,7 +54,7 @@ Stopień:</translatorcomment>
         <source>Tick for Closed Spline</source>
         <translatorcomment>--google--
 Zaznacz aby uzyskać zamknięte krzywe składane</translatorcomment>
-        <translation>Zaznacz do zamkniętych Spline</translation>
+        <translation>Zamyka krzywą</translation>
     </message>
     <message>
         <location line="+3"/>

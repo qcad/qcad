@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>UnitSettings</name>
     <message>
@@ -9,18 +8,18 @@
         <translatorcomment>--google--
 &amp;Główna jednostka rysowania:
 Główna jednostka rysowania:</translatorcomment>
-        <translation type="unfinished">Rysowanie jednostkowe:</translation>
+        <translation>Jednostka rysunku:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper Unit:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka papieru:</translation>
+        <translation>Jednostka papieru:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation>System miar (dla rodzajów linii i wzorów kreskowania):</translation>
     </message>
     <message>
         <location filename="../UnitSettings.js" line="+27"/>
@@ -28,7 +27,7 @@ Główna jednostka rysowania:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Domyślne dla nowych rysunków</translatorcomment>
-        <translation type="unfinished">Domyślne dla nowych rysunków</translation>
+        <translation>Domyślne dla nowych rysunków</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -38,7 +37,7 @@ Domyślne dla nowych rysunków</translatorcomment>
 &amp;Główna jednostka rysowania:
 &amp;Główna jednostka rysowania
 Główna jednostka rysowania:</translatorcomment>
-        <translation type="unfinished">Rysowanie jednostkowe</translation>
+        <translation>Jednostki</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -47,7 +46,7 @@ Główna jednostka rysowania:</translatorcomment>
 Ogólne ustawienia aplikacji
 [2000-206F] General Punctuation
 General Punctuation</translatorcomment>
-        <translation type="unfinished">Ogólny</translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -55,18 +54,18 @@ General Punctuation</translatorcomment>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
 Brak
-Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
-        <translation type="unfinished">Brak</translation>
+Wyrażenia "pragma" nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
+        <translation>Brak</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
-Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,jednostka musi byc ustawiona na cale.
-Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,jednostka musi byc ustawiona na cale
+Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc ustawiona na cale.
+Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc ustawiona na cale
 Cal</translatorcomment>
-        <translation type="unfinished">Cal</translation>
+        <translation>Cal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -74,7 +73,7 @@ Cal</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Stopa</translatorcomment>
-        <translation type="unfinished">Stopa</translation>
+        <translation>Stopa</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -82,7 +81,7 @@ Stopa</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Mila</translatorcomment>
-        <translation type="unfinished">Mila</translation>
+        <translation>Mila</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -91,7 +90,7 @@ Mila</translatorcomment>
 --file: qcadlib_pl.ts--
 Milimetr
 Milimetry (mm)</translatorcomment>
-        <translation type="unfinished">Milimetr</translation>
+        <translation>Milimetr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -100,7 +99,7 @@ Milimetry (mm)</translatorcomment>
 --file: qcadlib_pl.ts--
 Centrymetr
 Centymetry (cm)</translatorcomment>
-        <translation type="unfinished">Centrymetr</translation>
+        <translation>Centymetr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -109,7 +108,7 @@ Centymetry (cm)</translatorcomment>
 --file: qcadlib_pl.ts--
 Przełącz znak średnicy
 ø (Średnica)</translatorcomment>
-        <translation type="unfinished">Metr</translation>
+        <translation>Metr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -117,7 +116,7 @@ Przełącz znak średnicy
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Kilometr</translatorcomment>
-        <translation type="unfinished">Kilometr</translation>
+        <translation>Kilometr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -125,7 +124,7 @@ Kilometr</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Mikrocal</translatorcomment>
-        <translation type="unfinished">Mikrocal</translation>
+        <translation>Mikrocal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -134,7 +133,7 @@ Mikrocal</translatorcomment>
 --file: qcadlib_pl.ts--
 [0B80-0BFF] Tamil
 Tamilski</translatorcomment>
-        <translation type="unfinished">Mil</translation>
+        <translation>Mila</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -142,7 +141,7 @@ Tamilski</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Jard</translatorcomment>
-        <translation type="unfinished">Jard</translation>
+        <translation>Jard</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -150,7 +149,7 @@ Jard</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Angstrom</translatorcomment>
-        <translation type="unfinished">Angstrom</translation>
+        <translation>Angstrem</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -158,7 +157,7 @@ Angstrom</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Nanometr</translatorcomment>
-        <translation type="unfinished">Nanometr</translation>
+        <translation>Nanometr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -166,7 +165,7 @@ Nanometr</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Mikron</translatorcomment>
-        <translation type="unfinished">Mikron</translation>
+        <translation>Mikron</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -174,7 +173,7 @@ Mikron</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Decymetr</translatorcomment>
-        <translation type="unfinished">Decymetr</translation>
+        <translation>Decymetr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -182,7 +181,7 @@ Decymetr</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Dekametr</translatorcomment>
-        <translation type="unfinished">Dekametr</translation>
+        <translation>Dekametr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -190,7 +189,7 @@ Dekametr</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Hektometr</translatorcomment>
-        <translation type="unfinished">Hektometr</translation>
+        <translation>Hektometr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -198,7 +197,7 @@ Hektometr</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Gigametr</translatorcomment>
-        <translation type="unfinished">Gigametr</translation>
+        <translation>Gigametr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -206,7 +205,7 @@ Gigametr</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Astro</translatorcomment>
-        <translation type="unfinished">Astro</translation>
+        <translation>Jednostka astronomiczna</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -214,7 +213,7 @@ Astro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Rok świetlny</translatorcomment>
-        <translation type="unfinished">Rok świetlny</translation>
+        <translation>Rok świetlny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -222,17 +221,17 @@ Rok świetlny</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Parsek</translatorcomment>
-        <translation type="unfinished">Parsek</translation>
+        <translation>Parsek</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished"></translation>
+        <translation>Imperialny</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metryczny</translation>
     </message>
 </context>
 </TS>

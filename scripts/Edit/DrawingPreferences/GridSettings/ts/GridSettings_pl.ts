@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Grid</name>
     <message>
@@ -71,7 +70,7 @@ Mnożnik &amp;X:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Domyślne dla nowych rysunków</translatorcomment>
-        <translation type="unfinished">Domyślne dla nowych rysunków</translation>
+        <translation>Domyślne dla nowych rysunków</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -82,7 +81,7 @@ Domyślne dla nowych rysunków</translatorcomment>
 &amp;Siatka
 Siatka
 Pozycjonowanie siatki</translatorcomment>
-        <translation type="unfinished">Siatka</translation>
+        <translation>Siatka</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -91,7 +90,7 @@ Pozycjonowanie siatki</translatorcomment>
 Ogólne ustawienia aplikacji
 [2000-206F] General Punctuation
 General Punctuation</translatorcomment>
-        <translation type="unfinished">Ogólny</translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -105,7 +104,7 @@ General Punctuation</translatorcomment>
 &amp;Automatycznie
 Automatycznie
 Przyciąganie automatyczne</translatorcomment>
-        <translation type="unfinished">Automatycznie</translation>
+        <translation>Automatycznie</translation>
     </message>
 </context>
 <context>
@@ -117,7 +116,7 @@ Przyciąganie automatyczne</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Rzutnia 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -125,7 +124,7 @@ Przyciąganie automatyczne</translatorcomment>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="unfinished">Wyświetlanie siatki</translation>
+        <translation>Wyświetlanie siatki</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -133,7 +132,7 @@ Przyciąganie automatyczne</translatorcomment>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation type="unfinished">Siatka izometryczna</translation>
+        <translation>Siatka izometryczna</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -141,7 +140,7 @@ Przyciąganie automatyczne</translatorcomment>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished">Odstępy siatki</translation>
+        <translation>Odstępy siatki</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -153,7 +152,7 @@ Przyciąganie automatyczne</translatorcomment>
         <location line="+116"/>
         <location line="+30"/>
         <source>Y:</source>
-        <translation type="unfinished">y:</translation>
+        <translation>y:</translation>
     </message>
     <message>
         <location line="-512"/>
@@ -165,7 +164,7 @@ Przyciąganie automatyczne</translatorcomment>
         <location line="+62"/>
         <location line="+63"/>
         <source>X:</source>
-        <translation type="unfinished">x:</translation>
+        <translation>x:</translation>
     </message>
     <message>
         <location line="-462"/>
@@ -178,17 +177,17 @@ Przyciąganie automatyczne</translatorcomment>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Rzutnia 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Rzutnia 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Rzutnia 4</translation>
     </message>
     <message>
         <source>View 2</source>

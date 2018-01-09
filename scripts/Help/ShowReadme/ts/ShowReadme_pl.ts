@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -11,7 +10,7 @@
     </message>
     <message>
         <location line="+15"/>
-        <source>Don&apos;t show this dialog at startup</source>
+        <source>Don't show this dialog at startup</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Pomijanie wyświetlania tego okna podczas uruchamiania</translation>
     </message>
@@ -20,7 +19,7 @@
     <name>ShowReadme</name>
     <message>
         <location filename="../ShowReadme.js" line="+46"/>
-        <source>File &apos;%1&apos; doesn&apos;t exist.</source>
+        <source>File '%1' doesn't exist.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Plik „%1” nie istnieje.</translation>
     </message>

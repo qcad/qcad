@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -7,13 +6,13 @@
         <location filename="../DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz łuk lub okrąg encji</translation>
+        <translation>Proszę wskazać łuk lub okrąg</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Położenie linii wymiarowej lub kąt</translation>
+        <translation>Położenie lub kąt linii wymiarowej</translation>
     </message>
     <message>
         <location filename="../DimRadialInit.js" line="+2"/>

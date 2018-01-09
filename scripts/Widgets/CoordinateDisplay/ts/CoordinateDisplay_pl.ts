@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CoordinateDisplay</name>
     <message>
@@ -15,21 +14,21 @@ Bezwzględne współrzędne kartezjańskie</translatorcomment>
         <source>Absolute Polar Coordinate</source>
         <translatorcomment>--google--
 Bezwzględne współrzędne biegunowe</translatorcomment>
-        <translation type="unfinished">Absolute współrzędnych biegunowych</translation>
+        <translation>Bezwzględna współrzędna biegunowa</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
         <translatorcomment>--google--
 Względne współrzędne kartezjańskie</translatorcomment>
-        <translation type="unfinished">Względna współrzędnych kartezjańskich</translation>
+        <translation>Względna współrzędna kartezjańska</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
         <translatorcomment>--google--
 Względne współrzędne biegunowe</translatorcomment>
-        <translation type="unfinished">Względna współrzędnych biegunowych</translation>
+        <translation>Względna współrzędna biegunowa</translation>
     </message>
 </context>
 </TS>

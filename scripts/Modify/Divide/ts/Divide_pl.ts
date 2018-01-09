@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Divide</name>
     <message>
@@ -11,12 +10,12 @@
     <message>
         <location filename="../Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Proszę wskazać linię, łuk, okrąg, elipsę, splajn lub linię łamaną</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Proszę wskazać linię, łuk, okrąg lub elipsę</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -24,7 +23,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Wskaż punkt</translatorcomment>
-        <translation type="unfinished">Wskaż punkt</translation>
+        <translation>Proszę wskazać punkt</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -33,7 +32,7 @@ Wskaż punkt</translatorcomment>
 --file: qcadactions_pl.ts--
 Wskaż drugi punkt
 Wskaż dugi punkt odległości</translatorcomment>
-        <translation type="unfinished">Wskaż drugi punkt</translation>
+        <translation>Proszę wskazać drugi punkt</translation>
     </message>
     <message>
         <source>Cutting point is not on entity.</source>
@@ -49,7 +48,7 @@ Punkt cięcia nie jest na obiekcie.</translatorcomment>
 --file: qcadactions_pl.ts--
 Podzie&amp;l
 Podziel &amp;2</translatorcomment>
-        <translation type="unfinished">Podzie&amp;l</translation>
+        <translation>Podzie&amp;l</translation>
     </message>
 </context>
 </TS>

@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SnapMiddleManual</name>
     <message>
         <location filename="../SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Bliski Manualna</translation>
+        <translation>Punkt c&amp;entralny ręcznie</translation>
     </message>
 </context>
 </TS>

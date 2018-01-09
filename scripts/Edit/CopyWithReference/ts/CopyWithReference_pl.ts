@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -9,7 +8,7 @@
         <translatorcomment>--ignored case--
 --file: qcadactions_pl.ts--
 Kopiuj z punktem &amp;odniesienia</translatorcomment>
-        <translation>Skopiuj z punktem &amp;odniesienia</translation>
+        <translation>Skopiuj z &amp;odniesieniem</translation>
     </message>
 </context>
 </TS>

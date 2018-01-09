@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Lengthen</name>
     <message>
         <location filename="../Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz linię lub łuk</translation>
+        <translation>Proszę wskazać linię lub łuk</translation>
     </message>
     <message>
         <location filename="../Lengthen.ui" line="+17"/>
@@ -21,13 +20,13 @@ Wartość:</translatorcomment>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Kwota do wydłużyć lub skrócić (ujemna)</translation>
+        <translation>Określa wartość wydłużenia lub skrócenia (ujemna)</translation>
     </message>
     <message>
         <location filename="../LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wydłuż / Skróć</translation>
+        <translation>&amp;Wydłuż / skróć</translation>
     </message>
 </context>
 </TS>

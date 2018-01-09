@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -68,7 +67,7 @@ Przełącz znak średnicy
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+70"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Narzędzia wymiarów</translation>
@@ -77,7 +76,7 @@ Przełącz znak średnicy
         <location line="+5"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż narzędzia rozmiarom</translation>
+        <translation>Wyświetla narzędzia wymiarów</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -109,7 +108,7 @@ Wywiedź przedrostek z nazw plików</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wprowadź stałą etykietę lub pozostaw puste aby otrzymać etykietę automatyczną</translatorcomment>
-        <translation type="unfinished">Wprowadź stałą etykietę lub pozostaw puste aby otrzymać etykietę automatyczną</translation>
+        <translation>Wprowadza określoną etykietę lub nadaje etykietę automatyczną dla pustego pola</translation>
     </message>
     <message>
         <location line="+61"/>
@@ -140,7 +139,7 @@ Dolna tolerancja</translatorcomment>
     <message>
         <location line="+18"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatycznie</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>DimensionSettings</name>
     <message>
@@ -9,14 +8,14 @@
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Domyślne dla nowych rysunków</translatorcomment>
-        <translation type="unfinished">Domyślne dla nowych rysunków</translation>
+        <translation>Domyślne dla nowych rysunków</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ustawienia wymiarowe</translation>
+        <translation>Wymiary</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -26,22 +25,22 @@ Domyślne dla nowych rysunków</translatorcomment>
 Wymi&amp;ar
 Wymiar
 Wskaż położenie linii wymiarowej</translatorcomment>
-        <translation type="unfinished">Wymiar</translation>
+        <translation>Wymiar</translation>
     </message>
     <message>
         <location line="+108"/>
         <source>point</source>
-        <translation type="unfinished"></translation>
+        <translation>kropka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation type="unfinished"></translation>
+        <translation>przecinek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation>odstęp</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -49,7 +48,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Naukowy</translatorcomment>
-        <translation type="unfinished">Naukowy</translation>
+        <translation>Naukowy</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -58,7 +57,7 @@ Naukowy</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Dziesiętny
 Stopnie dziesiętne</translatorcomment>
-        <translation type="unfinished">Dziesiętny</translation>
+        <translation>Dziesiętny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -66,8 +65,8 @@ Stopnie dziesiętne</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Inżynierski
-Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,jednostka musi byc ustawiona na cale.</translatorcomment>
-        <translation type="unfinished">Inżynierski</translation>
+Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc ustawiona na cale.</translatorcomment>
+        <translation>Inżynierski</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -75,8 +74,8 @@ Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,j
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Architektoniczny
-Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,jednostka musi byc ustawiona na cale.</translatorcomment>
-        <translation type="unfinished">Architektoniczny</translation>
+Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc ustawiona na cale.</translatorcomment>
+        <translation>Architektoniczny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -84,7 +83,7 @@ Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,j
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Ułamkowy</translatorcomment>
-        <translation type="unfinished">Ułamkowy</translation>
+        <translation>Ułamkowy</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -92,7 +91,7 @@ Ułamkowy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Stopnie dziesiętne</translatorcomment>
-        <translation type="unfinished">Stopnie dziesiętne</translation>
+        <translation>Stopnie dziesiętne</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -100,7 +99,7 @@ Stopnie dziesiętne</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Stopnie/minuty/sekundy</translatorcomment>
-        <translation type="unfinished">Stopnie/minuty/sekundy</translation>
+        <translation>Stopnie/minuty/sekundy</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -108,7 +107,7 @@ Stopnie/minuty/sekundy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Gradusy</translatorcomment>
-        <translation type="unfinished">Gradusy</translation>
+        <translation>Gradusy</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -117,11 +116,11 @@ Gradusy</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Radiany
 Gradusy</translatorcomment>
-        <translation type="unfinished">Radiany</translation>
+        <translation>Radiany</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Surveyor&apos;s units</source>
+        <source>Surveyor's units</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Jednostki geometryczne</translatorcomment>
@@ -131,13 +130,17 @@ Jednostki geometryczne</translatorcomment>
         <location line="+209"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka / Format</translation>
+        <translation>Jednostka / format</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <source>The drawing unit must be 'Inch' or 'Foot' to display dimension labels in formats 'Architectural' or 'Engineering'. Format changed to 'Decimal'.</source>
+        <translation>Aby wyświetlać etykiety wymiarów w formacie „architektonicznym” lub „inżynierskim”, jednostką rysunku musi być „cal” lub „stopa”. Zmieniono format na „dziesiętny”.</translation>
+    </message>
+    <message>
+        <source>The drawing unit must be 'Inch' to display dimension labels in formats 'Architectural' or 'Engineering'. Format changed to 'Decimal'.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka rysunek musi być &quot;Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
+        <translation type="obsolete">Jednostka rysunek musi być "Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
@@ -146,7 +149,7 @@ Jednostki geometryczne</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Zmienia rozmiar okna aplikacji
 Rozmiary</translatorcomment>
-        <translation type="unfinished">Rozmiary</translation>
+        <translation>Rozmiary</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -154,7 +157,7 @@ Rozmiary</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Zachowaj proporcje</translatorcomment>
-        <translation type="unfinished">Zachowaj proporcje</translation>
+        <translation>Zachowanie proporcji</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -162,7 +165,7 @@ Zachowaj proporcje</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wysokość tekstu:</translatorcomment>
-        <translation type="unfinished">Wysokość tekstu:</translation>
+        <translation>Wysokość tekstu:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -170,7 +173,7 @@ Wysokość tekstu:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Przesunięcie linii rozszerzenia:</translatorcomment>
-        <translation type="unfinished">Przesunięcie linii rozszerzenia:</translation>
+        <translation>Przesunięcie linii pomocniczej:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -178,7 +181,7 @@ Przesunięcie linii rozszerzenia:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Rozszerzenie linii rozszerzenia:</translatorcomment>
-        <translation type="unfinished">Rozszerzenie linii rozszerzenia:</translation>
+        <translation>Wydłużenie linii pomocniczej:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -186,7 +189,7 @@ Rozszerzenie linii rozszerzenia:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Przerwa linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Przerwa linii wymiarowej:</translation>
+        <translation>Odstęp linii wymiarowej:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -194,12 +197,12 @@ Przerwa linii wymiarowej:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Rozmiar strzałki:</translatorcomment>
-        <translation type="unfinished">Rozmiar strzałki:</translation>
+        <translation>Rozmiar strzałki:</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Size scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Współczynnik skali:</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -207,7 +210,7 @@ Rozmiar strzałki:</translatorcomment>
         <translatorcomment>--google--
 Styl strzałki:
 Styl strzałki</translatorcomment>
-        <translation type="unfinished">Styl strzałki</translation>
+        <translation>Styl strzałki</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -216,7 +219,7 @@ Styl strzałki</translatorcomment>
 --file: designer_pl.ts--
 Odnośnik (linia ze strzałką)
 Rozmiar strzałki:</translatorcomment>
-        <translation type="unfinished">Strzałka</translation>
+        <translation>Strzałka</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -224,39 +227,39 @@ Rozmiar strzałki:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Strzałka architektoniczna</translatorcomment>
-        <translation type="unfinished">Strzałka architektoniczna</translation>
+        <translation>Zasieczka</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Czcionka</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Czcionka etykiet wymiarów</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Format liczb</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Separator dziesiętny:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Format etykiet</translation>
+        <translation>Format etykiet</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wymiarów liniowych</translation>
+        <translation>Wymiary liniowe</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -264,7 +267,7 @@ Strzałka architektoniczna</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Format:</translatorcomment>
-        <translation type="unfinished">&amp;Format:</translation>
+        <translation>&amp;Format:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -272,7 +275,7 @@ Strzałka architektoniczna</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Dokładność:</translatorcomment>
-        <translation type="unfinished">&amp;Dokładność:</translation>
+        <translation>&amp;Dokładność:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -281,13 +284,13 @@ Strzałka architektoniczna</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaż końcowe zera</translatorcomment>
-        <translation type="unfinished">Pokaż końcowe zera</translation>
+        <translation>Wyświetlanie końcowych zer</translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wymiary kątowe</translation>
+        <translation>Wymiary kątowe</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -295,7 +298,7 @@ Pokaż końcowe zera</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 F&amp;ormat:</translatorcomment>
-        <translation type="unfinished">F&amp;ormat:</translation>
+        <translation>F&amp;ormat:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -303,7 +306,7 @@ F&amp;ormat:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Dokładność:</translatorcomment>
-        <translation type="unfinished">&amp;Dokładność:</translation>
+        <translation>&amp;Dokładność:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -314,7 +317,7 @@ F&amp;ormat:</translatorcomment>
 Podgląd wydruku dla %1
 Podgląd wydruku
 Pokazuje podgląd wydruku</translatorcomment>
-        <translation type="unfinished">Podgląd</translation>
+        <translation>Podgląd</translation>
     </message>
 </context>
 </TS>

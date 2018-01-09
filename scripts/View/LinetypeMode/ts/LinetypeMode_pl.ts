@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LinetypeMode</name>
     <message>
         <location filename="../LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation type="unfinished"></translation>
+        <translation>Linie &amp;ekranowe</translation>
     </message>
 </context>
 </TS>

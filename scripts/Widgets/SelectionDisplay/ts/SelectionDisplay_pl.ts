@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SelectionDisplay</name>
     <message>
@@ -11,28 +10,28 @@
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie zaznaczono obiektów.</translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>%1 %2 on Layer &apos;%3&apos;</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <source>%1 %2 on Layer '%3'</source>
+        <translation>%1 %2 na warstwie „%3”</translation>
+    <translatorcomment>Should be plural form</translatorcomment></message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation>%1 %2 na %3 warstwach</translation>
+    <translatorcomment>Should be plural form</translatorcomment></message>
     <message>
         <location line="+4"/>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <source>%1 Entities on Layer '%2'</source>
+        <translation>%1 obiekty na warstwie „%2”</translation>
+    <translatorcomment>Should be plural form</translatorcomment></message>
     <message>
         <location line="+3"/>
         <source>%1 Entities on %2 Layers</source>
-        <translation type="unfinished"></translation>
-    </message>
+        <translation>%1 obiekty na %2 warstwach</translation>
+    <translatorcomment>Should be plural form</translatorcomment></message>
     <message>
         <source>Entities</source>
         <translatorcomment>--google--
@@ -50,9 +49,9 @@ Wymi&amp;ar</translatorcomment>
         <translation type="obsolete">na</translation>
     </message>
     <message>
-        <source>Layer &apos;%1&apos;</source>
+        <source>Layer '%1'</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Warstwa&apos;&amp;#39;</translation>
+        <translation type="obsolete">Warstwa'&amp;#39;</translation>
     </message>
     <message>
         <source>%1 Layers</source>
@@ -64,12 +63,13 @@ Wymi&amp;ar</translatorcomment>
         <source>Selected entities:
 %1.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybrane podmioty:.</translation>
+        <translation>Zaznaczone obiekty:
+%1.</translation>
     </message>
     <message>
         <location filename="../SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

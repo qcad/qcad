@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -6,12 +5,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Show font preview in font controls</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlanie podglądu czcionki w elementach sterujących czcionek</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation type="unfinished"></translation>
+        <translation>Używanie mniejszej ilości czcionek</translation>
     </message>
     <message>
         <location line="+14"/>

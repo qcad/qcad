@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -10,18 +9,18 @@
 --file: designer_pl.ts--
 Własne widżety
 Zastępcze widżety</translatorcomment>
-        <translation type="unfinished">Widżety</translation>
+        <translation>Widżety</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">CAD Toolbar</translation>
+        <translation>Pasek narzędziowy CAD</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Toggle Title Bar</source>
@@ -32,7 +31,7 @@ Zastępcze widżety</translatorcomment>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rozmiar ikon:</translation>
+        <translation>Rozmiar ikon:</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -41,7 +40,7 @@ Zastępcze widżety</translatorcomment>
 Przenośna pixmapa
 Format X Pixel Map
 %1 (%2x%3 piksli)</translatorcomment>
-        <translation type="unfinished">Pixel</translation>
+        <translation>piksele</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -49,7 +48,7 @@ Format X Pixel Map
         <translatorcomment>--google--
 Minimalny odstęp siatki (piksele):
 Minimalny odstęp siatki (piksele)</translatorcomment>
-        <translation type="unfinished">px</translation>
+        <translation type="unfinished">piks.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -58,7 +57,7 @@ Minimalny odstęp siatki (piksele)</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź kolumny:
 Kolumn:</translatorcomment>
-        <translation type="unfinished">Kolumn:</translation>
+        <translation>Liczba kolumn:</translation>
     </message>
 </context>
 <context>
@@ -70,7 +69,7 @@ Kolumn:</translatorcomment>
 --file: qt_pl.ts--
 Back
 Powrót do poprzedniego menu</translatorcomment>
-        <translation type="unfinished">Back</translation>
+        <translation type="unfinished">Wstecz</translation>
     </message>
 </context>
 </TS>

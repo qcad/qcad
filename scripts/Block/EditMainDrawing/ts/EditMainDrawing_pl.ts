@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>EditMainDrawing</name>
     <message>
         <location filename="../EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wróć do rysunku</translation>
+        <translation>&amp;Wróć do rysunku</translation>
     </message>
 </context>
 </TS>

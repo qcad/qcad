@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -157,7 +156,7 @@ Minimalna &amp;szerokość:</translatorcomment>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>Prostokąt z &amp;wymiarami</translation>
+        <translation>Prostokąt o &amp;wymiarach</translation>
     </message>
     <message>
         <location line="+5"/>

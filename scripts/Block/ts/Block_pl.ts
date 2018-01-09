@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Block</name>
     <message>
         <location filename="../Block.js" line="+67"/>
         <source>Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia bloku</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show block tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetla narzędzia bloku</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -19,7 +18,7 @@
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 &amp;Blok</translatorcomment>
-        <translation type="unfinished">&amp;Blok</translation>
+        <translation>&amp;Blok</translation>
     </message>
 </context>
 <context>
@@ -27,35 +26,35 @@
     <message>
         <location filename="../BlockDialog.js" line="+134"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nazwa bloku jest pusty.</translation>
+        <translation>Nazwa bloku jest pusta.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa bloku jest nieprawidłowa.</translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <source>Block '%1' already exists&lt;br&gt;and will be overwritten.</source>
+        <translation>Blok „%1” już istnieje&lt;br&gt;i zostanie zastąpiony.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block already exists.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Blok już istnieje.</translation>
+        <translation>Blok już istnieje.</translation>
     </message>
     <message>
         <location filename="../BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Blok danych</translation>
+        <translation>Dane bloku</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -63,13 +62,13 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Nazwa bloku:</translatorcomment>
-        <translation type="unfinished">Nazwa bloku:</translation>
+        <translation>Nazwa bloku:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>block 1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Blok 1</translation>
+        <translation>Blok 1</translation>
     </message>
 </context>
 </TS>

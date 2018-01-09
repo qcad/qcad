@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>IsoProject</name>
     <message>
@@ -10,7 +9,7 @@
 --file: qt_pl.ts--
 Upuść aby zakończyć przesuwanie widoku
 Góra - prawo</translatorcomment>
-        <translation type="unfinished">Do góry</translation>
+        <translation>Góra</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -19,7 +18,7 @@ Góra - prawo</translatorcomment>
 --file: qt_pl.ts--
 Dół - lewo
 Dół - prawo</translatorcomment>
-        <translation type="unfinished">W dół</translation>
+        <translation>Dół</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -28,13 +27,13 @@ Dół - prawo</translatorcomment>
 --file: qt_pl.ts--
 Góra - lewo
 Środek - lewo</translatorcomment>
-        <translation type="unfinished">Lewo</translation>
+        <translation>Lewo</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Left back</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Left back</translation>
+        <translation>Lewo od tyłu</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -43,30 +42,30 @@ Góra - lewo
 --file: qt_pl.ts--
 Góra - prawo
 Środek - prawo</translatorcomment>
-        <translation type="unfinished">Prawo</translation>
+        <translation>Prawo</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Z powrotem</translation>
+        <translation>Prawo od tyłu</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Obróć zaznaczenie w lewo przed projekcją</translation>
+        <translation>Obróć zaznaczenie przeciwnie do ruchu wskazówek zegara przed zrzutowaniem</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Obróć wybrane prawo przed projekcją</translation>
+        <translation>Obróć zaznaczenie zgodnie z ruchem wskazówek zegara przed zrzutowaniem</translation>
     </message>
     <message>
-        <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
+        <source>Scale projection to original size ('isometric drawing')</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Skala projekcji do oryginalnego rozmiaru (&quot;izometryczny rysunek&amp;quot;)</translation>
+        <translation type="obsolete">Skala projekcji do oryginalnego rozmiaru ("izometryczny rysunek&amp;quot;)</translation>
     </message>
     <message>
         <source>True scale</source>
@@ -79,38 +78,38 @@ Góra - prawo
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Rzutowanie &amp;izometryczne</translatorcomment>
-        <translation type="unfinished">Rzutowanie &amp;izometryczne</translation>
+        <translation>Rzutowanie &amp;izometryczne</translation>
     </message>
     <message>
         <location filename="../IsoProject.js" line="+50"/>
         <source>Isometric</source>
-        <translation type="unfinished"></translation>
+        <translation>Izometria</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Izometria o właściwej skali</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksonometria planometryczna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksonometria dimetryczna</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksonometria ukośna</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation type="unfinished"></translation>
+        <translation>Aksonometria kawalerska</translation>
     </message>
 </context>
 </TS>

@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>FirstStart</name>
     <message>
         <location filename="../FirstStart.js" line="+36"/>
-        <location line="+217"/>
+        <location line="+216"/>
         <source>%1 First Start</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pierwszy start</translation>
+        <translation>Pierwsze uruchomienie %1</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -17,7 +16,7 @@
 --file: qt_pl.ts--
 Czarny / Biały
 Bardzo gruby</translatorcomment>
-        <translation type="unfinished">Bardzo gruby</translation>
+        <translation>Czarny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -26,7 +25,7 @@ Bardzo gruby</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Czarny / Biały
 Biały</translatorcomment>
-        <translation type="unfinished">Biały</translation>
+        <translation>Biały</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -36,19 +35,19 @@ Biały</translatorcomment>
 Język interfejsu graficznego:
 Język komend:
 Język poleceń:</translatorcomment>
-        <translation type="unfinished">Język:</translation>
+        <translation>Język:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Witamy</translation>
+        <translation>Witamy w %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Proszę wybrać ustawienia wykorzystywane dla nowych rysunków. Wszystkie te ustawienia można zmienić później w oknie dialogowym Preferencje.</translation>
+        <translation>Proszę wybrać ustawienia używane dla nowych rysunków. Wszystkie te ustawienia można zmienić później w oknie Preferencji.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -57,25 +56,25 @@ Język poleceń:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Jednostka domyślna:
 &amp;Główna jednostka rysowania:</translatorcomment>
-        <translation type="unfinished">Jednostka:</translation>
+        <translation>Jednostka:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Domyślny rozmiar papieru:</translation>
+        <translation>Domyślny rozmiar papieru:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przecinku:</translation>
+        <translation>Separator dziesiętny:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Kolor tła:</translation>
+        <translation>Kolor tła:</translation>
     </message>
 </context>
 </TS>

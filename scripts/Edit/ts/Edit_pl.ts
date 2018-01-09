@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -20,12 +19,12 @@ Ogólne ustawienia aplikacji</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Preferencje bieżącego rysunku
 &amp;Preferencje bieżącego rysunku</translatorcomment>
-        <translation type="unfinished">Preferencje rysowania</translation>
+        <translation>Preferencje rysowania</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+45"/>
@@ -38,27 +37,28 @@ Preferencje bieżącego rysunku
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Proszę zrestartować QCad na zmiany preferencji odniosły skutek.</translation>
+        <translation>Proszę ponownie uruchomić program QCAD,
+aby wprowadzić zmiany preferencji.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślne dla</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>To są domyślne preferencje dla nowych rysunków.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferencje aktualnego rysunku można zmienić w &lt;br/&gt;&lt;i&gt;Edycja &amp;gt; Preferencje rysowania&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmiany zostaną wprowadzone do nowych rysunków, lecz NIE do aktualnego rysunku.</translation>
     </message>
 </context>
 <context>
@@ -70,7 +70,7 @@ the preference changes to take effect.</source>
 Wskaż punkt odniesienia
 Kopiuje obiekty do schowka z punktem odniesienia
 Wycina obiekty z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia</translation>
+        <translation>Punkt odniesienia</translation>
     </message>
 </context>
 <context>
@@ -78,12 +78,12 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia edycji</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetla narzędzia edycji</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -128,7 +128,7 @@ Brak argumentu dla filtru.</translatorcomment>
         <location line="+10"/>
         <source>Expand Tree</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rozwiń drzewo</translation>
+        <translation>Rozwiń drzewo</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -140,7 +140,7 @@ Brak argumentu dla filtru.</translatorcomment>
         <location line="+67"/>
         <source>Restore to Default Values</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przywrócić do wartości domyślnych</translation>
+        <translation>Przywróć wartości domyślne</translation>
     </message>
 </context>
 </TS>

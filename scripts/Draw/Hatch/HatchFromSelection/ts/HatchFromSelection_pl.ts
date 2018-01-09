@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -109,22 +108,22 @@ Skala:</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Pętla nie zamknięta w punkcie /.</translation>
+        <translation>Pętla nie zamknięta w punkcie %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Każda jednostka musi być granica linia, łuk, okrąg, elipsa, łuk, elipsa, polilinia lub splajn. Znaleziono:</translation>
+        <translation>Każdy obiekt konturu musi być linią, łukiem, okręgiem, łukiem elipsy, elipsą, linią łamaną lub splajnem. Odnaleziono:</translation>
     </message>
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&amp;Kreskowanie z zaznaczenia</translation>
+        <translation>&amp;Kreskowanie zaznaczenia</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Kreskuje lub wypełnia zaznaczony kontur</translation>
     </message>
 </context>
 </TS>

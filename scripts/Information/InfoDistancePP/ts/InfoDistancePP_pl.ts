@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>InfoDistancePP</name>
     <message>
@@ -10,7 +9,7 @@
 Wskaż pierwszy punkt
 Wskaż pierwszy punkt wieloboku
 Wskaż pierwszy punkt odległości</translatorcomment>
-        <translation type="unfinished">Pierwszy punkt</translation>
+        <translation>Pierwszy punkt</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -19,7 +18,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
 Wskaż drugi punkt
 Wskaż dugi punkt odległości
 Wskaż drugi punkt linii odbicia</translatorcomment>
-        <translation type="unfinished">Drugi punkt</translation>
+        <translation>Drugi punkt</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -29,7 +28,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -38,19 +37,19 @@ Zrobione
 --file: qcadguiqt_pl.ts--
 Odległość: %1
 Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
-        <translation type="unfinished">Odległość:</translation>
+        <translation>Odległość:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Delta X:</translation>
+        <translation>Delta X:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Delta Y:</translation>
+        <translation>Delta Y:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -59,13 +58,13 @@ Zaznacz obiekt do przycięcia lub wprowadź odległość:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź kąt:
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt:</translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location filename="../InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Punkt Odległość do punktu</translation>
+        <translation>Odległość p&amp;unktu do punktu</translation>
     </message>
 </context>
 </TS>

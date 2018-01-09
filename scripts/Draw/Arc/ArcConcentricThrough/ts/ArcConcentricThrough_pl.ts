@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -10,7 +9,7 @@
 --file: qcadguiqt_pl.ts--
 Wprowadź liczbę:
 Liczba:</translatorcomment>
-        <translation type="unfinished">Liczba:</translation>
+        <translation>Liczba kopii:</translation>
     </message>
     <message>
         <location filename="../ArcConcentricThroughInit.js" line="+2"/>

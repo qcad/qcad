@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -23,7 +22,7 @@ Wskaż drugą linie</translatorcomment>
     </message>
     <message>
         <location line="+69"/>
-        <source>Lines don&apos;t intersect.</source>
+        <source>Lines don't intersect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linie nie przecinają się.</translation>
     </message>
@@ -43,7 +42,7 @@ Wprowadź długość:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź liczbę:
 Liczba:</translatorcomment>
-        <translation type="unfinished">Liczba:</translation>
+        <translation>Ilość:</translation>
     </message>
     <message>
         <location filename="../LineBisectorInit.js" line="+2"/>

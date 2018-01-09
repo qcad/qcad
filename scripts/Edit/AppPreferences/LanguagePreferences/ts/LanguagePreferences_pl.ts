@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -26,7 +25,7 @@
 Język interfejsu graficznego:
 Język interfejsu graficznego
 Język komend:</translatorcomment>
-        <translation type="unfinished">Język</translation>
+        <translation>Język</translation>
     </message>
 </context>
 </TS>

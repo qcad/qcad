@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Form</name>
     <message>
@@ -24,19 +23,19 @@ Zaznacza pojedynczy obiekt</translatorcomment>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Trzy: Right</translation>
+        <translation>Trzy: po prawej</translation>
     </message>
     <message>
         <location filename="../Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Trzy: Left</translation>
+        <translation>Trzy: po lewej</translation>
     </message>
     <message>
         <location filename="../Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Trzy: Above</translation>
+        <translation>Trzy: powyżej</translation>
     </message>
     <message>
         <source>Three: Below</source>
@@ -79,7 +78,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="unfinished">Cztery: Równe</translation>
+        <translation>Cztery: równe</translation>
     </message>
 </context>
 <context>
@@ -87,7 +86,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="unfinished">Cztery: Left</translation>
+        <translation>Cztery: po lewej</translation>
     </message>
 </context>
 <context>
@@ -95,7 +94,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="unfinished">Cztery: Right</translation>
+        <translation>Cztery: po prawej</translation>
     </message>
 </context>
 <context>
@@ -103,7 +102,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="unfinished">Pojedynczy</translation>
+        <translation>Pojedyncza</translation>
     </message>
 </context>
 <context>
@@ -111,7 +110,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="unfinished">Trzy: Below</translation>
+        <translation>Trzy: poniżej</translation>
     </message>
 </context>
 <context>
@@ -119,7 +118,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="unfinished">Trzy: pozioma</translation>
+        <translation>Trzy: poziomo</translation>
     </message>
 </context>
 <context>
@@ -127,7 +126,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="unfinished">Trzy: Pionowa</translation>
+        <translation>Trzy: pionowo</translation>
     </message>
 </context>
 <context>
@@ -135,7 +134,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="unfinished">Dwa: Horizontal</translation>
+        <translation>Dwie: poziomo</translation>
     </message>
 </context>
 <context>
@@ -143,7 +142,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished">Dwa: w pionie</translation>
+        <translation>Dwie: pionowo</translation>
     </message>
 </context>
 <context>
@@ -151,17 +150,17 @@ Zaznacza pojedynczy obiekt</translatorcomment>
     <message>
         <location filename="../ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie obsługiwane przeciągnięte dane </translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Importing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Importowanie pliku:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Importowanie adresu URL:</translation>
     </message>
     <message>
         <source>Grid</source>

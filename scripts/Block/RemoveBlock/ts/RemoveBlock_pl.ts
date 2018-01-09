@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>RemoveBlock</name>
     <message>
@@ -9,13 +8,13 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Usuń blok</translatorcomment>
-        <translation type="unfinished">&amp;Usuń blok</translation>
+        <translation>&amp;Usuń blok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Usuń wybrany blok</translation>
+        <translation>Usuwa wybrany blok</translation>
     </message>
 </context>
 </TS>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -7,7 +6,7 @@
         <location filename="../Arc.js" line="+71"/>
         <source>Arc Tools</source>
         <translatorcomment>--google--
-Pokaż menu &quot;Łuki&quot;</translatorcomment>
+Pokaż menu "Łuki"</translatorcomment>
         <translation>Narzędzia łuku</translation>
     </message>
     <message>
@@ -15,8 +14,8 @@ Pokaż menu &quot;Łuki&quot;</translatorcomment>
         <source>Show arc tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
-Pokaż menu &quot;Łuki&quot;</translatorcomment>
-        <translation type="unfinished">Pokaż menu &quot;Łuki&quot;</translation>
+Pokaż menu "Łuki"</translatorcomment>
+        <translation>Wyświetla narzędzia łuku</translation>
     </message>
     <message>
         <location line="+18"/>

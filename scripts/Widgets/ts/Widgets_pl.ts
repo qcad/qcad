@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Dialog</name>
     <message>
@@ -28,7 +27,7 @@ Anuluj
         <location filename="../Widgets.js" line="+56"/>
         <source>&amp;Widgets</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Widgety</translation>
+        <translation>&amp;Widżety</translation>
     </message>
 </context>
 </TS>

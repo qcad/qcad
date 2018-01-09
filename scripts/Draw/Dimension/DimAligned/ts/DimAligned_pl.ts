@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -8,14 +7,14 @@
         <source>First extension line origin</source>
         <translatorcomment>--google--
 Wskaż początek pierwszej linii rozszerzenia</translatorcomment>
-        <translation type="unfinished">Pierwszym początkiem linia wewnętrzna</translation>
+        <translation>Początek pierwszej linii pomocniczej</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
         <translatorcomment>--google--
 Wskaż początek drugiej linii rozszerzenia</translatorcomment>
-        <translation type="unfinished">Drugie źródło linia wewnętrzna</translation>
+        <translation>Początek drugiej linii pomocniczej</translation>
     </message>
     <message>
         <location line="+8"/>

@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
         <location filename="../SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">r:</translation>
+        <translation>&amp;r:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -15,13 +14,13 @@
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Promień (odległość)</translatorcomment>
-        <translation type="unfinished">Promień (odległość)</translation>
+        <translation>Promień (odległość)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;&lt;:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">&amp;lt;:</translation>
+        <translation>&amp;&lt;:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -31,25 +30,25 @@ Promień (odległość)</translatorcomment>
 Wprowadź kąt:
 Wprowadź kąt
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt</translation>
+        <translation>Kąt</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zaznacz na współrzędne względne</translation>
+        <translation>Używa współrzędnych względnych</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Względny</translation>
+        <translation>&amp;Względna</translation>
     </message>
     <message>
         <location filename="../SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Polar współrzędnych</translation>
+        <translation>Współrzędna &amp;biegunowa</translation>
     </message>
 </context>
 </TS>

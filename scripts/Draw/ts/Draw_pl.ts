@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -23,12 +22,12 @@
     <message>
         <location filename="../DrawBasedOnRectanglePP.js" line="+69"/>
         <source>First corner</source>
-        <translation>Pierwsze naroże</translation>
+        <translation>Pierwszy narożnik</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation>Drugie naroże</translation>
+        <translation>Drugi narożnik</translation>
     </message>
 </context>
 <context>

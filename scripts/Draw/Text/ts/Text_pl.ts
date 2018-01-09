@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -29,7 +28,7 @@ Wskaż pozycje</translatorcomment>
 --file: assistant_pl.ts--
 Błąd podczas wklejania zawartości schowka: Brak głównego elementu &lt;ui&gt;.
 Błąd podczas wklejania zawartości schowka: Brak głównego elementu &lt;ui&gt;</translatorcomment>
-        <translation type="unfinished">Spis treści:</translation>
+        <translation>Zawartość:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -38,7 +37,7 @@ Błąd podczas wklejania zawartości schowka: Brak głównego elementu &lt;ui&gt
 --file: qt_pl.ts--
 Wysokość:
 Wysokość tekstu:</translatorcomment>
-        <translation type="unfinished">Wysokość:</translation>
+        <translation>Wysokość:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -63,7 +62,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <source>Draw text</source>
         <translatorcomment>--google--
 Rysuj obiekty tekstowe</translatorcomment>
-        <translation type="unfinished">Rysowania tekstu</translation>
+        <translation>Rysuje tekst</translation>
     </message>
 </context>
 <context>
@@ -71,7 +70,7 @@ Rysuj obiekty tekstowe</translatorcomment>
     <message>
         <location filename="../TextDialog/TextDialog.js" line="+242"/>
         <source>Default value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślna wartość:</translation>
     </message>
     <message>
         <location line="+266"/>
@@ -131,13 +130,13 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <location line="+20"/>
         <source>&amp;Subscript</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Indeks</translation>
+        <translation>Indeks &amp;dolny</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Napisany u góry</translation>
+        <translation>Indeks gó&amp;rny</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -149,14 +148,14 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Znaki specjalne ...</translation>
+        <translation>Znaki &amp;specjalne...</translation>
     </message>
     <message>
         <location line="+310"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
-        <translation type="unfinished">Inne...</translation>
+        <translation>Inne...</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -165,13 +164,13 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
 --file: qcadlib_pl.ts--
 ° (Stopień)
 Stopnie dziesiętne</translatorcomment>
-        <translation type="unfinished">Stopień</translation>
+        <translation>Stopień</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Plus-Minus</translation>
+        <translation>Plus-minus</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -180,13 +179,13 @@ Stopnie dziesiętne</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Przełącz znak średnicy
 ø (Średnica)</translatorcomment>
-        <translation type="unfinished">Średnica</translation>
+        <translation>Średnica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Prawie równe</translation>
+        <translation>Prawie równe</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -194,7 +193,7 @@ Przełącz znak średnicy
         <translatorcomment>--google--
 Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) jest niedozwolone.
 Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) jest niedozwolone</translatorcomment>
-        <translation type="unfinished">Mnożenie</translation>
+        <translation>Mnożenie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -203,7 +202,7 @@ Mnożenie wartości typu %1 przez %2 lub %3 (plus lub minus nieskończoność) j
 --file: qcadguiqt_pl.ts--
 ÷ (Dzielenie)
 Dzielenie (÷)</translatorcomment>
-        <translation type="unfinished">Dzielenie</translation>
+        <translation>Dzielenie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -218,7 +217,7 @@ Dzielenie (÷)</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Kopiuj obiekty do schowka
 Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">Pi</translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -227,13 +226,13 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
 Selektor narzucenia niepowtarzalności W3C XML Schema
 Pole narzucenia niepowtarzalności W3C XML Schema
 %1 odwołuje się do narzucenia niepowtarzalności %2 które nie jest elementem %3 ani %4.</translatorcomment>
-        <translation type="unfinished">Tożsamość</translation>
+        <translation>Tożsamość</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nie równa</translation>
+        <translation>Nie równe</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -251,18 +250,18 @@ Pole narzucenia niepowtarzalności W3C XML Schema
         <location line="+1"/>
         <source>Squared</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Squared</translation>
+        <translation>Do kwadratu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Cubed</translation>
+        <translation>Do sześcianu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation>Spacja nierozdzielająca</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
@@ -272,13 +271,13 @@ Pole narzucenia niepowtarzalności W3C XML Schema
 Wprowadź tekst wymiaru:
 Wprowadź tekst wymiaru
 Wprowadź tekst</translatorcomment>
-        <translation type="unfinished">Tekst</translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Główne Font</translation>
+        <translation>Główna czcionka</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -287,7 +286,7 @@ Wprowadź tekst</translatorcomment>
 --file: qt_pl.ts--
 Wysokość:
 Wysokość tekstu:</translatorcomment>
-        <translation type="unfinished">Wysokość:</translation>
+        <translation>Wysokość:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -303,7 +302,7 @@ Wysokość tekstu:</translatorcomment>
 --file: qt_pl.ts--
 Pogrubiony
 Na wpół pogrubiony</translatorcomment>
-        <translation type="unfinished">Pogrubiony</translation>
+        <translation>Pogrubienie</translation>
     </message>
     <message>
         <location line="-261"/>
@@ -319,14 +318,14 @@ Old Italic</translatorcomment>
         <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Tekst wpisuje się w jednej linii i nie ma formatowania</translation>
+        <translation>Wpisuje tekst w jednym wierszu, bez formatowania</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Prosty tekst (jeden wiersz, nie formatowanie)</translation>
+        <translation>Prosty tekst (jeden wiersz, nie formatowany)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -336,7 +335,7 @@ Old Italic</translatorcomment>
 Zmień tekst sformatowany...
 Zmień tekst sformatowany
 Rich Text</translatorcomment>
-        <translation type="unfinished">Rich Text</translation>
+        <translation>Tekst sformatowany</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -345,7 +344,7 @@ Rich Text</translatorcomment>
 --file: qt_pl.ts--
 Wytnij
 Wytnij obiekty do schowka</translatorcomment>
-        <translation type="unfinished">Wytnij</translation>
+        <translation>Wytnij</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -354,7 +353,7 @@ Wytnij obiekty do schowka</translatorcomment>
 --file: qt_pl.ts--
 Skopiuj
 S&amp;kopiuj</translatorcomment>
-        <translation type="unfinished">Skopiuj</translation>
+        <translation>Skopiuj</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -363,7 +362,7 @@ S&amp;kopiuj</translatorcomment>
 --file: qt_pl.ts--
 Wklej
 &amp;Wklej</translatorcomment>
-        <translation type="unfinished">Wklej</translation>
+        <translation>Wklej</translation>
     </message>
     <message>
         <location line="+170"/>
@@ -372,7 +371,7 @@ Wklej
 --file: linguist_pl.ts--
 CTRL+B
 Ctrl+B</translatorcomment>
-        <translation type="unfinished">Ctrl+B</translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -380,14 +379,14 @@ Ctrl+B</translatorcomment>
         <translatorcomment>--ignored case--
 --file: designer_pl.ts--
 CTRL+I</translatorcomment>
-        <translation type="unfinished">CTRL+I</translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Insert Symbol...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
-        <translation type="unfinished">Wstaw symbol...</translation>
+        <translation>Wstaw symbol...</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -397,39 +396,39 @@ CTRL+I</translatorcomment>
 Ścieżki do plików źródłowych dokumentacji:
 Ścieżki do plików źródłowych dokumentacji
 Ścieżki do plików źródłowych</translatorcomment>
-        <translation type="unfinished">Źródło</translation>
+        <translation>Źródło</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Szczegóły atrybutu</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation>Znacznik:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wartość:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Text Geometry</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Geometria Text</translation>
+        <translation>Geometria tekstu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Współczynnik interlinia:</translation>
+        <translation>Współczynnik odstępu wierszy:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -437,7 +436,7 @@ CTRL+I</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Współczynnik odstępu między liniami</translatorcomment>
-        <translation type="unfinished">Współczynnik odstępu między liniami</translation>
+        <translation>Współczynnik odległości między wierszami</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -446,7 +445,7 @@ Współczynnik odstępu między liniami</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź kąt:
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt:</translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -456,7 +455,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
 Wprowadź kąt obrotu:
 Wprowadź kąt obrotu
 Kąt obracania</translatorcomment>
-        <translation type="unfinished">Kąt obracania</translation>
+        <translation>Kąt obrotu</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -465,7 +464,7 @@ Kąt obracania</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wyrównanie
 Wyrównanie|Pionowe</translatorcomment>
-        <translation type="unfinished">Wyrównanie</translation>
+        <translation>Wyrównanie</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -473,12 +472,12 @@ Wyrównanie|Pionowe</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Góra - środek</translatorcomment>
-        <translation type="unfinished">Góra - środek</translation>
+        <translation>Góra - środek</translation>
     </message>
     <message>
         <location line="+145"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Podstawa - lewo</translation>
     </message>
     <message>
         <location line="-177"/>
@@ -486,17 +485,17 @@ Góra - środek</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Góra - lewo</translatorcomment>
-        <translation type="unfinished">Góra - lewo</translation>
+        <translation>Góra - lewo</translation>
     </message>
     <message>
         <location line="+206"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Podstawa - środek</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Podstawa - prawo</translation>
     </message>
     <message>
         <location line="-145"/>
@@ -504,7 +503,7 @@ Góra - lewo</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Góra - prawo</translatorcomment>
-        <translation type="unfinished">Góra - prawo</translation>
+        <translation>Góra - prawo</translation>
     </message>
     <message>
         <location line="+203"/>
@@ -512,7 +511,7 @@ Góra - prawo</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Dół - środek</translatorcomment>
-        <translation type="unfinished">Dół - środek</translation>
+        <translation>Dół - środek</translation>
     </message>
     <message>
         <location line="-145"/>
@@ -520,7 +519,7 @@ Dół - środek</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Środek - lewo</translatorcomment>
-        <translation type="unfinished">Środek - lewo</translation>
+        <translation>Środek - lewo</translation>
     </message>
     <message>
         <location line="-29"/>
@@ -528,7 +527,7 @@ Dół - środek</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Środek - środek</translatorcomment>
-        <translation type="unfinished">Środek - środek</translation>
+        <translation>Środek - środek</translation>
     </message>
     <message>
         <location line="-58"/>
@@ -536,7 +535,7 @@ Dół - środek</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Środek - prawo</translatorcomment>
-        <translation type="unfinished">Środek - prawo</translation>
+        <translation>Środek - prawo</translation>
     </message>
     <message>
         <location line="+203"/>
@@ -544,7 +543,7 @@ Dół - środek</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Dół - lewo</translatorcomment>
-        <translation type="unfinished">Dół - lewo</translation>
+        <translation>Dół - lewo</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -552,7 +551,7 @@ Dół - lewo</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Dół - prawo</translatorcomment>
-        <translation type="unfinished">Dół - prawo</translation>
+        <translation>Dół - prawo</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -561,7 +560,7 @@ Dół - prawo</translatorcomment>
 --file: qvfb_pl.ts--
 Anuluj
 &amp;Anuluj</translatorcomment>
-        <translation type="unfinished">Anuluj</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location line="+13"/>

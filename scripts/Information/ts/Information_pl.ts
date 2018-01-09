@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -7,7 +6,7 @@
         <location filename="../Information.js" line="+285"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narzędzi informacyjnych</translation>
+        <translation>Narzędzia informacji</translation>
     </message>
     <message>
         <location line="+5"/>

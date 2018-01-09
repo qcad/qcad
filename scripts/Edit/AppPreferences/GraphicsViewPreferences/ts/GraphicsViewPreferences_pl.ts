@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>GraphicsView</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Władcy i przewijania</translation>
+        <translation>Linijki i paski przewijania</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -15,13 +14,13 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaż linijki</translatorcomment>
-        <translation type="unfinished">Pokaż linijki</translation>
+        <translation>Linijki</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż paski przewijania</translation>
+        <translation>Paski przewijania</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -29,14 +28,14 @@ Pokaż linijki</translatorcomment>
         <translatorcomment>--google--
 &amp;Podświetl obiekt pod kursorem myszy
 Podświetl obiekt pod kursorem myszy
-Nie istnieje plik &apos;%1&apos; z obrazkiem kursora dla skórki.</translatorcomment>
-        <translation type="unfinished">Kursor</translation>
+Nie istnieje plik '%1' z obrazkiem kursora dla skórki.</translatorcomment>
+        <translation>Kursor</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż krzyżyk</translation>
+        <translation>Krzyżyk</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -45,7 +44,7 @@ Nie istnieje plik &apos;%1&apos; z obrazkiem kursora dla skórki.</translatorcom
 --file: qcadguiqt_pl.ts--
 &amp;Pokazuj duże krzyżyki
 Pokazuj duże krzyżyki</translatorcomment>
-        <translation type="unfinished">Pokazuj duże krzyżyki</translation>
+        <translation>Duży krzyżyk</translation>
     </message>
     <message>
         <source>Grid</source>
@@ -80,12 +79,12 @@ Minimalny odstęp siatki (piksele):</translatorcomment>
     <message>
         <location line="-64"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Początek układu współrzędnych</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Wielkie osie układu współrzędnych</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -94,18 +93,18 @@ Minimalny odstęp siatki (piksele):</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Autozoom
 &amp;Autozoom</translatorcomment>
-        <translation type="unfinished">Autozoom</translation>
+        <translation>Automatyczne przybliżanie</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Marża (px):</translation>
+        <translation>Margines (piksele):</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatyczne przybliżanie podczas wczytywania</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -117,7 +116,7 @@ Autozoom
         <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zapobiec biały na biały / czarny na czarnym ekranie</translation>
+        <translation>Zapobieganie wyświetlania białego na białym tle / czarnego na czarnym tle</translation>
     </message>
     <message>
         <location line="-29"/>
@@ -128,67 +127,67 @@ Autozoom
     <message>
         <location line="+39"/>
         <source>Disable for printing</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłączenie drukowania</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodzaje linii</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+36"/>
         <source>Display and Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlanie i wydajność</translation>
     </message>
     <message>
         <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished"></translation>
+        <translation>Liczba kresek obiektu powyżej, której obiekt wyświetlany będzie linią ciągłą:</translation>
     </message>
     <message>
         <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
         <location line="-134"/>
         <source>Use full resolution for Retina display</source>
-        <translation type="unfinished"></translation>
+        <translation>Użycie pełnej rozdzielczości dla wyświetlaczy Retina</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślnie włączony antyaliasing</translation>
     </message>
     <message>
         <location line="+327"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maksymalna liczba wyświetlanych punktów referencyjnych:</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished"></translation>
+        <translation>Czas renderowania kreskowania:</translation>
     </message>
     <message>
         <location line="-343"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatyczne użycie linii ekranowych w widoku modelu</translation>
     </message>
     <message>
         <source>Performance</source>
@@ -201,12 +200,12 @@ Autozoom
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Liczba obiektów w podglądzie:</translatorcomment>
-        <translation type="unfinished">Liczba obiektów w podglądzie:</translation>
+        <translation>Liczba obiektów w podglądzie:</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlanie łuków jako linie poniżej kąta (stopnie):</translation>
     </message>
     <message>
         <source>Text height display threshold:</source>
@@ -220,7 +219,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
 --file: qt_pl.ts--
 Kontynuuj działanie
 &amp;Wskaźnik do zaznaczania</translatorcomment>
-        <translation type="unfinished">Wybrane strony</translation>
+        <translation>Zaznaczenie</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -228,7 +227,7 @@ Kontynuuj działanie
         <translatorcomment>--google--
 &amp;Stałe zaznaczenia
 Stałe zaznaczenia</translatorcomment>
-        <translation type="unfinished">Persistent Selection</translation>
+        <translation>Trwałe zaznaczenie</translation>
     </message>
 </context>
 <context>
@@ -237,7 +236,7 @@ Stałe zaznaczenia</translatorcomment>
         <location filename="../GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Graphics View</translation>
+        <translation>Widok graficzny</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -246,7 +245,7 @@ Stałe zaznaczenia</translatorcomment>
 --file: qtconfig_pl.ts--
 &amp;Wygląd
 Wygląd</translatorcomment>
-        <translation type="unfinished">Wygląd</translation>
+        <translation>Wygląd</translation>
     </message>
 </context>
 </TS>

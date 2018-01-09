@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>RestrictOrthogonal</name>
     <message>
@@ -9,7 +8,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Ograniczaj &amp;prostopadle</translatorcomment>
-        <translation type="unfinished">Ograniczaj &amp;prostopadle</translation>
+        <translation>Ograniczanie p&amp;rostopadle</translation>
     </message>
 </context>
 </TS>

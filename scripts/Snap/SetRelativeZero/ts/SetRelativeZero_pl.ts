@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SetRelativeZero</name>
     <message>
@@ -11,13 +10,13 @@
 Wskaż położenie linii wymiarowej lub wprowadź kąt:
 Wskaż położenie linii wymiarowej lub wprowadź kąt
 Wskaż pozycje</translatorcomment>
-        <translation type="unfinished">Położenie</translation>
+        <translation>Proszę wskazać położenie</translation>
     </message>
     <message>
         <location filename="../SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ustaw krewny Zero</translation>
+        <translation>Ustal początek układu &amp;względnego</translation>
     </message>
 </context>
 </TS>

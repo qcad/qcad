@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -8,14 +7,14 @@
         <source>Feature location</source>
         <translatorcomment>--google--
 Wskaż położenie cechy</translatorcomment>
-        <translation type="unfinished">Lokalizacja funkcji</translation>
+        <translation>Położenie cechy</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
         <translatorcomment>--google--
 Wskaż punkt końcowy odnośnika</translatorcomment>
-        <translation type="unfinished">Endpoint lidera</translation>
+        <translation>Punkt końcowy odnośnika</translation>
     </message>
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Stretch</name>
     <message>
@@ -8,14 +7,14 @@
         <source>First corner</source>
         <translatorcomment>--google--
 Wskaż pierwszy wierzchołek</translatorcomment>
-        <translation type="unfinished">Pierwszy zakręt</translation>
+        <translation>Pierwszy narożnik</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second corner</source>
         <translatorcomment>--google--
 Wskaż drugi wierzchołek</translatorcomment>
-        <translation type="unfinished">Drugi narożnik</translation>
+        <translation>Drugi narożnik</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -24,14 +23,14 @@ Wskaż drugi wierzchołek</translatorcomment>
 Wskaż punkt odniesienia
 Kopiuje obiekty do schowka z punktem odniesienia
 Wycina obiekty z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia</translation>
+        <translation>Punkt odniesienia</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>
-        <translation type="unfinished">Punkt docelowy</translation>
+        <translation>Punkt docelowy</translation>
     </message>
     <message>
         <location filename="../StretchInit.js" line="+2"/>
@@ -39,7 +38,7 @@ Wskaż punkt docelowy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Rozciągnij</translatorcomment>
-        <translation type="unfinished">&amp;Rozciągnij</translation>
+        <translation>&amp;Rozciągnij</translation>
     </message>
 </context>
 </TS>

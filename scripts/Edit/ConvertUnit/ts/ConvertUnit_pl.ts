@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -6,12 +5,12 @@
     <message>
         <location filename="../ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation type="unfinished"></translation>
+        <translation>Brak czynności do wykonania.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation type="unfinished"></translation>
+        <source>Unit '%1' selected - Nothing to be done</source>
+        <translation>Wybrano jednostkę „%1” - brak czynności do wykonania</translation>
     </message>
     <message>
         <location line="+119"/>

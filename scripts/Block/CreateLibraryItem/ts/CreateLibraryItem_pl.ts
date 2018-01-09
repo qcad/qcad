@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>CreateLibraryItem</name>
     <message>
@@ -10,7 +9,7 @@
 Wskaż punkt odniesienia
 Kopiuje obiekty do schowka z punktem odniesienia
 Wycina obiekty z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia</translation>
+        <translation>Punkt odniesienia</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -22,13 +21,13 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Tworzenie elementu biblioteki</translation>
+        <translation>U&amp;twórz element kolekcji</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Create library item from selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Tworzenie elementu biblioteki z wyboru</translation>
+        <translation>Tworzy element kolekcji z zaznaczenia</translation>
     </message>
 </context>
 </TS>

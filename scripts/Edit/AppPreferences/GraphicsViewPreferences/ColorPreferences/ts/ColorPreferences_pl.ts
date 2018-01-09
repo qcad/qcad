@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -7,7 +6,7 @@
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Graphics View</translation>
+        <translation>Widok graficzny</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16,7 +15,7 @@
 --file: qcadguiqt_pl.ts--
 Kolory
 &amp;Dodaj do własnych kolorów</translatorcomment>
-        <translation type="unfinished">Kolory</translation>
+        <translation>Kolory</translation>
     </message>
 </context>
 <context>
@@ -24,7 +23,7 @@ Kolory
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Graphics View</translation>
+        <translation>Widok graficzny</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -34,12 +33,12 @@ Kolory
 Tło:
 Tło rysunku:
 Tło okna:</translatorcomment>
-        <translation type="unfinished">Tło:</translation>
+        <translation>Tło:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursor</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -50,17 +49,17 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Początek układu współrzędnych</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
@@ -70,102 +69,102 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+48"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta siatka:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaznaczenie</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pierwszorzędny kolor zaznaczenia:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation>Użycie drugorzędnego koloru zaznaczenia</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugorzędny kolor zaznaczenia:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugorzędne punkty referencyjne:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obramowanie prostokąta zaznaczenia:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wypełnienie prostokąta zaznaczenia:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkty początkowe:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkty końcowe:</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia przyciągania</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Etykieta przyciągania:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia informacji</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomiary i etykiety:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia rysowania</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia przybliżania</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obramowanie okna przybliżania:</translation>
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
@@ -176,7 +175,7 @@ Tło okna:</translatorcomment>
         <location line="-616"/>
         <source>Origin:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pochodzenie:</translation>
+        <translation>Początek układu współrzędnych:</translation>
     </message>
     <message>
         <source>Relative Zero:</source>
@@ -195,7 +194,7 @@ Tło okna:</translatorcomment>
 --file: designer_pl.ts--
 &amp;Meta-siatka:
 Meta-siatka:</translatorcomment>
-        <translation type="unfinished">Siatka:</translation>
+        <translation>Siatka:</translation>
     </message>
     <message>
         <source>Meta Grid:</source>

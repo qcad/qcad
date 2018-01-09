@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Viewport</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rzutnie</translation>
+        <translation>Rzutnie</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -17,7 +16,7 @@
 Podgląd wydruku dla %1
 Podgląd wydruku
 Pokazuje podgląd wydruku</translatorcomment>
-        <translation type="unfinished">Podgląd</translation>
+        <translation>Podgląd</translation>
     </message>
 </context>
 <context>
@@ -28,13 +27,13 @@ Pokazuje podgląd wydruku</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Domyślne dla nowych rysunków</translatorcomment>
-        <translation type="unfinished">Domyślne dla nowych rysunków</translation>
+        <translation>Domyślne dla nowych rysunków</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Layout - rzutnie</translation>
+        <translation>Układ - rzutnie</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -43,13 +42,13 @@ Domyślne dla nowych rysunków</translatorcomment>
 Usuń rozmieszczenie
 Zmień geometrię elementu w formularzu
 Zmień geometrię elementu w rozmieszczeniu</translatorcomment>
-        <translation type="unfinished">Układ</translation>
+        <translation>Układ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rzutnie</translation>
+        <translation>Rzutnie</translation>
     </message>
 </context>
 </TS>

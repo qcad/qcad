@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
         <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Dodaj niestandardowy obiekt</translation>
+        <translation type="unfinished">Dodaj dostosowaną właściwość</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -16,12 +15,12 @@
 --file: qt_pl.ts--
 Nazwa bloku:
 Nazwa warstwy:</translatorcomment>
-        <translation type="unfinished">Nazwa:</translation>
+        <translation>Nazwa:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wartość:</translation>
     </message>
     <message>
         <source>Type:</source>
@@ -38,7 +37,7 @@ Typ linii:
         <location filename="../PropertyEditor.js" line="+1324"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">* Różni *</translation>
+        <translation>*Różne*</translation>
     </message>
     <message>
         <location line="-1131"/>
@@ -47,13 +46,13 @@ Typ linii:
 --file: qt_pl.ts--
 Załadowany dokument:
 Wersja: </translatorcomment>
-        <translation type="unfinished">:</translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">No Selection</translation>
+        <translation>Brak zaznaczenia</translation>
     </message>
     <message>
         <source>Geometry</source>
@@ -66,12 +65,12 @@ Edytuj geometrię obiektu</translatorcomment>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Szczegółowe</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Zależne obiekty</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -81,7 +80,7 @@ Edytuj geometrię obiektu</translatorcomment>
 Niestandardowe..
 Niestandardowy
 Własne filtry</translatorcomment>
-        <translation type="unfinished">Niestandardowy</translation>
+        <translation>Dostosowany</translation>
     </message>
     <message>
         <location line="+166"/>
@@ -90,12 +89,12 @@ Własne filtry</translatorcomment>
 --file: linguist_pl.ts--
 Indeks
 Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
-        <translation type="unfinished">Indeks</translation>
+        <translation>Indeks</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+68"/>
@@ -106,12 +105,12 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
 Sąsiadująco w poziomie
 Czy chcesz zamknąć plik
 %1?</translatorcomment>
-        <translation type="unfinished">Wszystkie</translation>
+        <translation>Wszystkie</translation>
     </message>
     <message>
         <location line="+638"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widżety</translation>
     </message>
     <message>
         <source>Add Custom Property</source>
@@ -121,7 +120,7 @@ Czy chcesz zamknąć plik
     <message>
         <location line="-616"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <source>Left</source>
@@ -204,7 +203,7 @@ Dół - prawo</translatorcomment>
 &amp;Automatycznie
 Automatycznie
 Przyciąganie automatyczne</translatorcomment>
-        <translation type="unfinished">Automatycznie</translation>
+        <translation>Automatycznie</translation>
     </message>
     <message>
         <location line="+128"/>
@@ -240,14 +239,14 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
 --file: designer_pl.ts--
 Edytor właściwości
 Skonfiguruj edytor właściwości</translatorcomment>
-        <translation type="unfinished">Edytor właściwości</translation>
+        <translation>Edytor właściwości</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--</translatorcomment>
-        <translation type="unfinished">Wybrane strony:</translation>
+        <translation>Zaznaczenie:</translation>
     </message>
     <message>
         <source>General</source>
@@ -260,12 +259,12 @@ General Punctuation</translatorcomment>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolor:</translation>
     </message>
     <message>
         <source>Move Selection to a New Layer</source>
@@ -275,28 +274,28 @@ General Punctuation</translatorcomment>
     <message>
         <location line="+104"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+49"/>
         <source>Protected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chroniony:</translation>
     </message>
     <message>
         <location line="-143"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Uchwyt:</translation>
+        <translation>Uchwyt:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

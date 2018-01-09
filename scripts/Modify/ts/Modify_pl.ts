@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Modify</name>
     <message>
         <location filename="../Modify.js" line="+99"/>
         <source>Modification Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narzędzia modyfikacji</translation>
+        <translation>Narzędzia modyfikowania</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show modification tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż narzędzi modyfikacji</translation>
+        <translation>Wyświetla narzędzia modyfikowania</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -21,7 +20,7 @@
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
 &amp;Modyfikuj</translatorcomment>
-        <translation type="unfinished">&amp;Modyfikuj</translation>
+        <translation>&amp;Modyfikowanie</translation>
     </message>
 </context>
 <context>
@@ -29,24 +28,24 @@
     <message>
         <location filename="../ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Proszę wskazać narożnik</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz pierwszy podmiot</translation>
+        <translation>Proszę wskazać pierwszy obiekt</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz drugi podmiot</translation>
+        <translation>Proszę wskazać drugi obiekt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation>Proszę wskazać punkt</translation>
     </message>
 </context>
 <context>
@@ -55,7 +54,7 @@
         <location filename="../Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narzędzie to wymaga zaznaczenia</translation>
+        <translation>To narzędzie wymaga zaznaczenia</translation>
     </message>
 </context>
 </TS>

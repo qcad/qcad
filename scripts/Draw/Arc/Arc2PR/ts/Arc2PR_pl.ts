@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -111,7 +110,7 @@ Rozdzielczość</translatorcomment>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Rysuje łuk przez 2 punkty  i  o danym promieniu</translation>
+        <translation>Rysuje łuk przez 2 punkty i o danym promieniu</translation>
     </message>
 </context>
 </TS>

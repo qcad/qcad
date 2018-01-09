@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -51,17 +50,17 @@ Zrobione
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation>Punkt naroża</translation>
+        <translation>Punkt narożnika</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location filename="../ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Liczba naroży:</translation>
+        <translation>Liczba narożników:</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
@@ -70,12 +69,12 @@ Zrobione
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>Wi&amp;elokąt (środek, naroże)</translation>
+        <translation>Wi&amp;elokąt (środek, narożnik)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Rysuje wielokąt foremny ze środka i przez punkt naroża</translation>
+        <translation>Rysuje wielokąt foremny ze środka i przez punkt narożnika</translation>
     </message>
 </context>
 </TS>

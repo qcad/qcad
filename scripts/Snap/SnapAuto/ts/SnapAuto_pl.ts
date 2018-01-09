@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -26,7 +25,7 @@
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkty centralne</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -51,7 +50,7 @@
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Punkty na elemencie</translation>
+        <translation>Punkty na obiekcie</translation>
     </message>
     <message>
         <location line="+7"/>

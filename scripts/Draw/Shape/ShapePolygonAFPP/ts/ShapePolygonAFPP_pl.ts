@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -11,7 +10,7 @@
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation>Pierwsze naroże</translation>
+        <translation>Pierwszy narożnik</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -21,12 +20,12 @@
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation>Drugie naroże</translation>
+        <translation>Drugi narożnik</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFPPInit.js" line="+2"/>
@@ -36,17 +35,17 @@
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation>Rysuje wielokąt foremny ze środków dwóch przeciwnych boków lub dwóch przeciwnych naroży</translation>
+        <translation>Rysuje wielokąt foremny ze środków dwóch przeciwnych boków lub dwóch przeciwnych narożników</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation>Liczba naroży:</translation>
+        <translation>Liczba narożników:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Corner to Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Od narożnika do narożnika</translation>
     </message>
 </context>
 </TS>

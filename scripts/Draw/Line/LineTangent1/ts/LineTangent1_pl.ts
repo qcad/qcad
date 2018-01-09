@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -7,13 +6,13 @@
         <location filename="../LineTangent1.js" line="+64"/>
         <source>Choose start point of tangent</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz punkt początkowy styczna</translation>
+        <translation>Proszę wskazać punkt początkowy stycznej</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose circle, arc or ellipse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz okrąg, łuk lub elipsy</translation>
+        <translation>Proszę wskazać okrąg, łuk lub elipsę</translation>
     </message>
     <message>
         <location line="+83"/>

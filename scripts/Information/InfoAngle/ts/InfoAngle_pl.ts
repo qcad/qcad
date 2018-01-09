@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>InfoAngle</name>
     <message>
@@ -9,7 +8,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Wskaż pierwszą linie</translatorcomment>
-        <translation type="unfinished">Wskaż pierwszą linie</translation>
+        <translation>Proszę określić pierwszą linię</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -17,7 +16,7 @@ Wskaż pierwszą linie</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Wskaż drugą linie</translatorcomment>
-        <translation type="unfinished">Wskaż drugą linie</translation>
+        <translation>Proszę określić drugą linię</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -27,7 +26,7 @@ Wskaż drugą linie</translatorcomment>
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -36,7 +35,7 @@ Zrobione
 --file: qcadguiqt_pl.ts--
 Wprowadź kąt:
 Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="unfinished">Kąt:</translation>
+        <translation>Kąt:</translation>
     </message>
     <message>
         <location filename="../InfoAngleInit.js" line="+2"/>
@@ -45,7 +44,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
 --file: qcadguiqt_pl.ts--
 &amp;Kąt
 &amp;Kąt pomiędzy dwoma liniami</translatorcomment>
-        <translation type="unfinished">&amp;Kąt</translation>
+        <translation>&amp;Kąt</translation>
     </message>
 </context>
 </TS>

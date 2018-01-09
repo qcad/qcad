@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>PageSettings</name>
     <message>
@@ -9,13 +8,13 @@
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Domyślne dla nowych rysunków</translatorcomment>
-        <translation type="unfinished">Domyślne dla nowych rysunków</translation>
+        <translation>Domyślne dla nowych rysunków</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Drukowanie - Page</translation>
+        <translation>Drukowanie - strona</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -25,7 +24,7 @@ Domyślne dla nowych rysunków</translatorcomment>
 Drukowanie...
 Drukowanie
 Drukowanie zakończone</translatorcomment>
-        <translation type="unfinished">Drukowanie</translation>
+        <translation>Drukowanie</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -35,7 +34,7 @@ Drukowanie zakończone</translatorcomment>
 Strona:
 Strona
 Wycentruj na stronie</translatorcomment>
-        <translation type="unfinished">Strona</translation>
+        <translation>Strona</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -45,13 +44,13 @@ Wycentruj na stronie</translatorcomment>
 Niestandardowe..
 Niestandardowy
 Własne filtry</translatorcomment>
-        <translation type="unfinished">Niestandardowy</translation>
+        <translation>Dostosowany</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Orientacja strony</translation>
+        <translation>Orientacja strony</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -61,7 +60,7 @@ Własne filtry</translatorcomment>
 Portret
 QVGA portret (240x320)
 VGA portret (480x640)</translatorcomment>
-        <translation type="unfinished">Portret</translation>
+        <translation>Pionowo</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -71,7 +70,7 @@ VGA portret (480x640)</translatorcomment>
 &amp;Poziomo
 Pejzaż
 QVGA pejzaż (320x240)</translatorcomment>
-        <translation type="unfinished">Pejzaż</translation>
+        <translation>Poziomo</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -80,13 +79,13 @@ QVGA pejzaż (320x240)</translatorcomment>
 --file: qt_pl.ts--
 Format papieru
 &amp;Papier</translatorcomment>
-        <translation type="unfinished">Papier</translation>
+        <translation>Papier</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rozmiar papieru:</translation>
+        <translation>Rozmiar:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -94,7 +93,7 @@ Format papieru
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Szerokość papieru:</translatorcomment>
-        <translation type="unfinished">Szerokość papieru:</translation>
+        <translation>Szerokość:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -102,38 +101,38 @@ Szerokość papieru:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wysokość papieru:</translatorcomment>
-        <translation type="unfinished">Wysokość papieru:</translation>
+        <translation>Wysokość:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Viewport</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rzutnia</translation>
+        <translation>Rzutnia</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
         <translatorcomment>--ignored colon--
 --file: qcadguiqt_pl.ts--</translatorcomment>
-        <translation type="unfinished">&amp;Skaluj:</translation>
+        <translation>&amp;Podziałka:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przesunięcie X:</translation>
+        <translation>Przesunięcie X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przesunięcie Y:</translation>
+        <translation>Przesunięcie Y:</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Zero-Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zero-Point</translation>
+        <translation>Początek układu</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -142,13 +141,13 @@ Wysokość papieru:</translatorcomment>
 [2300-23FF] Miscellaneous Technical
 [2600-26FF] Miscellaneous Symbols
 [27C0-27EF] Miscellaneous Mathematical Symbols-A</translatorcomment>
-        <translation type="unfinished">Różny</translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show paper borders</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż granice papieru</translation>
+        <translation>Wyświetlanie granic arkusza</translation>
     </message>
 </context>
 </TS>

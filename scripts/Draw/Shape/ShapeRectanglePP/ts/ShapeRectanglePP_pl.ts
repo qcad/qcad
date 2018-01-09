@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -65,7 +64,7 @@ Wskaż drugi wierzchołek</translatorcomment>
     <message>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translation>Rysuje prostokąt z dwóch naroży</translation>
+        <translation>Rysuje prostokąt z dwóch narożników</translation>
     </message>
 </context>
 </TS>

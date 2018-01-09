@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -39,7 +38,7 @@ Nie można uruchomić Qt Assistant (%1)</translatorcomment>
 Niestandardowe..
 Niestandardowy
 Własne filtry</translatorcomment>
-        <translation>Niestandardowy</translation>
+        <translation>Dostosowany</translation>
     </message>
 </context>
 <context>
@@ -57,7 +56,7 @@ Własne filtry</translatorcomment>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Na obiekcie</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -72,7 +71,7 @@ Własne filtry</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>

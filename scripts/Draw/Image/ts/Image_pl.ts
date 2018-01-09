@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -46,7 +45,7 @@ Format:</translatorcomment>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+25"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

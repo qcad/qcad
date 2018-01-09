@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Projection</name>
     <message>
         <location filename="../Projection.js" line="+70"/>
         <source>Projection Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narzędzia projekcyjne</translation>
+        <translation>Narzędzia rzutowania</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show projection tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż narzędzi projekcyjnych</translation>
+        <translation>Wyświetla narzędzia rzutowania</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Projection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Projekcja</translation>
+        <translation>&amp;Rzutowanie</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -28,14 +27,14 @@
 Wskaż punkt odniesienia
 Kopiuje obiekty do schowka z punktem odniesienia
 Wycina obiekty z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia</translation>
+        <translation>Punkt odniesienia</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>
-        <translation type="unfinished">Punkt docelowy</translation>
+        <translation>Punkt docelowy</translation>
     </message>
 </context>
 <context>

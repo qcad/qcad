@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SnapOnEntity</name>
     <message>
@@ -9,7 +8,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Na obiekcie</translatorcomment>
-        <translation type="unfinished">&amp;Na obiekcie</translation>
+        <translation>&amp;Na obiekcie</translation>
     </message>
 </context>
 </TS>

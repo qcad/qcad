@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>FontPreferences</name>
     <message>
         <location filename="../FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Graphics View</translation>
+        <translation>Widok graficzny</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -17,7 +16,7 @@
 Czcionki:
 Czcionki
 Rozmiar czcionki</translatorcomment>
-        <translation type="unfinished">Czcionki</translation>
+        <translation>Czcionki</translation>
     </message>
 </context>
 <context>
@@ -26,19 +25,19 @@ Rozmiar czcionki</translatorcomment>
         <location filename="../PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Font Ruler:</translation>
+        <translation>Czcionka linijki:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Snap Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Snap Font Label:</translation>
+        <translation>Czcionka etykiety przyciągania:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Font Label Info:</translation>
+        <translation>Czcionka etykiety informacji:</translation>
     </message>
 </context>
 </TS>

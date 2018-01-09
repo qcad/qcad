@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Layer</name>
     <message>
         <location filename="../Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Narzędzia warstwy</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetla narzędzia warstw</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -20,37 +19,37 @@
 --file: qcad_pl.ts--
 Wars&amp;twa
 Użyj bieżącej &amp;warstwy</translatorcomment>
-        <translation type="unfinished">Wars&amp;twa</translation>
+        <translation>Wars&amp;twa</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlanie wszystkich warstw</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukrywanie wszystkich warstw</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokowanie wszystkich warstw</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Odblokowywanie wszystkich warstw</translation>
     </message>
 </context>
 <context>
@@ -58,25 +57,25 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
     <message>
         <location filename="../LayerDialog.js" line="+187"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nazwa warstwy jest pusta.</translation>
+        <translation>Nazwa warstwy jest pusta.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Warstwa już istnieje.</translation>
+        <translation>Warstwa już istnieje.</translation>
     </message>
     <message>
         <location filename="../LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Danych warstwy</translation>
+        <translation>Dane warstwy</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -84,7 +83,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Nazwa warstwy:</translatorcomment>
-        <translation type="unfinished">Nazwa warstwy:</translation>
+        <translation>Nazwa warstwy:</translation>
     </message>
     <message>
         <source>Pen</source>
@@ -98,7 +97,7 @@ Otwieranie przerwane</translatorcomment>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrybuty</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -108,19 +107,19 @@ Otwieranie przerwane</translatorcomment>
 Kolor &amp;siatki:
 Kolor siatki:
 Kolor &amp;meta-siatki:</translatorcomment>
-        <translation type="unfinished">Kolor:</translation>
+        <translation>Kolor:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Szerokość linii:</translation>
+        <translation>Szerokość linii:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rodzaj linii:</translation>
+        <translation>Rodzaj linii:</translation>
     </message>
 </context>
 </TS>

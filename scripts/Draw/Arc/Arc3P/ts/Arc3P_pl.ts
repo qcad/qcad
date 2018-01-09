@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Arc3P</name>
     <message>
@@ -10,13 +9,13 @@
 Punkt początkowy (y):
 Punkt początkowy (y)
 Punkt początkowy (x):</translatorcomment>
-        <translation type="unfinished">Punkt startowy</translation>
+        <translation>Punkt początkowy</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Point on arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Punkt na łuku</translation>
+        <translation>Punkt na łuku</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -25,7 +24,7 @@ Punkt początkowy (x):</translatorcomment>
 Punkt końcowy (x):
 Punkt końcowy (x)
 Punkt końcowy (y):</translatorcomment>
-        <translation type="unfinished">Punkt końcowy</translation>
+        <translation>Punkt końcowy</translation>
     </message>
     <message>
         <location filename="../Arc3PInit.js" line="+2"/>
@@ -33,13 +32,13 @@ Punkt końcowy (y):</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;3 Punkty</translatorcomment>
-        <translation type="unfinished">&amp;3 Punkty</translation>
+        <translation>&amp;3 punkty</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Narysuj łuk z 3 punktów</translation>
+        <translation>Rysuje łuk przez 3 punkty</translation>
     </message>
 </context>
 </TS>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -7,13 +6,13 @@
         <location filename="../LineTangent2.js" line="+70"/>
         <source>Choose first circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę wybrać pierwszy okrąg lub łuk</translation>
+        <translation>Proszę wskazać pierwszy okrąg lub łuk</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę wybrać drugi okrąg lub łuk</translation>
+        <translation>Proszę wskazać drugi okrąg lub łuk</translation>
     </message>
     <message>
         <location line="+140"/>

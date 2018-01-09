@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -11,7 +10,7 @@
     <message>
         <location line="+5"/>
         <source>Show misc tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetla różne narzędzia</translation>
     </message>
     <message>
         <location line="+17"/>

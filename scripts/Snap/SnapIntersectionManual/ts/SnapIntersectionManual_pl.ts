@@ -1,33 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>SnapIntersectionManual</name>
     <message>
         <location filename="../SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Instrukcja Intersection</translation>
+        <translation>Przecięcie &amp;ręcznie</translation>
     </message>
     <message>
         <location filename="../SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Przyciąganie</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Przecięcie ręczne</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Pierwszy obiekt</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugi obiekt</translation>
     </message>
 </context>
 </TS>

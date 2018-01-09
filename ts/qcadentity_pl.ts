@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>REntity</name>
     <message>
@@ -17,7 +16,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>Wyśrodkuj</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -252,7 +251,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Łączna długość</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -268,13 +267,13 @@
 Obszar wieloboczny
 Obszar &amp;wieloboczny
 Mierzy obszar wieloboku</translatorcomment>
-        <translation>Obszar</translation>
+        <translation>Pole powierzchni</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Łączne pole powierzchni</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
@@ -295,7 +294,7 @@ Mierzy obszar wieloboku</translatorcomment>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej:
 Wskaż położenie linii wymiarowej</translatorcomment>
-        <translation>Linia wymiaru</translation>
+        <translation>Linia wymiarowa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -311,7 +310,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translatorcomment>--google--
 Punkt 1 rozszerzenia|X
 Punkt 1 rozszerzenia|Y</translatorcomment>
-        <translation>Punkt Extension 1</translation>
+        <translation>Punkt linii pomocniczej 1</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -327,35 +326,35 @@ Punkt 1 rozszerzenia|Y</translatorcomment>
         <translatorcomment>--google--
 Punkt 2 rozszerzenia|X
 Punkt 2 rozszerzenia|Y</translatorcomment>
-        <translation>Punkt Extension 2</translation>
+        <translation>Punkt linii pomocniczej 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-18"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>Linia 1 Początek</translation>
+        <translation>Początek linii 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>Linia 1 End</translation>
+        <translation>Koniec linii 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>Linia 2 Początek</translation>
+        <translation>Początek linii 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>Linia 2 End</translation>
+        <translation>Koniec linii 2</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -364,7 +363,7 @@ Punkt 2 rozszerzenia|Y</translatorcomment>
         <source>Dimension Arc</source>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej łuku</translatorcomment>
-        <translation>Arc Wymiar</translation>
+        <translation>Wymiar łuku</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -375,7 +374,7 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
         <location line="+1"/>
         <source>Chord Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Punkt Chord</translation>
+        <translation>Punkt cięciwy</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -383,7 +382,7 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
         <location line="+1"/>
         <source>Far Chord Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Far Punkt Chord</translation>
+        <translation>Odległy punkt cięciwy</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -396,7 +395,7 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
 Wskaż początek pierwszej linii rozszerzenia
 Wskaż początek drugiej linii rozszerzenia
 &amp;Usuń oryginał</translatorcomment>
-        <translation>Pochodzenie</translation>
+        <translation>Początek układu współrzędnych</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -417,13 +416,13 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="+1"/>
         <source>Leader End Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Punkt końcowy Leader</translation>
+        <translation>Punkt końcowy odnośnika</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+2"/>
         <source>Dimension Angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Kąt wymiar</translation>
+        <translation>Kąt wymiaru</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
@@ -440,13 +439,13 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="-1"/>
         <source>Upper Limit</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Górna granica</translation>
+        <translation>Górna odchyłka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dolna granica</translation>
+        <translation>Dolna odchyłka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -454,7 +453,7 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="+1"/>
         <source>Definition Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Punkt Definicja</translation>
+        <translation>Punkt definicji</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -462,12 +461,12 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="+1"/>
         <source>Text Position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Pozycja tekstu</translation>
+        <translation>Położenie tekstu</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>Etykieta auto</translation>
+        <translation>Automatyczna etykieta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -477,17 +476,17 @@ Wskaż początek drugiej linii rozszerzenia
     <message>
         <location line="+1"/>
         <source>Linear Factor</source>
-        <translation>Powiększenie</translation>
+        <translation type="unfinished">Współczynnik liniowy</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nazwa bloku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Etykieta pozycji auto</translation>
+        <translation>Położenie automatycznej etykiety</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
@@ -497,7 +496,7 @@ Wskaż początek drugiej linii rozszerzenia
         <translatorcomment>--google--
 Punkt główny|X
 Punkt główny|Y</translatorcomment>
-        <translation>Głównym punktem</translation>
+        <translation>Główny punkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -507,12 +506,12 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation>Kliknij parametr</translation>
+        <translation>Parametr początkowy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation>Parametr End</translation>
+        <translation>Parametr końcowy</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -555,7 +554,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Z obiektu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -570,12 +569,12 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+192"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tak</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
@@ -620,13 +619,13 @@ Punkt główny|Y</translatorcomment>
         <location line="+2"/>
         <source>Width Factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Szerokość Factor</translation>
+        <translation>Współczynnik szerokości</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wysokość Factor</translation>
+        <translation>Współczynnik wysokości</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -641,7 +640,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
@@ -651,7 +650,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
@@ -672,17 +671,17 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -739,7 +738,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-10"/>
         <source>Closed Periodic</source>
-        <translation></translation>
+        <translation/>
     </message>
     <message>
         <location line="+1"/>
@@ -755,7 +754,7 @@ Punkt główny|Y</translatorcomment>
 Wskaż pierwszy punkt kontrolny
 Wskaż następny punkt kontrolny lub [%1]
 Wskaż następny punkt kontrolny</translatorcomment>
-        <translation>Control Point</translation>
+        <translation>Punkt kontrolny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -810,7 +809,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
     </message>
     <message>
         <source>Bold</source>
-        <translation type="vanished">Pogrubiony</translation>
+        <translation type="vanished">Pogrubienie</translation>
     </message>
     <message>
         <source>Italic</source>
@@ -818,7 +817,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation type="vanished">Odstęp między liniami</translation>
+        <translation type="vanished">Odstęp między wierszami</translation>
     </message>
     <message>
         <source>Alignment</source>
@@ -830,7 +829,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
     </message>
     <message>
         <source>Vertical</source>
-        <translation type="vanished">Pionowa</translation>
+        <translation type="vanished">Pionowo</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
@@ -851,7 +850,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation>Punktu bazowego</translation>
+        <translation>Punkt bazowy</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -877,12 +876,12 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>

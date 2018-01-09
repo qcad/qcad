@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -13,7 +12,7 @@
         <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Następny wierzchołek</translation>
+        <translation>Następny wierzchołek</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -23,7 +22,7 @@
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location filename="../LeaderInit.js" line="+2"/>
@@ -37,12 +36,12 @@ Zrobione
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Remis lidera (sekwencja linia ze strzałką)</translation>
+        <translation>Rysuje odnośnik (linię łamaną ze strzałką)</translation>
     </message>
     <message>
         <location filename="../Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation type="unfinished"></translation>
+        <translation>Cofnij ostatni segment</translation>
     </message>
     <message>
         <location line="+14"/>

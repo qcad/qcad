@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LibraryBrowser</name>
     <message>
@@ -82,7 +81,7 @@ Tytuł:</translatorcomment>
 --file: designer_pl.ts--
 Własne widżety
 Zastępcze widżety</translatorcomment>
-        <translation type="unfinished">Widżety</translation>
+        <translation>Widżety</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -92,7 +91,7 @@ Zastępcze widżety</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Przeglądarka bibliotek</translatorcomment>
-        <translation type="unfinished">Przeglądarka bibliotek</translation>
+        <translation>Przeglądarka kolekcji</translation>
     </message>
     <message>
         <location line="-1147"/>
@@ -101,7 +100,7 @@ Przeglądarka bibliotek</translatorcomment>
 XX ikona wybrana wyłączona
 Widok z ikonkami
 &amp;Ikonka:</translatorcomment>
-        <translation type="unfinished">Ikona</translation>
+        <translation>Ikony</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -110,13 +109,13 @@ Widok z ikonkami
 Lista warstw
 Lista bloków
 Atrybuty filtru bieżącej dokumentacji (lista oddzielona przecinkami):</translatorcomment>
-        <translation type="unfinished">Lista</translation>
+        <translation>Lista</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Choose Source Folder</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz folder źródłowy</translation>
+        <translation>Wybór katalogu źródłowego</translation>
     </message>
     <message>
         <location line="+685"/>
@@ -124,13 +123,13 @@ Atrybuty filtru bieżącej dokumentacji (lista oddzielona przecinkami):</transla
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
 Strona %1 z %2</translatorcomment>
-        <translation type="unfinished">Strona %1 z %2</translation>
+        <translation>Strona %1 z %2</translation>
     </message>
     <message>
         <location line="+237"/>
         <source>Updating icons...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Aktualizowanie ikony ...</translation>
+        <translation>Uaktualnianie ikon...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -149,8 +148,8 @@ Drukowanie przerwane</translatorcomment>
 --file: qtconfig_pl.ts--
 Niepoprawny plik UI: brak głównego elementu &lt;ui&gt;.
 Niepoprawny plik UI: brak głównego elementu &lt;ui&gt;
-&apos;%1&apos; nie jest poprawnym profilem: %2</translatorcomment>
-        <translation type="unfinished">Plik:</translation>
+'%1' nie jest poprawnym profilem: %2</translatorcomment>
+        <translation>Plik:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -159,13 +158,13 @@ Niepoprawny plik UI: brak głównego elementu &lt;ui&gt;
 --file: qt_pl.ts--
 Dodaj do katalogu:
 Wirtualny katalog:</translatorcomment>
-        <translation type="unfinished">Katalog:</translation>
+        <translation>Katalog:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>License:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Licencja:</translation>
+        <translation>Licencja:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -177,19 +176,19 @@ Wirtualny katalog:</translatorcomment>
         <location line="+3"/>
         <source>Creator:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Twórca:</translation>
+        <translation>Twórca:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Updating library index:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Aktualizowanie indeksu biblioteki:</translation>
+        <translation>Uaktualnianie indeksu kolekcji:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>DB error</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Błąd DB</translation>
+        <translation>Błąd bazy danych</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -199,17 +198,21 @@ Database error: %2
 Database file: %3
 Library browser will not be available.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">LibraryBrowser Plugin: nie można połączyć się z DB. Błąd kierowcy: Błąd bazy danych: Plik bazy danych: przeglądarka Biblioteka nie będzie dostępna.</translation>
+        <translation>Wtyczka LibraryBrowser: nie można połączyć się z bazą danych.
+Błąd sterownika: %1
+Błąd bazy danych: %2
+Plik bazy danych: %3
+Przeglądarka kolekcji nie będzie dostępna.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Source removed from part library: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Usunięto źródło z kolekcji części: %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+393"/>
@@ -217,7 +220,7 @@ Library browser will not be available.</source>
         <translatorcomment>--google--
 &amp;Wstaw blok
 &amp;Wstaw obiekt z biblioteki</translatorcomment>
-        <translation type="unfinished">Wstawić</translation>
+        <translation>&amp;Wstaw</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -229,7 +232,7 @@ Library browser will not be available.</source>
         <location line="+8"/>
         <source>Open &amp;SVG File...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Otwórz plik SVG ...</translation>
+        <translation>Otwórz plik &amp;SVG...</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -237,20 +240,20 @@ Library browser will not be available.</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
 &amp;Otwórz...</translatorcomment>
-        <translation type="unfinished">&amp;Otwórz...</translation>
+        <translation>&amp;Otwórz...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Edit...</source>
         <translatorcomment>--ignored ...--
 --file: linguist_pl.ts--</translatorcomment>
-        <translation type="unfinished">&amp;Edycja...</translation>
+        <translation>&amp;Edytuj...</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>File Browser</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przeglądarka plików</translation>
+        <translation>Przeglądarka plików</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -262,31 +265,31 @@ Library browser will not be available.</source>
         <location line="+28"/>
         <source>&amp;Remove from Favorites</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Usuń z ulubionych</translation>
+        <translation>&amp;Usuń z ulubionych</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Add to Favorites</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Dodaj do ulubionych</translation>
+        <translation>&amp;Dodaj do ulubionych</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>&amp;Regenerate Icon</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Regeneruj Ikona</translation>
+        <translation>U&amp;aktualnij ikonę</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Regenerate Icons</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Regeneruj Ikony</translation>
+        <translation>U&amp;aktualnij ikony</translation>
     </message>
     <message>
         <location filename="../LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przeglądarka Library</translation>
+        <translation>Przeglądarka &amp;kolekcji</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
@@ -298,38 +301,38 @@ Library browser will not be available.</source>
         <location line="+6"/>
         <source>Update search index on startup</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Aktualizacja indeksu wyszukiwania na starcie</translation>
+        <translation>Uaktualnianie indeksu wyszukiwania podczas uruchamiania</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Opcje wyświetlania</translation>
+        <translation>Opcje wyświetlania</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Icon Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rozmiar ikon:</translation>
+        <translation>Rozmiar ikon:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>View Mode:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Tryb wyświetlania:</translation>
+        <translation>Tryb wyświetlania:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Liczba pozycji wykazanych w wynikach wyszukiwania:</translation>
+        <translation>Liczba pozycji wykazanych w wynikach wyszukiwania:</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Library Sources</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Źródła Biblioteka</translation>
+        <translation>Źródła kolekcji</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -337,7 +340,7 @@ shown in search results:</source>
         <translatorcomment>--exact match--
 --file: assistant_pl.ts--
 Dodaj...</translatorcomment>
-        <translation type="unfinished">Dodaj...</translation>
+        <translation>Dodaj...</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -346,7 +349,7 @@ Dodaj...</translatorcomment>
 --file: qtconfig_pl.ts--
 Usuń blok
 &amp;Usuń blok</translatorcomment>
-        <translation type="unfinished">Usuń</translation>
+        <translation>Usuń</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -355,7 +358,7 @@ Usuń blok
 --file: qtconfig_pl.ts--
 Rozbij bloki oraz inne grupy obiektów
 &amp;Powiel podłogę</translatorcomment>
-        <translation type="unfinished">W górę</translation>
+        <translation>W górę</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -365,7 +368,7 @@ Rozbij bloki oraz inne grupy obiektów
 Pobieranie informacji o dokumentacji...
 Pobieranie informacji o dokumentacji
 Anulowano pobieranie.</translatorcomment>
-        <translation type="unfinished">W dół</translation>
+        <translation>W dół</translation>
     </message>
 </context>
 <context>
@@ -374,7 +377,7 @@ Anulowano pobieranie.</translatorcomment>
         <location filename="../LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">System plików</translation>
+        <translation>System plików</translation>
     </message>
     <message>
         <source>Tags</source>
@@ -387,7 +390,7 @@ Tags</translatorcomment>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyszukiwanie</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -396,7 +399,7 @@ Tags</translatorcomment>
 --file: assistant_pl.ts--
 Wy&amp;szukaj:
 Wyszukaj:</translatorcomment>
-        <translation type="unfinished">Wyszukaj:</translation>
+        <translation>Wyszukanie:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -405,7 +408,7 @@ Wyszukaj:</translatorcomment>
 --file: qt_pl.ts--
 Wyczyść tekst
 Wyczyść &amp;menu</translatorcomment>
-        <translation type="unfinished">Wyczyść</translation>
+        <translation>Wyczyść</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -415,13 +418,13 @@ Wyczyść &amp;menu</translatorcomment>
 Z&amp;najdź w tekście...
 Z&amp;najdź w tekście
 Znajdź w tekście...</translatorcomment>
-        <translation type="unfinished">Znajdź</translation>
+        <translation>Wyszukaj</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Reset tag selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Resetowanie wybór znacznika</translation>
+        <translation>Wyczyść wybór znacznika</translation>
     </message>
     <message>
         <source>about:blank</source>
@@ -435,18 +438,18 @@ Znajdź w tekście...</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Ulubione</translatorcomment>
-        <translation type="unfinished">Ulubione</translation>
+        <translation>Ulubione</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Wstaw zaznaczony obiekt do rysunku</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update DB from file system</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Aktualizacja DB z systemem plików</translation>
+        <translation>Uaktualnij bazę danych z systemu plików</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -455,7 +458,7 @@ Ulubione</translatorcomment>
 --file: linguist_pl.ts--
 Poziomy
 Pionowy</translatorcomment>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
 </context>
 </TS>

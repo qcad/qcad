@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -6,12 +5,12 @@
     <message>
         <location filename="../SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished"></translation>
+        <translation>Proszę wskazać pierwszy punkt, od którego zostanie zmierzona odległość</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugi punkt</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManualInit.js" line="+2"/>
@@ -21,7 +20,7 @@
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Przyciąga do odległości pomiędzy dwoma punktami</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManual.ui" line="+17"/>
@@ -36,12 +35,12 @@
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Wartość procentowa</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation type="unfinished"></translation>
+        <translation>Wartość ułamkowa</translation>
     </message>
 </context>
 </TS>

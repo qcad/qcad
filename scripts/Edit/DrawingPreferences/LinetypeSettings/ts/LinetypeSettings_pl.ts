@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LinetypeSettings</name>
     <message>
@@ -9,14 +8,14 @@
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
 Domyślne dla nowych rysunków</translatorcomment>
-        <translation type="unfinished">Domyślne dla nowych rysunków</translation>
+        <translation>Domyślne dla nowych rysunków</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rodzaj linii</translation>
+        <translation>Rodzaj linii</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -25,13 +24,13 @@ Domyślne dla nowych rysunków</translatorcomment>
 Ogólne ustawienia aplikacji
 [2000-206F] General Punctuation
 General Punctuation</translatorcomment>
-        <translation type="unfinished">Ogólny</translation>
+        <translation>Ogólne</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Globalny Rodzaj linii Skala:</translation>
+        <translation type="unfinished">Ogólna skala rodzaju linii:</translation>
     </message>
 </context>
 </TS>

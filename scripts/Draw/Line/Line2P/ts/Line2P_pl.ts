@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -29,7 +28,7 @@ Wskaż następny punkt wieloboku</translatorcomment>
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location filename="../Line2P.ui" line="+23"/>
@@ -42,7 +41,7 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
     <message>
         <location line="+7"/>
         <source>,, C</source>
-        <translation type="unfinished"></translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -53,7 +52,7 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished"></translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -63,7 +62,7 @@ Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych ob
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished"></translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+20"/>

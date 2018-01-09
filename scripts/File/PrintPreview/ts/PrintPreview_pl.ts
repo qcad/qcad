@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -35,7 +34,7 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
         <location filename="../PrintPreview.js" line="+183"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przeciągnij, aby przesunąć papier</translation>
+        <translation>Proszę przeciągnąć, aby przesunąć papier</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -45,7 +44,7 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location line="+404"/>
@@ -65,18 +64,18 @@ Wyeksportuj do PDF</translatorcomment>
         <location line="+5"/>
         <source>Export complete: %1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Zakończono eksportowanie: %1</translation>
+        <translation>Wyeksportowano: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie udało się wyeksportować (nie można otworzyć pliku do zapisania): %1</translation>
     </message>
     <message>
         <location filename="../PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zamknij podgląd wydruku</translation>
+        <translation>Zamknij podgląd wydruku</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -85,12 +84,12 @@ Wyeksportuj do PDF</translatorcomment>
 --file: linguist_pl.ts--
 Wy&amp;drukuj...
 Wydrukuj...</translatorcomment>
-        <translation>Wydrukuj...</translation>
+        <translation>Drukuj...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksportuj jako PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -110,18 +109,18 @@ Skala:</translatorcomment>
         <location line="+18"/>
         <source>Move Paper Position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przesuń położenie papieru</translation>
+        <translation>Przesuń położenie arkusza</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Auto dopasowanie rysunku do strony (s)</translation>
+        <translation>Dopasuj automatycznie rysunek do strony</translation>
     </message>
     <message>
         <location line="+76"/>
         <source>Auto zoom to page</source>
-        <translation type="unfinished"></translation>
+        <translation>Przybliż automatycznie do strony</translation>
     </message>
     <message>
         <source>Auto fit pages to drawing</source>
@@ -132,7 +131,7 @@ Skala:</translatorcomment>
         <location line="-65"/>
         <source>Auto Center</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Auto Center</translation>
+        <translation>Wyśrodkuj automatycznie</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -179,7 +178,7 @@ Pokaż pojedynczą stronę</translatorcomment>
         <location line="+45"/>
         <source>Full Color Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Full Color Mode</translation>
+        <translation>Przełącz tryb pełnej palety barw</translation>
     </message>
     <message>
         <source>ColorMode</source>
@@ -190,32 +189,32 @@ Pokaż pojedynczą stronę</translatorcomment>
         <location line="+23"/>
         <source>Grayscale Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Skala szarości</translation>
+        <translation>Przełącz tryb skali szarości</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
         <translatorcomment>--google--
 Przełącz tryb czarno-biały</translatorcomment>
-        <translation type="unfinished">Black / White Tryb</translation>
+        <translation>Przełącz tryb czarno / biały</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż Obramowanie papieru</translation>
+        <translation>Wyświetlaj krawędzie arkusza</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wydrukuj Znaki obcinania</translation>
+        <translation>Drukuj znaki obcinania</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż więcej opcji</translation>
+        <translation type="unfinished">Wyświetl więcej opcji</translation>
     </message>
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>
@@ -223,7 +222,7 @@ Przełącz tryb czarno-biały</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Podgląd wydruku</translatorcomment>
-        <translation type="unfinished">&amp;Podgląd wydruku</translation>
+        <translation>&amp;Podgląd wydruku</translation>
     </message>
     <message>
         <location line="+6"/>

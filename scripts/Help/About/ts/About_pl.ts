@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -19,13 +18,13 @@
     </message>
     <message>
         <location line="+19"/>
-        <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <source>This means that everyone can &lt;a href='%1'&gt;get involved&lt;/a&gt;!</source>
+        <translation>Oznacza to, że każdy może &lt;a href='%1'&gt;uczestniczyć w tworzeniu programu&lt;/a&gt;!</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program jest udostępniony w stanie takim, JAKIM JEST, BEZ JAKICHKOLWIEK GWARANCJI, WŁĄCZAJĄC W TO GWARANCJĘ ZAPROJEKTOWANIA, ZGODNOŚCI Z PRZEZNACZENIEM I PRZYDATNOŚCI DO OKREŚLONEGO CELU.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -106,7 +105,7 @@
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation>%1 jest oparty na QCAD, wolne (otwarto-źródłowe) oprogramowanie.</translation>
+        <translation>%1 jest oparty na QCAD, wolnym (otwarto-źródłowym) oprogramowaniu.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -115,18 +114,18 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="unfinished"></translation>
+        <source>Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).</source>
+        <translation>Wtyczki i dodatki skryptów są przedmiotem odpowiednich im licencji (proszę sprawdzić kartę „Wtyczki”)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Wszystkie marki lub nazwy produktów są znakami towarowymi lub zarejestrowanymi znakami towarowymi i należą do ich właścicieli.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fragmenty tego oprogramowania © 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -136,12 +135,12 @@
     <message>
         <location line="+93"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywna</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation>Nieaktywny (ponowne uruchomienie)</translation>
+        <translation>Nieaktywna (wymagane ponowne uruchomienie)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -159,7 +158,7 @@
         <translation>Błąd:</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+36"/>
         <source>Script Add-Ons</source>
         <translation>Dodatki skryptów</translation>
     </message>
@@ -195,7 +194,7 @@
         <translation>Tłumaczenia</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+14"/>
         <source>Templates</source>
         <translation>Szablony</translation>
     </message>

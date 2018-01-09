@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -53,7 +52,7 @@ Rozdzielczość:</translatorcomment>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Center Left Linia P1 - P2</translation>
+        <translation>Środek po lewej stronie linii P1 - P2</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -68,7 +67,7 @@ Rozdzielczość</translatorcomment>
         <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Right Center linii P1 - P2</translation>
+        <translation>Środek po prawej stronie linii P1 - P2</translation>
     </message>
     <message>
         <location filename="../Circle2PRInit.js" line="+2"/>

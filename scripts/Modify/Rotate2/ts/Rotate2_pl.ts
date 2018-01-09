@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Rotate2</name>
     <message>
         <location filename="../Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ośrodek podstawowej rotacji</translation>
+        <translation>Środek głównego obrotu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Centrum wtórnego obrotu</translation>
+        <translation>Środek wtórnego obrotu</translation>
     </message>
     <message>
         <location filename="../Rotate2Init.js" line="+2"/>
@@ -21,22 +20,22 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Obróć &amp;dwa</translatorcomment>
-        <translation type="unfinished">Obróć &amp;dwa</translation>
+        <translation>Obróć &amp;dwukrotnie</translation>
     </message>
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished">Główny Angle:</translation>
+        <translation>Główny kąt:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished">Secondary Angle:</translation>
+        <translation>Wtórny kąt</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished">Kopie:</translation>
+        <translation>Liczba kopii:</translation>
     </message>
 </context>
 <context>
@@ -47,7 +46,7 @@ Obróć &amp;dwa</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Opcje obrotów podwójnych</translatorcomment>
-        <translation type="unfinished">Opcje obrotów podwójnych</translation>
+        <translation>Opcje dwukrotnego obrotu</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -56,7 +55,7 @@ Opcje obrotów podwójnych</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Liczba kopii
 Wprowadź liczbę kopii</translatorcomment>
-        <translation type="unfinished">Liczba kopii</translation>
+        <translation>Liczba kopii</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -64,7 +63,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Usuń oryginał</translatorcomment>
-        <translation type="unfinished">&amp;Usuń oryginał</translation>
+        <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -72,7 +71,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Zachowaj oryginał</translatorcomment>
-        <translation type="unfinished">&amp;Zachowaj oryginał</translation>
+        <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -81,7 +80,7 @@ Wprowadź liczbę kopii</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Kopie &amp;wielokrotne
 Kopie &amp;wielokrotne:</translatorcomment>
-        <translation type="unfinished">Kopie &amp;wielokrotne</translation>
+        <translation>&amp;Wielokrotne skopiowanie</translation>
     </message>
     <message>
         <location line="+94"/>
@@ -89,7 +88,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Kąt (&amp;a):</translatorcomment>
-        <translation type="unfinished">Kąt (&amp;a):</translation>
+        <translation>Kąt (&amp;a):</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -97,13 +96,13 @@ Kąt (&amp;a):</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Kąt (&amp;b):</translatorcomment>
-        <translation type="unfinished">Kąt (&amp;b):</translation>
+        <translation>Kąt (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>
+        <translation>Użycie aktualnej warstwy i &amp;atrybutów</translation>
     </message>
 </context>
 <context>

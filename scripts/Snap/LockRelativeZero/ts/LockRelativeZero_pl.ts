@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>LockRelativeZero</name>
     <message>
@@ -8,7 +7,7 @@
         <source>&amp;Lock Relative Zero</source>
         <translatorcomment>--google--
 (Od/Za)&amp;blokuj zero względne</translatorcomment>
-        <translation type="unfinished">Blokada krewny Zero</translation>
+        <translation>Za&amp;blokuj początek układu względnego</translation>
     </message>
 </context>
 </TS>

@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>InfoArea</name>
     <message>
         <location filename="../InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ustaw następny róg wielokąta</translation>
+        <translation>Proszę ustalić następny narożnik wieloboku</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -23,14 +22,14 @@ Zrobione
         <location line="+138"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Polygon area:</translation>
+        <translation>Pole wieloboku:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
         <translatorcomment>--google--
 Obwód: %1</translatorcomment>
-        <translation type="unfinished">obwód:</translation>
+        <translation>obwód:</translation>
     </message>
     <message>
         <location filename="../InfoArea.ui" line="+17"/>
@@ -48,7 +47,7 @@ Obwód: %1</translatorcomment>
         <location filename="../InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Obszar wielokątne</translation>
+        <translation>Pole wie&amp;loboku</translation>
     </message>
 </context>
 </TS>

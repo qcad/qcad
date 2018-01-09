@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>Reverse</name>
     <message>
         <location filename="../ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Odwracać</translation>
+        <translation>О&amp;dwróć</translation>
     </message>
 </context>
 </TS>

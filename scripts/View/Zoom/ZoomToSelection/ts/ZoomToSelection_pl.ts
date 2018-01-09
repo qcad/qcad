@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -15,7 +14,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Zoom wg &amp;wyboru</translatorcomment>
-        <translation>Przybliż do &amp;zaznaczenia</translation>
+        <translation>Przybliż &amp;zaznaczenie</translation>
     </message>
 </context>
 </TS>

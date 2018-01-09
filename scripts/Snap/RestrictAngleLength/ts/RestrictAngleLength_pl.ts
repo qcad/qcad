@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -12,7 +11,7 @@
         <location line="+20"/>
         <location line="+47"/>
         <source>Base:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wartość początkowa:</translation>
     </message>
     <message>
         <location line="-20"/>
