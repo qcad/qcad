@@ -130,7 +130,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     }
 
     view.clear();
-    view.setPrinting(true);
+    view.setExporting(true);
 
     if (properties["regen"]!==false) {
         scene.regenerate();

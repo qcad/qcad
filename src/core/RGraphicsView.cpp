@@ -29,6 +29,7 @@
 
 
 RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
+      exporting(false),
       printing(false),
       printPreview(false),
       printPointSize(1.0, 1.0),
@@ -916,6 +917,18 @@ int RGraphicsView::getMargin() {
     return margin;
 }
 
+void RGraphicsView::setExporting(bool on) {
+    exporting = on;
+}
+
+bool RGraphicsView::isExporting() const {
+    return exporting;
+}
+
+bool RGraphicsView::isPrintingOrExporting() const {
+    return isPrinting() || isExporting();
+}
+
 void RGraphicsView::setPrinting(bool on) {
     printing = on;
 }
@@ -976,13 +989,13 @@ bool RGraphicsView::isPathVisible(const RPainterPath &path) const {
 
     if (featureSize>RS::PointTolerance) {
         // paths feature size is too small to be displayed (display real text):
-        if (!isPrinting() && featureSizePx<=textHeightThreshold) {
+        if (!isPrintingOrExporting() && featureSizePx<=textHeightThreshold) {
             return false;
         }
     }
     else if (featureSize<-RS::PointTolerance) {
         // paths feature size is too large to be displayed (bounding box):
-        if (isPrinting() || featureSizePx>textHeightThreshold) {
+        if (isPrintingOrExporting() || featureSizePx>textHeightThreshold) {
             return false;
         }
     }

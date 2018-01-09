@@ -479,7 +479,7 @@ void RGraphicsViewImage::paintGridLine(const RLine& ucsPosition) {
  * Paints the absolute zero point (origin).
  */
 void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
-    if (!doPaintOrigin || isPrinting()) {
+    if (!doPaintOrigin || isPrintingOrExporting()) {
         return;
     }
 
@@ -556,7 +556,7 @@ void RGraphicsViewImage::paintCursor(QPaintDevice& device) {
 }
 
 void RGraphicsViewImage::paintRelativeZero(QPaintDevice& device) {
-    if (!doPaintOrigin || isPrinting()) {
+    if (!doPaintOrigin || isPrintingOrExporting()) {
         return;
     }
 
@@ -770,7 +770,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
 
     //RDebug::startTimer();
 
-    if (isPrinting()) {
+    if (isPrintingOrExporting()) {
         clipBox = RBox();
     }
     else {
@@ -793,7 +793,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
 }
 
 void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool preview) {
-    if (!preview && !isPrinting() && !isSelected && getDocument()->isSelected(id)) {
+    if (!preview && !isPrintingOrExporting() && !isSelected && getDocument()->isSelected(id)) {
         static QMutex m;
         m.lock();
         selectedIds.insert(id);
@@ -853,7 +853,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
 
         // ideal pixel size for rendering arc at current zoom level:
         double ps = mapDistanceFromView(1.0);
-        if (isPrinting()) {
+        if (isPrintingOrExporting()) {
             ps = getScene()->getPixelSizeHint();
         }
 
@@ -890,7 +890,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         RGraphicsSceneDrawable drawable = i.next();
 
         // drawable is not plottable (from layer for which plottable is off):
-        if (drawable.getNoPlot() && (isPrinting() /*|| isPrintPreview()*/)) {
+        if (drawable.getNoPlot() && (isPrintingOrExporting() /*|| isPrintPreview()*/)) {
             continue;
         }
 
@@ -935,7 +935,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
 
         // additional bounding box check for painter paths that are
         // part of one block reference entity:
-        if (!isPrinting() && !clipBox.intersects(pathBB)) {
+        if (!isPrintingOrExporting() && !clipBox.intersects(pathBB)) {
             continue;
         }
 
@@ -957,7 +957,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
                 // use width of path pen
                 pen.setWidthF(pen.widthF() / getFactor());
             }
-            else if (isPrinting()) {
+            else if (isPrintingOrExporting()) {
                 if (hairlineMode) {
                     //pen.setWidthF(0.05 / drawingScale);
                     pen.setWidthF(0.0);
@@ -1004,7 +1004,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         applyMinimumLineweight(pen);
 
         // highlighted:
-        if (!isPrinting() && path.isHighlighted()) {
+        if (!isPrintingOrExporting() && path.isHighlighted()) {
             if (pen.style() != Qt::NoPen) {
                 pen.setColor(RColor::getHighlighted(pen.color(), bgColorLightness, 100));
             }
@@ -1023,7 +1023,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         painter->setBrush(brush);
         painter->setPen(pen);
 
-        if (isPrinting() /*|| clipBox.contains(pathBB)*/) {
+        if (isPrintingOrExporting() /*|| clipBox.contains(pathBB)*/) {
             if (brush.style() != Qt::NoBrush) {
                 painter->fillPath(path, brush);
             }
@@ -1132,7 +1132,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             int pMode = getDocument()->getKnownVariable(RS::PDMODE, 0).toInt();
 
             // FS#481: for printing, point size does not depend on current viewing factor:
-            if (isPrinting() || isPrintPreview()) {
+            if (isPrintingOrExporting() || isPrintPreview()) {
                 pMode = 0;
             }
             else {
@@ -1236,7 +1236,7 @@ void RGraphicsViewImage::applyColorMode(QPen& pen) {
     switch (colorMode) {
     case RGraphicsView::BlackWhite:
         // dark background: everything white:
-        if (bgColorLightness < 64 && !isPrinting()) {
+        if (bgColorLightness < 64 && !isPrintingOrExporting()) {
             if (pen.style() != Qt::NoPen) {
                 pen.setColor(Qt::white);
             }
@@ -1302,7 +1302,7 @@ double RGraphicsViewImage::getPointSize(double pSize) {
 
 void RGraphicsViewImage::drawDot(QPainter* painter, QPointF pt) {
     qreal r;
-    if (isPrinting() || isPrintPreview()) {
+    if (isPrintingOrExporting() || isPrintPreview()) {
         r = mapDistanceFromView(1.0);
     } else {
         r = mapDistanceFromView(1.5);
@@ -1449,7 +1449,7 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
     }
 #endif
 
-    if (isPrinting()) {
+    if (isPrintingOrExporting()) {
         text.update(true);
     }
     QList<RTextLayout> textLayouts = text.getTextLayouts();

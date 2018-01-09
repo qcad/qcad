@@ -163,6 +163,18 @@ public:
         return RGraphicsView::getDocumentInterface();
     }
 
+    void setExporting(bool on) {
+        RGraphicsView::setExporting(on);
+    }
+
+    bool isExporting() const {
+        return RGraphicsView::isExporting();
+    }
+
+    bool isPrintingOrExporting() const {
+        return RGraphicsView::isPrintingOrExporting();
+    }
+
     void setPrinting(bool on) {
         RGraphicsView::setPrinting(on);
     }

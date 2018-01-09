@@ -254,6 +254,11 @@ public:
     int getMargin();
     void setMargin(int m);
 
+    void setExporting(bool on);
+    bool isExporting() const;
+
+    bool isPrintingOrExporting() const;
+
     void setPrinting(bool on);
     bool isPrinting() const;
     void setPrintPreview(bool on);
@@ -325,6 +330,7 @@ public:
     }
 
 protected:
+    bool exporting;
     bool printing;
     bool printPreview;
     RVector printPointSize;
