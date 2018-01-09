@@ -366,7 +366,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 
         // grid layout with three columns and N rows for N property controls:
         gridLayoutGeometry = new QGridLayout(this.geometryGroup);
-        gridLayoutGeometry.setVerticalSpacing(4);
+        gridLayoutGeometry.setVerticalSpacing(2);
         gridLayoutGeometry.setColumnStretch(0,0);
         gridLayoutGeometry.setColumnStretch(1,1);
         gridLayoutGeometry.setColumnStretch(2,0);
@@ -381,7 +381,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         // grid layout with four columns and N rows for N property controls:
         // (the fourth column is for the 'remove property' button)
         gridLayoutChild = new QGridLayout(this.childGroup);
-        gridLayoutChild.setVerticalSpacing(4);
+        gridLayoutChild.setVerticalSpacing(2);
         gridLayoutChild.setColumnStretch(0,0);
         gridLayoutChild.setColumnStretch(1,1);
         gridLayoutChild.setColumnStretch(2,0);
@@ -398,7 +398,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             // grid layout with four columns and N rows for N property controls:
             // (the fourth column is for the 'remove property' button)
             gridLayoutCustom = new QGridLayout(this.customGroup);
-            gridLayoutCustom.setVerticalSpacing(4);
+            gridLayoutCustom.setVerticalSpacing(2);
             gridLayoutCustom.setColumnStretch(0,0);
             gridLayoutCustom.setColumnStretch(1,1);
             gridLayoutCustom.setColumnStretch(2,0);
