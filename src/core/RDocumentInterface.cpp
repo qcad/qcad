@@ -300,6 +300,10 @@ void RDocumentInterface::setDefaultAction(RAction* action) {
     }
 }
 
+RAction* RDocumentInterface::getDefaultAction() const {
+    return defaultAction;
+}
+
 /**
  * Sets the current action. This action will receive all events
  * until it finishes.

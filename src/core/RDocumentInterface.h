@@ -138,6 +138,7 @@ public:
     bool isScriptRunning();
 
     void setDefaultAction(RAction* action);
+    RAction* getDefaultAction() const;
     void setCurrentAction(RAction* action);
     void terminateCurrentAction();
     void queueAction(RAction* action);
