@@ -224,6 +224,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, setMargin, "setMargin");
             
+            REcmaHelper::registerFunction(&engine, proto, setExporting, "setExporting");
+            
+            REcmaHelper::registerFunction(&engine, proto, isExporting, "isExporting");
+            
+            REcmaHelper::registerFunction(&engine, proto, isPrintingOrExporting, "isPrintingOrExporting");
+            
             REcmaHelper::registerFunction(&engine, proto, setPrinting, "setPrinting");
             
             REcmaHelper::registerFunction(&engine, proto, isPrinting, "isPrinting");
@@ -5529,6 +5535,159 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::setMargin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::setExporting
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::setExporting", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::setExporting";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("setExporting", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExporting(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.setExporting().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::setExporting", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::isExporting
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::isExporting", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::isExporting";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("isExporting", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isExporting();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.isExporting().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::isExporting", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::isPrintingOrExporting
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::isPrintingOrExporting", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::isPrintingOrExporting";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("isPrintingOrExporting", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPrintingOrExporting();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.isPrintingOrExporting().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::isPrintingOrExporting", context, engine);
             return result;
         }
          QScriptValue

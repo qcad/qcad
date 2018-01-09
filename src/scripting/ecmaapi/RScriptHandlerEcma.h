@@ -78,6 +78,7 @@ public:
     static QScriptValue doInclude(QScriptEngine* engine, const QString& fileName, QString trContext = QString(), bool force=false);
 
     static QScriptValue ecmaEvalAppEngine(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaEvalDocEngine(QScriptContext* context, QScriptEngine* engine);
 
     static QScriptValue ecmaExit(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaPrint(QScriptContext* context, QScriptEngine* engine);

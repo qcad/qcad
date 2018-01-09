@@ -204,6 +204,24 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RDocumentInterface *"
       isPureVirtual="false" />
     </method>
+    <method name="setExporting" cppName="setExporting"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isExporting" cppName="isExporting"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isPrintingOrExporting"
+    cppName="isPrintingOrExporting" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setPrinting" cppName="setPrinting"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

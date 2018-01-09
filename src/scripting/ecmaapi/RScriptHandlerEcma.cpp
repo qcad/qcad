@@ -414,7 +414,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     
     QScriptValue globalObject = engine->globalObject();
     globalObject.setProperty("include", engine->newFunction(ecmaInclude, 1));
-    globalObject.setProperty("evalAppEngine", engine->newFunction(ecmaEvalAppEngine, 1));
+    globalObject.setProperty("evalAppEngine", engine->newFunction(ecmaEvalAppEngine));
+    globalObject.setProperty("evalDocEngine", engine->newFunction(ecmaEvalDocEngine));
     globalObject.setProperty("print", engine->newFunction(ecmaPrint));
     globalObject.setProperty("qDebug", engine->newFunction(ecmaDebug));
     globalObject.setProperty("qWarning", engine->newFunction(ecmaWarning));
@@ -1404,6 +1405,36 @@ QScriptValue RScriptHandlerEcma::ecmaEvalAppEngine(QScriptContext* context, QScr
     }
     else {
         return context->throwError(QString("evalAppEngine: wrong number / type of arguments"));
+    }
+}
+
+QScriptValue RScriptHandlerEcma::ecmaEvalDocEngine(QScriptContext* context, QScriptEngine* engine) {
+    QString arg;
+    if (context->argumentCount() == 1 && context->argument(0).isString()) {
+        arg = context->argument(0).toString();
+
+        RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
+        if (appWin) {
+            RDocumentInterface* di = appWin->getDocumentInterface();
+            if (di) {
+                RScriptHandler* sh = di->getScriptHandler("js");
+                if (sh) {
+                    sh->eval(arg);
+                }
+                else {
+                    qWarning() << "no script handler found for JS";
+                }
+            }
+            else {
+                qWarning() << "no document interface";
+            }
+        }
+        else {
+            qWarning() << "no app win";
+        }
+    }
+    else {
+        return context->throwError(QString("evalDocEngine: wrong number / type of arguments"));
     }
 }
 

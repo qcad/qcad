@@ -413,6 +413,21 @@
             );
         
     
+      void setExporting(
+                bool on
+            );
+        
+    
+      bool isExporting(
+                
+            );
+        
+    
+      bool isPrintingOrExporting(
+                
+            );
+        
+    
       void setPrinting(
                 bool on
             );

@@ -129,6 +129,15 @@
         getDocumentInterface
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setExporting
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isExporting
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isPrintingOrExporting
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPrinting
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

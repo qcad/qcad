@@ -164,6 +164,18 @@
         <return>return <expr><call><name><name>RGraphicsView</name>::<name>getDocumentInterface</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setExporting</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RGraphicsView::setExporting</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isExporting</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isExporting</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isPrintingOrExporting</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RGraphicsView</name>::<name>isPrintingOrExporting</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setPrinting</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>RGraphicsView::setPrinting</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
