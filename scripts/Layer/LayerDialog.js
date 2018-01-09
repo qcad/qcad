@@ -37,6 +37,20 @@ function LayerDialog(document, layer) {
 }
 
 /**
+ * Sets a custom UI (.ui) file to show additional components
+ * in the layer dialog. This data is stored as custom properties.
+ */
+LayerDialog.setCustomUi = function(uiFileName) {
+    var appWin = RMainWindowQt.getMainWindow();
+    appWin.setProperty("CustomLayerUi", uiFileName);
+};
+
+LayerDialog.getCustomUi = function(uiFileName) {
+    var appWin = RMainWindowQt.getMainWindow();
+    return appWin.property("CustomLayerUi");
+};
+
+/**
  * Hook for derived classes to do additional initialization.
  */
 LayerDialog.prototype.initDialog = function(dialog, layer) {
@@ -109,6 +123,21 @@ LayerDialog.prototype.show = function() {
 
     leLayerName.textChanged.connect(this, "validate");
 
+    // insert custom UI for custom layer properties:
+    var customUi = LayerDialog.getCustomUi();
+    var customWidget = undefined;
+    if (!isNull(customUi)) {
+        var l = this.dialog.layout();
+        if (!isNull(l)) {
+            customWidget = WidgetFactory.createDialog("", customUi);
+            l.insertWidget(2, customWidget);
+        }
+    }
+
+    if (!isNull(this.layer)) {
+        WidgetFactory.restoreState(customWidget, undefined, undefined, false, this.layer);
+    }
+
     this.initDialog(this.dialog, this.layer);
 
     this.dialog.show();
@@ -145,12 +174,17 @@ LayerDialog.prototype.show = function() {
         this.layer.setColor(clr);
         this.layer.setLinetypeId(ltId);
         this.layer.setLineweight(lw);
+        if (!isNull(customWidget)) {
+            WidgetFactory.saveState(customWidget, undefined, this.layer);
+        }
         this.initLayer(this.dialog, this.layer);
         return this.layer;
     }
-    //this.dialog.setAttribute(Qt.WA_DeleteOnClose);
-    //this.dialog.close();
+
     var layer = new RLayer(this.document, text, false, false, clr, ltId, lw);
+    if (!isNull(customWidget)) {
+        WidgetFactory.saveState(customWidget, undefined, layer);
+    }
     this.initLayer(this.dialog, layer);
     this.dialog.destroy();
     EAction.activateMainWindow();
