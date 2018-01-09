@@ -97,6 +97,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDefaultAction, "setDefaultAction");
             
+            REcmaHelper::registerFunction(&engine, proto, getDefaultAction, "getDefaultAction");
+            
             REcmaHelper::registerFunction(&engine, proto, setCurrentAction, "setCurrentAction");
             
             REcmaHelper::registerFunction(&engine, proto, terminateCurrentAction, "terminateCurrentAction");
@@ -1267,6 +1269,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::setDefaultAction", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::getDefaultAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::getDefaultAction", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::getDefaultAction";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("getDefaultAction", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RAction *'
+    RAction * cppResult =
+        
+               self->getDefaultAction();
+        // return type: RAction *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.getDefaultAction().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::getDefaultAction", context, engine);
             return result;
         }
          QScriptValue

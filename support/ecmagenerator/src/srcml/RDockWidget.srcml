@@ -54,6 +54,8 @@
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>actionEvent</name><parameter_list>(<param><decl><type><name>QActionEvent</name> *</type><name>event</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+
 </protected><private>private:
     <decl_stmt><decl><type><name>RFlowLayout</name>*</type> <name>layout</name></decl>;</decl_stmt>
 </private>}</block>;</class>

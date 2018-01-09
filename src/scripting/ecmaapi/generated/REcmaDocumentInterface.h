@@ -88,6 +88,9 @@
         setDefaultAction
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDefaultAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setCurrentAction
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

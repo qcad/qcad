@@ -38,11 +38,8 @@
 <macro><name>Q_OBJECT</name></macro>
 
 </private><public>public:
-    <constructor><name>RListView</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list> <member_list>:
-        <call><name>QListView</name><argument_list>(<argument><expr><name>parent</name></expr></argument>)</argument_list></call> </member_list><block>{
-    }</block></constructor>
-    <destructor><specifier>virtual</specifier> <name>~RListView</name><parameter_list>()</parameter_list> <block>{
-    }</block></destructor>
+    <constructor_decl><name>RListView</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor><specifier>virtual</specifier> <name>~RListView</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>signalContextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
@@ -104,15 +101,7 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>event</name></decl></param>)</parameter_list> <block>{
-        <decl_stmt><decl><type><name>QHelpEvent</name>*</type> <name>helpEvent</name> =<init> <expr><call><name>dynamic_cast<argument_list>&lt;<argument><name>QHelpEvent</name>*</argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>event</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-        <if>if <condition>(<expr><name>event</name>-&gt;<call><name>type</name><argument_list>()</argument_list></call>==<name><name>QEvent</name>::<name>ToolTip</name></name> &amp;&amp; <name>helpEvent</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <function_decl><type><name>emit</name></type> <name>signalToolTipRequested</name><parameter_list>(<param><decl><type><name>helpEvent</name></type></decl></param>)</parameter_list>;</function_decl>
-            <expr_stmt><expr><name>event</name>-&gt;<call><name>accept</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
-            <return>return <expr><name>true</name></expr>;</return>
-        }</block></then></if>
-        <return>return <expr><call><name><name>QListView</name>::<name>event</name></name><argument_list>(<argument><expr><name>event</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RListView*</argument>)</argument_list></macro>

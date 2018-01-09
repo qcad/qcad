@@ -21,7 +21,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="QObject *" typeName="QObject *" name="obj"
         isConst="false" />
-        <arg type="QEvent *" typeName="QEvent *" name="event"
+        <arg type="QEvent *" typeName="QEvent *" name="e"
         isConst="false" />
       </variant>
     </method>
