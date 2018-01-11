@@ -807,8 +807,10 @@ QString RTextBasedData::toRichText(const QString& escapedText, const QFont& main
 
     QString fontFamily = mainFont.family();
 
+#if QT_VERSION < 0x050A00
     // workaround for QTextEdit which replaces 'bold' with '12' in all font names:
-    fontFamily.replace("bold", "bol&#64;", Qt::CaseInsensitive);
+    fontFamily.replace("bold", "bol&#100;", Qt::CaseInsensitive);
+#endif
 
     ret += "<html>";
     ret += QString("<body style=\"font-family:'%1'; font-size:%2pt; font-weight:%3; font-style:%4; \">")
