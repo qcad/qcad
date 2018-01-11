@@ -340,6 +340,13 @@ void RClipboardOperation::copyEntity(
             return;
         }
 
+        // make sure the top level block ref uses the top draw order,
+        // when pasting from a part library document which contains
+        // a block reference:
+        if (blockRef->getBlockId()==src.getModelSpaceBlockId()) {
+            blockRef->setDrawOrder(REntityData::getDefaultDrawOrder());
+        }
+
         copiedBlockContents.insert(blockRef->getReferencedBlockId());
 
         // TODO: don't do this twice:
