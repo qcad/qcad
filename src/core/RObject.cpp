@@ -553,7 +553,9 @@ QMap<QString, QVariantMap> RObject::getCustomProperties() const {
 /**
  * Copies all custom properties from the given object. Existing properties are overwritten.
  */
-void RObject::copyCustomPropertiesFrom(RObject* other, const QString& title,  bool overwrite, const QStringList& ignoreList) {
+void RObject::copyCustomPropertiesFrom(RObject* other, const QString& title,
+                                       bool overwrite, const QStringList& ignoreList,
+                                       const QString& mapKeyFrom, const QString& mapKeyTo) {
     QMap<QString, QVariantMap> otherProperties = other->getCustomProperties();
     QMap<QString, QVariantMap>::iterator it;
     for (it=otherProperties.begin(); it!=otherProperties.end(); it++) {
@@ -565,6 +567,10 @@ void RObject::copyCustomPropertiesFrom(RObject* other, const QString& title,  bo
             for (it2=otherMap.begin(); it2!=otherMap.end(); it2++) {
                 QString otherKey = it2.key();
                 QVariant otherValue = it2.value();
+
+                if (!mapKeyFrom.isEmpty()) {
+                    otherKey.replace(mapKeyFrom, mapKeyTo);
+                }
 
                 if (!overwrite) {
                     if (customProperties[title].contains(otherKey)) {
