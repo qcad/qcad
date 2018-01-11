@@ -262,6 +262,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QStringList &amp;" typeName="QStringList"
         name="ignoreList" hasDefault="true"
         default="RDEFAULT_QSTRINGLIST" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="mapKeyFrom" hasDefault="true"
+        default="RDEFAULT_QSTRING" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="mapKeyTo" hasDefault="true"
+        default="RDEFAULT_QSTRING" isConst="true" />
       </variant>
     </method>
     <method name="getComplexity" cppName="getComplexity"
