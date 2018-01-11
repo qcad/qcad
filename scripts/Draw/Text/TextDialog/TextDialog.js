@@ -646,14 +646,9 @@ TextDialog.prototype.mainFontChanged = function() {
     var previousMainFont = this.mainFont;
     this.mainFont = font;
 
-    //qDebug("\n\nHTML after altering DOM: \n", dom.toString(-1), "\n\n");
-
     font.setPointSizeF(font.pointSizeF() * this.fontHeightFactor);
     this.textEdit.font = font;
     document.defaultFont = font;
-
-    //qDebug("\n\nnew html 1: ", dom.toString(-1));
-    //html = dom.toString(-1);
 
     //qDebug("\n\nHTML after setting default font: \n", html, "\n\n");
 
@@ -1012,7 +1007,7 @@ TextDialog.prototype.updateRichText = function(force) {
         source = source.replace("\n", "\\P");
         var richText = RTextBasedData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
         //richText = richText.replace("<html>", "<html xmlns='http://www.w3.org/1999/xhtml' xml:space='preserve'>");
-        //qDebug("HTML: \n\n", richText, "\n\n");
+        //qDebug("richText: \n\n", richText, "\n\n");
         this.textEdit.setHtml(richText);
         //qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");
         this.getSourceDocument().modified = false;
