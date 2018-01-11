@@ -128,7 +128,6 @@ InsertBlockItem.prototype.beginEvent = function() {
     }
 
     if (this.docItem.hasBlock(this.blockName)) {
-        // 20140520:
         // if the item contains a block with the same name as the file base name,
         // insert without creating a new block:
         this.blockName = undefined;
