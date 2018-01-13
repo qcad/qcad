@@ -1,5 +1,8 @@
 /**
  * Copyright (c) 2014-2015 by Robert S. All rights reserved.
+ *
+ * 2018 A. Mustun: correct use of segment (region cut off from circle)
+ * and sector (portion of circle enclosed by two radii and an arc).
  * 
  * This file is part of the QCAD project.
  *
@@ -26,11 +29,11 @@ include("../Information.js");
  */
 function InfoArcCircleArea(guiAction) {
     Information.call(this, guiAction);
-    this.pi = 3.14159265358979323846;
+    this.pi = Math.PI;
     this.shape = undefined;
     this.radius1 = undefined;       // major radius for ellipse
     this.radius2 = undefined;       // minor radius for ellipse
-    this.sectorMode = true;
+    this.segmentMode = true;
     this.addEntity = true;
     this.addChord = true;
     this.addLength = true;
@@ -124,7 +127,7 @@ InfoArcCircleArea.prototype.getOperation = function(preview) {
     view = view.getRGraphicsView();
 
     if (isArcShape(this.shape) || isEllipseArcShape(this.shape)) {
-        if (this.sectorMode) {
+        if (this.segmentMode) {
             if (this.addChord) {
                 var p1 = this.shape.getStartPoint();
                 var p2 = this.shape.getEndPoint();
@@ -178,8 +181,8 @@ InfoArcCircleArea.prototype.getCircleEllipseArea = function() {
     return (this.pi * this.radius1 * this.radius2);
 };
 
-// Return area of arc segment
-InfoArcCircleArea.prototype.getSegmentArea = function() {
+// Return area of arc sector
+InfoArcCircleArea.prototype.getSectorArea = function() {
     if (isArcShape(this.shape) || isCircleShape(this.shape)) {
         return this.shape.getArea();
     } else if (isEllipseArcShape(this.shape)) {
@@ -190,24 +193,24 @@ InfoArcCircleArea.prototype.getSegmentArea = function() {
 };
 
 
-// getSectorArea returns the area of the sector
+// getSegmentArea returns the area of the segment
 // i.e. the area bounded by arc and chord
-InfoArcCircleArea.prototype.getSectorArea = function() {
-    var sectorarea = 0.0;
+InfoArcCircleArea.prototype.getSegmentArea = function() {
+    var segmentArea = 0.0;
     var angleLength = this.shape.getAngleLength(false);
     var sweep = RMath.rad2deg(this.shape.getSweep());
     if (sweep < 180) {
-        sectorarea = (this.radius1 * this.radius2 * (angleLength - Math.sin(angleLength))) / 2.0;
+        segmentArea = (this.radius1 * this.radius2 * (angleLength - Math.sin(angleLength))) / 2.0;
     } else if (sweep === 180) {
-        sectorarea = 0.5 * this.getCircleEllipseArea();
+        segmentArea = 0.5 * this.getCircleEllipseArea();
     } else {
         var remainAngle = RMath.deg2rad(360 - sweep);
         var remainSliceArea = (this.radius1 * this.radius2 * remainAngle) / 2.0;
-        var remainSectorArea = (this.radius1 * this.radius2 * (remainAngle - Math.sin(remainAngle))) / 2.0;
-        sectorarea = this.getSegmentArea() + (remainSliceArea - remainSectorArea);
+        var remainSegmentArea = (this.radius1 * this.radius2 * (remainAngle - Math.sin(remainAngle))) / 2.0;
+        segmentArea = this.getSectorArea() + (remainSliceArea - remainSectorArea);
     }
 
-    return sectorarea;
+    return segmentArea;
 }
 
 InfoArcCircleArea.prototype.getCircumference = function() {
@@ -221,7 +224,7 @@ InfoArcCircleArea.prototype.getCircumference = function() {
     return circ;
 };
 
-// centre of gravity for the sector
+// centre of gravity for the segment
 InfoArcCircleArea.prototype.getCenter = function() {
 };
 
@@ -249,11 +252,11 @@ InfoArcCircleArea.prototype.calculate = function() {
   * Called when the user changes mode
   */
 InfoArcCircleArea.prototype.slotModeChanged = function(button) {
-    if (button.objectName === "Sector") {
-        this.sectorMode = true;
+    if (button.objectName === "Segment") {
+        this.segmentMode = true;
     }
     else {
-        this.sectorMode = false;
+        this.segmentMode = false;
     }
 };
 
@@ -313,8 +316,8 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
             ", " +  qsTr("circumference:") + " " + circ;
         }
     } else if (isEllipseArcShape(this.shape)) {
-        if (this.sectorMode) {
-            area = this.getSectorArea();
+        if (this.segmentMode) {
+            area = this.getSegmentArea();
             len = this.shape.getLength();
             chord = (this.shape.getStartPoint()).getDistanceTo(this.shape.getEndPoint());
             if (!cmdLine) {
@@ -336,7 +339,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 ", " + qsTr("chord:") + " " + chord;
             }
         } else {
-            area = this.getSegmentArea();
+            area = this.getSectorArea();
             len = this.shape.getLength();
             rad1 = (this.shape.getCenter()).getDistanceTo(this.shape.getStartPoint());
             rad2 = (this.shape.getCenter()).getDistanceTo(this.shape.getEndPoint());
@@ -380,8 +383,8 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
             ", " + qsTr("circumference:") + " " + circ;
         }
     } else {   // Arc shape
-        if (this.sectorMode) {
-            area = this.getSectorArea();
+        if (this.segmentMode) {
+            area = this.getSegmentArea();
             len = this.shape.getLength();
             chord = (this.shape.getStartPoint()).getDistanceTo(this.shape.getEndPoint());
             if (!cmdLine) {
@@ -403,7 +406,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 ", " + qsTr("chord:") + " " + chord;
             }
         } else {
-            area = this.getSegmentArea();
+            area = this.getSectorArea();
             len = this.shape.getLength();
             rad1 = this.radius1;
             if (!cmdLine) {
