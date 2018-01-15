@@ -123,8 +123,8 @@ public:
     void setClosed(bool on);
     bool isClosed() const;
     bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
-    bool autoClose() {
-        return toLogicallyClosed();
+    bool autoClose(double tolerance=RS::PointTolerance) {
+        return toLogicallyClosed(tolerance);
     }
     bool toLogicallyClosed(double tolerance=RS::PointTolerance);
     bool toLogicallyOpen();

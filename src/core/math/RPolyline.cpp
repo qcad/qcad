@@ -990,6 +990,7 @@ bool RPolyline::contains(const RVector& point, bool borderIsInside, double toler
     }
 
     if (hasArcSegments()) {
+        // TODO: not always reliable:
         QPainterPath pp = toPainterPath();
         return pp.contains(QPointF(point.x, point.y));
     }
