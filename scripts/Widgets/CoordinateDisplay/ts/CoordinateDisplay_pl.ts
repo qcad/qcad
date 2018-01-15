@@ -8,7 +8,7 @@
         <source>Absolute Cartesian Coordinate</source>
         <translatorcomment>--google--
 Bezwzględne współrzędne kartezjańskie</translatorcomment>
-        <translation type="unfinished">Absolute współrzędnych kartezjańskich</translation>
+        <translation>Bezwzględna współrzędna kartezjańska</translation>
     </message>
     <message>
         <location line="+21"/>

@@ -95,7 +95,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
     <message>
         <location line="+60"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Usuń wszystkie właściwości z zaznaczonych obiektów</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -121,7 +121,7 @@ Czy chcesz zamknąć plik
     <message>
         <location line="-616"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
     <message>
         <source>Left</source>
@@ -275,7 +275,7 @@ General Punctuation</translatorcomment>
     <message>
         <location line="+104"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala rodzaju linii:</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -291,12 +291,12 @@ General Punctuation</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlanie współrzędnych Z</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlanie właściwości aktualnego bloku i warstwy</translation>
     </message>
 </context>
 </TS>

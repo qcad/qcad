@@ -16,7 +16,7 @@
     <message>
         <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetla narzędzia przybliżania</translation>
     </message>
     <message>
         <location line="+23"/>

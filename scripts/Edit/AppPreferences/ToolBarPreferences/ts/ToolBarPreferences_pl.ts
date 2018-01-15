@@ -16,7 +16,7 @@
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished">px</translation>
+        <translation>piks.</translation>
     </message>
     <message>
         <location line="+22"/>

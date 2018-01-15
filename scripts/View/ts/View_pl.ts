@@ -24,7 +24,7 @@
     <message>
         <location line="+5"/>
         <source>Show view tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetla narzędzia widoku</translation>
     </message>
     <message>
         <location line="+23"/>

@@ -72,7 +72,7 @@
     <message>
         <location line="-245"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation>Proszę wybrać łuk, okrąg, elipsę lub łuk elipsy</translation>
+        <translation>Proszę wskazać łuk, okrąg, elipsę lub łuk elipsy</translation>
     </message>
     <message>
         <location line="+246"/>
@@ -99,12 +99,12 @@
     <message>
         <location line="+30"/>
         <source>Calculate Area of Sector</source>
-        <translation type="unfinished"></translation>
+        <translation>Oblicz pole powierzchni wycinka</translation>
     </message>
     <message>
         <location line="-23"/>
         <source>Calculate Area of Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Oblicz pole powierzchni odcinka</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Pole powierzchni odcinka koła/koła/elipsy</translation>
+        <translation>Pole powierzchni łuku/koła/elipsy</translation>
     </message>
 </context>
 </TS>

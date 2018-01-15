@@ -209,7 +209,7 @@ Dzielenie (÷)</translatorcomment>
         <location line="+1"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -239,13 +239,13 @@ Pole narzucenia niepowtarzalności W3C XML Schema
         <location line="+1"/>
         <source>Ohm</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Om</translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Omega</translation>
+        <translation>Omega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -293,7 +293,7 @@ Wysokość tekstu:</translatorcomment>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wysokość tekstu w jednostkach rysunku</translation>
+        <translation>Określa wysokość tekstu w jednostkach rysunku</translation>
     </message>
     <message>
         <location line="+18"/>

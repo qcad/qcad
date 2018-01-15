@@ -7,7 +7,7 @@
         <location filename="../SelectContour.js" line="+53"/>
         <source>Choose entity of contour</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę wybrać obiekt konturu</translation>
+        <translation>Proszę wskazać obiekt konturu</translation>
     </message>
     <message>
         <location filename="../SelectContour.ui" line="+17"/>
@@ -28,7 +28,7 @@
         <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">SelectionMode</translation>
+        <translation type="unfinished">Tryb_zaznaczania</translation>
     </message>
     <message>
         <location line="-53"/>

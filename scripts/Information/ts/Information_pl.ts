@@ -13,7 +13,7 @@
         <location line="+5"/>
         <source>Show information tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż narzędzi informacyjnych</translation>
+        <translation>Wyświetla narzędzia informacji</translation>
     </message>
     <message>
         <location line="+22"/>

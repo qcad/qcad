@@ -111,7 +111,7 @@ Autozoom
         <location line="+13"/>
         <source>Color Adjustment</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Regulacja kolorów</translation>
+        <translation>Regulacja kolorów</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -123,7 +123,7 @@ Autozoom
         <location line="-29"/>
         <source>Color lightness threshold:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Próg lekkość Kolor:</translation>
+        <translation>Próg jasności koloru:</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -138,17 +138,17 @@ Autozoom
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatyczne przełączanie ekranowego rodzaju linii w widoku modelu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Skalowanie wzorów rodzajów linii wg grubości linii</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Skala wzoru dla grubości linii 0,00 mm:</translation>
     </message>
     <message>
         <location line="+36"/>

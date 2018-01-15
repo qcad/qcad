@@ -21,7 +21,7 @@ Zastępcze widżety</translatorcomment>
     <message>
         <location line="+35"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Pionowo/poziomo</translation>
     </message>
     <message>
         <source>Toggle Title Bar</source>
@@ -49,7 +49,7 @@ Format X Pixel Map
         <translatorcomment>--google--
 Minimalny odstęp siatki (piksele):
 Minimalny odstęp siatki (piksele)</translatorcomment>
-        <translation type="unfinished">piks.</translation>
+        <translation>piks.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -70,7 +70,7 @@ Kolumn:</translatorcomment>
 --file: qt_pl.ts--
 Back
 Powrót do poprzedniego menu</translatorcomment>
-        <translation type="unfinished">Wstecz</translation>
+        <translation>Wstecz</translation>
     </message>
 </context>
 </TS>

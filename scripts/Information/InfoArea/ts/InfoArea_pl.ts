@@ -7,7 +7,7 @@
         <location filename="../InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę ustalić następny narożnik wieloboku</translation>
+        <translation>Proszę wskazać następny narożnik wieloboku</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -17,7 +17,7 @@
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation>Zrobione</translation>
     </message>
     <message>
         <location line="+138"/>

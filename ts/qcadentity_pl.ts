@@ -522,7 +522,7 @@ Punkt główny|Y</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation>Punkt startowy</translation>
+        <translation>Punkt początkowy</translation>
     </message>
     <message>
         <location line="+1"/>

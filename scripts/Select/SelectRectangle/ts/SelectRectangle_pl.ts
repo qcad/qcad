@@ -70,7 +70,7 @@ Zrobione
         <location line="+27"/>
         <source>Cross Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Krzyż Selection</translation>
+        <translation>Zaznaczanie krzyżowaniem</translation>
     </message>
     <message>
         <location filename="../SelectRectangleInit.js" line="+2"/>

@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Wskaż pierwszą linie</translatorcomment>
-        <translation>Proszę określić pierwszą linię</translation>
+        <translation>Proszę wskazać pierwszą linię</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -17,7 +17,7 @@ Wskaż pierwszą linie</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Wskaż drugą linie</translatorcomment>
-        <translation>Proszę określić drugą linię</translation>
+        <translation>Proszę wskazać drugą linię</translation>
     </message>
     <message>
         <location line="+3"/>

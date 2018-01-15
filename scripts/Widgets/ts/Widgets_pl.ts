@@ -19,7 +19,7 @@ OK
 --file: qvfb_pl.ts--
 Anuluj
 &amp;Anuluj</translatorcomment>
-        <translation type="unfinished">Anuluj</translation>
+        <translation>Anuluj</translation>
     </message>
 </context>
 <context>

@@ -12,7 +12,7 @@
         <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Skorygowany nieprawidłową nazwę bloku do&apos;&amp;#39;</translation>
+        <translation>Zmieniono nieprawidłową nazwę bloku na „%1”</translation>
     </message>
     <message>
         <location line="+62"/>

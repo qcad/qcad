@@ -45,12 +45,12 @@ Tło okna:</translatorcomment>
         <location line="+18"/>
         <source>Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Krzyżyk:</translation>
+        <translation>Krzyżyki:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieaktywne krzyżyki:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -60,7 +60,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Początek układu względnego:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -95,7 +95,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Przesuwane punkty odniesienia:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -115,7 +115,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wypełnienie prostokąta zaznaczenia krzyżowego:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -155,7 +155,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomocnicze kształty:</translation>
     </message>
     <message>
         <location line="+33"/>

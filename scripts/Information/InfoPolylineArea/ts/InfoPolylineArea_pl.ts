@@ -6,7 +6,7 @@
     <message>
         <location filename="../InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation>Proszę wybrać linię łamaną</translation>
+        <translation>Proszę wskazać linię łamaną</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation>Pole powierzchni linii łamanej</translation>
+        <translation>Pole powierzchni &amp;linii łamanej</translation>
     </message>
 </context>
 </TS>

@@ -31,7 +31,7 @@ Wskaż punkt docelowy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Skaluj</translatorcomment>
-        <translation>&amp;Przeskaluj</translation>
+        <translation>Prze&amp;skaluj</translation>
     </message>
 </context>
 <context>

@@ -42,7 +42,7 @@ Pasek do nawigacji
         <location line="+7"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Włącz gest panoramowania</translation>
+        <translation>Włączenie gestu przesuwania</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -57,7 +57,7 @@ Pasek do nawigacji
     <message>
         <location line="-34"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="unfinished"></translation>
+        <translation>Ograniczenie przybliżania i przewijania w celu zapobiegania przepełnienia</translation>
     </message>
 </context>
 </TS>

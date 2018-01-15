@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlanie paska kart</translation>
     </message>
     <message>
         <location filename="../TabBar.js" line="+24"/>

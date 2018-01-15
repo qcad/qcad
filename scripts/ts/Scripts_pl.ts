@@ -49,27 +49,27 @@
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
         <location line="+358"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Przenieś punkt odniesienia</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Przenieś zaznaczenie</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Przenieś obiekt</translation>
     </message>
     <message>
         <location line="+124"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation>Edytowanie bloku „%1”&lt;br&gt;Proszę użyć polecenia&lt;i&gt;Blok &gt; Wróć do rysunku&lt;/i&gt; po zakończeniu.</translation>
     </message>
 </context>
 <context>
@@ -326,22 +326,22 @@ Stopnie dziesiętne</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Kopiuj obiekty do schowka
 Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
-        <translation type="unfinished">Pi</translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square root</source>
-        <translation type="unfinished"></translation>
+        <translation>Pierwiastek kwadratowy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Fi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation>fi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -351,12 +351,12 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation>omega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -385,7 +385,7 @@ Dzielenie (÷)</translatorcomment>
         <location line="+1"/>
         <source>Delta</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -601,12 +601,12 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Odniesienia bloku i atrybuty</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Odniesienie bloku i atrybuty</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -640,12 +640,12 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Definicje atrybutu</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Definicja atrybutu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -722,7 +722,7 @@ Wymiar średnicowy</translatorcomment>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rzędna Wymiary</translation>
+        <translation>Wymiary łańcuchowe</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -730,7 +730,7 @@ Wymiar średnicowy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Wymiar rzędnej</translatorcomment>
-        <translation type="unfinished">Wymiar rzędnej</translation>
+        <translation>Wymiar łańcuchowy</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -742,13 +742,13 @@ Wymiar rzędnej</translatorcomment>
         <location line="+0"/>
         <source>Rotated Dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wymiar obracany</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wymiary promieniowe</translation>
+        <translation>Wymiary promieniowe</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -757,7 +757,7 @@ Wymiar rzędnej</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wymiar promienia
 Wymiar promieniowy</translatorcomment>
-        <translation type="unfinished">Wymiar promienia</translation>
+        <translation>Wymiar promieniowy</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -784,7 +784,7 @@ Elipsa
         <translatorcomment>--google--
 Rysuj kreskowanie i jednolite wypełnienia
 Kreskowanie / całkowite Wypełnienia</translatorcomment>
-        <translation type="unfinished">Włazy</translation>
+        <translation>Kreskowania</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -793,7 +793,7 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
 --file: qcadlib_pl.ts--
 Kreskowanie
 &amp;Kreskowanie</translatorcomment>
-        <translation type="unfinished">Kreskowanie</translation>
+        <translation>Kreskowanie</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -802,7 +802,7 @@ Kreskowanie
 &lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;&amp;nbsp;Przeszukano od początku
 &lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;nbsp;Przeszukano od początku
 &lt;img src=&quot;:/trolltech/shared/images/wrap.png&quot;&gt;&amp;nbsp;Przeszukano od początku</translatorcomment>
-        <translation type="unfinished">Obrazy</translation>
+        <translation>Obrazy</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -811,7 +811,7 @@ Kreskowanie
 --file: qcadlib_pl.ts--
 Eksportuj obraz
 Obraz</translatorcomment>
-        <translation type="unfinished">Obraz</translation>
+        <translation>Obraz</translation>
     </message>
     <message>
         <location line="+2"/>

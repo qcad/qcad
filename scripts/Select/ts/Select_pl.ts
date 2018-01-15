@@ -22,7 +22,7 @@ Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
         <location line="+9"/>
         <source>Selection Tools Panel</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Panel narzędzi zaznaczania</translation>
+        <translation>Panel narzędzi zaznaczania</translation>
     </message>
     <message>
         <location line="+9"/>

@@ -10,7 +10,7 @@
 --file: qcadactions_pl.ts--
 Wprowadź obiekt
 Wskaż obiekt do cięcia</translatorcomment>
-        <translation>Proszę określić obiekt</translation>
+        <translation>Proszę wskazać obiekt</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -18,7 +18,7 @@ Wskaż obiekt do cięcia</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
 Wskaż punkt</translatorcomment>
-        <translation>Proszę określić punkt</translation>
+        <translation>Proszę wskazać punkt</translation>
     </message>
     <message>
         <location line="+3"/>

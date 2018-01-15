@@ -16,7 +16,7 @@ Edytuj blok z &amp;insertu</translatorcomment>
         <location line="+1"/>
         <source>Edit contents of selected block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Modyfikuje zawartość zaznaczonego bloku</translation>
+        <translation>Modyfikuj zawartość zaznaczonego bloku</translation>
     </message>
 </context>
 </TS>

@@ -15,7 +15,7 @@
         <location line="+1"/>
         <source>Delete selected block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Usuwa wybrany blok</translation>
+        <translation>Usuń wybrany blok</translation>
     </message>
 </context>
 </TS>

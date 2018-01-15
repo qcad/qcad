@@ -272,7 +272,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Początek układu współrzędnych</translation>
+        <translation>Początek układu współrzędnych</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -516,7 +516,7 @@
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation>Pochylenie</translation>
+        <translation>Kursywa</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -587,12 +587,12 @@
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished">Mrożony</translation>
+        <translation type="unfinished">Zamrożona</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation>Zablokowany</translation>
+        <translation type="unfinished">Zablokowana</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -602,12 +602,12 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Drukowana</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Przyciąga</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -725,7 +725,7 @@
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">Kropka (duża)</translation>
+        <translation type="vanished">Kropka (wielka)</translation>
     </message>
     <message>
         <source>Dash</source>
@@ -737,7 +737,7 @@
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">Kreska (duża)</translation>
+        <translation type="vanished">Kreska (wielka)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
@@ -749,43 +749,43 @@
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Kreska kropka (duża)</translation>
+        <translation type="vanished">Kreska kropka (wielka)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">Podzielona</translation>
+        <translation type="vanished">Przerywana</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">Podzielona (mała)</translation>
+        <translation type="vanished">Przerywana (mała)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">Podzielona (duża)</translation>
+        <translation type="vanished">Przerywana (wielka)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Środek</translation>
+        <translation type="vanished">Środkowa</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation type="vanished">Środek (maly)</translation>
+        <translation type="vanished">Środkowa (mała)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation type="vanished">Środek (duży)</translation>
+        <translation type="vanished">Środkowa (wielka)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation type="vanished">Obwódka</translation>
+        <translation type="vanished">Obramowanie</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation type="vanished">Obwódka (mała)</translation>
+        <translation type="vanished">Obramowanie (mała)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation type="vanished">Obwódka (duża)</translation>
+        <translation type="vanished">Obramowanie (wielka)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -837,7 +837,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation>Środek</translation>
+        <translation>Środkowa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -858,7 +858,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Podzielona</translation>
+        <translation>Przerywana</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -879,7 +879,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished"></translation>
+        <translation>Zarys</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -954,52 +954,52 @@
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished"></translation>
+        <translation>Instalacja ciepłej wody</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ciepła woda</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Instalacja gazowa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradzinowanie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished"></translation>
+        <translation>Zygzag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ścieżki</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogrodzenie 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogrodzenie 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drainage</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpływ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpływ w przeciwną stronę</translation>
     </message>
 </context>
 <context>

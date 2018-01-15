@@ -31,7 +31,7 @@ General Punctuation</translatorcomment>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ogólna skala rodzaju linii:</translation>
+        <translation>Ogólna skala rodzaju linii:</translation>
     </message>
 </context>
 </TS>

@@ -7,7 +7,7 @@
         <location filename="../TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Przytnij &amp;obydwa</translation>
+        <translation>Przytnij o&amp;bydwa</translation>
     </message>
 </context>
 </TS>

@@ -22,7 +22,7 @@
     <message>
         <location filename="../RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation>Ograniczenie &amp;kąta lub długości</translation>
+        <translation>Ograniczanie &amp;kąta lub długości</translation>
     </message>
 </context>
 </TS>

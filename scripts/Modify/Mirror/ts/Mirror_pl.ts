@@ -23,7 +23,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Odbijaj</translatorcomment>
-        <translation>&amp;Odbij lustrzanie</translation>
+        <translation>Odbij &amp;lustrzanie</translation>
     </message>
 </context>
 <context>

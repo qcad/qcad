@@ -7,13 +7,13 @@
         <location filename="../LibraryBrowser.js" line="+72"/>
         <source>audience</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">publiczność</translation>
+        <translation>publiczność</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>creator</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">twórca</translation>
+        <translation>twórca</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -23,13 +23,13 @@
 Wymi&amp;ar
 Wymiar
 Wskaż położenie linii wymiarowej</translatorcomment>
-        <translation type="unfinished">Wymiar</translation>
+        <translation>wymiar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>levelOfDetail</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">levelOfDetail</translation>
+        <translation type="unfinished">poziom_szczegółów</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -37,13 +37,13 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translatorcomment>--google--
 Kontrolka licencjonowana
 Kontrolka wymaga licencji podczas projektowania</translatorcomment>
-        <translation type="unfinished">licencja</translation>
+        <translation>licencja</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>perspective</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">perspektywa</translation>
+        <translation>perspektywa</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -52,19 +52,19 @@ Kontrolka wymaga licencji podczas projektowania</translatorcomment>
 [FB00-FB4F] Alphabetic Presentation Forms
 [FB50-FDFF] Arabic Presentation Forms-A
 [FE70-FEFF] Arabic Presentation Forms-B</translatorcomment>
-        <translation type="unfinished">prezentacja</translation>
+        <translation>prezentacja</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>publisher</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">wydawca</translation>
+        <translation>wydawca</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>subject</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">przedmiot</translation>
+        <translation>temat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -73,7 +73,7 @@ Kontrolka wymaga licencji podczas projektowania</translatorcomment>
 Nienazwany
 &lt;title&gt;o:pusty&lt;/title&gt;
 Tytuł:</translatorcomment>
-        <translation type="unfinished">tytuł</translation>
+        <translation>tytuł</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -213,7 +213,7 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wymuś uaktualnienie bazy danych.</translation>
     </message>
     <message>
         <location line="+393"/>
@@ -227,7 +227,7 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
         <location line="+10"/>
         <source>&amp;Edit Script File...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Edycja pliku skryptu ...</translation>
+        <translation>&amp;Edytuj plik skryptu...</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -260,7 +260,7 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
         <location line="+2"/>
         <source>&amp;Show in %1...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Pokaż na ...</translation>
+        <translation>&amp;Wyświetl na %1...</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -296,7 +296,7 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Synchronization</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Synchronizacja</translation>
+        <translation>Synchronizowanie</translation>
     </message>
     <message>
         <location line="+6"/>

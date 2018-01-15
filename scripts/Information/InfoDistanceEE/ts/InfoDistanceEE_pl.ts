@@ -6,12 +6,12 @@
     <message>
         <location filename="../InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation>Proszę określić pierwszy obiekt</translation>
+        <translation>Proszę wskazać pierwszy obiekt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation>Proszę określić drugi obiekt</translation>
+        <translation>Proszę wskazać drugi obiekt</translation>
     </message>
     <message>
         <location line="+3"/>

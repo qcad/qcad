@@ -31,7 +31,7 @@
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprawia, że obiekty w blokach na warstwie 0 przejmują atrybuty i widoczność odniesienia bloku.</translation>
     </message>
 </context>
 </TS>

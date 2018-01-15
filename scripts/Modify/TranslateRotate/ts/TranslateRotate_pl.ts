@@ -18,7 +18,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Przesuń i &amp;obróć</translatorcomment>
-        <translation>Przenieś i &amp;obróć</translation>
+        <translation>P&amp;rzenieś i obróć</translation>
     </message>
 </context>
 <context>

@@ -173,7 +173,7 @@ Przyciąganie automatyczne</translatorcomment>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation type="unfinished">Odstępy siatki meta</translation>
+        <translation>Odstępy siatki meta</translation>
     </message>
     <message>
         <location line="-390"/>

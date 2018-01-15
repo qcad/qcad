@@ -50,7 +50,7 @@ Elipsy</translatorcomment>
         <location line="+16"/>
         <source>into polyline with line segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">na linię łamaną z segmentami linii</translation>
+        <translation>na linię łamaną z segmentami linii</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -59,7 +59,7 @@ Elipsy</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Rysuj krzywe składane
 Rysuj krzywe składane (NURBS)</translatorcomment>
-        <translation type="unfinished">Krzywe składane</translation>
+        <translation>Splajny</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -75,7 +75,7 @@ Pokaż menu &quot;Wymiarowanie&quot;</translatorcomment>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">w linii, brył i tekstów</translation>
+        <translation>na linie, bryły i teksty</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -125,7 +125,7 @@ Zmień atrybuty obiektu</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wybuch
 &amp;Rozbij</translatorcomment>
-        <translation type="unfinished">Rozbij</translation>
+        <translation>Rozbij</translation>
     </message>
     <message>
         <location filename="../ExplodeInit.js" line="+2"/>
@@ -139,7 +139,7 @@ Wybuch
     <message>
         <location filename="../PreferencesPage.ui" line="+197"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozbijanie znaków tekstu na linie łamane</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -156,17 +156,17 @@ Wybuch
     <message>
         <location line="-7"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozbijanie splajnów na linie łamane z segmentami linii</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozbijanie tekstów wielowierszowym na wiele bloków prostych tekstów</translation>
     </message>
     <message>
         <location line="-31"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tolerancja aproksymacji splajnu:</translation>
     </message>
 </context>
 </TS>

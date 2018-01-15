@@ -7,7 +7,7 @@
         <location filename="../ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wyświetl &amp;tylko aktywne</translation>
+        <translation>Wyświetl tylko &amp;aktywne</translation>
     </message>
 </context>
 </TS>

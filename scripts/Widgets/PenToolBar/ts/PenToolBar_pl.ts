@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>PenToolBar</name>
     <message>
@@ -11,13 +11,13 @@
 Otwieranie ostatniego pliku...
 Otwieranie ostatniego pliku
 Otwieranie przerwane</translatorcomment>
-        <translation type="unfinished">Pióro</translation>
+        <translation>Pióro</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Reset to Defaults</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Przywróć domyślne</translation>
+        <translation>Przywróć domyślne</translation>
     </message>
 </context>
 </TS>

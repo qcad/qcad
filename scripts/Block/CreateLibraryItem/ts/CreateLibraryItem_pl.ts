@@ -16,7 +16,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <location line="+29"/>
         <source>Save library item as...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zapisz jako ... elementu biblioteki</translation>
+        <translation>Zapisz element kolekcji jako...</translation>
     </message>
     <message>
         <location filename="../CreateLibraryItemInit.js" line="+2"/>
