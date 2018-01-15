@@ -124,8 +124,8 @@
     <function_decl><type><name>void</name></type> <name>setClosed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isClosed</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isGeometricallyClosed</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function><type><name>bool</name></type> <name>autoClose</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name>toLogicallyClosed</name><argument_list>()</argument_list></call></expr>;</return>
+    <function><type><name>bool</name></type> <name>autoClose</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>toLogicallyClosed</name><argument_list>(<argument><expr><name>tolerance</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
     <function_decl><type><name>bool</name></type> <name>toLogicallyClosed</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>toLogicallyOpen</name><parameter_list>()</parameter_list>;</function_decl>
