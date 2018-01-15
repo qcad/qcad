@@ -8,7 +8,7 @@
         <translation type="vanished">Selecione um Arco, Círculo, Elipse ou Arco Elíptico</translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="+70"/>
+        <location filename="../InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
@@ -101,17 +101,17 @@
         <translation>Modo:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+30"/>
         <source>Calculate Area of Sector</source>
         <translation>Calcule a Área do Setor</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
         <translation>Calcule a Área do Segmento</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>Adicione:</translation>
     </message>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -94,7 +95,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
     <message>
         <location line="+60"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+68"/>
@@ -120,7 +121,7 @@ Czy chcesz zamknąć plik
     <message>
         <location line="-616"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Left</source>
@@ -274,7 +275,7 @@ General Punctuation</translatorcomment>
     <message>
         <location line="+104"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+49"/>
@@ -290,12 +291,12 @@ General Punctuation</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

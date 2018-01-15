@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -28,7 +29,7 @@ Pokaż linijki</translatorcomment>
         <translatorcomment>--google--
 &amp;Podświetl obiekt pod kursorem myszy
 Podświetl obiekt pod kursorem myszy
-Nie istnieje plik '%1' z obrazkiem kursora dla skórki.</translatorcomment>
+Nie istnieje plik &apos;%1&apos; z obrazkiem kursora dla skórki.</translatorcomment>
         <translation>Kursor</translation>
     </message>
     <message>
@@ -137,17 +138,17 @@ Autozoom
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+36"/>

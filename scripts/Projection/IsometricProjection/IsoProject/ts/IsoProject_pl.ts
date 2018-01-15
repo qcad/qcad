@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -63,9 +64,9 @@ Góra - prawo
         <translation>Obróć zaznaczenie zgodnie z ruchem wskazówek zegara przed zrzutowaniem</translation>
     </message>
     <message>
-        <source>Scale projection to original size ('isometric drawing')</source>
+        <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Skala projekcji do oryginalnego rozmiaru ("izometryczny rysunek&amp;quot;)</translation>
+        <translation type="obsolete">Skala projekcji do oryginalnego rozmiaru (&quot;izometryczny rysunek&amp;quot;)</translation>
     </message>
     <message>
         <source>True scale</source>

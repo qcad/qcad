@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -6,7 +7,7 @@
         <location filename="../Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
         <translatorcomment>--google--
-Pokaż menu "Łamane"</translatorcomment>
+Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation>Narzędzia linii łamanej</translation>
     </message>
     <message>
@@ -14,7 +15,7 @@ Pokaż menu "Łamane"</translatorcomment>
         <source>Show polyline tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
-Pokaż menu "Łamane"</translatorcomment>
+Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation>Wyświetla narzędzia linii łamanej</translation>
     </message>
     <message>

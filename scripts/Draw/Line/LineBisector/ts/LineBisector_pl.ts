@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -22,7 +23,7 @@ Wskaż drugą linie</translatorcomment>
     </message>
     <message>
         <location line="+69"/>
-        <source>Lines don't intersect.</source>
+        <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linie nie przecinają się.</translation>
     </message>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -5,16 +6,16 @@
     <message>
         <source>Line Tools</source>
         <translatorcomment>--google--
-Pokaż menu "Linie"
-Pokaż menu "Łamane"</translatorcomment>
+Pokaż menu &quot;Linie&quot;
+Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation type="obsolete">Narzędzia linii</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
-Pokaż menu "Linie"</translatorcomment>
-        <translation type="obsolete">Pokaż menu "Linie"</translation>
+Pokaż menu &quot;Linie&quot;</translatorcomment>
+        <translation type="obsolete">Pokaż menu &quot;Linie&quot;</translation>
     </message>
     <message>
         <source>&amp;Line</source>
@@ -39,7 +40,7 @@ Pokaż menu "Linie"</translatorcomment>
     </message>
     <message>
         <source>Show line tools</source>
-        <translation type="obsolete">Pokaż menu "Linie"</translation>
+        <translation type="obsolete">Pokaż menu &quot;Linie&quot;</translation>
     </message>
     <message>
         <location line="+22"/>

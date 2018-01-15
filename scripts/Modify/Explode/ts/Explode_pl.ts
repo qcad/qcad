@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -67,7 +68,7 @@ Rysuj krzywe składane (NURBS)</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wymiary
 Wymiarowanie
-Pokaż menu "Wymiarowanie"</translatorcomment>
+Pokaż menu &quot;Wymiarowanie&quot;</translatorcomment>
         <translation>Wymiary</translation>
     </message>
     <message>
@@ -138,7 +139,7 @@ Wybuch
     <message>
         <location filename="../PreferencesPage.ui" line="+197"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -155,17 +156,17 @@ Wybuch
     <message>
         <location line="-7"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-31"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

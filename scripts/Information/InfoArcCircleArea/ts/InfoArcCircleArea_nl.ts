@@ -4,7 +4,7 @@
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="+70"/>
+        <location filename="../InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -97,17 +97,17 @@
         <translation>Modus:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+30"/>
         <source>Calculate Area of Sector</source>
         <translation>Cirkelsectoroppervlakte berekenen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
         <translation>Cirkelsegmentoppervlakte berekenen</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>Toevoegen:</translation>
     </message>

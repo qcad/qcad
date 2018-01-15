@@ -4,7 +4,7 @@
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="+70"/>
+        <location filename="../InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
         <translation>完了</translation>
     </message>
@@ -97,17 +97,17 @@
         <translation>モード:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+30"/>
         <source>Calculate Area of Sector</source>
         <translation>セクターの面積を計算</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
         <translation>セグメントの面積を計算</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>追加:</translation>
     </message>

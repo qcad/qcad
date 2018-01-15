@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -48,27 +49,27 @@
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+358"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+124"/>
-        <source>Editing block '%1'&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"/>
+        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -84,7 +85,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2058"/>
+        <location line="+2062"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -93,7 +94,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-1785"/>
+        <location line="-1789"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -105,11 +106,11 @@ Anuluj
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
 Brak
-Wyrażenia "pragma" nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
+Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+645"/>
+        <location line="+649"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -263,7 +264,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+995"/>
+        <location filename="../WidgetFactory.js" line="+1002"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -330,32 +331,32 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Square root</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>omega</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -416,33 +417,33 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -523,8 +524,9 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Layers</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>Warstwy</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
@@ -533,8 +535,9 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>Układy</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
@@ -568,8 +571,9 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Entities</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>Obiekty</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
@@ -597,12 +601,12 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -636,12 +640,12 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -795,9 +799,9 @@ Kreskowanie
         <location line="+2"/>
         <source>Images</source>
         <translatorcomment>--google--
-&lt;img src=":/trolltech/assistant/images/wrap.png"&gt;&amp;nbsp;Przeszukano od początku
-&lt;img src=":/trolltech/assistant/images/wrap.png"&gt;nbsp;Przeszukano od początku
-&lt;img src=":/trolltech/shared/images/wrap.png"&gt;&amp;nbsp;Przeszukano od początku</translatorcomment>
+&lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;&amp;nbsp;Przeszukano od początku
+&lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;nbsp;Przeszukano od początku
+&lt;img src=&quot;:/trolltech/shared/images/wrap.png&quot;&gt;&amp;nbsp;Przeszukano od początku</translatorcomment>
         <translation type="unfinished">Obrazy</translation>
     </message>
     <message>
@@ -855,12 +859,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -917,22 +921,22 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -955,13 +959,14 @@ Krzywa składana</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Texts</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>Teksty</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
@@ -975,12 +980,12 @@ Wprowadź tekst</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>

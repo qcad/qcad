@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -49,7 +50,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
@@ -59,7 +60,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
@@ -94,7 +95,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
@@ -114,7 +115,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
@@ -154,7 +155,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>

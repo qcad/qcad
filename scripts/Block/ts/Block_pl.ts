@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -41,7 +42,7 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Block '%1' already exists&lt;br&gt;and will be overwritten.</source>
+        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
         <translation>Blok „%1” już istnieje&lt;br&gt;i zostanie zastąpiony.</translation>
     </message>
     <message>

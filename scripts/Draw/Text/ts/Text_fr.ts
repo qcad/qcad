@@ -105,7 +105,7 @@
         <translation>&amp;Caractère spécial...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Autres...</translation>
     </message>

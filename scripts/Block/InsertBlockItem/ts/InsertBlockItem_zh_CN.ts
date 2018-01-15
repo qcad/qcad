@@ -14,7 +14,7 @@
         <translation>将无效块的名称设为‘%1’</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>

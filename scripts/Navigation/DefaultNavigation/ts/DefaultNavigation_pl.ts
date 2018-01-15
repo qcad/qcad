@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -13,7 +14,7 @@
         <source>Navigation</source>
         <translatorcomment>--google--
 Pasek do nawigacji
-"KeyNavigation" jest dostępny jedynie poprzez dołączone właściwości</translatorcomment>
+&quot;KeyNavigation&quot; jest dostępny jedynie poprzez dołączone właściwości</translatorcomment>
         <translation>Nawigacja</translation>
     </message>
     <message>
@@ -56,7 +57,7 @@ Pasek do nawigacji
     <message>
         <location line="-34"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

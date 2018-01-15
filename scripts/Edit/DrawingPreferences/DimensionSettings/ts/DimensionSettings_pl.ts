@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -65,7 +66,7 @@ Stopnie dziesiętne</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Inżynierski
-Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc ustawiona na cale.</translatorcomment>
+Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,jednostka musi byc ustawiona na cale.</translatorcomment>
         <translation>Inżynierski</translation>
     </message>
     <message>
@@ -74,7 +75,7 @@ Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc us
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Architektoniczny
-Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc ustawiona na cale.</translatorcomment>
+Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,jednostka musi byc ustawiona na cale.</translatorcomment>
         <translation>Architektoniczny</translation>
     </message>
     <message>
@@ -120,7 +121,7 @@ Gradusy</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <source>Surveyor's units</source>
+        <source>Surveyor&apos;s units</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Jednostki geometryczne</translatorcomment>
@@ -133,14 +134,14 @@ Jednostki geometryczne</translatorcomment>
         <translation>Jednostka / format</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>The drawing unit must be 'Inch' or 'Foot' to display dimension labels in formats 'Architectural' or 'Engineering'. Format changed to 'Decimal'.</source>
-        <translation>Aby wyświetlać etykiety wymiarów w formacie „architektonicznym” lub „inżynierskim”, jednostką rysunku musi być „cal” lub „stopa”. Zmieniono format na „dziesiętny”.</translation>
+        <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="vanished">Aby wyświetlać etykiety wymiarów w formacie „architektonicznym” lub „inżynierskim”, jednostką rysunku musi być „cal” lub „stopa”. Zmieniono format na „dziesiętny”.</translation>
     </message>
     <message>
-        <source>The drawing unit must be 'Inch' to display dimension labels in formats 'Architectural' or 'Engineering'. Format changed to 'Decimal'.</source>
+        <location line="+1"/>
+        <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Jednostka rysunek musi być "Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
+        <translation type="unfinished">Jednostka rysunek musi być &quot;Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

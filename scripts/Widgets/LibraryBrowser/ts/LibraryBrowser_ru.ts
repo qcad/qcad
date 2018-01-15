@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1155"/>
+        <location line="+1158"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Обзор библиотеки</translation>
     </message>
     <message>
-        <location line="-1147"/>
+        <location line="-1150"/>
         <source>Icon</source>
         <translation>Пиктограмма</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation>Выберите директорию исходного кода</translation>
     </message>
     <message>
-        <location line="+685"/>
+        <location line="+688"/>
         <source>Page %1 of %2</source>
         <translation>Страница %1 из %2</translation>
     </message>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -47,12 +48,14 @@
     <message>
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>Promień osiągnął wartość mniejszą niż 0 po narysowaniu %1 koncentrycznych okręgów.</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>Promień osiągnął wartość mniejszą niż 0 po narysowaniu %1 koncentrycznych łuków.</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
 </context>
 </TS>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -6,7 +7,7 @@
         <location filename="../Select.js" line="+216"/>
         <source>Selection Tools</source>
         <translatorcomment>--google--
-Pokaż menu "Zaznacz"</translatorcomment>
+Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
         <translation>Narzędzia zaznaczania</translation>
     </message>
     <message>
@@ -14,7 +15,7 @@ Pokaż menu "Zaznacz"</translatorcomment>
         <source>Show selection tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
-Pokaż menu "Zaznacz"</translatorcomment>
+Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
         <translation>Wyświetla narzędzia zaznaczania</translation>
     </message>
     <message>

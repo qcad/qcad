@@ -14,7 +14,7 @@
         <translation>Ändrade ogiltigt blocknamn till &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

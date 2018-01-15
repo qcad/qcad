@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -16,7 +17,7 @@
     </message>
     <message>
         <location line="+169"/>
-        <source>The two entities don't intersect, or are currently not supported for trimming.</source>
+        <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Te dwa obiekty nie przecinają się lub aktualnie ich przycinanie nie jest obsługiwane.</translation>
     </message>

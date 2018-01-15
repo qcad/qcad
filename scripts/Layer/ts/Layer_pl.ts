@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -34,12 +35,12 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31"/>
@@ -55,7 +56,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+187"/>
+        <location filename="../LayerDialog.js" line="+186"/>
         <source>Leading or trailing spaces.</source>
         <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>

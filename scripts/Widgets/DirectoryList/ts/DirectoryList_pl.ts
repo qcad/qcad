@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -5,7 +6,7 @@
     <message>
         <location filename="../DirectoryList.js" line="+57"/>
         <source>The folder
-'%1'
+&apos;%1&apos;
 is already in the list.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Katalog

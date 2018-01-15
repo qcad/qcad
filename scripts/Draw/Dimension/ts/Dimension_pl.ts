@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -67,7 +68,7 @@ Przełącz znak średnicy
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+79"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Narzędzia wymiarów</translation>

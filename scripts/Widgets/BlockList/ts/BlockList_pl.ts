@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../BlockList.js" line="+445"/>
+        <location filename="../BlockList.js" line="+453"/>
         <location line="+41"/>
         <location line="+39"/>
         <source>Block List</source>

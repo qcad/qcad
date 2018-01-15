@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>

@@ -19,7 +19,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+184"/>
+        <location filename="../PrintPreview.js" line="+216"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -44,7 +44,7 @@
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.js" line="+404"/>
+        <location filename="../PrintPreview.js" line="+405"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -54,12 +54,12 @@
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../PrintPreview.js" line="-405"/>
+        <location filename="../PrintPreview.js" line="-406"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+415"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>Export fehlgeschlagen (Kann Datei nicht öffnen): %1</translation>
     </message>
     <message>
-        <location filename="../PrintPreviewInit.js" line="+6"/>
+        <location filename="../PrintPreviewInit.js" line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Anzeigen wie die aktuelle Zeichnung gedruckt wird</translation>
     </message>

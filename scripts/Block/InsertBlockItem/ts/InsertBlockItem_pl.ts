@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -9,12 +10,12 @@
     </message>
     <message>
         <location line="+26"/>
-        <source>Adjusted invalid block name to '%1'</source>
+        <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Skorygowany nieprawidłową nazwę bloku do'&amp;#39;</translation>
+        <translation type="unfinished">Skorygowany nieprawidłową nazwę bloku do&apos;&amp;#39;</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

@@ -4,7 +4,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+183"/>
+        <location filename="../PrintPreview.js" line="+215"/>
         <source>Drag to move paper</source>
         <translation>Siirrä paperia vetämällä</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Tehty</translation>
     </message>
     <message>
-        <location line="+404"/>
+        <location line="+405"/>
         <source>Export to PDF</source>
         <translation>Vie PDF:ksi</translation>
     </message>
@@ -124,7 +124,7 @@
         <translation>Tulostuksen esikatselu</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Esikatselu, miltä nykyinen piirros näyttäisi tulostettuna</translation>
     </message>

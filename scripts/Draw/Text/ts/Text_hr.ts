@@ -105,7 +105,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation type="unfinished"></translation>
     </message>

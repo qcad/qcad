@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -9,7 +10,7 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Unit '%1' selected - Nothing to be done</source>
+        <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
         <translation>Wybrano jednostkę „%1” - brak czynności do wykonania</translation>
     </message>
     <message>

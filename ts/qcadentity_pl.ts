@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -640,7 +641,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
@@ -650,7 +651,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
@@ -671,17 +672,17 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -738,7 +739,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-10"/>
         <source>Closed Periodic</source>
-        <translation/>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -876,12 +877,12 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
     <name>FirstStart</name>
     <message>
         <location filename="../FirstStart.js" line="+36"/>
-        <location line="+216"/>
+        <location line="+217"/>
         <source>%1 First Start</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Pierwsze uruchomienie %1</translation>

@@ -217,7 +217,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+995"/>
+        <location filename="../WidgetFactory.js" line="+1002"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>

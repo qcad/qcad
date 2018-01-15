@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -31,7 +32,7 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+183"/>
+        <location filename="../PrintPreview.js" line="+215"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę przeciągnąć, aby przesunąć papier</translation>
@@ -47,7 +48,7 @@ Zrobione
         <translation>Zrobione</translation>
     </message>
     <message>
-        <location line="+404"/>
+        <location line="+405"/>
         <source>Export to PDF</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -225,7 +226,7 @@ Przełącz tryb czarno-biały</translatorcomment>
         <translation>&amp;Podgląd wydruku</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wyświetla podgląd wydruku aktualnego rysunku</translation>

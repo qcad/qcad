@@ -4,7 +4,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+183"/>
+        <location filename="../PrintPreview.js" line="+215"/>
         <source>Drag to move paper</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+404"/>
+        <location line="+405"/>
         <source>Export to PDF</source>
         <translation type="unfinished"></translation>
     </message>
@@ -124,7 +124,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Preview how current drawing would be printed</source>
         <translation type="unfinished"></translation>
     </message>

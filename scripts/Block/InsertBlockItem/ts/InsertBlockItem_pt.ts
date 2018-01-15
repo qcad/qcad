@@ -101,7 +101,7 @@ Utilize a camada atual</translatorcomment>
         <translation>Ajustado o nome do Bloco inválido para &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -54,7 +55,7 @@ General Punctuation</translatorcomment>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
 Brak
-Wyrażenia "pragma" nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
+Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
         <translation>Brak</translation>
     </message>
     <message>
@@ -62,8 +63,8 @@ Wyrażenia "pragma" nie są obsługiwane. Dlatego musi wystąpić wyrażenie zas
         <source>Inch</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
-Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc ustawiona na cale.
-Dla formatu długości "Inżynierski" i "Architektoniczny",jednostka musi byc ustawiona na cale
+Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,jednostka musi byc ustawiona na cale.
+Dla formatu długości &quot;Inżynierski&quot; i &quot;Architektoniczny&quot;,jednostka musi byc ustawiona na cale
 Cal</translatorcomment>
         <translation>Cal</translation>
     </message>

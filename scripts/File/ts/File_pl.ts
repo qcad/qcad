@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -23,7 +24,7 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
     </message>
     <message>
         <location line="+94"/>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -39,7 +40,7 @@ Format:</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <source>The file '%1' already exists. Do you wish to overwrite it?</source>
+        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>

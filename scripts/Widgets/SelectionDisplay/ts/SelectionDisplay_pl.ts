@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -14,24 +15,28 @@
     </message>
     <message>
         <location line="+23"/>
-        <source>%1 %2 on Layer '%3'</source>
+        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>%1 %2 na warstwie „%3”</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>%1 %2 na %3 warstwach</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+4"/>
-        <source>%1 Entities on Layer '%2'</source>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>%1 obiekty na warstwie „%2”</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+3"/>
         <source>%1 Entities on %2 Layers</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>%1 obiekty na %2 warstwach</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <source>Entities</source>
         <translatorcomment>--google--
@@ -49,9 +54,9 @@ Wymi&amp;ar</translatorcomment>
         <translation type="obsolete">na</translation>
     </message>
     <message>
-        <source>Layer '%1'</source>
+        <source>Layer &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Warstwa'&amp;#39;</translation>
+        <translation type="obsolete">Warstwa&apos;&amp;#39;</translation>
     </message>
     <message>
         <source>%1 Layers</source>
@@ -69,7 +74,7 @@ Wymi&amp;ar</translatorcomment>
     <message>
         <location filename="../SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

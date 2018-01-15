@@ -14,7 +14,7 @@
         <translation>Ongeldig blok naam gecorrigeerd in &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Position</source>
         <translation>Positie</translation>
     </message>

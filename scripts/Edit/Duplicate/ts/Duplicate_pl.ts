@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -10,12 +11,14 @@
     <message>
         <location filename="../Duplicate.js" line="+55"/>
         <source>1 entity duplicated</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>Powielono 1 element</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
     <message>
         <location line="+3"/>
         <source>%1 entities duplicated</source>
+        <translatorcomment>Should be plural form</translatorcomment>
         <translation>Powielono %1 elementów</translation>
-    <translatorcomment>Should be plural form</translatorcomment></message>
+    </message>
 </context>
 </TS>

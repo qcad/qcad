@@ -14,7 +14,7 @@
         <translation>Säädetty puutteellinen lohkonimi &apos;%1&apos; :een</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Position</source>
         <translation>Sijainti</translation>
     </message>

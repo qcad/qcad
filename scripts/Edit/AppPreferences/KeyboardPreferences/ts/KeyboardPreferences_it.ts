@@ -4,7 +4,7 @@
 <context>
     <name>Keyboard</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="17"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
         <translation>Scorciatoia timeout:</translation>
     </message>
@@ -12,12 +12,12 @@
 <context>
     <name>KeyboardPreferences</name>
     <message>
-        <location filename="../KeyboardPreferences.js" line="24"/>
+        <location filename="../KeyboardPreferences.js" line="+24"/>
         <source>General</source>
         <translation>Generale</translation>
     </message>
     <message>
-        <location filename="../KeyboardPreferences.js" line="24"/>
+        <location line="+0"/>
         <source>Keyboard</source>
         <translation>Tastiera</translation>
     </message>

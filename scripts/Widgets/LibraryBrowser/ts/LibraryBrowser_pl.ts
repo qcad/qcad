@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -85,7 +86,7 @@ Zastępcze widżety</translatorcomment>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1155"/>
+        <location line="+1158"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translatorcomment>--exact match--
@@ -94,7 +95,7 @@ Przeglądarka bibliotek</translatorcomment>
         <translation>Przeglądarka kolekcji</translation>
     </message>
     <message>
-        <location line="-1147"/>
+        <location line="-1150"/>
         <source>Icon</source>
         <translatorcomment>--google--
 XX ikona wybrana wyłączona
@@ -118,7 +119,7 @@ Atrybuty filtru bieżącej dokumentacji (lista oddzielona przecinkami):</transla
         <translation>Wybór katalogu źródłowego</translation>
     </message>
     <message>
-        <location line="+685"/>
+        <location line="+688"/>
         <source>Page %1 of %2</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -148,7 +149,7 @@ Drukowanie przerwane</translatorcomment>
 --file: qtconfig_pl.ts--
 Niepoprawny plik UI: brak głównego elementu &lt;ui&gt;.
 Niepoprawny plik UI: brak głównego elementu &lt;ui&gt;
-'%1' nie jest poprawnym profilem: %2</translatorcomment>
+&apos;%1&apos; nie jest poprawnym profilem: %2</translatorcomment>
         <translation>Plik:</translation>
     </message>
     <message>
@@ -212,7 +213,7 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+393"/>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -6,7 +7,7 @@
         <location filename="../Ellipse.js" line="+71"/>
         <source>Ellipse Tools</source>
         <translatorcomment>--google--
-Pokaz menu "Elipsy"</translatorcomment>
+Pokaz menu &quot;Elipsy&quot;</translatorcomment>
         <translation>Narzędzia elipsy</translation>
     </message>
     <message>
@@ -14,7 +15,7 @@ Pokaz menu "Elipsy"</translatorcomment>
         <source>Show ellipse tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
-Pokaz menu "Elipsy"</translatorcomment>
+Pokaz menu &quot;Elipsy&quot;</translatorcomment>
         <translation>Wyświetla narzędzia elipsy</translation>
     </message>
     <message>

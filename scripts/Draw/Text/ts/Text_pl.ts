@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -151,7 +152,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Znaki &amp;specjalne...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
@@ -411,7 +412,7 @@ CTRL+I</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>

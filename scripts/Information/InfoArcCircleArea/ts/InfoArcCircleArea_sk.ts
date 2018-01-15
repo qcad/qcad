@@ -4,7 +4,7 @@
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="+67"/>
+        <location filename="../InfoArcCircleArea.js" line="+70"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
         <translation>Vyberte oblúk, kružnicu, elipsu alebo eliptický oblúk</translation>
     </message>
@@ -113,17 +113,17 @@
         <translation>Mód:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+30"/>
         <source>Calculate Area of Sector</source>
         <translation>Vypočítať Obsah Časti</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
         <translation>Vypočítať Obsah Výseku</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>Pridať:</translation>
     </message>

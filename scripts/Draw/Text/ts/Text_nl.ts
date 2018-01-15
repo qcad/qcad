@@ -105,7 +105,7 @@
         <translation>&amp;Speciale tekens...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>

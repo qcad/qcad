@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -21,25 +22,25 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation>Wiersz poleceń</translation>
     </message>
     <message>
-        <source>Invalid coordinate '%1'.</source>
+        <source>Invalid coordinate &apos;%1&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Nieprawidłowy koordynować'&amp;#39;.</translation>
+        <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
         <location line="+207"/>
-        <source>Unknown command or invalid coordinate or value: '%1'</source>
+        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nieznane polecenie lub nieprawidłowa współrzędna bądź wartość: „%1”</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: '%1'</source>
+        <source>Numbers may be entered as: &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Liczby mogą być wprowadzane jako: „%1”</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: '%1' (absolute) or '%2' (relative) or '%3' (polar) or '%4' (relative polar)</source>
+        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Współrzędne mogą być wprowadzane jako: „%1” (absolutnie), „%2” (względnie), „%3” (biegunowo) lub „%4”; (biegunowo względnie)</translation>
     </message>
@@ -50,9 +51,9 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation>Format liczb i współrzędnych można zmienić w preferencjach programu.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+68"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
@@ -60,7 +61,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-362"/>
+        <location line="-342"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -71,11 +72,11 @@ Aktywuj linię &amp;poleceń</translatorcomment>
     </message>
     <message>
         <location line="+16"/>
-        <source>Invalid coordinate or distance '%1'.</source>
+        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Nieprawidłowa współrzędna lub odległość „%1”.</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+117"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

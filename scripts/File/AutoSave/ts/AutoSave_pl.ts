@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -38,7 +39,7 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>An 'autosave' backup file for an untitled drawing was found.
+        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Odnaleziono plik automatycznej kopii zapasowej dla rysunku bez nazwy.
@@ -46,11 +47,12 @@ Odzyskać go?</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>%1 'autosave' backup files for untitled drawings were found.
+        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
+        <translatorcomment>Plural form should be used.</translatorcomment>
         <translation>Odnaleziono %1 pliki automatycznej kopii zapasowej dla rysunków bez nazwy.
 Odzyskać je?</translation>
-    <translatorcomment>Plural form should be used.</translatorcomment></message>
+    </message>
     <message>
         <location line="+6"/>
         <source>Recover Files?</source>
@@ -71,7 +73,7 @@ Odzyskać je?</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>An 'autosave' backup file for '%1' exists.
+        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Istnieje automatyczna kopia zapasowa pliku „%1”.

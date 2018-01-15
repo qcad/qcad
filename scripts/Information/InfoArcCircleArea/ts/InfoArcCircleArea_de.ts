@@ -8,7 +8,7 @@
         <translation type="vanished">Kreis, Kreisbogen, Ellipse oder Ellipsenbogen wählen</translation>
     </message>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="+70"/>
+        <location filename="../InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
         <translation>Abbrechen</translation>
     </message>
@@ -149,17 +149,17 @@
         <translation>Modus:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+30"/>
         <source>Calculate Area of Sector</source>
         <translation>Sektorfläche berechnen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
         <translation>Segmentfläche berechnen</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>Hinzufügen:</translation>
     </message>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -19,13 +20,13 @@ Wszystkie pliki (*.*)</translatorcomment>
     </message>
     <message>
         <location line="-51"/>
-        <source>Error while generating Bitmap file '%1': %2</source>
+        <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Błąd podczas generowania pliku bitmapy „%1”: %2</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Bitmap file has been exported to '%1'</source>
+        <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wyeksportowano bitmapę do pliku „%1”</translation>
     </message>
@@ -71,7 +72,17 @@ Wysokość tekstu:</translatorcomment>
         <translation>Liczba pikseli na jednostkę rysunku:</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Transparent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
         <translation>Kolor</translation>
@@ -124,7 +135,7 @@ Minimalny odstęp siatki (piksele)</translatorcomment>
         <translation>Dodanie dodatkowego marginesu, aby skompensować grubość linii</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-170"/>
         <source>Background</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -161,7 +172,7 @@ Bardzo gruby</translatorcomment>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../BitmapExportWorker.js" line="+97"/>
+        <location filename="../BitmapExportWorker.js" line="+106"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nieprawidłowy rozmiar obrazu (szerokość x wysokość musi być mniejsze niż %1)</translation>
     </message>

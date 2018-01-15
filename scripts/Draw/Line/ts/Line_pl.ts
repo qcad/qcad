@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -6,8 +7,8 @@
         <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
         <translatorcomment>--google--
-Pokaż menu "Linie"
-Pokaż menu "Łamane"</translatorcomment>
+Pokaż menu &quot;Linie&quot;
+Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation>Narzędzia linii</translation>
     </message>
     <message>
@@ -15,7 +16,7 @@ Pokaż menu "Łamane"</translatorcomment>
         <source>Show line tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
-Pokaż menu "Linie"</translatorcomment>
+Pokaż menu &quot;Linie&quot;</translatorcomment>
         <translation>Wyświetla narzędzia linii</translation>
     </message>
     <message>

@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../InfoArcCircleArea.js" line="+70"/>
+        <location filename="../InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
         <translation>Zrobione</translation>
     </message>
@@ -96,17 +97,17 @@
         <translation>Tryb:</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Calculate Area of Sector</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Calculate Area of Segment</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
         <location line="+30"/>
+        <source>Calculate Area of Sector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>Calculate Area of Segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
         <source>Add:</source>
         <translation>Dodanie:</translation>
     </message>

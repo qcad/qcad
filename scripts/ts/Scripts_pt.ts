@@ -267,7 +267,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+995"/>
+        <location filename="../WidgetFactory.js" line="+1002"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--

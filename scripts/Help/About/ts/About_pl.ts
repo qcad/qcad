@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -18,8 +19,8 @@
     </message>
     <message>
         <location line="+19"/>
-        <source>This means that everyone can &lt;a href='%1'&gt;get involved&lt;/a&gt;!</source>
-        <translation>Oznacza to, że każdy może &lt;a href='%1'&gt;uczestniczyć w tworzeniu programu&lt;/a&gt;!</translation>
+        <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
+        <translation>Oznacza to, że każdy może &lt;a href=&apos;%1&apos;&gt;uczestniczyć w tworzeniu programu&lt;/a&gt;!</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -114,7 +115,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).</source>
+        <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
         <translation>Wtyczki i dodatki skryptów są przedmiotem odpowiednich im licencji (proszę sprawdzić kartę „Wtyczki”)</translation>
     </message>
     <message>
@@ -158,7 +159,7 @@
         <translation>Błąd:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+37"/>
         <source>Script Add-Ons</source>
         <translation>Dodatki skryptów</translation>
     </message>
@@ -194,7 +195,7 @@
         <translation>Tłumaczenia</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Templates</source>
         <translation>Szablony</translation>
     </message>

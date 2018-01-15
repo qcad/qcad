@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -46,7 +47,7 @@ Nienazwany
         <location line="+5"/>
         <source>Cannot open file</source>
         <translatorcomment>--google--
-Nie można otworzyć pliku '%1'
+Nie można otworzyć pliku &apos;%1&apos;
 Nie można otworzyć pliku %1! Zostaje on opuszczony.
 Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation>Nie można otworzyć pliku</translation>
@@ -106,13 +107,13 @@ Tylko do odczytu</translatorcomment>
     </message>
     <message>
         <location line="+58"/>
-        <source>Do you want to save the changes you made in&lt;br&gt;the document '%1'?</source>
+        <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zapisać zmiany wprowadzone w &lt;br&gt;dokumencie „%1”?</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Your changes will be lost if you don't save them.</source>
+        <source>Your changes will be lost if you don&apos;t save them.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wprowadzone zmiany zostaną porzucone jeśli nie zostaną zapisane.</translation>
     </message>

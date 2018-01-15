@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -20,7 +21,7 @@ Zastępcze widżety</translatorcomment>
     <message>
         <location line="+35"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Toggle Title Bar</source>

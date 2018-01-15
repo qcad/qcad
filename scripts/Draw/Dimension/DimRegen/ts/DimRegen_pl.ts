@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -11,8 +12,9 @@
     <message>
         <location line="+3"/>
         <source>Reset label position of %1 dimension(s).</source>
+        <translatorcomment>Form should be plural.</translatorcomment>
         <translation>Przywrócono położenie etykiet %1 wymiaru(ów).</translation>
-    <translatorcomment>Form should be plural.</translatorcomment></message>
+    </message>
     <message>
         <location filename="../DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>

@@ -14,7 +14,7 @@
         <translation>無効なブロック名は&apos;%1&apos;に調整されました</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+62"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>

@@ -148,7 +148,7 @@ Co&amp;lar</translatorcomment>
         <translation>&amp;Caracteres Especiais...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
