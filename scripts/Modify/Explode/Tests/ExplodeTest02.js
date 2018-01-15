@@ -21,6 +21,7 @@ ExplodeTest02.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::ExplodeButton');
     this.verifyDrawing('ExplodeTest02_000.dxf');
+    RSettings.setValue("Explode/SplineTolerance", 0.1);
     this.tearDown();
     qDebug('finished ExplodeTest02.test00()');
 };

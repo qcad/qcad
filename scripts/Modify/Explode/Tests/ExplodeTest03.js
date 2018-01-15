@@ -16,11 +16,12 @@ ExplodeTest03.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Modify/Explode/Tests/data/splines.dxf');
     // set tolerance:
-    RSettings.setValue("Explode/SplineTolerance", 1);
+    RSettings.setValue("Explode/SplineTolerance", 1.0);
     this.selectAll();
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::ExplodeButton');
     this.verifyDrawing('ExplodeTest03_000.dxf');
+    RSettings.setValue("Explode/SplineTolerance", 0.1);
     this.tearDown();
     qDebug('finished ExplodeTest03.test00()');
 };
