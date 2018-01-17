@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 
+include("scripts/library.js");
 include("../Layer.js");
- 
 
 /**
  * \class SelectLayer
@@ -48,11 +48,14 @@ SelectLayer.prototype.selectLayer = function(layer) {
         return false;
     }
 
+    var num;
     var ids = doc.queryLayerEntities(layer.getId());
     if (this.select) {
-        di.selectEntities(ids, true);
+        num = di.selectEntities(ids, true);
+        EAction.handleUserMessage(qsTr("%1 entities added to selection.").arg(num));
     }
     else {
-        di.deselectEntities(ids);
+        num = di.deselectEntities(ids);
+        EAction.handleUserMessage(qsTr("%1 entities removed from selection.").arg(num));
     }
 };
