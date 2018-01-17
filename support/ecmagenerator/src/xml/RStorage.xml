@@ -992,7 +992,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="selectEntities" cppName="selectEntities"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="true">
+      <variant returnType="int" isPureVirtual="true">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"
         typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
         isConst="true" />
@@ -1019,7 +1019,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="deselectEntities" cppName="deselectEntities"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="true">
+      <variant returnType="int" isPureVirtual="true">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"
         typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
         isConst="true" />
