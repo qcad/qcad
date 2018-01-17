@@ -2468,6 +2468,18 @@ function writeTextFile(fileName, str) {
     file.close();
 };
 
+function getKeyboardModifiers() {
+    if (RSettings.isQt(5)) {
+        return QGuiApplication.keyboardModifiers();
+    }
+    else {
+        return QApplication.keyboardModifiers();
+    }
+};
+
+function isShiftPressed() {
+    return getKeyboardModifiers().valueOf() & Qt.ShiftModifier.valueOf();
+};
 
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
