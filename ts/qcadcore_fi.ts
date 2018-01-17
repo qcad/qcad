@@ -992,7 +992,7 @@
     <message>
         <location line="+2"/>
         <source>Drainage</source>
-        <translation>Salaojitus</translation>
+        <translation>Viemäri</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1001,7 +1001,7 @@
     </message>
     <message>
         <source>Drainage Reverse</source>
-        <translation type="vanished">Salaojitus käänteinen</translation>
+        <translation type="vanished">Viemäri käänteinen</translation>
     </message>
 </context>
 <context>

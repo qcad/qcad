@@ -333,17 +333,17 @@ Autres...</translatorcomment>
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+45"/>
         <source>Current Layer ID</source>
-        <translation>Calque actuel uniquement</translation>
+        <translation>ID du calque actuel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Unité de dessin</translation>
+        <translation>Unité de mesure du dessin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Échelle du type de ligne</translation>
+        <translation>Échelle du type de la ligne</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -467,7 +467,7 @@ Partage Horizontal
 &amp;Echelle
 Echelle
 Met les entités à l&apos;échelle</translatorcomment>
-        <translation>Echelle</translation>
+        <translation>Échelle</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -844,7 +844,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <location filename="../src/core/RGuiAction.cpp" line="+183"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nécessite une sélection</translation>
+        <translation>Demande une sélection</translation>
     </message>
 </context>
 <context>
@@ -855,7 +855,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     </message>
     <message>
         <source>Frozen</source>
-        <translation type="vanished">Caché</translation>
+        <translation type="vanished">Gelé</translation>
     </message>
     <message>
         <source>Hidden</source>

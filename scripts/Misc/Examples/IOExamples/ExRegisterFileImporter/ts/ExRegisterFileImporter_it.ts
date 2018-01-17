@@ -21,7 +21,7 @@
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &apos;.example&apos;. Use File &gt; Open to see the filter in action.</source>
-        <translation>Registrato importer per i file &apos;.example&apos;. Usa File &gt; Apri per visualizzare il filtro in uso.</translation>
+        <translation>Registrato un importatore per i file &apos;.example&apos;. Usa File &gt; Apri per visualizzare il filtro in uso.</translation>
     </message>
     <message>
         <location line="+10"/>

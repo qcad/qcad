@@ -405,7 +405,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Peruslinjan päätepiste</translation>
+        <translation>Johtava päätepiste</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+2"/>
@@ -460,7 +460,7 @@
     <message>
         <location line="+1"/>
         <source>Linear Factor</source>
-        <translation>Lineaarikerroin</translation>
+        <translation>Lineaarinen kerroin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -752,7 +752,7 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-10"/>
         <source>Closed Periodic</source>
-        <translation>Suljettu jaksoittainen</translation>
+        <translation>Suljettu jakso</translation>
     </message>
     <message>
         <location line="+1"/>

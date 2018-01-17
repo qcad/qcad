@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.1" language="fr">
 <context>
     <name>CreateLibraryItem</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location line="+1"/>
         <source>Create library item from selection</source>
-        <translation>Créer élément de la bibliothèque de la sélection</translation>
+        <translation>Créer élément de la bibliothèque à partir de la sélection</translation>
     </message>
 </context>
 </TS>

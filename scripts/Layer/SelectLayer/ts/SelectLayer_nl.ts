@@ -8,5 +8,15 @@
         <source>&amp;Select Layer</source>
         <translation>Laag &amp;selecteren</translation>
     </message>
+    <message>
+        <location filename="../SelectLayer.js" line="+55"/>
+        <source>%1 entities added to selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 entities removed from selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

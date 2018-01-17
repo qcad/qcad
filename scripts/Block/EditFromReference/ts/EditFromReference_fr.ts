@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.1" language="fr">
 <context>
     <name>EditFromReference</name>
     <message>
         <location filename="../EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation>Choisissez la référence de bloc</translation>
+        <translation>Choisissez la référence du bloc</translation>
     </message>
     <message>
         <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>M&amp;odifier le bloc d&apos;une référence</translation>
+        <translation>M&amp;odifier le bloc à partir d&apos;une référence</translation>
     </message>
     <message>
         <location line="+1"/>

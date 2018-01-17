@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.1" language="fr">
 <context>
     <name>InsertBlockItem</name>
     <message>
@@ -25,12 +25,12 @@
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Échelle des entités&lt;br&gt;collées par ce facteur</translation>
+        <translation>Mise à l&apos;échelle des entités&lt;br&gt;collées par ce facteur</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Retourner les entités&lt;br&gt;collé horizontalement</translation>
+        <translation>Retourner les entités&lt;br&gt;collées horizontalement</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -48,7 +48,7 @@
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Ecraser les calques existantes&lt;br&gt;dans le dessin avec les&lt;br&gt;calques du presse-papiers</translation>
+        <translation>Ecraser les calques existants&lt;br&gt;dans le dessin avec les&lt;br&gt;calques du presse-papiers</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -73,7 +73,7 @@
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>Ajusté nom de bloc invalide &apos;%1&apos;</translation>
+        <translation>Corrigé nom de bloc invalide &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+62"/>

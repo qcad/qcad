@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fr_FR">
+<TS version="2.1" language="fr">
 <context>
     <name>Insert</name>
     <message>
@@ -32,7 +32,7 @@
     <message>
         <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation>Faire pivoter le&lt;br&gt;bloc par cet angle</translation>
+        <translation>Faire pivoter le&lt;br&gt;bloc de cet angle</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -42,7 +42,7 @@
     <message>
         <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation>Échelle du bloc en X&lt;br&gt;par ce facteur</translation>
+        <translation>Mise à l&apos;échelle du bloc en X&lt;br&gt;par ce facteur</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -52,7 +52,7 @@
     <message>
         <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation>Échelle du bloc en Y&lt;br&gt;par ce facteur</translation>
+        <translation>Mise à l&apos;échelle du bloc en Y&lt;br&gt;par ce facteur</translation>
     </message>
     <message>
         <location line="+65"/>
