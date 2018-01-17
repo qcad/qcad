@@ -227,6 +227,7 @@ EcmaScriptShell.init = function(basePath) {
 
         appendAndScroll("<span style='font-style:italic;color:"+colPrompt+";'>" + Qt.escape("ecma> ") + "</span>"
                         + "<span style='color:"+col+"'>" + Qt.escape(command) + "</span>");
+        leCommand.appendCommand(command);
 
         // if we have open brackets: continue entering:
         countBraces(command);
