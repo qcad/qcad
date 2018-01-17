@@ -191,12 +191,12 @@ public:
         REntity::Id entityId,
         QSet<REntity::Id>* affectedEntities=NULL
     );
-    void selectEntities(
+    int selectEntities(
         const QSet<REntity::Id>& entityId,
         bool add=false,
         QSet<REntity::Id>* affectedEntities=NULL
     );
-    bool deselectEntities(
+    int deselectEntities(
         const QSet<REntity::Id>& entityId,
         QSet<REntity::Id>* affectedEntities=NULL
     );

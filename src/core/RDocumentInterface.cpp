@@ -1463,27 +1463,30 @@ void RDocumentInterface::selectEntity(REntity::Id entityId, bool add) {
  *
  * \param add True to add to the current selection, false otherwise.
  */
-void RDocumentInterface::selectEntities(const QSet<REntity::Id>& entityIds, bool add) {
+int RDocumentInterface::selectEntities(const QSet<REntity::Id>& entityIds, bool add) {
     QSet<RObject::Id> objectIds;
-    document.selectEntities(entityIds, add, &objectIds);
+    int ret = document.selectEntities(entityIds, add, &objectIds);
     updateSelectionStatus(objectIds, true);
 
     if (RMainWindow::hasMainWindow() && allowUpdate) {
         RMainWindow::getMainWindow()->postSelectionChangedEvent();
     }
+
+    return ret;
 }
 
 /**
  * Deselects the given entities and updates the scenes accordingly.
  */
-bool RDocumentInterface::deselectEntities(const QSet<REntity::Id>& entityIds) {
+int RDocumentInterface::deselectEntities(const QSet<REntity::Id>& entityIds) {
     QSet<RObject::Id> objectIds;
-    bool ret = document.deselectEntities(entityIds, &objectIds);
+    int ret = document.deselectEntities(entityIds, &objectIds);
     updateSelectionStatus(objectIds, true);
 
-    if (ret && RMainWindow::hasMainWindow()) {
+    if (ret>0 && RMainWindow::hasMainWindow()) {
         RMainWindow::getMainWindow()->postSelectionChangedEvent();
     }
+
     return ret;
 }
 

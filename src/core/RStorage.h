@@ -536,7 +536,7 @@ public:
      *      After the call, this set will contain all entity IDs of
      *      entities that were affected by the call.
      */
-    virtual void selectEntities(
+    virtual int selectEntities(
         const QSet<REntity::Id>& entityIds,
         bool add=false,
         QSet<REntity::Id>* affectedEntities=NULL
@@ -561,7 +561,7 @@ public:
      *      After the call, this set will contain all entity IDs of
      *      entities that were affected by the call.
      */
-    virtual bool deselectEntities(
+    virtual int deselectEntities(
         const QSet<REntity::Id>& entityIds,
         QSet<REntity::Id>* affectedEntities=NULL
     ) = 0;

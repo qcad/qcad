@@ -914,7 +914,7 @@ void RMemoryStorage::deselectEntity(REntity::Id entityId,
     deselectEntities(set, affectedEntities);
 }
 
-void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
+int RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
         bool add, QSet<REntity::Id>* affectedEntities) {
 
     if (!add) {
@@ -930,6 +930,8 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
         }
     }
     
+    int ret = 0;
+
     QSet<REntity::Id>::const_iterator it;
     for (it = entityIds.constBegin(); it != entityIds.constEnd(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
@@ -937,8 +939,11 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
             !isLayerLocked(e->getLayerId()) && !isLayerOffOrFrozen(e->getLayerId())) {
 
             setEntitySelected(e, true, affectedEntities);
+            ret++;
         }
     }
+
+    return ret;
 }
 
 /**
@@ -991,14 +996,14 @@ void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     }
 }
 
-bool RMemoryStorage::deselectEntities(const QSet<REntity::Id>& entityIds, QSet<REntity::Id>* affectedEntities) {
-    bool ret = false;
+int RMemoryStorage::deselectEntities(const QSet<REntity::Id>& entityIds, QSet<REntity::Id>* affectedEntities) {
+    int ret = 0;
     QSet<REntity::Id>::const_iterator it;
     for (it = entityIds.constBegin(); it != entityIds.constEnd(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (!e.isNull() && e->isSelected()) {
             setEntitySelected(e, false, affectedEntities);
-            ret = true;
+            ret++;
         }
     }
     return ret;

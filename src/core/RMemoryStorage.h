@@ -104,10 +104,10 @@ public:
         QSet<REntity::Id>* affectedEntities = NULL);
     virtual void deselectEntity(REntity::Id entityId,
         QSet<REntity::Id>* affectedEntities=NULL);
-    virtual void selectEntities(const QSet<REntity::Id>& entityIds,
+    virtual int selectEntities(const QSet<REntity::Id>& entityIds,
             bool add = false,
             QSet<REntity::Id>* affectedEntities = NULL);
-    virtual bool deselectEntities(const QSet<REntity::Id>& entityIds,
+    virtual int deselectEntities(const QSet<REntity::Id>& entityIds,
             QSet<REntity::Id>* affectedEntities = NULL);
     void setEntitySelected(QSharedPointer<REntity> entity, bool on,
         QSet<REntity::Id>* affectedEntities = NULL, bool onlyDescend = false);

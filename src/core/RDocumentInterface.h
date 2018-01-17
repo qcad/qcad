@@ -232,9 +232,9 @@ public:
         bool selectedOnly = false);
     void highlightEntity(REntity::Id entityId);
     void highlightReferencePoint(const RRefPoint& position);
-    void selectEntities(const QSet<REntity::Id>& entityIds, bool add = false);
+    int selectEntities(const QSet<REntity::Id>& entityIds, bool add = false);
     void selectEntity(REntity::Id entityId, bool add = false);
-    bool deselectEntities(const QSet<REntity::Id>& entityIds);
+    int deselectEntities(const QSet<REntity::Id>& entityIds);
     void deselectEntity(REntity::Id entityId);
     void selectBoxXY(const RBox& box, bool add = false);
     void selectAll();

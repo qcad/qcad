@@ -2231,12 +2231,12 @@ void RDocument::deselectEntity(
  * \copydoc RStorage::selectEntities
  *
  */
-void RDocument::selectEntities(
+int RDocument::selectEntities(
     const QSet<REntity::Id>& entityIds,
     bool add,
     QSet<REntity::Id>* affectedEntities) {
 
-    storage.selectEntities(entityIds, add, affectedEntities);
+    return storage.selectEntities(entityIds, add, affectedEntities);
 }
 
 /**
@@ -2245,7 +2245,7 @@ void RDocument::selectEntities(
  * \copydoc RStorage::deselectEntities
  *
  */
-bool RDocument::deselectEntities(
+int RDocument::deselectEntities(
     const QSet<REntity::Id>& entityIds,
     QSet<REntity::Id>* affectedEntities) {
 
