@@ -486,13 +486,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         // only process children if key delivered no value:
         if (isNull(value) || isOfType(c, QGroupBox)) {
             // never process internal children of these widgets:
-            if (!isOfType(c, QSpinBox) &&
-                !isOfType(c, QDoubleSpinBox) &&
-                !isOfType(c, QComboBox) &&
-                !isOfType(c, QFontComboBox) &&
-                !isOfType(c, QPlainTextEdit) &&
-                !isOfType(c, RMathLineEdit)) {
-
+            if (WidgetFactory.processChildren(c)) {
                 WidgetFactory.restoreState(c, group, signalReceiver, reset, document, map);
             }
         }
@@ -520,10 +514,6 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
 //        qDebug("restoring: ", c.objectName);
 //        qDebug("  value: ", value);
-
-//        if (c.objectName==="Positions") {
-//            debugger;
-//        }
 
         if (isOfType(c, QLineEdit)) {
             WidgetFactory.connect(c.textChanged, signalReceiver, c.objectName);
@@ -902,6 +892,20 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
  */
 WidgetFactory.resetState = function(widget, group) {
     WidgetFactory.restoreState(widget, group, undefined, true);
+};
+
+WidgetFactory.processChildren = function(c) {
+    if (isOfType(c, QSpinBox) ||
+        isOfType(c, QDoubleSpinBox) ||
+        isOfType(c, QComboBox) ||
+        isOfType(c, QFontComboBox) ||
+        isOfType(c, QPlainTextEdit) ||
+        isOfType(c, RMathLineEdit)) {
+
+        return false;
+    }
+
+    return true;
 };
 
 /**
