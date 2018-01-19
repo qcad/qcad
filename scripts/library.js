@@ -1006,15 +1006,20 @@ function getWidgetPath(widget) {
  * \param widget the parent widget
  * \param ca the initial array which holds some child widgets for
  *        recursive calls
+ * \param allowDuplicates True to collect widgets with same name under
+ * a different key ("MyField", "MyField_1", "MyField_2").
  * \return Array of child widgets.
  */
-function getWidgets(widget, ca) {
+function getWidgets(widget, ca, allowDuplicates) {
     if (isNull(widget) || isDeleted(widget)) {
         return undefined;
     }
+    if (isNull(allowDuplicates)) {
+        allowDuplicates = false;
+    }
 
     if (isNull(ca)) {
-        ca = new Object();
+        ca = {};
     }
     var children = widget.children();
     for (var i = 0; i < children.length; ++i) {
@@ -1022,11 +1027,25 @@ function getWidgets(widget, ca) {
         if (isDeleted(child)) {
             continue;
         }
-        if (!isNull(child.objectName) && child.objectName !== "") {
+        if (isNull(child.objectName) || child.objectName === "") {
+            continue;
+        }
+
+        if (isNull(ca[child.objectName]) || allowDuplicates===false) {
+            // new child or overwrite child:
             ca[child.objectName] = child;
         }
+        else {
+            // find alternative key for child:
+            for (var k=1; k<10000; k++) {
+                if (isNull(ca[child.objectName + "_" + k])) {
+                    ca[child.objectName + "_" + k] = child;
+                    break;
+                }
+            }
+        }
         if (!isNull(child.children) && child.children().length !== 0) {
-            getWidgets(child, ca);
+            getWidgets(child, ca, allowDuplicates);
         }
     }
 
