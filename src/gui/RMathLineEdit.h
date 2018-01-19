@@ -69,6 +69,10 @@ public:
         return !RMath::isNaN(value);
     }
 
+    bool isSane() {
+        return RMath::isSane(value);
+    }
+
     void setToolTip(const QString& toolTip);
 
     /*
