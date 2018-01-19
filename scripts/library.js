@@ -1027,23 +1027,22 @@ function getWidgets(widget, ca, allowDuplicates) {
         if (isDeleted(child)) {
             continue;
         }
-        if (isNull(child.objectName) || child.objectName === "") {
-            continue;
-        }
-
-        if (isNull(ca[child.objectName]) || allowDuplicates===false) {
-            // new child or overwrite child:
-            ca[child.objectName] = child;
-        }
-        else {
-            // find alternative key for child:
-            for (var k=1; k<10000; k++) {
-                if (isNull(ca[child.objectName + "_" + k])) {
-                    ca[child.objectName + "_" + k] = child;
-                    break;
+        if (!isNull(child.objectName) && child.objectName !== "") {
+            if (isNull(ca[child.objectName]) || allowDuplicates===false) {
+                // new child or overwrite child:
+                ca[child.objectName] = child;
+            }
+            else {
+                // find alternative key for child:
+                for (var k=1; k<10000; k++) {
+                    if (isNull(ca[child.objectName + "_" + k])) {
+                        ca[child.objectName + "_" + k] = child;
+                        break;
+                    }
                 }
             }
         }
+
         if (!isNull(child.children) && child.children().length !== 0) {
             getWidgets(child, ca, allowDuplicates);
         }
