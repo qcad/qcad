@@ -70,6 +70,10 @@
         <return>return <expr>!<call><name><name>RMath</name>::<name>isNaN</name></name><argument_list>(<argument><expr><name>value</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isSane</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name><name>RMath</name>::<name>isSane</name></name><argument_list>(<argument><expr><name>value</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>void</name></type> <name>setToolTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>toolTip</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/*

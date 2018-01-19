@@ -61,6 +61,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="isSane" cppName="isSane" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setToolTip" cppName="setToolTip"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
+            
             REcmaHelper::registerFunction(&engine, proto, setToolTip, "setToolTip");
             
             REcmaHelper::registerFunction(&engine, proto, slotTextChanged, "slotTextChanged");
@@ -738,6 +740,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMathLineEdit::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathLineEdit::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathLineEdit::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathLineEdit* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathLineEdit::isSane", context, engine);
             return result;
         }
          QScriptValue
