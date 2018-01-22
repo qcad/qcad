@@ -34,6 +34,11 @@ function PrintPreview(guiAction) {
 
 PrintPreview.prototype = new EAction();
 PrintPreview.includeBasePath = includeBasePath;
+PrintPreview.instance = undefined;
+
+PrintPreview.getInstance = function() {
+    return PrintPreview.instance;
+};
 
 PrintPreview.isRunning = function() {
     //return global.printPreviewRunning;
@@ -55,11 +60,15 @@ PrintPreview.isRunning = function() {
 /**
  * Starts the print preview.
  */
-PrintPreview.start = function() {
+PrintPreview.start = function(initialAction) {
     var di = EAction.getDocumentInterface();
     var a = di.getDefaultAction();
     a.finishEvent();
-    di.setDefaultAction(new PrintPreviewImpl());
+    PrintPreview.instance = new PrintPreviewImpl();
+    if (!isNull(initialAction)) {
+        PrintPreview.instance.initialAction = initialAction;
+    }
+    di.setDefaultAction(PrintPreview.instance);
 
     var ga = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js")
     if (!isNull(ga)) {
