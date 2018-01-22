@@ -192,6 +192,12 @@
         isChecked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setForceGlobal
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getForceGlobal
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setRequiresDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
