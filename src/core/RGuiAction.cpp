@@ -48,7 +48,8 @@ RGuiAction::RGuiAction(const QString& text, QObject* parent)
     factory(NULL),
     oriText(text),
     groupDefault(false),
-    requiresDocument(true), 
+    forceGlobal(false),
+    requiresDocument(true),
     requiresSelection(false),
     requiresUndoableTransaction(false),
     requiresRedoableTransaction(false),
@@ -1042,7 +1043,7 @@ bool RGuiAction::slotTrigger(const QString& command) {
 
     if (scriptFile.size() > 0) {
         // call action factory of script handler:
-        if (requiresDocument) {
+        if (requiresDocument && !forceGlobal) {
             RDocumentInterface* di;
 //            if (documentInterface!=NULL) {
 //                di = documentInterface;

@@ -169,6 +169,18 @@ public:
     virtual bool isChecked() const;
     
     /**
+     * If \c on is true, this action runs in the global script context (default for
+     * actions that don't require a document).
+     */
+    void setForceGlobal(bool on) {
+        forceGlobal = on;
+    }
+
+    bool getForceGlobal() const {
+        return forceGlobal;
+    }
+
+    /**
      * If \c on is true, this action requires a document to be open. The GUI element(s)
      * can for example be grayed out if no document is open.
      */
@@ -372,6 +384,7 @@ protected:
     bool groupDefault;
     
     // TODO: refactor to use flags:
+    bool forceGlobal;
     bool requiresDocument;
     bool requiresSelection;
     bool requiresUndoableTransaction;
