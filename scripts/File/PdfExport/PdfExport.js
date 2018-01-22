@@ -32,15 +32,12 @@ PdfExport.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
     include("scripts/File/PrintPreview/PrintPreview.js");
+
+    var di = this.getDocumentInterface();
     if (!PrintPreview.isRunning()) {
-        var action = this.getPrintPreviewAction();
-        action.initialAction = "PdfExport";
-        var di = this.getDocumentInterface();
-        di.setCurrentAction(action);
+        PrintPreview.start("PdfExport");
     }
     else {
-        //PrintPreview.slotPdfExport();
-        //this.terminate();
         var pp = PrintPreview.getInstance();
         pp.slotPdfExport();
     }
