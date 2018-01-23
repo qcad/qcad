@@ -17,9 +17,9 @@
  * along with QCAD.
  */
 
-include("scripts/DefaultAction.js");
 include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");
 include("scripts/File/File.js");
+include("scripts/File/NewFile/NewFile.js");
 include("scripts/File/Print/Print.js");
 include("scripts/sprintf.js");
 
@@ -41,7 +41,6 @@ PrintPreview.getInstance = function() {
 };
 
 PrintPreview.isRunning = function() {
-    //return global.printPreviewRunning;
     var di = EAction.getDocumentInterface();
     if (isNull(di)) {
         return false;
@@ -83,7 +82,7 @@ PrintPreview.exit = function() {
     var di = EAction.getDocumentInterface();
     var a = di.getDefaultAction();
     a.finishEvent();
-    di.setDefaultAction(new DefaultAction(RGuiAction.getByScriptFile("scripts/Reset/Reset.js")));
+    NewFile.setupDefaultAction(di);
 
     var ga = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js")
     if (!isNull(ga)) {
@@ -112,7 +111,12 @@ PrintPreview.prototype.beginEvent = function() {
  * Intended to be used as default action.
  */
 function PrintPreviewImpl(guiAction) {
-    DefaultAction.call(this, guiAction);
+    // parent class can be DefaultAction or other configured
+    // default action:
+    var defaultActionClass = NewFile.getDefaultActionClass();
+    this.parentClass = global[defaultActionClass];
+
+    this.parentClass.call(this, guiAction);
 
     this.enableSlotPaperSizeChanged = false;
 
@@ -132,7 +136,7 @@ function PrintPreviewImpl(guiAction) {
     this.savedOffset = undefined;
 }
 
-PrintPreviewImpl.prototype = new DefaultAction();
+PrintPreviewImpl.prototype = NewFile.getDefaultAction();
 PrintPreviewImpl.includeBasePath = includeBasePath;
 
 PrintPreviewImpl.State = {
@@ -158,7 +162,7 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     var mdiChild = EAction.getMdiChild();
     this.view = mdiChild.getLastKnownViewWithFocus();
 
-    DefaultAction.prototype.beginEvent.call(this);
+    this.parentClass.prototype.beginEvent.call(this);
 
     if (!isNull(this.view)) {
         var document = this.getDocument();
@@ -215,7 +219,7 @@ PrintPreviewImpl.prototype.beginEvent = function() {
  * Handles additional state changes for offset moving state.
  */
 PrintPreviewImpl.prototype.setState = function(state) {
-    DefaultAction.prototype.setState.call(this, state);
+    this.parentClass.prototype.setState.call(this, state);
 
     if (this.state === PrintPreviewImpl.State.SettingOffset) {
         EAction.getDocumentInterface().setClickMode(RAction.PickingDisabled);
@@ -238,7 +242,7 @@ PrintPreviewImpl.prototype.suspendEvent = function() {
 
 PrintPreviewImpl.prototype.finishEvent = function() {
     qDebug("PrintPreviewImpl.prototype.finishEvent");
-    DefaultAction.prototype.finishEvent.call(this);
+    this.parentClass.prototype.finishEvent.call(this);
     var di = this.getDocumentInterface();
 
     if (!isNull(this.view)) {
@@ -298,7 +302,7 @@ PrintPreviewImpl.prototype.mousePressEvent = function(event) {
         }
     }
     else {
-        DefaultAction.prototype.mousePressEvent.call(this, event);
+        this.parentClass.prototype.mousePressEvent.call(this, event);
     }
 };
 
@@ -315,7 +319,7 @@ PrintPreviewImpl.prototype.mousePressEvent = function(event) {
 //        }
 //    }
 //    else {
-//        DefaultAction.prototype.mouseReleaseEvent.call(this, event);
+//        this.parentClass.prototype.mouseReleaseEvent.call(this, event);
 //    }
 //};
 
@@ -324,7 +328,7 @@ PrintPreviewImpl.prototype.mousePressEvent = function(event) {
  */
 PrintPreviewImpl.prototype.mouseMoveEvent = function(event) {
     if (this.state !== PrintPreviewImpl.State.SettingOffset) {
-        DefaultAction.prototype.mouseMoveEvent.call(this, event);
+        this.parentClass.prototype.mouseMoveEvent.call(this, event);
         return;
     }
 
