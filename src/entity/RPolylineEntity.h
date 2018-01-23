@@ -68,6 +68,7 @@ public:
     static RPropertyTypeId PropertyEndWidthN;
     static RPropertyTypeId PropertyGlobalWidth;
 
+    static RPropertyTypeId PropertyOrientation;
     static RPropertyTypeId PropertyLength;
     static RPropertyTypeId PropertyTotalLength;
     static RPropertyTypeId PropertyArea;

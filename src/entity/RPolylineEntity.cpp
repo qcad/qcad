@@ -46,6 +46,7 @@ RPropertyTypeId RPolylineEntity::PropertyEndWidthN;
 
 RPropertyTypeId RPolylineEntity::PropertyGlobalWidth;
 
+RPropertyTypeId RPolylineEntity::PropertyOrientation;
 RPropertyTypeId RPolylineEntity::PropertyLength;
 RPropertyTypeId RPolylineEntity::PropertyTotalLength;
 RPropertyTypeId RPolylineEntity::PropertyArea;
@@ -100,6 +101,7 @@ void RPolylineEntity::init() {
 
     RPolylineEntity::PropertyGlobalWidth.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Width"));
 
+    RPolylineEntity::PropertyOrientation.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Orientation"));
     RPolylineEntity::PropertyLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
     RPolylineEntity::PropertyTotalLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
     RPolylineEntity::PropertyArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
@@ -124,6 +126,20 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
         if (PropertyGlobalWidth==propertyTypeId) {
             data.setGlobalWidth(value.toDouble());
             ret = true;
+        }
+
+        if (PropertyOrientation==propertyTypeId) {
+            if (value.type()==QVariant::String) {
+                if (value.toString()==QT_TRANSLATE_NOOP("REntity", "CW")) {
+                    ret = ret || data.setOrientation(RS::CW);
+                }
+                else {
+                    ret = ret || data.setOrientation(RS::CCW);
+                }
+            }
+            else {
+                ret = ret || data.setOrientation((RS::Orientation)value.toInt());
+            }
         }
     }
 
@@ -204,6 +220,22 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             QVariant v;
             v.setValue(data.getArea());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+        }
+    }
+
+    if (RPolyline::hasProxy()) {
+        if (propertyTypeId == PropertyOrientation) {
+            RPropertyAttributes attr;
+            if (!noAttributes && humanReadable) {
+                attr.setChoices(QSet<QString>() << QT_TRANSLATE_NOOP("REntity", "CW") << QT_TRANSLATE_NOOP("REntity", "CCW"));
+            }
+            attr.setRedundant(true);
+            RS::Orientation ori = data.getOrientation(true);
+            if (humanReadable) {
+                QString oriStr = (ori==RS::CCW ? QT_TRANSLATE_NOOP("REntity", "CCW") : QT_TRANSLATE_NOOP("REntity", "CW"));
+                return qMakePair(oriStr, attr);
+            }
+            return qMakePair(ori, attr);
         }
     }
 
