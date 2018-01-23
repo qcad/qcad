@@ -699,6 +699,7 @@ EAction.prototype.keyPressEvent = function(event) {
         if (!isNull(w)) {
             w.setFocus(Qt.OtherFocusReason);
             w.text = String.fromCharCode(event.key());
+            event.accept();
             return;
         }
     }
