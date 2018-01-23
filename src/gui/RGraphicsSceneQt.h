@@ -107,14 +107,14 @@ public:
     bool hasPreview() const;
     QList<REntity::Id> getPreviewEntityIds();
     QList<RGraphicsSceneDrawable> getPreviewDrawables(REntity::Id entityId);
-    virtual void addToPreview(REntity::Id entityId, const QList<RGraphicsSceneDrawable>& drawables);
-    virtual void addToPreview(REntity::Id entityId, const RGraphicsSceneDrawable& drawable);
+    virtual void addToPreview(REntity::Id entityId, QList<RGraphicsSceneDrawable>& drawables);
+    virtual void addToPreview(REntity::Id entityId, RGraphicsSceneDrawable& drawable);
     void addTextToPreview(const RTextBasedData& text);
 
     bool hasClipRectangleFor(REntity::Id entityId, bool preview = false);
     RBox getClipRectangle(REntity::Id entityId, bool preview = false);
 
-    void addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft);
+    void addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft = false, bool preview = false);
 
     virtual void startEntity(bool topLevelEntity);
 

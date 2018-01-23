@@ -189,14 +189,10 @@ bool RGraphicsSceneQt::beginPath() {
 }
 
 void RGraphicsSceneQt::endPath() {
-    if (!exportToPreview) {
-        if (!currentPainterPath.isEmpty()) {
-            // entities which are part of a block and have attributes ByBlock are exported to block ref ID:
-            RGraphicsSceneDrawable d(currentPainterPath);
-            addDrawable(getBlockRefOrEntityId(), d, false);
-        }
-    } else {
-        addToPreview(getBlockRefOrEntityId(), currentPainterPath);
+    if (!currentPainterPath.isEmpty()) {
+        // entities which are part of a block and have attributes ByBlock are exported to block ref ID:
+        RGraphicsSceneDrawable d(currentPainterPath);
+        addDrawable(getBlockRefOrEntityId(), d, false, exportToPreview);
     }
 
     currentPainterPath.setValid(false);
@@ -501,11 +497,7 @@ void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
     p.lineTo(triangle.corner[0]);
 
     RGraphicsSceneDrawable d(p);
-    if (!exportToPreview) {
-        addDrawable(getBlockRefOrEntityId(), d, draftMode);
-    } else {
-        addToPreview(getBlockRefOrEntityId(), d);
-    }
+    addDrawable(getBlockRefOrEntityId(), d, draftMode, exportToPreview);
 }
 
 void RGraphicsSceneQt::exportRectangle(const RVector& p1, const RVector& p2) {
@@ -524,11 +516,7 @@ void RGraphicsSceneQt::exportRectangle(const RVector& p1, const RVector& p2) {
     p.setNoClipping(!getClipping());
 
     RGraphicsSceneDrawable d(p);
-    if (!exportToPreview) {
-        addDrawable(getBlockRefOrEntityId(), d, draftMode);
-    } else {
-        addToPreview(getBlockRefOrEntityId(), d);
-    }
+    addDrawable(getBlockRefOrEntityId(), d, draftMode, exportToPreview);
 }
 
 void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
@@ -550,23 +538,20 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
             path.setPen(getPen(path));
         }
 
-        if (!exportToPreview) {
-            // export into current path (used for complex linetypes):
-            if (currentPainterPath.isValid()) {
-                currentPainterPath.addPath(path);
-            }
-            else {
-                RGraphicsSceneDrawable d(path);
-                addDrawable(getBlockRefOrEntityId(), d, draftMode);
-            }
+        // export into current path (used for complex linetypes):
+        if (currentPainterPath.isValid()) {
+            currentPainterPath.addPath(path);
         }
         else {
-            addToPreview(getBlockRefOrEntityId(), path);
+            RGraphicsSceneDrawable d(path);
+            addDrawable(getBlockRefOrEntityId(), d, draftMode, exportToPreview);
         }
     }
 }
 
 void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) {
+    REntity::Id id = getBlockRefOrEntityId();
+
     if (exportToPreview) {
         RPainterPath path;
         path.setPen(currentPen);
@@ -583,18 +568,12 @@ void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) 
                 path.lineTo(edges.at(i % edges.count()).getStartPoint());
             }
         }
-        addToPreview(getBlockRefOrEntityId(), path);
+        RGraphicsSceneDrawable d(path);
+        addDrawable(id, d, draftMode, true);
     }
     else {
-        REntity::Id id = getBlockRefOrEntityId();
         RGraphicsSceneDrawable d(image);
         addDrawable(id, d, draftMode);
-//        if (drawables.contains(id)) {
-//            drawables[id].append(image);
-//        }
-//        else {
-//            drawables.insert(id, QList<RGraphicsSceneDrawable>() << image);
-//        }
     }
 }
 
@@ -734,7 +713,7 @@ RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) {
     return RBox();
 }
 
-void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft) {
+void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft, bool preview) {
     Q_UNUSED(draft)
 
     REntity* entity = getEntity();
@@ -747,11 +726,31 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         }
     }
 
-    if (drawables.contains(entityId)) {
-        drawables[entityId].append(drawable);
+    REntity* blockRefEntity = getBlockRefOrEntity();
+    if (blockRefEntity!=NULL && blockRefEntity->getType()==RS::EntityBlockRef) {
+        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(blockRefEntity);
+        if (blockRef!=NULL) {
+            RBlock::Id blockId = blockRef->getReferencedBlockId();
+            QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
+            if (block!=NULL && block->getCustomBoolProperty("QCAD", "PixelUnit", false)==true) {
+                drawable.setPixelUnit(true);
+            }
+        }
+    }
+
+    QMap<REntity::Id, QList<RGraphicsSceneDrawable> >* dwb;
+    if (preview) {
+        dwb = &previewDrawables;
     }
     else {
-        drawables.insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
+        dwb = &drawables;
+    }
+
+    if (dwb->contains(entityId)) {
+        (*dwb)[entityId].append(drawable);
+    }
+    else {
+        dwb->insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
     }
 }
 
@@ -778,32 +777,20 @@ void RGraphicsSceneQt::clearPreview() {
     previewDrawables.clear();
 }
     
-void RGraphicsSceneQt::addToPreview(REntity::Id entityId, const RGraphicsSceneDrawable& drawable) {
-    if (previewDrawables.contains(entityId)) {
-        previewDrawables[entityId].append(drawable);
-    }
-    else {
-        previewDrawables.insert(entityId, QList<RGraphicsSceneDrawable>() << drawable);
-    }
+void RGraphicsSceneQt::addToPreview(REntity::Id entityId, RGraphicsSceneDrawable& drawable) {
+    addDrawable(entityId, drawable, draftMode, true);
 }
 
-void RGraphicsSceneQt::addToPreview(REntity::Id entityId, const QList<RGraphicsSceneDrawable>& drawables) {
-    if (previewDrawables.contains(entityId)) {
-        previewDrawables[entityId].append(drawables);
-    }
-    else {
-        previewDrawables.insert(entityId, drawables);
+void RGraphicsSceneQt::addToPreview(REntity::Id entityId, QList<RGraphicsSceneDrawable>& drawables) {
+    for (int i=0; i<drawables.length(); i++) {
+        addDrawable(entityId, drawables[i], draftMode, true);
     }
 }
 
 void RGraphicsSceneQt::addTextToPreview(const RTextBasedData& text) {
     REntity::Id entityId = getBlockRefOrEntityId();
-    if (previewDrawables.contains(entityId)) {
-        previewDrawables[entityId].append(text);
-    }
-    else {
-        previewDrawables.insert(entityId, QList<RGraphicsSceneDrawable>() << text);
-    }
+    RGraphicsSceneDrawable d(text);
+    addDrawable(entityId, d, draftMode, true);
 }
 
 void RGraphicsSceneQt::highlightEntity(REntity& entity) {
