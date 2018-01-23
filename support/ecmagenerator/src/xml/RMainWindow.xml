@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QKeyEvent" />
   <class_decl name="RBlockListener" />
   <class_decl name="RCoordinateListener" />
   <class_decl name="RDocument" />
@@ -8,6 +9,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="REntity" />
   <class_decl name="RFocusListener" />
   <class_decl name="RGraphicsView" />
+  <class_decl name="RKeyListener" />
   <class_decl name="RLayerListener" />
   <class_decl name="RNewDocumentListener" />
   <class_decl name="RPenListener" />
@@ -425,6 +427,30 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocumentInterface *"
         typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="addKeyListener" cppName="addKeyListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RKeyListener *" typeName="RKeyListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removeKeyListener" cppName="removeKeyListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RKeyListener *" typeName="RKeyListener *"
+        name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyKeyListeners" cppName="notifyKeyListeners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent *" typeName="QKeyEvent *" name="event"
         isConst="false" />
       </variant>
     </method>

@@ -3185,6 +3185,58 @@
                 
     
     if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RGraphicsSceneDrawable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RGraphicsSceneDrawable*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RGraphicsSceneDrawable*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 1 is not of type RGraphicsSceneDrawable.",
+                               context);                    
+                    }
+                    RGraphicsSceneDrawable 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addDrawable(a0
+        ,
+    a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
     3 && (
             context->argument(0).isNumber()
         ) /* type: REntity::Id */
@@ -3244,6 +3296,84 @@
     a1
         ,
     a2);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RGraphicsSceneDrawable */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RGraphicsSceneDrawable*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RGraphicsSceneDrawable*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 1 is not of type RGraphicsSceneDrawable.",
+                               context);                    
+                    }
+                    RGraphicsSceneDrawable 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addDrawable(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
     } else
 
 

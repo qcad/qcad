@@ -9,6 +9,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocumentInterface" />
   <class_decl name="RFocusListener" />
   <class_decl name="RGraphicsView" />
+  <class_decl name="RKeyListener" />
   <class_decl name="RLayerListener" />
   <class_decl name="RMdiArea" />
   <class_decl name="RMdiChildQt" />

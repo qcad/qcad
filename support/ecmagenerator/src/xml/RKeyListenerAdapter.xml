@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocumentInterface" />
+  <class name="RKeyListenerAdapter"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QObject" specifier="public" />
+    <baseClass name="RKeyListener" specifier="public" />
+    <method name="keyPressed" cppName="keyPressed"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent *" typeName="QKeyEvent *" name="event"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -41,6 +41,7 @@
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
 <class_decl>class <name>RFocusListener</name>;</class_decl>
 <class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RKeyListener</name>;</class_decl>
 <class_decl>class <name>RLayerListener</name>;</class_decl>
 <class_decl>class <name>RMdiArea</name>;</class_decl>
 <class_decl>class <name>RMdiChildQt</name>;</class_decl>

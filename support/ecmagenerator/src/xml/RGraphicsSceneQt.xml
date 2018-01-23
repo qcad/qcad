@@ -272,14 +272,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
         <arg type="QList &lt; RGraphicsSceneDrawable &gt; &amp;"
         typeName="QList &lt; RGraphicsSceneDrawable &gt;"
-        name="drawables" isConst="true" />
+        name="drawables" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
         <arg type="RGraphicsSceneDrawable &amp;"
         typeName="RGraphicsSceneDrawable" name="drawable"
-        isConst="true" />
+        isConst="false" />
       </variant>
     </method>
     <method name="addTextToPreview" cppName="addTextToPreview"
@@ -320,7 +320,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RGraphicsSceneDrawable" name="drawable"
         isConst="false" />
         <arg type="bool" typeName="bool" name="draft"
-        isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="startEntity" cppName="startEntity"

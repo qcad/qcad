@@ -62,6 +62,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getNoPlot, "getNoPlot");
             
+            REcmaHelper::registerFunction(&engine, proto, setPixelUnit, "setPixelUnit");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPixelUnit, "getPixelUnit");
+            
             REcmaHelper::registerFunction(&engine, proto, getPainterPath, "getPainterPath");
             
             REcmaHelper::registerFunction(&engine, proto, getImage, "getImage");
@@ -132,6 +136,11 @@
 
     ctor.setProperty("NoPlot",
     QScriptValue(RGraphicsSceneDrawable::NoPlot),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PixelUnit",
+    QScriptValue(RGraphicsSceneDrawable::PixelUnit),
     QScriptValue::ReadOnly);
 
 
@@ -1057,6 +1066,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::getNoPlot", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::setPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::setPixelUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::setPixelUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("setPixelUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPixelUnit(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.setPixelUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::setPixelUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::getPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::getPixelUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::getPixelUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("getPixelUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getPixelUnit();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.getPixelUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::getPixelUnit", context, engine);
             return result;
         }
          QScriptValue

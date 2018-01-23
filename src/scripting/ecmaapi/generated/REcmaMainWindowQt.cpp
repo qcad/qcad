@@ -23,6 +23,8 @@
             
                 #include "RGraphicsView.h"
             
+                #include "RKeyListener.h"
+            
                 #include "RLayerListener.h"
             
                 #include "RMdiArea.h"
@@ -188,6 +190,12 @@
             REcmaHelper::registerFunction(&engine, proto, removeFocusListener, "removeFocusListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyFocusListeners, "notifyFocusListeners");
+            
+            REcmaHelper::registerFunction(&engine, proto, addKeyListener, "addKeyListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeKeyListener, "removeKeyListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyKeyListeners, "notifyKeyListeners");
             
             REcmaHelper::registerFunction(&engine, proto, addViewFocusListener, "addViewFocusListener");
             
@@ -3326,6 +3334,190 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyFocusListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::addKeyListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::addKeyListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::addKeyListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("addKeyListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RKeyListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RKeyListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RKeyListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RKeyListener *RKeyListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addKeyListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.addKeyListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::addKeyListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::removeKeyListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removeKeyListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removeKeyListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removeKeyListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RKeyListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RKeyListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RKeyListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RKeyListener *RKeyListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeKeyListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removeKeyListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removeKeyListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::notifyKeyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::notifyKeyListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::notifyKeyListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("notifyKeyListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant()
+        ) /* type: QKeyEvent * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QKeyEvent * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QKeyEvent >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type QKeyEvent *QKeyEvent *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyKeyListeners(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.notifyKeyListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyKeyListeners", context, engine);
             return result;
         }
          QScriptValue

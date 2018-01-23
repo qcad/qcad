@@ -113,6 +113,8 @@ HEADERS += \
     $$PWD/REcmaInputEvent.h \
     $$PWD/REcmaInterTransactionListener.h \
     $$PWD/REcmaInterTransactionListenerAdapter.h \
+    $$PWD/REcmaKeyListener.h \
+    $$PWD/REcmaKeyListenerAdapter.h \
     $$PWD/REcmaLayer.h \
     $$PWD/REcmaLayerListener.h \
     $$PWD/REcmaLayerListenerAdapter.h \
@@ -471,6 +473,8 @@ SOURCES += \
     $$PWD/REcmaInputEvent.cpp \
     $$PWD/REcmaInterTransactionListener.cpp \
     $$PWD/REcmaInterTransactionListenerAdapter.cpp \
+    $$PWD/REcmaKeyListener.cpp \
+    $$PWD/REcmaKeyListenerAdapter.cpp \
     $$PWD/REcmaLayer.cpp \
     $$PWD/REcmaLayerListener.cpp \
     $$PWD/REcmaLayerListenerAdapter.cpp \
