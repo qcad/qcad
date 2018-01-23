@@ -249,27 +249,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     //qDebug("initViewports: done");
     NewFile.updateTitle(mdiChild);
 
-    // set up default action:
-    var defaultGuiAction = RGuiAction.getByScriptFile("scripts/Reset/Reset.js");
-    var defaultActionFile = RSettings.getStringValue("NewFile/DefaultAction", "");
-    var defaultActionFileInfo = new QFileInfo(defaultActionFile);
-    if (!defaultActionFileInfo.exists()) {
-        defaultActionFileInfo = new QFileInfo(":/" + defaultActionFile);
-    }
-    var defaultAction = undefined;
-    if (defaultActionFile.length>0 && defaultActionFileInfo.exists()) {
-        include(defaultActionFile);
-        var defaultActionClass = new QFileInfo(defaultActionFile).baseName();
-        if (defaultActionFile.length>0 && typeof(global[defaultActionClass])!=="undefined") {
-            defaultAction = new global[defaultActionClass](defaultGuiAction);
-        }
-    }
-    if (isNull(defaultAction) && typeof(DefaultAction)!=="undefined") {
-        defaultAction = new DefaultAction(defaultGuiAction);
-    }
-    if (!isNull(defaultAction)) {
-        documentInterface.setDefaultAction(defaultAction);
-    }
+    NewFile.setupDefaultAction(documentInterface);
 
     ViewportWidget.initEventHandler(viewports);
 
@@ -486,3 +466,47 @@ NewFile.closeRequested = function(mdiChild) {
     EAction.activateMainWindow();
 };
 
+/**
+ * Setup default action for the given document interface.
+ */
+NewFile.setupDefaultAction = function(documentInterface) {
+    var defaultAction = NewFile.getDefaultAction(documentInterface);
+    if (!isNull(defaultAction)) {
+        documentInterface.setDefaultAction(defaultAction);
+    }
+};
+
+/**
+ * Returns name of default action class.
+ */
+NewFile.getDefaultActionClass = function() {
+    var defaultActionClass = "DefaultAction";
+    var defaultActionFile = RSettings.getStringValue("NewFile/DefaultAction", "");
+    if (defaultActionFile.length===0) {
+        return defaultActionClass;
+    }
+    var defaultActionFileInfo = new QFileInfo(defaultActionFile);
+    if (!defaultActionFileInfo.exists()) {
+        defaultActionFileInfo = new QFileInfo(":/" + defaultActionFile);
+    }
+    if (defaultActionFileInfo.exists()) {
+        include(defaultActionFile);
+        defaultActionClass = new QFileInfo(defaultActionFile).baseName();
+    }
+    return defaultActionClass;
+};
+
+/**
+ * Returns new default action as configured in settings ("NewFile/DefaultAction")
+ * or instance of DefaultAction.
+ */
+NewFile.getDefaultAction = function(documentInterface) {
+    // set up default action:
+    var defaultGuiAction = RGuiAction.getByScriptFile("scripts/Reset/Reset.js");
+    var defaultActionClass = NewFile.getDefaultActionClass();
+    var defaultAction = undefined;
+    if (typeof(global[defaultActionClass])!=="undefined") {
+        defaultAction = new global[defaultActionClass](defaultGuiAction);
+    }
+    return defaultAction;
+};
