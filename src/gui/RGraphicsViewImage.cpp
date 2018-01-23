@@ -162,23 +162,26 @@ void RGraphicsViewImage::updateImage() {
         return;
     }
 
-    // update drawing scale from document setting:
-    QString scaleString;
-    if (doc->getCurrentBlockId()==doc->getModelSpaceBlockId()) {
-        scaleString = doc->getVariable("PageSettings/Scale", "1:1").toString();
-    }
-    else {
-        QSharedPointer<RBlock> blk = doc->queryCurrentBlock();
-        if (!blk.isNull()) {
-            blk->getCustomProperty("QCAD", "PageSettings/Scale", "1:1").toString();
-        }
-    }
-    drawingScale = RMath::parseScale(scaleString);
-    if (RMath::isNaN(drawingScale) || drawingScale<1.0e-6) {
-        drawingScale = 1.0;
-    }
-
     if (graphicsBufferNeedsUpdate) {
+        // update drawing scale from document setting:
+        QString scaleString;
+        if (doc->getCurrentBlockId()==doc->getModelSpaceBlockId()) {
+            scaleString = doc->getVariable("PageSettings/Scale", "1:1").toString();
+        }
+        else {
+            QSharedPointer<RBlock> blk = doc->queryCurrentBlock();
+            if (!blk.isNull()) {
+                scaleString = blk->getCustomProperty("QCAD", "PageSettings/Scale", "1:1").toString();
+            }
+        }
+
+        if (scaleString!=lastScaleString) {
+            drawingScale = RMath::parseScale(scaleString);
+            if (RMath::isNaN(drawingScale) || drawingScale<1.0e-6) {
+                drawingScale = 1.0;
+            }
+        }
+
         //RDebug::startTimer();
         updateGraphicsBuffer();
         graphicsBufferNeedsUpdate = false;

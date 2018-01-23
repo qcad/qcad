@@ -383,6 +383,8 @@ protected:
     RBox clipBox;
     RVector paintOffset;
     bool alphaEnabled;
+
+    QString lastScaleString;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewImage*)
