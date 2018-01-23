@@ -61,6 +61,13 @@ void RMdiArea::resizeEvent(QResizeEvent* event) {
     updateAddButtonLocation();
 }
 
+void RMdiArea::keyPressEvent(QKeyEvent* event) {
+    QMdiArea::keyPressEvent(event);
+
+    // make sure arrow key events can be handled in main window:
+    event->ignore();
+}
+
 void RMdiArea::updateTabBarSize() {
     if (tabBarOri==NULL || tabBar==NULL) {
         return;
