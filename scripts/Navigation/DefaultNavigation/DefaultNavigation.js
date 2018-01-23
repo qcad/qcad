@@ -73,28 +73,28 @@ DefaultNavigation.prototype.finishEvent = function() {
  * Implement panning with arrow keys.
  * Only has an effect if no actions are triggered using arrows as shortcuts.
  */
-DefaultNavigation.prototype.keyPressEvent = function(event) {
-    var v = undefined;
+//DefaultNavigation.prototype.keyPressEvent = function(event) {
+//    var v = undefined;
 
-    if (event.isAccepted()) {
-        return;
-    }
+//    if (event.isAccepted()) {
+//        return;
+//    }
 
-    if (event.key()===Qt.Key_Left.valueOf()) {
-        v = new RVector(50, 0);
-    } else if (event.key()===Qt.Key_Right.valueOf()) {
-        v = new RVector(-50, 0);
-    } else if (event.key()===Qt.Key_Up.valueOf()) {
-        v = new RVector(0, 50);
-    } else if (event.key()===Qt.Key_Down.valueOf()) {
-        v = new RVector(0, -50);
-    }
+//    if (event.key()===Qt.Key_Left.valueOf()) {
+//        v = new RVector(50, 0);
+//    } else if (event.key()===Qt.Key_Right.valueOf()) {
+//        v = new RVector(-50, 0);
+//    } else if (event.key()===Qt.Key_Up.valueOf()) {
+//        v = new RVector(0, 50);
+//    } else if (event.key()===Qt.Key_Down.valueOf()) {
+//        v = new RVector(0, -50);
+//    }
 
-    if (!isNull(v)) {
-        this.view.pan(v);
-        event.accept();
-    }
-};
+//    if (!isNull(v)) {
+//        this.view.pan(v);
+//        event.accept();
+//    }
+//};
 
 DefaultNavigation.prototype.mousePressEvent = function(event) {
     if (isNull(this.view)) {
