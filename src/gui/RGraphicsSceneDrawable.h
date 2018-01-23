@@ -41,7 +41,8 @@ public:
 
     enum Mode {
         NoMode = 0x0000,
-        NoPlot = 0x0001                //!< not plotted (from not plottable layers)
+        NoPlot = 0x0001,               //!< not plotted (from not plottable layers)
+        PixelUnit = 0x0002             //!< unit interpreted as pixels
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -92,6 +93,13 @@ public:
     }
     bool getNoPlot() const {
         return getMode(RGraphicsSceneDrawable::NoPlot);
+    }
+
+    void setPixelUnit(bool on) {
+        setMode(RGraphicsSceneDrawable::PixelUnit, on);
+    }
+    bool getPixelUnit() const {
+        return getMode(RGraphicsSceneDrawable::PixelUnit);
     }
 
     RPainterPath& getPainterPath() const {

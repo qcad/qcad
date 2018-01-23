@@ -905,8 +905,14 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // TTF text block (CAD text block is painter path):
         if (drawable.getType()==RGraphicsSceneDrawable::Text) {
             RTextBasedData text = drawable.getText();
+
+            if (drawable.getPixelUnit()) {
+                text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
+            }
+
             text.move(drawable.getOffset());
             text.move(paintOffset);
+
             paintText(painter, text);
         }
 
@@ -921,9 +927,10 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             continue;
         }
 
-        if (path.getPixelUnit()) {
+        if (drawable.getPixelUnit() || path.getPixelUnit()) {
             // path is displayed in pixels, not drawing unit:
-            RVector sp = path.getStartPoint();
+            //RVector sp = path.getStartPoint();
+            RVector sp = path.getBoundingBox().getCenter();
             path.move(-sp);
             path.scale(1/factor,1/factor);
             path.move(sp);

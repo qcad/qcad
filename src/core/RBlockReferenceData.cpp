@@ -206,6 +206,17 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
         return QList<RBox>();
     }
 
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block.isNull()) {
+        return QList<RBox>();
+    }
+    if (block->getCustomBoolProperty("QCAD", "PixelUnit", false)==true) {
+        // pixel unit block:
+        // bounding box is point:
+        bbs->append(RBox(getPosition(), getPosition()));
+        return *bbs;
+    }
+
     static int recursionDepth=0;
     if (recursionDepth++>16) {
         recursionDepth--;
