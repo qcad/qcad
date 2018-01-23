@@ -720,6 +720,13 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
     }
 }
 
+bool RPolyline::setOrientation(RS::Orientation orientation) {
+    if (getOrientation(true)!=orientation) {
+        return reverse();
+    }
+    return false;
+}
+
 /**
  * \return A QPainterPath object that represents this polyline.
  */

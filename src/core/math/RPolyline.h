@@ -132,6 +132,7 @@ public:
     QList<RVector> getSelfIntersectionPoints() const;
 
     RS::Orientation getOrientation(bool implicitelyClosed = false) const;
+    bool setOrientation(RS::Orientation orientation);
 
     bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
     bool containsShape(const RShape& shape) const;
