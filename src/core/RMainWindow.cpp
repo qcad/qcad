@@ -31,6 +31,7 @@
 #include "RFontList.h"
 #include "RGraphicsView.h"
 #include "RGuiAction.h"
+#include "RKeyListener.h"
 #include "RLayerListener.h"
 #include "RMainWindow.h"
 #include "RNewDocumentListener.h"
@@ -451,6 +452,31 @@ void RMainWindow::notifySnapListeners(RDocumentInterface* documentInterface) {
     QList<RSnapListener*>::iterator it;
     for (it = snapListeners.begin(); it != snapListeners.end(); ++it) {
         (*it)->updateSnap(documentInterface);
+    }
+}
+
+/**
+ * Adds a listener for key changes.
+ */
+void RMainWindow::addKeyListener(RKeyListener* l) {
+    if (l != NULL) {
+        keyListeners.push_back(l);
+    } else {
+        qWarning("RMainWindow::addKeyListener(): Listener is NULL.");
+    }
+}
+
+void RMainWindow::removeKeyListener(RKeyListener* l) {
+    keyListeners.removeAll(l);
+}
+
+/**
+ * Notifies all key listeners.
+ */
+void RMainWindow::notifyKeyListeners(QKeyEvent* event) {
+    QList<RKeyListener*>::iterator it;
+    for (it = keyListeners.begin(); it != keyListeners.end(); ++it) {
+        (*it)->keyPressed(event);
     }
 }
 

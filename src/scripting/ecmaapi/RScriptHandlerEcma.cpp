@@ -155,6 +155,8 @@
 #include "REcmaInputEvent.h"
 #include "REcmaInterTransactionListener.h"
 #include "REcmaInterTransactionListenerAdapter.h"
+#include "REcmaKeyListener.h"
+#include "REcmaKeyListenerAdapter.h"
 #include "REcmaLayer.h"
 #include "REcmaLayerListener.h"
 #include "REcmaLayerListenerAdapter.h"
@@ -920,6 +922,9 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 //    REcmaWebView::initEcma(*engine);
 //#  endif
 //#endif
+
+    REcmaKeyListener::initEcma(*engine);
+    REcmaKeyListenerAdapter::initEcma(*engine);
 
     REcmaFocusListener::initEcma(*engine);
     REcmaFocusListenerAdapter::initEcma(*engine);

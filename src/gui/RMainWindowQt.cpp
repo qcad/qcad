@@ -591,6 +591,7 @@ bool RMainWindowQt::event(QEvent* e) {
     if (e->type()==QEvent::KeyPress) {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
         if (ke!=NULL) {
+            notifyKeyListeners(ke);
             if (ke->key()==Qt::Key_Enter || ke->key()==Qt::Key_Return) {
                 QWidget* w = QApplication::focusWidget();
                 if (w!=NULL) {

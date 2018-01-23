@@ -23,6 +23,7 @@
 #include "core_global.h"
 
 #include <QMutex>
+class QKeyEvent;
 
 #include "REntityExportListener.h"
 #include "RExportListener.h"
@@ -41,6 +42,7 @@ class RDocumentInterface;
 class REntity;
 class RFocusListener;
 class RGraphicsView;
+class RKeyListener;
 class RLayerListener;
 class RNewDocumentListener;
 class RPenListener;
@@ -159,6 +161,10 @@ public:
     void addFocusListener(RFocusListener* l);
     void removeFocusListener(RFocusListener* l);
     void notifyFocusListeners(RDocumentInterface* documentInterface);
+
+    void addKeyListener(RKeyListener* l);
+    void removeKeyListener(RKeyListener* l);
+    void notifyKeyListeners(QKeyEvent* event);
 
     void addViewFocusListener(RViewFocusListener* l);
     void removeViewFocusListener(RViewFocusListener* l);
@@ -304,6 +310,7 @@ protected:
     QList<RInterTransactionListener*> interTransactionListeners;
     QList<RNewDocumentListener*> newDocumentListeners;
     QList<RSnapListener*> snapListeners;
+    QList<RKeyListener*> keyListeners;
     QList<RFocusListener*> focusListeners;
     QList<RViewFocusListener*> viewFocusListeners;
     QList<RPreferencesListener*> preferencesListeners;

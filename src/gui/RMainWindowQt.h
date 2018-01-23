@@ -40,6 +40,7 @@ class RDocument;
 class RDocumentInterface;
 class RFocusListener;
 class RGraphicsView;
+class RKeyListener;
 class RLayerListener;
 class RMdiArea;
 class RMdiChildQt;

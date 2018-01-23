@@ -11,6 +11,7 @@ HEADERS += \
     $$PWD/RFontDatabase.h \
     $$PWD/RImportListenerAdapter.h \
     $$PWD/RInterTransactionListenerAdapter.h \
+    $$PWD/RKeyListenerAdapter.h \
     $$PWD/RLayerListenerAdapter.h \
     $$PWD/RNewDocumentListenerAdapter.h \
     $$PWD/RPenListenerAdapter.h \
