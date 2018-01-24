@@ -52,6 +52,9 @@ RPropertyTypeId RPolylineEntity::PropertyTotalLength;
 RPropertyTypeId RPolylineEntity::PropertyArea;
 RPropertyTypeId RPolylineEntity::PropertyTotalArea;
 
+QString RPolylineEntity::TrClockwise = QString("↻ ") + QT_TRANSLATE_NOOP("REntity", "Clockwise");
+QString RPolylineEntity::TrCounterclockwise = QString("↺ ") + QT_TRANSLATE_NOOP("REntity", "Counterclockwise");
+
 RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data) :
     REntity(document), data(document, data) {
     RDebug::incCounter("RPolylineEntity");
@@ -130,7 +133,7 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
 
         if (PropertyOrientation==propertyTypeId) {
             if (value.type()==QVariant::String) {
-                if (value.toString()==QT_TRANSLATE_NOOP("REntity", "CW")) {
+                if (value.toString()==RPolylineEntity::TrClockwise) {
                     ret = ret || data.setOrientation(RS::CW);
                 }
                 else {
@@ -227,12 +230,12 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         if (propertyTypeId == PropertyOrientation) {
             RPropertyAttributes attr;
             if (!noAttributes && humanReadable) {
-                attr.setChoices(QSet<QString>() << QT_TRANSLATE_NOOP("REntity", "CW") << QT_TRANSLATE_NOOP("REntity", "CCW"));
+                attr.setChoices(QSet<QString>() << RPolylineEntity::TrClockwise << RPolylineEntity::TrCounterclockwise);
             }
             attr.setRedundant(true);
             RS::Orientation ori = data.getOrientation(true);
             if (humanReadable) {
-                QString oriStr = (ori==RS::CCW ? QT_TRANSLATE_NOOP("REntity", "CCW") : QT_TRANSLATE_NOOP("REntity", "CW"));
+                QString oriStr = (ori==RS::CCW ? RPolylineEntity::TrCounterclockwise : RPolylineEntity::TrClockwise);
                 return qMakePair(oriStr, attr);
             }
             return qMakePair(ori, attr);

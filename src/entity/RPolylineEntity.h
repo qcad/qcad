@@ -74,6 +74,9 @@ public:
     static RPropertyTypeId PropertyArea;
     static RPropertyTypeId PropertyTotalArea;
 
+    static QString TrClockwise;
+    static QString TrCounterclockwise;
+
 public:
     RPolylineEntity(RDocument* document, const RPolylineData& data);
     RPolylineEntity(const RPolylineEntity& other);
