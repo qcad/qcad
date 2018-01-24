@@ -222,6 +222,7 @@ void RTextRenderer::renderSimple() {
     double horizontalAdvanceNoSpacing = 0.0;
     double ascent = 0.0;
     double descent = 0.0;
+    double usedHeight = 0.0;
 
     {
         // handle underlining formats:
@@ -258,7 +259,8 @@ void RTextRenderer::renderSimple() {
                 text, formats,
                 horizontalAdvance,
                 horizontalAdvanceNoSpacing,
-                ascent, descent);
+                ascent, descent,
+                usedHeight);
 
     width = horizontalAdvanceNoSpacing * textHeight * textData.getXScale();
 
@@ -445,6 +447,8 @@ void RTextRenderer::render() {
     double minDescent = 0.0;
     // max descent of _previous_ line:
     double minDescentPrevious = 0.0;
+    // maximum used height of current line:
+    double usedHeight = 0.0;
     // true for the first block of the current line:
     bool firstBlockInLine = true;
     // current line has leading spaces:
@@ -596,7 +600,8 @@ void RTextRenderer::render() {
                                 textBlock, formats,
                                 horizontalAdvance,
                                 horizontalAdvanceNoSpacing,
-                                ascent, descent);
+                                ascent, descent,
+                                usedHeight);
 
                     // transform to scale text from 1.0 to current text height:
                     QTransform sizeTransform;
@@ -644,13 +649,15 @@ void RTextRenderer::render() {
                     double horizontalAdvanceNoSpacing = 0.0;
                     double ascent = 0.0;
                     double descent = 0.0;
+                    double usedHeight = 0.0;
 
                     // get painter paths for current text block at height 1.0:
                     getPainterPathsForBlock(
                                 "A", QList<QTextLayout::FormatRange>(),
                                 horizontalAdvance,
                                 horizontalAdvanceNoSpacing,
-                                ascent, descent);
+                                ascent, descent,
+                                usedHeight);
 
                     // make sure the "A" is not rendered:
                     textLayouts.removeLast();
@@ -684,6 +691,7 @@ void RTextRenderer::render() {
 
                         double ascent = 0.0;
                         double descent = 0.0;
+                        double usedHeight = 0.0;
 
                         QList<QTextLayout::FormatRange> localFormats;
 
@@ -698,7 +706,8 @@ void RTextRenderer::render() {
                                     script, localFormats,
                                     horizontalAdvance[s],
                                     horizontalAdvanceNoSpacing[s],
-                                    ascent, descent);
+                                    ascent, descent,
+                                    usedHeight);
 
                         if (s==0) {
                             maxAscent = qMax(maxAscent, ascent * getBlockHeight() * heightFactor + getBlockHeight()*(1.0-heightFactor));
@@ -818,6 +827,13 @@ void RTextRenderer::render() {
                     lineBoundingBox.growToInclude(p.getBoundingBox());
                 }
 
+                if (lineBoundingBox.getHeight()<usedHeight) {
+                    lineBoundingBox.c2.y = lineBoundingBox.c1.y + usedHeight;
+                }
+
+                // make sure bounding box includes actually used text height:
+                boundingBox.growToInclude(lineBoundingBox);
+
                 double featureSize = lineBoundingBox.getHeight();
 
                 QTransform lineTransform;
@@ -914,6 +930,7 @@ void RTextRenderer::render() {
                 firstBlockInLine = true;
                 leadingSpaces = false;
                 trailingSpaces = false;
+                usedHeight = 0.0;
             }
         }
 
@@ -1195,7 +1212,8 @@ void RTextRenderer::render() {
         // first text line at y==0
 
         // vertical alignment:
-        double topLine = qMax(textHeight, boundingBox.getMaximum().y);
+        // use bounding box (was adjusted for used text height):
+        double topLine = boundingBox.getMaximum().y;
         double bottomLine = qMin(0.0, boundingBox.getMinimum().y);
 
         QTransform globalTransform;
@@ -1276,7 +1294,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlock(
     double& horizontalAdvance,
     double& horizontalAdvanceNoSpacing,
     double& ascent,
-    double& descent) {
+    double& descent,
+    double& usedHeight) {
 
     if (getUseCadFont()) {
         return getPainterPathsForBlockCad(
@@ -1284,7 +1303,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlock(
                     formats,
                     horizontalAdvance,
                     horizontalAdvanceNoSpacing,
-                    ascent, descent);
+                    ascent, descent,
+                    usedHeight);
     }
     else {
         return getPainterPathsForBlockTtf(
@@ -1292,7 +1312,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlock(
                     formats,
                     horizontalAdvance,
                     horizontalAdvanceNoSpacing,
-                    ascent, descent);
+                    ascent, descent,
+                    usedHeight);
     }
 }
 
@@ -1307,7 +1328,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     double& horizontalAdvance,
     double& horizontalAdvanceNoSpacing,
     double& ascent,
-    double& descent) {
+    double& descent,
+    double& usedHeight) {
 
     Q_UNUSED(horizontalAdvanceNoSpacing)
 
@@ -1361,7 +1383,9 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     double topSpacing = boxA.y() * 100.0;
 
     QTransform t;
+    // scale to make an A 1.0 height:
     t.scale(ttfScale, -ttfScale);
+    // move to align top of A with top line:
     t.translate(leadingSpace/ttfScale, -topSpacing-heightA);
     lineBlockTransforms.append(t);
 
@@ -1428,6 +1452,10 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     tl.correspondingPainterPaths = paths.size();
     textLayouts.append(tl);
 
+    if (!ret.isEmpty()) {
+        usedHeight = qMax(usedHeight, getBlockHeight());
+    }
+
     return ret;
 }
 
@@ -1442,7 +1470,8 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     double& horizontalAdvance,
     double& horizontalAdvanceNoSpacing,
     double& ascent,
-    double& descent) {
+    double& descent,
+    double& usedHeight) {
 
     QList<RPainterPath> ret;
 
@@ -1589,6 +1618,10 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     tl.layout = QSharedPointer<QTextLayout>(new QTextLayout(blockText, QFont(getBlockFont())));
     tl.height = getBlockHeight();
     textLayouts.append(tl);
+
+    if (!ret.isEmpty()) {
+        usedHeight = qMax(usedHeight, getBlockHeight());
+    }
 
     return ret;
 }

@@ -89,7 +89,8 @@ private:
         double& horizontalAdvance,
         double& horizontalAdvanceNoSpacing,
         double& ascent,
-        double& descent);
+        double& descent,
+        double& usedHeight);
 
     QList<RPainterPath> getPainterPathsForBlockTtf(
         const QString& blockText,
@@ -97,7 +98,8 @@ private:
         double& horizontalAdvance,
         double& horizontalAdvanceNoSpacing,
         double& ascent,
-        double& descent);
+        double& descent,
+        double& usedHeight);
 
     QList<RPainterPath> getPainterPathsForBlockCad(
         const QString& blockText,
@@ -105,7 +107,8 @@ private:
         double& horizontalAdvance,
         double& horizontalAdvanceNoSpacing,
         double& ascent,
-        double& descent);
+        double& descent,
+        double& usedHeight);
 
     void preparePath(RPainterPath& path,
         const RColor& color,
