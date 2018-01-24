@@ -4,7 +4,7 @@
 
 /**
  * Pastes the given document into the current document or into the second given document.
-* \ingroup ecma_simple
+ * \ingroup ecma_simple
  *
  * \param docSource RDocument to paste
  * \param docDestination RDocument to paste into (or undefined for current document)
