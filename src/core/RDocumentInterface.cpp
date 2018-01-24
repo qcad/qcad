@@ -1057,8 +1057,6 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     }
 #endif
 
-    RMainWindow* mainWindow = RMainWindow::getMainWindow();
-
     QNetworkAccessManager manager;
     QEventLoop loop;
     QNetworkReply* reply = manager.get(QNetworkRequest(url));
