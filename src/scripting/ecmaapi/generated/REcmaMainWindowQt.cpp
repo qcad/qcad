@@ -2905,7 +2905,7 @@
                 
     
     if( context->argumentCount() ==
-    2 && (
+    3 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
@@ -2915,6 +2915,9 @@
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
         ) /* type: RTransaction * */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
     
     ){
     // prepare arguments:
@@ -2945,6 +2948,14 @@
                         return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
                     }
                 
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
     // end of arguments
 
     // call C++ function:
@@ -2952,7 +2963,9 @@
     
                self->notifyNewDocumentListeners(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
     } else
 
 

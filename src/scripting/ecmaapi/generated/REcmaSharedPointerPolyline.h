@@ -219,6 +219,9 @@
         getOrientation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setOrientation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

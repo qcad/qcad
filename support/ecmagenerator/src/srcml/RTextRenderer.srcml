@@ -90,7 +90,8 @@
         <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvance</name></decl></param>,
         <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvanceNoSpacing</name></decl></param>,
         <param><decl><type><name>double</name>&amp;</type> <name>ascent</name></decl></param>,
-        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>)</parameter_list>;</function_decl>
+        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>usedHeight</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPathsForBlockTtf</name><parameter_list>(
         <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockText</name></decl></param>,
@@ -98,7 +99,8 @@
         <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvance</name></decl></param>,
         <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvanceNoSpacing</name></decl></param>,
         <param><decl><type><name>double</name>&amp;</type> <name>ascent</name></decl></param>,
-        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>)</parameter_list>;</function_decl>
+        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>usedHeight</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPathsForBlockCad</name><parameter_list>(
         <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockText</name></decl></param>,
@@ -106,7 +108,8 @@
         <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvance</name></decl></param>,
         <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvanceNoSpacing</name></decl></param>,
         <param><decl><type><name>double</name>&amp;</type> <name>ascent</name></decl></param>,
-        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>)</parameter_list>;</function_decl>
+        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>usedHeight</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>preparePath</name><parameter_list>(<param><decl><type><name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>,
         <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>,

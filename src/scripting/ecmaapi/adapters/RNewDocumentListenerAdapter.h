@@ -35,12 +35,12 @@ Q_OBJECT
 public:
     virtual ~RNewDocumentListenerAdapter() { }
 
-    virtual void updateNewDocumentListener(RDocument* document, RTransaction* transaction) {
-        emit newDocument(document, transaction);
+    virtual void updateNewDocumentListener(RDocument* document, RTransaction* transaction, bool beforeLoad) {
+        emit newDocument(document, transaction, beforeLoad);
     }
 
 signals:
-    void newDocument(RDocument* document, RTransaction* transaction);
+    void newDocument(RDocument* document, RTransaction* transaction, bool beforeLoad);
 };
 
 Q_DECLARE_METATYPE(RNewDocumentListenerAdapter*)

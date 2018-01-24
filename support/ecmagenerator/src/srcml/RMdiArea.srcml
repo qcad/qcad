@@ -59,6 +59,7 @@
 
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>resizeEvent</name><parameter_list>(<param><decl><type><name>QResizeEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>keyPressEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 
 </protected><private>private:
     <decl_stmt><decl><type><name>QTabBar</name>*</type> <name>tabBarOri</name></decl>;</decl_stmt>

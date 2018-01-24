@@ -42,7 +42,7 @@
     <comment type="block">/**
      * Called whenever a new document is created to do additional initialization.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateNewDocumentListener</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateNewDocumentListener</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name></decl></param>, <param><decl><type><name>bool</name></type> <name>beforeLoad</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RNewDocumentListener*</argument>)</argument_list></macro>

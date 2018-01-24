@@ -498,6 +498,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyGlobalWidth" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyOrientation" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyLength" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyTotalLength" type="RPropertyTypeId"
@@ -505,6 +507,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyArea" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyTotalArea" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="TrClockwise" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="TrCounterclockwise" type="QString"
     isConst="false" isStatic="true" />
   </class>
 </unit>

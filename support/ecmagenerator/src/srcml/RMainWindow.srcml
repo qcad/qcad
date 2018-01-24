@@ -153,7 +153,7 @@
 
     <function_decl><type><name>void</name></type> <name>addNewDocumentListener</name><parameter_list>(<param><decl><type><name>RNewDocumentListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeNewDocumentListener</name><parameter_list>(<param><decl><type><name>RNewDocumentListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>notifyNewDocumentListeners</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyNewDocumentListeners</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name></decl></param>, <param><decl><type><name>bool</name></type> <name>beforeLoad</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addSnapListener</name><parameter_list>(<param><decl><type><name>RSnapListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeSnapListener</name><parameter_list>(<param><decl><type><name>RSnapListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>

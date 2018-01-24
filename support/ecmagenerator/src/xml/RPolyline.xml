@@ -413,6 +413,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="setOrientation" cppName="setOrientation"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::Orientation" typeName="RS::Orientation"
+        name="orientation" isConst="false" />
+      </variant>
+    </method>
     <method name="contains" cppName="contains" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

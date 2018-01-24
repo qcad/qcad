@@ -378,6 +378,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="document" isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
         name="transaction" isConst="false" />
+        <arg type="bool" typeName="bool" name="beforeLoad"
+        isConst="false" />
       </variant>
     </method>
     <method name="addSnapListener" cppName="addSnapListener"

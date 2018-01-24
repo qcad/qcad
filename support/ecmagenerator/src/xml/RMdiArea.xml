@@ -59,5 +59,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="event" isConst="false" />
       </variant>
     </method>
+    <method name="keyPressEvent" cppName="keyPressEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeyEvent *" typeName="QKeyEvent *" name="event"
+        isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>
