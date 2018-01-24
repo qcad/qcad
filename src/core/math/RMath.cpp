@@ -399,7 +399,6 @@ double RMath::eval(const QString& expression, bool* ok) {
                 break;
             }
             QString inchString = re.cap(1);
-            qDebug() << "inchString:" << inchString;
             expr.replace(
                         re,
                         QString("(%1)")
