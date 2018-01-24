@@ -37,6 +37,9 @@ function getIntersectionPoints(e1, e2, limited) {
     if (isEntity(e1) && isEntity(e2)) {
         return e1.getIntersectionPoints(e2, limited);
     }
+    if (isShape(e1) && isShape(e2)) {
+        return e1.getIntersectionPoints(e2, limited);
+    }
     if (isEntity(e1) && isShape(e2)) {
         return e1.getIntersectionPointsWithShape(e2, limited);
     }
