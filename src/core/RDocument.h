@@ -69,7 +69,7 @@ public:
     RDocument(RStorage& storage, RSpatialIndex& spatialIndex);
     virtual ~RDocument();
 
-    void init();
+    void init(bool beforeLoad=false);
     void initLinetypes(RTransaction* transaction=NULL);
     QList<QSharedPointer<RObject> > getDefaultLinetypes();
 
@@ -80,7 +80,7 @@ public:
     RSpatialIndex* getSpatialIndexForCurrentBlock();
     RTransactionStack& getTransactionStack();
 
-    void clear();
+    void clear(bool beforeLoad=false);
 
     REntity::Id queryClosestXY(
         const RVector& wcsPosition,

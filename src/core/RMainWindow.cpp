@@ -422,10 +422,10 @@ void RMainWindow::removeNewDocumentListener(RNewDocumentListener* l) {
 /**
  * Notifies all transaction in progress listeners.
  */
-void RMainWindow::notifyNewDocumentListeners(RDocument* document, RTransaction* transaction) {
+void RMainWindow::notifyNewDocumentListeners(RDocument* document, RTransaction* transaction, bool beforeLoad) {
     QList<RNewDocumentListener*>::iterator it;
     for (it = newDocumentListeners.begin(); it != newDocumentListeners.end(); ++it) {
-        (*it)->updateNewDocumentListener(document, transaction);
+        (*it)->updateNewDocumentListener(document, transaction, beforeLoad);
     }
 }
 

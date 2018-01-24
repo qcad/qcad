@@ -41,7 +41,7 @@ public:
     /**
      * Called whenever a new document is created to do additional initialization.
      */
-    virtual void updateNewDocumentListener(RDocument* document, RTransaction* transaction) = 0;
+    virtual void updateNewDocumentListener(RDocument* document, RTransaction* transaction, bool beforeLoad) = 0;
 };
 
 Q_DECLARE_METATYPE(RNewDocumentListener*)

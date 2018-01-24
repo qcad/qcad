@@ -152,7 +152,7 @@ public:
 
     void addNewDocumentListener(RNewDocumentListener* l);
     void removeNewDocumentListener(RNewDocumentListener* l);
-    void notifyNewDocumentListeners(RDocument* document, RTransaction* transaction);
+    void notifyNewDocumentListeners(RDocument* document, RTransaction* transaction, bool beforeLoad);
 
     void addSnapListener(RSnapListener* l);
     void removeSnapListener(RSnapListener* l);

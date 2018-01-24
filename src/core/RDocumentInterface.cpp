@@ -243,8 +243,8 @@ void RDocumentInterface::notifyLayerListeners() {
 /**
  * Resets the document to its original, empty state.
  */
-void RDocumentInterface::clear() {
-    document.clear();
+void RDocumentInterface::clear(bool beforeLoad) {
+    document.clear(beforeLoad);
     suspended = false;
     setCurrentBlock(RBlock::modelSpaceName);
 
@@ -1128,6 +1128,9 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
 
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
 
+    // clear before loading
+    // RNewDocumentListeners are notified that we're intending to load a document:
+    clear(true);
     clearCaches();
 
     QFileInfo fi(fileName);

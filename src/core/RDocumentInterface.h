@@ -132,7 +132,7 @@ public:
     void removeLayerListener(RLayerListener* l);
     void notifyLayerListeners();
 
-    void clear();
+    void clear(bool beforeLoad=false);
 
     RScriptHandler* getScriptHandler(const QString& extension);
     bool isScriptRunning();

@@ -67,7 +67,7 @@ RDocument::RDocument(
 //    }
 //}
 
-void RDocument::init() {
+void RDocument::init(bool beforeLoad) {
     RS::Unit defaultUnit = (RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt();
     RS::Measurement measurement = (RS::Measurement)RSettings::getValue("UnitSettings/Measurement", RS::Metric).toInt();
     if (measurement!=RS::Metric && measurement!=RS::Imperial) {
@@ -335,7 +335,7 @@ void RDocument::init() {
 
         // notify new document listeners
         if (RMainWindow::hasMainWindow()) {
-            RMainWindow::getMainWindow()->notifyNewDocumentListeners(this, &transaction);
+            RMainWindow::getMainWindow()->notifyNewDocumentListeners(this, &transaction, beforeLoad);
         }
     }
 
@@ -408,7 +408,7 @@ QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
 /**
  * Resets this document to its initial, empty state.
  */
-void RDocument::clear() {
+void RDocument::clear(bool beforeLoad) {
     // preserve unit:
     RS::Unit u = getUnit();
 
@@ -417,7 +417,7 @@ void RDocument::clear() {
     clearSpatialIndices();
     transactionStack.reset();
 
-    init();
+    init(beforeLoad);
     setUnit(u);
 }
 
