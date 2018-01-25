@@ -4,6 +4,7 @@ SUBDIRS = \
     core \
     entity \
     grid \
+    scripts \
     snap \
     operations \
     stemmer \
