@@ -2127,6 +2127,7 @@ function addDirtyFlag(title) {
 }
 
 function hasPlugin(name) {
+    // TODO: refactor:
     if (name==="PROTOOLS") {
         if (new QFileInfo("scripts/Pro").exists()) {
             // PROTOOLS available not as plugins but as scripts folder:
@@ -2416,6 +2417,10 @@ function autoPath(path) {
     else {
         return ":" + path;
     }
+}
+
+function exists(path) {
+    return new QFileInfo(autoPath(path)).exists();
 }
 
 function neutralPath(path) {
