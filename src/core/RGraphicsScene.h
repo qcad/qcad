@@ -104,11 +104,11 @@ public:
     virtual void clearPreview();
     virtual bool isPreviewEmpty();
 
-    virtual void addToPreview(REntity::Id entityId, const QList<RGraphicsSceneDrawable>& drawables) {
+    virtual void addToPreview(REntity::Id entityId, QList<RGraphicsSceneDrawable>& drawables) {
         Q_UNUSED(entityId)
         Q_UNUSED(drawables)
     }
-    virtual void addToPreview(REntity::Id entityId, const RGraphicsSceneDrawable& drawable) {
+    virtual void addToPreview(REntity::Id entityId, RGraphicsSceneDrawable& drawable) {
         Q_UNUSED(entityId)
         Q_UNUSED(drawable)
     }
