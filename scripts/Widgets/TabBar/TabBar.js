@@ -96,7 +96,7 @@ TabBar.initTabBar = function() {
             action.setProperty("Configurable", false);
             action.setRequiresDocument(false);
             action.setScriptFile(fileNewAction.getScriptFile(), true);
-            action.setIcon("scripts/Widgets/TabBar/AddTab.svg");
+            action.setIcon(autoPath("scripts/Widgets/TabBar/AddTab.svg"));
             action.setNoState();
 
             button.setDefaultAction(action);
