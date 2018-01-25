@@ -21,12 +21,13 @@ include("../File.js");
 include("../Save/Save.js");
 include("scripts/Widgets/ViewportWidget/ViewportWidget.js");
 include("../AutoSave/AutoSave.js");
+include("scripts/Reset/Reset.js");
 
-if (new QFileInfo("scripts/DefaultAction.js").exists()) {
+if (exists("scripts/DefaultAction.js")) {
     include("scripts/DefaultAction.js");
 }
 
-if (new QFileInfo("scripts/Navigation/DefaultNavigation.js").exists()) {
+if (exists("scripts/Navigation/DefaultNavigation.js")) {
     include("scripts/Navigation/DefaultNavigation.js");
 }
 
