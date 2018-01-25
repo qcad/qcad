@@ -487,10 +487,12 @@ AddOn.getAddOns = function(dir) {
         }
 
         // append directories not in the list above:
-        var menuList = new QDir(dir).entryInfoList(dirFilter, sortFlags);
-        for (i=0; i<menuList.length; ++i) {
-            if (!fileMenuList.contains(menuList[i], function(a,b) { return a.absoluteFilePath()===b.absoluteFilePath(); })) {
-                fileMenuList.push(menuList[i]);
+        if (!isNull(dir)) {
+            var menuList = new QDir(dir).entryInfoList(dirFilter, sortFlags);
+            for (i=0; i<menuList.length; ++i) {
+                if (!fileMenuList.contains(menuList[i], function(a,b) { return a.absoluteFilePath()===b.absoluteFilePath(); })) {
+                    fileMenuList.push(menuList[i]);
+                }
             }
         }
     } else {
