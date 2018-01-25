@@ -543,18 +543,27 @@ AddOn.getAddOns = function(dir) {
 
         var rx1 = new RegExp(":?\/?scripts\/");
         var rx2 = new RegExp("\/.*");
+        var gotRegularFile = false;
         addOns.sort(function(a,b) {
             var aPath = a.getPath();
             var bPath = b.getPath();
+
+            if (!gotRegularFile && (aPath[0]!==":" || bPath[0]!==":")) {
+                gotRegularFile = true;
+            }
 
             // get top dir name after scripts (e.g. 'File', 'Layer', ...):
             var da = aPath.replace(rx1, "").replace(rx2, "");
             var db = bPath.replace(rx1, "").replace(rx2, "");
 
+            // first priority:
+            // sort by predefined menu order:
             // get sort order from menuNames map:
             var oa = menuNames[da];
             var ob = menuNames[db];
 
+            // menu not in list:
+            // insert between Local and Help:
             if (isNull(oa)) {
                 oa = 1000;
             }
@@ -562,22 +571,63 @@ AddOn.getAddOns = function(dir) {
                 ob = 1000;
             }
 
-            if (oa===ob) {
-                // prioritize 'scripts' paths (QCAD) over ':scripts' (plugin):
-                if (!aPath.startsWith(":") && bPath.startsWith(":")) {
-                    return -1;
-                }
-                else if (aPath.startsWith(":") && !bPath.startsWith(":")) {
-                    return 1;
-                }
+            if (oa!==ob) {
+                return oa-ob;
             }
 
-            return oa-ob;
+            // secondary priority:
+            // sort alphabetically:
+            var aPathNoColon = aPath;
+            var bPathNoColon = bPath;
+            if (aPathNoColon[0]===":") {
+                aPathNoColon = aPathNoColon.substring(1);
+            }
+            if (bPathNoColon[0]===":") {
+                bPathNoColon = bPathNoColon.substring(1);
+            }
+
+            if (aPathNoColon!==bPathNoColon) {
+                return (aPathNoColon>bPathNoColon) ? 1 : -1;
+            }
+
+            // prioritize 'scripts' paths (QCAD) over ':scripts' (plugin):
+            if (!aPath.startsWith(":") && bPath.startsWith(":")) {
+                return -1;
+            }
+            else if (aPath.startsWith(":") && !bPath.startsWith(":")) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
         });
 
-        //for (var i=0; i<addOns.length; i++) {
-        //    qDebug("addOn: ", addOns[i].getPath());
-        //}
+//        for (var i=0; i<addOns.length; i++) {
+//            qDebug("addOn: ", addOns[i].getPath());
+//        }
+
+        if (gotRegularFile) {
+            // filter out duplicate paths from plugins:
+            // files take priority over resources:
+            var addOnsFiltered = [];
+            var prevPathNoColon = undefined;
+            for (var i=0; i<addOns.length; i++) {
+                var addOn = addOns[i];
+                var pathNoColon = addOn.fileInfo.filePath();
+                if (pathNoColon[0]===":") {
+                    pathNoColon = pathNoColon.substring(1);
+                }
+
+                if (!isNull(prevPathNoColon) && prevPathNoColon===pathNoColon) {
+                    continue;
+                }
+
+                addOnsFiltered.push(addOn);
+
+                prevPathNoColon = pathNoColon;
+            }
+            addOns = addOnsFiltered;
+        }
 
         // cache:
         AddOn.addOns = addOns;
