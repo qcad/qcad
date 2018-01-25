@@ -21,7 +21,7 @@ include("WidgetFactory.js");
 include("scripts/Widgets/OptionsToolBar/OptionsToolBar.js");
 
 if (RSettings.isGuiEnabled()) {
-    if (new QFileInfo(autoPath("scripts/Widgets/CadToolBar/CadToolBar.js")).exists()) {
+    if (exists("scripts/Widgets/CadToolBar/CadToolBar.js")) {
         include("scripts/Widgets/CadToolBar/ColumnLayout.js");
         include("scripts/Widgets/CadToolBar/CadToolBar.js");
     }
@@ -58,6 +58,7 @@ function EAction(guiAction) {
 }
 
 EAction.prototype = new RActionAdapter();
+EAction.includeBasePath = includeBasePath;
 
 // some commonly used translated strings:
 EAction.trBack = qsTr("Back");
@@ -722,15 +723,15 @@ EAction.prototype.setCrosshairCursor = function() {
     if (isNull(EAction.crossCursor)) {
         var bitmap, mask
         if (RSettings.getDevicePixelRatio()===2 && RS.getSystemId()!=="osx") {
-            bitmap = new QBitmap("scripts/CrosshairCursor@2x.png", "PNG");
-            mask = new QBitmap("scripts/CrosshairCursorMask@2x.png", "PNG");
+            bitmap = new QBitmap(EAction.includeBasePath + "/CrosshairCursor@2x.png", "PNG");
+            mask = new QBitmap(EAction.includeBasePath + "/CrosshairCursorMask@2x.png", "PNG");
             //bitmap.setDevicePixelRatio(2);
             //mask.setDevicePixelRatio(2);
             EAction.crossCursor = new QCursor(bitmap, mask, 15, 15);
         }
         else {
-            bitmap = new QBitmap("scripts/CrosshairCursor.png", "PNG");
-            mask = new QBitmap("scripts/CrosshairCursorMask.png", "PNG");
+            bitmap = new QBitmap(EAction.includeBasePath + "CrosshairCursor.png", "PNG");
+            mask = new QBitmap(EAction.includeBasePath + "CrosshairCursorMask.png", "PNG");
             EAction.crossCursor = new QCursor(bitmap, mask, 15, 15);
         }
     }
