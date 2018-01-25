@@ -132,7 +132,7 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<p/>"
             + "<p>" + qsTr("All brand or product names are trademarks or registered trademarks of their respective holders.") + "</p>"
             + "<p/>"
-            + "<p>© 2011-2017 RibbonSoft GmbH.</p>"
+            + "<p>© 2011-2018 RibbonSoft GmbH.</p>"
             + "<p>" + qsTr("Portions of this software © 2008-2017 The Qt Company Ltd.") + "</p>"
             + "<p>" + qsTr("The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.") + "</p>"
             + "<p/>"
@@ -316,7 +316,10 @@ About.prototype.initAboutScripts = function(textBrowser) {
     else {
         var i;
         var scriptsPath = RS.getDirectoryList("scripts")[0];
-        var scriptsDir = new QDir(scriptsPath);
+        var scriptsDir = undefined;
+        if (!isNull(scriptsPath)) {
+            scriptsDir = new QDir(scriptsPath);
+        }
 
         var sorted = [];
         for (i=0; i<numAddOns; i++) {
@@ -326,7 +329,9 @@ About.prototype.initAboutScripts = function(textBrowser) {
                 path = path.substring(1);
             }
             else {
-                path = scriptsDir.relativeFilePath(path);
+                if (!isNull(scriptsDir)) {
+                    path = scriptsDir.relativeFilePath(path);
+                }
             }
             sorted.push([addOn.getClassName(), path]);
         }
