@@ -1,0 +1,7 @@
+#ifndef SCRIPTS_RC
+#define SCRIPTS_RC
+
+#define VER_ORIGINALFILENAME_STR    "qcadscripts.dll"
+#include "../../shared.rc"
+
+#endif // SCRIPTS_RC
