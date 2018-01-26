@@ -1144,6 +1144,32 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         return RDocumentInterface::IoErrorPermission;
     }
 
+    // import from compiled resource:
+    if (fileName.startsWith(":scripts")) {
+        QString resourceFileName = fileName;
+#if QT_VERSION >= 0x050000
+        // QTemporaryFile would not work here since Teigha wouldn't be
+        // able to open the locked file that is produced:
+        QTemporaryDir dir;
+        resourceFileName = "qcad_resource_file.dxf";
+        if (!dir.isValid()) {
+            qWarning() << "cannot create temporary directory:" << dir.path();
+            return RDocumentInterface::IoErrorGeneralImportUrlError;
+        }
+#else
+        // Clumsy port to Qt 4:
+        QDir dir(RSettings::getTempLocation());
+        qint64 ts = QDateTime::currentMSecsSinceEpoch();
+        resourceFileName = QString("qcad%1.dxf").arg(ts);
+#endif
+        resourceFileName = dir.path() + "/" + resourceFileName;
+        if (!QFile::copy(fileName, resourceFileName)) {
+            qWarning() << "cannot copy file from resource to temporary directory:" << resourceFileName;
+            return RDocumentInterface::IoErrorGeneralImportUrlError;
+        }
+        return importFile(resourceFileName, nameFilter, notify);
+    }
+
     RFileImporter* fileImporter = RFileImporterRegistry::getFileImporter(
         fileName, nameFilter, document, mainWindow, mainWindow);
     if (fileImporter == NULL) {
