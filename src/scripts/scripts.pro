@@ -8,4 +8,14 @@ SOURCES     = RScriptsPlugin.cpp
 DESTDIR     = ../../plugins
 RC_FILE     = scripts.rc
 LIBS        += -l$${RLIBNAME}core
-RESOURCES   = scripts.qrc
+
+CONFIG(debug, debug|release) {
+    # include development scripts, tests:
+    build_pass:message("Using development qrc")
+    RESOURCES   = scripts.qrc
+}
+else {
+    # release:
+    build_pass:message("Using release qrc")
+    RESOURCES   = scripts_release.qrc
+}
