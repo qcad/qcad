@@ -40,7 +40,7 @@ RSnapCoordinate.prototype = new RSnap();
 RSnapCoordinate.prototype.initAction = function(guiAction) {
     this.action = new EAction(guiAction);
     if (!isNull(this.action.setUiOptions)) {
-        this.action.setUiOptions("scripts/Snap/SnapCoordinate/SnapCoordinate.ui");
+        this.action.setUiOptions(SnapCoordinate.includeBasePath + "/SnapCoordinate.ui");
     }
     var snap = this;
 
@@ -139,6 +139,7 @@ function SnapCoordinate(guiAction) {
 }
 
 SnapCoordinate.prototype = new Snap();
+SnapCoordinate.includeBasePath = includeBasePath;
 
 SnapCoordinate.prototype.beginEvent = function() {
     Snap.prototype.beginEvent.call(this);

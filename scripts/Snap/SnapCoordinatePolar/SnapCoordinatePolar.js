@@ -34,7 +34,7 @@ RSnapCoordinatePolar.prototype = new RSnapCoordinate();
 RSnapCoordinatePolar.prototype.initAction = function(guiAction) {
     this.action = new EAction(guiAction);
     if (!isNull(this.action.setUiOptions)) {
-        this.action.setUiOptions("scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui");
+        this.action.setUiOptions(SnapCoordinatePolar.includeBasePath + "/SnapCoordinatePolar.ui");
     }
     var snap = this;
 
@@ -80,6 +80,7 @@ function SnapCoordinatePolar(guiAction) {
 }
 
 SnapCoordinatePolar.prototype = new Snap();
+SnapCoordinatePolar.includeBasePath = includeBasePath;
 
 SnapCoordinatePolar.prototype.beginEvent = function() {
     Snap.prototype.beginEvent.call(this);

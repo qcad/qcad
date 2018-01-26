@@ -30,7 +30,7 @@ function RSnapDistanceExtension() {
     this.action = new EAction(
          RGuiAction.getByScriptFile("scripts/Snap/SnapDistance/SnapDistance.js")
     );
-    this.action.setUiOptions("scripts/Snap/SnapDistance/SnapDistance.ui");
+    this.action.setUiOptions(SnapDistance.includeBasePath + "/SnapDistance.ui");
     var snap = this;
     this.action.slotDistanceChanged = function(value) {
         snap.setDistance(value);
@@ -59,6 +59,7 @@ function SnapDistance(guiAction) {
 }
 
 SnapDistance.prototype = new Snap();
+SnapDistance.includeBasePath = includeBasePath;
 
 SnapDistance.prototype.beginEvent = function() {
     Snap.prototype.beginEvent.call(this);

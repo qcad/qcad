@@ -39,10 +39,11 @@ function DrawPolyline(guiAction) {
     this.redoList = [];
     this.sweep = 0.0;
 
-    this.setUiOptions("DrawPolyline.ui");
+    this.setUiOptions(DrawPolyline.includeBasePath + "/DrawPolyline.ui");
 }
 
 DrawPolyline.prototype = new Polyline();
+DrawPolyline.includeBasePath = includeBasePath;
 
 DrawPolyline.State = {
     SettingFirstVertex : 0,
