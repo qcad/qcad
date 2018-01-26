@@ -625,6 +625,10 @@ EAction.prototype.showDialog = function() {
 
     // sync invisible part of options tool bar with dialog:
     for (i=0; i<noSyncWidgets.length; i++) {
+        if (isDeleted(noSyncWidgets[i])) {
+            continue;
+        }
+
         noSyncWidgets[i].setProperty("Loaded", true);
     }
 
@@ -632,6 +636,10 @@ EAction.prototype.showDialog = function() {
     WidgetFactory.restoreState(optionsToolBar, this.settingsGroup, this);
 
     for (i=0; i<noSyncWidgets.length; i++) {
+        if (isDeleted(noSyncWidgets[i])) {
+            continue;
+        }
+
         noSyncWidgets[i].setProperty("Loaded", false);
     }
 
