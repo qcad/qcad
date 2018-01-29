@@ -284,6 +284,6 @@ Layer.lockUnlock = function(lock, di, showProgress) {
 /**
  * Can be reimplemented in derived classes to provide an advanced dialog.
  */
-Layer.prototype.createLayerDialog = function(doc, layer) {
-    return new LayerDialog(doc, layer);
+Layer.prototype.createLayerDialog = function(di, layer) {
+    return new LayerDialog(di, layer);
 };

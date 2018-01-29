@@ -28,9 +28,13 @@ include("../WidgetFactory.js");
  * \param document RDocument the layer is in.
  * \param layer RLayer object to edit or undefined to show a dialog for a new layer.
  */
-function LayerDialog(document, layer) {
+function LayerDialog(documentInterface, layer) {
     this.dialog = null;
-    this.document = document;
+    this.documentInterface = documentInterface;
+    this.document = undefined;
+    if (!isNull(this.documentInterface)) {
+        this.document = documentInterface.getDocument();
+    }
     this.layer = layer;
     this.prefix = undefined;
     this.defaultName = "layer %1";

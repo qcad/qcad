@@ -38,7 +38,7 @@ AddLayer.getPreferencesCategory = function() {
 AddLayer.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
-    var dlg = this.createLayerDialog(this.getDocument());
+    var dlg = this.createLayerDialog(this.getDocumentInterface());
     this.layer = dlg.show();
     if (isNull(this.layer)) {
         this.terminate();
