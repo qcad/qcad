@@ -7,7 +7,6 @@
     <file alias="scripts/Block/AddBlock/AddBlock.svg">../../scripts/Block/AddBlock/AddBlock.svg</file>
     <file alias="scripts/Block/AddBlock/AddBlockInit.js">../../scripts/Block/AddBlock/AddBlockInit.js</file>
     <file alias="scripts/Block/AddBlock/Tests/AddBlockTest00.js">../../scripts/Block/AddBlock/Tests/AddBlockTest00.js</file>
-    <file alias="scripts/Block/AddBlock/Tests/actual/AddBlockTest00_000.dxf">../../scripts/Block/AddBlock/Tests/actual/AddBlockTest00_000.dxf</file>
     <file alias="scripts/Block/AddBlock/Tests/required/AddBlockTest00_000.dxf">../../scripts/Block/AddBlock/Tests/required/AddBlockTest00_000.dxf</file>
     <file alias="scripts/Block/AddBlock/ts/AddBlock_cs.qm">../../scripts/Block/AddBlock/ts/AddBlock_cs.qm</file>
     <file alias="scripts/Block/AddBlock/ts/AddBlock_de.qm">../../scripts/Block/AddBlock/ts/AddBlock_de.qm</file>
@@ -42,11 +41,6 @@
     <file alias="scripts/Block/CreateBlock/Tests/CreateBlockTest00.js">../../scripts/Block/CreateBlock/Tests/CreateBlockTest00.js</file>
     <file alias="scripts/Block/CreateBlock/Tests/CreateBlockTest01.js">../../scripts/Block/CreateBlock/Tests/CreateBlockTest01.js</file>
     <file alias="scripts/Block/CreateBlock/Tests/CreateBlockTest02.js">../../scripts/Block/CreateBlock/Tests/CreateBlockTest02.js</file>
-    <file alias="scripts/Block/CreateBlock/Tests/actual/CreateBlockTest00_000.dxf">../../scripts/Block/CreateBlock/Tests/actual/CreateBlockTest00_000.dxf</file>
-    <file alias="scripts/Block/CreateBlock/Tests/actual/CreateBlockTest01_000.dxf">../../scripts/Block/CreateBlock/Tests/actual/CreateBlockTest01_000.dxf</file>
-    <file alias="scripts/Block/CreateBlock/Tests/actual/CreateBlockTest02_000.dxf">../../scripts/Block/CreateBlock/Tests/actual/CreateBlockTest02_000.dxf</file>
-    <file alias="scripts/Block/CreateBlock/Tests/actual/CreateBlockTest02_001.dxf">../../scripts/Block/CreateBlock/Tests/actual/CreateBlockTest02_001.dxf</file>
-    <file alias="scripts/Block/CreateBlock/Tests/actual/CreateBlockTest02_002.dxf">../../scripts/Block/CreateBlock/Tests/actual/CreateBlockTest02_002.dxf</file>
     <file alias="scripts/Block/CreateBlock/Tests/required/CreateBlockTest00_000.dxf">../../scripts/Block/CreateBlock/Tests/required/CreateBlockTest00_000.dxf</file>
     <file alias="scripts/Block/CreateBlock/Tests/required/CreateBlockTest01_000.dxf">../../scripts/Block/CreateBlock/Tests/required/CreateBlockTest01_000.dxf</file>
     <file alias="scripts/Block/CreateBlock/Tests/required/CreateBlockTest02_000.dxf">../../scripts/Block/CreateBlock/Tests/required/CreateBlockTest02_000.dxf</file>
@@ -125,7 +119,6 @@
     <file alias="scripts/Block/EditBlock/EditBlock.svg">../../scripts/Block/EditBlock/EditBlock.svg</file>
     <file alias="scripts/Block/EditBlock/EditBlockInit.js">../../scripts/Block/EditBlock/EditBlockInit.js</file>
     <file alias="scripts/Block/EditBlock/Tests/EditBlockTest00.js">../../scripts/Block/EditBlock/Tests/EditBlockTest00.js</file>
-    <file alias="scripts/Block/EditBlock/Tests/actual/EditBlockTest00_000.dxf">../../scripts/Block/EditBlock/Tests/actual/EditBlockTest00_000.dxf</file>
     <file alias="scripts/Block/EditBlock/Tests/required/EditBlockTest00_000.dxf">../../scripts/Block/EditBlock/Tests/required/EditBlockTest00_000.dxf</file>
     <file alias="scripts/Block/EditBlock/ts/EditBlock_cs.qm">../../scripts/Block/EditBlock/ts/EditBlock_cs.qm</file>
     <file alias="scripts/Block/EditBlock/ts/EditBlock_de.qm">../../scripts/Block/EditBlock/ts/EditBlock_de.qm</file>
@@ -152,7 +145,6 @@
     <file alias="scripts/Block/EditFromReference/EditFromReference.svg">../../scripts/Block/EditFromReference/EditFromReference.svg</file>
     <file alias="scripts/Block/EditFromReference/EditFromReferenceInit.js">../../scripts/Block/EditFromReference/EditFromReferenceInit.js</file>
     <file alias="scripts/Block/EditFromReference/Tests/EditFromReferenceTest00.js">../../scripts/Block/EditFromReference/Tests/EditFromReferenceTest00.js</file>
-    <file alias="scripts/Block/EditFromReference/Tests/actual/EditFromReferenceTest00_000.dxf">../../scripts/Block/EditFromReference/Tests/actual/EditFromReferenceTest00_000.dxf</file>
     <file alias="scripts/Block/EditFromReference/Tests/required/EditFromReferenceTest00_000.dxf">../../scripts/Block/EditFromReference/Tests/required/EditFromReferenceTest00_000.dxf</file>
     <file alias="scripts/Block/EditFromReference/ts/EditFromReference_cs.qm">../../scripts/Block/EditFromReference/ts/EditFromReference_cs.qm</file>
     <file alias="scripts/Block/EditFromReference/ts/EditFromReference_de.qm">../../scripts/Block/EditFromReference/ts/EditFromReference_de.qm</file>
@@ -242,8 +234,6 @@
     <file alias="scripts/Block/InsertBlock/SingleBlock.svg">../../scripts/Block/InsertBlock/SingleBlock.svg</file>
     <file alias="scripts/Block/InsertBlock/Tests/InsertBlockTest00.js">../../scripts/Block/InsertBlock/Tests/InsertBlockTest00.js</file>
     <file alias="scripts/Block/InsertBlock/Tests/InsertBlockTest01.js">../../scripts/Block/InsertBlock/Tests/InsertBlockTest01.js</file>
-    <file alias="scripts/Block/InsertBlock/Tests/actual/InsertBlockTest00_000.dxf">../../scripts/Block/InsertBlock/Tests/actual/InsertBlockTest00_000.dxf</file>
-    <file alias="scripts/Block/InsertBlock/Tests/actual/InsertBlockTest01_000.dxf">../../scripts/Block/InsertBlock/Tests/actual/InsertBlockTest01_000.dxf</file>
     <file alias="scripts/Block/InsertBlock/Tests/required/InsertBlockTest00_000.dxf">../../scripts/Block/InsertBlock/Tests/required/InsertBlockTest00_000.dxf</file>
     <file alias="scripts/Block/InsertBlock/Tests/required/InsertBlockTest01_000.dxf">../../scripts/Block/InsertBlock/Tests/required/InsertBlockTest01_000.dxf</file>
     <file alias="scripts/Block/InsertBlock/ts/InsertBlock_cs.qm">../../scripts/Block/InsertBlock/ts/InsertBlock_cs.qm</file>
@@ -324,8 +314,6 @@
     <file alias="scripts/Block/RemoveBlock/RemoveBlock.svg">../../scripts/Block/RemoveBlock/RemoveBlock.svg</file>
     <file alias="scripts/Block/RemoveBlock/RemoveBlockInit.js">../../scripts/Block/RemoveBlock/RemoveBlockInit.js</file>
     <file alias="scripts/Block/RemoveBlock/Tests/RemoveBlockTest00.js">../../scripts/Block/RemoveBlock/Tests/RemoveBlockTest00.js</file>
-    <file alias="scripts/Block/RemoveBlock/Tests/actual/RemoveBlockTest00_000.dxf">../../scripts/Block/RemoveBlock/Tests/actual/RemoveBlockTest00_000.dxf</file>
-    <file alias="scripts/Block/RemoveBlock/Tests/actual/RemoveBlockTest00_001.dxf">../../scripts/Block/RemoveBlock/Tests/actual/RemoveBlockTest00_001.dxf</file>
     <file alias="scripts/Block/RemoveBlock/Tests/required/RemoveBlockTest00_000.dxf">../../scripts/Block/RemoveBlock/Tests/required/RemoveBlockTest00_000.dxf</file>
     <file alias="scripts/Block/RemoveBlock/Tests/required/RemoveBlockTest00_001.dxf">../../scripts/Block/RemoveBlock/Tests/required/RemoveBlockTest00_001.dxf</file>
     <file alias="scripts/Block/RemoveBlock/ts/RemoveBlock_cs.qm">../../scripts/Block/RemoveBlock/ts/RemoveBlock_cs.qm</file>
@@ -353,7 +341,6 @@
     <file alias="scripts/Block/RenameBlock/RenameBlock.svg">../../scripts/Block/RenameBlock/RenameBlock.svg</file>
     <file alias="scripts/Block/RenameBlock/RenameBlockInit.js">../../scripts/Block/RenameBlock/RenameBlockInit.js</file>
     <file alias="scripts/Block/RenameBlock/Tests/RenameBlockTest00.js">../../scripts/Block/RenameBlock/Tests/RenameBlockTest00.js</file>
-    <file alias="scripts/Block/RenameBlock/Tests/actual/RenameBlockTest00_000.dxf">../../scripts/Block/RenameBlock/Tests/actual/RenameBlockTest00_000.dxf</file>
     <file alias="scripts/Block/RenameBlock/Tests/required/RenameBlockTest00_000.dxf">../../scripts/Block/RenameBlock/Tests/required/RenameBlockTest00_000.dxf</file>
     <file alias="scripts/Block/RenameBlock/ts/RenameBlock_cs.qm">../../scripts/Block/RenameBlock/ts/RenameBlock_cs.qm</file>
     <file alias="scripts/Block/RenameBlock/ts/RenameBlock_de.qm">../../scripts/Block/RenameBlock/ts/RenameBlock_de.qm</file>
@@ -487,7 +474,6 @@
     <file alias="scripts/Draw/Arc/Arc2PA/CounterClockwise-inverse.svg">../../scripts/Draw/Arc/Arc2PA/CounterClockwise-inverse.svg</file>
     <file alias="scripts/Draw/Arc/Arc2PA/CounterClockwise.svg">../../scripts/Draw/Arc/Arc2PA/CounterClockwise.svg</file>
     <file alias="scripts/Draw/Arc/Arc2PA/Tests/Arc2PATest00.js">../../scripts/Draw/Arc/Arc2PA/Tests/Arc2PATest00.js</file>
-    <file alias="scripts/Draw/Arc/Arc2PA/Tests/actual/Arc2PATest00_000.dxf">../../scripts/Draw/Arc/Arc2PA/Tests/actual/Arc2PATest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc2PA/Tests/required/Arc2PATest00_000.dxf">../../scripts/Draw/Arc/Arc2PA/Tests/required/Arc2PATest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc2PA/ts/Arc2PA_cs.qm">../../scripts/Draw/Arc/Arc2PA/ts/Arc2PA_cs.qm</file>
     <file alias="scripts/Draw/Arc/Arc2PA/ts/Arc2PA_de.qm">../../scripts/Draw/Arc/Arc2PA/ts/Arc2PA_de.qm</file>
@@ -519,7 +505,6 @@
     <file alias="scripts/Draw/Arc/Arc2PH/CounterClockwise-inverse.svg">../../scripts/Draw/Arc/Arc2PH/CounterClockwise-inverse.svg</file>
     <file alias="scripts/Draw/Arc/Arc2PH/CounterClockwise.svg">../../scripts/Draw/Arc/Arc2PH/CounterClockwise.svg</file>
     <file alias="scripts/Draw/Arc/Arc2PH/Tests/Arc2PHTest00.js">../../scripts/Draw/Arc/Arc2PH/Tests/Arc2PHTest00.js</file>
-    <file alias="scripts/Draw/Arc/Arc2PH/Tests/actual/Arc2PHTest00_000.dxf">../../scripts/Draw/Arc/Arc2PH/Tests/actual/Arc2PHTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc2PH/Tests/required/Arc2PHTest00_000.dxf">../../scripts/Draw/Arc/Arc2PH/Tests/required/Arc2PHTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc2PH/ts/Arc2PH_cs.qm">../../scripts/Draw/Arc/Arc2PH/ts/Arc2PH_cs.qm</file>
     <file alias="scripts/Draw/Arc/Arc2PH/ts/Arc2PH_de.qm">../../scripts/Draw/Arc/Arc2PH/ts/Arc2PH_de.qm</file>
@@ -551,7 +536,6 @@
     <file alias="scripts/Draw/Arc/Arc2PL/CounterClockwise-inverse.svg">../../scripts/Draw/Arc/Arc2PL/CounterClockwise-inverse.svg</file>
     <file alias="scripts/Draw/Arc/Arc2PL/CounterClockwise.svg">../../scripts/Draw/Arc/Arc2PL/CounterClockwise.svg</file>
     <file alias="scripts/Draw/Arc/Arc2PL/Tests/Arc2PLTest00.js">../../scripts/Draw/Arc/Arc2PL/Tests/Arc2PLTest00.js</file>
-    <file alias="scripts/Draw/Arc/Arc2PL/Tests/actual/Arc2PLTest00_000.dxf">../../scripts/Draw/Arc/Arc2PL/Tests/actual/Arc2PLTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc2PL/Tests/required/Arc2PLTest00_000.dxf">../../scripts/Draw/Arc/Arc2PL/Tests/required/Arc2PLTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc2PL/ts/Arc2PL_cs.qm">../../scripts/Draw/Arc/Arc2PL/ts/Arc2PL_cs.qm</file>
     <file alias="scripts/Draw/Arc/Arc2PL/ts/Arc2PL_de.qm">../../scripts/Draw/Arc/Arc2PL/ts/Arc2PL_de.qm</file>
@@ -587,7 +571,6 @@
     <file alias="scripts/Draw/Arc/Arc2PR/Solution2-inverse.svg">../../scripts/Draw/Arc/Arc2PR/Solution2-inverse.svg</file>
     <file alias="scripts/Draw/Arc/Arc2PR/Solution2.svg">../../scripts/Draw/Arc/Arc2PR/Solution2.svg</file>
     <file alias="scripts/Draw/Arc/Arc2PR/Tests/Arc2PRTest00.js">../../scripts/Draw/Arc/Arc2PR/Tests/Arc2PRTest00.js</file>
-    <file alias="scripts/Draw/Arc/Arc2PR/Tests/actual/Arc2PRTest00_000.dxf">../../scripts/Draw/Arc/Arc2PR/Tests/actual/Arc2PRTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc2PR/Tests/required/Arc2PRTest00_000.dxf">../../scripts/Draw/Arc/Arc2PR/Tests/required/Arc2PRTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc2PR/ts/Arc2PR_cs.qm">../../scripts/Draw/Arc/Arc2PR/ts/Arc2PR_cs.qm</file>
     <file alias="scripts/Draw/Arc/Arc2PR/ts/Arc2PR_de.qm">../../scripts/Draw/Arc/Arc2PR/ts/Arc2PR_de.qm</file>
@@ -614,7 +597,6 @@
     <file alias="scripts/Draw/Arc/Arc3P/Arc3P.svg">../../scripts/Draw/Arc/Arc3P/Arc3P.svg</file>
     <file alias="scripts/Draw/Arc/Arc3P/Arc3PInit.js">../../scripts/Draw/Arc/Arc3P/Arc3PInit.js</file>
     <file alias="scripts/Draw/Arc/Arc3P/Tests/Arc3PTest00.js">../../scripts/Draw/Arc/Arc3P/Tests/Arc3PTest00.js</file>
-    <file alias="scripts/Draw/Arc/Arc3P/Tests/actual/Arc3PTest00_000.dxf">../../scripts/Draw/Arc/Arc3P/Tests/actual/Arc3PTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc3P/Tests/required/Arc3PTest00_000.dxf">../../scripts/Draw/Arc/Arc3P/Tests/required/Arc3PTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/Arc3P/ts/Arc3P_cs.qm">../../scripts/Draw/Arc/Arc3P/ts/Arc3P_cs.qm</file>
     <file alias="scripts/Draw/Arc/Arc3P/ts/Arc3P_de.qm">../../scripts/Draw/Arc/Arc3P/ts/Arc3P_de.qm</file>
@@ -646,8 +628,6 @@
     <file alias="scripts/Draw/Arc/ArcCPA/CounterClockwise-inverse.svg">../../scripts/Draw/Arc/ArcCPA/CounterClockwise-inverse.svg</file>
     <file alias="scripts/Draw/Arc/ArcCPA/CounterClockwise.svg">../../scripts/Draw/Arc/ArcCPA/CounterClockwise.svg</file>
     <file alias="scripts/Draw/Arc/ArcCPA/Tests/ArcCPATest00.js">../../scripts/Draw/Arc/ArcCPA/Tests/ArcCPATest00.js</file>
-    <file alias="scripts/Draw/Arc/ArcCPA/Tests/actual/ArcCPATest00_000.dxf">../../scripts/Draw/Arc/ArcCPA/Tests/actual/ArcCPATest00_000.dxf</file>
-    <file alias="scripts/Draw/Arc/ArcCPA/Tests/actual/~ArcCPATest00_000.dxf">../../scripts/Draw/Arc/ArcCPA/Tests/actual/~ArcCPATest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/ArcCPA/Tests/required/ArcCPATest00_000.dxf">../../scripts/Draw/Arc/ArcCPA/Tests/required/ArcCPATest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/ArcCPA/ts/ArcCPA_cs.qm">../../scripts/Draw/Arc/ArcCPA/ts/ArcCPA_cs.qm</file>
     <file alias="scripts/Draw/Arc/ArcCPA/ts/ArcCPA_de.qm">../../scripts/Draw/Arc/ArcCPA/ts/ArcCPA_de.qm</file>
@@ -675,7 +655,6 @@
     <file alias="scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui">../../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui</file>
     <file alias="scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js">../../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js</file>
     <file alias="scripts/Draw/Arc/ArcConcentric/Tests/ArcConcentricTest00.js">../../scripts/Draw/Arc/ArcConcentric/Tests/ArcConcentricTest00.js</file>
-    <file alias="scripts/Draw/Arc/ArcConcentric/Tests/actual/ArcConcentricTest00_000.dxf">../../scripts/Draw/Arc/ArcConcentric/Tests/actual/ArcConcentricTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/ArcConcentric/Tests/required/ArcConcentricTest00_000.dxf">../../scripts/Draw/Arc/ArcConcentric/Tests/required/ArcConcentricTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/ArcConcentric/ts/ArcConcentric_cs.qm">../../scripts/Draw/Arc/ArcConcentric/ts/ArcConcentric_cs.qm</file>
     <file alias="scripts/Draw/Arc/ArcConcentric/ts/ArcConcentric_de.qm">../../scripts/Draw/Arc/ArcConcentric/ts/ArcConcentric_de.qm</file>
@@ -730,7 +709,6 @@
     <file alias="scripts/Draw/Arc/ArcTPR/ArcTPR.ui">../../scripts/Draw/Arc/ArcTPR/ArcTPR.ui</file>
     <file alias="scripts/Draw/Arc/ArcTPR/ArcTPRInit.js">../../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js</file>
     <file alias="scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest00.js">../../scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest00.js</file>
-    <file alias="scripts/Draw/Arc/ArcTPR/Tests/actual/ArcTPRTest00_000.dxf">../../scripts/Draw/Arc/ArcTPR/Tests/actual/ArcTPRTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest00_000.dxf">../../scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest00_000.dxf</file>
     <file alias="scripts/Draw/Arc/ArcTPR/ts/ArcTPR_cs.qm">../../scripts/Draw/Arc/ArcTPR/ts/ArcTPR_cs.qm</file>
     <file alias="scripts/Draw/Arc/ArcTPR/ts/ArcTPR_de.qm">../../scripts/Draw/Arc/ArcTPR/ts/ArcTPR_de.qm</file>
@@ -807,7 +785,6 @@
     <file alias="scripts/Draw/Circle/Circle2P/Circle2P.svg">../../scripts/Draw/Circle/Circle2P/Circle2P.svg</file>
     <file alias="scripts/Draw/Circle/Circle2P/Circle2PInit.js">../../scripts/Draw/Circle/Circle2P/Circle2PInit.js</file>
     <file alias="scripts/Draw/Circle/Circle2P/Tests/Circle2PTest00.js">../../scripts/Draw/Circle/Circle2P/Tests/Circle2PTest00.js</file>
-    <file alias="scripts/Draw/Circle/Circle2P/Tests/actual/Circle2PTest00_000.dxf">../../scripts/Draw/Circle/Circle2P/Tests/actual/Circle2PTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2P/Tests/required/Circle2PTest00_000.dxf">../../scripts/Draw/Circle/Circle2P/Tests/required/Circle2PTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2P/ts/Circle2P_cs.qm">../../scripts/Draw/Circle/Circle2P/ts/Circle2P_cs.qm</file>
     <file alias="scripts/Draw/Circle/Circle2P/ts/Circle2P_de.qm">../../scripts/Draw/Circle/Circle2P/ts/Circle2P_de.qm</file>
@@ -867,9 +844,6 @@
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js">../../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js">../../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js">../../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js</file>
-    <file alias="scripts/Draw/Circle/Circle2TP/Tests/actual/Circle2TPTest00_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/actual/Circle2TPTest00_000.dxf</file>
-    <file alias="scripts/Draw/Circle/Circle2TP/Tests/actual/Circle2TPTest01_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/actual/Circle2TPTest01_000.dxf</file>
-    <file alias="scripts/Draw/Circle/Circle2TP/Tests/actual/Circle2TPTest02_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/actual/Circle2TPTest02_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest00_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest01_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest01_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest02_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest02_000.dxf</file>
@@ -900,8 +874,6 @@
     <file alias="scripts/Draw/Circle/Circle2TR/Circle2TRInit.js">../../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js</file>
     <file alias="scripts/Draw/Circle/Circle2TR/Tests/Circle2TRTest00.js">../../scripts/Draw/Circle/Circle2TR/Tests/Circle2TRTest00.js</file>
     <file alias="scripts/Draw/Circle/Circle2TR/Tests/Circle2TRTest01.js">../../scripts/Draw/Circle/Circle2TR/Tests/Circle2TRTest01.js</file>
-    <file alias="scripts/Draw/Circle/Circle2TR/Tests/actual/Circle2TRTest00_000.dxf">../../scripts/Draw/Circle/Circle2TR/Tests/actual/Circle2TRTest00_000.dxf</file>
-    <file alias="scripts/Draw/Circle/Circle2TR/Tests/actual/Circle2TRTest01_000.dxf">../../scripts/Draw/Circle/Circle2TR/Tests/actual/Circle2TRTest01_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TR/Tests/required/Circle2TRTest00_000.dxf">../../scripts/Draw/Circle/Circle2TR/Tests/required/Circle2TRTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TR/Tests/required/Circle2TRTest01_000.dxf">../../scripts/Draw/Circle/Circle2TR/Tests/required/Circle2TRTest01_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TR/ts/Circle2TR_cs.qm">../../scripts/Draw/Circle/Circle2TR/ts/Circle2TR_cs.qm</file>
@@ -929,7 +901,6 @@
     <file alias="scripts/Draw/Circle/Circle3P/Circle3P.svg">../../scripts/Draw/Circle/Circle3P/Circle3P.svg</file>
     <file alias="scripts/Draw/Circle/Circle3P/Circle3PInit.js">../../scripts/Draw/Circle/Circle3P/Circle3PInit.js</file>
     <file alias="scripts/Draw/Circle/Circle3P/Tests/Circle3PTest00.js">../../scripts/Draw/Circle/Circle3P/Tests/Circle3PTest00.js</file>
-    <file alias="scripts/Draw/Circle/Circle3P/Tests/actual/Circle3PTest00_000.dxf">../../scripts/Draw/Circle/Circle3P/Tests/actual/Circle3PTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle3P/Tests/required/Circle3PTest00_000.dxf">../../scripts/Draw/Circle/Circle3P/Tests/required/Circle3PTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle3P/ts/Circle3P_cs.qm">../../scripts/Draw/Circle/Circle3P/ts/Circle3P_cs.qm</file>
     <file alias="scripts/Draw/Circle/Circle3P/ts/Circle3P_de.qm">../../scripts/Draw/Circle/Circle3P/ts/Circle3P_de.qm</file>
@@ -959,10 +930,6 @@
     <file alias="scripts/Draw/Circle/Circle3T/Tests/Circle3TTest01.js">../../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest01.js</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/Circle3TTest02.js">../../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest02.js</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/Circle3TTest03.js">../../scripts/Draw/Circle/Circle3T/Tests/Circle3TTest03.js</file>
-    <file alias="scripts/Draw/Circle/Circle3T/Tests/actual/Circle3TTest00_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/actual/Circle3TTest00_000.dxf</file>
-    <file alias="scripts/Draw/Circle/Circle3T/Tests/actual/Circle3TTest01_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/actual/Circle3TTest01_000.dxf</file>
-    <file alias="scripts/Draw/Circle/Circle3T/Tests/actual/Circle3TTest02_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/actual/Circle3TTest02_000.dxf</file>
-    <file alias="scripts/Draw/Circle/Circle3T/Tests/actual/Circle3TTest03_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/actual/Circle3TTest03_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest00_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest01_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest01_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest02_000.dxf">../../scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest02_000.dxf</file>
@@ -994,7 +961,6 @@
     <file alias="scripts/Draw/Circle/CircleCD/CircleCDDialog.ui">../../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui</file>
     <file alias="scripts/Draw/Circle/CircleCD/CircleCDInit.js">../../scripts/Draw/Circle/CircleCD/CircleCDInit.js</file>
     <file alias="scripts/Draw/Circle/CircleCD/Tests/CircleCDTest00.js">../../scripts/Draw/Circle/CircleCD/Tests/CircleCDTest00.js</file>
-    <file alias="scripts/Draw/Circle/CircleCD/Tests/actual/CircleCDTest00_000.dxf">../../scripts/Draw/Circle/CircleCD/Tests/actual/CircleCDTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleCD/Tests/required/CircleCDTest00_000.dxf">../../scripts/Draw/Circle/CircleCD/Tests/required/CircleCDTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleCD/ts/CircleCD_cs.qm">../../scripts/Draw/Circle/CircleCD/ts/CircleCD_cs.qm</file>
     <file alias="scripts/Draw/Circle/CircleCD/ts/CircleCD_de.qm">../../scripts/Draw/Circle/CircleCD/ts/CircleCD_de.qm</file>
@@ -1021,7 +987,6 @@
     <file alias="scripts/Draw/Circle/CircleCP/CircleCP.svg">../../scripts/Draw/Circle/CircleCP/CircleCP.svg</file>
     <file alias="scripts/Draw/Circle/CircleCP/CircleCPInit.js">../../scripts/Draw/Circle/CircleCP/CircleCPInit.js</file>
     <file alias="scripts/Draw/Circle/CircleCP/Tests/CircleCPTest00.js">../../scripts/Draw/Circle/CircleCP/Tests/CircleCPTest00.js</file>
-    <file alias="scripts/Draw/Circle/CircleCP/Tests/actual/CircleCPTest00_000.dxf">../../scripts/Draw/Circle/CircleCP/Tests/actual/CircleCPTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleCP/Tests/required/CircleCPTest00_000.dxf">../../scripts/Draw/Circle/CircleCP/Tests/required/CircleCPTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleCP/ts/CircleCP_cs.qm">../../scripts/Draw/Circle/CircleCP/ts/CircleCP_cs.qm</file>
     <file alias="scripts/Draw/Circle/CircleCP/ts/CircleCP_de.qm">../../scripts/Draw/Circle/CircleCP/ts/CircleCP_de.qm</file>
@@ -1078,7 +1043,6 @@
     <file alias="scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui">../../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui</file>
     <file alias="scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js">../../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js</file>
     <file alias="scripts/Draw/Circle/CircleConcentric/Tests/CircleConcentricTest00.js">../../scripts/Draw/Circle/CircleConcentric/Tests/CircleConcentricTest00.js</file>
-    <file alias="scripts/Draw/Circle/CircleConcentric/Tests/actual/CircleConcentricTest00_000.dxf">../../scripts/Draw/Circle/CircleConcentric/Tests/actual/CircleConcentricTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleConcentric/Tests/required/CircleConcentricTest00_000.dxf">../../scripts/Draw/Circle/CircleConcentric/Tests/required/CircleConcentricTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleConcentric/ts/CircleConcentric_cs.qm">../../scripts/Draw/Circle/CircleConcentric/ts/CircleConcentric_cs.qm</file>
     <file alias="scripts/Draw/Circle/CircleConcentric/ts/CircleConcentric_de.qm">../../scripts/Draw/Circle/CircleConcentric/ts/CircleConcentric_de.qm</file>
@@ -1106,7 +1070,6 @@
     <file alias="scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui">../../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui</file>
     <file alias="scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js">../../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js</file>
     <file alias="scripts/Draw/Circle/CircleConcentricThrough/Tests/CircleConcentricThroughTest00.js">../../scripts/Draw/Circle/CircleConcentricThrough/Tests/CircleConcentricThroughTest00.js</file>
-    <file alias="scripts/Draw/Circle/CircleConcentricThrough/Tests/actual/CircleConcentricThroughTest00_000.dxf">../../scripts/Draw/Circle/CircleConcentricThrough/Tests/actual/CircleConcentricThroughTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleConcentricThrough/Tests/required/CircleConcentricThroughTest00_000.dxf">../../scripts/Draw/Circle/CircleConcentricThrough/Tests/required/CircleConcentricThroughTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleConcentricThrough/ts/CircleConcentricThrough_cs.qm">../../scripts/Draw/Circle/CircleConcentricThrough/ts/CircleConcentricThrough_cs.qm</file>
     <file alias="scripts/Draw/Circle/CircleConcentricThrough/ts/CircleConcentricThrough_de.qm">../../scripts/Draw/Circle/CircleConcentricThrough/ts/CircleConcentricThrough_de.qm</file>
@@ -1133,7 +1096,6 @@
     <file alias="scripts/Draw/Circle/CircleT2P/CircleT2P.svg">../../scripts/Draw/Circle/CircleT2P/CircleT2P.svg</file>
     <file alias="scripts/Draw/Circle/CircleT2P/CircleT2PInit.js">../../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js</file>
     <file alias="scripts/Draw/Circle/CircleT2P/Tests/CircleT2PTest00.js">../../scripts/Draw/Circle/CircleT2P/Tests/CircleT2PTest00.js</file>
-    <file alias="scripts/Draw/Circle/CircleT2P/Tests/actual/CircleT2PTest00_000.dxf">../../scripts/Draw/Circle/CircleT2P/Tests/actual/CircleT2PTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleT2P/Tests/required/CircleT2PTest00_000.dxf">../../scripts/Draw/Circle/CircleT2P/Tests/required/CircleT2PTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleT2P/ts/CircleT2P_cs.qm">../../scripts/Draw/Circle/CircleT2P/ts/CircleT2P_cs.qm</file>
     <file alias="scripts/Draw/Circle/CircleT2P/ts/CircleT2P_de.qm">../../scripts/Draw/Circle/CircleT2P/ts/CircleT2P_de.qm</file>
@@ -1161,7 +1123,6 @@
     <file alias="scripts/Draw/Circle/CircleTPR/CircleTPR.ui">../../scripts/Draw/Circle/CircleTPR/CircleTPR.ui</file>
     <file alias="scripts/Draw/Circle/CircleTPR/CircleTPRInit.js">../../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js</file>
     <file alias="scripts/Draw/Circle/CircleTPR/Tests/CircleTPRTest00.js">../../scripts/Draw/Circle/CircleTPR/Tests/CircleTPRTest00.js</file>
-    <file alias="scripts/Draw/Circle/CircleTPR/Tests/actual/CircleTPRTest00_000.dxf">../../scripts/Draw/Circle/CircleTPR/Tests/actual/CircleTPRTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleTPR/Tests/required/CircleTPRTest00_000.dxf">../../scripts/Draw/Circle/CircleTPR/Tests/required/CircleTPRTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/CircleTPR/ts/CircleTPR_cs.qm">../../scripts/Draw/Circle/CircleTPR/ts/CircleTPR_cs.qm</file>
     <file alias="scripts/Draw/Circle/CircleTPR/ts/CircleTPR_de.qm">../../scripts/Draw/Circle/CircleTPR/ts/CircleTPR_de.qm</file>
@@ -1208,7 +1169,6 @@
     <file alias="scripts/Draw/Dimension/DimAligned/DimAligned.svg">../../scripts/Draw/Dimension/DimAligned/DimAligned.svg</file>
     <file alias="scripts/Draw/Dimension/DimAligned/DimAlignedInit.js">../../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js</file>
     <file alias="scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js">../../scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js</file>
-    <file alias="scripts/Draw/Dimension/DimAligned/Tests/actual/DimAlignedTest00_000.dxf">../../scripts/Draw/Dimension/DimAligned/Tests/actual/DimAlignedTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimAligned/Tests/required/DimAlignedTest00_000.dxf">../../scripts/Draw/Dimension/DimAligned/Tests/required/DimAlignedTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimAligned/ts/DimAligned_cs.qm">../../scripts/Draw/Dimension/DimAligned/ts/DimAligned_cs.qm</file>
     <file alias="scripts/Draw/Dimension/DimAligned/ts/DimAligned_de.qm">../../scripts/Draw/Dimension/DimAligned/ts/DimAligned_de.qm</file>
@@ -1235,7 +1195,6 @@
     <file alias="scripts/Draw/Dimension/DimAngular/DimAngular.svg">../../scripts/Draw/Dimension/DimAngular/DimAngular.svg</file>
     <file alias="scripts/Draw/Dimension/DimAngular/DimAngularInit.js">../../scripts/Draw/Dimension/DimAngular/DimAngularInit.js</file>
     <file alias="scripts/Draw/Dimension/DimAngular/Tests/DimAngularTest00.js">../../scripts/Draw/Dimension/DimAngular/Tests/DimAngularTest00.js</file>
-    <file alias="scripts/Draw/Dimension/DimAngular/Tests/actual/DimAngularTest00_000.dxf">../../scripts/Draw/Dimension/DimAngular/Tests/actual/DimAngularTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimAngular/Tests/required/DimAngularTest00_000.dxf">../../scripts/Draw/Dimension/DimAngular/Tests/required/DimAngularTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimAngular/ts/DimAngular_cs.qm">../../scripts/Draw/Dimension/DimAngular/ts/DimAngular_cs.qm</file>
     <file alias="scripts/Draw/Dimension/DimAngular/ts/DimAngular_de.qm">../../scripts/Draw/Dimension/DimAngular/ts/DimAngular_de.qm</file>
@@ -1262,7 +1221,6 @@
     <file alias="scripts/Draw/Dimension/DimDiametric/DimDiametric.svg">../../scripts/Draw/Dimension/DimDiametric/DimDiametric.svg</file>
     <file alias="scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js">../../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js</file>
     <file alias="scripts/Draw/Dimension/DimDiametric/Tests/DimDiametricTest00.js">../../scripts/Draw/Dimension/DimDiametric/Tests/DimDiametricTest00.js</file>
-    <file alias="scripts/Draw/Dimension/DimDiametric/Tests/actual/DimDiametricTest00_000.dxf">../../scripts/Draw/Dimension/DimDiametric/Tests/actual/DimDiametricTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimDiametric/Tests/required/DimDiametricTest00_000.dxf">../../scripts/Draw/Dimension/DimDiametric/Tests/required/DimDiametricTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimDiametric/ts/DimDiametric_cs.qm">../../scripts/Draw/Dimension/DimDiametric/ts/DimDiametric_cs.qm</file>
     <file alias="scripts/Draw/Dimension/DimDiametric/ts/DimDiametric_de.qm">../../scripts/Draw/Dimension/DimDiametric/ts/DimDiametric_de.qm</file>
@@ -1289,7 +1247,6 @@
     <file alias="scripts/Draw/Dimension/DimHorizontal/DimHorizontal.svg">../../scripts/Draw/Dimension/DimHorizontal/DimHorizontal.svg</file>
     <file alias="scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js">../../scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js</file>
     <file alias="scripts/Draw/Dimension/DimHorizontal/Tests/DimHorizontalTest00.js">../../scripts/Draw/Dimension/DimHorizontal/Tests/DimHorizontalTest00.js</file>
-    <file alias="scripts/Draw/Dimension/DimHorizontal/Tests/actual/DimHorizontalTest00_000.dxf">../../scripts/Draw/Dimension/DimHorizontal/Tests/actual/DimHorizontalTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimHorizontal/Tests/required/DimHorizontalTest00_000.dxf">../../scripts/Draw/Dimension/DimHorizontal/Tests/required/DimHorizontalTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimHorizontal/ts/DimHorizontal_cs.qm">../../scripts/Draw/Dimension/DimHorizontal/ts/DimHorizontal_cs.qm</file>
     <file alias="scripts/Draw/Dimension/DimHorizontal/ts/DimHorizontal_de.qm">../../scripts/Draw/Dimension/DimHorizontal/ts/DimHorizontal_de.qm</file>
@@ -1316,7 +1273,6 @@
     <file alias="scripts/Draw/Dimension/DimOrdinate/DimOrdinate.svg">../../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.svg</file>
     <file alias="scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js">../../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js</file>
     <file alias="scripts/Draw/Dimension/DimOrdinate/Tests/DimOrdinateTest00.js">../../scripts/Draw/Dimension/DimOrdinate/Tests/DimOrdinateTest00.js</file>
-    <file alias="scripts/Draw/Dimension/DimOrdinate/Tests/actual/DimOrdinateTest00_000.dxf">../../scripts/Draw/Dimension/DimOrdinate/Tests/actual/DimOrdinateTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimOrdinate/Tests/required/DimOrdinateTest00_000.dxf">../../scripts/Draw/Dimension/DimOrdinate/Tests/required/DimOrdinateTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimOrdinate/ts/DimOrdinate_cs.qm">../../scripts/Draw/Dimension/DimOrdinate/ts/DimOrdinate_cs.qm</file>
     <file alias="scripts/Draw/Dimension/DimOrdinate/ts/DimOrdinate_de.qm">../../scripts/Draw/Dimension/DimOrdinate/ts/DimOrdinate_de.qm</file>
@@ -1343,7 +1299,6 @@
     <file alias="scripts/Draw/Dimension/DimRadial/DimRadial.svg">../../scripts/Draw/Dimension/DimRadial/DimRadial.svg</file>
     <file alias="scripts/Draw/Dimension/DimRadial/DimRadialInit.js">../../scripts/Draw/Dimension/DimRadial/DimRadialInit.js</file>
     <file alias="scripts/Draw/Dimension/DimRadial/Tests/DimRadialTest00.js">../../scripts/Draw/Dimension/DimRadial/Tests/DimRadialTest00.js</file>
-    <file alias="scripts/Draw/Dimension/DimRadial/Tests/actual/DimRadialTest00_000.dxf">../../scripts/Draw/Dimension/DimRadial/Tests/actual/DimRadialTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimRadial/Tests/required/DimRadialTest00_000.dxf">../../scripts/Draw/Dimension/DimRadial/Tests/required/DimRadialTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimRadial/ts/DimRadial_cs.qm">../../scripts/Draw/Dimension/DimRadial/ts/DimRadial_cs.qm</file>
     <file alias="scripts/Draw/Dimension/DimRadial/ts/DimRadial_de.qm">../../scripts/Draw/Dimension/DimRadial/ts/DimRadial_de.qm</file>
@@ -1395,7 +1350,6 @@
     <file alias="scripts/Draw/Dimension/DimRotated/DimRotated.ui">../../scripts/Draw/Dimension/DimRotated/DimRotated.ui</file>
     <file alias="scripts/Draw/Dimension/DimRotated/DimRotatedInit.js">../../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js</file>
     <file alias="scripts/Draw/Dimension/DimRotated/Tests/DimRotatedTest00.js">../../scripts/Draw/Dimension/DimRotated/Tests/DimRotatedTest00.js</file>
-    <file alias="scripts/Draw/Dimension/DimRotated/Tests/actual/DimRotatedTest00_000.dxf">../../scripts/Draw/Dimension/DimRotated/Tests/actual/DimRotatedTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimRotated/Tests/required/DimRotatedTest00_000.dxf">../../scripts/Draw/Dimension/DimRotated/Tests/required/DimRotatedTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimRotated/ts/DimRotated_cs.qm">../../scripts/Draw/Dimension/DimRotated/ts/DimRotated_cs.qm</file>
     <file alias="scripts/Draw/Dimension/DimRotated/ts/DimRotated_de.qm">../../scripts/Draw/Dimension/DimRotated/ts/DimRotated_de.qm</file>
@@ -1422,7 +1376,6 @@
     <file alias="scripts/Draw/Dimension/DimVertical/DimVertical.svg">../../scripts/Draw/Dimension/DimVertical/DimVertical.svg</file>
     <file alias="scripts/Draw/Dimension/DimVertical/DimVerticalInit.js">../../scripts/Draw/Dimension/DimVertical/DimVerticalInit.js</file>
     <file alias="scripts/Draw/Dimension/DimVertical/Tests/DimVerticalTest00.js">../../scripts/Draw/Dimension/DimVertical/Tests/DimVerticalTest00.js</file>
-    <file alias="scripts/Draw/Dimension/DimVertical/Tests/actual/DimVerticalTest00_000.dxf">../../scripts/Draw/Dimension/DimVertical/Tests/actual/DimVerticalTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimVertical/Tests/required/DimVerticalTest00_000.dxf">../../scripts/Draw/Dimension/DimVertical/Tests/required/DimVerticalTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimVertical/ts/DimVertical_cs.qm">../../scripts/Draw/Dimension/DimVertical/ts/DimVertical_cs.qm</file>
     <file alias="scripts/Draw/Dimension/DimVertical/ts/DimVertical_de.qm">../../scripts/Draw/Dimension/DimVertical/ts/DimVertical_de.qm</file>
@@ -1454,7 +1407,6 @@
     <file alias="scripts/Draw/Dimension/Leader/Leader.ui">../../scripts/Draw/Dimension/Leader/Leader.ui</file>
     <file alias="scripts/Draw/Dimension/Leader/LeaderInit.js">../../scripts/Draw/Dimension/Leader/LeaderInit.js</file>
     <file alias="scripts/Draw/Dimension/Leader/Tests/LeaderTest00.js">../../scripts/Draw/Dimension/Leader/Tests/LeaderTest00.js</file>
-    <file alias="scripts/Draw/Dimension/Leader/Tests/actual/LeaderTest00_000.dxf">../../scripts/Draw/Dimension/Leader/Tests/actual/LeaderTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/Leader/Tests/required/LeaderTest00_000.dxf">../../scripts/Draw/Dimension/Leader/Tests/required/LeaderTest00_000.dxf</file>
     <file alias="scripts/Draw/Dimension/Leader/Undo-inverse.svg">../../scripts/Draw/Dimension/Leader/Undo-inverse.svg</file>
     <file alias="scripts/Draw/Dimension/Leader/Undo.svg">../../scripts/Draw/Dimension/Leader/Undo.svg</file>
@@ -1524,7 +1476,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui">../../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js">../../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/actual/EllipseArcCPPATest00_000.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/actual/EllipseArcCPPATest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/lines.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/lines.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest00_000.dxf">../../scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseArcCPPA/ts/EllipseArcCPPA_cs.qm">../../scripts/Draw/Ellipse/EllipseArcCPPA/ts/EllipseArcCPPA_cs.qm</file>
@@ -1552,7 +1503,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.svg">../../scripts/Draw/Ellipse/EllipseCPP/EllipseCPP.svg</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js">../../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/Tests/EllipseCPPTest00.js">../../scripts/Draw/Ellipse/EllipseCPP/Tests/EllipseCPPTest00.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseCPP/Tests/actual/EllipseCPPTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseCPP/Tests/actual/EllipseCPPTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/Tests/required/EllipseCPPTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseCPP/Tests/required/EllipseCPPTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/ts/EllipseCPP_cs.qm">../../scripts/Draw/Ellipse/EllipseCPP/ts/EllipseCPP_cs.qm</file>
     <file alias="scripts/Draw/Ellipse/EllipseCPP/ts/EllipseCPP_de.qm">../../scripts/Draw/Ellipse/EllipseCPP/ts/EllipseCPP_de.qm</file>
@@ -1581,7 +1531,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui">../../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js">../../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/Tests/EllipseDDTest00.js">../../scripts/Draw/Ellipse/EllipseDD/Tests/EllipseDDTest00.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseDD/Tests/actual/EllipseDDTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseDD/Tests/actual/EllipseDDTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/Tests/required/EllipseDDTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseDD/Tests/required/EllipseDDTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/ts/EllipseDD_cs.qm">../../scripts/Draw/Ellipse/EllipseDD/ts/EllipseDD_cs.qm</file>
     <file alias="scripts/Draw/Ellipse/EllipseDD/ts/EllipseDD_de.qm">../../scripts/Draw/Ellipse/EllipseDD/ts/EllipseDD_de.qm</file>
@@ -1608,7 +1557,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.svg">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.svg</file>
     <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js">../../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/EllipseInscribedQuadTest00.js">../../scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/EllipseInscribedQuadTest00.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/actual/EllipseInscribedQuadTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/actual/EllipseInscribedQuadTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/required/EllipseInscribedQuadTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/required/EllipseInscribedQuadTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/ts/EllipseInscribedQuad_cs.qm">../../scripts/Draw/Ellipse/EllipseInscribedQuad/ts/EllipseInscribedQuad_cs.qm</file>
     <file alias="scripts/Draw/Ellipse/EllipseInscribedQuad/ts/EllipseInscribedQuad_de.qm">../../scripts/Draw/Ellipse/EllipseInscribedQuad/ts/EllipseInscribedQuad_de.qm</file>
@@ -1636,7 +1584,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui">../../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js">../../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/Tests/EllipseOffsetTest00.js">../../scripts/Draw/Ellipse/EllipseOffset/Tests/EllipseOffsetTest00.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseOffset/Tests/actual/EllipseOffsetTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseOffset/Tests/actual/EllipseOffsetTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/Tests/required/EllipseOffsetTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseOffset/Tests/required/EllipseOffsetTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/ts/EllipseOffset_cs.qm">../../scripts/Draw/Ellipse/EllipseOffset/ts/EllipseOffset_cs.qm</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffset/ts/EllipseOffset_de.qm">../../scripts/Draw/Ellipse/EllipseOffset/ts/EllipseOffset_de.qm</file>
@@ -1664,7 +1611,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui">../../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js">../../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/EllipseOffsetThroughTest00.js">../../scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/EllipseOffsetThroughTest00.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/actual/EllipseOffsetThroughTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/actual/EllipseOffsetThroughTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/required/EllipseOffsetThroughTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/required/EllipseOffsetThroughTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffsetThrough/ts/EllipseOffsetThrough_cs.qm">../../scripts/Draw/Ellipse/EllipseOffsetThrough/ts/EllipseOffsetThrough_cs.qm</file>
     <file alias="scripts/Draw/Ellipse/EllipseOffsetThrough/ts/EllipseOffsetThrough_de.qm">../../scripts/Draw/Ellipse/EllipseOffsetThrough/ts/EllipseOffsetThrough_de.qm</file>
@@ -1693,7 +1639,6 @@
     <file alias="scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui">../../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui</file>
     <file alias="scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js">../../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js</file>
     <file alias="scripts/Draw/Ellipse/EllipseRR/Tests/EllipseRRTest00.js">../../scripts/Draw/Ellipse/EllipseRR/Tests/EllipseRRTest00.js</file>
-    <file alias="scripts/Draw/Ellipse/EllipseRR/Tests/actual/EllipseRRTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseRR/Tests/actual/EllipseRRTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseRR/Tests/required/EllipseRRTest00_000.dxf">../../scripts/Draw/Ellipse/EllipseRR/Tests/required/EllipseRRTest00_000.dxf</file>
     <file alias="scripts/Draw/Ellipse/EllipseRR/ts/EllipseRR_cs.qm">../../scripts/Draw/Ellipse/EllipseRR/ts/EllipseRR_cs.qm</file>
     <file alias="scripts/Draw/Ellipse/EllipseRR/ts/EllipseRR_de.qm">../../scripts/Draw/Ellipse/EllipseRR/ts/EllipseRR_de.qm</file>
@@ -1752,14 +1697,6 @@
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest05.js">../../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest05.js</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest06.js">../../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest06.js</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js">../../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js</file>
-    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest00_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest00_000.dxf</file>
-    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest01_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest01_000.dxf</file>
-    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest02_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest02_000.dxf</file>
-    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest03_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest03_000.dxf</file>
-    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest04_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest04_000.dxf</file>
-    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest05_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest05_000.dxf</file>
-    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest06_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest06_000.dxf</file>
-    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest07_000.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/actual/HatchFromSelectionTest07_000.dxf</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/data/contour.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/data/contour.dxf</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_lines.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_lines.dxf</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_polyline.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_polyline.dxf</file>
@@ -1873,24 +1810,6 @@
     <file alias="scripts/Draw/Line/Line2P/Tests/LinesSnapOnEntity.js">../../scripts/Draw/Line/Line2P/Tests/LinesSnapOnEntity.js</file>
     <file alias="scripts/Draw/Line/Line2P/Tests/LinesSnapPolarCoordinate.js">../../scripts/Draw/Line/Line2P/Tests/LinesSnapPolarCoordinate.js</file>
     <file alias="scripts/Draw/Line/Line2P/Tests/LinesSnapReferences.js">../../scripts/Draw/Line/Line2P/Tests/LinesSnapReferences.js</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/Lines00_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/Lines00_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/Lines01_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/Lines01_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/Lines02_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/Lines02_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapCenter_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapCenter_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapCenter_001.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapCenter_001.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapCoordinate_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapCoordinate_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapDistance_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapDistance_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapEnd_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapEnd_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapFree_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapFree_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapGrid_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapGrid_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapIntersectionBlock_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapIntersectionBlock_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapIntersection_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapIntersection_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapMiddleManual_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapMiddleManual_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapMiddleManual_001.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapMiddleManual_001.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapMiddle_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapMiddle_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapOnEntity_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapOnEntity_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapPolarCoordinate_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapPolarCoordinate_000.dxf</file>
-    <file alias="scripts/Draw/Line/Line2P/Tests/actual/LinesSnapReferences_000.dxf">../../scripts/Draw/Line/Line2P/Tests/actual/LinesSnapReferences_000.dxf</file>
     <file alias="scripts/Draw/Line/Line2P/Tests/required/Lines00_000.dxf">../../scripts/Draw/Line/Line2P/Tests/required/Lines00_000.dxf</file>
     <file alias="scripts/Draw/Line/Line2P/Tests/required/Lines01_000.dxf">../../scripts/Draw/Line/Line2P/Tests/required/Lines01_000.dxf</file>
     <file alias="scripts/Draw/Line/Line2P/Tests/required/Lines02_000.dxf">../../scripts/Draw/Line/Line2P/Tests/required/Lines02_000.dxf</file>
@@ -1939,9 +1858,6 @@
     <file alias="scripts/Draw/Line/LineAngle/Tests/LineAngle00.js">../../scripts/Draw/Line/LineAngle/Tests/LineAngle00.js</file>
     <file alias="scripts/Draw/Line/LineAngle/Tests/LineAngle01.js">../../scripts/Draw/Line/LineAngle/Tests/LineAngle01.js</file>
     <file alias="scripts/Draw/Line/LineAngle/Tests/LineAngle02.js">../../scripts/Draw/Line/LineAngle/Tests/LineAngle02.js</file>
-    <file alias="scripts/Draw/Line/LineAngle/Tests/actual/LineAngle00_000.dxf">../../scripts/Draw/Line/LineAngle/Tests/actual/LineAngle00_000.dxf</file>
-    <file alias="scripts/Draw/Line/LineAngle/Tests/actual/LineAngle01_000.dxf">../../scripts/Draw/Line/LineAngle/Tests/actual/LineAngle01_000.dxf</file>
-    <file alias="scripts/Draw/Line/LineAngle/Tests/actual/LineAngle02_000.dxf">../../scripts/Draw/Line/LineAngle/Tests/actual/LineAngle02_000.dxf</file>
     <file alias="scripts/Draw/Line/LineAngle/Tests/required/LineAngle00_000.dxf">../../scripts/Draw/Line/LineAngle/Tests/required/LineAngle00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineAngle/Tests/required/LineAngle01_000.dxf">../../scripts/Draw/Line/LineAngle/Tests/required/LineAngle01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineAngle/Tests/required/LineAngle02_000.dxf">../../scripts/Draw/Line/LineAngle/Tests/required/LineAngle02_000.dxf</file>
@@ -1972,8 +1888,6 @@
     <file alias="scripts/Draw/Line/LineBisector/LineBisectorInit.js">../../scripts/Draw/Line/LineBisector/LineBisectorInit.js</file>
     <file alias="scripts/Draw/Line/LineBisector/Tests/LineBisectorTest00.js">../../scripts/Draw/Line/LineBisector/Tests/LineBisectorTest00.js</file>
     <file alias="scripts/Draw/Line/LineBisector/Tests/LineBisectorTest01.js">../../scripts/Draw/Line/LineBisector/Tests/LineBisectorTest01.js</file>
-    <file alias="scripts/Draw/Line/LineBisector/Tests/actual/LineBisectorTest00_000.dxf">../../scripts/Draw/Line/LineBisector/Tests/actual/LineBisectorTest00_000.dxf</file>
-    <file alias="scripts/Draw/Line/LineBisector/Tests/actual/LineBisectorTest01_000.dxf">../../scripts/Draw/Line/LineBisector/Tests/actual/LineBisectorTest01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineBisector/Tests/required/LineBisectorTest00_000.dxf">../../scripts/Draw/Line/LineBisector/Tests/required/LineBisectorTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineBisector/Tests/required/LineBisectorTest01_000.dxf">../../scripts/Draw/Line/LineBisector/Tests/required/LineBisectorTest01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineBisector/ts/LineBisector_cs.qm">../../scripts/Draw/Line/LineBisector/ts/LineBisector_cs.qm</file>
@@ -2026,7 +1940,6 @@
     <file alias="scripts/Draw/Line/LineHorizontal/LineHorizontal.ui">../../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui</file>
     <file alias="scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js">../../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js</file>
     <file alias="scripts/Draw/Line/LineHorizontal/Tests/LineHorizontalTest00.js">../../scripts/Draw/Line/LineHorizontal/Tests/LineHorizontalTest00.js</file>
-    <file alias="scripts/Draw/Line/LineHorizontal/Tests/actual/LineHorizontalTest00_000.dxf">../../scripts/Draw/Line/LineHorizontal/Tests/actual/LineHorizontalTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineHorizontal/Tests/required/LineHorizontalTest00_000.dxf">../../scripts/Draw/Line/LineHorizontal/Tests/required/LineHorizontalTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineHorizontal/ts/LineHorizontal_cs.qm">../../scripts/Draw/Line/LineHorizontal/ts/LineHorizontal_cs.qm</file>
     <file alias="scripts/Draw/Line/LineHorizontal/ts/LineHorizontal_de.qm">../../scripts/Draw/Line/LineHorizontal/ts/LineHorizontal_de.qm</file>
@@ -2054,7 +1967,6 @@
     <file alias="scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui">../../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui</file>
     <file alias="scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js">../../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js</file>
     <file alias="scripts/Draw/Line/LineOrthogonal/Tests/LineOrthogonalTest00.js">../../scripts/Draw/Line/LineOrthogonal/Tests/LineOrthogonalTest00.js</file>
-    <file alias="scripts/Draw/Line/LineOrthogonal/Tests/actual/LineOrthogonalTest00_000.dxf">../../scripts/Draw/Line/LineOrthogonal/Tests/actual/LineOrthogonalTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineOrthogonal/Tests/required/LineOrthogonalTest00_000.dxf">../../scripts/Draw/Line/LineOrthogonal/Tests/required/LineOrthogonalTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineOrthogonal/ts/LineOrthogonal_cs.qm">../../scripts/Draw/Line/LineOrthogonal/ts/LineOrthogonal_cs.qm</file>
     <file alias="scripts/Draw/Line/LineOrthogonal/ts/LineOrthogonal_de.qm">../../scripts/Draw/Line/LineOrthogonal/ts/LineOrthogonal_de.qm</file>
@@ -2081,7 +1993,6 @@
     <file alias="scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.svg">../../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.svg</file>
     <file alias="scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js">../../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js</file>
     <file alias="scripts/Draw/Line/LineOrthogonalTangent/Tests/LineOrthogonalTangentTest00.js">../../scripts/Draw/Line/LineOrthogonalTangent/Tests/LineOrthogonalTangentTest00.js</file>
-    <file alias="scripts/Draw/Line/LineOrthogonalTangent/Tests/actual/LineOrthogonalTangentTest00_000.dxf">../../scripts/Draw/Line/LineOrthogonalTangent/Tests/actual/LineOrthogonalTangentTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineOrthogonalTangent/Tests/required/LineOrthogonalTangentTest00_000.dxf">../../scripts/Draw/Line/LineOrthogonalTangent/Tests/required/LineOrthogonalTangentTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineOrthogonalTangent/ts/LineOrthogonalTangent_cs.qm">../../scripts/Draw/Line/LineOrthogonalTangent/ts/LineOrthogonalTangent_cs.qm</file>
     <file alias="scripts/Draw/Line/LineOrthogonalTangent/ts/LineOrthogonalTangent_de.qm">../../scripts/Draw/Line/LineOrthogonalTangent/ts/LineOrthogonalTangent_de.qm</file>
@@ -2110,8 +2021,6 @@
     <file alias="scripts/Draw/Line/LineParallel/LineParallelInit.js">../../scripts/Draw/Line/LineParallel/LineParallelInit.js</file>
     <file alias="scripts/Draw/Line/LineParallel/Tests/LineParallelTest00.js">../../scripts/Draw/Line/LineParallel/Tests/LineParallelTest00.js</file>
     <file alias="scripts/Draw/Line/LineParallel/Tests/LineParallelTest01.js">../../scripts/Draw/Line/LineParallel/Tests/LineParallelTest01.js</file>
-    <file alias="scripts/Draw/Line/LineParallel/Tests/actual/LineParallelTest00_000.dxf">../../scripts/Draw/Line/LineParallel/Tests/actual/LineParallelTest00_000.dxf</file>
-    <file alias="scripts/Draw/Line/LineParallel/Tests/actual/LineParallelTest01_000.dxf">../../scripts/Draw/Line/LineParallel/Tests/actual/LineParallelTest01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineParallel/Tests/data/polyline.dxf">../../scripts/Draw/Line/LineParallel/Tests/data/polyline.dxf</file>
     <file alias="scripts/Draw/Line/LineParallel/Tests/required/LineParallelTest00_000.dxf">../../scripts/Draw/Line/LineParallel/Tests/required/LineParallelTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineParallel/Tests/required/LineParallelTest01_000.dxf">../../scripts/Draw/Line/LineParallel/Tests/required/LineParallelTest01_000.dxf</file>
@@ -2142,8 +2051,6 @@
     <file alias="scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js">../../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js</file>
     <file alias="scripts/Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest00.js">../../scripts/Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest00.js</file>
     <file alias="scripts/Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest01.js">../../scripts/Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest01.js</file>
-    <file alias="scripts/Draw/Line/LineParallelThrough/Tests/actual/LineParallelThroughTest00_000.dxf">../../scripts/Draw/Line/LineParallelThrough/Tests/actual/LineParallelThroughTest00_000.dxf</file>
-    <file alias="scripts/Draw/Line/LineParallelThrough/Tests/actual/LineParallelThroughTest01_000.dxf">../../scripts/Draw/Line/LineParallelThrough/Tests/actual/LineParallelThroughTest01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineParallelThrough/Tests/data/polyline.dxf">../../scripts/Draw/Line/LineParallelThrough/Tests/data/polyline.dxf</file>
     <file alias="scripts/Draw/Line/LineParallelThrough/Tests/required/LineParallelThroughTest00_000.dxf">../../scripts/Draw/Line/LineParallelThrough/Tests/required/LineParallelThroughTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineParallelThrough/Tests/required/LineParallelThroughTest01_000.dxf">../../scripts/Draw/Line/LineParallelThrough/Tests/required/LineParallelThroughTest01_000.dxf</file>
@@ -2200,8 +2107,6 @@
     <file alias="scripts/Draw/Line/LineTangent1/LineTangent1Init.js">../../scripts/Draw/Line/LineTangent1/LineTangent1Init.js</file>
     <file alias="scripts/Draw/Line/LineTangent1/Tests/LineTangent1Test00.js">../../scripts/Draw/Line/LineTangent1/Tests/LineTangent1Test00.js</file>
     <file alias="scripts/Draw/Line/LineTangent1/Tests/LineTangent1Test01.js">../../scripts/Draw/Line/LineTangent1/Tests/LineTangent1Test01.js</file>
-    <file alias="scripts/Draw/Line/LineTangent1/Tests/actual/LineTangent1Test00_000.dxf">../../scripts/Draw/Line/LineTangent1/Tests/actual/LineTangent1Test00_000.dxf</file>
-    <file alias="scripts/Draw/Line/LineTangent1/Tests/actual/LineTangent1Test01_000.dxf">../../scripts/Draw/Line/LineTangent1/Tests/actual/LineTangent1Test01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineTangent1/Tests/required/LineTangent1Test00_000.dxf">../../scripts/Draw/Line/LineTangent1/Tests/required/LineTangent1Test00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineTangent1/Tests/required/LineTangent1Test01_000.dxf">../../scripts/Draw/Line/LineTangent1/Tests/required/LineTangent1Test01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineTangent1/ts/LineTangent1_cs.qm">../../scripts/Draw/Line/LineTangent1/ts/LineTangent1_cs.qm</file>
@@ -2230,8 +2135,6 @@
     <file alias="scripts/Draw/Line/LineTangent2/LineTangent2Init.js">../../scripts/Draw/Line/LineTangent2/LineTangent2Init.js</file>
     <file alias="scripts/Draw/Line/LineTangent2/Tests/LineTangent2Test00.js">../../scripts/Draw/Line/LineTangent2/Tests/LineTangent2Test00.js</file>
     <file alias="scripts/Draw/Line/LineTangent2/Tests/LineTangent2Test01.js">../../scripts/Draw/Line/LineTangent2/Tests/LineTangent2Test01.js</file>
-    <file alias="scripts/Draw/Line/LineTangent2/Tests/actual/LineTangent2Test00_000.dxf">../../scripts/Draw/Line/LineTangent2/Tests/actual/LineTangent2Test00_000.dxf</file>
-    <file alias="scripts/Draw/Line/LineTangent2/Tests/actual/LineTangent2Test01_000.dxf">../../scripts/Draw/Line/LineTangent2/Tests/actual/LineTangent2Test01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineTangent2/Tests/required/LineTangent2Test00_000.dxf">../../scripts/Draw/Line/LineTangent2/Tests/required/LineTangent2Test00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineTangent2/Tests/required/LineTangent2Test01_000.dxf">../../scripts/Draw/Line/LineTangent2/Tests/required/LineTangent2Test01_000.dxf</file>
     <file alias="scripts/Draw/Line/LineTangent2/ts/LineTangent2_cs.qm">../../scripts/Draw/Line/LineTangent2/ts/LineTangent2_cs.qm</file>
@@ -2259,7 +2162,6 @@
     <file alias="scripts/Draw/Line/LineVertical/LineVertical.svg">../../scripts/Draw/Line/LineVertical/LineVertical.svg</file>
     <file alias="scripts/Draw/Line/LineVertical/LineVerticalInit.js">../../scripts/Draw/Line/LineVertical/LineVerticalInit.js</file>
     <file alias="scripts/Draw/Line/LineVertical/Tests/LineVerticalTest00.js">../../scripts/Draw/Line/LineVertical/Tests/LineVerticalTest00.js</file>
-    <file alias="scripts/Draw/Line/LineVertical/Tests/actual/LineVerticalTest00_000.dxf">../../scripts/Draw/Line/LineVertical/Tests/actual/LineVerticalTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineVertical/Tests/required/LineVerticalTest00_000.dxf">../../scripts/Draw/Line/LineVertical/Tests/required/LineVerticalTest00_000.dxf</file>
     <file alias="scripts/Draw/Line/LineVertical/ts/LineVertical_cs.qm">../../scripts/Draw/Line/LineVertical/ts/LineVertical_cs.qm</file>
     <file alias="scripts/Draw/Line/LineVertical/ts/LineVertical_de.qm">../../scripts/Draw/Line/LineVertical/ts/LineVertical_de.qm</file>
@@ -2317,7 +2219,6 @@
     <file alias="scripts/Draw/Point/Point1P/Point1P.svg">../../scripts/Draw/Point/Point1P/Point1P.svg</file>
     <file alias="scripts/Draw/Point/Point1P/Point1PInit.js">../../scripts/Draw/Point/Point1P/Point1PInit.js</file>
     <file alias="scripts/Draw/Point/Point1P/Tests/Point1PTest00.js">../../scripts/Draw/Point/Point1P/Tests/Point1PTest00.js</file>
-    <file alias="scripts/Draw/Point/Point1P/Tests/actual/Point1PTest00_000.dxf">../../scripts/Draw/Point/Point1P/Tests/actual/Point1PTest00_000.dxf</file>
     <file alias="scripts/Draw/Point/Point1P/Tests/required/Point1PTest00_000.dxf">../../scripts/Draw/Point/Point1P/Tests/required/Point1PTest00_000.dxf</file>
     <file alias="scripts/Draw/Point/Point1P/ts/Point1P_cs.qm">../../scripts/Draw/Point/Point1P/ts/Point1P_cs.qm</file>
     <file alias="scripts/Draw/Point/Point1P/ts/Point1P_de.qm">../../scripts/Draw/Point/Point1P/ts/Point1P_de.qm</file>
@@ -2370,8 +2271,6 @@
     <file alias="scripts/Draw/Polyline/DrawPolyline/Redo.svg">../../scripts/Draw/Polyline/DrawPolyline/Redo.svg</file>
     <file alias="scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest00.js">../../scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest00.js</file>
     <file alias="scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest01.js">../../scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest01.js</file>
-    <file alias="scripts/Draw/Polyline/DrawPolyline/Tests/actual/DrawPolylineTest00_000.dxf">../../scripts/Draw/Polyline/DrawPolyline/Tests/actual/DrawPolylineTest00_000.dxf</file>
-    <file alias="scripts/Draw/Polyline/DrawPolyline/Tests/actual/DrawPolylineTest01_000.dxf">../../scripts/Draw/Polyline/DrawPolyline/Tests/actual/DrawPolylineTest01_000.dxf</file>
     <file alias="scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest00_000.dxf">../../scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest00_000.dxf</file>
     <file alias="scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest01_000.dxf">../../scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest01_000.dxf</file>
     <file alias="scripts/Draw/Polyline/DrawPolyline/Undo-inverse.svg">../../scripts/Draw/Polyline/DrawPolyline/Undo-inverse.svg</file>
@@ -2429,7 +2328,6 @@
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui">../../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js">../../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/Tests/ShapePolygonAFCPTest00.js">../../scripts/Draw/Shape/ShapePolygonAFCP/Tests/ShapePolygonAFCPTest00.js</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonAFCP/Tests/actual/ShapePolygonAFCPTest00_000.dxf">../../scripts/Draw/Shape/ShapePolygonAFCP/Tests/actual/ShapePolygonAFCPTest00_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/Tests/required/ShapePolygonAFCPTest00_000.dxf">../../scripts/Draw/Shape/ShapePolygonAFCP/Tests/required/ShapePolygonAFCPTest00_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/ts/ShapePolygonAFCP_cs.qm">../../scripts/Draw/Shape/ShapePolygonAFCP/ts/ShapePolygonAFCP_cs.qm</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFCP/ts/ShapePolygonAFCP_de.qm">../../scripts/Draw/Shape/ShapePolygonAFCP/ts/ShapePolygonAFCP_de.qm</file>
@@ -2458,8 +2356,6 @@
     <file alias="scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js">../../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest00.js">../../scripts/Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest00.js</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest01.js">../../scripts/Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest01.js</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonAFPP/Tests/actual/ShapePolygonAFPPTest00_000.dxf">../../scripts/Draw/Shape/ShapePolygonAFPP/Tests/actual/ShapePolygonAFPPTest00_000.dxf</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonAFPP/Tests/actual/ShapePolygonAFPPTest01_000.dxf">../../scripts/Draw/Shape/ShapePolygonAFPP/Tests/actual/ShapePolygonAFPPTest01_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFPP/Tests/required/ShapePolygonAFPPTest00_000.dxf">../../scripts/Draw/Shape/ShapePolygonAFPP/Tests/required/ShapePolygonAFPPTest00_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFPP/Tests/required/ShapePolygonAFPPTest01_000.dxf">../../scripts/Draw/Shape/ShapePolygonAFPP/Tests/required/ShapePolygonAFPPTest01_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonAFPP/ts/ShapePolygonAFPP_cs.qm">../../scripts/Draw/Shape/ShapePolygonAFPP/ts/ShapePolygonAFPP_cs.qm</file>
@@ -2490,9 +2386,6 @@
     <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest00.js">../../scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest00.js</file>
     <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest01.js">../../scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest01.js</file>
     <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest02.js">../../scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest02.js</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/actual/ShapePolygonCPTest00_000.dxf">../../scripts/Draw/Shape/ShapePolygonCP/Tests/actual/ShapePolygonCPTest00_000.dxf</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/actual/ShapePolygonCPTest01_000.dxf">../../scripts/Draw/Shape/ShapePolygonCP/Tests/actual/ShapePolygonCPTest01_000.dxf</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/actual/ShapePolygonCPTest02_000.dxf">../../scripts/Draw/Shape/ShapePolygonCP/Tests/actual/ShapePolygonCPTest02_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest00_000.dxf">../../scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest00_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest01_000.dxf">../../scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest01_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest02_000.dxf">../../scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest02_000.dxf</file>
@@ -2524,9 +2417,6 @@
     <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest00.js">../../scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest00.js</file>
     <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest01.js">../../scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest01.js</file>
     <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest02.js">../../scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest02.js</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/actual/ShapePolygonPPTest00_000.dxf">../../scripts/Draw/Shape/ShapePolygonPP/Tests/actual/ShapePolygonPPTest00_000.dxf</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/actual/ShapePolygonPPTest01_000.dxf">../../scripts/Draw/Shape/ShapePolygonPP/Tests/actual/ShapePolygonPPTest01_000.dxf</file>
-    <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/actual/ShapePolygonPPTest02_000.dxf">../../scripts/Draw/Shape/ShapePolygonPP/Tests/actual/ShapePolygonPPTest02_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest00_000.dxf">../../scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest00_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest01_000.dxf">../../scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest01_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest02_000.dxf">../../scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest02_000.dxf</file>
@@ -2556,8 +2446,6 @@
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js">../../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js</file>
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest00.js">../../scripts/Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest00.js</file>
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest01.js">../../scripts/Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest01.js</file>
-    <file alias="scripts/Draw/Shape/ShapeRectanglePP/Tests/actual/ShapeRectanglePPTest00_000.dxf">../../scripts/Draw/Shape/ShapeRectanglePP/Tests/actual/ShapeRectanglePPTest00_000.dxf</file>
-    <file alias="scripts/Draw/Shape/ShapeRectanglePP/Tests/actual/ShapeRectanglePPTest01_000.dxf">../../scripts/Draw/Shape/ShapeRectanglePP/Tests/actual/ShapeRectanglePPTest01_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/Tests/required/ShapeRectanglePPTest00_000.dxf">../../scripts/Draw/Shape/ShapeRectanglePP/Tests/required/ShapeRectanglePPTest00_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/Tests/required/ShapeRectanglePPTest01_000.dxf">../../scripts/Draw/Shape/ShapeRectanglePP/Tests/required/ShapeRectanglePPTest01_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/ts/ShapeRectanglePP_cs.qm">../../scripts/Draw/Shape/ShapeRectanglePP/ts/ShapeRectanglePP_cs.qm</file>
@@ -2588,8 +2476,6 @@
     <file alias="scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js">../../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js</file>
     <file alias="scripts/Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest00.js">../../scripts/Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest00.js</file>
     <file alias="scripts/Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest01.js">../../scripts/Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest01.js</file>
-    <file alias="scripts/Draw/Shape/ShapeRectangleSize/Tests/actual/ShapeRectangleSizeTest00_000.dxf">../../scripts/Draw/Shape/ShapeRectangleSize/Tests/actual/ShapeRectangleSizeTest00_000.dxf</file>
-    <file alias="scripts/Draw/Shape/ShapeRectangleSize/Tests/actual/ShapeRectangleSizeTest01_000.dxf">../../scripts/Draw/Shape/ShapeRectangleSize/Tests/actual/ShapeRectangleSizeTest01_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapeRectangleSize/Tests/required/ShapeRectangleSizeTest00_000.dxf">../../scripts/Draw/Shape/ShapeRectangleSize/Tests/required/ShapeRectangleSizeTest00_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapeRectangleSize/Tests/required/ShapeRectangleSizeTest01_000.dxf">../../scripts/Draw/Shape/ShapeRectangleSize/Tests/required/ShapeRectangleSizeTest01_000.dxf</file>
     <file alias="scripts/Draw/Shape/ShapeRectangleSize/ts/ShapeRectangleSize_cs.qm">../../scripts/Draw/Shape/ShapeRectangleSize/ts/ShapeRectangleSize_cs.qm</file>
@@ -2641,7 +2527,6 @@
     <file alias="scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui">../../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui</file>
     <file alias="scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js">../../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js</file>
     <file alias="scripts/Draw/Spline/SplineControlPoints/Tests/SplineControlPointsTest00.js">../../scripts/Draw/Spline/SplineControlPoints/Tests/SplineControlPointsTest00.js</file>
-    <file alias="scripts/Draw/Spline/SplineControlPoints/Tests/actual/SplineControlPointsTest00_000.dxf">../../scripts/Draw/Spline/SplineControlPoints/Tests/actual/SplineControlPointsTest00_000.dxf</file>
     <file alias="scripts/Draw/Spline/SplineControlPoints/Tests/required/SplineControlPointsTest00_000.dxf">../../scripts/Draw/Spline/SplineControlPoints/Tests/required/SplineControlPointsTest00_000.dxf</file>
     <file alias="scripts/Draw/Spline/SplineControlPoints/Undo-inverse.svg">../../scripts/Draw/Spline/SplineControlPoints/Undo-inverse.svg</file>
     <file alias="scripts/Draw/Spline/SplineControlPoints/Undo.svg">../../scripts/Draw/Spline/SplineControlPoints/Undo.svg</file>
@@ -2702,36 +2587,6 @@
     <file alias="scripts/Draw/Text/Tests/Text15.js">../../scripts/Draw/Text/Tests/Text15.js</file>
     <file alias="scripts/Draw/Text/Tests/Text16.js">../../scripts/Draw/Text/Tests/Text16.js</file>
     <file alias="scripts/Draw/Text/Tests/Text17.js">../../scripts/Draw/Text/Tests/Text17.js</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text01_000.dxf">../../scripts/Draw/Text/Tests/actual/Text01_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text02_000.dxf">../../scripts/Draw/Text/Tests/actual/Text02_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text03_000.dxf">../../scripts/Draw/Text/Tests/actual/Text03_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text04_000.dxf">../../scripts/Draw/Text/Tests/actual/Text04_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text04_001.dxf">../../scripts/Draw/Text/Tests/actual/Text04_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text05_000.dxf">../../scripts/Draw/Text/Tests/actual/Text05_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text05_001.dxf">../../scripts/Draw/Text/Tests/actual/Text05_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text06_000.dxf">../../scripts/Draw/Text/Tests/actual/Text06_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text06_001.dxf">../../scripts/Draw/Text/Tests/actual/Text06_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text07_000.dxf">../../scripts/Draw/Text/Tests/actual/Text07_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text08_000.dxf">../../scripts/Draw/Text/Tests/actual/Text08_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text08_001.dxf">../../scripts/Draw/Text/Tests/actual/Text08_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text09_000.dxf">../../scripts/Draw/Text/Tests/actual/Text09_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text09_001.dxf">../../scripts/Draw/Text/Tests/actual/Text09_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text10_000.dxf">../../scripts/Draw/Text/Tests/actual/Text10_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text10_001.dxf">../../scripts/Draw/Text/Tests/actual/Text10_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text11_000.dxf">../../scripts/Draw/Text/Tests/actual/Text11_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text11_001.dxf">../../scripts/Draw/Text/Tests/actual/Text11_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text12_000.dxf">../../scripts/Draw/Text/Tests/actual/Text12_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text12_001.dxf">../../scripts/Draw/Text/Tests/actual/Text12_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text13_000.dxf">../../scripts/Draw/Text/Tests/actual/Text13_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text13_001.dxf">../../scripts/Draw/Text/Tests/actual/Text13_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text14_000.dxf">../../scripts/Draw/Text/Tests/actual/Text14_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text14_001.dxf">../../scripts/Draw/Text/Tests/actual/Text14_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text15_000.dxf">../../scripts/Draw/Text/Tests/actual/Text15_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text15_001.dxf">../../scripts/Draw/Text/Tests/actual/Text15_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text16_000.dxf">../../scripts/Draw/Text/Tests/actual/Text16_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text16_001.dxf">../../scripts/Draw/Text/Tests/actual/Text16_001.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text17_000.dxf">../../scripts/Draw/Text/Tests/actual/Text17_000.dxf</file>
-    <file alias="scripts/Draw/Text/Tests/actual/Text17_001.dxf">../../scripts/Draw/Text/Tests/actual/Text17_001.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text01.dxf">../../scripts/Draw/Text/Tests/data/text01.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text02.dxf">../../scripts/Draw/Text/Tests/data/text02.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text03.dxf">../../scripts/Draw/Text/Tests/data/text03.dxf</file>
@@ -3267,7 +3122,6 @@
     <file alias="scripts/Edit/Copy/Copy.svg">../../scripts/Edit/Copy/Copy.svg</file>
     <file alias="scripts/Edit/Copy/CopyInit.js">../../scripts/Edit/Copy/CopyInit.js</file>
     <file alias="scripts/Edit/Copy/Tests/CopyTest00.js">../../scripts/Edit/Copy/Tests/CopyTest00.js</file>
-    <file alias="scripts/Edit/Copy/Tests/actual/CopyTest00_000.dxf">../../scripts/Edit/Copy/Tests/actual/CopyTest00_000.dxf</file>
     <file alias="scripts/Edit/Copy/Tests/required/CopyTest00_000.dxf">../../scripts/Edit/Copy/Tests/required/CopyTest00_000.dxf</file>
     <file alias="scripts/Edit/Copy/ts/Copy_cs.qm">../../scripts/Edit/Copy/ts/Copy_cs.qm</file>
     <file alias="scripts/Edit/Copy/ts/Copy_de.qm">../../scripts/Edit/Copy/ts/Copy_de.qm</file>
@@ -3294,7 +3148,6 @@
     <file alias="scripts/Edit/CopyWithReference/CopyWithReference.svg">../../scripts/Edit/CopyWithReference/CopyWithReference.svg</file>
     <file alias="scripts/Edit/CopyWithReference/CopyWithReferenceInit.js">../../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js</file>
     <file alias="scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest00.js">../../scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest00.js</file>
-    <file alias="scripts/Edit/CopyWithReference/Tests/actual/CopyWithReferenceTest00_000.dxf">../../scripts/Edit/CopyWithReference/Tests/actual/CopyWithReferenceTest00_000.dxf</file>
     <file alias="scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest00_000.dxf">../../scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest00_000.dxf</file>
     <file alias="scripts/Edit/CopyWithReference/ts/CopyWithReference_cs.qm">../../scripts/Edit/CopyWithReference/ts/CopyWithReference_cs.qm</file>
     <file alias="scripts/Edit/CopyWithReference/ts/CopyWithReference_de.qm">../../scripts/Edit/CopyWithReference/ts/CopyWithReference_de.qm</file>
@@ -3321,7 +3174,6 @@
     <file alias="scripts/Edit/Cut/Cut.svg">../../scripts/Edit/Cut/Cut.svg</file>
     <file alias="scripts/Edit/Cut/CutInit.js">../../scripts/Edit/Cut/CutInit.js</file>
     <file alias="scripts/Edit/Cut/Tests/CutTest00.js">../../scripts/Edit/Cut/Tests/CutTest00.js</file>
-    <file alias="scripts/Edit/Cut/Tests/actual/CutTest00_000.dxf">../../scripts/Edit/Cut/Tests/actual/CutTest00_000.dxf</file>
     <file alias="scripts/Edit/Cut/Tests/required/CutTest00_000.dxf">../../scripts/Edit/Cut/Tests/required/CutTest00_000.dxf</file>
     <file alias="scripts/Edit/Cut/ts/Cut_cs.qm">../../scripts/Edit/Cut/ts/Cut_cs.qm</file>
     <file alias="scripts/Edit/Cut/ts/Cut_de.qm">../../scripts/Edit/Cut/ts/Cut_de.qm</file>
@@ -3348,7 +3200,6 @@
     <file alias="scripts/Edit/CutWithReference/CutWithReference.svg">../../scripts/Edit/CutWithReference/CutWithReference.svg</file>
     <file alias="scripts/Edit/CutWithReference/CutWithReferenceInit.js">../../scripts/Edit/CutWithReference/CutWithReferenceInit.js</file>
     <file alias="scripts/Edit/CutWithReference/Tests/CutWithReferenceTest00.js">../../scripts/Edit/CutWithReference/Tests/CutWithReferenceTest00.js</file>
-    <file alias="scripts/Edit/CutWithReference/Tests/actual/CutWithReferenceTest00_000.dxf">../../scripts/Edit/CutWithReference/Tests/actual/CutWithReferenceTest00_000.dxf</file>
     <file alias="scripts/Edit/CutWithReference/Tests/required/CutWithReferenceTest00_000.dxf">../../scripts/Edit/CutWithReference/Tests/required/CutWithReferenceTest00_000.dxf</file>
     <file alias="scripts/Edit/CutWithReference/ts/CutWithReference_cs.qm">../../scripts/Edit/CutWithReference/ts/CutWithReference_cs.qm</file>
     <file alias="scripts/Edit/CutWithReference/ts/CutWithReference_de.qm">../../scripts/Edit/CutWithReference/ts/CutWithReference_de.qm</file>
@@ -3374,7 +3225,6 @@
     <file alias="scripts/Edit/Delete/Delete.svg">../../scripts/Edit/Delete/Delete.svg</file>
     <file alias="scripts/Edit/Delete/DeleteInit.js">../../scripts/Edit/Delete/DeleteInit.js</file>
     <file alias="scripts/Edit/Delete/Tests/DeleteTest00.js">../../scripts/Edit/Delete/Tests/DeleteTest00.js</file>
-    <file alias="scripts/Edit/Delete/Tests/actual/DeleteTest00_000.dxf">../../scripts/Edit/Delete/Tests/actual/DeleteTest00_000.dxf</file>
     <file alias="scripts/Edit/Delete/Tests/required/DeleteTest00_000.dxf">../../scripts/Edit/Delete/Tests/required/DeleteTest00_000.dxf</file>
     <file alias="scripts/Edit/Delete/ts/Delete_cs.qm">../../scripts/Edit/Delete/ts/Delete_cs.qm</file>
     <file alias="scripts/Edit/Delete/ts/Delete_de.qm">../../scripts/Edit/Delete/ts/Delete_de.qm</file>
@@ -3635,7 +3485,6 @@
     <file alias="scripts/Edit/Duplicate/Duplicate.svg">../../scripts/Edit/Duplicate/Duplicate.svg</file>
     <file alias="scripts/Edit/Duplicate/DuplicateInit.js">../../scripts/Edit/Duplicate/DuplicateInit.js</file>
     <file alias="scripts/Edit/Duplicate/Tests/DuplicateTest00.js">../../scripts/Edit/Duplicate/Tests/DuplicateTest00.js</file>
-    <file alias="scripts/Edit/Duplicate/Tests/actual/DuplicateTest00_000.dxf">../../scripts/Edit/Duplicate/Tests/actual/DuplicateTest00_000.dxf</file>
     <file alias="scripts/Edit/Duplicate/Tests/required/DuplicateTest00_000.dxf">../../scripts/Edit/Duplicate/Tests/required/DuplicateTest00_000.dxf</file>
     <file alias="scripts/Edit/Duplicate/ts/Duplicate_cs.qm">../../scripts/Edit/Duplicate/ts/Duplicate_cs.qm</file>
     <file alias="scripts/Edit/Duplicate/ts/Duplicate_de.qm">../../scripts/Edit/Duplicate/ts/Duplicate_de.qm</file>
@@ -3697,9 +3546,6 @@
     <file alias="scripts/Edit/Paste/Tests/PasteTest00.js">../../scripts/Edit/Paste/Tests/PasteTest00.js</file>
     <file alias="scripts/Edit/Paste/Tests/PasteTest01.js">../../scripts/Edit/Paste/Tests/PasteTest01.js</file>
     <file alias="scripts/Edit/Paste/Tests/PasteTest02.js">../../scripts/Edit/Paste/Tests/PasteTest02.js</file>
-    <file alias="scripts/Edit/Paste/Tests/actual/PasteTest00_000.dxf">../../scripts/Edit/Paste/Tests/actual/PasteTest00_000.dxf</file>
-    <file alias="scripts/Edit/Paste/Tests/actual/PasteTest01_000.dxf">../../scripts/Edit/Paste/Tests/actual/PasteTest01_000.dxf</file>
-    <file alias="scripts/Edit/Paste/Tests/actual/PasteTest02_000.dxf">../../scripts/Edit/Paste/Tests/actual/PasteTest02_000.dxf</file>
     <file alias="scripts/Edit/Paste/Tests/data/block_attributes.dxf">../../scripts/Edit/Paste/Tests/data/block_attributes.dxf</file>
     <file alias="scripts/Edit/Paste/Tests/required/PasteTest00_000.dxf">../../scripts/Edit/Paste/Tests/required/PasteTest00_000.dxf</file>
     <file alias="scripts/Edit/Paste/Tests/required/PasteTest01_000.dxf">../../scripts/Edit/Paste/Tests/required/PasteTest01_000.dxf</file>
@@ -4517,11 +4363,6 @@
     <file alias="scripts/Information/InfoDistanceEE/Tests/InfoDistanceEETest02.js">../../scripts/Information/InfoDistanceEE/Tests/InfoDistanceEETest02.js</file>
     <file alias="scripts/Information/InfoDistanceEE/Tests/InfoDistanceEETest03.js">../../scripts/Information/InfoDistanceEE/Tests/InfoDistanceEETest03.js</file>
     <file alias="scripts/Information/InfoDistanceEE/Tests/InfoDistanceEETest04.js">../../scripts/Information/InfoDistanceEE/Tests/InfoDistanceEETest04.js</file>
-    <file alias="scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest00_000.dxf">../../scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest00_000.dxf</file>
-    <file alias="scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest01_000.dxf">../../scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest01_000.dxf</file>
-    <file alias="scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest02_000.dxf">../../scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest02_000.dxf</file>
-    <file alias="scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest03_000.dxf">../../scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest03_000.dxf</file>
-    <file alias="scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest04_000.dxf">../../scripts/Information/InfoDistanceEE/Tests/actual/InfoDistanceEETest04_000.dxf</file>
     <file alias="scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest00_000.dxf">../../scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest00_000.dxf</file>
     <file alias="scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest01_000.dxf">../../scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest01_000.dxf</file>
     <file alias="scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest02_000.dxf">../../scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest02_000.dxf</file>
@@ -4552,7 +4393,6 @@
     <file alias="scripts/Information/InfoDistanceEP/InfoDistanceEP.svg">../../scripts/Information/InfoDistanceEP/InfoDistanceEP.svg</file>
     <file alias="scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js">../../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js</file>
     <file alias="scripts/Information/InfoDistanceEP/Tests/InfoDistanceEPTest00.js">../../scripts/Information/InfoDistanceEP/Tests/InfoDistanceEPTest00.js</file>
-    <file alias="scripts/Information/InfoDistanceEP/Tests/actual/InfoDistanceEPTest00_000.dxf">../../scripts/Information/InfoDistanceEP/Tests/actual/InfoDistanceEPTest00_000.dxf</file>
     <file alias="scripts/Information/InfoDistanceEP/Tests/required/InfoDistanceEPTest00_000.dxf">../../scripts/Information/InfoDistanceEP/Tests/required/InfoDistanceEPTest00_000.dxf</file>
     <file alias="scripts/Information/InfoDistanceEP/ts/InfoDistanceEP_cs.qm">../../scripts/Information/InfoDistanceEP/ts/InfoDistanceEP_cs.qm</file>
     <file alias="scripts/Information/InfoDistanceEP/ts/InfoDistanceEP_de.qm">../../scripts/Information/InfoDistanceEP/ts/InfoDistanceEP_de.qm</file>
@@ -4579,7 +4419,6 @@
     <file alias="scripts/Information/InfoDistancePP/InfoDistancePP.svg">../../scripts/Information/InfoDistancePP/InfoDistancePP.svg</file>
     <file alias="scripts/Information/InfoDistancePP/InfoDistancePPInit.js">../../scripts/Information/InfoDistancePP/InfoDistancePPInit.js</file>
     <file alias="scripts/Information/InfoDistancePP/Tests/InfoDistancePPTest00.js">../../scripts/Information/InfoDistancePP/Tests/InfoDistancePPTest00.js</file>
-    <file alias="scripts/Information/InfoDistancePP/Tests/actual/InfoDistancePPTest00_000.dxf">../../scripts/Information/InfoDistancePP/Tests/actual/InfoDistancePPTest00_000.dxf</file>
     <file alias="scripts/Information/InfoDistancePP/Tests/required/InfoDistancePPTest00_000.dxf">../../scripts/Information/InfoDistancePP/Tests/required/InfoDistancePPTest00_000.dxf</file>
     <file alias="scripts/Information/InfoDistancePP/ts/InfoDistancePP_cs.qm">../../scripts/Information/InfoDistancePP/ts/InfoDistancePP_cs.qm</file>
     <file alias="scripts/Information/InfoDistancePP/ts/InfoDistancePP_de.qm">../../scripts/Information/InfoDistancePP/ts/InfoDistancePP_de.qm</file>
@@ -4753,9 +4592,6 @@
     <file alias="scripts/Layer/AddLayer/Tests/AddLayerTest00.js">../../scripts/Layer/AddLayer/Tests/AddLayerTest00.js</file>
     <file alias="scripts/Layer/AddLayer/Tests/AddLayerTest01.js">../../scripts/Layer/AddLayer/Tests/AddLayerTest01.js</file>
     <file alias="scripts/Layer/AddLayer/Tests/AddLayerTest02.js">../../scripts/Layer/AddLayer/Tests/AddLayerTest02.js</file>
-    <file alias="scripts/Layer/AddLayer/Tests/actual/AddLayerTest00_000.dxf">../../scripts/Layer/AddLayer/Tests/actual/AddLayerTest00_000.dxf</file>
-    <file alias="scripts/Layer/AddLayer/Tests/actual/AddLayerTest01_000.dxf">../../scripts/Layer/AddLayer/Tests/actual/AddLayerTest01_000.dxf</file>
-    <file alias="scripts/Layer/AddLayer/Tests/actual/AddLayerTest02_000.dxf">../../scripts/Layer/AddLayer/Tests/actual/AddLayerTest02_000.dxf</file>
     <file alias="scripts/Layer/AddLayer/Tests/required/AddLayerTest00_000.dxf">../../scripts/Layer/AddLayer/Tests/required/AddLayerTest00_000.dxf</file>
     <file alias="scripts/Layer/AddLayer/Tests/required/AddLayerTest01_000.dxf">../../scripts/Layer/AddLayer/Tests/required/AddLayerTest01_000.dxf</file>
     <file alias="scripts/Layer/AddLayer/Tests/required/AddLayerTest02_000.dxf">../../scripts/Layer/AddLayer/Tests/required/AddLayerTest02_000.dxf</file>
@@ -5559,16 +5395,6 @@
     <file alias="scripts/Modify/AutoTrim/Tests/AutoTrimTest07.js">../../scripts/Modify/AutoTrim/Tests/AutoTrimTest07.js</file>
     <file alias="scripts/Modify/AutoTrim/Tests/AutoTrimTest08.js">../../scripts/Modify/AutoTrim/Tests/AutoTrimTest08.js</file>
     <file alias="scripts/Modify/AutoTrim/Tests/AutoTrimTest09.js">../../scripts/Modify/AutoTrim/Tests/AutoTrimTest09.js</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest00_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest00_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest01_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest01_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest02_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest02_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest03_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest03_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest04_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest04_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest05_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest05_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest06_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest06_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest07_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest07_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest08_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest08_000.dxf</file>
-    <file alias="scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest09_000.dxf">../../scripts/Modify/AutoTrim/Tests/actual/AutoTrimTest09_000.dxf</file>
     <file alias="scripts/Modify/AutoTrim/Tests/data/ellipses.dxf">../../scripts/Modify/AutoTrim/Tests/data/ellipses.dxf</file>
     <file alias="scripts/Modify/AutoTrim/Tests/data/line.dxf">../../scripts/Modify/AutoTrim/Tests/data/line.dxf</file>
     <file alias="scripts/Modify/AutoTrim/Tests/data/line_arc_circle.dxf">../../scripts/Modify/AutoTrim/Tests/data/line_arc_circle.dxf</file>
@@ -5619,15 +5445,6 @@
     <file alias="scripts/Modify/Bevel/Tests/BevelTest05.js">../../scripts/Modify/Bevel/Tests/BevelTest05.js</file>
     <file alias="scripts/Modify/Bevel/Tests/BevelTest06.js">../../scripts/Modify/Bevel/Tests/BevelTest06.js</file>
     <file alias="scripts/Modify/Bevel/Tests/BevelTest07.js">../../scripts/Modify/Bevel/Tests/BevelTest07.js</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/BevelTest00_000.dxf">../../scripts/Modify/Bevel/Tests/actual/BevelTest00_000.dxf</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/BevelTest01_000.dxf">../../scripts/Modify/Bevel/Tests/actual/BevelTest01_000.dxf</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/BevelTest02_000.dxf">../../scripts/Modify/Bevel/Tests/actual/BevelTest02_000.dxf</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/BevelTest03_000.dxf">../../scripts/Modify/Bevel/Tests/actual/BevelTest03_000.dxf</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/BevelTest04_000.dxf">../../scripts/Modify/Bevel/Tests/actual/BevelTest04_000.dxf</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/BevelTest05_000.dxf">../../scripts/Modify/Bevel/Tests/actual/BevelTest05_000.dxf</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/BevelTest06_000.dxf">../../scripts/Modify/Bevel/Tests/actual/BevelTest06_000.dxf</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/BevelTest07_000.dxf">../../scripts/Modify/Bevel/Tests/actual/BevelTest07_000.dxf</file>
-    <file alias="scripts/Modify/Bevel/Tests/actual/~BevelTest06_000.dxf">../../scripts/Modify/Bevel/Tests/actual/~BevelTest06_000.dxf</file>
     <file alias="scripts/Modify/Bevel/Tests/data/1line_1arc.dxf">../../scripts/Modify/Bevel/Tests/data/1line_1arc.dxf</file>
     <file alias="scripts/Modify/Bevel/Tests/data/2arcs.dxf">../../scripts/Modify/Bevel/Tests/data/2arcs.dxf</file>
     <file alias="scripts/Modify/Bevel/Tests/data/2lines.dxf">../../scripts/Modify/Bevel/Tests/data/2lines.dxf</file>
@@ -5681,25 +5498,6 @@
     <file alias="scripts/Modify/BreakOut/Tests/BreakOutTest14.js">../../scripts/Modify/BreakOut/Tests/BreakOutTest14.js</file>
     <file alias="scripts/Modify/BreakOut/Tests/BreakOutTest15.js">../../scripts/Modify/BreakOut/Tests/BreakOutTest15.js</file>
     <file alias="scripts/Modify/BreakOut/Tests/BreakOutTest16.js">../../scripts/Modify/BreakOut/Tests/BreakOutTest16.js</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest00_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest00_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest01_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest01_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest02_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest02_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest03_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest03_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest04_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest04_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest05_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest05_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest06_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest06_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest07_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest07_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest08_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest08_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest09_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest09_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest10_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest10_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest11_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest11_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest12_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest12_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest13_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest13_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest14_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest14_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest15_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest15_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/BreakOutTest16_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/BreakOutTest16_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/~BreakOutTest02_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/~BreakOutTest02_000.dxf</file>
-    <file alias="scripts/Modify/BreakOut/Tests/actual/~BreakOutTest13_000.dxf">../../scripts/Modify/BreakOut/Tests/actual/~BreakOutTest13_000.dxf</file>
     <file alias="scripts/Modify/BreakOut/Tests/data/closed_polyline.dxf">../../scripts/Modify/BreakOut/Tests/data/closed_polyline.dxf</file>
     <file alias="scripts/Modify/BreakOut/Tests/data/line_arc_circle.dxf">../../scripts/Modify/BreakOut/Tests/data/line_arc_circle.dxf</file>
     <file alias="scripts/Modify/BreakOut/Tests/data/line_xline_ray.dxf">../../scripts/Modify/BreakOut/Tests/data/line_xline_ray.dxf</file>
@@ -5749,7 +5547,6 @@
     <file alias="scripts/Modify/BreakOutGap/BreakOutGap.ui">../../scripts/Modify/BreakOutGap/BreakOutGap.ui</file>
     <file alias="scripts/Modify/BreakOutGap/BreakOutGapInit.js">../../scripts/Modify/BreakOutGap/BreakOutGapInit.js</file>
     <file alias="scripts/Modify/BreakOutGap/Tests/BreakOutGapTest01.js">../../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest01.js</file>
-    <file alias="scripts/Modify/BreakOutGap/Tests/actual/BreakOutGapTest01_000.dxf">../../scripts/Modify/BreakOutGap/Tests/actual/BreakOutGapTest01_000.dxf</file>
     <file alias="scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest01_000.dxf">../../scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest01_000.dxf</file>
     <file alias="scripts/Modify/BreakOutGap/ts/BreakOutGap_cs.qm">../../scripts/Modify/BreakOutGap/ts/BreakOutGap_cs.qm</file>
     <file alias="scripts/Modify/BreakOutGap/ts/BreakOutGap_de.qm">../../scripts/Modify/BreakOutGap/ts/BreakOutGap_de.qm</file>
@@ -5779,9 +5576,6 @@
     <file alias="scripts/Modify/BreakOutManual/Tests/BreakOutManualTest00.js">../../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest00.js</file>
     <file alias="scripts/Modify/BreakOutManual/Tests/BreakOutManualTest01.js">../../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest01.js</file>
     <file alias="scripts/Modify/BreakOutManual/Tests/BreakOutManualTest02.js">../../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest02.js</file>
-    <file alias="scripts/Modify/BreakOutManual/Tests/actual/BreakOutManualTest00_000.dxf">../../scripts/Modify/BreakOutManual/Tests/actual/BreakOutManualTest00_000.dxf</file>
-    <file alias="scripts/Modify/BreakOutManual/Tests/actual/BreakOutManualTest01_000.dxf">../../scripts/Modify/BreakOutManual/Tests/actual/BreakOutManualTest01_000.dxf</file>
-    <file alias="scripts/Modify/BreakOutManual/Tests/actual/BreakOutManualTest02_000.dxf">../../scripts/Modify/BreakOutManual/Tests/actual/BreakOutManualTest02_000.dxf</file>
     <file alias="scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest00_000.dxf">../../scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest00_000.dxf</file>
     <file alias="scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest01_000.dxf">../../scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest01_000.dxf</file>
     <file alias="scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest02_000.dxf">../../scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest02_000.dxf</file>
@@ -5811,8 +5605,6 @@
     <file alias="scripts/Modify/Divide/DivideInit.js">../../scripts/Modify/Divide/DivideInit.js</file>
     <file alias="scripts/Modify/Divide/Tests/DivideTest01.js">../../scripts/Modify/Divide/Tests/DivideTest01.js</file>
     <file alias="scripts/Modify/Divide/Tests/DivideTest02.js">../../scripts/Modify/Divide/Tests/DivideTest02.js</file>
-    <file alias="scripts/Modify/Divide/Tests/actual/DivideTest01_000.dxf">../../scripts/Modify/Divide/Tests/actual/DivideTest01_000.dxf</file>
-    <file alias="scripts/Modify/Divide/Tests/actual/DivideTest02_000.dxf">../../scripts/Modify/Divide/Tests/actual/DivideTest02_000.dxf</file>
     <file alias="scripts/Modify/Divide/Tests/data/line_arc_circle.dxf">../../scripts/Modify/Divide/Tests/data/line_arc_circle.dxf</file>
     <file alias="scripts/Modify/Divide/Tests/data/polylines.dxf">../../scripts/Modify/Divide/Tests/data/polylines.dxf</file>
     <file alias="scripts/Modify/Divide/Tests/required/DivideTest01_000.dxf">../../scripts/Modify/Divide/Tests/required/DivideTest01_000.dxf</file>
@@ -5896,12 +5688,6 @@
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest02.js">../../scripts/Modify/Explode/Tests/ExplodeTest02.js</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest03.js">../../scripts/Modify/Explode/Tests/ExplodeTest03.js</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest04.js">../../scripts/Modify/Explode/Tests/ExplodeTest04.js</file>
-    <file alias="scripts/Modify/Explode/Tests/actual/ExplodeTest00_000.dxf">../../scripts/Modify/Explode/Tests/actual/ExplodeTest00_000.dxf</file>
-    <file alias="scripts/Modify/Explode/Tests/actual/ExplodeTest01_000.dxf">../../scripts/Modify/Explode/Tests/actual/ExplodeTest01_000.dxf</file>
-    <file alias="scripts/Modify/Explode/Tests/actual/ExplodeTest02_000.dxf">../../scripts/Modify/Explode/Tests/actual/ExplodeTest02_000.dxf</file>
-    <file alias="scripts/Modify/Explode/Tests/actual/ExplodeTest03_000.dxf">../../scripts/Modify/Explode/Tests/actual/ExplodeTest03_000.dxf</file>
-    <file alias="scripts/Modify/Explode/Tests/actual/ExplodeTest04_000.dxf">../../scripts/Modify/Explode/Tests/actual/ExplodeTest04_000.dxf</file>
-    <file alias="scripts/Modify/Explode/Tests/actual/~ExplodeTest00_000.dxf">../../scripts/Modify/Explode/Tests/actual/~ExplodeTest00_000.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/attributes.dxf">../../scripts/Modify/Explode/Tests/data/attributes.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/block.dxf">../../scripts/Modify/Explode/Tests/data/block.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/explodable.dxf">../../scripts/Modify/Explode/Tests/data/explodable.dxf</file>
@@ -5936,7 +5722,6 @@
     <file alias="scripts/Modify/FlipHorizontal/FlipHorizontal.svg">../../scripts/Modify/FlipHorizontal/FlipHorizontal.svg</file>
     <file alias="scripts/Modify/FlipHorizontal/FlipHorizontalInit.js">../../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js</file>
     <file alias="scripts/Modify/FlipHorizontal/Tests/FlipHorizontalTest00.js">../../scripts/Modify/FlipHorizontal/Tests/FlipHorizontalTest00.js</file>
-    <file alias="scripts/Modify/FlipHorizontal/Tests/actual/FlipHorizontalTest00_000.dxf">../../scripts/Modify/FlipHorizontal/Tests/actual/FlipHorizontalTest00_000.dxf</file>
     <file alias="scripts/Modify/FlipHorizontal/Tests/required/FlipHorizontalTest00_000.dxf">../../scripts/Modify/FlipHorizontal/Tests/required/FlipHorizontalTest00_000.dxf</file>
     <file alias="scripts/Modify/FlipHorizontal/ts/FlipHorizontal_cs.qm">../../scripts/Modify/FlipHorizontal/ts/FlipHorizontal_cs.qm</file>
     <file alias="scripts/Modify/FlipHorizontal/ts/FlipHorizontal_de.qm">../../scripts/Modify/FlipHorizontal/ts/FlipHorizontal_de.qm</file>
@@ -5963,7 +5748,6 @@
     <file alias="scripts/Modify/FlipVertical/FlipVertical.svg">../../scripts/Modify/FlipVertical/FlipVertical.svg</file>
     <file alias="scripts/Modify/FlipVertical/FlipVerticalInit.js">../../scripts/Modify/FlipVertical/FlipVerticalInit.js</file>
     <file alias="scripts/Modify/FlipVertical/Tests/FlipVerticalTest00.js">../../scripts/Modify/FlipVertical/Tests/FlipVerticalTest00.js</file>
-    <file alias="scripts/Modify/FlipVertical/Tests/actual/FlipVerticalTest00_000.dxf">../../scripts/Modify/FlipVertical/Tests/actual/FlipVerticalTest00_000.dxf</file>
     <file alias="scripts/Modify/FlipVertical/Tests/required/FlipVerticalTest00_000.dxf">../../scripts/Modify/FlipVertical/Tests/required/FlipVerticalTest00_000.dxf</file>
     <file alias="scripts/Modify/FlipVertical/ts/FlipVertical_cs.qm">../../scripts/Modify/FlipVertical/ts/FlipVertical_cs.qm</file>
     <file alias="scripts/Modify/FlipVertical/ts/FlipVertical_de.qm">../../scripts/Modify/FlipVertical/ts/FlipVertical_de.qm</file>
@@ -5994,10 +5778,6 @@
     <file alias="scripts/Modify/Lengthen/Tests/LengthenTest01.js">../../scripts/Modify/Lengthen/Tests/LengthenTest01.js</file>
     <file alias="scripts/Modify/Lengthen/Tests/LengthenTest02.js">../../scripts/Modify/Lengthen/Tests/LengthenTest02.js</file>
     <file alias="scripts/Modify/Lengthen/Tests/LengthenTest03.js">../../scripts/Modify/Lengthen/Tests/LengthenTest03.js</file>
-    <file alias="scripts/Modify/Lengthen/Tests/actual/LengthenTest00_000.dxf">../../scripts/Modify/Lengthen/Tests/actual/LengthenTest00_000.dxf</file>
-    <file alias="scripts/Modify/Lengthen/Tests/actual/LengthenTest01_000.dxf">../../scripts/Modify/Lengthen/Tests/actual/LengthenTest01_000.dxf</file>
-    <file alias="scripts/Modify/Lengthen/Tests/actual/LengthenTest02_000.dxf">../../scripts/Modify/Lengthen/Tests/actual/LengthenTest02_000.dxf</file>
-    <file alias="scripts/Modify/Lengthen/Tests/actual/LengthenTest03_000.dxf">../../scripts/Modify/Lengthen/Tests/actual/LengthenTest03_000.dxf</file>
     <file alias="scripts/Modify/Lengthen/Tests/data/lines.dxf">../../scripts/Modify/Lengthen/Tests/data/lines.dxf</file>
     <file alias="scripts/Modify/Lengthen/Tests/required/LengthenTest00_000.dxf">../../scripts/Modify/Lengthen/Tests/required/LengthenTest00_000.dxf</file>
     <file alias="scripts/Modify/Lengthen/Tests/required/LengthenTest01_000.dxf">../../scripts/Modify/Lengthen/Tests/required/LengthenTest01_000.dxf</file>
@@ -6031,8 +5811,6 @@
     <file alias="scripts/Modify/Mirror/MirrorInit.js">../../scripts/Modify/Mirror/MirrorInit.js</file>
     <file alias="scripts/Modify/Mirror/Tests/MirrorTest00.js">../../scripts/Modify/Mirror/Tests/MirrorTest00.js</file>
     <file alias="scripts/Modify/Mirror/Tests/MirrorTest01.js">../../scripts/Modify/Mirror/Tests/MirrorTest01.js</file>
-    <file alias="scripts/Modify/Mirror/Tests/actual/MirrorTest00_000.dxf">../../scripts/Modify/Mirror/Tests/actual/MirrorTest00_000.dxf</file>
-    <file alias="scripts/Modify/Mirror/Tests/actual/MirrorTest01_000.dxf">../../scripts/Modify/Mirror/Tests/actual/MirrorTest01_000.dxf</file>
     <file alias="scripts/Modify/Mirror/Tests/data/half.dxf">../../scripts/Modify/Mirror/Tests/data/half.dxf</file>
     <file alias="scripts/Modify/Mirror/Tests/data/polyline.dxf">../../scripts/Modify/Mirror/Tests/data/polyline.dxf</file>
     <file alias="scripts/Modify/Mirror/Tests/required/MirrorTest00_000.dxf">../../scripts/Modify/Mirror/Tests/required/MirrorTest00_000.dxf</file>
@@ -6069,11 +5847,6 @@
     <file alias="scripts/Modify/Offset/Tests/OffsetTest00.js">../../scripts/Modify/Offset/Tests/OffsetTest00.js</file>
     <file alias="scripts/Modify/Offset/Tests/OffsetTest01.js">../../scripts/Modify/Offset/Tests/OffsetTest01.js</file>
     <file alias="scripts/Modify/Offset/Tests/OffsetTest02.js">../../scripts/Modify/Offset/Tests/OffsetTest02.js</file>
-    <file alias="scripts/Modify/Offset/Tests/actual/OffsetTest00_000.dxf">../../scripts/Modify/Offset/Tests/actual/OffsetTest00_000.dxf</file>
-    <file alias="scripts/Modify/Offset/Tests/actual/OffsetTest00_001.dxf">../../scripts/Modify/Offset/Tests/actual/OffsetTest00_001.dxf</file>
-    <file alias="scripts/Modify/Offset/Tests/actual/OffsetTest01_000.dxf">../../scripts/Modify/Offset/Tests/actual/OffsetTest01_000.dxf</file>
-    <file alias="scripts/Modify/Offset/Tests/actual/OffsetTest02_000.dxf">../../scripts/Modify/Offset/Tests/actual/OffsetTest02_000.dxf</file>
-    <file alias="scripts/Modify/Offset/Tests/actual/~OffsetTest02_000.dxf">../../scripts/Modify/Offset/Tests/actual/~OffsetTest02_000.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest00_000.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest00_000.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest00_001.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest00_001.dxf</file>
     <file alias="scripts/Modify/Offset/Tests/required/OffsetTest01_000.dxf">../../scripts/Modify/Offset/Tests/required/OffsetTest01_000.dxf</file>
@@ -6128,7 +5901,6 @@
     <file alias="scripts/Modify/Reverse/Reverse.svg">../../scripts/Modify/Reverse/Reverse.svg</file>
     <file alias="scripts/Modify/Reverse/ReverseInit.js">../../scripts/Modify/Reverse/ReverseInit.js</file>
     <file alias="scripts/Modify/Reverse/Tests/ReverseTest00.js">../../scripts/Modify/Reverse/Tests/ReverseTest00.js</file>
-    <file alias="scripts/Modify/Reverse/Tests/actual/ReverseTest00_000.dxf">../../scripts/Modify/Reverse/Tests/actual/ReverseTest00_000.dxf</file>
     <file alias="scripts/Modify/Reverse/Tests/data/entities.dxf">../../scripts/Modify/Reverse/Tests/data/entities.dxf</file>
     <file alias="scripts/Modify/Reverse/Tests/required/ReverseTest00_000.dxf">../../scripts/Modify/Reverse/Tests/required/ReverseTest00_000.dxf</file>
     <file alias="scripts/Modify/Reverse/ts/Reverse_cs.qm">../../scripts/Modify/Reverse/ts/Reverse_cs.qm</file>
@@ -6161,8 +5933,6 @@
     <file alias="scripts/Modify/Rotate/RotateInit.js">../../scripts/Modify/Rotate/RotateInit.js</file>
     <file alias="scripts/Modify/Rotate/Tests/RotateTest00.js">../../scripts/Modify/Rotate/Tests/RotateTest00.js</file>
     <file alias="scripts/Modify/Rotate/Tests/RotateTest01.js">../../scripts/Modify/Rotate/Tests/RotateTest01.js</file>
-    <file alias="scripts/Modify/Rotate/Tests/actual/RotateTest00_000.dxf">../../scripts/Modify/Rotate/Tests/actual/RotateTest00_000.dxf</file>
-    <file alias="scripts/Modify/Rotate/Tests/actual/RotateTest01_000.dxf">../../scripts/Modify/Rotate/Tests/actual/RotateTest01_000.dxf</file>
     <file alias="scripts/Modify/Rotate/Tests/data/entities.dxf">../../scripts/Modify/Rotate/Tests/data/entities.dxf</file>
     <file alias="scripts/Modify/Rotate/Tests/required/RotateTest00_000.dxf">../../scripts/Modify/Rotate/Tests/required/RotateTest00_000.dxf</file>
     <file alias="scripts/Modify/Rotate/Tests/required/RotateTest01_000.dxf">../../scripts/Modify/Rotate/Tests/required/RotateTest01_000.dxf</file>
@@ -6199,13 +5969,6 @@
     <file alias="scripts/Modify/Rotate2/Tests/Rotate2Test04.js">../../scripts/Modify/Rotate2/Tests/Rotate2Test04.js</file>
     <file alias="scripts/Modify/Rotate2/Tests/Rotate2Test05.js">../../scripts/Modify/Rotate2/Tests/Rotate2Test05.js</file>
     <file alias="scripts/Modify/Rotate2/Tests/Rotate2Test06.js">../../scripts/Modify/Rotate2/Tests/Rotate2Test06.js</file>
-    <file alias="scripts/Modify/Rotate2/Tests/actual/Rotate2Test01_000.dxf">../../scripts/Modify/Rotate2/Tests/actual/Rotate2Test01_000.dxf</file>
-    <file alias="scripts/Modify/Rotate2/Tests/actual/Rotate2Test02_000.dxf">../../scripts/Modify/Rotate2/Tests/actual/Rotate2Test02_000.dxf</file>
-    <file alias="scripts/Modify/Rotate2/Tests/actual/Rotate2Test03_000.dxf">../../scripts/Modify/Rotate2/Tests/actual/Rotate2Test03_000.dxf</file>
-    <file alias="scripts/Modify/Rotate2/Tests/actual/Rotate2Test04_000.dxf">../../scripts/Modify/Rotate2/Tests/actual/Rotate2Test04_000.dxf</file>
-    <file alias="scripts/Modify/Rotate2/Tests/actual/Rotate2Test05_000.dxf">../../scripts/Modify/Rotate2/Tests/actual/Rotate2Test05_000.dxf</file>
-    <file alias="scripts/Modify/Rotate2/Tests/actual/Rotate2Test06_000.dxf">../../scripts/Modify/Rotate2/Tests/actual/Rotate2Test06_000.dxf</file>
-    <file alias="scripts/Modify/Rotate2/Tests/actual/~Rotate2Test04_000.dxf">../../scripts/Modify/Rotate2/Tests/actual/~Rotate2Test04_000.dxf</file>
     <file alias="scripts/Modify/Rotate2/Tests/data/arc.dxf">../../scripts/Modify/Rotate2/Tests/data/arc.dxf</file>
     <file alias="scripts/Modify/Rotate2/Tests/data/circle.dxf">../../scripts/Modify/Rotate2/Tests/data/circle.dxf</file>
     <file alias="scripts/Modify/Rotate2/Tests/data/ellipse.dxf">../../scripts/Modify/Rotate2/Tests/data/ellipse.dxf</file>
@@ -6246,8 +6009,6 @@
     <file alias="scripts/Modify/Round/RoundInit.js">../../scripts/Modify/Round/RoundInit.js</file>
     <file alias="scripts/Modify/Round/Tests/RoundTest00.js">../../scripts/Modify/Round/Tests/RoundTest00.js</file>
     <file alias="scripts/Modify/Round/Tests/RoundTest01.js">../../scripts/Modify/Round/Tests/RoundTest01.js</file>
-    <file alias="scripts/Modify/Round/Tests/actual/RoundTest00_000.dxf">../../scripts/Modify/Round/Tests/actual/RoundTest00_000.dxf</file>
-    <file alias="scripts/Modify/Round/Tests/actual/RoundTest01_000.dxf">../../scripts/Modify/Round/Tests/actual/RoundTest01_000.dxf</file>
     <file alias="scripts/Modify/Round/Tests/data/lines.dxf">../../scripts/Modify/Round/Tests/data/lines.dxf</file>
     <file alias="scripts/Modify/Round/Tests/required/RoundTest00_000.dxf">../../scripts/Modify/Round/Tests/required/RoundTest00_000.dxf</file>
     <file alias="scripts/Modify/Round/Tests/required/RoundTest01_000.dxf">../../scripts/Modify/Round/Tests/required/RoundTest01_000.dxf</file>
@@ -6289,15 +6050,6 @@
     <file alias="scripts/Modify/Scale/Tests/ScaleTest06.js">../../scripts/Modify/Scale/Tests/ScaleTest06.js</file>
     <file alias="scripts/Modify/Scale/Tests/ScaleTest07.js">../../scripts/Modify/Scale/Tests/ScaleTest07.js</file>
     <file alias="scripts/Modify/Scale/Tests/ScaleTest08.js">../../scripts/Modify/Scale/Tests/ScaleTest08.js</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest00_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest00_000.dxf</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest01_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest01_000.dxf</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest02_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest02_000.dxf</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest03_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest03_000.dxf</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest04_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest04_000.dxf</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest05_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest05_000.dxf</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest06_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest06_000.dxf</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest07_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest07_000.dxf</file>
-    <file alias="scripts/Modify/Scale/Tests/actual/ScaleTest08_000.dxf">../../scripts/Modify/Scale/Tests/actual/ScaleTest08_000.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/data/arcs.dxf">../../scripts/Modify/Scale/Tests/data/arcs.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/data/circles.dxf">../../scripts/Modify/Scale/Tests/data/circles.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/data/ellipses_ellipse_arcs.dxf">../../scripts/Modify/Scale/Tests/data/ellipses_ellipse_arcs.dxf</file>
@@ -6343,9 +6095,6 @@
     <file alias="scripts/Modify/Stretch/Tests/StretchTest00.js">../../scripts/Modify/Stretch/Tests/StretchTest00.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest01.js">../../scripts/Modify/Stretch/Tests/StretchTest01.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest02.js">../../scripts/Modify/Stretch/Tests/StretchTest02.js</file>
-    <file alias="scripts/Modify/Stretch/Tests/actual/StretchTest00_000.dxf">../../scripts/Modify/Stretch/Tests/actual/StretchTest00_000.dxf</file>
-    <file alias="scripts/Modify/Stretch/Tests/actual/StretchTest01_000.dxf">../../scripts/Modify/Stretch/Tests/actual/StretchTest01_000.dxf</file>
-    <file alias="scripts/Modify/Stretch/Tests/actual/StretchTest02_000.dxf">../../scripts/Modify/Stretch/Tests/actual/StretchTest02_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities0.dxf">../../scripts/Modify/Stretch/Tests/data/entities0.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities1.dxf">../../scripts/Modify/Stretch/Tests/data/entities1.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest00_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest00_000.dxf</file>
@@ -6424,9 +6173,6 @@
     <file alias="scripts/Modify/Translate/Tests/TranslateTest00.js">../../scripts/Modify/Translate/Tests/TranslateTest00.js</file>
     <file alias="scripts/Modify/Translate/Tests/TranslateTest01.js">../../scripts/Modify/Translate/Tests/TranslateTest01.js</file>
     <file alias="scripts/Modify/Translate/Tests/TranslateTest02.js">../../scripts/Modify/Translate/Tests/TranslateTest02.js</file>
-    <file alias="scripts/Modify/Translate/Tests/actual/TranslateTest00_000.dxf">../../scripts/Modify/Translate/Tests/actual/TranslateTest00_000.dxf</file>
-    <file alias="scripts/Modify/Translate/Tests/actual/TranslateTest01_000.dxf">../../scripts/Modify/Translate/Tests/actual/TranslateTest01_000.dxf</file>
-    <file alias="scripts/Modify/Translate/Tests/actual/TranslateTest02_000.dxf">../../scripts/Modify/Translate/Tests/actual/TranslateTest02_000.dxf</file>
     <file alias="scripts/Modify/Translate/Tests/data/entities.dxf">../../scripts/Modify/Translate/Tests/data/entities.dxf</file>
     <file alias="scripts/Modify/Translate/Tests/required/Translate00_000.dxf">../../scripts/Modify/Translate/Tests/required/Translate00_000.dxf</file>
     <file alias="scripts/Modify/Translate/Tests/required/TranslateTest00_000.dxf">../../scripts/Modify/Translate/Tests/required/TranslateTest00_000.dxf</file>
@@ -6462,9 +6208,6 @@
     <file alias="scripts/Modify/TranslateRotate/Tests/TranslateRotateTest00.js">../../scripts/Modify/TranslateRotate/Tests/TranslateRotateTest00.js</file>
     <file alias="scripts/Modify/TranslateRotate/Tests/TranslateRotateTest01.js">../../scripts/Modify/TranslateRotate/Tests/TranslateRotateTest01.js</file>
     <file alias="scripts/Modify/TranslateRotate/Tests/TranslateRotateTest02.js">../../scripts/Modify/TranslateRotate/Tests/TranslateRotateTest02.js</file>
-    <file alias="scripts/Modify/TranslateRotate/Tests/actual/TranslateRotateTest00_000.dxf">../../scripts/Modify/TranslateRotate/Tests/actual/TranslateRotateTest00_000.dxf</file>
-    <file alias="scripts/Modify/TranslateRotate/Tests/actual/TranslateRotateTest01_000.dxf">../../scripts/Modify/TranslateRotate/Tests/actual/TranslateRotateTest01_000.dxf</file>
-    <file alias="scripts/Modify/TranslateRotate/Tests/actual/TranslateRotateTest02_000.dxf">../../scripts/Modify/TranslateRotate/Tests/actual/TranslateRotateTest02_000.dxf</file>
     <file alias="scripts/Modify/TranslateRotate/Tests/data/entities.dxf">../../scripts/Modify/TranslateRotate/Tests/data/entities.dxf</file>
     <file alias="scripts/Modify/TranslateRotate/Tests/required/TranslateRotateTest00_000.dxf">../../scripts/Modify/TranslateRotate/Tests/required/TranslateRotateTest00_000.dxf</file>
     <file alias="scripts/Modify/TranslateRotate/Tests/required/TranslateRotateTest01_000.dxf">../../scripts/Modify/TranslateRotate/Tests/required/TranslateRotateTest01_000.dxf</file>
@@ -6508,19 +6251,6 @@
     <file alias="scripts/Modify/Trim/Tests/TrimTest09.js">../../scripts/Modify/Trim/Tests/TrimTest09.js</file>
     <file alias="scripts/Modify/Trim/Tests/TrimTest10.js">../../scripts/Modify/Trim/Tests/TrimTest10.js</file>
     <file alias="scripts/Modify/Trim/Tests/TrimTest11.js">../../scripts/Modify/Trim/Tests/TrimTest11.js</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest00_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest00_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest01_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest01_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest02_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest02_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest03_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest03_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest04_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest04_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest05_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest05_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest06_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest06_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest07_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest07_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest08_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest08_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest09_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest09_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest10_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest10_000.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest10_001.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest10_001.dxf</file>
-    <file alias="scripts/Modify/Trim/Tests/actual/TrimTest11_000.dxf">../../scripts/Modify/Trim/Tests/actual/TrimTest11_000.dxf</file>
     <file alias="scripts/Modify/Trim/Tests/data/entities.dxf">../../scripts/Modify/Trim/Tests/data/entities.dxf</file>
     <file alias="scripts/Modify/Trim/Tests/data/line_ray_xline.dxf">../../scripts/Modify/Trim/Tests/data/line_ray_xline.dxf</file>
     <file alias="scripts/Modify/Trim/Tests/data/line_spline.dxf">../../scripts/Modify/Trim/Tests/data/line_spline.dxf</file>
@@ -6567,11 +6297,6 @@
     <file alias="scripts/Modify/TrimBoth/Tests/TrimBothTest02.js">../../scripts/Modify/TrimBoth/Tests/TrimBothTest02.js</file>
     <file alias="scripts/Modify/TrimBoth/Tests/TrimBothTest03.js">../../scripts/Modify/TrimBoth/Tests/TrimBothTest03.js</file>
     <file alias="scripts/Modify/TrimBoth/Tests/TrimBothTest04.js">../../scripts/Modify/TrimBoth/Tests/TrimBothTest04.js</file>
-    <file alias="scripts/Modify/TrimBoth/Tests/actual/TrimBothTest00_000.dxf">../../scripts/Modify/TrimBoth/Tests/actual/TrimBothTest00_000.dxf</file>
-    <file alias="scripts/Modify/TrimBoth/Tests/actual/TrimBothTest01_000.dxf">../../scripts/Modify/TrimBoth/Tests/actual/TrimBothTest01_000.dxf</file>
-    <file alias="scripts/Modify/TrimBoth/Tests/actual/TrimBothTest02_000.dxf">../../scripts/Modify/TrimBoth/Tests/actual/TrimBothTest02_000.dxf</file>
-    <file alias="scripts/Modify/TrimBoth/Tests/actual/TrimBothTest03_000.dxf">../../scripts/Modify/TrimBoth/Tests/actual/TrimBothTest03_000.dxf</file>
-    <file alias="scripts/Modify/TrimBoth/Tests/actual/TrimBothTest04_000.dxf">../../scripts/Modify/TrimBoth/Tests/actual/TrimBothTest04_000.dxf</file>
     <file alias="scripts/Modify/TrimBoth/Tests/data/closed_polylines.dxf">../../scripts/Modify/TrimBoth/Tests/data/closed_polylines.dxf</file>
     <file alias="scripts/Modify/TrimBoth/Tests/data/entities.dxf">../../scripts/Modify/TrimBoth/Tests/data/entities.dxf</file>
     <file alias="scripts/Modify/TrimBoth/Tests/data/line_ray_xline.dxf">../../scripts/Modify/TrimBoth/Tests/data/line_ray_xline.dxf</file>
@@ -6673,12 +6398,6 @@
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest04.js">../../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest04.js</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest10.js">../../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest10.js</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest11.js">../../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest11.js</file>
-    <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest00_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest00_000.dxf</file>
-    <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest01_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest01_000.dxf</file>
-    <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest03_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest03_000.dxf</file>
-    <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest04_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest04_000.dxf</file>
-    <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest10_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest10_000.dxf</file>
-    <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest11_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/actual/IsoProjectTest11_000.dxf</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_arc.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_arc.dxf</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_circle.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_circle.dxf</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_ellipse.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_ellipse.dxf</file>
@@ -7293,7 +7012,6 @@
     <file alias="scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui">../../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui</file>
     <file alias="scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js">../../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js</file>
     <file alias="scripts/Snap/SnapDistanceManual/Tests/SnapDistanceManualTest00.js">../../scripts/Snap/SnapDistanceManual/Tests/SnapDistanceManualTest00.js</file>
-    <file alias="scripts/Snap/SnapDistanceManual/Tests/actual/SnapDistanceManualTest00_000.dxf">../../scripts/Snap/SnapDistanceManual/Tests/actual/SnapDistanceManualTest00_000.dxf</file>
     <file alias="scripts/Snap/SnapDistanceManual/Tests/required/SnapDistanceManualTest00_000.dxf">../../scripts/Snap/SnapDistanceManual/Tests/required/SnapDistanceManualTest00_000.dxf</file>
     <file alias="scripts/Snap/SnapDistanceManual/ts/SnapDistanceManual_cs.qm">../../scripts/Snap/SnapDistanceManual/ts/SnapDistanceManual_cs.qm</file>
     <file alias="scripts/Snap/SnapDistanceManual/ts/SnapDistanceManual_de.qm">../../scripts/Snap/SnapDistanceManual/ts/SnapDistanceManual_de.qm</file>
@@ -7397,12 +7115,6 @@
     <file alias="scripts/Snap/SnapIntersection/Tests/SnapIntersectionTest03.js">../../scripts/Snap/SnapIntersection/Tests/SnapIntersectionTest03.js</file>
     <file alias="scripts/Snap/SnapIntersection/Tests/SnapIntersectionTest04.js">../../scripts/Snap/SnapIntersection/Tests/SnapIntersectionTest04.js</file>
     <file alias="scripts/Snap/SnapIntersection/Tests/SnapIntersectionTest05.js">../../scripts/Snap/SnapIntersection/Tests/SnapIntersectionTest05.js</file>
-    <file alias="scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest00_000.dxf">../../scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest00_000.dxf</file>
-    <file alias="scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest01_000.dxf">../../scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest01_000.dxf</file>
-    <file alias="scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest02_000.dxf">../../scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest02_000.dxf</file>
-    <file alias="scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest03_000.dxf">../../scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest03_000.dxf</file>
-    <file alias="scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest04_000.dxf">../../scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest04_000.dxf</file>
-    <file alias="scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest05_000.dxf">../../scripts/Snap/SnapIntersection/Tests/actual/SnapIntersectionTest05_000.dxf</file>
     <file alias="scripts/Snap/SnapIntersection/Tests/data/arc.dxf">../../scripts/Snap/SnapIntersection/Tests/data/arc.dxf</file>
     <file alias="scripts/Snap/SnapIntersection/Tests/data/ellipse.dxf">../../scripts/Snap/SnapIntersection/Tests/data/ellipse.dxf</file>
     <file alias="scripts/Snap/SnapIntersection/Tests/data/line.dxf">../../scripts/Snap/SnapIntersection/Tests/data/line.dxf</file>
@@ -7441,7 +7153,6 @@
     <file alias="scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.svg">../../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.svg</file>
     <file alias="scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js">../../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js</file>
     <file alias="scripts/Snap/SnapIntersectionManual/Tests/SnapIntersectionManualTest00.js">../../scripts/Snap/SnapIntersectionManual/Tests/SnapIntersectionManualTest00.js</file>
-    <file alias="scripts/Snap/SnapIntersectionManual/Tests/actual/SnapIntersectionManualTest00_000.dxf">../../scripts/Snap/SnapIntersectionManual/Tests/actual/SnapIntersectionManualTest00_000.dxf</file>
     <file alias="scripts/Snap/SnapIntersectionManual/Tests/data/intersections_manual.dxf">../../scripts/Snap/SnapIntersectionManual/Tests/data/intersections_manual.dxf</file>
     <file alias="scripts/Snap/SnapIntersectionManual/Tests/required/SnapIntersectionManualTest00_000.dxf">../../scripts/Snap/SnapIntersectionManual/Tests/required/SnapIntersectionManualTest00_000.dxf</file>
     <file alias="scripts/Snap/SnapIntersectionManual/ts/SnapIntersectionManual_cs.qm">../../scripts/Snap/SnapIntersectionManual/ts/SnapIntersectionManual_cs.qm</file>
@@ -7493,7 +7204,6 @@
     <file alias="scripts/Snap/SnapMiddleManual/SnapMiddleManual.svg">../../scripts/Snap/SnapMiddleManual/SnapMiddleManual.svg</file>
     <file alias="scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js">../../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js</file>
     <file alias="scripts/Snap/SnapMiddleManual/Tests/SnapMiddleManualTest00.js">../../scripts/Snap/SnapMiddleManual/Tests/SnapMiddleManualTest00.js</file>
-    <file alias="scripts/Snap/SnapMiddleManual/Tests/actual/SnapMiddleManualTest00_000.dxf">../../scripts/Snap/SnapMiddleManual/Tests/actual/SnapMiddleManualTest00_000.dxf</file>
     <file alias="scripts/Snap/SnapMiddleManual/Tests/required/SnapMiddleManualTest00_000.dxf">../../scripts/Snap/SnapMiddleManual/Tests/required/SnapMiddleManualTest00_000.dxf</file>
     <file alias="scripts/Snap/SnapMiddleManual/ts/SnapMiddleManual_cs.qm">../../scripts/Snap/SnapMiddleManual/ts/SnapMiddleManual_cs.qm</file>
     <file alias="scripts/Snap/SnapMiddleManual/ts/SnapMiddleManual_de.qm">../../scripts/Snap/SnapMiddleManual/ts/SnapMiddleManual_de.qm</file>

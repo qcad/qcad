@@ -9,7 +9,7 @@ rm -rf allfiles.qrc
 find ../../scripts -type f \( -name "*.js" -o -name "*.qm" -o -name "*.ui" -o -name "*.svg" -o -name "*.png" -o -name "*.xsl" -o -name "*.ttf" -o -name "*.dxf" \) | /usr/bin/sort | sed "s#../../##" | sed "s#\(.*\)#    <file alias=\"\1\">../../\1</file>#" >>allfiles.qrc
 
 #cat allfiles.qrc | grep -v "/actual/" | grep -v "/required/" | grep -v "/doc/" | sed s///g >${tmp}
-cat allfiles.qrc | grep -v "/doc/" | sed s///g >${tmp}
+cat allfiles.qrc | grep -v "/actual/" | grep -v "/doc/" | sed s///g >${tmp}
 mv ${tmp} allfiles.qrc
 
 for f in scripts scripts_release
