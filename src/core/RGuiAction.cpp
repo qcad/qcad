@@ -922,11 +922,18 @@ RGuiAction* RGuiAction::getByScriptFile(const QString& scriptFile) {
     }
     
     // look in scripts wrapped in plugins:
-    relFilePath = ":" + relFilePath;
-    if (actionsByScriptFile.count(relFilePath) != 0) {
-        return actionsByScriptFile[relFilePath];
+    QString pluginFilePath = ":" + relFilePath;
+    if (actionsByScriptFile.count(pluginFilePath) != 0) {
+        return actionsByScriptFile[pluginFilePath];
     }
 
+    // look in scripts wrapped in plugins:
+    pluginFilePath = ":/" + relFilePath;
+    if (actionsByScriptFile.count(pluginFilePath) != 0) {
+        return actionsByScriptFile[pluginFilePath];
+    }
+
+    qWarning() << "action not found:" << relFilePath;
     return NULL;
 }
 
