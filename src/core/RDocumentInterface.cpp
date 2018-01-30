@@ -1147,22 +1147,30 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     // import from compiled resource:
     if (fileName.startsWith(":scripts")) {
         QString resourceFileName = fileName;
+        QString tmpPath;
 #if QT_VERSION >= 0x050000
         // QTemporaryFile would not work here since Teigha wouldn't be
         // able to open the locked file that is produced:
-        QTemporaryDir dir;
+        QTemporaryDir tmpDir;
         resourceFileName = "qcad_resource_file.dxf";
-        if (!dir.isValid()) {
-            qWarning() << "cannot create temporary directory:" << dir.path();
-            return RDocumentInterface::IoErrorGeneralImportUrlError;
+        if (!tmpDir.isValid()) {
+            qWarning() << "cannot create temporary directory:" << tmpDir.path();
+            qWarning() << "using current directory instead";
+            //return RDocumentInterface::IoErrorGeneralImportUrlError;
+            tmpPath = ".";
         }
 #else
         // Clumsy port to Qt 4:
-        QDir dir(RSettings::getTempLocation());
+        QDir tmpDir(RSettings::getTempLocation());
         qint64 ts = QDateTime::currentMSecsSinceEpoch();
         resourceFileName = QString("qcad%1.dxf").arg(ts);
+        tmpPath = tmpDir.path();
 #endif
-        resourceFileName = dir.path() + "/" + resourceFileName;
+        resourceFileName = tmpPath + "/" + resourceFileName;
+        if (!QFile::remove(resourceFileName)) {
+            qWarning() << "cannot remove file:" << resourceFileName;
+            return RDocumentInterface::IoErrorGeneralImportUrlError;
+        }
         if (!QFile::copy(fileName, resourceFileName)) {
             qWarning() << "cannot copy file from resource to temporary directory:" << resourceFileName;
             return RDocumentInterface::IoErrorGeneralImportUrlError;
