@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2017 by RibbonSoft, GmbH. All rights reserved.
+ * Copyright (c) 2011-2018 by RibbonSoft, GmbH. All rights reserved.
  *
  * This file is part of the QCAD project.
  *

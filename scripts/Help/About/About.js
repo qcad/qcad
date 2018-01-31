@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2017 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -133,7 +133,7 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<p>" + qsTr("All brand or product names are trademarks or registered trademarks of their respective holders.") + "</p>"
             + "<p/>"
             + "<p>© 2011-2018 RibbonSoft GmbH.</p>"
-            + "<p>" + qsTr("Portions of this software © 2008-2017 The Qt Company Ltd.") + "</p>"
+            + "<p>" + qsTr("Portions of this software © 2008-2018 The Qt Company Ltd.") + "</p>"
             + "<p>" + qsTr("The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.") + "</p>"
             + "<p/>"
             + "</body></html>";
