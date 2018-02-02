@@ -222,7 +222,7 @@ PrintPreviewImpl.prototype.setState = function(state) {
     this.parentClass.prototype.setState.call(this, state);
 
     if (this.state === PrintPreviewImpl.State.SettingOffset) {
-        EAction.getDocumentInterface().setClickMode(RAction.PickingDisabled);
+        this.getDocumentInterface().setClickMode(RAction.PickingDisabled);
         this.setCursor(this.cursor, "PrintPreviewOffsetCursor");
         EAction.showMainTools();
         EAction.getMainWindow().setLeftMouseTip(qsTr("Drag to move paper"));
@@ -273,10 +273,10 @@ PrintPreviewImpl.prototype.finishEvent = function() {
 
     if (this.saveView===true) {
         if (!isNull(this.savedScale)) {
-            Print.setScale(di.getDocument(), this.savedScale);
+            Print.setScale(di, this.savedScale);
         }
         if (!isNull(this.savedOffset)) {
-            Print.setOffset(di.getDocument(), this.savedOffset);
+            Print.setOffset(di, this.savedOffset);
         }
     }
 
@@ -346,13 +346,14 @@ PrintPreviewImpl.prototype.mouseMoveEvent = function(event) {
         }
         this.panOffsetOrigin = panTarget;
 
-        var document = this.getDocument();
+        var di = this.getDocumentInterface();
+        var document = di.getDocument();
         var offset = Print.getOffset(document);
         offset.x += this.view.mapDistanceFromView(panDelta.x);
         offset.y -= this.view.mapDistanceFromView(panDelta.y);
 
         // update document variables
-        Print.setOffset(document, offset);
+        Print.setOffset(di, offset);
 
         this.updateBackgroundTransform();
 
@@ -565,7 +566,7 @@ PrintPreviewImpl.prototype.addDecorations = function(pages) {};
  * Updates the background decoration transformation.
  */
 PrintPreviewImpl.prototype.updateBackgroundTransform = function() {
-    var document = EAction.getDocument();
+    var document = this.getDocument();
 
     if (isNull(document)) {
         return;
@@ -588,7 +589,7 @@ PrintPreviewImpl.prototype.updateBackgroundTransform = function() {
  * Draws the paper border for the given page.
  */
 PrintPreviewImpl.prototype.drawPaper = function(path, border) {
-    var document = EAction.getDocument();
+    var document = this.getDocument();
     var paperBorder = Print.getPaperBorder(document, border);
     if (!paperBorder.isValid()) {
         return;
@@ -610,7 +611,7 @@ PrintPreviewImpl.prototype.drawGlueMargins = function(path, border) {
  * Draws the shadow for the given page.
  */
 PrintPreviewImpl.prototype.drawShadow = function(path, border) {
-    var document = EAction.getDocument();
+    var document = this.getDocument();
     var paper = Print.getPaperBorder(document, border);
     var offset = Print.getPaperSizeMM(document).width() * 0.02;
     var shadow = paper.adjusted(offset, -offset, offset, -offset);
@@ -622,7 +623,7 @@ PrintPreviewImpl.prototype.drawShadow = function(path, border) {
 
 PrintPreviewImpl.prototype.slotPdfExport = function() {
     var appWin = EAction.getMainWindow();
-    var fileName = EAction.getDocument().getFileName();
+    var fileName = this.getDocument().getFileName();
     var initialFileName = QDir.homePath();
     if (fileName!=="") {
         var fileInfo = new QFileInfo(fileName);
@@ -682,27 +683,25 @@ PrintPreviewImpl.prototype.slotScaleChanged = function(scaleString) {
         return;
     }
 
-    var document = this.getDocument();
-
-    if (isNull(document) || this.updateDisabled===true) {
+    var di = this.getDocumentInterface();
+    if (isNull(di) || this.updateDisabled===true) {
         return;
     }
 
-    Print.setScaleString(document, scaleString);
+    Print.setScaleString(di, scaleString);
 
     this.updateBackgroundTransform();
 
     // update pattern scale accordint to drawing scale:
-    var di = EAction.getDocumentInterface();
     di.regenerateScenes();
 };
 
-PrintPreviewImpl.setScale = function(document, scale) {
-    PrintPreviewImpl.setScaleString(document, sprintf("%.6f", scale));
+PrintPreviewImpl.setScale = function(di, scale) {
+    PrintPreviewImpl.setScaleString(di, sprintf("%.6f", scale));
 };
 
-PrintPreviewImpl.setScaleString = function(document, scaleString) {
-    Print.setScaleString(document, scaleString);
+PrintPreviewImpl.setScaleString = function(di, scaleString) {
+    Print.setScaleString(di, scaleString);
 
     PrintPreviewImpl.updateScaleString(document);
 };
@@ -751,7 +750,7 @@ PrintPreviewImpl.prototype.slotFullColorChanged = function(checked) {
         return;
     }
     if (checked) {
-        Print.setColorMode(EAction.getDocument(), RGraphicsView.FullColor);
+        Print.setColorMode(this.getDocumentInterface(), RGraphicsView.FullColor);
         this.colorModeUpdate();
     }
 };
@@ -761,7 +760,7 @@ PrintPreviewImpl.prototype.slotBlackWhiteChanged = function(checked) {
         return;
     }
     if (checked) {
-        Print.setColorMode(EAction.getDocument(), RGraphicsView.BlackWhite);
+        Print.setColorMode(this.getDocumentInterface(), RGraphicsView.BlackWhite);
         this.colorModeUpdate();
     }
 };
@@ -771,14 +770,14 @@ PrintPreviewImpl.prototype.slotGrayscaleChanged = function(checked) {
         return;
     }
     if (checked) {
-        Print.setColorMode(EAction.getDocument(), RGraphicsView.GrayScale);
+        Print.setColorMode(this.getDocumentInterface(), RGraphicsView.GrayScale);
         this.colorModeUpdate();
     }
 };
 
 PrintPreviewImpl.prototype.colorModeUpdate = function() {
     if (!isNull(this.view)) {
-        this.view.setColorMode(Print.getColorMode(EAction.getDocument()));
+        this.view.setColorMode(Print.getColorMode(this.getDocument()));
         this.view.regenerate(true);
     }    
 };
@@ -787,7 +786,7 @@ PrintPreviewImpl.prototype.slotHairlineChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
-    Print.setHairlineMode(EAction.getDocument(), checked);
+    Print.setHairlineMode(this.getDocumentInterface(), checked);
     if (!isNull(this.view)) {
         this.view.setHairlineMode(checked)
         this.view.regenerate(true);
@@ -802,8 +801,8 @@ PrintPreviewImpl.prototype.slotShowPaperBordersChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
-    var document = EAction.getDocument();
-    Print.setShowPaperBorders(document, checked);
+    var di = this.getDocumentInterface();
+    Print.setShowPaperBorders(di, checked);
 
     this.updateBackgroundDecoration();
 };
@@ -815,8 +814,8 @@ PrintPreviewImpl.prototype.slotPrintCropMarksChanged = function(checked) {
     if (this.updateDisabled===true) {
         return;
     }
-    var document = EAction.getDocument();
-    Print.setPrintCropMarks(document, checked);
+    var di = this.getDocumentInterface();
+    Print.setPrintCropMarks(di, checked);
 
     this.updateBackgroundDecoration();
 };
@@ -825,12 +824,13 @@ PrintPreviewImpl.prototype.slotPrintCropMarksChanged = function(checked) {
  * Auto fit box to page.
  */
 PrintPreviewImpl.prototype.slotAutoFitBox = function(box) {
-    var document = this.getDocument();
-    Print.autoFitBox(document, box);
-    PrintPreviewImpl.updateScaleString(document);
+    var di = this.getDocumentInterface();
+    var doc = di.getDocument();
+    Print.autoFitBox(di, box);
+    PrintPreviewImpl.updateScaleString(doc);
 
     // needed to update pattern scaling according to drawing scale:
-    var di = this.getDocumentInterface();
+    //var di = this.getDocumentInterface();
     di.regenerateScenes();
 
     this.updateBackgroundTransform();
@@ -843,12 +843,12 @@ PrintPreviewImpl.prototype.slotAutoFitBox = function(box) {
  * Auto fit drawing button clicked in options toolbar.
  */
 PrintPreviewImpl.prototype.slotAutoFitDrawing = function() {
-    var document = this.getDocument();
-    Print.autoFitDrawing(document);
+    var di = this.getDocumentInterface();
+    var document = di.getDocument();
+    Print.autoFitDrawing(di);
     PrintPreviewImpl.updateScaleString(document);
 
     // needed to update pattern scaling according to drawing scale:
-    var di = this.getDocumentInterface();
     di.regenerateScenes();
 
     this.updateBackgroundTransform();
@@ -858,7 +858,7 @@ PrintPreviewImpl.prototype.slotAutoFitDrawing = function() {
 };
 
 PrintPreviewImpl.prototype.slotAutoCenter = function() {
-    Print.autoCenter(this.getDocument());
+    Print.autoCenter(this.getDocumentInterface());
 
     this.updateBackgroundTransform();
     this.slotAutoZoomToPage();
@@ -869,8 +869,8 @@ PrintPreviewImpl.prototype.slotPortraitChanged = function() {
     if (this.updateDisabled===true) {
         return;
     }
-    var document = this.getDocument();
-    Print.setPageOrientationEnum(document, QPrinter.Portrait);
+    var di = this.getDocumentInterface();
+    Print.setPageOrientationEnum(di, QPrinter.Portrait);
 
     this.updateBackgroundDecoration();
     this.slotAutoZoomToPage();
@@ -880,8 +880,8 @@ PrintPreviewImpl.prototype.slotLandscapeChanged = function() {
     if (this.updateDisabled===true) {
         return;
     }
-    var document = this.getDocument();
-    Print.setPageOrientationEnum(document, QPrinter.Landscape);
+    var di = this.getDocumentInterface();
+    Print.setPageOrientationEnum(di, QPrinter.Landscape);
 
     this.updateBackgroundDecoration();
     this.slotAutoZoomToPage();

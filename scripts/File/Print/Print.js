@@ -337,17 +337,20 @@ Print.getPaperBox = function(document) {
 /**
  * Auto fit drawing to page size.
  */
-Print.autoFitDrawing = function(document) {
+Print.autoFitDrawing = function(di) {
+    var document = di.getDocument();
     // drawing bounding box in drawing units:
     var bBox = document.getBoundingBox(true, true);
-    Print.autoFitBox(document, bBox);
-    Print.centerBox(document, bBox);
+    qDebug("bb: ", bBox);
+    Print.autoFitBox(di, bBox);
+    Print.centerBox(di, bBox);
 };
 
 /**
  * Auto fit given box to page size.
  */
-Print.autoFitBox = function(document, bBox) {
+Print.autoFitBox = function(di, bBox) {
+    var document = di.getDocument();
     var paperUnit = Print.getPaperUnit(document);
 
     // paper bounding box in drawing units, multiplied by scale:
@@ -384,19 +387,23 @@ Print.autoFitBox = function(document, bBox) {
         f = 1.0;
     }
 
-    Print.setScale(document, f);
-    Print.centerBox(document, bBox);
+    qDebug("f:", f);
+
+    Print.setScale(di, f);
+    Print.centerBox(di, bBox);
 };
 
-Print.autoCenter = function(document) {
+Print.autoCenter = function(di) {
+    var document = di.getDocument();
     var bBox = document.getBoundingBox(true, true);
     if (!bBox.isValid()) {
         return;
     }
-    Print.centerBox(document, bBox);
+    Print.centerBox(di, bBox);
 };
 
-Print.centerBox = function(document, bBox) {
+Print.centerBox = function(di, bBox) {
+    var document = di.getDocument();
     var paperUnit = Print.getPaperUnit(document);
 
     var glueLeft = Print.getGlueMarginLeft(document);
@@ -420,7 +427,7 @@ Print.centerBox = function(document, bBox) {
     var dh = (glueTop - glueBottom) / scale;
     var offset = bBox.getMinimum().operator_subtract(new RVector(w2, h2));
     offset = offset.operator_add(new RVector(dw/2, dh/2));
-    Print.setOffset(document, offset);
+    Print.setOffset(di, offset);
 };
 
 /**
@@ -745,12 +752,12 @@ Print.getColorMode = function(document) {
     return Print.getColorModeEnum(colorModeString);
 };
 
-Print.setColorMode = function(document, colorMode) {
+Print.setColorMode = function(di, colorMode) {
     if (isString(colorMode)) {
-        Print.setValue("ColorSettings/ColorMode", colorMode, document);
+        Print.setValue("ColorSettings/ColorMode", colorMode, di);
     }
     else {
-        Print.setColorMode(document, Print.getColorModeString(colorMode));
+        Print.setColorMode(di, Print.getColorModeString(colorMode));
     }
 };
 
@@ -758,8 +765,8 @@ Print.getHairlineMode = function(document) {
     return Print.getBoolValue("Print/HairlineMode", false, document);
 };
 
-Print.setHairlineMode = function(document, onOff) {
-    Print.setValue("Print/HairlineMode", onOff, document);
+Print.setHairlineMode = function(di, onOff) {
+    Print.setValue("Print/HairlineMode", onOff, di);
 };
 
 /**
@@ -892,8 +899,14 @@ Print.getBoolValue = function(key, def, document) {
     return val;
 };
 
-Print.setValue = function(key, val, document) {
-    if (isNull(document) || document.getCurrentBlockId()===document.getModelSpaceBlockId()) {
+Print.setValue = function(key, val, di) {
+    if (isNull(di)) {
+        qWarning("di is NULL");
+        return;
+    }
+
+    var document = di.getDocument();
+    if (document.getCurrentBlockId()===document.getModelSpaceBlockId()) {
         document.setVariable(key, val);
     }
     else {
@@ -901,7 +914,6 @@ Print.setValue = function(key, val, document) {
         //if (block.hasLayout()) {
         if (block.getCustomProperty("QCAD", key, undefined)!==val) {
             block.setCustomProperty("QCAD", key, val.toString());
-            var di = EAction.getDocumentInterface();
             if (!isNull(di)) {
                 var op = new RAddObjectOperation(block);
                 op.setRecordAffectedObjects(false);
@@ -959,9 +971,9 @@ Print.getOffset = function(document) {
     return new RVector(x, y);
 };
 
-Print.setOffset = function(document, offset) {
-    Print.setValue("PageSettings/OffsetX", offset.x, document);
-    Print.setValue("PageSettings/OffsetY", offset.y, document);
+Print.setOffset = function(di, offset) {
+    Print.setValue("PageSettings/OffsetX", offset.x, di);
+    Print.setValue("PageSettings/OffsetY", offset.y, di);
 };
 
 /**
@@ -1193,16 +1205,16 @@ Print.getPageOrientationString = function(document) {
     return Print.getValue("PageSettings/PageOrientation", "Portrait", document);
 };
 
-Print.setPageOrientationString = function(document, pageOrientation) {
-    Print.setValue("PageSettings/PageOrientation", pageOrientation, document);
+Print.setPageOrientationString = function(di, pageOrientation) {
+    Print.setValue("PageSettings/PageOrientation", pageOrientation, di);
 };
 
-Print.setPageOrientationEnum = function(document, pageOrientation) {
+Print.setPageOrientationEnum = function(di, pageOrientation) {
     if (pageOrientation.valueOf()===QPrinter.Landscape.valueOf()) {
-        Print.setPageOrientationString(document, "Landscape");
+        Print.setPageOrientationString(di, "Landscape");
     }
     else {
-        Print.setPageOrientationString(document, "Portrait");
+        Print.setPageOrientationString(di, "Portrait");
     }
 };
 
@@ -1210,16 +1222,16 @@ Print.getShowPaperBorders = function(document) {
     return Print.getBoolValue("PageSettings/ShowPaperBorders", true, document);
 };
 
-Print.setShowPaperBorders = function(document, showPaperBorders) {
-    Print.setValue("PageSettings/ShowPaperBorders", showPaperBorders, document);
+Print.setShowPaperBorders = function(di, showPaperBorders) {
+    Print.setValue("PageSettings/ShowPaperBorders", showPaperBorders, di);
 };
 
 Print.getPrintCropMarks = function(document) {
     return Print.getBoolValue("MultiPageSettings/PrintCropMarks", true, document);
 };
 
-Print.setPrintCropMarks = function(document, printCropMarks) {
-    Print.setValue("MultiPageSettings/PrintCropMarks", printCropMarks, document);
+Print.setPrintCropMarks = function(di, printCropMarks) {
+    Print.setValue("MultiPageSettings/PrintCropMarks", printCropMarks, di);
 };
 
 Print.getScaleString = function(document) {
@@ -1272,12 +1284,12 @@ Print.getUnitScale = function(document) {
     return RUnit.convert(1.0, document.getUnit(), RS.Millimeter);
 };
 
-Print.setScale = function(document, scale) {
-    this.setScaleString(document, scale.toString());
+Print.setScale = function(di, scale) {
+    this.setScaleString(di, scale.toString());
 };
 
-Print.setScaleString = function(document, scaleString) {
-    Print.setValue("PageSettings/Scale", scaleString, document);
+Print.setScaleString = function(di, scaleString) {
+    Print.setValue("PageSettings/Scale", scaleString, di);
 };
 
 Print.getColumns = function(document) {
@@ -1289,8 +1301,8 @@ Print.getColumns = function(document) {
     return Print.getIntValue("MultiPageSettings/Columns", 1, document);
 };
 
-Print.setColumns = function(document, columns) {
-    Print.setValue("MultiPageSettings/Columns", columns, document);
+Print.setColumns = function(di, columns) {
+    Print.setValue("MultiPageSettings/Columns", columns, di);
 };
 
 Print.getRows = function(document) {
@@ -1302,8 +1314,8 @@ Print.getRows = function(document) {
     return Print.getIntValue("MultiPageSettings/Rows", 1, document);
 };
 
-Print.setRows = function(document, rows) {
-    Print.setValue("MultiPageSettings/Rows", rows, document);
+Print.setRows = function(di, rows) {
+    Print.setValue("MultiPageSettings/Rows", rows, di);
 };
 
 Print.getBackgroundColor = function(document) {

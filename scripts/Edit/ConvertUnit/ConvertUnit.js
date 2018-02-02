@@ -201,7 +201,7 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
 
     //var offset = Print.getOffset(doc);
     //offset.scale(factor);
-    //Print.setOffset(doc, offset);
+    //Print.setOffset(di, offset);
 
     doc.rebuildSpatialIndex();
 
