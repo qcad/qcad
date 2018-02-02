@@ -30,20 +30,21 @@ function WindowZoom(guiAction) {
 
     var bitmap, mask
     if (RSettings.getDevicePixelRatio()===2 && RS.getSystemId()!=="osx") {
-        bitmap = new QBitmap("scripts/View/Zoom/WindowZoom/WindowZoomCursor@2x.png", "PNG");
-        mask = new QBitmap("scripts/View/Zoom/WindowZoom/WindowZoomCursorMask@2x.png", "PNG");
+        bitmap = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursor@2x.png", "PNG");
+        mask = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursorMask@2x.png", "PNG");
         //bitmap.setDevicePixelRatio(2);
         //mask.setDevicePixelRatio(2);
         this.cursor = new QCursor(bitmap, mask, 24, 24);
     }
     else {
-        bitmap = new QBitmap("scripts/View/Zoom/WindowZoom/WindowZoomCursor.png", "PNG");
-        mask = new QBitmap("scripts/View/Zoom/WindowZoom/WindowZoomCursorMask.png", "PNG");
+        bitmap = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursor.png", "PNG");
+        mask = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursorMask.png", "PNG");
         this.cursor = new QCursor(bitmap, mask, 12, 12);
     }
 }
 
 WindowZoom.prototype = new View();
+WindowZoom.includeBasePath = includeBasePath;
 
 WindowZoom.State = {
     SettingCorner1 : 0,
