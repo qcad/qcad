@@ -251,6 +251,11 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
         entity->scaleVisualProperties(data.scaleFactor);
 
+        if (doc->getKnownVariable(RS::PSLTSCALE, true).toBool()==false) {
+            // scale line type pattern:
+            entity->setLinetypeScale(data.scaleFactor);
+        }
+
         e.exportEntity(*entity, preview, true);
 
         i++;
