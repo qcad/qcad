@@ -1501,6 +1501,11 @@ QScriptValue RScriptHandlerEcma::ecmaQtEscape(QScriptContext* context,
         QScriptEngine* engine) {
     if (context->argumentCount() == 1) {
         QString cppResult = Qt::escape(context->argument(0).toString());
+#if QT_VERSION >= 0x050000
+        cppResult = context->argument(0).toString().toHtmlEscaped();
+#else
+        cppResult = Qt::escape(context->argument(0).toString());
+#endif
         return qScriptValueFromValue(engine, cppResult);
     } else {
         return throwError(
