@@ -59,11 +59,16 @@ PrintPreview.isRunning = function() {
 /**
  * Starts the print preview.
  */
-PrintPreview.start = function(initialAction) {
+PrintPreview.start = function(initialAction, instance) {
     var di = EAction.getDocumentInterface();
     var a = di.getDefaultAction();
     a.finishEvent();
-    PrintPreview.instance = new PrintPreviewImpl();
+    if (isNull(instance)) {
+        PrintPreview.instance = new PrintPreviewImpl();
+    }
+    else {
+        PrintPreview.instance = instance;
+    }
     if (!isNull(initialAction)) {
         PrintPreview.instance.initialAction = initialAction;
     }
@@ -101,7 +106,6 @@ PrintPreview.prototype.beginEvent = function() {
     }
 
     this.terminate();
-    return;
 };
 
 
