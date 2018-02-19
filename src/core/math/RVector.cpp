@@ -756,13 +756,17 @@ bool RVector::operator ==(const RVector& v) const {
 }
 
 bool RVector::containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol) {
+    return findFirstFuzzy(vectors, v, tol)!=-1;
+}
+
+int RVector::findFirstFuzzy(const QList<RVector>& vectors, const RVector& v, double tol) {
     for (int i=0; i<vectors.length(); i++) {
         if (v.equalsFuzzy(vectors[i], tol)) {
-            return true;
+            return i;
         }
     }
 
-    return false;
+    return -1;
 }
 
 /**

@@ -211,6 +211,7 @@ public:
     }
 
     static bool containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol = RS::PointTolerance);
+    static int findFirstFuzzy(const QList<RVector>& vectors, const RVector& v, double tol = RS::PointTolerance);
 
     static RVector getMinimum(const QList<RVector>& vectors);
     static RVector getMaximum(const QList<RVector>& vectors);
