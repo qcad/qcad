@@ -6,22 +6,22 @@
     <message>
         <location filename="../DefaultNavigation.js" line="+46"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Graphics View</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigation</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom (Wheel Mouse)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>Scroll (Trackpad, Multi-Touch Mouse)</translation>
     </message>
 </context>
 <context>
@@ -29,27 +29,27 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit zoom and scroll to prevent overflows</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mouse wheel / two finger swipe:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Enable pan gesture</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable pan gesture</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Reverse mouse wheel direction for zoom</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mouse wheel zoom factor:</translation>
     </message>
 </context>
 </TS>

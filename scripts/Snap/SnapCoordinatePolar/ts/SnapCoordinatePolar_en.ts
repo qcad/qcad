@@ -6,37 +6,37 @@
     <message>
         <location filename="../SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;r:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Radius (Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Radius (Distance)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;&lt;:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;&lt;:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Tick for Relative Coordinate</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="unfinished"></translation>
+        <translation>Relati&amp;ve</translation>
     </message>
     <message>
         <location filename="../SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Polar Coordinate</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Show All Layers</translation>
     </message>
 </context>
 </TS>

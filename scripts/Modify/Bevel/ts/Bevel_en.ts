@@ -6,37 +6,37 @@
     <message>
         <location filename="../Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation type="unfinished"></translation>
+        <translation>The two entities cannot be bevelled.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>First entity cannot be trimmed.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Second entity cannot be trimmed.</translation>
     </message>
     <message>
         <location filename="../Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Trim</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Length 1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Length 2:</translation>
     </message>
     <message>
         <location filename="../BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Chamfer / Bevel</translation>
     </message>
 </context>
 </TS>

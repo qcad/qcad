@@ -6,17 +6,17 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Show tab bar</translation>
     </message>
     <message>
         <location filename="../TabBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab Bar</translation>
     </message>
 </context>
 </TS>

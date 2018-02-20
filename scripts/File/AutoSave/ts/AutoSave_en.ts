@@ -6,97 +6,107 @@
     <message>
         <location filename="../AutoSave.js" line="+35"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>File</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Autosave</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Autosaving to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Autosaving to:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Autosave failed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Autosave failed:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>Autosave complete.</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">An &apos;autosave&apos; backup file for an untitled drawing was found.
+Do you wish to recover it?</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">%1 &apos;autosave&apos; backup files for untitled drawings were found.
+Do you wish to recover them?</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Recover Files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Recover Files?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation type="unfinished"></translation>
+        <translation>Recovered</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation type="unfinished"></translation>
+        <translation>Recover File?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
+Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot rename file:</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Moved autosave backup file to:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Moved original file to:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot remove file:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable Autosave</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Autosave Interval:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation type="unfinished"></translation>
+        <translation>min</translation>
     </message>
 </context>
 </TS>

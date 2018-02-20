@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Toggle Visibility</translation>
     </message>
 </context>
 </TS>

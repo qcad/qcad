@@ -6,17 +6,17 @@
     <message>
         <location filename="../EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose block reference</translation>
     </message>
     <message>
         <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>E&amp;dit Block from Reference</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit block based on chosen block reference</translation>
     </message>
 </context>
 </TS>

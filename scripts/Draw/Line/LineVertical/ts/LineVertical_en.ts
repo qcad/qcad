@@ -6,12 +6,12 @@
     <message>
         <location filename="../LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vertical Line</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical line</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw vertical line</translation>
     </message>
 </context>
 </TS>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation type="unfinished"></translation>
+        <translation>Pen</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Reset to Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Reset to Defaults</translation>
     </message>
 </context>
 </TS>

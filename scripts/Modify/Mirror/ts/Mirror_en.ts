@@ -6,17 +6,17 @@
     <message>
         <location filename="../Mirror.js" line="+62"/>
         <source>First point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>First point of symmetry axis</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Second point of symmetry axis</translation>
     </message>
     <message>
         <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mirror</translation>
     </message>
 </context>
 <context>
@@ -24,27 +24,27 @@
     <message>
         <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Mirror Options</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Number of Copies</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Delete original</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Keep original</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Use current layer and &amp;attributes</translation>
     </message>
 </context>
 </TS>

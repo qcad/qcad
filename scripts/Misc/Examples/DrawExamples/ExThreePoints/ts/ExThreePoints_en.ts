@@ -6,17 +6,17 @@
     <message>
         <location filename="../ExThreePoints.js" line="+58"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Three Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Three Points</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw three points</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw three points</translation>
     </message>
 </context>
 </TS>

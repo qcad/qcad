@@ -6,32 +6,32 @@
     <message>
         <location filename="../ImportFile.js" line="+68"/>
         <source>Error while importing file %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Error while importing file %1</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>No import filters have been found. Aborting...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>All Files</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Import Drawing</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Import</translation>
     </message>
 </context>
 </TS>

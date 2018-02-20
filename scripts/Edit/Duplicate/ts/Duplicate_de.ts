@@ -8,20 +8,12 @@
         <source>&amp;Duplicate</source>
         <translation>&amp;Duplizieren</translation>
     </message>
-    <message>
-        <source>1 entity duplicated</source>
-        <translation type="vanished">Ein Objekt wurde dupliziert</translation>
-    </message>
-    <message>
-        <source>%1 entities duplicated</source>
-        <translation type="vanished">%1 Objekte wurden dupliziert</translation>
-    </message>
     <message numerus="yes">
         <location filename="../Duplicate.js" line="+58"/>
-        <source>%n entity(s) duplicated</source>
+        <source>%n entities duplicated</source>
         <translation>
-            <numerusform>%n Objekt wurde dupliziert</numerusform>
-            <numerusform>%n Objekte wurden dupliziert</numerusform>
+            <numerusform>Ein Objekt dupliziert</numerusform>
+            <numerusform>%n Objekte dupliziert</numerusform>
         </translation>
     </message>
 </context>

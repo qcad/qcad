@@ -20,7 +20,7 @@
     </message>
     <message numerus="yes">
         <location filename="../Duplicate.js" line="+58"/>
-        <source>%n entity(s) duplicated</source>
+        <source>%n entities duplicated</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>

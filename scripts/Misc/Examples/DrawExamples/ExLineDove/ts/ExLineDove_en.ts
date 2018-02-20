@@ -6,22 +6,22 @@
     <message>
         <location filename="../ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>First corner</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Second corner</translation>
     </message>
     <message>
         <location filename="../ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dovetail Joint</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw a dovetail joint</translation>
     </message>
 </context>
 </TS>

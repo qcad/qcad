@@ -6,22 +6,22 @@
     <message>
         <location filename="../Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Selection Tools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show selection tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Show selection tools</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Selection Tools Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Selection Tools Panel</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Select</translation>
     </message>
 </context>
 </TS>

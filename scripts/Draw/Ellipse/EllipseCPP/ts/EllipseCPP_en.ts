@@ -6,12 +6,12 @@
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ellipse (Center, Point, Ratio)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw full ellipse from center, major point and ratio</translation>
     </message>
 </context>
 </TS>

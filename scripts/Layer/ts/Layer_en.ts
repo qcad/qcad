@@ -6,47 +6,47 @@
     <message>
         <location filename="../Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer Tools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Show layer tools</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Layer</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Showing all layers</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Hiding all layers</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Thawing all layers</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Freezing all layers</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Locking all layers</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Unlocking all layers</translation>
     </message>
 </context>
 <context>
@@ -54,47 +54,47 @@
     <message>
         <location filename="../LayerDialog.js" line="+190"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Leading or trailing spaces.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer name is empty.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer already exists.</translation>
     </message>
     <message>
         <location filename="../LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer Data</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Layer name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer name:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Attributes</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lineweight:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="unfinished"></translation>
+        <translation>Linetype:</translation>
     </message>
 </context>
 </TS>

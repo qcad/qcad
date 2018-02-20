@@ -3,18 +3,18 @@
 <TS version="2.1" language="en_US">
 <context>
     <name>Duplicate</name>
-    <message numerus="yes">
-        <location filename="../Duplicate.js" line="+58"/>
-        <source>%n entity(s) duplicated</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
     <message>
         <location filename="../DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Duplicate</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../Duplicate.js" line="+58"/>
+        <source>%n entities duplicated</source>
+        <translation>
+            <numerusform>One entity duplicated</numerusform>
+            <numerusform>%n entities duplicated</numerusform>
+        </translation>
     </message>
 </context>
 </TS>

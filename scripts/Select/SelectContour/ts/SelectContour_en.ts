@@ -6,17 +6,17 @@
     <message>
         <location filename="../SelectContour.js" line="+53"/>
         <source>Choose entity of contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose entity of contour</translation>
     </message>
     <message>
         <location filename="../SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Replace the current selection</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -24,37 +24,37 @@
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="unfinished"></translation>
+        <translation>SelectionMode</translation>
     </message>
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Add to the current selection</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Subtract from the current selection</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Intersect with the current selection</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tolerance:</translation>
     </message>
     <message>
         <location filename="../SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished"></translation>
+        <translation>(De-)Select &amp;Contour</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished"></translation>
+        <translation>(De-)Select connected entities</translation>
     </message>
 </context>
 </TS>

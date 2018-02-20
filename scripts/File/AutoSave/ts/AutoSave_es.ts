@@ -55,21 +55,28 @@
         <translation>Guardado automático se ha completado.</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Un archivo de copia de &apos;guardado automática&apos; para un dibujo sin título fue encontrado.
+        <translation type="vanished">Un archivo de copia de &apos;guardado automática&apos; para un dibujo sin título fue encontrado.
 ¿Quiere recuperarlo?</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 archivos de copia de &apos;guardado automática&apos; para dibujos sin título se encontraron.
+        <translation type="vanished">%1 archivos de copia de &apos;guardado automática&apos; para dibujos sin título se encontraron.
 ¿Quiere recuperarlos?</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Recovered</source>
         <translation>Recuperado</translation>
     </message>
@@ -129,7 +136,7 @@ Do you wish to recover it?</source>
         <translation type="obsolete">Elija el directorio de guardado automático</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="-50"/>
         <source>Autosaving to:</source>
         <translation>Guardado automático de:</translation>
     </message>

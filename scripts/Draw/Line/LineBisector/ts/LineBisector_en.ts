@@ -6,37 +6,37 @@
     <message>
         <location filename="../LineBisector.js" line="+66"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>First line</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Second line</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lines don&apos;t intersect.</translation>
     </message>
     <message>
         <location filename="../LineBisector.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Length:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Number:</translation>
     </message>
     <message>
         <location filename="../LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle &amp;Bisector</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw angle bisector, trisector, ...</translation>
     </message>
 </context>
 </TS>

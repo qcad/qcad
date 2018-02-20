@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+126"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Custom</translation>
     </message>
 </context>
 <context>
@@ -14,47 +14,47 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+195"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Grid</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>On Entity</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Perpendicular</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangential</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Center</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Middle</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished"></translation>
+        <translation>Intersection</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Reference</translation>
     </message>
 </context>
 <context>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+156"/>
         <source>Invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>Invalid</translation>
     </message>
 </context>
 </TS>

@@ -6,27 +6,27 @@
     <message>
         <location filename="../Shape.js" line="+75"/>
         <source>Shape Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Shape Tools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show shape tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Show shape tools</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Shape</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Shape</translation>
     </message>
     <message>
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Create polyline</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Fill</translation>
     </message>
 </context>
 </TS>

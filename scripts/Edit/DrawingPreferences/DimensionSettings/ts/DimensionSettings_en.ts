@@ -6,215 +6,215 @@
     <message>
         <location filename="../DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Defaults for New Drawings</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension Settings</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension</translation>
     </message>
     <message>
         <location line="+108"/>
         <source>point</source>
-        <translation type="unfinished"></translation>
+        <translation>point</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation type="unfinished"></translation>
+        <translation>comma</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation>space</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Scientific</source>
-        <translation type="unfinished"></translation>
+        <translation>Scientific</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished"></translation>
+        <translation>Engineering</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished"></translation>
+        <translation>Architectural</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished"></translation>
+        <translation>Fractional</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimal Degrees</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished"></translation>
+        <translation>Deg/min/sec</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradians</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation type="unfinished"></translation>
+        <translation>Radians</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished"></translation>
+        <translation>Surveyor&apos;s units</translation>
     </message>
     <message>
         <location line="+209"/>
         <source>Unit / Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Unit / Format</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
-        <translation type="unfinished"></translation>
+        <translation>Sizes</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Keep proportions</source>
-        <translation type="unfinished"></translation>
+        <translation>Keep proportions</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Text height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Text height:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Extension line offset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Extension line offset:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Extension line extension:</source>
-        <translation type="unfinished"></translation>
+        <translation>Extension line extension:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Dimension line gap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension line gap:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Arrow size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrow size:</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Size scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Size scale factor:</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrow Style</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrow</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation type="unfinished"></translation>
+        <translation>Architectural Tick</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Font</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension label font:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Number Format</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimal separator:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Label Format</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Linear Dimensions</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Format:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;recision:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation type="unfinished"></translation>
+        <translation>Show trailing zeros</translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Angular Dimensions</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation type="unfinished"></translation>
+        <translation>F&amp;ormat:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pre&amp;cision:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Preview</translation>
     </message>
 </context>
 </TS>

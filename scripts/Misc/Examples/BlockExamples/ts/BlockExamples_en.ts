@@ -6,7 +6,7 @@
     <message>
         <location filename="../BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Block</translation>
     </message>
 </context>
 </TS>

@@ -6,23 +6,23 @@
     <message>
         <location filename="../LayerList.js" line="+197"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+109"/>
         <source>Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer List</translation>
     </message>
     <message>
         <location line="-55"/>
         <source>&amp;Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Layer List</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable alternating row colors</translation>
     </message>
 </context>
 </TS>

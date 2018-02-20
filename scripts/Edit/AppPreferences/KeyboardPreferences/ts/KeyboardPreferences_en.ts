@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Shortcut timeout:</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Keyboard</translation>
     </message>
 </context>
 </TS>

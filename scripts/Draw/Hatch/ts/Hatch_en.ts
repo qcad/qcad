@@ -6,17 +6,17 @@
     <message>
         <location filename="../Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Hatch Tools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Show hatch tools</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hatch</translation>
     </message>
 </context>
 <context>
@@ -24,42 +24,42 @@
     <message>
         <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Hatch</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Solid Fill</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Hatch Pattern</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Preview</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Pattern</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Scale:</translation>
     </message>
 </context>
 </TS>

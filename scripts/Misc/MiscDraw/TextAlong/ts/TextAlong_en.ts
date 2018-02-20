@@ -6,62 +6,62 @@
     <message>
         <location filename="../TextAlong.ui" line="+17"/>
         <source>Contents:</source>
-        <translation type="unfinished"></translation>
+        <translation>Contents:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Height:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation>Text height</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Spacing</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Letter spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Letter spacing</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Direction:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Counter Clockwise</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Clockwise</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Fit text to line, arc or circle</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Fit</translation>
     </message>
 </context>
 <context>
@@ -70,28 +70,28 @@
         <location filename="../TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Select Entity</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Selected entity is not a Line, Arc or Circle!</source>
-        <translation type="unfinished"></translation>
+        <translation>Selected entity is not a Line, Arc or Circle!</translation>
     </message>
     <message>
         <location filename="../TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Text Along Entity</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text along an entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw text along an entity</translation>
     </message>
 </context>
 </TS>

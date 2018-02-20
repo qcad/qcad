@@ -6,7 +6,7 @@
     <message>
         <location filename="../IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Isometric Grid &amp;Off</translation>
     </message>
 </context>
 </TS>

@@ -6,27 +6,27 @@
     <message>
         <location filename="../DimAngular.js" line="+72"/>
         <source>Arc or first of two lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Arc or first of two lines</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Second line</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension arc location</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension arc location</translation>
     </message>
     <message>
         <location filename="../DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Angular</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw angular dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw angular dimension</translation>
     </message>
 </context>
 </TS>

@@ -19,12 +19,11 @@
         <translation>これは、誰でも&lt;a href=&apos;%1&apos;&gt;参加&lt;/a&gt;できることを意味します!</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
-        <translation type="unfinished">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+        <translation type="obsolete">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+9"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>プログラムは現状のまま提供され、設計、商品性、および特定の目的への適合性を含む、いかなる保証もありません。</translation>
     </message>
@@ -73,7 +72,12 @@
         <translation>Qtバージョン:</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-74"/>
+        <source>Portions of this software © %1 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>License:</source>
         <translation>ライセンス:</translation>
     </message>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Print</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Print current drawing</translation>
     </message>
 </context>
 </TS>

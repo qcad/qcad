@@ -6,22 +6,22 @@
     <message>
         <location filename="../MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Misc</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Misc Selection Tools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc selection tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Show misc selection tools</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Select</translation>
     </message>
 </context>
 </TS>

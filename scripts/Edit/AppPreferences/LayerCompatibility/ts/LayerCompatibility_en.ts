@@ -6,32 +6,32 @@
     <message>
         <location filename="../LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Compatibility</source>
-        <translation type="unfinished"></translation>
+        <translation>Compatibility</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer 0</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer 0 behaves like a regular layer (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer 0 behaves differently (best compatibility)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entities in blocks on layer 0 take on attributes and visibility of block reference.</translation>
     </message>
 </context>
 </TS>

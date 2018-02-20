@@ -6,24 +6,24 @@
     <message>
         <location filename="../BlockList.js" line="+453"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+41"/>
         <location line="+39"/>
         <source>Block List</source>
-        <translation type="unfinished"></translation>
+        <translation>Block List</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Hide internal blocks</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Enable alternating row colors</translation>
     </message>
 </context>
 </TS>

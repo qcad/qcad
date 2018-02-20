@@ -6,12 +6,12 @@
     <message>
         <location filename="../ExText.js" line="+69"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw text</translation>
     </message>
 </context>
 </TS>

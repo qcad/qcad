@@ -6,17 +6,17 @@
     <message>
         <location filename="../LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Number:</translation>
     </message>
     <message>
         <location filename="../LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Par&amp;allel (through Point)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw parallel line or concentric arc or circle through a given point</translation>
     </message>
 </context>
 </TS>

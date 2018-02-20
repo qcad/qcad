@@ -6,57 +6,57 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto Snap</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation type="unfinished"></translation>
+        <translation>Intersections</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation type="unfinished"></translation>
+        <translation>End points</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation type="unfinished"></translation>
+        <translation>Middle points</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation type="unfinished"></translation>
+        <translation>Center points</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Perpendicular</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangential</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation type="unfinished"></translation>
+        <translation>Reference points</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation type="unfinished"></translation>
+        <translation>Grid points</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Points on entity</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="unfinished"></translation>
+        <translation>Free positioning</translation>
     </message>
 </context>
 <context>
@@ -64,17 +64,17 @@
     <message>
         <location filename="../SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto Snap</translation>
     </message>
     <message>
         <location filename="../SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Auto</translation>
     </message>
 </context>
 </TS>

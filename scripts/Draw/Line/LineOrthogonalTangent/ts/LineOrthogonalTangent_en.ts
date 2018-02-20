@@ -6,27 +6,27 @@
     <message>
         <location filename="../LineOrthogonalTangent.js" line="+70"/>
         <source>Choose line</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose line</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose circle, arc or ellipse</translation>
     </message>
     <message>
         <location line="+139"/>
         <source>No tangent possible</source>
-        <translation type="unfinished"></translation>
+        <translation>No tangent possible</translation>
     </message>
     <message>
         <location filename="../LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation type="unfinished"></translation>
+        <translation>Orthogonal / Tange&amp;nt</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw line orthogonal to line and tangent to circle, arc or ellipse</translation>
     </message>
 </context>
 </TS>

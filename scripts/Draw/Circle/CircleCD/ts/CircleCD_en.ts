@@ -7,28 +7,28 @@
         <location filename="../CircleCD.ui" line="+17"/>
         <location filename="../CircleCDDialog.ui" line="+89"/>
         <source>Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diameter:</translation>
     </message>
     <message>
         <location line="+33"/>
         <location filename="../CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Reference Point:</translation>
     </message>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Center, &amp;Diameter</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw circle from center and diameter</translation>
     </message>
 </context>
 </TS>

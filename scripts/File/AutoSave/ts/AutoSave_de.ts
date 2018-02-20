@@ -63,21 +63,30 @@
         <translation>Autosave abgeschlossen.</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Eine &apos;autosave&apos; Backup Datei für eine unbenannte Zeichnung wurde gefunden.
+        <translation type="vanished">Eine &apos;autosave&apos; Backup Datei für eine unbenannte Zeichnung wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 &apos;autosave&apos; Backup Dateien für unbenannte Zeichnungen wurden gefunden.
+        <translation type="vanished">%1 &apos;autosave&apos; Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation>
+            <numerusform>Eine &apos;autosave&apos; Backup Datei für eine unbenannte Zeichnung wurde gefunden.
+Möchten Sie die Zeichnung wiederherstellen?</numerusform>
+            <numerusform>%n &apos;autosave&apos; Backup Dateien für unbenannte Zeichnungen wurden gefunden.
+Möchten Sie die Zeichnungen wiederherstellen?</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>Recovered</source>
         <translation>Wiederhergestellt</translation>
     </message>
@@ -141,7 +150,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Verzeichnis für automatisches Speichern wählen</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="-50"/>
         <source>Autosaving to:</source>
         <translation>Automatisches Speichern in:</translation>
     </message>

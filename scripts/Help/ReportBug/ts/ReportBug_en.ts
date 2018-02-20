@@ -6,7 +6,7 @@
     <message>
         <location filename="../ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Report &amp;Bug</translation>
     </message>
 </context>
 </TS>

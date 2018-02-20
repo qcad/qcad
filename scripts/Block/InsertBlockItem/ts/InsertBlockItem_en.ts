@@ -6,72 +6,72 @@
     <message>
         <location filename="../InsertBlockItem.js" line="+101"/>
         <source>Cannot import file from URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot import file from URL: </translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Adjusted invalid block name to &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location filename="../InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotate pasted entities&lt;br&gt;by this angle</translation>
     </message>
     <message>
         <location line="+100"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Scale:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Scale pasted entities&lt;br&gt;by this factor</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Flip pasted entities&lt;br&gt;horizontally</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Flip pasted entities&lt;br&gt;vertically</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Overwrite layers</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Overwrite blocks</translation>
     </message>
     <message>
         <location filename="../InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Insert Block</translation>
     </message>
 </context>
 </TS>

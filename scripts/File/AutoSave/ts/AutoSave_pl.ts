@@ -38,23 +38,31 @@
         <translation>Zakończono automatyczne zapisywanie.</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Odnaleziono plik automatycznej kopii zapasowej dla rysunku bez nazwy.
+        <translation type="vanished">Odnaleziono plik automatycznej kopii zapasowej dla rysunku bez nazwy.
 Odzyskać go?</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
         <translatorcomment>Plural form should be used.</translatorcomment>
-        <translation>Odnaleziono %1 pliki automatycznej kopii zapasowej dla rysunków bez nazwy.
+        <translation type="vanished">Odnaleziono %1 pliki automatycznej kopii zapasowej dla rysunków bez nazwy.
 Odzyskać je?</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Recover Files?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Odzyskać pliki?</translation>

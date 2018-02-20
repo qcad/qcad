@@ -6,52 +6,52 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Status Bar Font:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Status Bar Widgets</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation>Coordinate display</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="unfinished"></translation>
+        <translation>Mouse display</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation type="unfinished"></translation>
+        <translation>Selection display</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation type="unfinished"></translation>
+        <translation>Progress display</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation type="unfinished"></translation>
+        <translation>Show status tips</translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+32"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Status Bar</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Status Bar</translation>
     </message>
 </context>
 </TS>

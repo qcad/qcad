@@ -6,27 +6,27 @@
     <message>
         <location filename="../ArcTangential.js" line="+63"/>
         <source>Choose base line or base arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose base line or base arc</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Choose end point of arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose end point of arc</translation>
     </message>
     <message>
         <location filename="../ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Radius:</translation>
     </message>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangentially Connected</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw arc tangential to base entity</translation>
     </message>
 </context>
 </TS>

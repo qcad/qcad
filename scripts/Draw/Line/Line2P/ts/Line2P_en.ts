@@ -6,62 +6,62 @@
     <message>
         <location filename="../Line2P.js" line="+67"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>First point</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation type="unfinished"></translation>
+        <translation>Next point</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Done</translation>
     </message>
     <message>
         <location filename="../Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation type="unfinished"></translation>
+        <translation>Close Sequence</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, C</source>
-        <translation type="unfinished"></translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Undo Previous Segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished"></translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Redo Segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished"></translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Restrict length or angle</translation>
     </message>
     <message>
         <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Line from &amp;2 Points</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw single line or sequence of lines</translation>
     </message>
 </context>
 </TS>

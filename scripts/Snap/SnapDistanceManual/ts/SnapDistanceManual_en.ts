@@ -6,42 +6,42 @@
     <message>
         <location filename="../SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished"></translation>
+        <translation>Specify first point to measure distance from</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Second point</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap distance:</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation>Distance</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation>Percentage</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation type="unfinished"></translation>
+        <translation>Fraction</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Distance Manual</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap distance between 2 points</translation>
     </message>
 </context>
 </TS>

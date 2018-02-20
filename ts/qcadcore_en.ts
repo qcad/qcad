@@ -6,107 +6,107 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Inch</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation>Foot</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation type="unfinished"></translation>
+        <translation>Mile</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Millimeter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Centimeter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilometer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation>Microinch</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation type="unfinished"></translation>
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation>Angstrom</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nanometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Nanometer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation>Micron</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimeter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Decameter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Hectometer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Gigameter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation>Astro</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation>Lightyear</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation>Parsec</translation>
     </message>
 </context>
 <context>
@@ -114,102 +114,102 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+287"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>By Layer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>By Block</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Red</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation type="unfinished"></translation>
+        <translation>Green</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Blue</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Cyan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Magenta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Yellow</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>Orange</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Red</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark Red</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Green</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark Green</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark Blue</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark Cyan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark Magenta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dark Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark Yellow</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Black</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>Gray</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>Light Gray</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>White</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>Others...</translation>
     </message>
 </context>
 <context>
@@ -217,22 +217,22 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+45"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Current Layer ID</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Drawing Unit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Linetype Scale</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension Font</translation>
     </message>
 </context>
 <context>
@@ -242,19 +242,19 @@
         <location filename="../src/core/RLayer.cpp" line="+90"/>
         <location filename="../src/core/RLayout.cpp" line="+80"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Hidden</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Origin</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -270,7 +270,7 @@
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -286,7 +286,7 @@
         <location line="+8"/>
         <location line="+2"/>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -301,27 +301,27 @@
         <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
         <location line="+10"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Layout</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+582"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Circular (recursive) block referencing detected:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Block name:</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Block</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -331,7 +331,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -339,81 +339,81 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Scale</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished"></translation>
+        <translation>Columns</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation>Rows</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Column Spacing</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Row Spacing</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
         <location filename="../src/core/RObject.cpp" line="+61"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Block ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Block ID</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Layer</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+9"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Linetype</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Linetype Scale</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation type="unfinished"></translation>
+        <translation>Lineweight</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Color</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Displayed Color</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw Order</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -421,243 +421,243 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Boundary</translation>
     </message>
     <message>
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Left</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Bottom</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Right</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Top</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Size</translation>
     </message>
     <message>
         <location line="-1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Width</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Height</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="-7"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Off</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Frozen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>Locked</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished"></translation>
+        <translation>Collapsed</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished"></translation>
+        <translation>Plottable</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished"></translation>
+        <translation>Snappable</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+        <translation>Off is Freeze</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
         <source>Tab Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab Order</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished"></translation>
+        <translation>Min Limits</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished"></translation>
+        <translation>Max Limits</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Insertion Base</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation type="unfinished"></translation>
+        <translation>Min Extents</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation type="unfinished"></translation>
+        <translation>Max Extents</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Custom</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished"></translation>
+        <translation>Protected</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation type="unfinished"></translation>
+        <translation>Simple</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Text Position</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Plain Text</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Font Name</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Text Height</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Text Angle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>X Scale</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Bold</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Italic</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Line Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Line Spacing</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Alignment</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Horizontal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertical</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>On</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished"></translation>
+        <translation>View Center</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished"></translation>
+        <translation>View Target</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished"></translation>
+        <translation>Overall</translation>
     </message>
 </context>
 <context>
@@ -665,7 +665,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+184"/>
         <source>Requires selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Requires selection</translation>
     </message>
 </context>
 <context>
@@ -673,22 +673,22 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Description</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metric</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Pattern</translation>
     </message>
 </context>
 <context>
@@ -696,193 +696,193 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+856"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>By Layer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>By Block</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished"></translation>
+        <translation>Continuous</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished"></translation>
+        <translation>Border</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Center</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Dash dot</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation type="unfinished"></translation>
+        <translation>Dashed</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation type="unfinished"></translation>
+        <translation>Divide</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Dot</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Hidden</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished"></translation>
+        <translation>Phantom</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dash</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dash space</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO long-dash dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO long-dash double-dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO long-dash triple-dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO long-dash short-dash</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO long-dash double-short-dash</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dash dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO double-dash dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dash double-dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO double-dash double-dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO dash triple-dot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation type="unfinished"></translation>
+        <translation>ISO double-dash triple-dot</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hot Water Supply</source>
-        <translation type="unfinished"></translation>
+        <translation>Hot Water Supply</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Hot Water</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gas Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Gas Line</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Batting</source>
-        <translation type="unfinished"></translation>
+        <translation>Batting</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation type="unfinished"></translation>
+        <translation>Zig Zag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tracks</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenceline 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fenceline 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Fenceline 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drainage</source>
-        <translation type="unfinished"></translation>
+        <translation>Drainage</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>Drainage Reversed</translation>
     </message>
 </context>
 <context>
@@ -890,137 +890,137 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+35"/>
         <source>By Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>By Layer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished"></translation>
+        <translation>By Block</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Default</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.00mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.05mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.09mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.13mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.15mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.18mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.25mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.30mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.35mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.40mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.50mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.53mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.60mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>0.70mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.80mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translation type="unfinished"></translation>
+        <translation>0.90mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>1.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.06mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>1.40mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translation type="unfinished"></translation>
+        <translation>1.58mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translation type="unfinished"></translation>
+        <translation>2.00mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translation type="unfinished"></translation>
+        <translation>2.11mm</translation>
     </message>
 </context>
 </TS>

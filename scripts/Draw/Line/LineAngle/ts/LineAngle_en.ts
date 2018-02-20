@@ -6,52 +6,52 @@
     <message>
         <location filename="../LineAngle.js" line="+65"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished"></translation>
+        <translation>Specify position</translation>
     </message>
     <message>
         <location filename="../LineAngle.ui" line="+17"/>
         <source>&amp;Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Angle:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Length:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Reference Point:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Start</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Middle</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>End</translation>
     </message>
     <message>
         <location filename="../LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Line from &amp;Angle</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw line at a given absolute angle</translation>
     </message>
 </context>
 </TS>

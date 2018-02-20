@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangential</translation>
     </message>
 </context>
 </TS>

@@ -6,87 +6,87 @@
     <message>
         <location filename="../Paste.js" line="+52"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Paste</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location filename="../Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotate pasted entities&lt;br&gt;by this angle</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Scale:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Scale pasted entities&lt;br&gt;by this factor</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Flip pasted entities&lt;br&gt;horizontally</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Flip pasted entities&lt;br&gt;vertically</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>To current layer</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Overwrite layers</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Overwrite blocks</translation>
     </message>
     <message>
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Paste</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="unfinished"></translation>
+        <translation>Reset to defaults every time tool is used</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Show font preview in font controls</source>
-        <translation type="unfinished"></translation>
+        <translation>Show font preview in font controls</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation type="unfinished"></translation>
+        <translation>Use reduced selection of fonts:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Uncheck all</source>
-        <translation type="unfinished"></translation>
+        <translation>Uncheck all</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Check all</source>
-        <translation type="unfinished"></translation>
+        <translation>Check all</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
 </context>
 </TS>

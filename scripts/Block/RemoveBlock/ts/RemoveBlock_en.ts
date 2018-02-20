@@ -6,12 +6,12 @@
     <message>
         <location filename="../RemoveBlockInit.js" line="+2"/>
         <source>&amp;Remove Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Remove Block</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
-        <translation type="unfinished"></translation>
+        <translation>Delete selected block</translation>
     </message>
 </context>
 </TS>

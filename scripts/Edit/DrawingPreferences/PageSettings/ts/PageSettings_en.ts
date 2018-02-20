@@ -6,97 +6,97 @@
     <message>
         <location filename="../PageSettings.js" line="+29"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Defaults for New Drawings</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Printing - Page</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation>Printing</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Page</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Custom</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Page Orientation</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Portrait</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Landscape</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Paper</source>
-        <translation type="unfinished"></translation>
+        <translation>Paper</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paper size:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paper width:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paper height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paper height:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Viewport</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Scale:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Offset Y:</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Zero-Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Zero-Point</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation>Miscellaneous</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show paper borders</source>
-        <translation type="unfinished"></translation>
+        <translation>Show paper borders</translation>
     </message>
 </context>
 </TS>

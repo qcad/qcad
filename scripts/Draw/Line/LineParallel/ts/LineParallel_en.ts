@@ -6,22 +6,22 @@
     <message>
         <location filename="../LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Distance:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Number:</translation>
     </message>
     <message>
         <location filename="../LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Para&amp;llel (with Distance)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw parallel to existing line or concentric arc, circle</translation>
     </message>
 </context>
 </TS>

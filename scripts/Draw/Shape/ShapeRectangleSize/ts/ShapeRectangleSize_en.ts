@@ -7,39 +7,39 @@
         <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Width:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Height:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Reference Point:</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Create Polyline</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Rectangle with &amp;Size</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw rectangle with position and size</translation>
     </message>
 </context>
 </TS>

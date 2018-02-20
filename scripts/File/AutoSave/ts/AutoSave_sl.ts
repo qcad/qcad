@@ -33,19 +33,28 @@
         <translation>Samodejno shranjevanje zaključeno.</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Najdena je bila samodejno shanjena varnostna kopija neznanege risanja. Jo želite obnovit?</translation>
+        <translation type="vanished">Najdena je bila samodejno shanjena varnostna kopija neznanege risanja. Jo želite obnovit?</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>Najdenih je bil %1 samodejno shanjenih varnostnih kopij neznanih risanj. Jih želite obnovit?</translation>
+        <translation type="vanished">Najdenih je bil %1 samodejno shanjenih varnostnih kopij neznanih risanj. Jih želite obnovit?</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Recover Files?</source>
         <translation>Obnovim datoteke?</translation>
     </message>

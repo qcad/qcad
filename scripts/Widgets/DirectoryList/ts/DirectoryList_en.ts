@@ -8,12 +8,14 @@
         <source>The folder
 &apos;%1&apos;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>The folder
+&apos;%1&apos;
+is already in the list.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
-        <translation type="unfinished"></translation>
+        <translation>Folder not added</translation>
     </message>
 </context>
 </TS>

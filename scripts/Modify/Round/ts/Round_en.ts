@@ -6,32 +6,32 @@
     <message>
         <location filename="../Round.js" line="+58"/>
         <source>The two entities cannot be rounded.</source>
-        <translation type="unfinished"></translation>
+        <translation>The two entities cannot be rounded.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>First entity cannot be trimmed.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Second entity cannot be trimmed.</translation>
     </message>
     <message>
         <location filename="../Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Trim</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Radius:</translation>
     </message>
     <message>
         <location filename="../RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Round</translation>
     </message>
 </context>
 </TS>

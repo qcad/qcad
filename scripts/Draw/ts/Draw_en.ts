@@ -6,12 +6,12 @@
     <message>
         <location filename="../Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Draw</translation>
     </message>
 </context>
 <context>
@@ -19,12 +19,12 @@
     <message>
         <location filename="../DrawBasedOnRectanglePP.js" line="+69"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>First corner</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Second corner</translation>
     </message>
 </context>
 <context>
@@ -32,52 +32,52 @@
     <message>
         <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Top Left</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Top</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Top Right</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Left</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Middle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Right</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Bottom Left</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Bottom</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Bottom Right</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
 </context>
 <context>
@@ -85,17 +85,17 @@
     <message>
         <location filename="../DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>First arc or circle</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Second arc or circle</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Third arc or circle</translation>
     </message>
 </context>
 </TS>

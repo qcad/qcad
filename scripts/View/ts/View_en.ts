@@ -6,17 +6,17 @@
     <message>
         <location filename="../View.js" line="+64"/>
         <source>View Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>View Tools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show view tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Show view tools</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;View</translation>
     </message>
 </context>
 </TS>

@@ -7,34 +7,34 @@
         <location filename="../EllipseDD.ui" line="+17"/>
         <location filename="../EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>X Diameter:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y Diameter:</translation>
     </message>
     <message>
         <location line="+30"/>
         <location filename="../EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Reference Point:</translation>
     </message>
     <message>
         <location filename="../EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipse with &amp;Diameters</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw ellipse with position and diameters</translation>
     </message>
 </context>
 </TS>

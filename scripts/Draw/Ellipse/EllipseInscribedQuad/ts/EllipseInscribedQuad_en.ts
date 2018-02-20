@@ -6,32 +6,32 @@
     <message>
         <location filename="../EllipseInscribedQuad.js" line="+82"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>First line</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Second line</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Third line</source>
-        <translation type="unfinished"></translation>
+        <translation>Third line</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Fourth line</source>
-        <translation type="unfinished"></translation>
+        <translation>Fourth line</translation>
     </message>
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>Inscribed in Quadrilateral</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw ellipse inscribed in quadrilateral</translation>
     </message>
 </context>
 </TS>

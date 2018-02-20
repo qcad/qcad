@@ -6,7 +6,7 @@
     <message>
         <location filename="../ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Report &amp;Translation Error</translation>
     </message>
 </context>
 </TS>

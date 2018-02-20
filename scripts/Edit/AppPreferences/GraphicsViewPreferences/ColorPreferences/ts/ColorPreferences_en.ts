@@ -6,12 +6,12 @@
     <message>
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Graphics View</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Colors</translation>
     </message>
 </context>
 <context>
@@ -19,152 +19,152 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Graphics View</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Background:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Crosshairs:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactive crosshairs:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Origin</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Origin:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Relative zero:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Grid</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Grid:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta grid:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selection</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Primary selection color:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation>Use secondary selection color</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Secondary selection color:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Draggable reference points:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Secondary reference points:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Selection box border:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Selection box fill:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cross-selection box fill:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Start points:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation type="unfinished"></translation>
+        <translation>End points:</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap Tools</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap label:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Info Tools</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation>Measurements and labels:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Drawing Tools</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Auxiliary shapes:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom Tools</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom box border:</translation>
     </message>
 </context>
 </TS>

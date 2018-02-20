@@ -6,17 +6,17 @@
     <message>
         <location filename="../ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>All Files</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation>Import XML</translation>
     </message>
     <message>
         <location filename="../ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Import XML</translation>
     </message>
 </context>
 </TS>

@@ -136,9 +136,13 @@
         <translation type="vanished">Delen van deze software © 2012 Nokia Corporation en / of haar dochterondernemingen (of organen).</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
-        <translation type="unfinished">Delen van deze software © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+        <translation type="obsolete">Delen van deze software © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Portions of this software © %1 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>

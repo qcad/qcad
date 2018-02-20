@@ -6,37 +6,37 @@
     <message>
         <location filename="../InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose polyline</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Done</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Area</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>Circumference</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Polyline area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polyline area:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>circumference:</translation>
     </message>
     <message>
         <location filename="../InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Polyl&amp;ine Area</translation>
     </message>
 </context>
 </TS>

@@ -33,21 +33,28 @@
         <translation>Automaattinen tallennus valmis.</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Nimettömän piirroksen automaattinen varmuuskopiotiedosto löytyi.
+        <translation type="vanished">Nimettömän piirroksen automaattinen varmuuskopiotiedosto löytyi.
 Haluaa palauttaa sen piirroksen?</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 varmuuskopiotiedostot &apos;autosave&apos; löytyivät nimettömille piirroksille.
+        <translation type="vanished">%1 varmuuskopiotiedostot &apos;autosave&apos; löytyivät nimettömille piirroksille.
 Haluaa palauttaa ne piirrokset?</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Recover Files?</source>
         <translation>Palautetaanko tiedostot?</translation>
     </message>

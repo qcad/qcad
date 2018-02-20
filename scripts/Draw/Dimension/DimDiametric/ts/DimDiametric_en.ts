@@ -6,22 +6,22 @@
     <message>
         <location filename="../DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose arc or circle entity</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension line location or angle</translation>
     </message>
     <message>
         <location filename="../DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Diametric</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw diametric dimension</translation>
     </message>
 </context>
 </TS>

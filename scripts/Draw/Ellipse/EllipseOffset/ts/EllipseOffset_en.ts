@@ -6,22 +6,22 @@
     <message>
         <location filename="../EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Distance:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Number:</translation>
     </message>
     <message>
         <location filename="../EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Parallel Curve (with Distance)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw parallel curve to ellipse</translation>
     </message>
 </context>
 </TS>

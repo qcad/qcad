@@ -33,21 +33,29 @@
         <translation>Автосохранение завершено.</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Был найден &apos;автосохранённый&apos; файл резервного копирования
+        <translation type="vanished">Был найден &apos;автосохранённый&apos; файл резервного копирования
 для безымянного чертежа. Вы хотите восстановить его?</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>Были найдены &apos;автосохранённые&apos; файлы резервного копирования
+        <translation type="vanished">Были найдены &apos;автосохранённые&apos; файлы резервного копирования
 для безымянного чертежа: %1. Вы хотите восстановить их?</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Recover Files?</source>
         <translation>Перезаписать файлы?</translation>
     </message>

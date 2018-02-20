@@ -37,21 +37,28 @@
         <translation>Auto-opslaan compleet.</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Een &apos;auto-opslaan&apos; bestand voor een naamloos tekening werd gevonden.
+        <translation type="vanished">Een &apos;auto-opslaan&apos; bestand voor een naamloos tekening werd gevonden.
 Wilt u de tekening herstellen?</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 &apos;Auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
+        <translation type="vanished">%1 &apos;Auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
 Wilt u deze herstellen?</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Recover Files?</source>
         <translation>Bestanden herstellen?</translation>
     </message>

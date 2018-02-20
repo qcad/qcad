@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw &amp;Colors</translation>
     </message>
 </context>
 </TS>

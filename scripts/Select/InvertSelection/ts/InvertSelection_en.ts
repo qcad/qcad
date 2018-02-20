@@ -6,12 +6,12 @@
     <message>
         <location filename="../InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Invert Selection</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Invert the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invert the current selection</translation>
     </message>
 </context>
 </TS>

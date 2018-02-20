@@ -32,9 +32,13 @@
         <translation type="vanished">Teile dieser Software sind © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
-        <translation type="unfinished">Teile dieser Software sind © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+        <translation type="vanished">Teile dieser Software sind © 2008-2018 The Qt Company Ltd.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Portions of this software © %1 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

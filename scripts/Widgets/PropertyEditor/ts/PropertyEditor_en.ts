@@ -6,17 +6,17 @@
     <message>
         <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Add Custom Property</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Name:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Value:</translation>
     </message>
 </context>
 <context>
@@ -24,124 +24,124 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Display Z coordinates</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Display properties of current block and current layer</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.js" line="+193"/>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>No Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>No Selection</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Specific Properties</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Dependent Entities</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Custom</translation>
     </message>
     <message>
         <location line="+166"/>
         <source>Index</source>
-        <translation type="unfinished"></translation>
+        <translation>Index</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove this property from selected objects</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>All</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Add custom property to selected objects</translation>
     </message>
     <message>
         <location line="+136"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto</translation>
     </message>
     <message>
         <location line="+128"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation>Use auto measurement</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Yes</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>No</translation>
     </message>
     <message>
         <location line="+309"/>
         <source>*VARIES*</source>
-        <translation type="unfinished"></translation>
+        <translation>*VARIES*</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Property Editor</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Selection:</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>General Properties</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Handle:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Linetype Scale:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Protected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Protected:</translation>
     </message>
 </context>
 </TS>

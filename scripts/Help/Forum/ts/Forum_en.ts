@@ -6,7 +6,7 @@
     <message>
         <location filename="../ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Forum</translation>
     </message>
 </context>
 </TS>

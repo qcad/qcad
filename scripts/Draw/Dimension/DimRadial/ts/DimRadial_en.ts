@@ -6,22 +6,22 @@
     <message>
         <location filename="../DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose arc or circle entity</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension line location or angle</translation>
     </message>
     <message>
         <location filename="../DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Radial</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw radial dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw radial dimension</translation>
     </message>
 </context>
 </TS>

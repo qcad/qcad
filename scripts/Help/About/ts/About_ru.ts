@@ -136,9 +136,13 @@
         <translation type="vanished">Фрагменты этой программы © 2012 корпорация Nokia и/или её дочери.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
-        <translation type="unfinished">Фрагменты этой программы © 2008-2016 The Qt Company Ltd. {2008-2017 ?} {2008-2018 ?}</translation>
+        <translation type="obsolete">Фрагменты этой программы © 2008-2016 The Qt Company Ltd. {2008-2017 ?} {2008-2018 ?}</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Portions of this software © %1 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>

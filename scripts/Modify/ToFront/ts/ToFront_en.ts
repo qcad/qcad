@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation type="unfinished"></translation>
+        <translation>Bring to &amp;Front</translation>
     </message>
 </context>
 </TS>

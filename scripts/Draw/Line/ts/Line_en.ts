@@ -6,37 +6,37 @@
     <message>
         <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Line Tools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show line tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Show line tools</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Line</translation>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Same Entity Type as Original</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Line Segment</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Infinite Line</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Ray</translation>
     </message>
 </context>
 </TS>

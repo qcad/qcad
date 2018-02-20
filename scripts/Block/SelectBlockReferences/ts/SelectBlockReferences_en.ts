@@ -6,7 +6,7 @@
     <message>
         <location filename="../SelectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Select Block References</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Select Block References</translation>
     </message>
 </context>
 </TS>

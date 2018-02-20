@@ -6,12 +6,12 @@
     <message>
         <location filename="../ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rectangle</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw rectangle from two corners</translation>
     </message>
 </context>
 </TS>

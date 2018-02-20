@@ -6,22 +6,22 @@
     <message>
         <location filename="../DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation type="unfinished"></translation>
+        <translation>Feature location</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation type="unfinished"></translation>
+        <translation>Endpoint of leader</translation>
     </message>
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ordinate (X/Y)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw ordinate dimension</translation>
     </message>
 </context>
 </TS>

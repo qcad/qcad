@@ -6,27 +6,27 @@
     <message>
         <location filename="../Arc3P.js" line="+62"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Start point</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Point on arc</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>End point</translation>
     </message>
     <message>
         <location filename="../Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;3 Points</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw arc from 3 points</translation>
     </message>
 </context>
 </TS>

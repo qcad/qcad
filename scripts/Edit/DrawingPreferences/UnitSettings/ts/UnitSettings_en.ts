@@ -6,148 +6,148 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Drawing Unit:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paper Unit:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation>Measurement System (for line types and hatch patterns):</translation>
     </message>
     <message>
         <location filename="../UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Defaults for New Drawings</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Drawing Unit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Inch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation>Foot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation type="unfinished"></translation>
+        <translation>Mile</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Millimeter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Centimeter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>Meter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Kilometer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation>Microinch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation type="unfinished"></translation>
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation>Angstrom</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Nanometer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation>Micron</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimeter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Decameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation type="unfinished"></translation>
+        <translation>Hectometer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Gigameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation>Astro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation>Lightyear</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation>Parsec</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished"></translation>
+        <translation>Imperial</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metric</translation>
     </message>
 </context>
 </TS>

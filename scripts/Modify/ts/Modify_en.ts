@@ -6,17 +6,17 @@
     <message>
         <location filename="../Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Modification Tools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show modification tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Show modification tools</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Modify</translation>
     </message>
 </context>
 <context>
@@ -24,22 +24,22 @@
     <message>
         <location filename="../ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose corner</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose first entity</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose second entity</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation>Set point</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>This tool requires a selection</translation>
     </message>
 </context>
 </TS>

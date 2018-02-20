@@ -6,57 +6,57 @@
     <message>
         <location filename="../Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Start point</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>End point</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid length</source>
-        <translation type="unfinished"></translation>
+        <translation>Invalid length</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>The two points are identical</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation type="unfinished"></translation>
+        <translation>The distance between the two points must be less than the arc length</translation>
     </message>
     <message>
         <location filename="../Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Length:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Direction:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Counter Clockwise (Positive)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Clockwise (Negative)</translation>
     </message>
     <message>
         <location filename="../Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 Points and Length</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and length</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw arc from 2 points and length</translation>
     </message>
 </context>
 </TS>

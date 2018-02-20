@@ -6,37 +6,37 @@
     <message>
         <location filename="../Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose limiting entity</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose entity to trim</translation>
     </message>
     <message>
         <location line="+169"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation type="unfinished"></translation>
+        <translation>The two entities don&apos;t intersect, or are currently not supported for trimming.</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>First entity cannot be trimmed.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entity cannot be trimmed.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Second entity cannot be trimmed.</translation>
     </message>
     <message>
         <location filename="../TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Trim</translation>
     </message>
 </context>
 </TS>

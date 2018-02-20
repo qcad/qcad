@@ -6,28 +6,28 @@
     <message>
         <location filename="../LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Defaults for New Drawings</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Linetype</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Global Linetype Scale:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Scale of linetypes matches the scale of each viewport</translation>
     </message>
 </context>
 </TS>

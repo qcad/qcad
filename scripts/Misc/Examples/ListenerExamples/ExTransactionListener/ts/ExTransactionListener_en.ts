@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExTransactionListener.js" line="+91"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Transaction Listener</translation>
     </message>
 </context>
 </TS>

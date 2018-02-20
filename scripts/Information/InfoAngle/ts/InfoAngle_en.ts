@@ -6,27 +6,27 @@
     <message>
         <location filename="../InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation type="unfinished"></translation>
+        <translation>Specify first line</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Specify second line</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Done</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle:</translation>
     </message>
     <message>
         <location filename="../InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Angle</translation>
     </message>
 </context>
 </TS>

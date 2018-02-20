@@ -6,7 +6,7 @@
     <message>
         <location filename="../InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Insert &amp;Script</translation>
     </message>
 </context>
 </TS>

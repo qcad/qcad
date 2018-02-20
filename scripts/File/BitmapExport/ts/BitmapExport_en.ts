@@ -6,123 +6,123 @@
     <message>
         <location filename="../BitmapExport.js" line="+78"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Error while generating Bitmap file &apos;%1&apos;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitmap file has been exported to &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Files</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Export as Bitmap</translation>
     </message>
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitmap Export</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Size</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Width:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Height:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pixels per drawing unit:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Export bounding box of selection</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Background</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>White</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Black</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Transparent</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparent</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Color</translation>
     </message>
     <message>
         <location line="-17"/>
         <source>Monochrome</source>
-        <translation type="unfinished"></translation>
+        <translation>Monochrome</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation type="unfinished"></translation>
+        <translation>Grayscale</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti-aliasing</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Use anti-aliasing</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Margin</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Margin:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Add extra margin to compensate for line weight</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bit&amp;map Export...</translation>
     </message>
 </context>
 <context>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../BitmapExportWorker.js" line="+106"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invalid image size (width x height must be less than %1)</translation>
     </message>
 </context>
 </TS>

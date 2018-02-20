@@ -6,7 +6,7 @@
     <message>
         <location filename="../QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quit</translation>
     </message>
 </context>
 </TS>

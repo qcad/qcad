@@ -6,12 +6,12 @@
     <message>
         <location filename="../SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Select &amp;All</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Select all visible entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Select all visible entities</translation>
     </message>
 </context>
 </TS>

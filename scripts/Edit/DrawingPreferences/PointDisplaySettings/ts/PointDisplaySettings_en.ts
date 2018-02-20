@@ -6,28 +6,28 @@
     <message>
         <location filename="../PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Defaults for New Drawings</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Point Display</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>General</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation type="unfinished"></translation>
+        <translation>Mode: </translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation type="unfinished"></translation>
+        <translation>Size (pixel):</translation>
     </message>
 </context>
 </TS>

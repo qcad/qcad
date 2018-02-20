@@ -136,9 +136,13 @@
         <translation type="vanished">Del tega programa © 2012 Nokia Corporation ter/ali njihovih podružnic.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
-        <translation type="unfinished">Del tega programa © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+        <translation type="obsolete">Del tega programa © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Portions of this software © %1 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>

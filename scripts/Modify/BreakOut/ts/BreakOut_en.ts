@@ -6,22 +6,22 @@
     <message>
         <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose line, arc, circle, ellipse, spline or polyline segment</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Choose line, arc, circle or ellipse segment</translation>
     </message>
     <message>
         <location filename="../BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Remove Segment</translation>
     </message>
     <message>
         <location filename="../BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Break out Segment</translation>
     </message>
 </context>
 </TS>

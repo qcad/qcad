@@ -6,7 +6,7 @@
     <message>
         <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Character Map</translation>
     </message>
 </context>
 <context>
@@ -14,32 +14,32 @@
     <message>
         <location filename="../Text.js" line="+88"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location filename="../Text.ui" line="+17"/>
         <source>Contents:</source>
-        <translation type="unfinished"></translation>
+        <translation>Contents:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Height:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle:</translation>
     </message>
     <message>
         <location filename="../TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Text</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation>Draw text</translation>
     </message>
 </context>
 <context>
@@ -47,345 +47,346 @@
     <message>
         <location filename="../TextDialog/TextDialog.js" line="+242"/>
         <source>Default value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Default value:</translation>
     </message>
     <message>
         <location line="+266"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Undo</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Redo</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Cu&amp;t</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copy</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Paste</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bold</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Italic</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Subscript</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Superscript</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Color...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Special Characters...</translation>
     </message>
     <message>
         <location line="+305"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>Others...</translation>
     </message>
     <message>
         <location line="+131"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Degree</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus-Minus</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Diameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Almost equal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Multiplication</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Division</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identity</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Not equal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished"></translation>
+        <translation>Omega</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished"></translation>
+        <translation>Squared</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation>Cubed</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation>No-break space</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Main Font</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Height:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Text Height in Drawing Units</translation>
     </message>
     <message>
         <location line="+18"/>
         <location line="+268"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Bold</translation>
     </message>
     <message>
         <location line="-261"/>
         <location line="+274"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Italic</translation>
     </message>
     <message>
         <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>Text fits on one line and has no formatting</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Simple text
+(one line, no formatting)</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Rich Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Rich Text</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Cut</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Paste</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Insert Symbol...</source>
-        <translation type="unfinished"></translation>
+        <translation>Insert Symbol...</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Source</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribute Details</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prompt:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Value:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Text Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>Text Geometry</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Line spacing factor:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Line Spacing Factor</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation Angle</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Alignment</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Top Left</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Top Center</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Middle Right</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Top Right</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Middle Center</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Middle Left</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Base Left</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Base Center</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Base Right</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Bottom Left</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Bottom Center</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Bottom Right</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
 </context>
 </TS>
