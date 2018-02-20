@@ -134,7 +134,7 @@
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Partes de este software © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>

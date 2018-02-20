@@ -17,11 +17,11 @@
         <translation type="vanished">%1 entità sono stati duplicati</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Duplicate.js" line="+58"/>
-        <source>%n entities duplicated</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <location filename="../Duplicate.js" line="+54"/>
+        <source>%n entity/ies duplicated</source>
+        <translation>
+            <numerusform>Un entità è stato duplicato</numerusform>
+            <numerusform>%n entità sono stati duplicati</numerusform>
         </translation>
     </message>
 </context>

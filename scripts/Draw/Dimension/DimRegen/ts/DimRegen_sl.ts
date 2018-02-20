@@ -8,10 +8,19 @@
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Ni izbrana nobena kotirna entiteta z prilagojeno lokacijo napisa.</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+3"/>
+        <source>Label position of %n dimension(s) was reset.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation>Razveljavi lokacijo napisa za %1 kotiranj.</translation>
+        <translation type="vanished">Razveljavi lokacijo napisa za %1 kotiranj.</translation>
     </message>
     <message>
         <location filename="../DimRegenInit.js" line="+2"/>

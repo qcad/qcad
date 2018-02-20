@@ -3,8 +3,17 @@
 <TS version="2.1" language="sk">
 <context>
     <name>ExTransactionListener</name>
+    <message numerus="yes">
+        <location filename="../ExTransactionListener.js" line="+50"/>
+        <source>Transaction affected %n object(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../ExTransactionListener.js" line="+91"/>
+        <location line="+41"/>
         <source>&amp;Transaction Listener</source>
         <translation>&amp;Transakcia Poslucháč</translation>
     </message>

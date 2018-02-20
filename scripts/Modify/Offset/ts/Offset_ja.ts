@@ -40,15 +40,27 @@
         <source>Choose line, arc, circle or ellipse</source>
         <translation>線分,弧,円または楕円を選択してください</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+89"/>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>同心円の半径が%1から0.0を下回りました。</translation>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation type="vanished">同心円の半径が%1から0.0を下回りました。</translation>
+    </message>
+    <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>同心弧の半径が%1から0.0を下回りました。 </translation>
+        <translation type="vanished">同心弧の半径が%1から0.0を下回りました。 </translation>
     </message>
 </context>
 </TS>

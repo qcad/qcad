@@ -40,15 +40,33 @@
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Izberi črto, lok, krog ali elipso</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+89"/>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Polmer je padel pod 0,0 po %1 kocentričnimi krogi.</translation>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation type="vanished">Polmer je padel pod 0,0 po %1 kocentričnimi krogi.</translation>
+    </message>
+    <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Polmer je padel pod 0,0 po %1 kocentričnimi loki.</translation>
+        <translation type="vanished">Polmer je padel pod 0,0 po %1 kocentričnimi loki.</translation>
     </message>
 </context>
 </TS>

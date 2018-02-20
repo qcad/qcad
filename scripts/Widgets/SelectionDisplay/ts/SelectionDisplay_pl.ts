@@ -25,17 +25,42 @@
         <translatorcomment>Should be plural form</translatorcomment>
         <translation>%1 %2 na %3 warstwach</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+4"/>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translatorcomment>Should be plural form</translatorcomment>
-        <translation>%1 obiekty na warstwie „%2”</translation>
+        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n Entities</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n Layers</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translatorcomment>Should be plural form</translatorcomment>
+        <translation type="vanished">%1 obiekty na warstwie „%2”</translation>
+    </message>
+    <message>
         <source>%1 Entities on %2 Layers</source>
         <translatorcomment>Should be plural form</translatorcomment>
-        <translation>%1 obiekty na %2 warstwach</translation>
+        <translation type="vanished">%1 obiekty na %2 warstwach</translation>
     </message>
     <message>
         <source>Entities</source>
@@ -46,12 +71,13 @@ Tworzy nowy blok z istniejących obiektów
         <translation type="obsolete">Podmioty</translation>
     </message>
     <message>
+        <location line="+0"/>
         <source>on</source>
         <translatorcomment>--google--
 Aktywuj linię poleceń
 Aktywuj linię &amp;poleceń
 Wymi&amp;ar</translatorcomment>
-        <translation type="obsolete">na</translation>
+        <translation type="unfinished">na</translation>
     </message>
     <message>
         <source>Layer &apos;%1&apos;</source>

@@ -45,17 +45,33 @@
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Proszę wskazać linię, łuk, okrąg lub elipsę</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+89"/>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translatorcomment>Should be plural form</translatorcomment>
-        <translation>Promień osiągnął wartość mniejszą niż 0 po narysowaniu %1 koncentrycznych okręgów.</translation>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translatorcomment>Should be plural form</translatorcomment>
+        <translation type="vanished">Promień osiągnął wartość mniejszą niż 0 po narysowaniu %1 koncentrycznych okręgów.</translation>
+    </message>
+    <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
         <translatorcomment>Should be plural form</translatorcomment>
-        <translation>Promień osiągnął wartość mniejszą niż 0 po narysowaniu %1 koncentrycznych łuków.</translation>
+        <translation type="vanished">Promień osiągnął wartość mniejszą niż 0 po narysowaniu %1 koncentrycznych łuków.</translation>
     </message>
 </context>
 </TS>

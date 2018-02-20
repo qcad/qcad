@@ -685,6 +685,16 @@
     </message>
 </context>
 <context>
+    <name>RImporter</name>
+    <message numerus="yes">
+        <source>Grounded %n recursive block reference(s) in blocks: %1</source>
+        <translation type="obsolete">
+            <numerusform>Eine Blockreferenz geerdet in Blöcken: %1</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+</context>
+<context>
     <name>RLayer</name>
     <message>
         <source>Name</source>

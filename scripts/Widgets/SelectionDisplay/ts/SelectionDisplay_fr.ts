@@ -23,15 +23,37 @@
         <source>%1 %2 on %3 Layers</source>
         <translation>%1 %2 sur %3 calques</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+4"/>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translation>%1 entités sur calque &apos;%2&apos;</translation>
+        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <translation>
+            <numerusform>%n entité sur calque &apos;%1&apos;</numerusform>
+            <numerusform>%n entités sur calque &apos;%1&apos;</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n Entities</source>
+        <translation>
+            <numerusform>%n entité</numerusform>
+            <numerusform>%n entités</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n Layers</source>
+        <translation>
+            <numerusform>%n calque</numerusform>
+            <numerusform>%n calques</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="vanished">%1 entités sur calque &apos;%2&apos;</translation>
+    </message>
+    <message>
         <source>%1 Entities on %2 Layers</source>
-        <translation>%1 entités sur %2 calques</translation>
+        <translation type="vanished">%1 entités sur %2 calques</translation>
     </message>
     <message>
         <source>Entities</source>
@@ -50,8 +72,9 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translation type="obsolete">sur</translation>
     </message>
     <message>
+        <location line="+0"/>
         <source>on</source>
-        <translation type="vanished">sur</translation>
+        <translation>sur</translation>
     </message>
     <message>
         <source>Layer &apos;%1&apos;</source>

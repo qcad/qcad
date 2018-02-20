@@ -22,15 +22,39 @@
         <source>%1 %2 on %3 Layers</source>
         <translation>%1 %2 on %3 画層</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+4"/>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translation>%1 エンティティ on 画層 &apos;%2&apos;</translation>
+        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n Entities</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+0"/>
+        <source>on</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n Layers</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="vanished">%1 エンティティ on 画層 &apos;%2&apos;</translation>
+    </message>
+    <message>
         <source>%1 Entities on %2 Layers</source>
-        <translation>%1 エンティティ on %2 画層</translation>
+        <translation type="vanished">%1 エンティティ on %2 画層</translation>
     </message>
     <message>
         <source>Entities</source>

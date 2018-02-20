@@ -142,7 +142,7 @@
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Delen van deze software © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+19"/>

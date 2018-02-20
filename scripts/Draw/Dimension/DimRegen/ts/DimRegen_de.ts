@@ -8,10 +8,17 @@
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Keine Bemassungen mit Benutzerdefinierter Beschriftungsposition ausgewählt.</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+3"/>
+        <source>Label position of %n dimension(s) was reset.</source>
+        <translation>
+            <numerusform>Beschriftungsposition von einer Bemassung zurückgesetzt.</numerusform>
+            <numerusform>Beschriftungsposition von %n Bemassungen zurückgesetzt.</numerusform>
+        </translation>
+    </message>
+    <message>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation>Beschriftungsposition von %1 Bemassung(en) zurückgesetzt.</translation>
+        <translation type="vanished">Beschriftungsposition von %1 Bemassung(en) zurückgesetzt.</translation>
     </message>
     <message>
         <location filename="../DimRegenInit.js" line="+2"/>

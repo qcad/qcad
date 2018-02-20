@@ -60,15 +60,29 @@
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+89"/>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreis(en).</translation>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Radius kleiner als 0.0 nach einem konzentrischen Kreis.</numerusform>
+            <numerusform>Radius kleiner als 0.0 nach %n konzentrischen Kreisen.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Radius kleiner als 0.0 nach einem konzentrischen Kreisbogen.</numerusform>
+            <numerusform>Radius kleiner als 0.0 nach %n konzentrischen Kreisbögen.</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreis(en).</translation>
+    </message>
+    <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
+        <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
 </context>
 </TS>

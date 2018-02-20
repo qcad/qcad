@@ -8,10 +8,18 @@
         <source>No dimension entities with custom label positions selected.</source>
         <translation>Нет размерных объектов с выбранными позициями пользовательних меток.</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+3"/>
+        <source>Label position of %n dimension(s) was reset.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation>Сбросить позицию метки из %1 размера(ов)</translation>
+        <translation type="vanished">Сбросить позицию метки из %1 размера(ов)</translation>
     </message>
     <message>
         <location filename="../DimRegenInit.js" line="+2"/>

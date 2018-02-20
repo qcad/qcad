@@ -8,15 +8,31 @@
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Vyberte čiaru, oblúk, kružnicu alebo elipsu</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+89"/>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Polomer klesol pod 0.0 po %1 sústredných kružniciach.</translation>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation type="vanished">Polomer klesol pod 0.0 po %1 sústredných kružniciach.</translation>
+    </message>
+    <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Polomer klesol pod 0.0 po %1 sústredných oblúkoch.</translation>
+        <translation type="vanished">Polomer klesol pod 0.0 po %1 sústredných oblúkoch.</translation>
     </message>
     <message>
         <location filename="../Offset.ui" line="+17"/>

@@ -70,9 +70,11 @@ Do you wish to recover them?</source>
         <location line="+19"/>
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Un archivo de copia de &apos;guardado automática&apos; para un dibujo sin título fue encontrado.
+¿Quiere recuperarlo?</numerusform>
+            <numerusform>%n archivos de copia de &apos;guardado automática&apos; para dibujos sin título se encontraron.
+¿Quiere recuperarlos?</numerusform>
         </translation>
     </message>
     <message>

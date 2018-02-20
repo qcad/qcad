@@ -52,15 +52,29 @@
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Choisissez ligne, arc, cercle ou ellipse</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+89"/>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Rayon chuté en dessous de zéro après %1 cercle(s) concentrique(s).</translation>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Rayon chuté en dessous de zéro après %n cercle concentrique.</numerusform>
+            <numerusform>Rayon chuté en dessous de zéro après %n cercles concentriques.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Rayon chuté en dessous de zéro, après %n arc concentrique.</numerusform>
+            <numerusform>Rayon chuté en dessous de zéro, après %n arcs concentriques.</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation type="vanished">Rayon chuté en dessous de zéro après %1 cercle(s) concentrique(s).</translation>
+    </message>
+    <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
+        <translation type="vanished">Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
 </context>
 </TS>

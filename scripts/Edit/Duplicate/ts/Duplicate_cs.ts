@@ -17,8 +17,8 @@
         <translation>&amp;Duplikovat</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Duplicate.js" line="+58"/>
-        <source>%n entities duplicated</source>
+        <location filename="../Duplicate.js" line="+54"/>
+        <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>

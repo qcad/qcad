@@ -8,15 +8,23 @@
         <source>Choose line, arc, circle or ellipse</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+89"/>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="unfinished"></translation>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+3"/>
-        <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="unfinished"></translation>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../Offset.ui" line="+17"/>

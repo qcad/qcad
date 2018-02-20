@@ -9,8 +9,15 @@
         <translation>&amp;Duplizieren</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Duplicate.js" line="+58"/>
         <source>%n entities duplicated</source>
+        <translation type="vanished">
+            <numerusform>Ein Objekt dupliziert</numerusform>
+            <numerusform>%n Objekte dupliziert</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../Duplicate.js" line="+54"/>
+        <source>%n entity/ies duplicated</source>
         <translation>
             <numerusform>Ein Objekt dupliziert</numerusform>
             <numerusform>%n Objekte dupliziert</numerusform>

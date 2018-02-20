@@ -18,15 +18,42 @@
         <source>%1 %2 on %3 Layers</source>
         <translation>%1 %2 op %3 laagen</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+4"/>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translation>%1 objecten op laag &apos;%2&apos;</translation>
+        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <translation>
+            <numerusform>Een object op laag &apos;%1&apos;</numerusform>
+            <numerusform>%n objecten op laag &apos;%1&apos;</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n Entities</source>
+        <translation>
+            <numerusform>Een object</numerusform>
+            <numerusform>%n objecten</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+0"/>
+        <source>on</source>
+        <translation>op</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n Layers</source>
+        <translation>
+            <numerusform>een laag</numerusform>
+            <numerusform>%n laagen</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="vanished">%1 objecten op laag &apos;%2&apos;</translation>
+    </message>
+    <message>
         <source>%1 Entities on %2 Layers</source>
-        <translation>%1 objecten op %2 laagen</translation>
+        <translation type="vanished">%1 objecten op %2 laagen</translation>
     </message>
     <message>
         <location line="+4"/>

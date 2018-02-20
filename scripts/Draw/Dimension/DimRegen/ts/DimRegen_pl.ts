@@ -9,11 +9,19 @@
         <translatorcomment>--google--</translatorcomment>
         <translation>Nie zaznaczono wymiarów z dostosowanym położeniem etykiet.</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+3"/>
+        <source>Label position of %n dimension(s) was reset.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
         <source>Reset label position of %1 dimension(s).</source>
         <translatorcomment>Form should be plural.</translatorcomment>
-        <translation>Przywrócono położenie etykiet %1 wymiaru(ów).</translation>
+        <translation type="vanished">Przywrócono położenie etykiet %1 wymiaru(ów).</translation>
     </message>
     <message>
         <location filename="../DimRegenInit.js" line="+2"/>

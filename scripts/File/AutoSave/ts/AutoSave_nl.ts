@@ -52,9 +52,11 @@ Wilt u deze herstellen?</translation>
         <location line="+19"/>
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Een &apos;auto-opslaan&apos; bestand voor een naamloos tekening werd gevonden.
+Wilt u de tekening herstellen?</numerusform>
+            <numerusform>%n &apos;auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
+Wilt u deze herstellen?</numerusform>
         </translation>
     </message>
     <message>

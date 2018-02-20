@@ -52,15 +52,29 @@
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Elija línea, arco, círculo o elipse</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+89"/>
-        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Radio caído por debajo de 0,0 después %1 de círculos concéntricos.</translation>
+        <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation>
+            <numerusform>Radio caído por debajo de 0,0 después %n de círculo concéntrico.</numerusform>
+            <numerusform>Radio caído por debajo de 0,0 después %n de círculos concéntricos.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation>
+            <numerusform>Radio caído por debajo de 0,0 después %n arco concéntrico.</numerusform>
+            <numerusform>Radio caído por debajo de 0,0 después %n de arcos concéntricos.</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
+        <translation type="vanished">Radio caído por debajo de 0,0 después %1 de círculos concéntricos.</translation>
+    </message>
+    <message>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
+        <translation type="vanished">Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
 </context>
 </TS>

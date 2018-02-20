@@ -8,10 +8,17 @@
         <source>No dimension entities with custom label positions selected.</source>
         <translation>No objetos de dimensión seleccionados con una posición de texto personalizado.</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+3"/>
+        <source>Label position of %n dimension(s) was reset.</source>
+        <translation>
+            <numerusform>Posición de la etiqueta de %n dimensión se ha restablecido.</numerusform>
+            <numerusform>Posición de la etiqueta de %n dimensiónes se ha restablecido.</numerusform>
+        </translation>
+    </message>
+    <message>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation>Posición de la etiqueta de %1 dimensión(es) se ha restablecido.</translation>
+        <translation type="vanished">Posición de la etiqueta de %1 dimensión(es) se ha restablecido.</translation>
     </message>
     <message>
         <location filename="../DimRegenInit.js" line="+2"/>

@@ -22,23 +22,46 @@
         <source>%1 %2 on %3 Layers</source>
         <translation>%1 %2 auf %3 Layern</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location line="+4"/>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translation>%1 Objekte auf Layer &apos;%2&apos;</translation>
+        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <translation>
+            <numerusform>Ein Objekt auf Layer &apos;%1&apos;</numerusform>
+            <numerusform>%n Objekte auf Layer &apos;%1&apos;</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n Entities</source>
+        <translation>
+            <numerusform>Ein Objekt</numerusform>
+            <numerusform>%n Objekte</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n Layers</source>
+        <translation>
+            <numerusform>einem Layer</numerusform>
+            <numerusform>%n Layer</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="+3"/>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="vanished">%1 Objekte auf Layer &apos;%2&apos;</translation>
+    </message>
+    <message>
         <source>%1 Entities on %2 Layers</source>
-        <translation>%1 Objekte auf %2 Layern</translation>
+        <translation type="vanished">%1 Objekte auf %2 Layern</translation>
     </message>
     <message>
         <source>Entities</source>
         <translation type="vanished">Objekte</translation>
     </message>
     <message>
+        <location line="+0"/>
         <source>on</source>
-        <translation type="vanished">auf</translation>
+        <translation>auf</translation>
     </message>
     <message>
         <source> on </source>
