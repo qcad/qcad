@@ -36,22 +36,22 @@
     <message>
         <location filename="../EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">距离：</translation>
+        <translation>距离：</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished">编号：</translation>
+        <translation>数量：</translation>
     </message>
     <message>
         <location filename="../EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>平行曲线（给定距离）(&amp;P)</translation>
+        <translation>偏移（给定距离）(&amp;P)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation>绘制椭圆平行曲线</translation>
+        <translation>偏移现有椭圆得到新椭圆</translation>
     </message>
 </context>
 </TS>

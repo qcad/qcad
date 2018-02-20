@@ -32,7 +32,7 @@ Fecha todas as janelas</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+215"/>
+        <location filename="../PrintPreview.js" line="+232"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arraste para mover o papel</translation>
@@ -48,7 +48,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+406"/>
         <source>Export to PDF</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Exporte para PDF</translation>
@@ -79,7 +79,7 @@ lugares:\</translatorcomment>
         <translation>&amp;Prévia de Impressão</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Preview how current drawing would be printed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Visualize como o desenho atual seria impresso</translation>

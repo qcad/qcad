@@ -54,7 +54,7 @@ Tryb koloru</translatorcomment>
         <location line="+6"/>
         <source>Full color</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Pełny kolor</translation>
+        <translation>Pełny zakres barw</translation>
     </message>
     <message>
         <location line="+20"/>

@@ -16,7 +16,7 @@
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation>编辑基于选中的块引用的块</translation>
+        <translation>从选中的块引用编辑块</translation>
     </message>
 </context>
 </TS>

@@ -107,12 +107,12 @@
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>分米</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation>十米</translation>
     </message>
     <message>
         <location line="+1"/>

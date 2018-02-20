@@ -35,5 +35,10 @@ Preferências Gerais do Aplicativo
         <translatorcomment>--google--</translatorcomment>
         <translation>Escala Global de Tipo de Linha:</translation>
     </message>
+    <message>
+        <location line="+35"/>
+        <source>Scale of linetypes matches the scale of each viewport</source>
+        <translation>Escala de tipos de linha corresponde à escala de âncora de vista</translation>
+    </message>
 </context>
 </TS>

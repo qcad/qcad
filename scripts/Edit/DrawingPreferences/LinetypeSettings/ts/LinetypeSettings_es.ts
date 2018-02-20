@@ -29,6 +29,11 @@
         <translation>Escala mundial de tipos de línea:</translation>
     </message>
     <message>
+        <location line="+35"/>
+        <source>Scale of linetypes matches the scale of each viewport</source>
+        <translation>La escala de los tipos de línea coincide con la escala de cada ventana de visualización</translation>
+    </message>
+    <message>
         <source>Use screen based line patterns for model space view</source>
         <translation type="obsolete">Usar patrones de línea base de la pantalla de vista de espacio modelo</translation>
     </message>

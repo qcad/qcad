@@ -16,7 +16,7 @@
     <message>
         <location line="+23"/>
         <source>&amp;View</source>
-        <translation>Zobraziť nástroje zobrazovania</translation>
+        <translation>&amp;Zobraziť</translation>
     </message>
 </context>
 </TS>

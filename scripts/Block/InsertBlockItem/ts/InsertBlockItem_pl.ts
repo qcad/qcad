@@ -62,7 +62,7 @@ Skala:</translatorcomment>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Odbija lustrzanie wklejone obiekty pionowo</translation>
+        <translation>Odbij lustrzanie wklejone obiekty pionowo</translation>
     </message>
     <message>
         <location line="+14"/>

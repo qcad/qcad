@@ -6,7 +6,7 @@
     <message>
         <location filename="../LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>编号：</translation>
+        <translation>数量：</translation>
     </message>
     <message>
         <location filename="../LineParallelThroughInit.js" line="+2"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation type="unfinished">&amp;Y/X z punktów</translation>
+        <translation>&amp;Y/X z punktów</translation>
     </message>
 </context>
 </TS>

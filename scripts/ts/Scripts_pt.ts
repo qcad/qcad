@@ -75,7 +75,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+63"/>
+        <location filename="../EAction.js" line="+64"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -85,7 +85,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2062"/>
+        <location line="+2071"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -94,7 +94,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1789"/>
+        <location line="-1798"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -115,7 +115,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+649"/>
+        <location line="+658"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -267,7 +267,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1002"/>
+        <location filename="../WidgetFactory.js" line="+999"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--

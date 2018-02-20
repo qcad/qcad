@@ -32,10 +32,10 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+215"/>
+        <location filename="../PrintPreview.js" line="+232"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę przeciągnąć, aby przesunąć papier</translation>
+        <translation>Proszę przeciągnąć, aby przesunąć arkusz</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -48,12 +48,12 @@ Zrobione
         <translation>Zrobione</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+406"/>
         <source>Export to PDF</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Wyeksportuj do PDF</translatorcomment>
-        <translation>Wyeksportuj do PDF</translation>
+        <translation>Wyeksportuj PDF</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -90,7 +90,7 @@ Wydrukuj...</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation>Eksportuj jako PDF...</translation>
+        <translation>Eksportuj PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -98,13 +98,13 @@ Wydrukuj...</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Skala:</translatorcomment>
-        <translation>Podziałka:</translation>
+        <translation>Skala:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Podziałka rysunku</translation>
+        <translation>Określa skalę rysunku</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -179,7 +179,7 @@ Pokaż pojedynczą stronę</translatorcomment>
         <location line="+45"/>
         <source>Full Color Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Przełącz tryb pełnej palety barw</translation>
+        <translation>Przełącz tryb pełnego zakresu barw</translation>
     </message>
     <message>
         <source>ColorMode</source>
@@ -226,7 +226,7 @@ Przełącz tryb czarno-biały</translatorcomment>
         <translation>&amp;Podgląd wydruku</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Preview how current drawing would be printed</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wyświetla podgląd wydruku aktualnego rysunku</translation>

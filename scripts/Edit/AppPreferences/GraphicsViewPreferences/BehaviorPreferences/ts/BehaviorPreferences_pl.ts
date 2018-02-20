@@ -34,12 +34,12 @@
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwieranie bloku kliknięciem na odniesieniu</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Przywracanie stanu początkowego kliknięciem prawym przyciskiem</translation>
     </message>
     <message>
         <location line="+10"/>

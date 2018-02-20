@@ -7,7 +7,7 @@
         <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Dodaj dostosowaną właściwość</translation>
+        <translation>Dodawanie dostosowanej właściwości</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -38,7 +38,7 @@ Typ linii:
         <location filename="../PropertyEditor.js" line="+1324"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>*Różne*</translation>
+        <translation>*RÓŻNE*</translation>
     </message>
     <message>
         <location line="-1131"/>
@@ -95,7 +95,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
     <message>
         <location line="+60"/>
         <source>Remove this property from selected objects</source>
-        <translation>Usuń wszystkie właściwości z zaznaczonych obiektów</translation>
+        <translation>Usuń właściwość z zaznaczonych obiektów</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -219,7 +219,7 @@ Przyciąganie automatyczne</translatorcomment>
 --file: qtconfig_pl.ts--
 Tak
 &amp;Tak</translatorcomment>
-        <translation type="unfinished">Tak</translation>
+        <translation>Tak</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -229,7 +229,7 @@ Tak
 Nie można otworzyć pliku %1. Proszę sprawdzić prawa.
 Nie można otworzyć pliku %1. Proszę sprawdzić prawa
 Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
-        <translation type="unfinished">Nie</translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <location line="+312"/>

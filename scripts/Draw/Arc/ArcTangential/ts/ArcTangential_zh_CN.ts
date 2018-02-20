@@ -11,7 +11,7 @@
     <message>
         <location line="+5"/>
         <source>Choose end point of arc</source>
-        <translation>选择弧线的结束点</translation>
+        <translation>选择弧线的终点</translation>
     </message>
     <message>
         <location filename="../ArcTangential.ui" line="+17"/>
@@ -20,17 +20,17 @@
     </message>
     <message>
         <source>&amp;Tangentially connected</source>
-        <translation type="vanished">切线连接(&amp;T)</translation>
+        <translation type="vanished">相切连接(&amp;T)</translation>
     </message>
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>切向连接(&amp;T)</translation>
+        <translation>相切连接(&amp;T)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation>在基础实体上画弧切线</translation>
+        <translation>在已有实体上画相切弧</translation>
     </message>
 </context>
 </TS>

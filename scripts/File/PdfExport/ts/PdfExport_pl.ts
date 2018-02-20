@@ -7,7 +7,7 @@
         <location filename="../PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Eksportuj do P&amp;DF...</translation>
+        <translation>Eksportuj P&amp;DF...</translation>
     </message>
     <message>
         <location line="+6"/>

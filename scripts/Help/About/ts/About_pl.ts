@@ -23,7 +23,12 @@
         <translation>Oznacza to, że każdy może &lt;a href=&apos;%1&apos;&gt;uczestniczyć w tworzeniu programu&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
+        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
+        <translation type="unfinished">Fragmenty tego oprogramowania © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Program jest udostępniony w stanie takim, JAKIM JEST, BEZ JAKICHKOLWIEK GWARANCJI, WŁĄCZAJĄC W TO GWARANCJĘ ZAPROJEKTOWANIA, ZGODNOŚCI Z PRZEZNACZENIEM I PRZYDATNOŚCI DO OKREŚLONEGO CELU.</translation>
     </message>
@@ -124,12 +129,11 @@
         <translation>Wszystkie marki lub nazwy produktów są znakami towarowymi lub zarejestrowanymi znakami towarowymi i należą do ich właścicieli.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation>Fragmenty tego oprogramowania © 2008-2017 The Qt Company Ltd.</translation>
+        <translation type="vanished">Fragmenty tego oprogramowania © 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>No plugins found.</source>
         <translation>Nie odnaleziono wtyczek.</translation>
     </message>
@@ -169,7 +173,7 @@
         <translation>Nie odnaleziono dodatków skryptów.</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+45"/>
         <source>Credits</source>
         <translation>Twórcy</translation>
     </message>

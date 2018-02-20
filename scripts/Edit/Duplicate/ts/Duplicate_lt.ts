@@ -4,19 +4,18 @@
 <context>
     <name>Duplicate</name>
     <message>
-        <location filename="../Duplicate.js" line="+55"/>
-        <source>1 entity duplicated</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>%1 entities duplicated</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../Duplicate.js" line="+58"/>
+        <source>%n entity(s) duplicated</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 </TS>

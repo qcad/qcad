@@ -16,7 +16,7 @@
     <message>
         <location line="+83"/>
         <source>The two points are identical</source>
-        <translation>这两点是相同的</translation>
+        <translation>两点为同一点</translation>
     </message>
     <message>
         <location filename="../Circle2PInit.js" line="+2"/>
@@ -26,7 +26,7 @@
     <message>
         <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
-        <translation>按两个截然相反的点画圆</translation>
+        <translation>以直径上的2点画圆</translation>
     </message>
 </context>
 </TS>

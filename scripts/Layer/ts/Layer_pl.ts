@@ -20,7 +20,7 @@
 --file: qcad_pl.ts--
 Wars&amp;twa
 Użyj bieżącej &amp;warstwy</translatorcomment>
-        <translation>Wars&amp;twa</translation>
+        <translation>W&amp;arstwa</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -56,7 +56,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+186"/>
+        <location filename="../LayerDialog.js" line="+190"/>
         <source>Leading or trailing spaces.</source>
         <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>

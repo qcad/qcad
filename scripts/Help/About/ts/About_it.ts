@@ -81,12 +81,11 @@
         <translation>Versione Qt:</translation>
     </message>
     <message>
-        <location line="-74"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation>Porzioni di questo software © 2008-2017 The Qt Company Ltd.</translation>
+        <translation type="vanished">Porzioni di questo software © 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+4"/>
         <source>License:</source>
         <translation>Licenza:</translation>
     </message>
@@ -133,6 +132,11 @@
         <translation>Tutti i nomi di marchio o di prodotto sono diritti registrati dai rispettivi proprietari.</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
+        <translation type="unfinished">Porzioni di questo software © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+    </message>
+    <message>
         <source>Portions of this software © 2013 Digia Plc.</source>
         <translation type="vanished">Porzioni di questo software © 2013 Digia Plc.</translation>
     </message>
@@ -141,7 +145,7 @@
         <translation type="vanished">Porzioni di questo software © 2012 Nokia Corporation e / o della sua controllata(ies).</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+19"/>
         <source>No plugins found.</source>
         <translation>Nessun plugin trovato.</translation>
     </message>
@@ -185,7 +189,7 @@
         <translation>Nessuno script add-on disponibile.</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+45"/>
         <source>Credits</source>
         <translation>Crediti</translation>
     </message>

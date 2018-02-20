@@ -7,7 +7,7 @@
         <location filename="../InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę wskazać następny narożnik wieloboku</translation>
+        <translation>Proszę wskazać następny narożnik wielokąta</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -23,7 +23,7 @@ Zrobione
         <location line="+138"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Pole wieloboku:</translation>
+        <translation>Pole wielokąta:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -42,7 +42,7 @@ Obwód: %1</translatorcomment>
         <location line="+14"/>
         <source>Close Tool.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zamknij Tool.</translation>
+        <translation type="unfinished">Zamknij narzędzie.</translation>
     </message>
     <message>
         <location filename="../InfoAreaInit.js" line="+2"/>

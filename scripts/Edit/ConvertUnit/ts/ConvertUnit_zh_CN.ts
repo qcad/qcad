@@ -16,7 +16,7 @@
     <message>
         <location line="+119"/>
         <source>Converted drawing from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation>将图形从 %1 转换成 %2</translation>
     </message>
     <message>
         <location filename="../ConvertUnitInit.js" line="+2"/>

@@ -11,7 +11,7 @@
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>无方案</translation>
     </message>
 </context>
 <context>
@@ -70,18 +70,18 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+63"/>
+        <location filename="../EAction.js" line="+64"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2062"/>
+        <location line="+2071"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1789"/>
+        <location line="-1798"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
@@ -92,7 +92,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+649"/>
+        <location line="+658"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -209,7 +209,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1002"/>
+        <location filename="../WidgetFactory.js" line="+999"/>
         <source>Restore defaults</source>
         <translation type="unfinished"></translation>
     </message>

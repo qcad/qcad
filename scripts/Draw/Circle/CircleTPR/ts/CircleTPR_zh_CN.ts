@@ -48,22 +48,22 @@
     <message>
         <location filename="../CircleTPR.js" line="+39"/>
         <source>Point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation>圆上的点</translation>
     </message>
     <message>
         <location filename="../CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>相切，点和半径(&amp;T)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>过点和给定半径画实体的相切圆</translation>
     </message>
     <message>
         <location filename="../CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>半径：</translation>
     </message>
 </context>
 </TS>

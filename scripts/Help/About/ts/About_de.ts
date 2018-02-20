@@ -32,7 +32,12 @@
         <translation type="vanished">Teile dieser Software sind © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
+        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
+        <translation type="unfinished">Teile dieser Software sind © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE JEDE GEWÄHRLEISTUNG - sogar ohne die implizite Gewährleistung der MARKTREIFE oder der EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.</translation>
     </message>
@@ -81,12 +86,11 @@
         <translation>Qt Version:</translation>
     </message>
     <message>
-        <location line="-74"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation>Teile dieser Software sind © 2008-2017 The Qt Company Ltd.</translation>
+        <translation type="vanished">Teile dieser Software sind © 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+4"/>
         <source>License:</source>
         <translation>Lizenz:</translation>
     </message>
@@ -193,7 +197,7 @@
         <translation>Keine Script Add-ons gefunden.</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+45"/>
         <source>Credits</source>
         <translation>Beitragende</translation>
     </message>

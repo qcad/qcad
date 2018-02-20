@@ -6,12 +6,12 @@
     <message>
         <location filename="../InsertBlockItem.js" line="+101"/>
         <source>Cannot import file from URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>不能从 URL 链接插入文件：</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>将无效块的名称设为‘%1’</translation>
+        <translation>将无效块的名称设为 &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -26,7 +26,7 @@
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>用这个角度旋转粘贴的实体</translation>
+        <translation>根据这个角度&lt;br&gt;旋转粘贴的实体</translation>
     </message>
     <message>
         <location line="+100"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>用因子缩放粘贴的实体</translation>
+        <translation>根据此比例&lt;br&gt;缩放粘贴的实体</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -51,7 +51,7 @@
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>用粘贴板的层覆盖图中现存的层</translation>
+        <translation>用剪贴板中的层覆盖图中现有层</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation>用粘贴板中的块覆盖图中现存的块</translation>
+        <translation>用剪贴板中的块覆盖图中现有块</translation>
     </message>
     <message>
         <location line="+3"/>

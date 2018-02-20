@@ -20,7 +20,7 @@
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../NewFile.js" line="+140"/>
+        <location filename="../NewFile.js" line="+141"/>
         <source>Opening drawing:</source>
         <translation>Avaamassa piirrosta:</translation>
     </message>
@@ -70,7 +70,7 @@
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+159"/>
+        <location line="+139"/>
         <source>Untitled %1</source>
         <translation>Nimetön %1</translation>
     </message>

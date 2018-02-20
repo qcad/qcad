@@ -6,7 +6,7 @@
     <message>
         <location filename="../Arc3P.js" line="+62"/>
         <source>Start point</source>
-        <translation>起始点</translation>
+        <translation>起点</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -16,17 +16,17 @@
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation>结束点</translation>
+        <translation>终点</translation>
     </message>
     <message>
         <location filename="../Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>三个点(&amp;3)</translation>
+        <translation>三点(&amp;3)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation>按三点画弧</translation>
+        <translation>以三点画弧</translation>
     </message>
 </context>
 </TS>

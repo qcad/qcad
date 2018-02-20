@@ -77,12 +77,11 @@
         <translation>Версия Qt:</translation>
     </message>
     <message>
-        <location line="-74"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation type="unfinished">Фрагменты этой программы © 2008-2016 The Qt Company Ltd. {2008-2017 ?}</translation>
+        <translation type="obsolete">Фрагменты этой программы © 2008-2016 The Qt Company Ltd. {2008-2017 ?}</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+4"/>
         <source>License:</source>
         <translation>Лицензия:</translation>
     </message>
@@ -137,7 +136,12 @@
         <translation type="vanished">Фрагменты этой программы © 2012 корпорация Nokia и/или её дочери.</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+3"/>
+        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
+        <translation type="unfinished">Фрагменты этой программы © 2008-2016 The Qt Company Ltd. {2008-2017 ?} {2008-2018 ?}</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>No plugins found.</source>
         <translation>Не найдено плагинов.</translation>
     </message>
@@ -177,7 +181,7 @@
         <translation>Нет найдено скриптов дополнений.</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+45"/>
         <source>Credits</source>
         <translation>Об авторах</translation>
     </message>

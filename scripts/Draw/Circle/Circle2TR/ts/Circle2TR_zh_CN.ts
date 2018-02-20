@@ -6,22 +6,22 @@
     <message>
         <location filename="../Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation>第一条线、弧线或圆</translation>
+        <translation>第一条直线、弧或圆</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second line, arc or circle</source>
-        <translation>第二条线、弧线或圆</translation>
+        <translation>第二条直线、弧或圆</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>选择方案</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>No solution</source>
-        <translation>无解决方案</translation>
+        <translation>无方案</translation>
     </message>
     <message>
         <source>Invalid radius</source>
@@ -35,12 +35,12 @@
     <message>
         <location filename="../Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>2条切线与半径(&amp;T)</translation>
+        <translation>双切线和半径(&amp;T)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation>按给定的半径向两个实体画切线</translation>
+        <translation>以给定的半径画两实体的公切圆</translation>
     </message>
 </context>
 </TS>

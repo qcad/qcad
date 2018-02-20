@@ -57,7 +57,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation>按中心、弧上的点和角度画弧</translation>
+        <translation>以中心、弧上的点和角度画弧</translation>
     </message>
 </context>
 </TS>

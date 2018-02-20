@@ -109,7 +109,7 @@ Skala:</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Pętla nie zamknięta w punkcie %1/%2.</translation>
+        <translation>Kontur nie zamknięty w punkcie %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -119,12 +119,12 @@ Skala:</translatorcomment>
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&amp;Kreskowanie zaznaczenia</translation>
+        <translation>Zakreskowanie &amp;zaznaczenia</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Kreskuje lub wypełnia zaznaczony kontur</translation>
+        <translation>Zakreskowuje lub wypełnia jednolicie zaznaczony kontur</translation>
     </message>
 </context>
 </TS>

@@ -52,7 +52,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+186"/>
+        <location filename="../LayerDialog.js" line="+190"/>
         <source>Leading or trailing spaces.</source>
         <translation>上部または下部の余白</translation>
     </message>

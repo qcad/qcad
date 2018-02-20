@@ -60,7 +60,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+69"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+92"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+96"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+77"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -236,7 +236,7 @@
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RFaceEntity.cpp" line="+2"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+9"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+10"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -561,7 +561,7 @@ Punkt główny|Y</translatorcomment>
         <location line="+1"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-10"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-11"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
@@ -651,10 +651,20 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
+        <translation>Blok strzałki</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-48"/>
+        <source>Clockwise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
+        <location line="+1"/>
+        <source>Counterclockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Polyline Pattern</source>
         <translation>Wzór linia łamana</translation>
     </message>
@@ -672,16 +682,21 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Początkowa szerokość</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Końcowa szerokość</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
+        <translation type="unfinished">Ogólna szerokość</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Orientation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -763,17 +778,17 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <location line="+1"/>
         <source>Fit Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dopasuj punkt</translation>
+        <translation>Punkt dopasowania</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation>Knot wektor</translation>
+        <translation type="unfinished">Knot wektor</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation>Knot</translation>
+        <translation type="unfinished">Knot</translation>
     </message>
     <message>
         <source>Simple</source>
@@ -877,12 +892,12 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stały kąt</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Niewidoczny</translation>
     </message>
 </context>
 </TS>

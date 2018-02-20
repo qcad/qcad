@@ -35,7 +35,7 @@ Wszystkie pliki (*.*)</translatorcomment>
         <source>Bitmap Export</source>
         <translatorcomment>--google--
 Eksportuj bitmapę...</translatorcomment>
-        <translation type="unfinished">Eksportowanie bitmapy</translation>
+        <translation>Eksportowanie bitmapy</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -74,12 +74,12 @@ Wysokość tekstu:</translatorcomment>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyeksportowanie prostokąta zaznaczenia</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Transparent</source>
-        <translation type="unfinished"></translation>
+        <translation>Przezroczyste</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -132,7 +132,7 @@ Minimalny odstęp siatki (piksele)</translatorcomment>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation>Dodanie dodatkowego marginesu, aby skompensować grubość linii</translation>
+        <translation>Dodanie dodatkowego marginesu kompensującego grubość linii</translation>
     </message>
     <message>
         <location line="-170"/>

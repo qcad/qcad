@@ -313,7 +313,7 @@ Na wpół pogrubiony</translatorcomment>
 --file: qt_pl.ts--
 [10300-1032F] Old Italic
 Old Italic</translatorcomment>
-        <translation type="unfinished">Kursywa</translation>
+        <translation>Kursywa</translation>
     </message>
     <message>
         <location line="-260"/>
@@ -412,7 +412,7 @@ CTRL+I</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation>Etykieta:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -437,7 +437,7 @@ CTRL+I</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Współczynnik odstępu między liniami</translatorcomment>
-        <translation>Współczynnik odległości między wierszami</translation>
+        <translation>Określa sspółczynnik odległości między wierszami</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -456,7 +456,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
 Wprowadź kąt obrotu:
 Wprowadź kąt obrotu
 Kąt obracania</translatorcomment>
-        <translation>Kąt obrotu</translation>
+        <translation>Określa kąt obrotu</translation>
     </message>
     <message>
         <location line="+25"/>

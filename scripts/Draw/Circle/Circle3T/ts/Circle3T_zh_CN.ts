@@ -6,28 +6,28 @@
     <message>
         <location filename="../Circle3T.js" line="+84"/>
         <source>First line, arc or circle</source>
-        <translation>第一个线，弧或圆</translation>
+        <translation>第一条直线，弧或圆</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line, arc or circle</source>
-        <translation>第二个线，弧或圆</translation>
+        <translation>第二条直线，弧或圆</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Third line, arc or circle</source>
-        <translation>第三个线，弧或圆</translation>
+        <translation>第三条直线，弧或圆</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation>选择解决方案</translation>
+        <translation>选择方案</translation>
     </message>
     <message>
         <location line="+115"/>
         <location line="+61"/>
         <source>No solution</source>
-        <translation>无解决方案</translation>
+        <translation>无方案</translation>
     </message>
     <message>
         <location filename="../Circle3TInit.js" line="+2"/>
@@ -37,7 +37,7 @@
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to three entities</source>
-        <translation>绘制与三个实体相切的圆</translation>
+        <translation>画三实体的公切圆</translation>
     </message>
 </context>
 </TS>

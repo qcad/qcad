@@ -11,7 +11,7 @@
     <message>
         <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation>编号(&amp;N)：</translation>
+        <translation>数量(&amp;N)：</translation>
     </message>
     <message>
         <location filename="../LineParallelInit.js" line="+2"/>

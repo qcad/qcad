@@ -40,7 +40,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">SelectionMode</translation>
+        <translation>TrybZaznaczania</translation>
     </message>
     <message>
         <location line="-53"/>

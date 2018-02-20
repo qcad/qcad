@@ -58,23 +58,23 @@ Wskaż pozycje</translatorcomment>
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation>Odbija blok lustrzanie w poziomie</translation>
+        <translation>Odbij blok lustrzanie w poziomie</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation>Odbija blok lustrzanie w pionie</translation>
+        <translation>Odbij blok lustrzanie w pionie</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation>Odbija blok lustrzanie w pionie</translation>
+        <translation>Wstaw pojedynczy blok</translation>
     </message>
     <message>
         <location line="+17"/>
         <location filename="../InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation>Tablica bloków</translation>
+        <translation>Wstaw tablicę bloków</translation>
     </message>
     <message>
         <location filename="../InsertBlockDialog.ui" line="+12"/>

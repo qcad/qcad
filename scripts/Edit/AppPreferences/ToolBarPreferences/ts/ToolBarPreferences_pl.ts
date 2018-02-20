@@ -26,7 +26,7 @@
     <message>
         <location line="+6"/>
         <source>Shortcut Prefix Character:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Znak poprzedzający skrót:</translation>
     </message>
 </context>
 <context>

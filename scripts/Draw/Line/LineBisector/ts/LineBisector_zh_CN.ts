@@ -26,7 +26,7 @@
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation>编号：</translation>
+        <translation>数量：</translation>
     </message>
     <message>
         <location filename="../LineBisectorInit.js" line="+2"/>

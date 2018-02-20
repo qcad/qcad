@@ -21,7 +21,7 @@
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation>Warstwa 0 zachowuje się zwykła warstwa (QCAD)</translation>
+        <translation>Warstwa 0 zachowuje się jak zwykła warstwa (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>

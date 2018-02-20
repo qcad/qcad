@@ -33,5 +33,10 @@ General Punctuation</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ogólna skala rodzaju linii:</translation>
     </message>
+    <message>
+        <location line="+35"/>
+        <source>Scale of linetypes matches the scale of each viewport</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

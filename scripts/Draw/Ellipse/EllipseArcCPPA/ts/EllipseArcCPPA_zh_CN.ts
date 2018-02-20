@@ -21,7 +21,7 @@
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation>椭圆长轴点或短半径</translation>
+        <translation>椭圆短轴点或短半径</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -71,7 +71,7 @@
     <message>
         <location line="+16"/>
         <source>End angle:</source>
-        <translation>最终角度：</translation>
+        <translation>终止角度：</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPA.ui" line="+17"/>
@@ -81,7 +81,7 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation>逆时针（正）</translation>
+        <translation>逆时针（正向）</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -92,7 +92,7 @@
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation>顺时针（负）</translation>
+        <translation>顺时针（负向）</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPAInit.js" line="+2"/>
@@ -102,7 +102,8 @@
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation>由中心，长轴点，长短轴比及角度绘制椭圆弧</translation>
+        <translatorcomment>The original tip text is wrong, it should be &quot;Draw ellipse arc from center, major point, minor point and angles&quot;</translatorcomment>
+        <translation>由中心，长轴点，短轴点及角度绘制椭圆弧</translation>
     </message>
 </context>
 </TS>

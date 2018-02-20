@@ -11,12 +11,12 @@
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation>数字：</translation>
+        <translation>数量：</translation>
     </message>
     <message>
         <location filename="../ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>同心的距离(&amp;C)</translation>
+        <translation>同心弧（根据偏移距离）(&amp;C)</translation>
     </message>
     <message>
         <location line="+5"/>

@@ -70,18 +70,18 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+63"/>
+        <location filename="../EAction.js" line="+64"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2062"/>
+        <location line="+2071"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1789"/>
+        <location line="-1798"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -96,7 +96,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+649"/>
+        <location line="+658"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -229,7 +229,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1002"/>
+        <location filename="../WidgetFactory.js" line="+999"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>

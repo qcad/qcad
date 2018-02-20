@@ -11,7 +11,7 @@
     <message>
         <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>数量(&amp;N)：</translation>
     </message>
     <message>
         <location filename="../OffsetInit.js" line="+2"/>

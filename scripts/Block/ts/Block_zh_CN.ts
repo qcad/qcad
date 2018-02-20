@@ -6,12 +6,12 @@
     <message>
         <location filename="../Block.js" line="+67"/>
         <source>Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>块工具</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show block tools</source>
-        <translation type="unfinished"></translation>
+        <translation>显示块工具</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -39,7 +39,7 @@
     <message>
         <location line="+11"/>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos; 块已经存在，并将被覆盖。</translation>
     </message>
     <message>
         <location line="+5"/>

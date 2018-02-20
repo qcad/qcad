@@ -4,7 +4,7 @@
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../PrintPreview.js" line="+215"/>
+        <location filename="../PrintPreview.js" line="+232"/>
         <source>Drag to move paper</source>
         <translation>Chyťte a hýbte s papierom</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+406"/>
         <source>Export to PDF</source>
         <translation>Exportovať do PDF</translation>
     </message>
@@ -124,7 +124,7 @@
         <translation>Náhľad &amp;pred tlačou</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Preview how current drawing would be printed</source>
         <translation>Náhľad ako bude aktuálny výkres tlačený</translation>
     </message>

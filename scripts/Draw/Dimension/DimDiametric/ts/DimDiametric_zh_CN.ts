@@ -6,7 +6,7 @@
     <message>
         <location filename="../DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>选择弧线或圆形实体</translation>
+        <translation>选择弧或圆</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation>画直径尺寸</translation>
+        <translation>绘制直径标注</translation>
     </message>
 </context>
 </TS>

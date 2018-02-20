@@ -16,7 +16,7 @@
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation type="unfinished"></translation>
+        <translation>终点</translation>
     </message>
     <message>
         <location line="+10"/>

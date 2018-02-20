@@ -6,12 +6,12 @@
     <message>
         <location filename="../Arc2PR.js" line="+67"/>
         <source>Start point</source>
-        <translation>起始点</translation>
+        <translation>起点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation>结束点</translation>
+        <translation>终点</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>两点完全一致</translation>
+        <translation>两点为同一点</translation>
     </message>
     <message>
         <location filename="../Arc2PR.ui" line="+17"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>逆时针方向（正向）</translation>
+        <translation>逆时针（正向）</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -47,7 +47,7 @@
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation>顺时针方向（反向）</translation>
+        <translation>顺时针（负向）</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -63,7 +63,7 @@
         <location line="+13"/>
         <location line="+17"/>
         <source>Solution</source>
-        <translation>解决方案</translation>
+        <translation>方案</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -78,7 +78,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>根据两点和半径画弧</translation>
+        <translation>以两点和半径画弧</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../DimAngular.js" line="+72"/>
         <source>Arc or first of two lines</source>
-        <translation>圆弧或两条线中的第一条</translation>
+        <translation>弧或两条直线中的第一条</translation>
     </message>
     <message>
         <location line="+12"/>

@@ -51,12 +51,12 @@
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportovať ohraničenie výberu</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Transparent</source>
-        <translation type="unfinished"></translation>
+        <translation>Priesvitné</translation>
     </message>
     <message>
         <location line="+10"/>

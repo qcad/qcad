@@ -4,7 +4,7 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="+79"/>
+        <location filename="../DrawPolyline.js" line="+80"/>
         <source>Next vertex</source>
         <translation>Siguiente vértice</translation>
     </message>

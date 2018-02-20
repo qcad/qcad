@@ -6,12 +6,12 @@
     <message>
         <location filename="../CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation>数字：</translation>
+        <translation>数量：</translation>
     </message>
     <message>
         <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation>根据点同心(&amp;t)</translation>
+        <translation>同心圆（根据圆上的点）(&amp;t)</translation>
     </message>
     <message>
         <location line="+4"/>

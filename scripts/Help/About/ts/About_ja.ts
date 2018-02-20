@@ -19,7 +19,12 @@
         <translation>これは、誰でも&lt;a href=&apos;%1&apos;&gt;参加&lt;/a&gt;できることを意味します!</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
+        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
+        <translation type="unfinished">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>プログラムは現状のまま提供され、設計、商品性、および特定の目的への適合性を含む、いかなる保証もありません。</translation>
     </message>
@@ -120,12 +125,11 @@
         <translation>すべてのブランドまたは製品名は、それぞれの所有者の商標または登録商標です。</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation>このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd.</translation>
+        <translation type="vanished">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>No plugins found.</source>
         <translation>プラグインがありません</translation>
     </message>
@@ -165,7 +169,7 @@
         <translation>スクリプト拡張機能がありません。</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+45"/>
         <source>Credits</source>
         <translation>クレジット</translation>
     </message>

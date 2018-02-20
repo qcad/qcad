@@ -6,7 +6,7 @@
     <message>
         <location filename="../DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation>选择弧线或圆实体</translation>
+        <translation>选择弧或圆</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -16,12 +16,12 @@
     <message>
         <location filename="../DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation>径向(&amp;R)</translation>
+        <translation>半径(&amp;R)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw radial dimension</source>
-        <translation>绘制径向标注</translation>
+        <translation>绘制半径标注</translation>
     </message>
 </context>
 </TS>

@@ -29,7 +29,7 @@
     <message>
         <location filename="../EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation>椭圆直径(&amp;D)</translation>
+        <translation>椭圆（根据直径）(&amp;D)</translation>
     </message>
     <message>
         <location line="+5"/>

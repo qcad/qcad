@@ -56,7 +56,7 @@
     <message>
         <location filename="../SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Proszę wybrać obiekt na warstwie</translation>
+        <translation>Proszę wskazać obiekt na warstwie</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntity.ui" line="+17"/>
@@ -74,7 +74,7 @@
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="unfinished">SelectionMode</translation>
+        <translation>TrybZaznaczania</translation>
     </message>
     <message>
         <location line="-53"/>

@@ -21,7 +21,7 @@
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation>由圆心和圆弧经过的点画圆</translation>
+        <translation>由圆心和圆上的点画圆</translation>
     </message>
 </context>
 </TS>

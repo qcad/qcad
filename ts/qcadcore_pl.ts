@@ -469,7 +469,7 @@
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation>Prosta</translation>
+        <translation>Prosty</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -553,14 +553,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wyświetl środek</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wyświetl cel</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -577,37 +577,37 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Ukryty</translation>
+        <translation>Ukryta</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyłączona</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished">Zamrożona</translation>
+        <translation>Zamrożona</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">Zablokowana</translation>
+        <translation>Zablokowana</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zwinięta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished">Drukowana</translation>
+        <translation>Drukowana</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished">Przyciąga</translation>
+        <translation>Przyciągająca</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -655,7 +655,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+571"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+582"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Wykryto rekursywne zależności bloku:</translation>
     </message>
@@ -668,7 +668,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+183"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+184"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wymaga zaznaczenia</translation>
@@ -682,7 +682,7 @@
     </message>
     <message>
         <source>Frozen</source>
-        <translation type="vanished">Mrożony</translation>
+        <translation type="obsolete">Zamrożony</translation>
     </message>
     <message>
         <source>Locked</source>

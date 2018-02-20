@@ -21,7 +21,7 @@
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>两点是相同的</translation>
+        <translation>两点为同一点</translation>
     </message>
     <message>
         <location filename="../Circle2PR.ui" line="+17"/>
@@ -31,33 +31,33 @@
     <message>
         <location line="+24"/>
         <source>Solution:</source>
-        <translation>解决方案：</translation>
+        <translation>方案：</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation>线P1-P2的中左部分</translation>
+        <translation>线P1-P2的中间偏左</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Solution</source>
-        <translation>解决方案</translation>
+        <translation>方案</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation>线P1-P2的中右部分</translation>
+        <translation>线P1-P2的中间偏右</translation>
     </message>
     <message>
         <location filename="../Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>点和半径(&amp;2)</translation>
+        <translation>2点和半径(&amp;2)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
-        <translation>按2个点和半径画弧线</translation>
+        <translation>以2点和半径画圆</translation>
     </message>
 </context>
 </TS>

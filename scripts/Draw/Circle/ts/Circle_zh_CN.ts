@@ -6,17 +6,17 @@
     <message>
         <location filename="../Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation>圆形工具</translation>
+        <translation>画圆工具</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>显示圆形工具</translation>
+        <translation>显示画圆工具</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Circle</source>
-        <translation>圆形(&amp;C)</translation>
+        <translation>圆(&amp;C)</translation>
     </message>
 </context>
 </TS>

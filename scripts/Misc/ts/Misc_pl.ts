@@ -21,7 +21,7 @@
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation>&amp;Różne</translation>
+        <translation>Róż&amp;ne</translation>
     </message>
 </context>
 </TS>

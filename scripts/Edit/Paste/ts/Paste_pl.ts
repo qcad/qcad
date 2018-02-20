@@ -55,13 +55,13 @@ Skala:</translatorcomment>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Odbija lustrzanie wklejony obiekty poziomo</translation>
+        <translation>Odbij lustrzanie wklejony obiekty poziomo</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Odbija lustrzanie wklejone obiekty pionowo</translation>
+        <translation>Odbij lustrzanie wklejone obiekty pionowo</translation>
     </message>
     <message>
         <location line="+21"/>

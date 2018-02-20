@@ -6,12 +6,12 @@
     <message>
         <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>增加空块(&amp;A)</translation>
+        <translation>创建空块(&amp;A)</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Add new empty block</source>
-        <translation>增加一个空的块</translation>
+        <translation>创建一个空块</translation>
     </message>
 </context>
 </TS>

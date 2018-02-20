@@ -75,7 +75,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+63"/>
+        <location filename="../EAction.js" line="+64"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -85,7 +85,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2062"/>
+        <location line="+2071"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -94,7 +94,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-1789"/>
+        <location line="-1798"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -110,7 +110,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+649"/>
+        <location line="+658"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -264,7 +264,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1002"/>
+        <location filename="../WidgetFactory.js" line="+999"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -391,7 +391,7 @@ Dzielenie (÷)</translatorcomment>
         <location line="+1"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Stacked tekst</translation>
+        <translation type="unfinished">Spiętrzony tekst</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -423,27 +423,27 @@ Dzielenie (÷)</translatorcomment>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Środek</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dopasowanie</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Góra</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Podstawa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Dół</translation>
     </message>
 </context>
 <context>
@@ -494,31 +494,37 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location filename="../library.js" line="+798"/>
         <source>Objects</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Obiekty</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Obiekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Nieznane obiekty</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Nieznany obiekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Bloki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Blok</translation>
     </message>
     <message>
@@ -530,6 +536,7 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Layer</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Warstwa</translation>
     </message>
     <message>
@@ -541,90 +548,91 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Layout</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Układ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Rodzaje linii</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Rodzaj linii</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Widoki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Widok</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Obiekt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entities</source>
-        <translatorcomment>Should be plural form</translatorcomment>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Obiekty</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">3dFaces</translation>
+        <translatorcomment>Plural form should be used</translatorcomment>
+        <translation>Powierzchnie 3d</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">3DFACE</translation>
+        <translatorcomment>Plural form should be used</translatorcomment>
+        <translation>Powierzchnia 3d</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translatorcomment>--google--</translatorcomment>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Odniesienia bloku</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translatorcomment>--google--</translatorcomment>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Odniesienie bloku</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Odniesienia bloku i atrybuty</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Odniesienie bloku i atrybuty</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_pl.ts--
-Rysuj łuki
-Rysuj łuk z danymi 3 punktami</translatorcomment>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Łuki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translatorcomment>--exact match--
---file: qcadlib_pl.ts--
-Ł&amp;uk
-Łuk
-Wskaż położenie linii wymiarowej łuku</translatorcomment>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Łuk</translation>
     </message>
     <message>
@@ -736,13 +744,13 @@ Wymiar rzędnej</translatorcomment>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Obrócone Wymiary</translation>
+        <translation>Wymiary obrócone</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Wymiar obrócony</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -831,19 +839,13 @@ Odnośnik
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_pl.ts--
-Rysuj równoległe do istniejących linii, łuków, okręgów
-Nie można zamknąć sekwencji linii: niewystarczająca liczba zdefiniowanych obiektów.</translatorcomment>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Linie</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translatorcomment>--exact match--
---file: qt_pl.ts--
-Aktywuj linię poleceń
-Aktywuj linię &amp;poleceń</translatorcomment>
+        <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Linia</translation>
     </message>
     <message>
@@ -931,12 +933,12 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"></translation>
+        <translation>Powierzchnie</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation>Powierzchnia</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -945,7 +947,7 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Rysuj krzywe składane
 Rysuj krzywe składane (NURBS)</translatorcomment>
-        <translation type="unfinished">Krzywe składane</translation>
+        <translation>Splajny</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -954,7 +956,7 @@ Rysuj krzywe składane (NURBS)</translatorcomment>
 --file: qcadlib_pl.ts--
 &amp;Krzywa składana
 Krzywa składana</translatorcomment>
-        <translation type="unfinished">Krzywa składana</translation>
+        <translation>Splajn</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -980,12 +982,12 @@ Wprowadź tekst</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>Rzutnie</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Rzutnia</translation>
     </message>
     <message>
         <location line="+3"/>

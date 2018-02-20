@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="vanished">环在点 %1/%2 未闭合.</translation>
+        <translation type="vanished">边界在点 %1/%2 未闭合.</translation>
     </message>
     <message>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="vanished">每个边界实体必须是直线，弧，圆，椭圆弧，椭圆，折线或曲线. 发现：</translation>
+        <translation type="vanished">每个边界实体必须是直线，弧，圆，椭圆弧，椭圆，折线或样条曲线。 发现：</translation>
     </message>
     <message>
         <source>&amp;Hatch</source>
@@ -48,7 +48,7 @@
     </message>
     <message>
         <source>Pattern</source>
-        <translation type="vanished">模式</translation>
+        <translation type="vanished">图案</translation>
     </message>
     <message>
         <source>Angle:</source>
@@ -56,7 +56,7 @@
     </message>
     <message>
         <source>Scale:</source>
-        <translation type="vanished">缩放：</translation>
+        <translation type="vanished">比例：</translation>
     </message>
 </context>
 <context>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">未选中边界.</translation>
+        <translation>未选中边界.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">环在点 %1/%2 未闭合.</translation>
+        <translation>边界在点 %1/%2 未闭合.</translation>
     </message>
     <message>
         <location line="+96"/>

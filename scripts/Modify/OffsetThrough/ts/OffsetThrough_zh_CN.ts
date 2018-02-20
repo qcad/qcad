@@ -11,7 +11,7 @@
     <message>
         <location filename="../OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>数量：</translation>
     </message>
     <message>
         <location filename="../OffsetThroughInit.js" line="+2"/>

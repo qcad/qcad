@@ -53,7 +53,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation>Otwieranie/Zapisywanie</translation>
+        <translation>Otwieranie/zapisywanie</translation>
     </message>
     <message>
         <location line="+25"/>

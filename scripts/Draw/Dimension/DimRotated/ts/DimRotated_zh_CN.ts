@@ -6,12 +6,12 @@
     <message>
         <location filename="../DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>第一延伸线的起点</translation>
+        <translation>第一尺寸界线的起点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>第二延伸线的起点</translation>
+        <translation>第二尺寸界线的起点</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation>线性的旋转(&amp;R)</translation>
+        <translation>旋转(线性的)(&amp;R)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation>在固定的角度画线性的尺寸线</translation>
+        <translation>标注固定角度方向的线性尺寸</translation>
     </message>
 </context>
 </TS>

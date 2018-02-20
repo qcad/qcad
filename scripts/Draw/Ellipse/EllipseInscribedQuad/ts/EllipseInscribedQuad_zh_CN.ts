@@ -26,12 +26,12 @@
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation>内接于四边形</translation>
+        <translation>内切于四边形</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>绘制内接于四边形的椭圆</translation>
+        <translation>绘制内切于四边形的椭圆</translation>
     </message>
 </context>
 </TS>

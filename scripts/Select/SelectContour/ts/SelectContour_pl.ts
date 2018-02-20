@@ -28,7 +28,7 @@
         <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Tryb_zaznaczania</translation>
+        <translation>TrybZaznaczania</translation>
     </message>
     <message>
         <location line="-53"/>

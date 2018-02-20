@@ -34,7 +34,7 @@ Domyślne dla nowych rysunków</translatorcomment>
         <location line="+0"/>
         <source>Layout - Viewports</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Układ - rzutnie</translation>
+        <translation>Rzutnie układu</translation>
     </message>
     <message>
         <location line="+2"/>

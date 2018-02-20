@@ -9,14 +9,20 @@
         <translation>&amp;Dupliceren</translation>
     </message>
     <message>
-        <location filename="../Duplicate.js" line="+55"/>
         <source>1 entity duplicated</source>
-        <translation>Een object is gedupliceerd</translation>
+        <translation type="vanished">Een object is gedupliceerd</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>%1 entities duplicated</source>
-        <translation>%1 objecten werden gedupliceerd</translation>
+        <translation type="vanished">%1 objecten werden gedupliceerd</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../Duplicate.js" line="+58"/>
+        <source>%n entity(s) duplicated</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 </TS>

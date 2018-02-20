@@ -28,17 +28,17 @@
     <message>
         <location filename="../EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">编号：</translation>
+        <translation>数量：</translation>
     </message>
     <message>
         <location filename="../EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>平行曲线（通过给定点）(&amp;t)</translation>
+        <translation>偏移（通过给定点）(&amp;t)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation>通过给定点绘制椭圆平行曲线</translation>
+        <translation>偏移现有椭圆得到新椭圆，新椭圆过给定点</translation>
     </message>
 </context>
 </TS>

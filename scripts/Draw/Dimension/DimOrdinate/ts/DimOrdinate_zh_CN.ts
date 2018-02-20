@@ -6,22 +6,22 @@
     <message>
         <location filename="../DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation>特征位置</translation>
+        <translation>需标注的特征位置</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation>注释引线的端点</translation>
+        <translation>引线的端点</translation>
     </message>
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>纵坐标X/Y(&amp;O)</translation>
+        <translation>坐标值(X/Y)(&amp;O)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation>绘制纵坐标标注</translation>
+        <translation>标注所选点的坐标值</translation>
     </message>
 </context>
 </TS>

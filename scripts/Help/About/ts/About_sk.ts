@@ -77,12 +77,11 @@
         <translation>Qt Verzia:</translation>
     </message>
     <message>
-        <location line="-74"/>
         <source>Portions of this software © 2008-2017 The Qt Company Ltd.</source>
-        <translation>Súčasti tohto software © 2008-2017 The Qt Company Ltd.</translation>
+        <translation type="vanished">Súčasti tohto software © 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+4"/>
         <source>License:</source>
         <translation>Licencia:</translation>
     </message>
@@ -137,7 +136,12 @@
         <translation type="vanished">Súčasti tohto softvéru © 2012 Spoločnosť Nokia a / alebo jej dcérske spoločnosti.</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+3"/>
+        <source>Portions of this software © 2008-2018 The Qt Company Ltd.</source>
+        <translation type="unfinished">Súčasti tohto software © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>No plugins found.</source>
         <translation>Nenašiel sa žiadny modul.</translation>
     </message>
@@ -177,7 +181,7 @@
         <translation>Nenašiel sa žiadny prídavný skript.</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+45"/>
         <source>Credits</source>
         <translation>Prispievatelia</translation>
     </message>

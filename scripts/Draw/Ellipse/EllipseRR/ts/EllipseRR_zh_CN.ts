@@ -29,12 +29,12 @@
     <message>
         <location filename="../EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation>椭圆半径(&amp;R)</translation>
+        <translation>椭圆（根据半径）(&amp;R)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and radii</source>
-        <translation>由位置及半径绘制椭圆</translation>
+        <translation>由位置和半径绘制椭圆</translation>
     </message>
 </context>
 </TS>

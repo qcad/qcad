@@ -6,12 +6,12 @@
     <message>
         <location filename="../Arc2PA.js" line="+65"/>
         <source>Start point</source>
-        <translation>起始点</translation>
+        <translation>起点</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation>结束点</translation>
+        <translation>终点</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>逆时针方向（正向）</translation>
+        <translation>逆时针（正向）</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -47,12 +47,12 @@
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation>顺时针方向（反向）</translation>
+        <translation>顺时针（负向）</translation>
     </message>
     <message>
         <location filename="../Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation>点和角度(&amp;2)</translation>
+        <translation>两点和角度(&amp;2)</translation>
     </message>
     <message>
         <location line="+4"/>

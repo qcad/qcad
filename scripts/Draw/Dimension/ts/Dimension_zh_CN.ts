@@ -26,7 +26,7 @@
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>弧</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -51,22 +51,22 @@
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Δ</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Dimension Tools</source>
-        <translation>尺寸工具</translation>
+        <translation>标注工具</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>显示尺寸工具</translation>
+        <translation>显示标注工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>D&amp;imension</source>
-        <translation>尺寸(&amp;i)</translation>
+        <translation>标注(&amp;i)</translation>
     </message>
     <message>
         <location filename="../Dimension.ui" line="+29"/>
@@ -106,7 +106,7 @@
     <message>
         <location line="+18"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>自动</translation>
     </message>
 </context>
 </TS>

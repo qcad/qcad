@@ -21,22 +21,22 @@
     <message>
         <location line="+107"/>
         <source>Scale X:</source>
-        <translation>缩放 X：</translation>
+        <translation>X 方向比例：</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation>根据放大因子在X方向上缩放块</translation>
+        <translation>根据 X 方向比例&lt;br&gt;缩放块</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>Y:</source>
-        <translation>Y：</translation>
+        <translation>Y 方向比例：</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation>根据放大因子在Y方向上缩放块</translation>
+        <translation>根据 Y 方向比例&lt;br&gt;缩放块</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -56,13 +56,13 @@
     <message>
         <location line="+18"/>
         <source>Single Block</source>
-        <translation type="unfinished"></translation>
+        <translation>单个块</translation>
     </message>
     <message>
         <location line="+17"/>
         <location filename="../InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>块矩阵</translation>
     </message>
     <message>
         <location filename="../InsertBlockInit.js" line="+2"/>
@@ -72,22 +72,22 @@
     <message>
         <location filename="../InsertBlockDialog.ui" line="+12"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>列数：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>行数：</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation type="unfinished"></translation>
+        <translation>列间距：</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation type="unfinished"></translation>
+        <translation>行间距：</translation>
     </message>
 </context>
 </TS>

@@ -138,7 +138,7 @@ Autozoom
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished">Automatyczne przełączanie ekranowego rodzaju linii w widoku modelu</translation>
+        <translation>Automatyczne przełączanie ekranowego rodzaju linii w widoku modelu</translation>
     </message>
     <message>
         <location line="+7"/>

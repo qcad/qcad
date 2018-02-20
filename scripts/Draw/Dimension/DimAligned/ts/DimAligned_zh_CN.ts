@@ -6,12 +6,12 @@
     <message>
         <location filename="../DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>第一延伸线的起点</translation>
+        <translation>第一尺寸界线的起点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>第二延伸线的起点</translation>
+        <translation>第二尺寸界线的起点</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation>已对齐</translation>
+        <translation>对齐(&amp;A)</translation>
     </message>
     <message>
         <location line="+4"/>

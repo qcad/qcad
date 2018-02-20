@@ -24,5 +24,10 @@
         <source>Global Linetype Scale:</source>
         <translation>Глобальный масштаб типа линии:</translation>
     </message>
+    <message>
+        <location line="+35"/>
+        <source>Scale of linetypes matches the scale of each viewport</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

@@ -4,7 +4,7 @@
 <context>
     <name>DrawPolyline</name>
     <message>
-        <location filename="../DrawPolyline.js" line="+69"/>
+        <location filename="../DrawPolyline.js" line="+70"/>
         <source>First vertex</source>
         <translation>Eerste hoekpunt</translation>
     </message>

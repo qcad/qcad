@@ -21,22 +21,22 @@
     <message>
         <location filename="../Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>恢复前一段</translation>
+        <translation>取消上一步</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation>箭头</translation>
+        <translation>箭头头部</translation>
     </message>
     <message>
         <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>前导(&amp;L)</translation>
+        <translation>引线(&amp;L)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>绘制前导（箭头序列）</translation>
+        <translation>引线标注(箭头后面跟着指引线)</translation>
     </message>
 </context>
 </TS>
