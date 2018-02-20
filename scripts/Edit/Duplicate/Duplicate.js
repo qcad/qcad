@@ -51,12 +51,12 @@ Duplicate.prototype.beginEvent = function() {
 
     di.applyOperation(op);
 
-    if (ids.length===1) {
-        EAction.handleUserMessage(qsTr("1 entity duplicated"));
-    }
-    else {
-        EAction.handleUserMessage(qsTr("%1 entities duplicated").arg(ids.length));
-    }
+//    if (ids.length===1) {
+//        EAction.handleUserMessage(qsTr("1 entity duplicated"));
+//    }
+//    else {
+        EAction.handleUserMessage(qsTr("%n entities duplicated", "", ids.length));
+//    }
 
     this.terminate();
 };

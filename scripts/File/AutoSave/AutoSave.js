@@ -172,15 +172,8 @@ AutoSave.recoverUntitled = function() {
         return false;
     }
 
-    var msg;
-    if (list.length===1) {
-        msg = qsTr("An 'autosave' backup file for an untitled drawing was found.\n" +
-            "Do you wish to recover it?");
-    }
-    else {
-        msg = qsTr("%1 'autosave' backup files for untitled drawings were found.\n" +
-            "Do you wish to recover them?").arg(list.length);
-    }
+    var msg = qsTr("%n 'autosave' backup file(s) for (an) untitled drawing(s) was/were found.\n" +
+            "Do you wish to recover it/them?", "", list.length);
 
     var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
     var ret = QMessageBox.warning(null,
