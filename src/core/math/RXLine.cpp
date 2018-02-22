@@ -130,7 +130,16 @@ RS::Ending RXLine::getTrimEnd(const RVector& trimPoint, const RVector& clickPoin
 }
 
 double RXLine::getDistanceFromStart(const RVector& p) const {
-    return basePoint.getDistanceTo(p);
+    double ret = basePoint.getDistanceTo(p);
+
+    RVector p2 = getClosestPointOnShape(p, false);
+    double angle = basePoint.getAngleTo(p2);
+    if (RMath::isSameDirection(getAngle(), angle, M_PI/2)) {
+        return ret;
+    }
+    else {
+        return -ret;
+    }
 }
 
 RVector RXLine::getBasePoint() const {
