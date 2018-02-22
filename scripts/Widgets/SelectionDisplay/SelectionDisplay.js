@@ -85,10 +85,10 @@ SelectionDisplay.selectionChanged = function(documentInterface) {
         }
     } else {
         if (layers.length == 1 ) {
-            str = qsTr("%1 Entities on Layer '%2'").arg(entities.length).arg(layers[0]);
+            str = qsTr("%n Entities on Layer '%1'", "", entities.length).arg(layers[0]);
         }
         else {
-            str = qsTr("%1 Entities on %2 Layers").arg(entities.length).arg(layers.length);
+            str = qsTr("%n Entities", "", entities.length) + " " + qsTr("on") + " " + qsTr("%n Layers", "", layers.length);
         }
     }
 

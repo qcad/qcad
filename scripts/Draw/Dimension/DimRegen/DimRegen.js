@@ -64,7 +64,7 @@ DimRegen.prototype.beginEvent = function() {
         msg = qsTr("No dimension entities with custom label positions selected.");
     }
     else {
-        msg = qsTr("Reset label position of %1 dimension(s).").arg(counter);
+        msg = qsTr("Label position of %n dimension(s) was reset.", "", counter);
     }
 
     EAction.handleUserMessage(msg);

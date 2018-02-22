@@ -161,10 +161,10 @@ Offset.prototype.getOperation = function(preview) {
         var c = RShape.getErrorCode();
         if (c!==0) {
             if (isCircleShape(this.shape)) {
-                this.error = qsTr("Radius dropped below 0.0 after %1 concentric circle(s).").arg(c-1);
+                this.error = qsTr("Radius dropped below 0.0 after %n concentric circle(s).", "", c-1);
             }
             else if (isArcShape(this.shape)) {
-                this.error = qsTr("Radius dropped below 0.0 after %1 concentric arc(s).").arg(c-1);
+                this.error = qsTr("Radius dropped below 0.0 after %n concentric arc(s).", "", c-1);
             }
         }
     }

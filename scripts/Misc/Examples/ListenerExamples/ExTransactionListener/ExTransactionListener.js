@@ -47,7 +47,7 @@ ExTransactionListener.prototype.beginEvent = function() {
         }
 
         var objIds = transaction.getAffectedObjects();
-        EAction.handleUserMessage("Transaction affected %1 objects.".arg(objIds.length));
+        EAction.handleUserMessage(qsTr("Transaction affected %n object(s).", "", objIds.length));
         if (objIds.length<10) {
             EAction.handleUserMessage("Object IDs: " + objIds.join(','));
         }
