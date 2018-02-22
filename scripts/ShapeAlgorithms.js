@@ -455,6 +455,15 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend) {
     return ShapeAlgorithms.autoSplitManual(shape, cutDist1, cutDist2, cutPos1, cutPos2, position, extend);
 };
 
+/**
+ * Cut shape at given distances / positions.
+ *
+ * \return Array of three new shapes which each might be undefined if its
+ * length would otherwise be 0.
+ * The first shape is the rest at the start of the shape.
+ * The second shape is the rest at the end of the shape.
+ * The third shape is the segment self in its new shape.
+ */
 ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, cutPos2, position, extend) {
     if (isNull(extend)) {
         extend = false;
@@ -958,7 +967,8 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
 /**
  * \return The two distances along the given shape identifying the
- * intersections points closest to the given position.
+ * intersections points closest to the given position along with the cut positions:
+ * [ [cutDist1, cutDist2], [cutPos1, cutPos2] ]
  *
  * \param onShape True: only return intersections on the shape
  * (for trimming, breaking, default).
