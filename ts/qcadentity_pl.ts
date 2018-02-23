@@ -697,7 +697,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Orientacja</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>

@@ -192,7 +192,7 @@
         <translation type="vanished">%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1403"/>
+        <location filename="../ShapeAlgorithms.js" line="+1413"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -375,7 +375,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+328"/>
+        <location filename="../autostart.js" line="+325"/>
         <source>Loading add-on translations...</source>
         <translation>アドオンの翻訳をロード中...</translation>
     </message>

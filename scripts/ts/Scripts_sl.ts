@@ -192,7 +192,7 @@
         <translation type="vanished">Polmer je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1403"/>
+        <location filename="../ShapeAlgorithms.js" line="+1413"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -375,7 +375,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+328"/>
+        <location filename="../autostart.js" line="+325"/>
         <source>Loading add-on translations...</source>
         <translation>Nalagam prevode dodatkov...</translation>
     </message>

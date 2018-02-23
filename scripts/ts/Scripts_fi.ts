@@ -192,7 +192,7 @@
         <translation type="vanished">Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1403"/>
+        <location filename="../ShapeAlgorithms.js" line="+1413"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>
@@ -375,7 +375,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+328"/>
+        <location filename="../autostart.js" line="+325"/>
         <source>Loading add-on translations...</source>
         <translation>Lataamassa lisäosia käännökseen...</translation>
     </message>

@@ -21,10 +21,10 @@
     <message numerus="yes">
         <location filename="../Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>plural form 0</numerusform>
+            <numerusform>plural form 1</numerusform>
+            <numerusform>plural form 2</numerusform>
         </translation>
     </message>
 </context>

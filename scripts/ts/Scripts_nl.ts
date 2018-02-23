@@ -188,7 +188,7 @@
         <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1403"/>
+        <location filename="../ShapeAlgorithms.js" line="+1413"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>
@@ -371,7 +371,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+328"/>
+        <location filename="../autostart.js" line="+325"/>
         <source>Loading add-on translations...</source>
         <translation>Laden van add-on vertalingen...</translation>
     </message>

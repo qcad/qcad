@@ -214,7 +214,7 @@
         <translation type="vanished">Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1403"/>
+        <location filename="../ShapeAlgorithms.js" line="+1413"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -426,7 +426,7 @@
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+328"/>
+        <location filename="../autostart.js" line="+325"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>

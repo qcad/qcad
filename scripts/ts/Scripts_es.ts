@@ -214,7 +214,7 @@
         <translation type="vanished">Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+1403"/>
+        <location filename="../ShapeAlgorithms.js" line="+1413"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -426,7 +426,7 @@
         <translation type="obsolete">Después de la inicialización...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+328"/>
+        <location filename="../autostart.js" line="+325"/>
         <source>Loading add-on translations...</source>
         <translation>Cargando complemento traducciones...</translation>
     </message>
