@@ -301,9 +301,9 @@ function setUpDragAndDrop(appWin) {
  */
 function loadTranslations(addOns, splash) {
     var locale = RSettings.getLocale();
-    if (locale === "en" || locale.toLowerCase() === "en_us") {
-        return;
-    }
+//    if (locale === "en" || locale.toLowerCase() === "en_us") {
+//        return;
+//    }
 
     if (!isNull(splash)) {
         // no translations yet:

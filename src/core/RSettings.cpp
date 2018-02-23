@@ -407,9 +407,9 @@ QString RSettings::getLocale() {
  */
 void RSettings::loadTranslations(const QString& module, const QStringList& dirs) {
     QString locale = RSettings::getLocale();
-    if (locale == "en" || locale.toLower() == "en_us") {
-        return;
-    }
+//    if (locale == "en" || locale.toLower() == "en_us") {
+//        return;
+//    }
 
     QStringList translationsDirs = dirs;
     if (translationsDirs.isEmpty()) {
