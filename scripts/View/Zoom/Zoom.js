@@ -48,7 +48,9 @@ Zoom.prototype.beginEvent = function() {
 };
 
 Zoom.getMenu = function() {
-    return EAction.getSubMenu(View.getMenu(), 3300, 100, qsTr("Zoom"), "ZoomMenu");
+    var menu = EAction.getSubMenu(View.getMenu(), 3300, 100, qsTr("Zoom"), "ZoomMenu");
+    menu.setProperty("scriptFile", Zoom.includeBasePath + "/Zoom.js");
+    return menu;
 };
 
 Zoom.getToolBar = function() {
