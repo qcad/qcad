@@ -9,7 +9,7 @@
         <translation>Povečava</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+14"/>
         <source>Zoom Tools</source>
         <translation>Orodja povečave</translation>
     </message>

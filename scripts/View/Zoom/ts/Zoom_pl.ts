@@ -9,7 +9,7 @@
         <translation>Przybliżanie</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+14"/>
         <source>Zoom Tools</source>
         <translation>Narzędzia przybliżania</translation>
     </message>

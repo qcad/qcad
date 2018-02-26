@@ -11,8 +11,8 @@
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Pozícia textu %n kóty(kót) bola resetovaná.</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>

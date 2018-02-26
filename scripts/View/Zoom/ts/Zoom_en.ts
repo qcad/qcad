@@ -9,7 +9,7 @@
         <translation>Zoom</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+14"/>
         <source>Zoom Tools</source>
         <translation>Zoom Tools</translation>
     </message>
