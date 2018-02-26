@@ -284,9 +284,13 @@ void RGuiAction::setDefaultShortcut(const QKeySequence& shortcut) {
 
 void RGuiAction::setShortcut(const QKeySequence& shortcut) {
     if (shortcut.count()==1) {
+        // single key stroke (Ctrl-A, +, ...):
+        // supported by Qt:
         QAction::setShortcut(shortcut);
     }
     else {
+        // multi key stroke (LI, ...):
+        // broken in Qt, use own implementation:
         QString key;
         for (int i=0; i<shortcut.count(); i++) {
             key += QChar(shortcut[i]);
