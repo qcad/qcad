@@ -97,6 +97,10 @@ public:
         text = t;
     }
 
+    QString getText() const {
+        return text;
+    }
+
 protected:
     bool undoable;
     bool recordAffectedObjects;
