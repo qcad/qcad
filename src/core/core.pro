@@ -270,6 +270,7 @@ HEADERS = \
     math/RTriangle.h \
     math/RVector.h \
     math/RXLine.h
+
 TEMPLATE = lib
 
 r_static_libs {
