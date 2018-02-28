@@ -1881,3 +1881,38 @@ QList<RPolyline> RPolyline::splitAtDiscontinuities(double tolerance) const {
     }
     return QList<RPolyline>() << *this;
 }
+
+double RPolyline::getBaseAngle() const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getBaseAngle(*this);
+    }
+    return 0.0;
+}
+
+double RPolyline::getWidth() const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getWidth(*this);
+    }
+    return 0.0;
+}
+
+bool RPolyline::setWidth(double v) {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->setWidth(*this, v);
+    }
+    return false;
+}
+
+double RPolyline::getHeight() const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getHeight(*this);
+    }
+    return 0.0;
+}
+
+bool RPolyline::setHeight(double v) {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->setHeight(*this, v);
+    }
+    return false;
+}

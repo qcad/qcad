@@ -56,6 +56,12 @@ public:
     virtual RVector getPointInside(const RPolyline& polyline) = 0;
 
     virtual QList<RPolyline> splitAtDiscontinuities(const RPolyline& polyline, double tolerance) = 0;
+
+    virtual double getBaseAngle(const RPolyline& polyline) = 0;
+    virtual double getWidth(const RPolyline& polyline) = 0;
+    virtual bool setWidth(RPolyline& polyline, double v) = 0;
+    virtual double getHeight(const RPolyline& polyline) = 0;
+    virtual bool setHeight(RPolyline& polyline, double v) = 0;
 };
 
 #endif

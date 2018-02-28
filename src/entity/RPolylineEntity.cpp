@@ -52,6 +52,10 @@ RPropertyTypeId RPolylineEntity::PropertyTotalLength;
 RPropertyTypeId RPolylineEntity::PropertyArea;
 RPropertyTypeId RPolylineEntity::PropertyTotalArea;
 
+RPropertyTypeId RPolylineEntity::PropertyBaseAngle;
+RPropertyTypeId RPolylineEntity::PropertyWidth;
+RPropertyTypeId RPolylineEntity::PropertyHeight;
+
 QString RPolylineEntity::TrClockwise = QString("↻ ") + QT_TRANSLATE_NOOP("REntity", "Clockwise");
 QString RPolylineEntity::TrCounterclockwise = QString("↺ ") + QT_TRANSLATE_NOOP("REntity", "Counterclockwise");
 
@@ -109,6 +113,10 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyTotalLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
     RPolylineEntity::PropertyArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
     RPolylineEntity::PropertyTotalArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
+
+    RPolylineEntity::PropertyBaseAngle.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Base Angle"));
+    RPolylineEntity::PropertyWidth.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
+    RPolylineEntity::PropertyHeight.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
 }
 
 bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -131,7 +139,7 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
             ret = true;
         }
 
-        if (PropertyOrientation==propertyTypeId) {
+        else if (PropertyOrientation==propertyTypeId) {
             if (value.type()==QVariant::String) {
                 if (value.toString()==RPolylineEntity::TrClockwise) {
                     ret = ret || data.setOrientation(RS::CW);
@@ -143,6 +151,13 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
             else {
                 ret = ret || data.setOrientation((RS::Orientation)value.toInt());
             }
+        }
+
+        else if (PropertyWidth==propertyTypeId) {
+            ret = ret || data.setWidth(value.toDouble());
+        }
+        else if (PropertyHeight==propertyTypeId) {
+            ret = ret || data.setHeight(value.toDouble());
         }
     }
 
@@ -239,6 +254,21 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
                 return qMakePair(oriStr, attr);
             }
             return qMakePair(ori, attr);
+        }
+        else if (propertyTypeId == PropertyBaseAngle) {
+            QVariant v;
+            v.setValue(data.getBaseAngle());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+        }
+        else if (propertyTypeId == PropertyWidth) {
+            QVariant v;
+            v.setValue(data.getWidth());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
+        }
+        else if (propertyTypeId == PropertyHeight) {
+            QVariant v;
+            v.setValue(data.getHeight());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
         }
     }
 

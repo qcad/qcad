@@ -74,6 +74,10 @@ public:
     static RPropertyTypeId PropertyArea;
     static RPropertyTypeId PropertyTotalArea;
 
+    static RPropertyTypeId PropertyBaseAngle;
+    static RPropertyTypeId PropertyWidth;
+    static RPropertyTypeId PropertyHeight;
+
     static QString TrClockwise;
     static QString TrCounterclockwise;
 

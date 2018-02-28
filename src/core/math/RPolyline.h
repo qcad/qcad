@@ -236,6 +236,12 @@ public:
 
     QList<RPolyline> splitAtDiscontinuities(double tolerance) const;
 
+    double getBaseAngle() const;
+    double getWidth() const;
+    bool setWidth(double v);
+    double getHeight() const;
+    bool setHeight(double v);
+
     static bool hasProxy() {
         return polylineProxy!=NULL;
     }
