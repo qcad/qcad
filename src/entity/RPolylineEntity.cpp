@@ -255,20 +255,24 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             }
             return qMakePair(ori, attr);
         }
-        else if (propertyTypeId == PropertyBaseAngle) {
-            QVariant v;
-            v.setValue(data.getBaseAngle());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
-        }
-        else if (propertyTypeId == PropertyWidth) {
-            QVariant v;
-            v.setValue(data.getWidth());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
-        }
-        else if (propertyTypeId == PropertyHeight) {
-            QVariant v;
-            v.setValue(data.getHeight());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
+
+        double baseAngle = data.getBaseAngle();
+        if (!RMath::isNaN(baseAngle)) {
+            if (propertyTypeId == PropertyBaseAngle) {
+                QVariant v;
+                v.setValue(baseAngle);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+            }
+            else if (propertyTypeId == PropertyWidth) {
+                QVariant v;
+                v.setValue(data.getWidth());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
+            }
+            else if (propertyTypeId == PropertyHeight) {
+                QVariant v;
+                v.setValue(data.getHeight());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
+            }
         }
     }
 
