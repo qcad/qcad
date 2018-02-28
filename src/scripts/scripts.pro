@@ -9,6 +9,8 @@ DESTDIR     = ../../plugins
 RC_FILE     = scripts.rc
 LIBS        += -l$${RLIBNAME}core
 
+CONFIG      += resources_big
+
 CONFIG(debug, debug|release) {
     # include development scripts, tests:
     build_pass:message("Using development qrc")
