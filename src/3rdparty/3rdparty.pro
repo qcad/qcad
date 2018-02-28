@@ -3,7 +3,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     spatialindexnavel \
     stemmer \
-    quazip
+    #quazip
 
 !r_no_opennurbs {
     SUBDIRS += opennurbs
