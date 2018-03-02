@@ -55,10 +55,13 @@ Odzyskać je?</translation>
         <location line="+19"/>
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Odnaleziono %n plik automatycznej kopii zapasowej rysunku bez nazwy.
+Odzyskać ją?</numerusform>
+            <numerusform>Odnaleziono %n pliki automatycznej kopii zapasowej rysunków bez nazwy.
+Odzyskać je?</numerusform>
+            <numerusform>Odnaleziono %n plików automatycznej kopii zapasowej rysunków bez nazwy.
+Odzyskać je?</numerusform>
         </translation>
     </message>
     <message>

@@ -15,7 +15,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wartość:</translatorcomment>
-        <translation type="unfinished">Wartość:</translation>
+        <translation>Wartość:</translation>
     </message>
     <message>
         <location line="+10"/>

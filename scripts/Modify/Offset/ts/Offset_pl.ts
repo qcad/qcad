@@ -48,19 +48,19 @@
     <message numerus="yes">
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Promień osiągnął wartość mniejszą niż 0.0 po narysowaniu %n koncentrycznego okręgu.</numerusform>
+            <numerusform>Promień osiągnął wartość mniejszą niż 0.0 po narysowaniu %n koncentrycznych okręgów.</numerusform>
+            <numerusform>Promień osiągnął wartość mniejszą niż 0.0 po narysowaniu %n koncentrycznych okręgów.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Promień osiągnął wartość mniejszą niż 0.0 po narysowaniu %n koncentrycznego łuku.</numerusform>
+            <numerusform>Promień osiągnął wartość mniejszą niż 0.0 po narysowaniu %n koncentrycznych łuków.</numerusform>
+            <numerusform>Promień osiągnął wartość mniejszą niż 0.0 po narysowaniu %n koncentrycznych łuków.</numerusform>
         </translation>
     </message>
     <message>

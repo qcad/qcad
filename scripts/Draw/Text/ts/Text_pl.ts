@@ -570,7 +570,7 @@ Anuluj
 --file: qvfb_pl.ts--
 OK
 &amp;OK</translatorcomment>
-        <translation type="unfinished">OK</translation>
+        <translation>OK</translation>
     </message>
 </context>
 </TS>

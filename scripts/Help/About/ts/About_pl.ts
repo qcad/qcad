@@ -78,7 +78,7 @@
     <message>
         <location line="-74"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fragmenty tego oprogramowania © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+78"/>

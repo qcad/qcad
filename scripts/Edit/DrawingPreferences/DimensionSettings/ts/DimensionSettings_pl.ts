@@ -125,7 +125,7 @@ Gradusy</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Jednostki geometryczne</translatorcomment>
-        <translation type="unfinished">Jednostki geometryczne</translation>
+        <translation>Jednostki geometryczne</translation>
     </message>
     <message>
         <location line="+209"/>
@@ -141,7 +141,7 @@ Jednostki geometryczne</translatorcomment>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Jednostka rysunek musi być &quot;Cal&amp;quot;, aby wyświetlać etykiety rozmiarom w formatach &amp;quot;Architektonicznych&amp;quot; lub &amp;quot;inżynieria&amp;quot;. Format zmieniony na &amp;quot;Decimal&amp;quot;.</translation>
+        <translation>Aby wyświetlać etykiety wymiarów w formacie „architektonicznym” lub „inżynierskim”, jednostką rysunku musi być „cal”. Zmieniono format na „dziesiętny”.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

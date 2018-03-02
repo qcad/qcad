@@ -60,7 +60,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+69"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+96"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+100"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+77"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -609,11 +609,13 @@
     </message>
     <message>
         <location line="+2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+11"/>
         <source>Width</source>
         <translation>Širina</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Višina</translation>
     </message>
@@ -633,7 +635,7 @@
         <translation>Blok puščice</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-48"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-60"/>
         <source>Clockwise</source>
         <translation type="unfinished"></translation>
     </message>
@@ -675,6 +677,18 @@
     <message>
         <location line="+2"/>
         <source>Orientation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Base Angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

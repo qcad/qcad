@@ -115,7 +115,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished">Wypełnienie prostokąta zaznaczenia krzyżowego:</translation>
+        <translation>Wypełnienie prostokąta zaznaczenia krzyżowego:</translation>
     </message>
     <message>
         <location line="+30"/>

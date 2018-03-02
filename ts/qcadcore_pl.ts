@@ -469,7 +469,7 @@
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
         <source>Simple</source>
-        <translation>Prosty</translation>
+        <translation>Zwykły</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -553,14 +553,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished">Wyświetl środek</translation>
+        <translation>Wyświetl środek</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished">Wyświetl cel</translation>
+        <translation>Wyświetl cel</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -597,7 +597,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished">Zwinięta</translation>
+        <translation>Zwinięta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -717,51 +717,51 @@
     </message>
     <message>
         <source>Dot</source>
-        <translation type="vanished">Kropka</translation>
+        <translation type="vanished">Wielopunktowa</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation type="vanished">Kropka (mała)</translation>
+        <translation type="vanished">Wielopunktowa (mała)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation type="vanished">Kropka (wielka)</translation>
+        <translation type="vanished">Wielopunktowa (wielka)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation type="vanished">Kreska</translation>
+        <translation type="vanished">Kreskowa</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation type="vanished">Kreska (mała)</translation>
+        <translation type="vanished">Kreskowa (mała)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation type="vanished">Kreska (wielka)</translation>
+        <translation type="vanished">Kreskowa (wielka)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation type="vanished">Kreska kropka</translation>
+        <translation type="vanished">Punktowa</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation type="vanished">Kreska kropka (mała)</translation>
+        <translation type="vanished">Punktowa (mała)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation type="vanished">Kreska kropka (wielka)</translation>
+        <translation type="vanished">Punktowa (wielka)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation type="vanished">Przerywana</translation>
+        <translation type="vanished">Dwupunktowa</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation type="vanished">Przerywana (mała)</translation>
+        <translation type="vanished">Dwupunktowa (mała)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation type="vanished">Przerywana (wielka)</translation>
+        <translation type="vanished">Dwupunktowa (wielka)</translation>
     </message>
     <message>
         <source>Center</source>
@@ -844,28 +844,28 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>Kreska kropka</translation>
+        <translation>Kreskowo-kropkowa</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dashed</source>
-        <translation>Kreska</translation>
+        <translation>Kreskowa</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Przerywana</translation>
+        <translation>Dwupunktowa</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation>Kropka</translation>
+        <translation>Kropkowa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -884,72 +884,72 @@
     <message>
         <location line="+2"/>
         <source>ISO dash</source>
-        <translation>ISO kreska</translation>
+        <translation>ISO kreskowa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation>ISO kreska odstęp</translation>
+        <translation>ISO kreskowa z odstępami</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash dot</source>
-        <translation>ISO długa-kreska kropka</translation>
+        <translation>ISO z długą kreską i kropką</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation>ISO długa-kreska podwójna-kropka</translation>
+        <translation>ISO z długą kreską i dwiema kropkami</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO długa-kreska potrójna-kropka</translation>
+        <translation>ISO z długą kreską i trzema kropkami</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dot</source>
-        <translation>ISO kropka</translation>
+        <translation>ISO kropkowa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO długa-kreska krótka-kreska</translation>
+        <translation>ISO z długą i krótką kreską</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO długa-kreska podwójna-krótka-kreska</translation>
+        <translation>ISO z długą kreską i dwoma krótkimi kreskami</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash dot</source>
-        <translation>ISO kreska kropka</translation>
+        <translation>ISO kreskowo-kropkowa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash dot</source>
-        <translation>ISO podwójna-kreska kropka</translation>
+        <translation>ISO z dwiema kreskami i kropką</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash double-dot</source>
-        <translation>ISO kreska podwójna-kropka</translation>
+        <translation>ISO kreskowa z dwiema kropkami</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash double-dot</source>
-        <translation>ISO podwójna-kreska podwójna-kropka</translation>
+        <translation>ISO z dwiema kreskami i dwiema kropkami</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation>ISO kreska potrójna-kropka</translation>
+        <translation>ISO z kreską i trzema kropkami</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation>ISO podwójna-kreska potrójna-kropka</translation>
+        <translation>ISO z dwiema kreskami i trzema kropkami</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -959,7 +959,7 @@
     <message>
         <location line="+1"/>
         <source>Hot Water</source>
-        <translation type="unfinished">Ciepła woda</translation>
+        <translation>Ciepła woda</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -974,12 +974,12 @@
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation>Zygzag</translation>
+        <translation>Zygzakowata</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tracks</source>
-        <translation type="unfinished">Ścieżki</translation>
+        <translation>Ścieżki</translation>
     </message>
     <message>
         <location line="+1"/>

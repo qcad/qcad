@@ -210,7 +210,7 @@ Przyciąganie automatyczne</translatorcomment>
         <location line="+128"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Użyj automatycznego pomiaru</translation>
+        <translation>Użyj automatycznego pomiaru</translation>
     </message>
     <message>
         <location line="+39"/>

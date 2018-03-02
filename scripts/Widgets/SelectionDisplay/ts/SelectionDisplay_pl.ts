@@ -28,28 +28,28 @@
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &apos;%1&apos;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n obiekt na warstwie „%1”</numerusform>
+            <numerusform>%n obiekty na warstwie „%1”</numerusform>
+            <numerusform>%n obiektów na warstwie „%1”</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n obiekt</numerusform>
+            <numerusform>%n obiekty</numerusform>
+            <numerusform>%n obiektów</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n warstwa</numerusform>
+            <numerusform>%n warstwy</numerusform>
+            <numerusform>%n warstw</numerusform>
         </translation>
     </message>
     <message>
@@ -77,7 +77,7 @@ Tworzy nowy blok z istniejących obiektów
 Aktywuj linię poleceń
 Aktywuj linię &amp;poleceń
 Wymi&amp;ar</translatorcomment>
-        <translation type="unfinished">na</translation>
+        <translation>na</translation>
     </message>
     <message>
         <source>Layer &apos;%1&apos;</source>
@@ -100,7 +100,7 @@ Wymi&amp;ar</translatorcomment>
     <message>
         <location filename="../SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Form</translation>
     </message>
 </context>
 </TS>

@@ -49,22 +49,22 @@
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished">Przenieś obiekt do określonego położenia</translation>
+        <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
         <location line="+358"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished">Przenieś punkt odniesienia</translation>
+        <translation>Przenieś punkt odniesienia</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished">Przenieś zaznaczenie</translation>
+        <translation>Przenieś zaznaczenie</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished">Przenieś obiekt</translation>
+        <translation>Przenieś obiekt</translation>
     </message>
     <message>
         <location line="+124"/>
@@ -107,7 +107,7 @@ Anuluj
 --file: qvfb_pl.ts--
 Brak
 Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
-        <translation type="unfinished">Brak</translation>
+        <translation>Brak</translation>
     </message>
     <message>
         <location line="+658"/>
@@ -258,7 +258,7 @@ Narzędzia CAD</translatorcomment>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Nieprawidłowy elipsa major / minor: /.</translation>
+        <translation>Nieprawidłowy elipsa major / minor: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -278,7 +278,7 @@ Przywróć ustawienia</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wstaw symbol do etykiety
 Wstaw symbol</translatorcomment>
-        <translation type="unfinished">Wstaw symbol</translation>
+        <translation>Wstaw symbol</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -346,7 +346,7 @@ Kopiuje obiekty do schowka z punktem odniesienia</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt fi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -379,7 +379,7 @@ Dzielenie (÷)</translatorcomment>
         <location line="+1"/>
         <source>Square</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Kwadrat</translation>
+        <translation>Kwadrat</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -391,7 +391,7 @@ Dzielenie (÷)</translatorcomment>
         <location line="+1"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Spiętrzony tekst</translation>
+        <translation>Spiętrzony tekst</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -407,7 +407,7 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Środek</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -417,18 +417,18 @@ Dzielenie (÷)</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyrównanie</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished">Środek</translation>
+        <translation>Środek</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished">Dopasowanie</translation>
+        <translation>Dopasowanie</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -861,12 +861,12 @@ Odnośnik
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation type="unfinished"></translation>
+        <translation>Półproste</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Półprosta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -909,7 +909,7 @@ Linia łamana</translatorcomment>
         <location line="+2"/>
         <source>Solids</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Solids</translation>
+        <translation>Bryły</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -918,7 +918,7 @@ Linia łamana</translatorcomment>
 --file: designer_pl.ts--
 Rysuj kreskowanie i jednolite wypełnienia
 Kreskowanie / całkowite Wypełnienia</translatorcomment>
-        <translation type="unfinished">Jednolity</translation>
+        <translation>Bryła</translation>
     </message>
     <message>
         <location line="+2"/>

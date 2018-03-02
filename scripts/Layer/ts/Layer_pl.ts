@@ -35,12 +35,12 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished">Odmrażanie wszystkich warstw</translation>
+        <translation>Odmrażanie wszystkich warstw</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished">Zamrażanie wszystkich warstw</translation>
+        <translation>Zamrażanie wszystkich warstw</translation>
     </message>
     <message>
         <location line="+31"/>

@@ -11,12 +11,14 @@
     <message>
         <location filename="../SelectLayer.js" line="+55"/>
         <source>%1 entities added to selection.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Plural form should be used</translatorcomment>
+        <translation>Dodano do zaznaczenia %1 obiektów.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Plural form should be used</translatorcomment>
+        <translation>Usunięto z zaznaczenia %1 obiektów.</translation>
     </message>
 </context>
 </TS>

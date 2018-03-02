@@ -215,7 +215,7 @@ Przełącz tryb czarno-biały</translatorcomment>
         <location line="+24"/>
         <source>Show More Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wyświetl więcej opcji</translation>
+        <translation>Wyświetl więcej opcji</translation>
     </message>
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>

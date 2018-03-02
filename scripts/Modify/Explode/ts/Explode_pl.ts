@@ -10,7 +10,7 @@
 --file: designer_pl.ts--
 Okno dialogowe
 Otwórz okno wyboru koloru</translatorcomment>
-        <translation type="unfinished">Okno dialogowe</translation>
+        <translation>Okno dialogowe</translation>
     </message>
     <message>
         <location line="+8"/>

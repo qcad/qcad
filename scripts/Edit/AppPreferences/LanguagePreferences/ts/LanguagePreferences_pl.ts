@@ -16,7 +16,7 @@
         <location filename="../LanguagePreferences.js" line="+56"/>
         <source>Language Settings</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Ustawienia językowe</translation>
+        <translation>Ustawienia językowe</translation>
     </message>
     <message>
         <location line="+0"/>

@@ -12,10 +12,10 @@
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Przywrócono położenie etykiet %n wymiaru.</numerusform>
+            <numerusform>Przywrócono położenie etykiet %n wymiarów.</numerusform>
+            <numerusform>Przywrócono położenie etykiet %n wymiarów.</numerusform>
         </translation>
     </message>
     <message>

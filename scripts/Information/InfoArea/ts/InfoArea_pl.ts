@@ -36,13 +36,13 @@ Obwód: %1</translatorcomment>
         <location filename="../InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Oblicz długość i zamknij narzędzie.</translation>
+        <translation>Oblicz długość i zamknij narzędzie.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Zamknij narzędzie.</translation>
+        <translation>Zamknij narzędzie.</translation>
     </message>
     <message>
         <location filename="../InfoAreaInit.js" line="+2"/>

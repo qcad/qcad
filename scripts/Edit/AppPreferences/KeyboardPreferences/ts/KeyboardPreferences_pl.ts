@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation type="unfinished">Czas wygaśnięcia skrótu:</translation>
+        <translation>Czas wygaśnięcia skrótu:</translation>
     </message>
 </context>
 <context>

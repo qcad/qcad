@@ -29,7 +29,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <location line="+1"/>
         <source>levelOfDetail</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">poziom_szczegółów</translation>
+        <translation>levelOfDetail</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -140,7 +140,7 @@ Strona %1 z %2</translatorcomment>
 --file: qt_pl.ts--
 Otwieranie przerwane
 Drukowanie przerwane</translatorcomment>
-        <translation type="unfinished">Przerwij</translation>
+        <translation>Przerwij</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -171,7 +171,7 @@ Wirtualny katalog:</translatorcomment>
         <location line="+3"/>
         <source>Attribute as:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Parametry jak:</translation>
+        <translation>Parametry jak:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -213,7 +213,7 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished">Wymuś uaktualnienie bazy danych.</translation>
+        <translation>Wymuś uaktualnienie bazy danych.</translation>
     </message>
     <message>
         <location line="+393"/>
