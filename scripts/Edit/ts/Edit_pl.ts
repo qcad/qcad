@@ -25,7 +25,7 @@ Preferencje bieżącego rysunku
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zastosuj preferencje</translation>
     </message>
     <message>
         <location line="+45"/>

@@ -643,7 +643,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation>Zanikanie</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
@@ -658,17 +658,17 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-60"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>W prawo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>W lewo</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Polyline Pattern</source>
-        <translation>Wzór linia łamana</translation>
+        <translation type="unfinished">Wzór linii łamanej</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -706,12 +706,12 @@ Punkt główny|Y</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kąt podstawy</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -768,12 +768,12 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-10"/>
         <source>Closed Periodic</source>
-        <translation></translation>
+        <translation>Zamknięty okresowy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Stopień</translation>
+        <translation>Liczba stopni</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -797,12 +797,12 @@ Wskaż następny punkt kontrolny</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation>Knot wektor</translation>
+        <translation>Wektor węzła</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation>Knot</translation>
+        <translation>Węzeł</translation>
     </message>
     <message>
         <source>Simple</source>

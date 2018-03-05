@@ -547,7 +547,7 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Włączona</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -565,7 +565,7 @@
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ogólnie</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-5"/>
@@ -612,7 +612,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wyłączenie działa jak zamrożenie</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>

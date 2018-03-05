@@ -72,7 +72,7 @@ Własne filtry</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrum</translation>
     </message>
     <message>
         <location line="+3"/>

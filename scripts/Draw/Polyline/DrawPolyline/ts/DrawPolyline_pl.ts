@@ -112,7 +112,7 @@ Zrobione
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Rysuje linię łamaną z segmentów linii i łuków</translation>
+        <translation>Rysuje linię łamaną z segmentów liniowych i łukowych</translation>
     </message>
 </context>
 </TS>
