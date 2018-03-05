@@ -183,7 +183,7 @@ public:
     RVector operator -() const;
     RVector getNegated() const;
 
-    double dot(const RVector& other) {
+    double dot(const RVector& other) const {
         return RVector::getDotProduct(*this, other);
     }
 
