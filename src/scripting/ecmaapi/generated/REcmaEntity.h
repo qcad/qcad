@@ -165,6 +165,9 @@
         to2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setZ
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBoxes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

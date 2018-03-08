@@ -145,6 +145,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
             
+            REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBoxes, "getBoundingBoxes");
             
             REcmaHelper::registerFunction(&engine, proto, getHull, "getHull");
@@ -2743,6 +2745,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntity::to2D", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntity::setZ
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntity::setZ", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntity::setZ";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("setZ", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setZ(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.setZ().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntity::setZ", context, engine);
             return result;
         }
          QScriptValue
