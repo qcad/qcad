@@ -131,7 +131,11 @@
     <comment type="block">/**
      * Flattens this shape to the X/Y plane
      */</comment>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><call><name>setZ</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setZ</name><parameter_list>(<param><decl><type><name>double</name></type> <name>z</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * \return The total length of this shape if applicable or NaN if not.

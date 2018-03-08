@@ -97,6 +97,9 @@
         to2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setZ
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

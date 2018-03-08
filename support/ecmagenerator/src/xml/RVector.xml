@@ -573,6 +573,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="findFirstFuzzy" cppName="findFirstFuzzy"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectors"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+        <arg type="double" typeName="double" name="tol"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getMinimum" cppName="getMinimum"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

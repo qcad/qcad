@@ -71,6 +71,9 @@
         ;static  QScriptValue
         setText
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getText
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

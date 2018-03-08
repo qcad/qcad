@@ -66,7 +66,7 @@
         isDirected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        to2D
+        setZ
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getVectorProperties
@@ -397,6 +397,21 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         splitAtDiscontinuities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBaseAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasProxy

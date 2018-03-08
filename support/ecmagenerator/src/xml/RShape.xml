@@ -151,7 +151,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="to2D" cppName="to2D" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="true" />
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setZ" cppName="setZ" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="double" typeName="double" name="z"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getLength" cppName="getLength" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

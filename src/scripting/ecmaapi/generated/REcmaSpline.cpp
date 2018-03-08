@@ -124,7 +124,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, copySpline, "copySpline");
             
-            REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
+            REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
             
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
             
@@ -1005,19 +1005,19 @@
             return result;
         }
          QScriptValue
-        REcmaSpline::to2D
+        REcmaSpline::setZ
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSpline::to2D", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::to2D";
+            //REcmaHelper::functionStart("REcmaSpline::setZ", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::setZ";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RSpline* self = 
-                        getSelf("to2D", context);
+                        getSelf("setZ", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1027,25 +1027,36 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
     ){
     // prepare arguments:
     
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->to2D();
+               self->setZ(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.to2D().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.setZ().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSpline::to2D", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpline::setZ", context, engine);
             return result;
         }
          QScriptValue

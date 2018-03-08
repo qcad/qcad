@@ -83,6 +83,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
             
+            REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
+            
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
             REcmaHelper::registerFunction(&engine, proto, equals, "equals");
@@ -1478,6 +1480,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::to2D", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::setZ
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::setZ", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::setZ";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RShape* self = 
+                        getSelf("setZ", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setZ(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.setZ().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::setZ", context, engine);
             return result;
         }
          QScriptValue

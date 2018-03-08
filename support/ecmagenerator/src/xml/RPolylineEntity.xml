@@ -508,6 +508,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyTotalArea" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyBaseAngle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyWidth" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHeight" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="TrClockwise" type="QString" isConst="false"
     isStatic="true" />
     <property name="TrCounterclockwise" type="QString"

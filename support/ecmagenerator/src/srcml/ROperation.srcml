@@ -98,6 +98,10 @@
         <expr_stmt><expr><name>text</name> = <name>t</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>QString</name></type> <name>getText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>text</name></expr>;</return>
+    }</block></function>
+
 </public><protected>protected:
     <decl_stmt><decl><type><name>bool</name></type> <name>undoable</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>recordAffectedObjects</name></decl>;</decl_stmt>

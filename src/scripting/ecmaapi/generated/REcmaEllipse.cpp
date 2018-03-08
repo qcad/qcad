@@ -126,7 +126,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
-            REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
+            REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
             
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
             
@@ -961,19 +961,19 @@
             return result;
         }
          QScriptValue
-        REcmaEllipse::to2D
+        REcmaEllipse::setZ
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::to2D", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::to2D";
+            //REcmaHelper::functionStart("REcmaEllipse::setZ", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setZ";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     REllipse* self = 
-                        getSelf("to2D", context);
+                        getSelf("setZ", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -983,25 +983,36 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
     ){
     // prepare arguments:
     
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->to2D();
+               self->setZ(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.to2D().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setZ().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::to2D", context, engine);
+            //REcmaHelper::functionEnd("REcmaEllipse::setZ", context, engine);
             return result;
         }
          QScriptValue

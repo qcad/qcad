@@ -311,6 +311,18 @@
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyTotalArea),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyBaseAngle",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyBaseAngle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyWidth",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyWidth),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyHeight",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyHeight),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("TrClockwise",
                 qScriptValueFromValue(&engine, RPolylineEntity::TrClockwise),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
