@@ -76,9 +76,9 @@ RPolyline::RPolyline(const QList<QSharedPointer<RShape> >& segments) :
 RPolyline::~RPolyline() {
 }
 
-void RPolyline::to2D() {
+void RPolyline::setZ(double z) {
     for (int i=0; i<vertices.size(); i++) {
-        vertices[i].z = 0.0;
+        vertices[i].z = z;
     }
 }
 

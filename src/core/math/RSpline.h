@@ -75,7 +75,7 @@ public:
     static QList<RSpline> createSplinesFromArc(const RArc& arc);
     static RSpline createBezierFromSmallArc(double r, double a1, double a2);
 
-    virtual void to2D();
+    virtual void setZ(double z);
 
     virtual QList<RVector> getVectorProperties() const;
     virtual QList<int> getIntProperties() const;

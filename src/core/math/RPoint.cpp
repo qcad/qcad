@@ -50,8 +50,8 @@ RPoint::RPoint(const RVector& position) :
 RPoint::~RPoint() {
 }
 
-void RPoint::to2D() {
-    position.z = 0.0;
+void RPoint::setZ(double z) {
+    position.z = z;
 }
 
 QList<RVector> RPoint::getVectorProperties() const {

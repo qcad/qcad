@@ -65,7 +65,7 @@ public:
         return true;
     }
 
-    virtual void to2D();
+    virtual void setZ(double z);
 
     virtual QList<RVector> getVectorProperties() const;
     virtual QList<double> getDoubleProperties() const;

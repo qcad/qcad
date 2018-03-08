@@ -52,9 +52,9 @@ RLine::RLine(const RVector& startPoint, double angle, double distance) :
 RLine::~RLine() {
 }
 
-void RLine::to2D() {
-    startPoint.z = 0.0;
-    endPoint.z = 0.0;
+void RLine::setZ(double z) {
+    startPoint.z = z;
+    endPoint.z = z;
 }
 
 QList<RVector> RLine::getVectorProperties() const {

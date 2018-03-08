@@ -50,7 +50,7 @@ public:
         return new RPoint(*this);
     }
 
-    virtual void to2D();
+    virtual void setZ(double z);
 
     virtual QList<RVector> getVectorProperties() const;
 

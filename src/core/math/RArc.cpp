@@ -56,8 +56,8 @@ RArc::RArc(const RVector& center, double radius, double startAngle,
 RArc::~RArc() {
 }
 
-void RArc::to2D() {
-    center.z = 0.0;
+void RArc::setZ(double z) {
+    center.z = z;
 }
 
 QList<RVector> RArc::getVectorProperties() const {

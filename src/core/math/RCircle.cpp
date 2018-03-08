@@ -82,8 +82,8 @@ RCircle RCircle::createFrom3Points(const RVector& p1,
     return RCircle(center, radius);
 }
 
-void RCircle::to2D() {
-    center.z = 0.0;
+void RCircle::setZ(double z) {
+    center.z = z;
 }
 
 QList<RVector> RCircle::getVectorProperties() const {

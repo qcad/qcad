@@ -56,9 +56,9 @@ RBox RXLine::getBoundingBox() const {
     );
 }
 
-void RXLine::to2D() {
-    basePoint.z = 0.0;
-    directionVector.z = 0.0;
+void RXLine::setZ(double z) {
+    basePoint.z = z;
+    directionVector.z = z;
 }
 
 QList<RVector> RXLine::getVectorProperties() const {

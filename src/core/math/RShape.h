@@ -130,7 +130,11 @@ public:
     /**
      * Flattens this shape to the X/Y plane
      */
-    virtual void to2D() = 0;
+    virtual void to2D() {
+        setZ(0.0);
+    }
+
+    virtual void setZ(double z) = 0;
 
     /**
      * \return The total length of this shape if applicable or NaN if not.

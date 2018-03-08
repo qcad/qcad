@@ -61,9 +61,9 @@ QList<RVector> REllipse::getFoci() const {
     return QList<RVector>() << getCenter()+vp << getCenter()-vp;
 }
 
-void REllipse::to2D() {
-    center.z = 0.0;
-    majorPoint.z = 0.0;
+void REllipse::setZ(double z) {
+    center.z = z;
+    majorPoint.z = z;
 }
 
 QList<RVector> REllipse::getVectorProperties() const {

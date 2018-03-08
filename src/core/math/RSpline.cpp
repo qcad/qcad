@@ -199,19 +199,19 @@ RSpline RSpline::createBezierFromSmallArc(double r, double a1, double a2) {
     return RSpline(ctrlPts, 2);
 }
 
-void RSpline::to2D() {
+void RSpline::setZ(double z) {
     bool upd = false;
 
     for (int i=0; i<controlPoints.size(); i++) {
         if (fabs(controlPoints[i].z)>RS::PointTolerance) {
-            controlPoints[i].z = 0.0;
+            controlPoints[i].z = z;
             upd = true;
         }
     }
 
     for (int i=0; i<fitPoints.size(); i++) {
         if (fabs(fitPoints[i].z)>RS::PointTolerance) {
-            fitPoints[i].z = 0.0;
+            fitPoints[i].z = z;
             upd = true;
         }
     }
