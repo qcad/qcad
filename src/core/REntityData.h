@@ -129,6 +129,7 @@ public:
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual void to2D();
+    virtual void setZ(double z);
 
     /**
      * \return List of bounding boxes that contain this entity.

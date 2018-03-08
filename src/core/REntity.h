@@ -337,6 +337,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::setZ
+     */
+    virtual void setZ(double z) {
+        getData().setZ(z);
+    }
+
+    /**
      * \copydoc REntityData::getBoundingBoxes
      */
     virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const {

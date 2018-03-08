@@ -301,6 +301,14 @@ void REntityData::to2D() {
     shape->to2D();
 }
 
+void REntityData::setZ(double z) {
+    RShape* shape = castToShape();
+    if (shape==NULL) {
+        return;
+    }
+    shape->setZ(z);
+}
+
 /**
  * \return A polygon that contains this entity.
  * Default implementation returns a polygon around the bounding box.
