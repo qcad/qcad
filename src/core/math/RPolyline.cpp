@@ -70,6 +70,10 @@ RPolyline::RPolyline(const QList<QSharedPointer<RShape> >& segments) :
         }
     }
 
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
+
     autoClose();
 }
 
@@ -99,6 +103,10 @@ void RPolyline::clear() {
     bulges.clear();
     startWidths.clear();
     endWidths.clear();
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 /**
@@ -138,6 +146,10 @@ void RPolyline::normalize(double tolerance) {
     bulges = newBulges;
     startWidths = newStartWidths;
     endWidths = newEndWidths;
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 bool RPolyline::prependShape(const RShape& shape) {
@@ -233,6 +245,10 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
         setBulgeAt(bulges.size()-2, bulge);
     }
 
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
+
     return ret;
 }
 
@@ -258,6 +274,10 @@ void RPolyline::appendVertex(const RVector& vertex, double bulge, double w1, dou
     bulges.append(bulge);
     startWidths.append(w1);
     endWidths.append(w2);
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 void RPolyline::prependVertex(const RVector& vertex, double bulge, double w1, double w2) {
@@ -265,6 +285,10 @@ void RPolyline::prependVertex(const RVector& vertex, double bulge, double w1, do
     bulges.prepend(bulge);
     startWidths.prepend(w1);
     endWidths.prepend(w2);
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 void RPolyline::insertVertex(int index, const RVector& vertex) {
@@ -275,10 +299,14 @@ void RPolyline::insertVertex(int index, const RVector& vertex) {
     bulges.insert(index, 0.0);
     startWidths.insert(index, RNANDOUBLE);
     endWidths.insert(index, RNANDOUBLE);
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 /**
- * Inserts a git point at the point on the spline closest to the given position.
+ * Inserts a vertex at the point on the polyline closest to the given position.
  */
 void RPolyline::insertVertexAt(const RVector& point) {
     int index = getClosestSegment(point);
@@ -319,26 +347,40 @@ void RPolyline::insertVertexAt(const RVector& point) {
     else {
         setBulgeAt(index+1, arc2->getBulge());
     }
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 void RPolyline::removeFirstVertex() {
     if (vertices.isEmpty()) {
         return;
     }
+
     vertices.removeFirst();
     bulges.removeFirst();
     startWidths.removeFirst();
     endWidths.removeFirst();
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 void RPolyline::removeLastVertex() {
     if (vertices.isEmpty()) {
         return;
     }
+
     vertices.removeLast();
     bulges.removeLast();
     startWidths.removeLast();
     endWidths.removeLast();
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 void RPolyline::removeVertex(int index) {
@@ -346,6 +388,10 @@ void RPolyline::removeVertex(int index) {
     bulges.removeAt(index);
     startWidths.removeAt(index);
     endWidths.removeAt(index);
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 void RPolyline::removeVerticesAfter(int index) {
@@ -353,6 +399,10 @@ void RPolyline::removeVerticesAfter(int index) {
     bulges = bulges.mid(0, index+1);
     startWidths = startWidths.mid(0, index+1);
     endWidths = endWidths.mid(0, index+1);
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 void RPolyline::removeVerticesBefore(int index) {
@@ -360,17 +410,27 @@ void RPolyline::removeVerticesBefore(int index) {
     bulges = bulges.mid(index);
     startWidths = startWidths.mid(index);
     endWidths = endWidths.mid(index);
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 void RPolyline::setVertices(const QList<RVector>& vertices) {
     this->vertices = vertices;
 
     bulges.clear();
+    startWidths.clear();
+    endWidths.clear();
     for (int i=0; i<vertices.size(); ++i) {
         bulges.append(0.0);
         startWidths.append(RNANDOUBLE);
         endWidths.append(RNANDOUBLE);
     }
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 }
 
 QList<RVector> RPolyline::getVertices() const {
@@ -590,6 +650,11 @@ bool RPolyline::toLogicallyClosed(double tolerance) {
 
     removeLastVertex();
     setClosed(true);
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
+
     return true;
 }
 
@@ -600,6 +665,11 @@ bool RPolyline::toLogicallyOpen() {
 
     appendVertex(getEndPoint(), getBulgeAt(vertices.size()-1));
     setClosed(false);
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
+
     return true;
 }
 
@@ -1587,6 +1657,11 @@ bool RPolyline::reverse() {
         nPolyline.convertToClosed();
     }
     *this = nPolyline;
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
+
     return true;
 }
 
@@ -1732,6 +1807,10 @@ bool RPolyline::simplify(double angleTolerance) {
     closed = newPolyline.closed;
     startWidths = newPolyline.startWidths;
     endWidths = newPolyline.endWidths;
+
+    Q_ASSERT(vertices.length()==bulges.length());
+    Q_ASSERT(vertices.length()==startWidths.length());
+    Q_ASSERT(vertices.length()==endWidths.length());
 
     return ret;
 }
