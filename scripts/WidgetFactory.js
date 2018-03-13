@@ -995,7 +995,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
 
         // automatically set tool tip and icon for reset button:
         if (w.objectName==="Reset") {
-            w.icon = new QIcon("scripts/ResetToDefaults.svg");
+            w.icon = new QIcon("ResetToDefaults.svg");
             w.toolTip = qsTr("Restore defaults");
         }
     }
