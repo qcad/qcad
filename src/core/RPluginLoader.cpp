@@ -244,7 +244,7 @@ QString RPluginLoader::getPluginsPath() {
     if (!pluginsDir.cd("plugins")) {
         pluginsDir.cdUp();
         if (!pluginsDir.cd("PlugIns")) {
-            qWarning() << "RPluginLoader::loadPlugins: No plugins directory found.";
+            qWarning() << "RPluginLoader::getPluginsPath: No plugins directory found.";
             return QString();
         }
     }
