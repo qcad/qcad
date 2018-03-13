@@ -23,6 +23,8 @@ include("map.js");
 function WidgetFactory() {
 }
 
+WidgetFactory.includeBasePath = includeBasePath;
+
 /**
  * Creates a dialog with the given \c parent, based on the UI file 
  * named \c uiFile in \c basePath. The dialog has a header area in
@@ -995,7 +997,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
 
         // automatically set tool tip and icon for reset button:
         if (w.objectName==="Reset") {
-            w.icon = new QIcon("ResetToDefaults.svg");
+            w.icon = new QIcon(WidgetFactory.includeBasePath + "/ResetToDefaults.svg");
             w.toolTip = qsTr("Restore defaults");
         }
     }
