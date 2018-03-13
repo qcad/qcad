@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1324"/>
+        <location filename="../PropertyEditor.js" line="+1332"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1139"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation>目次</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+62"/>
         <source>Remove this property from selected objects</source>
         <translation>選択したオブジェクトからこのプロパティを削除</translation>
     </message>
@@ -71,7 +71,7 @@
         <translation>全て</translation>
     </message>
     <message>
-        <location line="+638"/>
+        <location line="+644"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -80,12 +80,12 @@
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-622"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+142"/>
         <source>Auto</source>
         <translation>自動</translation>
     </message>
@@ -158,6 +158,11 @@
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
         <translation>現在のブロックと現在のレイヤーのプロパティを表示</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

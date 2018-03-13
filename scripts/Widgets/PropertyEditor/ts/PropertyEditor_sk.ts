@@ -32,12 +32,17 @@
         <translation>Zobrazenie vlastností aktuálneho bloku a aktuálnej vrstvy</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1324"/>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PropertyEditor.js" line="+1332"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1139"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -71,7 +76,7 @@
         <translation>Zoznam</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+62"/>
         <source>Remove this property from selected objects</source>
         <translation>Odstrániť vlastnosť z vybraných prvkov</translation>
     </message>
@@ -86,7 +91,7 @@
         <translation>Pridať vlastné vlastnosti k vybraným prvkom</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+142"/>
         <source>Auto</source>
         <translation>automatický</translation>
     </message>

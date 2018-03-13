@@ -636,12 +636,12 @@
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-60"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>V smere hodinových ručičiek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Proti smeru hodinových ručičiek</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -676,19 +676,19 @@
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Orientácia</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Základný uhol</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

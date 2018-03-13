@@ -32,12 +32,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1324"/>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PropertyEditor.js" line="+1332"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1139"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -67,7 +72,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+62"/>
         <source>Remove this property from selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -82,7 +87,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+142"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>

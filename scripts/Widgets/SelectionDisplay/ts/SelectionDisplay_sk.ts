@@ -21,8 +21,8 @@
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &apos;%1&apos;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n prvky na vrstve &apos;%1&apos;</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -30,8 +30,8 @@
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n prvky</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -39,13 +39,13 @@
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation type="unfinished"></translation>
+        <translation>na</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n vrstvy</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>

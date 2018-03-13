@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1324"/>
+        <location filename="../PropertyEditor.js" line="+1332"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1139"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -57,7 +57,7 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+62"/>
         <source>Remove this property from selected objects</source>
         <translation>Eigenschap van geselecteerde objecten verwijderen</translation>
     </message>
@@ -72,7 +72,7 @@
         <translation>Gebruiker gedefinieerde eigenschap aan geselecteerde objecten toevoegen</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+142"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
@@ -142,6 +142,11 @@
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
         <translation>Eigenschappen van het huidige blok en de huidige laag weergeven</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation>Toevoegen van gebruiker gedefinieerde eigenschappen toestaan</translation>
     </message>
 </context>
 </TS>

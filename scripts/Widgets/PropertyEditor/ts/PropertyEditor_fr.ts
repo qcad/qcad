@@ -41,7 +41,7 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+62"/>
         <source>Remove this property from selected objects</source>
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
@@ -51,7 +51,7 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+616"/>
+        <location line="+622"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1139"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -111,7 +111,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+313"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -145,7 +145,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+158"/>
+        <location line="+164"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -231,6 +231,11 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
         <translation>Afficher les propriétés de bloc actuel et du calque actuel</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation>Permet l&apos;ajout de propriétés personnalisées</translation>
     </message>
 </context>
 </TS>

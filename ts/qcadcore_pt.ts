@@ -496,7 +496,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
-        <location filename="../src/core/RObject.cpp" line="+61"/>
+        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

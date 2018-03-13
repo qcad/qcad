@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1324"/>
+        <location filename="../PropertyEditor.js" line="+1332"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1139"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation>Indeks</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+62"/>
         <source>Remove this property from selected objects</source>
         <translation>Odstrani to lastnost iz izbranih objektov</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+616"/>
+        <location line="+622"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -190,6 +190,11 @@
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
         <translation>Prikaži lastnosti trenutnega bloka in trenutne plasti</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

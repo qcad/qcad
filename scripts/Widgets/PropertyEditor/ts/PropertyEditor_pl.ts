@@ -35,13 +35,13 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1324"/>
+        <location filename="../PropertyEditor.js" line="+1332"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1131"/>
+        <location line="-1139"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -93,7 +93,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
         <translation>Indeks</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+62"/>
         <source>Remove this property from selected objects</source>
         <translation>Usuń właściwość z zaznaczonych obiektów</translation>
     </message>
@@ -109,7 +109,7 @@ Czy chcesz zamknąć plik
         <translation>Wszystkie</translation>
     </message>
     <message>
-        <location line="+638"/>
+        <location line="+644"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -119,7 +119,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-622"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -197,7 +197,7 @@ Dół - prawo</translatorcomment>
         <translation type="obsolete">W dół</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+142"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -297,6 +297,11 @@ General Punctuation</translatorcomment>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
         <translation>Wyświetlanie właściwości aktualnego bloku i warstwy</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

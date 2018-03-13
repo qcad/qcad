@@ -6,8 +6,8 @@
     <message numerus="yes">
         <location filename="../ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Transakcia ovplyvnila %n objekt (-y).</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>

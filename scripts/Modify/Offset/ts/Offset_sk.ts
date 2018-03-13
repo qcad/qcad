@@ -12,7 +12,7 @@
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 za% n paralelnú kružnicu (-e).</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
