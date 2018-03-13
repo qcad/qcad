@@ -52,6 +52,7 @@ About.prototype.beginEvent = function() {
          + "</head>";
 
     this.applicationName = qApp.applicationName;
+    this.version = undefined;
     this.iconFile = undefined;
 
     // init plugin view:
@@ -88,6 +89,18 @@ About.prototype.beginEvent = function() {
 };
 
 About.prototype.initAboutApp = function(textBrowser) {
+    var version = RSettings.getVersionString();
+    var versionComplete = "%1.%2.%3.%4"
+        .arg(RSettings.getMajorVersion())
+        .arg(RSettings.getMinorVersion())
+        .arg(RSettings.getRevisionVersion())
+        .arg(RSettings.getBuildVersion());
+
+    if (!isNull(this.version)) {
+        version = "";
+        versionComplete = this.version;
+    }
+
     var html =
             "<html>"
             + this.head
@@ -95,12 +108,9 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<h1>%1</h1>".arg(this.applicationName)
             + "<hr/>"
             + "<table border='0'><tr>"
-            + "<td><b>" + qsTr("Version:") + "</b> </td><td>%1.%2.%3.%4 (%5)</td>"
-              .arg(RSettings.getMajorVersion())
-              .arg(RSettings.getMinorVersion())
-              .arg(RSettings.getRevisionVersion())
-              .arg(RSettings.getBuildVersion())
-              .arg(RSettings.getVersionString())
+            + "<td><b>" + qsTr("Version:") + "</b> </td><td>%1 %2</td>"
+              .arg(versionComplete)
+              .arg(version.length>0 ? "("+version+")" : "")
             + "</tr><tr>"
             + "<td><b>" + qsTr("Internet:") + "</b> </td><td><a href='http://%1'>%1</a></td>".arg(qApp.organizationDomain)
             + "</tr><tr>"
@@ -158,6 +168,7 @@ About.prototype.initAboutPlugins = function(textBrowser) {
         var namePostfixesSlash = [];
         var namePostfixesSpace = [];
         var nameOverrides = [];
+        var versionOverrides = [];
         for (var i=0; i<numPlugins; i++) {
             html += "<table border='0' width='100%'>";
 
@@ -182,6 +193,11 @@ About.prototype.initAboutPlugins = function(textBrowser) {
             text = pluginInfo.get("NameOverride");
             if (!isNull(text)) {
                 nameOverrides.push(text);
+            }
+
+            text = pluginInfo.get("VersionOverride");
+            if (!isNull(text)) {
+                versionOverrides.push(text);
             }
 
             text = pluginInfo.get("IconOverride");
@@ -287,6 +303,11 @@ About.prototype.initAboutPlugins = function(textBrowser) {
             // e.g. "Incredible Edition" for "MyApp Incredible Edition":
             namePostfixesSpace.sort();
             this.applicationName = qApp.applicationName + namePostfixesSlash.join("") + namePostfixesSpace.join("");
+        }
+
+        // version override:
+        if (versionOverrides.length!==0) {
+            this.version = versionOverrides[0];
         }
     }
 
@@ -408,12 +429,19 @@ About.prototype.initAboutSystem = function(textEdit) {
     var i;
 
     text += "Versions";
-    text += "\n%1 version: %2.%3.%4.%5"
-        .arg(qApp.applicationName)
-        .arg(RSettings.getMajorVersion())
-        .arg(RSettings.getMinorVersion())
-        .arg(RSettings.getRevisionVersion())
-        .arg(RSettings.getBuildVersion());
+    if (!isNull(this.version)) {
+        text += "\n%1 version: %2"
+            .arg(qApp.applicationName)
+            .arg(this.version);
+    }
+    else {
+        text += "\n%1 version: %2.%3.%4.%5"
+            .arg(qApp.applicationName)
+            .arg(RSettings.getMajorVersion())
+            .arg(RSettings.getMinorVersion())
+            .arg(RSettings.getRevisionVersion())
+            .arg(RSettings.getBuildVersion());
+    }
     text += "\nDate: " + RSettings.getReleaseDate();
     text += "\nQt version: " + RSettings.getQtVersionString();
     text += "\nCompiler version: " + RSettings.getCompilerVersion();
