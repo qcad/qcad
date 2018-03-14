@@ -731,9 +731,14 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(blockRefEntity);
         if (blockRef!=NULL) {
             RBlock::Id blockId = blockRef->getReferencedBlockId();
-            QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
-            if (block!=NULL && block->getCustomBoolProperty("QCAD", "PixelUnit", false)==true) {
-                drawable.setPixelUnit(true);
+
+            // retrieve document from entity (could be a preview document):
+            RDocument* doc = blockRefEntity->getDocument();
+            if (doc!=NULL) {
+                QSharedPointer<RBlock> block = doc->queryBlockDirect(blockId);
+                if (block!=NULL && block->getCustomBoolProperty("QCAD", "PixelUnit", false)==true) {
+                    drawable.setPixelUnit(true);
+                }
             }
         }
     }
