@@ -58,16 +58,10 @@ RExporter::RExporter()
       pixelUnit(false),
       clipping(false),
       pixelWidth(false),
+      penCapStyle(Qt::RoundCap),
       projectionRenderingHint(RS::RenderThreeD) {
 
-    currentPen.setColor(Qt::white);
-    currentPen.setWidth(3);
-    currentPen.setCapStyle(Qt::RoundCap);
-    currentPen.setJoinStyle(Qt::RoundJoin);
-    currentPen.setStyle(Qt::SolidLine);
-
-    currentBrush.setColor(Qt::white);
-    currentBrush.setStyle(Qt::SolidPattern);
+    init();
 }
 
 RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProgressHandler *progressHandler)
@@ -83,23 +77,32 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       pixelUnit(false),
       clipping(false),
       pixelWidth(false),
+      penCapStyle(Qt::RoundCap),
       projectionRenderingHint(RS::RenderThreeD) {
 
     Q_UNUSED(messageHandler)
     Q_UNUSED(progressHandler)
 
-    currentPen.setColor(Qt::white);
-    currentPen.setWidth(3);
-    currentPen.setCapStyle(Qt::RoundCap);
-    currentPen.setJoinStyle(Qt::RoundJoin);
-
-    currentBrush.setColor(Qt::white);
-    currentBrush.setStyle(Qt::SolidPattern);
+    init();
 }
 
 
 
 RExporter::~RExporter() {
+}
+
+void RExporter::init() {
+    currentPen.setColor(Qt::white);
+    currentPen.setWidth(3);
+    currentPen.setStyle(Qt::SolidLine);
+
+    currentBrush.setColor(Qt::white);
+    currentBrush.setStyle(Qt::SolidPattern);
+
+    // init pen cap style (usually round):
+    int v = RSettings::getIntValue("GraphicsView/PenCapStyle", Qt::RoundCap);
+    penCapStyle = (Qt::PenCapStyle)v;
+    currentPen.setCapStyle(penCapStyle);
 }
 
 QString RExporter::getErrorMessage() const {
@@ -214,7 +217,7 @@ bool RExporter::getClipping() const {
  */
 void RExporter::setPen(const QPen& pen) {
     currentPen = pen;
-    currentPen.setCapStyle(Qt::RoundCap);
+    currentPen.setCapStyle(penCapStyle);
     currentPen.setJoinStyle(Qt::RoundJoin);
 }
 

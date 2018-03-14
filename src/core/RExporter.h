@@ -75,6 +75,11 @@ public:
     RExporter(RDocument& document, RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);
     virtual ~RExporter();
 
+private:
+    void init();
+
+public:
+
     QString getErrorMessage() const;
 
     void setLayerSource(RDocument* ls);
@@ -370,6 +375,7 @@ protected:
     bool pixelUnit;
     bool clipping;
     bool pixelWidth;
+    Qt::PenCapStyle penCapStyle;
 
 private:
     RS::ProjectionRenderingHint projectionRenderingHint;

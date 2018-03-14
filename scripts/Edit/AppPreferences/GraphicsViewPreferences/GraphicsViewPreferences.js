@@ -30,6 +30,12 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
     widgets["ZeroWeightWeight"].removeItem(0);
     // remove item "0.00":
     widgets["ZeroWeightWeight"].removeItem(0);
+
+    var cbCapStyle = widgets["PenCapStyle"];
+    cbCapStyle.visible = false;
+//    cbCapStyle.addItem(qsTr("Round Cap"), Qt.RoundCap.valueOf());
+//    cbCapStyle.addItem(qsTr("Flat Cap"), Qt.FlatCap.valueOf());
+//    cbCapStyle.addItem(qsTr("Square Cap"), Qt.SquareCap.valueOf());
 };
 
 GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
