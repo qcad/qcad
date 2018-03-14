@@ -28,6 +28,10 @@
 class RDocument;
 class RTransaction;
 
+#ifndef RQMapQStringQString
+typedef QMap<QString, QString> RQMapQStringQString;
+#endif
+
 #ifndef RDEFAULT_QVARIANT
 #define RDEFAULT_QVARIANT QVariant()
 #endif
@@ -39,6 +43,7 @@ class RTransaction;
 #ifndef RDEFAULT_QSTRINGLIST
 #define RDEFAULT_QSTRINGLIST QStringList()
 #endif
+
 
 
 /**
@@ -205,6 +210,11 @@ public:
     int getCustomIntProperty(const QString& title, const QString& key, int defaultValue) const;
     bool getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) const;
     void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
+
+    /**
+     * \nonscriptable
+     */
+    void setCustomProperties(const RQMapQStringQString& properties);
     void removeCustomProperty(const QString& title, const QString& key);
     QStringList getCustomPropertyTitles() const;
     QStringList getCustomPropertyKeys(const QString& title) const;
@@ -215,6 +225,9 @@ public:
             const QStringList& ignoreList = RDEFAULT_QSTRINGLIST,
             const QString& mapKeyFrom = RDEFAULT_QSTRING,
             const QString& mapKeyTo = RDEFAULT_QSTRING);
+
+    static void setCustomPropertyAttributes(const QString& title, const QString& key, const RPropertyAttributes& att);
+    static RPropertyAttributes getCustomPropertyAttributes(const QString& title, const QString& key);
 
     /**
      * \nonscriptable
@@ -306,15 +319,10 @@ private:
      * Handle of this object (from DXF / DWG).
      */
     Handle handle;
+    /**
+     * Object flags (undone, protected, ...)
+     */
     Flags flags;
-    /**
-     * True if this object has been undone (deleted).
-     */
-    //bool undone;
-    /**
-     * True if this object is protected (undeletable).
-     */
-    //bool protect;
     /**
      * AppID -> key -> value
      * e.g. 'QCAD' -> 'wall thickness' -> 12.0;
@@ -323,6 +331,11 @@ private:
      * original DXF code from the file.
      */
     QMap<QString, QVariantMap> customProperties;
+
+    /**
+     * Attributes of custom properties (read-only, invisible, ...).
+     */
+    static QMap<QString, QMap<QString, RPropertyAttributes> > customPropertyAttributes;
 };
 
 Q_DECLARE_METATYPE(RObject::Id)

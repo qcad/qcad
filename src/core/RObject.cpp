@@ -27,6 +27,7 @@
 
 const RObject::Id RObject::INVALID_ID = -1;
 const RObject::Handle RObject::INVALID_HANDLE = -1;
+QMap<QString, QMap<QString, RPropertyAttributes> > RObject::customPropertyAttributes;
 
 RPropertyTypeId RObject::PropertyCustom;
 RPropertyTypeId RObject::PropertyType;
@@ -512,6 +513,15 @@ void RObject::setCustomProperty(const QString& title, const QString& key, const 
     customProperties[title].insert(key, value);
 }
 
+void RObject::setCustomProperties(const RQMapQStringQString& properties) {
+    QStringList propertyNames = properties.keys();
+    for (int i=0; i<propertyNames.length(); i++) {
+        QString name = propertyNames[i];
+        QString value = properties[name];
+        setCustomProperty(RSettings::getAppId(), name, value);
+    }
+}
+
 /**
  * Removes the custom property with the given name.
  */
@@ -586,6 +596,29 @@ void RObject::copyCustomPropertiesFrom(RObject* other, const QString& title,
             }
         }
     }
+}
+
+/**
+ * Set attributes (read-only, invisible, ...) for the given custom property.
+ */
+void RObject::setCustomPropertyAttributes(const QString& title, const QString& key, const RPropertyAttributes& att) {
+    if (!customPropertyAttributes.contains(title)) {
+        customPropertyAttributes.insert(title, QMap<QString, RPropertyAttributes>());
+    }
+    customPropertyAttributes[title].insert(key, att);
+}
+
+/**
+ * \return attributes (read-only, invisible, ...) for the given custom property.
+ */
+RPropertyAttributes RObject::getCustomPropertyAttributes(const QString& title, const QString& key) {
+    if (customPropertyAttributes.contains(title)) {
+        if (customPropertyAttributes[title].contains(key)) {
+            return customPropertyAttributes[title].value(key);
+        }
+    }
+
+    return RPropertyAttributes();
 }
 
 /**
