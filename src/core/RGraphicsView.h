@@ -271,6 +271,9 @@ public:
     void setHairlineMode(bool on);
     bool getHairlineMode();
 
+    void setHairlineMinimumMode(bool on);
+    bool getHairlineMinimumMode();
+
     QList<RTextLabel> getTextLabels();
     void clearTextLabels();
     void addTextLabel(const RTextLabel &textLabel);
@@ -337,6 +340,7 @@ protected:
 
     ColorMode colorMode;
     bool hairlineMode;
+    bool hairlineMinimumMode;
 
     /**
      * The scene this view is attached to.

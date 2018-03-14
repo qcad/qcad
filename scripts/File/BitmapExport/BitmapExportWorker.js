@@ -131,6 +131,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
 
     view.clear();
     view.setExporting(true);
+    view.setHairlineMinimumMode(true);
 
     if (properties["regen"]!==false) {
         scene.regenerate();

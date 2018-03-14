@@ -143,6 +143,14 @@ public:
         return RGraphicsView::getHairlineMode();
     }
 
+    void setHairlineMinimumMode(bool on) {
+        RGraphicsView::setHairlineMinimumMode(on);
+    }
+
+    bool getHairlineMinimumMode() {
+        return RGraphicsView::getHairlineMinimumMode();
+    }
+
     void setAntialiasing(bool on) {
         RGraphicsView::setAntialiasing(on);
     }

@@ -1006,6 +1006,12 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
                     }
                 }
             }
+
+            // hairline minimum mode:
+            // ensure a line weight of at least 1 device pixel (e.g. bitmap export):
+            if (hairlineMinimumMode && pen.widthF()<1.0) {
+                pen.setWidth(0);
+            }
         }
 
         // prevent black on black / white on white drawing
