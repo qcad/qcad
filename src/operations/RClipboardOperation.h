@@ -30,7 +30,9 @@
 #include "ROperation.h"
 #include "RVector.h"
 
+#ifndef RQMapQStringQString
 typedef QMap<QString, QString> RQMapQStringQString;
+#endif
 
 #define RDEFAULT_QMAP_QSTRING_QSTRING RQMapQStringQString()
 
@@ -72,7 +74,8 @@ public:
         bool toModelSpaceBlock,
         bool preview,
         const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING,
-        const RQMapQStringQString& properties = RDEFAULT_QMAP_QSTRING_QSTRING
+        const RQMapQStringQString& properties = RDEFAULT_QMAP_QSTRING_QSTRING,
+        const RQMapQStringQString& blockProperties = RDEFAULT_QMAP_QSTRING_QSTRING
     );
 
     /**
@@ -96,7 +99,8 @@ public:
         const QString& layerName,
         RTransaction& transaction,
         bool toModelSpaceBlock,
-        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
+        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING,
+        const RQMapQStringQString& properties = RDEFAULT_QMAP_QSTRING_QSTRING
     );
 
     QSharedPointer<RBlock> copyEntityBlock(
