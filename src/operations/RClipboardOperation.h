@@ -99,8 +99,7 @@ public:
         const QString& layerName,
         RTransaction& transaction,
         bool toModelSpaceBlock,
-        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING,
-        const RQMapQStringQString& properties = RDEFAULT_QMAP_QSTRING_QSTRING
+        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
     );
 
     QSharedPointer<RBlock> copyEntityBlock(
