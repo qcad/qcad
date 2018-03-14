@@ -217,6 +217,9 @@
             <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>mapKeyFrom</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>,
             <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>mapKeyTo</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setCustomPropertyAttributes</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>RPropertyAttributes</name>&amp;</type> <name>att</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RPropertyAttributes</name></type> <name>getCustomPropertyAttributes</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
+
     <comment type="block">/**
      * \nonscriptable
      */</comment>
@@ -307,15 +310,10 @@
      * Handle of this object (from DXF / DWG).
      */</comment>
     <decl_stmt><decl><type><name>Handle</name></type> <name>handle</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * Object flags (undone, protected, ...)
+     */</comment>
     <decl_stmt><decl><type><name>Flags</name></type> <name>flags</name></decl>;</decl_stmt>
-    <comment type="block">/**
-     * True if this object has been undone (deleted).
-     */</comment>
-    <comment type="line">//bool undone;</comment>
-    <comment type="block">/**
-     * True if this object is protected (undeletable).
-     */</comment>
-    <comment type="line">//bool protect;</comment>
     <comment type="block">/**
      * AppID -&gt; key -&gt; value
      * e.g. 'QCAD' -&gt; 'wall thickness' -&gt; 12.0;
@@ -324,6 +322,11 @@
      * original DXF code from the file.
      */</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QVariantMap</name></argument>&gt;</argument_list></name></type> <name>customProperties</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Attributes of custom properties (read-only, invisible, ...).
+     */</comment>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>customPropertyAttributes</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject::Id</argument>)</argument_list></macro>

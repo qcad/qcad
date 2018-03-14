@@ -304,6 +304,12 @@
         getHairlineMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setHairlineMinimumMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHairlineMinimumMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTextLabels
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

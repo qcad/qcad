@@ -179,6 +179,18 @@
         
     
     
+      void setHairlineMinimumMode(
+                bool on
+            );
+        
+    
+    
+      bool getHairlineMinimumMode(
+                
+            );
+        
+    
+    
       void setAntialiasing(
                 bool on
             );

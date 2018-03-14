@@ -132,6 +132,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHairlineMode, "getHairlineMode");
             
+            REcmaHelper::registerFunction(&engine, proto, setHairlineMinimumMode, "setHairlineMinimumMode");
+            
+            REcmaHelper::registerFunction(&engine, proto, getHairlineMinimumMode, "getHairlineMinimumMode");
+            
             REcmaHelper::registerFunction(&engine, proto, setAntialiasing, "setAntialiasing");
             
             REcmaHelper::registerFunction(&engine, proto, getAntialiasing, "getAntialiasing");
@@ -2147,6 +2151,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getHairlineMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::setHairlineMinimumMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::setHairlineMinimumMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::setHairlineMinimumMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("setHairlineMinimumMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setHairlineMinimumMode(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.setHairlineMinimumMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setHairlineMinimumMode", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::getHairlineMinimumMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::getHairlineMinimumMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::getHairlineMinimumMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("getHairlineMinimumMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getHairlineMinimumMode();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.getHairlineMinimumMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getHairlineMinimumMode", context, engine);
             return result;
         }
          QScriptValue

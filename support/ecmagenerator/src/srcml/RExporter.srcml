@@ -76,6 +76,11 @@
     <constructor_decl><name>RExporter</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>RMessageHandler</name>*</type> <name>messageHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>RProgressHandler</name>*</type> <name>progressHandler</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RExporter</name><parameter_list>()</parameter_list>;</destructor_decl>
 
+</public><private>private:
+    <function_decl><type><name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+
+</private><public>public:
+
     <function_decl><type><name>QString</name></type> <name>getErrorMessage</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setLayerSource</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>ls</name></decl></param>)</parameter_list>;</function_decl>
@@ -371,6 +376,8 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelUnit</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>clipping</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelWidth</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>Qt</name>::<name>PenCapStyle</name></name></type> <name>penCapStyle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>Qt</name>::<name>PenJoinStyle</name></name></type> <name>penJoinStyle</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>projectionRenderingHint</name></decl>;</decl_stmt>

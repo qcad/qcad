@@ -123,6 +123,12 @@
         
     
     
+      RPropertyAttributes getCustomPropertyAttributes(
+                const QString & group, const QString & title
+            );
+        
+    
+    
       QList < RS::EntityType > getTypes(
                 
             );
