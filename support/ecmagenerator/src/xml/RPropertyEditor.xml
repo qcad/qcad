@@ -134,17 +134,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getCustomPropertyAttributes"
-    cppName="getCustomPropertyAttributes" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RPropertyAttributes"
-      isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="group"
-        isConst="true" />
-        <arg type="QString &amp;" typeName="QString" name="title"
-        isConst="true" />
-      </variant>
-    </method>
     <method name="getTypes" cppName="getTypes" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; RS::EntityType &gt;"
