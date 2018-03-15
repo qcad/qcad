@@ -61,12 +61,6 @@
         setInvisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isUndeletable
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setUndeletable
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         isList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

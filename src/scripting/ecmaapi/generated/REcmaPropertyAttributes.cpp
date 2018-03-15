@@ -60,10 +60,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, setInvisible, "setInvisible");
             
-            REcmaHelper::registerFunction(&engine, proto, isUndeletable, "isUndeletable");
-            
-            REcmaHelper::registerFunction(&engine, proto, setUndeletable, "setUndeletable");
-            
             REcmaHelper::registerFunction(&engine, proto, isList, "isList");
             
             REcmaHelper::registerFunction(&engine, proto, setList, "setList");
@@ -702,110 +698,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setInvisible", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPropertyAttributes::isUndeletable
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPropertyAttributes::isUndeletable", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isUndeletable";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPropertyAttributes* self = 
-                        getSelf("isUndeletable", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isUndeletable();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isUndeletable().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isUndeletable", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPropertyAttributes::setUndeletable
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPropertyAttributes::setUndeletable", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setUndeletable";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPropertyAttributes* self = 
-                        getSelf("setUndeletable", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setUndeletable(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setUndeletable().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setUndeletable", context, engine);
             return result;
         }
          QScriptValue

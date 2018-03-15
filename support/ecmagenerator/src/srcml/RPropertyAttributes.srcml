@@ -100,13 +100,13 @@
         <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Invisible</name></type></decl></param>, <param><decl><type><name>invisible</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
-    <function><type><name>bool</name></type> <name>isUndeletable</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Undeletable</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    bool isUndeletable() const {</comment>
+<comment type="line">//        return options.testFlag(Undeletable);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setUndeletable</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undeletable</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Undeletable</name></type></decl></param>, <param><decl><type><name>undeletable</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setUndeletable(bool undeletable) {</comment>
+<comment type="line">//        setOption(Undeletable, undeletable);</comment>
+<comment type="line">//    }</comment>
 
     <function><type><name>bool</name></type> <name>isList</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>List</name></expr></argument>)</argument_list></call></expr>;</return>
