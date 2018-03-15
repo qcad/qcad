@@ -69,9 +69,9 @@
         <expr><name>KnownVariable</name> = 0x20000</expr>,         <comment type="line">//!&lt; Property is a known DXF variable</comment>
         <expr><name>NumericallySorted</name> = 0x40000</expr>,     <comment type="line">//!&lt; Sort choices for this property numerically</comment>
         <expr><name>Percentage</name> = 0x80000 | <name>Integer</name></expr>,  <comment type="line">//!&lt; Property is a percentage (0...100), implies Integer</comment>
-        <expr><name>Sum</name> = 0x100000 | <name>ReadOnly</name> | <name>Redundant</name></expr>,  <comment type="line">//!&lt; Sum up this property when multiple entities are selected (area, lenght),</comment>
+        <expr><name>Sum</name> = 0x100000 | <name>ReadOnly</name> | <name>Redundant</name></expr>  <comment type="line">//!&lt; Sum up this property when multiple entities are selected (area, lenght),</comment>
                                          <comment type="line">//!&lt; implies ReadOnly and Redundant</comment>
-        <expr><name>Undeletable</name> = 0x200000</expr>           <comment type="line">//!&lt; Property is undeletable (custom properties only)</comment>
+        <comment type="line">//Undeletable = 0x200000           //!&lt; Property is undeletable (custom properties only)</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Options</argument>, <argument>Option</argument>)</argument_list></macro>
 

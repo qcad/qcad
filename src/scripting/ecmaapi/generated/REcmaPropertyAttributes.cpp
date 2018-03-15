@@ -278,11 +278,6 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Undeletable",
-    QScriptValue(RPropertyAttributes::Undeletable),
-    QScriptValue::ReadOnly);
-
-
     // enum conversions:
     
     qScriptRegisterMetaType<RPropertyAttributes::Option>(
