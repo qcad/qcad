@@ -752,7 +752,7 @@
        <item row="8" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Pen cap style:</string>
+          <string notr="true">Pen cap style:</string>
          </property>
         </widget>
        </item>
