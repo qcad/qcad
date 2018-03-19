@@ -133,6 +133,9 @@
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setBlockProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         apply
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -91,6 +91,9 @@
         getPropertyAttributes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCustomPropertyAttributes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTypes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

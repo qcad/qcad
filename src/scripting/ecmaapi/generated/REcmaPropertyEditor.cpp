@@ -101,6 +101,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPropertyAttributes, "getPropertyAttributes");
             
+            REcmaHelper::registerFunction(&engine, proto, getCustomPropertyAttributes, "getCustomPropertyAttributes");
+            
             REcmaHelper::registerFunction(&engine, proto, getTypes, "getTypes");
             
             REcmaHelper::registerFunction(&engine, proto, getTypeCount, "getTypeCount");
@@ -1385,6 +1387,79 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyEditor::getPropertyAttributes", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::getCustomPropertyAttributes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::getCustomPropertyAttributes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::getCustomPropertyAttributes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyEditor* self = 
+                        getSelf("getCustomPropertyAttributes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPropertyAttributes'
+    RPropertyAttributes cppResult =
+        
+               self->getCustomPropertyAttributes(a0
+        ,
+    a1);
+        // return type: RPropertyAttributes
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.getCustomPropertyAttributes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::getCustomPropertyAttributes", context, engine);
             return result;
         }
          QScriptValue
