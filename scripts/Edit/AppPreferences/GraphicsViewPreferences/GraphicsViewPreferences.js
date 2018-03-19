@@ -33,6 +33,8 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
 
     var cbCapStyle = widgets["PenCapStyle"];
     cbCapStyle.visible = false;
+    var lCapStyle = widgets["PenCapStyle_Label"];
+    lCapStyle.visible = false;
 //    cbCapStyle.addItem(qsTr("Round Cap"), Qt.RoundCap.valueOf());
 //    cbCapStyle.addItem(qsTr("Flat Cap"), Qt.FlatCap.valueOf());
 //    cbCapStyle.addItem(qsTr("Square Cap"), Qt.SquareCap.valueOf());
