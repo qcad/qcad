@@ -607,7 +607,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished">Off is Freeze</translation>
+        <translation>Zmrazenie vypnuté</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
