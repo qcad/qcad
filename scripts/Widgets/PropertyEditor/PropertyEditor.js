@@ -614,7 +614,9 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                         }
 
                         // 'remove custom property' button:
-                        if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom) && group===RSettings.getAppId()) {
+                        if (propertyTypeId.isCustom() && !isNull(gridLayoutCustom) &&
+                            group===RSettings.getAppId() && !attributes.isUndeletable()) {
+
                             var removeCustomPropertyButton = new QToolButton(this.widget);
                             removeCustomPropertyButton.icon = new QIcon(this.basePath + "/RemoveCustomProperty.svg");
                             removeCustomPropertyButton.iconSize = new QSize(12,12);
@@ -704,7 +706,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 
     // add custom property button:
     if (!onlyChanges) {
-        if (RSettings.isXDataEnabled()) {
+        if (RSettings.isXDataEnabled() && RSettings.getBoolValue("PropertyEditor/AddCustomProperties", true)!==false) {
             var addCustomPropertyButton = new QToolButton(this.widget);
             addCustomPropertyButton.icon = new QIcon(this.basePath + "/AddCustomProperty.svg");
             addCustomPropertyButton.iconSize = new QSize(12,12);
@@ -731,6 +733,12 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
     var value = this.getAdjustedPropertyValue(propertyTypeId);
     var attributes = this.getPropertyAttributes(propertyTypeId);
     var controls;
+
+    // used for custom properties only:
+    // invisible flag of other properties is handled in RPropertyEditor:
+    if (attributes.isInvisible()) {
+        return undefined;
+    }
 
     var objectName = PropertyEditorImpl.getControlObjectName(propertyTypeId);
     if (isNull(control) && onlyChanges) {

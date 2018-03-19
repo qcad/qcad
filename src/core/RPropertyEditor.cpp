@@ -446,11 +446,17 @@ QVariant RPropertyEditor::getPropertyValue(const QString& group, const QString& 
  * \return Property attributes of given propery.
  */
 RPropertyAttributes RPropertyEditor::getPropertyAttributes(const RPropertyTypeId& propertyTypeId) {
+    if (propertyTypeId.isCustom()) {
+        QString group = propertyTypeId.getPropertyGroupTitle();
+        QString title = propertyTypeId.getPropertyTitle();
+        return getCustomPropertyAttributes(group, title);
+    }
+
     return getPropertyAttributes(propertyTypeId.getPropertyGroupTitle(), propertyTypeId.getPropertyTitle());
 }
 
 /**
- * \return Property attributes of given propery.
+ * \return Property attributes for given propery.
  */
 RPropertyAttributes RPropertyEditor::getPropertyAttributes(const QString& group, const QString& title) {
     if (!combinedProperties.contains(group)) {
@@ -462,7 +468,18 @@ RPropertyAttributes RPropertyEditor::getPropertyAttributes(const QString& group,
     }
 
     QPair<QVariant, RPropertyAttributes> pair = combinedProperties[group][title];
+
+    if (pair.second.getPropertyTypeId().isCustom()) {
+        return getCustomPropertyAttributes(group, title);
+    }
+
     return pair.second;
+}
+
+RPropertyAttributes RPropertyEditor::getCustomPropertyAttributes(const QString& group, const QString& title) {
+    RPropertyAttributes ret = RObject::getCustomPropertyAttributes(group, title);
+    ret.setPropertyTypeId(RPropertyTypeId(group, title));
+    return ret;
 }
 
 QList<RS::EntityType> RPropertyEditor::getTypes() {

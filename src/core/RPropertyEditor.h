@@ -71,6 +71,7 @@ public:
     QVariant getPropertyValue(const QString& group, const QString& title);
     RPropertyAttributes getPropertyAttributes(const RPropertyTypeId& propertyTypeId);
     RPropertyAttributes getPropertyAttributes(const QString& group, const QString& title);
+    RPropertyAttributes getCustomPropertyAttributes(const QString& group, const QString& title);
     QList<RS::EntityType> getTypes();
     int getTypeCount(RS::EntityType type);
 

@@ -68,7 +68,9 @@ public:
         KnownVariable = 0x20000,         //!< Property is a known DXF variable
         NumericallySorted = 0x40000,     //!< Sort choices for this property numerically
         Percentage = 0x80000 | Integer,  //!< Property is a percentage (0...100), implies Integer
-        Sum = 0x100000 | ReadOnly | Redundant  //!< Sum up this property when multiple entities are selected (area, lenght), implies ReadOnly and Redundant
+        Sum = 0x100000 | ReadOnly | Redundant,  //!< Sum up this property when multiple entities are selected (area, lenght),
+                                         //!< implies ReadOnly and Redundant
+        Undeletable = 0x200000           //!< Property is undeletable (custom properties only)
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -95,6 +97,14 @@ public:
 
     void setInvisible(bool invisible) {
         setOption(Invisible, invisible);
+    }
+
+    bool isUndeletable() const {
+        return options.testFlag(Undeletable);
+    }
+
+    void setUndeletable(bool undeletable) {
+        setOption(Undeletable, undeletable);
     }
 
     bool isList() const {
