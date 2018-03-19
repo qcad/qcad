@@ -69,9 +69,9 @@
         <expr><name>KnownVariable</name> = 0x20000</expr>,         <comment type="line">//!&lt; Property is a known DXF variable</comment>
         <expr><name>NumericallySorted</name> = 0x40000</expr>,     <comment type="line">//!&lt; Sort choices for this property numerically</comment>
         <expr><name>Percentage</name> = 0x80000 | <name>Integer</name></expr>,  <comment type="line">//!&lt; Property is a percentage (0...100), implies Integer</comment>
-        <expr><name>Sum</name> = 0x100000 | <name>ReadOnly</name> | <name>Redundant</name></expr>  <comment type="line">//!&lt; Sum up this property when multiple entities are selected (area, lenght),</comment>
+        <expr><name>Sum</name> = 0x100000 | <name>ReadOnly</name> | <name>Redundant</name></expr>,  <comment type="line">//!&lt; Sum up this property when multiple entities are selected (area, lenght),</comment>
                                          <comment type="line">//!&lt; implies ReadOnly and Redundant</comment>
-        <comment type="line">//Undeletable = 0x200000           //!&lt; Property is undeletable (custom properties only)</comment>
+        <expr><name>Undeletable</name> = 0x200000</expr>           <comment type="line">//!&lt; Property is undeletable (custom properties only)</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Options</argument>, <argument>Option</argument>)</argument_list></macro>
 
@@ -100,13 +100,13 @@
         <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Invisible</name></type></decl></param>, <param><decl><type><name>invisible</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
-<comment type="line">//    bool isUndeletable() const {</comment>
-<comment type="line">//        return options.testFlag(Undeletable);</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>bool</name></type> <name>isUndeletable</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Undeletable</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
 
-<comment type="line">//    void setUndeletable(bool undeletable) {</comment>
-<comment type="line">//        setOption(Undeletable, undeletable);</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setUndeletable</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undeletable</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>Undeletable</name></type></decl></param>, <param><decl><type><name>undeletable</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
 
     <function><type><name>bool</name></type> <name>isList</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>List</name></expr></argument>)</argument_list></call></expr>;</return>

@@ -227,8 +227,8 @@
             <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>mapKeyFrom</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>,
             <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>mapKeyTo</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <comment type="line">//static void setCustomPropertyAttributes(const QString&amp; title, const QString&amp; key, const RPropertyAttributes&amp; att);</comment>
-    <comment type="line">//static RPropertyAttributes getCustomPropertyAttributes(const QString&amp; title, const QString&amp; key);</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setCustomPropertyAttributes</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>RPropertyAttributes</name>&amp;</type> <name>att</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RPropertyAttributes</name></type> <name>getCustomPropertyAttributes</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable

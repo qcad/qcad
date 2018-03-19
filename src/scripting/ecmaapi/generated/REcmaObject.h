@@ -133,6 +133,12 @@
         copyCustomPropertiesFrom
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCustomPropertyAttributes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCustomPropertyAttributes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getComplexity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

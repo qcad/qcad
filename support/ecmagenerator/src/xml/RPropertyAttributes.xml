@@ -31,6 +31,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Sum" />
       <value name="ReadOnly" />
       <value name="Redundant" />
+      <value name="Undeletable" />
     </enum>
     <constructor>
       <variant />
@@ -73,6 +74,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="invisible"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isUndeletable" cppName="isUndeletable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setUndeletable" cppName="setUndeletable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="undeletable"
         isConst="false" />
       </variant>
     </method>
