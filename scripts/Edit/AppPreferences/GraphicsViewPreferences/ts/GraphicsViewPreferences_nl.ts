@@ -153,7 +153,7 @@
         <translation>Maximum aantal weergeven referentiepunten:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+80"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>

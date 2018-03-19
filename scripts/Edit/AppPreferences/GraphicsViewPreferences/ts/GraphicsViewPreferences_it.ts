@@ -189,7 +189,7 @@
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+335"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>

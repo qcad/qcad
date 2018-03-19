@@ -153,7 +153,7 @@
         <translation>Maximálny počet zobrazených bodov :</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+80"/>
         <source>Selection</source>
         <translation>Výber</translation>
     </message>

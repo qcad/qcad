@@ -193,7 +193,7 @@
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+335"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>

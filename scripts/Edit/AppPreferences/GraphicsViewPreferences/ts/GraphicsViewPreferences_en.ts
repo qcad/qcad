@@ -149,7 +149,11 @@
         <translation>Maximum number of reference points displayed:</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <source>Pen cap style:</source>
+        <translation type="obsolete">Pen cap style:</translation>
+    </message>
+    <message>
+        <location line="+80"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>

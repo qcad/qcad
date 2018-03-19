@@ -4,12 +4,12 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="+62"/>
+        <location filename="../About.js" line="+63"/>
         <source>About %1</source>
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+56"/>
         <source>Revision:</source>
         <translation>Revizija:</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation>Vtičniki</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>No information available</source>
         <translation>Informacije niso navoljo</translation>
     </message>
@@ -48,7 +48,7 @@
         <translation>Vtičnik:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+30"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -65,14 +65,14 @@
         <translation>Neznano</translation>
     </message>
     <message>
-        <location line="-115"/>
-        <location line="+108"/>
+        <location line="-118"/>
+        <location line="+111"/>
         <source>Version:</source>
         <translation>Verzija:</translation>
     </message>
     <message>
-        <location line="-95"/>
-        <location line="+99"/>
+        <location line="-101"/>
+        <location line="+105"/>
         <source>Qt Version:</source>
         <translation>Qt verzija:</translation>
     </message>
@@ -86,14 +86,14 @@
         <translation>Licenca:</translation>
     </message>
     <message>
-        <location line="-109"/>
-        <location line="+118"/>
+        <location line="-115"/>
+        <location line="+124"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-128"/>
+        <location line="-134"/>
         <source>Build Date:</source>
         <translation>Datum kreiranja:</translation>
     </message>
@@ -150,7 +150,7 @@
         <translation>Ni najdenih nobenih vtičnikov.</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+99"/>
         <source>Active</source>
         <translation>Aktivno</translation>
     </message>
@@ -175,7 +175,7 @@
         <translation>Napaka:</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+42"/>
         <source>Script Add-Ons</source>
         <translation>Dodatki skript</translation>
     </message>
