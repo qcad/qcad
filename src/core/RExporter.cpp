@@ -100,8 +100,8 @@ void RExporter::init() {
     currentBrush.setStyle(Qt::SolidPattern);
 
     // init pen cap style (usually round):
-    int v = RSettings::getIntValue("GraphicsView/PenCapStyle", Qt::RoundCap);
-    penCapStyle = (Qt::PenCapStyle)v;
+    //int v = RSettings::getIntValue("GraphicsView/PenCapStyle", Qt::RoundCap);
+    //penCapStyle = (Qt::PenCapStyle)v;
     currentPen.setCapStyle(penCapStyle);
 }
 
