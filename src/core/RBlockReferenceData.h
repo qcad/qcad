@@ -56,6 +56,8 @@ public:
         return RS::EntityBlockRef;
     }
 
+    virtual bool isPointType() const;
+
     virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const;
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 

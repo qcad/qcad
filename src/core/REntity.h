@@ -110,6 +110,10 @@ public:
         return getData().getType();
     }
 
+    virtual bool isPointType() const {
+        return getData().isPointType();
+    }
+
     static bool isComplex(const RS::EntityType type);
     static bool isDimension(const RS::EntityType type);
 

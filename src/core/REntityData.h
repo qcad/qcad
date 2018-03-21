@@ -87,6 +87,13 @@ public:
         return RS::EntityUnknown;
     }
 
+    /**
+     * \return True if entity is of point nature (point, pixel based block).
+     */
+    virtual bool isPointType() const {
+        return false;
+    }
+
     virtual bool isValid() const {
         return true;
     }

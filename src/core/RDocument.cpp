@@ -1371,9 +1371,7 @@ REntity::Id RDocument::queryClosestXY(
  * index query.
  *
  * \param candidates Sets of candidates to consider.
- *
  * \param wcsPosition
- *
  * \param range Maximum distance between position and entity.
  */
 REntity::Id RDocument::queryClosestXY(
@@ -1396,6 +1394,12 @@ REntity::Id RDocument::queryClosestXY(
             continue;
         }
         double dist = e->getDistanceTo(wcsPosition, true, range, draft, strictRange);
+
+        if (e->isPointType() && dist<range+RS::PointTolerance) {
+            // make point type entites easier to select:
+            dist/=10.0;
+        }
+
         if (!RMath::isNaN(dist) && dist < minDist && dist < range+RS::PointTolerance) {
             minDist = dist;
             ret = *it;

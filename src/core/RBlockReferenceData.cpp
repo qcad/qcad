@@ -188,6 +188,15 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
     return minDist;
 }
 
+bool RBlockReferenceData::isPointType() const {
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block.isNull()) {
+        return false;
+    }
+
+    return block->getCustomBoolProperty("QCAD", "PixelUnit", false)==true;
+}
+
 QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
     QList<RBox>* bbs;
     if (ignoreEmpty) {
