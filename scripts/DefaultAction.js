@@ -286,8 +286,6 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             entityId = this.getEntityId(event, false, true);
 
             //qDebug("entityId: ", entityId);
-            //var e = this.document.queryEntity(entityId);
-            //if (!isNull(e)) qDebug("parentId: ", e.getParentId());
 
             if (entityId !== -1) {
                 if (shiftPressed && this.document.isSelected(entityId)) {
