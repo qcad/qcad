@@ -51,6 +51,11 @@ public:
     virtual RS::EntityType getType() const {
         return RS::EntityPoint;
     }
+
+    virtual bool isPointType() const {
+        return true;
+    }
+
     RVector getPosition() const {
        return RPoint::getPosition();
     }
