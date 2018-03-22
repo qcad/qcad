@@ -228,7 +228,7 @@ Explode.explodeEntity = function(entity, options) {
         }
     }
 
-    // explode spline into polyline with line segments:
+    // explode spline into polyline with arc or line segments:
     else if (isSplineEntity(entity)) {
         var spline = entity.getData().castToShape();
         var pl;
