@@ -679,6 +679,7 @@ RVector RSpline::getStartPoint() const {
 }
 
 void RSpline::setStartPoint(const RVector& v) {
+    // TODO: handle fit points
     controlPoints[0] = v;
     update();
 }
@@ -696,6 +697,7 @@ RVector RSpline::getEndPoint() const {
 }
 
 void RSpline::setEndPoint(const RVector& v) {
+    // TODO: handle fit points
     controlPoints[controlPoints.size()-1] = v;
     update();
 }
@@ -1205,22 +1207,39 @@ bool RSpline::flipVertical() {
 
 bool RSpline::reverse() {
     int k;
-    for(k = 0; k < controlPoints.size()/2; k++) {
-        controlPoints.swap(k,controlPoints.size()-(1+k));
+    if (!isClosed()) {
+        for (k = 0; k < controlPoints.size()/2; k++) {
+            controlPoints.swap(k,controlPoints.size()-(1+k));
+        }
+        for (k = 0; k < fitPoints.size()/2; k++) {
+            fitPoints.swap(k,fitPoints.size()-(1+k));
+        }
+        double t;
+        int i, j;
+        for(i = 0, j = knotVector.size()-1; i <= j; i++, j--) {
+            t = knotVector[i];
+            knotVector[i] = -knotVector[j];
+            knotVector[j] = -t;
+        }
+        RVector ts = tangentStart;
+        tangentStart = tangentEnd.getNegated();
+        tangentEnd = ts.getNegated();
     }
-    for(k = 0; k < fitPoints.size()/2; k++) {
-        fitPoints.swap(k,fitPoints.size()-(1+k));
+    else {
+        if (hasFitPoints()) {
+            for (k = 0; k < (int)floor(fitPoints.size()/2.0); k++) {
+                fitPoints.swap(k,fitPoints.size()-(1+k));
+            }
+            // keep start node the same:
+            fitPoints.prepend(fitPoints.takeLast());
+        }
+        else {
+            for (k = 0; k < controlPoints.size()/2; k++) {
+                controlPoints.swap(k,controlPoints.size()-(1+k));
+            }
+        }
+        updateTangentsPeriodic();
     }
-    double t;
-    int i, j;
-    for(i = 0, j = knotVector.size()-1; i <= j; i++, j--) {
-        t = knotVector[i];
-        knotVector[i] = -knotVector[j];
-        knotVector[j] = -t;
-    }
-    RVector ts = tangentStart;
-    tangentStart = tangentEnd.getNegated();
-    tangentEnd = ts.getNegated();
     update();
     return true;
 }
