@@ -72,6 +72,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
+            REcmaHelper::registerFunction(&engine, proto, isPointType, "isPointType");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBoxes, "getBoundingBoxes");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
@@ -1107,6 +1109,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceData::getType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::isPointType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::isPointType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::isPointType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("isPointType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPointType();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.isPointType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::isPointType", context, engine);
             return result;
         }
          QScriptValue

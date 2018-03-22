@@ -79,6 +79,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
+            REcmaHelper::registerFunction(&engine, proto, isPointType, "isPointType");
+            
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
@@ -100,6 +102,8 @@
             REcmaHelper::registerFunction(&engine, proto, getDrawOrder, "getDrawOrder");
             
             REcmaHelper::registerFunction(&engine, proto, setLayerId, "setLayerId");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLayerName, "setLayerName");
             
             REcmaHelper::registerFunction(&engine, proto, getLayerId, "getLayerId");
             
@@ -609,6 +613,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::getType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::isPointType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::isPointType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::isPointType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("isPointType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPointType();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.isPointType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::isPointType", context, engine);
             return result;
         }
          QScriptValue
@@ -1295,6 +1348,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::setLayerId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::setLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::setLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::setLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("setLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLayerName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.setLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::setLayerName", context, engine);
             return result;
         }
          QScriptValue

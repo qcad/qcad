@@ -57,6 +57,9 @@
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isPointType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -112,6 +115,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLayerId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLayerName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLayerName

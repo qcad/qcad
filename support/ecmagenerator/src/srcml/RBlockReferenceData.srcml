@@ -57,6 +57,8 @@
         <return>return <expr><name><name>RS</name>::<name>EntityBlockRef</name></name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isPointType</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>getBoundingBoxes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

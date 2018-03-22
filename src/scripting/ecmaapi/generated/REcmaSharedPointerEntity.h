@@ -65,6 +65,9 @@
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isPointType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isComplex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -102,6 +105,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setLayerId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLayerName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLayerId

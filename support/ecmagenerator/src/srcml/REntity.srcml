@@ -111,6 +111,10 @@
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getType</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isPointType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>isPointType</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isComplex</name><parameter_list>(<param><decl><type><name>const</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isDimension</name><parameter_list>(<param><decl><type><name>const</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -189,6 +193,13 @@
      */</comment>
     <function><type><name>void</name></type> <name>setLayerId</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setLayerId</name><argument_list>(<argument><expr><name>layerId</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \copydoc REntityData::setLayerName
+     */</comment>
+    <function><type><name>void</name></type> <name>setLayerName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setLayerName</name><argument_list>(<argument><expr><name>n</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
     <comment type="block">/**

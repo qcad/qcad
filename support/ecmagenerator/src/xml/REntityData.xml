@@ -35,6 +35,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RS::EntityType" isPureVirtual="false" />
     </method>
+    <method name="isPointType" cppName="isPointType"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="isValid" cppName="isValid" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
@@ -164,6 +169,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RLayer::Id" isPureVirtual="false" />
+    </method>
+    <method name="setLayerName" cppName="setLayerName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
     </method>
     <method name="getLayerName" cppName="getLayerName"
     specifier="public" isStatic="false" isVirtual="false"

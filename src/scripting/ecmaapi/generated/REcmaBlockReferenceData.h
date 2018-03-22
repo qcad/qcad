@@ -51,6 +51,9 @@
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isPointType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBoxes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
