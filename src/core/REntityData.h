@@ -210,6 +210,7 @@ public:
         return layerId;
     }
 
+    void setLayerName(const QString& layerName);
     QString getLayerName() const;
 
     virtual void setBlockId(RBlock::Id blockId) {

@@ -40,9 +40,23 @@ REntityData::REntityData(RDocument* document) :
     drawOrder = REntityData::getDefaultDrawOrder();
 }
 
+void REntityData::setLayerName(const QString& layerName) {
+    if (getDocument()==NULL) {
+        qWarning() << "REntityData::setLayerName: document is NULL";
+        return;
+    }
+    int id = getDocument()->getLayerId(layerName);
+    if (id==RObject::INVALID_ID) {
+        qWarning() << "REntityData::setLayerName: no such layer: " << layerName;
+        return;
+    }
+
+    layerId = id;
+}
+
 QString REntityData::getLayerName() const {
     if (getDocument()==NULL) {
-        qWarning("REntityData::getLayerName: document is NULL");
+        qWarning() << "REntityData::getLayerName: document is NULL";
         return QString();
     }
     return getDocument()->getLayerName(layerId);
@@ -50,7 +64,7 @@ QString REntityData::getLayerName() const {
 
 QString REntityData::getBlockName() const {
     if (getDocument()==NULL) {
-        qWarning("REntityData::getBlockName: document is NULL");
+        qWarning() << "REntityData::getBlockName: document is NULL";
         return QString();
     }
     return getDocument()->getBlockName(blockId);

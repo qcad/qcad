@@ -195,6 +195,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::setLayerName
+     */
+    void setLayerName(const QString& n) {
+        getData().setLayerName(n);
+    }
+
+    /**
      * \copydoc REntityData::getLayerId
      */
     RLayer::Id getLayerId() const {
