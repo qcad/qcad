@@ -47,7 +47,7 @@
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+356"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>

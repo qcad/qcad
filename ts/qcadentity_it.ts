@@ -118,6 +118,8 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+86"/>
         <location line="+3"/>
+        <location line="+8"/>
+        <location line="+4"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -203,8 +205,10 @@ Arco: Centro, Punto, Angoli
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-14"/>
         <location line="+3"/>
+        <location line="+8"/>
+        <location line="+4"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -268,8 +272,10 @@ Caricamento indirizzi delle librerie
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-2"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-14"/>
         <location line="+3"/>
+        <location line="+8"/>
+        <location line="+4"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -331,7 +337,7 @@ Arcocomplementare</translatorcomment>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+10"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-10"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
         <translatorcomment>--exact match--
@@ -755,12 +761,28 @@ Punto di adattamento successivo
         <translation>Nodo</translation>
     </message>
     <message>
-        <source>Start Tangent</source>
-        <translation type="vanished">Tangente iniziale</translation>
+        <location line="+4"/>
+        <source>Use Start Tangent</source>
+        <translation>Utilizzare la tangente di inizio</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Start Tangent</source>
+        <translation>Tangente iniziale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use End Tangent</source>
+        <translation>Utilizzare la tangente finale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="vanished">Tangente finale</translation>
+        <translation>Tangente finale</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-10"/>

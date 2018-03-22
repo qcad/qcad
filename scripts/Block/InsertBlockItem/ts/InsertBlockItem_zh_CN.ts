@@ -4,7 +4,7 @@
 <context>
     <name>InsertBlockItem</name>
     <message>
-        <location filename="../InsertBlockItem.js" line="+101"/>
+        <location filename="../InsertBlockItem.js" line="+102"/>
         <source>Cannot import file from URL: </source>
         <translation>不能从 URL 链接插入文件：</translation>
     </message>

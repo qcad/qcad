@@ -47,7 +47,7 @@
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+356"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>

@@ -47,7 +47,7 @@
         <translation>Переместите объект в нужное место</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+356"/>
         <source>Move Reference Point</source>
         <translation>Переместить точку привязки</translation>
     </message>

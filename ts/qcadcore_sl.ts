@@ -650,7 +650,7 @@
         <translation>Maks. razširitev</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+582"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+591"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Zaznano krožno (rekurzivno) blokovno sklicevanje:</translation>
     </message>

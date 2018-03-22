@@ -66,7 +66,7 @@
         <translation>Sovrascrivere i blocchi</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+101"/>
+        <location filename="../InsertBlockItem.js" line="+102"/>
         <source>Cannot import file from URL: </source>
         <translation>Non è possibile importare file da URL: </translation>
     </message>

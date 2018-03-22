@@ -47,7 +47,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+356"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
