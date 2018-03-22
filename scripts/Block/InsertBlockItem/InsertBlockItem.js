@@ -35,6 +35,7 @@ function InsertBlockItem(guiAction) {
     this.docItem = undefined;
 
     this.blockName = undefined;
+    // set to flatten all entities to this one layer:
     this.layerName = undefined;
     this.offset = undefined;
     this.scale = 1.0;
