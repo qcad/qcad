@@ -214,8 +214,8 @@ public:
     void addAffectedObjects(const QSet<RObject::Id>& objectIds);
     void addAffectedObject(QSharedPointer<RObject> object);
 
-    void deleteObject(RObject::Id objectId);
-    void deleteObject(QSharedPointer<RObject> object);
+    void deleteObject(RObject::Id objectId, bool force = false);
+    void deleteObject(QSharedPointer<RObject> object, bool force = false);
 
     /**
      * \return List of object IDs of objects that are affected by

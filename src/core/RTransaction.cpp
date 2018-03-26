@@ -442,7 +442,7 @@ bool RTransaction::overwriteBlock(QSharedPointer<RBlock> block) {
         // block references are not deleted,
         // because they no longer reference this block
         // block contents is deleted
-        deleteObject(storage->getBlockId(blockName));
+        deleteObject(storage->getBlockId(blockName), true);
     }
 
     // add new block to dest or overwrite block:
@@ -585,7 +585,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         objectStorage->setObjectId(*clone, REntity::INVALID_ID);
         // note that we delete the OLD entity here
         // (old entity is queried from storage since we pass the ID here):
-        deleteObject(entity->getId());
+        deleteObject(entity->getId(), true);
         addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
 
         // draw order was set to top value automatically by
@@ -925,12 +925,12 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
     affectedObjectIds.append(object->getId());
 }
 
-void RTransaction::deleteObject(RObject::Id objectId) {
+void RTransaction::deleteObject(RObject::Id objectId, bool force) {
     QSharedPointer<RObject> obj = storage->queryObject(objectId);
-    deleteObject(obj);
+    deleteObject(obj, force);
 }
 
-void RTransaction::deleteObject(QSharedPointer<RObject> object) {
+void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
     if (storage == NULL) {
         return;
     }
@@ -977,7 +977,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
         QSet<REntity::Id> ids = storage->queryLayerEntities(objectId, true);
         QSetIterator<REntity::Id> it(ids);
         while (it.hasNext()) {
-            deleteObject(it.next());
+            deleteObject(it.next(), true);
         }
 
         // current layer deleted, reset current layer to layer "0":
@@ -1003,14 +1003,14 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
         QSet<REntity::Id> ids = storage->queryBlockReferences(objectId);
         QSetIterator<REntity::Id> it(ids);
         while (it.hasNext()) {
-            deleteObject(it.next());
+            deleteObject(it.next(), true);
         }
 
         // delete all entities of this block definition:
         ids = storage->queryBlockEntities(objectId);
         it = QSetIterator<REntity::Id>(ids);
         while (it.hasNext()) {
-            deleteObject(it.next());
+            deleteObject(it.next(), true);
         }
 
         // current block deleted, reset current block to model space:
@@ -1024,7 +1024,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
 
     if (!entity.isNull()) {
-        if (!allowAll && !entity->isEditable(allowInvisible)) {
+        if (!allowAll && !force && !entity->isEditable(allowInvisible)) {
             qWarning() << "RTransaction::deleteObject: entity not editable (locked or hidden layer)";
             fail();
             return;
@@ -1040,7 +1040,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
         QSet<REntity::Id> ids = storage->queryChildEntities(entity->getId());
         QSetIterator<REntity::Id> it(ids);
         while (it.hasNext()) {
-            deleteObject(it.next());
+            deleteObject(it.next(), true);
         }
 
         allowAll = allowAllOri;
