@@ -28,7 +28,8 @@ RBlockReferenceData::RBlockReferenceData() :
     columnCount(1),
     rowCount(1),
     columnSpacing(0),
-    rowSpacing(0) {
+    rowSpacing(0),
+    visualPropertiesScale(1.0) {
 }
 
 RBlockReferenceData::RBlockReferenceData(RDocument* document,
@@ -356,6 +357,9 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
         blockReference->rotate(-2*blockReference->getRotation(), blockReference->getPosition());
         blockReference->rotate(rotation);
         blockReference->move(position);
+        if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
+            blockReference->scaleVisualProperties(visualPropertiesScale);
+        }
         return true;
     }
 
@@ -363,6 +367,10 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
     entity.scale(scaleFactors);
     entity.rotate(rotation);
     entity.move(position);
+
+    if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
+        entity.scaleVisualProperties(visualPropertiesScale);
+    }
 
     return true;
 }
@@ -578,6 +586,10 @@ bool RBlockReferenceData::scale(const RVector& scaleFactors, const RVector& cent
     this->scaleFactors.scale(scaleFactors);
     update();
     return true;
+}
+
+void RBlockReferenceData::scaleVisualProperties(double scaleFactor) {
+    visualPropertiesScale = scaleFactor;
 }
 
 void RBlockReferenceData::setReferencedBlockId(RBlock::Id blockId) {

@@ -79,6 +79,8 @@ public:
     virtual bool scale(const RVector& scaleFactors,
                        const RVector& center = RDEFAULT_RVECTOR);
 
+    virtual void scaleVisualProperties(double scaleFactor);
+
     void setReferencedBlockId(RBlock::Id blockId);
 
     void groundReferencedBlockId() const;
@@ -152,6 +154,9 @@ private:
     int rowCount;
     double columnSpacing;
     double rowSpacing;
+
+    double visualPropertiesScale;
+
     mutable QList<RBox> boundingBoxes;
     mutable QList<RBox> boundingBoxesIgnoreEmpty;
     mutable QMap<REntity::Id, QSharedPointer<REntity> > cache;
