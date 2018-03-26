@@ -401,8 +401,9 @@ CommandLine.init = function(basePath) {
             return;
         }
 
+        var msgEsc = message;
         if (escape) {
-            message = Qt.escape(message);
+            msgEsc = Qt.escape(message);
         }
 
         var cartCoordSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ',');
@@ -421,7 +422,7 @@ CommandLine.init = function(basePath) {
         appendAndScroll(
             "<span style='color:" + blue + ";'>"
             + "<i>" + what + ": </i>"
-            + message + "</span>");
+            + msgEsc + "</span>");
     });
 
     // change command prompt label:
