@@ -644,10 +644,14 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
         }
         */
 
+        // block editing with double click might be disabled globally:
         if (RSettings.getBoolValue("GraphicsView/DoubleClickEditBlock", true)===true) {
-            include("scripts/Block/Block.js");
-            EAction.handleUserMessage(qsTr("Editing block '%1'<br>Choose <i>Block > Return to Main Drawing</i> when done").arg(entity.getReferencedBlockName()));
-            Block.editBlock(this.di, entity.getReferencedBlockName());
+            // block editing with double click might be disabled for this entity:
+            if (entity.getCustomBoolProperty("QCAD", "DoubleClickEditBlock", true)===true) {
+                include("scripts/Block/Block.js");
+                EAction.handleUserMessage(qsTr("Editing block '%1'<br>Choose <i>Block > Return to Main Drawing</i> when done").arg(entity.getReferencedBlockName()), false);
+                Block.editBlock(this.di, entity.getReferencedBlockName());
+            }
         }
     }
     else if (isHatchEntity(entity)) {
