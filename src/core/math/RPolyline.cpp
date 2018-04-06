@@ -21,6 +21,7 @@
 #include "RArc.h"
 #include "RBox.h"
 #include "RCircle.h"
+#include "REllipse.h"
 #include "RLine.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
@@ -164,6 +165,14 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
     if (spl!=NULL) {
         double tol = RSettings::getDoubleValue("Explode/SplineTolerance", 0.01);
         RPolyline pl = spl->approximateWithArcs(tol);
+        return appendShape(pl, prepend);
+    }
+
+    // append ellipse as polyline approximation:
+    const REllipse* elp = dynamic_cast<const REllipse*>(&shape);
+    if (elp!=NULL) {
+        double seg = RSettings::getDoubleValue("Explode/EllipseSegments", 32);
+        RPolyline pl = elp->approximateWithArcs(seg);
         return appendShape(pl, prepend);
     }
 
