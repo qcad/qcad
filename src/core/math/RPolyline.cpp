@@ -716,16 +716,18 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
         return RS::Any;
     }
 
+    RPolyline pl = convertArcToLineSegments(16);
+
     RVector minV = RVector::invalid;
     QSharedPointer<RShape> shapeBefore;
     QSharedPointer<RShape> shapeAfter;
     QSharedPointer<RShape> shape;
-    QSharedPointer<RShape> previousShape = getSegmentAt(countSegments()-1);
+    QSharedPointer<RShape> previousShape = pl.getSegmentAt(pl.countSegments()-1);
 
     // find minimum vertex (lower left corner):
-    QList<QSharedPointer<RShape> > segments = getExploded();
+    QList<QSharedPointer<RShape> > segments = pl.getExploded();
     for (int i=0; i<segments.length(); i++) {
-        shape = getSegmentAt(i);
+        shape = pl.getSegmentAt(i);
         if (shape.isNull()) {
             continue;
         }
@@ -795,6 +797,26 @@ bool RPolyline::setOrientation(RS::Orientation orientation) {
         return reverse();
     }
     return false;
+}
+
+RPolyline RPolyline::convertArcToLineSegments(int segments) const {
+    RPolyline ret;
+
+    QList<QSharedPointer<RShape> > segs = getExploded();
+    for (int i=0; i<segs.length(); i++) {
+        QSharedPointer<RShape> seg = segs[i];
+        if (seg->getShapeType()==RShape::Arc) {
+            QSharedPointer<RArc> arc = seg.dynamicCast<RArc>();
+            RPolyline pl = arc->approximateWithLinesTan(arc->getLength()/segments);
+            ret.appendShape(pl);
+        }
+        else {
+            ret.appendShape(*seg);
+        }
+    }
+
+    ret.autoClose();
+    return ret;
 }
 
 /**
