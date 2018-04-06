@@ -6,12 +6,12 @@
     <message>
         <location filename="../CreateBlock.js" line="+51"/>
         <source>Reference Point</source>
-        <translation>Referans Noktası</translation>
+        <translation>Referenční bod</translation>
     </message>
     <message>
         <location filename="../CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>&amp;Seçimden Blok Oluştur</translation>
+        <translation>&amp;Vytvořit blok z výběru</translation>
     </message>
 </context>
 </TS>

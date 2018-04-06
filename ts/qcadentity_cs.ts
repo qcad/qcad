@@ -258,7 +258,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Celková délka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -397,7 +397,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Počátek</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -437,12 +437,12 @@
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Horní limit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Spodní limit</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -456,7 +456,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Umístění textu</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -483,7 +483,7 @@
     <message>
         <location line="+1"/>
         <source>Block Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Název bloku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -520,7 +520,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční bod</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -530,7 +530,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový bod</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
@@ -585,17 +585,17 @@
     <message>
         <location line="+184"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ano</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -748,7 +748,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Bod 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -761,7 +761,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Bod 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -774,7 +774,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Bod 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -787,7 +787,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Bod 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-10"/>

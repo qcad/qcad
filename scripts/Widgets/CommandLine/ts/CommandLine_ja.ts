@@ -74,7 +74,7 @@
         <translation>情報</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Expression</source>
         <translation>評価式</translation>
     </message>

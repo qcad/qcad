@@ -66,7 +66,7 @@
         <translation>Tiedot</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Expression</source>
         <translation type="unfinished"></translation>
     </message>

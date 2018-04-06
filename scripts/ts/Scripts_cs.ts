@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>Apollonius</name>
     <message>
         <location filename="../Apollonius.js" line="+1769"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Neplatný poloměr</translation>
     </message>
     <message>
         <location line="+51"/>

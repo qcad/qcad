@@ -24,12 +24,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+26"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí barva pro nové vrstvy:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="unfinished">Implicitní váha pro novou vrstvu</translation>
+        <translation>Výchozí tloušťka čáry pro nové vrstvy:</translation>
     </message>
 </context>
 </TS>

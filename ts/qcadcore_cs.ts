@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Žádná</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -56,7 +56,7 @@
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation>Míle</translation>
+        <translation>Yard</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -96,12 +96,12 @@
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation>Astronomická jednotka</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation>Světelný rok</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -334,7 +334,7 @@
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhel</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -403,7 +403,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation type="unfinished">Pořadí kreslení</translation>
+        <translation>Pořadí vykreslování</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -650,7 +650,7 @@
         <translation>Celkově</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+591"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+603"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished"></translation>
     </message>

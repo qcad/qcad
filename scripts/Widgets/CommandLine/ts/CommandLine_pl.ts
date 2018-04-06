@@ -95,7 +95,7 @@ Wypisuje informację debugowania obiektów</translatorcomment>
         <translation>Informacja</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Expression</source>
         <translation>Wyrażenie</translation>
     </message>

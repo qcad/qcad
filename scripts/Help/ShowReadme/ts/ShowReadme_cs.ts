@@ -24,7 +24,7 @@
     <message>
         <location filename="../ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation type="unfinished">Zobrazit &amp;Čtimne</translation>
+        <translation>Zobrazit &amp;Čti mne</translation>
     </message>
 </context>
 </TS>

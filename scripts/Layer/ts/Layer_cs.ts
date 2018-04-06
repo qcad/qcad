@@ -21,32 +21,32 @@
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit všechny vrstvy</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Skrýt všechny vrstvy</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmrazit všechny vrstvy</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmrazit všechny vrstvy</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzamknout všechny vrstvy</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Odemknout všechny vrstvy</translation>
     </message>
 </context>
 <context>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation type="unfinished">Data vrstvy</translation>
+        <translation>Údaje vrstvy</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -89,12 +89,12 @@
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tloušťka čáry:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ čáry:</translation>
     </message>
 </context>
 </TS>

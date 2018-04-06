@@ -99,7 +99,7 @@ Aviso:</translatorcomment>
         <translation>Informação</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Expression</source>
         <translation>Expressão</translation>
     </message>

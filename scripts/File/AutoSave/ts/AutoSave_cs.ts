@@ -15,12 +15,12 @@
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Autosaving to:</source>
-        <translation type="unfinished">Automatický uložit do:</translation>
+        <translation>Automaticky uložit do:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -36,8 +36,9 @@
         <location line="+19"/>
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Byly nalezeny záložní nepojmenované &apos;autosave&apos; soubory s výkresem %n.
+Přejete si je obnovit?</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -61,7 +62,8 @@ Do you wish to recover it/them?</source>
         <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Existuje záložní &apos;autosave&apos; soubor pro &apos;%1&apos;.
+Přejete si ho obnovit?</translation>
     </message>
     <message>
         <location line="+25"/>
