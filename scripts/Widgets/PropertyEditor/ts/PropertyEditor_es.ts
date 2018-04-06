@@ -38,7 +38,7 @@ Tipo de línea:</translatorcomment>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+713"/>
+        <location filename="../PropertyEditor.js" line="+712"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -73,7 +73,7 @@ Tipo de línea:</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1139"/>
+        <location line="-1138"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -115,7 +115,7 @@ Valor indexado</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+61"/>
         <source>Remove this property from selected objects</source>
         <translation>Retire esta propiedad de los objetos seleccionados</translation>
     </message>
