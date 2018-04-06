@@ -128,6 +128,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPropertyTypeId, "setPropertyTypeId");
             
+            REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLabel, "setLabel");
+            
             REcmaHelper::registerFunction(&engine, proto, equals, "equals");
             
             REcmaHelper::registerFunction(&engine, proto, operator_not_assign, "operator_not_assign");
@@ -2489,6 +2493,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setPropertyTypeId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::getLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::getLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::getLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("getLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLabel();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.getLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::getLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLabel(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setLabel", context, engine);
             return result;
         }
          QScriptValue

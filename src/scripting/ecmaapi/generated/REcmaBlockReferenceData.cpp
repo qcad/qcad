@@ -100,6 +100,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
+            REcmaHelper::registerFunction(&engine, proto, scaleVisualProperties, "scaleVisualProperties");
+            
             REcmaHelper::registerFunction(&engine, proto, setReferencedBlockId, "setReferencedBlockId");
             
             REcmaHelper::registerFunction(&engine, proto, groundReferencedBlockId, "groundReferencedBlockId");
@@ -2850,6 +2852,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceData::scale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::scaleVisualProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::scaleVisualProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::scaleVisualProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("scaleVisualProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->scaleVisualProperties(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.scaleVisualProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::scaleVisualProperties", context, engine);
             return result;
         }
          QScriptValue

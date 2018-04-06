@@ -222,11 +222,15 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RObject::Id" typeName="RObject::Id"
         name="objectId" isConst="false" />
+        <arg type="bool" typeName="bool" name="force"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="QSharedPointer &lt; RObject &gt;"
         typeName="QSharedPointer &lt; RObject &gt;" name="object"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="force"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getAffectedObjects" cppName="getAffectedObjects"

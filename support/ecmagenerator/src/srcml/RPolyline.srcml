@@ -135,6 +135,8 @@
     <function_decl><type><name><name>RS</name>::<name>Orientation</name></name></type> <name>getOrientation</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>implicitelyClosed</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>setOrientation</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Orientation</name></name></type> <name>orientation</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>RPolyline</name></type> <name>convertArcToLineSegments</name><parameter_list>(<param><decl><type><name>int</name></type> <name>segments</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>bool</name></type> <name>contains</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>borderIsInside</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>containsShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>shape</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

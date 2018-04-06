@@ -192,6 +192,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setOrientation, "setOrientation");
             
+            REcmaHelper::registerFunction(&engine, proto, convertArcToLineSegments, "convertArcToLineSegments");
+            
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
             
             REcmaHelper::registerFunction(&engine, proto, containsShape, "containsShape");
@@ -4303,6 +4305,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::setOrientation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::convertArcToLineSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::convertArcToLineSegments", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::convertArcToLineSegments";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("convertArcToLineSegments", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->convertArcToLineSegments(a0);
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.convertArcToLineSegments().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::convertArcToLineSegments", context, engine);
             return result;
         }
          QScriptValue

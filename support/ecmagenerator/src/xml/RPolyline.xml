@@ -424,6 +424,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="orientation" isConst="false" />
       </variant>
     </method>
+    <method name="convertArcToLineSegments"
+    cppName="convertArcToLineSegments" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false">
+        <arg type="int" typeName="int" name="segments"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="contains" cppName="contains" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

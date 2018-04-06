@@ -163,6 +163,12 @@
         setPropertyTypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         equals
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

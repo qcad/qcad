@@ -220,6 +220,9 @@
         setOrientation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        convertArcToLineSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

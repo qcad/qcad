@@ -494,6 +494,22 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyDegree" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyUseStartTangent" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartTangentX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartTangentY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartTangentZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyUseEndTangent" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndTangentX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndTangentY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndTangentZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyLength" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyTotalLength" type="RPropertyTypeId"

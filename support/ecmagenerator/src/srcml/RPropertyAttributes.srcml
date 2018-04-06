@@ -238,12 +238,20 @@
         <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>NumericallySorted</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
-    <function><type><name>RPropertyTypeId</name></type> <name>getPropertyTypeId</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>RPropertyTypeId</name></type> <name>getPropertyTypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>propertyTypeId</name></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setPropertyTypeId</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>pid</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>propertyTypeId</name> = <name>pid</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>label</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setLabel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>l</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>label</name> = <name>l</name></expr>;</expr_stmt>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>operator ==</name> <parameter_list>(<param><decl><type><name>const</name> <name>RPropertyAttributes</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
@@ -277,7 +285,7 @@
 </public><private>private:
     <decl_stmt><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>choices</name></decl>;</decl_stmt>
-    <comment type="line">//QList&lt;QVariant&gt; enumChoices;</comment>
+    <decl_stmt><decl><type><name>QString</name></type> <name>label</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 

@@ -290,6 +290,38 @@
                 qScriptValueFromValue(&engine, RSplineEntity::PropertyDegree),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyUseStartTangent",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyUseStartTangent),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyStartTangentX",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyStartTangentX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyStartTangentY",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyStartTangentY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyStartTangentZ",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyStartTangentZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyUseEndTangent",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyUseEndTangent),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyEndTangentX",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyEndTangentX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyEndTangentY",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyEndTangentY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyEndTangentZ",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyEndTangentZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyLength",
                 qScriptValueFromValue(&engine, RSplineEntity::PropertyLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

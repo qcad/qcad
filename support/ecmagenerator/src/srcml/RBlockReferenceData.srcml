@@ -80,6 +80,8 @@
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>scaleFactors</name></decl></param>,
                        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>scaleVisualProperties</name><parameter_list>(<param><decl><type><name>double</name></type> <name>scaleFactor</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>void</name></type> <name>setReferencedBlockId</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>groundReferencedBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -153,6 +155,9 @@
     <decl_stmt><decl><type><name>int</name></type> <name>rowCount</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>columnSpacing</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>rowSpacing</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>double</name></type> <name>visualPropertiesScale</name></decl>;</decl_stmt>
+
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>boundingBoxes</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>boundingBoxesIgnoreEmpty</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>cache</name></decl>;</decl_stmt>
