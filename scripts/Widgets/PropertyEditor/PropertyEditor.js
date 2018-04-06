@@ -597,6 +597,11 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                             localTitle = RSettings.translate("REntity", title);
                         }
 
+                        var l = attributes.getLabel();
+                        if (l.length>0) {
+                            localTitle = l;
+                        }
+
                         var label = new QLabel(localTitle + this.colon, groupBox);
                         label.textInteractionFlags = Qt.TextSelectableByMouse;
                         label.alignment = Qt.AlignRight | Qt.AlignVCenter;

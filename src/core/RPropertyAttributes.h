@@ -237,12 +237,20 @@ public:
         setOption(NumericallySorted, on);
     }
 
-    RPropertyTypeId getPropertyTypeId() {
+    RPropertyTypeId getPropertyTypeId() const {
         return propertyTypeId;
     }
 
     void setPropertyTypeId(RPropertyTypeId pid) {
         propertyTypeId = pid;
+    }
+
+    QString getLabel() const {
+        return label;
+    }
+
+    void setLabel(const QString& l) {
+        label = l;
     }
 
     bool operator == (const RPropertyAttributes& other) const {
@@ -276,7 +284,7 @@ public:
 private:
     RPropertyAttributes::Options options;
     QSet<QString> choices;
-    //QList<QVariant> enumChoices;
+    QString label;
     RPropertyTypeId propertyTypeId;
 };
 
