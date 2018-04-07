@@ -251,9 +251,13 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             RS::Orientation ori = data.getOrientation(true);
             if (humanReadable) {
                 QString oriStr = (ori==RS::CCW ? RPolylineEntity::TrCounterclockwise : RPolylineEntity::TrClockwise);
-                return qMakePair(oriStr, attr);
+                QVariant v;
+                v.setValue(oriStr);
+                return qMakePair(v, attr);
             }
-            return qMakePair(ori, attr);
+            QVariant v;
+            v.setValue(ori);
+            return qMakePair(v, attr);
         }
 
         double baseAngle = data.getBaseAngle();
