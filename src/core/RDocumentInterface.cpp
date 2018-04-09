@@ -1145,7 +1145,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
     }
 
     // import from compiled resource:
-    if (fileName.startsWith(":scripts")) {
+    if (fileName.startsWith(":scripts") || fileName.startsWith(":/scripts")) {
         QString resourceFileName = fileName;
         QString tmpPath;
 #if QT_VERSION >= 0x050000
