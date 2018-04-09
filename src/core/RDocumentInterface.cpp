@@ -1159,6 +1159,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
             //return RDocumentInterface::IoErrorGeneralImportUrlError;
             tmpPath = ".";
         }
+        tmpPath = tmpDir.path();
 #else
         // Clumsy port to Qt 4:
         QDir tmpDir(RSettings::getTempLocation());
@@ -1167,7 +1168,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         tmpPath = tmpDir.path();
 #endif
         resourceFileName = tmpPath + "/" + resourceFileName;
-        if (!QFile::remove(resourceFileName)) {
+        if (QFile::exists(resourceFileName) && !QFile::remove(resourceFileName)) {
             qWarning() << "cannot remove file:" << resourceFileName;
             return RDocumentInterface::IoErrorGeneralImportUrlError;
         }
