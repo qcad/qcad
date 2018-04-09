@@ -585,7 +585,7 @@ function main() {
             var s = pluginInfo.get(key);
             if (!isNull(s)) {
                 fn = s;
-                qDebug("splash override: ", fn);
+                //qDebug("splash override: ", fn);
             }
         }
 
