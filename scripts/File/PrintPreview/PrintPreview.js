@@ -140,7 +140,7 @@ function PrintPreviewImpl(guiAction) {
     this.savedOffset = undefined;
 }
 
-PrintPreviewImpl.prototype = NewFile.getDefaultAction();
+PrintPreviewImpl.prototype = NewFile.getDefaultAction(false);
 PrintPreviewImpl.includeBasePath = includeBasePath;
 
 PrintPreviewImpl.State = {

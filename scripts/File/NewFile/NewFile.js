@@ -471,7 +471,7 @@ NewFile.closeRequested = function(mdiChild) {
  * Setup default action for the given document interface.
  */
 NewFile.setupDefaultAction = function(documentInterface) {
-    var defaultAction = NewFile.getDefaultAction(documentInterface);
+    var defaultAction = NewFile.getDefaultAction();
     if (!isNull(defaultAction)) {
         documentInterface.setDefaultAction(defaultAction);
     }
@@ -501,9 +501,16 @@ NewFile.getDefaultActionClass = function() {
  * Returns new default action as configured in settings ("NewFile/DefaultAction")
  * or instance of DefaultAction.
  */
-NewFile.getDefaultAction = function(documentInterface) {
+NewFile.getDefaultAction = function(useGuiAction) {
+    if (isNull(useGuiAction)) {
+        useGuiAction = true;
+    }
+
     // set up default action:
-    var defaultGuiAction = RGuiAction.getByScriptFile("scripts/Reset/Reset.js");
+    var defaultGuiAction = undefined;
+    if (useGuiAction) {
+        defaultGuiAction = RGuiAction.getByScriptFile("scripts/Reset/Reset.js");
+    }
     var defaultActionClass = NewFile.getDefaultActionClass();
     var defaultAction = undefined;
     if (typeof(global[defaultActionClass])!=="undefined") {
