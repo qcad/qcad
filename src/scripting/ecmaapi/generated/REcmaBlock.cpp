@@ -85,6 +85,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAnonymous, "setAnonymous");
             
+            REcmaHelper::registerFunction(&engine, proto, isPixelUnit, "isPixelUnit");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPixelUnit, "setPixelUnit");
+            
             REcmaHelper::registerFunction(&engine, proto, setOrigin, "setOrigin");
             
             REcmaHelper::registerFunction(&engine, proto, getOrigin, "getOrigin");
@@ -102,6 +106,8 @@
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCustomProperty, "setCustomProperty");
             
             REcmaHelper::registerFunction(&engine, proto, isSelectedForPropertyEditing, "isSelectedForPropertyEditing");
             
@@ -811,6 +817,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlock::setAnonymous", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlock::isPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlock::isPixelUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlock::isPixelUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("isPixelUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPixelUnit();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isPixelUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlock::isPixelUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlock::setPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlock::setPixelUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlock::setPixelUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("setPixelUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPixelUnit(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setPixelUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlock::setPixelUnit", context, engine);
             return result;
         }
          QScriptValue
@@ -1607,6 +1717,97 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlock::setProperty", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlock::setCustomProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlock::setCustomProperty", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlock::setCustomProperty";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("setCustomProperty", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNumber() || 
+            context->argument(2).isString() || 
+            context->argument(2).isBool() || 
+            context->argument(2).isArray() || 
+            context->argument(2).isNull() || 
+            context->argument(2).isUndefined()
+        ) /* type: QVariant */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a2 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCustomProperty(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setCustomProperty().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlock::setCustomProperty", context, engine);
             return result;
         }
          QScriptValue
