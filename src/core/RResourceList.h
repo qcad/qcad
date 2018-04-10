@@ -78,7 +78,7 @@ public:
      * \return Resource with the given name or an invalid resource.
      * The returned resource is loaded first if it isn't already.
      */
-    T* get(const QString& resName, int rec=0) {
+    T* get(const QString& resName) {
         QString resNameSub = getSubName(resName);
 
         // check if resource is available:
