@@ -245,7 +245,6 @@ PrintPreviewImpl.prototype.suspendEvent = function() {
 };
 
 PrintPreviewImpl.prototype.finishEvent = function() {
-    qDebug("PrintPreviewImpl.prototype.finishEvent");
     this.parentClass.prototype.finishEvent.call(this);
     var di = this.getDocumentInterface();
 
