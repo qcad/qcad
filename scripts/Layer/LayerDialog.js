@@ -65,7 +65,7 @@ LayerDialog.prototype.getLayerName = function(dialog) {
 
 LayerDialog.prototype.show = function() {
     this.dialog = WidgetFactory.createDialog("scripts/Layer", "LayerDialog.ui");
-    //this.dialog.windowIcon = new QIcon("scripts/Layer/EditLayer/EditLayer.svg");
+    //this.dialog.windowIcon = new QIcon(autoPath("scripts/Layer/EditLayer/EditLayer.svg"));
 
     var widgets = getWidgets(this.dialog);
     var leLayerName = widgets["LayerName"];

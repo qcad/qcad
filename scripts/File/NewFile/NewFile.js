@@ -229,7 +229,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
     }
 
     var mdiChild = new RMdiChildQt();
-    mdiChild.windowIcon = new QIcon("scripts/qcad_icon.png");
+    mdiChild.windowIcon = new QIcon(autoPath("scripts/qcad_icon.png"));
     mdiChild.setDocumentInterface(documentInterface);
     var flags = new Qt.WindowFlags(Qt.FramelessWindowHint);
     mdiChild.setWindowFlags(flags);

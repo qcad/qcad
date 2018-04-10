@@ -89,8 +89,8 @@ TabBar.initTabBar = function() {
             button.styleSheet = "border:0px";
 
             var fileNewAction = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
-            //action.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");
-            //button.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");
+            //action.icon = new QIcon(autoPath("scripts/Widgets/TabBar/AddTab.svg"));
+            //button.icon = new QIcon(autoPath("scripts/Widgets/TabBar/AddTab.svg"));
 
             var action = new RGuiAction(fileNewAction.text, RMainWindowQt.getMainWindow());
             action.setProperty("Configurable", false);

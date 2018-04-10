@@ -34,7 +34,7 @@ CharacterMapDialog.prototype.show = function() {
     
     var dlg = WidgetFactory.createWidget(CharacterMapDialog.includeBasePath,
             "CharacterMapDialog.ui", this.parent.dialog);
-    //dlg.windowIcon = new QIcon("scripts/Draw/Text/Text.svg");
+    //dlg.windowIcon = new QIcon(autoPath("scripts/Draw/Text/Text.svg"));
 
     var characterMap = new RCharacterWidget(dlg);
     var fontFamily = this.parent.comboFont

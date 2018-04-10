@@ -694,7 +694,7 @@ function main() {
 
     setUpDragAndDrop(appWin);
 
-    appWin.windowIcon = new QIcon("scripts/qcad_icon.png");
+    appWin.windowIcon = new QIcon(autoPath("scripts/qcad_icon.png"));
     if (!ignoreDockappWindows) {
         appWin.readSettings();
     }
