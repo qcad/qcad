@@ -395,6 +395,17 @@ RVector RBlockReferenceData::mapToBlock(const RVector& v) const {
     return ret;
 }
 
+bool RBlockReferenceData::isPixelUnit() const {
+    if (document==NULL) {
+        return false;
+    }
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block==NULL) {
+        return false;
+    }
+    return block->isPixelUnit();
+}
+
 QList<RRefPoint> RBlockReferenceData::getInternalReferencePoints(RS::ProjectionRenderingHint hint) const {
     QList<RRefPoint> ret;
 
@@ -563,9 +574,10 @@ bool RBlockReferenceData::rotate(double rotation, const RVector& center) {
     if (fabs(rotation) < RS::AngleTolerance) {
         return false;
     }
+
     position.rotate(rotation, center);
-    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
-    if (block!=NULL && !block->isPixelUnit()) {
+
+    if (!isPixelUnit()) {
         this->rotation += rotation;
     }
     update();
@@ -575,18 +587,23 @@ bool RBlockReferenceData::rotate(double rotation, const RVector& center) {
 bool RBlockReferenceData::mirror(const RLine& axis) {
     position.mirror(axis);
 
-    RVector vec = RVector::createPolar(1.0, rotation);
-    vec.mirror(RVector(0.0,0.0), axis.endPoint-axis.startPoint);
-    rotation = vec.getAngle();
+    if (!isPixelUnit()) {
+        RVector vec = RVector::createPolar(1.0, rotation);
+        vec.mirror(RVector(0.0,0.0), axis.endPoint-axis.startPoint);
+        rotation = vec.getAngle();
 
-    scaleFactors.y*=-1;
+        scaleFactors.y*=-1;
+    }
     update();
     return true;
 }
 
 bool RBlockReferenceData::scale(const RVector& scaleFactors, const RVector& center) {
     position.scale(scaleFactors, center);
-    this->scaleFactors.scale(scaleFactors);
+
+    if (!isPixelUnit()) {
+        this->scaleFactors.scale(scaleFactors);
+    }
     update();
     return true;
 }

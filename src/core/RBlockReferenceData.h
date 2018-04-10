@@ -144,6 +144,7 @@ public:
     void applyColumnRowOffsetTo(REntity& entity, int col, int row) const;
     RVector mapToBlock(const RVector& v) const;
 
+    bool isPixelUnit() const;
 
 private:
     mutable RBlock::Id referencedBlockId;
