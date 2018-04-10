@@ -617,7 +617,7 @@ bool RMainWindowQt::event(QEvent* e) {
                         keyLog.clear();
                     }
                     keyLog += QChar(ke->key());
-                    qDebug() << "keyLog" << keyLog;
+                    //qDebug() << "keyLog" << keyLog;
                     if (RGuiAction::triggerByShortcut(keyLog)) {
                         keyLog.clear();
                     }
