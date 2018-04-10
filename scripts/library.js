@@ -2507,10 +2507,6 @@ function isShiftPressed() {
 // Qt 4 API workaround:
 function qsTranslate2(context, sourceText, disambiguation, n) {
     if (RSettings.isQt(4)) {
-        qDebug("context:", context);
-        qDebug("sourceText:", sourceText);
-        qDebug("disambiguation:", disambiguation);
-        qDebug("n:", n);
         if (isNull(disambiguation)) {
             return qsTranslate(context, sourceText);
         }
