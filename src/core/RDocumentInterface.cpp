@@ -1943,11 +1943,12 @@ void RDocumentInterface::previewOperation(ROperation* operation) {
     RTransaction transaction = operation->apply(*previewDocument, true);
     delete operation;
 
+    QList<RObject::Id> obj = transaction.getAffectedObjects();
+
     QList<RGraphicsScene*>::iterator it;
     for (it = scenes.begin(); it != scenes.end(); it++) {
         (*it)->beginPreview();
 
-        QList<RObject::Id> obj = transaction.getAffectedObjects();
         QList<RObject::Id>::iterator oit;
         for (oit=obj.begin(); oit!=obj.end(); ++oit) {
             QSharedPointer<REntity> e = previewDocument->queryEntity(*oit);
@@ -1959,6 +1960,11 @@ void RDocumentInterface::previewOperation(ROperation* operation) {
             e->setDocument(previewDocument);
 
             if (!ls->isInBackStorage(e->getBlockId())) {
+                continue;
+            }
+
+            if (previewDocument->getCurrentBlockId()!=e->getBlockId()) {
+                // ignore affected entities not on current block:
                 continue;
             }
 
