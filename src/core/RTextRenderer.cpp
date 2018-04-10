@@ -1494,7 +1494,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     // cxf fonts define glyphs at a scale of 9:1:
     double cxfScale = 1.0/9.0;
     // invalid color, default, means use color of entity:
-    QColor currentColor;
+    QColor currentColor = currentFormat.top().foreground().color();;
     bool gotLetterSpacing = false;
     QMap<int, double> indexToCursorStart;
     QMap<int, double> indexToCursorEnd;
@@ -1638,8 +1638,10 @@ void RTextRenderer::preparePathColor(RPainterPath& path, const RColor& color) {
     path.setPen(pen);
     // invalid color means color from entity, otherwise fixed color:
     if (color.isValid()) {
-        // fixed color:
-        path.setFixedPenColor(true);
+        if (color!=RColor::CompatByLayer && color!=RColor::CompatByBlock) {
+            // fixed color:
+            path.setFixedPenColor(true);
+        }
     }
 }
 
