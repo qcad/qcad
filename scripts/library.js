@@ -2507,7 +2507,17 @@ function isShiftPressed() {
 // Qt 4 API workaround:
 function qsTranslate2(context, sourceText, disambiguation, n) {
     if (RSettings.isQt(4)) {
-        return qsTranslate(context, sourceText, disambiguation, QCoreApplication.UnicodeUTF8, n);
+        qDebug("context:", context);
+        qDebug("sourceText:", sourceText);
+        qDebug("disambiguation:", disambiguation);
+        qDebug("n:", n);
+        if (isNull(disambiguation)) {
+            return qsTranslate(context, sourceText);
+        }
+        if (isNull(n)) {
+            return qsTranslate(context, sourceText, disambiguation);
+        }
+        return qsTranslate(context, sourceText, disambiguation, "UnicodeUTF8", n);
     }
     return qsTranslate(context, sourceText, disambiguation, n);
 }
