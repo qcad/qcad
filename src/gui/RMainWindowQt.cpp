@@ -580,7 +580,6 @@ QMenu* RMainWindowQt::createPopupMenu() {
 
 void RMainWindowQt::clearKeyLog() {
     keyLog.clear();
-    qDebug() << "keyLog" << keyLog;
 }
 
 bool RMainWindowQt::event(QEvent* e) {
