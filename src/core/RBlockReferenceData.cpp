@@ -563,12 +563,11 @@ bool RBlockReferenceData::rotate(double rotation, const RVector& center) {
     if (fabs(rotation) < RS::AngleTolerance) {
         return false;
     }
-    QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
-    if (block->isPixelUnit()) {
-        return false;
-    }
     position.rotate(rotation, center);
-    this->rotation += rotation;
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block!=NULL && !block->isPixelUnit()) {
+        this->rotation += rotation;
+    }
     update();
     return true;
 }
