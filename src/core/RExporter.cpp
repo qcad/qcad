@@ -626,7 +626,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
 
     // entity not on current block and allBlocks==false, break:
     if (!allBlocks && doc->getCurrentBlockId()!=entity.getBlockId()) {
-        qDebug() << "entity not on current block";
+        qDebug() << "entity on block " << entity.getBlockId() << "[" << entity.getBlockName() << "]" << " (not on current block" << doc->getCurrentBlockId() << "[" << doc->getCurrentBlockName() <<  "])";
         //unexportEntity(entity.getId());
         return;
     }
