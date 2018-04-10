@@ -1370,7 +1370,12 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
         }
 
         // post-processing for translation context:
+#if QT_VERSION >= 0x050000
         contents.replace("qsTr(\"", QString("qsTranslate('%1', \"").arg(trContext));
+#else
+        // workaround for Qt 4 API / see library.js:
+        contents.replace("qsTr(\"", QString("qsTranslate2('%1', \"").arg(trContext));
+#endif
         contents.replace("QT_TR_NOOP(\"", QString("QT_TRANSLATE_NOOP('%1', \"").arg(trContext));
 
         QString includeBasePath = engine->globalObject().property("includeBasePath").toString();

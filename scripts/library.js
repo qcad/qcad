@@ -2504,6 +2504,14 @@ function isShiftPressed() {
     return getKeyboardModifiers().valueOf() & Qt.ShiftModifier.valueOf();
 };
 
+// Qt 4 API workaround:
+function qsTranslate2(context, sourceText, disambiguation, n) {
+    if (RSettings.isQt(4)) {
+        return qsTranslate(context, sourceText, disambiguation, QCoreApplication.UnicodeUTF8, n);
+    }
+    return qsTranslate(context, sourceText, disambiguation, n);
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
