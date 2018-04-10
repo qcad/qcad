@@ -117,6 +117,13 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
             continue;
         }
 
+        var blockId = entity.getBlockId();
+        var block = doc.queryBlockDirect(blockId);
+        if (!isNull(block) && block.getCustomBoolProperty("QCAD", "PixelUnit", false)===true) {
+            // don't touch entities in pixel unit blocks:
+            continue;
+        }
+
         // don't scale block references as block content is scaled instead:
         if (isBlockReferenceEntity(entity)) {
             var p = entity.getPosition();
