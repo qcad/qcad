@@ -56,8 +56,13 @@ RPropertyTypeId RPolylineEntity::PropertyBaseAngle;
 RPropertyTypeId RPolylineEntity::PropertyWidth;
 RPropertyTypeId RPolylineEntity::PropertyHeight;
 
+#if QT_VERSION >= 0x050000
 QString RPolylineEntity::TrClockwise = QString("↻ ") + QT_TRANSLATE_NOOP("REntity", "Clockwise");
 QString RPolylineEntity::TrCounterclockwise = QString("↺ ") + QT_TRANSLATE_NOOP("REntity", "Counterclockwise");
+#else
+QString RPolylineEntity::TrClockwise = QT_TRANSLATE_NOOP("REntity", "Clockwise");
+QString RPolylineEntity::TrCounterclockwise = QT_TRANSLATE_NOOP("REntity", "Counterclockwise");
+#endif
 
 RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data) :
     REntity(document), data(document, data) {
