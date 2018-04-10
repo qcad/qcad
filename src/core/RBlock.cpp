@@ -129,7 +129,7 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& proper
         return qMakePair(QVariant(frozen), RPropertyAttributes());
     }
     else if (propertyTypeId == PropertyPixelUnit) {
-        return qMakePair(QVariant(pixelUnit), RPropertyAttributes());
+        return qMakePair(QVariant(pixelUnit), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
     else if (propertyTypeId == PropertyOriginX) {
         return qMakePair(QVariant(origin.x), RPropertyAttributes());
