@@ -27,6 +27,7 @@ RPropertyTypeId RBlock::PropertyType;
 RPropertyTypeId RBlock::PropertyHandle;
 RPropertyTypeId RBlock::PropertyName;
 RPropertyTypeId RBlock::PropertyFrozen;
+RPropertyTypeId RBlock::PropertyPixelUnit;
 RPropertyTypeId RBlock::PropertyOriginX;
 RPropertyTypeId RBlock::PropertyOriginY;
 RPropertyTypeId RBlock::PropertyOriginZ;
@@ -36,6 +37,7 @@ RBlock::RBlock() :
     RObject(),
     frozen(false),
     anonymous(false),
+    pixelUnit(false),
     origin(RVector::invalid),
     layoutId(RLayout::INVALID_ID) {
 }
@@ -46,6 +48,7 @@ RBlock::RBlock(RDocument* document, const QString& name,
     name(name.trimmed()),
     frozen(false),
     anonymous(false),
+    pixelUnit(false),
     origin(origin),
     layoutId(RLayout::INVALID_ID) {
 }
@@ -59,6 +62,7 @@ void RBlock::init() {
     RBlock::PropertyHandle.generateId(typeid(RBlock), RObject::PropertyHandle);
     RBlock::PropertyName.generateId(typeid(RBlock), "", QT_TRANSLATE_NOOP("REntity", "Name"));
     RBlock::PropertyFrozen.generateId(typeid(RBlock), "", QT_TRANSLATE_NOOP("REntity", "Hidden"));
+    RBlock::PropertyPixelUnit.generateId(typeid(RBlock), "", QT_TRANSLATE_NOOP("REntity", "Pixel Unit"));
     RBlock::PropertyOriginX.generateId(typeid(RBlock), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
     RBlock::PropertyOriginY.generateId(typeid(RBlock), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RBlock::PropertyOriginZ.generateId(typeid(RBlock), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Z"));
@@ -108,6 +112,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
 
     ret = ret || RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(frozen, value, PropertyFrozen == propertyTypeId);
+    ret = ret || RObject::setMember(pixelUnit, value, PropertyPixelUnit == propertyTypeId);
     ret = ret || RObject::setMember(origin.x, value, PropertyOriginX == propertyTypeId);
     ret = ret || RObject::setMember(origin.y, value, PropertyOriginY == propertyTypeId);
     ret = ret || RObject::setMember(origin.z, value, PropertyOriginZ == propertyTypeId);
@@ -122,6 +127,9 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& proper
     }
     else if (propertyTypeId == PropertyFrozen) {
         return qMakePair(QVariant(frozen), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyPixelUnit) {
+        return qMakePair(QVariant(pixelUnit), RPropertyAttributes());
     }
     else if (propertyTypeId == PropertyOriginX) {
         return qMakePair(QVariant(origin.x), RPropertyAttributes());
@@ -142,6 +150,18 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& proper
     }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
+}
+
+void RBlock::setCustomProperty(const QString& title, const QString& key, const QVariant& value) {
+    // set custom property PixelUnit as flag:
+    if (title=="QCAD" && key=="PixelUnit") {
+        if (value.toString()=="1") {
+            pixelUnit = true;
+            return;
+        }
+    }
+
+    RObject::setCustomProperty(title, key, value);
 }
 
 bool RBlock::isSelectedForPropertyEditing() {

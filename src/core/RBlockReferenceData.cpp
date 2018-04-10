@@ -195,7 +195,7 @@ bool RBlockReferenceData::isPointType() const {
         return false;
     }
 
-    return block->getCustomBoolProperty("QCAD", "PixelUnit", false)==true;
+    return block->isPixelUnit();
 }
 
 QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
@@ -220,7 +220,7 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
     if (block.isNull()) {
         return QList<RBox>();
     }
-    if (block->getCustomBoolProperty("QCAD", "PixelUnit", false)==true) {
+    if (block->isPixelUnit()) {
         // pixel unit block:
         // bounding box is point:
         bbs->append(RBox(getPosition(), getPosition()));
@@ -561,6 +561,10 @@ bool RBlockReferenceData::move(const RVector& offset) {
 
 bool RBlockReferenceData::rotate(double rotation, const RVector& center) {
     if (fabs(rotation) < RS::AngleTolerance) {
+        return false;
+    }
+    QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
+    if (block->isPixelUnit()) {
         return false;
     }
     position.rotate(rotation, center);

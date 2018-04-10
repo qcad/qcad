@@ -736,7 +736,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
             RDocument* doc = blockRefEntity->getDocument();
             if (doc!=NULL) {
                 QSharedPointer<RBlock> block = doc->queryBlockDirect(blockId);
-                if (block!=NULL && block->getCustomBoolProperty("QCAD", "PixelUnit", false)==true) {
+                if (block!=NULL && block->isPixelUnit()) {
                     drawable.setPixelUnit(true);
                 }
             }

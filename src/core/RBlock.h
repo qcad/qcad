@@ -48,6 +48,7 @@ public:
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyFrozen;
+    static RPropertyTypeId PropertyPixelUnit;
     static RPropertyTypeId PropertyOriginX;
     static RPropertyTypeId PropertyOriginY;
     static RPropertyTypeId PropertyOriginZ;
@@ -94,6 +95,14 @@ public:
         }
     }
 
+    bool isPixelUnit() const {
+        return pixelUnit;
+    }
+
+    void setPixelUnit(bool on) {
+        pixelUnit = on;
+    }
+
     void setOrigin(const RVector& origin) {
         this->origin = origin;
     }
@@ -125,6 +134,8 @@ public:
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
             const QVariant& value, RTransaction* transaction=NULL);
 
+    virtual void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
+
     virtual bool isSelectedForPropertyEditing();
 
 public:
@@ -141,6 +152,7 @@ private:
     QString name;
     bool frozen;
     bool anonymous;
+    bool pixelUnit;
     RVector origin;
     RLayout::Id layoutId;
 };
