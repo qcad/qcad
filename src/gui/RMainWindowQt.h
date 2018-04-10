@@ -126,6 +126,10 @@ public:
 
     void clearKeyLog();
 
+    QString getKeyLog() const {
+        return keyLog;
+    }
+
 public slots:
     void quit();
     void currentTabChanged(int index);
