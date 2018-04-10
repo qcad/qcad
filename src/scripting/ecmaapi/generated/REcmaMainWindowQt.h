@@ -380,6 +380,9 @@
         clearKeyLog
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getKeyLog
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         quit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

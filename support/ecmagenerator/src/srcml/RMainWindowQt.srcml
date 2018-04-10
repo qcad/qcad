@@ -127,6 +127,10 @@
 
     <function_decl><type><name>void</name></type> <name>clearKeyLog</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function><type><name>QString</name></type> <name>getKeyLog</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>keyLog</name></expr>;</return>
+    }</block></function>
+
 </public><public>public slots:
     <function_decl><type><name>void</name></type> <name>quit</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>currentTabChanged</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>

@@ -329,6 +329,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clearKeyLog, "clearKeyLog");
             
+            REcmaHelper::registerFunction(&engine, proto, getKeyLog, "getKeyLog");
+            
             REcmaHelper::registerFunction(&engine, proto, quit, "quit");
             
             REcmaHelper::registerFunction(&engine, proto, currentTabChanged, "currentTabChanged");
@@ -7527,6 +7529,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::clearKeyLog", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::getKeyLog
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::getKeyLog", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::getKeyLog";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("getKeyLog", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getKeyLog();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.getKeyLog().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::getKeyLog", context, engine);
             return result;
         }
          QScriptValue
