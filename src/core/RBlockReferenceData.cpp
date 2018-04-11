@@ -190,6 +190,10 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
 }
 
 bool RBlockReferenceData::isPointType() const {
+    if (document==NULL) {
+        return false;
+    }
+
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
         return false;
