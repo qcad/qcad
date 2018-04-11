@@ -219,6 +219,15 @@ Stretch.getStrechOperation = function(document, polygon, preview, offset, layerI
     // otherwise stretch all:
     var entities = document.queryIntersectedEntitiesXY(box, false, false, RObject.INVALID_ID, [], document.hasSelection());
 
+    if (entities.length===0 && !preview) {
+        if (document.hasSelection()) {
+            EAction.handleUserWarning(qsTr("No selected entities in given range"));
+        }
+        else {
+            EAction.handleUserWarning(qsTr("No entities in given range"));
+        }
+    }
+
     if (isNull(op)) {
         op = new RAddObjectsOperation();
     }
