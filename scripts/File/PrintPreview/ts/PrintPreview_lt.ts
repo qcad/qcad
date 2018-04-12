@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+405"/>
         <source>Export to PDF</source>
         <translation type="unfinished"></translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+405"/>
         <source>Export to PDF</source>
         <translation>Экспортировать в PDF</translation>
     </message>

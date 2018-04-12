@@ -14,7 +14,7 @@
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+405"/>
         <source>Export to PDF</source>
         <translation>PDF exporteren</translation>
     </message>

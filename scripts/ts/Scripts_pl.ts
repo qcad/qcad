@@ -67,7 +67,7 @@
         <translation>Przenieś obiekt</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Edytowanie bloku „%1”&lt;br&gt;Proszę użyć polecenia&lt;i&gt;Blok &gt; Wróć do rysunku&lt;/i&gt; po zakończeniu.</translation>
     </message>
@@ -85,7 +85,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2075"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -94,7 +94,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-1798"/>
+        <location line="-1802"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -110,7 +110,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation>Brak</translation>
     </message>
     <message>
-        <location line="+658"/>
+        <location line="+662"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

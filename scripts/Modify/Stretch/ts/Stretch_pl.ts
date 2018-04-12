@@ -34,6 +34,16 @@ Wskaż punkt docelowy</translatorcomment>
         <translation>Punkt docelowy</translation>
     </message>
     <message>
+        <location line="+138"/>
+        <source>No selected entities in given range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No entities in given range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
         <translatorcomment>--exact match--

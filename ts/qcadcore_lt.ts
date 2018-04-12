@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+60"/>
+        <location filename="../src/core/RBlock.cpp" line="+63"/>
         <location filename="../src/core/RLayer.cpp" line="+90"/>
         <location filename="../src/core/RLayout.cpp" line="+80"/>
         <source>Name</source>
@@ -247,6 +247,11 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pixel Unit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -650,7 +655,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+603"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+627"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished"></translation>
     </message>

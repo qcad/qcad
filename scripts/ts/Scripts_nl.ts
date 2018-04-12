@@ -62,7 +62,7 @@
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Bewerken van blok &apos;%1&apos;&lt;br&gt;Kies &lt;i&gt;Blok &gt; Terug naar hoofdtekening&lt;/i&gt; als u klaar bent</translation>
     </message>
@@ -76,12 +76,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2075"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1798"/>
+        <location line="-1802"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
@@ -92,7 +92,7 @@
         <translation>Geen</translation>
     </message>
     <message>
-        <location line="+658"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>

@@ -41,7 +41,7 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+67"/>
         <source>Remove this property from selected objects</source>
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1138"/>
+        <location line="-1144"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -111,7 +111,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+318"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal

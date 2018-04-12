@@ -28,5 +28,15 @@
         <source>Target point</source>
         <translation>Zielpunkt</translation>
     </message>
+    <message>
+        <location line="+138"/>
+        <source>No selected entities in given range</source>
+        <translation>Keine ausgewählten Objekte im angegebenen Bereich</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No entities in given range</source>
+        <translation>Keine Objekte im angegebenen Bereich</translation>
+    </message>
 </context>
 </TS>

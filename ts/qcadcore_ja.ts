@@ -252,7 +252,12 @@
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+62"/>
+        <location filename="../src/core/RBlock.cpp" line="+65"/>
+        <source>Pixel Unit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+82"/>
@@ -568,7 +573,7 @@
         <translation>全体</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-5"/>
+        <location filename="../src/core/RBlock.cpp" line="-6"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
@@ -655,7 +660,7 @@
         <translation>最大範囲</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+603"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+627"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>回状（再起的）ブロック参照が検出されました:</translation>
     </message>

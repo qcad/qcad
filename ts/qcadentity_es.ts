@@ -32,7 +32,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+118"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+123"/>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -618,17 +618,19 @@ Punto final (y):</translatorcomment>
         <translation>Punto final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-55"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-59"/>
+        <location line="+3"/>
         <source>Clockwise</source>
         <translation>Sentido horario</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
+        <location line="+3"/>
         <source>Counterclockwise</source>
         <translation>Sentido antihorario</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>Polyline Pattern</source>
         <translation>Patrón polilínea</translation>
     </message>

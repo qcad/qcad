@@ -62,7 +62,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Block &apos;%1&apos; bearbeiten&lt;br&gt;Wählen Sie &lt;i&gt;Block &gt; Zurück zur Hauptzeichnung&lt;/i&gt;, um zur Hauptzeichnung zurückzukehren</translation>
     </message>
@@ -76,12 +76,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2075"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1798"/>
+        <location line="-1802"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -96,7 +96,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+658"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>

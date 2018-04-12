@@ -24,6 +24,16 @@
         <translation>Target point</translation>
     </message>
     <message>
+        <location line="+138"/>
+        <source>No selected entities in given range</source>
+        <translation>No selected entities in given range</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No entities in given range</source>
+        <translation>No entities in given range</translation>
+    </message>
+    <message>
         <location filename="../StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
         <translation>&amp;Stretch</translation>

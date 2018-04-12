@@ -67,7 +67,7 @@
         <translation>Mova a Entidade</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Edição bloco &apos;%1&apos;&lt;br&gt;Escolha &lt;i&gt;Bloco &gt; Retorne ao Desenho Principal&lt;/i&gt; quando feito</translation>
     </message>
@@ -85,7 +85,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2075"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -94,7 +94,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1798"/>
+        <location line="-1802"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -115,7 +115,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+658"/>
+        <location line="+662"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

@@ -67,7 +67,7 @@
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Modifica blocco &apos;%1&apos;&lt;br&gt;Scegliete &lt;i&gt;Blocco &gt; Torna al disegno principale&lt;/i&gt; quando fatto</translation>
     </message>
@@ -81,12 +81,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2075"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-1798"/>
+        <location line="-1802"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -98,7 +98,7 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+658"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>

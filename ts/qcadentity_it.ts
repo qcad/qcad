@@ -42,7 +42,7 @@ Specificare la posizione</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+118"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+123"/>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: wp-geo-it_IT.po--
@@ -630,17 +630,19 @@ Punto finale (y):</translatorcomment>
         <translation>Punto finale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-55"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-59"/>
+        <location line="+3"/>
         <source>Clockwise</source>
         <translation>Senso orario</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
+        <location line="+3"/>
         <source>Counterclockwise</source>
         <translation>Senso antiorario</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>Polyline Pattern</source>
         <translation>Modello polilinea</translation>
     </message>

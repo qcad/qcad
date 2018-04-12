@@ -14,7 +14,7 @@
         <translation>Done</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+405"/>
         <source>Export to PDF</source>
         <translation>Export to PDF</translation>
     </message>

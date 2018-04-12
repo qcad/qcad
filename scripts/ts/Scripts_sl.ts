@@ -62,7 +62,7 @@
         <translation>Premakni entiteto</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Urejanje gradnika &apos;%1&lt;br&gt;Ko boste končali, izberite&lt;i&gt;Gradnik &gt; Vrnitev na glasvno risbo&lt;/i&gt;</translation>
     </message>
@@ -76,12 +76,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2075"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-1798"/>
+        <location line="-1802"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
@@ -92,7 +92,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+658"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>

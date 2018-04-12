@@ -62,7 +62,7 @@
         <translation>エンティティを移動</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+127"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>ブロック&apos;%1&apos;を編集中。&lt;br&gt;終了するには&lt;i&gt;ブロック&gt;メイン図面に戻る&lt;/i&gt;を選択して下さい</translation>
     </message>
@@ -76,12 +76,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2075"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-1798"/>
+        <location line="-1802"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
@@ -92,7 +92,7 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+658"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>

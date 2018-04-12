@@ -42,7 +42,7 @@ Indiquer la position [angle/longueur]</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+118"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+123"/>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -625,17 +625,19 @@ Extrémité (x) :</translatorcomment>
         <translation>Point final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-55"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-59"/>
+        <location line="+3"/>
         <source>Clockwise</source>
         <translation>Sens horaire</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
+        <location line="+3"/>
         <source>Counterclockwise</source>
         <translation>Antihorairement</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>Polyline Pattern</source>
         <translation>Motif polyligne</translation>
     </message>

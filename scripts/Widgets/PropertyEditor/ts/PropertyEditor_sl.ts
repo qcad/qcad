@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1331"/>
+        <location filename="../PropertyEditor.js" line="+1337"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1138"/>
+        <location line="-1144"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation>Indeks</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="+67"/>
         <source>Remove this property from selected objects</source>
         <translation>Odstrani to lastnost iz izbranih objektov</translation>
     </message>

@@ -21,12 +21,22 @@ Indiquer le point cible</translatorcomment>
         <translation>Point cible</translation>
     </message>
     <message>
+        <location line="+138"/>
+        <source>No selected entities in given range</source>
+        <translation>Aucun objet sélectionné dans la plage donnée</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No entities in given range</source>
+        <translation>Aucun objet dans la plage donnée</translation>
+    </message>
+    <message>
         <location filename="../StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
         <translation>E&amp;tirer</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="-17"/>
+        <location filename="../Stretch.js" line="-158"/>
         <source>Second corner</source>
         <translation>Deuxième point d&apos;angle</translation>
     </message>

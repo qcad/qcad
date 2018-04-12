@@ -44,7 +44,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+69"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+100"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+105"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+77"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -454,17 +454,19 @@
         <translation>End Parameter</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-55"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-59"/>
+        <location line="+3"/>
         <source>Clockwise</source>
         <translation>Uhrzeigersinn</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-2"/>
+        <location line="+3"/>
         <source>Counterclockwise</source>
         <translation>Gegenuhrzeigersinn</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>Polyline Pattern</source>
         <translation>Polylinienmuster</translation>
     </message>

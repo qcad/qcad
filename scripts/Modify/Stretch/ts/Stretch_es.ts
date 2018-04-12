@@ -23,12 +23,22 @@ Punto objetivo</translatorcomment>
         <translation>Punto objetivo</translation>
     </message>
     <message>
+        <location line="+138"/>
+        <source>No selected entities in given range</source>
+        <translation>Ningún objeto seleccionado en el rango dado</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No entities in given range</source>
+        <translation>Ningún objeto en el rango dado</translation>
+    </message>
+    <message>
         <location filename="../StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
         <translation>E&amp;stirar</translation>
     </message>
     <message>
-        <location filename="../Stretch.js" line="-17"/>
+        <location filename="../Stretch.js" line="-158"/>
         <source>Second corner</source>
         <translation>Segunda punto de esquina</translation>
     </message>

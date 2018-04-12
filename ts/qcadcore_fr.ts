@@ -369,7 +369,7 @@ Liste des blocs</translatorcomment>
         <translation type="obsolete">Bloc référencé</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+62"/>
+        <location filename="../src/core/RBlock.cpp" line="+66"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+82"/>
@@ -405,7 +405,12 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+0"/>
+        <location filename="../src/core/RBlock.cpp" line="-1"/>
+        <source>Pixel Unit</source>
+        <translation>Pixel unité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
@@ -737,7 +742,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation>Overall</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-5"/>
+        <location filename="../src/core/RBlock.cpp" line="-6"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
@@ -828,7 +833,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation type="vanished">Marges des tracés</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+603"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+627"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Une référence de bloc circulaire (récursive) a été détectée :</translation>
     </message>

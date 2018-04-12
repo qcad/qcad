@@ -48,7 +48,7 @@ Zrobione
         <translation>Zrobione</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+405"/>
         <source>Export to PDF</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
