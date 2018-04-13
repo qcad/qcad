@@ -57,7 +57,7 @@ Print.prototype.beginEvent = function() {
         var action = new PrintPreview(guiAction);
         action.saveView = this.saveView;
         action.initialAction = "Print";
-        var di = this.getDocumentInterface();
+        var di = EAction.getDocumentInterface();
         di.setCurrentAction(action);
     }
     else {
