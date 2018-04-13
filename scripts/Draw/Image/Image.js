@@ -41,7 +41,7 @@ function Image(guiAction) {
     this.angle = undefined;
     this.pos = undefined;
 
-    this.setUiOptions("scripts/Draw/Image/Image.ui");
+    this.setUiOptions(Image.includeBasePath + "/Image.ui");
 }
 
 Image.State = {

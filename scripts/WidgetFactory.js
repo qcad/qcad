@@ -74,7 +74,9 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
 
     var fileInfo = new QFileInfo(uiFile);
     if (!fileInfo.exists() && !fileInfo.isAbsolute()) {
-        uiFile = basePath + "/" + uiFile;
+        if (basePath.length>0) {
+            uiFile = basePath + "/" + uiFile;
+        }
 
         fileInfo = new QFileInfo(uiFile);
         if (!fileInfo.exists()) {
