@@ -32,8 +32,10 @@
 #include "RViewportEntity.h"
 
 
-RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface)
-    : RGraphicsScene(documentInterface), decorating(false), screenBasedLinetypesOverride(false) {
+RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface) :
+    RGraphicsScene(documentInterface),
+    decorating(false),
+    screenBasedLinetypesOverride(false) {
 
     setProjectionRenderingHint(RS::RenderTop);
 
@@ -150,7 +152,7 @@ bool RGraphicsSceneQt::beginPath() {
                 // screen based line weights:
                 localPen.setCosmetic(true);
                 // magic number 4.25 to scale approximately, so 1mm width is 1mm on screen:
-                localPen.setWidth(currentPen.widthF()*4.25);
+                localPen.setWidth(RUnit::convert(currentPen.widthF(), document->getUnit(), RS::Millimeter)*4.25);
             }
         }
         currentPainterPath.setPen(localPen);
