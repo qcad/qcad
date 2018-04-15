@@ -190,6 +190,10 @@ TextAlong.prototype.getOperation = function(preview) {
 }
 
 TextAlong.prototype.getCharWidths = function() {
+    if (isNull(this.textData)) {
+        return;
+    }
+
     this.text = new RTextEntity(this.getDocument(), this.textData);
     var txt = this.text.getPlainText();
     var num = txt.length;
