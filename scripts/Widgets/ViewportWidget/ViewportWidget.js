@@ -19,7 +19,7 @@
 
 include("scripts/sprintf.js");
 
-if (new QFileInfo(autoPath("scripts/Navigation/DefaultNavigation/DefaultNavigation.js")).exists()) {
+if (exists("scripts/Navigation/DefaultNavigation/DefaultNavigation.js")) {
     include("scripts/Navigation/DefaultNavigation/DefaultNavigation.js");
 }
 

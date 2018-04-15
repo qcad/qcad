@@ -19,7 +19,7 @@
 
 include("../NewFile/NewFile.js");
 
-if (new QFileInfo("scripts/File/AutoSave/AutoSave.js")) {
+if (exists("scripts/File/AutoSave/AutoSave.js")) {
     include("scripts/File/AutoSave/AutoSave.js");
 }
 
