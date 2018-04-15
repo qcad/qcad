@@ -1740,7 +1740,7 @@ LibraryBrowser.createItemContextMenu = function(itemView, filePath, itemId, inde
                 action = new RGuiAction(text, menu);
                 action.setData(filePath);
                 action.setRequiresDocument(false);
-                action.setScriptFile("../../../scripts/File/OpenFile/OpenFile.js");
+                action.setScriptFile(LibraryBrowser.includeBasePath + "/../../../scripts/File/OpenFile/OpenFile.js");
                 action.setIcon(icon);
                 action.addToMenu(menu);
             }
