@@ -72,6 +72,7 @@ public:
     int getColorIndex() const;
 
     static void removeColor(const QString& cn);
+    static void addColor(const QString& cn, const RColor& c);
     static RColor createFromCadIndex(const QString& code) {
         return createFromCadIndex(code.toInt());
     }

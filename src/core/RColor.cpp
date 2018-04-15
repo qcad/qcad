@@ -320,6 +320,10 @@ void RColor::removeColor(const QString& cn) {
     }
 }
 
+void RColor::addColor(const QString& cn, const RColor& c) {
+    list.append(QPair<QString, RColor> (cn, c));
+}
+
 QIcon RColor::getIcon(const RColor& color, const QSize& size) {
     init();
 
