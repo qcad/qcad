@@ -152,6 +152,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, mapToBlock, "mapToBlock");
             
+            REcmaHelper::registerFunction(&engine, proto, isPixelUnit, "isPixelUnit");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RBlockReferenceData*>(), *proto);
 
@@ -4348,6 +4350,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceData::mapToBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::isPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::isPixelUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::isPixelUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("isPixelUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPixelUnit();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.isPixelUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::isPixelUnit", context, engine);
             return result;
         }
          QScriptValue REcmaBlockReferenceData::toString

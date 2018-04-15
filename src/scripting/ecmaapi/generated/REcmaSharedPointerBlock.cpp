@@ -147,6 +147,10 @@
                 qScriptValueFromValue(&engine, RBlock::PropertyFrozen),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyPixelUnit",
+                qScriptValueFromValue(&engine, RBlock::PropertyPixelUnit),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyOriginX",
                 qScriptValueFromValue(&engine, RBlock::PropertyOriginX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

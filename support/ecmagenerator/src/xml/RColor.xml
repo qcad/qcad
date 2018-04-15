@@ -53,6 +53,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="addColor" cppName="addColor" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="cn"
+        isConst="true" />
+        <arg type="RColor &amp;" typeName="RColor" name="c"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="createFromCadIndex" cppName="createFromCadIndex"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

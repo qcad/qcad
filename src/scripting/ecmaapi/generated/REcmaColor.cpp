@@ -108,6 +108,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, removeColor, "removeColor");
             
+            REcmaHelper::registerFunction(&engine, &ctor, addColor, "addColor");
+            
             REcmaHelper::registerFunction(&engine, &ctor, createFromCadIndex, "createFromCadIndex");
             
             REcmaHelper::registerFunction(&engine, &ctor, createFromCadCustom, "createFromCadCustom");
@@ -769,6 +771,76 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaColor::removeColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaColor::addColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaColor::addColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaColor::addColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RColor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RColor: Argument 1 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RColor::
+       addColor(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RColor.addColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaColor::addColor", context, engine);
             return result;
         }
          QScriptValue
