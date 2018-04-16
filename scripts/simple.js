@@ -45,6 +45,7 @@ function getMainWindow() {
 function getDocumentInterface() {
     var appWin = getMainWindow();
     if (isNull(appWin)) {
+        qWarning("QCAD SIMPLE API: no main window");
         return undefined;
     }
     return appWin.getDocumentInterface();
@@ -57,6 +58,7 @@ function getDocumentInterface() {
 function getDocument() {
     var di = getDocumentInterface();
     if (isNull(di)) {
+        qWarning("QCAD SIMPLE API: no document");
         return undefined;
     }
     return di.getDocument();
