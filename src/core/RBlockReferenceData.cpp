@@ -367,14 +367,14 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
         return true;
     }
 
+    if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
+        entity.scaleVisualProperties(visualPropertiesScale);
+    }
+
     entity.move(-block->getOrigin());
     entity.scale(scaleFactors);
     entity.rotate(rotation);
     entity.move(position);
-
-    if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
-        entity.scaleVisualProperties(visualPropertiesScale);
-    }
 
     return true;
 }
