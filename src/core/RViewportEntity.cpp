@@ -216,6 +216,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             0.0
         )
     );
+    modelSpaceData.scaleVisualProperties(data.scaleFactor);
     modelSpaceData.update();
 
     // start clipping from here:
@@ -248,8 +249,6 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         if (!viewportBox.intersects(bb)) {
             continue;
         }
-
-        entity->scaleVisualProperties(data.scaleFactor);
 
         if (doc->getKnownVariable(RS::PSLTSCALE, true).toBool()==false) {
             // scale line type pattern:
