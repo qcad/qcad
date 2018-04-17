@@ -29,6 +29,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QPrinter>
+#include <QPrinterInfo>
 #include <QPrintDialog>
 #include <QXmlResultItems>
 #include <QXmlStreamWriter>
@@ -438,6 +439,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     globalObject.setProperty("parseXml", engine->newFunction(ecmaParseXml));
     globalObject.setProperty("qApp", engine->newQObject(dynamic_cast<RSingleApplication*>(qApp)));
     //globalObject.setProperty("getShapeIntersections", engine->newFunction(ecmaGetShapeIntersections));
+
+    globalObject.setProperty("getAvailablePrinterNames", engine->newFunction(ecmaGetAvailablePrinterNames));
+    globalObject.setProperty("getDefaultPrinterName", engine->newFunction(ecmaGetDefaultPrinterName));
+    globalObject.setProperty("createPrinter", engine->newFunction(ecmaCreatePrinter));
 
     // fix Qt wrapper APIs
     QScriptValue classQObject = globalObject.property("QObject");
@@ -1589,6 +1594,38 @@ QScriptValue RScriptHandlerEcma::ecmaQDomNodeRemoveChild(QScriptContext* context
     } else {
         return throwError(
                 "Wrong number/types of arguments for QDomNode.removeChild().",
+                context);
+    }
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaGetAvailablePrinterNames(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    QStringList cppResult = QPrinterInfo::availablePrinterNames();
+    result = qScriptValueFromValue(engine, cppResult);
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaGetDefaultPrinterName(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    QString cppResult = QPrinterInfo::defaultPrinterName();
+    result = qScriptValueFromValue(engine, cppResult);
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaCreatePrinter(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    if (context->argumentCount() == 1 && context->argument(0).isString()) {
+        QString name = context->argument(0).toString();
+        QPrinterInfo pi = QPrinterInfo::printerInfo(name);
+        if (pi.isNull()) {
+            return result;
+        }
+        QPrinter* cppResult = new QPrinter(pi, QPrinter::HighResolution);
+        result = qScriptValueFromValue(engine, cppResult);
+    } else {
+        return throwError(
+                "Wrong number/types of arguments for createPrinter(name).",
                 context);
     }
     return result;

@@ -93,6 +93,9 @@ public:
     static QScriptValue ecmaQObjectGetChildren(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQDomNodeAppendChild(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQDomNodeRemoveChild(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaGetAvailablePrinterNames(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaGetDefaultPrinterName(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaCreatePrinter(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaBacktrace(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaAttachDebugger(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaDetachDebugger(QScriptContext* context, QScriptEngine* engine);
