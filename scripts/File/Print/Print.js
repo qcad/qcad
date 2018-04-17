@@ -70,13 +70,32 @@ Print.prototype.beginEvent = function() {
 
 /**
  * Prints the given document.
+ *
+ * \param pdfFile Name of PDF file
+ * \param printerName Name of printer to print to or "" for default printer
  */
-Print.prototype.print = function(pdfFile) {
-    var printer = new QPrinter(QPrinter.HighResolution);
+Print.prototype.print = function(pdfFile, printerName) {
+    var printer = undefined;
 
-    if (isString(pdfFile)) {
-        printer.setOutputFormat(QPrinter.PdfFormat);
-        printer.setOutputFileName(pdfFile);
+    // print directly to given printer or default printer:
+    if (!isNull(printerName)) {
+        if (printerName==="") {
+            printerName = getDefaultPrinterName();
+        }
+        printer = createPrinter(printerName);
+        if (isNull(printer)) {
+            qWarning("invalid printer name: ", printerName);
+            printer = undefined;
+        }
+    }
+
+    if (isNull(printer)) {
+        printer = new QPrinter(QPrinter.HighResolution);
+
+        if (isString(pdfFile)) {
+            printer.setOutputFormat(QPrinter.PdfFormat);
+            printer.setOutputFileName(pdfFile);
+        }
     }
 
     var paperSizeEnum = Print.getPaperSizeEnum(this.document);
@@ -101,7 +120,7 @@ Print.prototype.print = function(pdfFile) {
     // show printer dialog if we are not printing to a PDF file
     // or running as command line tool:
     var appWin = EAction.getMainWindow();
-    if (!isString(pdfFile) && !isNull(appWin)) {
+    if (!isString(pdfFile) && !isNull(appWin) && isNull(printerName)) {
         Print.cancel = false;
         Print.printDialog = new QPrintDialog(printer, appWin);
 
