@@ -98,10 +98,12 @@ Print.prototype.print = function(pdfFile) {
         printer.setColorMode(QPrinter.GrayScale);
     }
 
-    // show printer dialog if we are not printing to a PDF file:
-    if (!isString(pdfFile)) {
+    // show printer dialog if we are not printing to a PDF file
+    // or running as command line tool:
+    var appWin = EAction.getMainWindow();
+    if (!isString(pdfFile) && !isNull(appWin)) {
         Print.cancel = false;
-        Print.printDialog = new QPrintDialog(printer, EAction.getMainWindow());
+        Print.printDialog = new QPrintDialog(printer, appWin);
 
         if (RSettings.isQt(5)) {
             Print.printDialog.rejected.connect(function() { Print.cancel = true; });
