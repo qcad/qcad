@@ -510,6 +510,11 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Espacio entre filas</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Attributes</source>
+        <translation>Atributos</translation>
+    </message>
+    <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
         <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Type</source>

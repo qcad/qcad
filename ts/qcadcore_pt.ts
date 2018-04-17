@@ -500,6 +500,11 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Espaçamento de Linha</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Attributes</source>
+        <translation>Atributos</translation>
+    </message>
+    <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
         <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Type</source>
@@ -510,7 +515,7 @@ Tipo Ordinal</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-11"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-14"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_pt.ts--

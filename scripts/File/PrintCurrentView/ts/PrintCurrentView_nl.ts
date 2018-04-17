@@ -9,7 +9,7 @@
         <translation>&amp;Huidige scherm akdrukken</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Huidige scherm akdrukken</translation>
     </message>

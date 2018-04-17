@@ -25,7 +25,7 @@
         <translation>Imprima a &amp;Exibição Atual</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Imprima a exibição atual</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>&amp;Печать</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current drawing</source>
         <translation>Печать текущего чертежа</translation>
     </message>

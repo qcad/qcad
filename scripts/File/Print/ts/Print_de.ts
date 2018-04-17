@@ -9,7 +9,7 @@
         <translation>&amp;Drucken</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current drawing</source>
         <translation>Druckt die aktuelle Zeichnung</translation>
     </message>

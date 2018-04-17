@@ -9,7 +9,7 @@
         <translation>Печать теку&amp;щего вида</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Печать текущего вида</translation>
     </message>

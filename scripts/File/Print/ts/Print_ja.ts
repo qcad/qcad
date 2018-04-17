@@ -9,7 +9,7 @@
         <translation>&amp;P 印刷</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current drawing</source>
         <translation>現在の図面を印刷</translation>
     </message>

@@ -505,6 +505,11 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Espacement des lignes</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Attributes</source>
+        <translation>Attributs</translation>
+    </message>
+    <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
         <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Type</source>

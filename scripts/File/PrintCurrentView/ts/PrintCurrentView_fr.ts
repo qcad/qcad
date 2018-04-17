@@ -20,7 +20,7 @@
         <translation>Imprimer &amp;affichage courant</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Imprimer affichage courant</translation>
     </message>

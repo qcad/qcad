@@ -10,7 +10,7 @@
         <translation>Eksportuj P&amp;DF...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Exports the current drawing as PDF</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Eksportuje aktualny rysunek do formatu PDF</translation>

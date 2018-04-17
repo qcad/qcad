@@ -20,7 +20,7 @@
         <translation>Natisni &amp;trenutni pogled</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Natisni trenutni pogled</translation>
     </message>

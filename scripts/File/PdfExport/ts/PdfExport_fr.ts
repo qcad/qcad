@@ -9,7 +9,7 @@
         <translation>Exportation &amp;PDF</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Exporte le dessin courant au format PDF</translation>
     </message>

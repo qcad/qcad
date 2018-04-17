@@ -9,7 +9,7 @@
         <translation>Print &amp;Current View</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Print current view</translation>
     </message>

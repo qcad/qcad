@@ -13,7 +13,7 @@
         <translation>&amp;Imprima</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current drawing</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Imprima o desenho atual</translation>

@@ -9,7 +9,7 @@
         <translation>&amp;Print</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current drawing</source>
         <translation>Print current drawing</translation>
     </message>

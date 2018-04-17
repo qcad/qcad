@@ -9,7 +9,7 @@
         <translation>Tlačiť &amp;aktuálne zobrazenie</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Vytlačiť aktuálne zobrazenie (pohľad)</translation>
     </message>

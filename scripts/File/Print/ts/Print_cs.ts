@@ -9,7 +9,7 @@
         <translation>&amp;Tisk</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current drawing</source>
         <translation type="unfinished">Tisk aktuální kresby</translation>
     </message>

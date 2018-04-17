@@ -25,7 +25,7 @@ Wy&amp;drukuj</translatorcomment>
         <translation>Drukuj &amp;aktualny widok</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Drukuje aktualny widok</translation>
     </message>

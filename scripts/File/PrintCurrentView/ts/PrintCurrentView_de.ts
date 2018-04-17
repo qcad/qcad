@@ -20,7 +20,7 @@
         <translation>&amp;Aktuelle Ansicht drucken</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Print current view</source>
         <translation>Aktuelle Ansicht drucken</translation>
     </message>

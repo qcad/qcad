@@ -9,7 +9,7 @@
         <translation>Exportovať do P&amp;DF</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Exports the current drawing as PDF</source>
         <translation>Exportovať aktuálny výkres do PDF súboru</translation>
     </message>
