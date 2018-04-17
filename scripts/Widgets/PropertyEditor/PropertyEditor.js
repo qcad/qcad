@@ -587,7 +587,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                     if (!isNull(controls) && !isNull(gridLayout)) {
                         row = gridLayout.rowCount();
                         var localTitle = title;
-                        if (propertyTypeId.isCustom() && group!==RSettings.getAppId()) {
+                        if (propertyTypeId.isCustom() && group!==RSettings.getAppId() && propertyTypeId.getCustomPropertyTitle()!=="Attributes") {
                             var pos = title.indexOf("_");
                             if (pos!==-1) {
                                 localTitle = title.mid(pos+1);
