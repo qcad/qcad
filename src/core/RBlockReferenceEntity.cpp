@@ -101,6 +101,9 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyRowCount.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Rows"));
     RBlockReferenceEntity::PropertyColumnSpacing.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Column Spacing"));
     RBlockReferenceEntity::PropertyRowSpacing.generateId(typeid(RBlockReferenceEntity), "", QT_TRANSLATE_NOOP("REntity", "Row Spacing"));
+
+    // make sure title of property attributes group is translated:
+    QT_TRANSLATE_NOOP("REntity", "Attributes");
 }
 
 QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds() const {
