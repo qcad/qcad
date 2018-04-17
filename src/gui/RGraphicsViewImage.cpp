@@ -1157,7 +1157,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
                 QPen pen = painter->pen();
                 pen.setWidth(0);
                 painter->setPen(pen);
-
             }
 
             // if PDMODE = 1 nothing is drawn
@@ -1319,7 +1318,8 @@ double RGraphicsViewImage::getPointSize(double pSize) {
 void RGraphicsViewImage::drawDot(QPainter* painter, QPointF pt) {
     qreal r;
     if (isPrintingOrExporting() || isPrintPreview()) {
-        r = mapDistanceFromView(1.0);
+        RDocument* doc = getDocument();
+        r = RUnit::convert(doc->getVariable("PageSettings/PointSize", 0.5, true).toDouble()/2.0, RS::Millimeter, doc->getUnit());
     } else {
         r = mapDistanceFromView(1.5);
     }
