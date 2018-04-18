@@ -206,7 +206,7 @@ Print.prototype.print = function(pdfFile, printerName) {
         printer.paperRect().height() / heightInMM
     );
 
-    // printer calibration goes here (future use):
+    // printer calibration:
     printerFactor.x *= RSettings.getDoubleValue(printer.printerName() + "/FactorX", 1.0);
     printerFactor.y *= RSettings.getDoubleValue(printer.printerName() + "/FactorY", 1.0);
 
