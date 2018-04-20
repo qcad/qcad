@@ -1131,9 +1131,6 @@ void RDxfImporter::addDimAngular3P(const DL_DimensionData& data,
     RVector dp1(edata.dpx1, edata.dpy1);
     RVector dp2(edata.dpx2, edata.dpy2);
 
-    //RVector defPoint(data.dpx, data.dpy);
-    //dimData.setDefinitionPoint(defPoint);
-
     RDimAngular3PData d(dimData, center, dp1, dp2);
 
     QSharedPointer<RDimAngular3PEntity> entity(new RDimAngular3PEntity(document, d));
