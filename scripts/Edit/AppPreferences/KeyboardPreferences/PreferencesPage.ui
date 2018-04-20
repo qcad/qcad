@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>386</width>
-    <height>212</height>
+    <width>470</width>
+    <height>216</height>
    </rect>
   </property>
   <layout class="QFormLayout" name="formLayout">
@@ -61,6 +61,16 @@
        <string notr="true">5000</string>
       </property>
      </item>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QCheckBox" name="EnableKeyboardNavigationInLists">
+     <property name="text">
+      <string>Enable keyboard navigation in list widgets</string>
+     </property>
+     <property name="RequiresRestart" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
   </layout>

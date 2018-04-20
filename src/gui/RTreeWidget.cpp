@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "REventFilter.h"
+#include "RSettings.h"
 #include "RTreeWidget.h"
 
 #include <QContextMenuEvent>
@@ -33,8 +34,10 @@ RTreeWidget::RTreeWidget(QWidget* parent) :
 //    iconOffset = 0;
 //#endif
 
-    installEventFilter(new REventFilter(QEvent::KeyPress, true));
-    installEventFilter(new REventFilter(QEvent::KeyRelease, true));
+    if (RSettings::getBoolValue("Keyboard/EnableKeyboardNavigationInLists", false)!=true) {
+        installEventFilter(new REventFilter(QEvent::KeyPress, true));
+        installEventFilter(new REventFilter(QEvent::KeyRelease, true));
+    }
 }
 
 /**
