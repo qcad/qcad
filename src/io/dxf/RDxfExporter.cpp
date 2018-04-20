@@ -1169,8 +1169,11 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
     case RS::EntityDimAligned:
         dimType = 1;
         break;
-    case RS::EntityDimAngular:
+    case RS::EntityDimAngular2L:
         dimType = 2;
+        break;
+    case RS::EntityDimAngular3P:
+        dimType = 5;
         break;
     case RS::EntityDimRotated:
         dimType = 0;
