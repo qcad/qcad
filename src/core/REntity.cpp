@@ -75,7 +75,8 @@ bool REntity::isDimension(const RS::EntityType type) {
             type==RS::EntityDimRotated ||
             type==RS::EntityDimRadial ||
             type==RS::EntityDimDiametric ||
-            type==RS::EntityDimAngular ||
+            type==RS::EntityDimAngular2L ||
+            type==RS::EntityDimAngular3P ||
             type==RS::EntityDimOrdinate);
 }
 
