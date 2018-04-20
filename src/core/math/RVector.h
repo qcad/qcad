@@ -123,6 +123,7 @@ public:
 
     RVector rotate(double rotation);
     RVector rotate(double rotation, const RVector& center);
+    RVector getRotated(double rotation, const RVector& center) const;
     RVector rotate3D(const RLine& axis, double rotation);
     RVector rotate3D(const QQuaternion& quaternion);
 
@@ -138,6 +139,7 @@ public:
 
     RVector scale(double factor, const RVector& center=nullVector);
     RVector scale(const RVector& factors, const RVector& center=nullVector);
+    RVector getScaled(const RVector& factors, const RVector& center) const;
 
     /**
      * \nonscriptable
@@ -150,6 +152,7 @@ public:
     static void scaleList(QList<RVector>& list, const RVector& factors, const RVector& center=nullVector);
 
     RVector mirror(const RLine& axis);
+    RVector getMirrored(const RLine& axis) const;
     RVector mirror(const RVector& axis1, const RVector& axis2);
     RVector flipHorizontal();
     RVector flipVertical();

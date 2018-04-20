@@ -331,6 +331,12 @@ RVector RVector::rotate(double rotation, const RVector& center) {
     return *this;
 }
 
+RVector RVector::getRotated(double rotation, const RVector& center) const {
+    RVector ret = *this;
+    ret.rotate(rotation, center);
+    return ret;
+}
+
 RVector RVector::rotate3D(const RLine& axis, double rotation) {
     RVector off = -axis.getStartPoint();
     RVector ret = *this;
@@ -384,6 +390,12 @@ RVector RVector::scale(const RVector& factors, const RVector& center) {
     return *this;
 }
 
+RVector RVector::getScaled(const RVector& factors, const RVector& center) const {
+    RVector ret = *this;
+    ret.scale(factors, center);
+    return ret;
+}
+
 void RVector::scaleList(QList<RVector>& list, double factor, const RVector& center) {
     for (int i=0; i<list.length(); i++) {
         list[i].scale(factor, center);
@@ -413,6 +425,12 @@ RVector RVector::mirror(const RLine& axis) {
     }
 
     return *this;
+}
+
+RVector RVector::getMirrored(const RLine& axis) const {
+    RVector ret = *this;
+    ret.mirror(axis);
+    return ret;
 }
 
 RVector RVector::mirror(const RVector& axis1, const RVector& axis2) {
