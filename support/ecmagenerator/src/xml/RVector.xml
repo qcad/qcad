@@ -236,6 +236,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getRotated" cppName="getRotated"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="rotation"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="rotate3D" cppName="rotate3D" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
@@ -264,6 +274,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="nullVector" isConst="true" />
       </variant>
     </method>
+    <method name="getScaled" cppName="getScaled" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="factors"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="mirror" cppName="mirror" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
@@ -274,6 +293,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="axis1"
         isConst="true" />
         <arg type="RVector &amp;" typeName="RVector" name="axis2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getMirrored" cppName="getMirrored"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="axis"
         isConst="true" />
       </variant>
     </method>

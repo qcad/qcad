@@ -147,13 +147,22 @@
         rotate
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRotated
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         rotate3D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         scale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getScaled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         mirror
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMirrored
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         flipHorizontal

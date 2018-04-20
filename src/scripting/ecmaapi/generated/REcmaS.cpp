@@ -303,6 +303,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityDimAngular2L",
+    QScriptValue(RS::EntityDimAngular2L),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EntityDimAngular3P",
+    QScriptValue(RS::EntityDimAngular3P),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityDimOrdinate",
     QScriptValue(RS::EntityDimOrdinate),
     QScriptValue::ReadOnly);

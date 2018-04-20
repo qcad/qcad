@@ -3,65 +3,84 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RExporter" />
-  <class name="RDimAngularEntity"
+  <class name="RDimAngular3PEntity"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
-  hasStreamOperator="false" isAbstract="true" isScriptable="true">
-    <baseClass name="RDimensionEntity" specifier="public" />
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RDimAngularEntity" specifier="public" />
     <constructor>
       <variant>
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
+        <arg type="RDimAngular3PData &amp;"
+        typeName="RDimAngular3PData" name="data" isConst="true" />
       </variant>
     </constructor>
     <method name="init" cppName="init" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
-    <method name="getData" cppName="getData" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RDimAngularData &amp;"
-      isPureVirtual="true" />
-      <variant returnType="const RDimAngularData &amp;"
+    <method name="getStaticPropertyTypeIds"
+    cppName="getStaticPropertyTypeIds" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RPropertyTypeId &gt;"
       isPureVirtual="false" />
     </method>
-    <method name="setExtensionLine1End"
-    cppName="setExtensionLine1End" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="p"
-        isConst="true" />
-      </variant>
+    <method name="clone" cppName="clone" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RDimAngular3PEntity *"
+      isPureVirtual="false" />
     </method>
-    <method name="getExtensionLine1End"
-    cppName="getExtensionLine1End" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RVector" isPureVirtual="false" />
-    </method>
-    <method name="setExtensionLine2End"
-    cppName="setExtensionLine2End" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="p"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getExtensionLine2End"
-    cppName="getExtensionLine2End" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RVector" isPureVirtual="false" />
-    </method>
-    <method name="setDimArcPosition" cppName="setDimArcPosition"
+    <method name="setProperty" cppName="setProperty"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default="NULL"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getProperty" cppName="getProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
+      isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="propertyTypeId"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="humanReadable"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getData" cppName="getData" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RDimAngular3PData &amp;"
+      isPureVirtual="false" />
+      <variant returnType="const RDimAngular3PData &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setData" cppName="setData" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDimAngular3PData &amp;"
+        typeName="RDimAngular3PData" name="d" isConst="false" />
+      </variant>
+    </method>
+    <method name="setCenter" cppName="setCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="p"
         isConst="true" />
       </variant>
     </method>
-    <method name="getDimArcPosition" cppName="getDimArcPosition"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="getCenter" cppName="getCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
     <method name="print" cppName="print" specifier="protected"
@@ -110,6 +129,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyMeasuredValue" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyFontName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCenterX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCenterY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyCenterZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyExtensionLine1EndX"
     type="RPropertyTypeId" isConst="false" isStatic="true" />

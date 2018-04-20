@@ -1,16 +1,22 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class name="RDimAngularData"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  <class name="RDimAngular3PData"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="true" isScriptable="true">
-    <baseClass name="RDimensionData" specifier="public" />
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RDimAngularData" specifier="public" />
     <constructor>
       <variant />
       <variant>
         <arg type="RDimensionData &amp;" typeName="RDimensionData"
         name="dimData" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="extensionLine1End" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="extensionLine2End" isConst="true" />
       </variant>
     </constructor>
     <method name="getType" cppName="getType" specifier="public"
@@ -25,42 +31,53 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getCenter" cppName="getCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setCenter" cppName="setCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="setExtensionLine1End"
     cppName="setExtensionLine1End" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="true">
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="p"
         isConst="true" />
       </variant>
     </method>
     <method name="getExtensionLine1End"
     cppName="getExtensionLine1End" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
     <method name="setExtensionLine2End"
     cppName="setExtensionLine2End" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="true">
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="p"
         isConst="true" />
       </variant>
     </method>
     <method name="getExtensionLine2End"
     cppName="getExtensionLine2End" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
     <method name="setDimArcPosition" cppName="setDimArcPosition"
-    specifier="public" isStatic="false" isVirtual="true"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="true">
+      <variant returnType="void" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="p"
         isConst="true" />
       </variant>
     </method>
     <method name="getDimArcPosition" cppName="getDimArcPosition"
-    specifier="public" isStatic="false" isVirtual="true"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
@@ -117,24 +134,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getShapes" cppName="getShapes" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
-      isPureVirtual="false">
-        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
-        hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
-        <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default="false" isConst="false" />
-        <arg type="bool" typeName="bool" name="segment"
-        hasDefault="true" default="false" isConst="false" />
-      </variant>
-    </method>
-    <method name="getAngle" cppName="getAngle" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
     <method name="getAngles" cppName="getAngles" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="double &amp;" typeName="double" name="ang1"
         isConst="false" />
@@ -147,20 +148,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="p2"
         isConst="false" />
       </variant>
-    </method>
-    <method name="getCenter" cppName="getCenter" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RVector" isPureVirtual="false" />
-    </method>
-    <method name="getMeasuredValue" cppName="getMeasuredValue"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="getAutoLabel" cppName="getAutoLabel"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false" />
     </method>
   </class>
 </unit>

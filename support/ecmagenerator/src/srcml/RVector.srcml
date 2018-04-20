@@ -124,6 +124,7 @@
 
     <function_decl><type><name>RVector</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getRotated</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>rotate3D</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>, <param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>rotate3D</name><parameter_list>(<param><decl><type><name>const</name> <name>QQuaternion</name>&amp;</type> <name>quaternion</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -139,6 +140,7 @@
 
     <function_decl><type><name>RVector</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>factor</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name>=<init><expr><name>nullVector</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name>=<init><expr><name>nullVector</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getScaled</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
@@ -151,6 +153,7 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>scaleList</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name>=<init><expr><name>nullVector</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>RVector</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getMirrored</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>axis1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>axis2</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>flipHorizontal</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>flipVertical</name><parameter_list>()</parameter_list>;</function_decl>

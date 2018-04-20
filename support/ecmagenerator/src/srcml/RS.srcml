@@ -113,6 +113,8 @@
         <expr><name>EntityDimRadial</name></expr>,    <comment type="block">/**&lt; Radial Dimension */</comment>
         <expr><name>EntityDimDiametric</name></expr>, <comment type="block">/**&lt; Diametric Dimension */</comment>
         <expr><name>EntityDimAngular</name></expr>,   <comment type="block">/**&lt; Angular Dimension */</comment>
+        <expr><name>EntityDimAngular2L</name></expr>, <comment type="block">/**&lt; Angular Dimension from 2 lines */</comment>
+        <expr><name>EntityDimAngular3P</name></expr>, <comment type="block">/**&lt; Angular Dimension from 3 points */</comment>
         <expr><name>EntityDimOrdinate</name></expr>,  <comment type="block">/**&lt; Ordinate Dimension */</comment>
         <expr><name>EntityHatch</name></expr>,        <comment type="block">/**&lt; Hatch */</comment>
         <expr><name>EntityImage</name></expr>,        <comment type="block">/**&lt; Image */</comment>

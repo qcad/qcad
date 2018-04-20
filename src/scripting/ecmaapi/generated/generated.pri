@@ -39,6 +39,10 @@ HEADERS += \
     $$PWD/REcmaDeleteSelectionOperation.h \
     $$PWD/REcmaDimAlignedData.h \
     $$PWD/REcmaDimAlignedEntity.h \
+    $$PWD/REcmaDimAngular2LData.h \
+    $$PWD/REcmaDimAngular2LEntity.h \
+    $$PWD/REcmaDimAngular3PData.h \
+    $$PWD/REcmaDimAngular3PEntity.h \
     $$PWD/REcmaDimAngularData.h \
     $$PWD/REcmaDimAngularEntity.h \
     $$PWD/REcmaDimDiametricData.h \
@@ -219,6 +223,8 @@ HEADERS += \
     $$PWD/REcmaSharedPointerCircle.h \
     $$PWD/REcmaSharedPointerCircleEntity.h \
     $$PWD/REcmaSharedPointerDimAlignedEntity.h \
+    $$PWD/REcmaSharedPointerDimAngular2LEntity.h \
+    $$PWD/REcmaSharedPointerDimAngular3PEntity.h \
     $$PWD/REcmaSharedPointerDimAngularEntity.h \
     $$PWD/REcmaSharedPointerDimDiametricEntity.h \
     $$PWD/REcmaSharedPointerDimLinearEntity.h \
@@ -399,6 +405,10 @@ SOURCES += \
     $$PWD/REcmaDeleteSelectionOperation.cpp \
     $$PWD/REcmaDimAlignedData.cpp \
     $$PWD/REcmaDimAlignedEntity.cpp \
+    $$PWD/REcmaDimAngular2LData.cpp \
+    $$PWD/REcmaDimAngular2LEntity.cpp \
+    $$PWD/REcmaDimAngular3PData.cpp \
+    $$PWD/REcmaDimAngular3PEntity.cpp \
     $$PWD/REcmaDimAngularData.cpp \
     $$PWD/REcmaDimAngularEntity.cpp \
     $$PWD/REcmaDimDiametricData.cpp \
@@ -579,6 +589,8 @@ SOURCES += \
     $$PWD/REcmaSharedPointerCircle.cpp \
     $$PWD/REcmaSharedPointerCircleEntity.cpp \
     $$PWD/REcmaSharedPointerDimAlignedEntity.cpp \
+    $$PWD/REcmaSharedPointerDimAngular2LEntity.cpp \
+    $$PWD/REcmaSharedPointerDimAngular3PEntity.cpp \
     $$PWD/REcmaSharedPointerDimAngularEntity.cpp \
     $$PWD/REcmaSharedPointerDimDiametricEntity.cpp \
     $$PWD/REcmaSharedPointerDimLinearEntity.cpp \

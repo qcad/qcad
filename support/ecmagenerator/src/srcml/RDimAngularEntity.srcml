@@ -30,7 +30,7 @@
 <class_decl>class <name>RExporter</name>;</class_decl>
 
 <comment type="block">/**
- * Aligned dimension entity class.
+ * Angular dimension entity base class.
  *
  * \scriptable
  * \sharedPointerSupport
@@ -63,17 +63,9 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMeasuredValue</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFontName</name></decl>;</decl_stmt>
 
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine1StartX</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine1StartY</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine1StartZ</name></decl>;</decl_stmt>
-
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine1EndX</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine1EndY</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine1EndZ</name></decl>;</decl_stmt>
-
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine2StartX</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine2StartY</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine2StartZ</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine2EndX</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtensionLine2EndY</name></decl>;</decl_stmt>
@@ -84,44 +76,13 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimArcPositionZ</name></decl>;</decl_stmt>
 
 </public><public>public:
-    <constructor_decl><name>RDimAngularEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RDimAngularData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RDimAngularEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RDimAngularEntity</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function><type><name>static</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getStaticPropertyTypeIds</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name>typeid</name><argument_list>(<argument><expr><name>RDimAngularEntity</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
-
-    <function><type><name>virtual</name> <name>RDimAngularEntity</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr>new <call><name>RDimAngularEntity</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
-
-    <function_decl><type><name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
-        <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(
-            <param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
-            <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-
-    <function><type><name>virtual</name> <name>RDimAngularData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><name>data</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setData</name><parameter_list>(<param><decl><type><name>RDimAngularData</name>&amp;</type> <name>d</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>data</name> = <name>d</name></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>virtual</name> <name>const</name> <name>RDimAngularData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>data</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setExtensionLine1Start</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setExtensionLine1Start</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>RVector</name></type> <name>getExtensionLine1Start</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getExtensionLine1Start</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>virtual</name> <name>RDimAngularData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>const</name> <name>RDimAngularData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
     <function><type><name>void</name></type> <name>setExtensionLine1End</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setExtensionLine1End</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
@@ -129,14 +90,6 @@
 
     <function><type><name>RVector</name></type> <name>getExtensionLine1End</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getExtensionLine1End</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setExtensionLine2Start</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setExtensionLine2Start</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>RVector</name></type> <name>getExtensionLine2Start</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getExtensionLine2Start</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setExtensionLine2End</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
@@ -158,8 +111,8 @@
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-</protected><protected>protected:
-    <decl_stmt><decl><type><name>RDimAngularData</name></type> <name>data</name></decl>;</decl_stmt>
+<comment type="line">//protected:</comment>
+    <comment type="line">//RDimAngularData data;</comment>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimAngularEntity*</argument>)</argument_list></macro>

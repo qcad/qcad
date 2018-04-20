@@ -55,40 +55,13 @@
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getStaticPropertyTypeIds
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        clone
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setProperty
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getProperty
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getData
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setData
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setExtensionLine1Start
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getExtensionLine1Start
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setExtensionLine1End
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getExtensionLine1End
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setExtensionLine2Start
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getExtensionLine2Start
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setExtensionLine2End
