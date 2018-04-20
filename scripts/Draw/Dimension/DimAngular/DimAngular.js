@@ -24,17 +24,20 @@ include("../Dimension.js");
  * \brief Draw angular dimension.
  * The first entity is a line or arc. If the first entity is a line,
  * a second entity has to be chosen which is also a line.
+ * If using max angle, this action creates a 3 point angular dimension.
  * \ingroup ecma_draw_dimension
  */
 function DimAngular(guiAction) {
     Dimension.call(this, guiAction);
 
-    this.data = new RDimAngularData();
+    this.data2L = new RDimAngular2LData();
+    this.data3P = new RDimAngular3PData();
     this.firstEntity = undefined;
     this.firstShape = undefined;
     this.secondEntity = undefined;
     this.secondShape = undefined;
-    this.setUiOptions("../Dimension.ui");
+    this.useMaxAngle = false;
+    this.setUiOptions(["../Dimension.ui", "DimAngular.ui"], false);
 }
 
 DimAngular.prototype = new Dimension();
@@ -60,11 +63,11 @@ DimAngular.prototype.setState = function(state) {
     switch (this.state) {
     case DimAngular.State.SettingFirstEntity:
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.data.setExtensionLine1Start(RVector.invalid);
-        this.data.setExtensionLine1End(RVector.invalid);
-        this.data.setExtensionLine2Start(RVector.invalid);
-        this.data.setExtensionLine2End(RVector.invalid);
-        this.data.setDimArcPosition(RVector.invalid);
+        this.data2L.setExtensionLine1Start(RVector.invalid);
+        this.data2L.setExtensionLine1End(RVector.invalid);
+        this.data2L.setExtensionLine2Start(RVector.invalid);
+        this.data2L.setExtensionLine2End(RVector.invalid);
+        this.data2L.setDimArcPosition(RVector.invalid);
         this.firstEntity = undefined;
         this.firstShape = undefined;
         this.secondEntity = undefined;
@@ -76,9 +79,9 @@ DimAngular.prototype.setState = function(state) {
 
     case DimAngular.State.SettingSecondEntity:
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.data.setExtensionLine2Start(RVector.invalid);
-        this.data.setExtensionLine2End(RVector.invalid);
-        this.data.setDimArcPosition(RVector.invalid);
+        this.data2L.setExtensionLine2Start(RVector.invalid);
+        this.data2L.setExtensionLine2End(RVector.invalid);
+        this.data2L.setDimArcPosition(RVector.invalid);
         this.secondEntity = undefined;
         this.secondShape = undefined;
         var trSecondEntity = qsTr("Second line");
@@ -88,7 +91,7 @@ DimAngular.prototype.setState = function(state) {
 
     case DimAngular.State.SettingDimPos:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.data.setDefinitionPoint(RVector.invalid);
+        this.data2L.setDefinitionPoint(RVector.invalid);
         var trDimPos = qsTr("Dimension arc location");
         this.setCommandPrompt(trDimPos);
         this.setLeftMouseTip(trDimPos);
@@ -192,7 +195,7 @@ DimAngular.prototype.pickCoordinate = function(event, preview) {
 
     switch (this.state) {
     case DimAngular.State.SettingDimPos:
-        this.data.setDimArcPosition(event.getModelPosition());
+        this.data2L.setDimArcPosition(event.getModelPosition());
         if (preview) {
             this.updatePreview();
         }
@@ -220,53 +223,190 @@ DimAngular.prototype.getOperation = function(preview) {
     var di = this.getDocumentInterface();
 
     if (isLineBasedShape(this.firstShape)) {
-        //this.data.setExtensionLine1Start(this.firstShape.getStartPoint());
-        //this.data.setExtensionLine1End(this.firstShape.getStartPoint());
-
         var intersections = this.firstShape.getIntersectionPoints(this.secondShape.data(), false);
 
-        if (intersections.length!=1) {
+        if (intersections.length!==1) {
             return undefined;
         }
 
         var center = intersections[0];
 
-        if (center.getDistanceTo(this.firstShape.getStartPoint()) <
+        if (this.useMaxAngle) {
+            this.data3P.setCenter(center);
+            this.data3P.setDimArcPosition(this.data2L.getDimArcPosition());
+            if (center.getDistanceTo(this.firstShape.getStartPoint()) <
                 center.getDistanceTo(this.firstShape.getEndPoint())) {
-            this.data.setExtensionLine1Start(this.firstShape.getEndPoint());
-            this.data.setExtensionLine1End(this.firstShape.getStartPoint());
-        } else {
-            this.data.setExtensionLine1Start(this.firstShape.getStartPoint());
-            this.data.setExtensionLine1End(this.firstShape.getEndPoint());
+                this.data3P.setExtensionLine1End(this.firstShape.getEndPoint());
+            }
+            else {
+                this.data3P.setExtensionLine1End(this.firstShape.getStartPoint());
+            }
+            if (center.getDistanceTo(this.secondShape.getStartPoint()) <
+                center.getDistanceTo(this.secondShape.getEndPoint())) {
+                this.data3P.setExtensionLine2End(this.secondShape.getEndPoint());
+            }
+            else {
+                this.data3P.setExtensionLine2End(this.secondShape.getStartPoint());
+            }
         }
 
-        if (center.getDistanceTo(this.secondShape.getStartPoint()) <
+        else {
+            if (center.getDistanceTo(this.firstShape.getStartPoint()) <
+                center.getDistanceTo(this.firstShape.getEndPoint())) {
+                this.data2L.setExtensionLine1Start(this.firstShape.getEndPoint());
+                this.data2L.setExtensionLine1End(this.firstShape.getStartPoint());
+            } else {
+                this.data2L.setExtensionLine1Start(this.firstShape.getStartPoint());
+                this.data2L.setExtensionLine1End(this.firstShape.getEndPoint());
+            }
+
+            if (center.getDistanceTo(this.secondShape.getStartPoint()) <
                 center.getDistanceTo(this.secondShape.getEndPoint())) {
-            this.data.setExtensionLine2Start(this.secondShape.getStartPoint());
-            this.data.setExtensionLine2End(this.secondShape.getEndPoint());
-        } else {
-            this.data.setExtensionLine2Start(this.secondShape.getEndPoint());
-            this.data.setExtensionLine2End(this.secondShape.getStartPoint());
+                this.data2L.setExtensionLine2Start(this.secondShape.getStartPoint());
+                this.data2L.setExtensionLine2End(this.secondShape.getEndPoint());
+            } else {
+                this.data2L.setExtensionLine2Start(this.secondShape.getEndPoint());
+                this.data2L.setExtensionLine2End(this.secondShape.getStartPoint());
+            }
+            if (!preview) {
+                di.setRelativeZero(center);
+            }
         }
-        //graphicView->moveRelativeZero(center);
+
+        //var ang = center.getAngleTo(this.data2L.getDimArcPosition());
+
+        //qDebug("useMaxAngle:", this.useMaxAngle);
+
+//        if (this.useMaxAngle) {
+//            if (center.getDistanceTo(this.firstShape.getStartPoint()) <
+//                center.getDistanceTo(this.firstShape.getEndPoint())) {
+
+//                this.data2L.setExtensionLine1Start(this.firstShape.getStartPoint());
+//                this.data2L.setExtensionLine1End(this.firstShape.getEndPoint());
+//            } else {
+//                this.data2L.setExtensionLine1Start(this.firstShape.getEndPoint());
+//                this.data2L.setExtensionLine1End(this.firstShape.getStartPoint());
+//            }
+
+//            if (center.getDistanceTo(this.secondShape.getStartPoint()) <
+//                center.getDistanceTo(this.secondShape.getEndPoint())) {
+
+//                this.data2L.setExtensionLine2Start(this.secondShape.getStartPoint());
+//                this.data2L.setExtensionLine2End(this.secondShape.getEndPoint());
+//            } else {
+//                this.data2L.setExtensionLine2Start(this.secondShape.getEndPoint());
+//                this.data2L.setExtensionLine2End(this.secondShape.getStartPoint());
+//            }
+//        }
+//        else {
+
+//            // find out the angles this dimension refers to:
+//            var done = false;
+//            //var ang1 = this.data2L.setExtensionLine1Start.getAngleTo(this.data2L.setExtensionLine1End);
+//            var ang1;
+//            for (var f1=0; f1<=1 && !done; ++f1) {
+//                //ang1 = RMath.getNormalizedAngle(this.data2L.setExtensionLine1End.getAngleTo(this.data2L.setExtensionLine1Start) + f1*Math.PI);
+//                if (f1===0) {
+//                    this.data2L.setExtensionLine1Start(this.firstShape.getStartPoint());
+//                    this.data2L.setExtensionLine1End(this.firstShape.getEndPoint());
+//                    ang1 = this.firstShape.getDirection1();
+//                }
+//                else {
+//                    this.data2L.setExtensionLine1Start(this.firstShape.getEndPoint());
+//                    this.data2L.setExtensionLine1End(this.firstShape.getStartPoint());
+//                    ang1 = this.firstShape.getDirection2();
+//                }
+
+//    //            if (f1==0) {
+//    //                p1 = this.data2L.setExtensionLine1Start;
+//    //            } else {
+//    //                p1 = this.data2L.setExtensionLine1End;
+//    //            }
+//                var ang2;
+//                for (var f2=0; f2<=1 && !done; ++f2) {
+//                    //ang2 = RMath.getNormalizedAngle(this.data2L.setExtensionLine2Start.getAngleTo(this.data2L.setExtensionLine2End) + f2*Math.PI);
+//                    if (f2===0) {
+//                        this.data2L.setExtensionLine2Start(this.secondShape.getStartPoint());
+//                        this.data2L.setExtensionLine2End(this.secondShape.getEndPoint());
+//                        ang2 = this.secondShape.getDirection1();
+//                    }
+//                    else {
+//                        this.data2L.setExtensionLine2Start(this.secondShape.getEndPoint());
+//                        this.data2L.setExtensionLine2End(this.secondShape.getStartPoint());
+//                        ang2 = this.secondShape.getDirection2();
+//                    }
+//                    //if (f2==0) {
+//                    //    p2 = definitionPoint;
+//                    //} else {
+//                    //    p2 = extensionLine2Start;
+//                    //}
+//                    for (var t=0; t<=1 && !done; ++t) {
+//                        var reversed = (t===1);
+
+//                        var angDiff;
+
+//                        if (!reversed) {
+//                            if (ang2<ang1) {
+//                                ang2+=2*Math.PI;
+//                            }
+//                            angDiff = ang2-ang1;
+//                        } else {
+//                            if (ang1<ang2) {
+//                                ang1+=2*Math.PI;
+//                            }
+//                            angDiff = ang1-ang2;
+//                        }
+
+//                        ang1 = RMath.getNormalizedAngle(ang1);
+//                        ang2 = RMath.getNormalizedAngle(ang2);
+
+//                        if (RMath.isAngleBetween(ang, ang1, ang2, reversed) && angDiff<=Math.PI) {
+//                            done = true;
+//                            break;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+
+//        qDebug("ang1:", ang1);
+//        qDebug("ang2:", ang2);
+//        qDebug("reversed:", reversed);
+
+//        if (reversed) {
+            // TODO:
+            // reverse extension line 1 and 2:
+//        }
+
+
         if (!preview) {
             di.setRelativeZero(center);
         }
-        //setStatus(SetPos);
-    }
-    if (isArcShape(this.firstShape)) {
-        this.data.setExtensionLine1Start(this.firstShape.getCenter());
-        this.data.setExtensionLine1End(this.firstShape.getStartPoint());
-        this.data.setExtensionLine2Start(this.firstShape.getCenter());
-        this.data.setExtensionLine2End(this.firstShape.getEndPoint());
     }
 
-    if (!this.data.isValid()) {
-        return undefined;
+    if (isArcShape(this.firstShape)) {
+        this.data2L.setExtensionLine1Start(this.firstShape.getCenter());
+        this.data2L.setExtensionLine1End(this.firstShape.getStartPoint());
+        this.data2L.setExtensionLine2Start(this.firstShape.getCenter());
+        this.data2L.setExtensionLine2End(this.firstShape.getEndPoint());
     }
+
 
     var doc = this.getDocument();
-    var entity = new RDimAngularEntity(doc, this.data);
+    var entity;
+    if (this.useMaxAngle) {
+        if (!this.data3P.isValid()) {
+            return undefined;
+        }
+        entity = new RDimAngular3PEntity(doc, this.data3P);
+    }
+    else {
+        if (!this.data2L.isValid()) {
+            return undefined;
+        }
+        entity = new RDimAngular2LEntity(doc, this.data2L);
+    }
+
     if (!isEntity(entity)) {
         return undefined;
     }
@@ -285,3 +425,6 @@ DimAngular.prototype.getHighlightedEntities = function() {
     return ret;
 };
 
+DimAngular.prototype.slotUseMaxAngleChanged = function(v) {
+    this.useMaxAngle = v;
+};

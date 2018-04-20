@@ -17,27 +17,27 @@
  * along with QCAD.
  */
 
-#ifndef RDIMANGULARENTITY_H
-#define RDIMANGULARENTITY_H
+#ifndef RDIMANGULAR2LENTITY_H
+#define RDIMANGULAR2LENTITY_H
 
 #include "entity_global.h"
 
-#include "RDimensionEntity.h"
-#include "RDimAngularData.h"
+#include "RDimAngularEntity.h"
+#include "RDimAngular2LData.h"
 
 class RDocument;
 class RExporter;
 
 /**
- * Angular dimension entity base class.
+ * Angular dimension entity from 2 lines class.
  *
  * \scriptable
  * \sharedPointerSupport
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RDimAngularEntity: public RDimensionEntity {
+class QCADENTITY_EXPORT RDimAngular2LEntity: public RDimAngularEntity {
 
-    Q_DECLARE_TR_FUNCTIONS(RDimAngularEntity)
+    Q_DECLARE_TR_FUNCTIONS(RDimAngular2LEntity)
 
 public:
     static RPropertyTypeId PropertyCustom;
@@ -62,9 +62,17 @@ public:
     static RPropertyTypeId PropertyMeasuredValue;
     static RPropertyTypeId PropertyFontName;
 
+    static RPropertyTypeId PropertyExtensionLine1StartX;
+    static RPropertyTypeId PropertyExtensionLine1StartY;
+    static RPropertyTypeId PropertyExtensionLine1StartZ;
+
     static RPropertyTypeId PropertyExtensionLine1EndX;
     static RPropertyTypeId PropertyExtensionLine1EndY;
     static RPropertyTypeId PropertyExtensionLine1EndZ;
+
+    static RPropertyTypeId PropertyExtensionLine2StartX;
+    static RPropertyTypeId PropertyExtensionLine2StartY;
+    static RPropertyTypeId PropertyExtensionLine2StartZ;
 
     static RPropertyTypeId PropertyExtensionLine2EndX;
     static RPropertyTypeId PropertyExtensionLine2EndY;
@@ -75,47 +83,62 @@ public:
     static RPropertyTypeId PropertyDimArcPositionZ;
 
 public:
-    RDimAngularEntity(RDocument* document);
-    virtual ~RDimAngularEntity();
+    RDimAngular2LEntity(RDocument* document, const RDimAngular2LData& data);
+    virtual ~RDimAngular2LEntity();
 
     static void init();
 
-    virtual RDimAngularData& getData() = 0;
-    virtual const RDimAngularData& getData() const = 0;
-
-    void setExtensionLine1End(const RVector& p) {
-        getData().setExtensionLine1End(p);
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimAngular2LEntity));
     }
 
-    RVector getExtensionLine1End() const {
-        return getData().getExtensionLine1End();
+    virtual RDimAngular2LEntity* clone() const {
+        return new RDimAngular2LEntity(*this);
     }
 
-    void setExtensionLine2End(const RVector& p) {
-        getData().setExtensionLine2End(p);
+    bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
+        RTransaction* transaction=NULL);
+    QPair<QVariant, RPropertyAttributes> getProperty(
+            RPropertyTypeId& propertyTypeId,
+            bool humanReadable = false, bool noAttributes = false);
+
+    virtual RDimAngular2LData& getData() {
+        return data;
     }
 
-    RVector getExtensionLine2End() const {
-        return getData().getExtensionLine2End();
+    void setData(RDimAngular2LData& d) {
+        data = d;
     }
 
-    void setDimArcPosition(const RVector& p) {
-        getData().setDimArcPosition(p);
+    virtual const RDimAngular2LData& getData() const {
+        return data;
     }
 
-    RVector getDimArcPosition() const {
-        return getData().getDimArcPosition();
+    void setExtensionLine1Start(const RVector& p) {
+        getData().setExtensionLine1Start(p);
+    }
+
+    RVector getExtensionLine1Start() const {
+        return getData().getExtensionLine1Start();
+    }
+
+    void setExtensionLine2Start(const RVector& p) {
+        getData().setExtensionLine2Start(p);
+    }
+
+    RVector getExtensionLine2Start() const {
+        return getData().getExtensionLine2Start();
     }
 
 protected:
     virtual void print(QDebug dbg) const;
 
-//protected:
-    //RDimAngularData data;
+protected:
+    RDimAngular2LData data;
 };
 
-Q_DECLARE_METATYPE(RDimAngularEntity*)
-Q_DECLARE_METATYPE(QSharedPointer<RDimAngularEntity>)
-Q_DECLARE_METATYPE(QSharedPointer<RDimAngularEntity>*)
+Q_DECLARE_METATYPE(RDimAngular2LEntity*)
+Q_DECLARE_METATYPE(QSharedPointer<RDimAngular2LEntity>)
+Q_DECLARE_METATYPE(QSharedPointer<RDimAngular2LEntity>*)
 
 #endif

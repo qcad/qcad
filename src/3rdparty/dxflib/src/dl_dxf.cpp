@@ -1852,7 +1852,7 @@ void DL_Dxf::addDimAngular(DL_CreationInterface* creationInterface) {
     DL_DimensionData d = getDimData();
 
     // angular dimension:
-    DL_DimAngularData da(
+    DL_DimAngular2LData da(
         // definition point 1
         getRealValue(13, 0.0),
         getRealValue(23, 0.0),
@@ -3231,9 +3231,9 @@ void DL_Dxf::writeDimDiametric(DL_WriterA& dw,
  * @param data Specific angular dimension data from the file
  * @param attrib Attributes
  */
-void DL_Dxf::writeDimAngular(DL_WriterA& dw,
+void DL_Dxf::writeDimAngular2L(DL_WriterA& dw,
                              const DL_DimensionData& data,
-                             const DL_DimAngularData& edata,
+                             const DL_DimAngular2LData& edata,
                              const DL_Attributes& attrib) {
 
     dw.entity("DIMENSION");

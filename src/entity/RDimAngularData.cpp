@@ -34,43 +34,32 @@ RDimAngularData::RDimAngularData(RDocument* document, const RDimAngularData& dat
 /**
  * \param definitionPoint Definition point is extensionLine2End.
  */
-RDimAngularData::RDimAngularData(const RDimensionData& dimData,
-                                 const RVector& extensionLine1Start,
-                                 const RVector& extensionLine1End,
-                                 const RVector& extensionLine2Start,
-                                 const RVector& dimArcPosition)
-    : RDimensionData(dimData),
-      extensionLine1Start(extensionLine1Start),
-      extensionLine1End(extensionLine1End),
-      extensionLine2Start(extensionLine2Start),
-      dimArcPosition(dimArcPosition) {
+RDimAngularData::RDimAngularData(const RDimensionData& dimData)
+    : RDimensionData(dimData) {
 
 }
 
 bool RDimAngularData::isValid() const {
     return RDimensionData::isValid() &&
-            extensionLine1Start.isValid() &&
-            extensionLine1End.isValid() &&
-            extensionLine2Start.isValid() &&
-            dimArcPosition.isValid();
+            getExtensionLine1End().isValid() &&
+            getExtensionLine2End().isValid() &&
+            getDimArcPosition().isValid();
 }
 
 bool RDimAngularData::isSane() const {
     return RDimensionData::isSane() &&
-            extensionLine1Start.isSane() &&
-            extensionLine1End.isSane() &&
-            extensionLine2Start.isSane() &&
-            dimArcPosition.isSane();
+            getExtensionLine1End().isSane() &&
+            getExtensionLine2End().isSane() &&
+            getDimArcPosition().isSane();
 }
 
 QList<RRefPoint> RDimAngularData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     QList<RRefPoint> ret = RDimensionData::getReferencePoints(hint);
 
     ret.append(getTextPosition());
-    ret.append(extensionLine1Start);
-    ret.append(extensionLine1End);
-    ret.append(extensionLine2Start);
-    ret.append(dimArcPosition);
+    ret.append(getExtensionLine1End());
+    ret.append(getExtensionLine2End());
+    ret.append(getDimArcPosition());
 
     return ret;
 }
@@ -80,23 +69,18 @@ bool RDimAngularData::moveReferencePoint(const RVector& referencePoint,
 
     bool ret = false;
 
-    if (referencePoint.equalsFuzzy(extensionLine1Start)) {
-        extensionLine1Start = targetPoint;
+    if (referencePoint.equalsFuzzy(getExtensionLine1End())) {
+        setExtensionLine1End(targetPoint);
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.equalsFuzzy(extensionLine1End)) {
-        extensionLine1End = targetPoint;
+    else if (referencePoint.equalsFuzzy(getExtensionLine2End())) {
+        setExtensionLine2End(targetPoint);
         autoTextPos = true;
         ret = true;
     }
-    else if (referencePoint.equalsFuzzy(extensionLine2Start)) {
-        extensionLine2Start = targetPoint;
-        autoTextPos = true;
-        ret = true;
-    }
-    else if (referencePoint.equalsFuzzy(dimArcPosition)) {
-        dimArcPosition = targetPoint;
+    else if (referencePoint.equalsFuzzy(getDimArcPosition())) {
+        setDimArcPosition(targetPoint);
         autoTextPos = true;
         ret = true;
     }
@@ -114,40 +98,36 @@ bool RDimAngularData::moveReferencePoint(const RVector& referencePoint,
 
 bool RDimAngularData::move(const RVector& offset) {
     RDimensionData::move(offset);
-    extensionLine1Start.move(offset);
-    extensionLine1End.move(offset);
-    extensionLine2Start.move(offset);
-    dimArcPosition.move(offset);
+    setExtensionLine1End(getExtensionLine1End() + offset);
+    setExtensionLine2End(getExtensionLine2End() + offset);
+    setDimArcPosition(getDimArcPosition() + offset);
     update();
     return true;
 }
 
 bool RDimAngularData::rotate(double rotation, const RVector& center) {
     RDimensionData::rotate(rotation, center);
-    extensionLine1Start.rotate(rotation, center);
-    extensionLine1End.rotate(rotation, center);
-    extensionLine2Start.rotate(rotation, center);
-    dimArcPosition.rotate(rotation, center);
+    setExtensionLine1End(getExtensionLine1End().getRotated(rotation, center));
+    setExtensionLine2End(getExtensionLine2End().getRotated(rotation, center));
+    setDimArcPosition(getDimArcPosition().getRotated(rotation, center));
     update();
     return true;
 }
 
 bool RDimAngularData::scale(const RVector& scaleFactors, const RVector& center) {
     RDimensionData::scale(scaleFactors, center);
-    extensionLine1Start.scale(scaleFactors, center);
-    extensionLine1End.scale(scaleFactors, center);
-    extensionLine2Start.scale(scaleFactors, center);
-    dimArcPosition.scale(scaleFactors, center);
+    setExtensionLine1End(getExtensionLine1End().getScaled(scaleFactors, center));
+    setExtensionLine2End(getExtensionLine2End().getScaled(scaleFactors, center));
+    setDimArcPosition(getDimArcPosition().getScaled(scaleFactors, center));
     update();
     return true;
 }
 
 bool RDimAngularData::mirror(const RLine& axis) {
     RDimensionData::mirror(axis);
-    extensionLine1Start.mirror(axis);
-    extensionLine1End.mirror(axis);
-    extensionLine2Start.mirror(axis);
-    dimArcPosition.mirror(axis);
+    setExtensionLine1End(getExtensionLine1End().getMirrored(axis));
+    setExtensionLine2End(getExtensionLine2End().getMirrored(axis));
+    setDimArcPosition(getDimArcPosition().getMirrored(axis));
     update();
     return true;
 }
@@ -185,7 +165,7 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
 
     getAngles(ang1, ang2, reversed, p1, p2);
 
-    double rad = dimArcPosition.getDistanceTo(center);
+    double rad = getDimArcPosition().getDistanceTo(center);
 
     RLine line;
     RVector dir;
@@ -330,83 +310,6 @@ double RDimAngularData::getAngle() const {
         }
         return ang1-ang2;
     }
-}
-
-/**
- * Finds out which angles this dimension actually measures.
- *
- * \param ang1 Reference will return the start angle
- * \param ang2 Reference will return the end angle
- * \param reversed Reference will return the reversed flag.
- *
- * \return true: on success
- */
-bool RDimAngularData::getAngles(double& ang1, double& ang2, bool& reversed,
-                              RVector& p1, RVector& p2) const {
-
-    RVector center = getCenter();
-    double ang = center.getAngleTo(dimArcPosition);
-    bool done = false;
-
-    // find out the angles this dimension refers to:
-    for (int f1=0; f1<=1 && !done; ++f1) {
-        ang1 = RMath::getNormalizedAngle(extensionLine1End.getAngleTo(extensionLine1Start) + f1*M_PI);
-        if (f1==0) {
-            p1 = extensionLine1Start;
-        } else {
-            p1 = extensionLine1End;
-        }
-        for (int f2=0; f2<=1 && !done; ++f2) {
-            ang2 = RMath::getNormalizedAngle(extensionLine2Start.getAngleTo(definitionPoint) + f2*M_PI);
-            if (f2==0) {
-                p2 = definitionPoint;
-            } else {
-                p2 = extensionLine2Start;
-            }
-            for (int t=0; t<=1 && !done; ++t) {
-                reversed = (bool)t;
-
-                double angDiff;
-
-                if (!reversed) {
-                    if (ang2<ang1) {
-                        ang2+=2*M_PI;
-                    }
-                    angDiff = ang2-ang1;
-                } else {
-                    if (ang1<ang2) {
-                        ang1+=2*M_PI;
-                    }
-                    angDiff = ang1-ang2;
-                }
-
-                ang1 = RMath::getNormalizedAngle(ang1);
-                ang2 = RMath::getNormalizedAngle(ang2);
-
-                if (RMath::isAngleBetween(ang, ang1, ang2, reversed) && angDiff<=M_PI) {
-                    done = true;
-                    break;
-                }
-            }
-        }
-    }
-
-    return done;
-}
-
-/**
- * \return Center of the measured dimension.
- */
-RVector RDimAngularData::getCenter() const {
-    RLine l1(extensionLine1End, extensionLine1Start);
-    RLine l2(extensionLine2Start, definitionPoint);
-    QList<RVector> vs = l1.getIntersectionPoints(l2, false);
-
-    if (vs.isEmpty()) {
-        return RVector::invalid;
-    }
-
-    return vs.at(0);
 }
 
 double RDimAngularData::getMeasuredValue() const {

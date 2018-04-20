@@ -17,27 +17,27 @@
  * along with QCAD.
  */
 
-#ifndef RDIMANGULARENTITY_H
-#define RDIMANGULARENTITY_H
+#ifndef RDIMANGULAR3PENTITY_H
+#define RDIMANGULAR3PENTITY_H
 
 #include "entity_global.h"
 
-#include "RDimensionEntity.h"
-#include "RDimAngularData.h"
+#include "RDimAngularEntity.h"
+#include "RDimAngular3PData.h"
 
 class RDocument;
 class RExporter;
 
 /**
- * Angular dimension entity base class.
+ * Angular dimension from 3 points entity class.
  *
  * \scriptable
  * \sharedPointerSupport
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RDimAngularEntity: public RDimensionEntity {
+class QCADENTITY_EXPORT RDimAngular3PEntity: public RDimAngularEntity {
 
-    Q_DECLARE_TR_FUNCTIONS(RDimAngularEntity)
+    Q_DECLARE_TR_FUNCTIONS(RDimAngular3PEntity)
 
 public:
     static RPropertyTypeId PropertyCustom;
@@ -62,6 +62,10 @@ public:
     static RPropertyTypeId PropertyMeasuredValue;
     static RPropertyTypeId PropertyFontName;
 
+    static RPropertyTypeId PropertyCenterX;
+    static RPropertyTypeId PropertyCenterY;
+    static RPropertyTypeId PropertyCenterZ;
+
     static RPropertyTypeId PropertyExtensionLine1EndX;
     static RPropertyTypeId PropertyExtensionLine1EndY;
     static RPropertyTypeId PropertyExtensionLine1EndZ;
@@ -75,47 +79,54 @@ public:
     static RPropertyTypeId PropertyDimArcPositionZ;
 
 public:
-    RDimAngularEntity(RDocument* document);
-    virtual ~RDimAngularEntity();
+    RDimAngular3PEntity(RDocument* document, const RDimAngular3PData& data);
+    virtual ~RDimAngular3PEntity();
 
     static void init();
 
-    virtual RDimAngularData& getData() = 0;
-    virtual const RDimAngularData& getData() const = 0;
-
-    void setExtensionLine1End(const RVector& p) {
-        getData().setExtensionLine1End(p);
+    static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
+        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimAngular3PEntity));
     }
 
-    RVector getExtensionLine1End() const {
-        return getData().getExtensionLine1End();
+    virtual RDimAngular3PEntity* clone() const {
+        return new RDimAngular3PEntity(*this);
     }
 
-    void setExtensionLine2End(const RVector& p) {
-        getData().setExtensionLine2End(p);
+    bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
+        RTransaction* transaction=NULL);
+    QPair<QVariant, RPropertyAttributes> getProperty(
+            RPropertyTypeId& propertyTypeId,
+            bool humanReadable = false, bool noAttributes = false);
+
+    virtual RDimAngular3PData& getData() {
+        return data;
     }
 
-    RVector getExtensionLine2End() const {
-        return getData().getExtensionLine2End();
+    void setData(RDimAngular3PData& d) {
+        data = d;
     }
 
-    void setDimArcPosition(const RVector& p) {
-        getData().setDimArcPosition(p);
+    virtual const RDimAngular3PData& getData() const {
+        return data;
     }
 
-    RVector getDimArcPosition() const {
-        return getData().getDimArcPosition();
+    void setCenter(const RVector& p) {
+        getData().setCenter(p);
+    }
+
+    RVector getCenter() const {
+        return getData().getCenter();
     }
 
 protected:
     virtual void print(QDebug dbg) const;
 
-//protected:
-    //RDimAngularData data;
+protected:
+    RDimAngular3PData data;
 };
 
-Q_DECLARE_METATYPE(RDimAngularEntity*)
-Q_DECLARE_METATYPE(QSharedPointer<RDimAngularEntity>)
-Q_DECLARE_METATYPE(QSharedPointer<RDimAngularEntity>*)
+Q_DECLARE_METATYPE(RDimAngular3PEntity*)
+Q_DECLARE_METATYPE(QSharedPointer<RDimAngular3PEntity>)
+Q_DECLARE_METATYPE(QSharedPointer<RDimAngular3PEntity>*)
 
 #endif

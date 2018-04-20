@@ -10,6 +10,10 @@ SOURCES = \
     RCircleEntity.cpp \
     RDimAlignedData.cpp \
     RDimAlignedEntity.cpp \
+    RDimAngular2LData.cpp \
+    RDimAngular2LEntity.cpp \
+    RDimAngular3PData.cpp \
+    RDimAngular3PEntity.cpp \
     RDimAngularData.cpp \
     RDimAngularEntity.cpp \
     RDimDiametricData.cpp \
@@ -64,6 +68,10 @@ HEADERS = \
     RCircleEntity.h \
     RDimAlignedData.h \
     RDimAlignedEntity.h \
+    RDimAngular2LData.h \
+    RDimAngular2LEntity.h \
+    RDimAngular3PData.h \
+    RDimAngular3PEntity.h \
     RDimAngularData.h \
     RDimAngularEntity.h \
     RDimDiametricData.h \

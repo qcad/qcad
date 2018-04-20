@@ -342,10 +342,30 @@ function isDimRadialEntity(obj) {
  * Checks if the given object is an angular dimension entity.
  * 
  * \return true if the given object is an angular dimension entity
- * (RDimAngularEntity).
+ * (RDimAngular2LEntity or RDimAngular3PEntity).
  */
 function isDimAngularEntity(obj) {
-    return isOfType(obj, RDimAngularEntity) || isOfType(obj, RDimAngularEntityPointer);
+    return isDimAngular2LEntity(obj) || isDimAngular3PEntity(obj);
+}
+
+/**
+ * Checks if the given object is an angular dimension from 2 lines entity.
+ *
+ * \return true if the given object is an angular dimension entity
+ * (RDimAngular2LEntity).
+ */
+function isDimAngular2LEntity(obj) {
+    return isOfType(obj, RDimAngular2LEntity) || isOfType(obj, RDimAngular2LEntityPointer);
+}
+
+/**
+ * Checks if the given object is an angular dimension from 3 points entity.
+ *
+ * \return true if the given object is an angular dimension entity
+ * (RDimAngular3PEntity).
+ */
+function isDimAngular3PEntity(obj) {
+    return isOfType(obj, RDimAngular3PEntity) || isOfType(obj, RDimAngular3PEntityPointer);
 }
 
 /**
@@ -831,6 +851,10 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Aligned Dimensions") : qsTr("Aligned Dimension");
     case RS.EntityDimAngular:
         return plural ? qsTr("Angular Dimensions") : qsTr("Angular Dimension");
+    case RS.EntityDimAngular2L:
+        return plural ? qsTr("2 Line Angular Dimensions") : qsTr("2 Line Angular Dimension");
+    case RS.EntityDimAngular3P:
+        return plural ? qsTr("3 Point Angular Dimensions") : qsTr("3 Point Angular Dimension");
     case RS.EntityDimDiametric:
         return plural ? qsTr("Diametric Dimensions") : qsTr("Diametric Dimension");
     case RS.EntityDimOrdinate:

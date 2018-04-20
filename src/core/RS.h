@@ -112,6 +112,8 @@ public:
         EntityDimRadial,    /**< Radial Dimension */
         EntityDimDiametric, /**< Diametric Dimension */
         EntityDimAngular,   /**< Angular Dimension */
+        EntityDimAngular2L, /**< Angular Dimension from 2 lines */
+        EntityDimAngular3P, /**< Angular Dimension from 3 points */
         EntityDimOrdinate,  /**< Ordinate Dimension */
         EntityHatch,        /**< Hatch */
         EntityImage,        /**< Image */

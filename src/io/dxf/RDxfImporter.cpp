@@ -33,7 +33,8 @@
 #include "RColor.h"
 #include "RDebug.h"
 #include "RDimAlignedEntity.h"
-#include "RDimAngularEntity.h"
+#include "RDimAngular2LEntity.h"
+#include "RDimAngular3PEntity.h"
 #include "RDimDiametricEntity.h"
 #include "RDimRadialEntity.h"
 #include "RDimRotatedEntity.h"
@@ -1109,31 +1110,33 @@ void RDxfImporter::addDimDiametric(const DL_DimensionData& data,
 }
 
 void RDxfImporter::addDimAngular(const DL_DimensionData& data,
-                                 const DL_DimAngularData& edata) {
+                                 const DL_DimAngular2LData& edata) {
     RDimensionData dimData = convDimensionData(data);
     RVector dp1(edata.dpx1, edata.dpy1);
     RVector dp2(edata.dpx2, edata.dpy2);
     RVector dp3(edata.dpx3, edata.dpy3);
     RVector dp4(edata.dpx4, edata.dpy4);
 
-    RDimAngularData d(dimData, dp1, dp2, dp3, dp4);
+    RDimAngular2LData d(dimData, dp1, dp2, dp3, dp4);
 
-    QSharedPointer<RDimAngularEntity> entity(new RDimAngularEntity(document, d));
+    QSharedPointer<RDimAngular2LEntity> entity(new RDimAngular2LEntity(document, d));
     importEntity(entity);
 }
 
 void RDxfImporter::addDimAngular3P(const DL_DimensionData& data,
                                    const DL_DimAngular3PData& edata) {
+
     RDimensionData dimData = convDimensionData(data);
-    RVector dp1(edata.dpx3, edata.dpy3);
-    RVector dp2(edata.dpx1, edata.dpy1);
-    RVector dp3(edata.dpx3, edata.dpy3);
-    RVector dp4 = dimData.getDefinitionPoint();
-    dimData.setDefinitionPoint(RVector(edata.dpx2, edata.dpy2));
+    RVector center(edata.dpx3, edata.dpy3);
+    RVector dp1(edata.dpx1, edata.dpy1);
+    RVector dp2(edata.dpx2, edata.dpy2);
 
-    RDimAngularData d(dimData, dp1, dp2, dp3, dp4);
+    //RVector defPoint(data.dpx, data.dpy);
+    //dimData.setDefinitionPoint(defPoint);
 
-    QSharedPointer<RDimAngularEntity> entity(new RDimAngularEntity(document, d));
+    RDimAngular3PData d(dimData, center, dp1, dp2);
+
+    QSharedPointer<RDimAngular3PEntity> entity(new RDimAngular3PEntity(document, d));
     importEntity(entity);
 }
 

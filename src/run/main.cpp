@@ -44,6 +44,8 @@
 #include "RDebug.h"
 #include "RDimAlignedEntity.h"
 #include "RDimAngularEntity.h"
+#include "RDimAngular2LEntity.h"
+#include "RDimAngular3PEntity.h"
 #include "RDimDiametricEntity.h"
 #include "RDimOrdinateEntity.h"
 #include "RDimRadialEntity.h"
@@ -247,6 +249,8 @@ int main(int argc, char *argv[]) {
     RDimensionEntity::init();
     RDimAlignedEntity::init();
     RDimAngularEntity::init();
+    RDimAngular2LEntity::init();
+    RDimAngular3PEntity::init();
     RDimDiametricEntity::init();
     RDimOrdinateEntity::init();
     RDimRadialEntity::init();

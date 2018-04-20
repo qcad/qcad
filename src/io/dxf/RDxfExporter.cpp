@@ -30,7 +30,8 @@
 #include "RCircleEntity.h"
 #include "RColor.h"
 #include "RDimAlignedEntity.h"
-#include "RDimAngularEntity.h"
+#include "RDimAngular2LEntity.h"
+#include "RDimAngular3PEntity.h"
 #include "RDimDiametricEntity.h"
 #include "RDimOrdinateEntity.h"
 #include "RDimRadialEntity.h"
@@ -691,7 +692,8 @@ void RDxfExporter::writeEntity(const REntity& e) {
         break;
 
     case RS::EntityDimAligned:
-    case RS::EntityDimAngular:
+    case RS::EntityDimAngular2L:
+    case RS::EntityDimAngular3P:
     case RS::EntityDimRotated:
     case RS::EntityDimRadial:
     case RS::EntityDimDiametric:
@@ -1268,10 +1270,10 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
         dxf.writeDimDiametric(*dw, dimData, dimDiametricData, attributes);
         }
         break;
-    case RS::EntityDimAngular: {
-        const RDimAngularEntity* dim = dynamic_cast<const RDimAngularEntity*>(&d);
+    case RS::EntityDimAngular2L: {
+        const RDimAngular2LEntity* dim = dynamic_cast<const RDimAngular2LEntity*>(&d);
 
-        DL_DimAngularData dimAngularData(dim->getExtensionLine1Start().x,
+        DL_DimAngular2LData dimAngular2LData(dim->getExtensionLine1Start().x,
                                          dim->getExtensionLine1Start().y,
                                          0.0,
                                          dim->getExtensionLine1End().x,
@@ -1284,7 +1286,23 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                                          dim->getDimArcPosition().y,
                                          0.0);
 
-        dxf.writeDimAngular(*dw, dimData, dimAngularData, attributes);
+        dxf.writeDimAngular2L(*dw, dimData, dimAngular2LData, attributes);
+        }
+        break;
+    case RS::EntityDimAngular3P: {
+        const RDimAngular3PEntity* dim = dynamic_cast<const RDimAngular3PEntity*>(&d);
+
+        DL_DimAngular3PData dimAngular3PData(dim->getExtensionLine1End().x,
+                                         dim->getExtensionLine1End().y,
+                                         0.0,
+                                         dim->getExtensionLine2End().x,
+                                         dim->getExtensionLine2End().y,
+                                         0.0,
+                                         dim->getCenter().x,
+                                         dim->getCenter().y,
+                                         0.0);
+
+        dxf.writeDimAngular3P(*dw, dimData, dimAngular3PData, attributes);
         }
         break;
     case RS::EntityDimOrdinate: {
