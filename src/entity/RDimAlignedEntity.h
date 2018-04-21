@@ -22,7 +22,7 @@
 
 #include "entity_global.h"
 
-#include "RDimensionEntity.h"
+#include "RDimLinearEntity.h"
 #include "RDimAlignedData.h"
 
 class RDocument;
@@ -35,7 +35,7 @@ class RExporter;
  * \sharedPointerSupport
  * \ingroup entity
  */
-class QCADENTITY_EXPORT RDimAlignedEntity: public RDimensionEntity {
+class QCADENTITY_EXPORT RDimAlignedEntity: public RDimLinearEntity {
 
     Q_DECLARE_TR_FUNCTIONS(RDimAlignedEntity)
 
@@ -66,6 +66,8 @@ public:
     static RPropertyTypeId PropertyDimBlockName;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
+    static RPropertyTypeId PropertyArrow1Flipped;
+    static RPropertyTypeId PropertyArrow2Flipped;
 
     static RPropertyTypeId PropertyDimensionLinePosX;
     static RPropertyTypeId PropertyDimensionLinePosY;

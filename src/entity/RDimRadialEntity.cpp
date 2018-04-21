@@ -45,6 +45,8 @@ RPropertyTypeId RDimRadialEntity::PropertyDimScale;
 RPropertyTypeId RDimRadialEntity::PropertyDimBlockName;
 RPropertyTypeId RDimRadialEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimRadialEntity::PropertyFontName;
+RPropertyTypeId RDimRadialEntity::PropertyArrow1Flipped;
+RPropertyTypeId RDimRadialEntity::PropertyArrow2Flipped;
 
 RPropertyTypeId RDimRadialEntity::PropertyCenterPointX;
 RPropertyTypeId RDimRadialEntity::PropertyCenterPointY;
@@ -89,6 +91,8 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyDimBlockName.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimBlockName);
     RDimRadialEntity::PropertyAutoTextPos.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimRadialEntity::PropertyFontName.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyFontName);
+    RDimRadialEntity::PropertyArrow1Flipped.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyArrow1Flipped);
+    RDimRadialEntity::PropertyArrow2Flipped.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyArrow2Flipped);
 
     RDimRadialEntity::PropertyCenterPointX.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true);
     RDimRadialEntity::PropertyCenterPointY.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true);

@@ -40,6 +40,8 @@ RPropertyTypeId RDimOrdinateEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimOrdinateEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimOrdinateEntity::PropertyMeasuredValue;
 RPropertyTypeId RDimOrdinateEntity::PropertyFontName;
+RPropertyTypeId RDimOrdinateEntity::PropertyArrow1Flipped;
+RPropertyTypeId RDimOrdinateEntity::PropertyArrow2Flipped;
 
 RPropertyTypeId RDimOrdinateEntity::PropertyDimScale;
 RPropertyTypeId RDimOrdinateEntity::PropertyDimBlockName;
@@ -88,6 +90,8 @@ void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyLowerTolerance.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimOrdinateEntity::PropertyMeasuredValue.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyMeasuredValue);
     RDimOrdinateEntity::PropertyFontName.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyFontName);
+    RDimOrdinateEntity::PropertyArrow1Flipped.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyArrow1Flipped);
+    RDimOrdinateEntity::PropertyArrow2Flipped.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyArrow2Flipped);
 
     RDimOrdinateEntity::PropertyDimScale.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyDimScale);
     RDimOrdinateEntity::PropertyDimBlockName.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyDimBlockName);

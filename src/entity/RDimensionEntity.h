@@ -68,6 +68,8 @@ public:
     static RPropertyTypeId PropertyDimBlockName;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
+    static RPropertyTypeId PropertyArrow1Flipped;
+    static RPropertyTypeId PropertyArrow2Flipped;
     //static RPropertyTypeId PropertyHeight;
     //static RPropertyTypeId PropertyAngle;
     //static RPropertyTypeId PropertyLineSpacingFactor;
@@ -181,6 +183,19 @@ public:
 
     bool hasDimensionBlockReference() const {
         return getData().hasDimensionBlockReference();
+    }
+
+    bool isArrow1Flipped() const {
+        return getData().isArrow1Flipped();
+    }
+    void setArrow1Flipped(bool on) {
+        getData().setArrow1Flipped(on);
+    }
+    bool isArrow2Flipped() const {
+        return getData().isArrow2Flipped();
+    }
+    void setArrow2Flipped(bool on) {
+        getData().setArrow2Flipped(on);
     }
 
     static QSet<QString> getDimensionBlockNames(RDocument* doc);

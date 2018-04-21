@@ -40,6 +40,8 @@ RPropertyTypeId RDimAngularEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimAngularEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimAngularEntity::PropertyMeasuredValue;
 RPropertyTypeId RDimAngularEntity::PropertyFontName;
+RPropertyTypeId RDimAngularEntity::PropertyArrow1Flipped;
+RPropertyTypeId RDimAngularEntity::PropertyArrow2Flipped;
 
 RPropertyTypeId RDimAngularEntity::PropertyExtensionLine1EndX;
 RPropertyTypeId RDimAngularEntity::PropertyExtensionLine1EndY;
@@ -85,6 +87,8 @@ void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyLowerTolerance.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimAngularEntity::PropertyMeasuredValue.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyMeasuredValue);
     RDimAngularEntity::PropertyFontName.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyFontName);
+    RDimAngularEntity::PropertyArrow1Flipped.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyArrow1Flipped);
+    RDimAngularEntity::PropertyArrow2Flipped.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyArrow2Flipped);
 
     RDimAngularEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true);
     RDimAngularEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true);

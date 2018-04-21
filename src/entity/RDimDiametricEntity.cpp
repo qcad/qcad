@@ -46,6 +46,8 @@ RPropertyTypeId RDimDiametricEntity::PropertyDimScale;
 RPropertyTypeId RDimDiametricEntity::PropertyDimBlockName;
 RPropertyTypeId RDimDiametricEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimDiametricEntity::PropertyFontName;
+RPropertyTypeId RDimDiametricEntity::PropertyArrow1Flipped;
+RPropertyTypeId RDimDiametricEntity::PropertyArrow2Flipped;
 
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointX;
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointY;
@@ -91,6 +93,8 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyDimBlockName.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimBlockName);
     RDimDiametricEntity::PropertyAutoTextPos.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimDiametricEntity::PropertyFontName.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyFontName);
+    RDimDiametricEntity::PropertyArrow1Flipped.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyArrow1Flipped);
+    RDimDiametricEntity::PropertyArrow2Flipped.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyArrow2Flipped);
 
     RDimDiametricEntity::PropertyChordPointX.generateId(typeid(RDimDiametricEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimDiametricEntity::PropertyChordPointY.generateId(typeid(RDimDiametricEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Y"));

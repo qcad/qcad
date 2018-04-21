@@ -61,6 +61,8 @@ public:
     static RPropertyTypeId PropertyLowerTolerance;
     static RPropertyTypeId PropertyMeasuredValue;
     static RPropertyTypeId PropertyFontName;
+    static RPropertyTypeId PropertyArrow1Flipped;
+    static RPropertyTypeId PropertyArrow2Flipped;
 
     static RPropertyTypeId PropertyCenterX;
     static RPropertyTypeId PropertyCenterY;

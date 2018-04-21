@@ -45,6 +45,8 @@ RPropertyTypeId RDimLinearEntity::PropertyDimScale;
 RPropertyTypeId RDimLinearEntity::PropertyDimBlockName;
 RPropertyTypeId RDimLinearEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimLinearEntity::PropertyFontName;
+RPropertyTypeId RDimLinearEntity::PropertyArrow1Flipped;
+RPropertyTypeId RDimLinearEntity::PropertyArrow2Flipped;
 
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosY;
@@ -90,6 +92,8 @@ void RDimLinearEntity::init() {
     RDimLinearEntity::PropertyDimBlockName.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimBlockName);
     RDimLinearEntity::PropertyAutoTextPos.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimLinearEntity::PropertyFontName.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyFontName);
+    RDimLinearEntity::PropertyArrow1Flipped.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyArrow1Flipped);
+    RDimLinearEntity::PropertyArrow2Flipped.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyArrow2Flipped);
 
     RDimLinearEntity::PropertyDimensionLinePosX.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimLinearEntity::PropertyDimensionLinePosY.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));

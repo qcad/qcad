@@ -66,6 +66,8 @@ public:
     static RPropertyTypeId PropertyDimBlockName;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
+    static RPropertyTypeId PropertyArrow1Flipped;
+    static RPropertyTypeId PropertyArrow2Flipped;
 
     static RPropertyTypeId PropertyCenterPointX;
     static RPropertyTypeId PropertyCenterPointY;

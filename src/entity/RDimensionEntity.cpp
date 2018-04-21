@@ -18,6 +18,7 @@
  */
 #include "RDimensionEntity.h"
 #include "RExporter.h"
+#include "RPluginLoader.h"
 #include "RStorage.h"
 
 RPropertyTypeId RDimensionEntity::PropertyCustom;
@@ -47,6 +48,8 @@ RPropertyTypeId RDimensionEntity::PropertyDimScale;
 RPropertyTypeId RDimensionEntity::PropertyDimBlockName;
 RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimensionEntity::PropertyFontName;
+RPropertyTypeId RDimensionEntity::PropertyArrow1Flipped;
+RPropertyTypeId RDimensionEntity::PropertyArrow2Flipped;
 //RPropertyTypeId RDimensionEntity::PropertyHeight;
 //RPropertyTypeId RDimensionEntity::PropertyAngle;
 //RPropertyTypeId RDimensionEntity::PropertyLineSpacingFactor;
@@ -88,6 +91,8 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyMiddleOfTextY.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RDimensionEntity::PropertyMiddleOfTextZ.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
 //    RDimensionEntity::PropertyFontName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Font"));
+    RDimensionEntity::PropertyArrow1Flipped.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Flip First Arrow"));
+    RDimensionEntity::PropertyArrow2Flipped.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Flip Second Arrow"));
 //    RDimensionEntity::PropertyHeight.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
 //    RDimensionEntity::PropertyAngle.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
 //    RDimensionEntity::PropertyLineSpacingFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
@@ -134,9 +139,11 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().dimScaleOverride, value, PropertyDimScale == propertyTypeId);
     ret = ret || RObject::setMember(getData().dimBlockName, value, PropertyDimBlockName == propertyTypeId);
     ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
-//    if (RPluginLoader::hasPlugin("DWG")) {
+    if (RPluginLoader::hasPlugin("DWG")) {
 //        ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
-//    }
+        ret = ret || RObject::setMember(getData().arrow1Flipped, value, PropertyArrow1Flipped == propertyTypeId);
+        ret = ret || RObject::setMember(getData().arrow2Flipped, value, PropertyArrow2Flipped == propertyTypeId);
+    }
 //    ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().lineSpacingFactor, value, PropertyLineSpacingFactor == propertyTypeId);
@@ -189,7 +196,7 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         return qMakePair(QVariant(getData().lowerTolerance),
                          RPropertyAttributes(RPropertyAttributes::Label));
     } else if (propertyTypeId == PropertyAutoLabel) {
-        if (getType()==RS::EntityDimAngular) {
+        if (getType()==RS::EntityDimAngular2L || getType()==RS::EntityDimAngular3P) {
             return qMakePair(QVariant(getData().getAutoLabel()),
                              RPropertyAttributes(RPropertyAttributes::ReadOnly | RPropertyAttributes::Angle));
         }
@@ -198,7 +205,7 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
                              RPropertyAttributes(RPropertyAttributes::ReadOnly));
         }
     } else if (propertyTypeId == PropertyMeasuredValue) {
-        if (getType()==RS::EntityDimAngular) {
+        if (getType()==RS::EntityDimAngular2L || getType()==RS::EntityDimAngular3P) {
             return qMakePair(QVariant(getData().getMeasuredValue()),
                              RPropertyAttributes(RPropertyAttributes::ReadOnly | RPropertyAttributes::Angle));
         }
@@ -220,6 +227,14 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
 //        return qMakePair(QVariant(getData().fontName),
 //            RPropertyAttributes(RPropertyAttributes::Style));
 //    }
+
+    else if (propertyTypeId == PropertyArrow1Flipped) {
+        return qMakePair(QVariant(getData().arrow1Flipped), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyArrow2Flipped) {
+        return qMakePair(QVariant(getData().arrow2Flipped), RPropertyAttributes());
+    }
+
     /*else if (propertyTypeId == PropertyHeight) {
         return qMakePair(QVariant(getData().textHeight), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAngle) {
@@ -328,7 +343,8 @@ QSet<QString> RDimensionEntity::getDimensionBlockNames(RDocument* doc) {
     dimTypes.append(RS::EntityDimRotated);
     dimTypes.append(RS::EntityDimRadial);
     dimTypes.append(RS::EntityDimDiametric);
-    dimTypes.append(RS::EntityDimAngular);
+    dimTypes.append(RS::EntityDimAngular2L);
+    dimTypes.append(RS::EntityDimAngular3P);
     dimTypes.append(RS::EntityDimOrdinate);
 
     QSet<REntity::Id> ids = doc->queryAllEntities(false, true, dimTypes);

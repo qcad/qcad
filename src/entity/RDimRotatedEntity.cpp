@@ -45,6 +45,8 @@ RPropertyTypeId RDimRotatedEntity::PropertyDimScale;
 RPropertyTypeId RDimRotatedEntity::PropertyDimBlockName;
 RPropertyTypeId RDimRotatedEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimRotatedEntity::PropertyFontName;
+RPropertyTypeId RDimRotatedEntity::PropertyArrow1Flipped;
+RPropertyTypeId RDimRotatedEntity::PropertyArrow2Flipped;
 
 RPropertyTypeId RDimRotatedEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimRotatedEntity::PropertyDimensionLinePosY;
@@ -62,7 +64,7 @@ RPropertyTypeId RDimRotatedEntity::PropertyAngle;
 
 
 RDimRotatedEntity::RDimRotatedEntity(RDocument* document, const RDimRotatedData& data) :
-    RDimensionEntity(document), data(document, data) {
+    RDimLinearEntity(document), data(document, data) {
 }
 
 RDimRotatedEntity::~RDimRotatedEntity() {
@@ -95,6 +97,8 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyDimBlockName.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimBlockName);
     RDimRotatedEntity::PropertyAutoTextPos.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimRotatedEntity::PropertyFontName.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyFontName);
+    RDimRotatedEntity::PropertyArrow1Flipped.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyArrow1Flipped);
+    RDimRotatedEntity::PropertyArrow2Flipped.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyArrow2Flipped);
 
     RDimRotatedEntity::PropertyDimensionLinePosX.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimRotatedEntity::PropertyDimensionLinePosY.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));
@@ -113,17 +117,17 @@ void RDimRotatedEntity::init() {
 
 bool RDimRotatedEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
-    bool ret = RDimensionEntity::setProperty(propertyTypeId, value, transaction);
+    bool ret = RDimLinearEntity::setProperty(propertyTypeId, value, transaction);
 
-    ret = ret || RObject::setMember(data.definitionPoint.x, value, PropertyDimensionLinePosX == propertyTypeId);
-    ret = ret || RObject::setMember(data.definitionPoint.y, value, PropertyDimensionLinePosY == propertyTypeId);
-    ret = ret || RObject::setMember(data.definitionPoint.z, value, PropertyDimensionLinePosZ == propertyTypeId);
-    ret = ret || RObject::setMember(data.extensionPoint1.x, value, PropertyExtensionPoint1X == propertyTypeId);
-    ret = ret || RObject::setMember(data.extensionPoint1.y, value, PropertyExtensionPoint1Y == propertyTypeId);
-    ret = ret || RObject::setMember(data.extensionPoint1.z, value, PropertyExtensionPoint1Z == propertyTypeId);
-    ret = ret || RObject::setMember(data.extensionPoint2.x, value, PropertyExtensionPoint2X == propertyTypeId);
-    ret = ret || RObject::setMember(data.extensionPoint2.y, value, PropertyExtensionPoint2Y == propertyTypeId);
-    ret = ret || RObject::setMember(data.extensionPoint2.z, value, PropertyExtensionPoint2Z == propertyTypeId);
+//    ret = ret || RObject::setMember(data.definitionPoint.x, value, PropertyDimensionLinePosX == propertyTypeId);
+//    ret = ret || RObject::setMember(data.definitionPoint.y, value, PropertyDimensionLinePosY == propertyTypeId);
+//    ret = ret || RObject::setMember(data.definitionPoint.z, value, PropertyDimensionLinePosZ == propertyTypeId);
+//    ret = ret || RObject::setMember(data.extensionPoint1.x, value, PropertyExtensionPoint1X == propertyTypeId);
+//    ret = ret || RObject::setMember(data.extensionPoint1.y, value, PropertyExtensionPoint1Y == propertyTypeId);
+//    ret = ret || RObject::setMember(data.extensionPoint1.z, value, PropertyExtensionPoint1Z == propertyTypeId);
+//    ret = ret || RObject::setMember(data.extensionPoint2.x, value, PropertyExtensionPoint2X == propertyTypeId);
+//    ret = ret || RObject::setMember(data.extensionPoint2.y, value, PropertyExtensionPoint2Y == propertyTypeId);
+//    ret = ret || RObject::setMember(data.extensionPoint2.z, value, PropertyExtensionPoint2Z == propertyTypeId);
     ret = ret || RObject::setMember(data.rotation, value, PropertyAngle == propertyTypeId);
 
     if (ret) {
@@ -135,34 +139,34 @@ bool RDimRotatedEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RDimRotatedEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyDimensionLinePosX) {
-        return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyDimensionLinePosY) {
-        return qMakePair(QVariant(data.definitionPoint.y), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyDimensionLinePosZ) {
-        return qMakePair(QVariant(data.definitionPoint.z), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyExtensionPoint1X) {
-        return qMakePair(QVariant(data.extensionPoint1.x), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyExtensionPoint1Y) {
-        return qMakePair(QVariant(data.extensionPoint1.y), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyExtensionPoint1Z) {
-        return qMakePair(QVariant(data.extensionPoint1.z), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyExtensionPoint2X) {
-        return qMakePair(QVariant(data.extensionPoint2.x), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyExtensionPoint2Y) {
-        return qMakePair(QVariant(data.extensionPoint2.y), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyExtensionPoint2Z) {
-        return qMakePair(QVariant(data.extensionPoint2.z), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyAngle) {
+//    if (propertyTypeId == PropertyDimensionLinePosX) {
+//        return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyDimensionLinePosY) {
+//        return qMakePair(QVariant(data.definitionPoint.y), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyDimensionLinePosZ) {
+//        return qMakePair(QVariant(data.definitionPoint.z), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyExtensionPoint1X) {
+//        return qMakePair(QVariant(data.extensionPoint1.x), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyExtensionPoint1Y) {
+//        return qMakePair(QVariant(data.extensionPoint1.y), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyExtensionPoint1Z) {
+//        return qMakePair(QVariant(data.extensionPoint1.z), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyExtensionPoint2X) {
+//        return qMakePair(QVariant(data.extensionPoint2.x), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyExtensionPoint2Y) {
+//        return qMakePair(QVariant(data.extensionPoint2.y), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyExtensionPoint2Z) {
+//        return qMakePair(QVariant(data.extensionPoint2.z), RPropertyAttributes());
+    if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(data.rotation), RPropertyAttributes(RPropertyAttributes::Angle));
     }
 
-    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimLinearEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
 void RDimRotatedEntity::print(QDebug dbg) const {
     dbg.nospace() << "RDimRotatedEntity(";
-    RDimensionEntity::print(dbg);
+    RDimLinearEntity::print(dbg);
     dbg.nospace() << ", extensionPoint1: " << getData().extensionPoint1
                   << ", extensionPoint2: " << getData().extensionPoint2
                   << ", angle: " << getData().rotation

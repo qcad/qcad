@@ -137,11 +137,27 @@ public:
         update();
     }
 
+    bool isArrow1Flipped() const {
+        return arrow1Flipped;
+    }
+    void setArrow1Flipped(bool on) {
+        arrow1Flipped = on;
+    }
+    bool isArrow2Flipped() const {
+        return arrow2Flipped;
+    }
+    void setArrow2Flipped(bool on) {
+        arrow2Flipped = on;
+    }
+
+    bool hasSpaceForArrows() const;
+
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
     virtual bool intersectsWith(const RShape& shape) const;
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
+    virtual bool clickReferencePoint(const RVector& referencePoint);
     virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint);
 
     virtual bool move(const RVector& offset);
@@ -230,11 +246,15 @@ protected:
 
     double linearFactor;
     double dimScaleOverride;
+    bool arrow1Flipped;
+    bool arrow2Flipped;
 
     mutable bool dirty;
     mutable RTextData textData;
     mutable RBox boundingBox;
     mutable double dimLineLength;
+    mutable RVector arrow1Pos;
+    mutable RVector arrow2Pos;
 
     /** True if the textPosition should be automatically calculated. */
     mutable bool autoTextPos;
