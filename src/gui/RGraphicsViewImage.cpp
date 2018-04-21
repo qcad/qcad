@@ -367,7 +367,7 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint&
         painter.drawLine(QPointF(pos.x, pos.y-size/2), QPointF(pos.x, pos.y+size/2));
     }
     else {
-        if (pos.isCenter()) {
+        if (pos.isCenter() || pos.isArrow()) {
             painter.setBrush(color);
             painter.drawEllipse(pos.x - size/2, pos.y - size/2, size, size);
         }
