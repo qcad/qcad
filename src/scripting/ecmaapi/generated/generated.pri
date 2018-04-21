@@ -22,6 +22,7 @@ HEADERS += \
     $$PWD/REcmaCircle.h \
     $$PWD/REcmaCircleData.h \
     $$PWD/REcmaCircleEntity.h \
+    $$PWD/REcmaClickReferencePointOperation.h \
     $$PWD/REcmaClipboardOperation.h \
     $$PWD/REcmaCloseCurrentEvent.h \
     $$PWD/REcmaColor.h \
@@ -388,6 +389,7 @@ SOURCES += \
     $$PWD/REcmaCircle.cpp \
     $$PWD/REcmaCircleData.cpp \
     $$PWD/REcmaCircleEntity.cpp \
+    $$PWD/REcmaClickReferencePointOperation.cpp \
     $$PWD/REcmaClipboardOperation.cpp \
     $$PWD/REcmaCloseCurrentEvent.cpp \
     $$PWD/REcmaColor.cpp \

@@ -167,6 +167,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, intersectsWith, "intersectsWith");
             
+            REcmaHelper::registerFunction(&engine, proto, clickReferencePoint, "clickReferencePoint");
+            
             REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
             
             REcmaHelper::registerFunction(&engine, proto, move, "move");
@@ -5467,6 +5469,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntityData::intersectsWith", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntityData::clickReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntityData::clickReferencePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntityData::clickReferencePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("clickReferencePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REntityData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->clickReferencePoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.clickReferencePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntityData::clickReferencePoint", context, engine);
             return result;
         }
          QScriptValue

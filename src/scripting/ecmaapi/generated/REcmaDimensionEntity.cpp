@@ -122,6 +122,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasDimensionBlockReference, "hasDimensionBlockReference");
             
+            REcmaHelper::registerFunction(&engine, proto, isArrow1Flipped, "isArrow1Flipped");
+            
+            REcmaHelper::registerFunction(&engine, proto, setArrow1Flipped, "setArrow1Flipped");
+            
+            REcmaHelper::registerFunction(&engine, proto, isArrow2Flipped, "isArrow2Flipped");
+            
+            REcmaHelper::registerFunction(&engine, proto, setArrow2Flipped, "setArrow2Flipped");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimensionEntity*>(), *proto);
 
@@ -243,6 +251,14 @@
             
             ctor.setProperty("PropertyFontName",
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyFontName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArrow1Flipped",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyArrow1Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArrow2Flipped",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyArrow2Flipped),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyAutoLabel",
@@ -2235,6 +2251,214 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionEntity::hasDimensionBlockReference", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::isArrow1Flipped
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::isArrow1Flipped", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::isArrow1Flipped";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("isArrow1Flipped", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isArrow1Flipped();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.isArrow1Flipped().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::isArrow1Flipped", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::setArrow1Flipped
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::setArrow1Flipped", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::setArrow1Flipped";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("setArrow1Flipped", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setArrow1Flipped(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.setArrow1Flipped().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::setArrow1Flipped", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::isArrow2Flipped
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::isArrow2Flipped", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::isArrow2Flipped";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("isArrow2Flipped", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isArrow2Flipped();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.isArrow2Flipped().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::isArrow2Flipped", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::setArrow2Flipped
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::setArrow2Flipped", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::setArrow2Flipped";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("setArrow2Flipped", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setArrow2Flipped(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.setArrow2Flipped().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::setArrow2Flipped", context, engine);
             return result;
         }
          QScriptValue

@@ -207,6 +207,14 @@
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyArrow1Flipped",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyArrow1Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArrow2Flipped",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyArrow2Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyChordPointX",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyChordPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

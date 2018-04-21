@@ -214,6 +214,9 @@
         intersectsWith
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clickReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         moveReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

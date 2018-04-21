@@ -151,6 +151,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Arrow",
+    QScriptValue(RRefPoint::Arrow),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RRefPoint::Flag>(

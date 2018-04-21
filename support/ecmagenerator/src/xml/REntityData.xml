@@ -480,6 +480,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="clickReferencePoint"
+    cppName="clickReferencePoint" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="referencePoint" isConst="true" />
+      </variant>
+    </method>
     <method name="moveReferencePoint" cppName="moveReferencePoint"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

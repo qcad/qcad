@@ -185,6 +185,14 @@
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyArrow1Flipped",
+                qScriptValueFromValue(&engine, RDimAngularEntity::PropertyArrow1Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArrow2Flipped",
+                qScriptValueFromValue(&engine, RDimAngularEntity::PropertyArrow2Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyExtensionLine1EndX",
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyExtensionLine1EndX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

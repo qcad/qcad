@@ -202,6 +202,14 @@
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyArrow1Flipped",
+                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyArrow1Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArrow2Flipped",
+                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyArrow2Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCenterPointX",
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyCenterPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

@@ -202,6 +202,32 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="isArrow1Flipped" cppName="isArrow1Flipped"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setArrow1Flipped" cppName="setArrow1Flipped"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isArrow2Flipped" cppName="isArrow2Flipped"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setArrow2Flipped" cppName="setArrow2Flipped"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getDimensionBlockNames"
     cppName="getDimensionBlockNames" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -269,6 +295,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyAutoTextPos" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyFontName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyArrow1Flipped" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyArrow2Flipped" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyAutoLabel" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

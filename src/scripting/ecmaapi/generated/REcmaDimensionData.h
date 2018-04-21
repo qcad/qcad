@@ -108,6 +108,21 @@
         setDimScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isArrow1Flipped
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setArrow1Flipped
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isArrow2Flipped
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setArrow2Flipped
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasSpaceForArrows
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -115,6 +130,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clickReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         moveReferencePoint

@@ -197,6 +197,14 @@
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyArrow1Flipped",
+                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyArrow1Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArrow2Flipped",
+                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyArrow2Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDimScale",
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyDimScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

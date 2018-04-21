@@ -353,6 +353,15 @@
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>intersectsWith</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>shape</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
+     * Called when user clicks a reference point.
+     *
+     * \return True if clicking the reference point had any immediate effect.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>clickReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>referencePoint</argument>)</argument_list></macro>
+    }</block></function>
+
+    <comment type="block">/**
      * Moves the given reference point to the given target point or does nothing
      * if this entity has no reference point as the given location.
      *

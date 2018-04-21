@@ -512,6 +512,13 @@
     }</block></function>
 
     <comment type="block">/**
+     * \copydoc REntityData::clickReferencePoint
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>clickReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>clickReferencePoint</name><argument_list>(<argument><expr><name>referencePoint</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
      * \copydoc REntityData::moveReferencePoint
      */</comment>
     <function><type><name>virtual</name> <name>bool</name></type> <name>moveReferencePoint</name><parameter_list>(

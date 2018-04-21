@@ -190,6 +190,14 @@
                 qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyArrow1Flipped",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyArrow1Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArrow2Flipped",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyArrow2Flipped),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCenterX",
                 qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyCenterX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
