@@ -275,13 +275,33 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
 
 DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
-    var view, range, strictRange, entityId;
+    var entityId;
 
     var shiftPressed = (event.modifiers() & Qt.ShiftModifier) > 0 || (event.modifiers() & Qt.ControlModifier) > 0 || persistentSelection===true;
 
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
         case DefaultAction.State.Dragging:
+
+            // handle clicks on reference points:
+            this.d2Model = event.getModelPosition();
+            this.d2Screen = event.getScreenPosition();
+            var view = event.getGraphicsView();
+            if (this.d1Screen.equalsFuzzy(this.d2Screen, 10)) {
+                // mouse press and release at same position (click):
+                var referencePoint = view.getClosestReferencePoint(this.d1Screen, this.minPickRangePixels);
+                if (referencePoint.isValid() && !referencePoint.isIgnore() && !RSettings.getIgnoreAllReferencePoints()) {
+                    qDebug("click ref point op");
+                    //var op = new RClickReferencePointOperation(referencePoint);
+                    this.d1Model = referencePoint;
+                    var op = new RClickReferencePointOperation(this.d1Model);
+                    this.di.applyOperation(op);
+                    this.setState(DefaultAction.State.Neutral);
+                    return;
+                }
+            }
+
+
             // find selectable entity under cursor:
             entityId = this.getEntityId(event, false, true);
 
@@ -437,6 +457,8 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
 
     var shiftPressed = (event.getModifiers() & Qt.ShiftModifier) > 0;
     var doc = this.getDocument();
+
+    qDebug("state:", this.state);
 
     switch (this.state) {
     case DefaultAction.State.MovingReference:
