@@ -31,14 +31,12 @@ RClickReferencePointOperation::RClickReferencePointOperation(const RVector& refe
 
 
 RTransaction RClickReferencePointOperation::apply(RDocument& document, bool preview) {
-    qDebug() << "RClickReferencePointOperation::apply";
     Q_UNUSED(preview)
 
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
 
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
-    qDebug() << "selectedEntities:" << selectedEntities;
     QSet<REntity::Id>::iterator it;
     for (it=selectedEntities.begin(); it!=selectedEntities.end(); it++) {
         QSharedPointer<REntity> entity = document.queryEntity(*it);
@@ -49,8 +47,6 @@ RTransaction RClickReferencePointOperation::apply(RDocument& document, bool prev
         // apply operation to cloned entity:
         bool modified = entity->clickReferencePoint(referencePoint);
 
-        qDebug() << "RClickReferencePointOperation::apply: modified: " << modified;
-        
         if (modified) {
             transaction.addObject(entity, false);
         }
