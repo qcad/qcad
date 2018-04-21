@@ -2,6 +2,7 @@ include( ../../shared.pri )
 SOURCES += RAddObjectOperation.cpp \
     RAddObjectsOperation.cpp \
     RChangePropertyOperation.cpp \
+    RClickReferencePointOperation.cpp \
     RClipboardOperation.cpp \
     RCopyOperation.cpp \
     RDeleteAllEntitiesOperation.cpp \
@@ -19,6 +20,7 @@ HEADERS = RAddObjectOperation.h \
     RAddObjectsOperation.h \
     RChangePropertyOperation.h \
     RClipboardOperation.h \
+    RClickReferencePointOperation.h \
     RCopyOperation.h \
     RDeleteAllEntitiesOperation.h \
     RDeleteObjectOperation.h \
