@@ -23,7 +23,8 @@ public:
         Center    = 0x002,        /**< Reference point is a center point */
         Ignore    = 0x004,        /**< Ignore reference point for drag and drop */
         Start     = 0x008,        /**< Reference point is a start point */
-        End       = 0x010         /**< Reference point is a start point */
+        End       = 0x010,        /**< Reference point is a start point */
+        Arrow     = 0x020,        /**< Reference point is a dimension arrow */
     };
     Q_DECLARE_FLAGS(Flags, Flag)
 
@@ -86,6 +87,14 @@ public:
 
     void setEnd(bool on) {
         setFlag(RRefPoint::End, on);
+    }
+
+    bool isArrow() const {
+        return getFlag(RRefPoint::Arrow);
+    }
+
+    void setArrow(bool on) {
+        setFlag(RRefPoint::Arrow, on);
     }
 
     void setFlag(RRefPoint::Flag flag, bool on) {
