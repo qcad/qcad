@@ -68,6 +68,7 @@
 #include "REcmaCircle.h"
 #include "REcmaCircleData.h"
 #include "REcmaCircleEntity.h"
+#include "REcmaClickReferencePointOperation.h"
 #include "REcmaClipboardOperation.h"
 #include "REcmaCloseCurrentEvent.h"
 #include "REcmaColor.h"
@@ -888,6 +889,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaMoveSelectionOperation::initEcma(*engine);
     REcmaScaleSelectionOperation::initEcma(*engine);
     REcmaPasteOperation::initEcma(*engine);
+    REcmaClickReferencePointOperation::initEcma(*engine);
 
     REcmaTransformation::initEcma(*engine);
 
