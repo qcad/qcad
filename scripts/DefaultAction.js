@@ -291,8 +291,6 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
                 // mouse press and release at same position (click):
                 var referencePoint = view.getClosestReferencePoint(this.d1Screen, this.minPickRangePixels);
                 if (referencePoint.isValid() && !referencePoint.isIgnore() && !RSettings.getIgnoreAllReferencePoints()) {
-                    qDebug("click ref point op");
-                    //var op = new RClickReferencePointOperation(referencePoint);
                     this.d1Model = referencePoint;
                     var op = new RClickReferencePointOperation(this.d1Model);
                     this.di.applyOperation(op);
