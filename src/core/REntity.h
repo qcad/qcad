@@ -511,6 +511,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::clickReferencePoint
+     */
+    virtual bool clickReferencePoint(const RVector& referencePoint) {
+        return getData().clickReferencePoint(referencePoint);
+    }
+
+    /**
      * \copydoc REntityData::moveReferencePoint
      */
     virtual bool moveReferencePoint(

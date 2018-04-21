@@ -352,6 +352,15 @@ public:
     virtual bool intersectsWith(const RShape& shape) const;
 
     /**
+     * Called when user clicks a reference point.
+     *
+     * \return True if clicking the reference point had any immediate effect.
+     */
+    virtual bool clickReferencePoint(const RVector& referencePoint) {
+        Q_UNUSED(referencePoint)
+    }
+
+    /**
      * Moves the given reference point to the given target point or does nothing
      * if this entity has no reference point as the given location.
      *
