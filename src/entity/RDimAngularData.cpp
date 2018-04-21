@@ -194,7 +194,16 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
     double distance = arc.getLength();
 
     // do we have to put the arrows outside of the arc?
-    bool outsideArrows = (distance<dimasz*2);
+    bool outsideArrow1 = (distance<dimasz*2);
+    bool outsideArrow2 = outsideArrow1;
+
+    // force flipping arrows (against logic above):
+    if (isArrow1Flipped()) {
+        outsideArrow1 = !outsideArrow1;
+    }
+    if (isArrow2Flipped()) {
+        outsideArrow2 = !outsideArrow2;
+    }
 
     // arrow angles:
     double arrowAngle1, arrowAngle2;
@@ -206,12 +215,11 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         arrowAng = 0.0;
     }
 
-    if (outsideArrows) {
+    if (outsideArrow1) {
         arrowAngle1 = arc.getDirection1();
-        arrowAngle2 = arc.getDirection2();
     }
     else {
-        RVector v1, v2;
+        RVector v1;
         if (!arc.isReversed()) {
             v1.setPolar(rad, arc.getStartAngle()+arrowAng);
         } else {
@@ -219,8 +227,14 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         }
         v1+=arc.getCenter();
         arrowAngle1 = arc.getStartPoint().getAngleTo(v1);
+        arrowAngle1 = arrowAngle1+M_PI;
+    }
 
-
+    if (outsideArrow2) {
+        arrowAngle2 = arc.getDirection2();
+    }
+    else {
+        RVector v2;
         if (!arc.isReversed()) {
             v2.setPolar(rad, arc.getEndAngle()-arrowAng);
         } else {
@@ -228,8 +242,6 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         }
         v2+=arc.getCenter();
         arrowAngle2 = arc.getEndPoint().getAngleTo(v2);
-
-        arrowAngle1 = arrowAngle1+M_PI;
         arrowAngle2 = arrowAngle2+M_PI;
     }
 
@@ -237,9 +249,11 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
     //RTriangle arrow = RTriangle::createArrow(arc.getStartPoint(), arrowAngle1, dimasz);
     QList<QSharedPointer<RShape> > arrow = getArrow(arc.getStartPoint(), arrowAngle1);
     ret.append(arrow);
+    arrow1Pos = arc.getStartPoint() + RVector::createPolar(dimasz, arrowAngle1 + M_PI);
     //arrow = RTriangle::createArrow(arc.getEndPoint(), arrowAngle2, dimasz);
     arrow = getArrow(arc.getEndPoint(), arrowAngle2);
     ret.append(arrow);
+    arrow2Pos = arc.getEndPoint() + RVector::createPolar(dimasz, arrowAngle2 + M_PI);
     //ret.append(QSharedPointer<RShape>(new RTriangle(arrow)));
 
     //RVector oldMot = textPosition;
