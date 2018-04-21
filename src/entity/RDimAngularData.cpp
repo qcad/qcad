@@ -188,7 +188,8 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
 
     // Create dimension line (arc):
     RArc arc(center, rad, ang1, ang2, reversed);
-    ret.append(QSharedPointer<RShape>(new RArc(arc)));
+    RArc dimArc = arc;
+    //ret.append(QSharedPointer<RShape>(new RArc(arc)));
 
     // length of dimension arc:
     double distance = arc.getLength();
@@ -205,6 +206,23 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         outsideArrow2 = !outsideArrow2;
     }
 
+    // extend arc outside arrows
+    //RVector dir;
+    //dir.setPolar(getDimasz()*2, dimensionLine.getDirection1());
+    double a = getDimasz()*2 / arc.getRadius();
+    if (outsideArrow1) {
+        dimArc.setStartAngle(arc.isReversed() ? arc.getStartAngle() + a : arc.getStartAngle() - a);
+        //arc.trimStartPoint(-getDimasz()*2);
+        //arc.setStartAngle(arc.getStartAngle()-a);
+    }
+    if (outsideArrow2) {
+        dimArc.setEndAngle(arc.isReversed() ? arc.getEndAngle() - a : arc.getEndAngle() + a);
+        //dimensionLine.setEndPoint(p2 + dir);
+        //arc.trimEndPoint(-getDimasz()*2);
+    }
+
+    ret.append(QSharedPointer<RShape>(new RArc(dimArc)));
+
     // arrow angles:
     double arrowAngle1, arrowAngle2;
     double arrowAng;
@@ -215,35 +233,55 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         arrowAng = 0.0;
     }
 
-    if (outsideArrow1) {
-        arrowAngle1 = arc.getDirection1();
-    }
-    else {
+//    if (outsideArrow1) {
+//        arrowAngle1 = arc.getDirection1();
+//    }
+//    else {
         RVector v1;
         if (!arc.isReversed()) {
-            v1.setPolar(rad, arc.getStartAngle()+arrowAng);
+            if (outsideArrow1) {
+                v1.setPolar(rad, arc.getStartAngle()-arrowAng);
+            }
+            else {
+                v1.setPolar(rad, arc.getStartAngle()+arrowAng);
+            }
         } else {
-            v1.setPolar(rad, arc.getStartAngle()-arrowAng);
+            if (outsideArrow1) {
+                v1.setPolar(rad, arc.getStartAngle()+arrowAng);
+            }
+            else {
+                v1.setPolar(rad, arc.getStartAngle()-arrowAng);
+            }
         }
         v1+=arc.getCenter();
         arrowAngle1 = arc.getStartPoint().getAngleTo(v1);
         arrowAngle1 = arrowAngle1+M_PI;
-    }
+//    }
 
-    if (outsideArrow2) {
-        arrowAngle2 = arc.getDirection2();
-    }
-    else {
+//    if (outsideArrow2) {
+//        arrowAngle2 = arc.getDirection2();
+//    }
+//    else {
         RVector v2;
         if (!arc.isReversed()) {
-            v2.setPolar(rad, arc.getEndAngle()-arrowAng);
+            if (outsideArrow2) {
+                v2.setPolar(rad, arc.getEndAngle()+arrowAng);
+            }
+            else {
+                v2.setPolar(rad, arc.getEndAngle()-arrowAng);
+            }
         } else {
-            v2.setPolar(rad, arc.getEndAngle()+arrowAng);
+            if (outsideArrow2) {
+                v2.setPolar(rad, arc.getEndAngle()-arrowAng);
+            }
+            else {
+                v2.setPolar(rad, arc.getEndAngle()+arrowAng);
+            }
         }
         v2+=arc.getCenter();
         arrowAngle2 = arc.getEndPoint().getAngleTo(v2);
         arrowAngle2 = arrowAngle2+M_PI;
-    }
+//    }
 
     // Arrows:
     //RTriangle arrow = RTriangle::createArrow(arc.getStartPoint(), arrowAngle1, dimasz);
