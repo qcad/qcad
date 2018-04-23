@@ -358,6 +358,7 @@ public:
      */
     virtual bool clickReferencePoint(const RVector& referencePoint) {
         Q_UNUSED(referencePoint)
+        return false;
     }
 
     /**
