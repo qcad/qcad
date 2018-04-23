@@ -4,7 +4,7 @@
 <context>
     <name>DimAngular</name>
     <message>
-        <location filename="../DimAngular.js" line="+72"/>
+        <location filename="../DimAngular.js" line="+75"/>
         <source>Arc or first of two lines</source>
         <translation type="unfinished"></translation>
     </message>

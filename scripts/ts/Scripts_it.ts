@@ -52,7 +52,7 @@
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+374"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>
@@ -465,7 +465,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+798"/>
+        <location filename="../library.js" line="+818"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>
@@ -650,6 +650,26 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
         <location line="+0"/>
         <source>Angular Dimensions</source>
         <translation>Quote angolari</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>2 Line Angular Dimensions</source>
+        <translation>Quote angolari 2 linee</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Line Angular Dimension</source>
+        <translation>Quota angolare 2 linee</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>3 Point Angular Dimensions</source>
+        <translation>Quote angolari 3 punti</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Point Angular Dimension</source>
+        <translation>Quota angolare 3 punti</translation>
     </message>
     <message>
         <location line="+2"/>

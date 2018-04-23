@@ -10,7 +10,10 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="+75"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+97"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+97"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+79"/>
@@ -22,28 +25,32 @@
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+95"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+99"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+101"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-2"/>
+        <location line="+16"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+95"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+94"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+98"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+95"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+99"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+99"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+103"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+84"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+87"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -88,9 +95,13 @@
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="-15"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-11"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-15"/>
+        <location line="+16"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
@@ -151,9 +162,13 @@
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="-15"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-11"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-15"/>
+        <location line="+16"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
@@ -323,7 +338,7 @@
         <translation>拡張点2</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="-18"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
@@ -331,6 +346,9 @@
     </message>
     <message>
         <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
@@ -347,11 +365,17 @@
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Line 2 End</source>
         <translation>ライン２終了</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
@@ -443,7 +467,17 @@
         <translation>テキスト位置</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+2"/>
+        <source>Flip First Arrow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Flip Second Arrow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Auto Label</source>
         <translation>自動ラベル</translation>
     </message>

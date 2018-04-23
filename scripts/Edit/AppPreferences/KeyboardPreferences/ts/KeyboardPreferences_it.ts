@@ -8,6 +8,11 @@
         <source>Shortcut timeout:</source>
         <translation>Scorciatoia timeout:</translation>
     </message>
+    <message>
+        <location line="+52"/>
+        <source>Enable keyboard navigation in list widgets</source>
+        <translation>Abilita la navigazione da tastiera nei widget dell&apos;elenco</translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>

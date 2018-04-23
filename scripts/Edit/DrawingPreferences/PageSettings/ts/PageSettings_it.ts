@@ -70,8 +70,18 @@
     </message>
     <message>
         <location line="+6"/>
+        <source>Point size (mm):</source>
+        <translation>Dimensione punto (mm):</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Show paper borders</source>
         <translation>Mostra i bordi della pagina</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>0.5</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Show page borders</source>

@@ -8,6 +8,11 @@
         <source>Shortcut timeout:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+52"/>
+        <source>Enable keyboard navigation in list widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>

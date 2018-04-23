@@ -8,6 +8,11 @@
         <source>Shortcut timeout:</source>
         <translation>Acceso directo tiempo muerto:</translation>
     </message>
+    <message>
+        <location line="+52"/>
+        <source>Enable keyboard navigation in list widgets</source>
+        <translation>Habilitar la navegación por teclado en los widgets de la lista</translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>

@@ -47,7 +47,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+374"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -458,7 +458,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+798"/>
+        <location filename="../library.js" line="+818"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>
@@ -636,6 +636,26 @@
         <location line="+0"/>
         <source>Angular Dimension</source>
         <translation>Winkel Bemassung</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>2 Line Angular Dimensions</source>
+        <translation>2 Linien Winkelbemassungen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Line Angular Dimension</source>
+        <translation>2 Linien Winkelbemassung</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>3 Point Angular Dimensions</source>
+        <translation>3 Punkte Winkelbemassungen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Point Angular Dimension</source>
+        <translation>3 Punkte Winkelbemassung</translation>
     </message>
     <message>
         <location line="+2"/>

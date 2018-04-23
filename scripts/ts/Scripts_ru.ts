@@ -47,7 +47,7 @@
         <translation>Переместите объект в нужное место</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+374"/>
         <source>Move Reference Point</source>
         <translation>Переместить точку привязки</translation>
     </message>
@@ -402,7 +402,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+798"/>
+        <location filename="../library.js" line="+818"/>
         <source>Objects</source>
         <translation>Объекты</translation>
     </message>
@@ -580,6 +580,26 @@
         <location line="+0"/>
         <source>Angular Dimension</source>
         <translation>Угловой размер</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>2 Line Angular Dimensions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Line Angular Dimension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>3 Point Angular Dimensions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Point Angular Dimension</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

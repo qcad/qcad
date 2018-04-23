@@ -60,28 +60,32 @@ Altura del Texto:</translatorcomment>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+87"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+75"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+95"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+99"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+101"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+97"/>
+        <location line="+16"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+95"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+94"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+98"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+95"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+99"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+97"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+99"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+103"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+84"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+87"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+79"/>
         <location line="+3"/>
@@ -132,6 +136,9 @@ Exportando el dibujo...</translatorcomment>
         <location filename="../src/entity/RCircleEntity.cpp" line="+0"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-16"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-4"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -151,9 +158,13 @@ Arco: centro, punto, ángulos
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="-15"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-11"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-1"/>
+        <location line="+16"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
@@ -219,9 +230,13 @@ Ubicando las Bibliotecas
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="-15"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-11"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location line="+4"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-15"/>
+        <location line="+16"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
@@ -428,7 +443,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+11"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+13"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
@@ -822,7 +837,7 @@ Punto de Extensión 2|Y</translatorcomment>
         <translation>Punto de extensión 2</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="-18"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
@@ -831,6 +846,9 @@ Punto de Extensión 2|Y</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
@@ -849,12 +867,18 @@ Punto de Extensión 2|Y</translatorcomment>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <source>Line 2 End</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Línea 2 fin</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
@@ -928,7 +952,7 @@ Cota ordinal</translatorcomment>
         <translation>Ángulo cota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-19"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-21"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -980,7 +1004,17 @@ Límite inferior</translatorcomment>
         <translation>Posición del texto</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+2"/>
+        <source>Flip First Arrow</source>
+        <translation>Refleja la primera flecha</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Flip Second Arrow</source>
+        <translation>Refleja la segunda flecha</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Auto Label</source>
         <translation>Auto etiqueta</translation>
     </message>

@@ -146,8 +146,18 @@ Altura do Papel:</translatorcomment>
     </message>
     <message>
         <location line="+6"/>
+        <source>Point size (mm):</source>
+        <translation>Tamanho do ponto (mm):</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Show paper borders</source>
         <translation>Exiba as bordas do papel</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>0.5</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Show page borders</source>

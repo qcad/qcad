@@ -52,7 +52,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+374"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -469,7 +469,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+798"/>
+        <location filename="../library.js" line="+818"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>
@@ -662,6 +662,26 @@ Dessine des cercles avec 2 points</translatorcomment>
         <location line="+0"/>
         <source>Angular Dimensions</source>
         <translation>Cotations angulaires</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>2 Line Angular Dimensions</source>
+        <translation>2 lignes cotations angulaires</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Line Angular Dimension</source>
+        <translation>2 lignes cotation angulaire</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>3 Point Angular Dimensions</source>
+        <translation>3 points cotations angulaires</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Point Angular Dimension</source>
+        <translation>3 points cotation angulaire</translation>
     </message>
     <message>
         <location line="+2"/>

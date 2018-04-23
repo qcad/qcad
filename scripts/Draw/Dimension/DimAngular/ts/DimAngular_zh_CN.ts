@@ -4,7 +4,7 @@
 <context>
     <name>DimAngular</name>
     <message>
-        <location filename="../DimAngular.js" line="+72"/>
+        <location filename="../DimAngular.js" line="+75"/>
         <source>Arc or first of two lines</source>
         <translation>弧或两条直线中的第一条</translation>
     </message>

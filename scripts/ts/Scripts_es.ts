@@ -52,7 +52,7 @@
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+374"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>
@@ -469,7 +469,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+798"/>
+        <location filename="../library.js" line="+818"/>
         <source>Objects</source>
         <translation>Objetos</translation>
     </message>
@@ -654,6 +654,26 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
         <location line="+0"/>
         <source>Angular Dimensions</source>
         <translation>Cotas angular</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>2 Line Angular Dimensions</source>
+        <translation>Cotas angulares de 2 líneas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Line Angular Dimension</source>
+        <translation>Cota angular de 2 líneas</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>3 Point Angular Dimensions</source>
+        <translation>Cotas angulares de 3 puntos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Point Angular Dimension</source>
+        <translation>Cota angular de 3 puntos</translation>
     </message>
     <message>
         <location line="+2"/>

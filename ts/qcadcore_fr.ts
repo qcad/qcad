@@ -510,7 +510,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Attributs</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/REntity.cpp" line="+87"/>
         <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Type</source>
         <translatorcomment>--exact match--

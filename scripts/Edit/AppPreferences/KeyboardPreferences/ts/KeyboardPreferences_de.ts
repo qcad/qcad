@@ -8,6 +8,11 @@
         <source>Shortcut timeout:</source>
         <translation>Tastenkürzel Zeitlimit:</translation>
     </message>
+    <message>
+        <location line="+52"/>
+        <source>Enable keyboard navigation in list widgets</source>
+        <translation>Tastatur-Navigation in Listen-Widgets aktivieren</translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>

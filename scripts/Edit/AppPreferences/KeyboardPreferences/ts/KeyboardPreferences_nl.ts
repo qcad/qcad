@@ -8,6 +8,11 @@
         <source>Shortcut timeout:</source>
         <translation>Sneltoets timeout:</translation>
     </message>
+    <message>
+        <location line="+52"/>
+        <source>Enable keyboard navigation in list widgets</source>
+        <translation>Toetsenbordnavigatie in lijstwidgets inschakelen</translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>

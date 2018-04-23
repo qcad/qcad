@@ -95,8 +95,18 @@
     </message>
     <message>
         <location line="+6"/>
+        <source>Point size (mm):</source>
+        <translation>Puntgrootte (mm):</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Show paper borders</source>
         <translation>Toon papier randen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>0.5</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

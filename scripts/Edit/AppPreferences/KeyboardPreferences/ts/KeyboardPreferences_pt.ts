@@ -8,6 +8,11 @@
         <source>Shortcut timeout:</source>
         <translation>Atalho tempo esgotado:</translation>
     </message>
+    <message>
+        <location line="+52"/>
+        <source>Enable keyboard navigation in list widgets</source>
+        <translation>Ativar navegação por teclado em widgets de lista</translation>
+    </message>
 </context>
 <context>
     <name>KeyboardPreferences</name>

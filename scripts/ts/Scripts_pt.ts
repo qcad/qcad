@@ -52,7 +52,7 @@
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+356"/>
+        <location line="+374"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -529,7 +529,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+798"/>
+        <location filename="../library.js" line="+818"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>
@@ -743,6 +743,26 @@ Dimensões angulares</translatorcomment>
 Dimensão angular
 Desenhe dimensão angular</translatorcomment>
         <translation>Dimensão Angular</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>2 Line Angular Dimensions</source>
+        <translation>Dimensões angulares de 2 linhas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Line Angular Dimension</source>
+        <translation>Dimensão angular de 2 linhas</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>3 Point Angular Dimensions</source>
+        <translation>Dimensões angulares de 3 pontos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Point Angular Dimension</source>
+        <translation>Dimensão angular de 3 pontos</translation>
     </message>
     <message>
         <location line="+2"/>
