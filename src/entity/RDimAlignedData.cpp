@@ -60,6 +60,14 @@ QList<RRefPoint> RDimAlignedData::getReferencePoints(RS::ProjectionRenderingHint
     QList<RRefPoint> ret;
 
     ret.append(getTextPosition());
+
+    if (arrow1Pos.isValid()) {
+        ret.append(RRefPoint(arrow1Pos, RRefPoint::Arrow));
+    }
+    if (arrow2Pos.isValid()) {
+        ret.append(RRefPoint(arrow2Pos, RRefPoint::Arrow));
+    }
+
     ret.append(extensionPoint1);
     ret.append(extensionPoint2);
     ret.append(refDefinitionPoint1);
