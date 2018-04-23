@@ -300,6 +300,21 @@ void RGraphicsViewImage::updateImage() {
         delete painter;
     }
 
+    // paint reference points of selected entities:
+    QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
+    int num = referencePoints.count();
+    if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 100000)) {
+        QPainter gbPainter(&graphicsBufferWithPreview);
+        QMultiMap<REntity::Id, RRefPoint>::iterator it;
+        for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
+            RRefPoint p = it.value();
+            RRefPoint pm = mapToView(p);
+            pm.setFlags(p.getFlags());
+            paintReferencePoint(gbPainter, pm, false);
+        }
+        gbPainter.end();
+    }
+
     // highlighting of closest reference point:
     if (scene->getHighlightedReferencePoint().isValid()) {
         RRefPoint p = scene->getHighlightedReferencePoint();
@@ -374,19 +389,28 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint&
         else {
             painter.fillRect(QRect(pos.x - size/2, pos.y - size/2, size, size), color);
         }
-        if (highlight) {
-            if (backgroundColor.value()<128) {
+
+        if (backgroundColor.value()<128) {
+            if (highlight) {
                 painter.setPen(QPen(Qt::white));
             }
             else {
+                painter.setPen(QPen(Qt::gray));
+            }
+        }
+        else {
+            if (highlight) {
                 painter.setPen(QPen(Qt::black));
             }
-            if (pos.isCenter()) {
-                painter.drawEllipse(pos.x - size/2, pos.y - size/2, size, size);
-            }
             else {
-                painter.drawRect(QRect(pos.x - size/2, pos.y - size/2, size, size));
+                painter.setPen(QPen(Qt::gray));
             }
+        }
+        if (pos.isCenter() || pos.isArrow()) {
+            painter.drawEllipse(pos.x - size/2, pos.y - size/2, size, size);
+        }
+        else {
+            painter.drawRect(QRect(pos.x - size/2, pos.y - size/2, size, size));
         }
     }
 }
@@ -655,22 +679,22 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     painter->end();
     delete painter;
 
-    // paint reference points of selected entities:
-    QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
-    int num = referencePoints.count();
-    if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 100000)) {
-        QPainter gbPainter(&graphicsBuffer);
-        QMultiMap<REntity::Id, RRefPoint>::iterator it;
+//    // paint reference points of selected entities:
+//    QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
+//    int num = referencePoints.count();
+//    if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 100000)) {
+//        QPainter gbPainter(&graphicsBuffer);
+//        QMultiMap<REntity::Id, RRefPoint>::iterator it;
 
-        for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
-            RRefPoint p = it.value();
-            RRefPoint pm = mapToView(p);
-            pm.setFlags(p.getFlags());
-            paintReferencePoint(gbPainter, pm, false);
-        }
+//        for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
+//            RRefPoint p = it.value();
+//            RRefPoint pm = mapToView(p);
+//            pm.setFlags(p.getFlags());
+//            paintReferencePoint(gbPainter, pm, false);
+//        }
 
-        gbPainter.end();
-    }
+//        gbPainter.end();
+//    }
 }
 
 void RGraphicsViewImage::clearBackground() {
