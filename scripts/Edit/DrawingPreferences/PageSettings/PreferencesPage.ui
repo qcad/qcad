@@ -294,7 +294,7 @@
         <item row="1" column="1">
          <widget class="RMathLineEdit" name="PointSize">
           <property name="text">
-           <string>0.5</string>
+           <string notr="true">0.5</string>
           </property>
           <property name="angle" stdset="0">
            <bool>false</bool>
