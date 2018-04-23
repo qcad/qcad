@@ -1199,8 +1199,8 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
     QString text = d.getMeasurement(false);
     text.replace("^", "^ ");
 
-    qDebug() << "dimType: " << dimType;
-    qDebug() << "text: " << d.getMeasurement(false);
+    //qDebug() << "dimType: " << dimType;
+    //qDebug() << "text: " << d.getMeasurement(false);
 
     DL_DimensionData dimData(d.getDefinitionPoint().x,
                              d.getDefinitionPoint().y,
@@ -1218,6 +1218,8 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                              d.getTextAngle(),
                              d.getLinearFactor(),
                              d.getDimScale());
+    dimData.arrow1Flipped = d.isArrow1Flipped();
+    dimData.arrow2Flipped = d.isArrow2Flipped();
 
     switch (d.getType()) {
     case RS::EntityDimAligned: {

@@ -1033,6 +1033,8 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
                        data.angle);
     ret.setUpperTolerance(uTol);
     ret.setLowerTolerance(lTol);
+    ret.setArrow1Flipped(data.arrow1Flipped);
+    ret.setArrow2Flipped(data.arrow2Flipped);
 
     if (midP.isValid()) {
         ret.setCustomTextPosition(true);
