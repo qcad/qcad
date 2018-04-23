@@ -68,12 +68,13 @@ QList<RRefPoint> RPolylineData::getReferencePoints(RS::ProjectionRenderingHint h
         ret.last().setEnd(true);
     }
     for (int i=0; i<countSegments(); i++) {
-        if (isArcSegmentAt(i)) {
-            QSharedPointer<RArc> arc = getSegmentAt(i).dynamicCast<RArc>();
-            if (!arc.isNull()) {
-                ret.append(RRefPoint(arc->getMiddlePoint(), RRefPoint::Secondary));
-            }
-        }
+        QSharedPointer<RShape> segment = getSegmentAt(i);
+        //if (isArcSegmentAt(i)) {
+            //QSharedPointer<RArc> arc = getSegmentAt(i).dynamicCast<RArc>();
+            //if (!arc.isNull()) {
+                ret.append(RRefPoint(segment->getMiddlePoint(), RRefPoint::Secondary));
+            //}
+        //}
     }
     return ret;
 }
@@ -91,15 +92,25 @@ bool RPolylineData::moveReferencePoint(const RVector& referencePoint,
     }
 
     for (int i=0; i<countSegments(); i++) {
+        QSharedPointer<RShape> segment = getSegmentAt(i);
+        if (segment.isNull()) {
+            continue;
+        }
+        if (!referencePoint.equalsFuzzy(segment->getMiddlePoint())) {
+            continue;
+        }
+
         if (isArcSegmentAt(i)) {
-            QSharedPointer<RArc> arc = getSegmentAt(i).dynamicCast<RArc>();
+            QSharedPointer<RArc> arc = segment.dynamicCast<RArc>();
             if (!arc.isNull()) {
-                if (referencePoint.equalsFuzzy(arc->getMiddlePoint())) {
-                    RArc a = RArc::createFrom3Points(arc->getStartPoint(), targetPoint, arc->getEndPoint());
-                    setBulgeAt(i, a.getBulge());
-                    ret = true;
-                }
+                RArc a = RArc::createFrom3Points(arc->getStartPoint(), targetPoint, arc->getEndPoint());
+                setBulgeAt(i, a.getBulge());
+                ret = true;
             }
+        }
+        else {
+            moveSegmentAt(i, targetPoint-referencePoint);
+            ret = true;
         }
     }
 

@@ -95,6 +95,7 @@ public:
     void setVertices(const QList<RVector>& vertices);
     QList<RVector> getVertices() const;
     void setVertexAt(int i, const RVector& v);
+    void moveVertexAt(int i, const RVector& offset);
     RVector getVertexAt(int i) const;
     int getVertexIndex(const RVector& v, double tolerance=RS::PointTolerance) const;
     RVector getLastVertex() const;
@@ -147,6 +148,8 @@ public:
 
     void moveStartPoint(const RVector& pos);
     void moveEndPoint(const RVector& pos);
+
+    void moveSegmentAt(int i, const RVector& offset);
 
     virtual double getDirection1() const;
     virtual double getDirection2() const;

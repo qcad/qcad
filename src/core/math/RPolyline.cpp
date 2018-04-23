@@ -486,6 +486,15 @@ void RPolyline::setVertexAt(int i, const RVector& v) {
     vertices[i] = v;
 }
 
+void RPolyline::moveVertexAt(int i, const RVector& offset) {
+    if (i<0 || i>=vertices.size()) {
+        Q_ASSERT(false);
+        return;
+    }
+
+    vertices[i]+=offset;
+}
+
 int RPolyline::countVertices() const {
     return vertices.size();
 }
@@ -1189,6 +1198,18 @@ void RPolyline::moveEndPoint(const RVector& pos) {
         return;
     }
     vertices.last() = pos;
+}
+
+void RPolyline::moveSegmentAt(int i, const RVector& offset) {
+    moveVertexAt(i, offset);
+    if (i+1<countVertices()) {
+        moveVertexAt(i+1, offset);
+    }
+    else {
+        if (closed) {
+            moveVertexAt(0, offset);
+        }
+    }
 }
 
 double RPolyline::getDirection1() const {
