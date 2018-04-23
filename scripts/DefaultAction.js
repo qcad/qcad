@@ -456,8 +456,6 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
     var shiftPressed = (event.getModifiers() & Qt.ShiftModifier) > 0;
     var doc = this.getDocument();
 
-    qDebug("state:", this.state);
-
     switch (this.state) {
     case DefaultAction.State.MovingReference:
     case DefaultAction.State.SettingReference:
