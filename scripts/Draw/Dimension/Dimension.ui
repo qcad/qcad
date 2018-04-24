@@ -178,14 +178,14 @@
     </widget>
    </item>
    <item>
-    <widget class="Line" name="line_2">
+    <widget class="Line" name="ScaleSeparator">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="ScaleLabel">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>

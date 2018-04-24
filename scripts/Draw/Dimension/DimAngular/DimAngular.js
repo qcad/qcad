@@ -30,8 +30,12 @@ include("../Dimension.js");
 function DimAngular(guiAction) {
     Dimension.call(this, guiAction);
 
-    this.data2L = new RDimAngular2LData();
-    this.data3P = new RDimAngular3PData();
+    // for common dimension data (set by options toolbar in Dimension class)
+    this.data = new RDimensionData();
+
+    //this.data2L = new RDimAngular2LData();
+    //this.data3P = new RDimAngular3PData();
+    this.dimArcPosition = RVector.invalid;
     this.firstEntity = undefined;
     this.firstShape = undefined;
     this.secondEntity = undefined;
@@ -63,11 +67,11 @@ DimAngular.prototype.setState = function(state) {
     switch (this.state) {
     case DimAngular.State.SettingFirstEntity:
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.data2L.setExtensionLine1Start(RVector.invalid);
-        this.data2L.setExtensionLine1End(RVector.invalid);
-        this.data2L.setExtensionLine2Start(RVector.invalid);
-        this.data2L.setExtensionLine2End(RVector.invalid);
-        this.data2L.setDimArcPosition(RVector.invalid);
+//        this.data2L.setExtensionLine1Start(RVector.invalid);
+//        this.data2L.setExtensionLine1End(RVector.invalid);
+//        this.data2L.setExtensionLine2Start(RVector.invalid);
+//        this.data2L.setExtensionLine2End(RVector.invalid);
+//        this.data2L.setDimArcPosition(RVector.invalid);
         this.firstEntity = undefined;
         this.firstShape = undefined;
         this.secondEntity = undefined;
@@ -79,9 +83,9 @@ DimAngular.prototype.setState = function(state) {
 
     case DimAngular.State.SettingSecondEntity:
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.data2L.setExtensionLine2Start(RVector.invalid);
-        this.data2L.setExtensionLine2End(RVector.invalid);
-        this.data2L.setDimArcPosition(RVector.invalid);
+//        this.data2L.setExtensionLine2Start(RVector.invalid);
+//        this.data2L.setExtensionLine2End(RVector.invalid);
+//        this.data2L.setDimArcPosition(RVector.invalid);
         this.secondEntity = undefined;
         this.secondShape = undefined;
         var trSecondEntity = qsTr("Second line");
@@ -91,7 +95,7 @@ DimAngular.prototype.setState = function(state) {
 
     case DimAngular.State.SettingDimPos:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.data2L.setDefinitionPoint(RVector.invalid);
+        //this.data2L.setDefinitionPoint(RVector.invalid);
         var trDimPos = qsTr("Dimension arc location");
         this.setCommandPrompt(trDimPos);
         this.setLeftMouseTip(trDimPos);
@@ -121,6 +125,14 @@ DimAngular.prototype.escapeEvent = function() {
         }
         break;
     }
+};
+
+DimAngular.prototype.initUiOptions = function(resume, optionsToolBar) {
+    Dimension.prototype.initUiOptions.call(this, resume, optionsToolBar);
+
+    optionsToolBar.findChild("ScaleAction").visible = false;
+    optionsToolBar.findChild("ScaleLabelAction").visible = false;
+    optionsToolBar.findChild("ScaleSeparatorAction").visible = false;
 };
 
 DimAngular.prototype.pickEntity = function(event, preview) {
@@ -195,7 +207,7 @@ DimAngular.prototype.pickCoordinate = function(event, preview) {
 
     switch (this.state) {
     case DimAngular.State.SettingDimPos:
-        this.data2L.setDimArcPosition(event.getModelPosition());
+        this.dimArcPosition = event.getModelPosition();
         if (preview) {
             this.updatePreview();
         }
@@ -232,8 +244,12 @@ DimAngular.prototype.getOperation = function(preview) {
         var center = intersections[0];
 
         if (this.useMaxAngle) {
+            this.data3P = new RDimAngular3PData(this.data, RVector.invalid, RVector.invalid, RVector.invalid);
+            this.data3P.setDimArcPosition(this.dimArcPosition);
             this.data3P.setCenter(center);
-            this.data3P.setDimArcPosition(this.data2L.getDimArcPosition());
+//            this.data3P.setText(this.data.getText());
+//            this.data3P.setUpperTolerance();
+//            this.data3P.setDimArcPosition(this.data2L.getDimArcPosition());
             if (center.getDistanceTo(this.firstShape.getStartPoint()) <
                 center.getDistanceTo(this.firstShape.getEndPoint())) {
                 this.data3P.setExtensionLine1End(this.firstShape.getEndPoint());
@@ -251,6 +267,8 @@ DimAngular.prototype.getOperation = function(preview) {
         }
 
         else {
+            this.data2L = new RDimAngular2LData(this.data, RVector.invalid, RVector.invalid, RVector.invalid, RVector.invalid);
+            this.data2L.setDimArcPosition(this.dimArcPosition);
             if (center.getDistanceTo(this.firstShape.getStartPoint()) <
                 center.getDistanceTo(this.firstShape.getEndPoint())) {
                 this.data2L.setExtensionLine1Start(this.firstShape.getEndPoint());
