@@ -134,6 +134,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setVertexAt, "setVertexAt");
             
+            REcmaHelper::registerFunction(&engine, proto, moveVertexAt, "moveVertexAt");
+            
             REcmaHelper::registerFunction(&engine, proto, getVertexAt, "getVertexAt");
             
             REcmaHelper::registerFunction(&engine, proto, getVertexIndex, "getVertexIndex");
@@ -211,6 +213,8 @@
             REcmaHelper::registerFunction(&engine, proto, moveStartPoint, "moveStartPoint");
             
             REcmaHelper::registerFunction(&engine, proto, moveEndPoint, "moveEndPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, moveSegmentAt, "moveSegmentAt");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
@@ -2423,6 +2427,86 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setVertexAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::moveVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::moveVertexAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::moveVertexAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("moveVertexAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->moveVertexAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.moveVertexAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::moveVertexAt", context, engine);
             return result;
         }
          QScriptValue
@@ -4961,6 +5045,86 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::moveEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::moveSegmentAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::moveSegmentAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::moveSegmentAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("moveSegmentAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->moveSegmentAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.moveSegmentAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::moveSegmentAt", context, engine);
             return result;
         }
          QScriptValue

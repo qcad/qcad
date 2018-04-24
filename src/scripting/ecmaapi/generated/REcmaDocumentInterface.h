@@ -238,6 +238,12 @@
         exportFile
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        tagState
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        undoToTag
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         undo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

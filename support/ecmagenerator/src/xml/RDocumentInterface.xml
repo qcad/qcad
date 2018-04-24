@@ -513,6 +513,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="tagState" cppName="tagState" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="tag"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="undoToTag" cppName="undoToTag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="tag"
+        hasDefault="true" default="&quot;&quot;" isConst="true" />
+      </variant>
+    </method>
     <method name="undo" cppName="undo" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />

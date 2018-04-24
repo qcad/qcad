@@ -14,7 +14,7 @@
             
         // includes for base ecma wrapper classes
         
-                  #include "REcmaSharedPointerDimensionEntity.h"
+                  #include "REcmaSharedPointerDimLinearEntity.h"
                  void REcmaSharedPointerDimAlignedEntity::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -29,10 +29,10 @@
     }
 
     
-        // primary base class RDimensionEntity:
+        // primary base class RDimLinearEntity:
         
             proto->setPrototype(engine.defaultPrototype(
-            qMetaTypeId<RDimensionEntityPointer>()));
+            qMetaTypeId<RDimLinearEntityPointer>()));
           
         /*
         
@@ -54,6 +54,9 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
+        // conversion for base class RDimLinearEntity
+        REcmaHelper::registerFunction(&engine, proto, getRDimLinearEntity, "getRDimLinearEntity");
+        
         // conversion for base class RDimensionEntity
         REcmaHelper::registerFunction(&engine, proto, getRDimensionEntity, "getRDimensionEntity");
         
@@ -382,7 +385,16 @@
     
 
     // conversion functions for base classes:
-     QScriptValue REcmaSharedPointerDimAlignedEntity::getRDimensionEntity(QScriptContext *context,
+     QScriptValue REcmaSharedPointerDimAlignedEntity::getRDimLinearEntity(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                RDimLinearEntity* cppResult =
+                    qscriptvalue_cast<RDimAlignedEntity*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
+             QScriptValue REcmaSharedPointerDimAlignedEntity::getRDimensionEntity(QScriptContext *context,
             QScriptEngine *engine)
         
             {
@@ -425,6 +437,8 @@
     {
         QStringList list;
         
+        list.append("RDimLinearEntity");
+    
         list.append("RDimensionEntity");
     
         list.append("REntity");

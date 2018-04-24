@@ -23,20 +23,20 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimensionEntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimLinearEntity.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimRotatedData.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>RExporter</name>;</class_decl>
 
 <comment type="block">/**
- * Linear dimension entity class.
+ * Rotated, linear dimension entity class.
  *
  * \scriptable
  * \sharedPointerSupport
  * \ingroup entity
  */</comment>
-<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RDimRotatedEntity</name><super>: <specifier>public</specifier> <name>RDimensionEntity</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RDimRotatedEntity</name><super>: <specifier>public</specifier> <name>RDimLinearEntity</name></super> <block>{<private type="default">
 
     <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RDimRotatedEntity</argument>)</argument_list></macro>
 

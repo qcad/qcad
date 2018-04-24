@@ -14,7 +14,7 @@
             
         // includes for base ecma wrapper classes
         
-                  #include "REcmaDimensionEntity.h"
+                  #include "REcmaDimLinearEntity.h"
                  void REcmaDimRotatedEntity::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -29,10 +29,10 @@
     }
 
     
-        // primary base class RDimensionEntity:
+        // primary base class RDimLinearEntity:
         
             QScriptValue dpt = engine.defaultPrototype(
-                qMetaTypeId<RDimensionEntity*>());
+                qMetaTypeId<RDimLinearEntity*>());
 
             if (dpt.isValid()) {
                 proto->setPrototype(dpt);
@@ -52,6 +52,9 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
+        // conversion for base class RDimLinearEntity
+        REcmaHelper::registerFunction(&engine, proto, getRDimLinearEntity, "getRDimLinearEntity");
+        
         // conversion for base class RDimensionEntity
         REcmaHelper::registerFunction(&engine, proto, getRDimensionEntity, "getRDimensionEntity");
         
@@ -389,7 +392,16 @@
     
 
     // conversion functions for base classes:
-     QScriptValue REcmaDimRotatedEntity::getRDimensionEntity(QScriptContext *context,
+     QScriptValue REcmaDimRotatedEntity::getRDimLinearEntity(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                RDimLinearEntity* cppResult =
+                    qscriptvalue_cast<RDimRotatedEntity*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
+             QScriptValue REcmaDimRotatedEntity::getRDimensionEntity(QScriptContext *context,
             QScriptEngine *engine)
         
             {
@@ -432,6 +444,8 @@
     {
         QStringList list;
         
+        list.append("RDimLinearEntity");
+    
         list.append("RDimensionEntity");
     
         list.append("REntity");

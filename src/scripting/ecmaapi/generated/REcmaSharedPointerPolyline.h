@@ -132,6 +132,9 @@
         setVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        moveVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -247,6 +250,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         moveEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        moveSegmentAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDirection1

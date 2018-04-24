@@ -197,6 +197,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportFile, "exportFile");
             
+            REcmaHelper::registerFunction(&engine, proto, tagState, "tagState");
+            
+            REcmaHelper::registerFunction(&engine, proto, undoToTag, "undoToTag");
+            
             REcmaHelper::registerFunction(&engine, proto, undo, "undo");
             
             REcmaHelper::registerFunction(&engine, proto, redo, "redo");
@@ -4717,6 +4721,148 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::exportFile", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::tagState
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::tagState", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::tagState";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("tagState", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->tagState();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->tagState(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.tagState().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::tagState", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::undoToTag
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::undoToTag", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::undoToTag";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("undoToTag", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->undoToTag();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->undoToTag(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.undoToTag().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::undoToTag", context, engine);
             return result;
         }
          QScriptValue

@@ -33,7 +33,9 @@
     ;
 
     // conversion functions for base classes:
-    static  QScriptValue getRDimensionEntity(QScriptContext *context,
+    static  QScriptValue getRDimLinearEntity(QScriptContext *context,
+            QScriptEngine *engine)
+        ;static  QScriptValue getRDimensionEntity(QScriptContext *context,
             QScriptEngine *engine)
         ;static  QScriptValue getREntity(QScriptContext *context,
             QScriptEngine *engine)

@@ -88,6 +88,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setEnd, "setEnd");
             
+            REcmaHelper::registerFunction(&engine, proto, isArrow, "isArrow");
+            
+            REcmaHelper::registerFunction(&engine, proto, setArrow, "setArrow");
+            
             REcmaHelper::registerFunction(&engine, proto, setFlag, "setFlag");
             
             REcmaHelper::registerFunction(&engine, proto, getFlag, "getFlag");
@@ -1254,6 +1258,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRefPoint::setEnd", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::isArrow
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::isArrow", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::isArrow";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("isArrow", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isArrow();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.isArrow().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::isArrow", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::setArrow
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::setArrow", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::setArrow";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("setArrow", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setArrow(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.setArrow().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::setArrow", context, engine);
             return result;
         }
          QScriptValue

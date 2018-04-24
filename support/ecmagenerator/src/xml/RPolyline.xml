@@ -208,6 +208,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="moveVertexAt" cppName="moveVertexAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getVertexAt" cppName="getVertexAt"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -485,6 +494,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="moveSegmentAt" cppName="moveSegmentAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
         isConst="true" />
       </variant>
     </method>

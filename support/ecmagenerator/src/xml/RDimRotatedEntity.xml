@@ -7,7 +7,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <baseClass name="RDimensionEntity" specifier="public" />
+    <baseClass name="RDimLinearEntity" specifier="public" />
     <constructor>
       <variant>
         <arg type="RDocument *" typeName="RDocument *"

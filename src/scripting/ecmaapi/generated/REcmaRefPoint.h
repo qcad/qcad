@@ -84,6 +84,12 @@
         setEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isArrow
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setArrow
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFlag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
