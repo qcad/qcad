@@ -212,6 +212,8 @@ public:
     QString getCorrectedFileName(const QString& fileName, const QString& fileVersion);
     bool exportFile(const QString& fileName, const QString& fileVersion = "", bool resetModified = true);
 
+    void tagState(const QString& tag = "");
+    void undoToTag(const QString& tag = "");
     void undo();
     void redo();
     void flushTransactions();
@@ -389,6 +391,8 @@ private:
 
     bool keepPreviewOnce;
     bool mouseTrackingEnabled;
+
+    QMap<QString, int> tags;
 
     // transform for all input coordinates:
 //    QTransform inputTransform;

@@ -1276,6 +1276,27 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
     return success;
 }
 
+void RDocumentInterface::tagState(const QString& tag) {
+    RStorage& storage = getStorage();
+    tags.insert(tag, storage.getLastTransactionId());
+}
+
+/**
+ * Rollback to given transaction ID:
+ */
+void RDocumentInterface::undoToTag(const QString& tag) {
+    if (!tags.contains(tag)) {
+        qWarning() << "tag not found: '" << tag << "'";
+        return;
+    }
+
+    int tid = tags.value(tag);
+    RStorage& storage = getStorage();
+    while (storage.getLastTransactionId()>tid) {
+        undo();
+    }
+}
+
 /**
  * Transaction based undo.
  */
