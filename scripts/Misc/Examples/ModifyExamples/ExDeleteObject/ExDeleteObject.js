@@ -66,7 +66,7 @@ ExDeleteObject.prototype.beginEvent = function() {
  * Adds a menu for this action.
  */
 ExDeleteObject.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Add and delete line"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Add and Delete Line"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExDeleteObject.js");
     action.setGroupSortOrder(78200);
