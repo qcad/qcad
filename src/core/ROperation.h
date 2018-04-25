@@ -93,6 +93,10 @@ public:
         transactionGroup = g;
     }
 
+    int getTransactionGroup() const {
+        return transactionGroup;
+    }
+
     void setText(const QString& t) {
         text = t;
     }
