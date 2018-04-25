@@ -122,11 +122,20 @@ public:
     int getBrightness() const {
         return brightness;
     }
+    void setBrightness(int v) {
+        brightness = v;
+    }
     int getContrast() const {
         return contrast;
     }
+    void setContrast(int v) {
+        contrast = v;
+    }
     int getFade() const {
         return fade;
+    }
+    void setFade(int v) {
+        fade = v;
     }
     QImage getImage() const;
 
