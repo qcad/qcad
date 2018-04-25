@@ -18,6 +18,7 @@
  */
 #include <QDir>
 #include <QFileInfo>
+#include <QGuiApplication>
 #include "RImageData.h"
 
 RImageData::RImageData() :
@@ -139,39 +140,19 @@ bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector
     bool ret = false;
 
     // scale image:
-
     RVector referencePointPx = mapToImage(referencePoint);
     RVector targetPointPx = mapToImage(targetPoint);
 
+    Qt::KeyboardModifiers mod = QGuiApplication::queryKeyboardModifiers();
+    bool keepAspectRatio = mod.testFlag(Qt::ShiftModifier);
+    bool fromCenter = mod.testFlag(Qt::AltModifier);
+
     QList<RVector> cornersPx = getCornersPx();
-    for (int i=0; i<cornersPx.length(); i++) {
-        if (referencePointPx.equalsFuzzy(cornersPx[i], 0.01)) {
-            if (i==0) {
-                cornersPx[0] = targetPointPx;
-                cornersPx[1].y = targetPointPx.y;
-                cornersPx[3].x = targetPointPx.x;
-            }
-            if (i==1) {
-                cornersPx[1] = targetPointPx;
-                cornersPx[0].y = targetPointPx.y;
-                cornersPx[2].x = targetPointPx.x;
-            }
-            if (i==2) {
-                cornersPx[2] = targetPointPx;
-                cornersPx[1].x = targetPointPx.x;
-                cornersPx[3].y = targetPointPx.y;
-            }
-            if (i==3) {
-                cornersPx[3] = targetPointPx;
-                cornersPx[0].x = targetPointPx.x;
-                cornersPx[2].y = targetPointPx.y;
-            }
-            ret = true;
-            break;
-        }
-    }
+    RBox box(cornersPx[0], cornersPx[2]);
+    ret = box.scaleByReference(referencePointPx, targetPointPx, keepAspectRatio);
 
     if (ret) {
+        cornersPx = box.getCorners2d();
         int wpx = getPixelWidth();
         int hpx = getPixelHeight();
         if (wpx!=0 && hpx!=0) {
