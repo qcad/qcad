@@ -106,6 +106,7 @@ public:
     RBox& growXY(double offset);
 
     void move(const RVector& offset);
+    bool scaleByReference(const RVector& referencePoint, const RVector& targetPoint, bool keepAspectRatio = false);
 
     QRectF toQRectF() const;
 

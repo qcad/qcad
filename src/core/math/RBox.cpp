@@ -117,6 +117,150 @@ void RBox::move(const RVector& offset) {
     c2.move(offset);
 }
 
+bool RBox::scaleByReference(const RVector& referencePoint, const RVector& targetPoint, bool keepAspectRatio) {
+    RVector oriSize = getSize().getAbsolute();
+
+    // prevent division by 0:
+    if (RMath::fuzzyCompare(oriSize.x, 0.0)) oriSize.x = 1;
+    if (RMath::fuzzyCompare(oriSize.y, 0.0)) oriSize.y = 1;
+    if (RMath::fuzzyCompare(oriSize.z, 0.0)) oriSize.z = 1;
+
+    int match = -1;
+    if (referencePoint.equalsFuzzy(c1)) match = 1;
+    if (referencePoint.equalsFuzzy(c2)) match = 2;
+
+    RVector c3 = RVector(c2.x, c1.y);
+    RVector c4 = RVector(c1.x, c2.y);
+    if (referencePoint.equalsFuzzy(c3)) match = 3;
+    if (referencePoint.equalsFuzzy(c4)) match = 4;
+
+    if (match==-1) {
+        return false;
+    }
+
+    RVector vf;
+    switch (match) {
+    case 1:
+        vf = (c2-targetPoint);
+        break;
+    case 2:
+        vf = (targetPoint-c1);
+        break;
+    case 3:
+        vf = (targetPoint-c4);
+        vf.y*=-1;
+        break;
+    case 4:
+        vf = (c3-targetPoint);
+        vf.y*=-1;
+        break;
+    }
+    vf = vf.getDividedComponents(oriSize);
+
+    if (keepAspectRatio) {
+        if (qAbs(vf.x)>qAbs(vf.y)) {
+            if (vf.x*vf.y>=0.0) {
+                vf.y = vf.x;
+            }
+            else {
+                vf.y = -vf.x;
+            }
+        }
+        else {
+            if (vf.x*vf.y>=0.0) {
+                vf.x = vf.y;
+            }
+            else {
+                vf.x = -vf.y;
+            }
+        }
+        //vf.x = vf.y = qMax(vf.x, vf.y);
+    }
+
+    switch (match) {
+    case 1:
+        c1.scale(vf, c2);
+        break;
+    case 2:
+        c2.scale(vf, c1);
+        break;
+    case 3:
+        c3.scale(vf, c4);
+        break;
+    case 4:
+        c4.scale(vf, c3);
+        break;
+    }
+
+    if (match==3 || match==4) {
+        c1 = RVector(c4.x, c3.y);
+        c2 = RVector(c3.x, c4.y);
+    }
+
+    return true;
+
+//    else if (referencePoint.equalsFuzzy(c2)) {
+//        RVector vf = (targetPoint-c1).getDividedComponents(oriSize);
+//        if (keepAspectRatio) {
+//            if (qAbs(vf.x)>qAbs(vf.y)) {
+//                vf.y = vf.x;
+//            }
+//            else {
+//                vf.x = vf.y;
+//            }
+//            //vf.x = vf.y = qMax(vf.x, vf.y);
+//        }
+//        c2.scale(vf, c1);
+//        return true;
+//    }
+//    else {
+//        RVector c3 = RVector(c2.x, c1.y);
+//        RVector c4 = RVector(c1.x, c2.y);
+//        bool ret = false;
+
+//        if (referencePoint.equalsFuzzy(c3)) {
+//            RVector vf = (c4-targetPoint).getDividedComponents(oriSize).getAbsolute();
+//            if (keepAspectRatio) {
+//                vf.x = vf.y = qMax(vf.x, vf.y);
+//            }
+//            c3.scale(vf, c4);
+//            ret = true;
+//        }
+//        else if (referencePoint.equalsFuzzy(c4)) {
+//            RVector vf = (c3-targetPoint).getDividedComponents(oriSize).getAbsolute();
+//            if (keepAspectRatio) {
+//                vf.x = vf.y = qMax(vf.x, vf.y);
+//            }
+//            c4.scale(vf, c3);
+//            ret = true;
+//        }
+
+//        if (ret) {
+//            c1 = RVector(c4.x, c3.y);
+//            c2 = RVector(c3.x, c4.y);
+//        }
+//        return ret;
+//    }
+//    else if (referencePointPx.equalsFuzzy(cornersPx[1], 0.01)) {
+//        cornersPx[1] = targetPointPx;
+//        cornersPx[0].y = targetPointPx.y;
+//        cornersPx[2].x = targetPointPx.x;
+//        ret = true;
+//    }
+//    else if (referencePointPx.equalsFuzzy(cornersPx[2], 0.01)) {
+//        cornersPx[2] = targetPointPx;
+//        cornersPx[1].x = targetPointPx.x;
+//        cornersPx[3].y = targetPointPx.y;
+//        ret = true;
+//    }
+//    else if (referencePointPx.equalsFuzzy(cornersPx[3], 0.01)) {
+//        cornersPx[3] = targetPointPx;
+//        cornersPx[0].x = targetPointPx.x;
+//        cornersPx[2].y = targetPointPx.y;
+//        ret = true;
+//    }
+}
+
 /**
  * \return Width of this box.
  */
