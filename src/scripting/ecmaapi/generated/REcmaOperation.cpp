@@ -85,6 +85,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setTransactionGroup, "setTransactionGroup");
             
+            REcmaHelper::registerFunction(&engine, proto, getTransactionGroup, "getTransactionGroup");
+            
             REcmaHelper::registerFunction(&engine, proto, setText, "setText");
             
             REcmaHelper::registerFunction(&engine, proto, getText, "getText");
@@ -610,6 +612,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaOperation::setTransactionGroup", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOperation::getTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOperation::getTransactionGroup", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOperation::getTransactionGroup";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROperation* self = 
+                        getSelf("getTransactionGroup", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getTransactionGroup();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.getTransactionGroup().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOperation::getTransactionGroup", context, engine);
             return result;
         }
          QScriptValue

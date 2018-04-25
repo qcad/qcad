@@ -69,6 +69,9 @@
         setTransactionGroup
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTransactionGroup
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

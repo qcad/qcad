@@ -94,6 +94,10 @@
         <expr_stmt><expr><name>transactionGroup</name> = <name>g</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>int</name></type> <name>getTransactionGroup</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>transactionGroup</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>t</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>text</name> = <name>t</name></expr>;</expr_stmt>
     }</block></function>
