@@ -107,8 +107,14 @@ public:
     RVector getUVector() const {
         return uVector;
     }
+    void setUVector(const RVector& v) {
+        uVector = v;
+    }
     RVector getVVector() const {
         return vVector;
+    }
+    void setVVector(const RVector& v) {
+        vVector = v;
     }
     void setWidth(double w, bool keepRatio=false);
     void setHeight(double h, bool keepRatio=false);
@@ -142,6 +148,12 @@ public:
     void load() const;
     void reload();
 
+    RVector getScaleVector() const;
+    RVector mapToImage(const RVector& v) const;
+    RVector mapFromImage(const RVector& v) const;
+
+    QList<RVector> getCornersPx() const;
+    QList<RVector> getCorners() const;
     QList<RLine> getEdges() const;
 
 private:

@@ -141,7 +141,67 @@ bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector
     Q_UNUSED(targetPoint)
 
     bool ret = false;
-    // TODO scale image:
+
+    // scale image:
+
+    RVector referencePointPx = mapToImage(referencePoint);
+    //qDebug() << "referencePointPx" << referencePointPx;
+    RVector targetPointPx = mapToImage(targetPoint);
+    //qDebug() << "targetPointPx" << targetPointPx;
+
+    QList<RVector> cornersPx = getCornersPx();
+    for (int i=0; i<cornersPx.length(); i++) {
+        //qDebug() << "referencePointPx:" << referencePointPx;
+        //qDebug() << "cornersPx[i]:" << cornersPx[i];
+        if (referencePointPx.equalsFuzzy(cornersPx[i], 0.01)) {
+            if (i==0) {
+                cornersPx[0] = targetPointPx;
+                cornersPx[1].y = targetPointPx.y;
+                cornersPx[3].x = targetPointPx.x;
+            }
+            if (i==1) {
+                cornersPx[1] = targetPointPx;
+                cornersPx[0].y = targetPointPx.y;
+                cornersPx[2].x = targetPointPx.x;
+            }
+            if (i==2) {
+                cornersPx[2] = targetPointPx;
+                cornersPx[1].x = targetPointPx.x;
+                cornersPx[3].y = targetPointPx.y;
+            }
+            if (i==3) {
+                cornersPx[3] = targetPointPx;
+                cornersPx[0].x = targetPointPx.x;
+                cornersPx[2].y = targetPointPx.y;
+            }
+            ret = true;
+            break;
+        }
+//        else {
+//            qDebug() << "gap:" << referencePointPx.getDistanceTo2D(cornersPx[i]);
+//        }
+    }
+
+    //qDebug() << "corners px after scale:" << cornersPx;
+
+    if (ret) {
+        int wpx = getPixelWidth();
+        int hpx = getPixelHeight();
+        if (wpx!=0 && hpx!=0) {
+            RVector ip = mapFromImage(cornersPx[0]);
+            //qDebug() << "uv Ori:" << uVector;
+            //qDebug() << "uv:" << uv;
+            RVector uv = mapFromImage(cornersPx[1])-mapFromImage(cornersPx[0]);
+            uv.setMagnitude2D(uv.getMagnitude2D()/wpx);
+            //qDebug() << "uv m:" << uv;
+            RVector vv = mapFromImage(cornersPx[3])-mapFromImage(cornersPx[0]);
+            vv.setMagnitude2D(vv.getMagnitude2D()/getPixelHeight());
+            setInsertionPoint(ip);
+            setUVector(uv);
+            setVVector(vv);
+        }
+    }
+
     return ret;
 }
 
@@ -235,37 +295,82 @@ void RImageData::load() const {
     }
 }
 
-QList<RLine> RImageData::getEdges() const {
+RVector RImageData::getScaleVector() const {
+    RVector ret = RVector(getUVector().getMagnitude(), getVVector().getMagnitude());
+    if (RMath::getAngleDifference180(getUVector().getAngle(), getVVector().getAngle()) < 0.0) {
+        ret.y *= -1;
+    }
+    return ret;
+}
+
+/**
+ * Maps the given drawing coordinates to image pixel coordinates.
+ */
+RVector RImageData::mapToImage(const RVector& v) const {
+    RVector ret = v;
+    RVector scale = getScaleVector();
+    ret.move(-getInsertionPoint());
+    ret.rotate(-getUVector().getAngle());
+    if (!RMath::fuzzyCompare(scale.x, 0.0) && !RMath::fuzzyCompare(scale.y, 0.0)) {
+        ret.scale(RVector(1/scale.x, 1/scale.y));
+    }
+    return ret;
+}
+
+/**
+ * Maps the given coordinate from image pixels to drawing coordinates.
+ */
+RVector RImageData::mapFromImage(const RVector& v) const {
+    RVector ret = v;
+    RVector scale = getScaleVector();
+    ret.scale(scale);
+    ret.rotate(getUVector().getAngle());
+    ret.move(getInsertionPoint());
+    return ret;
+}
+
+QList<RVector> RImageData::getCornersPx() const {
+    QList<RVector> ret;
+    ret.append(RVector(0,0));
+    ret.append(RVector(image.width(),0));
+    ret.append(RVector(image.width(),image.height()));
+    ret.append(RVector(0,image.height()));
+    return ret;
+}
+
+QList<RVector> RImageData::getCorners() const {
     load();
 
-    QList<RLine> edges;
+    QList<RVector> ret = getCornersPx();
+    //qDebug() << "corners px" << ret;
 
-    //qDebug() << "image width: " << image.width();
-    //qDebug() << "image u: " << uVector;
-    //qDebug() << "image v: " << vVector;
+//    RVector scale = RVector(getUVector().getMagnitude(), getVVector().getMagnitude());
 
-    edges.append(RLine(RVector(0,0), RVector(image.width(),0)));
-    edges.append(RLine(RVector(image.width(),0), RVector(image.width(),image.height())));
-    edges.append(RLine(RVector(image.width(),image.height()), RVector(0,image.height())));
-    edges.append(RLine(RVector(0,image.height()), RVector(0,0)));
+//    if (RMath::getAngleDifference180(getUVector().getAngle(), getVVector().getAngle()) < 0.0) {
+//        scale.y *= -1;
+//    }
 
-    RVector scale = RVector(getUVector().getMagnitude(), getVVector().getMagnitude());
+    //double angle = getUVector().getAngle();
 
-    if (RMath::getAngleDifference180(getUVector().getAngle(), getVVector().getAngle()) < 0.0) {
-        scale.y *= -1;
+    for (int i=0; i<ret.size(); i++) {
+        ret[i] = mapFromImage(ret[i]);
+        //ret[i].scale(scale);
+        //ret[i].rotate(angle);
+        //ret[i].move(getInsertionPoint());
     }
 
-    double angle = getUVector().getAngle();
+    //qDebug() << "corners" << ret;
 
-    for (int i=0; i<edges.size(); i++) {
-        edges[i].scale(scale);
-        edges[i].rotate(angle);
-        edges[i].move(getInsertionPoint());
+    return ret;
+}
 
-        //qDebug() << "edge: " << edges[i];
+QList<RLine> RImageData::getEdges() const {
+    QList<RVector> corners = getCorners();
+    QList<RLine> ret;
+    for (int i=0; i<corners.length(); ++i) {
+        ret.append(RLine(corners[i], corners[(i+1)%corners.length()]));
     }
-
-    return edges;
+    return ret;
 }
 
 QImage RImageData::getImage() const {
