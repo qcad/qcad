@@ -697,6 +697,10 @@ RVector RVector::getNegated() const {
     return RVector(-x, -y, -z, valid);
 }
 
+RVector RVector::getAbsolute() const {
+    return RVector(fabs(x), fabs(y), fabs(z));
+}
+
 /**
  * Normalizes this vector and returns a reference to this vector.
  */

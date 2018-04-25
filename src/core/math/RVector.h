@@ -185,6 +185,7 @@ public:
     RVector operator /(double s) const;
     RVector operator -() const;
     RVector getNegated() const;
+    RVector getAbsolute() const;
 
     double dot(const RVector& other) const {
         return RVector::getDotProduct(*this, other);
