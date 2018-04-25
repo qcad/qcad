@@ -125,14 +125,10 @@ QList<RRefPoint> RImageData::getReferencePoints(RS::ProjectionRenderingHint hint
     Q_UNUSED(hint)
 
     QList<RRefPoint> ret;
-    //ret.append(insertionPoint);
-
-    QList<RLine> edges = getEdges();
-    for (int i=0; i<edges.count(); i++) {
-        RLine l = edges.at(i);
-        ret.append(l.getStartPoint());
+    QList<RVector> corners = getCorners();
+    for (int i=0; i<corners.count(); i++) {
+        ret.append(corners[i]);
     }
-
     return ret;
 }
 
@@ -145,14 +141,10 @@ bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector
     // scale image:
 
     RVector referencePointPx = mapToImage(referencePoint);
-    //qDebug() << "referencePointPx" << referencePointPx;
     RVector targetPointPx = mapToImage(targetPoint);
-    //qDebug() << "targetPointPx" << targetPointPx;
 
     QList<RVector> cornersPx = getCornersPx();
     for (int i=0; i<cornersPx.length(); i++) {
-        //qDebug() << "referencePointPx:" << referencePointPx;
-        //qDebug() << "cornersPx[i]:" << cornersPx[i];
         if (referencePointPx.equalsFuzzy(cornersPx[i], 0.01)) {
             if (i==0) {
                 cornersPx[0] = targetPointPx;
@@ -177,23 +169,15 @@ bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector
             ret = true;
             break;
         }
-//        else {
-//            qDebug() << "gap:" << referencePointPx.getDistanceTo2D(cornersPx[i]);
-//        }
     }
-
-    //qDebug() << "corners px after scale:" << cornersPx;
 
     if (ret) {
         int wpx = getPixelWidth();
         int hpx = getPixelHeight();
         if (wpx!=0 && hpx!=0) {
             RVector ip = mapFromImage(cornersPx[0]);
-            //qDebug() << "uv Ori:" << uVector;
-            //qDebug() << "uv:" << uv;
             RVector uv = mapFromImage(cornersPx[1])-mapFromImage(cornersPx[0]);
             uv.setMagnitude2D(uv.getMagnitude2D()/wpx);
-            //qDebug() << "uv m:" << uv;
             RVector vv = mapFromImage(cornersPx[3])-mapFromImage(cornersPx[0]);
             vv.setMagnitude2D(vv.getMagnitude2D()/getPixelHeight());
             setInsertionPoint(ip);
@@ -342,25 +326,9 @@ QList<RVector> RImageData::getCorners() const {
     load();
 
     QList<RVector> ret = getCornersPx();
-    //qDebug() << "corners px" << ret;
-
-//    RVector scale = RVector(getUVector().getMagnitude(), getVVector().getMagnitude());
-
-//    if (RMath::getAngleDifference180(getUVector().getAngle(), getVVector().getAngle()) < 0.0) {
-//        scale.y *= -1;
-//    }
-
-    //double angle = getUVector().getAngle();
-
     for (int i=0; i<ret.size(); i++) {
         ret[i] = mapFromImage(ret[i]);
-        //ret[i].scale(scale);
-        //ret[i].rotate(angle);
-        //ret[i].move(getInsertionPoint());
     }
-
-    //qDebug() << "corners" << ret;
-
     return ret;
 }
 
