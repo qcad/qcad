@@ -191,10 +191,26 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
+    <method name="setUVector" cppName="setUVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getVVector" cppName="getVVector"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setVVector" cppName="setVVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
     </method>
     <method name="setWidth" cppName="setWidth" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -237,14 +253,34 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="setBrightness" cppName="setBrightness"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="v" isConst="false" />
+      </variant>
+    </method>
     <method name="getContrast" cppName="getContrast"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="setContrast" cppName="setContrast"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="v" isConst="false" />
+      </variant>
+    </method>
     <method name="getFade" cppName="getFade" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setFade" cppName="setFade" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="v" isConst="false" />
+      </variant>
     </method>
     <method name="getImage" cppName="getImage" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -257,6 +293,39 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="reload" cppName="reload" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getScaleVector" cppName="getScaleVector"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="mapToImage" cppName="mapToImage"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="mapFromImage" cppName="mapFromImage"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCornersPx" cppName="getCornersPx"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getCorners" cppName="getCorners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getEdges" cppName="getEdges" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

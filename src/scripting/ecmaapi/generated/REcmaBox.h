@@ -146,6 +146,9 @@
         move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        scaleByReference
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         toQRectF
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

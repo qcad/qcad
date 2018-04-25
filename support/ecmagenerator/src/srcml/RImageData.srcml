@@ -108,8 +108,14 @@
     <function><type><name>RVector</name></type> <name>getUVector</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>uVector</name></expr>;</return>
     }</block></function>
+    <function><type><name>void</name></type> <name>setUVector</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>uVector</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
     <function><type><name>RVector</name></type> <name>getVVector</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>vVector</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setVVector</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>vVector</name> = <name>v</name></expr>;</expr_stmt>
     }</block></function>
     <function_decl><type><name>void</name></type> <name>setWidth</name><parameter_list>(<param><decl><type><name>double</name></type> <name>w</name></decl></param>, <param><decl><type><name>bool</name></type> <name>keepRatio</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setHeight</name><parameter_list>(<param><decl><type><name>double</name></type> <name>h</name></decl></param>, <param><decl><type><name>bool</name></type> <name>keepRatio</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -123,17 +129,32 @@
     <function><type><name>int</name></type> <name>getBrightness</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>brightness</name></expr>;</return>
     }</block></function>
+    <function><type><name>void</name></type> <name>setBrightness</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>brightness</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
     <function><type><name>int</name></type> <name>getContrast</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>contrast</name></expr>;</return>
     }</block></function>
+    <function><type><name>void</name></type> <name>setContrast</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>contrast</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
     <function><type><name>int</name></type> <name>getFade</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>fade</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setFade</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>fade</name> = <name>v</name></expr>;</expr_stmt>
     }</block></function>
     <function_decl><type><name>QImage</name></type> <name>getImage</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>load</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>reload</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>RVector</name></type> <name>getScaleVector</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>mapToImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>mapFromImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getCornersPx</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getCorners</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RLine</name></argument>&gt;</argument_list></name></type> <name>getEdges</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </public><private>private:

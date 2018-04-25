@@ -246,6 +246,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="scaleByReference" cppName="scaleByReference"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="referencePoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="targetPoint" isConst="true" />
+        <arg type="bool" typeName="bool" name="keepAspectRatio"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="toQRectF" cppName="toQRectF" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QRectF" isPureVirtual="false" />

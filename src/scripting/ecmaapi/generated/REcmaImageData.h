@@ -111,7 +111,13 @@
         getUVector
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setUVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setVVector
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setWidth
@@ -135,10 +141,19 @@
         getBrightness
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setBrightness
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getContrast
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setContrast
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getFade
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFade
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getImage
@@ -148,6 +163,21 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         reload
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getScaleVector
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        mapToImage
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        mapFromImage
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCornersPx
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCorners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getEdges
