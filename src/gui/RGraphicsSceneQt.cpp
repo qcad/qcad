@@ -555,27 +555,31 @@ void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) 
     REntity::Id id = getBlockRefOrEntityId();
 
     if (exportToPreview) {
-        RPainterPath path;
-        path.setPen(currentPen);
-        path.setBrush(Qt::NoBrush);
-        if (forceSelected) {
-            path.setSelected(true);
-        }
-        QList<RLine> edges = image.getEdges();
-        for (int i=0; i<=edges.count(); i++) {
-            if (i==0) {
-                path.moveTo(edges.at(i).getStartPoint());
-            }
-            else {
-                path.lineTo(edges.at(i % edges.count()).getStartPoint());
-            }
-        }
-        RGraphicsSceneDrawable d(path);
+        RImageData img = image;
+        img.setFade(qMax(img.getFade(), 50));
+        RGraphicsSceneDrawable d(img);
         addDrawable(id, d, draftMode, true);
+//        RPainterPath path;
+//        path.setPen(currentPen);
+//        path.setBrush(Qt::NoBrush);
+//        if (forceSelected) {
+//            path.setSelected(true);
+//        }
+//        QList<RLine> edges = image.getEdges();
+//        for (int i=0; i<=edges.count(); i++) {
+//            if (i==0) {
+//                path.moveTo(edges.at(i).getStartPoint());
+//            }
+//            else {
+//                path.lineTo(edges.at(i % edges.count()).getStartPoint());
+//            }
+//        }
+//        RGraphicsSceneDrawable d(path);
+//        addDrawable(id, d, draftMode, true);
     }
     else {
         RGraphicsSceneDrawable d(image);
-        addDrawable(id, d, draftMode);
+        addDrawable(id, d, draftMode, false);
     }
 }
 
