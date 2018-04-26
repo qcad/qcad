@@ -141,7 +141,7 @@ File.getInitialSaveAsPath = function(filePath, extension) {
  *
  * \param parentWidget Parent widget or null
  * \param caption Dialog caption
- * \param path Initial path of the dialog
+ * \param path Initial path with file name of the dialog
  * \param fileName Initial file name to suggest to user
  * \param filterStrings Array of filter strings in the format 'My File Type (*.mft *.mftype)'
  *
@@ -170,7 +170,7 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
     
     //if (!isNull(fileName)) {
         //var fileInfo = new QFileInfo(fileName);
-        fileDialog.selectFile(fiDir.completeBaseName());
+        fileDialog.selectFile(path);
 
         if (fiDir.suffix().length!==0) {
             // preselect first name filter that matches current extension:
