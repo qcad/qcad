@@ -168,20 +168,17 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
 
     fileDialog.setNameFilters(filterStrings);
     
-    //if (!isNull(fileName)) {
-        //var fileInfo = new QFileInfo(fileName);
-        fileDialog.selectFile(path);
+    fileDialog.selectFile(path);
 
-        if (fiDir.suffix().length!==0) {
-            // preselect first name filter that matches current extension:
-            for (var i=0; i<filterStrings.length; ++i) {
-                if (filterStrings[i].contains("*." + fiDir.suffix().toLowerCase())) {
-                    fileDialog.selectNameFilter(filterStrings[i]);
-                    break;
-                }
+    if (fiDir.suffix().length!==0) {
+        // preselect first name filter that matches current extension:
+        for (var i=0; i<filterStrings.length; ++i) {
+            if (filterStrings[i].contains("*." + fiDir.suffix().toLowerCase())) {
+                fileDialog.selectNameFilter(filterStrings[i]);
+                break;
             }
         }
-    //}
+    }
 
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
 
