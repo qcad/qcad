@@ -106,8 +106,9 @@ About.prototype.initAboutApp = function(textBrowser) {
             + this.head
             + "<body>"
             + "<h1>%1</h1>".arg(this.applicationName)
-            + "<hr/>"
-            + "<table border='0'><tr>"
+            + "<hr/>";
+            html +=
+              "<table border='0'><tr>"
             + "<td><b>" + qsTr("Version:") + "</b> </td><td>%1 %2</td>"
               .arg(versionComplete)
               .arg(version.length>0 ? "("+version+")" : "")
@@ -119,14 +120,19 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<td><b>" + qsTr("Revision:") + "</b> </td><td>%1</td>".arg(RSettings.getRevisionString().left(7))
             + "</tr><tr>"
             + "<td><b>" + qsTr("Qt Version:") + "</b> </td><td>%1</td>".arg(RSettings.getQtVersionString())
-            + "</tr><tr>";
-            if (RS.getBuildCpuArchitecture().length!==0) {
-                html += "<td><b>" + qsTr("Architecture:") + "</b> </td><td>%1</td>".arg(RS.getBuildCpuArchitecture())
-                + "</tr><tr>";
+            + "</tr>";
+            var bca = RS.getBuildCpuArchitecture();
+            if (bca.length!==0) {
+                html += "<tr><td><b>" + qsTr("Architecture:") + "</b> </td><td>%1</td>".arg(bca) + "</tr>";
             }
-            html += "<td><b>" + qsTr("Compiler:") + "</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
-            + "</tr></table>"
-            + "<hr/>"
+            html += "<tr><td><b>" + qsTr("Compiler:") + "</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion()) + "</tr>";
+            var lk = RSettings.getStringValue("License/LicenseKey", "-");
+            if (lk.length>0) {
+                html += "<tr><td><b>" + qsTr("License Key:") + "</b> </td><td>%1</td>".arg(lk) + "</tr>";
+            }
+            html += "</table>";
+
+            html += "<hr/>"
             + "<p>" + qsTr("%1 is an application for computer-aided design (CAD).").arg(this.applicationName) + "</p>"
             + "<p/>";
 
@@ -441,6 +447,10 @@ About.prototype.initAboutSystem = function(textEdit) {
             .arg(RSettings.getMinorVersion())
             .arg(RSettings.getRevisionVersion())
             .arg(RSettings.getBuildVersion());
+    }
+    var lk = RSettings.getStringValue("License/LicenseKey", "-");
+    if (lk.length>0) {
+        text += "\nLicense Key: " + lk;
     }
     text += "\nDate: " + RSettings.getReleaseDate();
     text += "\nQt version: " + RSettings.getQtVersionString();
