@@ -72,6 +72,9 @@ public:
     static QString getPluginsPath();
     static bool hasPlugin(const QString& id);
 
+    static bool checkPluginLicenses();
+    static bool checkPluginLicense(QObject* plugin);
+
 private:
     static QList<RPluginInfo> pluginsInfo;
     static QStringList pluginFiles;

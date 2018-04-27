@@ -261,3 +261,35 @@ bool RPluginLoader::hasPlugin(const QString& id) {
     }
     return false;
 }
+
+bool RPluginLoader::checkPluginLicenses() {
+    bool ret = true;
+
+    foreach (QString fileName, getPluginFiles()) {
+        QPluginLoader loader(fileName);
+        QObject* plugin = loader.instance();
+        ret = ret && checkPluginLicense(plugin);
+    }
+
+    // check license of statically compiled in plugins:
+    QObjectList staticPlugins = QPluginLoader::staticInstances();
+    for (int i=0; i<staticPlugins.size(); i++) {
+        QObject* plugin = staticPlugins[i];
+        ret = ret && checkPluginLicense(plugin);
+    }
+
+    return ret;
+}
+
+bool RPluginLoader::checkPluginLicense(QObject* plugin) {
+    bool ret = true;
+
+    if (plugin) {
+        RPluginInterface* p = qobject_cast<RPluginInterface*>(plugin);
+        if (p) {
+            ret = p->checkLicense();
+        }
+    }
+
+    return ret;
+}

@@ -91,6 +91,11 @@ public:
      * This is typically used by an about dialog or debugging / developer tools.
      */
     virtual RPluginInfo getPluginInfo() = 0;
+
+    /**
+     * \return True if the plugin license is valid.
+     */
+    virtual bool checkLicense() = 0;
 };
 
 QT_BEGIN_NAMESPACE
