@@ -126,7 +126,7 @@ About.prototype.initAboutApp = function(textBrowser) {
                 html += "<tr><td><b>" + qsTr("Architecture:") + "</b> </td><td>%1</td>".arg(bca) + "</tr>";
             }
             html += "<tr><td><b>" + qsTr("Compiler:") + "</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion()) + "</tr>";
-            var lk = RSettings.getStringValue("License/LicenseKey", "-");
+            var lk = RSettings.getStringValue("License/LicenseKey", "");
             if (lk.length>0) {
                 html += "<tr><td><b>" + qsTr("License Key:") + "</b> </td><td>%1</td>".arg(lk) + "</tr>";
             }
@@ -448,7 +448,7 @@ About.prototype.initAboutSystem = function(textEdit) {
             .arg(RSettings.getRevisionVersion())
             .arg(RSettings.getBuildVersion());
     }
-    var lk = RSettings.getStringValue("License/LicenseKey", "-");
+    var lk = RSettings.getStringValue("License/LicenseKey", "");
     if (lk.length>0) {
         text += "\nLicense Key: " + lk;
     }
