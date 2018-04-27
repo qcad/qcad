@@ -186,6 +186,7 @@
     <function_decl><type><name>RVector</name></type> <name>operator /</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>operator -</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getNegated</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getAbsolute</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>double</name></type> <name>dot</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RVector</name>::<name>getDotProduct</name></name><argument_list>(<argument><expr>*<name>this</name></expr></argument>, <argument><expr><name>other</name></expr></argument>)</argument_list></call></expr>;</return>

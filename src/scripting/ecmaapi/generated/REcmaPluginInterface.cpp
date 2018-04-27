@@ -59,6 +59,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPluginInfo, "getPluginInfo");
             
+            REcmaHelper::registerFunction(&engine, proto, checkLicense, "checkLicense");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPluginInterface*>(), *proto);
 
@@ -391,6 +393,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginInterface::getPluginInfo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginInterface::checkLicense
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginInterface::checkLicense", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginInterface::checkLicense";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPluginInterface* self = 
+                        getSelf("checkLicense", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->checkLicense();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInterface.checkLicense().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginInterface::checkLicense", context, engine);
             return result;
         }
          QScriptValue REcmaPluginInterface::toString

@@ -210,6 +210,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getNegated, "getNegated");
             
+            REcmaHelper::registerFunction(&engine, proto, getAbsolute, "getAbsolute");
+            
             REcmaHelper::registerFunction(&engine, proto, dot, "dot");
             
             REcmaHelper::registerFunction(&engine, proto, normalize, "normalize");
@@ -5225,6 +5227,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::getNegated", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getAbsolute
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getAbsolute", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getAbsolute";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("getAbsolute", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getAbsolute();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getAbsolute().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getAbsolute", context, engine);
             return result;
         }
          QScriptValue

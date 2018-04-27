@@ -41,5 +41,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RPluginInfo" isPureVirtual="true" />
     </method>
+    <method name="checkLicense" cppName="checkLicense"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="true" />
+    </method>
   </class>
 </unit>

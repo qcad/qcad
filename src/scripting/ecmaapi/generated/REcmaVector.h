@@ -237,6 +237,9 @@
         getNegated
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAbsolute
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         dot
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
