@@ -155,11 +155,6 @@ Altura do Papel:</translatorcomment>
         <translation>Exiba as bordas do papel</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>0.5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show page borders</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Mostrar bordas da página</translation>

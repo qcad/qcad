@@ -15,8 +15,12 @@
     </message>
     <message>
         <location line="+9"/>
+        <source>Add and Delete Line</source>
+        <translation>Add and Delete Line</translation>
+    </message>
+    <message>
         <source>Add and delete line</source>
-        <translation>Add and delete line</translation>
+        <translation type="vanished">Add and delete line</translation>
     </message>
 </context>
 </TS>

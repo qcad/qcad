@@ -13,12 +13,12 @@
         <translation>Informazioni su %1</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+57"/>
         <source>Revision:</source>
         <translation>Revisione:</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+20"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
         <translation>%1 si basa su QCAD, un software libero (open source).</translation>
     </message>
@@ -69,14 +69,14 @@
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+111"/>
+        <location line="-123"/>
+        <location line="+116"/>
         <source>Version:</source>
         <translation>Versione:</translation>
     </message>
     <message>
-        <location line="-101"/>
-        <location line="+105"/>
+        <location line="-106"/>
+        <location line="+110"/>
         <source>Qt Version:</source>
         <translation>Versione Qt:</translation>
     </message>
@@ -90,29 +90,34 @@
         <translation>Licenza:</translation>
     </message>
     <message>
-        <location line="-115"/>
-        <location line="+124"/>
+        <location line="-120"/>
+        <location line="+129"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="-139"/>
         <source>Build Date:</source>
         <translation>Data Compilazione:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Architecture:</source>
         <translation>Architettura:</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Compiler:</source>
         <translation>Compilatore:</translation>
     </message>
     <message>
         <location line="+3"/>
+        <source>License Key:</source>
+        <translation>Chiave di licenza:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
         <translation>%1 è un&apos;applicazione per computer-aided design (CAD).</translation>
     </message>

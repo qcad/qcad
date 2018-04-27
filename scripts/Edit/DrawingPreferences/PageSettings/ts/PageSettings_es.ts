@@ -79,11 +79,6 @@
         <translation>Mostrar bordes de página</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>0.5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show page borders</source>
         <translation type="obsolete">Mostrar bordes de página</translation>
     </message>

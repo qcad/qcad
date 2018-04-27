@@ -15,7 +15,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>Add and delete line</source>
+        <source>Add and Delete Line</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

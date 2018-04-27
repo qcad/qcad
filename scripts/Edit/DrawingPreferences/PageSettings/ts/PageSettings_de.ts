@@ -108,11 +108,6 @@
         <translation>Papierrand anzeigen</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>0.5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show page borders</source>
         <translation type="obsolete">Seitenränder anzeigen</translation>
     </message>

@@ -22,7 +22,7 @@
         <translation>&amp;Arquivo</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+91"/>
         <location line="+69"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
