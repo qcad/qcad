@@ -1833,9 +1833,9 @@ ShapeAlgorithms.splineToLineOrArc = function(spline, tolerance, linesOnly) {
                 }
             }
 
-            if (splineIsArc && arc.getRadius()>1000.0) {
-                return new RLine(startPoint, endPoint);
-            }
+//            if (splineIsArc && arc.getRadius()>1000.0) {
+//                return new RLine(startPoint, endPoint);
+//            }
 
             if (splineIsArc) {
                 return arc;
