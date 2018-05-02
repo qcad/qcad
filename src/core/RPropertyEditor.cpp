@@ -50,11 +50,6 @@ RPropertyEditor::~RPropertyEditor() {
 void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
         RObject& object, RDocument* document) {
 
-//    qDebug() << "object:";
-//    object.dump();
-
-//    qDebug() << "propertyTypeId:" << propertyTypeId;
-
     RPropertyTypeId pid = propertyTypeId;
 
     QString propertyGroupTitle = propertyTypeId.getPropertyGroupTitle();
