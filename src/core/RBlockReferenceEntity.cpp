@@ -223,6 +223,10 @@ bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
                         continue;
                     }
 
+                    if (child->isUndone()) {
+                        continue;
+                    }
+
                     QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds();
                     QSet<RPropertyTypeId>::iterator it2;
                     for (it2=childProperties.begin(); it2!=childProperties.end(); it2++) {
