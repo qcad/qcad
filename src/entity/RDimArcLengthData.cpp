@@ -19,7 +19,7 @@
 #include "RDimArcLengthData.h"
 #include "RUnit.h"
 
-RDimArcLengthData::RDimArcLengthData() {
+RDimArcLengthData::RDimArcLengthData() : arcSymbolType(0) {
 }
 
 RDimArcLengthData::RDimArcLengthData(RDocument* document, const RDimArcLengthData& data)
