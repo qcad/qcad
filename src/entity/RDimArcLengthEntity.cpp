@@ -143,12 +143,7 @@ bool RDimArcLengthEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.definitionPoint.z, value, PropertyDimArcPositionZ == propertyTypeId);
 
     if (PropertyDimArcSymbolType == propertyTypeId) {
-//        if (value.type() == QVariant::Int) {
-            ret = ret || RObject::setMember(data.arcSymbolType, value.toInt(), true);
-//        }
-//        } else if (value.type() == QVariant::String) {
-//            ret = ret || RObject::setMember(data.arcSymbolType, toArcSymbolType(value.toString()), true);
-//        }
+        ret = ret || RObject::setMember(data.arcSymbolType, value.toInt(), true);
     }
 
     if (ret) {
