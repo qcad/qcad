@@ -514,9 +514,5 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyHeight" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="TrClockwise" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="TrCounterclockwise" type="QString"
-    isConst="false" isStatic="true" />
   </class>
 </unit>
