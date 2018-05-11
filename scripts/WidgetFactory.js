@@ -1203,6 +1203,27 @@ WidgetFactory.initVAlignCombo = function(comboBox) {
     comboBox.addItem(qsTr("Bottom"), RS.VAlignBottom);
 };
 
+WidgetFactory.initOrientationCombo = function(comboBox) {
+    comboBox.clear();
+
+    if (RSettings.isQt(5)) {
+        comboBox.addItem("↻ " + qsTr("Clockwise"), RS.CW);
+        comboBox.addItem("↺ " + qsTr("Counterclockwise"), RS.CCW);
+    }
+    else {
+        comboBox.addItem(qsTr("Clockwise"), RS.CW);
+        comboBox.addItem(qsTr("Counterclockwise"), RS.CCW);
+    }
+};
+
+WidgetFactory.initArcSymbolTypeCombo = function(comboBox) {
+    comboBox.clear();
+
+    comboBox.addItem(qsTr("Preceding"), 0);
+    comboBox.addItem(qsTr("Above"), 1);
+    comboBox.addItem(qsTr("None"), 2);
+};
+
 WidgetFactory.installComboBoxEventFilter = function(widget) {
     if (isNull(widget)) {
         return;

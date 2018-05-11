@@ -78,8 +78,8 @@ public:
     static RPropertyTypeId PropertyWidth;
     static RPropertyTypeId PropertyHeight;
 
-    static QString TrClockwise;
-    static QString TrCounterclockwise;
+//    static QString TrClockwise;
+//    static QString TrCounterclockwise;
 
 public:
     RPolylineEntity(RDocument* document, const RPolylineData& data);
