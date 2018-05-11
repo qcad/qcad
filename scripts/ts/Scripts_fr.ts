@@ -399,6 +399,33 @@
         <source>Bottom</source>
         <translation>En bas</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <location line="+4"/>
+        <source>Clockwise</source>
+        <translation>Sens horaire</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+4"/>
+        <source>Counterclockwise</source>
+        <translation>Sens antihoraire</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Preceding</source>
+        <translation>Précédent</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Above</source>
+        <translation>Au-dessus</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>None</source>
+        <translation>Aucun</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -469,7 +496,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+818"/>
+        <location filename="../library.js" line="+829"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>

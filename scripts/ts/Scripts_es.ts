@@ -399,6 +399,33 @@
         <source>Bottom</source>
         <translation>Parte inferior</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <location line="+4"/>
+        <source>Clockwise</source>
+        <translation>Sentido horario</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+4"/>
+        <source>Counterclockwise</source>
+        <translation>Sentido antihorario</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Preceding</source>
+        <translation>Precedente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Above</source>
+        <translation>Arriba</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>None</source>
+        <translation>Ninguno</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -469,7 +496,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+818"/>
+        <location filename="../library.js" line="+829"/>
         <source>Objects</source>
         <translation>Objetos</translation>
     </message>

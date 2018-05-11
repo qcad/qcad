@@ -102,7 +102,7 @@
         <translation>No</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+315"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>

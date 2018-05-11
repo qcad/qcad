@@ -13,6 +13,9 @@
         <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+97"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+102"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+97"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -37,6 +40,8 @@
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-2"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="+98"/>
@@ -104,6 +109,8 @@
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-15"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-6"/>
@@ -171,6 +178,8 @@
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-15"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-6"/>
@@ -392,6 +401,9 @@
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
@@ -731,19 +743,15 @@
         <translation>Arrow Block</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-64"/>
-        <location line="+3"/>
         <source>Clockwise</source>
-        <translation>Clockwise</translation>
+        <translation type="vanished">Clockwise</translation>
     </message>
     <message>
-        <location line="-2"/>
-        <location line="+3"/>
         <source>Counterclockwise</source>
-        <translation>Counterclockwise</translation>
+        <translation type="vanished">Counterclockwise</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-21"/>
         <source>Polyline Pattern</source>
         <translation>Polyline Pattern</translation>
     </message>
@@ -882,6 +890,11 @@
         <location line="+1"/>
         <source>End Tangent</source>
         <translation>End Tangent</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+2"/>
+        <source>Arc Symbol Type</source>
+        <translation>Arc Symbol Type</translation>
     </message>
 </context>
 </TS>

@@ -35,13 +35,13 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1337"/>
+        <location filename="../PropertyEditor.js" line="+1343"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1144"/>
+        <location line="-1150"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -109,7 +109,7 @@ Czy chcesz zamknąć plik
         <translation>Wszystkie</translation>
     </message>
     <message>
-        <location line="+644"/>
+        <location line="+650"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -119,7 +119,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-622"/>
+        <location line="-628"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -232,7 +232,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+318"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

@@ -72,6 +72,8 @@ Altura del Texto:</translatorcomment>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+102"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="+98"/>
@@ -139,6 +141,9 @@ Exportando el dibujo...</translatorcomment>
         <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-16"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-16"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-4"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -167,6 +172,8 @@ Arco: centro, punto, ángulos
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-1"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-6"/>
@@ -239,6 +246,8 @@ Ubicando las Bibliotecas
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-15"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-6"/>
@@ -633,19 +642,15 @@ Punto final (y):</translatorcomment>
         <translation>Punto final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-59"/>
-        <location line="+3"/>
         <source>Clockwise</source>
-        <translation>Sentido horario</translation>
+        <translation type="vanished">Sentido horario</translation>
     </message>
     <message>
-        <location line="-2"/>
-        <location line="+3"/>
         <source>Counterclockwise</source>
-        <translation>Sentido antihorario</translation>
+        <translation type="vanished">Sentido antihorario</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-16"/>
         <source>Polyline Pattern</source>
         <translation>Patrón polilínea</translation>
     </message>
@@ -879,6 +884,9 @@ Punto de Extensión 2|Y</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
@@ -1170,6 +1178,11 @@ Punto 4|Y</translatorcomment>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
         <translation>Invisible</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+2"/>
+        <source>Arc Symbol Type</source>
+        <translation>Símbolo de arco</translation>
     </message>
 </context>
 </TS>

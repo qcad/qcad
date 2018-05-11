@@ -371,6 +371,33 @@
         <source>Bottom</source>
         <translation>下</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <location line="+4"/>
+        <source>Clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+4"/>
+        <source>Counterclockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Preceding</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Above</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>None</source>
+        <translation type="unfinished">なし</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -402,7 +429,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+818"/>
+        <location filename="../library.js" line="+829"/>
         <source>Objects</source>
         <translation>オブジェクト</translation>
     </message>

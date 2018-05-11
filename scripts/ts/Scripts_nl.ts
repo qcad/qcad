@@ -367,6 +367,33 @@
         <source>Bottom</source>
         <translation>Onderkant</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <location line="+4"/>
+        <source>Clockwise</source>
+        <translation>Rechtsom</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+4"/>
+        <source>Counterclockwise</source>
+        <translation>Linksom</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Preceding</source>
+        <translation>Voorafgaand</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Above</source>
+        <translation>Boven</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>None</source>
+        <translation>Geen</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -398,7 +425,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+818"/>
+        <location filename="../library.js" line="+829"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
