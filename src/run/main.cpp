@@ -46,6 +46,7 @@
 #include "RDimAngularEntity.h"
 #include "RDimAngular2LEntity.h"
 #include "RDimAngular3PEntity.h"
+#include "RDimArcLengthEntity.h"
 #include "RDimDiametricEntity.h"
 #include "RDimOrdinateEntity.h"
 #include "RDimRadialEntity.h"
@@ -251,6 +252,7 @@ int main(int argc, char *argv[]) {
     RDimAngularEntity::init();
     RDimAngular2LEntity::init();
     RDimAngular3PEntity::init();
+    RDimArcLengthEntity::init();
     RDimDiametricEntity::init();
     RDimOrdinateEntity::init();
     RDimRadialEntity::init();
