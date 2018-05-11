@@ -82,10 +82,6 @@ public:
 
     static RPropertyTypeId PropertyDimArcSymbolType;
 
-//    static QString TrPreceding;
-//    static QString TrAbove;
-//    static QString TrNone;
-
 public:
     RDimArcLengthEntity(RDocument* document, const RDimArcLengthData& data);
     virtual ~RDimArcLengthEntity();
@@ -125,9 +121,6 @@ public:
     RVector getCenter() const {
         return getData().getCenter();
     }
-
-//    static QString toArcSymbolTypeName(int arcSymbolType);
-//    static int toArcSymbolType(const QString& name);
 
 protected:
     virtual void print(QDebug dbg) const;

@@ -194,44 +194,11 @@ QPair<QVariant, RPropertyAttributes> RDimArcLengthEntity::getProperty(
     }
 
     if (propertyTypeId == PropertyDimArcSymbolType) {
-//        if (humanReadable) {
-//            RPropertyAttributes attr;
-//            if (!noAttributes) {
-//                attr.setChoices(QSet<QString>() << toArcSymbolTypeName(0) << toArcSymbolTypeName(1) << toArcSymbolTypeName(2));
-//            }
-//            QString str = toArcSymbolTypeName(data.arcSymbolType);
-//            return qMakePair(QVariant(str), attr);
-//        }
-//        else {
-            return qMakePair(QVariant(data.arcSymbolType), RPropertyAttributes());
-//        }
+        return qMakePair(QVariant(data.arcSymbolType), RPropertyAttributes());
     }
 
     return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
-
-//QString RDimArcLengthEntity::toArcSymbolTypeName(int arcSymbolType) {
-//    switch (arcSymbolType) {
-//    case 0:
-//        return TrPreceding;
-//    case 1:
-//        return TrAbove;
-//    case 2:
-//        return TrNone;
-//    }
-//}
-
-//int RDimArcLengthEntity::toArcSymbolType(const QString& name) {
-//    if (name.toLower()==TrNone.toLower()) {
-//        return 2;
-//    }
-//    else if (name.toLower()==TrAbove.toLower()) {
-//        return 1;
-//    }
-//    else {
-//        return 0;
-//    }
-//}
 
 void RDimArcLengthEntity::print(QDebug dbg) const {
     dbg.nospace() << "RDimArcLengthEntity(";
