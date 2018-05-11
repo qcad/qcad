@@ -281,6 +281,7 @@ function isEntity(obj) {
 function isDimensionEntity(obj) {
     return isDimAlignedEntity(obj)
         || isDimAngularEntity(obj)
+        || isDimArcLengthEntity(obj)
         || isDimDiametricEntity(obj)
         || isDimLinearEntity(obj)
         || isDimOrdinateEntity(obj)
@@ -366,6 +367,16 @@ function isDimAngular2LEntity(obj) {
  */
 function isDimAngular3PEntity(obj) {
     return isOfType(obj, RDimAngular3PEntity) || isOfType(obj, RDimAngular3PEntityPointer);
+}
+
+/**
+ * Checks if the given object is an arc length dimension entity.
+ *
+ * \return true if the given object is an arc length dimension entity
+ * (RDimArcLengthEntity).
+ */
+function isDimArcLengthEntity(obj) {
+    return isOfType(obj, RDimArcLengthEntity) || isOfType(obj, RDimArcLengthEntityPointer);
 }
 
 /**
@@ -855,6 +866,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("2 Line Angular Dimensions") : qsTr("2 Line Angular Dimension");
     case RS.EntityDimAngular3P:
         return plural ? qsTr("3 Point Angular Dimensions") : qsTr("3 Point Angular Dimension");
+    case RS.EntityDimArcLength:
+        return plural ? qsTr("Arc Dimension") : qsTr("Arc Dimension");
     case RS.EntityDimDiametric:
         return plural ? qsTr("Diametric Dimensions") : qsTr("Diametric Dimension");
     case RS.EntityDimOrdinate:

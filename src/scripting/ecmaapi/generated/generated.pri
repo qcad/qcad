@@ -46,6 +46,8 @@ HEADERS += \
     $$PWD/REcmaDimAngular3PEntity.h \
     $$PWD/REcmaDimAngularData.h \
     $$PWD/REcmaDimAngularEntity.h \
+    $$PWD/REcmaDimArcLengthData.h \
+    $$PWD/REcmaDimArcLengthEntity.h \
     $$PWD/REcmaDimDiametricData.h \
     $$PWD/REcmaDimDiametricEntity.h \
     $$PWD/REcmaDimLinearData.h \
@@ -227,6 +229,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerDimAngular2LEntity.h \
     $$PWD/REcmaSharedPointerDimAngular3PEntity.h \
     $$PWD/REcmaSharedPointerDimAngularEntity.h \
+    $$PWD/REcmaSharedPointerDimArcLengthEntity.h \
     $$PWD/REcmaSharedPointerDimDiametricEntity.h \
     $$PWD/REcmaSharedPointerDimLinearEntity.h \
     $$PWD/REcmaSharedPointerDimOrdinateEntity.h \
@@ -413,6 +416,8 @@ SOURCES += \
     $$PWD/REcmaDimAngular3PEntity.cpp \
     $$PWD/REcmaDimAngularData.cpp \
     $$PWD/REcmaDimAngularEntity.cpp \
+    $$PWD/REcmaDimArcLengthData.cpp \
+    $$PWD/REcmaDimArcLengthEntity.cpp \
     $$PWD/REcmaDimDiametricData.cpp \
     $$PWD/REcmaDimDiametricEntity.cpp \
     $$PWD/REcmaDimLinearData.cpp \
@@ -594,6 +599,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerDimAngular2LEntity.cpp \
     $$PWD/REcmaSharedPointerDimAngular3PEntity.cpp \
     $$PWD/REcmaSharedPointerDimAngularEntity.cpp \
+    $$PWD/REcmaSharedPointerDimArcLengthEntity.cpp \
     $$PWD/REcmaSharedPointerDimDiametricEntity.cpp \
     $$PWD/REcmaSharedPointerDimLinearEntity.cpp \
     $$PWD/REcmaSharedPointerDimOrdinateEntity.cpp \

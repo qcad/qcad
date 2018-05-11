@@ -92,6 +92,8 @@
 #include "REcmaDimAngular2LEntity.h"
 #include "REcmaDimAngular3PData.h"
 #include "REcmaDimAngular3PEntity.h"
+#include "REcmaDimArcLengthData.h"
+#include "REcmaDimArcLengthEntity.h"
 #include "REcmaDimDiametricData.h"
 #include "REcmaDimDiametricEntity.h"
 #include "REcmaDimLinearData.h"
@@ -258,6 +260,7 @@
 #include "REcmaSharedPointerDimAngularEntity.h"
 #include "REcmaSharedPointerDimAngular2LEntity.h"
 #include "REcmaSharedPointerDimAngular3PEntity.h"
+#include "REcmaSharedPointerDimArcLengthEntity.h"
 #include "REcmaSharedPointerDimDiametricEntity.h"
 #include "REcmaSharedPointerDimLinearEntity.h"
 #include "REcmaSharedPointerDimOrdinateEntity.h"
@@ -839,6 +842,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaDimAngular3PData::initEcma(*engine);
     REcmaDimAngular3PEntity::initEcma(*engine);
     REcmaSharedPointerDimAngular3PEntity::initEcma(*engine);
+
+    REcmaDimArcLengthData::initEcma(*engine);
+    REcmaDimArcLengthEntity::initEcma(*engine);
+    REcmaSharedPointerDimArcLengthEntity::initEcma(*engine);
 
     REcmaDimDiametricData::initEcma(*engine);
     REcmaDimDiametricEntity::initEcma(*engine);
