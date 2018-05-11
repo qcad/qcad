@@ -369,9 +369,5 @@ double RDimAngularData::getMeasuredValue() const {
 }
 
 QString RDimAngularData::getAutoLabel() const {
-    QString ret;
-
-    ret = formatAngleLabel(getMeasuredValue());
-
-    return ret;
+    return formatAngleLabel(getMeasuredValue());
 }
