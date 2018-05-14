@@ -686,6 +686,9 @@ void RTextRenderer::render() {
                     // s==0: superscript, s==1: subscript:
                     for (int s=0; s<=1; ++s) {
                         QString script = reg.cap(s+1);
+                        if (script.isEmpty()) {
+                            continue;
+                        }
 
                         QList<RPainterPath> paths;
 
@@ -909,7 +912,10 @@ void RTextRenderer::render() {
                     //if (!xFeed) {
                         // TODO: don't count line after xfeed for vertical alignment:
                     //}
-                    boundingBox.growToInclude(p.getBoundingBox());
+                    RBox bb = p.getBoundingBox();
+                    if (bb.isSane() && !bb.getSize().isZero()) {
+                        boundingBox.growToInclude(bb);
+                    }
                 }
 
                 // add bounding box painter path for whole line for speedy rendering of very small texts:
@@ -1253,7 +1259,10 @@ void RTextRenderer::render() {
         boundingBox = RBox();
         for (int i=0; i<painterPaths.length(); ++i) {
             painterPaths[i].transform(globalTransform);
-            boundingBox.growToInclude(painterPaths[i].getBoundingBox());
+            RBox bb = painterPaths[i].getBoundingBox();
+            if (bb.isSane() && !bb.getSize().isZero()) {
+                boundingBox.growToInclude(bb);
+            }
         }
 
         int k=0;
@@ -1262,14 +1271,20 @@ void RTextRenderer::render() {
             textLayouts[i].boundingBox = RBox();
             if (textLayouts[i].correspondingPainterPaths==0) {
                 if (k<painterPaths.length()) {
-                    textLayouts[i].boundingBox.growToInclude(painterPaths[k].getBoundingBox());
+                    RBox bb = painterPaths[k].getBoundingBox();
+                    if (bb.isSane() && !bb.getSize().isZero()) {
+                        textLayouts[i].boundingBox.growToInclude(bb);
+                    }
                 }
                 k++;
             }
             else {
                 for (int n=0; n<textLayouts[i].correspondingPainterPaths; n++) {
                     if (k<painterPaths.length()) {
-                        textLayouts[i].boundingBox.growToInclude(painterPaths[k].getBoundingBox());
+                        RBox bb = painterPaths[k].getBoundingBox();
+                        if (bb.isSane() && !bb.getSize().isZero()) {
+                            textLayouts[i].boundingBox.growToInclude(bb);
+                        }
                         k++;
                     }
                 }
