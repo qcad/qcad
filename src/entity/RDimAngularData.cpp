@@ -386,7 +386,11 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         textPos = textPositionCenter;
     } else {
         // move text away from dimension line:
-        textPos+=distV;
+        double f = 1.0;
+        if (getMeasurement().contains("\\P")) {
+            f = 2.0;
+        }
+        textPos+=distV*f;
 
         textPositionCenter = textPos;
     }
