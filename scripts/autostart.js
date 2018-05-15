@@ -326,7 +326,7 @@ function loadTranslations(addOns, splash) {
         QCoreApplication.processEvents();
     }
 
-    RSettings.loadTranslations("Scripts_" + locale, ["scripts/ts"]);
+    RSettings.loadTranslations("Scripts_" + locale, [autoPath("scripts/ts")]);
 
     for (var i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
