@@ -157,35 +157,21 @@ double RDimArcLengthData::getMeasuredValue() const {
 }
 
 QString RDimArcLengthData::getAutoLabel() const {
-    return formatArcLabel(getMeasuredValue());
+    return formatLabel(getMeasuredValue());
 }
 
-QString RDimArcLengthData::formatArcLabel(double length) const {
+QString RDimArcLengthData::getMeasurement(bool resolveAutoMeasurement) const {
     QString ret;
-    if (arcSymbolType==0) {
+    if (arcSymbolType==0 && resolveAutoMeasurement) {
         // arc symbol in front:
-        ret = QString("{\\Fqcadshp|c0;%1}%2").arg(QChar(0x2312)).arg(length);
+        ret = QString("{\\Fqcadshp|c0;%1}%2").arg(QChar(0x2312)).arg(RDimAngularData::getMeasurement(resolveAutoMeasurement));
     }
-    else if (arcSymbolType==1) {
+    else if (arcSymbolType==1 && resolveAutoMeasurement) {
         // arc symbol above:
-        //ret = QString("{\\Fqcadshp|c0;%1}\\P%2").arg(QChar(0x2322)).arg(length);
-        ret = QString("{\\Fqcadshp|c0;%1}%2").arg(QChar(0x2322)).arg(length);
+        ret = QString("{\\Fqcadshp|c0;%1}\\P%2").arg(QChar(0x2322)).arg(RDimAngularData::getMeasurement(resolveAutoMeasurement));
     }
     else {
-        ret = QString("%1").arg(length);
+        ret = RDimAngularData::getMeasurement(resolveAutoMeasurement);
     }
     return ret;
 }
-
-//QList<QSharedPointer<RShape> > RDimArcLengthData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
-//    QList<QSharedPointer<RShape> > ret = RDimAngularData::getShapes(queryBox, ignoreComplex, segment);
-
-//    // add arc symbol in front:
-//    if (arcSymbolType==0) {
-//        RTextData& textData = getTextData();
-//        RBox bb = textData.getBoundingBox(false);
-//        qDebug();
-//    }
-
-//    return ret;
-//}
