@@ -61,11 +61,6 @@ RPropertyTypeId RDimArcLengthEntity::PropertyDimArcPositionZ;
 
 RPropertyTypeId RDimArcLengthEntity::PropertyDimArcSymbolType;
 
-//QString RDimArcLengthEntity::TrPreceding = QT_TRANSLATE_NOOP("REntity", "Preceding");
-//QString RDimArcLengthEntity::TrAbove = QT_TRANSLATE_NOOP("REntity", "Above");
-//QString RDimArcLengthEntity::TrNone = QT_TRANSLATE_NOOP("REntity", "None");
-
-
 RDimArcLengthEntity::RDimArcLengthEntity(RDocument* document, const RDimArcLengthData& data) :
     RDimAngularEntity(document), data(document, data) {
 }
