@@ -112,7 +112,7 @@ public:
 
     virtual double getMeasuredValue() const;
     virtual QString getAutoLabel() const;
-    QString formatArcLabel(double length) const;
+    virtual QString getMeasurement(bool resolveAutoMeasurement = true) const;
 
 private:
     /** Start point of first extension line. */
