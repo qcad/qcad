@@ -120,7 +120,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAutoLabel, "getAutoLabel");
             
-            REcmaHelper::registerFunction(&engine, proto, formatArcLabel, "formatArcLabel");
+            REcmaHelper::registerFunction(&engine, proto, getMeasurement, "getMeasurement");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RDimArcLengthData*>(), *proto);
@@ -1923,19 +1923,19 @@
             return result;
         }
          QScriptValue
-        REcmaDimArcLengthData::formatArcLabel
+        REcmaDimArcLengthData::getMeasurement
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimArcLengthData::formatArcLabel", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimArcLengthData::formatArcLabel";
+            //REcmaHelper::functionStart("REcmaDimArcLengthData::getMeasurement", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimArcLengthData::getMeasurement";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimArcLengthData* self = 
-                        getSelf("formatArcLabel", context);
+                        getSelf("getMeasurement", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1945,20 +1945,41 @@
                 
     
     if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getMeasurement();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
     1 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
+            context->argument(0).isBool()
+        ) /* type: bool */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    double
+                    bool
                     a0 =
-                    (double)
+                    (bool)
                     
                     context->argument( 0 ).
-                    toNumber();
+                    toBool();
                 
     // end of arguments
 
@@ -1966,7 +1987,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->formatArcLabel(a0);
+               self->getMeasurement(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1976,10 +1997,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimArcLengthData.formatArcLabel().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimArcLengthData.getMeasurement().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimArcLengthData::formatArcLabel", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimArcLengthData::getMeasurement", context, engine);
             return result;
         }
          QScriptValue REcmaDimArcLengthData::toString

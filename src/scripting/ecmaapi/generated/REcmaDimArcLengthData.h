@@ -121,7 +121,7 @@
         getAutoLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        formatArcLabel
+        getMeasurement
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
