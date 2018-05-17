@@ -127,6 +127,9 @@
         getSideOfPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTrimEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
