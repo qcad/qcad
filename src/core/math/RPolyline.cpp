@@ -1280,11 +1280,14 @@ RBox RPolyline::getBoundingBox() const {
  * \author Robert S.
  */
 double RPolyline::getArea() const {
-//    double control = 0.0;
-//    if (polylineProxy!=NULL) {
-//        control = polylineProxy->getArea(*this, 0.01);
-//    }
+    double control = 0.0;
+    if (polylineProxy!=NULL) {
+        control = polylineProxy->getArea(*this, 0.01);
+    }
 
+    /*
+    // fails for certain cases
+    // see FS#1756 - Faults with the area of Polylines with arcs
     RPolyline closedCopy = *this;
     if (!closedCopy.isGeometricallyClosed()) {
         closedCopy.setClosed(true);
@@ -1333,6 +1336,7 @@ double RPolyline::getArea() const {
     area = fabs(area);
     //qDebug() << "error: " << fabs(area - control);
     return area;
+    */
 }
 
 double RPolyline::getLength() const {
