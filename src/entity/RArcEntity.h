@@ -168,6 +168,10 @@ public:
         return data.getSideOfPoint(point);
     }
 
+    double getSweep() const {
+        return data.getSweep();
+    }
+
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
         return data.getTrimEnd(trimPoint, clickPoint);
     }
