@@ -199,7 +199,10 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
     } else if (propertyTypeId == PropertyAngleN) {
         QVariant v;
         v.setValue(data.getVertexAngles());
-        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List|RPropertyAttributes::Angle));
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List |
+                                                RPropertyAttributes::Angle |
+                                                RPropertyAttributes::Redundant |
+                                                RPropertyAttributes::ReadOnly));
     } else if (RPolyline::hasProxy() && propertyTypeId == PropertyStartWidthN) {
         QVariant v;
         v.setValue(data.startWidths);
