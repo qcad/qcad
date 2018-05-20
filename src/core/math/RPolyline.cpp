@@ -1280,10 +1280,11 @@ RBox RPolyline::getBoundingBox() const {
  * \author Robert S.
  */
 double RPolyline::getArea() const {
-    double control = 0.0;
+    double ret = 0.0;
     if (polylineProxy!=NULL) {
-        control = polylineProxy->getArea(*this, 0.01);
+        ret = polylineProxy->getArea(*this, 0.01);
     }
+    return ret;
 
     /*
     // fails for certain cases
