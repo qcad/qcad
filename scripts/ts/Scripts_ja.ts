@@ -630,6 +630,11 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Diametric Dimensions</source>
         <translation>直径寸法</translation>
     </message>

@@ -704,6 +704,11 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Dimensión del arco</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Diametric Dimension</source>
         <translation>Cota diametral</translation>
     </message>

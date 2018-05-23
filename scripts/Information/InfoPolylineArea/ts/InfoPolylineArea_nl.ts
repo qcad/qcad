@@ -14,7 +14,7 @@
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Area</source>
         <translation>Oppervlakte</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Omtrek</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Polyline area:</source>
         <translation>Oppervlakte:</translation>
     </message>

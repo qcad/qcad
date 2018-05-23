@@ -14,7 +14,7 @@
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Area</source>
         <translation>Plocha</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Obvod</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Polyline area:</source>
         <translation>Plocha krivky:</translation>
     </message>

@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1343"/>
+        <location filename="../PropertyEditor.js" line="+1350"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1157"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+635"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>

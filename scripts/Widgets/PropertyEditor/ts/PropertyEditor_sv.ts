@@ -37,12 +37,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1343"/>
+        <location filename="../PropertyEditor.js" line="+1350"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1157"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -87,7 +87,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+149"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>

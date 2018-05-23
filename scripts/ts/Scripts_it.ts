@@ -700,6 +700,11 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
     </message>
     <message>
         <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Dimensione d&apos;arco</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Diametric Dimension</source>
         <translation>Quota diametro</translation>
     </message>

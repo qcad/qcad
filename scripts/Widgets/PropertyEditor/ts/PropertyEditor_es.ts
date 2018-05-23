@@ -67,13 +67,13 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+632"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1157"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -131,7 +131,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+657"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>

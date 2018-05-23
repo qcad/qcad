@@ -793,6 +793,11 @@ Desenhe dimensão angular</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Dimensão do arco</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Diametric Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Dimensões de Diâmetros</translation>

@@ -761,6 +761,11 @@ Wymiar kątowy</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Diametric Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wymiary średnicowe</translation>

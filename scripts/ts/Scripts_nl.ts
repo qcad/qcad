@@ -626,6 +626,11 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Boog bemating</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Diametric Dimensions</source>
         <translation>Diametrische bemating</translation>
     </message>

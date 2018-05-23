@@ -14,7 +14,7 @@
         <translation>Fertig</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Area</source>
         <translation>Fläche</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Umfang</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Polyline area:</source>
         <translation>Polylinienfläche:</translation>
     </message>

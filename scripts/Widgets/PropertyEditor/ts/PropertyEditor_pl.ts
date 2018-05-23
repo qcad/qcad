@@ -35,13 +35,13 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1343"/>
+        <location filename="../PropertyEditor.js" line="+1350"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1157"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -109,7 +109,7 @@ Czy chcesz zamknąć plik
         <translation>Wszystkie</translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+657"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -119,7 +119,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-628"/>
+        <location line="-635"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -197,7 +197,7 @@ Dół - prawo</translatorcomment>
         <translation type="obsolete">W dół</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+149"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--

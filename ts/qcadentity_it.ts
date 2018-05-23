@@ -82,7 +82,7 @@ Altezza Testo:</translatorcomment>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+102"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+97"/>
         <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
         <location line="+4"/>
@@ -1196,7 +1196,7 @@ Punto 4|Y</translatorcomment>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+2"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished">Simbolo arco</translation>
+        <translation>Simbolo arco</translation>
     </message>
 </context>
 </TS>

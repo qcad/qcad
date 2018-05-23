@@ -614,6 +614,11 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Arc Dimension</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Diametric Dimensions</source>
         <translation>Diametric Dimensions</translation>
     </message>

@@ -82,7 +82,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+149"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>

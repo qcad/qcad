@@ -712,6 +712,11 @@ Dessine des cercles avec 2 points</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Cotation de l&apos;arc</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Diametric Dimension</source>
         <translation>Cotation diamétrale</translation>
     </message>

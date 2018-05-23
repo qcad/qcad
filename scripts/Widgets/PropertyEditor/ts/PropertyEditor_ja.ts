@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1343"/>
+        <location filename="../PropertyEditor.js" line="+1350"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1157"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -71,7 +71,7 @@
         <translation>全て</translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+657"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -80,12 +80,12 @@
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-628"/>
+        <location line="-635"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+149"/>
         <source>Auto</source>
         <translation>自動</translation>
     </message>

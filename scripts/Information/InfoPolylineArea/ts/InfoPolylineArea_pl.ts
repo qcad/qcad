@@ -14,7 +14,7 @@
         <translation>Zrobione</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Area</source>
         <translation>Pole powierzchni</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Obwód</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Polyline area:</source>
         <translation>Pole powierzchni linii łamanej:</translation>
     </message>
