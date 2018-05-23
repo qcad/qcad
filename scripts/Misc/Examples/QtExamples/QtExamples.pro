@@ -5,4 +5,5 @@ SUBDIRS = \
     ExDirListing \
     ExMainWindow \
     ExResizeWindow \
-    ExProcess
+    ExProcess \
+    ExWidget
