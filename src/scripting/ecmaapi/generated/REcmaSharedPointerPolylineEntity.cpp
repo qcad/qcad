@@ -324,14 +324,6 @@
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyHeight),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("TrClockwise",
-                qScriptValueFromValue(&engine, RPolylineEntity::TrClockwise),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("TrCounterclockwise",
-                qScriptValueFromValue(&engine, RPolylineEntity::TrCounterclockwise),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
 
     // enum values:
     

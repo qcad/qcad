@@ -42,7 +42,10 @@ ToolBarPreferences.applyPreferences = function(doc) {
     }
 
     var optionsToolBar = EAction.getOptionsToolBar();
-    optionsToolBar.setFixedHeight(s+6);
+    var ftb = EAction.getMainWindow().findChild("FileToolBar");
+    if (!isNull(ftb)) {
+        optionsToolBar.setFixedHeight(ftb.sizeHint.height());
+    }
 };
 
 ToolBarPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {

@@ -395,6 +395,33 @@
         <source>Bottom</source>
         <translation>Sotto</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <location line="+4"/>
+        <source>Clockwise</source>
+        <translation>Senso orario</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+4"/>
+        <source>Counterclockwise</source>
+        <translation>Senso antiorario</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Preceding</source>
+        <translation>Precedente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Above</source>
+        <translation>Sopra</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>None</source>
+        <translation>Niente</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -465,7 +492,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+818"/>
+        <location filename="../library.js" line="+829"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>
@@ -670,6 +697,11 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
         <location line="+0"/>
         <source>3 Point Angular Dimension</source>
         <translation>Quota angolare 3 punti</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Dimensione d&apos;arco</translation>
     </message>
     <message>
         <location line="+2"/>

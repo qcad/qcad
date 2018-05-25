@@ -114,6 +114,7 @@ public:
         EntityDimAngular,   /**< Angular Dimension */
         EntityDimAngular2L, /**< Angular Dimension from 2 lines */
         EntityDimAngular3P, /**< Angular Dimension from 3 points */
+        EntityDimArcLength, /**< Arc Length Dimension */
         EntityDimOrdinate,  /**< Ordinate Dimension */
         EntityHatch,        /**< Hatch */
         EntityImage,        /**< Image */

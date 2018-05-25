@@ -765,19 +765,26 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
     if (propertyTypeId.getId()===RTextEntity.PropertyHAlign.getId()) {
         controls = this.initChoiceControls(
                     objectName, propertyTypeId, onlyChanges, control, false, true);
-//                    [ qsTr("Left"), qsTr("Center"), qsTr("Right"),
-//                      qsTr("Aligned"), qsTr("Middle"), qsTr("Fit")],
-//                    [ RS.HAlignLeft, RS.HAlignCenter, RS.HAlignRight,
-//                      RS.HAlignAlign, RS.HAlignMid, RS.HAlignFit]);
     }
 
     // Vertical alignment: combo box:
     else if (propertyTypeId.getId()===RTextEntity.PropertyVAlign.getId()) {
         controls = this.initChoiceControls(
                     objectName, propertyTypeId, onlyChanges, control, false, true);
-//                    [qsTr("Top"), qsTr("Middle"), qsTr("Base"), qsTr("Bottom")],
-//                    [RS.VAlignTop, RS.VAlignMiddle, RS.VAlignBase, RS.VAlignBottom]);
     }
+
+    // Polyline orientation: combo box:
+    else if (propertyTypeId.getId()===RPolylineEntity.PropertyOrientation.getId()) {
+        controls = this.initChoiceControls(
+                    objectName, propertyTypeId, onlyChanges, control, false, true);
+    }
+
+    // Arc dimension arc symbol type: combo box:
+    else if (propertyTypeId.getId()===RDimArcLengthEntity.PropertyDimArcSymbolType.getId()) {
+        controls = this.initChoiceControls(
+                    objectName, propertyTypeId, onlyChanges, control, false, true);
+    }
+
 
     // Hatch pattern: combo box with hatch names:
     else if (propertyTypeId.getId()===RHatchEntity.PropertyPatternName.getId()) {
@@ -1112,6 +1119,12 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     }
     else if (propertyTypeId.getId()===RTextEntity.PropertyVAlign.getId()) {
         WidgetFactory.initVAlignCombo(control);
+    }
+    else if (propertyTypeId.getId()===RPolylineEntity.PropertyOrientation.getId()) {
+        WidgetFactory.initOrientationCombo(control);
+    }
+    else if (propertyTypeId.getId()===RDimArcLengthEntity.PropertyDimArcSymbolType.getId()) {
+        WidgetFactory.initArcSymbolTypeCombo(control);
     }
     else if (isOfType(control, QComboBox) /*&& propertyTypeId.getId()!==REntity.PropertyLayer.getId()*/) {
         control.clear();

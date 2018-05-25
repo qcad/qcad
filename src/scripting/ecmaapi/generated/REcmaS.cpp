@@ -313,6 +313,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityDimArcLength",
+    QScriptValue(RS::EntityDimArcLength),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityDimOrdinate",
     QScriptValue(RS::EntityDimOrdinate),
     QScriptValue::ReadOnly);

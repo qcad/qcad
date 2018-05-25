@@ -14,6 +14,8 @@ SOURCES = \
     RDimAngular2LEntity.cpp \
     RDimAngular3PData.cpp \
     RDimAngular3PEntity.cpp \
+    RDimArcLengthData.cpp \
+    RDimArcLengthEntity.cpp \
     RDimAngularData.cpp \
     RDimAngularEntity.cpp \
     RDimDiametricData.cpp \
@@ -72,6 +74,8 @@ HEADERS = \
     RDimAngular2LEntity.h \
     RDimAngular3PData.h \
     RDimAngular3PEntity.h \
+    RDimArcLengthData.h \
+    RDimArcLengthEntity.h \
     RDimAngularData.h \
     RDimAngularEntity.h \
     RDimDiametricData.h \

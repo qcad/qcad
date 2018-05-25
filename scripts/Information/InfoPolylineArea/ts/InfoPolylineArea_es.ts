@@ -14,7 +14,7 @@
         <translation>Terminar</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Area</source>
         <translation>Área</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Circunferencia</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Polyline area:</source>
         <translation>Área:</translation>
     </message>

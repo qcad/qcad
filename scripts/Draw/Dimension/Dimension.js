@@ -54,7 +54,7 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
 
     // for some dimensions (e.g. leader), no standard dimensions toolbar
     // is shown:
-    if (!this.uiFile.contains("../Dimension.ui")) {
+    if (this.uiFile.join(",").indexOf("/Dimension.ui")===-1) {
         return;
     }
 

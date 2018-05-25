@@ -76,6 +76,7 @@ DimAngular.prototype.setState = function(state) {
         this.firstShape = undefined;
         this.secondEntity = undefined;
         this.secondShape = undefined;
+        this.dimArcPosition = RVector.invalid;
         var trFirstEntity = qsTr("Arc or first of two lines");
         this.setLeftMouseTip(trFirstEntity);
         this.setRightMouseTip(EAction.trCancel);
@@ -88,6 +89,7 @@ DimAngular.prototype.setState = function(state) {
 //        this.data2L.setDimArcPosition(RVector.invalid);
         this.secondEntity = undefined;
         this.secondShape = undefined;
+        this.dimArcPosition = RVector.invalid;
         var trSecondEntity = qsTr("Second line");
         this.setLeftMouseTip(trSecondEntity);
         this.setRightMouseTip(EAction.trBack);
@@ -133,6 +135,7 @@ DimAngular.prototype.initUiOptions = function(resume, optionsToolBar) {
     optionsToolBar.findChild("ScaleAction").visible = false;
     optionsToolBar.findChild("ScaleLabelAction").visible = false;
     optionsToolBar.findChild("ScaleSeparatorAction").visible = false;
+    optionsToolBar.findChild("AutoScaleAction").visible = false;
 };
 
 DimAngular.prototype.pickEntity = function(event, preview) {

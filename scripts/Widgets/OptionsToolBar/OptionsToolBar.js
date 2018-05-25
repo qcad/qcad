@@ -73,11 +73,14 @@ OptionsToolBar.init = function(basePath) {
 
 OptionsToolBar.postInit = function(basePath) {
     var optionsToolBar = EAction.getOptionsToolBar();
-    var sh = EAction.getMainWindow().findChild("FileToolBar").sizeHint;
 
     // fixed height to prevent FS#652 (can happen at least on Windows and Linux):
     var h = RSettings.getIntValue("ToolBar/IconSize", 38);
-    optionsToolBar.setFixedHeight(h+6);
+
+    var ftb = EAction.getMainWindow().findChild("FileToolBar");
+    if (!isNull(ftb)) {
+        optionsToolBar.setFixedHeight(ftb.sizeHint.height());
+    }
 
     var flags = new Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea);
     optionsToolBar.setAllowedAreas(flags);

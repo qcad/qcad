@@ -120,6 +120,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSideOfPoint, "getSideOfPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, getSweep, "getSweep");
+            
             REcmaHelper::registerFunction(&engine, proto, getTrimEnd, "getTrimEnd");
             
             REcmaHelper::registerFunction(&engine, proto, trimStartPoint, "trimStartPoint");
@@ -2229,6 +2231,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerArcEntity::getSideOfPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerArcEntity::getSweep
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerArcEntity::getSweep", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArcEntity::getSweep";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArcEntity* self = 
+                        getSelf("getSweep", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getSweep();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArcEntity.getSweep().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerArcEntity::getSweep", context, engine);
             return result;
         }
          QScriptValue

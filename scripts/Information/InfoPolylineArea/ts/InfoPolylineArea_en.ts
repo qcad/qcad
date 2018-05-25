@@ -14,7 +14,7 @@
         <translation>Done</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Area</source>
         <translation>Area</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Circumference</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Polyline area:</source>
         <translation>Polyline area:</translation>
     </message>

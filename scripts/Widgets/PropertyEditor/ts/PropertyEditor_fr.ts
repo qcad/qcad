@@ -51,7 +51,7 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+622"/>
+        <location line="+635"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1144"/>
+        <location line="-1157"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -145,7 +145,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+171"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -174,7 +174,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+318"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

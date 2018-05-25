@@ -56,13 +56,13 @@ RPropertyTypeId RPolylineEntity::PropertyBaseAngle;
 RPropertyTypeId RPolylineEntity::PropertyWidth;
 RPropertyTypeId RPolylineEntity::PropertyHeight;
 
-#if QT_VERSION >= 0x050000
-QString RPolylineEntity::TrClockwise = QString("↻ ") + QT_TRANSLATE_NOOP("REntity", "Clockwise");
-QString RPolylineEntity::TrCounterclockwise = QString("↺ ") + QT_TRANSLATE_NOOP("REntity", "Counterclockwise");
-#else
-QString RPolylineEntity::TrClockwise = QT_TRANSLATE_NOOP("REntity", "Clockwise");
-QString RPolylineEntity::TrCounterclockwise = QT_TRANSLATE_NOOP("REntity", "Counterclockwise");
-#endif
+//#if QT_VERSION >= 0x050000
+//QString RPolylineEntity::TrClockwise; //= QString("↻ ") + QT_TRANSLATE_NOOP("REntity", "Clockwise");
+//QString RPolylineEntity::TrCounterclockwise; //= QString("↺ ") + QT_TRANSLATE_NOOP("REntity", "Counterclockwise");
+//#else
+//QString RPolylineEntity::TrClockwise; //= QT_TRANSLATE_NOOP("REntity", "Clockwise");
+//QString RPolylineEntity::TrCounterclockwise; //= QT_TRANSLATE_NOOP("REntity", "Counterclockwise");
+//#endif
 
 RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data) :
     REntity(document), data(document, data) {
@@ -145,17 +145,17 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
         }
 
         else if (PropertyOrientation==propertyTypeId) {
-            if (value.type()==QVariant::String) {
-                if (value.toString()==RPolylineEntity::TrClockwise) {
-                    ret = ret || data.setOrientation(RS::CW);
-                }
-                else {
-                    ret = ret || data.setOrientation(RS::CCW);
-                }
-            }
-            else {
+//            if (value.type()==QVariant::String) {
+//                if (value.toString()==RPolylineEntity::TrClockwise) {
+//                    ret = ret || data.setOrientation(RS::CW);
+//                }
+//                else {
+//                    ret = ret || data.setOrientation(RS::CCW);
+//                }
+//            }
+//            else {
                 ret = ret || data.setOrientation((RS::Orientation)value.toInt());
-            }
+//            }
         }
 
         else if (PropertyWidth==propertyTypeId) {
@@ -199,7 +199,10 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
     } else if (propertyTypeId == PropertyAngleN) {
         QVariant v;
         v.setValue(data.getVertexAngles());
-        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List|RPropertyAttributes::Angle));
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List |
+                                                RPropertyAttributes::Angle |
+                                                RPropertyAttributes::Redundant |
+                                                RPropertyAttributes::ReadOnly));
     } else if (RPolyline::hasProxy() && propertyTypeId == PropertyStartWidthN) {
         QVariant v;
         v.setValue(data.startWidths);
@@ -249,17 +252,17 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
     if (RPolyline::hasProxy()) {
         if (propertyTypeId == PropertyOrientation) {
             RPropertyAttributes attr;
-            if (!noAttributes && humanReadable) {
-                attr.setChoices(QSet<QString>() << RPolylineEntity::TrClockwise << RPolylineEntity::TrCounterclockwise);
-            }
+            //if (!noAttributes && humanReadable) {
+                //attr.setChoices(QSet<QString>() << RPolylineEntity::TrClockwise << RPolylineEntity::TrCounterclockwise);
+            //}
             attr.setRedundant(true);
             RS::Orientation ori = data.getOrientation(true);
-            if (humanReadable) {
-                QString oriStr = (ori==RS::CCW ? RPolylineEntity::TrCounterclockwise : RPolylineEntity::TrClockwise);
-                QVariant v;
-                v.setValue(oriStr);
-                return qMakePair(v, attr);
-            }
+//            if (humanReadable) {
+//                QString oriStr = (ori==RS::CCW ? RPolylineEntity::TrCounterclockwise : RPolylineEntity::TrClockwise);
+//                QVariant v;
+//                v.setValue(oriStr);
+//                return qMakePair(v, attr);
+//            }
             QVariant v;
             v.setValue(ori);
             return qMakePair(v, attr);

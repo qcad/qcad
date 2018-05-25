@@ -281,6 +281,7 @@ function isEntity(obj) {
 function isDimensionEntity(obj) {
     return isDimAlignedEntity(obj)
         || isDimAngularEntity(obj)
+        || isDimArcLengthEntity(obj)
         || isDimDiametricEntity(obj)
         || isDimLinearEntity(obj)
         || isDimOrdinateEntity(obj)
@@ -366,6 +367,16 @@ function isDimAngular2LEntity(obj) {
  */
 function isDimAngular3PEntity(obj) {
     return isOfType(obj, RDimAngular3PEntity) || isOfType(obj, RDimAngular3PEntityPointer);
+}
+
+/**
+ * Checks if the given object is an arc length dimension entity.
+ *
+ * \return true if the given object is an arc length dimension entity
+ * (RDimArcLengthEntity).
+ */
+function isDimArcLengthEntity(obj) {
+    return isOfType(obj, RDimArcLengthEntity) || isOfType(obj, RDimArcLengthEntityPointer);
 }
 
 /**
@@ -855,6 +866,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("2 Line Angular Dimensions") : qsTr("2 Line Angular Dimension");
     case RS.EntityDimAngular3P:
         return plural ? qsTr("3 Point Angular Dimensions") : qsTr("3 Point Angular Dimension");
+    case RS.EntityDimArcLength:
+        return plural ? qsTr("Arc Dimension") : qsTr("Arc Dimension");
     case RS.EntityDimDiametric:
         return plural ? qsTr("Diametric Dimensions") : qsTr("Diametric Dimension");
     case RS.EntityDimOrdinate:
@@ -900,70 +913,6 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
     }
 }
-
-//function getEntityTypeProperties(type) {
-//    switch (type) {
-//    case RS.EntityAll:
-//        return REntity.getStaticPropertyTypeIds();
-//    case RS.EntityBlockReferenceEntity:
-//        return RBlockReferenceEntity.getStaticPropertyTypeIds();
-//    case RS.EntityArc:
-//        return RArcEntity.getStaticPropertyTypeIds();
-//    case RS.EntityAttribute:
-//        return RAttributeEntity.getStaticPropertyTypeIds();
-//    case RS.EntityAttributeDefinition:
-//        return RAttributeDefinitionEntity.getStaticPropertyTypeIds();
-//    case RS.EntityCircle:
-//        return RCircleEntity.getStaticPropertyTypeIds();
-//    case RS.EntityDimension:
-//        return RDimensionEntity.getStaticPropertyTypeIds();
-//    case RS.EntityDimAligned:
-//        return RDimAlignedEntity.getStaticPropertyTypeIds();
-//    case RS.EntityDimAngular:
-//        return RDimAngularEntity.getStaticPropertyTypeIds();
-//    case RS.EntityDimDiametric:
-//        return RDimDiametricEntity.getStaticPropertyTypeIds();
-//    case RS.EntityDimOrdinate:
-//        return RDimOrdinateEntity.getStaticPropertyTypeIds();
-//    case RS.EntityDimRotated:
-//        return RDimRotatedEntity.getStaticPropertyTypeIds();
-//    case RS.EntityDimRadial:
-//        return RDimRadialEntity.getStaticPropertyTypeIds();
-//    case RS.EntityEllipse:
-//        return REllipseEntity.getStaticPropertyTypeIds();
-//    case RS.EntityHatch:
-//        return RHatchEntity.getStaticPropertyTypeIds();
-//    case RS.EntityImage:
-//        return RImageEntity.getStaticPropertyTypeIds();
-//    case RS.EntityLeader:
-//        return RLeaderEntity.getStaticPropertyTypeIds();
-//    case RS.EntityLine:
-//        return RLineEntity.getStaticPropertyTypeIds();
-//    case RS.EntityPoint:
-//        return RPointEntity.getStaticPropertyTypeIds();
-//    case RS.EntityPolyline:
-//        return RPolylineEntity.getStaticPropertyTypeIds();
-//    case RS.EntitySolid:
-//        return RSolidEntity.getStaticPropertyTypeIds();
-//    case RS.EntityTrace:
-//        return RTraceEntity.getStaticPropertyTypeIds();
-//    case RS.EntityViewport:
-//        return RViewportEntity.getStaticPropertyTypeIds();
-//    case RS.EntityRay:
-//        return RRayEntity.getStaticPropertyTypeIds();
-//    case RS.EntityXLine:
-//        return RXLineEntity.getStaticPropertyTypeIds();
-//    case RS.EntitySpline:
-//        return RSplineEntity.getStaticPropertyTypeIds();
-//    case RS.EntityTextBased:
-//        return RTextBasedEntity.getStaticPropertyTypeIds();
-//    case RS.EntityText:
-//        return RTextEntity.getStaticPropertyTypeIds();
-//    case RS.EntityUnknown:
-//    default:
-//        return [];
-//    }
-//}
 
 /**
  * Checks the type of the given object.

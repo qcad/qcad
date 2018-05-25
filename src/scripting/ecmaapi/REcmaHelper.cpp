@@ -26,6 +26,7 @@
 #include "RDimAlignedEntity.h"
 #include "RDimAngular2LEntity.h"
 #include "RDimAngular3PEntity.h"
+#include "RDimArcLengthEntity.h"
 #include "RDimDiametricEntity.h"
 #include "RDimOrdinateEntity.h"
 #include "RDimRadialEntity.h"
@@ -238,6 +239,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
         v = tryCast<RDimAngular3PEntity>(engine, cppValue);
         if (v.isValid()) return v;
         break;
+    case RS::EntityDimArcLength:
+        v = tryCast<RDimArcLengthEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
     case RS::EntityDimDiametric:
         v = tryCast<RDimDiametricEntity>(engine, cppValue);
         if (v.isValid()) return v;
@@ -442,6 +447,8 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     v = tryCast<RDimAngular2LData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RDimAngular3PData>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RDimArcLengthData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RDimDiametricData>(engine, cppValue);
     if (v.isValid()) return v;

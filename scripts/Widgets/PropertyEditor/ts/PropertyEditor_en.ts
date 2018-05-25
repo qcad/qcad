@@ -82,7 +82,7 @@
         <translation>Add custom property to selected objects</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+149"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -102,7 +102,7 @@
         <translation>No</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+315"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>

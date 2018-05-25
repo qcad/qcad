@@ -4,12 +4,12 @@
 <context>
     <name>DimAngular</name>
     <message>
-        <location filename="../DimAngular.js" line="+79"/>
+        <location filename="../DimAngular.js" line="+80"/>
         <source>Arc or first of two lines</source>
         <translation>弧或两条直线中的第一条</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+13"/>
         <source>Second line</source>
         <translation>第二条线</translation>
     </message>

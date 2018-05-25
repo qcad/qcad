@@ -14,7 +14,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Area</source>
         <translation>面積</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>外周</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+60"/>
         <source>Polyline area:</source>
         <translation>ポリライン面積:</translation>
     </message>

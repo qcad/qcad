@@ -82,6 +82,8 @@ Hauteur
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+97"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="+98"/>
@@ -149,6 +151,9 @@ Exportation du dessin...</translatorcomment>
         <location filename="../src/entity/RDimAngular3PEntity.cpp" line="-16"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-16"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-4"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -178,6 +183,8 @@ Indiquer le centre</translatorcomment>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-1"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-6"/>
@@ -250,6 +257,8 @@ Modifier
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-7"/>
         <location line="+4"/>
         <location line="+4"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-15"/>
+        <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-3"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-6"/>
@@ -640,19 +649,15 @@ Extrémité (x) :</translatorcomment>
         <translation>Point final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-59"/>
-        <location line="+3"/>
         <source>Clockwise</source>
-        <translation>Sens horaire</translation>
+        <translation type="vanished">Sens horaire</translation>
     </message>
     <message>
-        <location line="-2"/>
-        <location line="+3"/>
         <source>Counterclockwise</source>
-        <translation>Antihorairement</translation>
+        <translation type="vanished">Antihorairement</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-16"/>
         <source>Polyline Pattern</source>
         <translation>Motif polyligne</translation>
     </message>
@@ -886,6 +891,9 @@ Point d&apos;attache 2|Y</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
@@ -1173,6 +1181,11 @@ Point 4|Y</translatorcomment>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
         <translation>Invisible</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+2"/>
+        <source>Arc Symbol Type</source>
+        <translation>Symbole d&apos;arc</translation>
     </message>
 </context>
 </TS>

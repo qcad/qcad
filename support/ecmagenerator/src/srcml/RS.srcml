@@ -115,6 +115,7 @@
         <expr><name>EntityDimAngular</name></expr>,   <comment type="block">/**&lt; Angular Dimension */</comment>
         <expr><name>EntityDimAngular2L</name></expr>, <comment type="block">/**&lt; Angular Dimension from 2 lines */</comment>
         <expr><name>EntityDimAngular3P</name></expr>, <comment type="block">/**&lt; Angular Dimension from 3 points */</comment>
+        <expr><name>EntityDimArcLength</name></expr>, <comment type="block">/**&lt; Arc Length Dimension */</comment>
         <expr><name>EntityDimOrdinate</name></expr>,  <comment type="block">/**&lt; Ordinate Dimension */</comment>
         <expr><name>EntityHatch</name></expr>,        <comment type="block">/**&lt; Hatch */</comment>
         <expr><name>EntityImage</name></expr>,        <comment type="block">/**&lt; Image */</comment>

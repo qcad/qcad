@@ -359,6 +359,33 @@
         <source>Bottom</source>
         <translation>Bottom</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <location line="+4"/>
+        <source>Clockwise</source>
+        <translation>Clockwise</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+4"/>
+        <source>Counterclockwise</source>
+        <translation>Counterclockwise</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Preceding</source>
+        <translation>Preceding</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Above</source>
+        <translation>Above</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>None</source>
+        <translation>None</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -386,7 +413,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+818"/>
+        <location filename="../library.js" line="+829"/>
         <source>Objects</source>
         <translation>Objects</translation>
     </message>
@@ -584,6 +611,11 @@
         <location line="+0"/>
         <source>3 Point Angular Dimension</source>
         <translation>3 Point Angular Dimension</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Arc Dimension</translation>
     </message>
     <message>
         <location line="+2"/>

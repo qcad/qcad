@@ -75,14 +75,18 @@ InfoPolylineArea.prototype.pickEntity = function(event, preview) {
     } else {
         this.polyline = entity;
     }
+    this.shape = this.polyline.getData().castToShape();
+
     if (!preview) {
-        this.shape = this.polyline.getData().castToShape();
         this.slotCalculate();
+    }
+    else {
+        this.updatePreview();
     }
 };
 
 InfoPolylineArea.prototype.getOperation = function(preview) {
-    if (isNull(this.polyline)) {
+    if (isNull(this.polyline) || isNull(this.shape)) {
         return undefined;
     }
 
@@ -109,6 +113,14 @@ InfoPolylineArea.prototype.getOperation = function(preview) {
     }
 
     return op;
+};
+
+InfoPolylineArea.prototype.getHighlightedEntities = function() {
+    var ret = [];
+    if (isEntity(this.polyline)) {
+        ret.push(this.polyline.getId());
+    }
+    return ret;
 };
 
 InfoPolylineArea.prototype.getArea = function() {

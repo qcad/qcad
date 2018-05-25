@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RCircle.h"
 #include "RDimAngularData.h"
 #include "RUnit.h"
 
@@ -142,6 +143,13 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         return dimBlockReference->getShapes(queryBox, ignoreComplex);
     }
 
+    bool parallel = false;
+    if (getType()==RS::EntityDimArcLength) {
+        if (getAngle()<M_PI/2) {
+            parallel = true;
+        }
+    }
+
     QList<QSharedPointer<RShape> > ret;
 
     double dimexo = getDimexo();
@@ -152,7 +160,6 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
 
     // find out center:
     RVector center = getCenter();
-
     if (!center.isValid()) {
         return ret;
     }
@@ -167,32 +174,84 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
 
     double rad = getDimArcPosition().getDistanceTo(center);
 
-    RLine line;
-    RVector dir;
-    double len;
-    double dist;
+    // dimension line arc:
+    RArc dimArc(center, rad, ang1, ang2, reversed);
 
-    // 1st extension line:
-    dist = center.getDistanceTo2D(p1);
-    len = rad - dist + dimexe;
-    dir.setPolar(1.0, ang1);
-    line = RLine(center + dir*dist + dir*dimexo, center + dir*dist + dir*len);
-    ret.append(QSharedPointer<RShape>(new RLine(line)));
+    // correct arc when using parallel extension lines (arc length dimension for angle < 90):
+    if (parallel) {
+        RVector dir;
+        RLine line;
 
-    // 2nd extension line:
-    dist = center.getDistanceTo2D(p2);
-    len = rad - dist + dimexe;
-    dir.setPolar(1.0, ang2);
-    line = RLine(center + dir*dist + dir*dimexo, center + dir*dist + dir*len);
-    ret.append(QSharedPointer<RShape>(new RLine(line)));
+        double midAngle = center.getAngleTo(dimArc.getMiddlePoint());
+        double arcRad = center.getDistanceTo(getExtensionLine1End());
+        dir.setPolar(1.0, midAngle);
+
+        if (rad<arcRad) {
+            // dimension inside of arc: use same radius as for arc:
+            rad = arcRad;
+            dir.rotate(M_PI);
+        }
+
+        RCircle c(getDimArcPosition(), rad);
+        RLine middleLine(center, midAngle, 1.0);
+        QList<RVector> ips = RShape::getIntersectionPointsLC(middleLine, c, false);
+        RVector cent = center.getClosest(ips);
+
+        dimArc = RArc(cent, rad, ang1, ang2, reversed);
+
+        // arc we are dimensioning:
+        RArc arc(center, arcRad, ang1, ang2, reversed);
+
+        RVector ip1, ip2;
+        RLine line1(arc.getStartPoint(), arc.getStartPoint() + dir);
+        QList<RVector> ips1 = RShape::getIntersectionPointsLA(line1, dimArc, false, true);
+        if (ips1.length()==1) {
+            ip1 = ips1[0];
+        }
+
+        RLine line2(arc.getEndPoint(), arc.getEndPoint() + dir);
+        QList<RVector> ips2 = RShape::getIntersectionPointsLA(line2, dimArc, false, true);
+        if (ips2.length()==1) {
+            ip2 = ips2[0];
+        }
+
+        dimArc.trimStartPoint(ip1);
+        dimArc.trimEndPoint(ip2);
+
+        line = RLine(arc.getStartPoint() + dir*dimexo, ip1 + dir*dimexe);
+        ret.append(QSharedPointer<RShape>(new RLine(line)));
+
+        line = RLine(arc.getEndPoint() + dir*dimexo, ip2 + dir*dimexe);
+        ret.append(QSharedPointer<RShape>(new RLine(line)));
+    }
+    else {
+        RVector dir;
+        RLine line;
+        double len;
+        double dist;
+
+        // 1st extension line:
+        dist = center.getDistanceTo2D(p1);
+        len = rad - dist + dimexe;
+        dir.setPolar(1.0, ang1);
+        line = RLine(center + dir*dist + dir*dimexo, center + dir*dist + dir*len);
+        ret.append(QSharedPointer<RShape>(new RLine(line)));
+
+        // 2nd extension line:
+        dist = center.getDistanceTo2D(p2);
+        len = rad - dist + dimexe;
+        dir.setPolar(1.0, ang2);
+        line = RLine(center + dir*dist + dir*dimexo, center + dir*dist + dir*len);
+        ret.append(QSharedPointer<RShape>(new RLine(line)));
+
+        //arc = RArc(center, rad, ang1, ang2, reversed);
+    }
 
     // Create dimension line (arc):
-    RArc arc(center, rad, ang1, ang2, reversed);
-    RArc dimArc = arc;
-    //ret.append(QSharedPointer<RShape>(new RArc(arc)));
+    RArc dimArc2 = dimArc;
 
     // length of dimension arc:
-    double distance = arc.getLength();
+    double distance = dimArc.getLength();
 
     // do we have to put the arrows outside of the arc?
     bool outsideArrow1 = (distance<dimasz*2);
@@ -209,19 +268,19 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
     // extend arc outside arrows
     //RVector dir;
     //dir.setPolar(getDimasz()*2, dimensionLine.getDirection1());
-    double a = getDimasz()*2 / arc.getRadius();
+    double a = getDimasz()*2 / dimArc.getRadius();
     if (outsideArrow1) {
-        dimArc.setStartAngle(arc.isReversed() ? arc.getStartAngle() + a : arc.getStartAngle() - a);
+        dimArc2.setStartAngle(dimArc.isReversed() ? dimArc.getStartAngle() + a : dimArc.getStartAngle() - a);
         //arc.trimStartPoint(-getDimasz()*2);
         //arc.setStartAngle(arc.getStartAngle()-a);
     }
     if (outsideArrow2) {
-        dimArc.setEndAngle(arc.isReversed() ? arc.getEndAngle() - a : arc.getEndAngle() + a);
+        dimArc2.setEndAngle(dimArc.isReversed() ? dimArc.getEndAngle() - a : dimArc.getEndAngle() + a);
         //dimensionLine.setEndPoint(p2 + dir);
         //arc.trimEndPoint(-getDimasz()*2);
     }
 
-    ret.append(QSharedPointer<RShape>(new RArc(dimArc)));
+    ret.append(QSharedPointer<RShape>(new RArc(dimArc2)));
 
     // arrow angles:
     double arrowAngle1, arrowAngle2;
@@ -238,23 +297,23 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
 //    }
 //    else {
         RVector v1;
-        if (!arc.isReversed()) {
+        if (!dimArc.isReversed()) {
             if (outsideArrow1) {
-                v1.setPolar(rad, arc.getStartAngle()-arrowAng);
+                v1.setPolar(rad, dimArc.getStartAngle()-arrowAng);
             }
             else {
-                v1.setPolar(rad, arc.getStartAngle()+arrowAng);
+                v1.setPolar(rad, dimArc.getStartAngle()+arrowAng);
             }
         } else {
             if (outsideArrow1) {
-                v1.setPolar(rad, arc.getStartAngle()+arrowAng);
+                v1.setPolar(rad, dimArc.getStartAngle()+arrowAng);
             }
             else {
-                v1.setPolar(rad, arc.getStartAngle()-arrowAng);
+                v1.setPolar(rad, dimArc.getStartAngle()-arrowAng);
             }
         }
-        v1+=arc.getCenter();
-        arrowAngle1 = arc.getStartPoint().getAngleTo(v1);
+        v1+=dimArc.getCenter();
+        arrowAngle1 = dimArc.getStartPoint().getAngleTo(v1);
         arrowAngle1 = arrowAngle1+M_PI;
 //    }
 
@@ -263,35 +322,35 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
 //    }
 //    else {
         RVector v2;
-        if (!arc.isReversed()) {
+        if (!dimArc.isReversed()) {
             if (outsideArrow2) {
-                v2.setPolar(rad, arc.getEndAngle()+arrowAng);
+                v2.setPolar(rad, dimArc.getEndAngle()+arrowAng);
             }
             else {
-                v2.setPolar(rad, arc.getEndAngle()-arrowAng);
+                v2.setPolar(rad, dimArc.getEndAngle()-arrowAng);
             }
         } else {
             if (outsideArrow2) {
-                v2.setPolar(rad, arc.getEndAngle()-arrowAng);
+                v2.setPolar(rad, dimArc.getEndAngle()-arrowAng);
             }
             else {
-                v2.setPolar(rad, arc.getEndAngle()+arrowAng);
+                v2.setPolar(rad, dimArc.getEndAngle()+arrowAng);
             }
         }
-        v2+=arc.getCenter();
-        arrowAngle2 = arc.getEndPoint().getAngleTo(v2);
+        v2+=dimArc.getCenter();
+        arrowAngle2 = dimArc.getEndPoint().getAngleTo(v2);
         arrowAngle2 = arrowAngle2+M_PI;
 //    }
 
     // Arrows:
     //RTriangle arrow = RTriangle::createArrow(arc.getStartPoint(), arrowAngle1, dimasz);
-    QList<QSharedPointer<RShape> > arrow = getArrow(arc.getStartPoint(), arrowAngle1);
+    QList<QSharedPointer<RShape> > arrow = getArrow(dimArc.getStartPoint(), arrowAngle1);
     ret.append(arrow);
-    arrow1Pos = arc.getStartPoint() + RVector::createPolar(dimasz, arrowAngle1 + M_PI);
+    arrow1Pos = dimArc.getStartPoint() + RVector::createPolar(dimasz, arrowAngle1 + M_PI);
     //arrow = RTriangle::createArrow(arc.getEndPoint(), arrowAngle2, dimasz);
-    arrow = getArrow(arc.getEndPoint(), arrowAngle2);
+    arrow = getArrow(dimArc.getEndPoint(), arrowAngle2);
     ret.append(arrow);
-    arrow2Pos = arc.getEndPoint() + RVector::createPolar(dimasz, arrowAngle2 + M_PI);
+    arrow2Pos = dimArc.getEndPoint() + RVector::createPolar(dimasz, arrowAngle2 + M_PI);
     //ret.append(QSharedPointer<RShape>(new RTriangle(arrow)));
 
     //RVector oldMot = textPosition;
@@ -301,10 +360,10 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
     //getTextData();
     //textPosition = oldMot;
 
-    RVector textPos = arc.getMiddlePoint();
-    double dimAngle1 = textPos.getAngleTo(arc.getCenter())-M_PI/2.0;
+    RVector textPos = dimArc.getMiddlePoint();
+    double dimAngle1 = textPos.getAngleTo(dimArc.getCenter())-M_PI/2.0;
     if (!autoTextPos) {
-        dimAngle1 = textPositionCenter.getAngleTo(arc.getCenter())-M_PI/2.0;
+        dimAngle1 = textPositionCenter.getAngleTo(dimArc.getCenter())-M_PI/2.0;
     }
 
     RVector distV;
@@ -327,7 +386,11 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         textPos = textPositionCenter;
     } else {
         // move text away from dimension line:
-        textPos+=distV;
+        double f = 1.0;
+        if (getMeasurement().contains("\\P")) {
+            f = 2.0;
+        }
+        textPos+=distV*f;
 
         textPositionCenter = textPos;
     }
@@ -369,9 +432,5 @@ double RDimAngularData::getMeasuredValue() const {
 }
 
 QString RDimAngularData::getAutoLabel() const {
-    QString ret;
-
-    ret = formatAngleLabel(getMeasuredValue());
-
-    return ret;
+    return formatAngleLabel(getMeasuredValue());
 }

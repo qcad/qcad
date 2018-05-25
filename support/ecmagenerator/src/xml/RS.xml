@@ -53,6 +53,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntityDimAngular" />
       <value name="EntityDimAngular2L" />
       <value name="EntityDimAngular3P" />
+      <value name="EntityDimArcLength" />
       <value name="EntityDimOrdinate" />
       <value name="EntityHatch" />
       <value name="EntityImage" />

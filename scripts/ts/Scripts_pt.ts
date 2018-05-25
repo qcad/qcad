@@ -457,6 +457,33 @@ Delta X</translatorcomment>
         <source>Bottom</source>
         <translation>Inferior</translation>
     </message>
+    <message>
+        <location line="+7"/>
+        <location line="+4"/>
+        <source>Clockwise</source>
+        <translation>Horário</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+4"/>
+        <source>Counterclockwise</source>
+        <translation>Anti-horário</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Preceding</source>
+        <translation>Precedente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Above</source>
+        <translation>Acima</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>None</source>
+        <translation>Nenhum</translation>
+    </message>
 </context>
 <context>
     <name>autostart</name>
@@ -529,7 +556,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+818"/>
+        <location filename="../library.js" line="+829"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>
@@ -763,6 +790,11 @@ Desenhe dimensão angular</translatorcomment>
         <location line="+0"/>
         <source>3 Point Angular Dimension</source>
         <translation>Dimensão angular de 3 pontos</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Arc Dimension</source>
+        <translation>Dimensão do arco</translation>
     </message>
     <message>
         <location line="+2"/>
