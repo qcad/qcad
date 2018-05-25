@@ -4,6 +4,7 @@ SUBDIRS = \
     BlockExamples \
     CommandLineExamples \
     DrawExamples \
+    ExMinimal \
     IOExamples \
     LayerExamples \
     ListenerExamples \
