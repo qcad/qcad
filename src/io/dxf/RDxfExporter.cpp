@@ -107,6 +107,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     if (setFileName) {
         document->setFileName(fileName);
+        document->setFileVersion(nameFilter);
     }
 
     if (!minimalistic) {

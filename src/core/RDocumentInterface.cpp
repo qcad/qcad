@@ -1257,7 +1257,7 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
         // Note: exporter might set the file name of the document
         // to the new name if desired
         if (resetModified) {
-            document.setFileVersion(fileVersion);
+            //document.setFileVersion(fileVersion);
             document.setModified(false);
         }
 

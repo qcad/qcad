@@ -133,7 +133,10 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
     AutoSave.cleanUp(bakFileName);
 
     // file name might have been changed by filter (extension added):
-    fileName = di.getDocument().getFileName();
+    var doc = di.getDocument();
+    fileName = doc.getFileName();
+    fileVersion = doc.getFileVersion()
+
     var mdiChild = EAction.getMdiChild();
     if (!isNull(mdiChild)) {
         mdiChild.setWindowTitle(addDirtyFlag(new QFileInfo(fileName).fileName()));
