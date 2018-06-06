@@ -125,7 +125,7 @@ TextAlong.prototype.pickEntity = function(event, preview) {
         if (!preview) {
             var type = entity.getType();
             if (type !== RS.EntityLine && type !== RS.EntityArc && type !== RS.EntityCircle) {
-                EAction.handleUserWarning(qsTr("Selected entity is not a Line, Arc or Circle!"));
+                EAction.warnNotLineArcCircle();
                 return;
             }
 
