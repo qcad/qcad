@@ -4,19 +4,27 @@
 <context>
     <name>SelectByHandle</name>
     <message>
-        <location filename="../SelectByHandle.js" line="+58"/>
         <source>Object selected: </source>
-        <translation>Oggetto selezionato:</translation>
+        <translation type="vanished">Oggetto selezionato:</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Object is not an entity: </source>
-        <translation>Oggetto non entità:</translation>
+        <translation type="vanished">Oggetto non entità:</translation>
     </message>
     <message>
         <location filename="../SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
         <translation>Via Handle</translation>
+    </message>
+    <message>
+        <location filename="../SelectByHandle.js" line="+58"/>
+        <source>Object selected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Object is not an entity:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

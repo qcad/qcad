@@ -4,9 +4,8 @@
 <context>
     <name>SelectByHandle</name>
     <message>
-        <location filename="../SelectByHandle.js" line="+58"/>
         <source>Object selected: </source>
-        <translation>Vybraný prvok:</translation>
+        <translation type="vanished">Vybraný prvok:</translation>
     </message>
     <message>
         <location filename="../SelectByHandleInit.js" line="+2"/>
@@ -14,9 +13,18 @@
         <translation>Podľa identifikátora</translation>
     </message>
     <message>
-        <location filename="../SelectByHandle.js" line="+3"/>
         <source>Object is not an entity: </source>
-        <translation>Hodnota nie je prvok:</translation>
+        <translation type="vanished">Hodnota nie je prvok:</translation>
+    </message>
+    <message>
+        <location filename="../SelectByHandle.js" line="+58"/>
+        <source>Object selected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Object is not an entity:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

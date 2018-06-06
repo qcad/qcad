@@ -48,7 +48,7 @@
         <translation>¿Desea continuar?</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Saved drawing:</source>
         <translation>Dibujo guardado:</translation>
     </message>
@@ -62,7 +62,7 @@
         <translation type="obsolete">Todos los colores personalizados se &apos;redondea&apos; con una precisión de color fijo. ¿Desea continuar?</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-32"/>
         <source>Saving...</source>
         <translation>Ahorro...</translation>
     </message>

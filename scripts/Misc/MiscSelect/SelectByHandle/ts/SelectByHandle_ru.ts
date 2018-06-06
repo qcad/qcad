@@ -4,19 +4,27 @@
 <context>
     <name>SelectByHandle</name>
     <message>
-        <location filename="../SelectByHandle.js" line="+58"/>
         <source>Object selected: </source>
-        <translation>Выбранный объект: </translation>
+        <translation type="vanished">Выбранный объект: </translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Object is not an entity: </source>
-        <translation>Объект не является сущностью: </translation>
+        <translation type="vanished">Объект не является сущностью: </translation>
     </message>
     <message>
         <location filename="../SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
         <translation>Обработчиком</translation>
+    </message>
+    <message>
+        <location filename="../SelectByHandle.js" line="+58"/>
+        <source>Object selected:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Object is not an entity:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

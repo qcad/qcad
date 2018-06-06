@@ -79,9 +79,8 @@
         <translation>Pozícia</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Selected entity is not a Line, Arc or Circle!</source>
-        <translation>Vybraný prvok nie je čiara, oblúk alebo kružnica!</translation>
+        <translation type="vanished">Vybraný prvok nie je čiara, oblúk alebo kružnica!</translation>
     </message>
     <message>
         <location filename="../TextAlongInit.js" line="+2"/>

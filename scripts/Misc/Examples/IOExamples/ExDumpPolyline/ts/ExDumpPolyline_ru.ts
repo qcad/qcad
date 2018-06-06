@@ -4,9 +4,23 @@
 <context>
     <name>ExDumpPolyline</name>
     <message>
-        <location filename="../ExDumpPolyline.js" line="+95"/>
         <source>&amp;Dump Polyline</source>
-        <translation>&amp;Сбросить ломаную</translation>
+        <translation type="vanished">&amp;Сбросить ломаную</translation>
+    </message>
+    <message>
+        <location filename="../ExDumpPolyline.js" line="+48"/>
+        <source>Clockwise polyline:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Counterclockwise polyline:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>&amp;Output Polyline Vertices</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

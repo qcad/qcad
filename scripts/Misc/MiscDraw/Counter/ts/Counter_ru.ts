@@ -14,9 +14,13 @@
         <translation>Начало:</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Incr:</source>
-        <translation>Прирост:</translation>
+        <translation type="vanished">Прирост:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Increment:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>

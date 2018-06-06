@@ -83,9 +83,8 @@
         <translation>Position</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Selected entity is not a Line, Arc or Circle!</source>
-        <translation>Element ist keine Linie und kein Bogen oder Kreis.</translation>
+        <translation type="vanished">Element ist keine Linie und kein Bogen oder Kreis.</translation>
     </message>
     <message>
         <location filename="../TextAlongInit.js" line="+2"/>

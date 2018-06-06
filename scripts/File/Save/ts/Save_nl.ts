@@ -69,7 +69,7 @@
         <translation>Bestand %1 kon niet worden opgeslagen.</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Saved drawing:</source>
         <translation>Opgeslagen tekening:</translation>
     </message>

@@ -50,8 +50,12 @@
     </message>
     <message>
         <location line="+5"/>
+        <source>Tenons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Tennons</source>
-        <translation>Шипы</translation>
+        <translation type="vanished">Шипы</translation>
     </message>
     <message>
         <location filename="../LineBoxJointInit.js" line="+2"/>

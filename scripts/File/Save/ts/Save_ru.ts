@@ -69,7 +69,7 @@
         <translation>Не удалось сохранить файл %1.</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Saved drawing:</source>
         <translation>Чертёж сохранен:</translation>
     </message>

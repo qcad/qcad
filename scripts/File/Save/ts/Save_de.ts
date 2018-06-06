@@ -39,7 +39,7 @@
         <translation>Weiterfahren?</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Saved drawing:</source>
         <translation>Zeichnung gespeichert:</translation>
     </message>
@@ -53,7 +53,7 @@
         <translation type="obsolete">Alle Benutzerdefinierten Farben werden auf die nächste verfügbare Farbe gerundet. Weiterfahren?</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="-29"/>
         <source>Saving to file format version &apos;%1&apos;.</source>
         <translation>Speichere mit Dateiformat Version &apos;%1&apos;.</translation>
     </message>

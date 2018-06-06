@@ -14,8 +14,12 @@
         <translation>Start:</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Incr:</source>
+        <translation type="vanished">Schrittweite:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Increment:</source>
         <translation>Schrittweite:</translation>
     </message>
     <message>

@@ -79,11 +79,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Selected entity is not a Line, Arc or Circle!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
         <translation type="unfinished"></translation>
