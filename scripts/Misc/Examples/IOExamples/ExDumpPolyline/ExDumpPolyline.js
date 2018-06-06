@@ -43,17 +43,18 @@ ExDumpPolyline.prototype.beginEvent = function() {
         var entity = document.queryEntity(id);
 
         if (isPolylineEntity(entity)) {
-            EAction.handleUserMessage("Clockwise polyline dump:");
-
-            if (!ExDumpPolyline.isClockwise(entity)) {
-                EAction.handleUserWarning("Polyline not clockwise: reversing.");
-                entity.reverse();
+            var ori = entity.getOrientation(true);
+            if (ori===RS.CW) {
+                EAction.handleUserMessage(qsTr("Clockwise polyline:"));
+            }
+            else if (ori===RS.CCW) {
+                EAction.handleUserMessage(qsTr("Counterclockwise polyline:"));
             }
 
             var n = entity.countVertices();
             for (var k=0; k<n; k++) {
                 var v = entity.getVertexAt(k);
-                EAction.handleUserMessage("%1,%2,".arg(v.x).arg(-v.y));
+                EAction.handleUserMessage("%1,%2,".arg(v.x).arg(v.y));
             }
         }
     }
@@ -61,38 +62,11 @@ ExDumpPolyline.prototype.beginEvent = function() {
     this.terminate();
 };
 
-ExDumpPolyline.isClockwise = function(polyline) {
-    var n = polyline.countVertices();
-
-    // find minimum vertex:
-    var vMin = RVector.invalid;
-    var vBefore, vAfter;
-    for (var i=0; i<n; i++) {
-        var v = polyline.getVertexAt(i);
-        if (!vMin.isValid() || v.x<vMin.x || (v.x==vMin.x && v.y<vMin.y)) {
-            vMin = v;
-            vBefore = polyline.getVertexAt(i===0 ? n-1 : i-1);
-            vAfter = polyline.getVertexAt(i===n-1 ? 0 : i+1);
-        }
-    }
-
-    var xa = vBefore.x;
-    var ya = vBefore.y;
-    var xb = vMin.x;
-    var yb = vMin.y;
-    var xc = vAfter.x;
-    var yc = vAfter.y;
-
-    var det = (xb-xa) * (yc-ya) - (xc-xa) * (yb-ya);
-
-    return det<0.0;
-};
-
 /**
  * Adds a menu for this action to Examples/Math Examples/ExDumpPolyline.
  */
 ExDumpPolyline.init = function(basePath) {
-    var action = new RGuiAction(qsTr("&Dump Polyline"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Output Polyline Vertices"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExDumpPolyline.js");
     action.setGroupSortOrder(71100);
