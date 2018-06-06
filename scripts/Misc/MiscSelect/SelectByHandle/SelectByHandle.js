@@ -55,10 +55,10 @@ SelectByHandle.prototype.beginEvent = function() {
 
     if (isEntity(obj)) {
         di.selectEntity(obj.getId());
-        EAction.handleUserMessage(qsTr("Object selected: ") + obj.getId());
+        EAction.handleUserMessage(qsTr("Object selected:") + " " + obj.getId());
     }
     else {
-        EAction.handleUserMessage(qsTr("Object is not an entity: ") + obj);
+        EAction.handleUserMessage(qsTr("Object is not an entity:") + " " + obj);
     }
 
     dialog.destroy();
