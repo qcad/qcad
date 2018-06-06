@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>494</width>
+    <width>551</width>
     <height>49</height>
    </rect>
   </property>
@@ -22,14 +22,14 @@
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="FingerHeight" native="true">
+    <widget class="RMathLineEdit" name="FingerHeight">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">4</string>
      </property>
     </widget>
@@ -45,14 +45,14 @@
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="FingerLength" native="true">
+    <widget class="RMathLineEdit" name="FingerLength">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">10</string>
      </property>
     </widget>
@@ -68,14 +68,14 @@
     </widget>
    </item>
    <item>
-    <widget class="RMathLineEdit" name="SlotRatio" native="true">
+    <widget class="RMathLineEdit" name="SlotRatio">
      <property name="maximumSize">
       <size>
        <width>100</width>
        <height>16777215</height>
       </size>
      </property>
-     <property name="text" stdset="0">
+     <property name="text">
       <string notr="true">1</string>
      </property>
     </widget>
@@ -104,7 +104,7 @@
      </item>
      <item>
       <property name="text">
-       <string>Tennons</string>
+       <string>Tenons</string>
       </property>
      </item>
     </widget>
@@ -114,8 +114,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QWidget</extends>
-   <header>rmathlineedit.h</header>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
