@@ -52,7 +52,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>

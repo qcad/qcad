@@ -52,7 +52,7 @@
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>

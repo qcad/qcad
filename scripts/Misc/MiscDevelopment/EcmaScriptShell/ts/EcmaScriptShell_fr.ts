@@ -11,7 +11,7 @@
     <message>
         <location line="+38"/>
         <source>&amp;Script Shell</source>
-        <translation>&amp;Shell ECMAScript</translation>
+        <translation>&amp;Shell Script</translation>
     </message>
     <message>
         <location line="+25"/>

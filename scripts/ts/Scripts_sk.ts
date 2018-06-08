@@ -47,7 +47,7 @@
         <translation>Presunúť prvok na požadované miesto</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>Presunúť referenčný bod</translation>
     </message>
