@@ -439,7 +439,7 @@ public:
         return errorCode;
     }
 
-    void dump();
+    void dump() const;
 
     /**
      * \nonscriptable
