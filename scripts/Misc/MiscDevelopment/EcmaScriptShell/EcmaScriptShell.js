@@ -239,7 +239,8 @@ EcmaScriptShell.init = function(basePath) {
             var res;
             try {
                 //startTransaction();
-                res = RMainWindow.getMainWindow().eval("js", expression);
+                //res = RMainWindow.getMainWindow().eval("js", expression);
+                res = EcmaScriptShell.eval(expression);
                 //endTransaction();
 
                 // make sure input is enabled again:
@@ -330,3 +331,7 @@ EcmaScriptShell.init = function(basePath) {
 
     leCommand.clearHistory.connect(teHistory, "clear");
 };
+
+EcmaScriptShell.eval = function(expression) {
+    return RMainWindow.getMainWindow().eval("js", expression);
+}
