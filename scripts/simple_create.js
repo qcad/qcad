@@ -358,3 +358,27 @@ function addObject(obj) {
         return obj.clone();
     }
 }
+
+/**
+ * Deleted the given RObject from the drawing.
+ * \ingroup ecma_simple
+ *
+ * \return The added object. The object does not yet have a valid ID if it was added within a
+ * transaction.
+ */
+function deleteObject(obj) {
+    if (isFunction(obj.data)) {
+        deleteObject(obj.data().clone());
+    }
+
+    if (__simpleUseOp===true) {
+        if (isNull(__simpleOp)) {
+            __simpleOp = new RAddObjectsOperation();
+        }
+        __simpleOp.deleteObject(obj);
+    }
+    else {
+        var di = getDocumentInterface();
+        di.applyOperation(new RDeleteObjectOperation(obj));
+    }
+}
