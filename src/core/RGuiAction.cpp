@@ -915,7 +915,12 @@ RGuiAction* RGuiAction::getByScriptFile(const QString& scriptFile) {
 
     QString relFilePath;
     if (scriptFile.startsWith(":")) {
-        relFilePath = scriptFile;
+        if (actionsByScriptFile.count(scriptFile) != 0) {
+            return actionsByScriptFile[scriptFile];
+        }
+
+        // strip : at start:
+        relFilePath = scriptFile.mid(1);
     }
     else {
         relFilePath = dir.relativeFilePath(scriptFile);
