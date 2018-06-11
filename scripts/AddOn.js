@@ -463,7 +463,12 @@ AddOn.getAddOns = function(dir) {
     if (topCall) {
         var args = QCoreApplication.arguments();
 
-        dir = "scripts";
+        if (RSettings.getOriginalArguments().contains("-ignore-script-files")) {
+            dir = undefined;
+        }
+        else {
+            dir = "scripts";
+        }
 
         // fixed set of directories that will be scanned for add-ons first to 
         // ensure fixed order of menus and tool bars:
