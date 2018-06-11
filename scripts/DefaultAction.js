@@ -718,6 +718,10 @@ DefaultAction.prototype.isShiftPressed = function(event) {
     return false;
 };
 
+/**
+ * \return True to add to selection (by default this is when shiftPressed is true).
+ * May be reimplemented to allow other ways to add to selection (e.g. user interface button, etc.)
+ */
 DefaultAction.prototype.getAddToSelection = function(shiftPressed) {
     return shiftPressed;
 };
