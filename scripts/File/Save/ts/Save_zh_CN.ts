@@ -69,7 +69,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Saved drawing:</source>
         <translation type="unfinished"></translation>
     </message>

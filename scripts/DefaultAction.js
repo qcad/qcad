@@ -277,7 +277,8 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
     var entityId;
 
-    var shiftPressed = (event.modifiers() & Qt.ShiftModifier) > 0 || (event.modifiers() & Qt.ControlModifier) > 0 || persistentSelection===true;
+    var shiftPressed = this.isShiftPressed(event) || (event.modifiers() & Qt.ControlModifier) > 0 || persistentSelection===true;
+    var addToSelection = this.getAddToSelection(shiftPressed);
 
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
@@ -306,14 +307,14 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             //qDebug("entityId: ", entityId);
 
             if (entityId !== -1) {
-                if (shiftPressed && this.document.isSelected(entityId)) {
+                if (addToSelection && this.document.isSelected(entityId)) {
                     this.deselectEntity(entityId);
                 }
                 else {
-                    this.selectEntity(entityId, shiftPressed);
+                    this.selectEntity(entityId, addToSelection);
                 }
             } else {
-                if (!shiftPressed) {
+                if (!addToSelection) {
                     if (persistentSelection===false) {
                         this.di.clearSelection();
                     }
@@ -328,7 +329,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             this.di.clearPreview();
             this.d2Model = event.getModelPosition();
 
-            if ((event.modifiers().valueOf() == Qt.ShiftModifier.valueOf()) ||
+            if (addToSelection ||
                 (event.modifiers().valueOf() == Qt.ControlModifier.valueOf()) ||
                 persistentSelection===true) {
 
@@ -379,7 +380,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
 
                 // use right-click on entity to select entity:
                 else if (rightClickToDeselect) {
-                    this.selectEntity(entityId, shiftPressed);
+                    this.selectEntity(entityId, addToSelection);
                     handled = true;
                 }
             }
@@ -453,7 +454,8 @@ DefaultAction.prototype.escapeEvent = function(event) {
 DefaultAction.prototype.pickCoordinate = function(event, preview) {
     var op;
 
-    var shiftPressed = (event.getModifiers() & Qt.ShiftModifier) > 0;
+    var shiftPressed = this.isShiftPressed(event);
+    var addToSelection = this.getAddToSelection(shiftPressed);
     var doc = this.getDocument();
 
     switch (this.state) {
@@ -687,7 +689,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
         if (RSettings.getBoolValue("GraphicsView/DoubleClickSelectContour", true)===true) {
             include("scripts/Select/SelectContour/SelectContour.js");
             var matchingEntityIds = SelectContour.getConnectedEntities(this.document, entityId, 0.001);
-            var add = (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf());
+            var add = this.isShiftPressed(event);
             if (entity.isSelected()) {
                 this.di.selectEntities(matchingEntityIds, add);
             }
@@ -702,3 +704,25 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
 //        this.di.setCurrentViewport(entity.data());
 //    }
 };
+
+/**
+ * \return True if the shift key is pressed to alter the function (e.g. add to selection).
+ */
+DefaultAction.prototype.isShiftPressed = function(event) {
+    if (isFunction(event.getModifiers)) {
+        return (event.getModifiers() & Qt.ShiftModifier) > 0;
+    }
+    if (isFunction(event.modifiers)) {
+        return (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf());
+    }
+    return false;
+};
+
+/**
+ * \return True to add to selection (by default this is when shiftPressed is true).
+ * May be reimplemented to allow other ways to add to selection (e.g. user interface button, etc.)
+ */
+DefaultAction.prototype.getAddToSelection = function(shiftPressed) {
+    return shiftPressed;
+};
+

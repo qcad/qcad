@@ -47,7 +47,7 @@
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -398,7 +398,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+325"/>
+        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
         <translation>Laden van add-on vertalingen...</translation>
     </message>

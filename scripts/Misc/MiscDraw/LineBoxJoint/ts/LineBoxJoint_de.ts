@@ -64,8 +64,12 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>Tennons</source>
+        <source>Tenons</source>
         <translation>Schlitze</translation>
+    </message>
+    <message>
+        <source>Tennons</source>
+        <translation type="vanished">Schlitze</translation>
     </message>
 </context>
 </TS>

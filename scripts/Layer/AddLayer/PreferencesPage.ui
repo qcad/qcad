@@ -12,23 +12,30 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QFormLayout" name="formLayout">
-     <item row="1" column="1">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Default lineweight for new layers:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
       <widget class="RLineweightCombo" name="DefaultLineweight">
        <property name="onlyFixed" stdset="0">
         <bool>true</bool>
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
+     <item row="1" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
         <string>Default color for new layers:</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="RColorCombo" name="DefaultColor" native="true">
+     <item row="1" column="1">
+      <widget class="RColorCombo" name="DefaultColor">
        <property name="onlyFixed" stdset="0">
         <bool>true</bool>
        </property>
@@ -37,10 +44,34 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label">
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>Default lineweight for new layers:</string>
+        <string>Default lineweight for layer 0:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="RLineweightCombo" name="DefaultLineweightLayer0">
+       <property name="onlyFixed" stdset="0">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Default color for layer 0:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="RColorCombo" name="DefaultColorLayer0">
+       <property name="onlyFixed" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="blackWhite" stdset="0">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -63,14 +94,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>RLineweightCombo</class>
-   <extends>QComboBox</extends>
-   <header>RLineweightCombo.h</header>
-  </customwidget>
-  <customwidget>
    <class>RColorCombo</class>
    <extends>QComboBox</extends>
    <header>RColorCombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RLineweightCombo</class>
+   <extends>QComboBox</extends>
+   <header>RLineweightCombo.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

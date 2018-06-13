@@ -2278,7 +2278,7 @@ QList<QSharedPointer<RShape> > RShape::trim(
     return ret;
 }
 
-void RShape::dump() {
+void RShape::dump() const{
     qDebug() << *this;
 }
 

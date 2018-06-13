@@ -69,7 +69,7 @@
         <translation>File %1 has not been saved.</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Saved drawing:</source>
         <translation>Saved drawing:</translation>
     </message>

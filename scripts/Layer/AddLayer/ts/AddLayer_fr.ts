@@ -22,12 +22,22 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+26"/>
+        <location filename="../PreferencesPage.ui" line="+33"/>
         <source>Default color for new layers:</source>
         <translation>Couleur par défaut pour nouveaux calques :</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Default lineweight for layer 0:</source>
+        <translation>Épaisseur de ligne par défaut pour calque 0 :</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Default color for layer 0:</source>
+        <translation>Couleur par défaut pour calque 0 :</translation>
+    </message>
+    <message>
+        <location line="-45"/>
         <source>Default lineweight for new layers:</source>
         <translation>Épaisseur de ligne par défaut pour nouveaux calques :</translation>
     </message>

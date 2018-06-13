@@ -49,7 +49,7 @@
         <translation>Kontynuować?</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Saved drawing:</source>
         <translation>Zapisany rysunek:</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation type="obsolete">Wszystkie niestandardowe kolory zostaną &quot;zaokrąglone&amp;quot; do najbliższego stałego koloru. Kontynuować?</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-32"/>
         <source>Saving...</source>
         <translatorcomment>--ignored ...--
 --file: qvfb_pl.ts--

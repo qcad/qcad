@@ -22,12 +22,22 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+26"/>
+        <location filename="../PreferencesPage.ui" line="+33"/>
         <source>Default color for new layers:</source>
         <translation>Privzeta barva za nove plasti:</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Default lineweight for layer 0:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Default color for layer 0:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-45"/>
         <source>Default lineweight for new layers:</source>
         <translation>Privzeta debelina črte za nove plasti:</translation>
     </message>

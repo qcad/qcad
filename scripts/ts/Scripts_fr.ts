@@ -52,7 +52,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -453,7 +453,7 @@
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+325"/>
+        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>

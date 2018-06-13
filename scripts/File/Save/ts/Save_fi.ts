@@ -69,7 +69,7 @@
         <translation>Tiedostoa %1 ei ole tallennettu.</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Saved drawing:</source>
         <translation>Tallennettu piirros:</translation>
     </message>

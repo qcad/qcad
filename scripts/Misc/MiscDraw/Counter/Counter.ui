@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>580</width>
+    <width>677</width>
     <height>50</height>
    </rect>
   </property>
@@ -28,7 +28,7 @@
    <item>
     <widget class="QLabel" name="IncrementLabel">
      <property name="text">
-      <string>Incr:</string>
+      <string>Increment:</string>
      </property>
     </widget>
    </item>

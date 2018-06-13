@@ -444,6 +444,7 @@ AddOn.getParentAddOn = function(addOns, addOn) {
 
 /**
  * \return Array of all AddOn objects found.
+ *
  * \param dir Used internally for recursive calls
  */
 AddOn.getAddOns = function(dir) {
@@ -463,7 +464,15 @@ AddOn.getAddOns = function(dir) {
     if (topCall) {
         var args = QCoreApplication.arguments();
 
-        dir = "scripts";
+        // ignore all scripts in ./scripts directory
+        // and only load scripts from plugins
+        // used mainly for testing / development
+        if (RSettings.getOriginalArguments().contains("-ignore-script-files")) {
+            dir = undefined;
+        }
+        else {
+            dir = "scripts";
+        }
 
         // fixed set of directories that will be scanned for add-ons first to 
         // ensure fixed order of menus and tool bars:

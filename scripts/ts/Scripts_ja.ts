@@ -47,7 +47,7 @@
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>
@@ -402,7 +402,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+325"/>
+        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
         <translation>アドオンの翻訳をロード中...</translation>
     </message>

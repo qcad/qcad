@@ -485,6 +485,10 @@ QString RMath::angleToString(double a) {
 }
 
 QString RMath::trimTrailingZeroes(const QString& s) {
+    if (!s.contains('.')) {
+        return s;
+    }
+
     QString ret = s;
 
     bool done = false;

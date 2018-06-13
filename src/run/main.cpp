@@ -99,7 +99,7 @@ int main(int argc, char *argv[]) {
     // But use usual conversion for scanf()/sprintf():
     setlocale(LC_NUMERIC, "C");
 
-    // Finetuning Japanese encoding for corrent DXF/DWG import.
+    // Finetuning Japanese encoding for correct DXF/DWG import.
     // see http://qt-project.org/doc/qt-4.8/codecs-jis.html
 #ifdef Q_OS_WIN
     _putenv_s("UNICODEMAP_JP", "cp932");

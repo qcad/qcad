@@ -52,7 +52,7 @@
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -513,7 +513,7 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+325"/>
+        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
         <translation>Carregando traduções da add-on...</translation>
     </message>

@@ -47,7 +47,7 @@
         <translation>Presunúť prvok na požadované miesto</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>Presunúť referenčný bod</translation>
     </message>
@@ -402,7 +402,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+325"/>
+        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
         <translation>Nahrávanie prekladového doplnku...</translation>
     </message>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExMinimal2</class>
+ <widget class="QWidget" name="ExMinimal2">
+  <layout class="QHBoxLayout">
+   <item>
+    <widget class="QLabel" name="RadiusLabel">
+     <property name="text">
+      <string>&amp;Radius:</string>
+     </property>
+     <property name="buddy">
+      <cstring>Radius</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="RMathLineEdit" name="Radius">
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

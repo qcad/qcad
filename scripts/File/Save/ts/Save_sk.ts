@@ -69,7 +69,7 @@
         <translation>Súbor %1 nebol uložený.</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+19"/>
         <source>Saved drawing:</source>
         <translation>Výkres uložený:</translation>
     </message>

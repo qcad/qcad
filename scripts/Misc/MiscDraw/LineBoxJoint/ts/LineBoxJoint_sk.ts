@@ -14,12 +14,17 @@
         <translation>Výsek</translation>
     </message>
     <message>
+        <location line="+10"/>
+        <source>Tenons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../LineBoxJoint.js" line="-3"/>
         <source>Second point</source>
         <translation>Druhý bod</translation>
     </message>
     <message>
-        <location filename="../LineBoxJoint.ui" line="-34"/>
+        <location filename="../LineBoxJoint.ui" line="-44"/>
         <source>Finger/Slot Ratio:</source>
         <translation>Pomer Výsek/Výstupok:</translation>
     </message>
@@ -44,12 +49,11 @@
         <translation>Šírka:</translation>
     </message>
     <message>
-        <location line="+67"/>
         <source>Tennons</source>
-        <translation>Drážka</translation>
+        <translation type="vanished">Drážka</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="+46"/>
         <source>&amp;Style:</source>
         <translation>&amp;Spôsob:</translation>
     </message>

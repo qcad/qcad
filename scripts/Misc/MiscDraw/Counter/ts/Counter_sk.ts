@@ -14,9 +14,13 @@
         <translation>Začiatok:</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Incr:</source>
-        <translation>Krokovanie:</translation>
+        <translation type="vanished">Krokovanie:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Increment:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>

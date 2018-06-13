@@ -52,7 +52,7 @@
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+376"/>
         <source>Move Reference Point</source>
         <translation>Przenieś punkt odniesienia</translation>
     </message>
@@ -496,7 +496,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+325"/>
+        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
         <translation>Wczytywanie tłumaczeń dodatków...</translation>
     </message>

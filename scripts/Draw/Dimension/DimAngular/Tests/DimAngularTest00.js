@@ -42,6 +42,7 @@ DimAngularTest00.prototype.test00 = function() {
     this.setToolOption('Dimension/Text', '');
     this.setToolOption('Dimension/UpperTolerance', '');
     this.setToolOption('Dimension/LowerTolerance', '');
+    this.setToolOption('DimAngular/UseMaxAngle', 'false');
     this.updateToolOptions();
     this.setZoom(4.825046040515654, new RVector(10.9233, 14.2943, 0) );
 
