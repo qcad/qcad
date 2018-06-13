@@ -496,7 +496,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+325"/>
+        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
         <translation>Wczytywanie tłumaczeń dodatków...</translation>
     </message>

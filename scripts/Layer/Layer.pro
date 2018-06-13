@@ -10,5 +10,6 @@ SUBDIRS = \
     SelectLayer \
     ShowActiveLayer \
     ShowAllLayers \
+    ToggleLayetLock \
     ToggleLayerVisibility \
     UnlockAllLayers
