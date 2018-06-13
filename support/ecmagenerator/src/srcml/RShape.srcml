@@ -440,7 +440,7 @@
         <return>return <expr><name>errorCode</name></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>void</name></type> <name>dump</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>dump</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
