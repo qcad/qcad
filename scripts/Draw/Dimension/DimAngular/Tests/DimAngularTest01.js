@@ -24,13 +24,6 @@ DimAngularTest01.prototype.test00 = function() {
     this.setToolOption('Dimension/Scale', '1:1');
     this.setToolOption('DimAngular/UseMaxAngle', 'true');
     this.updateToolOptions();
-    this.setToolOption('Dimension/Prefix', '(No prefix)');
-    this.setToolOption('Dimension/Text', '');
-    this.setToolOption('Dimension/UpperTolerance', '');
-    this.setToolOption('Dimension/LowerTolerance', '');
-    this.setToolOption('Dimension/Scale', '1:1');
-    this.setToolOption('DimAngular/UseMaxAngle', 'true');
-    this.updateToolOptions();
     this.setZoom(5.887541345093716, new RVector(-15.4037, 0.434132, 0, true));
     var p = new RVector(33.407865, 52.898827);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
