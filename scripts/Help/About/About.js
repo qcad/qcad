@@ -171,10 +171,14 @@ About.prototype.initAboutPlugins = function(textBrowser) {
         html += qsTr("No plugins found.");
     }
     else {
-        var namePostfixesSlash = [];
-        var namePostfixesSpace = [];
-        var nameOverrides = [];
-        var versionOverrides = [];
+//        var namePostfixesSlash = [];
+//        var namePostfixesSpace = [];
+        //var nameOverrides = [];
+        //var versionOverrides = [];
+        //var nameOverride = undefined;
+        //var versionOverride = undefined;
+
+        var maxPri = undefined;
         for (var i=0; i<numPlugins; i++) {
             html += "<table border='0' width='100%'>";
 
@@ -182,33 +186,51 @@ About.prototype.initAboutPlugins = function(textBrowser) {
 
             var pluginInfo = RPluginLoader.getPluginInfo(i);
 
+            // override priority:
+            var pri = pluginInfo.get("OverridePriority");
+            if (!isNull(pri)) {
+                pri = parseInt(pri);
+            }
+            else {
+                // default to lowest priority:
+                pri = 0;
+            }
+
+            //qDebug("ID:", pluginInfo.get("ID"));
+            //qDebug("pri:", pri);
+
             // plugin about info:
             text = pluginInfo.get("Name", qsTr("No information available"));
             html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
 
-            text = pluginInfo.get("NamePostfix");
-            if (!isNull(text)) {
-                if (text.startsWith("/")) {
-                    namePostfixesSlash.push(text);
+//            text = pluginInfo.get("NamePostfix");
+//            if (!isNull(text)) {
+//                if (text.startsWith("/")) {
+//                    namePostfixesSlash.push(text);
+//                }
+//                else {
+//                    namePostfixesSpace.push(text);
+//                }
+//            }
+
+            // overrides:
+            if (isNull(maxPri) || pri>maxPri) {
+                maxPri = pri;
+
+                text = pluginInfo.get("NameOverride");
+                if (!isNull(text)) {
+                    this.applicationName = text;
                 }
-                else {
-                    namePostfixesSpace.push(text);
+
+                text = pluginInfo.get("VersionOverride");
+                if (!isNull(text)) {
+                    this.version = text;
                 }
-            }
 
-            text = pluginInfo.get("NameOverride");
-            if (!isNull(text)) {
-                nameOverrides.push(text);
-            }
-
-            text = pluginInfo.get("VersionOverride");
-            if (!isNull(text)) {
-                versionOverrides.push(text);
-            }
-
-            text = pluginInfo.get("IconOverride");
-            if (!isNull(text)) {
-                this.iconFile = text;
+                text = pluginInfo.get("IconOverride");
+                if (!isNull(text)) {
+                    this.iconFile = text;
+                }
             }
 
             // ID:
@@ -297,24 +319,24 @@ About.prototype.initAboutPlugins = function(textBrowser) {
         }
 
         // name override:
-        if (nameOverrides.length!==0) {
-            var a = nameOverrides.sort( function (a, b) { return b.length - a.length; });
-            this.applicationName = a[0];
-        }
-        else {
+//        if (nameOverrides.length!==0) {
+//            var a = nameOverrides.sort( function (a, b) { return b.length - a.length; });
+//            this.applicationName = a[0];
+//        }
+//        else {
             // add name postfixes:
 
             // e.g. "/XYZ" for "MyApp/XYZ":
-            namePostfixesSlash.sort();
+            //namePostfixesSlash.sort();
             // e.g. "Incredible Edition" for "MyApp Incredible Edition":
-            namePostfixesSpace.sort();
-            this.applicationName = qApp.applicationName + namePostfixesSlash.join("") + namePostfixesSpace.join("");
-        }
+            //namePostfixesSpace.sort();
+            //this.applicationName = qApp.applicationName + namePostfixesSlash.join("") + namePostfixesSpace.join("");
+//        }
 
         // version override:
-        if (versionOverrides.length!==0) {
-            this.version = versionOverrides[0];
-        }
+//        if (versionOverrides.length!==0) {
+//            this.version = versionOverrides[0];
+//        }
     }
 
     if (this.applicationName==="QCAD") {

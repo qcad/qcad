@@ -586,8 +586,8 @@ function main() {
         for (i=0; i<numPlugins; i++) {
             pluginInfo = RPluginLoader.getPluginInfo(i);
 
-            // splash override priority:
-            var pri = pluginInfo.get("SplashOverridePriority");
+            // override priority:
+            var pri = pluginInfo.get("OverridePriority");
             if (!isNull(pri)) {
                 pri = parseInt(pri);
             }
