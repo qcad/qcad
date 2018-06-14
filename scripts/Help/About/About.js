@@ -171,13 +171,6 @@ About.prototype.initAboutPlugins = function(textBrowser) {
         html += qsTr("No plugins found.");
     }
     else {
-//        var namePostfixesSlash = [];
-//        var namePostfixesSpace = [];
-        //var nameOverrides = [];
-        //var versionOverrides = [];
-        //var nameOverride = undefined;
-        //var versionOverride = undefined;
-
         var maxPri = undefined;
         for (var i=0; i<numPlugins; i++) {
             html += "<table border='0' width='100%'>";
@@ -202,16 +195,6 @@ About.prototype.initAboutPlugins = function(textBrowser) {
             // plugin about info:
             text = pluginInfo.get("Name", qsTr("No information available"));
             html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
-
-//            text = pluginInfo.get("NamePostfix");
-//            if (!isNull(text)) {
-//                if (text.startsWith("/")) {
-//                    namePostfixesSlash.push(text);
-//                }
-//                else {
-//                    namePostfixesSpace.push(text);
-//                }
-//            }
 
             // overrides:
             if (isNull(maxPri) || pri>maxPri) {
@@ -275,12 +258,7 @@ About.prototype.initAboutPlugins = function(textBrowser) {
                         var fixedUrl = url.toString();
                         fixedUrl = fixedUrl.replace("QUrl( \"", "");
                         fixedUrl = fixedUrl.replace("\" )", "");
-                        html += this.getTableRow(
-                            qsTr("Internet:"),
-                            "<a href='%2'>%3</a>"
-                                .arg(fixedUrl).arg(fixedUrl),
-                            false
-                        );
+                        html += this.getTableRow(qsTr("Internet:"), "<a href='%2'>%3</a>" .arg(fixedUrl).arg(fixedUrl), false);
                     }
                 }
             }
@@ -317,26 +295,6 @@ About.prototype.initAboutPlugins = function(textBrowser) {
             html += "</table>";
             html += "<hr/>";
         }
-
-        // name override:
-//        if (nameOverrides.length!==0) {
-//            var a = nameOverrides.sort( function (a, b) { return b.length - a.length; });
-//            this.applicationName = a[0];
-//        }
-//        else {
-            // add name postfixes:
-
-            // e.g. "/XYZ" for "MyApp/XYZ":
-            //namePostfixesSlash.sort();
-            // e.g. "Incredible Edition" for "MyApp Incredible Edition":
-            //namePostfixesSpace.sort();
-            //this.applicationName = qApp.applicationName + namePostfixesSlash.join("") + namePostfixesSpace.join("");
-//        }
-
-        // version override:
-//        if (versionOverrides.length!==0) {
-//            this.version = versionOverrides[0];
-//        }
     }
 
     if (this.applicationName==="QCAD") {
