@@ -582,12 +582,26 @@ function main() {
         }
 
         // look up slash screen override:
+        var maxPri = undefined;
         for (i=0; i<numPlugins; i++) {
             pluginInfo = RPluginLoader.getPluginInfo(i);
-            var s = pluginInfo.get(key);
-            if (!isNull(s)) {
-                fn = s;
-                //qDebug("splash override: ", fn);
+
+            // override priority:
+            var pri = pluginInfo.get("OverridePriority");
+            if (!isNull(pri)) {
+                pri = parseInt(pri);
+            }
+            else {
+                // default to lowest priority:
+                pri = 0;
+            }
+
+            if (isNull(maxPri) || pri>maxPri) {
+                var s = pluginInfo.get(key);
+                if (!isNull(s)) {
+                    fn = s;
+                    maxPri = pri;
+                }
             }
         }
 
