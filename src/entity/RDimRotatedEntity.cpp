@@ -100,17 +100,17 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyArrow1Flipped.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimRotatedEntity::PropertyArrow2Flipped.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimRotatedEntity::PropertyDimensionLinePosX.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RDimRotatedEntity::PropertyDimensionLinePosY.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RDimRotatedEntity::PropertyDimensionLinePosZ.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RDimRotatedEntity::PropertyDimensionLinePosX.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyDimensionLinePosX);
+    RDimRotatedEntity::PropertyDimensionLinePosY.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyDimensionLinePosY);
+    RDimRotatedEntity::PropertyDimensionLinePosZ.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyDimensionLinePosZ);
 
-    RDimRotatedEntity::PropertyExtensionPoint1X.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RDimRotatedEntity::PropertyExtensionPoint1Y.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 1"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RDimRotatedEntity::PropertyExtensionPoint1Z.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 1"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RDimRotatedEntity::PropertyExtensionPoint1X.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyExtensionPoint1X);
+    RDimRotatedEntity::PropertyExtensionPoint1Y.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyExtensionPoint1Y);
+    RDimRotatedEntity::PropertyExtensionPoint1Z.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyExtensionPoint1Z);
 
-    RDimRotatedEntity::PropertyExtensionPoint2X.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 2"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RDimRotatedEntity::PropertyExtensionPoint2Y.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 2"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RDimRotatedEntity::PropertyExtensionPoint2Z.generateId(typeid(RDimRotatedEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 2"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RDimRotatedEntity::PropertyExtensionPoint2X.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyExtensionPoint2X);
+    RDimRotatedEntity::PropertyExtensionPoint2Y.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyExtensionPoint2Y);
+    RDimRotatedEntity::PropertyExtensionPoint2Z.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyExtensionPoint2Z);
 
     RDimRotatedEntity::PropertyAngle.generateId(typeid(RDimRotatedEntity), "", QT_TRANSLATE_NOOP("REntity", "Dimension Angle"));
 }
@@ -119,15 +119,18 @@ bool RDimRotatedEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = RDimLinearEntity::setProperty(propertyTypeId, value, transaction);
 
-    ret = ret || RObject::setMember(data.definitionPoint.x, value, PropertyDimensionLinePosX == propertyTypeId);
-    ret = ret || RObject::setMember(data.definitionPoint.y, value, PropertyDimensionLinePosY == propertyTypeId);
-    ret = ret || RObject::setMember(data.definitionPoint.z, value, PropertyDimensionLinePosZ == propertyTypeId);
+//    ret = ret || RObject::setMember(data.definitionPoint.x, value, PropertyDimensionLinePosX == propertyTypeId);
+//    ret = ret || RObject::setMember(data.definitionPoint.y, value, PropertyDimensionLinePosY == propertyTypeId);
+//    ret = ret || RObject::setMember(data.definitionPoint.z, value, PropertyDimensionLinePosZ == propertyTypeId);
+
 //    ret = ret || RObject::setMember(data.extensionPoint1.x, value, PropertyExtensionPoint1X == propertyTypeId);
 //    ret = ret || RObject::setMember(data.extensionPoint1.y, value, PropertyExtensionPoint1Y == propertyTypeId);
 //    ret = ret || RObject::setMember(data.extensionPoint1.z, value, PropertyExtensionPoint1Z == propertyTypeId);
+
 //    ret = ret || RObject::setMember(data.extensionPoint2.x, value, PropertyExtensionPoint2X == propertyTypeId);
 //    ret = ret || RObject::setMember(data.extensionPoint2.y, value, PropertyExtensionPoint2Y == propertyTypeId);
 //    ret = ret || RObject::setMember(data.extensionPoint2.z, value, PropertyExtensionPoint2Z == propertyTypeId);
+
     ret = ret || RObject::setMember(data.rotation, value, PropertyAngle == propertyTypeId);
 
     if (ret) {
@@ -139,20 +142,25 @@ bool RDimRotatedEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RDimRotatedEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyDimensionLinePosX) {
-        return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyDimensionLinePosY) {
-        return qMakePair(QVariant(data.definitionPoint.y), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyDimensionLinePosZ) {
-        return qMakePair(QVariant(data.definitionPoint.z), RPropertyAttributes());
-    }
+
+    qDebug() << "getProperty: " << propertyTypeId.getPropertyGroupTitle() << propertyTypeId.getPropertyTitle();
+
+//    if (propertyTypeId == PropertyDimensionLinePosX) {
+//        return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyDimensionLinePosY) {
+//        return qMakePair(QVariant(data.definitionPoint.y), RPropertyAttributes());
+//    } else if (propertyTypeId == PropertyDimensionLinePosZ) {
+//        return qMakePair(QVariant(data.definitionPoint.z), RPropertyAttributes());
+
 //    } else if (propertyTypeId == PropertyExtensionPoint1X) {
 //        return qMakePair(QVariant(data.extensionPoint1.x), RPropertyAttributes());
 //    } else if (propertyTypeId == PropertyExtensionPoint1Y) {
 //        return qMakePair(QVariant(data.extensionPoint1.y), RPropertyAttributes());
 //    } else if (propertyTypeId == PropertyExtensionPoint1Z) {
 //        return qMakePair(QVariant(data.extensionPoint1.z), RPropertyAttributes());
-//    } else if (propertyTypeId == PropertyExtensionPoint2X) {
+//    }
+
+//    else if (propertyTypeId == PropertyExtensionPoint2X) {
 //        return qMakePair(QVariant(data.extensionPoint2.x), RPropertyAttributes());
 //    } else if (propertyTypeId == PropertyExtensionPoint2Y) {
 //        return qMakePair(QVariant(data.extensionPoint2.y), RPropertyAttributes());

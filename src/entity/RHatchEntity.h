@@ -89,12 +89,12 @@ public:
         return data.getCustomPattern();
     }
 
-    bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
+    virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     bool setBoundaryVector(RObject::XYZ xyz, const QVariant& value, bool condition);
     RVector setComponent(const RVector& p, double v, RObject::XYZ xyz);
 
-    QPair<QVariant, RPropertyAttributes> getProperty(
+    virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
 

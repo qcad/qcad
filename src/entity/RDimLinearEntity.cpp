@@ -102,6 +102,7 @@ void RDimLinearEntity::init() {
     RDimLinearEntity::PropertyExtensionPoint1X.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimLinearEntity::PropertyExtensionPoint1Y.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 1"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RDimLinearEntity::PropertyExtensionPoint1Z.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 1"), QT_TRANSLATE_NOOP("REntity", "Z"));
+
     RDimLinearEntity::PropertyExtensionPoint2X.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 2"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimLinearEntity::PropertyExtensionPoint2Y.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 2"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RDimLinearEntity::PropertyExtensionPoint2Z.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Extension Point 2"), QT_TRANSLATE_NOOP("REntity", "Z"));
@@ -132,13 +133,24 @@ bool RDimLinearEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RDimLinearEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
-    if (propertyTypeId == PropertyExtensionPoint1X) {
+
+    if (propertyTypeId == PropertyDimensionLinePosX) {
+        return qMakePair(QVariant(getData().definitionPoint.x), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyDimensionLinePosY) {
+        return qMakePair(QVariant(getData().definitionPoint.y), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyDimensionLinePosZ) {
+        return qMakePair(QVariant(getData().definitionPoint.z), RPropertyAttributes());
+    }
+
+    else if (propertyTypeId == PropertyExtensionPoint1X) {
         return qMakePair(QVariant(getData().extensionPoint1.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyExtensionPoint1Y) {
         return qMakePair(QVariant(getData().extensionPoint1.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyExtensionPoint1Z) {
         return qMakePair(QVariant(getData().extensionPoint1.z), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyExtensionPoint2X) {
+    }
+
+    else if (propertyTypeId == PropertyExtensionPoint2X) {
         return qMakePair(QVariant(getData().extensionPoint2.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyExtensionPoint2Y) {
         return qMakePair(QVariant(getData().extensionPoint2.y), RPropertyAttributes());
