@@ -167,6 +167,12 @@
         ;static  QScriptValue
         getPolylineGen
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setElevation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getElevation
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

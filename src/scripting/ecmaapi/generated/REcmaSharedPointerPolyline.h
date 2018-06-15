@@ -69,6 +69,9 @@
         setZ
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isFlat
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVectorProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

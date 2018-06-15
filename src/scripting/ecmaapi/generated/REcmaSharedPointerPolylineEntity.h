@@ -214,6 +214,15 @@
         getPolylineGen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setElevation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getElevation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isFlat
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTrimEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

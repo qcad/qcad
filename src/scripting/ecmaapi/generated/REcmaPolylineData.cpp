@@ -151,6 +151,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPolylineGen, "getPolylineGen");
             
+            REcmaHelper::registerFunction(&engine, proto, setElevation, "setElevation");
+            
+            REcmaHelper::registerFunction(&engine, proto, getElevation, "getElevation");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPolylineData*>(), *proto);
 
@@ -3981,6 +3985,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::getPolylineGen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::setElevation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::setElevation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setElevation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("setElevation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setElevation(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setElevation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::setElevation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::getElevation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::getElevation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::getElevation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("getElevation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getElevation();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.getElevation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::getElevation", context, engine);
             return result;
         }
          QScriptValue REcmaPolylineData::toString

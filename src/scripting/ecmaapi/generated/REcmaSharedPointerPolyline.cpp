@@ -92,6 +92,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
             
+            REcmaHelper::registerFunction(&engine, proto, isFlat, "isFlat");
+            
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
             
             REcmaHelper::registerFunction(&engine, proto, getDoubleProperties, "getDoubleProperties");
@@ -742,6 +744,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setZ", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::isFlat
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::isFlat", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::isFlat";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("isFlat", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isFlat();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isFlat().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isFlat", context, engine);
             return result;
         }
          QScriptValue
