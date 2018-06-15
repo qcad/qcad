@@ -212,3 +212,20 @@ QList<QSharedPointer<RShape> > RPolylineData::getShapes(const RBox& queryBox, bo
         return ret;
     }
 }
+
+void RPolylineData::setElevation(double v) {
+    for (int i=0; i<countVertices(); i++) {
+        RVector ver = getVertexAt(i);
+        ver.z = v;
+        setVertexAt(i, ver);
+    }
+}
+
+double RPolylineData::getElevation() const {
+    if (isFlat()) {
+        if (countVertices()>0) {
+            return getVertexAt(0).z;
+        }
+    }
+    return 0.0;
+}
