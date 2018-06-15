@@ -573,8 +573,18 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 
                 var controls = undefined;
                 if (!isNull(gridLayout)) {
-                    // don't display any Z values:
-                    if (RSettings.getBoolValue("PropertyEditor/ShowZCoordinates", false)===false && title==="Z" && !propertyTypeId.isCustom()) {
+                    // don't display any Z values or polyline elevation:
+                    var hide = false;
+                    if (!propertyTypeId.isCustom()) {
+                        if (RSettings.getBoolValue("PropertyEditor/ShowZCoordinates", false)===false && title==="Z") {
+                            if (title===RPolylineEntity.PropertyVertexNX.getPropertyTitle() ||
+                                title===RPolylineEntity.PropertyElevation.getPropertyTitle()) {
+                                hide = true;
+                            }
+                        }
+                    }
+
+                    if (hide) {
                         controls = undefined;
                     }
                     else {
