@@ -66,6 +66,7 @@ public:
     }
 
     virtual void setZ(double z);
+    bool isFlat() const;
 
     virtual QList<RVector> getVectorProperties() const;
     virtual QList<double> getDoubleProperties() const;

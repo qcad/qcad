@@ -87,6 +87,22 @@ void RPolyline::setZ(double z) {
     }
 }
 
+bool RPolyline::isFlat() const {
+    double z = RNANDOUBLE;
+    for (int i=0; i<vertices.size(); i++) {
+        if (i==0) {
+            z = vertices[i].z;
+            continue;
+        }
+
+        if (!RMath::fuzzyCompare(z, vertices[i].z)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 QList<RVector> RPolyline::getVectorProperties() const {
     return QList<RVector>() << vertices;
 }
