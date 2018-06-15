@@ -369,6 +369,14 @@ void RMainWindowQt::enable() {
     disableCounter--;
     if (disableCounter==0) {
         setEnabled(true);
+
+#if QT_VERSION == 0x050B00 && defined(Q_OS_MAC)
+        // workaround for Qt 5.11 bug
+        // only small portion of app win is redrawn when enabled
+        // redraw can only be forced with a resize
+        resize(width(), height()+1);
+        resize(width(), height()-1);
+#endif
     }
 }
 
