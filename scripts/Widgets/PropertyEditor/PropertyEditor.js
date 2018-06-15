@@ -576,8 +576,8 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                     // don't display any Z values or polyline elevation:
                     var hide = false;
                     if (!propertyTypeId.isCustom()) {
-                        if (RSettings.getBoolValue("PropertyEditor/ShowZCoordinates", false)===false && title==="Z") {
-                            if (title===RPolylineEntity.PropertyVertexNX.getPropertyTitle() ||
+                        if (RSettings.getBoolValue("PropertyEditor/ShowZCoordinates", false)===false) {
+                            if (title===RPolylineEntity.PropertyVertexNZ.getPropertyTitle() ||
                                 title===RPolylineEntity.PropertyElevation.getPropertyTitle()) {
                                 hide = true;
                             }
