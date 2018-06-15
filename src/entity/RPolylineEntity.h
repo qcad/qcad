@@ -78,6 +78,8 @@ public:
     static RPropertyTypeId PropertyWidth;
     static RPropertyTypeId PropertyHeight;
 
+    static RPropertyTypeId PropertyElevation;
+
 //    static QString TrClockwise;
 //    static QString TrCounterclockwise;
 
@@ -295,6 +297,17 @@ public:
     }
     bool getPolylineGen() const {
         return data.getPolylineGen();
+    }
+
+    void setElevation(double v) {
+        data.setElevation(v);
+    }
+    double getElevation() const {
+        return data.getElevation();
+    }
+
+    bool isFlat() const {
+        return data.isFlat();
     }
 
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
