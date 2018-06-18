@@ -123,7 +123,7 @@ bool RDimRadialEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimRadialEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyCenterPointX) {
         return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterPointY) {

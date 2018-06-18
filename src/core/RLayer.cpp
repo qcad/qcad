@@ -175,7 +175,7 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
     return ret;
 }
 
-QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(name), RPropertyAttributes());
     }

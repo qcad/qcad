@@ -258,7 +258,7 @@ RVector RHatchEntity::setComponent(const RVector& p, double v, RObject::XYZ xyz)
 }
 
 QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     if (propertyTypeId == PropertySolid) {
         //return qMakePair(QVariant(data.solid), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));

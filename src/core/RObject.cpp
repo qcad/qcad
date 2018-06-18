@@ -93,9 +93,10 @@ void RObject::setUndone(bool on) {
     }
 }
 
-QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     Q_UNUSED(humanReadable)
     Q_UNUSED(noAttributes)
+    Q_UNUSED(showOnRequest)
 
     if (propertyTypeId == PropertyType) {
         return qMakePair(QVariant(getType()), RPropertyAttributes(RPropertyAttributes::ReadOnly));

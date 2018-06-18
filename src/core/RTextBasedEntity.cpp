@@ -116,7 +116,7 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertySimple) {
         return qMakePair(QVariant(getData().simple), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionX) {

@@ -64,7 +64,7 @@ QSet<RPropertyTypeId> RDocumentVariables::getCustomPropertyTypeIds() const {
 }
 
 QPair<QVariant, RPropertyAttributes> RDocumentVariables::getProperty(RPropertyTypeId& propertyTypeId,
-        bool humanReadable, bool noAttributes) {
+        bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     if (propertyTypeId == PropertyCurrentLayerId) {
         return qMakePair(QVariant(currentLayerId), RPropertyAttributes());

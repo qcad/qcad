@@ -124,7 +124,7 @@ bool RDimDiametricEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimDiametricEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyChordPointX) {
         return qMakePair(QVariant(data.definitionPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyChordPointY) {

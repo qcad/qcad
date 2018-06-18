@@ -178,8 +178,7 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable,
-        bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyClosed) {
         QVariant v;
         v.setValue(data.closed);
@@ -255,9 +254,16 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             v.setValue(data.getArea());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
         } else if (propertyTypeId == PropertyTotalArea) {
-            QVariant v;
-            v.setValue(data.getArea());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+            if (showOnRequest) {
+                QVariant v;
+                v.setValue(data.getArea());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+            }
+            else {
+                QVariant v;
+                v.setValue(0.0);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest));
+            }
         }
     }
 

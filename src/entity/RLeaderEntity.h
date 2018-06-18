@@ -79,7 +79,7 @@ public:
         RTransaction* transaction=NULL);
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
-            bool humanReadable = false, bool noAttributes = false);
+            bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);
 
     virtual RLeaderData& getData() {
         return data;

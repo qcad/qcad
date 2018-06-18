@@ -65,7 +65,8 @@ public:
     virtual QPair<QVariant, RPropertyAttributes>
             getProperty(RPropertyTypeId& propertyTypeId,
                     bool humanReadable = false,
-                    bool noAttributes = false);
+                    bool noAttributes = false,
+                    bool showOnRequest = false);
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction=NULL);

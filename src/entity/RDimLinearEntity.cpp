@@ -132,7 +132,7 @@ bool RDimLinearEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimLinearEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     if (propertyTypeId == PropertyDimensionLinePosX) {
         return qMakePair(QVariant(getData().definitionPoint.x), RPropertyAttributes());

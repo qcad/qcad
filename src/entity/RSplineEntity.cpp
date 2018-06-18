@@ -154,7 +154,7 @@ bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
-        bool noAttributes) {
+        bool noAttributes, bool showOnRequest) {
 
     if (!data.controlPoints.isEmpty() && data.fitPoints.isEmpty()) {
         if (propertyTypeId == PropertyControlPointNX) {
