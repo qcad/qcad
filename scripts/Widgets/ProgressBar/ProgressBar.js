@@ -97,7 +97,9 @@ ProgressBar.progress = function(value) {
         }
     }
     var appWin = EAction.getMainWindow();
-    appWin.disable();
+    if (appWin.enabled) {
+        appWin.disable();
+    }
 };
 
 ProgressBar.progressEnd = function() {
@@ -116,6 +118,8 @@ ProgressBar.progressEnd = function() {
         }
     }
     var appWin = EAction.getMainWindow();
-    appWin.enable();
+    if (!appWin.enabled) {
+        appWin.enable();
+    }
 };
 
