@@ -32,6 +32,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="ReadOnly" />
       <value name="Redundant" />
       <value name="Undeletable" />
+      <value name="OnRequest" />
     </enum>
     <constructor>
       <variant />
@@ -224,6 +225,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="sum"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isOnRequest" cppName="isOnRequest"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setOnRequest" cppName="setOnRequest"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="onRequest"
         isConst="false" />
       </variant>
     </method>

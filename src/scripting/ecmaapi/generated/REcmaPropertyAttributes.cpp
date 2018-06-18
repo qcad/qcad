@@ -108,6 +108,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setSum, "setSum");
             
+            REcmaHelper::registerFunction(&engine, proto, isOnRequest, "isOnRequest");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOnRequest, "setOnRequest");
+            
             REcmaHelper::registerFunction(&engine, proto, isLabel, "isLabel");
             
             REcmaHelper::registerFunction(&engine, proto, isDimensionLabel, "isDimensionLabel");
@@ -284,6 +288,11 @@
 
     ctor.setProperty("Undeletable",
     QScriptValue(RPropertyAttributes::Undeletable),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OnRequest",
+    QScriptValue(RPropertyAttributes::OnRequest),
     QScriptValue::ReadOnly);
 
 
@@ -1973,6 +1982,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setSum", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isOnRequest
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isOnRequest", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isOnRequest";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isOnRequest", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOnRequest();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isOnRequest().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isOnRequest", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setOnRequest
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setOnRequest", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setOnRequest";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setOnRequest", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOnRequest(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setOnRequest().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setOnRequest", context, engine);
             return result;
         }
          QScriptValue

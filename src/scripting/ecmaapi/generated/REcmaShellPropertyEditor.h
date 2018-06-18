@@ -42,6 +42,7 @@
       void updateFromDocument(
                 RDocument * document, bool onlyChanges, RS::EntityType filter
         = RS :: EntityUnknown, bool manual
+        = false, bool showOnRequest
         = false
             );
         
@@ -161,7 +162,8 @@
     
       void updateEditor(
                 RObject & object, bool doUpdateGui, RDocument * document
-        = NULL
+        = NULL, bool showOnRequest
+        = false
             );
         
     
@@ -174,7 +176,8 @@
     
     
       void updateProperty(
-                const RPropertyTypeId & propertyTypeId, RObject & object, RDocument * document
+                const RPropertyTypeId & propertyTypeId, RObject & object, RDocument * document, bool showOnRequest
+        = false
             );
         
     

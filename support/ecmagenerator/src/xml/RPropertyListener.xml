@@ -22,6 +22,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RS :: EntityAll" isConst="false" />
         <arg type="bool" typeName="bool" name="manual"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="updateFromObject" cppName="updateFromObject"
