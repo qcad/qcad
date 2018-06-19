@@ -139,7 +139,7 @@ bool RArcEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& val
 }
 
 QPair<QVariant, RPropertyAttributes> RArcEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyCenterX) {
         return qMakePair(QVariant(data.center.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterY) {

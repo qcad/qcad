@@ -52,7 +52,7 @@ public:
     virtual ~RPropertyEditor();
 
     // from RPropertyListener interface:
-    virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false);
+    virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
     virtual void updateFromObject(RObject* object, RDocument* document = NULL);
     virtual void clearEditor();
 
@@ -86,7 +86,7 @@ public:
     static bool checkType(RS::EntityType type, RS::EntityType filter);
 
 protected:
-    virtual void updateEditor(RObject& object, bool doUpdateGui, RDocument* document = NULL);
+    virtual void updateEditor(RObject& object, bool doUpdateGui, RDocument* document = NULL, bool showOnRequest = false);
 
     /**
      * Updates the user interface of this property editor. This is the
@@ -97,7 +97,7 @@ protected:
         Q_UNUSED(onlyChanges)
     }
 
-    void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object, RDocument* document);
+    void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object, RDocument* document, bool showOnRequest = false);
     void removeAllButThese(const QMultiMap<QString, QString>& propertyTitles, bool customOnly=false);
 
 protected:

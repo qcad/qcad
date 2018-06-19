@@ -60,7 +60,7 @@ bool RView::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RView::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
-        bool noAttributes) {
+        bool noAttributes, bool showOnRequest) {
 
     Q_UNUSED(humanReadable)
     Q_UNUSED(noAttributes)

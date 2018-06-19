@@ -153,7 +153,7 @@ bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 
 QPair<QVariant, RPropertyAttributes> RImageEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyFileName) {
         return qMakePair(QVariant(data.fileName), RPropertyAttributes());
     } else if (propertyTypeId == PropertyInsertionPointX) {

@@ -45,7 +45,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="setProperty" cppName="setProperty"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
@@ -58,7 +58,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getProperty" cppName="getProperty"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
       isPureVirtual="false">
@@ -68,6 +68,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="humanReadable"
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
@@ -411,6 +413,23 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setElevation" cppName="setElevation"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getElevation" cppName="getElevation"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="isFlat" cppName="isFlat" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getTrimEnd" cppName="getTrimEnd"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -513,6 +532,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyWidth" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyHeight" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyElevation" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

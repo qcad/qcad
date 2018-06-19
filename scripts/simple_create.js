@@ -306,6 +306,19 @@ function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold
 }
 
 /**
+ * Adds the given RShapes to the drawing as new entities using current layer and attributes.
+ * \ingroup ecma_simple
+ *
+ * \return The added entities. The entities do not yet have valid IDs if they were added within a
+ * transaction.
+ */
+function addShapes(shapes) {
+    for (var i=0; i<shapes.length; i++) {
+        addShape(shapes[i]);
+    }
+}
+
+/**
  * Adds the given RShape to the drawing as a new entity using current layer and attributes.
  * \ingroup ecma_simple
  *

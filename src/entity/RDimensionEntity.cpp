@@ -158,7 +158,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyDefinitionPointX) {
         return qMakePair(QVariant(getData().definitionPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDefinitionPointY) {

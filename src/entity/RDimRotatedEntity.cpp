@@ -141,7 +141,7 @@ bool RDimRotatedEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimRotatedEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     qDebug() << "getProperty: " << propertyTypeId.getPropertyGroupTitle() << propertyTypeId.getPropertyTitle();
 

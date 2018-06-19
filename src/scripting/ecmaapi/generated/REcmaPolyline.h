@@ -67,6 +67,9 @@
         setZ
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isFlat
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVectorProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -101,6 +104,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         insertVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        insertVertexAtDistance
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         removeFirstVertex
@@ -419,6 +425,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        morph
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasProxy

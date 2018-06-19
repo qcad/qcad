@@ -57,7 +57,7 @@
      *      not changed (no deletes, no additions).
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>,
-              <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+              <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     
     <comment type="block">/**
      * This method is called if only the properties of the given property owner

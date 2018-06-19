@@ -151,7 +151,7 @@ bool RDimAngular2LEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RDimAngular2LEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     if (propertyTypeId == PropertyExtensionLine1StartX) {
         return qMakePair(QVariant(data.extensionLine1Start.x), RPropertyAttributes());

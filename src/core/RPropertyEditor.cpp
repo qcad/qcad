@@ -46,9 +46,10 @@ RPropertyEditor::~RPropertyEditor() {
  *
  * \param propertyTypeId: Id of the property in the format "Group|Property".
  * \param property: Value and attributes of the property.
+ * \param showOnRequest: True to show also slow properties shown on request.
  */
 void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
-        RObject& object, RDocument* document) {
+        RObject& object, RDocument* document, bool showOnRequest) {
 
     RPropertyTypeId pid = propertyTypeId;
 
@@ -69,7 +70,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
             // only query property if combined property is NOT already mixed:
             if (!propertyMap[propertyTitle].second.isMixed()) {
                 QPair<QVariant, RPropertyAttributes> property =
-                    object.getProperty(pid, true, true);
+                    object.getProperty(pid, true, true, showOnRequest);
 
                 // property is sum:
                 if (propertyMap[propertyTitle].second.isSum()) {
@@ -86,8 +87,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
             }
         } else {
             // new property in existing group:
-            QPair<QVariant, RPropertyAttributes> property =
-                object.getProperty(pid, true);
+            QPair<QVariant, RPropertyAttributes> property = object.getProperty(pid, true, false, showOnRequest);
             if (property.second.isInvisible()) {
                 return;
             }
@@ -97,8 +97,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
         }
     } else {
         // new property in new group:
-        QPair<QVariant, RPropertyAttributes> property = object.getProperty(pid,
-                document, true);
+        QPair<QVariant, RPropertyAttributes> property = object.getProperty(pid, true, false, showOnRequest);
         if (property.second.isInvisible()) {
             return;
         }
@@ -172,13 +171,15 @@ void RPropertyEditor::removeAllButThese(
 }
 
 /**
+ * Implements updateFromDocument from RPropertyListener to show properties for selected objects.
+ *
  * Updates the property editor to contain the properties of the
  * objects that are selected for editing in the given document.
  *
  * \param filter RS::EntityUnknown to use same filter as previously used,
  * any other value to change filter.
  */
-void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual) {
+void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual, bool showOnRequest) {
     if (updatesDisabled) {
         return;
     }
@@ -254,7 +255,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
             continue;
         }
 
-        updateEditor(*obj.data(), false, document);
+        updateEditor(*obj.data(), false, document, showOnRequest);
     }
 
     RS::EntityType entityTypeFilterProp = entityTypeFilter;
@@ -322,7 +323,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 }
 
 /**
- * Implements update from RPropertyListener.
+ * Implements updateFromObject from RPropertyListener to show properties for one single object.
  */
 void RPropertyEditor::updateFromObject(RObject* object, RDocument* document) {
     if (object != NULL) {
@@ -333,13 +334,12 @@ void RPropertyEditor::updateFromObject(RObject* object, RDocument* document) {
 /**
  * Updates the property widget to include the properties of the given property owner.
  */
-void RPropertyEditor::updateEditor(RObject& object, bool doUpdateGui,
-        RDocument* document) {
+void RPropertyEditor::updateEditor(RObject& object, bool doUpdateGui, RDocument* document, bool showOnRequest) {
     QList<RPropertyTypeId> propertyTypeIds = object.getPropertyTypeIds().toList();
     qSort(propertyTypeIds);
     QList<RPropertyTypeId>::iterator it;
     for (it = propertyTypeIds.begin(); it != propertyTypeIds.end(); ++it) {
-        updateProperty(*it, object, document);
+        updateProperty(*it, object, document, showOnRequest);
     }
     if (doUpdateGui) {
         updateGui();

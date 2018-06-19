@@ -30,7 +30,9 @@ QString RFileCache::getContents(const QString& fileName, bool forceReload) {
         return QString();
     }
 
-    return QString::fromUtf8((const char*)buffer->data());
+    QString ret = QString::fromUtf8((const char*)buffer->data());
+    delete buffer;
+    return ret;
 }
 
 QBuffer* RFileCache::getBuffer(const QString& fileName, bool forceReload) {
@@ -40,13 +42,15 @@ QBuffer* RFileCache::getBuffer(const QString& fileName, bool forceReload) {
         return NULL;
     }
 
-    if (forceReload) {
-        cache.remove(abs);
-    }
+//    if (forceReload) {
+//        cache.remove(abs);
+//    }
 
-    if (cache.contains(abs)) {
-        return cache[abs];
-    }
+//    if (cache.contains(abs)) {
+//        return cache[abs];
+//    }
+
+    //qDebug() << "getBuffer for " << fileName;
 
     QFile f(fileName);
     if (!f.open(QIODevice::ReadOnly)) {
@@ -56,7 +60,7 @@ QBuffer* RFileCache::getBuffer(const QString& fileName, bool forceReload) {
 
     QBuffer* buffer = new QBuffer();
     buffer->setData(f.readAll());
-    cache.insert(abs, buffer, buffer->size());
+    //cache.insert(abs, buffer, buffer->size());
     f.close();
 
     return buffer;

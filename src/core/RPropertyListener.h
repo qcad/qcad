@@ -56,7 +56,7 @@ public:
      *      not changed (no deletes, no additions).
      */
     virtual void updateFromDocument(RDocument* document, bool onlyChanges,
-              RS::EntityType entityTypeFilter = RS::EntityAll, bool manual = false) = 0;
+              RS::EntityType entityTypeFilter = RS::EntityAll, bool manual = false, bool showOnRequest = false) = 0;
     
     /**
      * This method is called if only the properties of the given property owner

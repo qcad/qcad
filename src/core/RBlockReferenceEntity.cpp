@@ -253,7 +253,7 @@ bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
         RPropertyTypeId& propertyTypeId,
-        bool humanReadable, bool noAttributes) {
+        bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     if (propertyTypeId == PropertyPositionX) {
         return qMakePair(QVariant(data.position.x), RPropertyAttributes());

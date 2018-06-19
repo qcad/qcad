@@ -32,7 +32,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false" />
     </method>
     <method name="setProperty" cppName="setProperty"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
@@ -45,7 +45,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getProperty" cppName="getProperty"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QPair &lt; QVariant , RPropertyAttributes &gt;"
       isPureVirtual="false">
@@ -55,6 +55,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="humanReadable"
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>

@@ -78,6 +78,8 @@ public:
     static RPropertyTypeId PropertyWidth;
     static RPropertyTypeId PropertyHeight;
 
+    static RPropertyTypeId PropertyElevation;
+
 //    static QString TrClockwise;
 //    static QString TrCounterclockwise;
 
@@ -102,7 +104,7 @@ public:
         RTransaction* transaction=NULL);
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
-            bool humanReadable = false, bool noAttributes = false);
+            bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);
 
     virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
@@ -295,6 +297,17 @@ public:
     }
     bool getPolylineGen() const {
         return data.getPolylineGen();
+    }
+
+    void setElevation(double v) {
+        data.setElevation(v);
+    }
+    double getElevation() const {
+        return data.getElevation();
+    }
+
+    bool isFlat() const {
+        return data.isFlat();
     }
 
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {

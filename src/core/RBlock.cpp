@@ -121,7 +121,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, 
     return ret;
 }
 
-QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(name), RPropertyAttributes());
     }

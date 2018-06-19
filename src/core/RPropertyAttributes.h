@@ -70,7 +70,8 @@ public:
         Percentage = 0x80000 | Integer,  //!< Property is a percentage (0...100), implies Integer
         Sum = 0x100000 | ReadOnly | Redundant,  //!< Sum up this property when multiple entities are selected (area, lenght),
                                          //!< implies ReadOnly and Redundant
-        Undeletable = 0x200000           //!< Property is undeletable (custom properties only)
+        Undeletable = 0x200000,          //!< Property is undeletable (custom properties only)
+        OnRequest = 0x400000             //!< Property shown on request (slow to compute)
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -203,6 +204,14 @@ public:
 
     void setSum(bool sum) {
         setOption(Sum, sum);
+    }
+
+    bool isOnRequest() const {
+        return options.testFlag(OnRequest);
+    }
+
+    void setOnRequest(bool onRequest) {
+        setOption(OnRequest, onRequest);
     }
 
     bool isLabel() const {

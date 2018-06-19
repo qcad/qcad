@@ -206,6 +206,8 @@ public:
     bool getPolylineGen() const {
         return polylineGen;
     }
+    void setElevation(double v);
+    double getElevation() const;
 
 protected:
     bool polylineGen;

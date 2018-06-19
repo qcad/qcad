@@ -132,7 +132,7 @@ bool RRayEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RRayEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
-        bool noAttributes) {
+        bool noAttributes, bool showOnRequest) {
 
     RPropertyAttributes attFixedAngle;
     attFixedAngle.setReadOnly(data.fixedAngle);

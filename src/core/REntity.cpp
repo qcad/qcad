@@ -232,7 +232,7 @@ QList<RVector> REntity::getIntersectionPoints(const RShape& shape, bool limited,
 
 QPair<QVariant, RPropertyAttributes> REntity::getProperty(
         RPropertyTypeId& propertyTypeId,
-        bool humanReadable, bool noAttributes) {
+        bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     if (propertyTypeId == PropertyType) {
         return qMakePair(QVariant(getType()), RPropertyAttributes());

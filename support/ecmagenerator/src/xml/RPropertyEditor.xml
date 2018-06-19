@@ -23,6 +23,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RS :: EntityUnknown" isConst="false" />
         <arg type="bool" typeName="bool" name="manual"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="updateFromObject" cppName="updateFromObject"
@@ -191,6 +193,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" hasDefault="true" default="NULL"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="updateGui" cppName="updateGui"
@@ -212,6 +216,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
+        <arg type="bool" typeName="bool" name="showOnRequest"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="removeAllButThese" cppName="removeAllButThese"

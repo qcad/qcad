@@ -62,6 +62,9 @@ public:
     virtual bool setWidth(RPolyline& polyline, double v) = 0;
     virtual double getHeight(const RPolyline& polyline) = 0;
     virtual bool setHeight(RPolyline& polyline, double v) = 0;
+
+    virtual QList<RPolyline> morph(const RPolyline& polyline, const RPolyline& target, int num) = 0;
+    virtual void insertVertexAtDistance(RPolyline& polyline, double dist) = 0;
 };
 
 #endif

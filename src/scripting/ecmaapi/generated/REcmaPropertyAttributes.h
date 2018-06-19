@@ -133,6 +133,12 @@
         setSum
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isOnRequest
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOnRequest
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

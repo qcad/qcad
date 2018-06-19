@@ -164,7 +164,7 @@ public:
      *      property if this property owner has no property with the given ID.
      */
     virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
-        bool humanReadable = false, bool noAttributes = false);
+        bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);
 
     /**
      * Sets the given property to the given value. If this property owner

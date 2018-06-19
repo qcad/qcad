@@ -573,8 +573,18 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 
                 var controls = undefined;
                 if (!isNull(gridLayout)) {
-                    // don't display any Z values:
-                    if (RSettings.getBoolValue("PropertyEditor/ShowZCoordinates", false)===false && title==="Z" && !propertyTypeId.isCustom()) {
+                    // don't display any Z values or polyline elevation:
+                    var hide = false;
+                    if (!propertyTypeId.isCustom()) {
+                        if (RSettings.getBoolValue("PropertyEditor/ShowZCoordinates", false)===false) {
+                            if (title===RPolylineEntity.PropertyVertexNZ.getPropertyTitle() ||
+                                title===RPolylineEntity.PropertyElevation.getPropertyTitle()) {
+                                hide = true;
+                            }
+                        }
+                    }
+
+                    if (hide) {
                         controls = undefined;
                     }
                     else {
@@ -754,6 +764,20 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
             return undefined;
         }
     }
+
+    // property available on request:
+    // add button to request all properties:
+    if (attributes.isOnRequest()) {
+        var requestAllButton = new QToolButton(this.geometryGroup);
+        requestAllButton.objectName = objectName + "_request";
+        requestAllButton.text = qsTr("Show");
+        requestAllButton.toolTip = qsTr("Show all properties");
+        requestAllButton.clicked.connect(this, "requestAllProperties");
+        requestAllButton.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
+
+        return new Array(requestAllButton);
+    }
+
 
     // Layer:
 //    if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
@@ -1258,6 +1282,24 @@ PropertyEditorImpl.prototype.filterChanged = function() {
     }
 
     this.updateFromDocument(doc, false, entityTypeFilter, true);
+};
+
+/**
+ * Called when the user requests all properties to be shown.
+ */
+PropertyEditorImpl.prototype.requestAllProperties = function() {
+    var doc = EAction.getDocument();
+    if (isNull(doc)) {
+        return;
+    }
+
+    var selectionCombo = this.widget.findChild("Selection");
+    var entityTypeFilter = selectionCombo.itemData(selectionCombo.currentIndex);
+    if (isNull(entityTypeFilter)) {
+        entityTypeFilter = RS.EntityAll;
+    }
+
+    this.updateFromDocument(doc, false, entityTypeFilter, true, true);
 };
 
 PropertyEditorImpl.prototype.getAdjustedPropertyValue = function(propertyTypeId) {

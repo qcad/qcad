@@ -44,6 +44,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isFlat" cppName="isFlat" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getVectorProperties"
     cppName="getVectorProperties" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -136,6 +140,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RVector &amp;" typeName="RVector" name="vertex"
         isConst="true" />
+        <arg type="double" typeName="double" name="bulgeBefore"
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="double" typeName="double" name="bulgeAfter"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="insertVertexAt" cppName="insertVertexAt"
@@ -144,6 +152,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="insertVertexAtDistance"
+    cppName="insertVertexAtDistance" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="dist"
+        isConst="false" />
       </variant>
     </method>
     <method name="removeFirstVertex" cppName="removeFirstVertex"
@@ -959,6 +975,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="morph" cppName="morph" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPolyline &gt;"
+      isPureVirtual="false">
+        <arg type="RPolyline &amp;" typeName="RPolyline"
+        name="target" isConst="true" />
+        <arg type="int" typeName="int" name="num"
         isConst="false" />
       </variant>
     </method>

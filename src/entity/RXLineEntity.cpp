@@ -131,7 +131,7 @@ bool RXLineEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RXLineEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
-        bool noAttributes) {
+        bool noAttributes, bool showOnRequest) {
 
     RPropertyAttributes attFixedAngle;
     attFixedAngle.setReadOnly(data.fixedAngle);

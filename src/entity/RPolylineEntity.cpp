@@ -55,6 +55,7 @@ RPropertyTypeId RPolylineEntity::PropertyTotalArea;
 RPropertyTypeId RPolylineEntity::PropertyBaseAngle;
 RPropertyTypeId RPolylineEntity::PropertyWidth;
 RPropertyTypeId RPolylineEntity::PropertyHeight;
+RPropertyTypeId RPolylineEntity::PropertyElevation;
 
 //#if QT_VERSION >= 0x050000
 //QString RPolylineEntity::TrClockwise; //= QString("↻ ") + QT_TRANSLATE_NOOP("REntity", "Clockwise");
@@ -122,6 +123,8 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyBaseAngle.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Base Angle"));
     RPolylineEntity::PropertyWidth.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
     RPolylineEntity::PropertyHeight.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
+
+    RPolylineEntity::PropertyElevation.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Z"));
 }
 
 bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -139,7 +142,12 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
         ret = ret || RObject::setMember(data.startWidths, value, PropertyStartWidthN == propertyTypeId);
         ret = ret || RObject::setMember(data.endWidths, value, PropertyEndWidthN == propertyTypeId);
 
-        if (PropertyGlobalWidth==propertyTypeId) {
+        if (PropertyElevation==propertyTypeId) {
+            data.setElevation(value.toDouble());
+            ret = true;
+        }
+
+        else if (PropertyGlobalWidth==propertyTypeId) {
             data.setGlobalWidth(value.toDouble());
             ret = true;
         }
@@ -170,8 +178,7 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable,
-        bool noAttributes) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     if (propertyTypeId == PropertyClosed) {
         QVariant v;
         v.setValue(data.closed);
@@ -226,6 +233,10 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             }
         }
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (RPolyline::hasProxy() && propertyTypeId == PropertyElevation) {
+        QVariant v;
+        v.setValue(data.getElevation());
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
     }
 
     // human readable properties (not relevant for transactions):
@@ -243,9 +254,16 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             v.setValue(data.getArea());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
         } else if (propertyTypeId == PropertyTotalArea) {
-            QVariant v;
-            v.setValue(data.getArea());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+            if (showOnRequest) {
+                QVariant v;
+                v.setValue(data.getArea());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+            }
+            else {
+                QVariant v;
+                v.setValue(0.0);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest));
+            }
         }
     }
 

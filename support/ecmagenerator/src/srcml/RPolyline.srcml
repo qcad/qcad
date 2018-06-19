@@ -67,6 +67,7 @@
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setZ</name><parameter_list>(<param><decl><type><name>double</name></type> <name>z</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isFlat</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getVectorProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getDoubleProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -81,8 +82,9 @@
 
     <function_decl><type><name>void</name></type> <name>appendVertex</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>, <param><decl><type><name>double</name></type> <name>bulge</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w1</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w2</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>prependVertex</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>, <param><decl><type><name>double</name></type> <name>bulge</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w1</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w2</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>insertVertex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>insertVertex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>, <param><decl><type><name>double</name></type> <name>bulgeBefore</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>bulgeAfter</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>insertVertexAt</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>insertVertexAtDistance</name><parameter_list>(<param><decl><type><name>double</name></type> <name>dist</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeFirstVertex</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeLastVertex</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeVertex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
@@ -247,6 +249,8 @@
     <function_decl><type><name>bool</name></type> <name>setWidth</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>setHeight</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>morph</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>target</name></decl></param>, <param><decl><type><name>int</name></type> <name>num</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>polylineProxy</name>!=<name>NULL</name></expr>;</return>

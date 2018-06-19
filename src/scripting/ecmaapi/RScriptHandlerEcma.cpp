@@ -1105,6 +1105,16 @@ RFileImporterAdapter* RScriptHandlerEcma::createFileImporter(const QString& clas
 QString RScriptHandlerEcma::readScript(const QString& fileName, bool forceReload) {
 
     return RFileCache::getContents(fileName, forceReload);
+
+//    QFile f(fileName);
+//    if (!f.open(QIODevice::ReadOnly)) {
+//        qWarning() << "RScriptHandlerEcma::readScript: cannot read file: " << fileName;
+//        return QString();
+//    }
+
+//    QString ret = f.readAll();
+//    f.close();
+//    return ret;
 }
 
 void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
