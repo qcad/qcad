@@ -81,8 +81,9 @@ public:
 
     void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
     void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
-    void insertVertex(int index, const RVector& vertex);
+    void insertVertex(int index, const RVector& vertex, double bulgeBefore = 0.0, double bulgeAfter = 0.0);
     void insertVertexAt(const RVector& point);
+    void insertVertexAtDistance(double dist);
     void removeFirstVertex();
     void removeLastVertex();
     void removeVertex(int index);
@@ -247,6 +248,8 @@ public:
     bool setWidth(double v);
     double getHeight() const;
     bool setHeight(double v);
+
+    QList<RPolyline> morph(const RPolyline& target, int num) const;
 
     static bool hasProxy() {
         return polylineProxy!=NULL;

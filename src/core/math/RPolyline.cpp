@@ -316,12 +316,12 @@ void RPolyline::prependVertex(const RVector& vertex, double bulge, double w1, do
     Q_ASSERT(vertices.length()==endWidths.length());
 }
 
-void RPolyline::insertVertex(int index, const RVector& vertex) {
+void RPolyline::insertVertex(int index, const RVector& vertex, double bulgeBefore, double bulgeAfter) {
     vertices.insert(index, vertex);
     if (index>0) {
-        bulges[index-1] = 0.0;
+        bulges[index-1] = bulgeBefore;
     }
-    bulges.insert(index, 0.0);
+    bulges.insert(index, bulgeAfter);
     startWidths.insert(index, RNANDOUBLE);
     endWidths.insert(index, RNANDOUBLE);
 
@@ -376,6 +376,13 @@ void RPolyline::insertVertexAt(const RVector& point) {
     Q_ASSERT(vertices.length()==bulges.length());
     Q_ASSERT(vertices.length()==startWidths.length());
     Q_ASSERT(vertices.length()==endWidths.length());
+}
+
+void RPolyline::insertVertexAtDistance(double dist) {
+    if (polylineProxy!=NULL) {
+        polylineProxy->insertVertexAtDistance(*this, dist);
+    }
+    return;
 }
 
 void RPolyline::removeFirstVertex() {
@@ -661,18 +668,36 @@ QList<double> RPolyline::getEndWidths() const {
     return endWidths;
 }
 
+/**
+ * Marks the poyline as logically (explicitely) closed.
+ * The first and last node are usually not identical. Logically
+ * closed polylines have an additional segment from start to end point.
+ */
 void RPolyline::setClosed(bool on) {
     closed = on;
 }
 
+/**
+ * \return True if this polyline is logically marked as closed.
+ */
 bool RPolyline::isClosed() const {
     return closed;
 }
 
+/**
+ * \return True is this polyline is logically or geometrically closed.
+ */
 bool RPolyline::isGeometricallyClosed(double tolerance) const {
     return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
 }
 
+/**
+ * Converts this geometrically closed polyline (start == end) to a
+ * locically closed polyline.
+ *
+ * \return True on success, false if this polyline is already
+ * locically closed or is not geometrically closed.
+ */
 bool RPolyline::toLogicallyClosed(double tolerance) {
     if (isClosed()) {
         return false;
@@ -692,6 +717,14 @@ bool RPolyline::toLogicallyClosed(double tolerance) {
     return true;
 }
 
+/**
+ * Converts this logically closed polyline to a locically open,
+ * geometrically closed polyline. An additional node is inserted
+ * to make sure start == end.
+ *
+ * \return True on success, false if this polyline is not
+ * locically closed.
+ */
 bool RPolyline::toLogicallyOpen() {
     if (!isClosed()) {
         return false;
@@ -1110,7 +1143,12 @@ QSharedPointer<RShape> RPolyline::getFirstSegment() const {
 
 /**
  * Checks if the given point is inside this closed polygon. If this
- * polyline is not closed (\see setClosed), false is returned.
+ * polyline is not closed, false is returned.
+ *
+ * \see setClosed
+ *
+ * \param borderIsInside True if a position on the polyline counts as inside.
+ * \param tolerance Tolerance used to check if point is on polyline.
  */
 bool RPolyline::contains(const RVector& point, bool borderIsInside, double tolerance) const {
     if (!isGeometricallyClosed(tolerance)) {
@@ -1140,6 +1178,16 @@ bool RPolyline::contains(const RVector& point, bool borderIsInside, double toler
     return c;
 }
 
+/**
+ * Checks if the given shape is completely inside this closed polygon. If this
+ * polyline is not closed, false is returned.
+ *
+ * \see setClosed
+ *
+ * If the shape touches the polyline, false is returned.
+ *
+ * \param shape The shape to check.
+ */
 bool RPolyline::containsShape(const RShape& shape) const {
     // check if the shape intersects with any of the polygon edges:
     bool gotIntersection = false;
@@ -2067,4 +2115,11 @@ bool RPolyline::setHeight(double v) {
         return polylineProxy->setHeight(*this, v);
     }
     return false;
+}
+
+QList<RPolyline> RPolyline::morph(const RPolyline& target, int num) const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->morph(*this, target, num);
+    }
+    return QList<RPolyline>();
 }
