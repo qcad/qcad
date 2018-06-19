@@ -116,6 +116,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, insertVertexAt, "insertVertexAt");
             
+            REcmaHelper::registerFunction(&engine, proto, insertVertexAtDistance, "insertVertexAtDistance");
+            
             REcmaHelper::registerFunction(&engine, proto, removeFirstVertex, "removeFirstVertex");
             
             REcmaHelper::registerFunction(&engine, proto, removeLastVertex, "removeLastVertex");
@@ -325,6 +327,8 @@
             REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
             
             REcmaHelper::registerFunction(&engine, proto, setHeight, "setHeight");
+            
+            REcmaHelper::registerFunction(&engine, proto, morph, "morph");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RPolyline*>(), *proto);
@@ -1922,6 +1926,149 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->insertVertex(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->insertVertex(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.insertVertex().",
                    context);
@@ -1994,6 +2141,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::insertVertexAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::insertVertexAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::insertVertexAtDistance", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::insertVertexAtDistance";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("insertVertexAtDistance", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->insertVertexAtDistance(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.insertVertexAtDistance().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::insertVertexAtDistance", context, engine);
             return result;
         }
          QScriptValue
@@ -9907,6 +10109,91 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::setHeight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::morph
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::morph", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::morph";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("morph", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPolyline */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPolyline*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPolyline*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RPolyline.",
+                               context);                    
+                    }
+                    RPolyline 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPolyline >'
+    QList < RPolyline > cppResult =
+        
+               self->morph(a0
+        ,
+    a1);
+        // return type: QList < RPolyline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.morph().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::morph", context, engine);
             return result;
         }
          QScriptValue
