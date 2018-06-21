@@ -38,7 +38,7 @@ Tipo de línea:</translatorcomment>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+718"/>
+        <location filename="../PropertyEditor.js" line="+728"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -67,13 +67,13 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+632"/>
+        <location line="+664"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1157"/>
+        <location line="-1199"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -115,7 +115,7 @@ Valor indexado</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+77"/>
         <source>Remove this property from selected objects</source>
         <translation>Retire esta propiedad de los objetos seleccionados</translation>
     </message>
@@ -131,7 +131,17 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+657"/>
+        <location line="+67"/>
+        <source>Show</source>
+        <translation>Mostrar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show all properties</source>
+        <translation>Mostrar todas las propiedades</translation>
+    </message>
+    <message>
+        <location line="+621"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -161,7 +171,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-486"/>
+        <location line="-504"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -182,7 +192,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+318"/>
+        <location line="+336"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

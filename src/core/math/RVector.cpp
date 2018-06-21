@@ -261,7 +261,7 @@ bool RVector::equalsFuzzy2D(const RVector& v, double tol) const {
  */
 double RVector::getDistanceTo(const RVector& v) const {
     if (!valid || !v.valid) {
-        return RMAXDOUBLE;
+        return RNANDOUBLE;
     } else {
         return (*this - v).getMagnitude();
     }
@@ -272,7 +272,7 @@ double RVector::getDistanceTo(const RVector& v) const {
  */
 double RVector::getDistanceTo2D(const RVector& v) const {
     if (!valid || !v.valid) {
-        return RMAXDOUBLE;
+        return RNANDOUBLE;
     } else {
         return (*this - v).getMagnitude2D();
     }

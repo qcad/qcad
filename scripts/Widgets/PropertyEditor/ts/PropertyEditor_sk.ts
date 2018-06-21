@@ -37,12 +37,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1350"/>
+        <location filename="../PropertyEditor.js" line="+1392"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1157"/>
+        <location line="-1199"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Zoznam</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+77"/>
         <source>Remove this property from selected objects</source>
         <translation>Odstrániť vlastnosť z vybraných prvkov</translation>
     </message>
@@ -91,7 +91,17 @@
         <translation>Pridať vlastné vlastnosti k vybraným prvkom</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+45"/>
+        <source>Show</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show all properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+117"/>
         <source>Auto</source>
         <translation>automatický</translation>
     </message>
@@ -111,7 +121,7 @@
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+318"/>
+        <location line="+336"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>

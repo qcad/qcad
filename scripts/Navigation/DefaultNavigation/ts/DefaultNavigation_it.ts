@@ -4,7 +4,7 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="+46"/>
+        <location filename="../DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Visualizzazione grafica</translation>
@@ -34,29 +34,34 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+53"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Rotella del mouse / due finger swipe:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-34"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Abilita gesto pan</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+27"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Inversa direzione rotellina del mouse per zoom</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
+        <source>Middle mouse button zoom factor:</source>
+        <translation>Pulsante centrale del mouse fattore di zoom:</translation>
+    </message>
+    <message>
+        <location line="-34"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Rotella del mouse fattore di zoom:</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="+10"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Limitare zoom per evitare overflow</translation>
     </message>

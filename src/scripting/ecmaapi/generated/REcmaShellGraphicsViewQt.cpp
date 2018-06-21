@@ -8864,7 +8864,7 @@
             }
         
       void REcmaShellGraphicsViewQt::zoomIn(
-                const RVector & center
+                const RVector & center, double factor
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewQt::zoomIn", engine);
@@ -8877,7 +8877,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewQt::zoomIn";
@@ -8890,7 +8890,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewQt::zoomIn(
-                            center
+                            center, factor
                         );
 
                         // block recursion again:
@@ -8919,6 +8919,15 @@
         
             // const reference argument - make a new object:
             new RVector(center)
+        )
+      
+
+
+
+    // type: double, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        factor
         )
       
                             )
@@ -8987,7 +8996,7 @@
             }
         
       void REcmaShellGraphicsViewQt::zoomOut(
-                const RVector & center
+                const RVector & center, double factor
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewQt::zoomOut", engine);
@@ -9000,7 +9009,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewQt::zoomOut";
@@ -9013,7 +9022,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewQt::zoomOut(
-                            center
+                            center, factor
                         );
 
                         // block recursion again:
@@ -9042,6 +9051,15 @@
         
             // const reference argument - make a new object:
             new RVector(center)
+        )
+      
+
+
+
+    // type: double, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        factor
         )
       
                             )

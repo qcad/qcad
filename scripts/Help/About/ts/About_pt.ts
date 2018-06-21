@@ -44,7 +44,7 @@
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+31"/>
         <source>No information available</source>
         <translation>Não há informações disponíveis</translation>
     </message>
@@ -54,7 +54,7 @@
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+25"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -71,14 +71,14 @@
         <translation>Desconhecido</translation>
     </message>
     <message>
-        <location line="-123"/>
-        <location line="+116"/>
+        <location line="-128"/>
+        <location line="+121"/>
         <source>Version:</source>
         <translation>Versão:</translation>
     </message>
     <message>
-        <location line="-106"/>
-        <location line="+110"/>
+        <location line="-111"/>
+        <location line="+115"/>
         <source>Qt Version:</source>
         <translation>Qt Versão:</translation>
     </message>
@@ -92,14 +92,14 @@
         <translation>Licença:</translation>
     </message>
     <message>
-        <location line="-120"/>
-        <location line="+129"/>
-        <location line="+12"/>
+        <location line="-125"/>
+        <location line="+134"/>
+        <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-139"/>
+        <location line="-143"/>
         <source>Build Date:</source>
         <translation>Data de constituição:</translation>
     </message>
@@ -190,7 +190,7 @@
         <translation type="vanished">Community Edition</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+22"/>
         <source>Script Add-Ons</source>
         <translation>Scripts de Add-Ons</translation>
     </message>

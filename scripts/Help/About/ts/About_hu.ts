@@ -29,7 +29,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+31"/>
         <source>No information available</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+25"/>
         <source>ID:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56,14 +56,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-123"/>
-        <location line="+116"/>
+        <location line="-128"/>
+        <location line="+121"/>
         <source>Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-106"/>
-        <location line="+110"/>
+        <location line="-111"/>
+        <location line="+115"/>
         <source>Qt Version:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -73,14 +73,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-120"/>
-        <location line="+129"/>
-        <location line="+12"/>
+        <location line="-125"/>
+        <location line="+134"/>
+        <location line="+11"/>
         <source>Internet:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-139"/>
+        <location line="-143"/>
         <source>Build Date:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -160,7 +160,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+22"/>
         <source>Script Add-Ons</source>
         <translation type="unfinished"></translation>
     </message>

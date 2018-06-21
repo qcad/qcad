@@ -67,7 +67,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+77"/>
         <source>Remove this property from selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -82,7 +82,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+45"/>
+        <source>Show</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show all properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+117"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>
@@ -102,7 +112,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+315"/>
+        <location line="+333"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>

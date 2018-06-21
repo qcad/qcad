@@ -141,8 +141,8 @@ public:
     void restoreViewport();
     void zoomIn();
     void zoomOut();
-    void zoomIn(const RVector& center);
-    void zoomOut(const RVector& center);
+    void zoomIn(const RVector& center, double factor=1.2);
+    void zoomOut(const RVector& center, double factor=1.2);
     virtual void zoom(const RVector& center, double factor);
     virtual void zoomTo(const RBox& window, int margin = 0);
     void zoomPrevious();

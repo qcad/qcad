@@ -26,12 +26,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1350"/>
+        <location filename="../PropertyEditor.js" line="+1392"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1157"/>
+        <location line="-1199"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -60,7 +60,7 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+77"/>
         <source>Remove this property from selected objects</source>
         <translation>Eigenschaft von ausgewählten Objekten entfernen</translation>
     </message>
@@ -70,7 +70,17 @@
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+657"/>
+        <location line="+67"/>
+        <source>Show</source>
+        <translation>Anzeigen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show all properties</source>
+        <translation>Alle Eigenschaften anzeigen</translation>
+    </message>
+    <message>
+        <location line="+621"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -107,7 +117,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-667"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -120,7 +130,7 @@
         <translation type="obsolete">Basis</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+163"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
@@ -144,7 +154,7 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+318"/>
+        <location line="+336"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -205,7 +215,7 @@
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-1026"/>
+        <location filename="../PropertyEditor.js" line="-1068"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

@@ -378,11 +378,11 @@ void RPolyline::insertVertexAt(const RVector& point) {
     Q_ASSERT(vertices.length()==endWidths.length());
 }
 
-void RPolyline::insertVertexAtDistance(double dist) {
+RVector RPolyline::insertVertexAtDistance(double dist) {
     if (polylineProxy!=NULL) {
-        polylineProxy->insertVertexAtDistance(*this, dist);
+        return polylineProxy->insertVertexAtDistance(*this, dist);
     }
-    return;
+    return RVector::invalid;
 }
 
 void RPolyline::removeFirstVertex() {
@@ -636,13 +636,13 @@ double RPolyline::getEndWidthAt(int i) const {
 
 bool RPolyline::hasWidths() const {
     for (int i=0; i<startWidths.length() && i<endWidths.length(); i++) {
-        if (startWidths[i]>0.0) {
+        if (!RMath::isNaN(startWidths[i]) && startWidths[i]>0.0) {
             // widths in last vertex only count if closed:
             if (i!=startWidths.length()-1 || isClosed()) {
                 return true;
             }
         }
-        if (endWidths[i]>0.0) {
+        if (!RMath::isNaN(endWidths[i]) && endWidths[i]>0.0) {
             if (i!=startWidths.length()-1 || isClosed()) {
                 return true;
             }
@@ -2117,9 +2117,9 @@ bool RPolyline::setHeight(double v) {
     return false;
 }
 
-QList<RPolyline> RPolyline::morph(const RPolyline& target, int num) const {
+QList<RPolyline> RPolyline::morph(const RPolyline& target, int steps) const {
     if (polylineProxy!=NULL) {
-        return polylineProxy->morph(*this, target, num);
+        return polylineProxy->morph(*this, target, steps);
     }
     return QList<RPolyline>();
 }

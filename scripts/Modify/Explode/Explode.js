@@ -99,7 +99,6 @@ Explode.explodeSelection = function(di, toolTitle) {
         if (isPointEntity(entity) ||
             isLineEntity(entity) ||
             isArcEntity(entity) ||
-            isCircleEntity(entity) ||
             isViewportEntity(entity)) {
             continue;
         }
@@ -198,6 +197,15 @@ Explode.explodeEntity = function(entity, options) {
         else {
             continue;
         }
+    }
+
+    // explode circle into polyline with two arc segments:
+    else if (isCircleEntity(entity)) {
+        var circle = entity.getData().castToShape();
+        polyline = new RPolyline();
+        polyline.appendShape(new RArc(circle.getCenter(), circle.getRadius(), 0.0, Math.PI, false));
+        polyline.appendShape(new RArc(circle.getCenter(), circle.getRadius(), Math.PI, 2*Math.PI, false));
+        ret.push(polyline);
     }
 
     // explode polyline into line and arc segments:

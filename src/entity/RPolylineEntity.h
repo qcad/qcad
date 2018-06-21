@@ -321,6 +321,10 @@ public:
         return data.trimEndPoint(trimPoint, clickPoint, extend);
     }
 
+    QList<RPolyline> morph(const RPolyline& target, int steps) const {
+        return data.morph(target, steps);
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

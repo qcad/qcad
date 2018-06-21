@@ -41,7 +41,7 @@
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+77"/>
         <source>Remove this property from selected objects</source>
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
@@ -51,7 +51,17 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+635"/>
+        <location line="+45"/>
+        <source>Show</source>
+        <translation>Afficher</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show all properties</source>
+        <translation>Afficher toutes les propriétés</translation>
+    </message>
+    <message>
+        <location line="+621"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -86,7 +96,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1157"/>
+        <location line="-1199"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -111,7 +121,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+318"/>
+        <location line="+328"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -145,7 +155,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+171"/>
+        <location line="+185"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -174,7 +184,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+318"/>
+        <location line="+336"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

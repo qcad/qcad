@@ -26,6 +26,7 @@ function DefaultNavigation(widget) {
     this.panning = false;
     this.savedCursor = undefined;
     this.panOrigin = new RVector();
+    this.panFirstOrigin = new RVector();
     if (!isNull(widget)) {
         this.hruler = widget.findChild("HorizontalRuler");
         this.vruler = widget.findChild("VerticalRuler");
@@ -57,6 +58,7 @@ DefaultNavigation.applyPreferences = function(doc) {
     DefaultNavigation.reverseMouseWheelZoom = RSettings.getBoolValue("GraphicsViewNavigation/ReverseMouseWheelZoom", false);
     DefaultNavigation.mouseWheelZoomFactor = RSettings.getDoubleValue("GraphicsViewNavigation/MouseWheelZoomFactor", 1.2);
     DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
+    DefaultNavigation.middleMouseButtonZoomFactor = RSettings.getDoubleValue("GraphicsViewNavigation/MiddleMouseButtonZoomFactor", 1.2);
 };
 
 DefaultNavigation.prototype.beginEvent = function() {
@@ -107,6 +109,7 @@ DefaultNavigation.prototype.mousePressEvent = function(event) {
          event.modifiers().valueOf() === Qt.ControlModifier.valueOf())) {
 
         this.panOrigin = event.getScreenPosition();
+        this.panFirstOrigin = this.panOrigin;
         this.panning = true;
         this.savedCursor = this.view.getCursor();
         this.view.setCursor(new QCursor(Qt.OpenHandCursor));
@@ -123,6 +126,17 @@ DefaultNavigation.prototype.mouseReleaseEvent = function(event) {
     if (this.panning === true &&
         (event.button() === Qt.MidButton ||
          event.button() === Qt.LeftButton)) {
+
+        if (this.panFirstOrigin.getDistanceTo(event.getScreenPosition())<2) {
+            // zoom in / out:
+            var position = event.getModelPosition();
+            if (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf()) {
+                this.view.zoomOut(position, DefaultNavigation.middleMouseButtonZoomFactor);
+            }
+            else {
+                this.view.zoomIn(position, DefaultNavigation.middleMouseButtonZoomFactor);
+            }
+        }
 
         if (!isNull(this.savedCursor)) {
             this.view.setCursor(this.savedCursor);
