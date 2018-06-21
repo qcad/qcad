@@ -283,8 +283,8 @@ void RGraphicsView::zoomOut() {
  * Zooms in by factor 1.2. The given \c center point stays
  * at the same position.
  */
-void RGraphicsView::zoomIn(const RVector& center) {
-    zoom(center, 1.2);
+void RGraphicsView::zoomIn(const RVector& center, double factor) {
+    zoom(center, factor);
 }
 
 
@@ -293,8 +293,11 @@ void RGraphicsView::zoomIn(const RVector& center) {
  * Zooms out by factor 1.0/1.2. The given \c center point stays
  * at the same position.
  */
-void RGraphicsView::zoomOut(const RVector& center) {
-    zoom(center, 1.0/1.2);
+void RGraphicsView::zoomOut(const RVector& center, double factor) {
+    if (factor<RS::PointTolerance) {
+        return;
+    }
+    zoom(center, 1.0/factor);
 }
 
 
