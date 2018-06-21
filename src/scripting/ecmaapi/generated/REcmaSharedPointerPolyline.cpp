@@ -2181,9 +2181,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'RVector'
+    RVector cppResult =
+        
                self->insertVertexAtDistance(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
     } else
 
 

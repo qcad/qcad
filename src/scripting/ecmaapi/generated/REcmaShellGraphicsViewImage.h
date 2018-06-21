@@ -769,7 +769,8 @@
             );
         
       void zoomIn(
-                const RVector & center
+                const RVector & center, double factor
+        = 1.2
             );
         
     
@@ -778,7 +779,8 @@
             );
         
       void zoomOut(
-                const RVector & center
+                const RVector & center, double factor
+        = 1.2
             );
         
     

@@ -157,7 +157,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="insertVertexAtDistance"
     cppName="insertVertexAtDistance" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="RVector" isPureVirtual="false">
         <arg type="double" typeName="double" name="dist"
         isConst="false" />
       </variant>
@@ -984,7 +984,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RPolyline &amp;" typeName="RPolyline"
         name="target" isConst="true" />
-        <arg type="int" typeName="int" name="num"
+        <arg type="int" typeName="int" name="steps"
         isConst="false" />
       </variant>
     </method>
