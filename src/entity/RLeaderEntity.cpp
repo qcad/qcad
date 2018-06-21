@@ -168,7 +168,7 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
         return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
     }
 
-    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 

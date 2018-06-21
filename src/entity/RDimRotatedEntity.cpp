@@ -170,7 +170,7 @@ QPair<QVariant, RPropertyAttributes> RDimRotatedEntity::getProperty(
         return qMakePair(QVariant(data.rotation), RPropertyAttributes(RPropertyAttributes::Angle));
     }
 
-    return RDimLinearEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimLinearEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimRotatedEntity::print(QDebug dbg) const {

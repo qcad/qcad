@@ -336,7 +336,7 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
         }
     }
 
-    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 //void RBlockReferenceEntity::setSelected(bool on) {

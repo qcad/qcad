@@ -171,7 +171,7 @@ QPair<QVariant, RPropertyAttributes> RRayEntity::getProperty(
         return qMakePair(QVariant(data.fixedAngle), RPropertyAttributes());
     }
 
-    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 

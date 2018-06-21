@@ -172,7 +172,7 @@ QPair<QVariant, RPropertyAttributes> RDimOrdinateEntity::getProperty(
         return qMakePair(QVariant(data.leaderEndPoint.z), RPropertyAttributes());
     }
 
-    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimOrdinateEntity::print(QDebug dbg) const {

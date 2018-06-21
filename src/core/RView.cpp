@@ -62,9 +62,6 @@ QPair<QVariant, RPropertyAttributes> RView::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes, bool showOnRequest) {
 
-    Q_UNUSED(humanReadable)
-    Q_UNUSED(noAttributes)
-
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(name), RPropertyAttributes());
     }
@@ -78,7 +75,7 @@ QPair<QVariant, RPropertyAttributes> RView::getProperty(
         return qMakePair(QVariant(height), RPropertyAttributes());
     }
 
-    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 bool RView::isSelectedForPropertyEditing() {

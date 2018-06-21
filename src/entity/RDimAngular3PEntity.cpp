@@ -177,7 +177,7 @@ QPair<QVariant, RPropertyAttributes> RDimAngular3PEntity::getProperty(
         return qMakePair(QVariant(data.definitionPoint.z), RPropertyAttributes());
     }
 
-    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimAngular3PEntity::print(QDebug dbg) const {

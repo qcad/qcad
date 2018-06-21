@@ -248,7 +248,7 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
         }
     }
 
-    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RSplineEntity::setShape(const RSpline& s) {

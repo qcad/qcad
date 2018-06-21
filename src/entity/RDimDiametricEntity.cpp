@@ -139,7 +139,7 @@ QPair<QVariant, RPropertyAttributes> RDimDiametricEntity::getProperty(
         return qMakePair(QVariant(data.chordPoint.z), RPropertyAttributes());
     }
 
-    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimDiametricEntity::print(QDebug dbg) const {

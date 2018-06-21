@@ -174,7 +174,7 @@ QPair<QVariant, RPropertyAttributes> REllipseEntity::getProperty(
         }
     }
 
-    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void REllipseEntity::setShape(const REllipse& e) {

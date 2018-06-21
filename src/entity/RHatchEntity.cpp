@@ -354,7 +354,7 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
     }
 
-    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 

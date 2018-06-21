@@ -74,10 +74,6 @@ QPair<QVariant, RPropertyAttributes> RLinetype::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes, bool showOnRequest) {
 
-    Q_UNUSED(humanReadable)
-    Q_UNUSED(noAttributes)
-    Q_UNUSED(showOnRequest)
-
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(pattern.name), RPropertyAttributes());
     }
@@ -93,7 +89,8 @@ QPair<QVariant, RPropertyAttributes> RLinetype::getProperty(
         return qMakePair(v, RPropertyAttributes());
     }
 
-    return qMakePair(QVariant(), RPropertyAttributes());
+    //return qMakePair(QVariant(), RPropertyAttributes());
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 bool RLinetype::isSelectedForPropertyEditing() {

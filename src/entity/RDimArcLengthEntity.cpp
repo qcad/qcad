@@ -187,7 +187,7 @@ QPair<QVariant, RPropertyAttributes> RDimArcLengthEntity::getProperty(
         return qMakePair(QVariant(data.arcSymbolType), RPropertyAttributes());
     }
 
-    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimArcLengthEntity::print(QDebug dbg) const {
