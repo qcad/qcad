@@ -197,6 +197,13 @@ void RSpatialIndexNavel::addToIndex(
 
     //qDebug() << "\tbefore: " << *this;
 
+    if (RMath::isNaN(x1) || RMath::isNaN(y1) || RMath::isNaN(z1) ||
+            RMath::isNaN(x2) || RMath::isNaN(y2) || RMath::isNaN(z2)) {
+
+        qWarning() << "trying to add NaN values to spatial index";
+        return;
+    }
+
     addToIndex(
         id, pos,
         RSpatialIndexNavel::RSiRegion(
