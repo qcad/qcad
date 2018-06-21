@@ -246,13 +246,27 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             v.setValue(data.getLength());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
         } else if (propertyTypeId == PropertyTotalLength) {
-            QVariant v;
-            v.setValue(data.getLength());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+            if (showOnRequest) {
+                QVariant v;
+                v.setValue(data.getLength());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+            }
+            else {
+                QVariant v;
+                v.setValue(0.0);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest));
+            }
         } else if (propertyTypeId == PropertyArea) {
-            QVariant v;
-            v.setValue(data.getArea());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
+            if (showOnRequest) {
+                QVariant v;
+                v.setValue(data.getArea());
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
+            }
+            else {
+                QVariant v;
+                v.setValue(0.0);
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest));
+            }
         } else if (propertyTypeId == PropertyTotalArea) {
             if (showOnRequest) {
                 QVariant v;
