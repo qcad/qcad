@@ -31,7 +31,7 @@
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+718"/>
+        <location filename="../PropertyEditor.js" line="+728"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -60,13 +60,13 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+632"/>
+        <location line="+664"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1157"/>
+        <location line="-1199"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -103,7 +103,7 @@ Nessuna selezione</translatorcomment>
         <translation>Indice</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+77"/>
         <source>Remove this property from selected objects</source>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>
@@ -113,7 +113,17 @@ Nessuna selezione</translatorcomment>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+657"/>
+        <location line="+67"/>
+        <source>Show</source>
+        <translation>Mostra</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show all properties</source>
+        <translation>Mostra tutte le proprietà</translation>
+    </message>
+    <message>
+        <location line="+621"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -143,7 +153,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-486"/>
+        <location line="-504"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -164,7 +174,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+318"/>
+        <location line="+336"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

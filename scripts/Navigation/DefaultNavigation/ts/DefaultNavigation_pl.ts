@@ -4,7 +4,7 @@
 <context>
     <name>DefaultNavigation</name>
     <message>
-        <location filename="../DefaultNavigation.js" line="+46"/>
+        <location filename="../DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Widok graficzny</translation>
@@ -33,29 +33,34 @@ Pasek do nawigacji
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+53"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Kółko myszy / przeciągnięcie dwoma palcami:</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-34"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Włączenie gestu przesuwania</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+27"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Odwrócenie kierunku kółka myszy dla przybliżania</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
+        <source>Middle mouse button zoom factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-34"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Współczynnik przybliżania kółka myszy:</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="+10"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Ograniczenie przybliżania i przewijania w celu zapobiegania przepełnienia</translation>
     </message>

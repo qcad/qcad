@@ -35,13 +35,13 @@ Typ linii:
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1350"/>
+        <location filename="../PropertyEditor.js" line="+1392"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1157"/>
+        <location line="-1199"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -93,7 +93,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
         <translation>Indeks</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+77"/>
         <source>Remove this property from selected objects</source>
         <translation>Usuń właściwość z zaznaczonych obiektów</translation>
     </message>
@@ -109,7 +109,17 @@ Czy chcesz zamknąć plik
         <translation>Wszystkie</translation>
     </message>
     <message>
-        <location line="+657"/>
+        <location line="+67"/>
+        <source>Show</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show all properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+621"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -119,7 +129,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-667"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -197,7 +207,7 @@ Dół - prawo</translatorcomment>
         <translation type="obsolete">W dół</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+163"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -232,7 +242,7 @@ Nie można zapisać pliku %1. Proszę sprawdzić prawa.</translatorcomment>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+318"/>
+        <location line="+336"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

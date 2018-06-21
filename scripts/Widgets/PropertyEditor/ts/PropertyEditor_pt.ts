@@ -35,13 +35,13 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1350"/>
+        <location filename="../PropertyEditor.js" line="+1392"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1157"/>
+        <location line="-1199"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -92,7 +92,7 @@ Trocar para a próxima camada</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+77"/>
         <source>Remove this property from selected objects</source>
         <translation>Remova esta propriedade dos objetos selecionados</translation>
     </message>
@@ -107,7 +107,17 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+657"/>
+        <location line="+67"/>
+        <source>Show</source>
+        <translation>Mostrar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show all properties</source>
+        <translation>Mostrar todas as propriedades</translation>
+    </message>
+    <message>
+        <location line="+621"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -117,7 +127,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-667"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -200,7 +210,7 @@ Centro abaixo</translatorcomment>
         <translation type="obsolete">Fundo</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+163"/>
         <source>Auto</source>
         <translatorcomment>--exact match--
 --file: SnapAuto_pt.ts--
@@ -241,7 +251,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+318"/>
+        <location line="+336"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+49"/>
-        <location line="+116"/>
+        <location line="+121"/>
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+129"/>
-        <location line="+12"/>
+        <location line="-117"/>
+        <location line="+134"/>
+        <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-139"/>
+        <location line="-143"/>
         <source>Build Date:</source>
         <translation>Build Date:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+110"/>
+        <location line="+115"/>
         <source>Qt Version:</source>
         <translation>Qt Version:</translation>
     </message>
     <message>
-        <location line="-106"/>
+        <location line="-111"/>
         <source>Architecture:</source>
         <translation>Architecture:</translation>
     </message>
@@ -107,7 +107,7 @@
         <translation>No plugins found.</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+25"/>
         <source>No information available</source>
         <translation>No information available</translation>
     </message>
@@ -117,7 +117,7 @@
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+25"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -139,7 +139,7 @@
         <translation>License:</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+29"/>
         <source>Active</source>
         <translation>Active</translation>
     </message>
@@ -164,7 +164,7 @@
         <translation>Error:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+22"/>
         <source>Script Add-Ons</source>
         <translation>Script Add-Ons</translation>
     </message>

@@ -33,7 +33,7 @@
         <translation>プラグイン</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+31"/>
         <source>No information available</source>
         <translation>利用可能な情報がありません</translation>
     </message>
@@ -43,7 +43,7 @@
         <translation>プラグイン:</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+25"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -60,36 +60,36 @@
         <translation>不明</translation>
     </message>
     <message>
-        <location line="-123"/>
-        <location line="+116"/>
+        <location line="-128"/>
+        <location line="+121"/>
         <source>Version:</source>
         <translation>バージョン:</translation>
     </message>
     <message>
-        <location line="-106"/>
-        <location line="+110"/>
+        <location line="-111"/>
+        <location line="+115"/>
         <source>Qt Version:</source>
         <translation>Qtバージョン:</translation>
     </message>
     <message>
-        <location line="-80"/>
+        <location line="-85"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+89"/>
         <source>License:</source>
         <translation>ライセンス:</translation>
     </message>
     <message>
-        <location line="-120"/>
-        <location line="+129"/>
-        <location line="+12"/>
+        <location line="-125"/>
+        <location line="+134"/>
+        <location line="+11"/>
         <source>Internet:</source>
         <translation>インターネット:</translation>
     </message>
     <message>
-        <location line="-139"/>
+        <location line="-143"/>
         <source>Build Date:</source>
         <translation>ビルド日付:</translation>
     </message>
@@ -168,7 +168,7 @@
         <translation>エラー:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+22"/>
         <source>Script Add-Ons</source>
         <translation>スクリプトアドオン</translation>
     </message>
