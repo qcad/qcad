@@ -51,6 +51,8 @@ RPropertyEditor::~RPropertyEditor() {
 void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
         RObject& object, RDocument* document, bool showOnRequest) {
 
+    Q_UNUSED(document)
+
     RPropertyTypeId pid = propertyTypeId;
 
     QString propertyGroupTitle = propertyTypeId.getPropertyGroupTitle();

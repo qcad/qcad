@@ -108,14 +108,14 @@ public:
         this->document = document;
     }
 
-    void setFlag(int flag, bool on = true) {
+    void setFlag(uint flag, bool on = true) {
         if (on) {
             flags |= (ObjectFlag)flag;
         } else {
             flags &= ~(ObjectFlag)flag;
         }
     }
-    bool getFlag(int flag) const {
+    bool getFlag(uint flag) const {
         return (flags & flag) == flag;
     }
 
