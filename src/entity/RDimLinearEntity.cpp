@@ -158,7 +158,7 @@ QPair<QVariant, RPropertyAttributes> RDimLinearEntity::getProperty(
         return qMakePair(QVariant(getData().extensionPoint2.z), RPropertyAttributes());
     }
 
-    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimLinearEntity::print(QDebug dbg) const {

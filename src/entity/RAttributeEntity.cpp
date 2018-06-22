@@ -124,7 +124,7 @@ QPair<QVariant, RPropertyAttributes> RAttributeEntity::getProperty(
         );
     }
 
-    return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 bool RAttributeEntity::isVisible() const {

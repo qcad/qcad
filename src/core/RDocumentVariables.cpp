@@ -91,7 +91,7 @@ QPair<QVariant, RPropertyAttributes> RDocumentVariables::getProperty(RPropertyTy
         }
     }
 
-    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 bool RDocumentVariables::setProperty(RPropertyTypeId propertyTypeId,

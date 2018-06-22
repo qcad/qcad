@@ -235,7 +235,7 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& proper
     }
 
     //return qMakePair(QVariant(), RPropertyAttributes());
-    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 bool RLayer::isSelectedForPropertyEditing() {

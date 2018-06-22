@@ -248,7 +248,7 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         return qMakePair(QVariant(getData().verticalAlignment), RPropertyAttributes());
     }*/
 
-    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {

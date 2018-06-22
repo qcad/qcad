@@ -176,7 +176,7 @@ QPair<QVariant, RPropertyAttributes> RImageEntity::getProperty(
         return qMakePair(QVariant(data.fade), RPropertyAttributes(RPropertyAttributes::Percentage));
     }
 
-    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 

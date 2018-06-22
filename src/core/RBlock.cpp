@@ -149,7 +149,7 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& proper
         return qMakePair(QVariant(layoutId), RPropertyAttributes());
     }
 
-    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RBlock::setCustomProperty(const QString& title, const QString& key, const QVariant& value) {

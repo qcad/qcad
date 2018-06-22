@@ -193,7 +193,7 @@ QPair<QVariant, RPropertyAttributes> RDimAngular2LEntity::getProperty(
         return qMakePair(QVariant(data.dimArcPosition.z), RPropertyAttributes());
     }
 
-    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimAngular2LEntity::print(QDebug dbg) const {

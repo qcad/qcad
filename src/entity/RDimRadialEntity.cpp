@@ -138,7 +138,7 @@ QPair<QVariant, RPropertyAttributes> RDimRadialEntity::getProperty(
         return qMakePair(QVariant(data.chordPoint.z), RPropertyAttributes());
     }
 
-    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RDimensionEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 void RDimRadialEntity::print(QDebug dbg) const {

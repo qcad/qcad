@@ -307,7 +307,7 @@ QPair<QVariant, RPropertyAttributes> RLayout::getProperty(
         return qMakePair(QVariant(canonicalMediaName), RPropertyAttributes());
     }
 
-    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 bool RLayout::isSelectedForPropertyEditing() {

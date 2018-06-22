@@ -111,7 +111,7 @@ QPair<QVariant, RPropertyAttributes> RAttributeDefinitionEntity::getProperty(
     } else if (propertyTypeId == PropertyPrompt) {
         return qMakePair(QVariant(data.prompt), RPropertyAttributes());
     }
-    return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes);
+    return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
 //void RAttributeDefinitionEntity::exportEntity(RExporter& e, bool preview) const {
