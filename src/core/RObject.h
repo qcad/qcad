@@ -116,7 +116,7 @@ public:
         }
     }
     bool getFlag(int flag) const {
-        return (flags & flag) == flag;
+        return (flags & flag) == (ObjectFlag)flag;
     }
 
     /**

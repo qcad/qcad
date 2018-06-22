@@ -24,10 +24,10 @@
 
 RStorage::RStorage() :
     modified(false),
+    handleCounter(0),
     document(NULL),
     maxDrawOrder(0),
     idCounter(0),
-    handleCounter(0),
     currentColor(RColor::ByLayer),
     currentLineweight(RLineweight::WeightByLayer),
     currentLinetypeId(RLinetype::INVALID_ID),
@@ -35,6 +35,8 @@ RStorage::RStorage() :
     currentViewId(RView::INVALID_ID),
     currentBlockId(RBlock::INVALID_ID),
     currentViewportId(RViewportEntity::INVALID_ID),
+    modelSpaceBlockId(RBlock::INVALID_ID),
+    layer0Id(RLayer::INVALID_ID),
     lastTransactionId(-1),
     lastTransactionGroup(1) {
 }
@@ -42,9 +44,9 @@ RStorage::RStorage() :
 void RStorage::clear() {
     lastModified = QDateTime();
     modified = false;
+    handleCounter = 0;
     maxDrawOrder = 0;
     idCounter = 0;
-    handleCounter = 0;
     currentColor = RColor::ByLayer;
     currentLineweight = RLineweight::WeightByLayer,
     currentLinetypeId = RLinetype::INVALID_ID;

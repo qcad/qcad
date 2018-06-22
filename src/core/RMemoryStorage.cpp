@@ -443,6 +443,8 @@ QSet<REntity::Id> RMemoryStorage::queryLayerBlockEntities(RLayer::Id layerId, RB
 }
 
 QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {
+    Q_UNUSED(type)
+
     if (!childMap.contains(parentId)) {
         return QSet<REntity::Id>();
     }

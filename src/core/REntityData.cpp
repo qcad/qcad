@@ -489,6 +489,8 @@ bool REntityData::intersectsWith(const RShape& shape) const {
 QList<RVector> REntityData::getIntersectionPoints(
         const REntityData& other, bool limited, bool same, const RBox& queryBox, bool ignoreComplex) const {
 
+    Q_UNUSED(same)
+
     QList<RVector> ret;
     QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, ignoreComplex, true);
 
