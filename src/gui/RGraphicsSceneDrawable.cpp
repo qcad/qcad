@@ -7,19 +7,19 @@ RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RGraphicsSceneDrawable& oth
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RPainterPath& pp, const RVector& os) :
-    type(PainterPath), modes(NoMode), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+    type(PainterPath), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {
 
     painterPath = new RPainterPath(pp);
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RImageData& img, const RVector& os) :
-    type(Image), modes(NoMode), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+    type(Image), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {
 
     image = new RImageData(img);
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTextBasedData& txt, const RVector& os) :
-    type(Text), modes(NoMode), offset(os), painterPath(NULL), image(NULL), text(NULL) {
+    type(Text), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {
 
     text = new RTextBasedData(txt);
 }
