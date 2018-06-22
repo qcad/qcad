@@ -1789,9 +1789,6 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
 
     QList<QSharedPointer<RShape> > ret;
 
-    RVector startPoint = getStartPoint();
-    RVector endPoint = getEndPoint();
-
     QMap<double, RVector> sortable;
     for (int i=0; i<points.length(); i++) {
         double t = getTAtPoint(points[i]);
