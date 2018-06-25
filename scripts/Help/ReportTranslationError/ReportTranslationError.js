@@ -27,6 +27,6 @@ ReportTranslationError.prototype = new Help();
 
 ReportTranslationError.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
-    Help.openUrl("http://www.qcad.org/translationreport");
+    Help.openUrl("https://qcad.org/translationreport");
 };
 

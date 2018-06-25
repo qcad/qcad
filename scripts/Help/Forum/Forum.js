@@ -28,6 +28,6 @@ Forum.prototype = new Help();
 Forum.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
-    Help.openUrl("http://www.qcad.org/forum/");
+    Help.openUrl("https://qcad.org/rsforum/");
 };
 
