@@ -296,7 +296,7 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
 //                return qMakePair(v, attr);
 //            }
             QVariant v;
-            v.setValue(ori);
+            v.setValue((int)ori);
             return qMakePair(v, attr);
         }
 
