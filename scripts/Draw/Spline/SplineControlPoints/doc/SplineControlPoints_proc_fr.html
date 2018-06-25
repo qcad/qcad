@@ -1,13 +1,28 @@
-<ol>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-</ol>
-
-<p>
-</p>
+<div>
+  <ol>
+    <li>Choisissez le degré de la spline dans la barre d'outils des options.
+    Les degrés supportés sont 2 (quadratique b-spline) et 3 (cubique b-spline).
+    Plus le degré est élevé, plus la courbe devient'lisse'. 
+    <br />Notez qu'un b-spline quadratique nécessite par définition au moins 3
+    points de contrôle alors qu'un b-spline cubique a au moins 4 points de
+    contrôle.</li>
+    <li>Cochez la case'Fermé' dans la barre d'outils des options si vous voulez
+    créer une spline fermée. Les cannelures fermées sont des boucles fermées
+    continues.</li>
+    <li>Spécifiez les points de contrôle. Après avoir défini le troisième (pour
+    les courbes quadratiques) ou le quatrième (pour les courbes cubiques) point
+    de contrôle, un aperçu sera affiché. Vous pouvez supprimer le dernier point
+    de contrôle en cliquant sur le bouton"Annuler" dans la barre d'outils des
+    options.</li>
+    <li>Appuyez sur escape ou cliquez sur le bouton droit de la souris après
+    avoir réglé le dernier point pour confirmer la forme de la spline.</li>
+    <li>Vous pouvez créer une autre spline ou cliquer à nouveau avec le
+    bouton droit de la souris pour terminer l'outil.</li>
+  </ol>
+  <p>Exemple pour deux splines ouvertes (quadratique et cubique) : 
+  <br />
+  <img src="SplineControlPoints01.png" class="figure" />
+  <br />Exemple pour deux splines périodiques fermées (quadratique et cubique) 
+  <br />
+  <img src="SplineControlPoints02.png" class="figure" /></p>
+</div>
