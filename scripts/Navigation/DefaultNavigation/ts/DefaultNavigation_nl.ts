@@ -27,32 +27,37 @@
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+53"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Muiswiel / twee vingerbeweging:</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="+24"/>
         <source>Enable pan gesture</source>
         <translation>Gebaar om te verplaatsen inschakelen</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="-10"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Muiswiel richting voor zoomen omkeren</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-7"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Middelste muisknop vergrotingsfactor:</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="+34"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Muiswiel vergrotingsfactor:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+207"/>
+        <source>Panning threshold (px):</source>
+        <translation>Drempelwaarde voor panning (pixel):</translation>
+    </message>
+    <message>
+        <location line="-217"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Zoomen en scrollen beperken om overflows te voorkomen</translation>
     </message>
