@@ -113,7 +113,6 @@ DefaultNavigation.prototype.mousePressEvent = function(event) {
         this.panFirstOrigin = this.panOrigin;
         this.panning = true;
         this.savedCursor = this.view.getCursor();
-        this.view.setCursor(new QCursor(Qt.OpenHandCursor));
         this.view.startPan();
         EAction.disableCoordinateWidget();
     }
