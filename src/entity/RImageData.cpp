@@ -18,7 +18,11 @@
  */
 #include <QDir>
 #include <QFileInfo>
+#if QT_VERSION >= 0x050000
 #include <QGuiApplication>
+#else
+#include <QApplication>
+#endif
 #include "RImageData.h"
 
 RImageData::RImageData() :
@@ -143,7 +147,11 @@ bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector
     RVector referencePointPx = mapToImage(referencePoint);
     RVector targetPointPx = mapToImage(targetPoint);
 
+#if QT_VERSION >= 0x050000
     Qt::KeyboardModifiers mod = QGuiApplication::queryKeyboardModifiers();
+#else
+    Qt::KeyboardModifiers mod = QApplication::queryKeyboardModifiers();
+#endif
     bool keepAspectRatio = mod.testFlag(Qt::ShiftModifier);
     bool fromCenter = mod.testFlag(Qt::AltModifier);
 
