@@ -59,6 +59,7 @@ DefaultNavigation.applyPreferences = function(doc) {
     DefaultNavigation.mouseWheelZoomFactor = RSettings.getDoubleValue("GraphicsViewNavigation/MouseWheelZoomFactor", 1.2);
     DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
     DefaultNavigation.middleMouseButtonZoomFactor = RSettings.getDoubleValue("GraphicsViewNavigation/MiddleMouseButtonZoomFactor", 1.2);
+    DefaultNavigation.panThreshold = RSettings.getDoubleValue("GraphicsViewNavigation/PanThreshold", 4);
 };
 
 DefaultNavigation.prototype.beginEvent = function() {
@@ -127,7 +128,7 @@ DefaultNavigation.prototype.mouseReleaseEvent = function(event) {
         (event.button() === Qt.MidButton ||
          event.button() === Qt.LeftButton)) {
 
-        if (this.panFirstOrigin.getDistanceTo(event.getScreenPosition())<2) {
+        if (this.panFirstOrigin.getDistanceTo(event.getScreenPosition())<DefaultNavigation.panThreshold) {
             // zoom in / out:
             var position = event.getModelPosition();
             if (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf()) {
@@ -159,7 +160,7 @@ DefaultNavigation.prototype.mouseMoveEvent = function(event) {
         if (this.panning === true) {
             var panTarget = event.getScreenPosition();
             var panDelta = panTarget.operator_subtract(this.panOrigin);
-            if (Math.abs(panDelta.x) > 2 || Math.abs(panDelta.y) > 2) {
+            if (Math.abs(panDelta.x) > DefaultNavigation.panThreshold || Math.abs(panDelta.y) > DefaultNavigation.panThreshold) {
                 this.view.setCursor(
                     new QCursor(Qt.ClosedHandCursor)
                 );

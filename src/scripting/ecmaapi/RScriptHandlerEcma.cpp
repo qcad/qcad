@@ -1634,14 +1634,27 @@ QScriptValue RScriptHandlerEcma::ecmaQDomNodeRemoveChild(QScriptContext* context
 
 QScriptValue RScriptHandlerEcma::ecmaGetAvailablePrinterNames(QScriptContext* context, QScriptEngine* engine) {
     QScriptValue result = engine->undefinedValue();
+#if QT_VERSION >= 0x050000
     QStringList cppResult = QPrinterInfo::availablePrinterNames();
+#else
+    QList<QPrinterInfo> printerInfos = QPrinterInfo::availablePrinters();
+    QStringList cppResult;
+    for (int i=0; i<printerInfos.length(); i++) {
+        cppResult.append(printerInfos.at(i).printerName());
+    }
+#endif
     result = qScriptValueFromValue(engine, cppResult);
     return result;
 }
 
 QScriptValue RScriptHandlerEcma::ecmaGetDefaultPrinterName(QScriptContext* context, QScriptEngine* engine) {
     QScriptValue result = engine->undefinedValue();
+#if QT_VERSION >= 0x050000
     QString cppResult = QPrinterInfo::defaultPrinterName();
+#else
+    QPrinterInfo defaultPrinter = QPrinterInfo::defaultPrinter();
+    QString cppResult = defaultPrinter.printerName();
+#endif
     result = qScriptValueFromValue(engine, cppResult);
     return result;
 }
@@ -1650,7 +1663,18 @@ QScriptValue RScriptHandlerEcma::ecmaCreatePrinter(QScriptContext* context, QScr
     QScriptValue result = engine->undefinedValue();
     if (context->argumentCount() == 1 && context->argument(0).isString()) {
         QString name = context->argument(0).toString();
+#if QT_VERSION >= 0x050000
         QPrinterInfo pi = QPrinterInfo::printerInfo(name);
+#else
+        QPrinterInfo pi;
+        QList<QPrinterInfo> printerInfos = QPrinterInfo::availablePrinters();
+        for (int i=0; i<printerInfos.length(); i++) {
+            if (printerInfos.at(i).printerName().toLower()==name.toLower()) {
+                pi = printerInfos.at(i);
+                break;
+            }
+        }
+#endif
         if (pi.isNull()) {
             return result;
         }

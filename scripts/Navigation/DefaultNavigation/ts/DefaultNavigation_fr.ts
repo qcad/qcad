@@ -33,34 +33,39 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+53"/>
+        <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Molette de la souris / glissement deux doigts :</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="+24"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Activer geste pan</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="-10"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Inverse direction de molette de la souris pour le zoom</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-7"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Facteur de zoom du bouton central de la souris :</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="+34"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Molette de la souris facteur de zoom :</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+207"/>
+        <source>Panning threshold (px):</source>
+        <translation>Seuil de panoramique :</translation>
+    </message>
+    <message>
+        <location line="-217"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Limiter zoom pour éviter les débordements</translation>
     </message>
