@@ -234,5 +234,10 @@
         <source>Allow adding custom properties</source>
         <translation>Hinzufügen von benutzerdefinierten Eigenschaften erlauben</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation>Immer alle Eigenschaften anzeigen (dies kann die Auswahl der Objekte verlangsamen)</translation>
+    </message>
 </context>
 </TS>

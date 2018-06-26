@@ -256,5 +256,10 @@ Seleccione entidad base</translatorcomment>
         <source>Allow adding custom properties</source>
         <translation>Permite agregar propiedades personalizadas</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation>Mostrar siempre todas las propiedades (esto puede ralentizar la selección de entidades)</translation>
+    </message>
 </context>
 </TS>

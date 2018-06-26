@@ -37,6 +37,11 @@
         <translation>Allow adding custom properties</translation>
     </message>
     <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation>Always show all properties (this may slow down selection of entities)</translation>
+    </message>
+    <message>
         <location filename="../PropertyEditor.js" line="+193"/>
         <source>:</source>
         <translation>:</translation>

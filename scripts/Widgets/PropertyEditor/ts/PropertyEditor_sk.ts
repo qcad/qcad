@@ -37,6 +37,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../PropertyEditor.js" line="+1392"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>

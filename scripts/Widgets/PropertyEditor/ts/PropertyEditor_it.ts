@@ -237,5 +237,10 @@ Specifica la base</translatorcomment>
         <source>Allow adding custom properties</source>
         <translation>Consente l&apos; aggiunta di proprietà personalizzate</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation>Mostra sempre tutte le proprietà (questo può rallentare la selezione delle entità)</translation>
+    </message>
 </context>
 </TS>

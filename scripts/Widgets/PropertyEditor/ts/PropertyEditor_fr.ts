@@ -247,5 +247,10 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <source>Allow adding custom properties</source>
         <translation>Permet l&apos;ajout de propriétés personnalisées</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation>Toujours afficher toutes les propriétés (cela peut ralentir la sélection des entités)</translation>
+    </message>
 </context>
 </TS>

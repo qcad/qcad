@@ -323,5 +323,10 @@ Preferências Gerais do Aplicativo
         <source>Allow adding custom properties</source>
         <translation>Permitir a adição de propriedades personalizadas</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation>Sempre mostrar todas as propriedades (isso pode retardar a seleção de entidades)</translation>
+    </message>
 </context>
 </TS>

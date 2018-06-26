@@ -158,5 +158,10 @@
         <source>Allow adding custom properties</source>
         <translation>Toevoegen van gebruiker gedefinieerde eigenschappen toestaan</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation>Toon altijd alle eigenschappen (dit kan de selectie van objecten vertragen)</translation>
+    </message>
 </context>
 </TS>
