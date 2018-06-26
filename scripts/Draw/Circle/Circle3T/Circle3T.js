@@ -202,9 +202,10 @@ Circle3T.prototype.pickEntity = function(event, preview) {
         break;
 
     case Circle3T.State.ChoosingShape3:
-        if (entityId!==this.entity3Id) {
+        // optimization breaks when choosing three segments of a polyline:
+        //if (entityId!==this.entity3Id) {
             this.candidates = undefined;
-        }
+        //}
 
         this.entity3 = entity;
         this.entity3Id = entityId;
