@@ -39,6 +39,13 @@
     </widget>
    </item>
    <item>
+    <widget class="QCheckBox" name="ShowOnRequest">
+     <property name="text">
+      <string>Always show all properties (this may slow down selection of entities)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>

@@ -53,6 +53,9 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
 
     Q_UNUSED(document)
 
+    // always show on requestable properties:
+    showOnRequest = showOnRequest || RSettings::getBoolValue("PropertyEditor/ShowOnRequest", false)==true;
+
     RPropertyTypeId pid = propertyTypeId;
 
     QString propertyGroupTitle = propertyTypeId.getPropertyGroupTitle();
