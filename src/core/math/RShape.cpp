@@ -163,6 +163,15 @@ RVector RShape::getPointAtPercent(double p) const {
 }
 
 /**
+ * \return Angle at given percentile.
+ */
+double RShape::getAngleAtPercent(double p) const {
+    double length = getLength();
+    double distance = p * length;
+    return getAngleAt(distance);
+}
+
+/**
  * \return True if this shape intersects with the given shape.
  */
 bool RShape::intersectsWith(const RShape& other, bool limited) const {

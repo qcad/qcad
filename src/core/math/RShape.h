@@ -190,7 +190,7 @@ public:
     virtual QList<RVector> getPointsWithDistanceToEnd(
         double distance, int from = RS::FromAny) const = 0;
 
-    virtual RVector getPointWithDistanceToStart(double distance) {
+    virtual RVector getPointWithDistanceToStart(double distance) const {
         QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromStart);
         if (res.isEmpty()) {
             return RVector::invalid;
@@ -198,7 +198,7 @@ public:
         return res[0];
     }
 
-    virtual RVector getPointWithDistanceToEnd(double distance) {
+    virtual RVector getPointWithDistanceToEnd(double distance) const {
         QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromEnd);
         if (res.isEmpty()) {
             return RVector::invalid;
@@ -220,6 +220,7 @@ public:
     }
 
     virtual RVector getPointAtPercent(double p) const;
+    virtual double getAngleAtPercent(double p) const;
 
     virtual bool intersectsWith(const RShape& other, 
         bool limited = true) const;
