@@ -121,7 +121,15 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     RImporter::startImport();
 
     DL_Dxf dxflib;
+
+#ifdef Q_OS_WIN
+    wchar_t* winfn = new wchar_t[2000];
+    int len = fileName.toWCharArray(winfn);
+    winfn[len] = '\0';
+    bool success = dxflib.in(std::ifstream(winfn, std::ifstream::in), this);
+#else
     bool success = dxflib.in((const char*)fileName.toUtf8(), this);
+#endif
 
     if (success==false) {
         qWarning() << "Cannot open DXF file: " << fileName;
