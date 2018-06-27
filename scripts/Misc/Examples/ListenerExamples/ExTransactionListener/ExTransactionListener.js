@@ -52,11 +52,13 @@ ExTransactionListener.prototype.beginEvent = function() {
             EAction.handleUserMessage("Object IDs: " + objIds.join(','));
         }
 
-        // show property changes of first 10 entities:
-        for (var i=0; i<objIds.length && i<10; i++) {
-            var objId = objIds[i];
+        var i, objId;
 
-            EAction.handleUserMessage("Object ID: " + objId);
+        // show property changes of first 10 entities:
+        for (i=0; i<objIds.length && i<10; i++) {
+            objId = objIds[i];
+
+            EAction.handleUserMessage("Changed object ID: " + objId);
 
             var pre = "&nbsp;&nbsp;&nbsp;";
 
@@ -77,6 +79,30 @@ ExTransactionListener.prototype.beginEvent = function() {
 
                 EAction.handleUserMessage(pre + "old value:" + change.getOldValue(), false);
                 EAction.handleUserMessage(pre + "new value:" + change.getNewValue(), false);
+            }
+        }
+
+        // show objects that were created or deleted:
+        objIds = transaction.getStatusChanges();
+        for (i=0; i<objIds.length && i<10; i++) {
+            objId = objIds[i];
+
+            var obj = document.queryObjectDirect(objId);
+            if (obj.isUndone()) {
+                EAction.handleUserMessage("Deleted object with ID: " + objId);
+            }
+            else {
+                EAction.handleUserMessage("Created object with ID: " + objId);
+            }
+
+            if (isLayer(obj)) {
+                EAction.handleUserMessage("Object is layer");
+            }
+            else if (isBlock(obj)) {
+                EAction.handleUserMessage("Object is block");
+            }
+            else if (isEntity(obj)) {
+                EAction.handleUserMessage("Object is entity");
             }
         }
     });
