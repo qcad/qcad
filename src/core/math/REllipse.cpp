@@ -136,22 +136,45 @@ double REllipse::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
 
-    // TODO
+    // TODO: getPointWithDistanceToStart not implemented for ellipses:
+//    RVector pos;
+//    if (from==RS::FromStart) {
+//        pos = getPointWithDistanceToStart(distance);
+//    }
+//    else {
+//        pos = getPointWithDistanceToEnd(distance);
+//    }
+
+//    return getAngleAtPoint(pos);
+
     return 0.0;
 }
 
 double REllipse::getAngleAtPoint(const RVector& pos) const {
-    RVector m = pos;
-    m.move(-getCenter());
-    m.rotate(-getAngle());
+    RVector posNormalized = pos;
+    posNormalized.move(-getCenter());
+    posNormalized.rotate(-getAngle());
 
     double angle;
-    if (RMath::fuzzyCompare(m.y, 0.0)) {
-        angle = M_PI/2;
+    if (RMath::fuzzyCompare(posNormalized.y, 0.0)) {
+        if (posNormalized.x>0) {
+            angle = M_PI/2;
+        }
+        else {
+            angle = M_PI/2*3;
+        }
     }
     else {
-        double slope = - (pow(getMinorRadius()*2, 2) * m.x) / (pow(getMajorRadius()*2, 2) * m.y);
-        angle = atan(slope);
+        double slope = - (pow(getMinorRadius()*2, 2) * posNormalized.x) / (pow(getMajorRadius()*2, 2) * posNormalized.y);
+        angle = atan(slope) + M_PI;
+    }
+
+    if (reversed) {
+        angle += M_PI;
+    }
+
+    if (posNormalized.y<0) {
+        angle += M_PI;
     }
 
     angle += getAngle();
