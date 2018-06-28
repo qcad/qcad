@@ -162,6 +162,9 @@
         getPointAtPercent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAngleAtPercent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         intersectsWith
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
