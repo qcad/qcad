@@ -165,10 +165,11 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
         break;
 
     case Circle2TR.State.ChoosingShape2:
-        if (entityId!==this.entity2Id) {
+        // optimization breaks when choosing two segments of the same polyline:
+        //if (entityId!==this.entity2Id) {
             // force re-calculation:
             this.candidates = [];
-        }
+        //}
         this.entity2 = entity;
         this.entity2Id = entityId;
         this.shape2 = shape;
