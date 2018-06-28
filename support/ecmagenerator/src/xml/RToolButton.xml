@@ -4,6 +4,20 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RToolButton"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"
-  hasStreamOperator="false" isAbstract="false"
-  isScriptable="false" />
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QToolButton" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="event" cppName="event" specifier="protected"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QEvent *" typeName="QEvent *" name="event"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
 </unit>

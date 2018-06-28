@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 
-#ifndef RTEXTEDIT_H_
-#define RTEXTEDIT_H_
+#ifndef RTOOLBUTTON_H_
+#define RTOOLBUTTON_H_
 
 #include "gui_global.h"
 
@@ -27,6 +27,7 @@
 
 /**
  * \ingroup gui
+ * \scriptable
  */
 class QCADGUI_EXPORT RToolButton: public QToolButton {
 Q_OBJECT

@@ -341,6 +341,7 @@ HEADERS += \
     $$PWD/REcmaTextLayout.h \
     $$PWD/REcmaTextRenderer.h \
     $$PWD/REcmaThread.h \
+    $$PWD/REcmaToolButton.h \
     $$PWD/REcmaToolMatrixItemDelegate.h \
     $$PWD/REcmaTraceData.h \
     $$PWD/REcmaTraceEntity.h \
@@ -711,6 +712,7 @@ SOURCES += \
     $$PWD/REcmaTextLayout.cpp \
     $$PWD/REcmaTextRenderer.cpp \
     $$PWD/REcmaThread.cpp \
+    $$PWD/REcmaToolButton.cpp \
     $$PWD/REcmaToolMatrixItemDelegate.cpp \
     $$PWD/REcmaTraceData.cpp \
     $$PWD/REcmaTraceEntity.cpp \
