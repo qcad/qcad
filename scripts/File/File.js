@@ -168,7 +168,14 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
 
     fileDialog.setNameFilters(filterStrings);
     
-    fileDialog.selectFile(path);
+    if (getDontUseNativeDialog()) {
+        // workaround for Qt file dialog behaviour,
+        // different from system file dialog behavior:
+        fileDialog.selectFile(fiDir.absolutePath() + "/" + fiDir.completeBaseName() + ".dummy");
+    }
+    else {
+        fileDialog.selectFile(fiDir.completeBaseName());
+    }
 
     if (fiDir.suffix().length!==0) {
         // preselect first name filter that matches current extension:
