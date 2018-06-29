@@ -72,6 +72,7 @@ AppPreferences.init = function(basePath) {
     action.setDefaultCommands(["preferences"]);
     action.setRequiresDocument(false);
     action.setScriptFile(basePath + "/AppPreferences.js");
+    action.setIcon(basePath + "/AppPreferences.svg");
     action.setNoState();
     action.setGroupSortOrder(2800);
     action.setSortOrder(200);
