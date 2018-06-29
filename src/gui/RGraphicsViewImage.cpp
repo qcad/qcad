@@ -923,6 +923,10 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
 
         // image:
         if (drawable.getType()==RGraphicsSceneDrawable::Image) {
+            if (clipRectangle.isValid()) {
+                // re-enable clipping for image if a path switched it off:
+                painter->setClipping(true);
+            }
             RImageData image = drawable.getImage();
             image.move(drawable.getOffset());
             image.move(paintOffset);
