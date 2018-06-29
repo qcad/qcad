@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Window.js");
+include("scripts/Window/Window.js");
 
 function PreviousWindow(guiAction) {
     Window.call(this, guiAction);
