@@ -24,7 +24,7 @@
  * \brief This module contains the ECMAScript implementation of the text
  * drawing tool.
  */
-include("../Draw.js");
+include("scripts/Draw/Draw.js");
 include("scripts/WidgetFactory.js");
 include("TextDialog/TextDialog.js");
 

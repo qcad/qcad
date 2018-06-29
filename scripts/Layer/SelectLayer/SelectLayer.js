@@ -18,7 +18,7 @@
  */
 
 include("scripts/library.js");
-include("../Layer.js");
+include("scripts/Layer/Layer.js");
 
 /**
  * \class SelectLayer

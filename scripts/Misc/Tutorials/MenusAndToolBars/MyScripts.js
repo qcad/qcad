@@ -20,7 +20,7 @@
 
 // All actions are derived from class EAction, so we need to 
 // include this class definition here:
-include("../EAction.js");
+include("scripts/EAction.js");
 
 // Constructor calls base class constructor:
 function MyScripts(guiAction) {

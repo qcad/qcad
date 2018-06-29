@@ -17,9 +17,7 @@
  * along with QCAD.
  */
 
-include("../File.js");
-
-
+include("scripts/File/File.js");
 
 function RecentFiles(guiAction) {
     File.call(this, guiAction);

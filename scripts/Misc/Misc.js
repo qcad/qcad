@@ -24,7 +24,7 @@
  * \brief This module contains ECMAScript examples and uncategorized
  * scripts.
  */
-include("../EAction.js");
+include("scripts/EAction.js");
 
 /**
  * \class Misc

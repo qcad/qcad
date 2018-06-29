@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Spline.js");
+include("scripts/Draw/Spline/Spline.js");
 
 /**
  * \class SplineControlPoints

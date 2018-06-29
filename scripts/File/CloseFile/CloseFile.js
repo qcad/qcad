@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../File.js");
+include("scripts/File/File.js");
 
 /**
  * This action handles the user interaction to close the current drawing.

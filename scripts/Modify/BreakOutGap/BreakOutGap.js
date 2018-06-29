@@ -2,7 +2,7 @@
  * Copyright (c) 2015 by Norbert Kolb. All rights reserved.
  */
 
-include("../Modify.js");
+include("scripts/Modify/Modify.js");
 
 /**
  * \class BreakOutGap

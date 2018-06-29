@@ -18,8 +18,8 @@
  */
 
 include("scripts/Widgets/LibraryBrowser/LibraryBrowser.js");
-include("../../File/File.js");
-include("../Block.js");
+include("scripts/File/File.js");
+include("scripts/Block/Block.js");
 include("../BlockDialog.js");
 
 function CreateLibraryItem(guiAction) {

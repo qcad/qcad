@@ -23,7 +23,7 @@
  * \brief This module contains the ECMAScript implementation of the text
  * editing tool.
  */
-include("../Modify.js");
+include("scripts/Modify/Modify.js");
 include("scripts/Draw/Text/TextDialog/TextDialog.js");
 
 /**

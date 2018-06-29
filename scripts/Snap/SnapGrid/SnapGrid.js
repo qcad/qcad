@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Snap.js");
+include("scripts/Snap/Snap.js");
 
 /**
  * \class SnapGrid

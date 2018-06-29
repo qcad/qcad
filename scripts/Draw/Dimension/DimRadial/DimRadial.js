@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Dimension.js");
+include("scripts/Draw/Dimension/Dimension.js");
 
 function DimRadial(guiAction) {
     Dimension.call(this, guiAction);

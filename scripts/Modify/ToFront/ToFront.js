@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Modify.js");
+include("scripts/Modify/Modify.js");
 
 function ToFront(guiAction) {
     Modify.call(this, guiAction);

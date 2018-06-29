@@ -24,7 +24,7 @@
  * \brief This module contains ECMAScript implementations of various
  * window tools.
  */
-include("../EAction.js");
+include("scripts/EAction.js");
 
 function MenuData(d) {
     this.data = d;

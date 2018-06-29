@@ -23,7 +23,7 @@
  * \brief This module contains the ECMAScript implementation of the hatch
  * editing tool.
  */
-include("../Modify.js");
+include("scripts/Modify/Modify.js");
 include("scripts/Draw/Hatch/HatchDialog.js");
 
 /**

@@ -23,7 +23,7 @@
  *
  * \brief This module contains ECMAScript implementations of various circle drawing tools.
  */
-include("../Draw.js");
+include("scripts/Draw/Draw.js");
 
 /**
  * \class Circle

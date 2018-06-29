@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../File.js");
+include("scripts/File/File.js");
 include("BitmapExportWorker.js");
 
 function BitmapExport(guiAction) {

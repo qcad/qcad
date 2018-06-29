@@ -24,7 +24,7 @@
  * \brief This module contains ECMAScript implementations of various 
  * hatch and fill drawing tools.
  */
-include("../Draw.js");
+include("scripts/Draw/Draw.js");
 
 /**
  * \class Hatch

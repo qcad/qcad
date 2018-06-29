@@ -17,10 +17,10 @@
  * along with QCAD.
  */
 
-include("../File.js");
+include("scripts/File/File.js");
 include("scripts/sprintf.js");
 if (RSettings.isGuiEnabled() && typeof(PrintPreview)=="undefined") {
-    include("../PrintPreview/PrintPreview.js");
+    include("scripts/File/PrintPreview/PrintPreview.js");
 }
 if (typeof(PageSettings)=="undefined") {
     include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");

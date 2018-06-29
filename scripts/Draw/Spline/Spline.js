@@ -23,7 +23,7 @@
  *
  * \brief This module contains ECMAScript implementations of various spline drawing tools.
  */
-include("../Draw.js");
+include("scripts/Draw/Draw.js");
 
 /**
  * \class Spline

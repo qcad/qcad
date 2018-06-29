@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../File.js");
+include("scripts/File/File.js");
 include("../Save/Save.js");
 include("scripts/Widgets/ViewportWidget/ViewportWidget.js");
 include("../AutoSave/AutoSave.js");

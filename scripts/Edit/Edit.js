@@ -24,7 +24,7 @@
  * \brief This module contains ECMAScript implementations of the editing tools
  * (copy, paste, undo, redo, delete, ...)
  */
-include("../EAction.js");
+include("scripts/EAction.js");
 
 /**
  * \class Edit

@@ -24,7 +24,7 @@
  * \brief This module contains ECMAScript implementations of
  * the help menu entries.
  */
-include("../EAction.js");
+include("scripts/EAction.js");
 
 /**
  * \class Help

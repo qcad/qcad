@@ -24,7 +24,7 @@
  * \brief This module contains the ECMAScript implementation of the image
  * drawing tool.
  */
-include("../Draw.js");
+include("scripts/Draw/Draw.js");
 
 /**
  * \class Image

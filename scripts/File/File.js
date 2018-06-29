@@ -24,7 +24,7 @@
  * \brief This module contains ECMAScript implementations of the
  * tools in the file menu.
  */
-include("../EAction.js");
+include("scripts/EAction.js");
 
 /**
  * \class File

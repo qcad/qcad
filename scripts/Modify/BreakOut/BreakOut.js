@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Modify.js");
+include("scripts/Modify/Modify.js");
 include("scripts/ShapeAlgorithms.js");
 
 function BreakOut(guiAction) {

@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Arc.js");
+include("scripts/Draw/Arc/Arc.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**

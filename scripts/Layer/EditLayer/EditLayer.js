@@ -18,7 +18,7 @@
  */
 
  
-include("../Layer.js");
+include("scripts/Layer/Layer.js");
 include("../LayerDialog.js");
 
 /**

@@ -23,7 +23,7 @@
  *
  * \brief This module contains ECMAScript implementations of various arc drawing tools.
  */
-include("../Draw.js");
+include("scripts/Draw/Draw.js");
 
 /**
  * \class Arc

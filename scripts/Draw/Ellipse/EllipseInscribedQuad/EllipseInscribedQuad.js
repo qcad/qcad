@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Ellipse.js");
+include("scripts/Draw/Ellipse/Ellipse.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**

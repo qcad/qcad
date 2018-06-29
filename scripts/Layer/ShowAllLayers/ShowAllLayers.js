@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Layer.js");
+include("scripts/Layer/Layer.js");
 
 /**
  * \class ShowAllLayers

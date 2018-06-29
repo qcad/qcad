@@ -24,7 +24,7 @@
  * \brief This module contains ECMAScript implementations of various polyline 
  * drawing and modification tools.
  */
-include("../Draw.js");
+include("scripts/Draw/Draw.js");
 
 /**
  * \class Polyline

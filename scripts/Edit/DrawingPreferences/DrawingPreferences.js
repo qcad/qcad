@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Edit.js");
+include("scripts/Edit/Edit.js");
 include("../AbstractPreferences.js");
 
 function DrawingPreferences(guiAction, initialClassName) {

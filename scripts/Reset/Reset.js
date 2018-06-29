@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 
-include("../EAction.js");
-include("../Edit/Edit.js");
+include("scripts/EAction.js");
+include("scripts/Edit/Edit.js");
 
 /**
  * \class Reset

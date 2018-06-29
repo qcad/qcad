@@ -24,7 +24,7 @@
  * \brief This module contains ECMAScript implementations of advanced
  * selection tools.
  */
-include("../EAction.js");
+include("scripts/EAction.js");
 
 /**
  * \class Select
