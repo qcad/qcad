@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Help.js");
+include("scripts/Help/Help.js");
 
 function BrowseUserManual(guiAction) {
     Help.call(this, guiAction);

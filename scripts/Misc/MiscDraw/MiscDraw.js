@@ -23,7 +23,7 @@
  *
  * \brief This module contains misc drawing tools.
  */
-include("../Misc.js");
+include("scripts/Misc/Misc.js");
 include("scripts/Draw/Line/Line.js");
 
 /**

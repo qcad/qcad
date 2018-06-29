@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Misc.js");
+include("scripts/Misc/Misc.js");
 
 /**
  * \class MiscModify

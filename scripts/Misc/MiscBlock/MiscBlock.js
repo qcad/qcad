@@ -23,7 +23,7 @@
  *
  * \brief This module contains misc block tools..
  */
-include("../Misc.js");
+include("scripts/Misc/Misc.js");
 
 /**
  * \class MiscBlock

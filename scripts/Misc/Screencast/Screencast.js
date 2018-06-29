@@ -23,7 +23,7 @@
  *
  * \brief This module contains ECMAScript screencast recording tools.
  */
-include("../Misc.js");
+include("scripts/Misc/Misc.js");
 
 /**
  * \class Screencast

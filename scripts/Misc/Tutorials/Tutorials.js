@@ -23,7 +23,7 @@
  *
  * \brief This module contains ECMAScript example tutorials.
  */
-include("../Misc.js");
+include("scripts/Misc/Misc.js");
 
 /**
  * \class Tutorials
