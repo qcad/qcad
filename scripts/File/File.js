@@ -171,9 +171,14 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
     if (getDontUseNativeDialog()) {
         // workaround for Qt file dialog behaviour,
         // different from system file dialog behavior:
-        fileDialog.selectFile(fiDir.absolutePath() + "/" + fiDir.completeBaseName() + ".dummy");
+        //fileDialog.selectFile(fiDir.absolutePath() + "/" + fiDir.completeBaseName() + ".dummy");
+        //fileDialog.selectFile(fiDir.absolutePath() + "/" + fiDir.completeBaseName());
+
+        // macOS / Qt 5.11:
+        fileDialog.selectFile(fiDir.completeBaseName());
     }
     else {
+        // macOS / Qt 5.11:
         fileDialog.selectFile(fiDir.completeBaseName());
     }
 
