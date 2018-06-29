@@ -24,7 +24,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+116"/>
         <location line="+61"/>
         <source>No solution</source>
         <translation type="unfinished"></translation>

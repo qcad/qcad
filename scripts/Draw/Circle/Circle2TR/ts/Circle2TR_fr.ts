@@ -19,7 +19,7 @@
         <translation>Choisir solution</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+99"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>

@@ -19,7 +19,7 @@
         <translation>Vyberte možnosť</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+99"/>
         <source>No solution</source>
         <translation>Žiadne riešenie</translation>
     </message>

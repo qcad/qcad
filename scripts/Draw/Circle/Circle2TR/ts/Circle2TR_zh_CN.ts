@@ -19,7 +19,7 @@
         <translation>选择方案</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+99"/>
         <source>No solution</source>
         <translation>无方案</translation>
     </message>

@@ -19,7 +19,7 @@
         <translation>ソリューション</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+99"/>
         <source>No solution</source>
         <translation>解がありません</translation>
     </message>

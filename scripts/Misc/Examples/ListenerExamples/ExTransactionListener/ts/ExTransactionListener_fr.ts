@@ -12,7 +12,7 @@
         </translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+67"/>
         <source>&amp;Transaction Listener</source>
         <translation>Écouteur de &amp;transactions</translation>
     </message>

@@ -19,7 +19,7 @@
         <translation>Proszę wskazać rozwiązanie</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+99"/>
         <source>No solution</source>
         <translation>Brak rozwiązania</translation>
     </message>
