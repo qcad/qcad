@@ -2525,7 +2525,9 @@
     <file alias="scripts/EAction.js">../../scripts/EAction.js</file>
     <file alias="scripts/Edit/AbstractPreferences.js">../../scripts/Edit/AbstractPreferences.js</file>
     <file alias="scripts/Edit/AbstractPreferences.ui">../../scripts/Edit/AbstractPreferences.ui</file>
+    <file alias="scripts/Edit/AppPreferences/AppPreferences-inverse.svg">../../scripts/Edit/AppPreferences/AppPreferences-inverse.svg</file>
     <file alias="scripts/Edit/AppPreferences/AppPreferences.js">../../scripts/Edit/AppPreferences/AppPreferences.js</file>
+    <file alias="scripts/Edit/AppPreferences/AppPreferences.svg">../../scripts/Edit/AppPreferences/AppPreferences.svg</file>
     <file alias="scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js">../../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js</file>
     <file alias="scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferencesInit.js">../../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferencesInit.js</file>
     <file alias="scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui">../../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui</file>
@@ -4638,6 +4640,30 @@
     <file alias="scripts/Layer/ShowAllLayers/ts/ShowAllLayers_tr.qm">../../scripts/Layer/ShowAllLayers/ts/ShowAllLayers_tr.qm</file>
     <file alias="scripts/Layer/ShowAllLayers/ts/ShowAllLayers_zh_CN.qm">../../scripts/Layer/ShowAllLayers/ts/ShowAllLayers_zh_CN.qm</file>
     <file alias="scripts/Layer/ShowAllLayers/ts/ShowAllLayers_zh_TW.qm">../../scripts/Layer/ShowAllLayers/ts/ShowAllLayers_zh_TW.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ToggleLayerLock.js">../../scripts/Layer/ToggleLayerLock/ToggleLayerLock.js</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ToggleLayerLock.svg">../../scripts/Layer/ToggleLayerLock/ToggleLayerLock.svg</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js">../../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_cs.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_cs.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_de.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_de.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_en.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_en.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_es.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_es.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_fi.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_fi.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_fr.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_fr.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_hr.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_hr.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_hu.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_hu.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_it.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_it.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_ja.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_ja.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_lt.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_lt.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_nl.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_nl.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_pl.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_pl.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_pt.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_pt.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_ru.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_ru.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_sk.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_sk.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_sl.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_sl.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_sv.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_sv.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_tr.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_tr.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_zh_CN.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_zh_CN.qm</file>
+    <file alias="scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_zh_TW.qm">../../scripts/Layer/ToggleLayerLock/ts/ToggleLayerLock_zh_TW.qm</file>
     <file alias="scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility-inverse.svg">../../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility-inverse.svg</file>
     <file alias="scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility.js">../../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility.js</file>
     <file alias="scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility.svg">../../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility.svg</file>
@@ -4713,12 +4739,14 @@
     <file alias="scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js">../../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_de.qm">../../scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_de.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_en.qm">../../scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_en.qm</file>
+    <file alias="scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_fr.qm">../../scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_fr.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_it.qm">../../scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_it.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_ru.qm">../../scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_ru.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_sk.qm">../../scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_sk.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_sl.qm">../../scripts/Misc/Examples/BlockExamples/ExAddBlock/ts/ExAddBlock_sl.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ts/BlockExamples_de.qm">../../scripts/Misc/Examples/BlockExamples/ts/BlockExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ts/BlockExamples_en.qm">../../scripts/Misc/Examples/BlockExamples/ts/BlockExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/BlockExamples/ts/BlockExamples_fr.qm">../../scripts/Misc/Examples/BlockExamples/ts/BlockExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ts/BlockExamples_it.qm">../../scripts/Misc/Examples/BlockExamples/ts/BlockExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ts/BlockExamples_ru.qm">../../scripts/Misc/Examples/BlockExamples/ts/BlockExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/BlockExamples/ts/BlockExamples_sk.qm">../../scripts/Misc/Examples/BlockExamples/ts/BlockExamples_sk.qm</file>
@@ -4727,6 +4755,7 @@
     <file alias="scripts/Misc/Examples/CommandLineExamples/ExSetColor/ExSetColor.js">../../scripts/Misc/Examples/CommandLineExamples/ExSetColor/ExSetColor.js</file>
     <file alias="scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_de.qm">../../scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_en.qm">../../scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_fr.qm">../../scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_it.qm">../../scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_ru.qm">../../scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_sk.qm">../../scripts/Misc/Examples/CommandLineExamples/ts/CommandLineExamples_sk.qm</file>
@@ -4735,6 +4764,7 @@
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_de.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_de.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_en.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_en.qm</file>
+    <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_fr.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_fr.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_it.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_it.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_ru.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_ru.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_sk.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_sk.qm</file>
@@ -4745,6 +4775,7 @@
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_de.qm">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_de.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_en.qm">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_en.qm</file>
+    <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_fr.qm">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_fr.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_it.qm">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_it.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_ru.qm">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_ru.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_sk.qm">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_sk.qm</file>
@@ -4752,6 +4783,7 @@
     <file alias="scripts/Misc/Examples/DrawExamples/ExText/ExText.js">../../scripts/Misc/Examples/DrawExamples/ExText/ExText.js</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_de.qm">../../scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_de.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_en.qm">../../scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_en.qm</file>
+    <file alias="scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_fr.qm">../../scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_fr.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_it.qm">../../scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_it.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_ru.qm">../../scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_ru.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_sk.qm">../../scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_sk.qm</file>
@@ -4759,20 +4791,33 @@
     <file alias="scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js">../../scripts/Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_de.qm">../../scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_de.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_en.qm">../../scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_en.qm</file>
+    <file alias="scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_fr.qm">../../scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_fr.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_it.qm">../../scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_it.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_ru.qm">../../scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_ru.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_sk.qm">../../scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_sk.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_sl.qm">../../scripts/Misc/Examples/DrawExamples/ExThreePoints/ts/ExThreePoints_sl.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ts/DrawExamples_de.qm">../../scripts/Misc/Examples/DrawExamples/ts/DrawExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ts/DrawExamples_en.qm">../../scripts/Misc/Examples/DrawExamples/ts/DrawExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/DrawExamples/ts/DrawExamples_fr.qm">../../scripts/Misc/Examples/DrawExamples/ts/DrawExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ts/DrawExamples_it.qm">../../scripts/Misc/Examples/DrawExamples/ts/DrawExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ts/DrawExamples_ru.qm">../../scripts/Misc/Examples/DrawExamples/ts/DrawExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ts/DrawExamples_sk.qm">../../scripts/Misc/Examples/DrawExamples/ts/DrawExamples_sk.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ts/DrawExamples_sl.qm">../../scripts/Misc/Examples/DrawExamples/ts/DrawExamples_sl.qm</file>
+    <file alias="scripts/Misc/Examples/ExMinimal/ExMinimal.js">../../scripts/Misc/Examples/ExMinimal/ExMinimal.js</file>
+    <file alias="scripts/Misc/Examples/ExMinimal/ts/ExMinimal_de.qm">../../scripts/Misc/Examples/ExMinimal/ts/ExMinimal_de.qm</file>
+    <file alias="scripts/Misc/Examples/ExMinimal/ts/ExMinimal_en.qm">../../scripts/Misc/Examples/ExMinimal/ts/ExMinimal_en.qm</file>
+    <file alias="scripts/Misc/Examples/ExMinimal/ts/ExMinimal_fr.qm">../../scripts/Misc/Examples/ExMinimal/ts/ExMinimal_fr.qm</file>
+    <file alias="scripts/Misc/Examples/ExMinimal/ts/ExMinimal_it.qm">../../scripts/Misc/Examples/ExMinimal/ts/ExMinimal_it.qm</file>
+    <file alias="scripts/Misc/Examples/ExMinimal/ts/ExMinimal_ru.qm">../../scripts/Misc/Examples/ExMinimal/ts/ExMinimal_ru.qm</file>
+    <file alias="scripts/Misc/Examples/ExMinimal/ts/ExMinimal_sk.qm">../../scripts/Misc/Examples/ExMinimal/ts/ExMinimal_sk.qm</file>
+    <file alias="scripts/Misc/Examples/ExMinimal/ts/ExMinimal_sl.qm">../../scripts/Misc/Examples/ExMinimal/ts/ExMinimal_sl.qm</file>
+    <file alias="scripts/Misc/Examples/ExMinimal2/ExMinimal2.js">../../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js</file>
+    <file alias="scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui">../../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui</file>
     <file alias="scripts/Misc/Examples/Examples.js">../../scripts/Misc/Examples/Examples.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js">../../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_de.qm">../../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_de.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_en.qm">../../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_en.qm</file>
+    <file alias="scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_fr.qm">../../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_fr.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_it.qm">../../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_it.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_ru.qm">../../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_ru.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_sk.qm">../../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ts/ExDumpPolyline_sk.qm</file>
@@ -4780,6 +4825,7 @@
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js">../../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_de.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_de.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_en.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_en.qm</file>
+    <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_fr.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_fr.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_it.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_it.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_ru.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_ru.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_sk.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ts/ExRegisterFileExporter_sk.qm</file>
@@ -4787,6 +4833,7 @@
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js">../../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_de.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_de.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_en.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_en.qm</file>
+    <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_fr.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_fr.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_it.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_it.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_ru.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_ru.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_sk.qm">../../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ts/ExRegisterFileImporter_sk.qm</file>
@@ -4795,6 +4842,7 @@
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js">../../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_de.qm">../../scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_de.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_en.qm">../../scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_en.qm</file>
+    <file alias="scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_fr.qm">../../scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_fr.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_it.qm">../../scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_it.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_ru.qm">../../scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_ru.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_sk.qm">../../scripts/Misc/Examples/IOExamples/ExXmlExport/ts/ExXmlExport_sk.qm</file>
@@ -4803,6 +4851,7 @@
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js">../../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_de.qm">../../scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_de.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_en.qm">../../scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_en.qm</file>
+    <file alias="scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_fr.qm">../../scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_fr.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_it.qm">../../scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_it.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_ru.qm">../../scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_ru.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_sk.qm">../../scripts/Misc/Examples/IOExamples/ExXmlImport/ts/ExXmlImport_sk.qm</file>
@@ -4811,6 +4860,7 @@
     <file alias="scripts/Misc/Examples/IOExamples/_AutoLoadInitFileDialog/AutoLoadInitFileDialog.js">../../scripts/Misc/Examples/IOExamples/_AutoLoadInitFileDialog/AutoLoadInitFileDialog.js</file>
     <file alias="scripts/Misc/Examples/IOExamples/ts/IOExamples_de.qm">../../scripts/Misc/Examples/IOExamples/ts/IOExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ts/IOExamples_en.qm">../../scripts/Misc/Examples/IOExamples/ts/IOExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/IOExamples/ts/IOExamples_fr.qm">../../scripts/Misc/Examples/IOExamples/ts/IOExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ts/IOExamples_it.qm">../../scripts/Misc/Examples/IOExamples/ts/IOExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ts/IOExamples_ru.qm">../../scripts/Misc/Examples/IOExamples/ts/IOExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/IOExamples/ts/IOExamples_sk.qm">../../scripts/Misc/Examples/IOExamples/ts/IOExamples_sk.qm</file>
@@ -4818,6 +4868,7 @@
     <file alias="scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js">../../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_de.qm">../../scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_de.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_en.qm">../../scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_en.qm</file>
+    <file alias="scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_fr.qm">../../scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_fr.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_it.qm">../../scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_it.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_ru.qm">../../scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_ru.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_sk.qm">../../scripts/Misc/Examples/LayerExamples/ExAddLayer/ts/ExAddLayer_sk.qm</file>
@@ -4825,6 +4876,7 @@
     <file alias="scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js">../../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_de.qm">../../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_de.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_en.qm">../../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_en.qm</file>
+    <file alias="scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_fr.qm">../../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_fr.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_it.qm">../../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_it.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_ru.qm">../../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_ru.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_sk.qm">../../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ts/ExLayerCustomProperty_sk.qm</file>
@@ -4832,6 +4884,7 @@
     <file alias="scripts/Misc/Examples/LayerExamples/LayerExamples.js">../../scripts/Misc/Examples/LayerExamples/LayerExamples.js</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ts/LayerExamples_de.qm">../../scripts/Misc/Examples/LayerExamples/ts/LayerExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ts/LayerExamples_en.qm">../../scripts/Misc/Examples/LayerExamples/ts/LayerExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/LayerExamples/ts/LayerExamples_fr.qm">../../scripts/Misc/Examples/LayerExamples/ts/LayerExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ts/LayerExamples_it.qm">../../scripts/Misc/Examples/LayerExamples/ts/LayerExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ts/LayerExamples_ru.qm">../../scripts/Misc/Examples/LayerExamples/ts/LayerExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/LayerExamples/ts/LayerExamples_sk.qm">../../scripts/Misc/Examples/LayerExamples/ts/LayerExamples_sk.qm</file>
@@ -4840,6 +4893,7 @@
     <file alias="scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js">../../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_de.qm">../../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_de.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_en.qm">../../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_en.qm</file>
+    <file alias="scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_fr.qm">../../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_fr.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_it.qm">../../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_it.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_ru.qm">../../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_ru.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_sk.qm">../../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ts/ExTransactionListener_sk.qm</file>
@@ -4847,6 +4901,7 @@
     <file alias="scripts/Misc/Examples/ListenerExamples/ListenerExamples.js">../../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_de.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_en.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_fr.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_it.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_ru.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_sk.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_sk.qm</file>
@@ -4854,6 +4909,7 @@
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_de.qm">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_de.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_en.qm">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_en.qm</file>
+    <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_fr.qm">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_fr.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_it.qm">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_it.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_ru.qm">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_ru.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_sk.qm">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_sk.qm</file>
@@ -4861,6 +4917,7 @@
     <file alias="scripts/Misc/Examples/MathExamples/MathExamples.js">../../scripts/Misc/Examples/MathExamples/MathExamples.js</file>
     <file alias="scripts/Misc/Examples/MathExamples/ts/MathExamples_de.qm">../../scripts/Misc/Examples/MathExamples/ts/MathExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ts/MathExamples_en.qm">../../scripts/Misc/Examples/MathExamples/ts/MathExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/MathExamples/ts/MathExamples_fr.qm">../../scripts/Misc/Examples/MathExamples/ts/MathExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ts/MathExamples_it.qm">../../scripts/Misc/Examples/MathExamples/ts/MathExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ts/MathExamples_ru.qm">../../scripts/Misc/Examples/MathExamples/ts/MathExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ts/MathExamples_sk.qm">../../scripts/Misc/Examples/MathExamples/ts/MathExamples_sk.qm</file>
@@ -4868,6 +4925,7 @@
     <file alias="scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js">../../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_de.qm">../../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_de.qm</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_en.qm">../../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_en.qm</file>
+    <file alias="scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_fr.qm">../../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_fr.qm</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_it.qm">../../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_it.qm</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_ru.qm">../../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_ru.qm</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_sk.qm">../../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ts/ExDeleteObject_sk.qm</file>
@@ -4875,6 +4933,7 @@
     <file alias="scripts/Misc/Examples/ModifyExamples/ModifyExamples.js">../../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_de.qm">../../scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_en.qm">../../scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_fr.qm">../../scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_it.qm">../../scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_ru.qm">../../scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_sk.qm">../../scripts/Misc/Examples/ModifyExamples/ts/ModifyExamples_sk.qm</file>
@@ -4882,6 +4941,7 @@
     <file alias="scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js">../../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_de.qm">../../scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_de.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_en.qm">../../scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_en.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_fr.qm">../../scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_fr.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_it.qm">../../scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_it.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_ru.qm">../../scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_ru.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_sk.qm">../../scripts/Misc/Examples/QtExamples/ExDirListing/ts/ExDirListing_sk.qm</file>
@@ -4890,6 +4950,7 @@
     <file alias="scripts/Misc/Examples/QtExamples/ExMainWindow/MyAction.png">../../scripts/Misc/Examples/QtExamples/ExMainWindow/MyAction.png</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_de.qm">../../scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_de.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_en.qm">../../scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_en.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_fr.qm">../../scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_fr.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_it.qm">../../scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_it.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_ru.qm">../../scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_ru.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_sk.qm">../../scripts/Misc/Examples/QtExamples/ExMainWindow/ts/ExMainWindow_sk.qm</file>
@@ -4897,6 +4958,7 @@
     <file alias="scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js">../../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_de.qm">../../scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_de.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_en.qm">../../scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_en.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_fr.qm">../../scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_fr.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_it.qm">../../scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_it.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_ru.qm">../../scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_ru.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_sk.qm">../../scripts/Misc/Examples/QtExamples/ExProcess/ts/ExProcess_sk.qm</file>
@@ -4905,19 +4967,32 @@
     <file alias="scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui">../../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_de.qm">../../scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_de.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_en.qm">../../scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_en.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_fr.qm">../../scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_fr.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_it.qm">../../scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_it.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_ru.qm">../../scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_ru.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_sk.qm">../../scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_sk.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_sl.qm">../../scripts/Misc/Examples/QtExamples/ExResizeWindow/ts/ExResizeWindow_sl.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js">../../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.js">../../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.js</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui">../../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_de.qm">../../scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_de.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_en.qm">../../scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_en.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_fr.qm">../../scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_fr.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_it.qm">../../scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_it.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_ru.qm">../../scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_ru.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_sk.qm">../../scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_sk.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_sl.qm">../../scripts/Misc/Examples/QtExamples/ExWidget/ts/ExWidget_sl.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/QtExamples.js">../../scripts/Misc/Examples/QtExamples/QtExamples.js</file>
     <file alias="scripts/Misc/Examples/QtExamples/ts/QtExamples_de.qm">../../scripts/Misc/Examples/QtExamples/ts/QtExamples_de.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ts/QtExamples_en.qm">../../scripts/Misc/Examples/QtExamples/ts/QtExamples_en.qm</file>
+    <file alias="scripts/Misc/Examples/QtExamples/ts/QtExamples_fr.qm">../../scripts/Misc/Examples/QtExamples/ts/QtExamples_fr.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ts/QtExamples_it.qm">../../scripts/Misc/Examples/QtExamples/ts/QtExamples_it.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ts/QtExamples_ru.qm">../../scripts/Misc/Examples/QtExamples/ts/QtExamples_ru.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ts/QtExamples_sk.qm">../../scripts/Misc/Examples/QtExamples/ts/QtExamples_sk.qm</file>
     <file alias="scripts/Misc/Examples/QtExamples/ts/QtExamples_sl.qm">../../scripts/Misc/Examples/QtExamples/ts/QtExamples_sl.qm</file>
     <file alias="scripts/Misc/Examples/ts/Examples_de.qm">../../scripts/Misc/Examples/ts/Examples_de.qm</file>
     <file alias="scripts/Misc/Examples/ts/Examples_en.qm">../../scripts/Misc/Examples/ts/Examples_en.qm</file>
+    <file alias="scripts/Misc/Examples/ts/Examples_fr.qm">../../scripts/Misc/Examples/ts/Examples_fr.qm</file>
     <file alias="scripts/Misc/Examples/ts/Examples_it.qm">../../scripts/Misc/Examples/ts/Examples_it.qm</file>
     <file alias="scripts/Misc/Examples/ts/Examples_ru.qm">../../scripts/Misc/Examples/ts/Examples_ru.qm</file>
     <file alias="scripts/Misc/Examples/ts/Examples_sk.qm">../../scripts/Misc/Examples/ts/Examples_sk.qm</file>
@@ -4926,6 +5001,7 @@
     <file alias="scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js">../../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js</file>
     <file alias="scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_de.qm">../../scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_de.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_en.qm">../../scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_en.qm</file>
+    <file alias="scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_fr.qm">../../scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_fr.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_it.qm">../../scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_it.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_ru.qm">../../scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_ru.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_sk.qm">../../scripts/Misc/MiscBlock/BlockFixNames/ts/BlockFixNames_sk.qm</file>
@@ -4933,6 +5009,7 @@
     <file alias="scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js">../../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js</file>
     <file alias="scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_de.qm">../../scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_de.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_en.qm">../../scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_en.qm</file>
+    <file alias="scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_fr.qm">../../scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_fr.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_it.qm">../../scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_it.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_ru.qm">../../scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_ru.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_sk.qm">../../scripts/Misc/MiscBlock/BlockListAttributes/ts/BlockListAttributes_sk.qm</file>
@@ -4940,6 +5017,7 @@
     <file alias="scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js">../../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js</file>
     <file alias="scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_de.qm">../../scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_de.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_en.qm">../../scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_en.qm</file>
+    <file alias="scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_fr.qm">../../scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_fr.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_it.qm">../../scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_it.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_ru.qm">../../scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_ru.qm</file>
     <file alias="scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_sk.qm">../../scripts/Misc/MiscBlock/BlockListExport/ts/BlockListExport_sk.qm</file>
@@ -4947,6 +5025,7 @@
     <file alias="scripts/Misc/MiscBlock/MiscBlock.js">../../scripts/Misc/MiscBlock/MiscBlock.js</file>
     <file alias="scripts/Misc/MiscBlock/ts/MiscBlock_de.qm">../../scripts/Misc/MiscBlock/ts/MiscBlock_de.qm</file>
     <file alias="scripts/Misc/MiscBlock/ts/MiscBlock_en.qm">../../scripts/Misc/MiscBlock/ts/MiscBlock_en.qm</file>
+    <file alias="scripts/Misc/MiscBlock/ts/MiscBlock_fr.qm">../../scripts/Misc/MiscBlock/ts/MiscBlock_fr.qm</file>
     <file alias="scripts/Misc/MiscBlock/ts/MiscBlock_it.qm">../../scripts/Misc/MiscBlock/ts/MiscBlock_it.qm</file>
     <file alias="scripts/Misc/MiscBlock/ts/MiscBlock_ru.qm">../../scripts/Misc/MiscBlock/ts/MiscBlock_ru.qm</file>
     <file alias="scripts/Misc/MiscBlock/ts/MiscBlock_sk.qm">../../scripts/Misc/MiscBlock/ts/MiscBlock_sk.qm</file>
@@ -4954,6 +5033,7 @@
     <file alias="scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js">../../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js</file>
     <file alias="scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_de.qm">../../scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_de.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_en.qm">../../scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_en.qm</file>
+    <file alias="scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_fr.qm">../../scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_fr.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_it.qm">../../scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_it.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_ru.qm">../../scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_ru.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_sk.qm">../../scripts/Misc/MiscDevelopment/DevDebug/ts/DevDebug_sk.qm</file>
@@ -4967,6 +5047,7 @@
     <file alias="scripts/Misc/MiscDevelopment/EcmaScriptShell/ToggleTitleBar.svg">../../scripts/Misc/MiscDevelopment/EcmaScriptShell/ToggleTitleBar.svg</file>
     <file alias="scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_de.qm">../../scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_de.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_en.qm">../../scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_en.qm</file>
+    <file alias="scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_fr.qm">../../scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_fr.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_it.qm">../../scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_it.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_ru.qm">../../scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_ru.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_sk.qm">../../scripts/Misc/MiscDevelopment/EcmaScriptShell/ts/EcmaScriptShell_sk.qm</file>
@@ -4978,12 +5059,14 @@
     <file alias="scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js">../../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js</file>
     <file alias="scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_de.qm">../../scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_de.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_en.qm">../../scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_en.qm</file>
+    <file alias="scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_fr.qm">../../scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_fr.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_it.qm">../../scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_it.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_ru.qm">../../scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_ru.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_sk.qm">../../scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_sk.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_sl.qm">../../scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_sl.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/ts/MiscDevelopment_de.qm">../../scripts/Misc/MiscDevelopment/ts/MiscDevelopment_de.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/ts/MiscDevelopment_en.qm">../../scripts/Misc/MiscDevelopment/ts/MiscDevelopment_en.qm</file>
+    <file alias="scripts/Misc/MiscDevelopment/ts/MiscDevelopment_fr.qm">../../scripts/Misc/MiscDevelopment/ts/MiscDevelopment_fr.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/ts/MiscDevelopment_it.qm">../../scripts/Misc/MiscDevelopment/ts/MiscDevelopment_it.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/ts/MiscDevelopment_ru.qm">../../scripts/Misc/MiscDevelopment/ts/MiscDevelopment_ru.qm</file>
     <file alias="scripts/Misc/MiscDevelopment/ts/MiscDevelopment_sk.qm">../../scripts/Misc/MiscDevelopment/ts/MiscDevelopment_sk.qm</file>
@@ -4995,6 +5078,7 @@
     <file alias="scripts/Misc/MiscDraw/Counter/CounterInit.js">../../scripts/Misc/MiscDraw/Counter/CounterInit.js</file>
     <file alias="scripts/Misc/MiscDraw/Counter/ts/Counter_de.qm">../../scripts/Misc/MiscDraw/Counter/ts/Counter_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/Counter/ts/Counter_en.qm">../../scripts/Misc/MiscDraw/Counter/ts/Counter_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/Counter/ts/Counter_fr.qm">../../scripts/Misc/MiscDraw/Counter/ts/Counter_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/Counter/ts/Counter_it.qm">../../scripts/Misc/MiscDraw/Counter/ts/Counter_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/Counter/ts/Counter_ru.qm">../../scripts/Misc/MiscDraw/Counter/ts/Counter_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/Counter/ts/Counter_sk.qm">../../scripts/Misc/MiscDraw/Counter/ts/Counter_sk.qm</file>
@@ -5006,6 +5090,7 @@
     <file alias="scripts/Misc/MiscDraw/Cross/CrossInit.js">../../scripts/Misc/MiscDraw/Cross/CrossInit.js</file>
     <file alias="scripts/Misc/MiscDraw/Cross/ts/Cross_de.qm">../../scripts/Misc/MiscDraw/Cross/ts/Cross_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/Cross/ts/Cross_en.qm">../../scripts/Misc/MiscDraw/Cross/ts/Cross_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/Cross/ts/Cross_fr.qm">../../scripts/Misc/MiscDraw/Cross/ts/Cross_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/Cross/ts/Cross_it.qm">../../scripts/Misc/MiscDraw/Cross/ts/Cross_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/Cross/ts/Cross_ru.qm">../../scripts/Misc/MiscDraw/Cross/ts/Cross_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/Cross/ts/Cross_sk.qm">../../scripts/Misc/MiscDraw/Cross/ts/Cross_sk.qm</file>
@@ -5013,6 +5098,7 @@
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js">../../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js</file>
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_de.qm">../../scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_en.qm">../../scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_fr.qm">../../scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_it.qm">../../scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_ru.qm">../../scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_sk.qm">../../scripts/Misc/MiscDraw/DrawBoundingBox/ts/DrawBoundingBox_sk.qm</file>
@@ -5024,6 +5110,7 @@
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_de.qm">../../scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_en.qm">../../scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_fr.qm">../../scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_it.qm">../../scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_ru.qm">../../scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_sk.qm">../../scripts/Misc/MiscDraw/LineBoxJoint/ts/LineBoxJoint_sk.qm</file>
@@ -5035,6 +5122,7 @@
     <file alias="scripts/Misc/MiscDraw/LineDove/LineDoveInit.js">../../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/ts/LineDove_de.qm">../../scripts/Misc/MiscDraw/LineDove/ts/LineDove_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/ts/LineDove_en.qm">../../scripts/Misc/MiscDraw/LineDove/ts/LineDove_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/LineDove/ts/LineDove_fr.qm">../../scripts/Misc/MiscDraw/LineDove/ts/LineDove_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/ts/LineDove_it.qm">../../scripts/Misc/MiscDraw/LineDove/ts/LineDove_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/ts/LineDove_ru.qm">../../scripts/Misc/MiscDraw/LineDove/ts/LineDove_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/ts/LineDove_sk.qm">../../scripts/Misc/MiscDraw/LineDove/ts/LineDove_sk.qm</file>
@@ -5046,6 +5134,7 @@
     <file alias="scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js">../../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js</file>
     <file alias="scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_de.qm">../../scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_en.qm">../../scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_fr.qm">../../scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_it.qm">../../scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_ru.qm">../../scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_sk.qm">../../scripts/Misc/MiscDraw/LineRadicalAxis/ts/LineRadicalAxis_sk.qm</file>
@@ -5056,6 +5145,7 @@
     <file alias="scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js">../../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js</file>
     <file alias="scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_de.qm">../../scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_en.qm">../../scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_fr.qm">../../scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_it.qm">../../scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_ru.qm">../../scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_sk.qm">../../scripts/Misc/MiscDraw/LineSimilarityAxes/ts/LineSimilarityAxes_sk.qm</file>
@@ -5067,6 +5157,7 @@
     <file alias="scripts/Misc/MiscDraw/PointPole/PointPoleInit.js">../../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js</file>
     <file alias="scripts/Misc/MiscDraw/PointPole/ts/PointPole_de.qm">../../scripts/Misc/MiscDraw/PointPole/ts/PointPole_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/PointPole/ts/PointPole_en.qm">../../scripts/Misc/MiscDraw/PointPole/ts/PointPole_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/PointPole/ts/PointPole_fr.qm">../../scripts/Misc/MiscDraw/PointPole/ts/PointPole_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/PointPole/ts/PointPole_it.qm">../../scripts/Misc/MiscDraw/PointPole/ts/PointPole_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/PointPole/ts/PointPole_ru.qm">../../scripts/Misc/MiscDraw/PointPole/ts/PointPole_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/PointPole/ts/PointPole_sk.qm">../../scripts/Misc/MiscDraw/PointPole/ts/PointPole_sk.qm</file>
@@ -5077,6 +5168,7 @@
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js">../../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_de.qm">../../scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_en.qm">../../scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_fr.qm">../../scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_it.qm">../../scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_ru.qm">../../scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_sk.qm">../../scripts/Misc/MiscDraw/PointPowerCenter/ts/PointPowerCenter_sk.qm</file>
@@ -5092,6 +5184,7 @@
     <file alias="scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js">../../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_de.qm">../../scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_en.qm">../../scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_fr.qm">../../scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_it.qm">../../scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_ru.qm">../../scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_sk.qm">../../scripts/Misc/MiscDraw/TextAlong/ts/TextAlong_sk.qm</file>
@@ -5102,6 +5195,7 @@
     <file alias="scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js">../../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js</file>
     <file alias="scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_de.qm">../../scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_en.qm">../../scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_fr.qm">../../scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_it.qm">../../scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_ru.qm">../../scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_sk.qm">../../scripts/Misc/MiscDraw/XLineHorizontal/ts/XLineHorizontal_sk.qm</file>
@@ -5112,12 +5206,14 @@
     <file alias="scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js">../../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js</file>
     <file alias="scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_de.qm">../../scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_en.qm">../../scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_fr.qm">../../scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_it.qm">../../scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_ru.qm">../../scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_sk.qm">../../scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_sk.qm</file>
     <file alias="scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_sl.qm">../../scripts/Misc/MiscDraw/XLineVertical/ts/XLineVertical_sl.qm</file>
     <file alias="scripts/Misc/MiscDraw/ts/MiscDraw_de.qm">../../scripts/Misc/MiscDraw/ts/MiscDraw_de.qm</file>
     <file alias="scripts/Misc/MiscDraw/ts/MiscDraw_en.qm">../../scripts/Misc/MiscDraw/ts/MiscDraw_en.qm</file>
+    <file alias="scripts/Misc/MiscDraw/ts/MiscDraw_fr.qm">../../scripts/Misc/MiscDraw/ts/MiscDraw_fr.qm</file>
     <file alias="scripts/Misc/MiscDraw/ts/MiscDraw_it.qm">../../scripts/Misc/MiscDraw/ts/MiscDraw_it.qm</file>
     <file alias="scripts/Misc/MiscDraw/ts/MiscDraw_ru.qm">../../scripts/Misc/MiscDraw/ts/MiscDraw_ru.qm</file>
     <file alias="scripts/Misc/MiscDraw/ts/MiscDraw_sk.qm">../../scripts/Misc/MiscDraw/ts/MiscDraw_sk.qm</file>
@@ -5125,6 +5221,7 @@
     <file alias="scripts/Misc/MiscIO/ImportPoints/ImportPoints.js">../../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js</file>
     <file alias="scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_de.qm">../../scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_de.qm</file>
     <file alias="scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_en.qm">../../scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_en.qm</file>
+    <file alias="scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_fr.qm">../../scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_fr.qm</file>
     <file alias="scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_it.qm">../../scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_it.qm</file>
     <file alias="scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_ru.qm">../../scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_ru.qm</file>
     <file alias="scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_sk.qm">../../scripts/Misc/MiscIO/ImportPoints/ts/ImportPoints_sk.qm</file>
@@ -5137,12 +5234,14 @@
     <file alias="scripts/Misc/MiscIO/MolImport/MolImporter.js">../../scripts/Misc/MiscIO/MolImport/MolImporter.js</file>
     <file alias="scripts/Misc/MiscIO/MolImport/ts/MolImport_de.qm">../../scripts/Misc/MiscIO/MolImport/ts/MolImport_de.qm</file>
     <file alias="scripts/Misc/MiscIO/MolImport/ts/MolImport_en.qm">../../scripts/Misc/MiscIO/MolImport/ts/MolImport_en.qm</file>
+    <file alias="scripts/Misc/MiscIO/MolImport/ts/MolImport_fr.qm">../../scripts/Misc/MiscIO/MolImport/ts/MolImport_fr.qm</file>
     <file alias="scripts/Misc/MiscIO/MolImport/ts/MolImport_it.qm">../../scripts/Misc/MiscIO/MolImport/ts/MolImport_it.qm</file>
     <file alias="scripts/Misc/MiscIO/MolImport/ts/MolImport_ru.qm">../../scripts/Misc/MiscIO/MolImport/ts/MolImport_ru.qm</file>
     <file alias="scripts/Misc/MiscIO/MolImport/ts/MolImport_sk.qm">../../scripts/Misc/MiscIO/MolImport/ts/MolImport_sk.qm</file>
     <file alias="scripts/Misc/MiscIO/MolImport/ts/MolImport_sl.qm">../../scripts/Misc/MiscIO/MolImport/ts/MolImport_sl.qm</file>
     <file alias="scripts/Misc/MiscIO/ts/MiscIO_de.qm">../../scripts/Misc/MiscIO/ts/MiscIO_de.qm</file>
     <file alias="scripts/Misc/MiscIO/ts/MiscIO_en.qm">../../scripts/Misc/MiscIO/ts/MiscIO_en.qm</file>
+    <file alias="scripts/Misc/MiscIO/ts/MiscIO_fr.qm">../../scripts/Misc/MiscIO/ts/MiscIO_fr.qm</file>
     <file alias="scripts/Misc/MiscIO/ts/MiscIO_it.qm">../../scripts/Misc/MiscIO/ts/MiscIO_it.qm</file>
     <file alias="scripts/Misc/MiscIO/ts/MiscIO_ru.qm">../../scripts/Misc/MiscIO/ts/MiscIO_ru.qm</file>
     <file alias="scripts/Misc/MiscIO/ts/MiscIO_sk.qm">../../scripts/Misc/MiscIO/ts/MiscIO_sk.qm</file>
@@ -5150,6 +5249,7 @@
     <file alias="scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js">../../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js</file>
     <file alias="scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_de.qm">../../scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_de.qm</file>
     <file alias="scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_en.qm">../../scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_en.qm</file>
+    <file alias="scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_fr.qm">../../scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_fr.qm</file>
     <file alias="scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_it.qm">../../scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_it.qm</file>
     <file alias="scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_ru.qm">../../scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_ru.qm</file>
     <file alias="scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_sk.qm">../../scripts/Misc/MiscModify/ChangeFontToArial/ts/ChangeFontToArial_sk.qm</file>
@@ -5157,6 +5257,7 @@
     <file alias="scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js">../../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js</file>
     <file alias="scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_de.qm">../../scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_de.qm</file>
     <file alias="scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_en.qm">../../scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_en.qm</file>
+    <file alias="scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_fr.qm">../../scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_fr.qm</file>
     <file alias="scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_it.qm">../../scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_it.qm</file>
     <file alias="scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_ru.qm">../../scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_ru.qm</file>
     <file alias="scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_sk.qm">../../scripts/Misc/MiscModify/FlushBackLog/ts/FlushBackLog_sk.qm</file>
@@ -5165,6 +5266,7 @@
     <file alias="scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js">../../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js</file>
     <file alias="scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_de.qm">../../scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_de.qm</file>
     <file alias="scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_en.qm">../../scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_en.qm</file>
+    <file alias="scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_fr.qm">../../scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_fr.qm</file>
     <file alias="scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_it.qm">../../scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_it.qm</file>
     <file alias="scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_ru.qm">../../scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_ru.qm</file>
     <file alias="scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_sk.qm">../../scripts/Misc/MiscModify/ReloadLinetypes/ts/ReloadLinetypes_sk.qm</file>
@@ -5172,12 +5274,14 @@
     <file alias="scripts/Misc/MiscModify/SplineToLine/SplineToLine.js">../../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js</file>
     <file alias="scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_de.qm">../../scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_de.qm</file>
     <file alias="scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_en.qm">../../scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_en.qm</file>
+    <file alias="scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_fr.qm">../../scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_fr.qm</file>
     <file alias="scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_it.qm">../../scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_it.qm</file>
     <file alias="scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_ru.qm">../../scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_ru.qm</file>
     <file alias="scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_sk.qm">../../scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_sk.qm</file>
     <file alias="scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_sl.qm">../../scripts/Misc/MiscModify/SplineToLine/ts/SplineToLine_sl.qm</file>
     <file alias="scripts/Misc/MiscModify/ts/MiscModify_de.qm">../../scripts/Misc/MiscModify/ts/MiscModify_de.qm</file>
     <file alias="scripts/Misc/MiscModify/ts/MiscModify_en.qm">../../scripts/Misc/MiscModify/ts/MiscModify_en.qm</file>
+    <file alias="scripts/Misc/MiscModify/ts/MiscModify_fr.qm">../../scripts/Misc/MiscModify/ts/MiscModify_fr.qm</file>
     <file alias="scripts/Misc/MiscModify/ts/MiscModify_it.qm">../../scripts/Misc/MiscModify/ts/MiscModify_it.qm</file>
     <file alias="scripts/Misc/MiscModify/ts/MiscModify_ru.qm">../../scripts/Misc/MiscModify/ts/MiscModify_ru.qm</file>
     <file alias="scripts/Misc/MiscModify/ts/MiscModify_sk.qm">../../scripts/Misc/MiscModify/ts/MiscModify_sk.qm</file>
@@ -5188,12 +5292,14 @@
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_de.qm">../../scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_de.qm</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_en.qm">../../scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_en.qm</file>
+    <file alias="scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_fr.qm">../../scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_fr.qm</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_it.qm">../../scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_it.qm</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_ru.qm">../../scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_ru.qm</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_sk.qm">../../scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_sk.qm</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_sl.qm">../../scripts/Misc/MiscSelect/SelectByHandle/ts/SelectByHandle_sl.qm</file>
     <file alias="scripts/Misc/MiscSelect/ts/MiscSelect_de.qm">../../scripts/Misc/MiscSelect/ts/MiscSelect_de.qm</file>
     <file alias="scripts/Misc/MiscSelect/ts/MiscSelect_en.qm">../../scripts/Misc/MiscSelect/ts/MiscSelect_en.qm</file>
+    <file alias="scripts/Misc/MiscSelect/ts/MiscSelect_fr.qm">../../scripts/Misc/MiscSelect/ts/MiscSelect_fr.qm</file>
     <file alias="scripts/Misc/MiscSelect/ts/MiscSelect_it.qm">../../scripts/Misc/MiscSelect/ts/MiscSelect_it.qm</file>
     <file alias="scripts/Misc/MiscSelect/ts/MiscSelect_ru.qm">../../scripts/Misc/MiscSelect/ts/MiscSelect_ru.qm</file>
     <file alias="scripts/Misc/MiscSelect/ts/MiscSelect_sk.qm">../../scripts/Misc/MiscSelect/ts/MiscSelect_sk.qm</file>
@@ -5233,6 +5339,7 @@
     <file alias="scripts/Misc/Tutorials/CommandLineTools/ExSvgExport/ExSvgExport.js">../../scripts/Misc/Tutorials/CommandLineTools/ExSvgExport/ExSvgExport.js</file>
     <file alias="scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_de.qm">../../scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_de.qm</file>
     <file alias="scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_en.qm">../../scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_en.qm</file>
+    <file alias="scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_fr.qm">../../scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_fr.qm</file>
     <file alias="scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_it.qm">../../scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_it.qm</file>
     <file alias="scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_ru.qm">../../scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_ru.qm</file>
     <file alias="scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_sk.qm">../../scripts/Misc/Tutorials/CommandLineTools/ts/CommandLineTools_sk.qm</file>
@@ -5244,6 +5351,7 @@
     <file alias="scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js">../../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js</file>
     <file alias="scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_de.qm">../../scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_de.qm</file>
     <file alias="scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_en.qm">../../scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_en.qm</file>
+    <file alias="scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_fr.qm">../../scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_fr.qm</file>
     <file alias="scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_it.qm">../../scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_it.qm</file>
     <file alias="scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_ru.qm">../../scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_ru.qm</file>
     <file alias="scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_sk.qm">../../scripts/Misc/Tutorials/MenusAndToolBars/ts/MenusAndToolBars_sk.qm</file>
@@ -5252,6 +5360,7 @@
     <file alias="scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui">../../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui</file>
     <file alias="scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_de.qm">../../scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_de.qm</file>
     <file alias="scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_en.qm">../../scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_en.qm</file>
+    <file alias="scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_fr.qm">../../scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_fr.qm</file>
     <file alias="scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_it.qm">../../scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_it.qm</file>
     <file alias="scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_ru.qm">../../scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_ru.qm</file>
     <file alias="scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_sk.qm">../../scripts/Misc/Tutorials/PersistentWidgets/ts/PersistentWidgets_sk.qm</file>
@@ -5259,6 +5368,7 @@
     <file alias="scripts/Misc/Tutorials/Tutorials.js">../../scripts/Misc/Tutorials/Tutorials.js</file>
     <file alias="scripts/Misc/Tutorials/ts/Tutorials_de.qm">../../scripts/Misc/Tutorials/ts/Tutorials_de.qm</file>
     <file alias="scripts/Misc/Tutorials/ts/Tutorials_en.qm">../../scripts/Misc/Tutorials/ts/Tutorials_en.qm</file>
+    <file alias="scripts/Misc/Tutorials/ts/Tutorials_fr.qm">../../scripts/Misc/Tutorials/ts/Tutorials_fr.qm</file>
     <file alias="scripts/Misc/Tutorials/ts/Tutorials_it.qm">../../scripts/Misc/Tutorials/ts/Tutorials_it.qm</file>
     <file alias="scripts/Misc/Tutorials/ts/Tutorials_ru.qm">../../scripts/Misc/Tutorials/ts/Tutorials_ru.qm</file>
     <file alias="scripts/Misc/Tutorials/ts/Tutorials_sk.qm">../../scripts/Misc/Tutorials/ts/Tutorials_sk.qm</file>
@@ -7076,6 +7186,7 @@
     <file alias="scripts/Snap/ts/Snap_tr.qm">../../scripts/Snap/ts/Snap_tr.qm</file>
     <file alias="scripts/Snap/ts/Snap_zh_CN.qm">../../scripts/Snap/ts/Snap_zh_CN.qm</file>
     <file alias="scripts/Snap/ts/Snap_zh_TW.qm">../../scripts/Snap/ts/Snap_zh_TW.qm</file>
+    <file alias="scripts/Tools/ExTool/ExTool.js">../../scripts/Tools/ExTool/ExTool.js</file>
     <file alias="scripts/Tools/MergeDrawings/MergeDrawings.js">../../scripts/Tools/MergeDrawings/MergeDrawings.js</file>
     <file alias="scripts/Tools/MergeDrawings/MergeDrawingsInit.js">../../scripts/Tools/MergeDrawings/MergeDrawingsInit.js</file>
     <file alias="scripts/Tools/arguments.js">../../scripts/Tools/arguments.js</file>
