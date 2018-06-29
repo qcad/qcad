@@ -280,7 +280,7 @@ RCadToolMatrixTree.prototype.filter = function(text) {
         var found = false;
         for (var k=0; k<children.length; k++) {
             var child = children[k];
-            if (!isOfType(child, RToolButton)) {
+            if (!isOfType(child, RToolButton) && !isOfType(child, QToolButton)) {
                 continue;
             }
 
