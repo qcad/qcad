@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Widgets.js");
+include("scripts/Widgets/Widgets.js");
 include("scripts/WidgetFactory.js");
 
 /**
