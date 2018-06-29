@@ -258,8 +258,14 @@ RCadToolMatrixTree.getItemsAndEmbeddedWidgets = function(tree) {
 };
 
 RCadToolMatrixTree.prototype.filter = function(text) {
+    var re;
     // hide all tool buttons / categories which don't match the filter:
-    var re = new RegExp(text, "gi");
+    try {
+        re = new RegExp(text, "gi");
+    }
+    catch(e) {
+        re = new RegExp("", "gi");
+    }
 
     var embeddedWidgets = RCadToolMatrixTree.getItemsAndEmbeddedWidgets(this);
     for (var i=0; i<embeddedWidgets.length; i++) {
@@ -274,7 +280,7 @@ RCadToolMatrixTree.prototype.filter = function(text) {
         var found = false;
         for (var k=0; k<children.length; k++) {
             var child = children[k];
-            if (!isOfType(child, QToolButton)) {
+            if (!isOfType(child, RToolButton)) {
                 continue;
             }
 
@@ -282,7 +288,6 @@ RCadToolMatrixTree.prototype.filter = function(text) {
             if (isNull(action)) {
                 continue;
             }
-
 
             if (text.length===0) {
                 // no filter:
