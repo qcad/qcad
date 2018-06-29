@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../Select.js");
+include("scripts/Select/Select.js");
 
 /**
  * \class InvertSelection
