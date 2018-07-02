@@ -57,6 +57,18 @@ Projection.State = {
     SettingTargetPoint : 1
 };
 
+Projection.getMenu = function() {
+    var menu = EAction.getSubMenu(
+        Modify.getMenu(),
+        14800, 100,
+        Projection.getTitle(),
+        "ModifyProjectionMenu",
+        Projection.includeBasePath + "/Projection.svg"
+    );
+    menu.setProperty("scriptFile", Projection.includeBasePath + "/Projection.js");
+    return menu;
+};
+
 Projection.getToolBar = function() {
     var tb = EAction.getToolBar(Projection.getTitle(), "ProjectionToolBar");
     tb.visible = false;
@@ -95,12 +107,6 @@ Projection.getTitle = function() {
 
 Projection.prototype.getTitle = function() {
     return Projection.getTitle();
-};
-
-Projection.init = function() {
-    Projection.getToolBar();
-    Projection.getCadToolBarPanel();
-    Projection.getToolMatrixPanel();
 };
 
 Projection.prototype.beginEvent = function() {
@@ -540,4 +546,11 @@ Projection.prototype.slotSegmentLengthChanged = function(l) {
     this.segmentLength = l;
     this.clearCache();
     this.updatePreview(true);
+};
+
+Projection.init = function() {
+    Projection.getMenu();
+    Projection.getToolBar();
+    Projection.getCadToolBarPanel();
+    Projection.getToolMatrixPanel();
 };

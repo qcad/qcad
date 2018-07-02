@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["isometric", "pj"]);
     action.setGroupSortOrder(18200);
     action.setSortOrder(100);
-    action.setWidgetNames(["ModifyMenu", "ProjectionToolBar", "ProjectionToolsPanel", "ProjectionMatrixPanel"]);
+    action.setWidgetNames(["ModifyProjectionMenu", "ProjectionToolBar", "ProjectionToolsPanel", "ProjectionMatrixPanel"]);
 }
