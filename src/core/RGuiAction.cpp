@@ -197,6 +197,24 @@ QString RGuiAction::getShortcutText() const {
     return shortcutText;
 }
 
+QString RGuiAction::getShortcutsString(const QString& separator, QKeySequence::SequenceFormat format) const {
+//    if (isNull(ksList)) {
+//        return "";
+//    }
+
+    QString ret = "";
+
+    QList<QKeySequence> scs = getShortcuts();
+    for (int i=0; i<scs.length(); ++i) {
+        ret += scs[i].toString(format);
+        if (i<scs.length()-1) {
+            ret += separator;
+        }
+    }
+
+    return ret;
+}
+
 void RGuiAction::setIcon(const QString& iconFile) {
     // look up theme specific icon:
     QFileInfo fi(iconFile);
@@ -270,7 +288,7 @@ bool RGuiAction::isIconDisabled() const {
 
 void RGuiAction::setDefaultShortcuts(const QList<QKeySequence>& shortcuts) {
     defaultShortcuts = shortcuts;
-    this->setShortcuts(shortcuts);
+    setShortcuts(shortcuts);
 }
 
 QList<QKeySequence> RGuiAction::getDefaultShortcuts() {
@@ -279,48 +297,94 @@ QList<QKeySequence> RGuiAction::getDefaultShortcuts() {
 
 void RGuiAction::setDefaultShortcut(const QKeySequence& shortcut) {
     defaultShortcuts = QList<QKeySequence>() << shortcut;
-    this->setShortcut(shortcut);
+    setShortcut(shortcut);
+}
+
+void RGuiAction::addShortcut(const QKeySequence& shortcut) {
+    if (shortcut.count()==1) {
+        return;
+    }
+
+    QString key;
+    for (int i=0; i<shortcut.count(); i++) {
+        key += QChar(shortcut[i]);
+    }
+    key = key.toLower();
+    actionsByShortcut.insert(key, this);
+
+    if (shortcutText.isEmpty()) {
+        // for first shortcut, set text to display in menu:
+        shortcutText = key.toUpper();
+    }
+
+    multiKeyShortcuts.append(shortcut);
 }
 
 void RGuiAction::setShortcut(const QKeySequence& shortcut) {
+    bool match = scriptFile.contains("OpenFile.js");
+    multiKeyShortcuts.clear();
+
     if (shortcut.count()==1) {
         // single key stroke (Ctrl-A, +, ...):
         // supported by Qt:
+        if (match) qDebug() << "setting QAction shortcut to :" << shortcut.toString();
         QAction::setShortcut(shortcut);
+        if (match) qDebug() << "QAction shortcuts :" << shortcuts();
     }
     else {
         // multi key stroke (LI, ...):
         // broken in Qt, use own implementation:
-        QString key;
-        for (int i=0; i<shortcut.count(); i++) {
-            key += QChar(shortcut[i]);
-        }
-        key = key.toLower();
-        actionsByShortcut.insert(key, this);
-
-        if (shortcutText.isEmpty()) {
-            shortcutText = key.toUpper();
-        }
+        addShortcut(shortcut);
     }
 
-//    QAction::setShortcut(shortcut);
+    //QAction::setShortcut(shortcut);
+    //shortcuts = QList<QKeySequence>() << shortcut;
     initTexts();
 }
 
 void RGuiAction::setShortcuts(const QList<QKeySequence>& shortcuts) {
     QList<QKeySequence> scs;
 
+    multiKeyShortcuts.clear();
+
     for (int i=0; i<shortcuts.length(); i++) {
         if (shortcuts[i].count()==1) {
             scs.append(shortcuts[i]);
         }
         else {
-            setShortcut(shortcuts[i]);
+            //setShortcut(shortcuts[i]);
+            addShortcut(shortcuts[i]);
         }
     }
 
+    // only one key shortcuts are set here:
     QAction::setShortcuts(scs);
     initTexts();
+}
+
+void RGuiAction::setShortcutsFromStrings(const QStringList& shortcuts) {
+    QList<QKeySequence> scs;
+
+    multiKeyShortcuts.clear();
+
+    for (int i=0; i<shortcuts.length(); i++) {
+        QKeySequence ks(shortcuts[i]);
+        if (ks.count()==1) {
+            scs.append(ks);
+        }
+        else {
+            //setShortcut(shortcuts[i]);
+            addShortcut(ks);
+        }
+    }
+
+    // only one key shortcuts are set here:
+    QAction::setShortcuts(scs);
+    initTexts();
+}
+
+QList<QKeySequence> RGuiAction::getShortcuts() const {
+    return multiKeyShortcuts + shortcuts();
 }
 
 void RGuiAction::setToolTip(const QString& tip) {

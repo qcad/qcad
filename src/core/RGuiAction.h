@@ -88,6 +88,7 @@ public:
     //void setDocumentInterface(RDocumentInterface* di);
     //RDocumentInterface* getDocumentInterface() const;
 
+    void addShortcut(const QKeySequence& shortcut);
     /**
      * Sets the shortcut(s) for this action.
      *
@@ -96,10 +97,13 @@ public:
     void setShortcut(const QKeySequence& shortcut);
     void setDefaultShortcut(const QKeySequence& shortcut);
     void setShortcuts(const QList<QKeySequence>& shortcuts);
+    void setShortcutsFromStrings(const QStringList& shortcuts);
+    QList<QKeySequence> getShortcuts() const;
     void setDefaultShortcuts(const QList<QKeySequence>& shortcuts);
     QList<QKeySequence> getDefaultShortcuts();
     void setShortcutText(const QString& oriText);
     QString getShortcutText() const;
+    QString getShortcutsString(const QString& separator = ",", QKeySequence::SequenceFormat format = QKeySequence::PortableText) const;
 
     static void setGroupSortOrderStatic(QAction* a, int sortOrder);
     static void setGroupSortOrderOverrideStatic(QAction* a, const QString& widgetName, int sortOrder);
@@ -397,6 +401,7 @@ protected:
     QStringList arguments;
 
     QList<QKeySequence> defaultShortcuts;
+    QList<QKeySequence> multiKeyShortcuts;
     QString shortcutText;
     QString toolTip;
     bool iconDisabled;

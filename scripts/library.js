@@ -2169,7 +2169,6 @@ function restoreOverrideCursor() {
 }
 
 function initUserShortcuts() {
-    var settings = RSettings.getQSettings();
     var keys = RSettings.getAllKeys("Shortcuts");
 
     var i, key, action;
@@ -2180,13 +2179,24 @@ function initUserShortcuts() {
         if (isNull(action)) {
             continue;
         }
-        var scStringList = settings.value("Shortcuts/" + key);
+
+        var match = action.getScriptFile().contains("OpenFile");
+
+        var scStringList = RSettings.getValue("Shortcuts/" + key);
+
+        if (match) qDebug("scStringList", scStringList);
 
         // explicitely no shortcuts:
         if (isNull(scStringList)) {
+            if (match) qDebug("explicitely no shortcuts");
             action.setShortcuts([]);
             continue;
         }
+
+        if (match) qDebug("setting shortcuts to ", scStringList);
+
+        //action.setShortcutsFromStrings(scStringList);
+        //action.setShortcuts(scStringList);
 
         var scList = [];
         for (var k=0; k<scStringList.length; k++) {
@@ -2204,7 +2214,7 @@ function initUserShortcuts() {
         if (isNull(action)) {
             continue;
         }
-        var cmStringList = settings.value("Commands/" + key);
+        var cmStringList = RSettings.getValue("Commands/" + key);
 
         // explicitely no commands:
         if (isNull(cmStringList)) {
