@@ -27,18 +27,31 @@
 #include <QFont>
 
 #include "RColor.h"
+#include "RBox.h"
 
 // workaround for src2srcml bug:
 #ifndef RDEFAULT_RCOLOR
 #define RDEFAULT_RCOLOR RColor()
 #endif
 
+#ifndef RDEFAULT_RBOX
+#define RDEFAULT_RBOX RBox()
+#endif
+
 #ifndef RDEFAULT_QVARIANT
 #define RDEFAULT_QVARIANT QVariant()
 #endif
 
+#ifndef RDEFAULT_QSTRING
+#define RDEFAULT_QSTRING QString()
+#endif
+
 #ifndef RDEFAULT_QSTRINGLIST
 #define RDEFAULT_QSTRINGLIST QStringList()
+#endif
+
+#ifndef RDEFAULT_QLISTINT
+#define RDEFAULT_QLISTINT QList<int>()
 #endif
 
 /**
@@ -60,6 +73,15 @@ public:
 
     static QStringList getOriginalArguments();
     static void setOriginalArguments(const QStringList& a);
+
+    static QString getArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const QString& def = RDEFAULT_QSTRING);
+    static QStringList getArguments(const QStringList& args, const QString& shortFlag, const QString& longFlag);
+    static int getIntArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, int def = NAN);
+    static QList<int> getIntListArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, QList<int> def = RDEFAULT_QLISTINT);
+    static double getFloatArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, double def = RNANDOUBLE);
+    static RColor getColorArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RColor& def = RDEFAULT_RCOLOR);
+    static RBox getBoxArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RBox& def = RDEFAULT_RBOX);
+    static bool testArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag);
 
     static bool isDeployed();
     static QString getApplicationPath();

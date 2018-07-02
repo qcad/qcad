@@ -25,11 +25,12 @@
  * \param longFlag E.g. "-output"
  */
 function getArgument(args, shortFlag, longFlag, def) {
-    var ret = getArguments(args, shortFlag, longFlag);
-    if (ret.length===0) {
-        return def;
-    }
-    return ret[0];
+    return RSettings.getArgument(args, shortFlag, longFlag, def);
+//    var ret = getArguments(args, shortFlag, longFlag);
+//    if (ret.length===0) {
+//        return def;
+//    }
+//    return ret[0];
 }
 
 /**
@@ -40,122 +41,130 @@ function getArgument(args, shortFlag, longFlag, def) {
  * \param longFlag E.g. "-output"
  */
 function getArguments(args, shortFlag, longFlag) {
-    var ret = [];
+    return RSettings.getArguments(args, shortFlag, longFlag);
 
-    for (var k=0; k<args.length; k++) {
-        if (args[k]===shortFlag) {
-            if (k+1 < args.length) {
-                ret.push(args[k+1]);
-            }
-        }
+//    var ret = [];
 
-        if (args[k].indexOf(longFlag+"=")===0) {
-            var j=args[k].indexOf("=");
-            ret.push(args[k].substr(j+1));
-        }
-    }
+//    for (var k=0; k<args.length; k++) {
+//        if (args[k]===shortFlag) {
+//            if (k+1 < args.length) {
+//                ret.push(args[k+1]);
+//            }
+//        }
 
-    return ret;
+//        if (args[k].indexOf(longFlag+"=")===0) {
+//            var j=args[k].indexOf("=");
+//            ret.push(args[k].substr(j+1));
+//        }
+//    }
+
+//    return ret;
 }
 
 function getIntArgument(args, shortFlag, longFlag, def) {
-    var ret = getArgument(args, shortFlag, longFlag);
-    if (ret===undefined) {
-        return def;
-    }
-    return parseInt(ret, 10);
+    return RSettings.getIntArgument(args, shortFlag, longFlag, def);
+//    var ret = getArgument(args, shortFlag, longFlag);
+//    if (ret===undefined) {
+//        return def;
+//    }
+//    return parseInt(ret, 10);
 }
 
 function getIntListArgument(args, shortFlag, longFlag, def) {
-    var arg = getArgument(args, shortFlag, longFlag);
-    if (arg===undefined) {
-        return def;
-    }
+    return RSettings.getIntListArgument(args, shortFlag, longFlag, def);
+//    var arg = getArgument(args, shortFlag, longFlag);
+//    if (arg===undefined) {
+//        return def;
+//    }
 
-    var ret = [];
-    var tokens = arg.split(",");
+//    var ret = [];
+//    var tokens = arg.split(",");
 
-    var singleInt = false;
-    if (tokens.length===1) {
-        singleInt = true;
-    }
+//    var singleInt = false;
+//    if (tokens.length===1) {
+//        singleInt = true;
+//    }
 
-    for (var i=0; i<tokens.length; i++) {
-        var token = tokens[i];
-        var range = token.split("-");
-        var start, stop;
+//    for (var i=0; i<tokens.length; i++) {
+//        var token = tokens[i];
+//        var range = token.split("-");
+//        var start, stop;
 
-        if (range.length===1) {
-            start = singleInt ? 0 : parseInt(range[0]);
-            stop = parseInt(range[0]);
-        }
-        else if (range.length===2) {
-            start = parseInt(range[0]);
-            stop = parseInt(range[1]);
-        }
-        else {
-            qWarning("invalid token in list: ", token);
-            continue;
-        }
+//        if (range.length===1) {
+//            start = singleInt ? 0 : parseInt(range[0]);
+//            stop = parseInt(range[0]);
+//        }
+//        else if (range.length===2) {
+//            start = parseInt(range[0]);
+//            stop = parseInt(range[1]);
+//        }
+//        else {
+//            qWarning("invalid token in list: ", token);
+//            continue;
+//        }
 
-        for (var k=start; k<=stop; k++) {
-            ret.push(k);
-        }
-    }
-    return ret;
+//        for (var k=start; k<=stop; k++) {
+//            ret.push(k);
+//        }
+//    }
+//    return ret;
 }
 
 function getFloatArgument(args, shortFlag, longFlag, def) {
-    var ret = getArgument(args, shortFlag, longFlag);
-    if (ret===undefined) {
-        return def;
-    }
-    return parseFloat(ret);
+    return RSettings.getFloatArgument(args, shortFlag, longFlag, def);
+//    var ret = getArgument(args, shortFlag, longFlag);
+//    if (ret===undefined) {
+//        return def;
+//    }
+//    return parseFloat(ret);
 }
 
 function getColorArgument(args, shortFlag, longFlag, def) {
-    var ret = getArgument(args, shortFlag, longFlag);
-    if (ret===undefined) {
-        return def;
-    }
-    return new RColor(ret);
+    return RSettings.getColorArgument(args, shortFlag, longFlag, def);
+//    var ret = getArgument(args, shortFlag, longFlag);
+//    if (ret===undefined) {
+//        return def;
+//    }
+//    return new RColor(ret);
 }
 
 function getBoxArgument(args, shortFlag, longFlag, def) {
-    var ret = getArgument(args, shortFlag, longFlag);
-    if (ret===undefined) {
-        return def;
-    }
-    var parts = ret.split(',');
-    if (parts.length!==4) {
-        return def;
-    }
-    for (var i=0; i<parts.length; i++) {
-        parts[i] = parseFloat(parts[i]);
-    }
+    return RSettings.getBoxArgument(args, shortFlag, longFlag, def);
+//    var ret = getArgument(args, shortFlag, longFlag);
+//    if (ret===undefined) {
+//        return def;
+//    }
+//    var parts = ret.split(',');
+//    if (parts.length!==4) {
+//        return def;
+//    }
+//    for (var i=0; i<parts.length; i++) {
+//        parts[i] = parseFloat(parts[i]);
+//    }
 
-    return new RBox(new RVector(parts[0], parts[1]), new RVector(parts[0] + parts[2], parts[1] + parts[3]));
+//    return new RBox(new RVector(parts[0], parts[1]), new RVector(parts[0] + parts[2], parts[1] + parts[3]));
 }
 
 /**
  * \return True if the given arguments contain one of the given flags.
  */
 function testArgument(args, shortFlag, longFlag) {
-    if (shortFlag!=="" && args.indexOf(shortFlag)!==-1) {
-        return true;
-    }
-    if (longFlag!=="") {
-        if (args.indexOf(longFlag)!==-1) {
-            return true;
-        }
-        for (var k=0; k<args.length; k++) {
-            if (args[k].indexOf(longFlag+"=")===0) {
-                return true;
-            }
-        }
-    }
+    return RSettings.testArgument(args, shortFlag, longFlag);
+//    if (shortFlag!=="" && args.indexOf(shortFlag)!==-1) {
+//        return true;
+//    }
+//    if (longFlag!=="") {
+//        if (args.indexOf(longFlag)!==-1) {
+//            return true;
+//        }
+//        for (var k=0; k<args.length; k++) {
+//            if (args[k].indexOf(longFlag+"=")===0) {
+//                return true;
+//            }
+//        }
+//    }
 
-    return false;
+//    return false;
 }
 
 function printArgument(name, prop) {

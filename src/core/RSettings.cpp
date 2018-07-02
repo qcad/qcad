@@ -23,6 +23,7 @@
 #include <QFileInfo>
 #include <QFrame>
 #include <QPrinterInfo>
+#include <QString>
 #include <QStringList>
 #include <QTranslator>
 
@@ -130,6 +131,154 @@ QStringList RSettings::getOriginalArguments() {
 
 void RSettings::setOriginalArguments(const QStringList& a) {
     originalArguments = a;
+}
+
+/**
+ * \return The argument after the first one of the given flags or the given default value.
+ *
+ * \param args Array of strings (program arguments)
+ * \param shortFlag E.g. "-o"
+ * \param longFlag E.g. "-output"
+ */
+QString RSettings::getArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const QString& def) {
+    QStringList ret = getArguments(args, shortFlag, longFlag);
+    if (ret.isEmpty()) {
+        return def;
+    }
+    return ret[0];
+}
+
+/**
+ * \return Array of all arguments after the given flags or an empty array.
+ *
+ * \param args Array of strings (program arguments)
+ * \param shortFlag E.g. "-o"
+ * \param longFlag E.g. "-output"
+ */
+QStringList RSettings::getArguments(const QStringList& args, const QString& shortFlag, const QString& longFlag) {
+    QStringList ret;
+
+    for (int k=0; k<args.length(); k++) {
+        if (args[k]==shortFlag) {
+            if (k+1 < args.length()) {
+                ret.append(args[k+1]);
+            }
+        }
+
+        if (args[k].startsWith(longFlag+"=")) {
+            QStringList tokens = args[k].split("=");
+            if (tokens.length()==2) {
+                ret.append(tokens[1]);
+            }
+            //int j=args[k].indexOf("=");
+            //ret.push(args[k].substr(j+1));
+        }
+    }
+
+    return ret;
+}
+
+int RSettings::getIntArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, int def) {
+    QString ret = getArgument(args, shortFlag, longFlag);
+    if (ret.isNull()) {
+        return def;
+    }
+    return ret.toInt();
+}
+
+QList<int> RSettings::getIntListArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, QList<int> def) {
+    QString arg = getArgument(args, shortFlag, longFlag);
+    if (arg.isNull()) {
+        return def;
+    }
+
+    QList<int> ret;
+    QStringList tokens = arg.split(",");
+
+    bool singleInt = false;
+    if (tokens.length()==1) {
+        singleInt = true;
+    }
+
+    for (int i=0; i<tokens.length(); i++) {
+        QString token = tokens[i];
+        QStringList range = token.split("-");
+        int start, stop;
+
+        if (range.length()==1) {
+            start = singleInt ? 0 : range[0].toInt();
+            stop = range[0].toInt();
+        }
+        else if (range.length()==2) {
+            start = range[0].toInt();
+            stop = range[1].toInt();
+        }
+        else {
+            qWarning() << "invalid token in list: " << token;
+            continue;
+        }
+
+        for (int k=start; k<=stop; k++) {
+            ret.append(k);
+        }
+    }
+
+    return ret;
+}
+
+double RSettings::getFloatArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, double def) {
+    QString ret = getArgument(args, shortFlag, longFlag);
+    if (ret.isNull()) {
+        return def;
+    }
+    return ret.toDouble();
+}
+
+RColor RSettings::getColorArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RColor& def) {
+    QString ret = getArgument(args, shortFlag, longFlag);
+    if (ret.isNull()) {
+        return def;
+    }
+    return RColor(ret);
+}
+
+RBox RSettings::getBoxArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RBox& def) {
+    QString ret = getArgument(args, shortFlag, longFlag);
+    if (ret.isNull()) {
+        return def;
+    }
+    QStringList parts = ret.split(',');
+    if (parts.length()!=4) {
+        return def;
+    }
+    QList<double> floatParts;
+    for (int i=0; i<parts.length(); i++) {
+        //parts[i] = parts[i].toDouble();
+        floatParts.append(parts[i].toDouble());
+    }
+
+    return RBox(RVector(floatParts[0], floatParts[1]), RVector(floatParts[0] + floatParts[2], floatParts[1] + floatParts[3]));
+}
+
+/**
+ * \return True if the given arguments contain one of the given flags.
+ */
+bool RSettings::testArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag) {
+    if (!shortFlag.isEmpty() && args.contains(shortFlag)) {
+        return true;
+    }
+    if (!longFlag.isEmpty()) {
+        if (args.contains(longFlag)) {
+            return true;
+        }
+        for (int k=0; k<args.length(); k++) {
+            if (args[k].startsWith(longFlag+"=")) {
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 /**
