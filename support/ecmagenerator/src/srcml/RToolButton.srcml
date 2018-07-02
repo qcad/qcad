@@ -18,8 +18,8 @@
  * along with QCAD.
  */</comment>
 
-<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTEXTEDIT_H_</name></cpp:ifndef>
-<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTEXTEDIT_H_</name></cpp:define>
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTOOLBUTTON_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTOOLBUTTON_H_</name></cpp:define>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 

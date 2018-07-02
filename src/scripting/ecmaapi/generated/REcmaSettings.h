@@ -73,6 +73,30 @@
         setOriginalArguments
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getArgument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getArguments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntArgument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntListArgument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFloatArgument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColorArgument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoxArgument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        testArgument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isDeployed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

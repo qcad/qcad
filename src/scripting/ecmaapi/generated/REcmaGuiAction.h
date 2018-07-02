@@ -84,6 +84,9 @@
         getToolTip
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addShortcut
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setShortcut
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -91,6 +94,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setShortcuts
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setShortcutsFromStrings
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShortcuts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setDefaultShortcuts
@@ -103,6 +112,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getShortcutText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShortcutsString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setGroupSortOrderStatic

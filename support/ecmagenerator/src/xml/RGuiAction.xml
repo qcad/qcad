@@ -55,6 +55,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="shortcut" isConst="true" />
       </variant>
     </method>
+    <method name="addShortcut" cppName="addShortcut"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QKeySequence &amp;" typeName="QKeySequence"
+        name="shortcut" isConst="true" />
+      </variant>
+    </method>
     <method name="setShortcut" cppName="setShortcut"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -79,6 +87,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QList &lt; QKeySequence &gt;" name="shortcuts"
         isConst="true" />
       </variant>
+    </method>
+    <method name="setShortcutsFromStrings"
+    cppName="setShortcutsFromStrings" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="shortcuts" isConst="true" />
+      </variant>
+    </method>
+    <method name="getShortcuts" cppName="getShortcuts"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QKeySequence &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="setDefaultShortcuts"
     cppName="setDefaultShortcuts" specifier="public"
@@ -107,6 +129,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getShortcutsString" cppName="getShortcutsString"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="separator" hasDefault="true" default="&quot;,&quot;"
+        isConst="true" />
+        <arg type="QKeySequence::SequenceFormat"
+        typeName="QKeySequence::SequenceFormat" name="format"
+        hasDefault="true" default="QKeySequence :: PortableText"
+        isConst="false" />
+      </variant>
     </method>
     <method name="setGroupSortOrderStatic"
     cppName="setGroupSortOrderStatic" specifier="public"

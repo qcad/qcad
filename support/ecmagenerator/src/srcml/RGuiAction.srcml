@@ -89,6 +89,7 @@
     <comment type="line">//void setDocumentInterface(RDocumentInterface* di);</comment>
     <comment type="line">//RDocumentInterface* getDocumentInterface() const;</comment>
 
+    <function_decl><type><name>void</name></type> <name>addShortcut</name><parameter_list>(<param><decl><type><name>const</name> <name>QKeySequence</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
     <comment type="block">/**
      * Sets the shortcut(s) for this action.
      *
@@ -97,10 +98,13 @@
     <function_decl><type><name>void</name></type> <name>setShortcut</name><parameter_list>(<param><decl><type><name>const</name> <name>QKeySequence</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setDefaultShortcut</name><parameter_list>(<param><decl><type><name>const</name> <name>QKeySequence</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setShortcuts</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name>&amp;</type> <name>shortcuts</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setShortcutsFromStrings</name><parameter_list>(<param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>shortcuts</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name></type> <name>getShortcuts</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setDefaultShortcuts</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name>&amp;</type> <name>shortcuts</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name></type> <name>getDefaultShortcuts</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setShortcutText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>oriText</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getShortcutText</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getShortcutsString</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>separator</name> =<init> <expr>","</expr></init></decl></param>, <param><decl><type><name><name>QKeySequence</name>::<name>SequenceFormat</name></name></type> <name>format</name> =<init> <expr><name><name>QKeySequence</name>::<name>PortableText</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>setGroupSortOrderStatic</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>setGroupSortOrderOverrideStatic</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>widgetName</name></decl></param>, <param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
@@ -398,6 +402,7 @@
     <decl_stmt><decl><type><name>QStringList</name></type> <name>arguments</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name></type> <name>defaultShortcuts</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name></type> <name>multiKeyShortcuts</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>shortcutText</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>toolTip</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>iconDisabled</name></decl>;</decl_stmt>

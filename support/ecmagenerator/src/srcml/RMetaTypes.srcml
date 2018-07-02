@@ -340,6 +340,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QVector&lt;uint&gt;*</argument>)</argument_list></macro>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QEvent::Type</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QKeySequence::SequenceFormat</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QKeySequence::SequenceFormat*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::DropActions</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::CursorShape</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::GlobalColor</argument>)</argument_list></macro>

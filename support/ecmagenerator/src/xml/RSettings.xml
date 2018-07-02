@@ -63,6 +63,118 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="a" isConst="true" />
       </variant>
     </method>
+    <method name="getArgument" cppName="getArgument"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="def"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getArguments" cppName="getArguments"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+      </variant>
+    </method>
+    <method name="getIntArgument" cppName="getIntArgument"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+        <arg type="int" typeName="int" name="def" hasDefault="true"
+        default="NAN" isConst="false" />
+      </variant>
+    </method>
+    <method name="getIntListArgument" cppName="getIntListArgument"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; int &gt;"
+      isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+        <arg type="QList &lt; int &gt;"
+        typeName="QList &lt; int &gt;" name="def" hasDefault="true"
+        default="RDEFAULT_QLISTINT" isConst="false" />
+      </variant>
+    </method>
+    <method name="getFloatArgument" cppName="getFloatArgument"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+        <arg type="double" typeName="double" name="def"
+        hasDefault="true" default="RNANDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="getColorArgument" cppName="getColorArgument"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+        <arg type="RColor &amp;" typeName="RColor" name="def"
+        hasDefault="true" default="RDEFAULT_RCOLOR"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getBoxArgument" cppName="getBoxArgument"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RBox" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+        <arg type="RBox &amp;" typeName="RBox" name="def"
+        hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+      </variant>
+    </method>
+    <method name="testArgument" cppName="testArgument"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+      </variant>
+    </method>
     <method name="isDeployed" cppName="isDeployed"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
