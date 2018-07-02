@@ -339,6 +339,8 @@ Q_DECLARE_METATYPE(QVector<uint>)
 Q_DECLARE_METATYPE(QVector<uint>*)
 
 Q_DECLARE_METATYPE(QEvent::Type)
+Q_DECLARE_METATYPE(QKeySequence::SequenceFormat)
+Q_DECLARE_METATYPE(QKeySequence::SequenceFormat*)
 Q_DECLARE_METATYPE(Qt::DropActions)
 Q_DECLARE_METATYPE(Qt::CursorShape)
 Q_DECLARE_METATYPE(Qt::GlobalColor)
