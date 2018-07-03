@@ -4,9 +4,7 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/Duplicate.js");
     action.setIcon(basePath + "/Duplicate.svg");
-    action.setDefaultShortcuts([
-        new QKeySequence("d,p")
-    ]);
+    action.setDefaultShortcut(new QKeySequence("d,p"));
     action.setDefaultCommands(["duplicate", "dp"]);
     action.setNoState();
     action.setGroupSortOrder(2300);
