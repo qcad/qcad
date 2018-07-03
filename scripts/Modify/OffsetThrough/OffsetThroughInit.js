@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/OffsetThrough.svg");
     action.setStatusTip(qsTranslate("OffsetThrough", "Offset line, arc, circle or ellipse through point"));
     action.setDefaultShortcut(new QKeySequence("o,h"));
-    action.setDefaultCommands(["offsetthrough", "offsetthrough", "oh"]);
+    action.setDefaultCommands(["offsetthrough", "oh"]);
     action.setGroupSortOrder(13150);
     action.setSortOrder(200);
     action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
