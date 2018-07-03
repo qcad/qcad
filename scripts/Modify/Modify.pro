@@ -6,6 +6,7 @@ SUBDIRS = \
     BreakOutGap \
     BreakOutManual \
     Divide \
+    DisplayOrder \
     EditHatch \
     EditText \
     Explode \
@@ -21,8 +22,6 @@ SUBDIRS = \
     Round \
     Scale \
     Stretch \
-    ToBack \
-    ToFront \
     Translate \
     TranslateRotate \
     Trim \
