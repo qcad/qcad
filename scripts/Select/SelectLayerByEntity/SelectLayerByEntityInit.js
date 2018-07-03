@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/SelectLayerByEntity.svg");
     action.setStatusTip(qsTranslate("SelectLayerByEntity", "(De-)Select all entities on the same layer"));
     action.setDefaultShortcut(new QKeySequence("t,l"));
-    action.setDefaultCommands(["selectlayer", "tl"]);
+    action.setDefaultCommands(["selectlayerbyentity", "tl"]);
     action.setGroupSortOrder(4300);
     action.setSortOrder(300);
     action.setWidgetNames(["SelectMenu", "SelectToolBar", "SelectToolsPanel", "SelectMatrixPanel"]);
