@@ -8,7 +8,7 @@
         <translation type="vanished">ロード/セーブ</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="+37"/>
+        <location filename="../RecentFiles.js" line="+35"/>
         <source>Recent Files</source>
         <translation>最近使ったファイル</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../Projection.js" line="+70"/>
+        <location filename="../Projection.js" line="+82"/>
         <source>Projection Tools</source>
         <translation>投影ツール</translation>
     </message>
@@ -19,7 +19,7 @@
         <translation>&amp;P 投影</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+37"/>
         <source>Reference point</source>
         <translation>基準点</translation>
     </message>

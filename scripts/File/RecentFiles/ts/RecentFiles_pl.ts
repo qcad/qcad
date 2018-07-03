@@ -9,7 +9,7 @@
         <translation type="obsolete">Load / Save</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="+37"/>
+        <location filename="../RecentFiles.js" line="+35"/>
         <source>Recent Files</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ostatnie pliki</translation>

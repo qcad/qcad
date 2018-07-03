@@ -9,7 +9,7 @@
         <translation>Recent files history size:</translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="+37"/>
+        <location filename="../RecentFiles.js" line="+35"/>
         <source>File</source>
         <translation>File</translation>
     </message>

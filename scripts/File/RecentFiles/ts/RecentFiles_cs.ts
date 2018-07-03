@@ -9,7 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../RecentFiles.js" line="+37"/>
+        <location filename="../RecentFiles.js" line="+35"/>
         <source>Recent Files</source>
         <translation type="unfinished"></translation>
     </message>

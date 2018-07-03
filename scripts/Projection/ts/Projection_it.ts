@@ -4,7 +4,7 @@
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../Projection.js" line="+70"/>
+        <location filename="../Projection.js" line="+82"/>
         <source>Projection Tools</source>
         <translation>Strumenti di proiezione</translation>
     </message>
@@ -19,7 +19,7 @@
         <translation>&amp;Proiezione</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+37"/>
         <source>Reference point</source>
         <translation>Punto di riferimento</translation>
     </message>
