@@ -25,12 +25,12 @@
  * \param longFlag E.g. "-output"
  */
 function getArgument(args, shortFlag, longFlag, def) {
-    return RSettings.getArgument(args, shortFlag, longFlag, def);
-//    var ret = getArguments(args, shortFlag, longFlag);
-//    if (ret.length===0) {
-//        return def;
-//    }
-//    return ret[0];
+//    return RSettings.getArgument(args, shortFlag, longFlag, def);
+    var ret = getArguments(args, shortFlag, longFlag);
+    if (ret.length===0) {
+        return def;
+    }
+    return ret[0];
 }
 
 /**
