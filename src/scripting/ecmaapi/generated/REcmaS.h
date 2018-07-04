@@ -127,6 +127,8 @@
     ;static  void fromScriptValueEnumJoinType(const QScriptValue& value, RS::JoinType& out)
     ;static  QScriptValue toScriptValueEnumEndType(QScriptEngine* engine, const RS::EndType& value)
     ;static  void fromScriptValueEnumEndType(const QScriptValue& value, RS::EndType& out)
+    ;static  QScriptValue toScriptValueEnumEasing(QScriptEngine* engine, const RS::Easing& value)
+    ;static  void fromScriptValueEnumEasing(const QScriptValue& value, RS::Easing& out)
     ;};
     #endif
     

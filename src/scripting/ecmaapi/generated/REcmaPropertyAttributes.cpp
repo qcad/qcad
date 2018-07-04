@@ -266,23 +266,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Integer",
-    QScriptValue(RPropertyAttributes::Integer),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("Sum",
     QScriptValue(RPropertyAttributes::Sum),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("ReadOnly",
-    QScriptValue(RPropertyAttributes::ReadOnly),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Redundant",
-    QScriptValue(RPropertyAttributes::Redundant),
     QScriptValue::ReadOnly);
 
 

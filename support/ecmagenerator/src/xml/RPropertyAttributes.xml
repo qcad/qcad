@@ -27,10 +27,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="KnownVariable" />
       <value name="NumericallySorted" />
       <value name="Percentage" />
-      <value name="Integer" />
       <value name="Sum" />
-      <value name="ReadOnly" />
-      <value name="Redundant" />
       <value name="Undeletable" />
       <value name="OnRequest" />
     </enum>

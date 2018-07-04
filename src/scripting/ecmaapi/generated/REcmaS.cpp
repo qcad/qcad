@@ -498,16 +498,6 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("FromStart",
-    QScriptValue(RS::FromStart),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("FromEnd",
-    QScriptValue(RS::FromEnd),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("AlongPolyline",
     QScriptValue(RS::AlongPolyline),
     QScriptValue::ReadOnly);
@@ -603,28 +593,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Top",
-    QScriptValue(RS::Top),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Isometric",
-    QScriptValue(RS::Isometric),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("IsoBottom",
     QScriptValue(RS::IsoBottom),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Bottom",
-    QScriptValue(RS::Bottom),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Isometric",
-    QScriptValue(RS::Isometric),
     QScriptValue::ReadOnly);
 
 
@@ -633,28 +603,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Left",
-    QScriptValue(RS::Left),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Isometric",
-    QScriptValue(RS::Isometric),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("IsoLeftBack",
     QScriptValue(RS::IsoLeftBack),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("LeftBack",
-    QScriptValue(RS::LeftBack),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Isometric",
-    QScriptValue(RS::Isometric),
     QScriptValue::ReadOnly);
 
 
@@ -663,28 +613,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("Right",
-    QScriptValue(RS::Right),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Isometric",
-    QScriptValue(RS::Isometric),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("IsoRightBack",
     QScriptValue(RS::IsoRightBack),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("RightBack",
-    QScriptValue(RS::RightBack),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Isometric",
-    QScriptValue(RS::Isometric),
     QScriptValue::ReadOnly);
 
 
@@ -810,11 +740,6 @@
 
     ctor.setProperty("MaxUnit",
     QScriptValue(RS::MaxUnit),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Parsec",
-    QScriptValue(RS::Parsec),
     QScriptValue::ReadOnly);
 
 
@@ -1683,11 +1608,6 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("WORLDVIEW",
-    QScriptValue(RS::WORLDVIEW),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("INVALID",
     QScriptValue(RS::INVALID),
     QScriptValue::ReadOnly);
@@ -1795,6 +1715,241 @@
 
     ctor.setProperty("EndOpenSingle",
     QScriptValue(RS::EndOpenSingle),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Linear",
+    QScriptValue(RS::Linear),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InQuad",
+    QScriptValue(RS::InQuad),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutQuad",
+    QScriptValue(RS::OutQuad),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutQuad",
+    QScriptValue(RS::InOutQuad),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInQuad",
+    QScriptValue(RS::OutInQuad),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InCubic",
+    QScriptValue(RS::InCubic),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutCubic",
+    QScriptValue(RS::OutCubic),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutCubic",
+    QScriptValue(RS::InOutCubic),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInCubic",
+    QScriptValue(RS::OutInCubic),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InQuart",
+    QScriptValue(RS::InQuart),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutQuart",
+    QScriptValue(RS::OutQuart),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutQuart",
+    QScriptValue(RS::InOutQuart),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInQuart",
+    QScriptValue(RS::OutInQuart),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InQuint",
+    QScriptValue(RS::InQuint),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutQuint",
+    QScriptValue(RS::OutQuint),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutQuint",
+    QScriptValue(RS::InOutQuint),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInQuint",
+    QScriptValue(RS::OutInQuint),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InSine",
+    QScriptValue(RS::InSine),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutSine",
+    QScriptValue(RS::OutSine),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutSine",
+    QScriptValue(RS::InOutSine),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInSine",
+    QScriptValue(RS::OutInSine),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InExpo",
+    QScriptValue(RS::InExpo),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutExpo",
+    QScriptValue(RS::OutExpo),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutExpo",
+    QScriptValue(RS::InOutExpo),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInExpo",
+    QScriptValue(RS::OutInExpo),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InCirc",
+    QScriptValue(RS::InCirc),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutCirc",
+    QScriptValue(RS::OutCirc),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutCirc",
+    QScriptValue(RS::InOutCirc),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInCirc",
+    QScriptValue(RS::OutInCirc),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InElastic",
+    QScriptValue(RS::InElastic),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutElastic",
+    QScriptValue(RS::OutElastic),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutElastic",
+    QScriptValue(RS::InOutElastic),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInElastic",
+    QScriptValue(RS::OutInElastic),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InBack",
+    QScriptValue(RS::InBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutBack",
+    QScriptValue(RS::OutBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutBack",
+    QScriptValue(RS::InOutBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInBack",
+    QScriptValue(RS::OutInBack),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InBounce",
+    QScriptValue(RS::InBounce),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutBounce",
+    QScriptValue(RS::OutBounce),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InOutBounce",
+    QScriptValue(RS::InOutBounce),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutInBounce",
+    QScriptValue(RS::OutInBounce),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("InCurve",
+    QScriptValue(RS::InCurve),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OutCurve",
+    QScriptValue(RS::OutCurve),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("SineCurve",
+    QScriptValue(RS::SineCurve),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("CosineCurve",
+    QScriptValue(RS::CosineCurve),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("BezierSpline",
+    QScriptValue(RS::BezierSpline),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("TCBSpline",
+    QScriptValue(RS::TCBSpline),
     QScriptValue::ReadOnly);
 
 
@@ -1951,6 +2106,13 @@
         &engine,
         toScriptValueEnumEndType,
         fromScriptValueEnumEndType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::Easing>(
+        &engine,
+        toScriptValueEnumEasing,
+        fromScriptValueEnumEasing,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -2926,5 +3088,15 @@
     
         {
             out = qvariant_cast<RS::EndType>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumEasing(QScriptEngine* engine, const RS::Easing& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumEasing(const QScriptValue& value, RS::Easing& out)
+    
+        {
+            out = qvariant_cast<RS::Easing>(value.toVariant());
         }
         
