@@ -85,7 +85,7 @@
             <!--  enums -->
             <xsl:for-each select="srcml:block/srcml:public/srcml:enum">
                 <enum name="{srcml:name/text()}">
-                    <xsl:for-each select="srcml:block/srcml:expr/srcml:name">
+                    <xsl:for-each select="srcml:block/srcml:expr/srcml:name[1]">
                         <value name="{text()}"/>
                     </xsl:for-each>
                 </enum>

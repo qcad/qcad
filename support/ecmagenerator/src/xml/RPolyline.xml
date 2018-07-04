@@ -986,6 +986,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="target" isConst="true" />
         <arg type="int" typeName="int" name="steps"
         isConst="false" />
+        <arg type="RS::Easing" typeName="RS::Easing" name="easing"
+        hasDefault="true" default="RS :: Linear" isConst="false" />
       </variant>
     </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"
