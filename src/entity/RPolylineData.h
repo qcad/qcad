@@ -65,8 +65,11 @@ public:
     }
 
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const {
-        Q_UNUSED(draft)
+        if (!hasWidths()) {
+            return REntityData::getDistanceTo(point, limited, range, draft, strictRange);
+        }
 
+        // polylines with custom segment widths:
         double ret = RPolyline::getDistanceTo(point, limited, strictRange);
         if (ret>range) {
             return RNANDOUBLE;
