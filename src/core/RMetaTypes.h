@@ -43,6 +43,7 @@
 #include <QDragMoveEvent>
 #include <QDragLeaveEvent>
 #include <QDropEvent>
+#include <QEasingCurve>
 #include <QEvent>
 #include <QFocusEvent>
 #include <QFocusFrame>
@@ -357,6 +358,7 @@ Q_DECLARE_METATYPE(QPrinter::PaperSize)
 #endif
 Q_DECLARE_METATYPE(QVariant::Type)
 Q_DECLARE_METATYPE(QAbstractItemView::ScrollHint)
+Q_DECLARE_METATYPE(QEasingCurve::Type)
 
 Q_DECLARE_METATYPE(QtMsgType*)
 Q_DECLARE_METATYPE(QtMsgType)
