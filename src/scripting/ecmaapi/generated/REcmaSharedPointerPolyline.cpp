@@ -10202,9 +10202,7 @@
             context->argument(1).isNumber()
         ) /* type: int */
      && (
-            context->argument(2).isVariant() || 
-            context->argument(2).isQObject() || 
-            context->argument(2).isNull()
+            context->argument(2).isNumber()
         ) /* type: RS::Easing */
     
     ){
@@ -10236,21 +10234,13 @@
                     context->argument( 1 ).
                     toNumber();
                 
-                    // argument is reference
-                    RS::Easing*
-                    ap2 =
-                    qscriptvalue_cast<
-                    RS::Easing*
-                        >(
-                        context->argument(
-                        2
-                        )
-                    );
-                    if( ap2 == NULL ){
-                           return REcmaHelper::throwError("RPolyline: Argument 2 is not of type RS::Easing*.",
-                               context);                    
-                    }
-                    RS::Easing& a2 = *ap2;
+                    // argument isStandardType
+                    RS::Easing
+                    a2 =
+                    (RS::Easing)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
                 
     // end of arguments
 
