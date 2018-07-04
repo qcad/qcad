@@ -2117,9 +2117,9 @@ bool RPolyline::setHeight(double v) {
     return false;
 }
 
-QList<RPolyline> RPolyline::morph(const RPolyline& target, int steps) const {
+QList<RPolyline> RPolyline::morph(const RPolyline& target, int steps, RS::Easing easing) const {
     if (polylineProxy!=NULL) {
-        return polylineProxy->morph(*this, target, steps);
+        return polylineProxy->morph(*this, target, steps, easing);
     }
     return QList<RPolyline>();
 }
