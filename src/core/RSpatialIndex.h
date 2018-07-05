@@ -218,5 +218,6 @@ protected:
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RSpatialIndex& si);
 
 Q_DECLARE_METATYPE(RSpatialIndex*)
+Q_DECLARE_METATYPE(const RSpatialIndex*)
 
 #endif
