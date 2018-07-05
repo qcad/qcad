@@ -1134,6 +1134,10 @@ RSpatialIndex& RDocument::getSpatialIndex() {
     return spatialIndex;
 }
 
+const RSpatialIndex& RDocument::getSpatialIndex() const {
+    return spatialIndex;
+}
+
 RSpatialIndex* RDocument::getSpatialIndexForBlock(RBlock::Id blockId) {
     if (disableSpatialIndicesByBlock) {
         return &spatialIndex;
@@ -2599,11 +2603,11 @@ QDebug operator<<(QDebug dbg, RDocument& d) {
     dbg.nospace() << "RDocument(" << QString("0x%1").arg((long int)&d, 0, 16) << ", ";
     dbg.nospace() << d.getStorage();
     dbg.nospace() << d.getSpatialIndex();
-    QSet<RBlock::Id> blockIds = d.queryAllBlocks();
-    for (QSet<RBlock::Id>::iterator it=blockIds.begin(); it!=blockIds.end(); it++) {
-        dbg.nospace() << "\nspatial index for block: " << d.getBlockName(*it);
-        dbg.nospace() << *d.getSpatialIndexForBlock(*it);
-    }
+//    QSet<RBlock::Id> blockIds = d.queryAllBlocks();
+//    for (QSet<RBlock::Id>::iterator it=blockIds.begin(); it!=blockIds.end(); it++) {
+//        dbg.nospace() << "\nspatial index for block: " << d.getBlockName(*it);
+//        dbg.nospace() << *d.getSpatialIndexForBlock(*it);
+//    }
     return dbg.space();
 }
 

@@ -76,6 +76,7 @@ public:
     RStorage& getStorage();
     const RStorage& getStorage() const;
     RSpatialIndex& getSpatialIndex();
+    const RSpatialIndex& getSpatialIndex() const;
     RSpatialIndex* getSpatialIndexForBlock(RBlock::Id blockId);
     RSpatialIndex* getSpatialIndexForCurrentBlock();
     RTransactionStack& getTransactionStack();
