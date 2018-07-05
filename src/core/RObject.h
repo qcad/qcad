@@ -104,9 +104,7 @@ public:
         return document;
     }
 
-    void setDocument(RDocument* document) {
-        this->document = document;
-    }
+    void setDocument(RDocument* document);
 
     void setFlag(int flag, bool on = true) {
         if (on) {

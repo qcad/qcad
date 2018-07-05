@@ -57,6 +57,10 @@ RObject::~RObject() {
     //RDebug::decCounter("RObject");
 }
 
+void RObject::setDocument(RDocument* document) {
+    this->document = document;
+}
+
 void RObject::init() {
     RObject::PropertyCustom.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Custom"));
     RObject::PropertyType.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Type"));
