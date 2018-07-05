@@ -94,6 +94,9 @@
         setOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDocument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

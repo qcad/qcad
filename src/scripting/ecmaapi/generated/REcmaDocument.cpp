@@ -931,6 +931,28 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'const RSpatialIndex &'
+    const RSpatialIndex & cppResult =
+        
+               self->getSpatialIndex();
+        // return type: const RSpatialIndex &
+                // reference
+                result = engine->newVariant(
+                QVariant::fromValue(&cppResult));
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getSpatialIndex().",
                    context);

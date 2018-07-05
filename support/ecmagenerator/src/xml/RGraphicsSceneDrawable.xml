@@ -138,6 +138,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getDocument" cppName="getDocument"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RDocument *" isPureVirtual="false" />
+    </method>
     <method name="setSelected" cppName="setSelected"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

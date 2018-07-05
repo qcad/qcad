@@ -219,6 +219,7 @@
 <function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>RSpatialIndex</name>&amp;</type> <name>si</name></decl></param>)</parameter_list>;</function_decl>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSpatialIndex*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RSpatialIndex*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

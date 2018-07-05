@@ -77,6 +77,7 @@
     <function_decl><type><name>RStorage</name>&amp;</type> <name>getStorage</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>const</name> <name>RStorage</name>&amp;</type> <name>getStorage</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RSpatialIndex</name>&amp;</type> <name>getSpatialIndex</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>const</name> <name>RSpatialIndex</name>&amp;</type> <name>getSpatialIndex</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RSpatialIndex</name>*</type> <name>getSpatialIndexForBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RSpatialIndex</name>*</type> <name>getSpatialIndexForCurrentBlock</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>RTransactionStack</name>&amp;</type> <name>getTransactionStack</name><parameter_list>()</parameter_list>;</function_decl>

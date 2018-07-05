@@ -51,6 +51,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RSpatialIndex &amp;"
       isPureVirtual="false" />
+      <variant returnType="const RSpatialIndex &amp;"
+      isPureVirtual="false" />
     </method>
     <method name="getSpatialIndexForBlock"
     cppName="getSpatialIndexForBlock" specifier="public"
