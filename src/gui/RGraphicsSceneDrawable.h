@@ -125,6 +125,8 @@ public:
         offset = o;
     }
 
+    RDocument* getDocument() const;
+
     void setSelected(bool on);
     void setHighlighted(bool on);
 

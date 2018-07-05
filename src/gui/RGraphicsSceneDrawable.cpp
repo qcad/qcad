@@ -58,6 +58,16 @@ void RGraphicsSceneDrawable::uninit() {
     modes = NoMode;
 }
 
+RDocument* RGraphicsSceneDrawable::getDocument() const {
+    if (type==Image) {
+        return image->getDocument();
+    }
+    if (type==Text) {
+        return text->getDocument();
+    }
+    return NULL;
+}
+
 void RGraphicsSceneDrawable::setSelected(bool on) {
     switch (type) {
     case PainterPath:
