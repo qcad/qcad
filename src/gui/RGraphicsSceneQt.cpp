@@ -557,6 +557,7 @@ void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) 
     if (exportToPreview) {
         RImageData img = image;
         img.setFade(qMax(img.getFade(), 50));
+        img.setDocument(&getDocument());
         RGraphicsSceneDrawable d(img);
         addDrawable(id, d, draftMode, true);
 //        RPainterPath path;
