@@ -1110,65 +1110,6 @@
             
     
     if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isArray()
-        ) /* type: QStringList */
-     && (
-            context->argument(1).isString()
-        ) /* type: QString */
-     && (
-            context->argument(2).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isArray
-                    QStringList
-                    a0;
-                    REcmaHelper::fromScriptValue(
-                        engine,
-                        context->argument(0),
-                        a0
-                    );
-                
-                    // argument isStandardType
-                    QString
-                    a1 =
-                    (QString)
-                    
-                    context->argument( 1 ).
-                    toString();
-                
-                    // argument isStandardType
-                    QString
-                    a2 =
-                    (QString)
-                    
-                    context->argument( 2 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'int'
-    int cppResult =
-        RSettings::
-       getIntArgument(a0
-        ,
-    a1
-        ,
-    a2);
-        // return type: int
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
     4 && (
             context->argument(0).isArray()
         ) /* type: QStringList */

@@ -100,8 +100,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="shortFlag" isConst="true" />
         <arg type="QString &amp;" typeName="QString"
         name="longFlag" isConst="true" />
-        <arg type="int" typeName="int" name="def" hasDefault="true"
-        default="NAN" isConst="false" />
+        <arg type="int" typeName="int" name="def"
+        isConst="false" />
       </variant>
     </method>
     <method name="getIntListArgument" cppName="getIntListArgument"
