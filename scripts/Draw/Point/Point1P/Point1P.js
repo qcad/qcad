@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-include("scripts/Point/Point.js");
+include("scripts/Draw/Point/Point.js");
 
 /**
  * \class Point1P
