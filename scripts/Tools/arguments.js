@@ -26,13 +26,13 @@
  */
 function getArgument(args, shortFlag, longFlag, def) {
     // make sure undefined is returned as default:
-    if (isNull(def)) {
+    if (def===undefined) {
         var ret = getArguments(args, shortFlag, longFlag);
         if (ret.length===0) {
             return def;
         }
     }
-    return RSettings.getArgument(args, shortFlag, longFlag, def);
+    return RSettings.getArgument(args, shortFlag, longFlag);
 }
 
 /**
@@ -65,9 +65,9 @@ function getArguments(args, shortFlag, longFlag) {
 
 function getIntArgument(args, shortFlag, longFlag, def) {
     // make sure undefined is returned as default:
-    if (isNull(def)) {
+    if (def===undefined) {
         var ret = getArgument(args, shortFlag, longFlag);
-        if (isNull(ret)) {
+        if (ret===undefined) {
             return def;
         }
     }
@@ -76,14 +76,14 @@ function getIntArgument(args, shortFlag, longFlag, def) {
 
 function getIntListArgument(args, shortFlag, longFlag, def) {
     // make sure undefined is returned as default:
-    if (isNull(def)) {
+    if (def===undefined) {
         var ret = RSettings.getIntListArgument(args, shortFlag, longFlag, []);
         if (ret.length===0) {
             return def;
         }
     }
 
-    return RSettings.getIntListArgument(args, shortFlag, longFlag, def);
+    return RSettings.getIntListArgument(args, shortFlag, longFlag);
 
 //    var arg = getArgument(args, shortFlag, longFlag);
 //    if (arg===undefined) {
@@ -125,42 +125,36 @@ function getIntListArgument(args, shortFlag, longFlag, def) {
 
 function getFloatArgument(args, shortFlag, longFlag, def) {
     // make sure undefined is returned as default:
-    if (isNull(def)) {
-        if (isNull(def)) {
-            var ret = getArgument(args, shortFlag, longFlag);
-            if (isNull(ret)) {
-                return def;
-            }
+    if (def===undefined) {
+        var ret = getArgument(args, shortFlag, longFlag);
+        if (ret===undefined) {
+            return def;
         }
     }
 
-    return RSettings.getFloatArgument(args, shortFlag, longFlag, def);
+    return RSettings.getFloatArgument(args, shortFlag, longFlag);
 }
 
 function getColorArgument(args, shortFlag, longFlag, def) {
     // make sure undefined is returned as default:
-    if (isNull(def)) {
-        if (isNull(def)) {
-            var ret = getArgument(args, shortFlag, longFlag);
-            if (isNull(ret)) {
-                return def;
-            }
+    if (def===undefined) {
+        var ret = getArgument(args, shortFlag, longFlag);
+        if (ret===undefined) {
+            return def;
         }
     }
-    return RSettings.getColorArgument(args, shortFlag, longFlag, def);
+    return RSettings.getColorArgument(args, shortFlag, longFlag);
 }
 
 function getBoxArgument(args, shortFlag, longFlag, def) {
     // make sure undefined is returned as default:
-    if (isNull(def)) {
-        if (isNull(def)) {
-            var ret = getArgument(args, shortFlag, longFlag);
-            if (isNull(ret)) {
-                return def;
-            }
+    if (def===undefined) {
+        var ret = getArgument(args, shortFlag, longFlag);
+        if (ret===undefined) {
+            return def;
         }
     }
-    return RSettings.getBoxArgument(args, shortFlag, longFlag, def);
+    return RSettings.getBoxArgument(args, shortFlag, longFlag);
 
 //    var parts = ret.split(',');
 //    if (parts.length!==4) {
