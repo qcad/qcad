@@ -6,7 +6,7 @@ function init(basePath) {
     action.setIcon(basePath + "/Explode.svg");
     action.setDefaultShortcut(new QKeySequence("x,p"));
     action.setDefaultCommands(["explode", "xp"]);
-    action.setGroupSortOrder(14700);
+    action.setGroupSortOrder(13550);
     action.setSortOrder(100);
     action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel", "BlockMenu", "BlockToolBar", "BlockToolsPanel", "BlockMatrixPanel"]);
 }
