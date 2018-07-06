@@ -86,12 +86,12 @@ class RPropertyAttributes;
 #define REASING_OUTBOUNCE QEasingCurve::OutBounce
 #define REASING_INOUTBOUNCE QEasingCurve::InOutBounce
 #define REASING_OUTINBOUNCE QEasingCurve::OutInBounce
-#define REASING_INCURVE QEasingCurve::InCurve
-#define REASING_OUTCURVE QEasingCurve::OutCurve
-#define REASING_SINECURVE QEasingCurve::SineCurve
-#define REASING_COSINECURVE QEasingCurve::CosineCurve
-#define REASING_BEZIERSPLINE QEasingCurve::BezierSpline
-#define REASING_TCBSPLINE QEasingCurve::TCBSpline
+//#define REASING_INCURVE QEasingCurve::InCurve
+//#define REASING_OUTCURVE QEasingCurve::OutCurve
+//#define REASING_SINECURVE QEasingCurve::SineCurve
+//#define REASING_COSINECURVE QEasingCurve::CosineCurve
+//#define REASING_BEZIERSPLINE QEasingCurve::BezierSpline
+//#define REASING_TCBSPLINE QEasingCurve::TCBSpline
 
 /**
  * Class namespace for various global enums.
@@ -631,12 +631,12 @@ public:
         OutBounce = REASING_OUTBOUNCE,
         InOutBounce = REASING_INOUTBOUNCE,
         OutInBounce = REASING_OUTINBOUNCE,
-        InCurve = REASING_INCURVE,
-        OutCurve = REASING_OUTCURVE,
-        SineCurve = REASING_SINECURVE,
-        CosineCurve = REASING_COSINECURVE,
-        BezierSpline = REASING_BEZIERSPLINE,
-        TCBSpline = REASING_TCBSPLINE
+        //InCurve = REASING_INCURVE,
+        //OutCurve = REASING_OUTCURVE
+        //SineCurve = REASING_SINECURVE,
+        //CosineCurve = REASING_COSINECURVE,
+        //BezierSpline = REASING_BEZIERSPLINE,
+        //TCBSpline = REASING_TCBSPLINE
     };
 
 public:
