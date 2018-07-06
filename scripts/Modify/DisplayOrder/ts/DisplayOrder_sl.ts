@@ -4,7 +4,7 @@
 <context>
     <name>DisplayOrder</name>
     <message>
-        <location filename="../DisplayOrder.js" line="92"/>
+        <location filename="../DisplayOrder.js" line="+92"/>
         <source>&amp;Display Order</source>
         <translation type="unfinished"></translation>
     </message>
