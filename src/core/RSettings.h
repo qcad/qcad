@@ -76,7 +76,7 @@ public:
 
     static QString getArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const QString& def = RDEFAULT_QSTRING);
     static QStringList getArguments(const QStringList& args, const QString& shortFlag, const QString& longFlag);
-    static int getIntArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, int def = NAN);
+    static int getIntArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, int def);
     static QList<int> getIntListArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, QList<int> def = RDEFAULT_QLISTINT);
     static double getFloatArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, double def = RNANDOUBLE);
     static RColor getColorArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RColor& def = RDEFAULT_RCOLOR);
