@@ -1923,36 +1923,6 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("InCurve",
-    QScriptValue(RS::InCurve),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("OutCurve",
-    QScriptValue(RS::OutCurve),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("SineCurve",
-    QScriptValue(RS::SineCurve),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("CosineCurve",
-    QScriptValue(RS::CosineCurve),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("BezierSpline",
-    QScriptValue(RS::BezierSpline),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("TCBSpline",
-    QScriptValue(RS::TCBSpline),
-    QScriptValue::ReadOnly);
-
-
     // enum conversions:
     
     qScriptRegisterMetaType<RS::MessageType>(

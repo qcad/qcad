@@ -417,12 +417,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="OutBounce" />
       <value name="InOutBounce" />
       <value name="OutInBounce" />
-      <value name="InCurve" />
-      <value name="OutCurve" />
-      <value name="SineCurve" />
-      <value name="CosineCurve" />
-      <value name="BezierSpline" />
-      <value name="TCBSpline" />
     </enum>
     <method name="compare" cppName="compare" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

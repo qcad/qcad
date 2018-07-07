@@ -631,12 +631,12 @@ public:
         OutBounce = REASING_OUTBOUNCE,
         InOutBounce = REASING_INOUTBOUNCE,
         OutInBounce = REASING_OUTINBOUNCE,
-        InCurve = REASING_INCURVE,
-        OutCurve = REASING_OUTCURVE,
-        SineCurve = REASING_SINECURVE,
-        CosineCurve = REASING_COSINECURVE,
-        BezierSpline = REASING_BEZIERSPLINE,
-        TCBSpline = REASING_TCBSPLINE
+        //InCurve = REASING_INCURVE,
+        //OutCurve = REASING_OUTCURVE,
+        //SineCurve = REASING_SINECURVE,
+        //CosineCurve = REASING_COSINECURVE,
+        //BezierSpline = REASING_BEZIERSPLINE,
+        //TCBSpline = REASING_TCBSPLINE
     };
 
 public:

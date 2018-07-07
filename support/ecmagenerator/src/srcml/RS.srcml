@@ -632,12 +632,12 @@
         <expr><name>OutBounce</name> = <name>REASING_OUTBOUNCE</name></expr>,
         <expr><name>InOutBounce</name> = <name>REASING_INOUTBOUNCE</name></expr>,
         <expr><name>OutInBounce</name> = <name>REASING_OUTINBOUNCE</name></expr>,
-        <expr><name>InCurve</name> = <name>REASING_INCURVE</name></expr>,
-        <expr><name>OutCurve</name> = <name>REASING_OUTCURVE</name></expr>,
-        <expr><name>SineCurve</name> = <name>REASING_SINECURVE</name></expr>,
-        <expr><name>CosineCurve</name> = <name>REASING_COSINECURVE</name></expr>,
-        <expr><name>BezierSpline</name> = <name>REASING_BEZIERSPLINE</name></expr>,
-        <expr><name>TCBSpline</name> = <name>REASING_TCBSPLINE</name></expr>
+        <comment type="line">//InCurve = REASING_INCURVE,</comment>
+        <comment type="line">//OutCurve = REASING_OUTCURVE,</comment>
+        <comment type="line">//SineCurve = REASING_SINECURVE,</comment>
+        <comment type="line">//CosineCurve = REASING_COSINECURVE,</comment>
+        <comment type="line">//BezierSpline = REASING_BEZIERSPLINE,</comment>
+        <comment type="line">//TCBSpline = REASING_TCBSPLINE</comment>
     }</block>;</enum>
 
 </public><public>public:
