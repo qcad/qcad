@@ -675,6 +675,8 @@ public:
         return T();
     }
 
+    static QStringList sortAlphanumerical(const QStringList& list);
+
     static const double PointTolerance;
     static const double AngleTolerance;
 };

@@ -16,6 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+
+#if QT_VERSION >= 0x050200
+#include <QCollator>
+#endif
+
 #include "RColor.h"
 #include "RGlobal.h"
 #include "RLinetype.h"
@@ -229,3 +234,31 @@ QStringList RS::getLinetypeList(bool metric) {
     }
 }
 
+/**
+ * Alphanumerical sorting.
+ */
+QStringList RS::sortAlphanumerical(const QStringList& list) {
+    QStringList ret = list;
+
+#if QT_VERSION >= 0x050200
+    QCollator collator;
+    collator.setNumericMode(true);
+    std::sort(
+        ret.begin(),
+        ret.end(),
+        [&collator](const QString& s1, const QString& s2)
+        {
+            return collator.compare(s1, s2) < 0;
+        });
+#else
+    qSort(ret.begin(), ret.end());
+#endif
+
+    return ret;
+}
+
+int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
+    QCollator collator;
+    collator.setNumericMode(true);
+    return collator.compare(s1, s2) < 0;
+}
