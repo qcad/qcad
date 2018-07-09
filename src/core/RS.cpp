@@ -103,6 +103,7 @@ bool RS::compare(const QVariant& v1, const QVariant& v2) {
         }
         break;
     }
+    return false;
 }
 
 bool RS::compare(const QPair<QVariant, RPropertyAttributes>& p1, const QPair<
@@ -248,10 +249,12 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
     std::sort(
         ret.begin(),
         ret.end(),
-        [&](const QString& s1, const QString& s2)
-        {
-            return collator.compare(s1, s2) < 0;
-        });
+        RS::compareAlphanumerical
+    );
+        //[&collator](const QString& s1, const QString& s2)
+        //{
+        //    return collator.compare(s1, s2) < 0;
+        //});
 #else
     qSort(ret.begin(), ret.end());
 #endif
@@ -260,8 +263,12 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
 }
 
 int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
+#if QT_VERSION >= 0x050200
     QCollator collator;
     collator.setNumericMode(true);
     collator.setCaseSensitivity(Qt::CaseInsensitive);
     return collator.compare(s1, s2);
+#else
+    return QString::compare(s1, s2, Qt::CaseInsensitive);
+#endif
 }
