@@ -249,7 +249,7 @@ public:
     double getHeight() const;
     bool setHeight(double v);
 
-    QList<RPolyline> morph(const RPolyline& target, int steps, RS::Easing easing = RS::Linear) const;
+    QList<RPolyline> morph(const RPolyline& target, int steps, RS::Easing easing = RS::Linear, bool zLinear = true) const;
 
     static bool hasProxy() {
         return polylineProxy!=NULL;
