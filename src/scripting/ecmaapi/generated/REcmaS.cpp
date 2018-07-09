@@ -83,6 +83,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getLinetypeList, "getLinetypeList");
             
+            REcmaHelper::registerFunction(&engine, &ctor, sortAlphanumerical, "sortAlphanumerical");
+            
 
     // static properties:
     
@@ -2760,6 +2762,57 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getLinetypeList", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::sortAlphanumerical
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::sortAlphanumerical", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::sortAlphanumerical";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QStringList
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RS::
+       sortAlphanumerical(a0);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.sortAlphanumerical().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::sortAlphanumerical", context, engine);
             return result;
         }
          QScriptValue REcmaS::toString

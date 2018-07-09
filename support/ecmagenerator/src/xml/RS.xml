@@ -498,6 +498,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="sortAlphanumerical" cppName="sortAlphanumerical"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="list" isConst="true" />
+      </variant>
+    </method>
     <property name="PointTolerance" type="double" isConst="true"
     isStatic="true" />
     <property name="AngleTolerance" type="double" isConst="true"
