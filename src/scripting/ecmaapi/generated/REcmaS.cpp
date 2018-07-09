@@ -85,6 +85,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, sortAlphanumerical, "sortAlphanumerical");
             
+            REcmaHelper::registerFunction(&engine, &ctor, compareAlphanumerical, "compareAlphanumerical");
+            
 
     // static properties:
     
@@ -2813,6 +2815,69 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::sortAlphanumerical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::compareAlphanumerical
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::compareAlphanumerical", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::compareAlphanumerical";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RS::
+       compareAlphanumerical(a0
+        ,
+    a1);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.compareAlphanumerical().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::compareAlphanumerical", context, engine);
             return result;
         }
          QScriptValue REcmaS::toString
