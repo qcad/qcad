@@ -988,6 +988,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RS::Easing" typeName="RS::Easing" name="easing"
         hasDefault="true" default="RS :: Linear" isConst="false" />
+        <arg type="bool" typeName="bool" name="zLinear"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"
