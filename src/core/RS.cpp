@@ -244,10 +244,11 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
 #if QT_VERSION >= 0x050200
     QCollator collator;
     collator.setNumericMode(true);
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
     std::sort(
         ret.begin(),
         ret.end(),
-        [&collator](const QString& s1, const QString& s2)
+        [&](const QString& s1, const QString& s2)
         {
             return collator.compare(s1, s2) < 0;
         });
@@ -261,5 +262,6 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
 int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
     QCollator collator;
     collator.setNumericMode(true);
-    return collator.compare(s1, s2) < 0;
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
+    return collator.compare(s1, s2);
 }
