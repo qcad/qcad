@@ -676,6 +676,7 @@ public:
     }
 
     static QStringList sortAlphanumerical(const QStringList& list);
+    static int compareAlphanumerical(const QString& s1, const QString& s2);
 
     static const double PointTolerance;
     static const double AngleTolerance;

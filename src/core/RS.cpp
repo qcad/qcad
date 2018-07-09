@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 
+#include <QtGlobal>
 #if QT_VERSION >= 0x050200
 #include <QCollator>
 #endif
