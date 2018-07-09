@@ -1,0 +1,96 @@
+<div xml:space="preserve">
+ 
+<p>Autor: Robert S.</p> 
+<p>Este comando calcula el área de arcos, círculos, elipses y arcos elípticos,
+y opcionalmente añade la información a la capa actual de un dibujo. Si
+selecciona cualquier otro tipo de entidad, se muestra una advertencia en la
+línea de comandos.</p> 
+<p>Para los arcos, hay dos opciones para calcular áreas: Segmento o Sector. El
+área de un segmento (o rebanada) es el área delimitada por el arco y dos líneas
+trazadas desde el punto inicial y el punto final del arco hasta el centro del
+arco. El área de un sector es el área delimitada por el arco y una cuerda
+dibujada desde el punto inicial del arco hasta el punto final.</p> 
+<p>
+<img alt="Segment or Sector" src="ArcCircle01.png" height="297" width="570" /> 
+<br /> Figura 1: un segmento (slice) y un sector.</p> 
+<p>
+  <b>Opciones</b>
+</p> 
+<p>Este comando tiene las opciones estándar 
+<i>"Añadir medida al dibujo</i>" y 
+<i>"Altura del texto</i>".</p> 
+<p>
+<img alt="Standard options" src="ArcCircle02a.png" height="38" width="399" /> 
+<br /> Figura 2: Opciones de información estándar</p> 
+<p>Tanto si está desactivado como si no, al hacer clic en un arco, círculo,
+elipse o arco elíptico, la información se muestra en el widget de la línea de
+comandos.</p> 
+<p>
+<img alt="Info is displayed in command line widget" src="ArcCircle03.png"
+height="58" width="475" /> 
+<br /> Figura 3: Información mostrada en la línea de comandos</p> 
+<p>(Nota: Cada vez que inicie un comando de información, la casilla de
+verificación 
+<i>"Añadir medida al dibujo</i>" siempre estará desmarcada. No olvide
+encenderlo si desea que la información se añada al dibujo).</p> 
+<p>También agrega las siguientes opciones.</p> 
+<p>
+<img alt="Options toolbar" src="ArcCircle02.png" height="49" width="425" /> 
+<br /> Figura 4: Opciones añadidas</p> 
+<p>
+  <b>Mode:</b>
+</p> 
+<p>El modo sólo se aplica a los arcos.</p> 
+<p>
+<img alt="Sector" src="InfoSector.png" height="24" width="24" /> 
+<br /> 
+<i>Sector:</i> Este modo devuelve el área del sector. Esto es útil cuando se
+usa junto con el comando 
+<i>"Área poligonal</i>".</p> 
+<p>
+<img alt="Segment" src="InfoSlice.png" height="24" width="24" /> 
+<i>Segmento:</i> Este modo devuelve el área del segmento.</p> 
+<p>
+  <b>Add:</b>
+</p> 
+<p>
+<i>Entidad:</i> Esto selecciona si desea añadir una copia de la entidad medida
+a la capa actual del dibujo.</p> 
+<p>
+<i>Acorde:</i> Esto selecciona si desea que el acorde (sector), o las líneas de
+radio (segmento), se agreguen al dibujo.</p> 
+<p>
+<i>Longitud:</i> Por defecto, el área siempre se imprime en el dibujo. Esta
+opción selecciona si desea añadir información adicional al dibujo.</p> 
+<p>Para círculos y elipses completas, la información adicional es la
+circunferencia. Esto usa el punto central como la esquina inferior izquierda
+para el texto agregado.</p> 
+<p>
+  <img alt="Extra info for circles and ellipses" src="ArcCircle04.png"
+  height="271" width="727" />
+</p> 
+<p>Para arcos circulares la información extra es la longitud del arco y la
+longitud de la cuerda (en modo sector), o el radio (en modo segmento).</p> 
+<p>En el caso de las elipses, la información adicional es la longitud del arco
+y la longitud de la cuerda (en modo sector), o la distancia desde el punto
+central hasta el punto inicial del arco, seguida de la distancia desde el punto
+central hasta el punto final del arco (en modo segmento).</p> 
+<p>La esquina inferior izquierda del texto agregado es el punto final del
+arco.</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle06.png" height="149"
+  width="664" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle05.png" height="222"
+  width="756" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle08.png" height="179"
+  width="656" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle07.png" height="210"
+  width="835" />
+</p> 
+</div>
