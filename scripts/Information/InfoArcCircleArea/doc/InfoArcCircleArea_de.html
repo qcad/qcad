@@ -17,5 +17,104 @@
 <br /><b>Tastenkürzel:</b> <font face='courier new'>I, C</font>
 <br /><b>Kommandos:</b> <font face='courier new'>acearea | ic</font>
 </p>
+<p><strong>Beschreibung:</strong></p>
+<div xml:space="preserve">
+ 
+<p>Autor: Robert S.</p> 
+
+<p>Dieser Befehl berechnet die Fläche von Bögen, Kreisen, Ellipsen und
+elliptischen Bögen und fügt optional die Informationen zur aktuellen Ebene
+einer Zeichnung hinzu. Wenn Sie einen anderen Objekttyp auswählen, wird eine
+Warnung in der Befehlszeile angezeigt.</p> 
+<p>Für Bögen gibt es zwei Möglichkeiten der Flächenberechnung, nämlich Segment
+oder Sektor. Die Fläche eines Segments ist der Bereich, der
+durch den Bogen und zwei Linien vom Start- und Endpunkt des Bogens zum
+Mittelpunkt des Bogens begrenzt wird. Die Fläche eines Sektors ist der
+Bereich, der durch den Bogen und eine Linie vom Startpunkt des Bogens bis zum
+Endpunkt begrenzt wird.</p> 
+<p>
+<img alt="Segment or Sector" src="ArcCircle01.png" height="297" width="570" /> 
+<br /> Abbildung 1: ein Segment und ein Sektor.</p> 
+<p>
+  <b>Optionen</b>
+</p> 
+<p>Dieser Befehl hat die Standardoptionen "<i>Bemassung zur Zeichnung hinzufügen</i>" und 
+<i>"Texthöhe</i>".</p> 
+<p>
+<img alt="Standard Optionen" src="ArcCircle02a.png" height="38" width="399" /> 
+<br /> Abbildung 2: Standard Optionen</p> 
+<p>Ob dies nun ausgeschaltet ist oder nicht, wenn Sie auf einen Bogen, Kreis,
+eine Ellipse oder einen elliptischen Bogen klicken, werden die Informationen im
+der Befehlszeile angezeigt.</p> 
+<p>
+<img alt="Info wird in der Befehlszeile angezeigt" src="ArcCircle03.png"
+height="58" width="475" /> 
+<br /> Abbildung 3: In der Kommandozeile angezeigte Informationen</p> 
+<p>(Hinweis: Bei jedem Start eines Info-Befehls ist das Kontrollkästchen 
+"<i>Resultat der Zeichnung hinzufügen</i>" 
+deaktiviert. Sie müssen daran denken, es einzuschalten, wenn Sie möchten, 
+dass die Informationen in die Zeichnung aufgenommen werden).</p> 
+<p>Ausserdem werden die folgenden Optionen hinzugefügt.</p> 
+<p>
+<img alt="Optionenwerkzeugleiste" src="ArcCircle02.png" height="49" width="425" /> 
+<br /> Abbildung 4: Zusätzliche Optionen</p> 
+<p>
+  <b>Modus:</b>
+</p> 
+<p>Der Modus gilt nur für Bögen.</p> 
+<p>
+<img alt="Sektor" src="InfoSector.png" height="24" width="24" /> 
+<br /> 
+<i>Sektor:</i> Dieser Modus gibt die Fläche des Sektors zurück. Dies ist
+sinnvoll in Verbindung mit dem Befehl 
+<i>"Polygon Fläche</i>".</p> 
+<p>
+<img alt="Segment" src="InfoSlice.png" height="24" width="24" /> 
+<i>Segment:</i> Dieser Modus gibt die Fläche des Segments zurück.</p> 
+<p>
+  <b>Hinzufügen:</b>
+</p> 
+<p>
+<i>Objekt:</i> Hiermit legen Sie fest, ob Sie dem aktuellen Layer der
+Zeichnung eine Kopie des gemessenen Objekts hinzufügen möchten.</p> 
+<p>
+<i>Sehne:</i> Hiermit wählen Sie aus, ob die Sehne oder die
+Radiuslinien (Sektor) in die Zeichnung eingefügt werden sollen.</p> 
+<p>
+<i>Länge:</i> Standardmässig wird die Fläche immer auf die Zeichnung gedruckt.
+Mit dieser Option können Sie auswählen, ob der Zeichnung zusätzliche
+Informationen hinzugefügt werden sollen.</p> 
+<p>Bei Kreisen und vollen Ellipsen ist die zusätzliche Information der Umfang.
+Dabei wird der Mittelpunkt als untere linke Ecke für den hinzugefügten Text
+verwendet.</p> 
+<p>
+  <img alt="Extra Info für Kreise und Ellipsen" src="ArcCircle04.png"
+  height="271" width="727" />
+</p> 
+<p>Bei Kreisbögen ist die zusätzliche Information die Länge des Bogens und die
+Länge der Sehne (im Sektormodus) oder der Radius (im Segmentmodus).</p> 
+<p>Bei Ellipsen ist die zusätzliche Information die Länge des Bogens und die
+Länge der Sehne (im Sektormodus), oder der Abstand vom Mittelpunkt zum
+Startpunkt des Bogens, gefolgt vom Abstand vom Mittelpunkt zum Endpunkt des
+Bogens (im Segmentmodus).</p> 
+<p>Die untere linke Ecke für den hinzugefügten Text ist der Endpunkt des
+Bogens.</p> 
+<p>
+  <img alt="Extra Info für Bögen" src="ArcCircle06.png" height="149"
+  width="664" />
+</p> 
+<p>
+  <img alt="Extra Info für Bögen" src="ArcCircle05.png" height="222"
+  width="756" />
+</p> 
+<p>
+  <img alt="Extra Info für Bögen" src="ArcCircle08.png" height="179"
+  width="656" />
+</p> 
+<p>
+  <img alt="Extra Info für Bögen" src="ArcCircle07.png" height="210"
+  width="835" />
+</p> 
+</div>
 </body>
 </html>
