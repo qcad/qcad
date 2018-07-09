@@ -354,7 +354,7 @@
         <translation>Valeur mesurée</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+116"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
