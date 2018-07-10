@@ -1140,8 +1140,8 @@ WidgetFactory.initLayerCombo = function(comboBox, doc) {
     comboBox.clear();
     comboBox.iconSize = new QSize(32, 16);
     var names = doc.getLayerNames();
-    names = RS.sortAlphanumerical(names);
-    //names.sort(Array.alphaNumericalSorter);
+    //names = RS.sortAlphanumerical(names);
+    names.sort(Array.alphaNumericalSorter);
     for (var i=0; i<names.length; i++) {
         var name = names[i];
         var layer = doc.queryLayer(name);
@@ -1160,8 +1160,8 @@ WidgetFactory.initBlockCombo = function(comboBox, doc, showSpaces) {
 
     comboBox.clear();
     var names = doc.getBlockNames();
-    //names.sort(Array.alphaNumericalSorter);
-    names = RS.sortAlphanumerical(names);
+    names.sort(Array.alphaNumericalSorter);
+    //names = RS.sortAlphanumerical(names);
     for (var i=0; i<names.length; i++) {
         var name = names[i];
         if (showSpaces || !name.startsWith("*")) {
