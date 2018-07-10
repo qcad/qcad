@@ -321,15 +321,12 @@ void RGuiAction::addShortcut(const QKeySequence& shortcut) {
 }
 
 void RGuiAction::setShortcut(const QKeySequence& shortcut) {
-    bool match = scriptFile.contains("OpenFile.js");
     multiKeyShortcuts.clear();
 
     if (shortcut.count()==1) {
         // single key stroke (Ctrl-A, +, ...):
         // supported by Qt:
-        if (match) qDebug() << "setting QAction shortcut to :" << shortcut.toString();
         QAction::setShortcut(shortcut);
-        if (match) qDebug() << "QAction shortcuts :" << shortcuts();
     }
     else {
         // multi key stroke (LI, ...):
