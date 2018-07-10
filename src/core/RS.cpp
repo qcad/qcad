@@ -242,10 +242,7 @@ QStringList RS::getLinetypeList(bool metric) {
 QStringList RS::sortAlphanumerical(const QStringList& list) {
     QStringList ret = list;
 
-#if QT_VERSION >= 0x050200
-    QCollator collator;
-    collator.setNumericMode(true);
-    collator.setCaseSensitivity(Qt::CaseInsensitive);
+#if QT_VERSION >= 0x050200 && !defined(Q_OS_LINUX)
     std::sort(
         ret.begin(),
         ret.end(),
@@ -263,7 +260,8 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
 }
 
 int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
-#if QT_VERSION >= 0x050200
+#if QT_VERSION >= 0x050200 && !defined(Q_OS_LINUX)
+    // crashes sometimes under Linux:
     QCollator collator;
     collator.setNumericMode(true);
     collator.setCaseSensitivity(Qt::CaseInsensitive);
