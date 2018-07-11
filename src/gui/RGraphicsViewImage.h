@@ -285,8 +285,9 @@ public:
     void addToBackground(const RPainterPath& path);
     void setBackgroundTransform(double bgFactor, const RVector& bgOffset);
 
-    void clearForeground(int id);
-    void addToForeground(int id, const RGraphicsSceneDrawable& drawable);
+    void clearForeground(int foregroundId);
+    void clearForeground(int foregroundId, RObject::Id objectId);
+    void addToForeground(int foregroundId, RObject::Id objectId, const RGraphicsSceneDrawable& drawable);
 
     void setColorCorrectionOverride(bool on) {
         colorCorrectionOverride = on;
@@ -394,7 +395,7 @@ protected:
     double backgroundFactor;
     RVector backgroundOffset;
 
-    QMap<int, QList<RGraphicsSceneDrawable> > foregroundDecorations;
+    QMap<int, QMap<RObject::Id, QList<RGraphicsSceneDrawable> > > foregroundDecorations;
 
     RBox clipBox;
     RVector paintOffset;

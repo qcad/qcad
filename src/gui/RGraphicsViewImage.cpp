@@ -731,60 +731,86 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
     painter->setTransform(savedTransform);
 }
 
-void RGraphicsViewImage::clearForeground(int id) {
-    if (foregroundDecorations.contains(id)) {
-        foregroundDecorations[id].clear();
+void RGraphicsViewImage::clearForeground(int foregroundId) {
+    if (foregroundDecorations.contains(foregroundId)) {
+        foregroundDecorations[foregroundId].clear();
     }
 }
 
-void RGraphicsViewImage::addToForeground(int id, const RGraphicsSceneDrawable& drawable) {
-    if (!foregroundDecorations.contains(id)) {
-        foregroundDecorations.insert(id, QList<RGraphicsSceneDrawable>());
+void RGraphicsViewImage::clearForeground(int foregroundId, RObject::Id objectId) {
+    if (foregroundDecorations.contains(foregroundId)) {
+        if (foregroundDecorations[foregroundId].contains(objectId)) {
+            qDebug() << "clear for" << objectId;
+            foregroundDecorations[foregroundId].remove(objectId);
+        }
     }
-    foregroundDecorations[id].append(drawable);
+}
+
+void RGraphicsViewImage::addToForeground(int foregroundId, RObject::Id objectId, const RGraphicsSceneDrawable& drawable) {
+    if (!foregroundDecorations.contains(foregroundId)) {
+        QMap<RObject::Id, QList<RGraphicsSceneDrawable> > map;
+        map.insert(objectId, QList<RGraphicsSceneDrawable>());
+        //foregroundDecorations.insert(id, map);
+    }
+    if (!foregroundDecorations[foregroundId].contains(objectId)) {
+        foregroundDecorations[foregroundId].insert(objectId, QList<RGraphicsSceneDrawable>());
+    }
+
+    qDebug() << "add for" << objectId;
+    foregroundDecorations[foregroundId][objectId].append(drawable);
 }
 
 void RGraphicsViewImage::paintForeground(QPainter* painter) {
-    QList<int> keys = foregroundDecorations.keys();
-    qSort(keys);
+    QList<int> foregroundIds = foregroundDecorations.keys();
+    //qSort(foregroundIds);
 
-    for (int n=0; n<keys.length(); n++) {
-        int key = keys[n];
-        for (int i=0; i<foregroundDecorations[key].size(); i++) {
-            RGraphicsSceneDrawable drawable = foregroundDecorations[key].at(i);
-            if (drawable.getType()==RGraphicsSceneDrawable::PainterPath) {
-                RPainterPath path = drawable.getPainterPath();
+    // iterate through all maps (each map represents a foreground decoration or overlay):
+    for (int n=0; n<foregroundIds.length(); n++) {
+        int foregroundId = foregroundIds[n];
 
-                //RVector sp = path.getBoundingBox().getCenter();
-                //path.move(-sp);
-                path.scale(1/factor,1/factor);
-                path.move(drawable.getOffset());
+        // iterate through object Ids for this foreground:
+        QList<RObject::Id> objIds = foregroundDecorations[foregroundId].keys();
+        for (int c=0; c<objIds.length(); c++) {
+            RObject::Id objId = objIds[c];
 
-                QPen pen = path.getPen();
-                if (path.getPixelWidth()) {
-                    pen.setWidthF(pen.widthF() / factor);
+            // iterate through list of drawables for this object:
+            for (int i=0; i<foregroundDecorations[foregroundId][objId].length(); i++) {
+
+                RGraphicsSceneDrawable drawable = foregroundDecorations[foregroundId][objId].at(i);
+                if (drawable.getType()==RGraphicsSceneDrawable::PainterPath) {
+                    RPainterPath path = drawable.getPainterPath();
+
+                    //RVector sp = path.getBoundingBox().getCenter();
+                    //path.move(-sp);
+                    path.scale(1/factor,1/factor);
+                    path.move(drawable.getOffset());
+
+                    QPen pen = path.getPen();
+                    if (path.getPixelWidth()) {
+                        pen.setWidthF(pen.widthF() / factor);
+                    }
+
+                    painter->setPen(pen);
+                    painter->setBrush(path.getBrush());
+                    painter->drawPath(path);
                 }
 
-                painter->setPen(pen);
-                painter->setBrush(path.getBrush());
-                painter->drawPath(path);
-            }
+                else if (drawable.getType()==RGraphicsSceneDrawable::Text) {
+                    RTextBasedData text = drawable.getText();
 
-            else if (drawable.getType()==RGraphicsSceneDrawable::Text) {
-                RTextBasedData text = drawable.getText();
+                    if (drawable.getPixelUnit()) {
+                        text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
+                    }
 
-                if (drawable.getPixelUnit()) {
-                    text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
+                    text.move(drawable.getOffset());
+                    text.move(paintOffset);
+
+                    paintText(painter, text);
                 }
-
-                text.move(drawable.getOffset());
-                text.move(paintOffset);
-
-                paintText(painter, text);
+                //painter->setPen(path.getPen());
+                //painter->setBrush(path.getBrush());
+                //painter->drawPath(path);
             }
-            //painter->setPen(path.getPen());
-            //painter->setBrush(path.getBrush());
-            //painter->drawPath(path);
         }
     }
 }
