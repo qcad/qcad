@@ -538,14 +538,24 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="int" typeName="int" name="foregroundId"
+        isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="foregroundId"
+        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" isConst="false" />
       </variant>
     </method>
     <method name="addToForeground" cppName="addToForeground"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="int" typeName="int" name="foregroundId"
+        isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" isConst="false" />
         <arg type="RGraphicsSceneDrawable &amp;"
         typeName="RGraphicsSceneDrawable" name="drawable"
         isConst="true" />

@@ -4890,6 +4890,46 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RObject::Id
+                    a1 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearForeground(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.clearForeground().",
                    context);
@@ -4920,13 +4960,16 @@
                 
     
     if( context->argumentCount() ==
-    2 && (
+    3 && (
             context->argument(0).isNumber()
         ) /* type: int */
      && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
+            context->argument(1).isNumber()
+        ) /* type: RObject::Id */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
         ) /* type: RGraphicsSceneDrawable */
     
     ){
@@ -4940,23 +4983,31 @@
                     context->argument( 0 ).
                     toNumber();
                 
+                    // argument isStandardType
+                    RObject::Id
+                    a1 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
                     // argument isCopyable and has default constructor and isSimpleClass 
                     RGraphicsSceneDrawable*
-                    ap1 =
+                    ap2 =
                     qscriptvalue_cast<
                     RGraphicsSceneDrawable*
                         >(
                         context->argument(
-                        1
+                        2
                         )
                     );
-                    if (ap1 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RGraphicsSceneDrawable.",
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 2 is not of type RGraphicsSceneDrawable.",
                                context);                    
                     }
                     RGraphicsSceneDrawable 
-                    a1 = 
-                    *ap1;
+                    a2 = 
+                    *ap2;
                 
     // end of arguments
 
@@ -4965,7 +5016,9 @@
     
                self->addToForeground(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
     } else
 
 

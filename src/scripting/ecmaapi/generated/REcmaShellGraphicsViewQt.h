@@ -613,12 +613,16 @@
         
     
       void clearForeground(
-                int id
+                int foregroundId
+            );
+        
+      void clearForeground(
+                int foregroundId, RObject::Id objectId
             );
         
     
       void addToForeground(
-                int id, const RGraphicsSceneDrawable & drawable
+                int foregroundId, RObject::Id objectId, const RGraphicsSceneDrawable & drawable
             );
         
     
