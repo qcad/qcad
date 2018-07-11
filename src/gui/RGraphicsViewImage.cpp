@@ -659,7 +659,9 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
 
     QPainter* painter;
     painter = initPainter(graphicsBuffer, false, false, r);
+
     paintBackground(painter, r);
+
     RVector c1 = mapFromView(RVector(r.left()-1,r.bottom()+1), -1e300);
     RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e300);
     RBox queryBox(c1, c2);
@@ -675,6 +677,8 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
             paintEntity(painter, i.next());
         }
     }
+
+    paintForeground(painter);
 
     painter->end();
     delete painter;
@@ -725,6 +729,64 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
     }
 
     painter->setTransform(savedTransform);
+}
+
+void RGraphicsViewImage::clearForeground(int id) {
+    if (foregroundDecorations.contains(id)) {
+        foregroundDecorations[id].clear();
+    }
+}
+
+void RGraphicsViewImage::addToForeground(int id, const RGraphicsSceneDrawable& drawable) {
+    if (!foregroundDecorations.contains(id)) {
+        foregroundDecorations.insert(id, QList<RGraphicsSceneDrawable>());
+    }
+    foregroundDecorations[id].append(drawable);
+}
+
+void RGraphicsViewImage::paintForeground(QPainter* painter) {
+    QList<int> keys = foregroundDecorations.keys();
+    qSort(keys);
+
+    for (int n=0; n<keys.length(); n++) {
+        int key = keys[n];
+        for (int i=0; i<foregroundDecorations[key].size(); i++) {
+            RGraphicsSceneDrawable drawable = foregroundDecorations[key].at(i);
+            if (drawable.getType()==RGraphicsSceneDrawable::PainterPath) {
+                RPainterPath path = drawable.getPainterPath();
+
+                //RVector sp = path.getBoundingBox().getCenter();
+                //path.move(-sp);
+                path.scale(1/factor,1/factor);
+                path.move(drawable.getOffset());
+
+                QPen pen = path.getPen();
+                if (path.getPixelWidth()) {
+                    pen.setWidthF(pen.widthF() / factor);
+                }
+
+                painter->setPen(pen);
+                painter->setBrush(path.getBrush());
+                painter->drawPath(path);
+            }
+
+            else if (drawable.getType()==RGraphicsSceneDrawable::Text) {
+                RTextBasedData text = drawable.getText();
+
+                if (drawable.getPixelUnit()) {
+                    text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
+                }
+
+                text.move(drawable.getOffset());
+                text.move(paintOffset);
+
+                paintText(painter, text);
+            }
+            //painter->setPen(path.getPen());
+            //painter->setBrush(path.getBrush());
+            //painter->drawPath(path);
+        }
+    }
 }
 
 QPainter* RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool screen, const QRect& rect) {

@@ -32,6 +32,7 @@ class RAction;
 class RDocument;
 class RDocumentInterface;
 class RGraphicsSceneQt;
+class RGraphicsSceneDrawable;
 class RLine;
 class RSnap;
 class RSnapRestriction;
@@ -284,6 +285,9 @@ public:
     void addToBackground(const RPainterPath& path);
     void setBackgroundTransform(double bgFactor, const RVector& bgOffset);
 
+    void clearForeground(int id);
+    void addToForeground(int id, const RGraphicsSceneDrawable& drawable);
+
     void setColorCorrectionOverride(bool on) {
         colorCorrectionOverride = on;
     }
@@ -338,6 +342,7 @@ protected:
     virtual void paintRelativeZero(QPaintDevice& device);
     virtual void paintDocument(const QRect& rect = QRect());
     virtual void paintBackground(QPainter* painter, const QRect& rect = QRect());
+    virtual void paintForeground(QPainter* painter);
 
     /**
      * \nonscriptable
@@ -388,6 +393,9 @@ protected:
     //QTransform backgroundTransform;
     double backgroundFactor;
     RVector backgroundOffset;
+
+    QMap<int, QList<RGraphicsSceneDrawable> > foregroundDecorations;
+
     RBox clipBox;
     RVector paintOffset;
     bool alphaEnabled;
