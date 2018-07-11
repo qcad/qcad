@@ -229,7 +229,7 @@ void RDocumentInterface::removeLayerListener(RLayerListener* l) {
 }
 
 /**
- * Notifies local layer listeners only interesed in layer events from this
+ * Notifies local layer listeners only interested in layer events from this
  * particular document. Used for layer lists other than the global one
  * (e.g. in preferences).
  */
@@ -237,6 +237,25 @@ void RDocumentInterface::notifyLayerListeners() {
     QList<RLayerListener*>::iterator it;
     for (it = layerListeners.begin(); it != layerListeners.end(); ++it) {
         (*it)->updateLayers(this);
+    }
+}
+
+void RDocumentInterface::addTransactionListener(RTransactionListener* l) {
+    transactionListeners.push_back(l);
+}
+
+void RDocumentInterface::removeTransactionListener(RTransactionListener* l) {
+    transactionListeners.removeAll(l);
+}
+
+/**
+ * Notifies local transaction listeners only interested in transaction events from this
+ * particular document.
+ */
+void RDocumentInterface::notifyTransactionListeners(RTransaction* t) {
+    QList<RTransactionListener*>::iterator it;
+    for (it = transactionListeners.begin(); it != transactionListeners.end(); ++it) {
+        (*it)->updateTransactionListener(&document, t);
     }
 }
 
@@ -2033,6 +2052,8 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
     }
 
     delete operation;
+
+    notifyTransactionListeners(&transaction);
 
     return transaction;
 }

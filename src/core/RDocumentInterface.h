@@ -43,6 +43,7 @@
 #include "RStorage.h"
 #include "RTerminateEvent.h"
 #include "RTextLabel.h"
+#include "RTransactionListener.h"
 #include "RUcs.h"
 
 #define RDEFAULT_QLIST_QREAL QList<qreal>()
@@ -131,6 +132,10 @@ public:
     void addLayerListener(RLayerListener* l);
     void removeLayerListener(RLayerListener* l);
     void notifyLayerListeners();
+
+    void addTransactionListener(RTransactionListener* l);
+    void removeTransactionListener(RTransactionListener* l);
+    void notifyTransactionListeners(RTransaction* t);
 
     void clear(bool beforeLoad=false);
 
@@ -369,6 +374,7 @@ private:
 
     QList<RCoordinateListener*> coordinateListeners;
     QList<RLayerListener*> layerListeners;
+    QList<RTransactionListener*> transactionListeners;
 
     RSnap* currentSnap;
     RSnapRestriction* currentSnapRestriction;
