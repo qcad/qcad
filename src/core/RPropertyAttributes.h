@@ -68,7 +68,7 @@ public:
         KnownVariable = 0x20000,         //!< Property is a known DXF variable
         NumericallySorted = 0x40000,     //!< Sort choices for this property numerically
         Percentage = 0x80000 | Integer,  //!< Property is a percentage (0...100), implies Integer
-        Sum = 0x100000 | ReadOnly | Redundant,  //!< Sum up this property when multiple entities are selected (area, lenght),
+        Sum = 0x100000 | ReadOnly | Redundant,  //!< Sum up this property when multiple entities are selected (area, length),
                                          //!< implies ReadOnly and Redundant
         Undeletable = 0x200000,          //!< Property is undeletable (custom properties only)
         OnRequest = 0x400000             //!< Property shown on request (slow to compute)

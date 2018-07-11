@@ -168,7 +168,7 @@ qDebug("-------------------------------------------------------");
   // distance from Dovetail Top to Border
   var ldovetailTopToBorder = ldovetailBottomToBorder-lUnderDovetailSlope;
 
-  // lenght of dovetail slope
+  // length of dovetail slope
   var lDovetailSlope = Math.sqrt(hDovetail*hDovetail + lUnderDovetailSlope*lUnderDovetailSlope); 
 
 /*
