@@ -191,7 +191,7 @@ public:
         double distance, int from = RS::FromAny) const = 0;
 
     virtual RVector getPointWithDistanceToStart(double distance) const {
-        QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromStart);
+        QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromStart|RS::AlongPolyline);
         if (res.isEmpty()) {
             return RVector::invalid;
         }
@@ -199,7 +199,7 @@ public:
     }
 
     virtual RVector getPointWithDistanceToEnd(double distance) const {
-        QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromEnd);
+        QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromEnd|RS::AlongPolyline);
         if (res.isEmpty()) {
             return RVector::invalid;
         }
