@@ -1330,6 +1330,7 @@ void RDocumentInterface::undo() {
         if (RMainWindow::hasMainWindow()) {
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
         }
+        notifyTransactionListeners(&t[i]);
     }
 }
 
@@ -1348,6 +1349,7 @@ void RDocumentInterface::redo() {
         if (RMainWindow::hasMainWindow()) {
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
         }
+        notifyTransactionListeners(&t[i]);
     }
 }
 
