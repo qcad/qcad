@@ -89,6 +89,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, notifyLayerListeners, "notifyLayerListeners");
             
+            REcmaHelper::registerFunction(&engine, proto, addTransactionListener, "addTransactionListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeTransactionListener, "removeTransactionListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyTransactionListeners, "notifyTransactionListeners");
+            
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, getScriptHandler, "getScriptHandler");
@@ -1058,6 +1064,192 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::notifyLayerListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::addTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::addTransactionListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::addTransactionListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("addTransactionListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransactionListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RTransactionListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RTransactionListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RTransactionListener *RTransactionListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addTransactionListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.addTransactionListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::addTransactionListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::removeTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::removeTransactionListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::removeTransactionListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("removeTransactionListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransactionListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RTransactionListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RTransactionListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RTransactionListener *RTransactionListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeTransactionListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.removeTransactionListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::removeTransactionListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::notifyTransactionListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::notifyTransactionListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::notifyTransactionListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("notifyTransactionListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RTransaction * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyTransactionListeners(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.notifyTransactionListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::notifyTransactionListeners", context, engine);
             return result;
         }
          QScriptValue

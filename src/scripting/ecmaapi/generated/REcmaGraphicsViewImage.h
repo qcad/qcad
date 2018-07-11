@@ -273,6 +273,12 @@
         setBackgroundTransform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearForeground
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addToForeground
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setColorCorrectionOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

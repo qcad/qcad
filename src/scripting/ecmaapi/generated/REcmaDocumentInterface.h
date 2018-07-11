@@ -76,6 +76,15 @@
         notifyLayerListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeTransactionListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyTransactionListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

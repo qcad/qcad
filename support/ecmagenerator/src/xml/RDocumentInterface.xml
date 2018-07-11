@@ -94,6 +94,32 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="addTransactionListener"
+    cppName="addTransactionListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransactionListener *"
+        typeName="RTransactionListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removeTransactionListener"
+    cppName="removeTransactionListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransactionListener *"
+        typeName="RTransactionListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyTransactionListeners"
+    cppName="notifyTransactionListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="t" isConst="false" />
+      </variant>
+    </method>
     <method name="clear" cppName="clear" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

@@ -612,6 +612,16 @@
             );
         
     
+      void clearForeground(
+                int id
+            );
+        
+    
+      void addToForeground(
+                int id, const RGraphicsSceneDrawable & drawable
+            );
+        
+    
       void setColorCorrectionOverride(
                 bool on
             );

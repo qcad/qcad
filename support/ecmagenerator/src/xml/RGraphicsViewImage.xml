@@ -5,6 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RDocumentInterface" />
   <class_decl name="RGraphicsSceneQt" />
+  <class_decl name="RGraphicsSceneDrawable" />
   <class_decl name="RLine" />
   <class_decl name="RSnap" />
   <class_decl name="RSnapRestriction" />
@@ -533,6 +534,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="bgOffset" isConst="true" />
       </variant>
     </method>
+    <method name="clearForeground" cppName="clearForeground"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+      </variant>
+    </method>
+    <method name="addToForeground" cppName="addToForeground"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+        <arg type="RGraphicsSceneDrawable &amp;"
+        typeName="RGraphicsSceneDrawable" name="drawable"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="setColorCorrectionOverride"
     cppName="setColorCorrectionOverride" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -754,6 +772,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QPaintDevice &amp;" typeName="QPaintDevice"
         name="device" isConst="false" />
+      </variant>
+    </method>
+    <method name="paintForeground" cppName="paintForeground"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
       </variant>
     </method>
     <method name="invalidate" cppName="invalidate"

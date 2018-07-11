@@ -220,6 +220,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setBackgroundTransform, "setBackgroundTransform");
             
+            REcmaHelper::registerFunction(&engine, proto, clearForeground, "clearForeground");
+            
+            REcmaHelper::registerFunction(&engine, proto, addToForeground, "addToForeground");
+            
             REcmaHelper::registerFunction(&engine, proto, setColorCorrectionOverride, "setColorCorrectionOverride");
             
             REcmaHelper::registerFunction(&engine, proto, getColorCorrectionOverride, "getColorCorrectionOverride");
@@ -4836,6 +4840,141 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setBackgroundTransform", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::clearForeground
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::clearForeground", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::clearForeground";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("clearForeground", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearForeground(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.clearForeground().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::clearForeground", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::addToForeground
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::addToForeground", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::addToForeground";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("addToForeground", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RGraphicsSceneDrawable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RGraphicsSceneDrawable*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RGraphicsSceneDrawable*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RGraphicsSceneDrawable.",
+                               context);                    
+                    }
+                    RGraphicsSceneDrawable 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addToForeground(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.addToForeground().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::addToForeground", context, engine);
             return result;
         }
          QScriptValue

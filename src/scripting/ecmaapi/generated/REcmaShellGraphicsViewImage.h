@@ -501,6 +501,18 @@
         
     
     
+      void clearForeground(
+                int id
+            );
+        
+    
+    
+      void addToForeground(
+                int id, const RGraphicsSceneDrawable & drawable
+            );
+        
+    
+    
       void setColorCorrectionOverride(
                 bool on
             );
@@ -649,6 +661,12 @@
     
       void paintRelativeZero(
                 QPaintDevice & device
+            );
+        
+    
+    
+      void paintForeground(
+                QPainter * painter
             );
         
     
@@ -978,6 +996,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintRelativeZero
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paintForeground
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         invalidate

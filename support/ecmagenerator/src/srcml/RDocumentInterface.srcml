@@ -44,6 +44,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RStorage.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTerminateEvent.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextLabel.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RUcs.h"</cpp:file></cpp:include>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QLIST_QREAL</name> <name>QList</name>&lt;qreal&gt;()</cpp:define>
@@ -132,6 +133,10 @@
     <function_decl><type><name>void</name></type> <name>addLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyLayerListeners</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addTransactionListener</name><parameter_list>(<param><decl><type><name>RTransactionListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removeTransactionListener</name><parameter_list>(<param><decl><type><name>RTransactionListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyTransactionListeners</name><parameter_list>(<param><decl><type><name>RTransaction</name>*</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>clear</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>beforeLoad</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
@@ -370,6 +375,7 @@
 
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RCoordinateListener</name>*</argument>&gt;</argument_list></name></type> <name>coordinateListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RLayerListener</name>*</argument>&gt;</argument_list></name></type> <name>layerListeners</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RTransactionListener</name>*</argument>&gt;</argument_list></name></type> <name>transactionListeners</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>RSnap</name>*</type> <name>currentSnap</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RSnapRestriction</name>*</type> <name>currentSnapRestriction</name></decl>;</decl_stmt>
