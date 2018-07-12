@@ -208,6 +208,10 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     // add all properties of the selected entities in the given document:
     QSet<RObject::Id> objectIds = document->queryPropertyEditorObjects();
 
+    if (objectIds.size()==1) {
+        showOnRequest = true;
+    }
+
     QSet<RObject::Id>::iterator it;
 
     // only block ref and attributes selected: default to filter block ref:

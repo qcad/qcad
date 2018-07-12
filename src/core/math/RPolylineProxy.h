@@ -23,6 +23,7 @@
 #include "../core_global.h"
 
 #include <RS.h>
+#include <RMath.h>
 
 class RArc;
 class RExporter;
@@ -63,7 +64,7 @@ public:
     virtual double getHeight(const RPolyline& polyline) = 0;
     virtual bool setHeight(RPolyline& polyline, double v) = 0;
 
-    virtual QList<RPolyline> morph(const RPolyline& polyline, const RPolyline& target, int steps, RS::Easing easing = RS::Linear, bool zLinear = true) = 0;
+    virtual QList<RPolyline> morph(const RPolyline& polyline, const RPolyline& target, int steps, RS::Easing easing = RS::Linear, bool zLinear = true, double customFactor = RNANDOUBLE) = 0;
     virtual RVector insertVertexAtDistance(RPolyline& polyline, double dist) = 0;
 };
 

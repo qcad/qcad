@@ -1554,12 +1554,14 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     }
 }
 
-void RExporter::exportPainterPathSource(const RPainterPathSource& pathSource) {
-    exportPainterPaths(pathSource.getPainterPaths(false, pixelSizeHint));
+void RExporter::exportPainterPathSource(const RPainterPathSource& pathSource, double z) {
+    exportPainterPaths(pathSource.getPainterPaths(false, pixelSizeHint), z);
 }
 
-void RExporter::exportPainterPaths(const QList<RPainterPath>& paths) {
+void RExporter::exportPainterPaths(const QList<RPainterPath>& paths, double z) {
     Q_UNUSED(paths)
+    Q_UNUSED(z)
+
     // TODO: split up painter paths into line semgents, splines (?), arcs...
 }
 

@@ -92,7 +92,7 @@ public:
     virtual void exportTriangle(const RTriangle& triangle);
     virtual void exportRectangle(const RVector& p1, const RVector& p2);
 
-    virtual void exportPainterPaths(const QList<RPainterPath>& paths);
+    virtual void exportPainterPaths(const QList<RPainterPath>& paths, double z = 0.0);
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
     virtual void exportClipRectangle(const RBox& clipRectangles, bool forceSelected = false);

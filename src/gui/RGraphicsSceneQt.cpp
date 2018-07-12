@@ -521,7 +521,9 @@ void RGraphicsSceneQt::exportRectangle(const RVector& p1, const RVector& p2) {
     addDrawable(getBlockRefOrEntityId(), d, draftMode, exportToPreview);
 }
 
-void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
+void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths, double z) {
+    Q_UNUSED(z)
+
     if (getEntity() == NULL && !exportToPreview) {
         qWarning("RGraphicsSceneQt::exportPainterPaths: entity is NULL");
         return;

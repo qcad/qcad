@@ -227,9 +227,9 @@ public:
     /**
      * \nonscriptable
      */
-    virtual void exportPainterPathSource(const RPainterPathSource& pathSource);
+    virtual void exportPainterPathSource(const RPainterPathSource& pathSource, double z = 0.0);
 
-    virtual void exportPainterPaths(const QList<RPainterPath>& paths);
+    virtual void exportPainterPaths(const QList<RPainterPath>& paths, double z = 0.0);
     virtual void exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos);
 
     virtual void exportBoundingBoxPaths(const QList<RPainterPath>& paths);

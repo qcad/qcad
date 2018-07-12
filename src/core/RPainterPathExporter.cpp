@@ -47,7 +47,9 @@ void RPainterPathExporter::exportLineSegment(const RLine& line, double angle) {
     }
 }
 
-void RPainterPathExporter::exportPainterPaths(const QList<RPainterPath>& paths) {
+void RPainterPathExporter::exportPainterPaths(const QList<RPainterPath>& paths, double z) {
+    Q_UNUSED(z)
+
     for (int i=0; i<paths.length(); i++) {
         path.addPath(paths[i]);
     }

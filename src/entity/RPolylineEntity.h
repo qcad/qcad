@@ -321,6 +321,13 @@ public:
         return data.trimEndPoint(trimPoint, clickPoint, extend);
     }
 
+    bool trimStartPoint(double trimDist) {
+        return data.trimStartPoint(trimDist);
+    }
+    bool trimEndPoint(double trimDist) {
+        return data.trimEndPoint(trimDist);
+    }
+
     QList<RPolyline> morph(const RPolyline& target, int steps) const {
         return data.morph(target, steps);
     }

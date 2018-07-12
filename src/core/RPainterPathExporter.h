@@ -37,7 +37,7 @@ public:
         RExporter(), exportZeroLinesAsPoints(true), ignoreZeroLines(false) { }
 
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
-    virtual void exportPainterPaths(const QList<RPainterPath>& paths);
+    virtual void exportPainterPaths(const QList<RPainterPath>& paths, double z = 0.0);
 
     virtual void exportXLine(const RXLine& xLine) {
         Q_UNUSED(xLine)

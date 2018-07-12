@@ -163,10 +163,10 @@ void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
         QList<RPainterPath> paths = e.exportText(getData(), forceSelected);
 
         // export part of text that can only be rendered as painter paths (CAD fonts):
-        e.exportPainterPaths(paths);
+        e.exportPainterPaths(paths, getPosition().z);
     }
     else {
-        e.exportPainterPathSource(getData());
+        e.exportPainterPathSource(getData(), getPosition().z);
     }
 }
 

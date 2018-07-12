@@ -36,8 +36,8 @@ public:
         return exporter.getLineTypePatternScale(p);
     }
 
-    virtual void exportPainterPaths(const QList<RPainterPath>& paths) {
-        exporter.exportPainterPaths(paths);
+    virtual void exportPainterPaths(const QList<RPainterPath>& paths, double z = 0.0) {
+        exporter.exportPainterPaths(paths, z);
     }
 
     virtual void exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos);
