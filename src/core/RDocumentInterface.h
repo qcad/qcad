@@ -133,7 +133,8 @@ public:
     void removeLayerListener(RLayerListener* l);
     void notifyLayerListeners();
 
-    void addTransactionListener(RTransactionListener* l);
+    int addTransactionListener(RTransactionListener* l);
+    void removeTransactionListener(int index);
     void removeTransactionListener(RTransactionListener* l);
     void notifyTransactionListeners(RTransaction* t);
 

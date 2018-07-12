@@ -240,8 +240,18 @@ void RDocumentInterface::notifyLayerListeners() {
     }
 }
 
-void RDocumentInterface::addTransactionListener(RTransactionListener* l) {
+int RDocumentInterface::addTransactionListener(RTransactionListener* l) {
     transactionListeners.push_back(l);
+    return transactionListeners.length()-1;
+}
+
+void RDocumentInterface::removeTransactionListener(int index) {
+    if (index<0 || index>=transactionListeners.length()) {
+        qWarning() << "index out of range";
+        return;
+    }
+
+    transactionListeners.removeAt(index);
 }
 
 void RDocumentInterface::removeTransactionListener(RTransactionListener* l) {
