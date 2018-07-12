@@ -678,7 +678,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
         }
     }
 
-    paintForeground(painter);
+    paintOverlay(painter);
 
     painter->end();
     delete painter;
@@ -731,50 +731,49 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
     painter->setTransform(savedTransform);
 }
 
-void RGraphicsViewImage::clearForeground(int foregroundId) {
-    if (foregroundDecorations.contains(foregroundId)) {
-        foregroundDecorations[foregroundId].clear();
+void RGraphicsViewImage::clearOverlay(int overlayId) {
+    if (overlayDrawables.contains(overlayId)) {
+        overlayDrawables[overlayId].clear();
     }
 }
 
-void RGraphicsViewImage::clearForeground(int foregroundId, RObject::Id objectId) {
-    if (foregroundDecorations.contains(foregroundId)) {
-        if (foregroundDecorations[foregroundId].contains(objectId)) {
-            foregroundDecorations[foregroundId].remove(objectId);
+void RGraphicsViewImage::clearOverlay(int overlayId, RObject::Id objectId) {
+    if (overlayDrawables.contains(overlayId)) {
+        if (overlayDrawables[overlayId].contains(objectId)) {
+            overlayDrawables[overlayId].remove(objectId);
         }
     }
 }
 
-void RGraphicsViewImage::addToForeground(int foregroundId, RObject::Id objectId, const RGraphicsSceneDrawable& drawable) {
-    if (!foregroundDecorations.contains(foregroundId)) {
+void RGraphicsViewImage::addToOverlay(int overlayId, RObject::Id objectId, const RGraphicsSceneDrawable& drawable) {
+    if (!overlayDrawables.contains(overlayId)) {
         QMap<RObject::Id, QList<RGraphicsSceneDrawable> > map;
         map.insert(objectId, QList<RGraphicsSceneDrawable>());
-        //foregroundDecorations.insert(id, map);
     }
-    if (!foregroundDecorations[foregroundId].contains(objectId)) {
-        foregroundDecorations[foregroundId].insert(objectId, QList<RGraphicsSceneDrawable>());
+    if (!overlayDrawables[overlayId].contains(objectId)) {
+        overlayDrawables[overlayId].insert(objectId, QList<RGraphicsSceneDrawable>());
     }
 
-    foregroundDecorations[foregroundId][objectId].append(drawable);
+    overlayDrawables[overlayId][objectId].append(drawable);
 }
 
-void RGraphicsViewImage::paintForeground(QPainter* painter) {
-    QList<int> foregroundIds = foregroundDecorations.keys();
-    //qSort(foregroundIds);
+void RGraphicsViewImage::paintOverlay(QPainter* painter) {
+    QList<int> overlayIds = overlayDrawables.keys();
+    //qSort(overlayIds);
 
-    // iterate through all maps (each map represents a foreground decoration or overlay):
-    for (int n=0; n<foregroundIds.length(); n++) {
-        int foregroundId = foregroundIds[n];
+    // iterate through all maps (each map represents an overlay):
+    for (int n=0; n<overlayIds.length(); n++) {
+        int overlayId = overlayIds[n];
 
-        // iterate through object Ids for this foreground:
-        QList<RObject::Id> objIds = foregroundDecorations[foregroundId].keys();
+        // iterate through object Ids for this overlay:
+        QList<RObject::Id> objIds = overlayDrawables[overlayId].keys();
         for (int c=0; c<objIds.length(); c++) {
             RObject::Id objId = objIds[c];
 
             // iterate through list of drawables for this object:
-            for (int i=0; i<foregroundDecorations[foregroundId][objId].length(); i++) {
+            for (int i=0; i<overlayDrawables[overlayId][objId].length(); i++) {
 
-                RGraphicsSceneDrawable drawable = foregroundDecorations[foregroundId][objId].at(i);
+                RGraphicsSceneDrawable drawable = overlayDrawables[overlayId][objId].at(i);
                 if (drawable.getType()==RGraphicsSceneDrawable::PainterPath) {
                     RPainterPath path = drawable.getPainterPath();
 

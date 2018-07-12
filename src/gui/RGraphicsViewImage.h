@@ -278,16 +278,16 @@ public:
     virtual void emitUpdateTextLabel(const RTextLabel& textLabel) {
         Q_UNUSED(textLabel)
     }
-    virtual void emitDecorateBackground(QPainter* painter) { Q_UNUSED(painter) }
-    virtual void emitDecorateForeground(QPainter* painter) { Q_UNUSED(painter) }
+    //virtual void emitDecorateBackground(QPainter* painter) { Q_UNUSED(painter) }
+    //virtual void emitDecorateForeground(QPainter* painter) { Q_UNUSED(painter) }
 
     void clearBackground();
     void addToBackground(const RPainterPath& path);
     void setBackgroundTransform(double bgFactor, const RVector& bgOffset);
 
-    void clearForeground(int foregroundId);
-    void clearForeground(int foregroundId, RObject::Id objectId);
-    void addToForeground(int foregroundId, RObject::Id objectId, const RGraphicsSceneDrawable& drawable);
+    void clearOverlay(int overlayId);
+    void clearOverlay(int overlayId, RObject::Id objectId);
+    void addToOverlay(int overlayId, RObject::Id objectId, const RGraphicsSceneDrawable& drawable);
 
     void setColorCorrectionOverride(bool on) {
         colorCorrectionOverride = on;
@@ -343,7 +343,7 @@ protected:
     virtual void paintRelativeZero(QPaintDevice& device);
     virtual void paintDocument(const QRect& rect = QRect());
     virtual void paintBackground(QPainter* painter, const QRect& rect = QRect());
-    virtual void paintForeground(QPainter* painter);
+    virtual void paintOverlay(QPainter* painter);
 
     /**
      * \nonscriptable
@@ -395,7 +395,7 @@ protected:
     double backgroundFactor;
     RVector backgroundOffset;
 
-    QMap<int, QMap<RObject::Id, QList<RGraphicsSceneDrawable> > > foregroundDecorations;
+    QMap<int, QMap<RObject::Id, QList<RGraphicsSceneDrawable> > > overlayDrawables;
 
     RBox clipBox;
     RVector paintOffset;
