@@ -241,21 +241,29 @@ void RDocumentInterface::notifyLayerListeners() {
 }
 
 int RDocumentInterface::addTransactionListener(RTransactionListener* l) {
-    transactionListeners.push_back(l);
-    return transactionListeners.length()-1;
+    // find first available key:
+    for (int i=0; i<1e6; i++) {
+        if (!transactionListeners.contains(i)) {
+            transactionListeners[i] = l;
+            return i;
+        }
+    }
+    return -1;
 }
 
-void RDocumentInterface::removeTransactionListener(int index) {
-    if (index<0 || index>=transactionListeners.length()) {
-        qWarning() << "index out of range";
-        return;
-    }
-
-    transactionListeners.removeAt(index);
+void RDocumentInterface::removeTransactionListener(int key) {
+    transactionListeners.remove(key);
 }
 
 void RDocumentInterface::removeTransactionListener(RTransactionListener* l) {
-    transactionListeners.removeAll(l);
+    QList<int> keys = transactionListeners.keys();
+    for (int i=0; i<keys.length(); i++) {
+        int key = keys[i];
+        if (transactionListeners[key]==l) {
+            transactionListeners.remove(key);
+            break;
+        }
+    }
 }
 
 /**
@@ -263,7 +271,7 @@ void RDocumentInterface::removeTransactionListener(RTransactionListener* l) {
  * particular document.
  */
 void RDocumentInterface::notifyTransactionListeners(RTransaction* t) {
-    QList<RTransactionListener*>::iterator it;
+    QMap<int, RTransactionListener*>::iterator it;
     for (it = transactionListeners.begin(); it != transactionListeners.end(); ++it) {
         (*it)->updateTransactionListener(&document, t);
     }

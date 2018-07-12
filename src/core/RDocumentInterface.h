@@ -134,7 +134,7 @@ public:
     void notifyLayerListeners();
 
     int addTransactionListener(RTransactionListener* l);
-    void removeTransactionListener(int index);
+    void removeTransactionListener(int key);
     void removeTransactionListener(RTransactionListener* l);
     void notifyTransactionListeners(RTransaction* t);
 
@@ -375,7 +375,7 @@ private:
 
     QList<RCoordinateListener*> coordinateListeners;
     QList<RLayerListener*> layerListeners;
-    QList<RTransactionListener*> transactionListeners;
+    QMap<int, RTransactionListener*> transactionListeners;
 
     RSnap* currentSnap;
     RSnapRestriction* currentSnapRestriction;
