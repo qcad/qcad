@@ -471,18 +471,6 @@
         
     
     
-      void emitDecorateBackground(
-                QPainter * painter
-            );
-        
-    
-    
-      void emitDecorateForeground(
-                QPainter * painter
-            );
-        
-    
-    
       void clearBackground(
                 
             );
@@ -501,18 +489,18 @@
         
     
     
-      void clearForeground(
-                int foregroundId
+      void clearOverlay(
+                int overlayId
             );
         
-      void clearForeground(
-                int foregroundId, RObject::Id objectId
+      void clearOverlay(
+                int overlayId, RObject::Id objectId
             );
         
     
     
-      void addToForeground(
-                int foregroundId, RObject::Id objectId, const RGraphicsSceneDrawable & drawable
+      void addToOverlay(
+                int overlayId, RObject::Id objectId, const RGraphicsSceneDrawable & drawable
             );
         
     
@@ -669,7 +657,7 @@
         
     
     
-      void paintForeground(
+      void paintOverlay(
                 QPainter * painter
             );
         
@@ -1002,7 +990,7 @@
         paintRelativeZero
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        paintForeground
+        paintOverlay
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         invalidate

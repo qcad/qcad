@@ -210,19 +210,15 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTransform, "getTransform");
             
-            REcmaHelper::registerFunction(&engine, proto, emitDecorateBackground, "emitDecorateBackground");
-            
-            REcmaHelper::registerFunction(&engine, proto, emitDecorateForeground, "emitDecorateForeground");
-            
             REcmaHelper::registerFunction(&engine, proto, clearBackground, "clearBackground");
             
             REcmaHelper::registerFunction(&engine, proto, addToBackground, "addToBackground");
             
             REcmaHelper::registerFunction(&engine, proto, setBackgroundTransform, "setBackgroundTransform");
             
-            REcmaHelper::registerFunction(&engine, proto, clearForeground, "clearForeground");
+            REcmaHelper::registerFunction(&engine, proto, clearOverlay, "clearOverlay");
             
-            REcmaHelper::registerFunction(&engine, proto, addToForeground, "addToForeground");
+            REcmaHelper::registerFunction(&engine, proto, addToOverlay, "addToOverlay");
             
             REcmaHelper::registerFunction(&engine, proto, setColorCorrectionOverride, "setColorCorrectionOverride");
             
@@ -4528,130 +4524,6 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsViewQt::emitDecorateBackground
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::emitDecorateBackground", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::emitDecorateBackground";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewQt* self = 
-                        getSelf("emitDecorateBackground", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPainter * */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    QPainter * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->emitDecorateBackground(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.emitDecorateBackground().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::emitDecorateBackground", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsViewQt::emitDecorateForeground
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::emitDecorateForeground", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::emitDecorateForeground";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsViewQt* self = 
-                        getSelf("emitDecorateForeground", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPainter * */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    QPainter * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->emitDecorateForeground(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.emitDecorateForeground().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::emitDecorateForeground", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaGraphicsViewQt::clearBackground
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4843,19 +4715,19 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsViewQt::clearForeground
+        REcmaGraphicsViewQt::clearOverlay
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::clearForeground", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::clearForeground";
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::clearOverlay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::clearOverlay";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsViewQt* self = 
-                        getSelf("clearForeground", context);
+                        getSelf("clearOverlay", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -4885,7 +4757,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->clearForeground(a0);
+               self->clearOverlay(a0);
     } else
 
 
@@ -4923,7 +4795,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->clearForeground(a0
+               self->clearOverlay(a0
         ,
     a1);
     } else
@@ -4931,26 +4803,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.clearForeground().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.clearOverlay().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::clearForeground", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::clearOverlay", context, engine);
             return result;
         }
          QScriptValue
-        REcmaGraphicsViewQt::addToForeground
+        REcmaGraphicsViewQt::addToOverlay
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsViewQt::addToForeground", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::addToForeground";
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::addToOverlay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::addToOverlay";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsViewQt* self = 
-                        getSelf("addToForeground", context);
+                        getSelf("addToOverlay", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -5014,7 +4886,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->addToForeground(a0
+               self->addToOverlay(a0
         ,
     a1
         ,
@@ -5024,10 +4896,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.addToForeground().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.addToOverlay().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::addToForeground", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::addToOverlay", context, engine);
             return result;
         }
          QScriptValue

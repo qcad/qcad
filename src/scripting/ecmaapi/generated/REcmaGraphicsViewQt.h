@@ -234,12 +234,6 @@
         getTransform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        emitDecorateBackground
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        emitDecorateForeground
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         clearBackground
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -249,10 +243,10 @@
         setBackgroundTransform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        clearForeground
+        clearOverlay
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        addToForeground
+        addToOverlay
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setColorCorrectionOverride

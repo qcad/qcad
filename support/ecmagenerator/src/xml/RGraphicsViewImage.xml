@@ -495,22 +495,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="textLabel" isConst="true" />
       </variant>
     </method>
-    <method name="emitDecorateBackground"
-    cppName="emitDecorateBackground" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="emitDecorateForeground"
-    cppName="emitDecorateForeground" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="clearBackground" cppName="clearBackground"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -534,25 +518,25 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="bgOffset" isConst="true" />
       </variant>
     </method>
-    <method name="clearForeground" cppName="clearForeground"
+    <method name="clearOverlay" cppName="clearOverlay"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="int" typeName="int" name="foregroundId"
+        <arg type="int" typeName="int" name="overlayId"
         isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
-        <arg type="int" typeName="int" name="foregroundId"
+        <arg type="int" typeName="int" name="overlayId"
         isConst="false" />
         <arg type="RObject::Id" typeName="RObject::Id"
         name="objectId" isConst="false" />
       </variant>
     </method>
-    <method name="addToForeground" cppName="addToForeground"
+    <method name="addToOverlay" cppName="addToOverlay"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="int" typeName="int" name="foregroundId"
+        <arg type="int" typeName="int" name="overlayId"
         isConst="false" />
         <arg type="RObject::Id" typeName="RObject::Id"
         name="objectId" isConst="false" />
@@ -784,7 +768,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="device" isConst="false" />
       </variant>
     </method>
-    <method name="paintForeground" cppName="paintForeground"
+    <method name="paintOverlay" cppName="paintOverlay"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

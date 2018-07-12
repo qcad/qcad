@@ -4931,142 +4931,6 @@
         
     
     
-      void REcmaShellGraphicsViewImage::emitDecorateBackground(
-                QPainter * painter
-            ) {
-                QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::emitDecorateBackground", engine);
-                QScriptValue _q_function = __qtscript_self.property("emitDecorateBackground");
-
-
-
-                if (!_q_function.isFunction() || 
-                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
-                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
-                    
-                    /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
-                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
-                    ) {
-                    //QString cppSig = "RGraphicsViewImage::emitDecorateBackground";
-                    
-                        // re-enable recursion for calls from C++ into ECMAScript functions
-                        // leave it marked as generated though if appropriate:
-                        
-                        quint32 prev = _q_function.data().toUInt32();
-                        //if (cppSig!="RGraphicsViewQt::event") {
-                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
-                        //}
-                        RGraphicsViewImage::emitDecorateBackground(
-                            painter
-                        );
-
-                        // block recursion again:
-                        _q_function.setData(QScriptValue(engine, prev));
-
-                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateBackground", engine);
-
-                        
-                            return;
-                          
-                }
-                    // prevent recursion if script implementation calls base implementation
-                    // mark function as 'in call':
-                    quint32 prev = _q_function.data().toUInt32();
-                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    
-                            _q_function.call(__qtscript_self,
-                                QScriptValueList()
-                                
-
-
-
-    // type: QPainter *, copyable: false
-        << qScriptValueFromValue(engine, 
-
-        painter
-        )
-      
-                            )
-                        
-                    ;
-                    _q_function.setData(QScriptValue(engine, prev));
-
-                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateBackground", engine);
-
-                    
-            }
-        
-    
-    
-      void REcmaShellGraphicsViewImage::emitDecorateForeground(
-                QPainter * painter
-            ) {
-                QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::emitDecorateForeground", engine);
-                QScriptValue _q_function = __qtscript_self.property("emitDecorateForeground");
-
-
-
-                if (!_q_function.isFunction() || 
-                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
-                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
-                    
-                    /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
-                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
-                    ) {
-                    //QString cppSig = "RGraphicsViewImage::emitDecorateForeground";
-                    
-                        // re-enable recursion for calls from C++ into ECMAScript functions
-                        // leave it marked as generated though if appropriate:
-                        
-                        quint32 prev = _q_function.data().toUInt32();
-                        //if (cppSig!="RGraphicsViewQt::event") {
-                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
-                        //}
-                        RGraphicsViewImage::emitDecorateForeground(
-                            painter
-                        );
-
-                        // block recursion again:
-                        _q_function.setData(QScriptValue(engine, prev));
-
-                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateForeground", engine);
-
-                        
-                            return;
-                          
-                }
-                    // prevent recursion if script implementation calls base implementation
-                    // mark function as 'in call':
-                    quint32 prev = _q_function.data().toUInt32();
-                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    
-                            _q_function.call(__qtscript_self,
-                                QScriptValueList()
-                                
-
-
-
-    // type: QPainter *, copyable: false
-        << qScriptValueFromValue(engine, 
-
-        painter
-        )
-      
-                            )
-                        
-                    ;
-                    _q_function.setData(QScriptValue(engine, prev));
-
-                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::emitDecorateForeground", engine);
-
-                    
-            }
-        
-    
-    
       void REcmaShellGraphicsViewImage::clearBackground(
                 
             ) {
@@ -5272,12 +5136,12 @@
         
     
     
-      void REcmaShellGraphicsViewImage::clearForeground(
-                int foregroundId
+      void REcmaShellGraphicsViewImage::clearOverlay(
+                int overlayId
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::clearForeground", engine);
-                QScriptValue _q_function = __qtscript_self.property("clearForeground");
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::clearOverlay", engine);
+                QScriptValue _q_function = __qtscript_self.property("clearOverlay");
 
 
 
@@ -5289,7 +5153,7 @@
                     || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
-                    //QString cppSig = "RGraphicsViewImage::clearForeground";
+                    //QString cppSig = "RGraphicsViewImage::clearOverlay";
                     
                         // re-enable recursion for calls from C++ into ECMAScript functions
                         // leave it marked as generated though if appropriate:
@@ -5298,14 +5162,14 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RGraphicsViewImage::clearForeground(
-                            foregroundId
+                        RGraphicsViewImage::clearOverlay(
+                            overlayId
                         );
 
                         // block recursion again:
                         _q_function.setData(QScriptValue(engine, prev));
 
-                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearForeground", engine);
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearOverlay", engine);
 
                         
                             return;
@@ -5325,7 +5189,7 @@
     // type: int, copyable: true
         << qScriptValueFromValue(engine, 
 
-        foregroundId
+        overlayId
         )
       
                             )
@@ -5333,17 +5197,17 @@
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearForeground", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearOverlay", engine);
 
                     
             }
         
-      void REcmaShellGraphicsViewImage::clearForeground(
-                int foregroundId, RObject::Id objectId
+      void REcmaShellGraphicsViewImage::clearOverlay(
+                int overlayId, RObject::Id objectId
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::clearForeground", engine);
-                QScriptValue _q_function = __qtscript_self.property("clearForeground");
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::clearOverlay", engine);
+                QScriptValue _q_function = __qtscript_self.property("clearOverlay");
 
 
 
@@ -5355,7 +5219,7 @@
                     || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
-                    //QString cppSig = "RGraphicsViewImage::clearForeground";
+                    //QString cppSig = "RGraphicsViewImage::clearOverlay";
                     
                         // re-enable recursion for calls from C++ into ECMAScript functions
                         // leave it marked as generated though if appropriate:
@@ -5364,14 +5228,14 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RGraphicsViewImage::clearForeground(
-                            foregroundId, objectId
+                        RGraphicsViewImage::clearOverlay(
+                            overlayId, objectId
                         );
 
                         // block recursion again:
                         _q_function.setData(QScriptValue(engine, prev));
 
-                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearForeground", engine);
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearOverlay", engine);
 
                         
                             return;
@@ -5391,7 +5255,7 @@
     // type: int, copyable: true
         << qScriptValueFromValue(engine, 
 
-        foregroundId
+        overlayId
         )
       
 
@@ -5408,19 +5272,19 @@
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearForeground", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::clearOverlay", engine);
 
                     
             }
         
     
     
-      void REcmaShellGraphicsViewImage::addToForeground(
-                int foregroundId, RObject::Id objectId, const RGraphicsSceneDrawable & drawable
+      void REcmaShellGraphicsViewImage::addToOverlay(
+                int overlayId, RObject::Id objectId, const RGraphicsSceneDrawable & drawable
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::addToForeground", engine);
-                QScriptValue _q_function = __qtscript_self.property("addToForeground");
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::addToOverlay", engine);
+                QScriptValue _q_function = __qtscript_self.property("addToOverlay");
 
 
 
@@ -5432,7 +5296,7 @@
                     || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
-                    //QString cppSig = "RGraphicsViewImage::addToForeground";
+                    //QString cppSig = "RGraphicsViewImage::addToOverlay";
                     
                         // re-enable recursion for calls from C++ into ECMAScript functions
                         // leave it marked as generated though if appropriate:
@@ -5441,14 +5305,14 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RGraphicsViewImage::addToForeground(
-                            foregroundId, objectId, drawable
+                        RGraphicsViewImage::addToOverlay(
+                            overlayId, objectId, drawable
                         );
 
                         // block recursion again:
                         _q_function.setData(QScriptValue(engine, prev));
 
-                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addToForeground", engine);
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addToOverlay", engine);
 
                         
                             return;
@@ -5468,7 +5332,7 @@
     // type: int, copyable: true
         << qScriptValueFromValue(engine, 
 
-        foregroundId
+        overlayId
         )
       
 
@@ -5496,7 +5360,7 @@
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addToForeground", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::addToOverlay", engine);
 
                     
             }
@@ -7507,12 +7371,12 @@
         
     
     
-      void REcmaShellGraphicsViewImage::paintForeground(
+      void REcmaShellGraphicsViewImage::paintOverlay(
                 QPainter * painter
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintForeground", engine);
-                QScriptValue _q_function = __qtscript_self.property("paintForeground");
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintOverlay", engine);
+                QScriptValue _q_function = __qtscript_self.property("paintOverlay");
 
 
 
@@ -7524,7 +7388,7 @@
                     || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
-                    //QString cppSig = "RGraphicsViewImage::paintForeground";
+                    //QString cppSig = "RGraphicsViewImage::paintOverlay";
                     
                         // re-enable recursion for calls from C++ into ECMAScript functions
                         // leave it marked as generated though if appropriate:
@@ -7533,14 +7397,14 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RGraphicsViewImage::paintForeground(
+                        RGraphicsViewImage::paintOverlay(
                             painter
                         );
 
                         // block recursion again:
                         _q_function.setData(QScriptValue(engine, prev));
 
-                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintForeground", engine);
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintOverlay", engine);
 
                         
                             return;
@@ -7553,7 +7417,7 @@
                     
                         // temporary make protected function scriptable, only from the context of this function call:
                         QScriptValue proto = engine->defaultPrototype(qMetaTypeId<RGraphicsViewImage*>());
-                        REcmaHelper::registerFunction(engine, &proto, paintForeground, "paintForeground");
+                        REcmaHelper::registerFunction(engine, &proto, paintOverlay, "paintOverlay");
                         
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
@@ -7572,7 +7436,7 @@
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintForeground", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintOverlay", engine);
 
                     
             }
@@ -12613,12 +12477,12 @@
             return result;
         }
          QScriptValue
-        REcmaShellGraphicsViewImage::paintForeground
+        REcmaShellGraphicsViewImage::paintOverlay
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellGraphicsViewImage::paintForeground", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaShellGraphicsViewImage::paintForeground";
+            //REcmaHelper::functionStart("REcmaShellGraphicsViewImage::paintOverlay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShellGraphicsViewImage::paintOverlay";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -12662,16 +12526,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->RGraphicsViewImage::paintForeground(a0);
+               self->RGraphicsViewImage::paintOverlay(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintForeground().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintOverlay().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::paintForeground", context, engine);
+            //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::paintOverlay", context, engine);
             return result;
         }
          QScriptValue
