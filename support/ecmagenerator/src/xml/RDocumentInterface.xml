@@ -97,7 +97,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="addTransactionListener"
     cppName="addTransactionListener" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="int" isPureVirtual="false">
         <arg type="RTransactionListener *"
         typeName="RTransactionListener *" name="l"
         isConst="false" />
@@ -106,6 +106,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="removeTransactionListener"
     cppName="removeTransactionListener" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="RTransactionListener *"
         typeName="RTransactionListener *" name="l"

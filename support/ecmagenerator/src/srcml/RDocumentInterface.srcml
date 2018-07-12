@@ -134,7 +134,8 @@
     <function_decl><type><name>void</name></type> <name>removeLayerListener</name><parameter_list>(<param><decl><type><name>RLayerListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyLayerListeners</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>addTransactionListener</name><parameter_list>(<param><decl><type><name>RTransactionListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>addTransactionListener</name><parameter_list>(<param><decl><type><name>RTransactionListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removeTransactionListener</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeTransactionListener</name><parameter_list>(<param><decl><type><name>RTransactionListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyTransactionListeners</name><parameter_list>(<param><decl><type><name>RTransaction</name>*</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
 

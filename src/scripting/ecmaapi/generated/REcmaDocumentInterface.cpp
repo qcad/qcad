@@ -1114,9 +1114,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'int'
+    int cppResult =
+        
                self->addTransactionListener(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -1149,6 +1154,33 @@
                     return REcmaHelper::throwError("self is NULL", context);
                 }
                 
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeTransactionListener(a0);
+    } else
+
+
+        
     
     if( context->argumentCount() ==
     1 && (
