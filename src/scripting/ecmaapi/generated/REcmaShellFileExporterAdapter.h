@@ -460,7 +460,8 @@
         
     
       void exportPainterPaths(
-                const QList < RPainterPath > & paths
+                const QList < RPainterPath > & paths, double z
+        = 0.0
             );
         
       void exportPainterPaths(

@@ -37,8 +37,8 @@
         <return>return <expr><name>exporter</name>.<call><name>getLineTypePatternScale</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>exportPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>paths</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>exporter</name>.<call><name>exportPainterPaths</name><argument_list>(<argument><expr><name>paths</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>paths</name></decl></param>, <param><decl><type><name>double</name></type> <name>z</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>exporter</name>.<call><name>exportPainterPaths</name><argument_list>(<argument><expr><name>paths</name></expr></argument>, <argument><expr><name>z</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>paths</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>

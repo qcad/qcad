@@ -5609,7 +5609,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportPainterPaths(
-                const QList < RPainterPath > & paths
+                const QList < RPainterPath > & paths, double z
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportPainterPaths", engine);
@@ -5622,7 +5622,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportPainterPaths";
@@ -5635,7 +5635,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportPainterPaths(
-                            paths
+                            paths, z
                         );
 
                         // block recursion again:
@@ -5662,6 +5662,15 @@
         // List of ...:
         << REcmaHelper::listToScriptValue(engine, 
           paths
+        )
+      
+
+
+
+    // type: double, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        z
         )
       
                             )

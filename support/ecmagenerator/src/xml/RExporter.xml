@@ -589,6 +589,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QList &lt; RPainterPath &gt; &amp;"
         typeName="QList &lt; RPainterPath &gt;" name="paths"
         isConst="true" />
+        <arg type="double" typeName="double" name="z"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="QList &lt; RPainterPath &gt; &amp;"

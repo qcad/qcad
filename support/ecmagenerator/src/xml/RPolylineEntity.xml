@@ -452,6 +452,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="extend"
         hasDefault="true" default="false" isConst="false" />
       </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="trimDist"
+        isConst="false" />
+      </variant>
     </method>
     <method name="trimEndPoint" cppName="trimEndPoint"
     specifier="public" isStatic="false" isVirtual="false"
@@ -464,6 +468,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RVector :: invalid" isConst="true" />
         <arg type="bool" typeName="bool" name="extend"
         hasDefault="true" default="false" isConst="false" />
+      </variant>
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="trimDist"
+        isConst="false" />
       </variant>
     </method>
     <method name="morph" cppName="morph" specifier="public"
