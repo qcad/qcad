@@ -740,7 +740,6 @@ void RGraphicsViewImage::clearForeground(int foregroundId) {
 void RGraphicsViewImage::clearForeground(int foregroundId, RObject::Id objectId) {
     if (foregroundDecorations.contains(foregroundId)) {
         if (foregroundDecorations[foregroundId].contains(objectId)) {
-            qDebug() << "clear for" << objectId;
             foregroundDecorations[foregroundId].remove(objectId);
         }
     }
@@ -756,7 +755,6 @@ void RGraphicsViewImage::addToForeground(int foregroundId, RObject::Id objectId,
         foregroundDecorations[foregroundId].insert(objectId, QList<RGraphicsSceneDrawable>());
     }
 
-    qDebug() << "add for" << objectId;
     foregroundDecorations[foregroundId][objectId].append(drawable);
 }
 
