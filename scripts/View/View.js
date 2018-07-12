@@ -88,6 +88,10 @@ View.getToolMatrixPanel = function() {
     return EAction.getToolMatrixPanel(View.getTitle(), "ViewMatrixPanel", 30);
 };
 
+View.getContextMenuCategory = function() {
+    return [qsTr("View")];
+};
+
 View.getTitle = function() {
     return qsTr("&View");
 };
