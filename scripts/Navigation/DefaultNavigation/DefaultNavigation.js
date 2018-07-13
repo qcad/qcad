@@ -105,8 +105,8 @@ DefaultNavigation.prototype.mousePressEvent = function(event) {
     }
 
     // middle button or left button and control (command on mac) to pan:
-    if (event.button() == Qt.MidButton ||
-        (event.button() == Qt.LeftButton &&
+    if (event.button() === Qt.MidButton ||
+        (event.button() === Qt.LeftButton &&
          event.modifiers().valueOf() === Qt.ControlModifier.valueOf())) {
 
         this.panOrigin = event.getScreenPosition();
