@@ -319,6 +319,10 @@ public:
         data.simplify(tolerance);
     }
 
+    QList<RSpline> getBezierSegments(const RBox& queryBox = RDEFAULT_RBOX) const {
+        return data.getBezierSegments(queryBox);
+    }
+
     /*
     double getAngle() const {
         return data.getAngle();
