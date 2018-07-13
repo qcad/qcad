@@ -218,6 +218,8 @@ public:
 
     bool isLayerFrozen(RLayer::Id layerId) const;
     bool isLayerFrozen(const RLayer& layer) const;
+    bool isLayerPlottable(RLayer::Id layerId) const;
+    bool isLayerPlottable(const RLayer& layer) const;
     bool isParentLayerFrozen(RLayer::Id layerId) const;
     bool isParentLayerFrozen(const RLayer& layer) const;
     bool isBlockFrozen(RBlock::Id blockId) const;

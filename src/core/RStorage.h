@@ -595,6 +595,8 @@ public:
     virtual bool isParentLayerSnappable(RLayer::Id layerId) const;
     virtual bool isParentLayerSnappable(const RLayer& layer) const;
 
+    virtual bool isLayerPlottable(RLayer::Id layerId) const;
+    virtual bool isLayerPlottable(const RLayer& layer) const;
     virtual bool isParentLayerPlottable(RLayer::Id layerId) const;
     virtual bool isParentLayerPlottable(const RLayer& layer) const;
 
