@@ -329,6 +329,8 @@ Print.prototype.printPage = function(painter, rect) {
             new RVector(rect.x()+rect.width(), rect.y()+rect.height())
         )
     );
+
+    this.view.paintOverlay(painter);
 };
 
 /**
