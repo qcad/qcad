@@ -145,6 +145,7 @@
     <decl_stmt><decl><type><name>QTime</name></type> <name>mouseClickTimer</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>mousePressScreenPosition</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>mousePressModelPosition</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>gotMouseButtonPress</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsViewQt*</argument>)</argument_list></macro>

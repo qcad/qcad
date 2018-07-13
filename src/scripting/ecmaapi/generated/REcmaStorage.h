@@ -429,6 +429,9 @@
         isParentLayerSnappable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isLayerPlottable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isParentLayerPlottable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

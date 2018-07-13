@@ -228,6 +228,9 @@
         paintEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        paintOverlay
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBuffer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

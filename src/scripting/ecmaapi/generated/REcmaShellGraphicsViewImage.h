@@ -447,6 +447,12 @@
         
     
     
+      void paintOverlay(
+                QPainter * painter
+            );
+        
+    
+    
       QImage getBuffer(
                 
             );
@@ -653,12 +659,6 @@
     
       void paintRelativeZero(
                 QPaintDevice & device
-            );
-        
-    
-    
-      void paintOverlay(
-                QPainter * painter
             );
         
     
@@ -988,9 +988,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintRelativeZero
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        paintOverlay
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         invalidate

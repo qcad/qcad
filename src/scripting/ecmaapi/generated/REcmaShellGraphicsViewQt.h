@@ -577,6 +577,11 @@
             );
         
     
+      void paintOverlay(
+                QPainter * painter
+            );
+        
+    
       QImage getBuffer(
                 
             );
