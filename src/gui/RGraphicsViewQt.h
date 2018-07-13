@@ -144,6 +144,7 @@ private:
     QTime mouseClickTimer;
     RVector mousePressScreenPosition;
     RVector mousePressModelPosition;
+    bool gotMouseButtonPress;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewQt*)

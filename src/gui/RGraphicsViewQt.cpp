@@ -48,7 +48,8 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
       RGraphicsViewImage(),
       showFocus(showFocus),
       focusFrameWidget(NULL),
-      gesturesEnabled(true) {
+      gesturesEnabled(true),
+      gotMouseButtonPress(false) {
 
     setFocusPolicy(Qt::WheelFocus);
     setMouseTracking(true);
@@ -247,6 +248,7 @@ void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
 }
 
 void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
+    gotMouseButtonPress = true;
     if (event==NULL || scene==NULL) {
         return;
     }
@@ -271,6 +273,16 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
 void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
     static int ignoreTimeThreshold = RSettings::getIntValue("GraphicsView/IgnoreTimeThreshold", 150);
     static int ignoreDeltaThreshold = RSettings::getIntValue("GraphicsView/IgnoreDeltaThreshold", 100);
+
+    if (gotMouseButtonPress) {
+        // everything OK, got press, followed by release
+    }
+    else {
+        // Qt/Wacom bug workaround for omitted mouse press events:
+        // got release but no press (Qt / Wacom bug), simulate press:
+        mousePressEvent(event);
+    }
+    gotMouseButtonPress = false;
 
     if (event==NULL || scene==NULL) {
         return;
