@@ -56,7 +56,8 @@ RGraphicsViewImage::RGraphicsViewImage()
       colorThreshold(10),
       minimumLineweight(0.0),
       drawingScale(1.0),
-      alphaEnabled(false) {
+      alphaEnabled(false),
+      showOnlyPlottable(false) {
 
     currentScale = 1.0;
     saveViewport();
@@ -181,6 +182,8 @@ void RGraphicsViewImage::updateImage() {
                 drawingScale = 1.0;
             }
         }
+
+        showOnlyPlottable = RSettings::getBoolValue("PrintPreviewPro/ShowOnlyPlottable", false);
 
         //RDebug::startTimer();
         updateGraphicsBuffer();
@@ -779,8 +782,18 @@ void RGraphicsViewImage::paintOverlay(QPainter* painter) {
 
                     //RVector sp = path.getBoundingBox().getCenter();
                     //path.move(-sp);
-                    path.scale(1/factor,1/factor);
+                    if (drawable.getPixelUnit() || path.getPixelUnit()) {
+                        if (!isPrinting() && !isPrintPreview()) {
+                            path.scale(1/factor,1/factor);
+                        }
+                        else {
+                            double f = RUnit::convert(0.22, RS::Millimeter, getDocument()->getUnit());
+                            f/=getDevicePixelRatio();
+                            path.scale(f,f);
+                        }
+                    }
                     path.move(drawable.getOffset());
+                    path.move(paintOffset);
 
                     QPen pen = path.getPen();
                     if (path.getPixelWidth()) {
@@ -1002,7 +1015,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         RGraphicsSceneDrawable drawable = i.next();
 
         // drawable is not plottable (from layer for which plottable is off):
-        if (drawable.getNoPlot() && (isPrintingOrExporting() /*|| isPrintPreview()*/)) {
+        if (drawable.getNoPlot() && (isPrintingOrExporting() || (showOnlyPlottable && isPrintPreview()))) {
             continue;
         }
 

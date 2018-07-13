@@ -268,6 +268,8 @@ public:
     virtual void paintEntities(QPainter* painter, const RBox& queryBox);
     virtual void paintEntity(QPainter* painter, REntity::Id id, bool preview = false);
 
+    virtual void paintOverlay(QPainter* painter);
+
     QImage getBuffer() const;
     QTransform getTransform() const;
 
@@ -343,7 +345,6 @@ protected:
     virtual void paintRelativeZero(QPaintDevice& device);
     virtual void paintDocument(const QRect& rect = QRect());
     virtual void paintBackground(QPainter* painter, const QRect& rect = QRect());
-    virtual void paintOverlay(QPainter* painter);
 
     /**
      * \nonscriptable
@@ -402,6 +403,8 @@ protected:
     bool alphaEnabled;
 
     QString lastScaleString;
+
+    bool showOnlyPlottable;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewImage*)
