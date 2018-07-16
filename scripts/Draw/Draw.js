@@ -77,7 +77,7 @@ Draw.init = function() {
 
     // add action for the sake of configurability (tool preferences):
     var appWin = EAction.getMainWindow();
-    var action = new RGuiAction("", appWin);
+    var action = new RGuiAction(qsTr("Drawing Tools"), appWin);
     action.setScriptFile(Draw.includeBasePath + "/Draw.js");
     action.setGroupSortOrder(5);
     action.setSortOrder(100);

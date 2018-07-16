@@ -115,4 +115,10 @@ Window.prototype.getTitle = function() {
 Window.init = function() {
     Window.getMenu();
     Window.getToolBar();
+
+    // make sure there's an action:
+    var appWin = EAction.getMainWindow();
+    var action = new RGuiAction(qsTr("Window Tools"), appWin);
+    action.setScriptFile(Window.includeBasePath + "/Window.js");
+    action.setWidgetNames([]);
 };
