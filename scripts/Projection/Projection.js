@@ -528,7 +528,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
     }
 
     return [];
-}
+};
 
 Projection.prototype.slotRotateCCW = function() {
     this.rotation += 90;
