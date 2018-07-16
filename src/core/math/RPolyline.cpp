@@ -1341,7 +1341,6 @@ RBox RPolyline::getBoundingBox() const {
 
 /**
  * \return Area of (implicitly closed) polyline.
- * \author Robert S.
  */
 double RPolyline::getArea() const {
     double ret = 0.0;
@@ -1351,6 +1350,8 @@ double RPolyline::getArea() const {
     return ret;
 
     /*
+     * \author Robert S.
+
     // fails for certain cases
     // see FS#1756 - Faults with the area of Polylines with arcs
     RPolyline closedCopy = *this;
