@@ -28,6 +28,11 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>&amp;View</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

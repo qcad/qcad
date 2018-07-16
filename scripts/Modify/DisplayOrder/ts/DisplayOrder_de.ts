@@ -8,5 +8,10 @@
         <source>&amp;Display Order</source>
         <translation>&amp;Anzeigereihenfolge</translation>
     </message>
+    <message>
+        <location line="+12"/>
+        <source>Display Order</source>
+        <translation>Anzeigereihenfolge</translation>
+    </message>
 </context>
 </TS>

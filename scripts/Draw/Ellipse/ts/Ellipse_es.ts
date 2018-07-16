@@ -4,7 +4,7 @@
 <context>
     <name>Ellipse</name>
     <message>
-        <location filename="../Ellipse.js" line="+71"/>
+        <location filename="../Ellipse.js" line="+85"/>
         <source>Ellipse Tools</source>
         <translation>Herramientas elipse</translation>
     </message>

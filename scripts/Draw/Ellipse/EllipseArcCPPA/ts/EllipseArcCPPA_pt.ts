@@ -60,7 +60,7 @@ Entre o ângulo de rotação
         <translation>Parâmetro final</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+267"/>
         <source>Invalid major radius.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Raio maior inválido.</translation>

@@ -8,5 +8,10 @@
         <source>&amp;Display Order</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+12"/>
+        <source>Display Order</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

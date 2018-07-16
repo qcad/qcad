@@ -34,7 +34,7 @@
     <message>
         <location line="+20"/>
         <source>Height:</source>
-        <translation>Hauteur : </translation>
+        <translation>Hauteur&#xa0;: </translation>
     </message>
     <message>
         <location line="+20"/>
@@ -197,7 +197,7 @@
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation>Hauteur : </translation>
+        <translation>Hauteur&#xa0;: </translation>
     </message>
     <message>
         <location line="+7"/>

@@ -8,5 +8,10 @@
         <source>&amp;Window</source>
         <translation>&amp;Окно</translation>
     </message>
+    <message>
+        <location line="+13"/>
+        <source>Window Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

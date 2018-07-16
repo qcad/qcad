@@ -12,5 +12,10 @@
 &amp;Okno</translatorcomment>
         <translation>&amp;Okno</translation>
     </message>
+    <message>
+        <location line="+13"/>
+        <source>Window Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

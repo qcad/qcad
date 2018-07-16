@@ -29,6 +29,11 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>View</source>
+        <translation>Exibir</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>&amp;View</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

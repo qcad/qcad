@@ -13,6 +13,11 @@
         <source>&amp;Draw</source>
         <translation>&amp;Dibujar</translation>
     </message>
+    <message>
+        <location line="+15"/>
+        <source>Drawing Tools</source>
+        <translation>Herramientas de dibujo</translation>
+    </message>
 </context>
 <context>
     <name>DrawBasedOnRectangle</name>

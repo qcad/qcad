@@ -17,6 +17,11 @@
 &amp;Preferências do Desenho Atual...</translatorcomment>
         <translation>&amp;Desenhe</translation>
     </message>
+    <message>
+        <location line="+15"/>
+        <source>Drawing Tools</source>
+        <translation>Ferramentas de Desenho</translation>
+    </message>
 </context>
 <context>
     <name>DrawBasedOnRectangle</name>

@@ -44,7 +44,7 @@
         <translation>Končni parameter</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+267"/>
         <source>Invalid major radius.</source>
         <translation>Neveljaven velik polmer.</translation>
     </message>

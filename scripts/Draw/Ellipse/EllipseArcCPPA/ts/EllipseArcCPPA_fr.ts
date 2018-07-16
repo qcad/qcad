@@ -44,7 +44,7 @@
         <translation>Paramètre de fin</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+267"/>
         <source>Invalid major radius.</source>
         <translation>Invalid rayon majeur.</translation>
     </message>

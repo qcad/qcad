@@ -15,6 +15,11 @@
     </message>
     <message>
         <location line="+23"/>
+        <source>View</source>
+        <translation>View</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>&amp;View</source>
         <translation>&amp;View</translation>
     </message>

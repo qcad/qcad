@@ -12,5 +12,10 @@
 &amp;Janela de Desseleção</translatorcomment>
         <translation>&amp;Janela</translation>
     </message>
+    <message>
+        <location line="+13"/>
+        <source>Window Tools</source>
+        <translation>Ferramentas janelas</translation>
+    </message>
 </context>
 </TS>

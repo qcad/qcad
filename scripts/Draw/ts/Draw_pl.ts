@@ -17,6 +17,11 @@
 &amp;Preferencje bieżącego rysunku</translatorcomment>
         <translation>&amp;Rysowanie</translation>
     </message>
+    <message>
+        <location line="+15"/>
+        <source>Drawing Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DrawBasedOnRectanglePP</name>

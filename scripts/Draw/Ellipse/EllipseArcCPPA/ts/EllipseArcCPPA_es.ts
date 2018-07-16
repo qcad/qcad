@@ -44,7 +44,7 @@
         <translation>Parámetro final</translation>
     </message>
     <message>
-        <location line="+269"/>
+        <location line="+267"/>
         <source>Invalid major radius.</source>
         <translation>Inválida radio mayor.</translation>
     </message>
