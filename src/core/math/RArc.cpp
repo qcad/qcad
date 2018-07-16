@@ -953,7 +953,7 @@ QList<QSharedPointer<RShape> > RArc::splitAt(const QList<RVector>& points) const
         RArc* seg = clone();
         double a1 = center.getAngleTo(sortedPoints[i]);
         double a2 = center.getAngleTo(sortedPoints[i+1]);
-        if (RMath::getAngleDifference180(a1, a2)*radius<0.001) {
+        if (fabs(RMath::getAngleDifference180(a1, a2)*radius)<0.001) {
             continue;
         }
         seg->setStartAngle(a1);
