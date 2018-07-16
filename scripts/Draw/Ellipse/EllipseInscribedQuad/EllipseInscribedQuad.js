@@ -243,6 +243,8 @@ EllipseInscribedQuad.prototype.getOperation = function(preview) {
         return undefined;
     }
 
+    shape = Ellipse.postProcess(shape);
+
     var doc = this.getDocument();
 
     var e = shapeToEntity(doc, shape);

@@ -41,6 +41,9 @@ EllipseRR.prototype.getShapes = function(corners) {
         lines.push(new RLine(corners[i], corners[(i+1)%corners.length]));
     }
     var ellipse = ShapeAlgorithms.createEllipseInscribedFromLines(lines[0], lines[1], lines[2], lines[3]);
+
+    ellipse = Ellipse.postProcess(ellipse);
+
     return [ ellipse ];
 };
 

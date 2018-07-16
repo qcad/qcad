@@ -280,12 +280,10 @@ EllipseArcCPPA.prototype.getOperation = function(preview) {
 //        param2 = 2*Math.PI;
 //    }
 
-    var ellipse = new REllipseEntity(
-        this.getDocument(),
-        new REllipseData(this.getEllipse())
-    );
+    var shape = Ellipse.postProcess(this.getEllipse());
+    var entity = shapeToEntity(this.getDocument(), shape);
 
-    return new RAddObjectOperation(ellipse, this.getToolTitle());
+    return new RAddObjectOperation(entity, this.getToolTitle());
 };
 
 EllipseArcCPPA.prototype.getAuxPreview = function() {

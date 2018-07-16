@@ -37,6 +37,20 @@ function Ellipse(guiAction) {
 Ellipse.prototype = new Draw();
 Ellipse.includeBasePath = includeBasePath;
 
+/**
+ * Ellipse shape post processing.
+ * \return ellipseShape or, if configured polyline.
+ */
+Ellipse.postProcess = function(ellipseShape) {
+    if (RSettings.getBoolValue("Ellipse/CreatePolyline", false)!==true) {
+        return ellipseShape;
+    }
+
+    var ellipseSegments = RSettings.getIntValue("Explode/EllipseSegments", 32);
+
+    return ellipseShape.approximateWithArcs(ellipseSegments);
+};
+
 Ellipse.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
