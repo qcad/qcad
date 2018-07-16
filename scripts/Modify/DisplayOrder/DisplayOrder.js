@@ -98,6 +98,13 @@ DisplayOrder.prototype.getTitle = function() {
 
 DisplayOrder.init = function() {
     DisplayOrder.getMenu();
+
+    // make sure there's an action:
+    var appWin = EAction.getMainWindow();
+    var action = new RGuiAction(qsTr("Display Order"), appWin);
+    action.setScriptFile(DisplayOrder.includeBasePath + "/DisplayOrder.js");
+    action.setWidgetNames([]);
+
     //DisplayOrder.getToolBar();
     //DisplayOrder.getCadToolBarPanel();
     //DisplayOrder.getToolMatrixPanel();
