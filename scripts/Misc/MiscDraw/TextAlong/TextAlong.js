@@ -42,7 +42,7 @@ function TextAlong(guiAction, mode) {
 
     this.textData = undefined;
     this.mode = mode;
-    this.entity = undefined;
+    this.shape = undefined;
     this.text = undefined;
     this.height = 1.0;
     this.spacing = 0.0;
@@ -119,18 +119,20 @@ TextAlong.prototype.pickEntity = function(event, preview) {
     this.pos = event.getModelPosition();
 
     if (isNull(entity)) {
-        this.entity = undefined;
+        this.shape = undefined;
         return;
     } else {
         if (!preview) {
-            var type = entity.getType();
-            if (type !== RS.EntityLine && type !== RS.EntityArc && type !== RS.EntityCircle) {
-                EAction.warnNotLineArcCircle();
-                return;
-            }
+            this.shape = getClosestSimpleShape(entity, this.pos);
+            if (!isNull(this.shape)) {
+                var type = this.shape.getShapeType();
+                if (type !== RShape.Line && type !== RShape.Arc && type !== RShape.Circle) {
+                    EAction.warnNotLineArcCircle();
+                    return;
+                }
 
-            this.entity = entity;
-            this.setState(TextAlong.State.SettingPosition);
+                this.setState(TextAlong.State.SettingPosition);
+            }
         }
     }
 };
@@ -161,26 +163,27 @@ TextAlong.prototype.getOperation = function(preview) {
     var di = this.getDocumentInterface();
     var type;
 
-    if (!isNull(this.entity)) {
-        type = this.entity.getType();
+    if (!isNull(this.shape)) {
+        type = this.shape.getShapeType();
     } else {
         return undefined;
     }
 
     var op = undefined;
+    var arc;
     switch(type) {
-    case RS.EntityLine :
+    case RShape.Line:
         op = this.alongLine();
         break;
-    case RS.EntityArc :
-        // 'this.entity' is a pointer to the arc, so get the actual arc object
-        var arc = this.entity.getData().getArc();
+    case RShape.Arc:
+        // 'this.shape' is a pointer to the arc, so get the actual arc object
+        arc = this.shape;
         op = this.alongArc(arc);
         break;
-    case RS.EntityCircle :
+    case RShape.Circle:
         // create a circular arc and use 'alongArc'.
         // when using 'fit', add one or more spaces to the start or end of the text
-        var arc = new RArc(this.entity.getCenter(), this.entity.getRadius(), 0.0, 0.0);
+        arc = new RArc(this.shape.getCenter(), this.shape.getRadius(), 0.0, 0.0);
         op = this.alongArc(arc);
         break;
     default :
@@ -279,8 +282,8 @@ TextAlong.prototype.slotFitChanged = function(value) {
 TextAlong.prototype.alongLine = function() {
     var ang, len, op, h, v;
 
-    ang = this.entity.getAngle();
-    len = this.entity.getLength();
+    ang = this.shape.getAngle();
+    len = this.shape.getLength();
     if (!isNull(this.textData)) {
         if (this.ccw) {
             this.textData.setAngle(ang + Math.PI);
