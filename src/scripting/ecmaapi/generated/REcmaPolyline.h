@@ -232,6 +232,9 @@
         convertArcToLineSegments
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        convertArcToLineSegmentsLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
