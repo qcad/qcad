@@ -886,6 +886,26 @@ RPolyline RPolyline::convertArcToLineSegments(int segments) const {
     return ret;
 }
 
+RPolyline RPolyline::convertArcToLineSegmentsLength(double segmentLength) const {
+    RPolyline ret;
+
+    QList<QSharedPointer<RShape> > segs = getExploded();
+    for (int i=0; i<segs.length(); i++) {
+        QSharedPointer<RShape> seg = segs[i];
+        if (seg->getShapeType()==RShape::Arc) {
+            QSharedPointer<RArc> arc = seg.dynamicCast<RArc>();
+            RPolyline pl = arc->approximateWithLinesTan(segmentLength);
+            ret.appendShape(pl);
+        }
+        else {
+            ret.appendShape(*seg);
+        }
+    }
+
+    ret.autoClose();
+    return ret;
+}
+
 /**
  * \return A QPainterPath object that represents this polyline.
  */
