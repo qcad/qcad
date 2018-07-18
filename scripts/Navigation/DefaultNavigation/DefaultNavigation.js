@@ -127,16 +127,7 @@ DefaultNavigation.prototype.mouseReleaseEvent = function(event) {
         (event.button() === Qt.MidButton ||
          event.button() === Qt.LeftButton)) {
 
-        if (this.panFirstOrigin.getDistanceTo(event.getScreenPosition())<DefaultNavigation.panThreshold) {
-            // zoom in / out:
-            var position = event.getModelPosition();
-            if (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf()) {
-                this.view.zoomOut(position, DefaultNavigation.middleMouseButtonZoomFactor);
-            }
-            else {
-                this.view.zoomIn(position, DefaultNavigation.middleMouseButtonZoomFactor);
-            }
-        }
+        this.handleMiddleMouseButtonZoom(event);
 
         if (!isNull(this.savedCursor)) {
             this.view.setCursor(this.savedCursor);
@@ -146,6 +137,19 @@ DefaultNavigation.prototype.mouseReleaseEvent = function(event) {
         EAction.enableCoordinateWidget();
     }
 };
+
+DefaultNavigation.prototype.handleMiddleMouseButtonZoom = function(event) {
+    if (this.panFirstOrigin.getDistanceTo(event.getScreenPosition())<DefaultNavigation.panThreshold) {
+        // zoom in / out:
+        var position = event.getModelPosition();
+        if (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf()) {
+            this.view.zoomOut(position, DefaultNavigation.middleMouseButtonZoomFactor);
+        }
+        else {
+            this.view.zoomIn(position, DefaultNavigation.middleMouseButtonZoomFactor);
+        }
+    }
+}
 
 DefaultNavigation.prototype.mouseMoveEvent = function(event) {
     if (isNull(this.view)) {
