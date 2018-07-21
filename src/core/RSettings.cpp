@@ -575,7 +575,7 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
  * Translates the given string for the given context.
  */
 QString RSettings::translate(const QString& context, const QString& str) {
-    return QCoreApplication::translate((const char*)context.toLatin1(), (const char*)str.toLatin1());
+    return QCoreApplication::translate((const char*)context.toUtf8(), (const char*)str.toUtf8());
 }
 
 /**
