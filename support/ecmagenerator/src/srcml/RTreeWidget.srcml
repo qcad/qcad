@@ -51,6 +51,8 @@
         <return>return <expr><call><name>indexFromItem</name><argument_list>(<argument><expr><name>item</name></expr></argument>, <argument><expr><name>column</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>QTreeWidgetItem</name>*</type> <name>getActiveItem</name><parameter_list>()</parameter_list>;</function_decl>
+
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>contextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>

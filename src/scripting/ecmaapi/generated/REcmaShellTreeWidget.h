@@ -52,6 +52,12 @@
         
     
     
+      QTreeWidgetItem * getActiveItem(
+                
+            );
+        
+    
+    
       void contextMenuEvent(
                 QContextMenuEvent * e
             );

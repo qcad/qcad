@@ -28,6 +28,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="0" isConst="false" />
       </variant>
     </method>
+    <method name="getActiveItem" cppName="getActiveItem"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QTreeWidgetItem *"
+      isPureVirtual="false" />
+    </method>
     <method name="contextMenuEvent" cppName="contextMenuEvent"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
