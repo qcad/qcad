@@ -259,14 +259,58 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
     return ret;
 }
 
+/**
+ * \return List of strings containing either only numbers or non-numbers.
+ * E.g. "abc123" -> "abc", "123"
+ */
+QStringList RS::compareChunkify(const QString& s) {
+    QStringList tz;
+    bool nummerical = false;
+
+    for (int i=0; i<s.length(); i++) {
+        QChar c = s.at(i);
+
+        bool n = c.isDigit() || c=='.';
+
+        if (n!=nummerical || i==0) {
+            tz.append(c);
+            nummerical = n;
+        }
+        else {
+            tz.last().append(c);
+        }
+    }
+
+    return tz;
+}
+
+/**
+ * Alphanumerical, locale aware, case insensitive comparision.
+ */
 int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
-#if QT_VERSION >= 0x050200 && !defined(Q_OS_LINUX)
-    // crashes sometimes under Linux:
-    QCollator collator;
-    collator.setNumericMode(true);
-    collator.setCaseSensitivity(Qt::CaseInsensitive);
-    return collator.compare(s1, s2);
-#else
-    return QString::compare(s1, s2, Qt::CaseInsensitive);
-#endif
+    // note: we deliberately do not use QCollator here (buggy, crashes under Linux):
+    QStringList aa = compareChunkify(s1.toLower());
+    QStringList bb = compareChunkify(s2.toLower());
+
+    for (int x = 0; x<aa.length() && x < bb.length(); x++) {
+        if (aa[x] != bb[x]) {
+            bool ok1, ok2;
+            float c = aa[x].toFloat(&ok1);
+            float d = bb[x].toFloat(&ok2);
+            if (ok1 && ok2) {
+                if (c-d<0.0) {
+                    return -1;
+                }
+                if (c-d>0.0) {
+                    return 1;
+                }
+                return 0;
+            }
+            else {
+                return aa[x].localeAwareCompare(bb[x]);
+            }
+        }
+    }
+
+    return aa.length() - bb.length();
 }
