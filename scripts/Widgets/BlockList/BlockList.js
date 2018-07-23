@@ -461,6 +461,18 @@ BlockList.applyPreferences = function(doc, mdiChild) {
     WidgetFactory.initList(blockList, "BlockList");
 };
 
+/**
+ * \return Active item.
+ */
+BlockList.getActiveItem = function() {
+    var appWin = RMainWindowQt.getMainWindow();
+    var blockList = appWin.findChild("BlockList");
+    if (isNull(blockList)) {
+        return undefined;
+    }
+
+    return blockList.getActiveItem();
+};
 
 /**
  * Shows / hides the block list.

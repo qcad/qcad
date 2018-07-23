@@ -46,6 +46,19 @@ RTreeWidget::RTreeWidget(QWidget* parent) :
 RTreeWidget::~RTreeWidget() {
 }
 
+/**
+ * \return The active item. Either the selected or current item.
+ * This is the item an action is applied for.
+ */
+QTreeWidgetItem* RTreeWidget::getActiveItem() {
+    QList<QTreeWidgetItem*> sel = selectedItems();
+    if (!sel.isEmpty()) {
+        return sel[0];
+    }
+
+    return currentItem();
+}
+
 void RTreeWidget::contextMenuEvent(QContextMenuEvent* e) {
     if (e!=NULL) {
         QTreeWidgetItem* item = itemAt(e->pos());
@@ -66,10 +79,6 @@ void RTreeWidget::mousePressEvent(QMouseEvent* e) {
 
     if (item!=NULL) {
         itemPressedData = item->data(0, Qt::UserRole);
-//        if (index==0) {
-//            qDebug() << "emit 1";
-//            emit itemColumnClicked(item, index);
-//        }
     }
     indexPressed = index;
 

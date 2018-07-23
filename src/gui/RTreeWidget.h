@@ -50,6 +50,8 @@ public:
         return indexFromItem(item, column);
     }
 
+    QTreeWidgetItem* getActiveItem();
+
 protected:
     virtual void contextMenuEvent(QContextMenuEvent* e);
     virtual void mousePressEvent(QMouseEvent* e);

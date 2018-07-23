@@ -41,7 +41,7 @@ EditBlock.prototype.beginEvent = function() {
         return;
     }
 
-    var item = blockList.currentItem();
+    var item = BlockList.getActiveItem();
     if (isNull(item)) {
         this.terminate();
         return;
