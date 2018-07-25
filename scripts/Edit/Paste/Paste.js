@@ -108,6 +108,7 @@ Paste.prototype.pickCoordinate = function(event, preview) {
             if (!isNull(op)) {
                 this.di.applyOperation(op);
                 this.di.clearPreview();
+                this.di.setRelativeZero(this.offset);
                 this.di.repaintViews();
                 this.postInsertion();
             }
