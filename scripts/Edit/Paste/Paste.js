@@ -123,6 +123,12 @@ Paste.prototype.pickCoordinate = function(event, preview) {
 Paste.prototype.postInsertion = function() {
 };
 
+/**
+ * Called to perform additional initialization of the RPasteOperation.
+ */
+Paste.prototype.initOperation = function(op) {
+};
+
 Paste.prototype.getOperation = function(preview) {
     if (!isVector(this.offset) || !isNumber(this.scale) || !isNumber(this.rotation)) {
         return undefined;
@@ -138,6 +144,7 @@ Paste.prototype.getOperation = function(preview) {
     op.setToCurrentLayer(this.toCurrentLayer);
     op.setOverwriteLayers(this.overwriteLayers);
     op.setOverwriteBlocks(this.overwriteBlocks);
+    this.initOperation(op);
     var unitFactor = RUnit.convert(1.0, this.sourceDocument.getUnit(), this.getDocument().getUnit());
     this.boundary = op.getBoundary(unitFactor);
     return op;
