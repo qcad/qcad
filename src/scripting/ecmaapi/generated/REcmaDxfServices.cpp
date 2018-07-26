@@ -116,6 +116,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, getSafeBlockName, "getSafeBlockName");
+            
             REcmaHelper::registerFunction(&engine, &ctor, numberToColor24, "numberToColor24");
             
             REcmaHelper::registerFunction(&engine, &ctor, numberToWeight, "numberToWeight");
@@ -301,6 +303,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDxfServices::reset", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::getSafeBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getSafeBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getSafeBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RDxfServices::
+       getSafeBlockName(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getSafeBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getSafeBlockName", context, engine);
             return result;
         }
          QScriptValue

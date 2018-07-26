@@ -52,6 +52,8 @@
 
     <function_decl><type><name>void</name></type> <name>reset</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getSafeBlockName</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>void</name></type> <name>fixBlockName</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>fixLayerName</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>fixFontName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

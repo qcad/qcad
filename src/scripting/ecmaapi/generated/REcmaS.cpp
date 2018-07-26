@@ -85,6 +85,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, sortAlphanumerical, "sortAlphanumerical");
             
+            REcmaHelper::registerFunction(&engine, &ctor, compareChunkify, "compareChunkify");
+            
             REcmaHelper::registerFunction(&engine, &ctor, compareAlphanumerical, "compareAlphanumerical");
             
 
@@ -2815,6 +2817,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::sortAlphanumerical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::compareChunkify
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::compareChunkify", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::compareChunkify";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RS::
+       compareChunkify(a0);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.compareChunkify().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::compareChunkify", context, engine);
             return result;
         }
          QScriptValue

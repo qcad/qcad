@@ -19,6 +19,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getSafeBlockName" cppName="getSafeBlockName"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="false" />
+      </variant>
+    </method>
     <method name="fixBlockName" cppName="fixBlockName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -506,6 +506,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="list" isConst="true" />
       </variant>
     </method>
+    <method name="compareChunkify" cppName="compareChunkify"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="s"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="compareAlphanumerical"
     cppName="compareAlphanumerical" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

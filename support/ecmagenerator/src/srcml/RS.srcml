@@ -677,6 +677,7 @@
     }</block></function></template>
 
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>sortAlphanumerical</name><parameter_list>(<param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>list</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QStringList</name></type> <name>compareChunkify</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>compareAlphanumerical</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s1</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s2</name></decl></param>)</parameter_list>;</function_decl>
 
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>double</name></type> <name>PointTolerance</name></decl>;</decl_stmt>

@@ -49,6 +49,9 @@
         reset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSafeBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         fixBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

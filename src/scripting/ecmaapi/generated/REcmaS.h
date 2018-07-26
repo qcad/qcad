@@ -82,6 +82,9 @@
         sortAlphanumerical
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        compareChunkify
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         compareAlphanumerical
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
