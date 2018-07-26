@@ -51,6 +51,8 @@ public:
 
     void reset();
 
+    static QString getSafeBlockName(QString& blockName);
+
     void fixBlockName(QString& blockName);
     void fixLayerName(QString& layerName);
     QString fixFontName(const QString& fontName) const;

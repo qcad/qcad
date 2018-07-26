@@ -126,6 +126,13 @@ void RDxfServices::detectVersion2Format(const QString& fileName) {
     }
 }
 
+QString RDxfServices::getSafeBlockName(QString& blockName) {
+    QString ret = blockName;
+    ret.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
+    ret.replace(QChar(0x0083), "_");
+    return ret;
+}
+
 void RDxfServices::fixBlockName(QString& blockName) {
     // fix invalid block names (mainly from QCAD 2):
     if (!blockName.startsWith("*")) {
