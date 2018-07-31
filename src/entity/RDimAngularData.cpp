@@ -97,6 +97,7 @@ bool RDimAngularData::moveReferencePoint(const RVector& referencePoint,
     return ret;
 }
 
+/*
 bool RDimAngularData::move(const RVector& offset) {
     RDimensionData::move(offset);
     setExtensionLine1End(getExtensionLine1End() + offset);
@@ -132,6 +133,7 @@ bool RDimAngularData::mirror(const RLine& axis) {
     update();
     return true;
 }
+*/
 
 QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
     Q_UNUSED(queryBox)

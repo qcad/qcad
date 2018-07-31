@@ -102,7 +102,9 @@ bool RDimAngular2LData::moveReferencePoint(const RVector& referencePoint,
 bool RDimAngular2LData::move(const RVector& offset) {
     RDimAngularData::move(offset);
     extensionLine1Start.move(offset);
+    extensionLine1End.move(offset);
     extensionLine2Start.move(offset);
+    dimArcPosition.move(offset);
     update();
     return true;
 }
@@ -110,7 +112,9 @@ bool RDimAngular2LData::move(const RVector& offset) {
 bool RDimAngular2LData::rotate(double rotation, const RVector& center) {
     RDimAngularData::rotate(rotation, center);
     extensionLine1Start.rotate(rotation, center);
+    extensionLine1End.rotate(rotation, center);
     extensionLine2Start.rotate(rotation, center);
+    dimArcPosition.rotate(rotation, center);
     update();
     return true;
 }
@@ -118,7 +122,9 @@ bool RDimAngular2LData::rotate(double rotation, const RVector& center) {
 bool RDimAngular2LData::scale(const RVector& scaleFactors, const RVector& center) {
     RDimAngularData::scale(scaleFactors, center);
     extensionLine1Start.scale(scaleFactors, center);
+    extensionLine1End.scale(scaleFactors, center);
     extensionLine2Start.scale(scaleFactors, center);
+    dimArcPosition.scale(scaleFactors, center);
     update();
     return true;
 }
@@ -126,7 +132,9 @@ bool RDimAngular2LData::scale(const RVector& scaleFactors, const RVector& center
 bool RDimAngular2LData::mirror(const RLine& axis) {
     RDimAngularData::mirror(axis);
     extensionLine1Start.mirror(axis);
+    extensionLine1End.mirror(axis);
     extensionLine2Start.mirror(axis);
+    dimArcPosition.mirror(axis);
     update();
     return true;
 }

@@ -63,10 +63,12 @@ public:
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);
 
+    /*
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center);
     virtual bool scale(const RVector& scaleFactors, const RVector& center);
     virtual bool mirror(const RLine& axis);
+    */
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const;
     double getAngle() const;
