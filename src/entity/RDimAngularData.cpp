@@ -231,19 +231,28 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         RLine line;
         double len;
         double dist;
+        int f;
 
         // 1st extension line:
         dist = center.getDistanceTo2D(p1);
-        len = rad - dist + dimexe;
+        f=1;
+        if (rad<dist) {
+            f=-1;
+        }
+        len = rad - dist + dimexe*f;
         dir.setPolar(1.0, ang1);
-        line = RLine(center + dir*dist + dir*dimexo, center + dir*dist + dir*len);
+        line = RLine(center + dir*dist + dir*dimexo*f, center + dir*dist + dir*len);
         ret.append(QSharedPointer<RShape>(new RLine(line)));
 
         // 2nd extension line:
         dist = center.getDistanceTo2D(p2);
-        len = rad - dist + dimexe;
+        f=1;
+        if (rad<dist) {
+            f=-1;
+        }
+        len = rad - dist + dimexe*f;
         dir.setPolar(1.0, ang2);
-        line = RLine(center + dir*dist + dir*dimexo, center + dir*dist + dir*len);
+        line = RLine(center + dir*dist + dir*dimexo*f, center + dir*dist + dir*len);
         ret.append(QSharedPointer<RShape>(new RLine(line)));
 
         //arc = RArc(center, rad, ang1, ang2, reversed);
@@ -416,17 +425,21 @@ double RDimAngularData::getAngle() const {
 
     getAngles(ang1, ang2, reversed, p1, p2);
 
+    bool dimArcLength = (getType()==RS::EntityDimArcLength);
+
+    double ret;
     if (!reversed) {
         if (ang2<ang1) {
             ang2+=2*M_PI;
         }
-        return ang2-ang1;
+        ret = ang2-ang1;
     } else {
         if (ang1<ang2) {
             ang1+=2*M_PI;
         }
-        return ang1-ang2;
+        ret = ang1-ang2;
     }
+    return ret;
 }
 
 double RDimAngularData::getMeasuredValue() const {
