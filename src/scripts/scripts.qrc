@@ -3864,6 +3864,7 @@
     <file alias="scripts/File/ImportFile/ImportFile-inverse.svg">../../scripts/File/ImportFile/ImportFile-inverse.svg</file>
     <file alias="scripts/File/ImportFile/ImportFile.js">../../scripts/File/ImportFile/ImportFile.js</file>
     <file alias="scripts/File/ImportFile/ImportFile.svg">../../scripts/File/ImportFile/ImportFile.svg</file>
+    <file alias="scripts/File/ImportFile/ImportFile.ui">../../scripts/File/ImportFile/ImportFile.ui</file>
     <file alias="scripts/File/ImportFile/ImportFileInit.js">../../scripts/File/ImportFile/ImportFileInit.js</file>
     <file alias="scripts/File/ImportFile/ts/ImportFile_cs.qm">../../scripts/File/ImportFile/ts/ImportFile_cs.qm</file>
     <file alias="scripts/File/ImportFile/ts/ImportFile_de.qm">../../scripts/File/ImportFile/ts/ImportFile_de.qm</file>
