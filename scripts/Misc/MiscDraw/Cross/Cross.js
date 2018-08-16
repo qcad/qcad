@@ -101,7 +101,7 @@ Cross.prototype.getOperation = function() {
     var cp = this.shape.getCenter();
     var ex = objectFromPath("MainWindow::Options::ExtendX");
     var ey = objectFromPath("MainWindow::Options::ExtendY");
-    var mode = objectFromPath("MainWindow::Options::Mode");
+    var mode = objectFromPath("MainWindow::Options::Modes");
     var or = objectFromPath("MainWindow::Options::Orientation");
     var orient = or.getValue();
     if (mode.currentIndex === 0) {      //Extend

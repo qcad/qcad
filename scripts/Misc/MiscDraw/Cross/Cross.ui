@@ -70,7 +70,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="Mode">
+    <widget class="QComboBox" name="Modes">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
