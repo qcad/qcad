@@ -25,7 +25,7 @@
  * \param longFlag E.g. "-output"
  */
 function getArgument(args, shortFlag, longFlag, def) {
-    // make sure undefined is returned as default:
+    // make sure undefined can be returned as default:
     if (def===undefined) {
         var ret = getArguments(args, shortFlag, longFlag);
         if (ret.length===0) {
@@ -64,18 +64,18 @@ function getArguments(args, shortFlag, longFlag) {
 }
 
 function getIntArgument(args, shortFlag, longFlag, def) {
-    // make sure undefined is returned as default:
+    // make sure undefined can be returned as default:
     if (def===undefined) {
         var ret = getArgument(args, shortFlag, longFlag);
         if (ret===undefined) {
             return def;
         }
     }
-    return RSettings.getIntArgument(args, shortFlag, longFlag, def);
+    return RSettings.getIntArgument(args, shortFlag, longFlag, -1);
 }
 
 function getIntListArgument(args, shortFlag, longFlag, def) {
-    // make sure undefined is returned as default:
+    // make sure undefined can be returned as default:
     if (def===undefined) {
         var ret = RSettings.getIntListArgument(args, shortFlag, longFlag, []);
         if (ret.length===0) {
@@ -124,7 +124,7 @@ function getIntListArgument(args, shortFlag, longFlag, def) {
 }
 
 function getFloatArgument(args, shortFlag, longFlag, def) {
-    // make sure undefined is returned as default:
+    // make sure undefined can be returned as default:
     if (def===undefined) {
         var ret = getArgument(args, shortFlag, longFlag);
         if (ret===undefined) {
@@ -136,7 +136,7 @@ function getFloatArgument(args, shortFlag, longFlag, def) {
 }
 
 function getColorArgument(args, shortFlag, longFlag, def) {
-    // make sure undefined is returned as default:
+    // make sure undefined can be returned as default:
     if (def===undefined) {
         var ret = getArgument(args, shortFlag, longFlag);
         if (ret===undefined) {
@@ -147,7 +147,7 @@ function getColorArgument(args, shortFlag, longFlag, def) {
 }
 
 function getBoxArgument(args, shortFlag, longFlag, def) {
-    // make sure undefined is returned as default:
+    // make sure undefined can be returned as default:
     if (def===undefined) {
         var ret = getArgument(args, shortFlag, longFlag);
         if (ret===undefined) {
