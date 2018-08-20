@@ -245,9 +245,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     var viewports = ViewportWidget.getViewports(mdiChild, documentInterface);
     mdiChild.viewports = viewports;
-    //qDebug("initViewports");
     ViewportWidget.initializeViewports(viewports, uiFile, graphicsSceneClass);
-    //qDebug("initViewports: done");
     NewFile.updateTitle(mdiChild);
 
     NewFile.setupDefaultAction(documentInterface);
