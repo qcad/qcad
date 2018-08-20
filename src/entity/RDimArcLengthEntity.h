@@ -60,6 +60,11 @@ public:
     static RPropertyTypeId PropertyUpperTolerance;
     static RPropertyTypeId PropertyLowerTolerance;
     static RPropertyTypeId PropertyMeasuredValue;
+
+    static RPropertyTypeId PropertyLinearFactor;
+    static RPropertyTypeId PropertyDimScale;
+    static RPropertyTypeId PropertyDimBlockName;
+    static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
     static RPropertyTypeId PropertyArrow1Flipped;
     static RPropertyTypeId PropertyArrow2Flipped;

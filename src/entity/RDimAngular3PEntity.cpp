@@ -39,6 +39,10 @@ RPropertyTypeId RDimAngular3PEntity::PropertyText;
 RPropertyTypeId RDimAngular3PEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimAngular3PEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimAngular3PEntity::PropertyMeasuredValue;
+
+RPropertyTypeId RDimAngular3PEntity::PropertyDimScale;
+RPropertyTypeId RDimAngular3PEntity::PropertyDimBlockName;
+RPropertyTypeId RDimAngular3PEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimAngular3PEntity::PropertyFontName;
 RPropertyTypeId RDimAngular3PEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimAngular3PEntity::PropertyArrow2Flipped;
@@ -90,6 +94,10 @@ void RDimAngular3PEntity::init() {
     RDimAngular3PEntity::PropertyUpperTolerance.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimAngular3PEntity::PropertyLowerTolerance.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimAngular3PEntity::PropertyMeasuredValue.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyMeasuredValue);
+
+    RDimAngular3PEntity::PropertyDimScale.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyDimScale);
+    RDimAngular3PEntity::PropertyDimBlockName.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyDimBlockName);
+    RDimAngular3PEntity::PropertyAutoTextPos.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimAngular3PEntity::PropertyFontName.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyFontName);
     RDimAngular3PEntity::PropertyArrow1Flipped.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimAngular3PEntity::PropertyArrow2Flipped.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyArrow2Flipped);

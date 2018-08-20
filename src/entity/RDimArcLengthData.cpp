@@ -157,7 +157,9 @@ double RDimArcLengthData::getMeasuredValue() const {
 }
 
 QString RDimArcLengthData::getAutoLabel() const {
-    return formatLabel(getMeasuredValue());
+    double distance = getMeasuredValue();
+    distance *= linearFactor;
+    return formatLabel(distance);
 }
 
 QString RDimArcLengthData::getMeasurement(bool resolveAutoMeasurement) const {

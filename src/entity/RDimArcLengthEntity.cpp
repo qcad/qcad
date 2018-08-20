@@ -38,6 +38,11 @@ RPropertyTypeId RDimArcLengthEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimArcLengthEntity::PropertyText;
 RPropertyTypeId RDimArcLengthEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimArcLengthEntity::PropertyLowerTolerance;
+
+RPropertyTypeId RDimArcLengthEntity::PropertyLinearFactor;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimScale;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimBlockName;
+RPropertyTypeId RDimArcLengthEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimArcLengthEntity::PropertyMeasuredValue;
 RPropertyTypeId RDimArcLengthEntity::PropertyFontName;
 RPropertyTypeId RDimArcLengthEntity::PropertyArrow1Flipped;
@@ -90,6 +95,11 @@ void RDimArcLengthEntity::init() {
     RDimArcLengthEntity::PropertyUpperTolerance.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimArcLengthEntity::PropertyLowerTolerance.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimArcLengthEntity::PropertyMeasuredValue.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyMeasuredValue);
+
+    RDimArcLengthEntity::PropertyLinearFactor.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyLinearFactor);
+    RDimArcLengthEntity::PropertyDimScale.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyDimScale);
+    RDimArcLengthEntity::PropertyDimBlockName.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyDimBlockName);
+    RDimArcLengthEntity::PropertyAutoTextPos.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimArcLengthEntity::PropertyFontName.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyFontName);
     RDimArcLengthEntity::PropertyArrow1Flipped.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimArcLengthEntity::PropertyArrow2Flipped.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyArrow2Flipped);
