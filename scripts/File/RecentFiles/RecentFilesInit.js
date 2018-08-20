@@ -1,4 +1,17 @@
 /**
+ * Menu item handler for recent file menu items.
+ */
+function RecentFilesHandler(fileName) {
+    this.fileName = fileName;
+}
+
+RecentFilesHandler.prototype = {};
+
+RecentFilesHandler.prototype.open = function() {
+    NewFile.createMdiChild(this.fileName);
+};
+
+/**
  * Specialized QMenu class that shows recently used files.
  */
 function RecentFilesMenu(basePath) {
@@ -20,7 +33,7 @@ RecentFilesMenu.prototype.refresh = function() {
     
     this.setEnabled(true);
     
-    for (var i = 0; i < files.length; ++i) {
+    for (var i=files.length-1; i>=0 ; --i) {
         var fi = new QFileInfo(files[i]);
         var text = "";
         if (files.length - i < 10) {
@@ -38,14 +51,9 @@ RecentFilesMenu.prototype.refresh = function() {
                 + fn + " ["
                 + fp + "]";
 
-        action = new RGuiAction(text, this);
-        action.setData(files[i]);
-        action.setRequiresDocument(false);
-        action.setScriptFile(this.basePath + "/../OpenFile/OpenFile.js", true);
-        action.setProperty("hasShortcuts", false);
-        action.setGroupSortOrder(1500);
-        action.setSortOrder(89 - i);
-        RGuiAction.addToWidget(action, this);
+        action = this.addAction(text);
+        var h = new RecentFilesHandler(files[i]);
+        action.triggered.connect(h, "open");
     }
 
     action = new RGuiAction(qsTranslate("RecentFiles", "&Clear List"), this);
