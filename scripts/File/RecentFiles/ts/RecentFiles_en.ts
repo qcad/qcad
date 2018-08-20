@@ -19,7 +19,7 @@
         <translation>Recent Files</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+51"/>
+        <location filename="../RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
         <translation>&amp;Clear List</translation>
     </message>

@@ -20,7 +20,7 @@
         <translation>Plik</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+51"/>
+        <location filename="../RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Wyczyść listę</translation>

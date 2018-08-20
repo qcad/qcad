@@ -8,7 +8,7 @@
         <translation type="obsolete">Effacer la liste</translation>
     </message>
     <message>
-        <location filename="../RecentFilesInit.js" line="+51"/>
+        <location filename="../RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
         <translation>&amp;Effacer la liste</translation>
     </message>

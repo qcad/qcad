@@ -4,12 +4,12 @@
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../ImportFile.js" line="+68"/>
+        <location filename="../ImportFile.js" line="+73"/>
         <source>Error while importing file %1</source>
         <translation>Error while importing file %1</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>No import filters have been found. Aborting...</translation>
     </message>

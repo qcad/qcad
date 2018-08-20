@@ -90,7 +90,7 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+137"/>
         <source>Untitled %1</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bez nazwy %1</translation>

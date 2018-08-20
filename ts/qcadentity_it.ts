@@ -70,16 +70,16 @@ Altezza Testo:</translatorcomment>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+87"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+75"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+101"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+109"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+105"/>
         <location line="+16"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+107"/>
         <location line="+16"/>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
         <location line="+4"/>

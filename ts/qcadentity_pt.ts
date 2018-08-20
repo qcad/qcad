@@ -10,10 +10,10 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="+75"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+105"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+107"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+97"/>
@@ -32,7 +32,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+101"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+109"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>

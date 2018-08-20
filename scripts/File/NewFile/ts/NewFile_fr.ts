@@ -82,7 +82,7 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+137"/>
         <source>Untitled %1</source>
         <translation>Sans titre %1</translation>
     </message>
