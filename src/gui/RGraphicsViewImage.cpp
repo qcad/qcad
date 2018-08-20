@@ -329,12 +329,12 @@ void RGraphicsViewImage::updateImage() {
     }
 
     // overlay (painted after / on top of preview and highlighting):
-    if (!overlayDrawables.isEmpty()) {
-        QPainter* painter = initPainter(graphicsBufferWithPreview, false);
-        painter->setRenderHint(QPainter::Antialiasing);
-        paintOverlay(painter);
-        painter->end();
-    }
+//    if (!overlayDrawables.isEmpty()) {
+//        QPainter* painter = initPainter(graphicsBufferWithPreview, false);
+//        painter->setRenderHint(QPainter::Antialiasing);
+//        paintOverlay(painter);
+//        painter->end();
+//    }
 
     // snap label:
     if (hasFocus() || this == di->getLastKnownViewWithFocus()) {
@@ -688,6 +688,9 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
             paintEntity(painter, i.next());
         }
     }
+
+    // paint overlay:
+    paintOverlay(painter);
 
     painter->end();
     delete painter;
