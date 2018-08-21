@@ -124,6 +124,7 @@ public:
     static RColor getStartReferencePointColor();
     static RColor getEndReferencePointColor();
     static RColor getSecondaryReferencePointColor();
+    static RColor getTertiaryReferencePointColor();
 
     static bool getHighResolutionGraphicsView();
     static bool getAutoScaleGrid();
@@ -272,6 +273,8 @@ public:
     static bool getImportRecomputedDimBlocks();
     static bool getIgnoreBlockReferencePoint();
     static bool getIgnoreAllReferencePoints();
+    static int getReferencePointSize();
+    static int getReferencePointShape();
 
     static bool hasDarkGuiBackground();
     static bool hasCustomStyleSheet();
@@ -301,6 +304,7 @@ private:
     static RColor* startReferencePointColor;
     static RColor* endReferencePointColor;
     static RColor* secondaryReferencePointColor;
+    static RColor* tertiaryReferencePointColor;
     static int darkGuiBackground;
     static int snapRange;
     static int pickRange;
@@ -328,6 +332,8 @@ private:
     static int importRecomputedDimBlocks;
     static int ignoreBlockReferencePoint;
     static int ignoreAllReferencePoints;
+    static int referencePointSize;
+    static int referencePointShape;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 

@@ -53,6 +53,7 @@ RColor* RSettings::referencePointColor = NULL;
 RColor* RSettings::startReferencePointColor = NULL;
 RColor* RSettings::endReferencePointColor = NULL;
 RColor* RSettings::secondaryReferencePointColor = NULL;
+RColor* RSettings::tertiaryReferencePointColor = NULL;
 int RSettings::darkGuiBackground = -1;
 int RSettings::snapRange = -1;
 int RSettings::pickRange = -1;
@@ -80,6 +81,8 @@ int RSettings::hideAttributeWithBlock = -1;
 int RSettings::importRecomputedDimBlocks = -1;
 int RSettings::ignoreBlockReferencePoint = -1;
 int RSettings::ignoreAllReferencePoints = -1;
+int RSettings::referencePointSize = -1;
+int RSettings::referencePointShape = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -767,6 +770,13 @@ RColor RSettings::getSecondaryReferencePointColor() {
     return *secondaryReferencePointColor;
 }
 
+RColor RSettings::getTertiaryReferencePointColor() {
+    if (tertiaryReferencePointColor==NULL) {
+        tertiaryReferencePointColor = new RColor(getColor("GraphicsViewColors/TertiaryReferencePointColor", RColor(0,64,172)));
+    }
+    return *tertiaryReferencePointColor;
+}
+
 bool RSettings::getAutoScaleGrid() {
     return getValue("GraphicsView/AutoScaleGrid", true).toBool();
 }
@@ -877,6 +887,26 @@ bool RSettings::getIgnoreAllReferencePoints() {
         ignoreAllReferencePoints = getBoolValue("GraphicsView/IgnoreAllReferencePoints", false);
     }
     return ignoreAllReferencePoints;
+}
+
+/**
+ * \return Size of reference points.
+ */
+int RSettings::getReferencePointSize() {
+    if (referencePointSize==-1) {
+        referencePointSize = getIntValue("GraphicsView/ReferencePointSize", 10);
+    }
+    return referencePointSize;
+}
+
+/**
+ * \return Shape of reference points.
+ */
+int RSettings::getReferencePointShape() {
+    if (referencePointShape==-1) {
+        referencePointShape = getIntValue("GraphicsView/ReferencePointShape", 0);
+    }
+    return referencePointShape;
 }
 
 bool RSettings::hasDarkGuiBackground() {
@@ -1538,6 +1568,10 @@ void RSettings::resetCache() {
         delete secondaryReferencePointColor;
         secondaryReferencePointColor = NULL;
     }
+    if (tertiaryReferencePointColor!=NULL) {
+        delete tertiaryReferencePointColor;
+        tertiaryReferencePointColor = NULL;
+    }
     snapRange = -1;
     zeroWeightWeight = -1;
     showCrosshair = -1;
@@ -1559,6 +1593,10 @@ void RSettings::resetCache() {
     selectBlockWithAttribute = -1;
     hideAttributeWithBlock = -1;
     importRecomputedDimBlocks = -1;
+    ignoreBlockReferencePoint = -1;
+    ignoreAllReferencePoints = -1;
+    referencePointSize = -1;
+    referencePointShape = -1;
     mouseThreshold = -1;
     themePath = QString();
     cache.clear();

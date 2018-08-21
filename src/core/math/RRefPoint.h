@@ -20,11 +20,12 @@ public:
     enum Flag {
         NoFlags   = 0x000,
         Secondary = 0x001,        /**< Secondary reference point (typically shown with different color) */
-        Center    = 0x002,        /**< Reference point is a center point */
-        Ignore    = 0x004,        /**< Ignore reference point for drag and drop */
-        Start     = 0x008,        /**< Reference point is a start point */
-        End       = 0x010,        /**< Reference point is a start point */
-        Arrow     = 0x020,        /**< Reference point is a dimension arrow */
+        Tertiary  = 0x002,        /**< Tertiary reference point (typically shown with different color) */
+        Center    = 0x004,        /**< Reference point is a center point */
+        Ignore    = 0x008,        /**< Ignore reference point for drag and drop */
+        Start     = 0x010,        /**< Reference point is a start point */
+        End       = 0x020,        /**< Reference point is a start point */
+        Arrow     = 0x040,        /**< Reference point is a dimension arrow */
     };
     Q_DECLARE_FLAGS(Flags, Flag)
 
@@ -52,9 +53,15 @@ public:
     bool isSecondary() const {
         return getFlag(RRefPoint::Secondary);
     }
-
     void setSecondary(bool on) {
         setFlag(RRefPoint::Secondary, on);
+    }
+
+    bool isTertiary() const {
+        return getFlag(RRefPoint::Tertiary);
+    }
+    void setTertiary(bool on) {
+        setFlag(RRefPoint::Tertiary, on);
     }
 
     bool isIgnore() const {
