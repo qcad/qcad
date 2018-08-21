@@ -96,9 +96,13 @@
         <translation>Sekundäre Farbe für Selektion:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Referenzpunkte:</translation>
+        <translation type="vanished">Referenzpunkte:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation>Primäre Referenzpunkte:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -131,7 +135,12 @@
         <translation>Endpunkte:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation>Tertiäre Referenzpunkte:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Fangwerkzeuge</translation>
     </message>
@@ -187,7 +196,7 @@
         <translation type="obsolete">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location line="-697"/>
+        <location line="-724"/>
         <source>Crosshairs:</source>
         <translation>Fadenkreuz:</translation>
     </message>

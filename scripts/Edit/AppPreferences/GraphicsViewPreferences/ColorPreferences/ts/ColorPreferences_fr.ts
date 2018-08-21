@@ -96,14 +96,18 @@ Arrière-plan du dessin :</translatorcomment>
         <translation>Couleur secondaire de sélection :</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Points de référence :</translation>
+        <translation type="vanished">Points de référence :</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation>Points de référence premières :</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation>Points de référence secondaire :</translation>
+        <translation>Points de référence secondaires :</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -131,7 +135,12 @@ Arrière-plan du dessin :</translatorcomment>
         <translation>Points finaux :</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation>Points de référence tertiaires :</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Outils de accrochage</translation>
     </message>
@@ -181,7 +190,7 @@ Arrière-plan du dessin :</translatorcomment>
         <translation type="obsolete">Réticule inactif :</translation>
     </message>
     <message>
-        <location line="-697"/>
+        <location line="-724"/>
         <source>Crosshairs:</source>
         <translation>Réticule :</translation>
     </message>

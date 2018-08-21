@@ -109,14 +109,18 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation>Cor secundária para seleção:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Pontos de referência arrastáveis:</translation>
+        <translation type="vanished">Pontos de referência arrastáveis:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation>Pontos principais de referência:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation>Pontos de referência secundária:</translation>
+        <translation>Pontos de referência secundários:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -144,7 +148,12 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation>Pontos finais:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation>Pontos de referência terciária:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Ferramentas de Salto</translation>
     </message>
@@ -189,7 +198,7 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation type="obsolete">Mira inativos:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: qgis_pt.ts--

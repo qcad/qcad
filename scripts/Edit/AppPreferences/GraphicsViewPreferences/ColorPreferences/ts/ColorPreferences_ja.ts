@@ -82,9 +82,13 @@
         <translation>2番目の選択色:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>ドラッグ可能な基準点:</translation>
+        <translation type="vanished">ドラッグ可能な基準点:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
@@ -117,7 +121,12 @@
         <translation>終了点:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>スナップツール</translation>
     </message>
@@ -161,7 +170,7 @@
         <translation type="obsolete">非アクティブな十字線:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translation>原点:</translation>
     </message>

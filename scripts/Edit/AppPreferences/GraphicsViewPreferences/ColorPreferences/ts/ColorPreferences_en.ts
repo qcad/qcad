@@ -93,8 +93,12 @@
     </message>
     <message>
         <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation>Primary reference points:</translation>
+    </message>
+    <message>
         <source>Draggable reference points:</source>
-        <translation>Draggable reference points:</translation>
+        <translation type="vanished">Draggable reference points:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -127,7 +131,12 @@
         <translation>End points:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation>Tertiary reference points:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Snap Tools</translation>
     </message>

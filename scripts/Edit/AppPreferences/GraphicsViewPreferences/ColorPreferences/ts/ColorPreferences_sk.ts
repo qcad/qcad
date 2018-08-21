@@ -93,8 +93,12 @@
     </message>
     <message>
         <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Draggable reference points:</source>
-        <translation>Referenčné body:</translation>
+        <translation type="vanished">Referenčné body:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -127,7 +131,12 @@
         <translation>Koncové body:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Nástroje prichytávania</translation>
     </message>

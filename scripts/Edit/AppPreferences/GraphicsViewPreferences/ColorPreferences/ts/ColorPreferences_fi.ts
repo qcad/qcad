@@ -82,9 +82,13 @@
         <translation>Toissijainen värivalinta:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Vedettävät vertailupisteet:</translation>
+        <translation type="vanished">Vedettävät vertailupisteet:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
@@ -117,7 +121,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Poimintatyökalut</translation>
     </message>
@@ -157,7 +166,7 @@
         <translation>Suurenna/säädä laatikon reuna:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translation>Nollakohta:</translation>
     </message>

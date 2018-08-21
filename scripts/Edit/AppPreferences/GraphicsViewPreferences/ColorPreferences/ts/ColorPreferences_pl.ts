@@ -93,9 +93,13 @@ Tło okna:</translatorcomment>
         <translation>Drugorzędny kolor zaznaczenia:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Przesuwane punkty odniesienia:</translation>
+        <translation type="vanished">Przesuwane punkty odniesienia:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
@@ -128,7 +132,12 @@ Tło okna:</translatorcomment>
         <translation>Punkty końcowe:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Narzędzia przyciągania</translation>
     </message>
@@ -173,7 +182,7 @@ Tło okna:</translatorcomment>
         <translation type="obsolete">Nieaktywne Krzyżyk:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Początek układu współrzędnych:</translation>

@@ -82,9 +82,13 @@
         <translation>Secundaire selectie kleur:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Versleepbare referentiepunten:</translation>
+        <translation type="vanished">Versleepbare referentiepunten:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation>Primaire referentiepunten:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -117,7 +121,12 @@
         <translation>Eindpunten:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation>Tertiaire referentiepunten:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Snap gereedschappen</translation>
     </message>
@@ -157,7 +166,7 @@
         <translation>Zoom venster rand:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translation>Oorsprong:</translation>
     </message>

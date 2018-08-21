@@ -82,9 +82,13 @@
         <translation>Sekundarna barva izbora:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Premična referenčna točka:</translation>
+        <translation type="vanished">Premična referenčna točka:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
@@ -117,7 +121,12 @@
         <translation>Končne točke:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Orodja lepljenja</translation>
     </message>
@@ -161,7 +170,7 @@
         <translation type="obsolete">Neaktivni kazalni križec:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translation>Izhodišče:</translation>
     </message>

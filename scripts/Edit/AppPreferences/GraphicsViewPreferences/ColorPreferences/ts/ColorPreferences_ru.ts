@@ -82,9 +82,13 @@
         <translation>Вторичный цвет выделения:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Перетаскиваемые точка привязки</translation>
+        <translation type="vanished">Перетаскиваемые точка привязки</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
@@ -117,7 +121,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Инструменты прилипания</translation>
     </message>
@@ -157,7 +166,7 @@
         <translation>Масштаб границы коробки:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translation>Начало координат:</translation>
     </message>

@@ -97,14 +97,18 @@ Visualizzazione grafica</translatorcomment>
         <translation>Colore secondario di selezione:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Punti di riferimento:</translation>
+        <translation type="vanished">Punti di riferimento:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation>Punti di riferimento primari:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation>Punti di riferimento secondario:</translation>
+        <translation>Punti di riferimento secondari:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -132,7 +136,12 @@ Visualizzazione grafica</translatorcomment>
         <translation>Punti finali:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation>Punti di riferimento terziari:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Strumenti snap</translation>
     </message>
@@ -177,7 +186,7 @@ Visualizzazione grafica</translatorcomment>
         <translation type="obsolete">Reticolo inattivo:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--

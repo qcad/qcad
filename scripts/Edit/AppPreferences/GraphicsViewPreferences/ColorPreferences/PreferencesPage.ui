@@ -417,7 +417,7 @@
           </size>
          </property>
          <property name="text">
-          <string>Draggable reference points:</string>
+          <string>Primary reference points:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

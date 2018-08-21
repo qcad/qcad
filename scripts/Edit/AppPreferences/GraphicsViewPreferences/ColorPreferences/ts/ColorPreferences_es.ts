@@ -102,14 +102,18 @@ Ver gráficos</translatorcomment>
         <translation>Color secundaria de selección:</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation>Puntos de referencia:</translation>
+        <translation type="vanished">Puntos de referencia:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation>Puntos de referencia primarios:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation>Puntos de referencia secundaria:</translation>
+        <translation>Puntos de referencia secundarios:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -137,7 +141,12 @@ Ver gráficos</translatorcomment>
         <translation>Puntos finales:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation>Puntos de referencia terciarios:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation>Herramientas de forzar</translation>
     </message>
@@ -182,7 +191,7 @@ Ver gráficos</translatorcomment>
         <translation type="obsolete">Retículo inactivo:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--

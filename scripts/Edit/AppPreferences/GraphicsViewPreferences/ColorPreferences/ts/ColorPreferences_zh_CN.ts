@@ -83,7 +83,7 @@
     </message>
     <message>
         <location line="+36"/>
-        <source>Draggable reference points:</source>
+        <source>Primary reference points:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -117,7 +117,12 @@
         <translation>终点：</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -157,7 +162,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Origin:</source>
         <translation type="unfinished"></translation>
     </message>
