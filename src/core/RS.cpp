@@ -33,25 +33,45 @@
 const double RS::PointTolerance = 1.0e-9;
 const double RS::AngleTolerance = 1.0e-9;
 
-bool RS::compare(const QVariant& v1, const QVariant& v2) {
+bool RS::compare(const QVariant& v1, const QVariant& v2, bool noTolerance) {
     // 20120609: tolerance when comparing doubles (property editor)
     // 20140513: handle basic types since Qt 5 converts double, bool, int to line type
     switch (v1.type()) {
     case QVariant::Double:
-        if (v2.type()==QVariant::Double) {
-            return fabs(v1.toDouble() - v2.toDouble()) < RS::PointTolerance;
+        if (noTolerance) {
+            if (v2.type()==QVariant::Double) {
+                return v1.toDouble() != v2.toDouble();
+            }
+            else if (v2.type()==QVariant::Int) {
+                return v1.toDouble() != (double)v2.toInt();
+            }
         }
-        else if (v2.type()==QVariant::Int) {
-            return fabs(v1.toDouble() - v2.toInt()) < RS::PointTolerance;
+        else {
+            if (v2.type()==QVariant::Double) {
+                return fabs(v1.toDouble() - v2.toDouble()) < RS::PointTolerance;
+            }
+            else if (v2.type()==QVariant::Int) {
+                return fabs(v1.toDouble() - v2.toInt()) < RS::PointTolerance;
+            }
         }
         break;
 
     case QVariant::Int:
-        if (v2.type()==QVariant::Int) {
-            return v1.toInt()==v2.toInt();
+        if (noTolerance) {
+            if (v2.type()==QVariant::Int) {
+                return v1.toInt()==v2.toInt();
+            }
+            else if (v2.type()==QVariant::Double) {
+                return (double)v1.toInt() != v2.toDouble();
+            }
         }
-        else if (v2.type()==QVariant::Double) {
-            return fabs(v1.toInt() - v2.toDouble()) < RS::PointTolerance;
+        else {
+            if (v2.type()==QVariant::Int) {
+                return v1.toInt()==v2.toInt();
+            }
+            else if (v2.type()==QVariant::Double) {
+                return fabs(v1.toInt() - v2.toDouble()) < RS::PointTolerance;
+            }
         }
         break;
 
@@ -107,8 +127,8 @@ bool RS::compare(const QVariant& v1, const QVariant& v2) {
 }
 
 bool RS::compare(const QPair<QVariant, RPropertyAttributes>& p1, const QPair<
-                 QVariant, RPropertyAttributes>& p2) {
-    return compare(p1.first, p2.first);
+                 QVariant, RPropertyAttributes>& p2, bool noTolerance) {
+    return compare(p1.first, p2.first, noTolerance);
 }
 
 /**

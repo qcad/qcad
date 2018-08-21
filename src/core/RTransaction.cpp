@@ -851,7 +851,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
  * Adds the given property change for the given object to this transaction.
  */
 bool RTransaction::addPropertyChange(RObject::Id objectId, const RPropertyChange& propertyChange) {
-    if (!RS::compare(propertyChange.oldValue, propertyChange.newValue)) {
+    if (!RS::compare(propertyChange.oldValue, propertyChange.newValue, true)) {
         //propertyChanges.insert(objectId, propertyChange);
         QList<RPropertyChange> pc = propertyChanges.value(objectId);
         pc.append(propertyChange);

@@ -640,9 +640,10 @@ public:
     };
 
 public:
-    static bool compare(const QVariant& v1, const QVariant& v2);
+    static bool compare(const QVariant& v1, const QVariant& v2, bool noTolerance = false);
     static bool compare(const QPair<QVariant, RPropertyAttributes>& p1,
-                        const QPair<QVariant, RPropertyAttributes>& p2);
+                        const QPair<QVariant, RPropertyAttributes>& p2,
+                        bool noTolerance = false);
     static int getCpuCores();
     static QString getBuildCpuArchitecture();
 
