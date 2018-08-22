@@ -281,20 +281,11 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         }
     }
 
-    if (RPolyline::hasProxy()) {
+    if (RPolyline::hasProxy() && humanReadable) {
         if (propertyTypeId == PropertyOrientation) {
             RPropertyAttributes attr;
-            //if (!noAttributes && humanReadable) {
-                //attr.setChoices(QSet<QString>() << RPolylineEntity::TrClockwise << RPolylineEntity::TrCounterclockwise);
-            //}
             attr.setRedundant(true);
             RS::Orientation ori = data.getOrientation(true);
-//            if (humanReadable) {
-//                QString oriStr = (ori==RS::CCW ? RPolylineEntity::TrCounterclockwise : RPolylineEntity::TrClockwise);
-//                QVariant v;
-//                v.setValue(oriStr);
-//                return qMakePair(v, attr);
-//            }
             QVariant v;
             v.setValue((int)ori);
             return qMakePair(v, attr);
