@@ -177,46 +177,53 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
     bool ret = true;
 
     // append spline as polyline approximation:
-    const RSpline* spl = dynamic_cast<const RSpline*>(&shape);
-    if (spl!=NULL) {
-        double tol = RSettings::getDoubleValue("Explode/SplineTolerance", 0.01);
-        RPolyline pl = spl->approximateWithArcs(tol);
-        return appendShape(pl, prepend);
+    if (shape.getShapeType()==RShape::Spline) {
+        const RSpline* spl = dynamic_cast<const RSpline*>(&shape);
+        if (spl!=NULL) {
+            double tol = RSettings::getDoubleValue("Explode/SplineTolerance", 0.01);
+            RPolyline pl = spl->approximateWithArcs(tol);
+            return appendShape(pl, prepend);
+        }
     }
 
     // append ellipse as polyline approximation:
-    const REllipse* elp = dynamic_cast<const REllipse*>(&shape);
-    if (elp!=NULL) {
-        double seg = RSettings::getDoubleValue("Explode/EllipseSegments", 32);
-        RPolyline pl = elp->approximateWithArcs(seg);
-        return appendShape(pl, prepend);
+    else if (shape.getShapeType()==RShape::Ellipse) {
+        const REllipse* elp = dynamic_cast<const REllipse*>(&shape);
+        if (elp!=NULL) {
+            double seg = RSettings::getDoubleValue("Explode/EllipseSegments", 32);
+            RPolyline pl = elp->approximateWithArcs(seg);
+            return appendShape(pl, prepend);
+        }
     }
 
-    const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
-    if (pl!=NULL) {
-        if (prepend) {
-            for (int i=pl->countSegments()-1; i>=0; --i) {
-                QSharedPointer<RShape> s = pl->getSegmentAt(i);
-                if (s.isNull()) {
-                    continue;
+    // append polyline:
+    else if (shape.getShapeType()==RShape::Polyline) {
+        const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
+        if (pl!=NULL) {
+            if (prepend) {
+                for (int i=pl->countSegments()-1; i>=0; --i) {
+                    QSharedPointer<RShape> s = pl->getSegmentAt(i);
+                    if (s.isNull()) {
+                        continue;
+                    }
+                    ret = prependShape(*s) && ret;
+                    setStartWidthAt(0, pl->getStartWidthAt(i));
+                    setEndWidthAt(0, pl->getEndWidthAt(i));
                 }
-                ret = prependShape(*s) && ret;
-                setStartWidthAt(0, pl->getStartWidthAt(i));
-                setEndWidthAt(0, pl->getEndWidthAt(i));
             }
-        }
-        else {
-            for (int i=0; i<pl->countSegments(); ++i) {
-                QSharedPointer<RShape> s = pl->getSegmentAt(i);
-                if (s.isNull()) {
-                    continue;
+            else {
+                for (int i=0; i<pl->countSegments(); ++i) {
+                    QSharedPointer<RShape> s = pl->getSegmentAt(i);
+                    if (s.isNull()) {
+                        continue;
+                    }
+                    setStartWidthAt(vertices.length()-1, pl->getStartWidthAt(i));
+                    setEndWidthAt(vertices.length()-1, pl->getEndWidthAt(i));
+                    ret = appendShape(*s) && ret;
                 }
-                setStartWidthAt(vertices.length()-1, pl->getStartWidthAt(i));
-                setEndWidthAt(vertices.length()-1, pl->getEndWidthAt(i));
-                ret = appendShape(*s) && ret;
             }
+            return ret;
         }
-        return ret;
     }
 
     double bulge = 0.0;
@@ -1879,82 +1886,18 @@ void RPolyline::print(QDebug dbg) const {
 }
 
 /**
- * TODO: use douglas peuker
+ * TODO: use douglas peuker for polylines with only line segments
+ *
+ * Simplify by attempting to skip nodes within given tolerance.
+ * \return True if nodes have been skipped.
  */
-bool RPolyline::simplify(double angleTolerance) {
-    bool ret = false;
-    RPolyline newPolyline;
-
-    RS::EntityType type = RS::EntityUnknown;
-    double angle = RMAXDOUBLE;
-    double radius = RMAXDOUBLE;
-    RVector center = RVector::invalid;
-
-    for (int i=0; i<countSegments(); i++) {
-        QSharedPointer<RShape> seg = getSegmentAt(i);
-
-        QSharedPointer<RLine> line = seg.dynamicCast<RLine>();
-        if (!line.isNull()) {
-            if (line->getLength()<RS::PointTolerance) {
-                ret = true;
-            }
-            else {
-                double angleDiff = qAbs(RMath::getAngleDifference180(line->getAngle(), angle));
-                if (type==RS::EntityLine && angleDiff<angleTolerance) {
-                    ret = true;
-                }
-                else {
-                    newPolyline.appendVertex(line->getStartPoint());
-                    angle = line->getAngle();
-                    type = RS::EntityLine;
-                }
-            }
-            radius = RMAXDOUBLE;
-            center = RVector::invalid;
-        }
-
-        QSharedPointer<RArc> arc = seg.dynamicCast<RArc>();
-        if (!arc.isNull()) {
-            // simplify consecutive arcs:
-            if (arc->getCenter().equalsFuzzy(center, 0.001) && RMath::fuzzyCompare(arc->getRadius(), radius, 0.001)) {
-                double a1 = arc->getStartAngle();
-                arc->setStartAngle(arc->getCenter().getAngleTo(newPolyline.getEndPoint()));
-                if (fabs(arc->getSweep())<=M_PI) {
-                    newPolyline.removeLastVertex();
-                }
-                else {
-                    // Reverse joining of consecutive arcs (arc would cover more than half a circle):
-                    // We could join arcs up to almost full circle but precision will suffer and full
-                    // circles represented as polylines might be oddly represented by a 3/4 arc and a
-                    // 1/4 arc instead of two half arcs.
-                    arc->setStartAngle(a1);
-                }
-            }
-            newPolyline.appendVertex(arc->getStartPoint(), arc->getBulge());
-            angle = RMAXDOUBLE;
-            radius = arc->getRadius();
-            center = arc->getCenter();
-        }
-    }
-
-    if (isClosed()) {
-        newPolyline.setClosed(true);
+bool RPolyline::simplify(double tolerance) {
+    if (RPolyline::hasProxy()) {
+        return RPolyline::getPolylineProxy()->simplify(*this, tolerance);
     }
     else {
-        newPolyline.appendVertex(getEndPoint());
+        return false;
     }
-
-    vertices = newPolyline.vertices;
-    bulges = newPolyline.bulges;
-    closed = newPolyline.closed;
-    startWidths = newPolyline.startWidths;
-    endWidths = newPolyline.endWidths;
-
-    Q_ASSERT(vertices.length()==bulges.length());
-    Q_ASSERT(vertices.length()==startWidths.length());
-    Q_ASSERT(vertices.length()==endWidths.length());
-
-    return ret;
 }
 
 /**
