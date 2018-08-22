@@ -161,6 +161,7 @@ public:
             bool limited = true, double strictRange = RMAXDOUBLE) const = 0;
 
     virtual double getDistanceTo(const RVector& point, bool limited = true, double strictRange = RMAXDOUBLE) const;
+    virtual double getMaxDistanceTo(const QList<RVector>& points, bool limited = true, double strictRange = RMAXDOUBLE) const;
     virtual bool isOnShape(const RVector& point,
                            bool limited = true,
                            double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const;

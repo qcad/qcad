@@ -53,6 +53,18 @@ double RShape::getDistanceTo(const RVector& point, bool limited, double strictRa
 }
 
 /**
+ * \return Maximum shortest distance from this shape to any of the given points.
+ */
+double RShape::getMaxDistanceTo(const QList<RVector>& points, bool limited, double strictRange) const {
+    double ret = 0.0;
+    for (int i=0; i<points.length(); i++) {
+        double d = getDistanceTo(points[i], limited, strictRange);
+        ret = qMax(ret, d);
+    }
+    return ret;
+}
+
+/**
  * \return true if the given point is on this shape.
  */
 bool RShape::isOnShape(const RVector& point, bool limited, double tolerance) const {
