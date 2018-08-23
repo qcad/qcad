@@ -2599,6 +2599,35 @@ void RDocument::copyVariablesFrom(const RDocument& other) {
     delete transaction;
 }
 
+/**
+ * Normalizes the draw order of all entities,
+ * avoiding duplicate orders or gaps, starting with 0.
+ */
+void RDocument::normalizeDrawOrder(bool useTransactionGroup) {
+    RTransaction* transaction = new RTransaction(storage, "Normalize draw order", false);
+
+    //RAddObjectsOperation* op = new RAddObjectsOperation();
+    QSet<REntity::Id> idsSet = queryAllEntities();
+    QList<REntity::Id> ids = storage.orderBackToFront(idsSet);
+    for (int i=0; i<ids.length(); i++) {
+        RObject::Id id = ids[i];
+        QSharedPointer<REntity> e = queryEntity(id);
+        if (!e.isNull()) {
+            e->setDrawOrder(i);
+        }
+        //op->addObject(e);
+        transaction->addObject(e);
+    }
+    if (useTransactionGroup) {
+        transaction->setGroup(getTransactionGroup());
+//        op->setTransactionGroup(document.getTransactionGroup());
+    }
+    //applyOperation(op);
+
+    transaction->end();
+    delete transaction;
+}
+
 RDocument& RDocument::getClipboard() {
     if (clipboard==NULL) {
         clipboard = new RDocument(

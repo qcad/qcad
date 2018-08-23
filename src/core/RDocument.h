@@ -403,6 +403,8 @@ public:
 
     void copyVariablesFrom(const RDocument& other);
 
+    void normalizeDrawOrder(bool useTransactionGroup=false);
+
     /*
     void copyToDocument(const RVector& reference, RDocument& other,
         bool selectionOnly, bool clear, RTransaction& transaction);
