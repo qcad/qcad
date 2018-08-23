@@ -243,6 +243,7 @@ public:
     QList<RVector> getConcaveVertices() const;
 
     QList<RPolyline> splitAtDiscontinuities(double tolerance) const;
+    QList<RPolyline> splitAtSegmentTypeChange() const;
 
     double getBaseAngle() const;
     double getWidth() const;

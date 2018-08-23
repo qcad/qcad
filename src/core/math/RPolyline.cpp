@@ -2046,6 +2046,16 @@ QList<RPolyline> RPolyline::splitAtDiscontinuities(double tolerance) const {
     return QList<RPolyline>() << *this;
 }
 
+/**
+ * Splits the polyline into polylines with exclusively line or arc segments.
+ */
+QList<RPolyline> RPolyline::splitAtSegmentTypeChange() const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->splitAtSegmentTypeChange(*this);
+    }
+    return QList<RPolyline>() << *this;
+}
+
 double RPolyline::getBaseAngle() const {
     if (polylineProxy!=NULL) {
         return polylineProxy->getBaseAngle(*this);

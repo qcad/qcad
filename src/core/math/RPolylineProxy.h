@@ -68,6 +68,7 @@ public:
     virtual RVector insertVertexAtDistance(RPolyline& polyline, double dist) = 0;
 
     virtual bool simplify(RPolyline& polyline, double tolerance) = 0;
+    virtual QList<RPolyline> splitAtSegmentTypeChange(const RPolyline& polyline) = 0;
 };
 
 #endif
