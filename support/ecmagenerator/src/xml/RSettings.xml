@@ -340,6 +340,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false" />
     </method>
+    <method name="getTertiaryReferencePointColor"
+    cppName="getTertiaryReferencePointColor" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
     <method name="getHighResolutionGraphicsView"
     cppName="getHighResolutionGraphicsView" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -856,6 +861,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getIgnoreAllReferencePoints" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getReferencePointSize"
+    cppName="getReferencePointSize" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getReferencePointShape"
+    cppName="getReferencePointShape" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
     </method>
     <method name="hasDarkGuiBackground"
     cppName="hasDarkGuiBackground" specifier="public"

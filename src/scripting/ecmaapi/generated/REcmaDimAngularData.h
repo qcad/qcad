@@ -83,18 +83,6 @@
         moveReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        move
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        rotate
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        scale
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        mirror
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

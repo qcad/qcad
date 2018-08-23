@@ -190,6 +190,9 @@
         getSecondaryReferencePointColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTertiaryReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHighResolutionGraphicsView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -443,6 +446,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getIgnoreAllReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getReferencePointSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getReferencePointShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasDarkGuiBackground

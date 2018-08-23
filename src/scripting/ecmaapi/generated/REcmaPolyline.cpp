@@ -320,6 +320,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, splitAtDiscontinuities, "splitAtDiscontinuities");
             
+            REcmaHelper::registerFunction(&engine, proto, splitAtSegmentTypeChange, "splitAtSegmentTypeChange");
+            
             REcmaHelper::registerFunction(&engine, proto, getBaseAngle, "getBaseAngle");
             
             REcmaHelper::registerFunction(&engine, proto, getWidth, "getWidth");
@@ -9909,6 +9911,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::splitAtDiscontinuities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::splitAtSegmentTypeChange
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::splitAtSegmentTypeChange", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::splitAtSegmentTypeChange";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("splitAtSegmentTypeChange", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPolyline >'
+    QList < RPolyline > cppResult =
+        
+               self->splitAtSegmentTypeChange();
+        // return type: QList < RPolyline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.splitAtSegmentTypeChange().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::splitAtSegmentTypeChange", context, engine);
             return result;
         }
          QScriptValue

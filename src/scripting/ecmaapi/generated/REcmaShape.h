@@ -124,6 +124,9 @@
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMaxDistanceTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isOnShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

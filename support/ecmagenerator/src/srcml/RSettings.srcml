@@ -125,6 +125,7 @@
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getStartReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getEndReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RColor</name></type> <name>getSecondaryReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getTertiaryReferencePointColor</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getHighResolutionGraphicsView</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getAutoScaleGrid</name><parameter_list>()</parameter_list>;</function_decl>
@@ -273,6 +274,8 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getImportRecomputedDimBlocks</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getIgnoreBlockReferencePoint</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getIgnoreAllReferencePoints</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getReferencePointSize</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getReferencePointShape</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasDarkGuiBackground</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasCustomStyleSheet</name><parameter_list>()</parameter_list>;</function_decl>
@@ -302,6 +305,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>startReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>endReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>secondaryReferencePointColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>tertiaryReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>darkGuiBackground</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>snapRange</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>pickRange</name></decl>;</decl_stmt>
@@ -329,6 +333,8 @@
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>importRecomputedDimBlocks</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>ignoreBlockReferencePoint</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>ignoreAllReferencePoints</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>referencePointSize</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>referencePointShape</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QStringList</name></type> <name>recentFiles</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QLocale</name>*</type> <name>numberLocale</name></decl>;</decl_stmt>
 

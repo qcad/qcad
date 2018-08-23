@@ -415,6 +415,9 @@
         splitAtDiscontinuities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        splitAtSegmentTypeChange
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBaseAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

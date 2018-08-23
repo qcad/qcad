@@ -153,6 +153,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getSecondaryReferencePointColor, "getSecondaryReferencePointColor");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getTertiaryReferencePointColor, "getTertiaryReferencePointColor");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getHighResolutionGraphicsView, "getHighResolutionGraphicsView");
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleGrid, "getAutoScaleGrid");
@@ -322,6 +324,10 @@
             REcmaHelper::registerFunction(&engine, &ctor, getIgnoreBlockReferencePoint, "getIgnoreBlockReferencePoint");
             
             REcmaHelper::registerFunction(&engine, &ctor, getIgnoreAllReferencePoints, "getIgnoreAllReferencePoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getReferencePointSize, "getReferencePointSize");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getReferencePointShape, "getReferencePointShape");
             
             REcmaHelper::registerFunction(&engine, &ctor, hasDarkGuiBackground, "hasDarkGuiBackground");
             
@@ -3136,6 +3142,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getSecondaryReferencePointColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getTertiaryReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getTertiaryReferencePointColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getTertiaryReferencePointColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getTertiaryReferencePointColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getTertiaryReferencePointColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getTertiaryReferencePointColor", context, engine);
             return result;
         }
          QScriptValue
@@ -6930,6 +6975,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getIgnoreAllReferencePoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getReferencePointSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getReferencePointSize", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getReferencePointSize";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getReferencePointSize();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getReferencePointSize().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getReferencePointSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getReferencePointShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getReferencePointShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getReferencePointShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getReferencePointShape();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getReferencePointShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getReferencePointShape", context, engine);
             return result;
         }
          QScriptValue

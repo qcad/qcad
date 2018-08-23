@@ -72,6 +72,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setSecondary, "setSecondary");
             
+            REcmaHelper::registerFunction(&engine, proto, isTertiary, "isTertiary");
+            
+            REcmaHelper::registerFunction(&engine, proto, setTertiary, "setTertiary");
+            
             REcmaHelper::registerFunction(&engine, proto, isIgnore, "isIgnore");
             
             REcmaHelper::registerFunction(&engine, proto, setIgnore, "setIgnore");
@@ -132,6 +136,11 @@
 
     ctor.setProperty("Secondary",
     QScriptValue(RRefPoint::Secondary),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Tertiary",
+    QScriptValue(RRefPoint::Tertiary),
     QScriptValue::ReadOnly);
 
 
@@ -842,6 +851,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRefPoint::setSecondary", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::isTertiary
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::isTertiary", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::isTertiary";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("isTertiary", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isTertiary();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.isTertiary().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::isTertiary", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::setTertiary
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::setTertiary", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::setTertiary";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("setTertiary", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setTertiary(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.setTertiary().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::setTertiary", context, engine);
             return result;
         }
          QScriptValue

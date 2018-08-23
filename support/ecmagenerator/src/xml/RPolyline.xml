@@ -855,8 +855,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="simplify" cppName="simplify" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
-        <arg type="double" typeName="double" name="angleTolerance"
-        hasDefault="true" default="RS :: AngleTolerance"
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
         isConst="false" />
       </variant>
     </method>
@@ -958,6 +958,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="tolerance"
         isConst="false" />
       </variant>
+    </method>
+    <method name="splitAtSegmentTypeChange"
+    cppName="splitAtSegmentTypeChange" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPolyline &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getBaseAngle" cppName="getBaseAngle"
     specifier="public" isStatic="false" isVirtual="false"

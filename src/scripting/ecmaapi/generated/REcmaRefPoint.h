@@ -60,6 +60,12 @@
         setSecondary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isTertiary
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setTertiary
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isIgnore
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

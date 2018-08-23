@@ -2251,6 +2251,84 @@
         
     
     if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNumber() || 
+            context->argument(0).isString() || 
+            context->argument(0).isBool() || 
+            context->argument(0).isArray() || 
+            context->argument(0).isNull() || 
+            context->argument(0).isUndefined()
+        ) /* type: QVariant */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNumber() || 
+            context->argument(1).isString() || 
+            context->argument(1).isBool() || 
+            context->argument(1).isArray() || 
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
+        ) /* type: QVariant */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable or pointer
+                    QVariant
+                    a0 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a1 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RS::
+       compare(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
     2 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
@@ -2306,6 +2384,84 @@
        compare(a0
         ,
     a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPair < QVariant , RPropertyAttributes > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QPair < QVariant , RPropertyAttributes > */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPair < QVariant , RPropertyAttributes >*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPair < QVariant , RPropertyAttributes >*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RS: Argument 0 is not of type QPair < QVariant , RPropertyAttributes >*.",
+                               context);                    
+                    }
+                    QPair < QVariant , RPropertyAttributes >& a0 = *ap0;
+                
+                    // argument is reference
+                    QPair < QVariant , RPropertyAttributes >*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QPair < QVariant , RPropertyAttributes >*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RS: Argument 1 is not of type QPair < QVariant , RPropertyAttributes >*.",
+                               context);                    
+                    }
+                    QPair < QVariant , RPropertyAttributes >& a1 = *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RS::
+       compare(a0
+        ,
+    a1
+        ,
+    a2);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);

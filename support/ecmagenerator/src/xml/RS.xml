@@ -425,6 +425,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="QVariant &amp;" typeName="QVariant" name="v2"
         isConst="true" />
+        <arg type="bool" typeName="bool" name="noTolerance"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="bool" isPureVirtual="false">
         <arg type="QPair &lt; QVariant , RPropertyAttributes &gt; &amp;"
@@ -433,6 +435,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QPair &lt; QVariant , RPropertyAttributes &gt; &amp;"
         typeName="QPair &lt; QVariant , RPropertyAttributes &gt;"
         name="p2" isConst="true" />
+        <arg type="bool" typeName="bool" name="noTolerance"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getCpuCores" cppName="getCpuCores"
