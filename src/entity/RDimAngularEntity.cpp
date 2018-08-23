@@ -39,6 +39,10 @@ RPropertyTypeId RDimAngularEntity::PropertyText;
 RPropertyTypeId RDimAngularEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimAngularEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimAngularEntity::PropertyMeasuredValue;
+
+RPropertyTypeId RDimAngularEntity::PropertyDimScale;
+RPropertyTypeId RDimAngularEntity::PropertyDimBlockName;
+RPropertyTypeId RDimAngularEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimAngularEntity::PropertyFontName;
 RPropertyTypeId RDimAngularEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimAngularEntity::PropertyArrow2Flipped;
