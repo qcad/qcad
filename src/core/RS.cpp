@@ -33,6 +33,10 @@
 const double RS::PointTolerance = 1.0e-9;
 const double RS::AngleTolerance = 1.0e-9;
 
+/**
+ * \return True if the two values are considered to be equal.
+ * \param noTolerance True strict comparision of doubles.
+ */
 bool RS::compare(const QVariant& v1, const QVariant& v2, bool noTolerance) {
     // 20120609: tolerance when comparing doubles (property editor)
     // 20140513: handle basic types since Qt 5 converts double, bool, int to line type
@@ -40,10 +44,10 @@ bool RS::compare(const QVariant& v1, const QVariant& v2, bool noTolerance) {
     case QVariant::Double:
         if (noTolerance) {
             if (v2.type()==QVariant::Double) {
-                return v1.toDouble() != v2.toDouble();
+                return v1.toDouble() == v2.toDouble();
             }
             else if (v2.type()==QVariant::Int) {
-                return v1.toDouble() != (double)v2.toInt();
+                return v1.toDouble() == (double)v2.toInt();
             }
         }
         else {
@@ -62,7 +66,7 @@ bool RS::compare(const QVariant& v1, const QVariant& v2, bool noTolerance) {
                 return v1.toInt()==v2.toInt();
             }
             else if (v2.type()==QVariant::Double) {
-                return (double)v1.toInt() != v2.toDouble();
+                return (double)v1.toInt() == v2.toDouble();
             }
         }
         else {
