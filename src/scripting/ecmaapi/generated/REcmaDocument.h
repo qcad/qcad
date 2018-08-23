@@ -594,6 +594,9 @@
         copyVariablesFrom
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        normalizeDrawOrder
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClipboard
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
