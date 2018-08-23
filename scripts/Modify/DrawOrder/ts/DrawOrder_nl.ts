@@ -2,15 +2,15 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="nl_NL">
 <context>
-    <name>DisplayOrder</name>
+    <name>DrawOrder</name>
     <message>
-        <location filename="../DisplayOrder.js" line="+92"/>
-        <source>&amp;Display Order</source>
+        <location filename="../DrawOrder.js" line="+92"/>
+        <source>&amp;Draw Order</source>
         <translation>&amp;Volgorde</translation>
     </message>
     <message>
         <location line="+12"/>
-        <source>Display Order</source>
+        <source>Draw Order</source>
         <translation>Volgorde</translation>
     </message>
 </context>

@@ -20,54 +20,54 @@
 include("scripts/Modify/Modify.js");
 
 /**
- * \defgroup ecma_projection Display order Tools
+ * \defgroup ecma_projection Draw order Tools
  * \ingroup ecma_modify
  *
  * \brief This module contains ECMAScript implementations of drawing order tools.
  */
 
 /**
- * \class DisplayOrder
- * \brief Base class for all display order tools.
+ * \class DrawOrder
+ * \brief Base class for all draw order tools.
  * \ingroup ecma_projection
  */
-function DisplayOrder(guiAction) {
+function DrawOrder(guiAction) {
     Modify.call(this, guiAction);
 }
 
-DisplayOrder.prototype = new Modify();
-DisplayOrder.includeBasePath = includeBasePath;
+DrawOrder.prototype = new Modify();
+DrawOrder.includeBasePath = includeBasePath;
 
-DisplayOrder.getMenu = function() {
+DrawOrder.getMenu = function() {
     var menu = EAction.getSubMenu(
         Modify.getMenu(),
         13600, 100,
-        DisplayOrder.getTitle(),
-        "ModifyDisplayOrderMenu"
-        //DisplayOrder.includeBasePath + "/DisplayOrder.svg"
+        DrawOrder.getTitle(),
+        "ModifyDrawOrderMenu"
+        //DrawOrder.includeBasePath + "/DrawOrder.svg"
     );
-    menu.setProperty("scriptFile", DisplayOrder.includeBasePath + "/DisplayOrder.js");
+    menu.setProperty("scriptFile", DrawOrder.includeBasePath + "/DrawOrder.js");
     return menu;
 };
 
 /*
-DisplayOrder.getToolBar = function() {
-    var tb = EAction.getToolBar(DisplayOrder.getTitle(), "DisplayOrderToolBar");
+DrawOrder.getToolBar = function() {
+    var tb = EAction.getToolBar(DrawOrder.getTitle(), "DrawOrderToolBar");
     tb.visible = false;
     return tb;
 };
 */
 
 /*
-DisplayOrder.getCadToolBarPanel = function() {
+DrawOrder.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "DisplayOrderToolsPanelAction";
+    var actionName = "DrawOrderToolsPanelAction";
     if (!isNull(mtb) && isNull(mtb.findChild(actionName))) {
-        var action = new RGuiAction(qsTr("DisplayOrder Tools"), mtb);
-        action.setScriptFile(DisplayOrder.includeBasePath + "/DisplayOrder.js");
+        var action = new RGuiAction(qsTr("DrawOrder Tools"), mtb);
+        action.setScriptFile(DrawOrder.includeBasePath + "/DrawOrder.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
-        action.setIcon(DisplayOrder.includeBasePath + "/DisplayOrder.svg");
+        action.setIcon(DrawOrder.includeBasePath + "/DrawOrder.svg");
         action.setStatusTip(qsTr("Show projection tools"));
         action.setDefaultShortcut(new QKeySequence("w,j"));
         action.setNoState();
@@ -77,35 +77,35 @@ DisplayOrder.getCadToolBarPanel = function() {
         action.setWidgetNames(["MainToolsPanel"]);
     }
 
-    var tb = EAction.getCadToolBarPanel(DisplayOrder.getTitle(), "DisplayOrderToolsPanel", true);
+    var tb = EAction.getCadToolBarPanel(DrawOrder.getTitle(), "DrawOrderToolsPanel", true);
     return tb;
 };
 */
 
 /*
-DisplayOrder.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(DisplayOrder.getTitle(), "DisplayOrderMatrixPanel", 3500);
+DrawOrder.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(DrawOrder.getTitle(), "DrawOrderMatrixPanel", 3500);
 };
 */
 
-DisplayOrder.getTitle = function() {
-    return qsTr("&Display Order");
+DrawOrder.getTitle = function() {
+    return qsTr("&Draw Order");
 };
 
-DisplayOrder.prototype.getTitle = function() {
-    return DisplayOrder.getTitle();
+DrawOrder.prototype.getTitle = function() {
+    return DrawOrder.getTitle();
 };
 
-DisplayOrder.init = function() {
-    DisplayOrder.getMenu();
+DrawOrder.init = function() {
+    DrawOrder.getMenu();
 
     // make sure there's an action:
     var appWin = EAction.getMainWindow();
-    var action = new RGuiAction(qsTr("Display Order"), appWin);
-    action.setScriptFile(DisplayOrder.includeBasePath + "/DisplayOrder.js");
+    var action = new RGuiAction(qsTr("Draw Order"), appWin);
+    action.setScriptFile(DrawOrder.includeBasePath + "/DrawOrder.js");
     action.setWidgetNames([]);
 
-    //DisplayOrder.getToolBar();
-    //DisplayOrder.getCadToolBarPanel();
-    //DisplayOrder.getToolMatrixPanel();
+    //DrawOrder.getToolBar();
+    //DrawOrder.getCadToolBarPanel();
+    //DrawOrder.getToolMatrixPanel();
 };

@@ -6,7 +6,7 @@ SUBDIRS = \
     BreakOutGap \
     BreakOutManual \
     Divide \
-    DisplayOrder \
+    DrawOrder \
     EditHatch \
     EditText \
     Explode \
