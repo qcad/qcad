@@ -1,4 +1,4 @@
-NAME = DisplayOrder
+NAME = DrawOrder
 TSDIR = .
 include(../../../translations.pri)
-SOURCES = ../DisplayOrder.js
+SOURCES = ../DrawOrder.js
