@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Przesuń-zoom</translatorcomment>
-        <translation>&amp;Przesuń przybliżenie</translation>
+        <translation>P&amp;rzesuń przybliżenie</translation>
     </message>
 </context>
 </TS>

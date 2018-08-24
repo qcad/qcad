@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation>Wklej</translation>
+        <translation>Wklejanie</translation>
     </message>
     <message>
         <location line="+40"/>

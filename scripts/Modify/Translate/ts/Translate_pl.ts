@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation>Przenieś / skopiuj</translation>
+        <translation>Przenoszenie / kopiowanie</translation>
     </message>
     <message>
         <location line="+27"/>

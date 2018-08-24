@@ -39,33 +39,33 @@ Pasek do nawigacji
         <translation>Kółko myszy / przeciągnięcie dwoma palcami:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+7"/>
+        <source>Middle mouse button zoom factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Włączenie gestu przesuwania</translation>
     </message>
     <message>
-        <location line="-10"/>
-        <source>Reverse mouse wheel direction for zoom</source>
-        <translation>Odwrócenie kierunku kółka myszy dla przybliżania</translation>
-    </message>
-    <message>
-        <location line="-7"/>
-        <source>Middle mouse button zoom factor:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+34"/>
-        <source>Mouse wheel zoom factor:</source>
-        <translation>Współczynnik przybliżania kółka myszy:</translation>
-    </message>
-    <message>
-        <location line="+207"/>
+        <location line="+224"/>
         <source>Panning threshold (px):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-217"/>
+        <location line="-234"/>
+        <source>Reverse mouse wheel direction for zoom</source>
+        <translation>Odwrócenie kierunku kółka myszy dla przybliżania</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Mouse wheel zoom factor:</source>
+        <translation>Współczynnik przybliżania kółka myszy:</translation>
+    </message>
+    <message>
+        <location line="-10"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Ograniczenie przybliżania i przewijania w celu zapobiegania przepełnienia</translation>
     </message>

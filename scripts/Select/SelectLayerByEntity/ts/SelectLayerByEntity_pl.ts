@@ -94,7 +94,7 @@
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>Zaznacz &amp;warstwę</translation>
+        <translation>Zaznacz w&amp;arstwę</translation>
     </message>
     <message>
         <location line="+4"/>

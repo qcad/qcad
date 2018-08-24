@@ -119,7 +119,7 @@ Skala:</translatorcomment>
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Zakreskowanie &amp;zaznaczenia</translation>
+        <translation>Zakreskuj &amp;zaznaczenie</translation>
     </message>
     <message>
         <location line="+5"/>
