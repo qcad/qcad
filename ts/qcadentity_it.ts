@@ -76,7 +76,7 @@ Altezza Testo:</translatorcomment>
         <location line="+4"/>
         <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+105"/>
         <location line="+16"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+97"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+107"/>
