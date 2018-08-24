@@ -70,8 +70,10 @@ function getIntArgument(args, shortFlag, longFlag, def) {
         if (ret===undefined) {
             return def;
         }
+        return RSettings.getIntArgument(args, shortFlag, longFlag, -1);
     }
-    return RSettings.getIntArgument(args, shortFlag, longFlag, -1);
+
+    return RSettings.getIntArgument(args, shortFlag, longFlag, def);
 }
 
 function getIntListArgument(args, shortFlag, longFlag, def) {
@@ -130,9 +132,11 @@ function getFloatArgument(args, shortFlag, longFlag, def) {
         if (ret===undefined) {
             return def;
         }
+
+        return RSettings.getFloatArgument(args, shortFlag, longFlag);
     }
 
-    return RSettings.getFloatArgument(args, shortFlag, longFlag);
+    return RSettings.getFloatArgument(args, shortFlag, longFlag, def);
 }
 
 function getColorArgument(args, shortFlag, longFlag, def) {
