@@ -97,6 +97,8 @@ bool RDimArcLengthData::moveReferencePoint(const RVector& referencePoint,
 bool RDimArcLengthData::move(const RVector& offset) {
     RDimAngularData::move(offset);
     center.move(offset);
+    extensionLine1End.move(offset);
+    extensionLine2End.move(offset);
     update();
     return true;
 }
@@ -104,6 +106,8 @@ bool RDimArcLengthData::move(const RVector& offset) {
 bool RDimArcLengthData::rotate(double rotation, const RVector& center) {
     RDimAngularData::rotate(rotation, center);
     this->center.rotate(rotation, center);
+    extensionLine1End.rotate(rotation, center);
+    extensionLine2End.rotate(rotation, center);
     update();
     return true;
 }
@@ -111,6 +115,8 @@ bool RDimArcLengthData::rotate(double rotation, const RVector& center) {
 bool RDimArcLengthData::scale(const RVector& scaleFactors, const RVector& center) {
     RDimAngularData::scale(scaleFactors, center);
     this->center.scale(scaleFactors, center);
+    extensionLine1End.scale(scaleFactors, center);
+    extensionLine2End.scale(scaleFactors, center);
     update();
     return true;
 }
@@ -118,6 +124,8 @@ bool RDimArcLengthData::scale(const RVector& scaleFactors, const RVector& center
 bool RDimArcLengthData::mirror(const RLine& axis) {
     RDimAngularData::mirror(axis);
     this->center.mirror(axis);
+    extensionLine1End.mirror(axis);
+    extensionLine2End.mirror(axis);
     update();
     return true;
 }
