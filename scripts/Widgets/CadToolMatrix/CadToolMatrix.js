@@ -423,7 +423,6 @@ CadToolMatrix.getPreferencesCategory = function() {
 };
 
 CadToolMatrix.applyPreferences = function(doc) {
-    qDebug("CadToolMatrix.applyPreferences");
     if (!isNull(doc)) {
         // document settings: nothing to do
         return;
