@@ -1340,6 +1340,21 @@ Array.prototype.remove = function(val, compareFunction) {
 };
 
 /**
+ * Removes all matches of the given value from the array.
+ * \param The value(s) to remove.
+ */
+Array.prototype.removeAll = function() {
+    var what, a = arguments, l = a.length, ax;
+    while (l && this.length) {
+        what = a[--l];
+        while ((ax = this.indexOf(what)) !== -1) {
+            this.splice(ax, 1);
+        }
+    }
+    return this;
+};
+
+/**
  * Remove the first case insensitive match of the given string value from the array.
  * \param val The value to remove.
  */
