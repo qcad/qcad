@@ -3643,11 +3643,13 @@
     <file alias="scripts/Edit/Esc/Tests/EActionTest00.js">../../scripts/Edit/Esc/Tests/EActionTest00.js</file>
     <file alias="scripts/Edit/Esc/Tests/EActionTest01.js">../../scripts/Edit/Esc/Tests/EActionTest01.js</file>
     <file alias="scripts/Edit/Esc/Tests/EActionTest02.js">../../scripts/Edit/Esc/Tests/EActionTest02.js</file>
+    <file alias="scripts/Edit/Esc/Tests/EActionTest03.js">../../scripts/Edit/Esc/Tests/EActionTest03.js</file>
     <file alias="scripts/Edit/Esc/Tests/data/entities.dxf">../../scripts/Edit/Esc/Tests/data/entities.dxf</file>
     <file alias="scripts/Edit/Esc/Tests/data/qcad_icon.png">../../scripts/Edit/Esc/Tests/data/qcad_icon.png</file>
     <file alias="scripts/Edit/Esc/Tests/required/EActionTest00_000.dxf">../../scripts/Edit/Esc/Tests/required/EActionTest00_000.dxf</file>
     <file alias="scripts/Edit/Esc/Tests/required/EActionTest01_000.dxf">../../scripts/Edit/Esc/Tests/required/EActionTest01_000.dxf</file>
     <file alias="scripts/Edit/Esc/Tests/required/EActionTest02_000.dxf">../../scripts/Edit/Esc/Tests/required/EActionTest02_000.dxf</file>
+    <file alias="scripts/Edit/Esc/Tests/required/EActionTest03_000.dxf">../../scripts/Edit/Esc/Tests/required/EActionTest03_000.dxf</file>
     <file alias="scripts/Edit/Esc/ts/Esc_cs.qm">../../scripts/Edit/Esc/ts/Esc_cs.qm</file>
     <file alias="scripts/Edit/Esc/ts/Esc_de.qm">../../scripts/Edit/Esc/ts/Esc_de.qm</file>
     <file alias="scripts/Edit/Esc/ts/Esc_en.qm">../../scripts/Edit/Esc/ts/Esc_en.qm</file>
