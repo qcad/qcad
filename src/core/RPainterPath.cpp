@@ -98,22 +98,24 @@ void RPainterPath::addLine(const RLine& line) {
 void RPainterPath::addArc(const RArc& arc) {
     //moveToOrNop(arc.getStartPoint());
 
-    // more precise, but not desirable for SVG export:
-//    QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
-//    for (int i=0; i<splines.length(); i++) {
-//        RSpline spline = splines[i];
-//        cubicTo(spline.getControlPointAt(1), spline.getControlPointAt(2), spline.getControlPointAt(3));
-//    }
+        // more precise, but not desirable for SVG export:
+        QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
+        for (int i=0; i<splines.length(); i++) {
+            RSpline spline = splines[i];
+            cubicTo(spline.getControlPointAt(1), spline.getControlPointAt(2), spline.getControlPointAt(3));
+        }
 
-    // NOTE: very imprecise for short arcs with large radii:
-    RCircle c(arc.getCenter(), arc.getRadius());
-    RBox bb = c.getBoundingBox();
-    arcTo(bb.getMinimum().x,
-          bb.getMinimum().y,
-          bb.getSize().x,
-          bb.getSize().y,
-          -RMath::rad2deg(arc.getStartAngle()),
-          -RMath::rad2deg(arc.getSweep()));
+//        // NOTE: very imprecise for short arcs with large radii:
+//        // causes problems with arcs with large radii
+//        // in SVG exports (20180905):
+//        RCircle c(arc.getCenter(), arc.getRadius());
+//        RBox bb = c.getBoundingBox();
+//        arcTo(bb.getMinimum().x,
+//              bb.getMinimum().y,
+//              bb.getSize().x,
+//              bb.getSize().y,
+//              -RMath::rad2deg(arc.getStartAngle()),
+//              -RMath::rad2deg(arc.getSweep()));
 }
 
 void RPainterPath::addPolyline(const RPolyline& pl) {
