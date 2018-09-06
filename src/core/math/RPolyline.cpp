@@ -260,7 +260,7 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
         gap = vertices.last().getDistanceTo(connectionPoint);
     }
 
-    if (!RMath::fuzzyCompare(gap, 0.0, 1.0e-4)) {
+    if (!RMath::fuzzyCompare(gap, 0.0, 1.0e-3)) {
         qWarning() << "RPolyline::appendShape: "
                    << "arc or line not connected to polyline at " << connectionPoint << ":"
                    << "\nshape:" << shape
