@@ -823,7 +823,10 @@ bool RExporter::isEntitySelected() {
     }
 }
 
-
+bool RExporter::isPatternContinuous(const RLinetypePattern& p) {
+    return !p.isValid() || p.getNumDashes()<=1 ||
+           draftMode || getScreenBasedLinetypes() || twoColorSelectedMode;
+}
 
 /**
  * This is called for entities for which an export was requested
@@ -1390,11 +1393,7 @@ void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
 void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
-    bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
-        continuous = true;
-    }
-
+    bool continuous = getEntity()==NULL || isPatternContinuous(p);
     if (!continuous) {
         p.scale(getLineTypePatternScale(p));
 
@@ -1441,10 +1440,7 @@ void RExporter::exportSplineSegment(const RSpline& spline) {
 void RExporter::exportSpline(const RSpline& spline, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
-    bool continuous = false;
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
-        continuous = true;
-    }
+    bool continuous = getEntity()==NULL || isPatternContinuous(p);
 
     p.scale(getLineTypePatternScale(p));
     double patternLength = p.getPatternLength();
@@ -1512,7 +1508,7 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     QList<QSharedPointer<RShape> > sub = explodable.getExploded();
 
     RLinetypePattern p = getLinetypePattern();
-    if (!p.isValid() || p.getNumDashes() <= 1 || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
+    if (isPatternContinuous(p)) {
         for (int i=0; i<sub.length(); i++) {
             QSharedPointer<RLine> lineP = sub[i].dynamicCast<RLine>();
             if (!lineP.isNull()) {

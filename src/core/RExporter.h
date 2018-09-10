@@ -134,6 +134,7 @@ public:
     virtual const REntity* getEntity() const;
 
     virtual bool isEntitySelected();
+    virtual bool isPatternContinuous(const RLinetypePattern& p);
 
     virtual void startExport();
     virtual void endExport();
