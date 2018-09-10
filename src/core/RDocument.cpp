@@ -2616,7 +2616,7 @@ void RDocument::normalizeDrawOrder(bool useTransactionGroup) {
             e->setDrawOrder(i);
         }
         //op->addObject(e);
-        transaction->addObject(e);
+        transaction->addObject(e, false);
     }
     if (useTransactionGroup) {
         transaction->setGroup(getTransactionGroup());
