@@ -11,7 +11,7 @@
     <message>
         <location line="+28"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nebyly nalezeny žádné filtry pro import. Přerušení...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Import výkresu</translation>
     </message>
     <message>
         <location line="+9"/>

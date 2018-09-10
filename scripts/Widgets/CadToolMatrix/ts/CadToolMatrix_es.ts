@@ -30,7 +30,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+48"/>
+        <location line="+47"/>
         <source>Tool Matrix</source>
         <translation>Matriz de herramientas</translation>
     </message>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialogové okno Soubor</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít systémové dialogové okno Soubor</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -41,7 +41,7 @@
     <message>
         <location line="+25"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nebyly nalezeny žádné filtry pro export. Přerušení...</translation>
     </message>
     <message>
         <location line="+74"/>

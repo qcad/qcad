@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Print current drawing</source>
-        <translation type="unfinished">Tisk aktuální kresby</translation>
+        <translation>Tisk aktuálního výkresu</translation>
     </message>
 </context>
 </TS>

@@ -13,7 +13,7 @@
     <message>
         <location filename="../ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Curseur dans la matrice des outils</translation>
     </message>
 </context>
 </TS>

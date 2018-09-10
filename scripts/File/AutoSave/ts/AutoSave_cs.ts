@@ -75,17 +75,17 @@ Přejete si ho obnovit?</translation>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Přesunut automaticky ukládaný záložní soubor na:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Přesunut originální soubor na:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation type="unfinished">Nelze přesunout soubor:</translation>
+        <translation>Nelze odstranit soubor:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

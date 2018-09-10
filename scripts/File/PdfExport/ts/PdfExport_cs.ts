@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Exports the current drawing as PDF</source>
-        <translation type="unfinished">Exportovat aktuální výkres jako PDF</translation>
+        <translation>Exportovat aktuální výkres jako PDF</translation>
     </message>
 </context>
 </TS>

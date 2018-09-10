@@ -16,7 +16,7 @@
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Použít předvolby</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -32,12 +32,12 @@ the preference changes to take effect.</source>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí pro </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toto jsou výchozí předvolby pro nový výkres.</translation>
     </message>
     <message>
         <location line="+2"/>

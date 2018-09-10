@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>SvgImport</name>
     <message>
         <location filename="../SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubor</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -16,12 +16,12 @@
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Soubory SVG</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Všechny soubory</translation>
     </message>
     <message>
         <location line="-34"/>
@@ -32,12 +32,12 @@
     <message>
         <location filename="../SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozlišení:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Pixely / Palec</translation>
     </message>
     <message>
         <location filename="../SvgImportInit.js" line="+2"/>
