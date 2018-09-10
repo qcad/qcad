@@ -133,6 +133,9 @@
         isEntitySelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isPatternContinuous
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         startExport
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

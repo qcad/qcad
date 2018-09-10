@@ -2876,6 +2876,85 @@
             }
         
     
+      bool REcmaShellFileExporterAdapter::isPatternContinuous(
+                const RLinetypePattern & p
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::isPatternContinuous", engine);
+                QScriptValue _q_function = __qtscript_self.property("isPatternContinuous");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::isPatternContinuous";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        bool ret =
+                        RFileExporterAdapter::isPatternContinuous(
+                            p
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::isPatternContinuous", engine);
+
+                        
+                            return ret;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: RLinetypePattern &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        
+            // const reference argument - make a new object:
+            new RLinetypePattern(p)
+        )
+      
+                            )
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::isPatternContinuous", engine);
+
+                    
+                            return res;
+                          
+            }
+        
+    
       void REcmaShellFileExporterAdapter::startExport(
                 
             ) {

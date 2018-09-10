@@ -244,6 +244,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="isPatternContinuous"
+    cppName="isPatternContinuous" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLinetypePattern &amp;"
+        typeName="RLinetypePattern" name="p" isConst="true" />
+      </variant>
+    </method>
     <method name="startExport" cppName="startExport"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

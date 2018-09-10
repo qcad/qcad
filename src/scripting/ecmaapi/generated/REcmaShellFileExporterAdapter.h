@@ -253,6 +253,11 @@
             );
         
     
+      bool isPatternContinuous(
+                const RLinetypePattern & p
+            );
+        
+    
       void startExport(
                 
             );

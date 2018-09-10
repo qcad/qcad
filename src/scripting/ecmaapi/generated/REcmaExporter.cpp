@@ -139,6 +139,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isEntitySelected, "isEntitySelected");
             
+            REcmaHelper::registerFunction(&engine, proto, isPatternContinuous, "isPatternContinuous");
+            
             REcmaHelper::registerFunction(&engine, proto, startExport, "startExport");
             
             REcmaHelper::registerFunction(&engine, proto, endExport, "endExport");
@@ -2146,6 +2148,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::isEntitySelected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::isPatternContinuous
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::isPatternContinuous", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::isPatternContinuous";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("isPatternContinuous", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLinetypePattern */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLinetypePattern*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLinetypePattern*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLinetypePattern.",
+                               context);                    
+                    }
+                    RLinetypePattern 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPatternContinuous(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.isPatternContinuous().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::isPatternContinuous", context, engine);
             return result;
         }
          QScriptValue
