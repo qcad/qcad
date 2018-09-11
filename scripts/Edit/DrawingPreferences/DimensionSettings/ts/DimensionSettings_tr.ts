@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni Çizimler için Varsayılanlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut Ayarları</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut</translation>
     </message>
     <message>
         <location line="+108"/>
         <source>point</source>
-        <translation type="unfinished"></translation>
+        <translation>nokta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation type="unfinished"></translation>
+        <translation>virgül</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation>boşluk</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Scientific</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilimsel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished"></translation>
+        <translation>Ondalık</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished"></translation>
+        <translation>Mühendislik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished"></translation>
+        <translation>Mimari</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished"></translation>
+        <translation>Kesirli</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -92,12 +92,12 @@
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ölçü birimi, &apos;Mimari&apos; veya &apos;Mühendislik&apos; formatlarında boyut etiketleri görüntülemek için &apos;İnç&apos; olmalıdır. Biçim &apos;Ondalık&apos; olarak değiştirildi.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyutlar</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -107,7 +107,7 @@
     <message>
         <location line="+12"/>
         <source>Text height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin yüksekliği:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -122,7 +122,7 @@
     <message>
         <location line="+17"/>
         <source>Dimension line gap:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Boyut çizgi aralığı:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -152,12 +152,12 @@
     <message>
         <location line="+23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Font</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut etiketi yazı tipi:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -177,7 +177,7 @@
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Doğrusal Boyutlar</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -198,7 +198,7 @@
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Açısal Boyutlar</translation>
     </message>
     <message>
         <location line="+8"/>

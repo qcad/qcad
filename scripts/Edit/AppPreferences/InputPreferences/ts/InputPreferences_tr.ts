@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Input</name>
     <message>
@@ -26,7 +26,7 @@
     <message>
         <location line="+12"/>
         <source>Examples</source>
-        <translation type="unfinished"></translation>
+        <translation>Örnekler</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../InputPreferences.js" line="+32"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Genel</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -108,7 +108,7 @@
     <message>
         <location line="+12"/>
         <source>Dot</source>
-        <translation type="unfinished"></translation>
+        <translation>Nokta</translation>
     </message>
 </context>
 </TS>

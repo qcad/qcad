@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>ShapePolygonAFPP</name>
     <message>
@@ -31,12 +31,12 @@
     <message>
         <location filename="../ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>Köşeler:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Corner to Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Köşeden Köşeye</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFPPInit.js" line="+2"/>
@@ -46,7 +46,7 @@
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation type="unfinished"></translation>
+        <translation>İki karşıt tarafın orta noktalarından veya iki karşıt köşeden normal çokgen çizin</translation>
     </message>
 </context>
 </TS>

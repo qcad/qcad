@@ -94,7 +94,7 @@
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Primárne body:</translation>
     </message>
     <message>
         <source>Draggable reference points:</source>
@@ -133,7 +133,7 @@
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Terciárne body:</translation>
     </message>
     <message>
         <location line="+30"/>

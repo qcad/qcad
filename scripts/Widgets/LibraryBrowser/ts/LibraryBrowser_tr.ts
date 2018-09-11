@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>LibraryBrowser</name>
     <message>
         <location filename="../LibraryBrowser.js" line="+72"/>
         <source>audience</source>
-        <translation type="unfinished"></translation>
+        <translation>seyirci</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>creator</source>
-        <translation type="unfinished"></translation>
+        <translation>kurucu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>boyut</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -36,27 +36,27 @@
     <message>
         <location line="+1"/>
         <source>presentation</source>
-        <translation type="unfinished"></translation>
+        <translation>sunum</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>publisher</source>
-        <translation type="unfinished"></translation>
+        <translation>yayımcı</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>subject</source>
-        <translation type="unfinished"></translation>
+        <translation>konu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>title</source>
-        <translation type="unfinished"></translation>
+        <translation>başlık</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgetler</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -68,17 +68,17 @@
     <message>
         <location line="-1150"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Simge</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>List</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Choose Source Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak Klasörünü Seç</translation>
     </message>
     <message>
         <location line="+688"/>
@@ -153,17 +153,17 @@ Library browser will not be available.</source>
     <message>
         <location line="+393"/>
         <source>&amp;Insert</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ekle</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Edit Script File...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Betik Dosyası Düzenle ...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Open &amp;SVG File...</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG &amp;Dosyası Aç...</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -173,12 +173,12 @@ Library browser will not be available.</source>
     <message>
         <location line="+3"/>
         <source>&amp;Edit...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Düzen</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>File Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Tarayıcı</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -203,7 +203,7 @@ Library browser will not be available.</source>
     <message>
         <location line="+11"/>
         <source>&amp;Regenerate Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Simgeleri Yeniden Düzenle</translation>
     </message>
     <message>
         <location filename="../LibraryBrowserInit.js" line="-11"/>
@@ -213,7 +213,7 @@ Library browser will not be available.</source>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Synchronization</source>
-        <translation type="unfinished"></translation>
+        <translation>Senkronizasyon</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -223,17 +223,17 @@ Library browser will not be available.</source>
     <message>
         <location line="+13"/>
         <source>Display Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüleme Seçenekleri</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Icon Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Simge Boyutu:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>View Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Görünüm Modu:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -264,7 +264,7 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Aşağı</translation>
     </message>
 </context>
 <context>
@@ -272,12 +272,12 @@ shown in search results:</source>
     <message>
         <location filename="../LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Sistemi</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Ara</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -287,12 +287,12 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Temizle</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Find</source>
-        <translation type="unfinished"></translation>
+        <translation>Bul</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -302,12 +302,12 @@ shown in search results:</source>
     <message>
         <location line="+126"/>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Sık kullanılanlar</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçilen öğeyi çizime ekle</translation>
     </message>
     <message>
         <location line="+27"/>

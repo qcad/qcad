@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>LayerList</name>
     <message>
         <location filename="../LayerList.js" line="+197"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgetler</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -22,7 +22,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternatif satır renklerini etkinleştir</translation>
     </message>
 </context>
 </TS>

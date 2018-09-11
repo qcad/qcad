@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>BreakOutManual</name>
     <message>
@@ -38,12 +38,12 @@
     <message>
         <location filename="../BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Segmenti Kaldır</translation>
     </message>
     <message>
         <location filename="../BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kılavuzdan Çık</translation>
     </message>
 </context>
 </TS>

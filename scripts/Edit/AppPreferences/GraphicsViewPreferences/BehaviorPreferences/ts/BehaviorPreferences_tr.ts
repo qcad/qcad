@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>BehaviorPreferences</name>
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafik Görünümü</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Davranış</translation>
     </message>
 </context>
 <context>
@@ -19,57 +19,57 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Right-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Sağ-Tık</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Varlıkların seçimini kaldırmak için sağ tıklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Çift Tıklama</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>Metni düzenlemek için çift tıklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapağı düzenlemek için çift tıklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok referans çift tıklatıldığında blok açılır</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click to select contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontur seçmek için çift tıklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıfırlamak için sağ çift tıklayın</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloklar</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Özniteliklerle birlikte blok referanslarını seçin</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok referansları gizlendiğinde özellikleri gizle</translation>
     </message>
     <message>
         <location line="+10"/>

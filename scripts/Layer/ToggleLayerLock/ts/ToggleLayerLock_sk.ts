@@ -13,7 +13,7 @@
     <message>
         <location filename="../ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepnú&amp;ť stav uzamknutia</translation>
     </message>
 </context>
 <context>

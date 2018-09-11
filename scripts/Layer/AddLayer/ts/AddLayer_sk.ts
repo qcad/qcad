@@ -29,12 +29,12 @@
     <message>
         <location line="+17"/>
         <source>Default lineweight for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation>Predvolená hrúbka čiar pre vrstvu 0:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Default color for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation>Predvolená farba pre vrstvu 0:</translation>
     </message>
     <message>
         <location line="-45"/>

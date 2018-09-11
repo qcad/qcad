@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>CloseDialog</name>
     <message>
         <location filename="../CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizim Kapatılıyor...</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>İsimsiz</translation>
     </message>
 </context>
 <context>
@@ -22,77 +22,77 @@
     <message>
         <location filename="../NewFile.js" line="+141"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizim açılıyor:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Import Error</source>
-        <translation type="unfinished"></translation>
+        <translation>İçe aktarma hatası</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Cannot open file</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya açılamıyor</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygun içe alma bulunamadı. Lütfen dosya formatını ve uzantısını kontrol edin.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya bulunamadı.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lütfen erişim haklarınızı, dosya biçimini ve dosya uzantısını kontrol edin.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>İçe alma hatası.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya boş.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizim başarıyla yüklendi:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Biçim:</translation>
     </message>
     <message>
         <location line="+137"/>
         <source>Untitled %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 isimsiz</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation>Salt okunur</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Belgede yaptığınız değişiklikleri&lt;br&gt;&apos;%1&apos; belgesine kaydetmek ister misiniz?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eğer kaydetmezseniz değişiklikleriniz kaybolacak.</translation>
     </message>
     <message>
         <location filename="../NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yeni</translation>
     </message>
 </context>
 </TS>

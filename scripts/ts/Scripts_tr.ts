@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Apollonius</name>
     <message>
@@ -363,13 +363,13 @@
         <location line="+7"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Saat yönünde</translation>
     </message>
     <message>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Saat yönünün tersine</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -392,22 +392,22 @@
     <message>
         <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation>Eklenti çevirileri yükleniyor...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Eklentiler yükleniyor ...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Eklentiler başlatılıyor...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eklentiler başlatılıyor... </translation>
     </message>
 </context>
 <context>
@@ -415,32 +415,32 @@
     <message>
         <location filename="../library.js" line="+829"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Nesneler</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Nesneler </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilinmeyen Nesneler </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilinmeyen Nesne</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloklar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -565,97 +565,97 @@
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyutlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Hizalanmış Boyutlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Hizalanmış Boyut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Açısal Boyutlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Açısal Boyut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>2 Line Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>2 Çizgi Açısal Boyutlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>2 Line Angular Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>2 Çizgi Açısal Boyut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>3 Point Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>3 Nokta Açısal Boyutlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3 Point Angular Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>3 Nokta Açısal Boyut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Yay Boyutu</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Çap Boyutları</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Çap Boyutu</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordinat Boyutları</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordinat Boyutu</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Döndürülmüş Boyutlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Döndürülmüş Boyut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Radyal Boyutlar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Radyal Boyut</translation>
     </message>
     <message>
         <location line="+2"/>

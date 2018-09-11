@@ -16,7 +16,7 @@
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Nástroje kreslenia</translation>
     </message>
 </context>
 <context>

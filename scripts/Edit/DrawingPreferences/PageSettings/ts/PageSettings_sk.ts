@@ -96,7 +96,7 @@
     <message>
         <location line="+6"/>
         <source>Point size (mm):</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť bodu (mm):</translation>
     </message>
     <message>
         <location line="+7"/>

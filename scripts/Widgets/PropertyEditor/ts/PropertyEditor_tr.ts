@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Değer:</translation>
     </message>
 </context>
 <context>
@@ -39,22 +39,22 @@
     <message>
         <location line="+10"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation type="unfinished"></translation>
+        <translation>Her zaman tüm özellikleri göster (bu, varlıkların seçimini yavaşlatabilir)</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.js" line="+193"/>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>No Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçim Yok</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Özel Özellikler</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -99,7 +99,7 @@
     <message>
         <location line="+117"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Oto</translation>
     </message>
     <message>
         <location line="+128"/>
@@ -109,12 +109,12 @@
     <message>
         <location line="+39"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Evet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Hayır</translation>
     </message>
     <message>
         <location line="+333"/>
@@ -124,7 +124,7 @@
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgetler</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -136,12 +136,12 @@
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçim:</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Genel Özellikler</translation>
     </message>
     <message>
         <location line="+25"/>

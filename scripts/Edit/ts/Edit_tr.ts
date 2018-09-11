@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>AbstractPreferences</name>
     <message>
         <location filename="../AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Uygulama Tercihleri</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizim Tercihleri</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Tercihleri uygula</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden başlatmak gerekir</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geçerli değişikliklerin geçerli olması için
+lütfen QCAD&apos;i yeniden başlatın.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation type="unfinished"></translation>
+        <translation>Varsayılanlar için</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bunlar yeni çizimler için varsayılan tercihlerdir.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Değişiklikler yeni çizimleri etkileyecek, ancak mevcut çizimi DEĞİL.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut çizimin tercihleri, &lt;br/&gt;&lt;i&gt;Düzen &amp;gt;Çizim Tercihleri&lt;/i&gt;altında değiştirilebilir.</translation>
     </message>
 </context>
 <context>
@@ -55,7 +56,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../ClipboardOperation.js" line="+52"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Referans noktası</translation>
     </message>
 </context>
 <context>
@@ -63,17 +64,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzenleme Araçları</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzenleme araçlarını göster</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Düzen</translation>
     </message>
 </context>
 <context>
@@ -83,27 +84,27 @@ the preference changes to take effect.</source>
         <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Tercihler</translation>
     </message>
     <message>
         <location line="-74"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtre</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Expand Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağaç Genişlet</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağaç Daralt</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Varsayılan Değerlere Geri Dön</translation>
     </message>
 </context>
 </TS>

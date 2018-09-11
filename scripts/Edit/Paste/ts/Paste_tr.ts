@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Paste</name>
     <message>
         <location filename="../Paste.js" line="+52"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzenle</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Yapıştır</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Konum</translation>
     </message>
     <message>
         <location filename="../Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Döndürme:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -31,7 +31,7 @@
     <message>
         <location line="+107"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ölçek:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -56,7 +56,7 @@
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut katmana</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -66,7 +66,7 @@
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Katmanların üzerine yaz</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -76,17 +76,17 @@
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokların üzerine yaz</translation>
     </message>
     <message>
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Yapıştır</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="unfinished"></translation>
+        <translation>Araç her kullanıldığında varsayılanlara sıfırla</translation>
     </message>
 </context>
 </TS>

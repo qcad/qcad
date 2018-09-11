@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>InfoDistancePP</name>
     <message>
@@ -36,7 +36,7 @@
     <message>
         <location line="+1"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Açı:</translation>
     </message>
     <message>
         <location filename="../InfoDistancePPInit.js" line="+2"/>

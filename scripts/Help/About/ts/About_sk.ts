@@ -110,7 +110,7 @@
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenčný kľúč:</translation>
     </message>
     <message>
         <location line="+5"/>

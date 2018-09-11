@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>AutoSnap</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitiş noktaları</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Oto</translation>
     </message>
 </context>
 </TS>

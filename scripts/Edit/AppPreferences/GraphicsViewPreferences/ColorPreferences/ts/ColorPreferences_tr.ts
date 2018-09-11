@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>ColorPreferences</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Renkler</translation>
     </message>
 </context>
 <context>
@@ -119,12 +119,12 @@
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Başlangıç noktası:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitiş noktaları:</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -144,7 +144,7 @@
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilgi Araçları</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -154,7 +154,7 @@
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizim Araçları</translation>
     </message>
     <message>
         <location line="+12"/>

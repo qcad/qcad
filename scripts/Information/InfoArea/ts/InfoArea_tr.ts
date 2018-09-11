@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>InfoArea</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location line="+138"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzunluk hesapla ve aracı kapat.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Poli&amp;gonal Alan</translation>
     </message>
 </context>
 </TS>

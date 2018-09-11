@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>LineTangent2</name>
     <message>
         <location filename="../LineTangent2.js" line="+70"/>
         <source>Choose first circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>İlk daire veya yayı seç</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>İkinci daireyi veya yayı seç</translation>
     </message>
     <message>
         <location line="+140"/>

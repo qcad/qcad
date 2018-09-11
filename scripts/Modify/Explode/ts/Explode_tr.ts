@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="../ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Diyalog</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Yaylar ve Daireler</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -47,7 +47,7 @@
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Boyutlar</translation>
     </message>
     <message>
         <location line="+8"/>

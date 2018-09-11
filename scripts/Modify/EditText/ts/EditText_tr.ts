@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>EditText</name>
     <message>
@@ -11,12 +11,12 @@
     <message>
         <location filename="../EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation type="unfinished"></translation>
+        <translation>Metni D&amp;üzenle</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>Metni düzenle</translation>
     </message>
 </context>
 </TS>

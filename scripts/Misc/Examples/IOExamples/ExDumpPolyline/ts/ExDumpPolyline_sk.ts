@@ -10,12 +10,12 @@
     <message>
         <location filename="../ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation>Krivka v smere hod. ručičiek:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation>Krivka proti smeru hod. ručičiek:</translation>
     </message>
     <message>
         <location line="+18"/>

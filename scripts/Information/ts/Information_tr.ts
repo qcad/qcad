@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Information</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location line="+22"/>
         <source>&amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bilgi</translation>
     </message>
     <message>
         <location filename="../Information.ui" line="+17"/>

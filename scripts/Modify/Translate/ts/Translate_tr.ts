@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Translate</name>
     <message>
@@ -51,7 +51,7 @@
     <message>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
-        <translation type="unfinished"></translation>
+        <translation>Varlıkları bir veya daha fazla kez taşıyın veya kopyalayın</translation>
     </message>
 </context>
 <context>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>LineVertical</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+4"/>
         <source>Draw vertical line</source>
-        <translation type="unfinished"></translation>
+        <translation>Dikey çizgi çiz</translation>
     </message>
 </context>
 </TS>

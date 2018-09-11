@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>Line</name>
     <message>
         <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizgi Araçları</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show line tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizgi araçlarını göster</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Çizgi</translation>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>

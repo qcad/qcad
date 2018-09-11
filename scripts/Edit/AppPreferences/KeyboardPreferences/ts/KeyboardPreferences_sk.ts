@@ -11,7 +11,7 @@
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Povoliť klávesovú navigáciu v zozname pomôcok</translation>
     </message>
 </context>
 <context>
