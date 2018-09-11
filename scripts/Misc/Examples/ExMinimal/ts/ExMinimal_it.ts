@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExMinimal.js" line="+18"/>
         <source>&amp;Minimal Example</source>
-        <translation type="unfinished"></translation>
+        <translation>Esempio &amp;minimal</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../MiscDraw.js" line="+52"/>
         <source>Misc</source>
-        <translation>Varie</translation>
+        <translation type="unfinished">Varie</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation>Strumenti di Disegno Vari</translation>
+        <translation type="unfinished">Strumenti per Disegnare Miscele</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc drawing tools</source>
-        <translation>Mostra strumenti di disegno</translation>
+        <translation type="unfinished">Mostra gli strumenti di disegno misc</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Disegna</translation>
+        <translation type="unfinished">Disegna</translation>
     </message>
 </context>
 </TS>

@@ -6,66 +6,66 @@
     <message>
         <location filename="../LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation>Primo punto</translation>
+        <translation type="unfinished">Primo punto</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation>Secondo punto</translation>
+        <translation type="unfinished">Secondo punto</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="unfinished">Fatto</translation>
     </message>
     <message>
         <location filename="../LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation>Profondità:</translation>
+        <translation type="unfinished">Profondità:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger Width:</source>
-        <translation>Spessore linea:</translation>
+        <translation type="unfinished">Larghezza dito:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
-        <translation>Rapporto Linea/Slot:</translation>
+        <translation type="unfinished">Rapporto dito/slot:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Style:</source>
-        <translation>&amp;Style:</translation>
+        <translation type="unfinished">&amp;Stile:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation>Prima Linea</translation>
+        <translation type="unfinished">Prima il dito</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation>Primo slot</translation>
+        <translation type="unfinished">Prima lo slot</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tenoni</translation>
     </message>
     <message>
         <source>Tennons</source>
-        <translation type="vanished">Tennons</translation>
+        <translation type="unfinished">Tennons</translation>
     </message>
     <message>
         <location filename="../LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>Scatola &amp;giunto da 2 punti</translation>
+        <translation type="unfinished">Riquadro e punto da 2 punti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dita, Slot e Tennons di giunzione per scatole di derivazione</translation>
     </message>
 </context>
 </TS>

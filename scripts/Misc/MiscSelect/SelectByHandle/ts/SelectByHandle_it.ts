@@ -5,26 +5,26 @@
     <name>SelectByHandle</name>
     <message>
         <source>Object selected: </source>
-        <translation type="vanished">Oggetto selezionato:</translation>
+        <translation type="unfinished">Oggetto selezionato</translation>
     </message>
     <message>
         <source>Object is not an entity: </source>
-        <translation type="vanished">Oggetto non entità:</translation>
+        <translation type="unfinished">L'oggetto non è un'entità</translation>
     </message>
     <message>
         <location filename="../SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation>Via Handle</translation>
+        <translation type="unfinished">Da Maneggiare</translation>
     </message>
     <message>
         <location filename="../SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oggetto selezionato:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not an entity:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">L'oggetto non è un'entità:</translation>
     </message>
 </context>
 <context>
@@ -32,12 +32,12 @@
     <message>
         <location filename="../SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation>Seleziona Handle</translation>
+        <translation type="unfinished">Selezione per maniglia</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation>Handle (hex):</translation>
+        <translation type="unfinished">Maniglia (esagono):</translation>
     </message>
 </context>
 </TS>

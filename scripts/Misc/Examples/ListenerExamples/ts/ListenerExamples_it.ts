@@ -6,7 +6,7 @@
     <message>
         <location filename="../ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation>&amp;Listeners</translation>
+        <translation type="unfinished">Ascoltatori</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../MolImport.js" line="+38"/>
         <source>Import MOL</source>
-        <translation>Importa MOL</translation>
+        <translation type="unfinished">Importa MOL</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>MOL Files</source>
-        <translation>File MOL</translation>
+        <translation type="unfinished">File MOL</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation>Tutti i file</translation>
+        <translation type="unfinished">Tutti i file</translation>
     </message>
     <message>
         <location filename="../MolImportInit.js" line="+2"/>
         <source>Leetro MOL Import...</source>
-        <translation>Leetro MOL Importa...</translation>
+        <translation type="unfinished">Leetro MOL importazione...</translation>
     </message>
 </context>
 <context>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation>Importare Leetro MOL file...</translation>
+        <translation type="unfinished">Importazione di file Leetro MOL...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Interruzione</translation>
     </message>
 </context>
 </TS>

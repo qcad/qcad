@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Widget</translation>
     </message>
 </context>
 </TS>

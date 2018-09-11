@@ -6,7 +6,7 @@
     <message>
         <location filename="../PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation>&amp;Persistent Widgets</translation>
+        <translation type="unfinished">Widget &amp;Persistent</translation>
     </message>
 </context>
 </TS>

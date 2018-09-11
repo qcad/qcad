@@ -6,7 +6,7 @@
     <message>
         <location filename="../ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation>Ricarica Definizioni LineType</translation>
+        <translation type="unfinished">Ricaricare le definizioni di Linetype</translation>
     </message>
 </context>
 </TS>

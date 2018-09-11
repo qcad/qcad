@@ -16,7 +16,7 @@
     <message>
         <location filename="../ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation>&amp;Import XML</translation>
+        <translation>&amp;Importa XML</translation>
     </message>
 </context>
 </TS>

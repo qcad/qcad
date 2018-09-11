@@ -6,7 +6,7 @@
     <message>
         <location filename="../QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation>&amp;Qt</translation>
+        <translation type="unfinished">&amp;Qt</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
-        <translation>&amp;Spirale</translation>
+        <translation type="unfinished">&amp;Spirale</translation>
     </message>
 </context>
 </TS>
