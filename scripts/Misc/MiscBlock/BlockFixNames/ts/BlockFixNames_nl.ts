@@ -6,7 +6,7 @@
     <message>
         <location filename="../BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation type="unfinished">&amp;Fix-bloknamen</translation>
+        <translation>&amp;Fix bloknamen</translation>
     </message>
 </context>
 </TS>

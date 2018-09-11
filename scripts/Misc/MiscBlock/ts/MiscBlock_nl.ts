@@ -6,22 +6,22 @@
     <message>
         <location filename="../MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">Schijf</translation>
+        <translation>Diverse</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation type="unfinished">Gereedschap schijvenblok</translation>
+        <translation>Diverse blokgereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc block tools</source>
-        <translation type="unfinished">Toon misc blokfunctiepen</translation>
+        <translation>Toon diverse blokfuncties</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp; Slot</translation>
+        <translation>&amp;Blok</translation>
     </message>
 </context>
 </TS>

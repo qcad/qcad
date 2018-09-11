@@ -6,16 +6,15 @@
     <message numerus="yes">
         <location filename="../ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation type="unfinished">Transacción afectada %n objeto(s).</translation>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Transacción afectada un objeto.</numerusform>
+            <numerusform>Transacción afectada %n objetos.</numerusform>
         </translation>
     </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished">Escuchador de transacciones</translation>
+        <translation>&amp;Transaction Listener</translation>
     </message>
 </context>
 </TS>

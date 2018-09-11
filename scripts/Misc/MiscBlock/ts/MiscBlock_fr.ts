@@ -11,7 +11,7 @@
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation>Outils pour blocs divers</translation>
+        <translation>Outils divers pour blocs</translation>
     </message>
     <message>
         <location line="+5"/>

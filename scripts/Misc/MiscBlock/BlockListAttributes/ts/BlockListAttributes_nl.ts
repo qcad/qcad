@@ -6,22 +6,22 @@
     <message>
         <location filename="../BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation type="unfinished">Blok:</translation>
+        <translation>Blok:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation type="unfinished">Referentie-ID van het blok:</translation>
+        <translation>Referentie-ID van het blok:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation type="unfinished">Blok-attribuut:</translation>
+        <translation>Blokattribuut:</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation type="unfinished">&amp;List-blokkenmerken</translation>
+        <translation>&amp;Vermeld blokattributen</translation>
     </message>
 </context>
 </TS>

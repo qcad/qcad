@@ -6,12 +6,12 @@
     <message>
         <location filename="../ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
-        <translation type="unfinished">Aggiunta la proprietà personalizzata &apos;MyCustomProperty&apos; al livello &apos;0&apos;.</translation>
+        <translation>Aggiunta la proprietà personalizzata &apos;MyCustomProperty&apos; al livello &apos;0&apos;.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation type="unfinished">Aggiunta di proprietà personalizzate a un livello</translation>
+        <translation>Aggiunta di proprietà personalizzate a un livello</translation>
     </message>
 </context>
 </TS>

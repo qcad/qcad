@@ -6,7 +6,7 @@
     <message>
         <location filename="../IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished">&amp;Importación/Exportación</translation>
+        <translation>&amp;Importación/Exportación</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExProcess.js" line="+81"/>
         <source>&amp;Run Process</source>
-        <translation type="unfinished">&amp; Proces uitvoeren</translation>
+        <translation>&amp;Proces uitvoeren</translation>
     </message>
 </context>
 </TS>

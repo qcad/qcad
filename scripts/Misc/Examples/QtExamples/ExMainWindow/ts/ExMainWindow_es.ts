@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
-        <translation type="unfinished">Ventana principal</translation>
+        <translation>&amp;Ventana principal</translation>
     </message>
 </context>
 </TS>

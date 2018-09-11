@@ -14,7 +14,7 @@
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation>&amp;Transaktions-Listener</translation>
+        <translation>&amp;Transaction Listener</translation>
     </message>
 </context>
 </TS>

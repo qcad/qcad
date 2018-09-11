@@ -6,12 +6,12 @@
     <message>
         <location filename="../ExAddLayer.js" line="+44"/>
         <source>Added layer &apos;MyLayer&apos;</source>
-        <translation type="unfinished">Añadida capa &apos;MyLayer&apos;;</translation>
+        <translation>Añadida capa &apos;MyLayer&apos;</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished">Agregar capa</translation>
+        <translation>Agregar capa</translation>
     </message>
 </context>
 </TS>

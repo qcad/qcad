@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation type="unfinished">&amp; Richtlijnenlijst</translation>
+        <translation>&amp;Directorylijst</translation>
     </message>
 </context>
 </TS>

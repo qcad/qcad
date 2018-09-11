@@ -6,27 +6,27 @@
     <message>
         <location filename="../ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation type="unfinished">Venster &amp;verkleinen</translation>
+        <translation>&amp;Venstergrootte wijzigen</translation>
     </message>
     <message>
         <location filename="../ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation type="unfinished">Grootte invoeren</translation>
+        <translation>Grootte invoeren</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation type="unfinished">Grootte:</translation>
+        <translation>Grootte:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>1280x720 (720p) 16:9</source>
-        <translation type="unfinished">1280x720 (720p) 16:9</translation>
+        <translation>1280x720 (720p) 16:9</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
-        <translation type="unfinished">1920x1080 (1080p, Full HD) 16:9</translation>
+        <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
 </context>
 </TS>

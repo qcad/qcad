@@ -6,7 +6,7 @@
     <message>
         <location filename="../DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation type="unfinished">Modo &amp;Debug</translation>
+        <translation>Modo &amp;Debug</translation>
     </message>
 </context>
 </TS>

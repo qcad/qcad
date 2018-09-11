@@ -6,7 +6,7 @@
     <message>
         <location filename="../ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished">&amp;Modificeren</translation>
+        <translation>&amp;Modificeren</translation>
     </message>
 </context>
 </TS>

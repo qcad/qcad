@@ -6,17 +6,17 @@
     <message>
         <location filename="../BlockListExport.js" line="+91"/>
         <source>Export Block List (CSV)</source>
-        <translation type="unfinished">Elenco blocchi di esportazione (CSV)</translation>
+        <translation>&amp;Esportare l&apos;elenco di blocco</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation type="unfinished">Elenco blocchi &amp;Export</translation>
+        <translation>&amp;Esportare l&apos;elenco di blocco</translation>
     </message>
 </context>
 </TS>
