@@ -347,13 +347,13 @@ double RMath::eval(const QString& expression, bool* ok) {
                 break;
             }
             QString feetString = re.cap(1);
-            qDebug() << "feetString:" << feetString;
+            //qDebug() << "feetString:" << feetString;
             if (feetString.isEmpty()) {
                 feetString="0";
-                qDebug() << "> feetString:" << feetString;
+                //qDebug() << "> feetString:" << feetString;
             }
             QString inchString = re.cap(2);
-            qDebug() << "inchString:" << inchString;
+            //qDebug() << "inchString:" << inchString;
             expr.replace(
                         re,
                         //       ((FT)*12+(IN))
