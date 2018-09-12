@@ -5,11 +5,11 @@
     <name>SelectByHandle</name>
     <message>
         <source>Object selected: </source>
-        <translation type="unfinished">Oggetto selezionato</translation>
+        <translation type="obsolete">Oggetto selezionato</translation>
     </message>
     <message>
         <source>Object is not an entity: </source>
-        <translation type="unfinished">L'oggetto non è un'entità</translation>
+        <translation type="obsolete">L&apos;oggetto non è un&apos;entità</translation>
     </message>
     <message>
         <location filename="../SelectByHandleInit.js" line="+2"/>
@@ -24,7 +24,7 @@
     <message>
         <location line="+3"/>
         <source>Object is not an entity:</source>
-        <translation type="unfinished">L'oggetto non è un'entità:</translation>
+        <translation type="unfinished">L&apos;oggetto non è un&apos;entità:</translation>
     </message>
 </context>
 <context>

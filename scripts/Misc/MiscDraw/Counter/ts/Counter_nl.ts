@@ -6,47 +6,47 @@
     <message>
         <location filename="../Counter.js" line="+64"/>
         <source>Position</source>
-        <translation type="unfinished">Positie</translation>
+        <translation>Positie</translation>
     </message>
     <message>
         <location filename="../Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation type="unfinished">Beginnen:</translation>
+        <translation>Start:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Increment:</source>
-        <translation type="unfinished">Verhoging:</translation>
+        <translation>Increment:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Precision:</source>
-        <translation type="unfinished">Precisie:</translation>
+        <translation>Precisie:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation type="unfinished">Aantal decimale cijfers</translation>
+        <translation>Aantal decimale cijfers</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Prefix:</source>
-        <translation type="unfinished">Voorvoegsel:</translation>
+        <translation>Prefix:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Suffix:</source>
-        <translation type="unfinished">Achtervoegsel:</translation>
+        <translation>Suffix:</translation>
     </message>
     <message>
         <location filename="../CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation type="unfinished">&amp;Teller</translation>
+        <translation>&amp;Teller</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Auto increment number</source>
-        <translation type="unfinished">Automatisch verhogingsgetal</translation>
+        <translation>Automatisch verhogen van de teller</translation>
     </message>
 </context>
 </TS>

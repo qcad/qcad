@@ -6,51 +6,51 @@
     <message>
         <location filename="../Counter.js" line="+64"/>
         <source>Position</source>
-        <translation type="unfinished">Posizione</translation>
+        <translation>Posizione</translation>
     </message>
     <message>
         <location filename="../Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation type="unfinished">Avviare:</translation>
+        <translation>Inizio:</translation>
     </message>
     <message>
         <source>Incr:</source>
-        <translation type="unfinished">Incr:</translation>
+        <translation type="obsolete">Incr:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Increment:</source>
-        <translation type="unfinished">Aumento:</translation>
+        <translation>Incremento:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Precision:</source>
-        <translation type="unfinished">Precisione:</translation>
+        <translation>Precisione:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation type="unfinished">Numero di cifre decimali</translation>
+        <translation>Numero di cifre decimali</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Prefix:</source>
-        <translation type="unfinished">Prefisso:</translation>
+        <translation>Prefisso:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Suffix:</source>
-        <translation type="unfinished">Suffisso:</translation>
+        <translation>Suffisso:</translation>
     </message>
     <message>
         <location filename="../CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation type="unfinished">&amp;Controllo</translation>
+        <translation>&amp;Contatore</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Auto increment number</source>
-        <translation type="unfinished">Numero incremento automatico</translation>
+        <translation>Auto incrementa il numero</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">Varie</translation>
+        <translation>Varie</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation type="unfinished">Strumenti per lo sviluppo delle risorse biologiche</translation>
+        <translation>Strumenti di sviluppo vari</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc development tools</source>
-        <translation type="unfinished">Mostra gli strumenti di sviluppo misc</translation>
+        <translation>Mostra gli strumenti di sviluppo varie</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished">De&amp;sviluppo</translation>
+        <translation>&amp;Sviluppo</translation>
     </message>
 </context>
 </TS>

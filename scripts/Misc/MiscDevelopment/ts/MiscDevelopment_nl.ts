@@ -6,22 +6,22 @@
     <message>
         <location filename="../MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished">Schijf</translation>
+        <translation>Diverse</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation type="unfinished">Hulpmiddelen voor de ontwikkeling van de schijf</translation>
+        <translation>Diverse ontwikkelingstools</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc development tools</source>
-        <translation type="unfinished">Toon misc ontwikkelingsfunctieen</translation>
+        <translation>Toon diverse ontwikkelingstools</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished">Ontwikkeling</translation>
+        <translation>&amp;Ontwikkeling</translation>
     </message>
 </context>
 </TS>

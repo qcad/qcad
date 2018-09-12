@@ -46,7 +46,7 @@
     <message>
         <location line="+4"/>
         <source>Auto increment number</source>
-        <translation>Incrémenter automatiquement le nombre</translation>
+        <translation>Incrémenter le nombre automatiquement</translation>
     </message>
 </context>
 </TS>

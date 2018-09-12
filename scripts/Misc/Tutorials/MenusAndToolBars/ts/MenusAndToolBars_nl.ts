@@ -6,7 +6,7 @@
     <message>
         <location filename="../MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished">Menu'sAndToolBars() draait...</translation>
+        <translation type="unfinished">Menu&apos;sAndToolBars() draait...</translation>
     </message>
     <message>
         <location line="+6"/>

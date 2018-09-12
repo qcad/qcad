@@ -81,12 +81,12 @@
     <message>
         <location filename="../TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished">Prossimo Lungo L'Entità</translation>
+        <translation type="unfinished">Prossimo Lungo L&apos;Entità</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text along an entity</source>
-        <translation type="unfinished">Disegno del testo lungo un'entità</translation>
+        <translation type="unfinished">Disegno del testo lungo un&apos;entità</translation>
     </message>
 </context>
 </TS>
