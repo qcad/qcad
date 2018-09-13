@@ -78,14 +78,14 @@ SelectionDisplay.selectionChanged = function(documentInterface) {
     if (typesSingular.length == 1) {
         var typeStr = entityTypeToString(typesSingular[0], count>1);
         if (layers.length == 1 ) {
-            str = qsTr("%1 %2 on Layer '%3'").arg(entities.length).arg(typeStr).arg(layers[0]);
+            str = qsTr("%1 %2 on Layer \"%3\"").arg(entities.length).arg(typeStr).arg(layers[0]);
         }
         else {
             str = qsTr("%1 %2 on %3 Layers").arg(entities.length).arg(typeStr).arg(layers.length);
         }
     } else {
         if (layers.length == 1 ) {
-            str = qsTr("%n Entities on Layer '%1'", "", entities.length).arg(layers[0]);
+            str = qsTr("%n Entities on Layer \"%1\"", "", entities.length).arg(layers[0]);
         }
         else {
             str = qsTr("%n Entities", "", entities.length) + " " + qsTr("on") + " " + qsTr("%n Layers", "", layers.length);

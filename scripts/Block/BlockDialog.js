@@ -152,7 +152,7 @@ BlockDialog.validate = function(block, blockName, document, dialog, validator, a
     if (document.hasBlock(leBlockName.text)) {
         if (creatingBlock && allowOverwrite===true) {
             // warning: overwriting an existing block:
-            message.text += "<font color='red'>" + qsTr("Block '%1' already exists<br>and will be overwritten.").arg(leBlockName.text.toString())  + "</font>";
+            message.text += "<font color='red'>" + qsTr("Block \"%1\" already exists<br>and will be overwritten.").arg(leBlockName.text.toString())  + "</font>";
             acceptable = true;
         }
         else if ((isNull(block) || block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) && !allowSameName) {

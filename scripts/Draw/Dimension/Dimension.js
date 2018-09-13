@@ -153,7 +153,7 @@ Dimension.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Dimension.includeBasePath + "/Dimension.svg");
-        action.setStatusTip(qsTr("Show dimension tools"));
+        //action.setStatusTip(qsTr("Show dimension tools"));
         action.setDefaultShortcut(new QKeySequence("w,d"));
         action.setNoState();
         action.setDefaultCommands(["dimensionmenu"]);

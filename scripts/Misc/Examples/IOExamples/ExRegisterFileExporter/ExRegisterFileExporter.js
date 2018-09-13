@@ -118,7 +118,7 @@ ExRegisterFileExporter.prototype.beginEvent = function() {
     QMessageBox.information(
         appWin,
         qsTr("Info"),
-        qsTr("Registered a file exporter for file type '.example'. Use File > Save As to see the filter in action.")
+        qsTr("Registered a file exporter for file type \".example\". Use File > Save As to see the filter in action.")
     );
 };
 

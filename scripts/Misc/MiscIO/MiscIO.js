@@ -62,7 +62,7 @@ MiscIO.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         //action.setIcon(MiscIO.includeBasePath + "/MiscIO.svg");
-        action.setStatusTip(qsTr("Show misc import / export tools"));
+        //action.setStatusTip(qsTr("Show misc import / export tools"));
         action.setNoState();
         action.setDefaultCommands(["misciomenu"]);
         action.setGroupSortOrder(90);

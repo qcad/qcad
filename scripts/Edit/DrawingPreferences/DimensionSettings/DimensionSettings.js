@@ -402,9 +402,9 @@ DimensionSettings.showLinearFormatWarning = function() {
     var appWin = EAction.getMainWindow();
     QMessageBox.warning(appWin,
                         qsTr("Unit / Format"),
-                        qsTr("The drawing unit must be 'Inch' to display dimension labels in "
-                             + "formats 'Architectural' or 'Engineering'. "
-                             + "Format changed to 'Decimal'."));
+                        qsTr("The drawing unit must be \"Inch\" to display dimension labels in "
+                             + "formats \"Architectural\" or \"Engineering\". "
+                             + "Format changed to \"Decimal\"."));
 };
 
 /**

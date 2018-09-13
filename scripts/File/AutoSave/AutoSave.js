@@ -172,7 +172,7 @@ AutoSave.recoverUntitled = function() {
         return false;
     }
 
-    var msg = qsTr("%n 'autosave' backup file(s) for (an) untitled drawing(s) was/were found.\n" +
+    var msg = qsTr("%n autosave backup file(s) for (an) untitled drawing(s) was/were found.\n" +
             "Do you wish to recover it/them?", "", list.length);
 
     var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
@@ -241,7 +241,7 @@ AutoSave.recover = function(fileName) {
     var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No, QMessageBox.Cancel);
     var ret = QMessageBox.warning(null,
             qsTr("Recover File?"),
-            qsTr("An 'autosave' backup file for '%1' exists.\n" +
+            qsTr("An autosave backup file for \"%1\" exists.\n" +
                 "Do you wish to recover it?").arg(fi.fileName()),
             buttons);
 

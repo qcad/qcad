@@ -67,7 +67,7 @@ Edit.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(false);
         action.setIcon(Edit.includeBasePath + "/Edit.svg");
-        action.setStatusTip(qsTr("Show edit tools"));
+        //action.setStatusTip(qsTr("Show edit tools"));
         action.setNoState();
         action.setDefaultCommands(["editmenu"]);
         action.setGroupSortOrder(10);

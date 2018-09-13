@@ -84,7 +84,7 @@ Projection.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Projection.includeBasePath + "/Projection.svg");
-        action.setStatusTip(qsTr("Show projection tools"));
+        //action.setStatusTip(qsTr("Show projection tools"));
         action.setDefaultShortcut(new QKeySequence("w,j"));
         action.setNoState();
         action.setDefaultCommands(["projectmenu"]);

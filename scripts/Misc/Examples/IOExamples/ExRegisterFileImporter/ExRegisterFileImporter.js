@@ -87,7 +87,7 @@ ExFileImporter.prototype.importFile = function(fileName, nameFilter) {
         line = ts.readLine();
 
         if (!isNull(this.messageHandler)) {
-            this.messageHandler.handleUserMessage(qsTr("Read from file: '%1'").arg(line));
+            this.messageHandler.handleUserMessage(qsTr("Read from file: \"%1\"").arg(line));
         }
 
         // use importObject to import an object read from the file:
@@ -123,7 +123,7 @@ ExRegisterFileImporter.prototype.beginEvent = function() {
     QMessageBox.information(
         appWin,
         qsTr("Info"),
-        qsTr("Registered a file importer for file type '.example'. Use File > Open to see the filter in action.")
+        qsTr("Registered a file importer for file type \".example\". Use File > Open to see the filter in action.")
     );
 };
 

@@ -59,7 +59,7 @@ Snap.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Snap.includeBasePath + "/Snap.svg");
-        action.setStatusTip(qsTr("Show snap tools"));
+        //action.setStatusTip(qsTr("Show snap tools"));
         action.setNoState();
         action.setDefaultCommands(["snapmenu"]);
         action.setGroupSortOrder(40);

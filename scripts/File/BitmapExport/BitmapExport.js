@@ -75,12 +75,12 @@ BitmapExport.prototype.beginEvent = function() {
         print("Error: cannot save file: ", bmpFileName);
         print("Error: ", res[1]);
         appWin.handleUserWarning(
-                qsTr("Error while generating Bitmap file '%1': %2")
+                qsTr("Error while generating bitmap file \"%1\": %2")
                     .arg(bmpFileName).arg(res[1]));
     }
     else {
         appWin.handleUserMessage(
-                qsTr("Bitmap file has been exported to '%1'").arg(bmpFileName));
+                qsTr("Bitmap file has been exported to \"%1\"").arg(bmpFileName));
     }
 
     this.terminate();

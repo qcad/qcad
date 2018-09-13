@@ -77,7 +77,7 @@ Shape.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Shape.includeBasePath + "/Shape.svg");
-        action.setStatusTip(qsTr("Show shape tools"));
+        //action.setStatusTip(qsTr("Show shape tools"));
         action.setDefaultShortcut(new QKeySequence("w,h"));
         action.setNoState();
         action.setDefaultCommands(["shapemenu"]);

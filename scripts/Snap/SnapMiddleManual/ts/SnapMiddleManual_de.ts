@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation>&amp;Mittelpunkt Manuell</translation>
+        <translation>&amp;Mittelpunkt manuell</translation>
     </message>
 </context>
 </TS>

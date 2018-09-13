@@ -41,7 +41,7 @@ ExAddLayer.prototype.beginEvent = function() {
     var linetypeId = document.getLinetypeId("CONTINUOUS");
     var layer = new RLayer(document, "MyLayer", false, false, new RColor("red"), linetypeId, RLineweight.Weight000);
     op.addObject(layer);
-    EAction.handleUserMessage(qsTr("Added layer 'MyLayer'"));
+    EAction.handleUserMessage(qsTr("Added layer \"MyLayer\""));
     di.applyOperation(op);
 
     // make the new layer the current layer:

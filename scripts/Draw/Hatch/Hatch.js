@@ -74,7 +74,7 @@ Hatch.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Hatch.includeBasePath + "/Hatch.svg");
-        action.setStatusTip(qsTr("Show hatch tools"));
+        //action.setStatusTip(qsTr("Show hatch tools"));
         action.setDefaultShortcut(new QKeySequence("w,x"));
         action.setNoState();
         action.setDefaultCommands(["hatchmenu"]);

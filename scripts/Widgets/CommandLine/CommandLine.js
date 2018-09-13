@@ -261,7 +261,7 @@ CommandLine.init = function(basePath) {
             if (!pos.isNaN()) {
                 if (!pos.isValid()) {
                     appWin.handleUserWarning(
-                        qsTr("Invalid coordinate or distance '%1'.")
+                        qsTr("Invalid coordinate or distance \"%1\".")
                             .arg(Qt.escape(command))
                     );
                     return;
@@ -280,21 +280,21 @@ CommandLine.init = function(basePath) {
         var commandLower = command.toLowerCase();
         if (!RGuiAction.triggerByCommand(commandLower)) {
             EAction.handleUserWarning(
-                qsTr("Unknown command or invalid coordinate or value: '%1'").arg(commandLower)
+                qsTr("Unknown command or invalid coordinate or value: \"%1\"").arg(commandLower)
             );
 
             // guess: if there's a number somewhere, user might be trying to enter
             // a number value or coordinate. Nuge him in the right direction:
             if (command.search(/[0-9]./)!==-1) {
                 EAction.handleUserWarning(
-                    qsTr("Numbers may be entered as: '%1'")
+                    qsTr("Numbers may be entered as: \"%1\"")
                         .arg(numberToString(Math.PI, 3))
                 );
                 var sample = new RVector(1.234,1.234);
                 var samplePolar = RVector.createPolar(10,30);
                 EAction.handleUserWarning(
-                    qsTr("Coordinates may be entered as: '%1' (absolute) " +
-                         "or '%2' (relative) or '%3' (polar) or '%4' (relative polar)")
+                    qsTr("Coordinates may be entered as: \"%1\" (absolute) " +
+                         "or \"%2\" (relative) or \"%3\" (polar) or \"%4\" (relative polar)")
                         .arg(coordinateToString(sample, 3, false, false))
                         .arg(coordinateToString(sample, 3, true, false))
                         .arg(coordinateToString(samplePolar, 3, false, true))

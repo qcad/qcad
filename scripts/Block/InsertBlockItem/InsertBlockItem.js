@@ -125,7 +125,7 @@ InsertBlockItem.prototype.beginEvent = function() {
         while (isNull(this.blockName) || doc.hasBlock(this.blockName)) {
             this.blockName = 'block_' + c++;
         }
-        EAction.handleUserMessage(qsTr("Adjusted invalid block name to '%1'").arg(this.blockName));
+        EAction.handleUserMessage(qsTr("Adjusted invalid block name to \"%1\"").arg(this.blockName));
     }
 
     if (this.docItem.hasBlock(this.blockName)) {

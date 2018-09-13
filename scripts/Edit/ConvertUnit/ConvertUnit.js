@@ -86,7 +86,7 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
         return [1, qsTr("Nothing to be done.")];
     }
     if (fromUnit === RS.None || toUnit === RS.None) {
-        return [1, qsTr("Unit '%1' selected - Nothing to be done").arg(RUnit.unitToName(RS.None))];
+        return [1, qsTr("Unit \"%1\" selected. Nothing to be done").arg(RUnit.unitToName(RS.None))];
     }
 
     var factor = RUnit.convert(1.0, fromUnit, toUnit);

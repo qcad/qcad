@@ -287,7 +287,7 @@ Information.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Information.includeBasePath + "/Information.svg");
-        action.setStatusTip(qsTr("Show information tools"));
+        //action.setStatusTip(qsTr("Show information tools"));
         action.setDefaultShortcut(new QKeySequence("w,i"));
         action.setNoState();
         action.setDefaultCommands(["infomenu", "informationmenu", "measuringmenu"]);

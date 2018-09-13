@@ -58,7 +58,7 @@ SelectByHandle.prototype.beginEvent = function() {
         EAction.handleUserMessage(qsTr("Object selected:") + " " + obj.getId());
     }
     else {
-        EAction.handleUserMessage(qsTr("Object is not an entity:") + " " + obj);
+        EAction.handleUserMessage(qsTr("Object is not a drawing entity:") + " " + obj);
     }
 
     dialog.destroy();

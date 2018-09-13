@@ -99,7 +99,7 @@ Layer.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Layer.includeBasePath + "/Layer.svg");
-        action.setStatusTip(qsTr("Show layer tools"));
+        //action.setStatusTip(qsTr("Show layer tools"));
         action.setDefaultShortcut(new QKeySequence("w,y"));
         action.setNoState();
         action.setDefaultCommands(["layermenu"]);

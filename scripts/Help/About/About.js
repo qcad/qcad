@@ -144,7 +144,7 @@ About.prototype.initAboutApp = function(textBrowser) {
                       + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("http://www.qcad.org/contribute") + "</p>";
             }
 
-            html += "<p>" + qsTr("Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).") + "</p>"
+            html += "<p>" + qsTr("Plugins and script add-ons are subject to their respective license (see \"Plugins\" tab).") + "</p>"
             + "<p/>"
             + "<p>" + qsTr("All brand or product names are trademarks or registered trademarks of their respective holders.") + "</p>"
             + "<p/>"

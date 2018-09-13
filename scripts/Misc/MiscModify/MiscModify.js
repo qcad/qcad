@@ -56,7 +56,7 @@ MiscModify.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         //action.setIcon(MiscModify.includeBasePath + "/MiscModify.svg");
-        action.setStatusTip(qsTr("Show misc modification tools"));
+        //action.setStatusTip(qsTr("Show misc modification tools"));
         action.setNoState();
         action.setDefaultCommands(["miscmodifymenu"]);
         action.setGroupSortOrder(90);

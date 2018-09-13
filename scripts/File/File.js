@@ -67,7 +67,7 @@ File.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(false);
         action.setIcon(File.includeBasePath + "/File.svg");
-        action.setStatusTip(qsTr("Show file tools"));
+        //action.setStatusTip(qsTr("Show file tools"));
         action.setNoState();
         action.setDefaultCommands(["filemenu"]);
         action.setGroupSortOrder(10);
@@ -218,7 +218,7 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
             var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.No);
             var ret = QMessageBox.warning(parentWidget, 
                 qsTr("Overwrite File?"), 
-                qsTr("The file '%1' already exists. Do you wish to overwrite it?").arg(fileToSave),
+                qsTr("The file \"%1\" already exists. Do you wish to overwrite it?").arg(fileToSave),
                 buttons);
             if (ret!=QMessageBox.Yes) {
                 done = false;

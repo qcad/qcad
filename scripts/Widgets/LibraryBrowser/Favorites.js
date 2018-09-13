@@ -100,7 +100,7 @@ Favorites.add = function(fileName) {
 
     var fi = new QFileInfo(fileName);
 //    EAction.handleUserMessage(
-//            qsTr("Item '%1' has been added to your favorites.".arg(fi
+//            qsTr("Item \"%1\" has been added to your favorites.".arg(fi
 //                    .fileName())));
 };
 
@@ -120,7 +120,7 @@ Favorites.remove = function(fileName) {
 
     var fi = new QFileInfo(fileName);
 //    EAction.handleUserMessage(
-//            qsTr("Item '%1' has been removed from your favorites.".arg(fi.fileName())));
+//            qsTr("Item \"%1\" has been removed from your favorites.".arg(fi.fileName())));
 };
 
 /**

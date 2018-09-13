@@ -83,7 +83,7 @@ Line.getCadToolBarPanel = function() {
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Line.includeBasePath + "/Line.svg");
-        action.setStatusTip(qsTr("Show line tools"));
+        //action.setStatusTip(qsTr("Show line tools"));
         action.setDefaultShortcut(new QKeySequence("w,l"));
         action.setNoState();
         action.setDefaultCommands(["linemenu"]);
