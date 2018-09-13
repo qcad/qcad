@@ -59,12 +59,11 @@
         <translation>标注工具</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>显示标注工具</translation>
+        <translation type="vanished">显示标注工具</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>标注(&amp;i)</translation>
     </message>

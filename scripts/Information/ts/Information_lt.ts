@@ -9,12 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Show information tools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Info</source>
         <translation type="unfinished"></translation>
     </message>

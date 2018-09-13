@@ -9,12 +9,11 @@
         <translation>Point Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show point tools</source>
-        <translation>Show point tools</translation>
+        <translation type="vanished">Show point tools</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Point</source>
         <translation>&amp;Point</translation>
     </message>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
-        <translation type="unfinished">Ninguna solución</translation>
+        <translation>Ninguna solución</translation>
     </message>
     <message>
         <location filename="../PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation type="unfinished">Centro de Poder de Tres Círculos</translation>
+        <translation>Centro de poder de tres círculos</translation>
     </message>
 </context>
 </TS>

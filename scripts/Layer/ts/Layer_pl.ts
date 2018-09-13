@@ -9,12 +9,11 @@
         <translation>Narzędzia warstwy</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Wyświetla narzędzia warstw</translation>
+        <translation type="vanished">Wyświetla narzędzia warstw</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

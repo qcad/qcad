@@ -22,25 +22,25 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation>Wiersz poleceń</translation>
     </message>
     <message>
-        <source>Invalid coordinate &apos;%1&apos;.</source>
+        <source>Invalid coordinate &quot;%1&quot;.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
         <location line="+207"/>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
+        <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nieznane polecenie lub nieprawidłowa współrzędna bądź wartość: „%1”</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
+        <source>Numbers may be entered as: &quot;%1&quot;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Liczby mogą być wprowadzane jako: „%1”</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
+        <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Współrzędne mogą być wprowadzane jako: „%1” (absolutnie), „%2” (względnie), „%3” (biegunowo) lub „%4”; (biegunowo względnie)</translation>
     </message>
@@ -72,7 +72,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
     </message>
     <message>
         <location line="+16"/>
-        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <source>Invalid coordinate or distance &quot;%1&quot;.</source>
         <translation>Nieprawidłowa współrzędna lub odległość „%1”.</translation>
     </message>
     <message>

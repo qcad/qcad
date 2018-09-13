@@ -59,12 +59,11 @@
         <translation>Kótovacie Nástroje</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>Zobraziť kótovacie nástroje</translation>
+        <translation type="vanished">Zobraziť kótovacie nástroje</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>Kótovan&amp;ie</translation>
     </message>

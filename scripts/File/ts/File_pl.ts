@@ -9,12 +9,11 @@
         <translation>Narzędzia pliku</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show file tools</source>
-        <translation>Wyświetla narzędzia pliku</translation>
+        <translation type="vanished">Wyświetla narzędzia pliku</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;File</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -40,9 +39,13 @@ Format:</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Plik „%1” już istnieje. Zastąpić go?</translation>
+        <translation type="vanished">Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>
     <message>
         <location line="+20"/>

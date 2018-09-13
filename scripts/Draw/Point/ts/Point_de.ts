@@ -14,9 +14,8 @@
         <translation>Punktwerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show point tools</source>
-        <translation>Punktwerkzeuge anzeigen</translation>
+        <translation type="vanished">Punktwerkzeuge anzeigen</translation>
     </message>
 </context>
 </TS>

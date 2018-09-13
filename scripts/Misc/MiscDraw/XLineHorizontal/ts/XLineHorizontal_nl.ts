@@ -6,12 +6,12 @@
     <message>
         <location filename="../XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation type="unfinished">&amp; Horizontale Bouwlijn</translation>
+        <translation>&amp;Horizontale constructielijn</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal construction line</source>
-        <translation type="unfinished">Teken horizontale bouwtekening</translation>
+        <translation>Teken horizontale constructielijn</translation>
     </message>
 </context>
 </TS>

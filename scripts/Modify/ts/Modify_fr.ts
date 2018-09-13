@@ -19,12 +19,11 @@
         <translation>Outils de modification</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>Montrer les outils de modification</translation>
+        <translation type="vanished">Montrer les outils de modification</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifier</translation>
     </message>

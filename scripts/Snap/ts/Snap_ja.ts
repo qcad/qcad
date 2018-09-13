@@ -9,12 +9,11 @@
         <translation>スナップツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>表示スナップツール</translation>
+        <translation type="vanished">表示スナップツール</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>&amp;S スナップ</translation>
     </message>

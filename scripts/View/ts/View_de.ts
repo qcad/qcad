@@ -24,12 +24,11 @@
         <translation>Ansichtswerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show view tools</source>
-        <translation>Ansichtswerkzeuge anzeigen</translation>
+        <translation type="vanished">Ansichtswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>View</source>
         <translation>Ansicht</translation>
     </message>

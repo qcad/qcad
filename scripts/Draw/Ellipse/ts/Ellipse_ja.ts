@@ -9,12 +9,11 @@
         <translation>楕円ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show ellipse tools</source>
-        <translation>楕円ツールを表示</translation>
+        <translation type="vanished">楕円ツールを表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;E 楕円</translation>
     </message>

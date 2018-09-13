@@ -23,8 +23,12 @@
     </message>
     <message>
         <location line="+3"/>
+        <source>Object is not a drawing entity:</source>
+        <translation>Object is not a drawing entity:</translation>
+    </message>
+    <message>
         <source>Object is not an entity:</source>
-        <translation>Object is not an entity:</translation>
+        <translation type="vanished">Object is not a drawing entity:</translation>
     </message>
 </context>
 <context>

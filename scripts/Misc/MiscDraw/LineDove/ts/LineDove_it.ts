@@ -6,27 +6,27 @@
     <message>
         <location filename="../LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">Primo punto</translation>
+        <translation>Primo punto</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Secondo punto</translation>
+        <translation>Secondo punto</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Fatto</translation>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location filename="../LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished">Giunto di dilatazione da 2 punti</translation>
+        <translation>Guarnizione a coda di rondine da 2 punti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished">Disegnare un giunto a coda di rondine</translation>
+        <translation>Disegnare un coda di rondine comune</translation>
     </message>
 </context>
 </TS>

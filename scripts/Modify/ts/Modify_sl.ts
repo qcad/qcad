@@ -9,12 +9,11 @@
         <translation>Orodja za urejanje</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>Prikaži orodja za urejanje</translation>
+        <translation type="vanished">Prikaži orodja za urejanje</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;Uredi</translation>
     </message>

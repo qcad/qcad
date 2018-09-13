@@ -11,15 +11,14 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
         <translation>Ferramentas de Seleção</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show selection tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Seleção&quot;</translatorcomment>
-        <translation>Exiba as ferramentas de seleção</translation>
+        <translation type="vanished">Exiba as ferramentas de seleção</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translation>Painel de Ferramentas de Seleção</translation>
     </message>

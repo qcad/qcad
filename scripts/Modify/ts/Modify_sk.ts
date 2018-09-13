@@ -9,12 +9,11 @@
         <translation>Nástroje úpravy</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>Zobraziť nástroje úpravy</translation>
+        <translation type="vanished">Zobraziť nástroje úpravy</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;Úpravy</translation>
     </message>

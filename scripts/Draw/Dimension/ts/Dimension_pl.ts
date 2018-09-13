@@ -74,13 +74,12 @@ Przełącz znak średnicy
         <translation>Narzędzia wymiarów</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wyświetla narzędzia wymiarów</translation>
+        <translation type="vanished">Wyświetla narzędzia wymiarów</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Wymiar</translation>

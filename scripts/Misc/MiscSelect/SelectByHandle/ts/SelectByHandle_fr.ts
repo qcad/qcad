@@ -15,8 +15,12 @@
     </message>
     <message>
         <location line="+3"/>
+        <source>Object is not a drawing entity:</source>
+        <translation>L&apos;objet n&apos;est pas un élément de dessin :</translation>
+    </message>
+    <message>
         <source>Object is not an entity:</source>
-        <translation>L&apos;objet n&apos;est pas une entité :</translation>
+        <translation type="vanished">L&apos;objet n&apos;est pas un élément de dessin :</translation>
     </message>
 </context>
 <context>

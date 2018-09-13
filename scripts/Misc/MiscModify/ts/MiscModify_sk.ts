@@ -19,9 +19,8 @@
         <translation>&amp;Úpravy</translation>
     </message>
     <message>
-        <location line="-18"/>
         <source>Show misc modification tools</source>
-        <translation>Zobraziť rôzne nástroje úpravy</translation>
+        <translation type="vanished">Zobraziť rôzne nástroje úpravy</translation>
     </message>
 </context>
 </TS>

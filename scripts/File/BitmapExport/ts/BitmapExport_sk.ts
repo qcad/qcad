@@ -4,14 +4,22 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+78"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation>Chyba pri generovaní obrázkového súboru &apos;%1&apos;: %2</translation>
+        <translation type="vanished">Chyba pri generovaní obrázkového súboru &apos;%1&apos;: %2</translation>
+    </message>
+    <message>
+        <source>Bitmap file has been exported to &apos;%1&apos;</source>
+        <translation type="vanished">Obrázkový súbor bol exportovaný do &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <location filename="../BitmapExport.js" line="+78"/>
+        <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation>Obrázkový súbor bol exportovaný do &apos;%1&apos;</translation>
+        <source>Bitmap file has been exported to &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+36"/>

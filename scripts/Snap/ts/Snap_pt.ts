@@ -10,12 +10,11 @@
         <translation>Ferramentas de Salto</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Exiba as ferramentas de salto</translation>
+        <translation type="vanished">Exiba as ferramentas de salto</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

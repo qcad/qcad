@@ -6,22 +6,22 @@
     <message>
         <location filename="../LineRadicalAxis.js" line="+68"/>
         <source>First arc or circle</source>
-        <translation type="unfinished">Primer arco o círculo</translation>
+        <translation>Primer arco o círculo</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished">Segundo arco o círculo</translation>
+        <translation>Segundo arco o círculo</translation>
     </message>
     <message>
         <location filename="../LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Longitud:</translation>
+        <translation>Longitud:</translation>
     </message>
     <message>
         <location filename="../LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation type="unfinished">Eje Radical de 2 Círculos</translation>
+        <translation>Eje radical de 2 círculos</translation>
     </message>
 </context>
 </TS>

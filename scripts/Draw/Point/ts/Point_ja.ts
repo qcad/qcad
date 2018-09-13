@@ -9,12 +9,11 @@
         <translation>点ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show point tools</source>
-        <translation>点ツールを表示</translation>
+        <translation type="vanished">点ツールを表示</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Point</source>
         <translation>&amp;P 点</translation>
     </message>

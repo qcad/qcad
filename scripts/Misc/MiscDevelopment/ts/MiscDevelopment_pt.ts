@@ -14,12 +14,11 @@
         <translation>Ferramentas de desenvolvimento variadas</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc development tools</source>
-        <translation>Mostrar ferramentas de desenvolvimento variadas</translation>
+        <translation type="vanished">Mostrar ferramentas de desenvolvimento variadas</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>De&amp;velopment</source>
         <translation>&amp;Desenvolvimento</translation>
     </message>

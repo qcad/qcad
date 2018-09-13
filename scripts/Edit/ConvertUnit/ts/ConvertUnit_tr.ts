@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+3"/>
+        <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation>&apos;%1&apos; birimi seçildi - Yapılacak bir şey yok</translation>
+        <translation type="vanished">&apos;%1&apos; birimi seçildi - Yapılacak bir şey yok</translation>
     </message>
     <message>
         <location line="+126"/>

@@ -9,12 +9,11 @@
         <translation>Modification Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>Show modification tools</translation>
+        <translation type="vanished">Show modification tools</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modify</translation>
     </message>

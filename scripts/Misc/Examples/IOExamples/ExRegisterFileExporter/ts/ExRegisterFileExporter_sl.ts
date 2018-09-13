@@ -15,8 +15,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
-        <translation>Registriran datotečni izvoznik za datoteko tipa &apos;.primer&apos;. Uporabite Datoteka-&gt;Shrani kot ,da vidite filter v akciji.</translation>
+        <translation type="vanished">Registriran datotečni izvoznik za datoteko tipa &apos;.primer&apos;. Uporabite Datoteka-&gt;Shrani kot ,da vidite filter v akciji.</translation>
     </message>
     <message>
         <location line="+10"/>

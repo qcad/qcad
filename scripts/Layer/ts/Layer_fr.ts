@@ -9,12 +9,11 @@
         <translation>Outils de la couche</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Afficher les outils de la couche</translation>
+        <translation type="vanished">Afficher les outils de la couche</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>&amp;Calque</translation>
     </message>

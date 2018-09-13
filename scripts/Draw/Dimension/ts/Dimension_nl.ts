@@ -59,12 +59,11 @@
         <translation>Bematinggereedschap</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>Bematinggereedschap tonen</translation>
+        <translation type="vanished">Bematinggereedschap tonen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>&amp;Bemating</translation>
     </message>

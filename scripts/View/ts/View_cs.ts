@@ -9,12 +9,11 @@
         <translation>Nástroje zobrazení</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show view tools</source>
-        <translation>Zobrazit nástroje zobrazení</translation>
+        <translation type="vanished">Zobrazit nástroje zobrazení</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>

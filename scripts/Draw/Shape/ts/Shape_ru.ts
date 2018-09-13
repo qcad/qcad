@@ -9,12 +9,11 @@
         <translation>Инструменты работы с фигурами</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Показать инструменты работы с фигурами</translation>
+        <translation type="vanished">Показать инструменты работы с фигурами</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>Фигура</translation>
     </message>

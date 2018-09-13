@@ -17,14 +17,18 @@
 <context>
     <name>ShowReadme</name>
     <message>
-        <location filename="../ShowReadme.js" line="+46"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation>&apos;%1&apos; dosyası mevcut değil.</translation>
+        <translation type="vanished">&apos;%1&apos; dosyası mevcut değil.</translation>
     </message>
     <message>
         <location filename="../ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
         <translation>Benioku &amp;Göster</translation>
+    </message>
+    <message>
+        <location filename="../ShowReadme.js" line="+46"/>
+        <source>File &quot;%1&quot; doesn&apos;t exist.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -9,12 +9,11 @@
         <translation>Nástroje výberu</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show selection tools</source>
-        <translation>Zobraziť nástroje výberu</translation>
+        <translation type="vanished">Zobraziť nástroje výberu</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translation>Panel Nástrojov výberu</translation>
     </message>

@@ -14,8 +14,8 @@
     </message>
     <message>
         <location line="+23"/>
-        <source>%1 %2 on Layer &apos;%3&apos;</source>
-        <translation>%1 %2 auf Layer &apos;%3&apos;</translation>
+        <source>%1 %2 on Layer &quot;%3&quot;</source>
+        <translation>%1 %2 auf Layer &quot;%3&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -24,10 +24,10 @@
     </message>
     <message numerus="yes">
         <location line="+4"/>
-        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
-            <numerusform>Ein Objekt auf Layer &apos;%1&apos;</numerusform>
-            <numerusform>%n Objekte auf Layer &apos;%1&apos;</numerusform>
+            <numerusform>Ein Objekt auf Layer &quot;%1&quot;</numerusform>
+            <numerusform>%n Objekte auf Layer &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -47,8 +47,8 @@
         </translation>
     </message>
     <message>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translation type="vanished">%1 Objekte auf Layer &apos;%2&apos;</translation>
+        <source>%1 Entities on Layer &quot;%2&quot;</source>
+        <translation type="vanished">%1 Objekte auf Layer &quot;%2&quot;</translation>
     </message>
     <message>
         <source>%1 Entities on %2 Layers</source>
@@ -68,12 +68,8 @@
         <translation type="obsolete"> auf </translation>
     </message>
     <message>
-        <source>Layer &apos;%1&apos;</source>
-        <translation type="vanished">Layer &apos;%1&apos;</translation>
-    </message>
-    <message>
         <source>Layer &quot;%1&quot;</source>
-        <translation type="obsolete">Layer &quot;%1&quot;</translation>
+        <translation type="vanished">Layer &quot;%1&quot;</translation>
     </message>
     <message>
         <source>%1 Layers</source>

@@ -10,12 +10,11 @@
         <translation>Herramientas de forzar</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Mostrar herramientas de forzar</translation>
+        <translation type="vanished">Mostrar herramientas de forzar</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>&amp;Forzar</translation>
     </message>

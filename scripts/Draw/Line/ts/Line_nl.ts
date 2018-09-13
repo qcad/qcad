@@ -9,12 +9,11 @@
         <translation>Lijnhulpmiddelen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Lijnhulpmiddelen tonen</translation>
+        <translation type="vanished">Lijnhulpmiddelen tonen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>&amp;Lijn</translation>
     </message>

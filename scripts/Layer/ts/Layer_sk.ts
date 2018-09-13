@@ -9,12 +9,11 @@
         <translation>Nástroje Vstvy</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Zobraziť nástroje vrstvy</translation>
+        <translation type="vanished">Zobraziť nástroje vrstvy</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>&amp;Vrstva</translation>
     </message>

@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+3"/>
+        <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation>単位&apos;%1&apos;が選択されました-何もされませんでした</translation>
+        <translation type="vanished">単位&apos;%1&apos;が選択されました-何もされませんでした</translation>
     </message>
     <message>
         <location line="+126"/>

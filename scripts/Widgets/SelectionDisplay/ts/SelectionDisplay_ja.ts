@@ -14,8 +14,8 @@
     </message>
     <message>
         <location line="+23"/>
-        <source>%1 %2 on Layer &apos;%3&apos;</source>
-        <translation>%1 %2 on 画層 &apos;%3&apos;</translation>
+        <source>%1 %2 on Layer &quot;%3&quot;</source>
+        <translation>%1 %2 on 画層 &quot;%3&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -24,7 +24,7 @@
     </message>
     <message numerus="yes">
         <location line="+4"/>
-        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
@@ -49,8 +49,8 @@
         </translation>
     </message>
     <message>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
-        <translation type="vanished">%1 エンティティ on 画層 &apos;%2&apos;</translation>
+        <source>%1 Entities on Layer &quot;%2&quot;</source>
+        <translation type="vanished">%1 エンティティ on 画層 &quot;%2&quot;</translation>
     </message>
     <message>
         <source>%1 Entities on %2 Layers</source>
@@ -61,8 +61,8 @@
         <translation type="vanished">エンティティ</translation>
     </message>
     <message>
-        <source>Layer &apos;%1&apos;</source>
-        <translation type="vanished">画層 &apos;%1&apos;</translation>
+        <source>Layer &quot;%1&quot;</source>
+        <translation type="vanished">画層 &quot;%1&quot;</translation>
     </message>
     <message>
         <source>%1 Layers</source>

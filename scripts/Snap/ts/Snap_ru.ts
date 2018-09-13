@@ -9,12 +9,11 @@
         <translation>Инструменты прилипания</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Показать инструменты прилипания</translation>
+        <translation type="vanished">Показать инструменты прилипания</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>Пр&amp;ивязка</translation>
     </message>

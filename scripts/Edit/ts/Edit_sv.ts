@@ -66,12 +66,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation type="unfinished"></translation>
     </message>

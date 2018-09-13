@@ -9,12 +9,11 @@
         <translation>情報ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show information tools</source>
-        <translation>情報ツールを表示</translation>
+        <translation type="vanished">情報ツールを表示</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Info</source>
         <translation>&amp;I 情報</translation>
     </message>

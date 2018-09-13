@@ -9,22 +9,20 @@
         <translation>Korvataanko tiedosto?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Tiedosto &apos;%1&apos; on jo olemassa. Haluatko varmasti korvata sen?</translation>
+        <translation type="vanished">Tiedosto &apos;%1&apos; on jo olemassa. Haluatko varmasti korvata sen?</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>File Format Version Not Recommended</source>
         <translation>Tiedostomuodon versiota ei suositella</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation>Käyttämääsi tiedostomuodon versiota ei suositella: &apos;%1&apos;.</translation>
+        <translation type="vanished">Käyttämääsi tiedostomuodon versiota ei suositella: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Custom properties will not be saved.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34,12 +32,11 @@
         <translation>Kaikki mustat kohteet ja tasot tallennetaan valkoisina.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Kaikki säädetyt värit &apos;pyöristetään&apos; lähimpään kiinteään väriin.</translation>
+        <translation type="vanished">Kaikki säädetyt värit &apos;pyöristetään&apos; lähimpään kiinteään väriin.</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="+1"/>
         <source>Proceed?</source>
         <translation>Jatka?</translation>
     </message>
@@ -49,19 +46,42 @@
         <translation>Tallennetaan...</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation>Tallennetaan tiedostomuodon versioon &apos;%1&apos;.</translation>
+        <translation type="vanished">Tallennetaan tiedostomuodon versioon &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>Mustat kohteet ja tasot tallennetaan valkoisina.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Säädetyt värit &apos;pyöristetään&apos; lähimpään kiinteään väriin.</translation>
+        <translation type="vanished">Säädetyt värit &apos;pyöristetään&apos; lähimpään kiinteään väriin.</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>All custom colors will be adjusted to the nearest fixed color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Saving to file format version &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Custom colors are adjusted to the nearest fixed color.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>

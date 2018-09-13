@@ -9,18 +9,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>%1 %2 on Layer &apos;%3&apos;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+26"/>
         <source>%1 %2 on %3 Layers</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="-3"/>
+        <source>%1 %2 on Layer &quot;%3&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location line="+4"/>
-        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <location line="+7"/>
+        <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>

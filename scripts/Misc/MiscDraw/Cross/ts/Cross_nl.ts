@@ -6,17 +6,17 @@
     <message>
         <location filename="../Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished">Boog, cirkel, ellips of ellipsboog kiezen</translation>
+        <translation>Boog, cirkel, ellips of ellipsboog kiezen</translation>
     </message>
     <message>
         <location filename="../CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished">Middellijn kruis</translation>
+        <translation>Middellijn kruis</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished">Teken het middenlijn kruis in bogen, cirkels of ellipsen</translation>
+        <translation>Teken het middenlijn kruis in bogen, cirkels of ellipsen</translation>
     </message>
 </context>
 <context>
@@ -24,32 +24,32 @@
     <message>
         <location filename="../Cross.ui" line="+17"/>
         <source>X:</source>
-        <translation type="unfinished">X:</translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Y:</source>
-        <translation type="unfinished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Extension</source>
-        <translation type="unfinished">Uitbreiding</translation>
+        <translation>Uitbreiding</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Total length</source>
-        <translation type="unfinished">Totale lengte</translation>
+        <translation>Totale lengte</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation type="unfinished">Procent</translation>
+        <translation>Procent</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation type="unfinished">Hoek:</translation>
+        <translation>Hoek:</translation>
     </message>
 </context>
 </TS>

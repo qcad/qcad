@@ -9,12 +9,11 @@
         <translation>Layer Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Show layer tools</translation>
+        <translation type="vanished">Show layer tools</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>&amp;Layer</translation>
     </message>

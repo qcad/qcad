@@ -9,12 +9,11 @@
         <translation>Orodja točke</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show point tools</source>
-        <translation>Prikaži orodja točke</translation>
+        <translation type="vanished">Prikaži orodja točke</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Point</source>
         <translation>&amp;Točka</translation>
     </message>

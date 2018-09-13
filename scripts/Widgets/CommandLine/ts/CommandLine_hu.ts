@@ -27,22 +27,22 @@
     </message>
     <message>
         <location line="+16"/>
-        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <source>Invalid coordinate or distance &quot;%1&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
+        <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
+        <source>Numbers may be entered as: &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
+        <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

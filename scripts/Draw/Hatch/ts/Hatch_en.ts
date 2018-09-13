@@ -9,12 +9,11 @@
         <translation>Hatch Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Show hatch tools</translation>
+        <translation type="vanished">Show hatch tools</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Hatch</translation>
     </message>

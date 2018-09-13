@@ -9,12 +9,11 @@
         <translation>Инструменты работы с окружностью</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Показать инструменты работы с окружностью</translation>
+        <translation type="vanished">Показать инструменты работы с окружностью</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>Окружность</translation>
     </message>

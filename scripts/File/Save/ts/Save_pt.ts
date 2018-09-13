@@ -10,25 +10,32 @@
         <translation>Substitua o Arquivo?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translation>
+        <translation type="vanished">O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Todas as cores personalizadas serão aproximadas para a cor fixa mais próxima.</translation>
+        <translation type="vanished">Todas as cores personalizadas serão aproximadas para a cor fixa mais próxima.</translation>
     </message>
     <message>
-        <location line="-4"/>
+        <location line="+18"/>
         <source>File Format Version Not Recommended</source>
         <translation>Versão de Formato de Arquivo Não Recomendada</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation>A versão de formato de arquivo que você está usando não é recomendada: &apos;%1&apos;.</translation>
+        <translation type="vanished">A versão de formato de arquivo que você está usando não é recomendada: &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation>O arquivo &quot;%1&quot; já existe. Você deseja substituí-lo?</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
+        <translation>A versão de formato de arquivo que você está usando não é recomendada: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -46,7 +53,22 @@
         <translation>Proceder?</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+0"/>
+        <source>All custom colors will be adjusted to the nearest fixed color.</source>
+        <translation>Todas as cores personalizadas serão aproximadas para a cor fixa mais próxima.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Saving to file format version &quot;%1&quot;.</source>
+        <translation>Gravando em arquivo formato versão &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Custom colors are adjusted to the nearest fixed color.</source>
+        <translation>As cores personalizadas são aproximadas para a cor fixa mais próxima.</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Saved drawing:</source>
         <translation>Desenho gravado:</translation>
     </message>
@@ -68,22 +90,20 @@ A guardar...</translatorcomment>
         <translation>Gravando...</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation>Gravando em arquivo formato versão &apos;%1&apos;.</translation>
+        <translation type="vanished">Gravando em arquivo formato versão &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>Entidades e camadas negras são salvas como brancas.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>As cores personalizadas são aproximadas para a cor fixa mais próxima.</translation>
+        <translation type="vanished">As cores personalizadas são aproximadas para a cor fixa mais próxima.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>File %1 has not been saved.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>O arquivo &apos;%1&apos; não foi gravado.</translation>

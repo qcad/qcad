@@ -14,12 +14,11 @@
         <translation>Разные инструменты выделения</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc selection tools</source>
-        <translation>Показать разные инструменты выделения</translation>
+        <translation type="vanished">Показать разные инструменты выделения</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Select</source>
         <translation>В&amp;ыделение</translation>
     </message>

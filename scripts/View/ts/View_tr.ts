@@ -9,12 +9,11 @@
         <translation>Görünüm Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show view tools</source>
-        <translation>Görünüm araçlarını göster</translation>
+        <translation type="vanished">Görünüm araçlarını göster</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>View</source>
         <translation>Görünüm</translation>
     </message>

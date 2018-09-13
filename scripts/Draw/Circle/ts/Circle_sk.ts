@@ -9,12 +9,11 @@
         <translation>Nástroje kružnice</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Zobraziť nástroje kružnice</translation>
+        <translation type="vanished">Zobraziť nástroje kružnice</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>&amp;Kružnica</translation>
     </message>

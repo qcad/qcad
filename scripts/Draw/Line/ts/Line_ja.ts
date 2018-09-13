@@ -9,12 +9,11 @@
         <translation>線分ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>線分ツールを表示</translation>
+        <translation type="vanished">線分ツールを表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>&amp;L 線分</translation>
     </message>

@@ -36,16 +36,15 @@
         <translation>Outils de forme</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Afficher les outils de forme</translation>
+        <translation type="vanished">Afficher les outils de forme</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translation type="vanished">Afficher les outils de forme</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Forme</translation>
     </message>

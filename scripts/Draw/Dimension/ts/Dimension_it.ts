@@ -63,12 +63,11 @@
         <translation>Utensili dimensione</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>Utensili dimensione</translation>
+        <translation type="vanished">Utensili dimensione</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>&amp;Quota</translation>
     </message>

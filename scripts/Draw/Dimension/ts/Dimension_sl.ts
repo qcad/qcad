@@ -59,12 +59,11 @@
         <translation>Orodja dimenzij</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>Prikaži orodja dimenzij</translation>
+        <translation type="vanished">Prikaži orodja dimenzij</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>&amp;Dimenzija</translation>
     </message>

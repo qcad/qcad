@@ -9,12 +9,11 @@
         <translation>Herramientas círculo</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Mostrar menú &quot;Círculos&quot;</translation>
+        <translation type="vanished">Mostrar menú &quot;Círculos&quot;</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>&amp;Círculo</translation>
     </message>

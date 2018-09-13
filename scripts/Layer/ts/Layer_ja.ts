@@ -9,12 +9,11 @@
         <translation>レイヤツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>表示レイヤツール</translation>
+        <translation type="vanished">表示レイヤツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>&amp;L 画層</translation>
     </message>

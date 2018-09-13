@@ -6,22 +6,22 @@
     <message>
         <location filename="../FlushBackLog.js" line="+38"/>
         <source>Flush Undo History</source>
-        <translation type="unfinished">Enjuagar el historial de deshacer</translation>
+        <translation>Enjuagar el historial de deshacer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation type="unfinished">¿Está seguro de que desea deshacer / rehacer el historial de transacciones?</translation>
+        <translation>¿Está seguro de que desea deshacer / rehacer el historial de transacciones?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation type="unfinished">Esto no se puede deshacer.</translation>
+        <translation>Esto no se puede deshacer.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Flush &amp;Undo History</source>
-        <translation type="unfinished">Historia de Flush &amp;Undo</translation>
+        <translation>&amp;Enjuagar historial de deshacer</translation>
     </message>
 </context>
 </TS>

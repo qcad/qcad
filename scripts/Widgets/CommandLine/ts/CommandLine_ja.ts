@@ -16,23 +16,23 @@
         <translation>コマンドライン</translation>
     </message>
     <message>
-        <source>Invalid coordinate &apos;%1&apos;.</source>
-        <translation type="obsolete">無効な座標 &apos;%1&apos;.</translation>
+        <source>Invalid coordinate &quot;%1&quot;.</source>
+        <translation type="obsolete">無効な座標 &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+207"/>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation>不明なコマンドまたは無効な座標もしくは値: &apos;%1&apos;</translation>
+        <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
+        <translation>不明なコマンドまたは無効な座標もしくは値: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation>数値が&apos;%1&apos;として入力されました</translation>
+        <source>Numbers may be entered as: &quot;%1&quot;</source>
+        <translation>数値が&quot;%1&quot;として入力されました</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
-        <translation>座標が&apos;%1&apos; (絶対座標) or &apos;%2&apos; (相対座標) or &apos;%3&apos; (極座標) or &apos;%4&apos; (相対極座標)として入力されました</translation>
+        <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
+        <translation>座標が&quot;%1&quot; (絶対座標) or &quot;%2&quot; (相対座標) or &quot;%3&quot; (極座標) or &quot;%4&quot; (相対極座標)として入力されました</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -60,8 +60,8 @@
     </message>
     <message>
         <location line="+16"/>
-        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation>無効な座標または距離 &apos;%1&apos;.</translation>
+        <source>Invalid coordinate or distance &quot;%1&quot;.</source>
+        <translation>無効な座標または距離 &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+117"/>

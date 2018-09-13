@@ -11,15 +11,14 @@ Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
         <translation>Narzędzia zaznaczania</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show selection tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaż menu &quot;Zaznacz&quot;</translatorcomment>
-        <translation>Wyświetla narzędzia zaznaczania</translation>
+        <translation type="vanished">Wyświetla narzędzia zaznaczania</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Panel narzędzi zaznaczania</translation>

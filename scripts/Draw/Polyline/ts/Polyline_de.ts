@@ -4,12 +4,11 @@
 <context>
     <name>Polyline</name>
     <message>
-        <location filename="../Polyline.js" line="+78"/>
         <source>Show polyline tools</source>
-        <translation>Polylinienwerkzeuge anzeigen</translation>
+        <translation type="vanished">Polylinienwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location filename="../Polyline.js" line="+100"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polylinie</translation>
     </message>

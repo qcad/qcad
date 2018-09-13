@@ -59,12 +59,11 @@
         <translation>Alati za Kotiranje</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>Prikaži alate za kotiranje</translation>
+        <translation type="vanished">Prikaži alate za kotiranje</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>K&amp;ote</translation>
     </message>

@@ -9,12 +9,11 @@
         <translation>修正ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>修正ツールを表示</translation>
+        <translation type="vanished">修正ツールを表示</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;M 修正</translation>
     </message>

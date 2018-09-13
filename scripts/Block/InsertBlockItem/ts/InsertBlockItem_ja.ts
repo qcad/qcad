@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+26"/>
+        <source>Adjusted invalid block name to &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>無効なブロック名は&apos;%1&apos;に調整されました</translation>
+        <translation type="vanished">無効なブロック名は&apos;%1&apos;に調整されました</translation>
     </message>
     <message>
         <location line="+62"/>

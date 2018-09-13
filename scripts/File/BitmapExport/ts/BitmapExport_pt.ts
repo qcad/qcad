@@ -4,7 +4,17 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+119"/>
+        <location filename="../BitmapExport.js" line="+78"/>
+        <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
+        <translation>Erro ao gerar o arquivo Bitmap &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Bitmap file has been exported to &quot;%1&quot;</source>
+        <translation>O arquivo bitmap foi exportado para &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Files</source>
         <translatorcomment>--exact match--
 --file: Image_pt.ts--
@@ -19,16 +29,14 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <translation>Exporte como Bitmap</translation>
     </message>
     <message>
-        <location line="-51"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Erro ao gerar o arquivo Bitmap &apos;%1&apos;: %2</translation>
+        <translation type="vanished">Erro ao gerar o arquivo Bitmap &apos;%1&apos;: %2</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>O arquivo Bitmap foi exportado para &apos;%1&apos;</translation>
+        <translation type="vanished">O arquivo Bitmap foi exportado para &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>

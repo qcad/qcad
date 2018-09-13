@@ -23,9 +23,8 @@
         <translation>&amp;Výber</translation>
     </message>
     <message>
-        <location line="-18"/>
         <source>Show misc selection tools</source>
-        <translation>Zobraziť rôzne nástroje výberu</translation>
+        <translation type="vanished">Zobraziť rôzne nástroje výberu</translation>
     </message>
 </context>
 </TS>

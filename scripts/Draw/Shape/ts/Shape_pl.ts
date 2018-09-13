@@ -34,16 +34,15 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
         <translation>Narzędzia figur</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Wyświetla narzędzia figur</translation>
+        <translation type="vanished">Wyświetla narzędzia figur</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translation type="obsolete">Pokaż menu &quot;Linie&quot;</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Figura</translation>
     </message>

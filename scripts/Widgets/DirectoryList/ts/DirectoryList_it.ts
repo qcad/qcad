@@ -6,11 +6,11 @@
     <message>
         <location filename="../DirectoryList.js" line="+57"/>
         <source>The folder
-&apos;%1&apos;
+&quot;%1&quot;
 is already in the list.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>La cartella
-&apos;%1&apos;
+&quot;%1&quot;
 è già nella lista.</translation>
     </message>
     <message>

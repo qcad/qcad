@@ -177,7 +177,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+10"/>
         <source>&amp;Edit Script File...</source>
-        <translation>&amp;Editar archivos de script...</translation>
+        <translation>&amp;Editar archivos de guión...</translation>
     </message>
     <message>
         <location line="+8"/>

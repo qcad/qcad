@@ -14,12 +14,11 @@
         <translation>Razna blokovna orodja</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc block tools</source>
-        <translation>Prikaži razna blokovna orodja</translation>
+        <translation type="vanished">Prikaži razna blokovna orodja</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>

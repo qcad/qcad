@@ -14,12 +14,11 @@
         <translation>Outils de modification divers</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc modification tools</source>
-        <translation>Afficher outils de modification divers</translation>
+        <translation type="vanished">Afficher outils de modification divers</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifier</translation>
     </message>

@@ -9,12 +9,11 @@
         <translation>Orodja plasti</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Prikaži orodja plasti</translation>
+        <translation type="vanished">Prikaži orodja plasti</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>P&amp;last</translation>
     </message>

@@ -9,12 +9,11 @@
         <translation>&amp;Rôzne</translation>
     </message>
     <message>
-        <location line="-21"/>
         <source>Show misc tools</source>
-        <translation>Zobraziť rôzne nástroje</translation>
+        <translation type="vanished">Zobraziť rôzne nástroje</translation>
     </message>
     <message>
-        <location line="-5"/>
+        <location line="-26"/>
         <source>Misc Tools</source>
         <translation>Rôzne nástroje</translation>
     </message>

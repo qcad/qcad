@@ -32,6 +32,23 @@
         <source>Autosave complete.</source>
         <translation>Samodejno shranjevanje zaključeno.</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform>Najdena je bila samodejno shanjena varnostna kopija neznanege risanja. Jo želite obnovit?</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
@@ -42,19 +59,8 @@ Do you wish to recover it?</source>
 Do you wish to recover them?</source>
         <translation type="vanished">Najdenih je bil %1 samodejno shanjenih varnostnih kopij neznanih risanj. Jih želite obnovit?</translation>
     </message>
-    <message numerus="yes">
-        <location line="+19"/>
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
-Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
     <message>
-        <location line="+5"/>
+        <location line="-64"/>
         <source>Recover Files?</source>
         <translation>Obnovim datoteke?</translation>
     </message>
@@ -69,13 +75,12 @@ Do you wish to recover it/them?</source>
         <translation>Obnovim datoteko?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Najdena je bila samodejno shanjena varnostna kopija &apos;%1&apos;. Jo želite obnovit?</translation>
+        <translation type="vanished">Najdena je bila samodejno shanjena varnostna kopija &apos;%1&apos;. Jo želite obnovit?</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>

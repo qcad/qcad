@@ -11,15 +11,14 @@ Pokaz menu &quot;Elipsy&quot;</translatorcomment>
         <translation>Narzędzia elipsy</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show ellipse tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaz menu &quot;Elipsy&quot;</translatorcomment>
-        <translation>Wyświetla narzędzia elipsy</translation>
+        <translation type="vanished">Wyświetla narzędzia elipsy</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

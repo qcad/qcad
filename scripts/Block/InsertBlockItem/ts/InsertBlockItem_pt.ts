@@ -97,8 +97,12 @@ Utilize a camada atual</translatorcomment>
     </message>
     <message>
         <location line="+26"/>
+        <source>Adjusted invalid block name to &quot;%1&quot;</source>
+        <translation>Ajustado o nome do Bloco inválido para &quot;%1&quot;</translation>
+    </message>
+    <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>Ajustado o nome do Bloco inválido para &apos;%1&apos;</translation>
+        <translation type="vanished">Ajustado o nome do Bloco inválido para &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+62"/>

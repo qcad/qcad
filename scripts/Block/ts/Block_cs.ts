@@ -9,12 +9,11 @@
         <translation>Nástroje bloku</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show block tools</source>
-        <translation>Zobrazit nástroje bloku</translation>
+        <translation type="vanished">Zobrazit nástroje bloku</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -38,8 +37,12 @@
     </message>
     <message>
         <location line="+11"/>
+        <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Blok &apos;%1&apos; už existuje&lt;br&gt;a bude překreslen.</translation>
+        <translation type="vanished">Blok &apos;%1&apos; už existuje&lt;br&gt;a bude překreslen.</translation>
     </message>
     <message>
         <location line="+5"/>

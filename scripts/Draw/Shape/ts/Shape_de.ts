@@ -9,16 +9,15 @@
         <translation>Formwerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Formwerkzeuge anzeigen</translation>
+        <translation type="vanished">Formwerkzeuge anzeigen</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translation type="vanished">Formwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Form</translation>
     </message>

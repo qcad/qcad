@@ -67,12 +67,11 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Düzenleme Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Düzenleme araçlarını göster</translation>
+        <translation type="vanished">Düzenleme araçlarını göster</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Düzen</translation>
     </message>

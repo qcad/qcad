@@ -10,7 +10,7 @@
     </message>
     <message>
         <location line="+26"/>
-        <source>Adjusted invalid block name to &apos;%1&apos;</source>
+        <source>Adjusted invalid block name to &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -68,8 +68,12 @@
     </message>
     <message>
         <location line="+127"/>
+        <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Edytowanie bloku „%1”&lt;br&gt;Proszę użyć polecenia&lt;i&gt;Blok &gt; Wróć do rysunku&lt;/i&gt; po zakończeniu.</translation>
+        <translation type="vanished">Edytowanie bloku „%1”&lt;br&gt;Proszę użyć polecenia&lt;i&gt;Blok &gt; Wróć do rysunku&lt;/i&gt; po zakończeniu.</translation>
     </message>
 </context>
 <context>

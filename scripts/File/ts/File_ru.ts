@@ -9,12 +9,11 @@
         <translation>Инструменты работы с файлами</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show file tools</source>
-        <translation>Показать инструменты работы с файлами</translation>
+        <translation type="vanished">Показать инструменты работы с файлами</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;File</source>
         <translation>Файл</translation>
     </message>
@@ -31,8 +30,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Файл с именем «%1» уже существует. Заменить его?</translation>
+        <translation type="vanished">Файл с именем «%1» уже существует. Заменить его?</translation>
     </message>
     <message>
         <location line="+20"/>

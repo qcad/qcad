@@ -19,9 +19,8 @@
         <translation>Rôzne nástroje bloku</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc block tools</source>
-        <translation>Zobraziť rôzne nástroje bloku</translation>
+        <translation type="vanished">Zobraziť rôzne nástroje bloku</translation>
     </message>
 </context>
 </TS>

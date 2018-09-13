@@ -6,12 +6,12 @@
     <message>
         <location filename="../XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Linha de construção &amp;vertical</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical construction line</source>
-        <translation type="unfinished"></translation>
+        <translation>Desenho linha de construção vertical</translation>
     </message>
 </context>
 </TS>

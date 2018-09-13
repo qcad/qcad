@@ -6,22 +6,21 @@
     <message>
         <location filename="../MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished">Schijf</translation>
+        <translation>Diverse</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished">Schijfselectie Gereedschap</translation>
+        <translation>Diverse selectie gereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc selection tools</source>
-        <translation type="unfinished">Toon misc selectiefunctieen</translation>
+        <translation type="vanished">Diverse selectie gereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Select</source>
-        <translation type="unfinished">&amp;Selecteren</translation>
+        <translation>&amp;Selecteer</translation>
     </message>
 </context>
 </TS>

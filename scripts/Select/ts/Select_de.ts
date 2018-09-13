@@ -9,12 +9,11 @@
         <translation>Selektionswerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show selection tools</source>
-        <translation>Selektionswerkzeuge anzeigen</translation>
+        <translation type="vanished">Selektionswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translation>Selektionswerkzeuge</translation>
     </message>

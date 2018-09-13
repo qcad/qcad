@@ -9,12 +9,11 @@
         <translation>選択ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show selection tools</source>
-        <translation>選択ツールを表示</translation>
+        <translation type="vanished">選択ツールを表示</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translation>選択ツールパネル</translation>
     </message>

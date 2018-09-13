@@ -17,14 +17,18 @@
 <context>
     <name>ShowReadme</name>
     <message>
-        <location filename="../ShowReadme.js" line="+46"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation>File &apos;%1&apos; doesn&apos;t exist.</translation>
+        <translation type="vanished">File &apos;%1&apos; doesn&apos;t exist.</translation>
     </message>
     <message>
         <location filename="../ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
         <translation>Show &amp;Readme</translation>
+    </message>
+    <message>
+        <location filename="../ShowReadme.js" line="+46"/>
+        <source>File &quot;%1&quot; doesn&apos;t exist.</source>
+        <translation>File &quot;%1&quot; doesn&apos;t exist.</translation>
     </message>
 </context>
 </TS>

@@ -9,12 +9,11 @@
         <translation>Nástroje súboru</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show file tools</source>
-        <translation>Zobraziť nástroje súboru</translation>
+        <translation type="vanished">Zobraziť nástroje súboru</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;File</source>
         <translation>&amp;Súbor</translation>
     </message>
@@ -31,8 +30,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Súbor &apos;%1&apos; už existuje. Chcete ho prepísať?</translation>
+        <translation type="vanished">Súbor &apos;%1&apos; už existuje. Chcete ho prepísať?</translation>
     </message>
     <message>
         <location line="+20"/>

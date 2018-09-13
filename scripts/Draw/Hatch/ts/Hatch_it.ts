@@ -21,12 +21,11 @@
         <translation>Menù tratteggi</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Mostra menù tratteggi</translation>
+        <translation type="vanished">Mostra menù tratteggi</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Tratteggi</translation>
     </message>

@@ -41,7 +41,12 @@
         <translation type="vanished">Teile dieser Software sind © 2008-2018 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+3"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation>Plugins und Skript Add-ons unterliegen ihrer jeweiligen Lizenz (siehe &quot;Plugins&quot; Reiter).</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation>Teile dieser Software sind © %1 The Qt Company Ltd.</translation>
     </message>
@@ -144,12 +149,11 @@
         <translation type="obsolete">Das bedeutet, dass jeder &lt;a href=&apos;%1&apos;&gt;mithelfen kann.</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Plugins und Skript Add-ons unterliegen ihrer jeweiligen Lizenz (siehe &quot;Plugins&quot; Reiter).</translation>
+        <translation type="vanished">Plugins und Skript Add-ons unterliegen ihrer jeweiligen Lizenz (siehe &quot;Plugins&quot; Reiter).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Alle Marken und Produktnamen sind Marken oder eingetragene Marken der jeweiligen Inhaber.</translation>
     </message>
@@ -229,7 +233,7 @@
         <translation>Übersetzungen</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Vorlagen</translation>
     </message>

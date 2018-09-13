@@ -21,12 +21,11 @@
         <translation>Arcering gereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Toon arcering gereedschappen</translation>
+        <translation type="vanished">Toon arcering gereedschappen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Arcering</translation>
     </message>

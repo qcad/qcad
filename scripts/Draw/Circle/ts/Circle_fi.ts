@@ -9,12 +9,11 @@
         <translation>Ympyrätyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Näytä ympyrätyökalut</translation>
+        <translation type="vanished">Näytä ympyrätyökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>Ympyrä</translation>
     </message>

@@ -15,8 +15,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
+        <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
         <translation>Bestandsexporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Opslaan als om het filter in actie te zien.</translation>
+    </message>
+    <message>
+        <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
+        <translation type="vanished">Bestandsexporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Opslaan als om het filter in actie te zien.</translation>
     </message>
     <message>
         <location line="+10"/>

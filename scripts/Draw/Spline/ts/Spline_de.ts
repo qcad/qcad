@@ -14,9 +14,8 @@
         <translation>Splinewerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show spline tools</source>
-        <translation>Splinewerkzeuge anzeigen</translation>
+        <translation type="vanished">Splinewerkzeuge anzeigen</translation>
     </message>
 </context>
 </TS>

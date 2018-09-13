@@ -76,13 +76,12 @@ Delta Y</translatorcomment>
         <translation>Ferramentas de Dimensão</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Exiba as ferramentas de dimensões</translation>
+        <translation type="vanished">Exiba as ferramentas de dimensões</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>D&amp;imensão</translation>

@@ -6,22 +6,21 @@
     <message>
         <location filename="../MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Miscelânea</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferramentas diversas de importação / exportação</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc import / export tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Mostrar ferramentas diversas de importação / exportação</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Importar/Exportar</translation>
     </message>
 </context>
 </TS>

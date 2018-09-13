@@ -9,12 +9,11 @@
         <translation>Orodja projekcij</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show projection tools</source>
-        <translation>Prikaži orodja projekcij</translation>
+        <translation type="vanished">Prikaži orodja projekcij</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projekcija</translation>
     </message>

@@ -4,9 +4,13 @@
 <context>
     <name>ExAddLayer</name>
     <message>
-        <location filename="../ExAddLayer.js" line="+44"/>
         <source>Added layer &apos;MyLayer&apos;</source>
-        <translation>Laag &apos;MyLayer&apos; toegevoegd</translation>
+        <translation type="vanished">Laag &apos;MyLayer&apos; toegevoegd</translation>
+    </message>
+    <message>
+        <location filename="../ExAddLayer.js" line="+44"/>
+        <source>Added layer &quot;MyLayer&quot;</source>
+        <translation>Laag &quot;MyLayer&quot; toegevoegd</translation>
     </message>
     <message>
         <location line="+13"/>

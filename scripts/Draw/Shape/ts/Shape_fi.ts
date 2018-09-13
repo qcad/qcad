@@ -9,16 +9,15 @@
         <translation>Muototyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Näytä muototyökalut</translation>
+        <translation type="vanished">Näytä muototyökalut</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translation type="vanished">Näytä viivatyökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Muoto</translation>
     </message>

@@ -14,12 +14,11 @@
         <translation>Yakınlaştırma Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation>Yakınlaştırma araçlarını göster</translation>
+        <translation type="vanished">Yakınlaştırma araçlarını göster</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Yakınlaştır</translation>
     </message>

@@ -66,12 +66,11 @@ the preference changes to take effect.</source>
         <translation>Editační nástroje</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Zobrazit editační nástroje</translation>
+        <translation type="vanished">Zobrazit editační nástroje</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Upravit</translation>
     </message>

@@ -9,12 +9,11 @@
         <translation>Modificeren gereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>Modificeren gereedschappen tonen</translation>
+        <translation type="vanished">Modificeren gereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificeren</translation>
     </message>

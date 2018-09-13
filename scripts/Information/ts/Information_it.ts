@@ -9,12 +9,11 @@
         <translation>Strumenti di informazione</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show information tools</source>
-        <translation>Mostra strumenti di informazione</translation>
+        <translation type="vanished">Mostra strumenti di informazione</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>

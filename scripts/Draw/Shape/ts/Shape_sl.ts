@@ -36,16 +36,15 @@
         <translation>Orodja oblike</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Prikaži orodja oblike</translation>
+        <translation type="vanished">Prikaži orodja oblike</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translation type="obsolete">Prikaži orodja črte</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Oblike</translation>
     </message>

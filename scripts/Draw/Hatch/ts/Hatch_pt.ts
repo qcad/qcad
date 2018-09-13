@@ -24,12 +24,11 @@
         <translation>Ferramentas de hachura</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Exiba as ferramentas de hachura</translation>
+        <translation type="vanished">Exiba as ferramentas de hachura</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--

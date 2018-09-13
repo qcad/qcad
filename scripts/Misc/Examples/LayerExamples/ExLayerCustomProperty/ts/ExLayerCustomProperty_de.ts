@@ -4,9 +4,13 @@
 <context>
     <name>ExLayerCustomProperty</name>
     <message>
-        <location filename="../ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
-        <translation>Benutzerdefinierte Eigenschaft &quot;MyCustomProperty&quot; zu Layer &apos;0&apos; hinzugefügt.</translation>
+        <translation type="vanished">Benutzerdefinierte Eigenschaft &quot;MyCustomProperty&quot; zu Layer &apos;0&apos; hinzugefügt.</translation>
+    </message>
+    <message>
+        <location filename="../ExLayerCustomProperty.js" line="+43"/>
+        <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
+        <translation>Benutzerdefinierte Eigenschaft &quot;MyCustomProperty&quot; zu Layer &quot;0&quot; hinzugefügt.</translation>
     </message>
     <message>
         <location line="+10"/>

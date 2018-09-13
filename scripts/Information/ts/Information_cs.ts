@@ -9,12 +9,11 @@
         <translation>Informační nástroje</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show information tools</source>
-        <translation>Zobrazit informační nástroje</translation>
+        <translation type="vanished">Zobrazit informační nástroje</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Info</source>
         <translation>&amp;Informace</translation>
     </message>

@@ -11,15 +11,14 @@ Pokaż menu &quot;Okręgi&quot;</translatorcomment>
         <translation>Narzędzia okręgu</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaż menu &quot;Okręgi&quot;</translatorcomment>
-        <translation>Wyświetla narzędzia okręgu</translation>
+        <translation type="vanished">Wyświetla narzędzia okręgu</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

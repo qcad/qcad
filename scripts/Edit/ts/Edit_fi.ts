@@ -67,12 +67,11 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>Muokkaustyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Näytä muokkaustyökalut</translation>
+        <translation type="vanished">Näytä muokkaustyökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Muokkaa</translation>
     </message>

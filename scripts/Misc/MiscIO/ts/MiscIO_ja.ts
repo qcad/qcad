@@ -14,12 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Show misc import / export tools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>&amp;Import/Export</source>
         <translation type="unfinished"></translation>
     </message>

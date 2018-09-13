@@ -89,6 +89,11 @@
         <translation>Vermessung</translation>
     </message>
     <message>
+        <location line="+210"/>
+        <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
+        <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemassungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translation type="vanished">Die Zeichnungseinheit muss &apos;Inch&apos; oder &apos;Foot&apos; sein, damit Bemassungsbeschriftungen in den Formaten &apos;Architektur&apos; oder &apos;Technisch&apos; angezeigt werden können. Format zurückgesetzt auf &apos;Dezimal&apos;.</translation>
     </message>
@@ -215,14 +220,13 @@
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../DimensionSettings.js" line="+209"/>
+        <location filename="../DimensionSettings.js" line="-1"/>
         <source>Unit / Format</source>
         <translation>Einheit / Format</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>Die Zeichnungseinheit muss &apos;Inch&apos; sein, damit Bemassungsbeschriftungen in den Formaten &apos;Architektur&apos; oder &apos;Technisch&apos; angezeigt werden können. Format zurückgesetzt auf &apos;Dezimal&apos;.</translation>
+        <translation type="vanished">Die Zeichnungseinheit muss &apos;Inch&apos; sein, damit Bemassungsbeschriftungen in den Formaten &apos;Architektur&apos; oder &apos;Technisch&apos; angezeigt werden können. Format zurückgesetzt auf &apos;Dezimal&apos;.</translation>
     </message>
 </context>
 </TS>

@@ -9,12 +9,11 @@
         <translation>Kaarityökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Näytä kaarityökalut</translation>
+        <translation type="vanished">Näytä kaarityökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>Kaari</translation>
     </message>

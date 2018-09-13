@@ -20,12 +20,11 @@
         <translation>Diverse Werkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc tools</source>
-        <translation>Diverse Werkzeuge anzeigen</translation>
+        <translation type="vanished">Diverse Werkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>Misc</source>
         <translation>Diverses</translation>
     </message>

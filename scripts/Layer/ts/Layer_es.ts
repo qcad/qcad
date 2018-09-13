@@ -9,12 +9,11 @@
         <translation>Herramientas de capa</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Mostrar herramientas de capa</translation>
+        <translation type="vanished">Mostrar herramientas de capa</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>&amp;Capa</translation>
     </message>

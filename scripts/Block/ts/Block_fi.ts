@@ -9,12 +9,11 @@
         <translation>Lohkotyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show block tools</source>
-        <translation>Näytä lohkotyökalut</translation>
+        <translation type="vanished">Näytä lohkotyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Block</source>
         <translation>Lohko</translation>
     </message>
@@ -38,7 +37,7 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

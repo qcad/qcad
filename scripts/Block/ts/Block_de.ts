@@ -9,12 +9,11 @@
         <translation>Blockwerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show block tools</source>
-        <translation>Blockwerkzeuge anzeigen</translation>
+        <translation type="vanished">Blockwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Block</source>
         <translation>Blo&amp;ck</translation>
     </message>
@@ -38,8 +37,12 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
         <translation>Block &quot;%1&quot; ist bereits vorhanden&lt;br&gt;und wird überschrieben.</translation>
+    </message>
+    <message>
+        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation type="vanished">Block &quot;%1&quot; ist bereits vorhanden&lt;br&gt;und wird überschrieben.</translation>
     </message>
     <message>
         <location line="+5"/>

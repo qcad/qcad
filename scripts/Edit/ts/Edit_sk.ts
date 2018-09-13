@@ -67,12 +67,11 @@ musíte znovu spustiť QCAD.</translation>
         <translation>Nástroje Úpravy</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Zobraziť nástroje úpravy</translation>
+        <translation type="vanished">Zobraziť nástroje úpravy</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Upraviť</translation>
     </message>

@@ -6,22 +6,21 @@
     <message>
         <location filename="../MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished">Misceláneo</translation>
+        <translation>Misceláneo</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished">Herramientas de selección misceláneas</translation>
+        <translation>Herramientas de selección misceláneas</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc selection tools</source>
-        <translation type="unfinished">Mostrar varias herramientas de selección</translation>
+        <translation type="vanished">Mostrar varias herramientas de selección</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Select</source>
-        <translation type="unfinished">&amp;Seleccionar</translation>
+        <translation>&amp;Seleccionar</translation>
     </message>
 </context>
 </TS>

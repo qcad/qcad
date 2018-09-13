@@ -9,12 +9,11 @@
         <translation>Figurverktyg</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Visa figurverktyg</translation>
+        <translation type="vanished">Visa figurverktyg</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Form</translation>
     </message>

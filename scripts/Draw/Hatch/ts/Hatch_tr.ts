@@ -9,12 +9,11 @@
         <translation>Kapak Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Kapak araçlarını göster</translation>
+        <translation type="vanished">Kapak araçlarını göster</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Kapak</translation>
     </message>

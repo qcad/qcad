@@ -9,12 +9,11 @@
         <translation>Selectie gereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show selection tools</source>
-        <translation>Selectie gereedschappen tonen</translation>
+        <translation type="vanished">Selectie gereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translation>Selectie gereedschappen</translation>
     </message>

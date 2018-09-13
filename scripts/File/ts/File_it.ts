@@ -9,12 +9,11 @@
         <translation>Strumenti di file</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show file tools</source>
-        <translation>Strumenti di file</translation>
+        <translation type="vanished">Strumenti di file</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
@@ -37,11 +36,15 @@ Sovrascrivere?</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation>Il file &quot;%1&quot; esiste già. Vuoi sovrascriverlo?</translation>
+    </message>
+    <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--exact match--
 --file: Save_it.ts--
 Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translatorcomment>
-        <translation>Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translation>
+        <translation type="vanished">Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translation>
     </message>
     <message>
         <location line="+20"/>

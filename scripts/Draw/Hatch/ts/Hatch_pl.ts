@@ -24,12 +24,11 @@
         <translation>Narzędzia kreskowania</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Wyświetla narzędzia kreskowania</translation>
+        <translation type="vanished">Wyświetla narzędzia kreskowania</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

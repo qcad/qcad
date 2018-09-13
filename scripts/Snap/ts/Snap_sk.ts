@@ -9,12 +9,11 @@
         <translation>Nástroje prichytávania</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Zobraziť nástroje prichytávania</translation>
+        <translation type="vanished">Zobraziť nástroje prichytávania</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>&amp;Prichytávanie</translation>
     </message>

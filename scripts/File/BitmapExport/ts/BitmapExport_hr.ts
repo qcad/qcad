@@ -5,12 +5,12 @@
     <name>BitmapExport</name>
     <message>
         <location filename="../BitmapExport.js" line="+78"/>
-        <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
+        <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Bitmap file has been exported to &apos;%1&apos;</source>
+        <source>Bitmap file has been exported to &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

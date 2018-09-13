@@ -6,22 +6,21 @@
     <message>
         <location filename="../MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation type="unfinished">Misceláneo</translation>
+        <translation>Misceláneo</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation type="unfinished">Herramientas de Modificación Miscelánea</translation>
+        <translation>Herramientas de modificación miscelánea</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc modification tools</source>
-        <translation type="unfinished">Mostrar varias herramientas de modificación</translation>
+        <translation type="vanished">Mostrar varias herramientas de modificación</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished">&amp;Modificar</translation>
+        <translation>&amp;Modificar</translation>
     </message>
 </context>
 </TS>

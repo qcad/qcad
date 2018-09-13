@@ -14,12 +14,11 @@
         <translation>Razna orodja izbire</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc selection tools</source>
-        <translation>Prikaži razna orodja izbire</translation>
+        <translation type="vanished">Prikaži razna orodja izbire</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Select</source>
         <translation>&amp;Izberi</translation>
     </message>

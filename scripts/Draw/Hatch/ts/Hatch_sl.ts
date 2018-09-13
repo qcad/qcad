@@ -21,12 +21,11 @@
         <translation>Orodja šrafure</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Prikaži orodja šrafur</translation>
+        <translation type="vanished">Prikaži orodja šrafur</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>Š&amp;rafura</translation>
     </message>

@@ -6,9 +6,9 @@
     <message>
         <location filename="../DirectoryList.js" line="+57"/>
         <source>The folder
-&apos;%1&apos;
+&quot;%1&quot;
 is already in the list.</source>
-        <translation>&apos;%1&apos; 
+        <translation>&quot;%1&quot; 
 klasörü 
 zaten listede.</translation>
     </message>

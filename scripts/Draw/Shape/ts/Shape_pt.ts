@@ -46,16 +46,15 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
         <translation>Ferramentas de Forma</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Exiba as ferramentas de forma</translation>
+        <translation type="vanished">Exiba as ferramentas de forma</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translation type="vanished">Exiba as ferramentas de linha</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Forma</translation>
     </message>

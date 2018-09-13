@@ -6,17 +6,17 @@
     <message>
         <location filename="../PointPole.js" line="+67"/>
         <source>Arc or circle</source>
-        <translation type="unfinished">Boog of cirkel</translation>
+        <translation>Boog of cirkel</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Line</source>
-        <translation type="unfinished">Lijn</translation>
+        <translation>Lijn</translation>
     </message>
     <message>
         <location filename="../PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation type="unfinished">Pool van Lijn en Cirkel</translation>
+        <translation>Pool van lijn en cirkel</translation>
     </message>
 </context>
 </TS>

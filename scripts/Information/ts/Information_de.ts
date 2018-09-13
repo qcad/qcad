@@ -14,9 +14,8 @@
         <translation>Informationswerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show information tools</source>
-        <translation>Informationswerkzeuge anzeigen</translation>
+        <translation type="vanished">Informationswerkzeuge anzeigen</translation>
     </message>
     <message>
         <location filename="../Information.ui" line="+17"/>

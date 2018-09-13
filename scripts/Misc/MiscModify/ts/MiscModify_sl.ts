@@ -14,12 +14,11 @@
         <translation>Razna orodja modifikacij</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc modification tools</source>
-        <translation>Prikaži razna orodja modifikacij</translation>
+        <translation type="vanished">Prikaži razna orodja modifikacij</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificiraj</translation>
     </message>

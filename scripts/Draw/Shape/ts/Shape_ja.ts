@@ -36,16 +36,15 @@
         <translation>成形ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>表示成形ツール</translation>
+        <translation type="vanished">表示成形ツール</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translation type="obsolete">線ツールの表示</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;S 成形</translation>
     </message>

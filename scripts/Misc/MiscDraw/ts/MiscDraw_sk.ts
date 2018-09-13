@@ -14,12 +14,11 @@
         <translation>&amp;Kreslenie</translation>
     </message>
     <message>
-        <location line="-18"/>
         <source>Show misc drawing tools</source>
-        <translation>Zobraziť rôzne nástroje kreslenia</translation>
+        <translation type="vanished">Zobraziť rôzne nástroje kreslenia</translation>
     </message>
     <message>
-        <location line="-5"/>
+        <location line="-23"/>
         <source>Misc Drawing Tools</source>
         <translation>Rôzne nástroje kreslenia</translation>
     </message>

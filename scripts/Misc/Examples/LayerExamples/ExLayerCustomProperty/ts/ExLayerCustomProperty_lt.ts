@@ -5,7 +5,7 @@
     <name>ExLayerCustomProperty</name>
     <message>
         <location filename="../ExLayerCustomProperty.js" line="+43"/>
-        <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
+        <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

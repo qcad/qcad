@@ -9,12 +9,11 @@
         <translation>Polylijn gereedschap</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show polyline tools</source>
-        <translation>Polylijn gereedschap tonen</translation>
+        <translation type="vanished">Polylijn gereedschap tonen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polylijn</translation>
     </message>

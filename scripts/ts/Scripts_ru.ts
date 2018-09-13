@@ -63,8 +63,12 @@
     </message>
     <message>
         <location line="+127"/>
+        <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Редактируя блок &apos;%1&apos;,&lt;br&gt;Выберите &lt;i&gt;Блок &gt; Возврат к главному рисованию&lt;/i&gt;, когда закончите</translation>
+        <translation type="vanished">Редактируя блок &apos;%1&apos;,&lt;br&gt;Выберите &lt;i&gt;Блок &gt; Возврат к главному рисованию&lt;/i&gt;, когда закончите</translation>
     </message>
 </context>
 <context>

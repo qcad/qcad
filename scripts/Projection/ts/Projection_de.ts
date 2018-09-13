@@ -9,12 +9,11 @@
         <translation>Projektionswerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show projection tools</source>
-        <translation>Projektionswerkzeuge</translation>
+        <translation type="vanished">Projektionswerkzeuge</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projektion</translation>
     </message>

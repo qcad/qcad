@@ -11,15 +11,14 @@ Pokaż menu &quot;Łuki&quot;</translatorcomment>
         <translation>Narzędzia łuku</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaż menu &quot;Łuki&quot;</translatorcomment>
-        <translation>Wyświetla narzędzia łuku</translation>
+        <translation type="vanished">Wyświetla narzędzia łuku</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

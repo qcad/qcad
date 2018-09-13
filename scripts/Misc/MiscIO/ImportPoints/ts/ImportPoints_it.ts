@@ -6,17 +6,17 @@
     <message>
         <location filename="../ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">Tutti i file</translation>
+        <translation>Tutti i file</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation type="unfinished">Punti Importazione</translation>
+        <translation>Importa Punti</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>&amp;Import Points</source>
-        <translation type="unfinished">Punti &amp;Importazione</translation>
+        <translation>&amp;Importa punti</translation>
     </message>
 </context>
 </TS>

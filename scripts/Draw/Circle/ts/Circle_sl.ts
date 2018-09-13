@@ -9,12 +9,11 @@
         <translation>Orodja kroga</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Prikaži orodja kroga</translation>
+        <translation type="vanished">Prikaži orodja kroga</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>&amp;Krog</translation>
     </message>

@@ -9,12 +9,11 @@
         <translation>Laag gereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Laag gereedschappen tonen</translation>
+        <translation type="vanished">Laag gereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>&amp;Laag</translation>
     </message>

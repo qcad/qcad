@@ -9,12 +9,11 @@
         <translation>Rôzne</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Show misc import / export tools</source>
-        <translation>Zobraziť rôzne nástroje Importu/Exportu</translation>
+        <translation type="vanished">Zobraziť rôzne nástroje Importu/Exportu</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+31"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Import/Export</translation>
     </message>

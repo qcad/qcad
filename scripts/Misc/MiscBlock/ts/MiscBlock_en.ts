@@ -14,12 +14,11 @@
         <translation>Misc Block Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc block tools</source>
-        <translation>Show misc block tools</translation>
+        <translation type="vanished">Show misc block tools</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translation>&amp;Block</translation>
     </message>

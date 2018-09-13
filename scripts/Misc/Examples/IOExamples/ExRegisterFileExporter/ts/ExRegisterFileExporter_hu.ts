@@ -15,7 +15,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
+        <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

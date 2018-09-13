@@ -9,12 +9,11 @@
         <translation>Muunnostyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>Näytä muunnostyökalut</translation>
+        <translation type="vanished">Näytä muunnostyökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;Muunna</translation>
     </message>

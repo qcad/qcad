@@ -14,12 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Show misc development tools</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>De&amp;velopment</source>
         <translation type="unfinished"></translation>
     </message>

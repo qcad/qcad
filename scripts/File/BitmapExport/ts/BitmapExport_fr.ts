@@ -4,7 +4,12 @@
 <context>
     <name>BitmapExport</name>
     <message>
-        <location filename="../BitmapExport.js" line="+119"/>
+        <location filename="../BitmapExport.js" line="+78"/>
+        <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
+        <translation>Erreur lors de la génération du fichier Bitmap &quot;%1&quot; : %2</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Files</source>
         <translation>Fichiers</translation>
     </message>
@@ -14,24 +19,23 @@
         <translation>Exporter en bitmap</translation>
     </message>
     <message>
-        <location line="-51"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Erreur lors de la génération du fichier bitmap &apos;%1&apos;: &apos;%2&apos;</translation>
+        <translation type="vanished">Erreur lors de la génération du fichier bitmap &apos;%1&apos;: &apos;%2&apos;</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Fichier Bitmap a été exportée vers &apos;%1&apos;</translation>
+        <translation type="vanished">Fichier Bitmap a été exportée vers &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
         <translation type="obsolete">Erreur lors de la génération du fichier Bitmap &quot;%1&quot; : &quot;%2&quot;</translation>
     </message>
     <message>
+        <location line="-46"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="obsolete">Fichier Bitmap a été exportée vers &apos;%1&apos;</translation>
+        <translation>Fichier Bitmap a été exportée vers &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>

@@ -36,6 +36,24 @@
         <source>Autosave complete.</source>
         <translation>Auto-opslaan compleet.</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation>
+            <numerusform>Een automatisch opgeslagen bestand voor een naamloos tekening werd gevonden.
+Wilt u de tekening herstellen?</numerusform>
+            <numerusform>%n automatisch opgeslagen bestanden voor naamloose tekeningen worden gevonden.
+Wilt u deze herstellen?</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation>Een automatisch opgeslagen bestand voor &quot;%1&quot; bestaat.
+Wilt u deze herstellen?</translation>
+    </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
@@ -49,10 +67,9 @@ Do you wish to recover them?</source>
 Wilt u deze herstellen?</translation>
     </message>
     <message numerus="yes">
-        <location line="+19"/>
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Een &apos;auto-opslaan&apos; bestand voor een naamloos tekening werd gevonden.
 Wilt u de tekening herstellen?</numerusform>
             <numerusform>%n &apos;auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
@@ -60,7 +77,7 @@ Wilt u deze herstellen?</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-64"/>
         <source>Recover Files?</source>
         <translation>Bestanden herstellen?</translation>
     </message>
@@ -75,14 +92,13 @@ Wilt u deze herstellen?</numerusform>
         <translation>Bestand herstellen?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Een &apos;Auto-opslaan&apos; bestand voor &apos;%1&apos; bestaat.
+        <translation type="vanished">Een &apos;Auto-opslaan&apos; bestand voor &apos;%1&apos; bestaat.
 Wilt u het herstellen?</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>

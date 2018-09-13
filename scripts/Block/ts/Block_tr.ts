@@ -9,12 +9,11 @@
         <translation>Blok Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show block tools</source>
-        <translation>Blok araçlarını göster</translation>
+        <translation type="vanished">Blok araçlarını göster</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -38,8 +37,12 @@
     </message>
     <message>
         <location line="+11"/>
+        <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>&apos;%1&apos; bloğu zaten var&lt;br&gt;ve üzerine yazılacak.</translation>
+        <translation type="vanished">&apos;%1&apos; bloğu zaten var&lt;br&gt;ve üzerine yazılacak.</translation>
     </message>
     <message>
         <location line="+5"/>

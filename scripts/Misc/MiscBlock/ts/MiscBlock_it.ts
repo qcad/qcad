@@ -14,12 +14,11 @@
         <translation>Strumenti muscolari per blocchi</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc block tools</source>
-        <translation>Mostra strumenti muscolari per blocchi</translation>
+        <translation type="vanished">Mostra strumenti muscolari per blocchi</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translation>&amp;Blocco</translation>
     </message>

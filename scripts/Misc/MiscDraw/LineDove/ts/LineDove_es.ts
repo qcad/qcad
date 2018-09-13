@@ -6,27 +6,27 @@
     <message>
         <location filename="../LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">Primer punto</translation>
+        <translation>Primer punto</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Segundo punto</translation>
+        <translation>Segundo punto</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Hecho</translation>
+        <translation>Terminar</translation>
     </message>
     <message>
         <location filename="../LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished">Junta de cola de milano desde 2 puntos</translation>
+        <translation>Junta de cola de pato desde 2 puntos</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished">Dibujar una junta de cola de milano</translation>
+        <translation>Dibujar una junta de cola de pato</translation>
     </message>
 </context>
 </TS>

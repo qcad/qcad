@@ -9,12 +9,11 @@
         <translation>Инструменты модификаций</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>Показать инструменты модификаций</translation>
+        <translation type="vanished">Показать инструменты модификаций</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>Из&amp;менение</translation>
     </message>

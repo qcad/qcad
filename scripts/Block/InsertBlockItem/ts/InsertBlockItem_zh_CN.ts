@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+26"/>
+        <source>Adjusted invalid block name to &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>将无效块的名称设为 &apos;%1&apos;</translation>
+        <translation type="vanished">将无效块的名称设为 &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+62"/>

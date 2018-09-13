@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+26"/>
+        <source>Adjusted invalid block name to &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>&apos;%1&apos; için düzeltilmiş geçersiz blok adı</translation>
+        <translation type="vanished">&apos;%1&apos; için düzeltilmiş geçersiz blok adı</translation>
     </message>
     <message>
         <location line="+62"/>

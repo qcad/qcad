@@ -9,12 +9,11 @@
         <translation>Orodjarna lokov</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Prikaži orodjarno lokov</translation>
+        <translation type="vanished">Prikaži orodjarno lokov</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Lok</translation>
     </message>

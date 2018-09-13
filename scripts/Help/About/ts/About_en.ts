@@ -73,12 +73,11 @@
         <translation>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</translation>
+        <translation type="vanished">Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>All brand or product names are trademarks or registered trademarks of their respective holders.</translation>
     </message>
@@ -87,7 +86,12 @@
         <translation type="vanished">Portions of this software © 2008-2018 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-2"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation>Portions of this software © %1 The Qt Company Ltd.</translation>
     </message>
@@ -197,7 +201,7 @@
         <translation>Translations</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Templates</translation>
     </message>

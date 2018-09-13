@@ -14,12 +14,11 @@
         <translation>Инструменты масштабирования</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation>Показать инструменты масштабирования</translation>
+        <translation type="vanished">Показать инструменты масштабирования</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Масштаб</translation>
     </message>

@@ -9,12 +9,11 @@
         <translation>Alati za elipse</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show ellipse tools</source>
-        <translation>Prikaži alate za elipse</translation>
+        <translation type="vanished">Prikaži alate za elipse</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>%Elipsa</translation>
     </message>

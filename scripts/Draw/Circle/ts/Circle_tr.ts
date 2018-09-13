@@ -9,12 +9,11 @@
         <translation>Daire Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Daire araçlarını göster</translation>
+        <translation type="vanished">Daire araçlarını göster</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>&amp;Daire</translation>
     </message>

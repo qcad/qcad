@@ -27,23 +27,23 @@
     </message>
     <message>
         <location line="+16"/>
-        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation>Ongeldige coördinaat of afstand &apos;%1&apos;.</translation>
+        <source>Invalid coordinate or distance &quot;%1&quot;.</source>
+        <translation>Ongeldige coördinaat of afstand &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation>Onbekende commando of ongeldige coördinaaten of waarde: &apos;%1&apos;</translation>
+        <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
+        <translation>Onbekende commando of ongeldige coördinaaten of waarde: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation>Cijfers kunnen worden ingevoerd als volgt: &apos;%1&apos;</translation>
+        <source>Numbers may be entered as: &quot;%1&quot;</source>
+        <translation>Cijfers kunnen worden ingevoerd als volgt: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
-        <translation>Coördinaten kunnen worden ingevoerd als: &apos;%1&apos; (absoluut) of &apos;%2&apos; (relatief) of &apos;%3&apos; (polaire) of &apos;%4&apos; (relatief polaire)</translation>
+        <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
+        <translation>Coördinaten kunnen worden ingevoerd als: &quot;%1&quot; (absoluut) of &quot;%2&quot; (relatief) of &quot;%3&quot; (polaire) of &quot;%4&quot; (relatief polaire)</translation>
     </message>
     <message>
         <location line="+8"/>

@@ -9,12 +9,11 @@
         <translation>Poimintatyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Näytä poimintatyökalut</translation>
+        <translation type="vanished">Näytä poimintatyökalut</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>&amp;Poiminta</translation>
     </message>

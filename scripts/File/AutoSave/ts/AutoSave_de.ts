@@ -63,25 +63,25 @@
         <translation>Autosave abgeschlossen.</translation>
     </message>
     <message>
-        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
+        <source>An autosave backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation type="vanished">Eine &apos;autosave&apos; Backup Datei für eine unbenannte Zeichnung wurde gefunden.
+        <translation type="vanished">Eine autosave Backup Datei für eine unbenannte Zeichnung wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
-        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
+        <source>%1 autosave backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation type="vanished">%1 &apos;autosave&apos; Backup Dateien für unbenannte Zeichnungen wurden gefunden.
+        <translation type="vanished">%1 autosave Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform>Eine &apos;autosave&apos; Backup Datei für eine unbenannte Zeichnung wurde gefunden.
+            <numerusform>Eine autosave Backup Datei für eine unbenannte Zeichnung wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</numerusform>
-            <numerusform>%n &apos;autosave&apos; Backup Dateien für unbenannte Zeichnungen wurden gefunden.
+            <numerusform>%n autosave Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</numerusform>
         </translation>
     </message>
@@ -96,10 +96,16 @@ Möchten Sie die Zeichnungen wiederherstellen?</numerusform>
         <translation>Datei wiederherstellen?</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
+        <source>An autosave backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Eine &apos;autosave&apos; Backup Datei für &apos;%1&apos; wurde gefunden.
+        <translation type="vanished">Eine autosave Backup Datei für &apos;%1&apos; wurde gefunden.
+Möchten Sie die Zeichnung wiederherstellen?</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation>Eine automatisch gespeicherte Backup Datei für &quot;%1&quot; wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>

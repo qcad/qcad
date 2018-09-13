@@ -9,12 +9,11 @@
         <translation>Nástroje oblouku</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Zobrazit nástroje oblouku</translation>
+        <translation type="vanished">Zobrazit nástroje oblouku</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Oblouk</translation>
     </message>

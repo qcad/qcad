@@ -10,12 +10,11 @@
         <translation>Narzędzia przyciągania</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Wyświetla narzędzia przyciągania</translation>
+        <translation type="vanished">Wyświetla narzędzia przyciągania</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

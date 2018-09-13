@@ -68,8 +68,12 @@
     </message>
     <message>
         <location line="+127"/>
+        <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation>Editar bloque &quot;%1&quot;&lt;br&gt;Elija &lt;i&gt;Bloque &gt; Volver al dibujo principal&lt;/i&gt; cuando se hace</translation>
+    </message>
+    <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Editar bloque &apos;%1&apos;&lt;br&gt;Elija &lt;i&gt;Bloque &gt; Volver al dibujo principal&lt;/i&gt; cuando se hace</translation>
+        <translation type="vanished">Editar bloque &apos;%1&apos;&lt;br&gt;Elija &lt;i&gt;Bloque &gt; Volver al dibujo principal&lt;/i&gt; cuando se hace</translation>
     </message>
 </context>
 <context>

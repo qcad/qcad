@@ -28,21 +28,27 @@
         <source>Autosave complete.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+88"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Recover Files?</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location line="+19"/>
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+        <location line="-5"/>
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Recover Files?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+21"/>
         <source>Recovered</source>
         <translation type="unfinished"></translation>
     </message>
@@ -52,13 +58,7 @@ Do you wish to recover it/them?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
-Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>

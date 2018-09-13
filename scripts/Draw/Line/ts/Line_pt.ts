@@ -12,15 +12,14 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
         <translation>Ferramentas de Linha</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation>Exiba as ferramentas de linha</translation>
+        <translation type="vanished">Exiba as ferramentas de linha</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

@@ -10,13 +10,12 @@
         <translation>Herramientas de modificación</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar herramientas de modificación</translation>
+        <translation type="vanished">Mostrar herramientas de modificación</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modificar</translation>
     </message>

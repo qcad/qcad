@@ -30,14 +30,27 @@
     </message>
     <message numerus="yes">
         <location line="+19"/>
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>
+        <translation type="unfinished">
             <numerusform>İsimsiz çizim için %n &apos;otomatik kaydetme&apos; yedekleme dosyası bulundu.\ nOnları kurtarmak ister misiniz?</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+69"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="vanished">
+            <numerusform>İsimsiz çizim için %n &apos;otomatik kaydetme&apos; yedekleme dosyası bulundu.\ nOnları kurtarmak ister misiniz?</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Recover Files?</source>
         <translation>Dosyalar Kurtarılsın mı?</translation>
     </message>
@@ -52,14 +65,13 @@ Do you wish to recover it/them?</source>
         <translation>Dosya Kurtarılsın mı? </translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>&apos;%1&apos; için bir &apos;otomatik kaydetme&apos; yedekleme dosyası var.
+        <translation type="vanished">&apos;%1&apos; için bir &apos;otomatik kaydetme&apos; yedekleme dosyası var.
 Onu kurtarmak ister misiniz?</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>

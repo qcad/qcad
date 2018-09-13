@@ -91,8 +91,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
+        <translation>Pre zobrazenie kót vo formátoch &quot;Architektonický&quot; alebo &quot;Strojársky&quot; musia byť nastavené jednotky v &quot;Palcoch&quot;. Formát zmenený na &quot;Desatinný&quot;.</translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>Pre zobrazenie kót vo formátoch &apos;Architektonický&apos; alebo &apos;Strojársky&apos; musia byť nastavené jednotky v &apos;Palcoch&apos;. Formát zmenený na &apos;Desatinný&apos;.</translation>
+        <translation type="vanished">Pre zobrazenie kót vo formátoch &apos;Architektonický&apos; alebo &apos;Strojársky&apos; musia byť nastavené jednotky v &apos;Palcoch&apos;. Formát zmenený na &apos;Desatinný&apos;.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>

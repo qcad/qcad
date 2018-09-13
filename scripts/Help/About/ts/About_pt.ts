@@ -34,7 +34,12 @@
         <translation type="vanished">Partes deste software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+3"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation>Plugins e script add-ons estão sujeitos às suas respectivas licenças (ver &quot;Plugins&quot; tab).</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Esse programa é distribuído na esperança que seja útil, mas sem nenhuma garantia, nem mesmo a garantia implicada de comercialização ou propriedade para uso particular.</translation>
     </message>
@@ -129,12 +134,11 @@
         <translation>%1 é um software livre (open source).</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Plugins e script add-ons estão sujeitos às suas respectivas licenças (ver &quot;Plugins&quot; tab).</translation>
+        <translation type="vanished">Plugins e script add-ons estão sujeitos às suas respectivas licenças (ver &quot;Plugins&quot; tab).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Todos os nomes de incêndio ou produtos são marcas comerciais ou marcas comerciais registradas de seus respectivos proprietários.</translation>
     </message>
@@ -192,7 +196,7 @@
     <message>
         <location line="+22"/>
         <source>Script Add-Ons</source>
-        <translation>Scripts de Add-Ons</translation>
+        <translation>Add-ons de script</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -223,7 +227,7 @@
         <translation>Traduções</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Modelos</translation>
     </message>

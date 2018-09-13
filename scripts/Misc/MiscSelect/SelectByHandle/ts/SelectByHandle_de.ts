@@ -23,8 +23,12 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Object is not an entity:</source>
+        <source>Object is not a drawing entity:</source>
         <translation>Objekt ist kein Zeichenelement:</translation>
+    </message>
+    <message>
+        <source>Object is not an entity:</source>
+        <translation type="vanished">Objekt ist kein Zeichenelement:</translation>
     </message>
 </context>
 <context>

@@ -9,12 +9,11 @@
         <translation>画圆工具</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>显示画圆工具</translation>
+        <translation type="vanished">显示画圆工具</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>圆(&amp;C)</translation>
     </message>

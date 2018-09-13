@@ -9,12 +9,11 @@
         <translation>Nástroje Čiary</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Zobraziť nástroje čiar</translation>
+        <translation type="vanished">Zobraziť nástroje čiar</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>Č&amp;iara</translation>
     </message>

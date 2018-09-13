@@ -14,9 +14,8 @@
         <translation>Outils point</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show point tools</source>
-        <translation>Outils point</translation>
+        <translation type="vanished">Outils point</translation>
     </message>
 </context>
 </TS>

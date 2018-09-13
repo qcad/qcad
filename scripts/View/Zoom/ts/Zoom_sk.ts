@@ -14,12 +14,11 @@
         <translation>Nástroje lupy</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation>Zobraziť nástroje lupy</translation>
+        <translation type="vanished">Zobraziť nástroje lupy</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Lupa</translation>
     </message>

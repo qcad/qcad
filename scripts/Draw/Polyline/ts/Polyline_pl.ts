@@ -11,15 +11,14 @@ Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation>Narzędzia linii łamanej</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show polyline tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaż menu &quot;Łamane&quot;</translatorcomment>
-        <translation>Wyświetla narzędzia linii łamanej</translation>
+        <translation type="vanished">Wyświetla narzędzia linii łamanej</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Polyline</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

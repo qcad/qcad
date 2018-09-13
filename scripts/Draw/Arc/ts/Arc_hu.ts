@@ -9,12 +9,11 @@
         <translation>Ív eszköztár</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Ív eszköztár megjelenítése</translation>
+        <translation type="vanished">Ív eszköztár megjelenítése</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>Körív</translation>
     </message>

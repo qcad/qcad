@@ -9,12 +9,11 @@
         <translation>Viivatyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Näytä viivatyökalut</translation>
+        <translation type="vanished">Näytä viivatyökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>&amp;Viiva</translation>
     </message>

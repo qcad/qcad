@@ -9,12 +9,11 @@
         <translation>Fangwerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Fangwerkzeuge anzeigen</translation>
+        <translation type="vanished">Fangwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>&amp;Fang</translation>
     </message>

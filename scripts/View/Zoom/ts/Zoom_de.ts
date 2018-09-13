@@ -14,12 +14,11 @@
         <translation>Zoomwerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation>Zoomwerkzeuge anzeigen</translation>
+        <translation type="vanished">Zoomwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Zoom</translation>
     </message>

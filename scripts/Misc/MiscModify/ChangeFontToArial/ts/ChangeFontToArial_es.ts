@@ -6,7 +6,7 @@
     <message>
         <location filename="../ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation type="unfinished">Poner Fuente a Arial</translation>
+        <translation>Poner fuente a Arial</translation>
     </message>
 </context>
 </TS>

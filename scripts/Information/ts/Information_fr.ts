@@ -10,13 +10,12 @@
         <translation>Outils d&apos;information</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show information tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Montrer les outils d&apos;information</translation>
+        <translation type="vanished">Montrer les outils d&apos;information</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Info</source>
         <translation>&amp;Infos</translation>
     </message>

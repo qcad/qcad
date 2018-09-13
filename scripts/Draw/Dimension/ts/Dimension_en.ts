@@ -59,12 +59,11 @@
         <translation>Dimension Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>Show dimension tools</translation>
+        <translation type="vanished">Show dimension tools</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>D&amp;imension</translation>
     </message>

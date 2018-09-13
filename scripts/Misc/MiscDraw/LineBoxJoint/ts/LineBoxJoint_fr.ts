@@ -60,12 +60,12 @@
     <message>
         <location filename="../LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation>&amp;Charnière entrepassée à partir de 2 points</translation>
+        <translation>&amp;Assemblage à queue droite à partir de 2 points</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Charnière entrepassée avec les doigts, les fentes ou les tenons</translation>
+        <translation>Assemblage à queue droite avec les doigts, les fentes ou les tenons</translation>
     </message>
 </context>
 </TS>

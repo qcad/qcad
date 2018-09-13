@@ -9,12 +9,11 @@
         <translation>Nástroje Premietania</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show projection tools</source>
-        <translation>Zobraziť nástroje premietania</translation>
+        <translation type="vanished">Zobraziť nástroje premietania</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Projection</source>
         <translation>&amp;Premietanie</translation>
     </message>

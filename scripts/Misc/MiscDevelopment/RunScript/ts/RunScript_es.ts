@@ -6,7 +6,7 @@
     <message>
         <location filename="../RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation>Abrir archivo de script</translation>
+        <translation>Abrir archivo de guión</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation>Ejecución de script</translation>
+        <translation>Ejecución de guión</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -41,12 +41,12 @@
     <message>
         <location filename="../RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation>&amp;Ejecutar script</translation>
+        <translation>&amp;Ejecutar guión</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open and run a script file</source>
-        <translation>Abrir y ejecutar un archivo de script</translation>
+        <translation>Abrir y ejecutar un archivo de guión</translation>
     </message>
 </context>
 </TS>

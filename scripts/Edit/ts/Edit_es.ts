@@ -71,12 +71,11 @@ para aplicar los cambios.</translation>
         <translation>Herramientas de edición</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Mostrar herramientas de edición</translation>
+        <translation type="vanished">Mostrar herramientas de edición</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Editar</translation>
     </message>

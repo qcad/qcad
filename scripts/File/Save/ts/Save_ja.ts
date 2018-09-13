@@ -9,22 +9,20 @@
         <translation>ファイルを上書きしますか?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>ファイル&apos;%1&apos;は既に存在します。上書きしますか？</translation>
+        <translation type="vanished">ファイル&apos;%1&apos;は既に存在します。上書きしますか？</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>File Format Version Not Recommended</source>
         <translation>ファイルのフォーマットバージョンは推奨されていません</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation>使用しているファイルのフォーマットバージョンは推奨されていません：&apos;%1&apos;.</translation>
+        <translation type="vanished">使用しているファイルのフォーマットバージョンは推奨されていません：&apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Custom properties will not be saved.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34,12 +32,11 @@
         <translation>全ての黒いエンティティ及び画層は白色で保存されます。</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>全てのカスタム色は最も近い固定色に変換されます。</translation>
+        <translation type="vanished">全てのカスタム色は最も近い固定色に変換されます。</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="+1"/>
         <source>Proceed?</source>
         <translation>続行しますか？</translation>
     </message>
@@ -49,19 +46,42 @@
         <translation>保存中...</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation>ファイルフォーマットバージョン&apos;%1&apos;で保存中です。</translation>
+        <translation type="vanished">ファイルフォーマットバージョン&apos;%1&apos;で保存中です。</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>黒いエンティティ及び画層は白色で保存されます。</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>カスタム色は最も近い固定色に変換されます。</translation>
+        <translation type="vanished">カスタム色は最も近い固定色に変換されます。</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>All custom colors will be adjusted to the nearest fixed color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Saving to file format version &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Custom colors are adjusted to the nearest fixed color.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>

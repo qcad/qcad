@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+3"/>
+        <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation>Izbrana enota &apos;%1&apos; - Nič ni za naredit</translation>
+        <translation type="vanished">Izbrana enota &apos;%1&apos; - Nič ni za naredit</translation>
     </message>
     <message>
         <location line="+126"/>

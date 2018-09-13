@@ -10,13 +10,12 @@
         <translation>Narzędzia rzutowania</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show projection tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wyświetla narzędzia rzutowania</translation>
+        <translation type="vanished">Wyświetla narzędzia rzutowania</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Projection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Rzutowanie</translation>

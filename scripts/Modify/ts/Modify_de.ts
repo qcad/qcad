@@ -17,12 +17,11 @@
         <translation>Bearbeitungswerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
-        <translation>Bearbeitungswerkzeuge anzeigen</translation>
+        <translation type="vanished">Bearbeitungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifizieren</translation>
     </message>

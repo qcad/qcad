@@ -10,13 +10,12 @@
         <translation>Narzędzia punktu</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show point tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wyświetla narzędzia punktu</translation>
+        <translation type="vanished">Wyświetla narzędzia punktu</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Point</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

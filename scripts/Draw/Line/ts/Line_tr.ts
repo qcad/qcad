@@ -9,12 +9,11 @@
         <translation>Çizgi Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Çizgi araçlarını göster</translation>
+        <translation type="vanished">Çizgi araçlarını göster</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>&amp;Çizgi</translation>
     </message>

@@ -9,12 +9,11 @@
         <translation>Orodja lomljenke</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show polyline tools</source>
-        <translation>Prikaži orodja lomljenke</translation>
+        <translation type="vanished">Prikaži orodja lomljenke</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Lomljenka</translation>
     </message>

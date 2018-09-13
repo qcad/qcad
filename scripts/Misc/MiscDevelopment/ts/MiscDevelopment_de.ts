@@ -33,12 +33,11 @@
         <translation>Diverse Entwicklerwerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc development tools</source>
-        <translation>Diverse Entwicklerwerkzeuge anzeigen</translation>
+        <translation type="vanished">Diverse Entwicklerwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>De&amp;velopment</source>
         <translation>Entwi&amp;cklung</translation>
     </message>

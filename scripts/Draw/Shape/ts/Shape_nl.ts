@@ -9,12 +9,11 @@
         <translation>Vormgereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Vormgereedschappen tonen</translation>
+        <translation type="vanished">Vormgereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Vorm</translation>
     </message>

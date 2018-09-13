@@ -9,12 +9,11 @@
         <translation>Boogen gereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Toon bogen gereedschappen</translation>
+        <translation type="vanished">Toon bogen gereedschappen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Boog</translation>
     </message>

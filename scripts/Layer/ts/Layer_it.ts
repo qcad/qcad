@@ -9,12 +9,11 @@
         <translation>Strumenti di livello</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Mostra strumenti di livello</translation>
+        <translation type="vanished">Mostra strumenti di livello</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>&amp;Layer</translation>
     </message>

@@ -11,15 +11,14 @@ Exibe o menu &quot;Círculo&quot;</translatorcomment>
         <translation>Ferramentas de Círculo</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Círculo&quot;</translatorcomment>
-        <translation>Exiba as ferramentas de Círculo</translation>
+        <translation type="vanished">Exiba as ferramentas de Círculo</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

@@ -9,12 +9,11 @@
         <translation>Инструменты выделения</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show selection tools</source>
-        <translation>Показать инструменты выделения</translation>
+        <translation type="vanished">Показать инструменты выделения</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translation>Панель инструментов выделения</translation>
     </message>

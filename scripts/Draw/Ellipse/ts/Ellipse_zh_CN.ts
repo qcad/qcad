@@ -9,12 +9,11 @@
         <translation>椭圆工具</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show ellipse tools</source>
-        <translation>显示椭圆工具</translation>
+        <translation type="vanished">显示椭圆工具</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>椭圆(&amp;E)</translation>
     </message>

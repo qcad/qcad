@@ -9,12 +9,11 @@
         <translation>ブロックツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show block tools</source>
-        <translation>表示ブロックツール</translation>
+        <translation type="vanished">表示ブロックツール</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Block</source>
         <translation>&amp;B ブロック</translation>
     </message>
@@ -38,8 +37,12 @@
     </message>
     <message>
         <location line="+11"/>
+        <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>ブロック &apos;%1&apos;は既に存在します。&lt;br&gt;そのため上書きされます。</translation>
+        <translation type="vanished">ブロック &apos;%1&apos;は既に存在します。&lt;br&gt;そのため上書きされます。</translation>
     </message>
     <message>
         <location line="+5"/>

@@ -15,7 +15,7 @@
     </message>
     <message>
         <location line="+23"/>
-        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <source>%1 %2 on Layer &quot;%3&quot;</source>
         <translatorcomment>Should be plural form</translatorcomment>
         <translation>%1 %2 na warstwie „%3”</translation>
     </message>
@@ -27,7 +27,7 @@
     </message>
     <message numerus="yes">
         <location line="+4"/>
-        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
             <numerusform>%n obiekt na warstwie „%1”</numerusform>
             <numerusform>%n obiekty na warstwie „%1”</numerusform>
@@ -53,7 +53,7 @@
         </translation>
     </message>
     <message>
-        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <source>%1 Entities on Layer &quot;%2&quot;</source>
         <translatorcomment>Should be plural form</translatorcomment>
         <translation type="vanished">%1 obiekty na warstwie „%2”</translation>
     </message>
@@ -80,7 +80,7 @@ Wymi&amp;ar</translatorcomment>
         <translation>na</translation>
     </message>
     <message>
-        <source>Layer &apos;%1&apos;</source>
+        <source>Layer &quot;%1&quot;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Warstwa&apos;&amp;#39;</translation>
     </message>

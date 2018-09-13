@@ -9,12 +9,11 @@
         <translation>Инструменты рисования дуги</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Показать инструменты дуги</translation>
+        <translation type="vanished">Показать инструменты дуги</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>Дуга</translation>
     </message>

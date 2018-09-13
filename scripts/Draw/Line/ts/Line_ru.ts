@@ -9,12 +9,11 @@
         <translation>Инструменты работы с линией</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Показать инструменты работы с линией</translation>
+        <translation type="vanished">Показать инструменты работы с линией</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>Линия</translation>
     </message>

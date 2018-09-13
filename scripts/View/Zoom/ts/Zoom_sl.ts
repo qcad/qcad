@@ -14,12 +14,11 @@
         <translation>Orodja povečave</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation>Prikaži orodja povečave</translation>
+        <translation type="vanished">Prikaži orodja povečave</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Povečava</translation>
     </message>

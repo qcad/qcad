@@ -9,12 +9,11 @@
         <translation>Näkymätyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show view tools</source>
-        <translation>Näytä näkymätyökalut</translation>
+        <translation type="vanished">Näytä näkymätyökalut</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>

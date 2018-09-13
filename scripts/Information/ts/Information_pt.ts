@@ -10,13 +10,12 @@
         <translation>Ferramentas de Informações</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show information tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Exiba as ferramentas de informação</translation>
+        <translation type="vanished">Exiba as ferramentas de informação</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Info</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

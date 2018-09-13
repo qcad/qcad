@@ -10,21 +10,29 @@
     </message>
     <message>
         <location line="+53"/>
-        <source>Read from file: &apos;%1&apos;</source>
-        <translation>Uit bestand gelezen: &quot;%1&quot;;</translation>
+        <source>Read from file: &quot;%1&quot;</source>
+        <translation>Uit bestand gelezen: &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+36"/>
+        <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
+        <translation>Bestandsimporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Openen om het filter in actie te zien.</translation>
+    </message>
+    <message>
+        <source>Read from file: &apos;%1&apos;</source>
+        <translation type="vanished">Uit bestand gelezen: &quot;%1&quot;;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Registered a file importer for file type &apos;.example&apos;. Use File &gt; Open to see the filter in action.</source>
-        <translation>Bestandsimporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Openen om het filter in actie te zien.</translation>
+        <translation type="vanished">Bestandsimporteur voor bestandstype &quot;.example&quot; geregistreerd. Gebruik Bestand &gt; Openen om het filter in actie te zien.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>&amp;Register File Importer</source>
         <translation>Bestandimporteur &amp;registreren</translation>
     </message>

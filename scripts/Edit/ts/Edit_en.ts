@@ -67,12 +67,11 @@ the preference changes to take effect.</translation>
         <translation>Edit Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Show edit tools</translation>
+        <translation type="vanished">Show edit tools</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>

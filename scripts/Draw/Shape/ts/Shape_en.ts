@@ -9,12 +9,11 @@
         <translation>Shape Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Show shape tools</translation>
+        <translation type="vanished">Show shape tools</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Shape</translation>
     </message>

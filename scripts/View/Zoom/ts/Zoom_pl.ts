@@ -14,12 +14,11 @@
         <translation>Narzędzia przybliżania</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation>Wyświetla narzędzia przybliżania</translation>
+        <translation type="vanished">Wyświetla narzędzia przybliżania</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Przybliż</translation>
     </message>

@@ -91,8 +91,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
+        <translation>Ölçü birimi, &quot;Mimari&quot; veya &quot;Mühendislik&quot; formatlarında boyut etiketleri görüntülemek için &quot;İnç&quot; olmalıdır. Biçim &quot;Ondalık&quot; olarak değiştirildi.</translation>
+    </message>
+    <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>Ölçü birimi, &apos;Mimari&apos; veya &apos;Mühendislik&apos; formatlarında boyut etiketleri görüntülemek için &apos;İnç&apos; olmalıdır. Biçim &apos;Ondalık&apos; olarak değiştirildi.</translation>
+        <translation type="vanished">Ölçü birimi, &apos;Mimari&apos; veya &apos;Mühendislik&apos; formatlarında boyut etiketleri görüntülemek için &apos;İnç&apos; olmalıdır. Biçim &apos;Ondalık&apos; olarak değiştirildi.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>

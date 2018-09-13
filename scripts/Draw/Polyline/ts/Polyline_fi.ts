@@ -9,12 +9,11 @@
         <translation>Murtoviivan työkalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show polyline tools</source>
-        <translation>Näytä murtoviivan työkalut</translation>
+        <translation type="vanished">Näytä murtoviivan työkalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Moniviiva</translation>
     </message>

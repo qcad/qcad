@@ -14,12 +14,11 @@
         <translation>拡大ツール </translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation>拡大ツールを表示</translation>
+        <translation type="vanished">拡大ツールを表示</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>拡大 (&amp;Z)</translation>
     </message>

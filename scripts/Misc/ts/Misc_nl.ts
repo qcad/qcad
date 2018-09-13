@@ -9,12 +9,11 @@
         <translation>Diverse gereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc tools</source>
-        <translation>Diverse gereedschappen tonen</translation>
+        <translation type="vanished">Diverse gereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>Misc</source>
         <translation>Diverse</translation>
     </message>

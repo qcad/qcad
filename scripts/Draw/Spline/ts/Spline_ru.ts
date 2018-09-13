@@ -9,12 +9,11 @@
         <translation>Инструменты кривых</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show spline tools</source>
-        <translation>Показать инструменты работы с кривой</translation>
+        <translation type="vanished">Показать инструменты работы с кривой</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Spline</source>
         <translation>&amp;Кривая</translation>
     </message>

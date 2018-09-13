@@ -9,12 +9,11 @@
         <translation>Utensili cerchio</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Mostra menù &quot;Cerchi&quot;</translation>
+        <translation type="vanished">Mostra menù &quot;Cerchi&quot;</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>&amp;Cerchio</translation>
     </message>

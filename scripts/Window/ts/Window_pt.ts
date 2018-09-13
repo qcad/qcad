@@ -6,10 +6,6 @@
     <message>
         <location filename="../Window.js" line="+108"/>
         <source>&amp;Window</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_pt.ts--
-&amp;Janela
-&amp;Janela de Desseleção</translatorcomment>
         <translation>&amp;Janela</translation>
     </message>
     <message>

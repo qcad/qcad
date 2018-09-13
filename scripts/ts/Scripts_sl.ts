@@ -63,8 +63,12 @@
     </message>
     <message>
         <location line="+127"/>
+        <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Urejanje gradnika &apos;%1&lt;br&gt;Ko boste končali, izberite&lt;i&gt;Gradnik &gt; Vrnitev na glasvno risbo&lt;/i&gt;</translation>
+        <translation type="vanished">Urejanje gradnika &apos;%1&lt;br&gt;Ko boste končali, izberite&lt;i&gt;Gradnik &gt; Vrnitev na glasvno risbo&lt;/i&gt;</translation>
     </message>
 </context>
 <context>

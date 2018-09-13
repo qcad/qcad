@@ -10,13 +10,12 @@
         <translation>Narzędzia modyfikowania</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show modification tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wyświetla narzędzia modyfikowania</translation>
+        <translation type="vanished">Wyświetla narzędzia modyfikowania</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Modify</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

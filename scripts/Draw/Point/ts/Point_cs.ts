@@ -9,12 +9,11 @@
         <translation>Nástroje bodu</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show point tools</source>
-        <translation>Zobrazit nástroje bodu</translation>
+        <translation type="vanished">Zobrazit nástroje bodu</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Point</source>
         <translation>&amp;Bod</translation>
     </message>

@@ -14,12 +14,11 @@
         <translation>Razna orodja razvoja</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc development tools</source>
-        <translation>Prikaži razna orodja razvoja</translation>
+        <translation type="vanished">Prikaži razna orodja razvoja</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>De&amp;velopment</source>
         <translation>Raz&amp;voj</translation>
     </message>

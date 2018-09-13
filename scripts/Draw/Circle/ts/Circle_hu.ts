@@ -9,12 +9,11 @@
         <translation>Kör eszköztár</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Kör eszköztár megmutatása</translation>
+        <translation type="vanished">Kör eszköztár megmutatása</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>Kör</translation>
     </message>

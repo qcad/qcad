@@ -6,7 +6,7 @@
     <message>
         <location filename="../DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation type="unfinished">Dibujo y caja de cartón</translation>
+        <translation>Dibujo y &amp;caja de contorno</translation>
     </message>
 </context>
 </TS>

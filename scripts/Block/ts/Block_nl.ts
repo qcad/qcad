@@ -9,12 +9,11 @@
         <translation>Blokgereedschap</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show block tools</source>
-        <translation>Blokgereedschap tonen</translation>
+        <translation type="vanished">Blokgereedschap tonen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -38,8 +37,12 @@
     </message>
     <message>
         <location line="+11"/>
-        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
         <translation>Block &quot;%1&quot; bestaat al&lt;br&gt;en zal worden overschreven.</translation>
+    </message>
+    <message>
+        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation type="vanished">Block &quot;%1&quot; bestaat al&lt;br&gt;en zal worden overschreven.</translation>
     </message>
     <message>
         <location line="+5"/>

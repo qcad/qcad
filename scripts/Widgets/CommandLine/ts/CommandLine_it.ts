@@ -11,14 +11,14 @@
         <translation>Riga di comando</translation>
     </message>
     <message>
-        <source>Invalid coordinate &apos;%1&apos;</source>
+        <source>Invalid coordinate &quot;%1&quot;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Non valido coordinate &apos;%1&apos;</translation>
+        <translation type="obsolete">Non valido coordinate &quot;%1&quot;</translation>
     </message>
     <message>
-        <source>Unknown command &apos;%1&apos;</source>
+        <source>Unknown command &quot;%1&quot;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Comando sconosciuto &apos;%1&apos;</translation>
+        <translation type="obsolete">Comando sconosciuto &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="-16"/>
@@ -26,23 +26,23 @@
         <translation>Riga di &amp;comando</translation>
     </message>
     <message>
-        <source>Invalid coordinate &apos;%1&apos;.</source>
-        <translation type="obsolete">Non valido coordinate &apos;%1&apos;.</translation>
+        <source>Invalid coordinate &quot;%1&quot;.</source>
+        <translation type="obsolete">Non valido coordinate &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+223"/>
-        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
-        <translation>Comando sconosciuto o coordinate o valore non valido: &apos;%1&apos;</translation>
+        <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
+        <translation>Comando sconosciuto o coordinate o valore non valido: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation>I numeri possono essere inseriti come: &apos;%1&apos;</translation>
+        <source>Numbers may be entered as: &quot;%1&quot;</source>
+        <translation>I numeri possono essere inseriti come: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
-        <translation>Coordinate può essere inserito come: &apos;%1&apos; (assoluto) o &apos;%2&apos; (relativa) o &apos;%3&apos; (polare) o &apos;%4&apos; (relativa polare)</translation>
+        <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
+        <translation>Coordinate può essere inserito come: &quot;%1&quot; (assoluto) o &quot;%2&quot; (relativa) o &quot;%3&quot; (polare) o &quot;%4&quot; (relativa polare)</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -75,8 +75,8 @@
     </message>
     <message>
         <location line="+16"/>
-        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
-        <translation>Non valido coordinate o distanza &apos;%1&apos;.</translation>
+        <source>Invalid coordinate or distance &quot;%1&quot;.</source>
+        <translation>Non valido coordinate o distanza &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+117"/>

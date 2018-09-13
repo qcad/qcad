@@ -6,7 +6,7 @@
     <message>
         <location filename="../FlushBackLog.js" line="+38"/>
         <source>Flush Undo History</source>
-        <translation>Verlauf ufr Rückgängig leeren</translation>
+        <translation>Verlauf für Rückgängig leeren</translation>
     </message>
     <message>
         <location line="+1"/>

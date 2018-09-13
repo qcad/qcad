@@ -25,12 +25,11 @@
         <translation>Schraffurwerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Schraffurwerkzeuge anzeigen</translation>
+        <translation type="vanished">Schraffurwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Schraffur</translation>
     </message>

@@ -15,8 +15,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
-        <translation>Зарегистрирован экспортёр файла для файла типа &apos;.example&apos;. Используйте Файл -&gt; Сохранить как чтобы увидеть фильтр в действии.</translation>
+        <translation type="vanished">Зарегистрирован экспортёр файла для файла типа &apos;.example&apos;. Используйте Файл -&gt; Сохранить как чтобы увидеть фильтр в действии.</translation>
     </message>
     <message>
         <location line="+10"/>

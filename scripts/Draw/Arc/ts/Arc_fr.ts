@@ -9,12 +9,11 @@
         <translation>Outils d&apos;arc</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Afficher les outils d&apos;arc</translation>
+        <translation type="vanished">Afficher les outils d&apos;arc</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Arc</translation>
     </message>

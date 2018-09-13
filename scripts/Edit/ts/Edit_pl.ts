@@ -82,12 +82,11 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation>Narzędzia edycji</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Wyświetla narzędzia edycji</translation>
+        <translation type="vanished">Wyświetla narzędzia edycji</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

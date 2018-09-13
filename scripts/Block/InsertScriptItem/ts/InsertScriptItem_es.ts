@@ -14,7 +14,7 @@
     <message>
         <location filename="../InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
-        <translation>Insertar &amp;script</translation>
+        <translation>Insertar &amp;guión</translation>
     </message>
 </context>
 </TS>

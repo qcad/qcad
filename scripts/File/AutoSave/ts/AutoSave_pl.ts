@@ -37,6 +37,25 @@
         <translatorcomment>--google--</translatorcomment>
         <translation>Zakończono automatyczne zapisywanie.</translation>
     </message>
+    <message numerus="yes">
+        <location line="+19"/>
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="unfinished">
+            <numerusform>Odnaleziono %n plik automatycznej kopii zapasowej rysunku bez nazwy.
+Odzyskać ją?</numerusform>
+            <numerusform>Odnaleziono %n pliki automatycznej kopii zapasowej rysunków bez nazwy.
+Odzyskać je?</numerusform>
+            <numerusform>Odnaleziono %n plików automatycznej kopii zapasowej rysunków bez nazwy.
+Odzyskać je?</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
@@ -52,10 +71,9 @@ Do you wish to recover them?</source>
 Odzyskać je?</translation>
     </message>
     <message numerus="yes">
-        <location line="+19"/>
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Odnaleziono %n plik automatycznej kopii zapasowej rysunku bez nazwy.
 Odzyskać ją?</numerusform>
             <numerusform>Odnaleziono %n pliki automatycznej kopii zapasowej rysunków bez nazwy.
@@ -65,7 +83,7 @@ Odzyskać je?</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-64"/>
         <source>Recover Files?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Odzyskać pliki?</translation>
@@ -83,15 +101,14 @@ Odzyskać je?</numerusform>
         <translation>Odzyskać plik?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Istnieje automatyczna kopia zapasowa pliku „%1”.
+        <translation type="vanished">Istnieje automatyczna kopia zapasowa pliku „%1”.
 Odzyskać ją?</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>

@@ -9,12 +9,11 @@
         <translation>Инструменты слоёв</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Показать инструменты слоёв</translation>
+        <translation type="vanished">Показать инструменты слоёв</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translation>С&amp;лой</translation>
     </message>

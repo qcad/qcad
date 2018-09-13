@@ -14,12 +14,11 @@
         <translation>Разные инструменты рисования</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc drawing tools</source>
-        <translation>Показать разные инструменты рисования</translation>
+        <translation type="vanished">Показать разные инструменты рисования</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Draw</source>
         <translation>&amp;Рисование</translation>
     </message>

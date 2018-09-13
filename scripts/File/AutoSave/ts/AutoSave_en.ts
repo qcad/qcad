@@ -28,31 +28,38 @@
         <source>Autosave complete.</source>
         <translation>Autosave complete.</translation>
     </message>
-    <message>
-        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
-Do you wish to recover it?</source>
-        <translation type="vanished">An &apos;autosave&apos; backup file for an untitled drawing was found.
-Do you wish to recover it?</translation>
-    </message>
-    <message>
-        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
-Do you wish to recover them?</source>
-        <translation type="vanished">%1 &apos;autosave&apos; backup files for untitled drawings were found.
-Do you wish to recover them?</translation>
-    </message>
     <message numerus="yes">
         <location line="+19"/>
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform>An &apos;autosave&apos; backup file for an untitled drawing was found.
+            <numerusform>An &quot;autosave backup file for an untitled drawing was found.
 Do you wish to recover it?</numerusform>
-            <numerusform>%n &apos;autosave&apos; backup files for untitled drawings were found.
+            <numerusform>%n autosave backup files for untitled drawings were found.
 Do you wish to recover them?</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+69"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</translation>
+    </message>
+    <message>
+        <source>An autosave backup file for an untitled drawing was found.
+Do you wish to recover it?</source>
+        <translation type="vanished">An autosave backup file for an untitled drawing was found.
+Do you wish to recover it?</translation>
+    </message>
+    <message>
+        <source>%1 autosave backup files for untitled drawings were found.
+Do you wish to recover them?</source>
+        <translation type="vanished">%1 autosave backup files for untitled drawings were found.
+Do you wish to recover them?</translation>
+    </message>
+    <message>
+        <location line="-64"/>
         <source>Recover Files?</source>
         <translation>Recover Files?</translation>
     </message>
@@ -67,14 +74,13 @@ Do you wish to recover them?</numerusform>
         <translation>Recover File?</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
+        <source>An autosave backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
+        <translation type="vanished">An autosave backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+26"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>

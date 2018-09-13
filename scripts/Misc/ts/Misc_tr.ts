@@ -9,12 +9,11 @@
         <translation>Çeşitli Araçlar</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc tools</source>
-        <translation>Çeşitli araçları göster</translation>
+        <translation type="vanished">Çeşitli araçları göster</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>Misc</source>
         <translation>Çeşitli</translation>
     </message>

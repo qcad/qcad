@@ -9,12 +9,11 @@
         <translation>Tietotyökalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show information tools</source>
-        <translation>Näytä tietotyökalut</translation>
+        <translation type="vanished">Näytä tietotyökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Info</source>
         <translation>&amp;Tietoja</translation>
     </message>

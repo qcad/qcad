@@ -9,12 +9,11 @@
         <translation>Narzędzia bloku</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show block tools</source>
-        <translation>Wyświetla narzędzia bloku</translation>
+        <translation type="vanished">Wyświetla narzędzia bloku</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Block</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
@@ -42,8 +41,12 @@
     </message>
     <message>
         <location line="+11"/>
+        <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Blok „%1” już istnieje&lt;br&gt;i zostanie zastąpiony.</translation>
+        <translation type="vanished">Blok „%1” już istnieje&lt;br&gt;i zostanie zastąpiony.</translation>
     </message>
     <message>
         <location line="+5"/>

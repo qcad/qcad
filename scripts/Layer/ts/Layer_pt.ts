@@ -9,12 +9,11 @@
         <translation>Ferramentas de Camada</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Exiba as ferramentas de camada</translation>
+        <translation type="vanished">Exiba as ferramentas de camada</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Layer</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

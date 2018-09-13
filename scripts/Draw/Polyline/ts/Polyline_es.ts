@@ -9,12 +9,11 @@
         <translation>Herramientas polilínea</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show polyline tools</source>
-        <translation>Mostrar menú &quot;Polilíneas&quot;</translation>
+        <translation type="vanished">Mostrar menú &quot;Polilíneas&quot;</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polilínea</translation>
     </message>

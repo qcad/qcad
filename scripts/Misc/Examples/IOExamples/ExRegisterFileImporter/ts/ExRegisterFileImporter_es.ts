@@ -10,21 +10,29 @@
     </message>
     <message>
         <location line="+53"/>
-        <source>Read from file: &apos;%1&apos;</source>
-        <translation>Lectura desde archivo: &apos;%1</translation>
+        <source>Read from file: &quot;%1&quot;</source>
+        <translation>Lectura desde archivo: &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+36"/>
+        <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
+        <translation>Registró un importador de archivos para el tipo de archivo &quot;.example&quot;. Use Archivo &gt; Abrir para ver el filtro en acción.</translation>
+    </message>
+    <message>
+        <source>Read from file: &apos;%1&apos;</source>
+        <translation type="vanished">Lectura desde archivo: &apos;%1</translation>
+    </message>
+    <message>
+        <location line="-1"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Registered a file importer for file type &apos;.example&apos;. Use File &gt; Open to see the filter in action.</source>
-        <translation>Registró un importador de archivos para el tipo de archivo &apos;.example&apos;. Use Archivo &gt; Abrir para ver el filtro en acción.</translation>
+        <translation type="vanished">Registró un importador de archivos para el tipo de archivo &apos;.example&apos;. Use Archivo &gt; Abrir para ver el filtro en acción.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>&amp;Register File Importer</source>
         <translation>&amp;Registrar un importador de archivos</translation>
     </message>

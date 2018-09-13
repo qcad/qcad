@@ -67,12 +67,11 @@ da bodo spremembe začele delovat.</translation>
         <translation>Orodja urejanja</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Prikaži orodja urejanja</translation>
+        <translation type="vanished">Prikaži orodja urejanja</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Uredi</translation>
     </message>

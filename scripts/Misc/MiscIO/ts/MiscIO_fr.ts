@@ -14,12 +14,11 @@
         <translation>Outils divers d&apos;importation et d&apos;exportation</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc import / export tools</source>
-        <translation>Afficher outils divers d&apos;importation et d&apos;exportation</translation>
+        <translation type="vanished">Afficher outils divers d&apos;importation et d&apos;exportation</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Importation / Exportation</translation>
     </message>

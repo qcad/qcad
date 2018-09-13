@@ -71,12 +71,11 @@ de wijzigingen door te voeren.</translation>
         <translation>Bewerken gereedschappen</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Bewerken gereedschappen tonen</translation>
+        <translation type="vanished">Bewerken gereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translation>&amp;Bewerken</translation>
     </message>

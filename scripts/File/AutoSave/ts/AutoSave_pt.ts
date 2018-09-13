@@ -44,10 +44,9 @@ Do you wish to recover them?</source>
 Você deseja recuperá-los?</translation>
     </message>
     <message numerus="yes">
-        <location line="+19"/>
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Um arquivo de backup de gravação automática para um desenho sem título foi encontrado.
 Você deseja recuperá-lo?</numerusform>
             <numerusform>%n arquivos de backup de gravação automática, para desenhos sem título foram encontrados.
@@ -55,7 +54,7 @@ Você deseja recuperá-los?</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+40"/>
         <source>Recovered</source>
         <translation>Recuperado</translation>
     </message>
@@ -65,10 +64,27 @@ Você deseja recuperá-los?</numerusform>
         <translation>Recuperar Arquivo?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Um arquivo de backup de gravação automática para &apos;%1&apos; foi encontrado.
+        <translation type="vanished">Um arquivo de backup de gravação automática para &apos;%1&apos; foi encontrado.
+Você deseja recuperá-lo?</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-68"/>
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation>
+            <numerusform>Um arquivo de backup de gravação automática para um desenho sem título foi encontrado.
+Você deseja recuperá-lo?</numerusform>
+            <numerusform>%n arquivos de backup de gravação automática, para desenhos sem título foram encontrados.
+Você deseja recuperá-los?</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation>Um arquivo de backup de gravação automática para &quot;%1&quot; foi encontrado.
 Você deseja recuperá-lo?</translation>
     </message>
     <message>

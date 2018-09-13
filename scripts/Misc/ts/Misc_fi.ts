@@ -9,12 +9,11 @@
         <translation>Sekalaiset työkalut</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc tools</source>
-        <translation>Näytä sekalaiset työkalut</translation>
+        <translation type="vanished">Näytä sekalaiset työkalut</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>Misc</source>
         <translation type="unfinished"></translation>
     </message>

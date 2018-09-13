@@ -11,15 +11,14 @@ Exibe o menu &quot;Multilinha&quot;</translatorcomment>
         <translation>Ferramentas de Polilinha</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show polyline tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Multilinha&quot;</translatorcomment>
-        <translation>Exiba as ferramentas de polilinha</translation>
+        <translation type="vanished">Exiba as ferramentas de polilinha</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Polyline</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

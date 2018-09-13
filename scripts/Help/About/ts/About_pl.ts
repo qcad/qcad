@@ -76,7 +76,12 @@
         <translation>Wersja Qt:</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-90"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation>Fragmenty tego oprogramowania © %1 The Qt Company Ltd.</translation>
     </message>
@@ -128,12 +133,11 @@
         <translation>%1 jest wolnym (otwarto-źródłowym) oprogramowaniem.</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Wtyczki i dodatki skryptów są przedmiotem odpowiednich im licencji (proszę sprawdzić kartę „Wtyczki”)</translation>
+        <translation type="vanished">Wtyczki i dodatki skryptów są przedmiotem odpowiednich im licencji (proszę sprawdzić kartę „Wtyczki”)</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Wszystkie marki lub nazwy produktów są znakami towarowymi lub zarejestrowanymi znakami towarowymi i należą do ich właścicieli.</translation>
     </message>
@@ -208,7 +212,7 @@
         <translation>Tłumaczenia</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Szablony</translation>
     </message>

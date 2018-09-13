@@ -9,12 +9,11 @@
         <translation>円ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>円ツールを表示</translation>
+        <translation type="vanished">円ツールを表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>&amp;C 円</translation>
     </message>

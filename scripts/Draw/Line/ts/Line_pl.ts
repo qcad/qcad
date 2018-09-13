@@ -12,15 +12,14 @@ Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation>Narzędzia linii</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaż menu &quot;Linie&quot;</translatorcomment>
-        <translation>Wyświetla narzędzia linii</translation>
+        <translation type="vanished">Wyświetla narzędzia linii</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

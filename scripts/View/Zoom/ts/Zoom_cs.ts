@@ -14,12 +14,11 @@
         <translation>Nástroje přiblížení</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation>Zobrazit nástroje přiblížení</translation>
+        <translation type="vanished">Zobrazit nástroje přiblížení</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Přiblížení</translation>
     </message>

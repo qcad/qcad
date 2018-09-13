@@ -63,8 +63,12 @@
     </message>
     <message>
         <location line="+127"/>
+        <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Úprava bloku &apos;%1&apos;&lt;br&gt;Vybrať &lt;i&gt;Blok &gt; Návrat ku kresleniu &lt;/i&gt; keď bude hotové</translation>
+        <translation type="vanished">Úprava bloku &apos;%1&apos;&lt;br&gt;Vybrať &lt;i&gt;Blok &gt; Návrat ku kresleniu &lt;/i&gt; keď bude hotové</translation>
     </message>
 </context>
 <context>

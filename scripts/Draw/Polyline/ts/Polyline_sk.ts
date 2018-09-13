@@ -9,12 +9,11 @@
         <translation>Nástroje Krivky</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show polyline tools</source>
-        <translation>Zobraziť nástroje krivky</translation>
+        <translation type="vanished">Zobraziť nástroje krivky</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Krivka</translation>
     </message>

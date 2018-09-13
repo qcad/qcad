@@ -9,12 +9,11 @@
         <translation>Ellipse Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show ellipse tools</source>
-        <translation>Show ellipse tools</translation>
+        <translation type="vanished">Show ellipse tools</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellipse</translation>
     </message>

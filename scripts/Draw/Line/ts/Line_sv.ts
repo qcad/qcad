@@ -9,12 +9,11 @@
         <translation>Linjeverktyg</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Visa linjeverktyg</translation>
+        <translation type="vanished">Visa linjeverktyg</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>&amp;Linje</translation>
     </message>

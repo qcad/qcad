@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+3"/>
+        <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
+        <translation>Unidade &quot;%1&quot; selecionado. Nada a ser feito</translation>
+    </message>
+    <message>
         <source>Unit &apos;%1&apos; selected - Nothing to be done</source>
-        <translation>Unidade &apos;%1&apos; selecionado - nada a ser feito</translation>
+        <translation type="vanished">Unidade &apos;%1&apos; selecionado - nada a ser feito</translation>
     </message>
     <message>
         <location line="+126"/>

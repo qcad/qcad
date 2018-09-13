@@ -6,17 +6,21 @@
     <message>
         <location filename="../SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation type="unfinished">Object geselecteerd:</translation>
+        <translation>Object geselecteerd:</translation>
     </message>
     <message>
         <location line="+3"/>
+        <source>Object is not a drawing entity:</source>
+        <translation>Object is geen tekenelement:</translation>
+    </message>
+    <message>
         <source>Object is not an entity:</source>
-        <translation type="unfinished">Het object is geen object:</translation>
+        <translation type="vanished">Object is geen tekenelement:</translation>
     </message>
     <message>
         <location filename="../SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation type="unfinished">Door Handvat</translation>
+        <translation>Door handle</translation>
     </message>
 </context>
 <context>
@@ -24,12 +28,12 @@
     <message>
         <location filename="../SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation type="unfinished">Selectie door Handvat</translation>
+        <translation>Selectie door handle</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation type="unfinished">Handvat (zeskant):</translation>
+        <translation>Handle (hex):</translation>
     </message>
 </context>
 </TS>

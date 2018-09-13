@@ -123,12 +123,11 @@
         <translation>%1 - свободное программное обеспечение с открытым кодом.</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Плагины и скрипты дополнений подчиняются их соответствующей лицензии (см. вкладку &apos;Плагины&apos;).</translation>
+        <translation type="vanished">Плагины и скрипты дополнений подчиняются их соответствующей лицензии (см. вкладку &apos;Плагины&apos;).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Все бренды или названия продуктов являются товарными знаками или зарегистрированными товарными знаками их соответствующих владельцев.</translation>
     </message>
@@ -145,7 +144,12 @@
         <translation type="obsolete">Фрагменты этой программы © 2008-2016 The Qt Company Ltd. {2008-2017 ?} {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-2"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -213,7 +217,7 @@
         <translation>Переводы</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation type="unfinished"></translation>
     </message>

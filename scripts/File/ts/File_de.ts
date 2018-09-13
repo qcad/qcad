@@ -9,12 +9,11 @@
         <translation>Dateiwerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show file tools</source>
-        <translation>Dateiwerkzeuge anzeigen</translation>
+        <translation type="vanished">Dateiwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;File</source>
         <translation>&amp;Datei</translation>
     </message>
@@ -25,12 +24,11 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="-31"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Die Datei &apos;%1&apos; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
+        <translation type="vanished">Die Datei &apos;%1&apos; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-11"/>
         <source>All Files</source>
         <translation>Alle Dateien</translation>
     </message>
@@ -44,8 +42,9 @@
         <translation>Datei überschreiben?</translation>
     </message>
     <message>
+        <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="obsolete">Die Datei &quot;%1&quot; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
+        <translation>Die Datei &quot;%1&quot; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
     </message>
 </context>
 </TS>

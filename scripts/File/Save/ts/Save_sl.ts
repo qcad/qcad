@@ -9,22 +9,20 @@
         <translation>Prepišem datoteko?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Datoteka &apos;%1&apos; že obstaja. Jo želite prepisat?</translation>
+        <translation type="vanished">Datoteka &apos;%1&apos; že obstaja. Jo želite prepisat?</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>File Format Version Not Recommended</source>
         <translation>Verzija datotečnega formata ni priporočena</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation>Verzija datotečnega formata, ki ga uporabljate ni priporočena: &apos;%1&apos; .</translation>
+        <translation type="vanished">Verzija datotečnega formata, ki ga uporabljate ni priporočena: &apos;%1&apos; .</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Custom properties will not be saved.</source>
         <translation>Prilagojene lastnosti ne bodo shranjene.</translation>
     </message>
@@ -34,12 +32,11 @@
         <translation>Vse črne entitete in plasti bodo shranjeni kot beli.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Vse prilagojene barve bodo &apos;zaokrožene&apos; na najbližjo fiksno barvo.</translation>
+        <translation type="vanished">Vse prilagojene barve bodo &apos;zaokrožene&apos; na najbližjo fiksno barvo.</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="+1"/>
         <source>Proceed?</source>
         <translation>Nadaljujem?</translation>
     </message>
@@ -49,19 +46,42 @@
         <translation>Shranjujem...</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation>Shranjevanje v datotečni format verzije &apos;%1&apos; .</translation>
+        <translation type="vanished">Shranjevanje v datotečni format verzije &apos;%1&apos; .</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
         <translation>Črne entitete in plasti so shranjene kot bele.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Prilagojene barve so &apos;zaokrožene&apos; na najbližjo fiksno barvo.</translation>
+        <translation type="vanished">Prilagojene barve so &apos;zaokrožene&apos; na najbližjo fiksno barvo.</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>All custom colors will be adjusted to the nearest fixed color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Saving to file format version &quot;%1&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Custom colors are adjusted to the nearest fixed color.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>

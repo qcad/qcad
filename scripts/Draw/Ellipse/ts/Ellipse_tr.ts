@@ -9,12 +9,11 @@
         <translation>Elips Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show ellipse tools</source>
-        <translation>Elips araçlarını göster</translation>
+        <translation type="vanished">Elips araçlarını göster</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elips</translation>
     </message>

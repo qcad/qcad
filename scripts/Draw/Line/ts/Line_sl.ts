@@ -9,12 +9,11 @@
         <translation>Orodja črte</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Prikaži orodja črte</translation>
+        <translation type="vanished">Prikaži orodja črte</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>&amp;Črta</translation>
     </message>

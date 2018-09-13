@@ -21,12 +21,11 @@
         <translation>Nástroje Šrafovanie/Výplň</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Zobraziť nástroje Šrafovanie/Výplň</translation>
+        <translation type="vanished">Zobraziť nástroje Šrafovanie/Výplň</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Šrafovanie/Výplň</translation>
     </message>

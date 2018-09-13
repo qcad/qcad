@@ -72,7 +72,12 @@
         <translation>Qtバージョン:</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-90"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -124,12 +129,11 @@
         <translation>%1は自由で（オープンソースな）ソフトウェアです。</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>プラグインとスクリプト拡張機能は個別のライセンスが適用されます（&apos;プラグイン&apos;タブ参照）</translation>
+        <translation type="vanished">プラグインとスクリプト拡張機能は個別のライセンスが適用されます（&apos;プラグイン&apos;タブ参照）</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>すべてのブランドまたは製品名は、それぞれの所有者の商標または登録商標です。</translation>
     </message>
@@ -201,7 +205,7 @@
         <translation>翻訳</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>テンプレート</translation>
     </message>

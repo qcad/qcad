@@ -123,12 +123,11 @@
         <translation>%1 is gratis (open source) software.</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Plugins en script add-ons zijn beschikbaar onder hun respectieve licentie (zie tabblad &apos;Plugins&apos;).</translation>
+        <translation type="vanished">Plugins en script add-ons zijn beschikbaar onder hun respectieve licentie (zie tabblad &apos;Plugins&apos;).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Alle merk- en productnamen zijn handelsmerken of geregistreerde handelsmerken van hun respectievelijke eigenaren.</translation>
     </message>
@@ -145,7 +144,12 @@
         <translation type="obsolete">Delen van deze software © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-2"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation>Plugins en script add-ons zijn beschikbaar onder hun respectieve licentie (zie tabblad &quot;Plugins&quot;).</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation>Delen van deze software © %1 The Qt Company Ltd.</translation>
     </message>
@@ -213,7 +217,7 @@
         <translation>Vertalingen</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Sjablonen</translation>
     </message>

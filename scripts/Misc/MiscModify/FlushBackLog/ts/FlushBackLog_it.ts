@@ -6,22 +6,22 @@
     <message>
         <location filename="../FlushBackLog.js" line="+38"/>
         <source>Flush Undo History</source>
-        <translation type="unfinished">Cronologia degli annullamenti di lavaggio</translation>
+        <translation>Cancella la cronologia degli annullamenti</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation type="unfinished">Sei sicuro di voler risciacquare la cronologia delle transazioni di annullamento/ripetizione?</translation>
+        <translation>Sei sicuro di voler risciacquare la cronologia delle transazioni di annullamento/ripetizione?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation type="unfinished">Questo non può essere annullato.</translation>
+        <translation>Questo non può essere annullato.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Flush &amp;Undo History</source>
-        <translation type="unfinished">Storia del lavaggio e dello svuotamento</translation>
+        <translation>Cancella la &amp;cronologia degli annullamenti</translation>
     </message>
 </context>
 </TS>

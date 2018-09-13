@@ -9,12 +9,11 @@
         <translation>弧ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>弧ツールを表示</translation>
+        <translation type="vanished">弧ツールを表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;A 弧</translation>
     </message>

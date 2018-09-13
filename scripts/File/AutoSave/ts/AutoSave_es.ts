@@ -55,25 +55,25 @@
         <translation>Guardado automático se ha completado.</translation>
     </message>
     <message>
-        <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
+        <source>An autosave backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
         <translation type="vanished">Un archivo de copia de &apos;guardado automática&apos; para un dibujo sin título fue encontrado.
 ¿Quiere recuperarlo?</translation>
     </message>
     <message>
-        <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
+        <source>%1 autosave backup files for untitled drawings were found.
 Do you wish to recover them?</source>
         <translation type="vanished">%1 archivos de copia de &apos;guardado automática&apos; para dibujos sin título se encontraron.
 ¿Quiere recuperarlos?</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
-        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+        <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation>
-            <numerusform>Un archivo de copia de &apos;guardado automática&apos; para un dibujo sin título fue encontrado.
+            <numerusform>Un archivo de copia de guardado automática para un dibujo sin título fue encontrado.
 ¿Quiere recuperarlo?</numerusform>
-            <numerusform>%n archivos de copia de &apos;guardado automática&apos; para dibujos sin título se encontraron.
+            <numerusform>%n archivos de copia de guardado automática para dibujos sin título se encontraron.
 ¿Quiere recuperarlos?</numerusform>
         </translation>
     </message>
@@ -88,10 +88,16 @@ Do you wish to recover it/them?</source>
         <translation>Recuperar archivo?</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
+        <source>An autosave backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Un archivo de copia de &apos;guardado automática&apos; para &apos;%1&apos; fue encontrado.
+        <translation type="vanished">Un archivo de copia de &apos;guardado automática&apos; para &apos;%1&apos; fue encontrado.
+¿Quiere recuperarlo?</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>An autosave backup file for &quot;%1&quot; exists.
+Do you wish to recover it?</source>
+        <translation>Un archivo de copia de guardado automática para &quot;%1&quot; fue encontrado.
 ¿Quiere recuperarlo?</translation>
     </message>
     <message>

@@ -73,9 +73,13 @@
         <translation>Bu, herkesin &lt;a href=&apos;%1&apos;&gt; dahil olabileceği anlamına gelir &lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Eklentiler ve komut dosyası eklentileri, ilgili lisanslarına tabidir (bkz. &apos;Eklentiler&apos; sekmesi).</translation>
+        <translation type="vanished">Eklentiler ve komut dosyası eklentileri, ilgili lisanslarına tabidir (bkz. &apos;Eklentiler&apos; sekmesi).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -193,7 +197,7 @@
         <translation>Çeviriler</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Şablonlar</translation>
     </message>

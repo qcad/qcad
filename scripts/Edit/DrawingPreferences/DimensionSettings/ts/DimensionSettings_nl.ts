@@ -91,8 +91,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>De tekening eenheid moet &apos;Inch&apos; zijn dat bematingen in het format &apos;Architectuur&apos; of &apos;Technisch&apos; kunnen worden weergegeven. Format teruggezet op &apos;Decimaal&apos;.</translation>
+        <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
+        <translation>De tekening eenheid moet &quot;Inch&quot; zijn dat bematingen in het format &quot;Architectuur&quot; of &quot;Technisch&quot; kunnen worden weergegeven. Format teruggezet op &quot;Decimaal&quot;.</translation>
+    </message>
+    <message>
+        <source>The drawing unit must be &quot;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
+        <translation type="vanished">De tekening eenheid moet &apos;Inch&apos; zijn dat bematingen in het format &apos;Architectuur&apos; of &apos;Technisch&apos; kunnen worden weergegeven. Format teruggezet op &apos;Decimaal&apos;.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>

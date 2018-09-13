@@ -9,12 +9,11 @@
         <translation>Spline Tools</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show spline tools</source>
-        <translation>Show spline tools</translation>
+        <translation type="vanished">Show spline tools</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
     </message>

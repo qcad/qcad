@@ -15,8 +15,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
-        <translation>Pre export registrovaných súborov typu &apos;.príklad&apos; (&apos;.example&apos;), použite Súbor &gt; Uložiť ako ... a zvoľte Formát: &apos;*.example&apos;.</translation>
+        <translation type="vanished">Pre export registrovaných súborov typu &apos;.príklad&apos; (&apos;.example&apos;), použite Súbor &gt; Uložiť ako ... a zvoľte Formát: &apos;*.example&apos;.</translation>
     </message>
     <message>
         <location line="+10"/>

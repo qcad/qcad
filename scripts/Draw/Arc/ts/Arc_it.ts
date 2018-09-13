@@ -9,12 +9,11 @@
         <translation>Menù archi</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Mostra menù &quot;Archi&quot;</translation>
+        <translation type="vanished">Mostra menù &quot;Archi&quot;</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Arco</translation>
     </message>

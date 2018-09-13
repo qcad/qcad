@@ -6,7 +6,7 @@
     <message>
         <location filename="../CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation type="unfinished">Herramientas de la línea de comandos</translation>
+        <translation>Herramientas de la línea de &amp;comandos</translation>
     </message>
 </context>
 </TS>

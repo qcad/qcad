@@ -17,14 +17,18 @@
 <context>
     <name>ShowReadme</name>
     <message>
-        <location filename="../ShowReadme.js" line="+46"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation>Bestand &quot;%1&quot; bestaat niet.</translation>
+        <translation type="vanished">Bestand &quot;%1&quot; bestaat niet.</translation>
     </message>
     <message>
         <location filename="../ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
         <translation>&amp;Readme tonen</translation>
+    </message>
+    <message>
+        <location filename="../ShowReadme.js" line="+46"/>
+        <source>File &quot;%1&quot; doesn&apos;t exist.</source>
+        <translation>Bestand &quot;%1&quot; bestaat niet.</translation>
     </message>
 </context>
 </TS>

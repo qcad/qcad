@@ -18,12 +18,11 @@
         <translation>Diverse Zeichnungswerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc drawing tools</source>
-        <translation>Diverse Zeichnungswerkzeuge anzeigen</translation>
+        <translation type="vanished">Diverse Zeichnungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Draw</source>
         <translation>&amp;Zeichnen</translation>
     </message>

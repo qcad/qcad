@@ -6,12 +6,12 @@
     <message>
         <location filename="../MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished">Menu&apos;sAndToolBars() draait...</translation>
+        <translation>MenusAndToolBars() draait...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation type="unfinished">&amp;Menus en Werkbalken</translation>
+        <translation>&amp;Menus en werkbalken</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation type="unfinished">Mijn Scripts</translation>
+        <translation>Mijn Scripts</translation>
     </message>
 </context>
 </TS>

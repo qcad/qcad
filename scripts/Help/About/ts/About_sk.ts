@@ -123,12 +123,11 @@
         <translation>%1 je bezplatný software (open source).</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Zásuvné moduly a skripty podliehajú vlastným licenciám (pozri záložku Zásuvné moduly).</translation>
+        <translation type="vanished">Zásuvné moduly a skripty podliehajú vlastným licenciám (pozri záložku Zásuvné moduly).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+6"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Všetky značky alebo názvy produktov sú ochrannými známkami alebo registrovanými ochrannými známkami príslušných vlastníkov.</translation>
     </message>
@@ -145,7 +144,12 @@
         <translation type="obsolete">Súčasti tohto software © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-2"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation>Časť tohto softvéru © %1 The Qt Company Ltd.</translation>
     </message>
@@ -213,7 +217,7 @@
         <translation>Preklady</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Templates</source>
         <translation>Šablóny</translation>
     </message>

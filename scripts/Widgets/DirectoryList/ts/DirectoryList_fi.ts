@@ -6,10 +6,10 @@
     <message>
         <location filename="../DirectoryList.js" line="+57"/>
         <source>The folder
-&apos;%1&apos;
+&quot;%1&quot;
 is already in the list.</source>
         <translation>Hakemisto
-&apos;%1&apos;
+&quot;%1&quot;
 on jo luettelossa.</translation>
     </message>
     <message>

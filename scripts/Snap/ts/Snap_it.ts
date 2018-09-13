@@ -10,12 +10,11 @@
         <translation>Strumenti snap</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Mostra strumenti di aggancia</translation>
+        <translation type="vanished">Mostra strumenti di aggancia</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>&amp;Snap</translation>
     </message>

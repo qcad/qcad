@@ -10,12 +10,11 @@
         <translation>Outils de accrochage</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Montrer outils de accrochage</translation>
+        <translation type="vanished">Montrer outils de accrochage</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>&amp;Accrochage</translation>
     </message>

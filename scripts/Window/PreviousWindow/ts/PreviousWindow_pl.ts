@@ -6,10 +6,6 @@
     <message>
         <location filename="../PreviousWindowInit.js" line="+2"/>
         <source>&amp;Previous</source>
-        <translatorcomment>--exact match--
---file: designer_pl.ts--
-Poprze&amp;dni widok
-Znajdź &amp;poprzednie</translatorcomment>
         <translation>&amp;Poprzednie</translation>
     </message>
 </context>

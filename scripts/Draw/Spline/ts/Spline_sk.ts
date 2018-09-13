@@ -9,12 +9,11 @@
         <translation>Nástroje Spline-u</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show spline tools</source>
-        <translation>Zobraziť nástroje spline-u</translation>
+        <translation type="vanished">Zobraziť nástroje spline-u</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
     </message>

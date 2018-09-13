@@ -6,7 +6,7 @@
     <message>
         <location filename="../LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation type="unfinished">Gelijkenisassen van 3 Cirkels</translation>
+        <translation>Assen van gelijkenis van 3 cirkels</translation>
     </message>
 </context>
 </TS>

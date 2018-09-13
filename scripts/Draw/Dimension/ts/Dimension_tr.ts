@@ -59,12 +59,11 @@
         <translation>Boyut Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation>Boyut araçlarını göster</translation>
+        <translation type="vanished">Boyut araçlarını göster</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>D&amp;imension</source>
         <translation>Ö&amp;lçü</translation>
     </message>

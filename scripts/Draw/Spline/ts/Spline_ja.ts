@@ -9,12 +9,11 @@
         <translation>スプラインツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show spline tools</source>
-        <translation>スプラインツールを表示</translation>
+        <translation type="vanished">スプラインツールを表示</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Spline</source>
         <translation>&amp;S スプライン</translation>
     </message>

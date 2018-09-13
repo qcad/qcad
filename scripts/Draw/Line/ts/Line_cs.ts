@@ -9,12 +9,11 @@
         <translation>Nástroje úsečky</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show line tools</source>
-        <translation>Zobrazit nástroje úsečky</translation>
+        <translation type="vanished">Zobrazit nástroje úsečky</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Line</source>
         <translation>Ú&amp;sečka</translation>
     </message>

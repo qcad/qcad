@@ -23,12 +23,11 @@
         <translation>Ferramentas de Visualização</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show view tools</source>
-        <translation>Exiba as ferramentas de visualização</translation>
+        <translation type="vanished">Exiba as ferramentas de visualização</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+28"/>
         <source>View</source>
         <translation>Exibir</translation>
     </message>

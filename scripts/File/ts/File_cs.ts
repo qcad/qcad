@@ -9,12 +9,11 @@
         <translation>Souborové nástroje</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show file tools</source>
-        <translation>Zobrazit souborové nástroje</translation>
+        <translation type="vanished">Zobrazit souborové nástroje</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;File</source>
         <translation>&amp;Soubor</translation>
     </message>
@@ -31,8 +30,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Soubor &apos;%1&apos; již existuje. Přeješ si ho přepsat?</translation>
+        <translation type="vanished">Soubor &apos;%1&apos; již existuje. Přeješ si ho přepsat?</translation>
     </message>
     <message>
         <location line="+20"/>

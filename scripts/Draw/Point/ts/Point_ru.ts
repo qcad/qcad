@@ -9,12 +9,11 @@
         <translation>Инструменты работы с точками</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show point tools</source>
-        <translation>Показать инструменты работы с точками</translation>
+        <translation type="vanished">Показать инструменты работы с точками</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Point</source>
         <translation>Точка</translation>
     </message>

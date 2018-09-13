@@ -9,12 +9,11 @@
         <translation>Nástroje Tvaru</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show shape tools</source>
-        <translation>Zobraziť nástroje tvaru</translation>
+        <translation type="vanished">Zobraziť nástroje tvaru</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Shape</source>
         <translation>&amp;Tvar</translation>
     </message>

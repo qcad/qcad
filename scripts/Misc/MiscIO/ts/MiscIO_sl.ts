@@ -14,12 +14,11 @@
         <translation>Orodja raznega uvoza/izvoza</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show misc import / export tools</source>
-        <translation>Prikaži orodja raznega uvoza/izvoza</translation>
+        <translation type="vanished">Prikaži orodja raznega uvoza/izvoza</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+22"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Uvozi/Izvozi</translation>
     </message>

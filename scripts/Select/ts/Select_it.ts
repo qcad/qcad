@@ -11,12 +11,11 @@ Mostra menù &quot;Seleziona&quot;</translatorcomment>
         <translation>Strumenti di selezione</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show selection tools</source>
-        <translation>Mostra menù &quot;Seleziona&quot;</translation>
+        <translation type="vanished">Mostra menù &quot;Seleziona&quot;</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+14"/>
         <source>Selection Tools Panel</source>
         <translation>Strumenti di selezione</translation>
     </message>

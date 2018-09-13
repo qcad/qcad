@@ -9,12 +9,11 @@
         <translation>Yay Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Yay araçlarını göster</translation>
+        <translation type="vanished">Yay araçlarını göster</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Yay</translation>
     </message>

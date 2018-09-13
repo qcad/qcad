@@ -10,13 +10,12 @@
         <translation>Narzędzia splajów</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show spline tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wyświetla narzędzia splajnów</translation>
+        <translation type="vanished">Wyświetla narzędzia splajnów</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Spline</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

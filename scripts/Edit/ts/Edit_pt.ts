@@ -87,12 +87,11 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Ferramentas de Edição</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Exiba as ferramentas de edição</translation>
+        <translation type="vanished">Exiba as ferramentas de edição</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

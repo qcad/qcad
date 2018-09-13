@@ -9,12 +9,11 @@
         <translation>投影ツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show projection tools</source>
-        <translation>投影ツールを表示</translation>
+        <translation type="vanished">投影ツールを表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Projection</source>
         <translation>&amp;P 投影</translation>
     </message>

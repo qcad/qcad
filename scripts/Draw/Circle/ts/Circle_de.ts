@@ -9,12 +9,11 @@
         <translation>Kreiswerkzeuge</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show circle tools</source>
-        <translation>Kreiswerkzeuge anzeigen</translation>
+        <translation type="vanished">Kreiswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Circle</source>
         <translation>&amp;Kreis</translation>
     </message>

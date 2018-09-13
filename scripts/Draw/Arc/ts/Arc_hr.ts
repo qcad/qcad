@@ -9,12 +9,11 @@
         <translation>Alati za lukove</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show arc tools</source>
-        <translation>Prikaži alate za lukove</translation>
+        <translation type="vanished">Prikaži alate za lukove</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;Arc</source>
         <translation>&amp;Luk</translation>
     </message>

@@ -4,9 +4,13 @@
 <context>
     <name>ExLayerCustomProperty</name>
     <message>
-        <location filename="../ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
-        <translation>Dodana prilagojena lasnost &apos;MyCustomProperty&apos; na plast 0.</translation>
+        <translation type="vanished">Dodana prilagojena lasnost &apos;MyCustomProperty&apos; na plast 0.</translation>
+    </message>
+    <message>
+        <location filename="../ExLayerCustomProperty.js" line="+43"/>
+        <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>

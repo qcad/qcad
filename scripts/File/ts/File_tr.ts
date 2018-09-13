@@ -9,12 +9,11 @@
         <translation>Dosya Araçları</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show file tools</source>
-        <translation>Dosya araçlarını göster</translation>
+        <translation type="vanished">Dosya araçlarını göster</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
@@ -31,8 +30,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>&apos;%1&apos; dosyası zaten var. Üzerine yazmak istiyor musun?</translation>
+        <translation type="vanished">&apos;%1&apos; dosyası zaten var. Üzerine yazmak istiyor musun?</translation>
     </message>
     <message>
         <location line="+20"/>

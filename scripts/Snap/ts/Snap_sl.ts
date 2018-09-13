@@ -9,12 +9,11 @@
         <translation>Orodja pritrjevanja</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show snap tools</source>
-        <translation>Prikaži orodja pritrjevanja</translation>
+        <translation type="vanished">Prikaži orodja pritrjevanja</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>&amp;Snap</source>
         <translation>&amp;Pritrdi</translation>
     </message>

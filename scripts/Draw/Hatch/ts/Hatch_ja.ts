@@ -21,12 +21,11 @@
         <translation>ハッチングツール</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>ハッチングツールを表示</translation>
+        <translation type="vanished">ハッチングツールを表示</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;H ハッチング</translation>
     </message>

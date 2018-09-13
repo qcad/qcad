@@ -21,12 +21,11 @@
         <translation>Menú rayado</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show hatch tools</source>
-        <translation>Mostrar menú rayado</translation>
+        <translation type="vanished">Mostrar menú rayado</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Hatch</source>
         <translation>&amp;Rayado</translation>
     </message>

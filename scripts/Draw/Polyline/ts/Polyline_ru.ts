@@ -9,12 +9,11 @@
         <translation>Утилиты многоугольника</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Show polyline tools</source>
-        <translation>Показать утилиты многоугольника</translation>
+        <translation type="vanished">Показать утилиты многоугольника</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Ломаная</translation>
     </message>
