@@ -6,7 +6,7 @@
     <message>
         <location filename="../InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir sonraki çokgen köşeyi ayarla</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -16,12 +16,12 @@
     <message>
         <location line="+138"/>
         <source>Polygon area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Çokgen alanı:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>çevre:</translation>
     </message>
     <message>
         <location filename="../InfoArea.ui" line="+17"/>
@@ -31,7 +31,7 @@
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kapatma Aracı.</translation>
     </message>
     <message>
         <location filename="../InfoAreaInit.js" line="+2"/>

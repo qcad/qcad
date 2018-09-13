@@ -13,17 +13,29 @@
         <location line="+46"/>
         <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Komut Satırı</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Komut Satırı</translation>
     </message>
     <message>
         <location line="+188"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
+        <translation type="vanished">Bilinmeyen komut veya geçersiz koordinat veya değer: &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Numbers may be entered as: &apos;%1&apos;</source>
+        <translation type="vanished">Sayılar şöyle girilebilir: &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
+        <translation type="vanished">Koordinatlar şu şekilde girilebilir: &apos;%1&apos; (mutlak) veya &apos;%2&apos; (göreceli) veya &apos;%3&apos; (polar) veya &apos;%4&apos; (göreceli polar)</translation>
     </message>
     <message>
         <location line="+16"/>

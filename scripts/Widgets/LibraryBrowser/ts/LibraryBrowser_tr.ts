@@ -26,7 +26,7 @@
     <message>
         <location line="+1"/>
         <source>license</source>
-        <translation type="unfinished"></translation>
+        <translation>lisans</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -143,12 +143,12 @@ Library browser will not be available.</source>
     <message>
         <location line="+43"/>
         <source>Source removed from part library: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak kitaplıktan kaldırıldı:%1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished"></translation>
+        <translation>Veritabanı güncellemesini zorla.</translation>
     </message>
     <message>
         <location line="+393"/>
@@ -168,7 +168,7 @@ Library browser will not be available.</source>
     <message>
         <location line="+9"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aç...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -183,17 +183,17 @@ Library browser will not be available.</source>
     <message>
         <location line="+2"/>
         <source>&amp;Show in %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 &amp;göster...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Remove from Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Favorilerden Çıkar</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Add to Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Fav&amp;orilere Ekle</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -249,17 +249,17 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekle...</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Çıkar</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Yukarı</translation>
     </message>
     <message>
         <location line="+14"/>

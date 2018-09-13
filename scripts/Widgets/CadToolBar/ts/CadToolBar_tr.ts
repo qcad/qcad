@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>CadToolBar</name>
     <message>
@@ -21,17 +21,17 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Simge Boyutu:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Piksel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../CadToolBarPanel.js" line="+109"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Geri</translation>
     </message>
 </context>
 </TS>

@@ -34,7 +34,7 @@
     <message>
         <location line="+7"/>
         <source>Allow adding custom properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Özel özellikler eklemeye izin ver</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -59,7 +59,7 @@
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağımlı Varlıklar</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -79,7 +79,7 @@
     <message>
         <location line="+68"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Tümü</translation>
     </message>
     <message>
         <location line="+22"/>

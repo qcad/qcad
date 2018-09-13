@@ -33,7 +33,7 @@
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform>İsimsiz çizim için %n &apos;otomatik kaydetme&apos; yedekleme dosyası bulundu.\ nOnları kurtarmak ister misiniz?</numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>

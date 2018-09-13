@@ -28,7 +28,7 @@
     <message>
         <location filename="../ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka &quot;%1&quot; ne obstaja.</translation>
     </message>
 </context>
 </TS>

@@ -11,12 +11,12 @@
     <message>
         <location line="+53"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Beri iz datoteke &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Registriran datotečni uvoznik za datoteko tip &quot;.example&quot;. Uporabite Datoteka-&gt;Odpri ,da vidite filter v akciji.</translation>
     </message>
     <message>
         <source>Read from file: &apos;%1&apos;</source>

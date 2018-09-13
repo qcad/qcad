@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>SnapDistanceManual</name>
     <message>
         <location filename="../SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished"></translation>
+        <translation>Mesafeyi ölçmek için ilk noktayı belirtin</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>İkinci nokta</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ek mesafe:</translation>
     </message>
     <message>
         <location line="+69"/>

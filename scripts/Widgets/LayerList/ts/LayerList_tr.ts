@@ -12,7 +12,7 @@
         <location line="+0"/>
         <location line="+109"/>
         <source>Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>Katman Listesi</translation>
     </message>
     <message>
         <location line="-55"/>

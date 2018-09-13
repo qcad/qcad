@@ -47,7 +47,7 @@
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Polmer je padel pod 0,0 po %1 kocentričnimi krogi.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -57,7 +57,7 @@
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Polmer je padel pod 0,0 po %1 kocentričnimi loki.</numerusform>
         </translation>
     </message>
     <message>

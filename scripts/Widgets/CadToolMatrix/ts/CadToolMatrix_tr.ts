@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>CadToolMatrix</name>
     <message>
@@ -16,12 +16,12 @@
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Liste Görünümü</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation type="unfinished"></translation>
+        <translation>Simge Görünümü</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../CadToolMatrix.ui" line="+37"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtre</translation>
     </message>
 </context>
 </TS>

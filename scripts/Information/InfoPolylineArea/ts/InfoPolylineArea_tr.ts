@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1" language="tr">
 <context>
     <name>InfoPolylineArea</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+1"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevre</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -31,7 +31,7 @@
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>çevre:</translation>
     </message>
     <message>
         <location filename="../InfoPolylineAreaInit.js" line="+2"/>

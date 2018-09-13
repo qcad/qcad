@@ -10,7 +10,7 @@
     <message>
         <location filename="../ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodana prilagojena lasnost &quot;MyCustomProperty&quot; na plast &quot;0&quot;.</translation>
     </message>
     <message>
         <location line="+10"/>

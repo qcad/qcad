@@ -10,7 +10,7 @@
     <message>
         <location filename="../ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodana plast &quot;MyLayer&quot;</translation>
     </message>
     <message>
         <location line="+13"/>

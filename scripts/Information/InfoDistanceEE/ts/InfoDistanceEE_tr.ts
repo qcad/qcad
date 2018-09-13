@@ -26,7 +26,7 @@
     <message>
         <location filename="../InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Varlıktan Varlığa Ar&amp;alık</translation>
     </message>
 </context>
 </TS>

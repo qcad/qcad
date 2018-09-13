@@ -135,7 +135,7 @@
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Varlık</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Yay/Daire/Elips Alanı</translation>
     </message>
 </context>
 </TS>

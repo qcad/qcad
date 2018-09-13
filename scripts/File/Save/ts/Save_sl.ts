@@ -61,27 +61,27 @@
     <message>
         <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka &quot;%1&quot; že obstaja. Jo želite prepisat?</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzija datotečnega formata, ki ga uporabljate ni priporočena: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vse prilagojene barve bodo &apos;zaokrožene&apos; na najbližjo fiksno barvo.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Shranjevanje v datotečni format verzije &quot;%1&quot; .</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagojene barve so &apos;zaokrožene&apos; na najbližjo fiksno barvo.</translation>
     </message>
     <message>
         <location line="+6"/>

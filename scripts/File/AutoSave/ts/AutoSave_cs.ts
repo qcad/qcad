@@ -37,8 +37,7 @@
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform>Byly nalezeny záložní nepojmenované autosave soubory s výkresem %n.
-Přejete si je obnovit?</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -48,6 +47,16 @@ Přejete si je obnovit?</numerusform>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
+Do you wish to recover it/them?</source>
+        <translation type="vanished">
+            <numerusform>Byly nalezeny záložní nepojmenované &apos;autosave&apos; soubory s výkresem %n.
+Přejete si je obnovit?</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location line="-64"/>
@@ -65,9 +74,9 @@ Do you wish to recover it?</source>
         <translation>Obnovit soubor?</translation>
     </message>
     <message>
-        <source>An autosave backup file for &apos;%1&apos; exists.
+        <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation type="vanished">Existuje záložní autosave soubor pro &apos;%1&apos;.
+        <translation type="vanished">Existuje záložní &apos;autosave&apos; soubor pro &apos;%1&apos;.
 Přejete si ho obnovit?</translation>
     </message>
     <message>

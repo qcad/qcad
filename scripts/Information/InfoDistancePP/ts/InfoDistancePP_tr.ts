@@ -6,22 +6,22 @@
     <message>
         <location filename="../InfoDistancePP.js" line="+59"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>İlk nokta</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>İkinci nokta</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitti</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mesafe:</translation>
     </message>
     <message>
         <location line="+4"/>
