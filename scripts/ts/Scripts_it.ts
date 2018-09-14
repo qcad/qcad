@@ -683,24 +683,40 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
         <translation>Quote angolari</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>2 Line Angular Dimensions</source>
-        <translation>Quote angolari 2 linee</translation>
+        <translation type="vanished">Quote angolari 2 linee</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>2 Line Angular Dimension</source>
-        <translation>Quota angolare 2 linee</translation>
+        <translation type="vanished">Quota angolare 2 linee</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimensions</source>
+        <translation type="vanished">Quote angolari 3 punti</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimension</source>
+        <translation type="vanished">Quota angolare 3 punti</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3 Point Angular Dimensions</source>
-        <translation>Quote angolari 3 punti</translation>
+        <source>Angular Dimensions (2 Line)</source>
+        <translation>Quote angolari (2 linee)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3 Point Angular Dimension</source>
-        <translation>Quota angolare 3 punti</translation>
+        <source>Angular Dimension (2 Line)</source>
+        <translation>Quota angolare (2 linee)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angular Dimensions (3 Point)</source>
+        <translation>Quote angolari (3 punti)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Angular Dimension (3 Point)</source>
+        <translation>Quota angolare (3 punti)</translation>
     </message>
     <message>
         <location line="+2"/>

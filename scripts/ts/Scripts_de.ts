@@ -669,24 +669,40 @@
         <translation>Winkel Bemassung</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>2 Line Angular Dimensions</source>
-        <translation>2 Linien Winkelbemassungen</translation>
+        <translation type="vanished">2 Linien Winkelbemassungen</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>2 Line Angular Dimension</source>
-        <translation>2 Linien Winkelbemassung</translation>
+        <translation type="vanished">2 Linien Winkelbemassung</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimensions</source>
+        <translation type="vanished">3 Punkte Winkelbemassungen</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimension</source>
+        <translation type="vanished">3 Punkte Winkelbemassung</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3 Point Angular Dimensions</source>
-        <translation>3 Punkte Winkelbemassungen</translation>
+        <source>Angular Dimensions (2 Line)</source>
+        <translation>Winkelbemassungen (2 Linien)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3 Point Angular Dimension</source>
-        <translation>3 Punkte Winkelbemassung</translation>
+        <source>Angular Dimension (2 Line)</source>
+        <translation>Winkelbemassung (2 Linien)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angular Dimensions (3 Point)</source>
+        <translation>Winkelbemassungen (3 Punkte)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Angular Dimension (3 Point)</source>
+        <translation>Winkelbemassung (3 Punkte)</translation>
     </message>
     <message>
         <location line="+2"/>

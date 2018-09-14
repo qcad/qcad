@@ -597,24 +597,40 @@
         <translation>Angular Dimension</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>2 Line Angular Dimensions</source>
-        <translation>2 Line Angular Dimensions</translation>
+        <translation type="vanished">2 Line Angular Dimensions</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>2 Line Angular Dimension</source>
-        <translation>2 Line Angular Dimension</translation>
+        <translation type="vanished">2 Line Angular Dimension</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimensions</source>
+        <translation type="vanished">3 Point Angular Dimensions</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimension</source>
+        <translation type="vanished">3 Point Angular Dimension</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3 Point Angular Dimensions</source>
-        <translation>3 Point Angular Dimensions</translation>
+        <source>Angular Dimensions (2 Line)</source>
+        <translation>Angular Dimensions (2 Line)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3 Point Angular Dimension</source>
-        <translation>3 Point Angular Dimension</translation>
+        <source>Angular Dimension (2 Line)</source>
+        <translation>Angular Dimension (2 Line)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angular Dimensions (3 Point)</source>
+        <translation>Angular Dimensions (3 Point)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Angular Dimension (3 Point)</source>
+        <translation>Angular Dimension (3 Point)</translation>
     </message>
     <message>
         <location line="+2"/>

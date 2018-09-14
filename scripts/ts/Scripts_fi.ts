@@ -610,22 +610,22 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>2 Line Angular Dimensions</source>
+        <source>Angular Dimensions (2 Line)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>2 Line Angular Dimension</source>
+        <source>Angular Dimension (2 Line)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3 Point Angular Dimensions</source>
+        <source>Angular Dimensions (3 Point)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3 Point Angular Dimension</source>
+        <source>Angular Dimension (3 Point)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

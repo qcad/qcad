@@ -695,24 +695,40 @@ Dessine des cercles avec 2 points</translatorcomment>
         <translation>Cotations angulaires</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>2 Line Angular Dimensions</source>
-        <translation>2 lignes cotations angulaires</translation>
+        <translation type="vanished">2 lignes cotations angulaires</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>2 Line Angular Dimension</source>
-        <translation>2 lignes cotation angulaire</translation>
+        <translation type="vanished">2 lignes cotation angulaire</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimensions</source>
+        <translation type="vanished">3 points cotations angulaires</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimension</source>
+        <translation type="vanished">3 points cotation angulaire</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3 Point Angular Dimensions</source>
-        <translation>3 points cotations angulaires</translation>
+        <source>Angular Dimensions (2 Line)</source>
+        <translation>Cotations angulaires (2 lignes)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3 Point Angular Dimension</source>
-        <translation>3 points cotation angulaire</translation>
+        <source>Angular Dimension (2 Line)</source>
+        <translation>Cotation angulaire (2 lignes)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angular Dimensions (3 Point)</source>
+        <translation>Cotations angulaires (3 points)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Angular Dimension (3 Point)</source>
+        <translation>Cotation angulaire (3 points)</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -609,24 +609,40 @@
         <translation>Hoek bemating</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>2 Line Angular Dimensions</source>
-        <translation>2 lijnen hoek bematingen</translation>
+        <translation type="vanished">2 lijnen hoek bematingen</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>2 Line Angular Dimension</source>
-        <translation>2 lijnen hoek bemating</translation>
+        <translation type="vanished">2 lijnen hoek bemating</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimensions</source>
+        <translation type="vanished">3 punt hoek bematingen</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimension</source>
+        <translation type="vanished">3 punt hoek bemating</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3 Point Angular Dimensions</source>
-        <translation>3 punt hoek bematingen</translation>
+        <source>Angular Dimensions (2 Line)</source>
+        <translation>Hoek bematingen (2 lijnen)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3 Point Angular Dimension</source>
-        <translation>3 punt hoek bemating</translation>
+        <source>Angular Dimension (2 Line)</source>
+        <translation>Hoek bemating (2 lijnen)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angular Dimensions (3 Point)</source>
+        <translation>Hoek bematingen (3 punt)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Angular Dimension (3 Point)</source>
+        <translation>Hoek bemating (3 punt)</translation>
     </message>
     <message>
         <location line="+2"/>

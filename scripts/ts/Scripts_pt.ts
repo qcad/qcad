@@ -776,24 +776,40 @@ Desenhe dimensão angular</translatorcomment>
         <translation>Dimensão Angular</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>2 Line Angular Dimensions</source>
-        <translation>Dimensões angulares de 2 linhas</translation>
+        <translation type="vanished">Dimensões angulares de 2 linhas</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>2 Line Angular Dimension</source>
-        <translation>Dimensão angular de 2 linhas</translation>
+        <translation type="vanished">Dimensão angular de 2 linhas</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimensions</source>
+        <translation type="vanished">Dimensões angulares de 3 pontos</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimension</source>
+        <translation type="vanished">Dimensão angular de 3 pontos</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3 Point Angular Dimensions</source>
-        <translation>Dimensões angulares de 3 pontos</translation>
+        <source>Angular Dimensions (2 Line)</source>
+        <translation>Dimensões angulares (2 linhas)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3 Point Angular Dimension</source>
-        <translation>Dimensão angular de 3 pontos</translation>
+        <source>Angular Dimension (2 Line)</source>
+        <translation>Dimensão angular (2 linhas)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angular Dimensions (3 Point)</source>
+        <translation>Dimensões angulares (3 pontos)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Angular Dimension (3 Point)</source>
+        <translation>Dimensão angular (3 pontos)</translation>
     </message>
     <message>
         <location line="+2"/>

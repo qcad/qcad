@@ -687,24 +687,40 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
         <translation>Cotas angular</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>2 Line Angular Dimensions</source>
-        <translation>Cotas angulares de 2 líneas</translation>
+        <translation type="vanished">Cotas angulares de 2 líneas</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>2 Line Angular Dimension</source>
-        <translation>Cota angular de 2 líneas</translation>
+        <translation type="vanished">Cota angular de 2 líneas</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimensions</source>
+        <translation type="vanished">Cotas angulares de 3 puntos</translation>
+    </message>
+    <message>
+        <source>3 Point Angular Dimension</source>
+        <translation type="vanished">Cota angular de 3 puntos</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3 Point Angular Dimensions</source>
-        <translation>Cotas angulares de 3 puntos</translation>
+        <source>Angular Dimensions (2 Line)</source>
+        <translation>Cotas angulares (2 líneas)</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3 Point Angular Dimension</source>
-        <translation>Cota angular de 3 puntos</translation>
+        <source>Angular Dimension (2 Line)</source>
+        <translation>Cota angular (2 líneas)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angular Dimensions (3 Point)</source>
+        <translation>Cotas angulares (3 puntos)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Angular Dimension (3 Point)</source>
+        <translation>Cota angular (3 puntos)</translation>
     </message>
     <message>
         <location line="+2"/>
