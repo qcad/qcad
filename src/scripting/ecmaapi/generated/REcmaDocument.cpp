@@ -435,8 +435,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, copyVariablesFrom, "copyVariablesFrom");
             
-            REcmaHelper::registerFunction(&engine, proto, normalizeDrawOrder, "normalizeDrawOrder");
-            
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
         engine.setDefaultPrototype(
@@ -14518,77 +14516,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::copyVariablesFrom", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDocument::normalizeDrawOrder
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDocument::normalizeDrawOrder", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::normalizeDrawOrder";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDocument* self = 
-                        getSelf("normalizeDrawOrder", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->normalizeDrawOrder();
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->normalizeDrawOrder(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.normalizeDrawOrder().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDocument::normalizeDrawOrder", context, engine);
             return result;
         }
          QScriptValue

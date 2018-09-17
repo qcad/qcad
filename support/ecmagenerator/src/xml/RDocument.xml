@@ -1543,14 +1543,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="other" isConst="true" />
       </variant>
     </method>
-    <method name="normalizeDrawOrder" cppName="normalizeDrawOrder"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="useTransactionGroup"
-        hasDefault="true" default="false" isConst="false" />
-      </variant>
-    </method>
     <method name="getClipboard" cppName="getClipboard"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
