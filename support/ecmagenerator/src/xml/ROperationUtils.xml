@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocumentInterface" />
+  <class name="ROperationUtils"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <method name="normalizeDrawOrder" cppName="normalizeDrawOrder"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="di"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="useTransactionGroup"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>

@@ -163,6 +163,7 @@ HEADERS += \
     $$PWD/REcmaNewDocumentListenerAdapter.h \
     $$PWD/REcmaObject.h \
     $$PWD/REcmaOperation.h \
+    $$PWD/REcmaOperationUtils.h \
     $$PWD/REcmaOrthoGrid.h \
     $$PWD/REcmaPainterPath.h \
     $$PWD/REcmaPainterPathDevice.h \
@@ -534,6 +535,7 @@ SOURCES += \
     $$PWD/REcmaNewDocumentListenerAdapter.cpp \
     $$PWD/REcmaObject.cpp \
     $$PWD/REcmaOperation.cpp \
+    $$PWD/REcmaOperationUtils.cpp \
     $$PWD/REcmaOrthoGrid.cpp \
     $$PWD/REcmaPainterPath.cpp \
     $$PWD/REcmaPainterPathDevice.cpp \
