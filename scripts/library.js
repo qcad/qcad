@@ -863,9 +863,9 @@ function entityTypeToString(type, plural) {
     case RS.EntityDimAngular:
         return plural ? qsTr("Angular Dimensions") : qsTr("Angular Dimension");
     case RS.EntityDimAngular2L:
-        return plural ? qsTr("2 Line Angular Dimensions") : qsTr("2 Line Angular Dimension");
+        return plural ? qsTr("Angular Dimensions (2 Line)") : qsTr("Angular Dimension (2 Line)");
     case RS.EntityDimAngular3P:
-        return plural ? qsTr("3 Point Angular Dimensions") : qsTr("3 Point Angular Dimension");
+        return plural ? qsTr("Angular Dimensions (3 Point)") : qsTr("Angular Dimension (3 Point)");
     case RS.EntityDimArcLength:
         return plural ? qsTr("Arc Dimension") : qsTr("Arc Dimension");
     case RS.EntityDimDiametric:
