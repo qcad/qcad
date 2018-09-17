@@ -4826,6 +4826,7 @@
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_tr.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_tr.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_zh_CN.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_zh_CN.qm</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_zh_TW.qm">../../scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_zh_TW.qm</file>
+    <file alias="scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js">../../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove-inverse.svg">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove-inverse.svg</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js</file>
     <file alias="scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.svg">../../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.svg</file>
