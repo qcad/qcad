@@ -201,6 +201,7 @@
 #include "REcmaNavigationAction.h"
 #include "REcmaObject.h"
 #include "REcmaOperation.h"
+#include "REcmaOperationUtils.h"
 #include "REcmaOrthoGrid.h"
 #include "REcmaPainterPath.h"
 #include "REcmaPainterPathDevice.h"
@@ -898,6 +899,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaScaleSelectionOperation::initEcma(*engine);
     REcmaPasteOperation::initEcma(*engine);
     REcmaClickReferencePointOperation::initEcma(*engine);
+    REcmaOperationUtils::initEcma(*engine);
 
     REcmaTransformation::initEcma(*engine);
 
