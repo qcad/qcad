@@ -32,6 +32,10 @@ void ROperationUtils::normalizeDrawOrder(RDocumentInterface* di, bool useTransac
     RDocument& doc = di->getDocument();
 
     RAddObjectsOperation* op = new RAddObjectsOperation();
+    if (useTransactionGroup) {
+        op->setTransactionGroup(doc.getTransactionGroup());
+    }
+
     QSet<REntity::Id> idsSet = doc.queryAllEntities();
     QList<REntity::Id> ids = doc.getStorage().orderBackToFront(idsSet);
     for (int i=0; i<ids.length(); i++) {
@@ -39,11 +43,9 @@ void ROperationUtils::normalizeDrawOrder(RDocumentInterface* di, bool useTransac
         QSharedPointer<REntity> e = doc.queryEntity(id);
         if (!e.isNull()) {
             e->setDrawOrder(i);
+            op->addObject(e, false);
         }
-        op->addObject(e, false);
     }
-    if (useTransactionGroup) {
-        op->setTransactionGroup(doc.getTransactionGroup());
-    }
+
     di->applyOperation(op);
 }

@@ -34,7 +34,7 @@ class RDocumentInterface;
  */
 class QCADOPERATIONS_EXPORT ROperationUtils {
 public:
-    static void normalizeDrawOrder(RDocumentInterface* di, bool useTransactionGroup);
+    static void normalizeDrawOrder(RDocumentInterface* di, bool useTransactionGroup = false);
 };
 
 Q_DECLARE_METATYPE(ROperationUtils)
