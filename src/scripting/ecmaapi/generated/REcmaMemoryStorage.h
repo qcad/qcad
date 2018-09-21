@@ -290,6 +290,9 @@
         getBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBlockIdAuto
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getViewName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

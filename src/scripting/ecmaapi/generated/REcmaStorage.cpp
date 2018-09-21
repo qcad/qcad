@@ -233,6 +233,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBlockId, "getBlockId");
             
+            REcmaHelper::registerFunction(&engine, proto, getBlockIdAuto, "getBlockIdAuto");
+            
             REcmaHelper::registerFunction(&engine, proto, hasBlock, "hasBlock");
             
             REcmaHelper::registerFunction(&engine, proto, getViewName, "getViewName");
@@ -6195,6 +6197,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getBlockIdAuto
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getBlockIdAuto", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getBlockIdAuto";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getBlockIdAuto", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBlock::Id'
+    RBlock::Id cppResult =
+        
+               self->getBlockIdAuto(a0);
+        // return type: RBlock::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getBlockIdAuto().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getBlockIdAuto", context, engine);
             return result;
         }
          QScriptValue

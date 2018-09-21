@@ -14,7 +14,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RDocumentInterface *" name="di"
         isConst="false" />
         <arg type="bool" typeName="bool" name="useTransactionGroup"
-        isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
   </class>

@@ -294,6 +294,9 @@
         getBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBlockIdAuto
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

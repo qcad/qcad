@@ -1216,6 +1216,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="blockName" isConst="true" />
       </variant>
     </method>
+    <method name="getBlockIdAuto" cppName="getBlockIdAuto"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RBlock::Id" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="blockLayoutName" isConst="true" />
+      </variant>
+    </method>
     <method name="getModelSpaceBlockId"
     cppName="getModelSpaceBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

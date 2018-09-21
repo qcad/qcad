@@ -459,6 +459,9 @@
         getBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBlockIdAuto
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getModelSpaceBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
