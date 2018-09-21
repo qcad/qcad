@@ -18,9 +18,6 @@
  */
 
 #include <QtGlobal>
-#if QT_VERSION >= 0x050200
-#include <QCollator>
-#endif
 
 #include "RColor.h"
 #include "RGlobal.h"
@@ -266,19 +263,11 @@ QStringList RS::getLinetypeList(bool metric) {
 QStringList RS::sortAlphanumerical(const QStringList& list) {
     QStringList ret = list;
 
-#if QT_VERSION >= 0x050200 && !defined(Q_OS_LINUX)
     std::sort(
         ret.begin(),
         ret.end(),
-        RS::compareAlphanumerical
+        RS::lessThanAlphanumerical
     );
-        //[&collator](const QString& s1, const QString& s2)
-        //{
-        //    return collator.compare(s1, s2) < 0;
-        //});
-#else
-    qSort(ret.begin(), ret.end());
-#endif
 
     return ret;
 }
@@ -337,4 +326,8 @@ int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
     }
 
     return aa.length() - bb.length();
+}
+
+bool RS::lessThanAlphanumerical(const QString& s1, const QString& s2) {
+    return RS::compareAlphanumerical(s1, s2)<0;
 }
