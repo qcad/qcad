@@ -1013,6 +1013,13 @@ RBlock::Id RDocument::getBlockId(const QString& blockName) const {
 }
 
 /**
+ * \copydoc RStorage::getBlockIdAuto
+ */
+RBlock::Id RDocument::getBlockIdAuto(const QString& blockLayoutName) const {
+    return storage.getBlockIdAuto(blockLayoutName);
+}
+
+/**
  * \copydoc RStorage::getModelSpaceBlockId
  */
 RBlock::Id RDocument::getModelSpaceBlockId() const {

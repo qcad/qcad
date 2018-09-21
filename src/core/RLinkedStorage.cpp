@@ -66,7 +66,7 @@ QSet<RBlock::Id> RLinkedStorage::queryAllBlocks(bool undone) {
             .unite(backStorage->queryAllBlocks(undone));
 }
 
-QSet<RBlock::Id> RLinkedStorage::queryAllLayoutBlocks(bool includeModelSpace, bool undone) {
+QSet<RBlock::Id> RLinkedStorage::queryAllLayoutBlocks(bool includeModelSpace, bool undone) const {
     return RMemoryStorage::queryAllLayoutBlocks(includeModelSpace, undone)
             .unite(backStorage->queryAllLayoutBlocks(includeModelSpace, undone));
 }
@@ -379,6 +379,14 @@ RBlock::Id RLinkedStorage::getBlockId(const QString& blockName) const {
     RBlock::Id ret = RMemoryStorage::getBlockId(blockName);
     if (ret==RBlock::INVALID_ID) {
         ret = backStorage->getBlockId(blockName);
+    }
+    return ret;
+}
+
+RBlock::Id RLinkedStorage::getBlockIdAuto(const QString& blockLayoutName) const {
+    RBlock::Id ret = RMemoryStorage::getBlockIdAuto(blockLayoutName);
+    if (ret==RBlock::INVALID_ID) {
+        ret = backStorage->getBlockIdAuto(blockLayoutName);
     }
     return ret;
 }

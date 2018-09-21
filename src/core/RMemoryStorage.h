@@ -56,7 +56,7 @@ public:
     virtual QSet<RUcs::Id> queryAllUcs();
     virtual QSet<RLayer::Id> queryAllLayers(bool undone = false);
     virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false);
-    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false);
+    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) const;
     virtual QSet<RBlock::Id> queryAllLayouts(bool undone);
     virtual QSet<RView::Id> queryAllViews(bool undone = false);
     virtual QSet<RLinetype::Id> queryAllLinetypes();
@@ -157,6 +157,7 @@ public:
     virtual QString getBlockName(RBlock::Id blockId) const;
     virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     virtual RBlock::Id getBlockId(const QString& blockName) const;
+    virtual RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const;
 
     virtual QString getViewName(RView::Id viewId) const;
     virtual QSet<QString> getViewNames() const;

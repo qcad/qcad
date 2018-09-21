@@ -275,10 +275,10 @@ QSet<RBlock::Id> RMemoryStorage::queryAllBlocks(bool undone) {
     return result;
 }
 
-QSet<RBlock::Id> RMemoryStorage::queryAllLayoutBlocks(bool includeModelSpace, bool undone) {
+QSet<RBlock::Id> RMemoryStorage::queryAllLayoutBlocks(bool includeModelSpace, bool undone) const {
     QSet<RBlock::Id> result;
-    QHash<RObject::Id, QSharedPointer<RBlock> >::iterator it;
-    for (it = blockMap.begin(); it != blockMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
+    for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = *it;
         if (!b.isNull() && (undone || !b->isUndone()) && b->hasLayout()) {
             if (includeModelSpace || !b->isModelSpace()) {
@@ -1627,6 +1627,25 @@ RBlock::Id RMemoryStorage::getBlockId(const QString& blockName) const {
         return RBlock::INVALID_ID;
     }
     return b->getId();
+}
+
+RBlock::Id RMemoryStorage::getBlockIdAuto(const QString& blockLayoutName) const {
+    if (hasBlock(blockLayoutName)) {
+        return getBlockId(blockLayoutName);
+    }
+    else {
+        // look up layout instead:
+        QSet<RBlock::Id> ids = queryAllLayoutBlocks();
+        QSet<RBlock::Id>::iterator it;
+        for (it = ids.begin(); it != ids.end(); it++) {
+            QSharedPointer<RBlock> layoutBlock = queryBlockDirect(*it);
+            if (QString::compare(layoutBlock->getName(), blockLayoutName, Qt::CaseInsensitive)==0) {
+                return *it;
+            }
+        }
+    }
+
+    return RBlock::INVALID_ID;
 }
 
 RView::Id RMemoryStorage::getViewId(const QString& viewName) const {

@@ -144,7 +144,7 @@ public:
     /**
      * \return A set of all block IDs of layout blocks of the document.
      */
-    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) = 0;
+    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) const = 0;
 
     /**
      * \return A set of all layout IDs of layouts of the document.
@@ -400,6 +400,7 @@ public:
     virtual QString getBlockName(RBlock::Id blockId) const = 0;
     virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
     virtual RBlock::Id getBlockId(const QString& blockName) const = 0;
+    virtual RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const = 0;
     virtual bool hasBlock(const QString& blockName) const;
 
     virtual QString getViewName(RView::Id viewId) const = 0;

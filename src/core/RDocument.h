@@ -339,6 +339,7 @@ public:
     RLayer::Id getLayerId(const QString& layerName) const;
     RLayer::Id getLayer0Id() const;
     RBlock::Id getBlockId(const QString& blockName) const;
+    RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const;
     RBlock::Id getModelSpaceBlockId() const;
 
     RLinetype::Id getLinetypeId(const QString& linetypeName) const;
