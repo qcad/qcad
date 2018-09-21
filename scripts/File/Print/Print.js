@@ -68,13 +68,7 @@ Print.prototype.beginEvent = function() {
     this.terminate();
 };
 
-/**
- * Prints the given document.
- *
- * \param pdfFile Name of PDF file
- * \param printerName Name of printer to print to or "" for default printer
- */
-Print.prototype.print = function(pdfFile, printerName) {
+Print.prototype.createPrinter = function(pdfFile, printerName) {
     var printer = undefined;
 
     // print directly to given printer or default printer:
@@ -90,6 +84,7 @@ Print.prototype.print = function(pdfFile, printerName) {
     }
 
     if (isNull(printer)) {
+        // create printer on the fly:
         printer = new QPrinter(QPrinter.HighResolution);
 
         if (isString(pdfFile)) {
@@ -167,9 +162,45 @@ Print.prototype.print = function(pdfFile, printerName) {
 
         if (Print.cancel===true) {
             printer.destroy();
-            return;
+            return undefined;
         }
     }
+
+    return printer;
+};
+
+/**
+ * Prints the given document.
+ *
+ * \param pdfFile Name of PDF file.
+ * \param printerName Name of printer to print to or "" for default printer.
+ * \param printer QPrinter object or undefined to create on the fly.
+ */
+Print.prototype.print = function(pdfFile, printerName) {
+    var printer = this.createPrinter(pdfFile, printerName);
+    if (isNull(printer)) {
+        qWarning("Print.prototype.print: no printer created");
+        return false;
+    }
+
+    var painter = new QPainter();
+    if (!painter.begin(printer)) {
+        printer.destroy();
+        return false;
+    }
+
+    this.printCurrentBlock(printer, painter);
+
+    painter.end();
+    printer.destroy();
+
+    return true;
+};
+
+/**
+ * Prints / exports the given block on a single or on multiple pages (if columns/rows are > 1).
+ */
+Print.prototype.printCurrentBlock = function(printer, painter) {
 
     // set background color of view to match printing preference:
     var bgColor = this.view.getBackgroundColor();
@@ -186,12 +217,6 @@ Print.prototype.print = function(pdfFile, printerName) {
         this.scene.setDraftMode(false);
         this.scene.setScreenBasedLinetypes(false);
         this.scene.regenerate();
-    }
-
-    var painter = new QPainter();
-    if (!painter.begin(printer)) {
-        printer.destroy();
-        return false;
     }
 
     // scale factor from drawing unit to mm:
@@ -225,16 +250,16 @@ Print.prototype.print = function(pdfFile, printerName) {
     }
 
     // iterate through all pages and print the appropriate area
-    var first = true;
+    var firstPage = true;
 
     var pages = Print.getPages(this.document);
     for (var i = 0; i < pages.length; ++i) {
         // if this is not the first page, add new page:
-        if (!first) {
+        if (!firstPage) {
             printer.newPage();
         }
         else {
-            first = false;
+            firstPage = false;
         }
 
         var c = Print.getBackgroundColor(this.document);
@@ -300,9 +325,6 @@ Print.prototype.print = function(pdfFile, printerName) {
         }
     }
 
-    painter.end();
-    printer.destroy();
-
     this.scene.setPixelSizeHint(previousPixelSizeHint);
 
     this.scene.setScreenBasedLinetypes(screenBasedLinetypes);
@@ -312,7 +334,7 @@ Print.prototype.print = function(pdfFile, printerName) {
     this.view.setBackgroundColor(bgColor);
     this.view.setPrinting(false);
 
-    return true;
+    //return true;
 };
 
 /**
