@@ -30,7 +30,9 @@
 #include <QIcon>
 #include <QDebug>
 
+#ifndef RDEFAULT_QSIZE_ICON
 #define RDEFAULT_QSIZE_ICON QSize(32,10)
+#endif
 
 /**
  * Color. Fixed RGBA or ByLayer or ByBlock.

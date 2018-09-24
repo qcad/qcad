@@ -1138,14 +1138,14 @@ WidgetFactory.initLayerCombo = function(comboBox, doc) {
     }
 
     comboBox.clear();
-    comboBox.iconSize = new QSize(32, 16);
+    comboBox.iconSize = new QSize(16, 10);
     var names = doc.getLayerNames();
     //names = RS.sortAlphanumerical(names);
     names.sort(Array.alphaNumericalSorter);
     for (var i=0; i<names.length; i++) {
         var name = names[i];
         var layer = doc.queryLayer(name);
-        var icon = RColor.getIcon(layer.getColor());
+        var icon = RColor.getIcon(layer.getColor(), new QSize(comboBox.iconSize.width(),10));
         comboBox.addItem(icon, layer.getName());
     }
 };

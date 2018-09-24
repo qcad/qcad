@@ -26,7 +26,7 @@
 RLineweightCombo::RLineweightCombo(QWidget *parent) :
     QComboBox(parent), onlyFixed(false) {
 
-    setIconSize(QSize(32, 16));
+    setIconSize(QSize(16, 16));
     init();
     connect(this, SIGNAL(currentIndexChanged(int)),
         this, SLOT(lineweightChanged(int)));
@@ -50,7 +50,7 @@ void RLineweightCombo::init() {
     while (it.hasNext()) {
         QPair<QString, RLineweight::Lineweight> p = it.next();
         v.setValue<RLineweight::Lineweight> (p.second);
-        addItem(RLineweight::getIcon(p.second), p.first, v);
+        addItem(RLineweight::getIcon(p.second, QSize(16, 16)), p.first, v);
     }
 
     if (!onlyFixed) {

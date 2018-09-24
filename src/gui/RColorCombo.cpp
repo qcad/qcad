@@ -27,7 +27,7 @@
 
 RColorCombo::RColorCombo(QWidget *parent) :
     QComboBox(parent), onlyFixed(false), showAlphaChannel(false) {
-    setIconSize(QSize(32, 16));
+    setIconSize(QSize(16, 10));
     init();
     connect(this, SIGNAL(currentIndexChanged(int)),
             this, SLOT(colorChanged(int)));
@@ -43,9 +43,9 @@ void RColorCombo::init() {
         QPair<QString, RColor> p = it.next();
         if (p.second.isValid()) {
             v.setValue<RColor> (p.second);
-            addItem(RColor::getIcon(p.second), p.first, v);
+            addItem(RColor::getIcon(p.second, iconSize()), p.first, v);
         } else {
-            addItem(RColor::getIcon(p.second), p.first);
+            addItem(RColor::getIcon(p.second, iconSize()), p.first);
         }
     }
 
@@ -128,7 +128,7 @@ void RColorCombo::setColor(const RColor& col) {
     if (i != -1) {
         removeItem(i);
     }
-    insertItem(count() - 1, RColor::getIcon(currentColor), custom, v);
+    insertItem(count() - 1, RColor::getIcon(currentColor, iconSize()), custom, v);
     setCurrentIndex(count() - 2);
     blockSignals(false);
 }
