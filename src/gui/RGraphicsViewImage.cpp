@@ -822,7 +822,8 @@ void RGraphicsViewImage::paintOverlay(QPainter* painter) {
                     RTextBasedData text = drawable.getText();
 
                     if (drawable.getPixelUnit()) {
-                        text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
+                        //text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
+                        text.scale(RVector(1/factor,1/factor), RVector(0,0));
                     }
 
                     text.move(drawable.getOffset());
