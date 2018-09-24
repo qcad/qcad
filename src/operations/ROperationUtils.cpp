@@ -32,6 +32,8 @@ void ROperationUtils::normalizeDrawOrder(RDocumentInterface* di, bool useTransac
     RDocument& doc = di->getDocument();
 
     RAddObjectsOperation* op = new RAddObjectsOperation();
+    op->setAllowInvisible(true);
+    op->setAllowAll(true);
     if (useTransactionGroup) {
         op->setTransactionGroup(doc.getTransactionGroup());
     }
