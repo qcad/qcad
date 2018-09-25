@@ -89,6 +89,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, compareAlphanumerical, "compareAlphanumerical");
             
+            REcmaHelper::registerFunction(&engine, &ctor, lessThanAlphanumerical, "lessThanAlphanumerical");
+            
 
     // static properties:
     
@@ -3086,6 +3088,69 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::compareAlphanumerical", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::lessThanAlphanumerical
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::lessThanAlphanumerical", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::lessThanAlphanumerical";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RS::
+       lessThanAlphanumerical(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.lessThanAlphanumerical().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::lessThanAlphanumerical", context, engine);
             return result;
         }
          QScriptValue REcmaS::toString

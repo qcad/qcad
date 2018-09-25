@@ -52,6 +52,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLineweight::Lineweight"
         typeName="RLineweight::Lineweight" name="color"
         isConst="false" />
+        <arg type="QSize &amp;" typeName="QSize" name="size"
+        hasDefault="true" default="RDEFAULT_QSIZE_ICON"
+        isConst="true" />
       </variant>
     </method>
     <method name="getName" cppName="getName" specifier="public"

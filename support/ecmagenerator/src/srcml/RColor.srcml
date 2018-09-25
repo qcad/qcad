@@ -31,7 +31,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QIcon&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSIZE_ICON</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSIZE_ICON</name> <name>QSize</name>(32,10)</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <comment type="block">/**
  * Color. Fixed RGBA or ByLayer or ByBlock.

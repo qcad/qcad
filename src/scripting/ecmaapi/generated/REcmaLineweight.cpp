@@ -397,6 +397,61 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RLineweight::Lineweight */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QSize */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLineweight::Lineweight
+                    a0 =
+                    (RLineweight::Lineweight)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument is reference
+                    QSize*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QSize*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RLineweight: Argument 1 is not of type QSize*.",
+                               context);                    
+                    }
+                    QSize& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QIcon'
+    QIcon cppResult =
+        RLineweight::
+       getIcon(a0
+        ,
+    a1);
+        // return type: QIcon
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweight.getIcon().",
                    context);

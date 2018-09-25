@@ -96,6 +96,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getExtensionPoint2, "getExtensionPoint2");
             
+            REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAlignedEntity*>(), *proto);
 
@@ -1473,6 +1475,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAlignedEntity::getExtensionPoint2", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAlignedEntity::getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAlignedEntity::getAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedEntity::getAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAlignedEntity* self = 
+                        getSelf("getAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAlignedEntity::getAngle", context, engine);
             return result;
         }
          QScriptValue REcmaDimAlignedEntity::toString

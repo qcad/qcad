@@ -528,6 +528,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="lessThanAlphanumerical"
+    cppName="lessThanAlphanumerical" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="s1"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="s2"
+        isConst="true" />
+      </variant>
+    </method>
     <property name="PointTolerance" type="double" isConst="true"
     isStatic="true" />
     <property name="AngleTolerance" type="double" isConst="true"

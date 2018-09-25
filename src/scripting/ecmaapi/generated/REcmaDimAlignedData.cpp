@@ -90,6 +90,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAutoLabel, "getAutoLabel");
             
+            REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAlignedData*>(), *proto);
 
@@ -1117,6 +1119,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAlignedData::getAutoLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAlignedData::getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAlignedData::getAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::getAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAlignedData* self = 
+                        getSelf("getAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngle();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.getAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAlignedData::getAngle", context, engine);
             return result;
         }
          QScriptValue REcmaDimAlignedData::toString
