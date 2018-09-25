@@ -127,6 +127,10 @@ public:
         return data.getExtensionPoint2();
     }
 
+    double getAngle() const {
+        return data.getAngle();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

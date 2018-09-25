@@ -62,6 +62,7 @@ public:
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const;
     virtual double getMeasuredValue() const;
     virtual QString getAutoLabel() const;
+    double getAngle() const;
 
 private:
     // for caching only:

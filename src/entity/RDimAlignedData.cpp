@@ -200,3 +200,7 @@ QString RDimAlignedData::getAutoLabel() const {
     distance *= linearFactor;
     return formatLabel(distance);
 }
+
+double RDimAlignedData::getAngle() const {
+    return extensionPoint1.getAngleTo(extensionPoint2);
+}
