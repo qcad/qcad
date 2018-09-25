@@ -368,9 +368,9 @@ void RTransaction::commit() {
     }
     storage->commitTransaction();
 
-    if (!cloneIds.isEmpty()) {
-        qWarning() << "RTransaction::commit: last cycle not closed";
-    }
+//    if (!cloneIds.isEmpty()) {
+//        qWarning() << "RTransaction::commit: last cycle not closed";
+//    }
 
     updateAffectedBlockReferences();
 }
