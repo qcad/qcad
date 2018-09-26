@@ -150,6 +150,7 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox,
     RVector knee1;
     RVector knee2;
     RVector textOffsetV;   // normal vector in direction of text offset
+    double legSize = getDimasz()*2;
 
     // vertical, measuring X
     if (isMeasuringXAxis()) {
@@ -157,21 +158,21 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox,
         knee2.x = leaderEndPoint.x;
 
         if (definingPoint.y < leaderEndPoint.y) {
-            knee1.y = leaderEndPoint.y - 0.36*2;
-            if (knee1.y < definingPoint.y + 0.36) {
-                knee1.y = definingPoint.y + 0.36;
+            knee1.y = leaderEndPoint.y - legSize*2;
+            if (knee1.y < definingPoint.y + legSize) {
+                knee1.y = definingPoint.y + legSize;
             }
 
-            knee2.y = leaderEndPoint.y - 0.36;
+            knee2.y = leaderEndPoint.y - legSize;
             textOffsetV = RVector(0,1);
         }
         else {
-            knee1.y = leaderEndPoint.y + 0.36*2;
-            if (knee1.y > definingPoint.y - 0.36) {
-                knee1.y = definingPoint.y - 0.36;
+            knee1.y = leaderEndPoint.y + legSize*2;
+            if (knee1.y > definingPoint.y - legSize) {
+                knee1.y = definingPoint.y - legSize;
             }
 
-            knee2.y = leaderEndPoint.y + 0.36;
+            knee2.y = leaderEndPoint.y + legSize;
             textOffsetV = RVector(0,-1);
         }
     }
@@ -182,21 +183,21 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox,
         knee2.y = leaderEndPoint.y;
 
         if (definingPoint.x < leaderEndPoint.x) {
-            knee1.x = leaderEndPoint.x - 0.36*2;
-            if (knee1.x < definingPoint.x + 0.36) {
-                knee1.x = definingPoint.x + 0.36;
+            knee1.x = leaderEndPoint.x - legSize*2;
+            if (knee1.x < definingPoint.x + legSize) {
+                knee1.x = definingPoint.x + legSize;
             }
 
-            knee2.x = leaderEndPoint.x - 0.36;
+            knee2.x = leaderEndPoint.x - legSize;
             textOffsetV = RVector(1,0);
         }
         else {
-            knee1.x = leaderEndPoint.x + 0.36*2;
-            if (knee1.x > definingPoint.x - 0.36) {
-                knee1.x = definingPoint.x - 0.36;
+            knee1.x = leaderEndPoint.x + legSize*2;
+            if (knee1.x > definingPoint.x - legSize) {
+                knee1.x = definingPoint.x - legSize;
             }
 
-            knee2.x = leaderEndPoint.x + 0.36;
+            knee2.x = leaderEndPoint.x + legSize;
             textOffsetV = RVector(-1,0);
         }
     }
