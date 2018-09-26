@@ -114,6 +114,7 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     setKnownVariable(RS::DIMTSZ, 0.0);
     setKnownVariable(RS::DIMTXT, 0.18);
     setKnownVariable(RS::DIMZIN, 0);
+    setKnownVariable(RS::DIMDLI, 0.18*2);
     setKnownVariable(RS::LTSCALE, 1);
 
     setCurrentBlockId(document->getModelSpaceBlockId());

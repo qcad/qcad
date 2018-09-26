@@ -18,8 +18,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>663</width>
-     <height>738</height>
+     <width>648</width>
+     <height>764</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -41,101 +41,6 @@
        </item>
        <item>
         <layout class="QGridLayout" name="_2">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Text height:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QLabel" name="DimUnit3">
-           <property name="text">
-            <string notr="true">units</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_4">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Extension line offset:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QLabel" name="DimUnit2">
-           <property name="text">
-            <string notr="true">units</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_3">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Extension line extension:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="DimUnit1">
-           <property name="text">
-            <string notr="true">units</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_5">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Dimension line gap:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="2">
-          <widget class="QLabel" name="DimUnit5">
-           <property name="text">
-            <string notr="true">units</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="2">
-          <widget class="QLabel" name="DimUnit4">
-           <property name="text">
-            <string notr="true">units</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_6">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Arrow size:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="RMathLineEdit" name="DIMTXT">
-           <property name="text">
-            <string notr="true">2.5</string>
-           </property>
-           <property name="angle" stdset="0">
-            <bool>false</bool>
-           </property>
-           <property name="defaultUnit" stdset="0">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="1">
           <widget class="RMathLineEdit" name="DIMEXE">
            <property name="enabled">
@@ -152,24 +57,18 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
-          <widget class="RMathLineEdit" name="DIMEXO">
+         <item row="3" column="0">
+          <widget class="QLabel" name="DIMGAP_LAbel">
            <property name="enabled">
             <bool>false</bool>
            </property>
            <property name="text">
-            <string notr="true">0.625</string>
-           </property>
-           <property name="angle" stdset="0">
-            <bool>false</bool>
-           </property>
-           <property name="defaultUnit" stdset="0">
-            <number>0</number>
+            <string>Dimension line gap:</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="1">
-          <widget class="RMathLineEdit" name="DIMGAP">
+         <item row="2" column="1">
+          <widget class="RMathLineEdit" name="DIMEXO">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -197,6 +96,134 @@
            </property>
            <property name="defaultUnit" stdset="0">
             <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="DIMASZ_Label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Arrow size:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="DIMEXE_Label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Extension line extension:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="RMathLineEdit" name="DIMTXT">
+           <property name="text">
+            <string notr="true">2.5</string>
+           </property>
+           <property name="angle" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="defaultUnit" stdset="0">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="DimUnit1">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="DimUnit4">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="DimUnit5">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLabel" name="DimUnit6">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="RMathLineEdit" name="DIMGAP">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">0.625</string>
+           </property>
+           <property name="angle" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="defaultUnit" stdset="0">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="DIMTXT_Label">
+           <property name="text">
+            <string>Text height:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="DIMEXO_Label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Extension line offset:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="DimUnit2">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="DimUnit3">
+           <property name="text">
+            <string notr="true">units</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="DIMDLI_Label">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Dimension line increment:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="RMathLineEdit" name="DIMDLI">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">5</string>
            </property>
           </widget>
          </item>
@@ -572,7 +599,7 @@
   <connection>
    <sender>KeepProportions</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_3</receiver>
+   <receiver>DIMEXE_Label</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -588,7 +615,7 @@
   <connection>
    <sender>KeepProportions</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_4</receiver>
+   <receiver>DIMEXO_Label</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -604,7 +631,7 @@
   <connection>
    <sender>KeepProportions</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_5</receiver>
+   <receiver>DIMGAP_LAbel</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -620,7 +647,7 @@
   <connection>
    <sender>KeepProportions</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_6</receiver>
+   <receiver>DIMASZ_Label</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
@@ -678,6 +705,38 @@
     <hint type="destinationlabel">
      <x>315</x>
      <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>KeepProportions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>DIMDLI</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>KeepProportions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>DIMDLI_Label</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>107</x>
+     <y>223</y>
     </hint>
    </hints>
   </connection>

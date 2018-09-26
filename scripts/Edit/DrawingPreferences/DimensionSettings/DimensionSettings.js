@@ -37,6 +37,7 @@ DimensionSettings.dimx = [
             ["DIMGAP", RS.DIMGAP, 0.25],
             ["DIMASZ", RS.DIMASZ, 1.0],
             ["DIMSCALE", RS.DIMSCALE, undefined],
+            ["DIMDLI", RS.DIMDLI, 2.0],
         ];
 
 /**

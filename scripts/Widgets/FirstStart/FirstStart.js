@@ -108,6 +108,7 @@ FirstStart.prototype.showDialog = function() {
         RSettings.setValue("DimensionSettings/DIMEXO", dimtxt/4);
         RSettings.setValue("DimensionSettings/DIMGAP", dimtxt/4);
         RSettings.setValue("DimensionSettings/DIMASZ", dimtxt);
+        RSettings.setValue("DimensionSettings/DIMDLI", dimtxt*2);
 
         var paperUnit;
         if (!RUnit.isMetric(drawingUnit)) {
