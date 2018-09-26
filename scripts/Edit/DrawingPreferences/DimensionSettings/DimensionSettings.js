@@ -55,7 +55,7 @@ DimensionSettings.updateUnit = function(unit) {
     // (re-)init unit labels:
     var unitSymbol = "";
     unitSymbol = RUnit.unitToName(DimensionSettings.unit);
-    for (var i=1; i<=5; i++) {
+    for (var i=1; i<=6; i++) {
         var w = widgets["DimUnit" + i];
         if (isNull(w)) {
             continue;
