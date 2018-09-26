@@ -134,6 +134,8 @@ public:
     static double rad2gra(double a);
     static double gra2deg(double a);
 
+    static bool isBetween(double value, double limit1, double limit2, bool inclusive, double tolerance = RS::PointTolerance);
+
     static int getGcd(int a, int b);
     static bool isAngleBetween(double a, double a1, double a2, bool reversed);
     static double getNormalizedAngle(double a);

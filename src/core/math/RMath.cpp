@@ -533,6 +533,19 @@ double RMath::gra2deg(double a) {
 }
 
 /**
+ * \return True if the given value is between the given limits.
+ * \param inclusive True to accept values close to the limits within the given tolerance.
+ */
+bool RMath::isBetween(double value, double limit1, double limit2, bool inclusive, double tolerance) {
+    if (fuzzyCompare(value, limit1, tolerance) || fuzzyCompare(value, limit2, tolerance)) {
+        return inclusive;
+    }
+    double min = qMin(limit1, limit2);
+    double max = qMax(limit1, limit2);
+    return (value>=min && value<=max);
+}
+
+/**
  * Converts degrees to radians.
  *
  * \param a angle in degrees
