@@ -113,6 +113,10 @@ public:
         return getData().getDimArcPosition();
     }
 
+    virtual RArc getDimensionArc() const {
+        return getData().getDimensionArc();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

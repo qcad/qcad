@@ -449,3 +449,13 @@ double RDimAngularData::getMeasuredValue() const {
 QString RDimAngularData::getAutoLabel() const {
     return formatAngleLabel(getMeasuredValue());
 }
+
+RArc RDimAngularData::getDimensionArc() const {
+    RVector center = getCenter();
+    double radius = center.getDistanceTo(getDimArcPosition());
+    double ang1, ang2;
+    bool reversed;
+    RVector p1, p2;
+    getAngles(ang1, ang2, reversed, p1, p2);
+    return RArc(center, radius, ang1, ang2, reversed);
+}

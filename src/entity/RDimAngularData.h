@@ -78,6 +78,8 @@ public:
     virtual RVector getCenter() const = 0;
     virtual double getMeasuredValue() const;
     virtual QString getAutoLabel() const;
+
+    virtual RArc getDimensionArc() const;
 };
 
 Q_DECLARE_METATYPE(RDimAngularData*)
