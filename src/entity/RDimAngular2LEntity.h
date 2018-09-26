@@ -136,6 +136,10 @@ public:
         return getData().getExtensionLine2Start();
     }
 
+    RVector getCenter() const {
+        return getData().getCenter();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 
