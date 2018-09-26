@@ -100,6 +100,9 @@
         gra2deg
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isBetween
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getGcd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

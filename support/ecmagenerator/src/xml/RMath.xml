@@ -125,6 +125,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isBetween" cppName="isBetween" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+        <arg type="double" typeName="double" name="limit1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="limit2"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="inclusive"
+        isConst="false" />
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getGcd" cppName="getGcd" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
