@@ -77,6 +77,9 @@
         ;static  QScriptValue
         getDimArcPosition
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimensionArc
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

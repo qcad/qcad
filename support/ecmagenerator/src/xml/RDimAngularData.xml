@@ -130,5 +130,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getDimensionArc" cppName="getDimensionArc"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RArc" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

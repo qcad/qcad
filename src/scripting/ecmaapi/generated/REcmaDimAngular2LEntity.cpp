@@ -96,6 +96,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getExtensionLine2Start, "getExtensionLine2Start");
             
+            REcmaHelper::registerFunction(&engine, proto, getCenter, "getCenter");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAngular2LEntity*>(), *proto);
 
@@ -1493,6 +1495,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAngular2LEntity::getExtensionLine2Start", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngular2LEntity::getCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngular2LEntity::getCenter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngular2LEntity::getCenter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngular2LEntity* self = 
+                        getSelf("getCenter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getCenter();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngular2LEntity.getCenter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngular2LEntity::getCenter", context, engine);
             return result;
         }
          QScriptValue REcmaDimAngular2LEntity::toString

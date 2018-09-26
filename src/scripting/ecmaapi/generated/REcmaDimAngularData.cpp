@@ -102,6 +102,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAutoLabel, "getAutoLabel");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimensionArc, "getDimensionArc");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAngularData*>(), *proto);
 
@@ -1410,6 +1412,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAngularData::getAutoLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngularData::getDimensionArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngularData::getDimensionArc", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngularData::getDimensionArc";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularData* self = 
+                        getSelf("getDimensionArc", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RArc'
+    RArc cppResult =
+        
+               self->getDimensionArc();
+        // return type: RArc
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularData.getDimensionArc().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngularData::getDimensionArc", context, engine);
             return result;
         }
          QScriptValue REcmaDimAngularData::toString

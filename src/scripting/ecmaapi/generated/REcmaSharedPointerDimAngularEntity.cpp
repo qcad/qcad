@@ -91,6 +91,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimArcPosition, "getDimArcPosition");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimensionArc, "getDimensionArc");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAngularEntityPointer>(), *proto);
       
@@ -776,6 +778,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimAngularEntity::getDimArcPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimAngularEntity::getDimensionArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimAngularEntity::getDimensionArc", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAngularEntity::getDimensionArc";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngularEntity* self = 
+                        getSelf("getDimensionArc", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RArc'
+    RArc cppResult =
+        
+               self->getDimensionArc();
+        // return type: RArc
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngularEntity.getDimensionArc().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimAngularEntity::getDimensionArc", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerDimAngularEntity::toString
