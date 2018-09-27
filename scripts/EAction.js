@@ -158,6 +158,8 @@ EAction.prototype.finishEvent = function() {
     if (!isNull(di)) {
         di.repaintViews();
     }
+
+    this.setCommandPrompt();
 };
 
 /**
