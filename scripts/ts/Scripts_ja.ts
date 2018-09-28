@@ -47,7 +47,7 @@
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+376"/>
+        <location line="+377"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>
@@ -80,7 +80,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2075"/>
+        <location line="+2077"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>

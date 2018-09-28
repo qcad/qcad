@@ -29,7 +29,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation>Wymiar</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+109"/>
         <source>point</source>
         <translation>kropka</translation>
     </message>
@@ -165,7 +165,7 @@ Zachowaj proporcje</translatorcomment>
         <translation>Zachowanie proporcji</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+147"/>
         <source>Text height:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -173,7 +173,7 @@ Wysokość tekstu:</translatorcomment>
         <translation>Wysokość tekstu:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Extension line offset:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -181,7 +181,7 @@ Przesunięcie linii rozszerzenia:</translatorcomment>
         <translation>Przesunięcie linii pomocniczej:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-74"/>
         <source>Extension line extension:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -189,7 +189,7 @@ Rozszerzenie linii rozszerzenia:</translatorcomment>
         <translation>Wydłużenie linii pomocniczej:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-52"/>
         <source>Dimension line gap:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -197,7 +197,7 @@ Przerwa linii wymiarowej:</translatorcomment>
         <translation>Odstęp linii wymiarowej:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+42"/>
         <source>Arrow size:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -205,7 +205,12 @@ Rozmiar strzałki:</translatorcomment>
         <translation>Rozmiar strzałki:</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+108"/>
+        <source>Dimension line increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Size scale factor:</source>
         <translation>Współczynnik skali:</translation>
     </message>

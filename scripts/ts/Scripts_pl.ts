@@ -52,7 +52,7 @@
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
-        <location line="+376"/>
+        <location line="+377"/>
         <source>Move Reference Point</source>
         <translation>Przenieś punkt odniesienia</translation>
     </message>
@@ -89,7 +89,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2075"/>
+        <location line="+2077"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--

@@ -20,7 +20,7 @@
         <translation>Размер</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+109"/>
         <source>point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -109,32 +109,37 @@
         <translation>Сохранять пропорции</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+147"/>
         <source>Text height:</source>
         <translation>Высота текста:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Extension line offset:</source>
         <translation>Смещение линии-выноски:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-74"/>
         <source>Extension line extension:</source>
         <translation>Выступ линии-выноски:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-52"/>
         <source>Dimension line gap:</source>
         <translation>Расстояние от текста до размерной линии:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+42"/>
         <source>Arrow size:</source>
         <translation>Величина стрелки:</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+108"/>
+        <source>Dimension line increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Size scale factor:</source>
         <translation>Величина коэффициента масштабирования:</translation>
     </message>

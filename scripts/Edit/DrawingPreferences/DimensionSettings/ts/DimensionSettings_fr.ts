@@ -24,7 +24,7 @@
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+111"/>
         <source>point</source>
         <translation>Point</translation>
     </message>
@@ -117,32 +117,37 @@
         <translation>Garder les proportions</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+147"/>
         <source>Text height:</source>
         <translation>Hauteur du texte :</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Extension line offset:</source>
         <translation>Décalage de la ligne d&apos;attache :</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-74"/>
         <source>Extension line extension:</source>
         <translation>Extension de la ligne d&apos;attache :</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-52"/>
         <source>Dimension line gap:</source>
         <translation>Espacement de la ligne de cote :</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+42"/>
         <source>Arrow size:</source>
         <translation>Taille de flèche :</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+108"/>
+        <source>Dimension line increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Size scale factor:</source>
         <translation>Facteur d&apos;échelle :</translation>
     </message>

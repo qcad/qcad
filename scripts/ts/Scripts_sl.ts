@@ -47,7 +47,7 @@
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+376"/>
+        <location line="+377"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -80,7 +80,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2075"/>
+        <location line="+2077"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>

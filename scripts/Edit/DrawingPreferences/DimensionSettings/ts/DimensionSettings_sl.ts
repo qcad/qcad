@@ -20,7 +20,7 @@
         <translation>Dimenzija</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+109"/>
         <source>point</source>
         <translation>pika</translation>
     </message>
@@ -113,32 +113,37 @@
         <translation>Ohrani razmerja</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+147"/>
         <source>Text height:</source>
         <translation>Višina besedila:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Extension line offset:</source>
         <translation>Odmik podajšane črte:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-74"/>
         <source>Extension line extension:</source>
         <translation>Podaljšek podajšane črte:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-52"/>
         <source>Dimension line gap:</source>
         <translation>Odmik mere od kotirne črte:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+42"/>
         <source>Arrow size:</source>
         <translation>Velikost puščice:</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+108"/>
+        <source>Dimension line increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Size scale factor:</source>
         <translation>Faktor povečave:</translation>
     </message>

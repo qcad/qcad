@@ -31,7 +31,7 @@ Dimensão Alinhada</translatorcomment>
         <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+111"/>
         <source>point</source>
         <translation>Ponto</translation>
     </message>
@@ -167,7 +167,7 @@ Mantenha proporções</translatorcomment>
         <translation>Mantenha proporções</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+147"/>
         <source>Text height:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -175,7 +175,7 @@ Altura do Texto:</translatorcomment>
         <translation>Altura do texto:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Extension line offset:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -183,7 +183,7 @@ Extensão da linha de deslocamento:</translatorcomment>
         <translation>Extensão da linha de offset:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-74"/>
         <source>Extension line extension:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -191,7 +191,7 @@ Extensão da linha de extensionamento:</translatorcomment>
         <translation>Extensão da linha estendida:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-52"/>
         <source>Dimension line gap:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -199,7 +199,7 @@ Dimensione a linha de brecha:</translatorcomment>
         <translation>Lacuna da linha de dimensão:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+42"/>
         <source>Arrow size:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -207,7 +207,12 @@ Tamanho da seta:</translatorcomment>
         <translation>Tamanho da seta:</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+108"/>
+        <source>Dimension line increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Size scale factor:</source>
         <translation>Fator de escala:</translation>
     </message>

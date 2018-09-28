@@ -24,7 +24,7 @@
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+111"/>
         <source>point</source>
         <translation>Punto</translation>
     </message>
@@ -117,32 +117,37 @@
         <translation>Mantener proporciones</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+147"/>
         <source>Text height:</source>
         <translation>Altura del texto:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+10"/>
         <source>Extension line offset:</source>
         <translation>Desfase línea de referencia:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-74"/>
         <source>Extension line extension:</source>
         <translation>Extensión línea de referencia:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-52"/>
         <source>Dimension line gap:</source>
         <translation>Espacio línea de dimensión:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+42"/>
         <source>Arrow size:</source>
         <translation>Tamaño flecha:</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+108"/>
+        <source>Dimension line increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Size scale factor:</source>
         <translation>Factor de escala:</translation>
     </message>
