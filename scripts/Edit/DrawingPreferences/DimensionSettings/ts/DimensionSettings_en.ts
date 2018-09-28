@@ -136,7 +136,7 @@
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension line increment:</translation>
     </message>
     <message>
         <location line="+28"/>

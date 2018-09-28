@@ -144,7 +144,7 @@
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Incremento delle linee di dimensione:</translation>
     </message>
     <message>
         <location line="+28"/>

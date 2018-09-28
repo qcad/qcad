@@ -209,7 +209,7 @@ Tamanho da seta:</translatorcomment>
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Incremento de linhas de dimensão:</translation>
     </message>
     <message>
         <location line="+28"/>

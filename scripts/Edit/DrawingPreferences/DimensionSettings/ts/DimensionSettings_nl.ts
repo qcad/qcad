@@ -140,7 +140,7 @@
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Afstand van maatlijnen:</translation>
     </message>
     <message>
         <location line="+28"/>
