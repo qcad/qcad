@@ -25,6 +25,7 @@
 #include <QPrinterInfo>
 #include <QString>
 #include <QStringList>
+#include <QSysInfo>
 #include <QTranslator>
 
 #if QT_VERSION >= 0x050000
@@ -1026,6 +1027,9 @@ QString RSettings::getCompilerVersion() {
  * \return OS name and version as human readable string.
  */
 QString RSettings::getOSVersion() {
+#if QT_VERSION >= 0x050400
+    return QSysInfo::productVersion();
+#else
 #ifdef Q_OS_WIN
     switch (QSysInfo::windowsVersion()) {
     case QSysInfo::WV_NT:
@@ -1095,6 +1099,7 @@ QString RSettings::getOSVersion() {
     }
 #else
     return "Unknown";
+#endif
 #endif
 }
 
