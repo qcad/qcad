@@ -157,7 +157,6 @@ QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, 
     double extLength = extensionLine.getDistanceTo(definitionPoint, false);
 
     RVector v1, v2, e1;
-    RLine line;
 
     // from entity to inner point of extension line:
     v1.setPolar(dimexo, extAngle);
@@ -175,12 +174,14 @@ QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, 
     }
 
     // extension line 1:
-    line = RLine(extensionPoint1 + v1, extensionPoint1 + e1*extLength + v2);
-    ret.append(QSharedPointer<RLine>(new RLine(line)));
-
+    RLine extLine1 = RLine(extensionPoint1 + e1*extLength + v2, extensionPoint1 + v1);
     // extension line 2:
-    line = RLine(extensionPoint2 + v1, extensionPoint2 + e1*extLength + v2);
-    ret.append(QSharedPointer<RLine>(new RLine(line)));
+    RLine extLine2 = RLine(extensionPoint2 + e1*extLength + v2, extensionPoint2 + v1);
+
+    adjustExtensionLineFixLength(extLine1, extLine2);
+
+    ret.append(QSharedPointer<RLine>(new RLine(extLine1)));
+    ret.append(QSharedPointer<RLine>(new RLine(extLine2)));
 
     // dimension line:
     ret.append(getDimensionLineShapes(

@@ -68,6 +68,9 @@ public:
     static RPropertyTypeId PropertyArrow1Flipped;
     static RPropertyTypeId PropertyArrow2Flipped;
 
+    static RPropertyTypeId PropertyExtLineFix;
+    static RPropertyTypeId PropertyExtLineFixLength;
+
     static RPropertyTypeId PropertyCenterX;
     static RPropertyTypeId PropertyCenterY;
     static RPropertyTypeId PropertyCenterZ;

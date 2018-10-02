@@ -48,6 +48,9 @@ RPropertyTypeId RDimLinearEntity::PropertyFontName;
 RPropertyTypeId RDimLinearEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimLinearEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimLinearEntity::PropertyExtLineFix;
+RPropertyTypeId RDimLinearEntity::PropertyExtLineFixLength;
+
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosY;
 RPropertyTypeId RDimLinearEntity::PropertyDimensionLinePosZ;
@@ -94,6 +97,9 @@ void RDimLinearEntity::init() {
     RDimLinearEntity::PropertyFontName.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyFontName);
     RDimLinearEntity::PropertyArrow1Flipped.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimLinearEntity::PropertyArrow2Flipped.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyArrow2Flipped);
+
+    RDimLinearEntity::PropertyExtLineFix.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyExtLineFix);
+    RDimLinearEntity::PropertyExtLineFixLength.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyExtLineFixLength);
 
     RDimLinearEntity::PropertyDimensionLinePosX.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimLinearEntity::PropertyDimensionLinePosY.generateId(typeid(RDimLinearEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Line"), QT_TRANSLATE_NOOP("REntity", "Y"));

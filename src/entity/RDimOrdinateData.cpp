@@ -205,7 +205,9 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox,
     RLine line;
 
     if (definingPoint.getDistanceTo(knee1) > dimexo) {
-        line = RLine(definingPoint + textOffsetV*dimexo, knee1);
+        line = RLine(knee1, definingPoint + textOffsetV*dimexo);
+        RLine dummy;
+        adjustExtensionLineFixLength(line, dummy, false);
         ret.append(QSharedPointer<RLine>(new RLine(line)));
     }
 

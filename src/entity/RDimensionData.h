@@ -150,6 +150,22 @@ public:
         arrow2Flipped = on;
     }
 
+    bool isExtLineFix() const {
+        return extLineFix;
+    }
+    void setExtLineFix(bool on) {
+        extLineFix = on;
+    }
+
+    double getExtLineFixLength() const {
+        return extLineFixLength;
+    }
+    void setExtLineFixLength(double v) {
+        extLineFixLength = v;
+    }
+
+    void adjustExtensionLineFixLength(RLine& extLine1, RLine& extLine2, bool addDimExe = true) const;
+
     bool hasSpaceForArrows() const;
 
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
@@ -248,6 +264,9 @@ protected:
     double dimScaleOverride;
     bool arrow1Flipped;
     bool arrow2Flipped;
+
+    bool extLineFix;
+    double extLineFixLength;
 
     mutable bool dirty;
     mutable RTextData textData;

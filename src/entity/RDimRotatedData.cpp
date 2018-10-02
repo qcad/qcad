@@ -207,6 +207,8 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
     // definitive dimension line:
     ret += getDimensionLineShapes(dimP1, dimP2, true, true);
 
+    RLine extLine1, extLine2;
+
     // extension lines:
     RVector vDimexo1, vDimexe1, vDimexo2, vDimexe2;
     if (!extensionPoint1.equalsFuzzy(dimP1)) {
@@ -214,8 +216,7 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
         vDimexe1.setPolar(dimexe, a1);
         vDimexo1.setPolar(dimexo, a1);
 
-        RLine line(extensionPoint1+vDimexo1, dimP1+vDimexe1);
-        ret.append(QSharedPointer<RLine>(new RLine(line)));
+        extLine1 = RLine(dimP1+vDimexe1, extensionPoint1+vDimexo1);
     }
 
     if (!extensionPoint2.equalsFuzzy(dimP2)) {
@@ -223,8 +224,16 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
         vDimexe2.setPolar(dimexe, a2);
         vDimexo2.setPolar(dimexo, a2);
 
-        RLine line(extensionPoint2+vDimexo2, dimP2+vDimexe2);
-        ret.append(QSharedPointer<RLine>(new RLine(line)));
+        extLine2 = RLine(dimP2+vDimexe2, extensionPoint2+vDimexo2);
+    }
+
+    adjustExtensionLineFixLength(extLine1, extLine2);
+
+    if (extLine1.isValid()) {
+        ret.append(QSharedPointer<RLine>(new RLine(extLine1)));
+    }
+    if (extLine2.isValid()) {
+        ret.append(QSharedPointer<RLine>(new RLine(extLine2)));
     }
 
     return ret;

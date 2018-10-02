@@ -48,6 +48,9 @@ RPropertyTypeId RDimAlignedEntity::PropertyFontName;
 RPropertyTypeId RDimAlignedEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimAlignedEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimAlignedEntity::PropertyExtLineFix;
+RPropertyTypeId RDimAlignedEntity::PropertyExtLineFixLength;
+
 RPropertyTypeId RDimAlignedEntity::PropertyDimensionLinePosX;
 RPropertyTypeId RDimAlignedEntity::PropertyDimensionLinePosY;
 RPropertyTypeId RDimAlignedEntity::PropertyDimensionLinePosZ;
@@ -95,6 +98,9 @@ void RDimAlignedEntity::init() {
     RDimAlignedEntity::PropertyFontName.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyFontName);
     RDimAlignedEntity::PropertyArrow1Flipped.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimAlignedEntity::PropertyArrow2Flipped.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyArrow2Flipped);
+
+    RDimAlignedEntity::PropertyExtLineFix.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyExtLineFix);
+    RDimAlignedEntity::PropertyExtLineFixLength.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyExtLineFixLength);
 
     RDimAlignedEntity::PropertyDimensionLinePosX.generateId(typeid(RDimAlignedEntity), RDimLinearEntity::PropertyDimensionLinePosX);
     RDimAlignedEntity::PropertyDimensionLinePosY.generateId(typeid(RDimAlignedEntity), RDimLinearEntity::PropertyDimensionLinePosY);

@@ -70,6 +70,9 @@ public:
     static RPropertyTypeId PropertyFontName;
     static RPropertyTypeId PropertyArrow1Flipped;
     static RPropertyTypeId PropertyArrow2Flipped;
+
+    static RPropertyTypeId PropertyExtLineFix;
+    static RPropertyTypeId PropertyExtLineFixLength;
     //static RPropertyTypeId PropertyHeight;
     //static RPropertyTypeId PropertyAngle;
     //static RPropertyTypeId PropertyLineSpacingFactor;
@@ -196,6 +199,20 @@ public:
     }
     void setArrow2Flipped(bool on) {
         getData().setArrow2Flipped(on);
+    }
+
+    bool isExtLineFix() const {
+        return getData().isExtLineFix();
+    }
+    void setExtLineFix(bool on) {
+        getData().setExtLineFix(on);
+    }
+
+    double getExtLineFixLength() const {
+        return getData().getExtLineFixLength();
+    }
+    void setExtLineFixLength(double v) {
+        getData().setExtLineFixLength(v);
     }
 
     static QSet<QString> getDimensionBlockNames(RDocument* doc);

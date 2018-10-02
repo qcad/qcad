@@ -50,6 +50,10 @@ RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimensionEntity::PropertyFontName;
 RPropertyTypeId RDimensionEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimensionEntity::PropertyArrow2Flipped;
+
+RPropertyTypeId RDimensionEntity::PropertyExtLineFix;
+RPropertyTypeId RDimensionEntity::PropertyExtLineFixLength;
+
 //RPropertyTypeId RDimensionEntity::PropertyHeight;
 //RPropertyTypeId RDimensionEntity::PropertyAngle;
 //RPropertyTypeId RDimensionEntity::PropertyLineSpacingFactor;
@@ -93,6 +97,10 @@ void RDimensionEntity::init() {
 //    RDimensionEntity::PropertyFontName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Font"));
     RDimensionEntity::PropertyArrow1Flipped.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Flip First Arrow"));
     RDimensionEntity::PropertyArrow2Flipped.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Flip Second Arrow"));
+
+    RDimensionEntity::PropertyExtLineFix.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Fixed Extension Line"));
+    RDimensionEntity::PropertyExtLineFixLength.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Extension Line Length"));
+
 //    RDimensionEntity::PropertyHeight.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
 //    RDimensionEntity::PropertyAngle.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
 //    RDimensionEntity::PropertyLineSpacingFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
@@ -143,6 +151,9 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
 //        ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
         ret = ret || RObject::setMember(getData().arrow1Flipped, value, PropertyArrow1Flipped == propertyTypeId);
         ret = ret || RObject::setMember(getData().arrow2Flipped, value, PropertyArrow2Flipped == propertyTypeId);
+
+        ret = ret || RObject::setMember(getData().extLineFix, value, PropertyExtLineFix == propertyTypeId);
+        ret = ret || RObject::setMember(getData().extLineFixLength, value, PropertyExtLineFixLength == propertyTypeId);
     }
 //    ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
 //    ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
@@ -233,6 +244,13 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
     }
     else if (propertyTypeId == PropertyArrow2Flipped) {
         return qMakePair(QVariant(getData().arrow2Flipped), RPropertyAttributes());
+    }
+
+    else if (propertyTypeId == PropertyExtLineFix) {
+        return qMakePair(QVariant(getData().extLineFix), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyExtLineFixLength) {
+        return qMakePair(QVariant(getData().extLineFixLength), RPropertyAttributes());
     }
 
     /*else if (propertyTypeId == PropertyHeight) {

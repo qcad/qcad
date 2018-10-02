@@ -49,6 +49,9 @@ RPropertyTypeId RDimDiametricEntity::PropertyFontName;
 RPropertyTypeId RDimDiametricEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimDiametricEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimDiametricEntity::PropertyExtLineFix;
+RPropertyTypeId RDimDiametricEntity::PropertyExtLineFixLength;
+
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointX;
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointY;
 RPropertyTypeId RDimDiametricEntity::PropertyChordPointZ;
@@ -95,6 +98,9 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyFontName.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyFontName);
     RDimDiametricEntity::PropertyArrow1Flipped.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimDiametricEntity::PropertyArrow2Flipped.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyArrow2Flipped);
+
+    RDimDiametricEntity::PropertyExtLineFix.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyExtLineFix);
+    RDimDiametricEntity::PropertyExtLineFixLength.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyExtLineFixLength);
 
     RDimDiametricEntity::PropertyChordPointX.generateId(typeid(RDimDiametricEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "X"));
     RDimDiametricEntity::PropertyChordPointY.generateId(typeid(RDimDiametricEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Y"));

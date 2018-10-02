@@ -70,6 +70,9 @@ public:
     static RPropertyTypeId PropertyArrow1Flipped;
     static RPropertyTypeId PropertyArrow2Flipped;
 
+    static RPropertyTypeId PropertyExtLineFix;
+    static RPropertyTypeId PropertyExtLineFixLength;
+
     static RPropertyTypeId PropertyChordPointX;
     static RPropertyTypeId PropertyChordPointY;
     static RPropertyTypeId PropertyChordPointZ;

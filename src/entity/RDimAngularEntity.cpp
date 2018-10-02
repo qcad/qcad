@@ -47,6 +47,9 @@ RPropertyTypeId RDimAngularEntity::PropertyFontName;
 RPropertyTypeId RDimAngularEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimAngularEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimAngularEntity::PropertyExtLineFix;
+RPropertyTypeId RDimAngularEntity::PropertyExtLineFixLength;
+
 RPropertyTypeId RDimAngularEntity::PropertyExtensionLine1EndX;
 RPropertyTypeId RDimAngularEntity::PropertyExtensionLine1EndY;
 RPropertyTypeId RDimAngularEntity::PropertyExtensionLine1EndZ;
@@ -93,6 +96,9 @@ void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyFontName.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyFontName);
     RDimAngularEntity::PropertyArrow1Flipped.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimAngularEntity::PropertyArrow2Flipped.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyArrow2Flipped);
+
+    RDimAngularEntity::PropertyExtLineFix.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyExtLineFix);
+    RDimAngularEntity::PropertyExtLineFixLength.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyExtLineFixLength);
 
     RDimAngularEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true);
     RDimAngularEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true);

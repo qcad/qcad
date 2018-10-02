@@ -35,6 +35,8 @@ RDimensionData::RDimensionData(RDocument* document) :
     dimScaleOverride(0.0),
     arrow1Flipped(false),
     arrow2Flipped(false),
+    extLineFix(false),
+    extLineFixLength(0.0),
     dirty(true),
     dimLineLength(0.0),
     autoTextPos(true) {
@@ -88,6 +90,8 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       dimScaleOverride(0.0),
       arrow1Flipped(false),
       arrow2Flipped(false),
+      extLineFix(false),
+      extLineFixLength(0.0),
       dirty(true),
       dimLineLength(0.0),
       autoTextPos(true) {
@@ -110,6 +114,28 @@ bool RDimensionData::isValid() const {
 
 bool RDimensionData::isSane() const {
     return REntityData::isSane() && definitionPoint.isSane();
+}
+
+void RDimensionData::adjustExtensionLineFixLength(RLine& extLine1, RLine& extLine2, bool addDimExe) const {
+    // extension lines with fixed length:
+    if (isExtLineFix()) {
+        double extLineLen = getExtLineFixLength();
+        if (RMath::fuzzyCompare(extLineLen, 0.0)) {
+            // value of 0 for extension line fixed length means fixed length is off:
+            return;
+        }
+
+        if (addDimExe) {
+            double dimexe = getDimexe();
+            extLineLen += dimexe;
+        }
+        if (extLine1.isValid()) {
+            extLine1.setLength(qMin(extLine1.getLength(), extLineLen));
+        }
+        if (extLine2.isValid()) {
+            extLine2.setLength(qMin(extLine2.getLength(), extLineLen));
+        }
+    }
 }
 
 bool RDimensionData::hasSpaceForArrows() const {

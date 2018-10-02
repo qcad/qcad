@@ -48,6 +48,9 @@ RPropertyTypeId RDimArcLengthEntity::PropertyFontName;
 RPropertyTypeId RDimArcLengthEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimArcLengthEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimArcLengthEntity::PropertyExtLineFix;
+RPropertyTypeId RDimArcLengthEntity::PropertyExtLineFixLength;
+
 RPropertyTypeId RDimArcLengthEntity::PropertyCenterX;
 RPropertyTypeId RDimArcLengthEntity::PropertyCenterY;
 RPropertyTypeId RDimArcLengthEntity::PropertyCenterZ;
@@ -103,6 +106,9 @@ void RDimArcLengthEntity::init() {
     RDimArcLengthEntity::PropertyFontName.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyFontName);
     RDimArcLengthEntity::PropertyArrow1Flipped.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimArcLengthEntity::PropertyArrow2Flipped.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyArrow2Flipped);
+
+    RDimArcLengthEntity::PropertyExtLineFix.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyExtLineFix);
+    RDimArcLengthEntity::PropertyExtLineFixLength.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyExtLineFixLength);
 
     RDimArcLengthEntity::PropertyCenterX.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true);
     RDimArcLengthEntity::PropertyCenterY.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true);

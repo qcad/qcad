@@ -182,7 +182,6 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
     // correct arc when using parallel extension lines (arc length dimension for angle < 90):
     if (parallel) {
         RVector dir;
-        RLine line;
 
         double midAngle = center.getAngleTo(dimArc.getMiddlePoint());
         double arcRad = center.getDistanceTo(getExtensionLine1End());
@@ -220,15 +219,17 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         dimArc.trimStartPoint(ip1);
         dimArc.trimEndPoint(ip2);
 
-        line = RLine(arc.getStartPoint() + dir*dimexo, ip1 + dir*dimexe);
-        ret.append(QSharedPointer<RShape>(new RLine(line)));
+        // extension line:
+        RLine extLine1 = RLine(ip1 + dir*dimexe, arc.getStartPoint() + dir*dimexo);
+        RLine extLine2 = RLine(ip2 + dir*dimexe, arc.getEndPoint() + dir*dimexo);
 
-        line = RLine(arc.getEndPoint() + dir*dimexo, ip2 + dir*dimexe);
-        ret.append(QSharedPointer<RShape>(new RLine(line)));
+        adjustExtensionLineFixLength(extLine1, extLine2);
+
+        ret.append(QSharedPointer<RShape>(new RLine(extLine1)));
+        ret.append(QSharedPointer<RShape>(new RLine(extLine2)));
     }
     else {
         RVector dir;
-        RLine line;
         double len;
         double dist;
         int f;
@@ -241,8 +242,7 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         }
         len = rad - dist + dimexe*f;
         dir.setPolar(1.0, ang1);
-        line = RLine(center + dir*dist + dir*dimexo*f, center + dir*dist + dir*len);
-        ret.append(QSharedPointer<RShape>(new RLine(line)));
+        RLine extLine1 = RLine(center + dir*dist + dir*len, center + dir*dist + dir*dimexo*f);
 
         // 2nd extension line:
         dist = center.getDistanceTo2D(p2);
@@ -252,8 +252,12 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         }
         len = rad - dist + dimexe*f;
         dir.setPolar(1.0, ang2);
-        line = RLine(center + dir*dist + dir*dimexo*f, center + dir*dist + dir*len);
-        ret.append(QSharedPointer<RShape>(new RLine(line)));
+        RLine extLine2 = RLine(center + dir*dist + dir*len, center + dir*dist + dir*dimexo*f);
+
+        adjustExtensionLineFixLength(extLine1, extLine2);
+
+        ret.append(QSharedPointer<RShape>(new RLine(extLine1)));
+        ret.append(QSharedPointer<RShape>(new RLine(extLine2)));
 
         //arc = RArc(center, rad, ang1, ang2, reversed);
     }

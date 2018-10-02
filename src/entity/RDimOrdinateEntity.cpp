@@ -43,6 +43,9 @@ RPropertyTypeId RDimOrdinateEntity::PropertyFontName;
 RPropertyTypeId RDimOrdinateEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimOrdinateEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimOrdinateEntity::PropertyExtLineFix;
+RPropertyTypeId RDimOrdinateEntity::PropertyExtLineFixLength;
+
 RPropertyTypeId RDimOrdinateEntity::PropertyDimScale;
 RPropertyTypeId RDimOrdinateEntity::PropertyDimBlockName;
 
@@ -92,6 +95,9 @@ void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyFontName.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyFontName);
     RDimOrdinateEntity::PropertyArrow1Flipped.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimOrdinateEntity::PropertyArrow2Flipped.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyArrow2Flipped);
+
+    RDimOrdinateEntity::PropertyExtLineFix.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyExtLineFix);
+    RDimOrdinateEntity::PropertyExtLineFixLength.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyExtLineFixLength);
 
     RDimOrdinateEntity::PropertyDimScale.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyDimScale);
     RDimOrdinateEntity::PropertyDimBlockName.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyDimBlockName);

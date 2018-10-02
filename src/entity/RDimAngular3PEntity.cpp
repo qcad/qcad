@@ -47,6 +47,9 @@ RPropertyTypeId RDimAngular3PEntity::PropertyFontName;
 RPropertyTypeId RDimAngular3PEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimAngular3PEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimAngular3PEntity::PropertyExtLineFix;
+RPropertyTypeId RDimAngular3PEntity::PropertyExtLineFixLength;
+
 RPropertyTypeId RDimAngular3PEntity::PropertyCenterX;
 RPropertyTypeId RDimAngular3PEntity::PropertyCenterY;
 RPropertyTypeId RDimAngular3PEntity::PropertyCenterZ;
@@ -101,6 +104,9 @@ void RDimAngular3PEntity::init() {
     RDimAngular3PEntity::PropertyFontName.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyFontName);
     RDimAngular3PEntity::PropertyArrow1Flipped.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyArrow1Flipped);
     RDimAngular3PEntity::PropertyArrow2Flipped.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyArrow2Flipped);
+
+    RDimAngular3PEntity::PropertyExtLineFix.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyExtLineFix);
+    RDimAngular3PEntity::PropertyExtLineFixLength.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyExtLineFixLength);
 
     RDimAngular3PEntity::PropertyCenterX.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true);
     RDimAngular3PEntity::PropertyCenterY.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true);
