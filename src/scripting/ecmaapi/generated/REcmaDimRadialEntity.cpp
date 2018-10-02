@@ -210,6 +210,14 @@
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyArrow2Flipped),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyExtLineFix",
+                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyExtLineFix),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyExtLineFixLength",
+                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyExtLineFixLength),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCenterPointX",
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyCenterPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

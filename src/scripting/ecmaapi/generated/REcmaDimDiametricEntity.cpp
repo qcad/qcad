@@ -214,6 +214,14 @@
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyArrow2Flipped),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyExtLineFix",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyExtLineFix),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyExtLineFixLength",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyExtLineFixLength),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyChordPointX",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyChordPointX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

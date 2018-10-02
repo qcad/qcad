@@ -209,6 +209,14 @@
                 qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyArrow2Flipped),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyExtLineFix",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyExtLineFix),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyExtLineFixLength",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyExtLineFixLength),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCenterX",
                 qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyCenterX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

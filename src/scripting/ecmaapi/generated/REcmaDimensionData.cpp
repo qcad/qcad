@@ -113,6 +113,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, setArrow2Flipped, "setArrow2Flipped");
             
+            REcmaHelper::registerFunction(&engine, proto, isExtLineFix, "isExtLineFix");
+            
+            REcmaHelper::registerFunction(&engine, proto, setExtLineFix, "setExtLineFix");
+            
+            REcmaHelper::registerFunction(&engine, proto, getExtLineFixLength, "getExtLineFixLength");
+            
+            REcmaHelper::registerFunction(&engine, proto, setExtLineFixLength, "setExtLineFixLength");
+            
             REcmaHelper::registerFunction(&engine, proto, hasSpaceForArrows, "hasSpaceForArrows");
             
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
@@ -1889,6 +1897,214 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::setArrow2Flipped", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::isExtLineFix
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::isExtLineFix", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::isExtLineFix";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("isExtLineFix", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isExtLineFix();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.isExtLineFix().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::isExtLineFix", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setExtLineFix
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setExtLineFix", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setExtLineFix";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setExtLineFix", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExtLineFix(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setExtLineFix().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setExtLineFix", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getExtLineFixLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getExtLineFixLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getExtLineFixLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getExtLineFixLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getExtLineFixLength();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getExtLineFixLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getExtLineFixLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setExtLineFixLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setExtLineFixLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setExtLineFixLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setExtLineFixLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExtLineFixLength(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setExtLineFixLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setExtLineFixLength", context, engine);
             return result;
         }
          QScriptValue

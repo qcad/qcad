@@ -213,6 +213,14 @@
                 qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyArrow2Flipped),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyExtLineFix",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyExtLineFix),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyExtLineFixLength",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyExtLineFixLength),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyCenterX",
                 qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyCenterX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
