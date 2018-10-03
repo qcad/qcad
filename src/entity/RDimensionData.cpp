@@ -130,10 +130,10 @@ void RDimensionData::adjustExtensionLineFixLength(RLine& extLine1, RLine& extLin
             extLineLen += dimexe;
         }
         if (extLine1.isValid()) {
-            extLine1.setLength(qMin(extLine1.getLength(), extLineLen));
+            extLine1.setLength(qMin(extLine1.getLength(), extLineLen), false);
         }
         if (extLine2.isValid()) {
-            extLine2.setLength(qMin(extLine2.getLength(), extLineLen));
+            extLine2.setLength(qMin(extLine2.getLength(), extLineLen), false);
         }
     }
 }

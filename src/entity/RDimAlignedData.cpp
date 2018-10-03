@@ -174,9 +174,9 @@ QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, 
     }
 
     // extension line 1:
-    RLine extLine1 = RLine(extensionPoint1 + e1*extLength + v2, extensionPoint1 + v1);
+    RLine extLine1 = RLine(extensionPoint1 + v1, extensionPoint1 + e1*extLength + v2);
     // extension line 2:
-    RLine extLine2 = RLine(extensionPoint2 + e1*extLength + v2, extensionPoint2 + v1);
+    RLine extLine2 = RLine(extensionPoint2 + v1, extensionPoint2 + e1*extLength + v2);
 
     adjustExtensionLineFixLength(extLine1, extLine2);
 

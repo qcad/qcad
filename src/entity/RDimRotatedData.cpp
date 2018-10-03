@@ -216,7 +216,7 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
         vDimexe1.setPolar(dimexe, a1);
         vDimexo1.setPolar(dimexo, a1);
 
-        extLine1 = RLine(dimP1+vDimexe1, extensionPoint1+vDimexo1);
+        extLine1 = RLine(extensionPoint1+vDimexo1, dimP1+vDimexe1);
     }
 
     if (!extensionPoint2.equalsFuzzy(dimP2)) {
@@ -224,7 +224,7 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
         vDimexe2.setPolar(dimexe, a2);
         vDimexo2.setPolar(dimexo, a2);
 
-        extLine2 = RLine(dimP2+vDimexe2, extensionPoint2+vDimexo2);
+        extLine2 = RLine(extensionPoint2+vDimexo2, dimP2+vDimexe2);
     }
 
     adjustExtensionLineFixLength(extLine1, extLine2);

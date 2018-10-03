@@ -242,7 +242,7 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         }
         len = rad - dist + dimexe*f;
         dir.setPolar(1.0, ang1);
-        RLine extLine1 = RLine(center + dir*dist + dir*len, center + dir*dist + dir*dimexo*f);
+        RLine extLine1 = RLine(center + dir*dist + dir*dimexo*f, center + dir*dist + dir*len);
 
         // 2nd extension line:
         dist = center.getDistanceTo2D(p2);
@@ -252,7 +252,7 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         }
         len = rad - dist + dimexe*f;
         dir.setPolar(1.0, ang2);
-        RLine extLine2 = RLine(center + dir*dist + dir*len, center + dir*dist + dir*dimexo*f);
+        RLine extLine2 = RLine(center + dir*dist + dir*dimexo*f, center + dir*dist + dir*len);
 
         adjustExtensionLineFixLength(extLine1, extLine2);
 
