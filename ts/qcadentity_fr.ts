@@ -46,7 +46,7 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Largeur&#xa0;: 
+Largeur : 
 Largeur
 &amp;Largeur de page :</translatorcomment>
         <translation>Largeur</translation>
@@ -57,7 +57,7 @@ Largeur
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Hauteur&#xa0;: 
+Hauteur : 
 Hauteur
 &amp;Hauteur de page :</translatorcomment>
         <translation>Hauteur</translation>
@@ -70,28 +70,28 @@ Hauteur
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+87"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+75"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+109"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+115"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+105"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+111"/>
         <location line="+16"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+103"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+107"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+113"/>
         <location line="+16"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+105"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+98"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+104"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+99"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+105"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+103"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+79"/>
         <location line="+3"/>
@@ -443,7 +443,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Non</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+13"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
@@ -930,13 +930,13 @@ Cotation ordonnée</translatorcomment>
         <translation>Repère point final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+115"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+121"/>
         <source>Dimension Angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Angle de cotation</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-21"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-25"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: Dimension_fr.ts--
@@ -994,7 +994,17 @@ Tolérance inférieure</translatorcomment>
         <translation>Miroir la deuxième flèche</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+2"/>
+        <source>Fixed Extension Line</source>
+        <translation>Ligne d&apos;extension fixe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension Line Length</source>
+        <translation>Longueur ligne d&apos;extension</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Auto Label</source>
         <translation>Auto etiquette</translation>
     </message>

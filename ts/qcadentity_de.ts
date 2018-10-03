@@ -6,28 +6,28 @@
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+87"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+75"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+109"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+115"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+105"/>
+        <location filename="../src/entity/RDimAngular3PEntity.cpp" line="+111"/>
         <location line="+16"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+103"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+107"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+113"/>
         <location line="+16"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+99"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+105"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+98"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+104"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+99"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+105"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+103"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+79"/>
         <location line="+3"/>
@@ -361,7 +361,7 @@
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+13"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
@@ -732,12 +732,12 @@
         <translation>Führungsendpunkt</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+115"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+121"/>
         <source>Dimension Angle</source>
         <translation>Bemassungswinkel</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-21"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-25"/>
         <source>Label</source>
         <translation>Beschriftung</translation>
     </message>
@@ -775,7 +775,17 @@
         <translation>Zweiten Pfeil umdrehen</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+2"/>
+        <source>Fixed Extension Line</source>
+        <translation>Fixe Verlängerungslinie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension Line Length</source>
+        <translation>Länge Verlängerungslinien</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Auto Label</source>
         <translation>Auto Beschriftung</translation>
     </message>
@@ -799,14 +809,14 @@
         <translation type="obsolete">Definitionspunkt</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="-21"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
         <translation>Text Position</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+15"/>
         <source>Measured Value</source>
         <translation>Gemessener Wert</translation>
     </message>
