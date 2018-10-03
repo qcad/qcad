@@ -87,7 +87,7 @@ public:
     double getLength() const;
     double getAngle() const;
 
-    void setLength(double l);
+    void setLength(double l, bool fromStart = true);
     void setAngle(double a);
 
     bool isVertical(double tolerance = RS::PointTolerance) const;

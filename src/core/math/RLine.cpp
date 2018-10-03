@@ -69,8 +69,13 @@ double RLine::getLength() const {
     return startPoint.getDistanceTo(endPoint);
 }
 
-void RLine::setLength(double l) {
-    endPoint = startPoint + RVector::createPolar(l, getAngle());
+void RLine::setLength(double l, bool fromStart) {
+    if (fromStart) {
+        endPoint = startPoint + RVector::createPolar(l, getAngle());
+    }
+    else {
+        startPoint = endPoint - RVector::createPolar(l, getAngle());
+    }
 }
 
 double RLine::getAngle() const {
