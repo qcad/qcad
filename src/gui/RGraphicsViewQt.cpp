@@ -140,8 +140,8 @@ bool RGraphicsViewQt::event(QEvent* e) {
         return gestureEvent(static_cast<QGestureEvent*>(e));
     }
 
-#if QT_VERSION >= 0x050A00 && QT_VERSION <= 0x050B01
-    // workaround for Qt 5.10-5.11.1 bug QTBUG-65559 with Wacom tablets:
+#if QT_VERSION >= 0x050A00 && QT_VERSION <= 0x050B02
+    // workaround for Qt 5.10.0-5.11.2 bug QTBUG-65559 with Wacom tablets:
     // TabletMove events are triggered instead of mouseMoveEvents if pen does NOT
     // hover over tablet when application is started:
     // convert to mouseMoveEvents here:

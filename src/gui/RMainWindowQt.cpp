@@ -372,7 +372,7 @@ void RMainWindowQt::enable() {
 
 #ifdef Q_OS_MAC
 #if QT_VERSION == 0x050B00 || QT_VERSION == 0x050B01
-        // workaround for Qt 5.11 bug
+        // workaround for Qt 5.10.0-5.11.1 bug
         // only small portion of app win is redrawn when enabled
         // redraw can only be forced with a resize
         resize(width(), height()+1);
