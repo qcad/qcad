@@ -81,6 +81,14 @@ bool RBox::isSane() const {
     return (c1.isSane() && c2.isSane());
 }
 
+bool RBox::equalsFuzzy(const RBox& b, double tol) const {
+    return c1.equalsFuzzy(b.c1) && c2.equalsFuzzy(b.c2);
+}
+
+bool RBox::equalsFuzzy2D(const RBox& b, double tol) const {
+    return c1.equalsFuzzy2D(b.c1) && c2.equalsFuzzy2D(b.c2);
+}
+
 /**
  * Grows this box by the given offset in X, Y and Z (!).
  * \return pointer to this box

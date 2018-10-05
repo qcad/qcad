@@ -52,6 +52,9 @@ public:
     bool isValid() const;
     bool isSane() const;
 
+    bool equalsFuzzy(const RBox& b, double tol = RS::PointTolerance) const;
+    bool equalsFuzzy2D(const RBox& b, double tol = RS::PointTolerance) const;
+
     RBox get2D() const {
         return RBox(c1.get2D(), c2.get2D());
     }
