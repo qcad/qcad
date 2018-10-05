@@ -214,6 +214,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="adjustExtensionLineFixLength"
+    cppName="adjustExtensionLineFixLength" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="extLine1"
+        isConst="false" />
+        <arg type="RLine &amp;" typeName="RLine" name="extLine2"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="addDimExe"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
     <method name="hasSpaceForArrows" cppName="hasSpaceForArrows"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

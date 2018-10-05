@@ -143,6 +143,18 @@
         setArrow2Flipped
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isExtLineFix
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setExtLineFix
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExtLineFixLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setExtLineFixLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimensionBlockNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

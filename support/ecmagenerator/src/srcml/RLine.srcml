@@ -88,7 +88,7 @@
     <function_decl><type><name>double</name></type> <name>getLength</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>setLength</name><parameter_list>(<param><decl><type><name>double</name></type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setLength</name><parameter_list>(<param><decl><type><name>double</name></type> <name>l</name></decl></param>, <param><decl><type><name>bool</name></type> <name>fromStart</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>isVertical</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

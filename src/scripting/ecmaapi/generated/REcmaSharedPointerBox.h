@@ -58,6 +58,12 @@
         isSane
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        equalsFuzzy
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        equalsFuzzy2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         get2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

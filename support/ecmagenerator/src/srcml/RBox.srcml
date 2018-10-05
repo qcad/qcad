@@ -53,6 +53,9 @@
     <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isSane</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>bool</name></type> <name>equalsFuzzy</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>b</name></decl></param>, <param><decl><type><name>double</name></type> <name>tol</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>equalsFuzzy2D</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>b</name></decl></param>, <param><decl><type><name>double</name></type> <name>tol</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function><type><name>RBox</name></type> <name>get2D</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>RBox</name><argument_list>(<argument><expr><name>c1</name>.<call><name>get2D</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>c2</name>.<call><name>get2D</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

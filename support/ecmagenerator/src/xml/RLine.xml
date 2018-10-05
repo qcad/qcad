@@ -168,6 +168,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="double" typeName="double" name="l"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="fromStart"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="setAngle" cppName="setAngle" specifier="public"

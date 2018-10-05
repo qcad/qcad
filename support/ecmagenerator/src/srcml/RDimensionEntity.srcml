@@ -202,6 +202,20 @@
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setArrow2Flipped</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isExtLineFix</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>isExtLineFix</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setExtLineFix</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setExtLineFix</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getExtLineFixLength</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getExtLineFixLength</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setExtLineFixLength</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setExtLineFixLength</name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function_decl><type><name>static</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getDimensionBlockNames</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>doc</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:

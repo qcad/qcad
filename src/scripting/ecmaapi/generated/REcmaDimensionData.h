@@ -132,6 +132,9 @@
         setExtLineFixLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        adjustExtensionLineFixLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasSpaceForArrows
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

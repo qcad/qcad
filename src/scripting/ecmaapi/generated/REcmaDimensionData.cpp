@@ -121,6 +121,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setExtLineFixLength, "setExtLineFixLength");
             
+            REcmaHelper::registerFunction(&engine, proto, adjustExtensionLineFixLength, "adjustExtensionLineFixLength");
+            
             REcmaHelper::registerFunction(&engine, proto, hasSpaceForArrows, "hasSpaceForArrows");
             
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
@@ -2105,6 +2107,175 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::setExtLineFixLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::adjustExtensionLineFixLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::adjustExtensionLineFixLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::adjustExtensionLineFixLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("adjustExtensionLineFixLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RLine */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimensionData: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimensionData: Argument 1 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->adjustExtensionLineFixLength(a0
+        ,
+    a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RLine */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimensionData: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimensionData: Argument 1 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->adjustExtensionLineFixLength(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.adjustExtensionLineFixLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::adjustExtensionLineFixLength", context, engine);
             return result;
         }
          QScriptValue
