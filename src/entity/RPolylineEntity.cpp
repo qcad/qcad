@@ -281,7 +281,7 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         }
     }
 
-    if (RPolyline::hasProxy() && humanReadable) {
+    if (RPolyline::hasProxy()) {
         if (propertyTypeId == PropertyOrientation) {
             RPropertyAttributes attr;
             attr.setRedundant(true);
