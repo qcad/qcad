@@ -126,6 +126,10 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
 WidgetFactory.createDialog = function(basePath, uiFile, parent) {
     var dialog = WidgetFactory.createWidget(basePath, uiFile, parent);
 
+    var flags = dialog.windowFlags();
+    flags = new Qt.WindowFlags(flags & ~(Qt.WindowContextHelpButtonHint));
+    dialog.setWindowFlags(flags);
+
     // a global function might be defined to do additional
     // initilization for all dialogs (e.g. for testing purposes):
     if (typeof(initDialog)!=="undefined") {
