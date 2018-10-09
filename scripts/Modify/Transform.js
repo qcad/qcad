@@ -84,7 +84,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 
         this.clearCache();
 
-        var docTrans = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
+        var docTrans = new RDocument(new RMemoryStorage(), new RSpatialIndexSimple());
         docTrans.copyVariablesFrom(doc);
         this.diTrans = new RDocumentInterface(docTrans);
         this.diTrans.setNotifyListeners(false);

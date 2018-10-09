@@ -63,7 +63,7 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
     var document = this.getDocument();
 
     var itemStorage = new RMemoryStorage();
-    var itemSpatialIndex = new RSpatialIndexNavel();
+    var itemSpatialIndex = createSpatialIndex();
     var itemDocument = new RDocument(itemStorage, itemSpatialIndex);
     itemDocument.setUnit(document.getUnit());
     var itemDocumentInterface = new RDocumentInterface(itemDocument);

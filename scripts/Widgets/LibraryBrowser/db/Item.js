@@ -185,7 +185,7 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
 
     // generate icon:
     var ms = new RMemoryStorage();
-    var si = new RSpatialIndexNavel();
+    var si = new RSpatialIndexSimple();
     var doc = new RDocument(ms, si);
     var di = new RDocumentInterface(doc);
     di.setNotifyListeners(false);

@@ -143,7 +143,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
 
     // create document:
     var storage = new RMemoryStorage();
-    var spatialIndex = new RSpatialIndexNavel();
+    var spatialIndex = createSpatialIndex();
     var document = new RDocument(storage, spatialIndex);
     var documentInterface = new RDocumentInterface(document);
 

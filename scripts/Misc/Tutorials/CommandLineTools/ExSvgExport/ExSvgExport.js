@@ -30,7 +30,7 @@ qApp.applicationName = "MyApplication";
 
 //! [document]
 var storage = new RMemoryStorage();
-var spatialIndex = new RSpatialIndexNavel();
+var spatialIndex = new RSpatialIndexSimple();
 var document = new RDocument(storage, spatialIndex);
 document.setUnit(RS.Millimeter);
 //! [document]

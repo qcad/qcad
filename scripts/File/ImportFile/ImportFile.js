@@ -28,7 +28,7 @@ include("scripts/Edit/Paste/Paste.js");
 function ImportFile(guiAction, fileName) {
     Paste.call(this, guiAction);
 
-    this.sourceDocument = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
+    this.sourceDocument = new RDocument(new RMemoryStorage(), createSpatialIndex());
     this.sourceDi = new RDocumentInterface(this.sourceDocument);
     this.sourceDi.setNotifyListeners(false);
 

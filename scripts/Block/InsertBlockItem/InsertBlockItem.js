@@ -69,7 +69,7 @@ InsertBlockItem.prototype.beginEvent = function() {
     // part library item is loaded into this document:
     if (isNull(this.diItem)) {
         var ms = new RMemoryStorage();
-        var si = new RSpatialIndexNavel();
+        var si = createSpatialIndex();
         this.docItem = new RDocument(ms, si);
         this.diItem = new RDocumentInterface(this.docItem);
         this.diItem.setNotifyListeners(false);

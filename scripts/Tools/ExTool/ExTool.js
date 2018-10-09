@@ -53,7 +53,7 @@ function main() {
     }
 
     // create new document (off screen):
-    var doc = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
+    var doc = new RDocument(new RMemoryStorage(), new RSpatialIndexSimple());
     var di = new RDocumentInterface(doc);
 
     // import given file:

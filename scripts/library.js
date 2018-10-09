@@ -2420,7 +2420,7 @@ function writeTextFile(fileName, str) {
         textStream.writeString(str);
     }
     file.close();
-};
+}
 
 function getKeyboardModifiers() {
     if (RSettings.isQt(5)) {
@@ -2429,11 +2429,20 @@ function getKeyboardModifiers() {
     else {
         return QApplication.keyboardModifiers();
     }
-};
+}
 
 function isShiftPressed() {
     return getKeyboardModifiers().valueOf() & Qt.ShiftModifier.valueOf();
-};
+}
+
+function createSpatialIndex() {
+    if (!isNull(global.SpatialIndexClass)) {
+        // use class defined as global variable "SpatialIndexClass":
+        // allows plugins to override the default spatial index class:
+        return new global[global.SpatialIndexClass]();
+    }
+    return new RSpatialIndexNavel();
+}
 
 // Qt 4 API workaround:
 function qsTranslate2(context, sourceText, disambiguation, n) {
