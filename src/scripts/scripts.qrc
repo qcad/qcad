@@ -3865,6 +3865,10 @@
     <file alias="scripts/File/File-inverse.svg">../../scripts/File/File-inverse.svg</file>
     <file alias="scripts/File/File.js">../../scripts/File/File.js</file>
     <file alias="scripts/File/File.svg">../../scripts/File/File.svg</file>
+    <file alias="scripts/File/ImportFile/FlipHorizontal-inverse.svg">../../scripts/File/ImportFile/FlipHorizontal-inverse.svg</file>
+    <file alias="scripts/File/ImportFile/FlipHorizontal.svg">../../scripts/File/ImportFile/FlipHorizontal.svg</file>
+    <file alias="scripts/File/ImportFile/FlipVertical-inverse.svg">../../scripts/File/ImportFile/FlipVertical-inverse.svg</file>
+    <file alias="scripts/File/ImportFile/FlipVertical.svg">../../scripts/File/ImportFile/FlipVertical.svg</file>
     <file alias="scripts/File/ImportFile/ImportFile-inverse.svg">../../scripts/File/ImportFile/ImportFile-inverse.svg</file>
     <file alias="scripts/File/ImportFile/ImportFile.js">../../scripts/File/ImportFile/ImportFile.js</file>
     <file alias="scripts/File/ImportFile/ImportFile.svg">../../scripts/File/ImportFile/ImportFile.svg</file>
