@@ -56,7 +56,7 @@ public:
 
     virtual QFont getFont() const;
 
-    void updateViewport();
+    virtual void updateViewport();
 
     virtual void updateCoordinate(RDocumentInterface* documentInterface);
 

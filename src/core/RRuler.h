@@ -45,6 +45,7 @@ public:
 
     void setGraphicsView(RGraphicsView* view) {
         this->view = view;
+        updateViewport();
     }
 
     Qt::Orientation getOrientation() const {
@@ -53,11 +54,14 @@ public:
 
     void setOrientation(Qt::Orientation orientation) {
         this->orientation = orientation;
+        updateViewport();
     }
 
     virtual void paintTick(int pos, bool major, const QString& label) = 0;
 
     virtual QFont getFont() const = 0;
+
+    virtual void updateViewport() = 0;
 
 protected:
     RGraphicsView* view;
