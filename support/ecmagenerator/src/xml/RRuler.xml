@@ -47,5 +47,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QFont" isPureVirtual="false" />
     </method>
+    <method name="updateViewport" cppName="updateViewport"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
   </class>
 </unit>

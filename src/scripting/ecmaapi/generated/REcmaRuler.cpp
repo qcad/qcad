@@ -61,6 +61,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getFont, "getFont");
             
+            REcmaHelper::registerFunction(&engine, proto, updateViewport, "updateViewport");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RRuler*>(), *proto);
 
@@ -418,6 +420,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRuler::getFont", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRuler::updateViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRuler::updateViewport", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRuler::updateViewport";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRuler* self = 
+                        getSelf("updateViewport", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateViewport();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRuler.updateViewport().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRuler::updateViewport", context, engine);
             return result;
         }
          QScriptValue REcmaRuler::toString

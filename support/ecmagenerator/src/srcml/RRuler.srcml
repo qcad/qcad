@@ -46,6 +46,7 @@
 
     <function><type><name>void</name></type> <name>setGraphicsView</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>*</type> <name>view</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>view</name> = <name>view</name></expr>;</expr_stmt>
+        <constructor_decl><name>updateViewport</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name><name>Qt</name>::<name>Orientation</name></name></type> <name>getOrientation</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -54,11 +55,14 @@
 
     <function><type><name>void</name></type> <name>setOrientation</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>Orientation</name></name></type> <name>orientation</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>orientation</name> = <name>orientation</name></expr>;</expr_stmt>
+        <constructor_decl><name>updateViewport</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintTick</name><parameter_list>(<param><decl><type><name>int</name></type> <name>pos</name></decl></param>, <param><decl><type><name>bool</name></type> <name>major</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>label</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QFont</name></type> <name>getFont</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateViewport</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
 </public><protected>protected:
     <decl_stmt><decl><type><name>RGraphicsView</name>*</type> <name>view</name></decl>;</decl_stmt>
