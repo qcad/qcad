@@ -61,7 +61,7 @@ SelectByColor.prototype.beginEvent = function() {
     }
 
     if (typeof(desiredColor) == 'undefined') {
-        EAction.handleUserWarning(qsTr("Select one or more objects of the desired color first"));
+        EAction.handleUserWarning(qsTr("Select one or more objects only of the desired color"));
     } else {
         var visible = document.queryAllVisibleEntities();
         var entityIdsToSelect = [];
