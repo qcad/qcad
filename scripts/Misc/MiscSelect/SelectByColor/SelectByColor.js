@@ -22,6 +22,7 @@ include("scripts/EAction.js");
 /**
  * \class SelectByColor
  * \ingroup ecma_misc_select
+ * \author Stephen Casner (slcasner)
  *
  * \brief Selects entities by their color.
  */
@@ -41,41 +42,42 @@ SelectByColor.prototype.beginEvent = function() {
     var desiredColor = undefined;
     var name;
     var localName;
+    var e, entityId, entity, color;
 
-    for (var e = 0; e < selected.length; ++e) {
-	var entityId = selected[e];
-	var entity = document.queryEntityDirect(entityId);
-	var color = entity.getDisplayColor();
-	localName = color.getName();
-	name = color.name();
-	if (typeof(desiredColor) == 'undefined') {
-	    desiredColor = name;
-	} else {
-	    if (name != desiredColor) {
-		desiredColor = undefined;
-		break;
-	    }
-	}
+    for (e = 0; e < selected.length; ++e) {
+        entityId = selected[e];
+        entity = document.queryEntityDirect(entityId);
+        color = entity.getDisplayColor();
+        localName = color.getName();
+        name = color.name();
+        if (typeof(desiredColor) == 'undefined') {
+            desiredColor = name;
+        } else {
+            if (name != desiredColor) {
+                desiredColor = undefined;
+                break;
+            }
+        }
     }
 
     if (typeof(desiredColor) == 'undefined') {
-        EAction.handleUserWarning(qsTr("Select one or more objects only of the desired color"));
+        EAction.handleUserWarning(qsTr("Select one or more objects of the desired color first"));
     } else {
-	var visible = document.queryAllVisibleEntities();
+        var visible = document.queryAllVisibleEntities();
         var entityIdsToSelect = [];
-	for (var e = 0; e < visible.length; ++e) {
-	    var entityId = visible[e];
-            var entity = document.queryEntity(entityId);
-	    var color = entity.getDisplayColor();
-	    name = color.name();
-	    if (name == desiredColor) {
+        for (e = 0; e < visible.length; ++e) {
+            entityId = visible[e];
+            entity = document.queryEntity(entityId);
+            color = entity.getDisplayColor();
+            name = color.name();
+            if (name == desiredColor) {
                 entityIdsToSelect.push(entityId);
             }
         }
         if (entityIdsToSelect.length!==0) {
             di.selectEntities(entityIdsToSelect);
         }
-        EAction.handleUserMessage(qsTr("Selected all visible entities of color") + " " + localName);
+        EAction.handleUserMessage(qsTr("Selected all visible entities of color %1").arg(localName));
     }
 
     EAction.activateMainWindow();
