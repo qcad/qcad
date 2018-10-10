@@ -6520,6 +6520,8 @@
     <file alias="scripts/Misc/MiscModify/ts/MiscModify_zh_CN.qm">../../scripts/Misc/MiscModify/ts/MiscModify_zh_CN.qm</file>
     <file alias="scripts/Misc/MiscModify/ts/MiscModify_zh_TW.qm">../../scripts/Misc/MiscModify/ts/MiscModify_zh_TW.qm</file>
     <file alias="scripts/Misc/MiscSelect/MiscSelect.js">../../scripts/Misc/MiscSelect/MiscSelect.js</file>
+    <file alias="scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js">../../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js</file>
+    <file alias="scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js">../../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js</file>
