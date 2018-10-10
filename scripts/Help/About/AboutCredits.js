@@ -42,6 +42,8 @@ var credits =
                               "Info > Arc/Circle/Ellipse Area<br>" +
                               "Custom linetype support, loading .lin files<br>"
                               ],
+        [ "Stephen Casner",   "Misc > Select > By Color"
+                              ],
         [ "Tamas Tevesz",     "Port to FreeBSD<br>" +
                               "Various improvements and fixes<br>"
                               ],
