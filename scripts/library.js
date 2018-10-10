@@ -2441,6 +2441,7 @@ function createSpatialIndex() {
         // allows plugins to override the default spatial index class:
         return new global[global.SpatialIndexClass]();
     }
+    //return new RSpatialIndexSimple();
     return new RSpatialIndexNavel();
 }
 
