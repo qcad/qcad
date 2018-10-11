@@ -113,7 +113,7 @@ public:
     }
 
     bool getFlag(RRefPoint::Flag flag) const {
-        return (flags & flags) == flag;
+        return (flags & flag) == flag;
     }
 
     RRefPoint::Flags getFlags() const {
