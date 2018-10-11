@@ -96,7 +96,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
             if (property.second.isInvisible()) {
                 return;
             }
-            property.second.setPropertyTypeId(propertyTypeId);
+            //property.second.setPropertyTypeId(propertyTypeId);
             propertyMap[propertyTitle] = property;
             propertyOrder[propertyGroupTitle].push_back(propertyTitle);
         }
@@ -106,7 +106,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
         if (property.second.isInvisible()) {
             return;
         }
-        property.second.setPropertyTypeId(propertyTypeId);
+        //property.second.setPropertyTypeId(propertyTypeId);
         RPropertyMap propertyMap;
         propertyMap[propertyTitle] = property;
         combinedProperties[propertyGroupTitle] = propertyMap;
@@ -131,7 +131,7 @@ void RPropertyEditor::removeAllButThese(
         QStringList removableProperties;
         RPropertyMap::iterator it2;
         for (it2 = it.value().begin(); it2 != it.value().end(); ++it2) {
-            if (customOnly && !it2.value().second.getPropertyTypeId().isCustom()) {
+            if (customOnly && !it2.value().second.isCustom()) {
                 continue;
             }
 
@@ -478,7 +478,7 @@ RPropertyAttributes RPropertyEditor::getPropertyAttributes(const QString& group,
 
     QPair<QVariant, RPropertyAttributes> pair = combinedProperties[group][title];
 
-    if (pair.second.getPropertyTypeId().isCustom()) {
+    if (pair.second.isCustom()) {
         return getCustomPropertyAttributes(group, title);
     }
 
@@ -487,7 +487,7 @@ RPropertyAttributes RPropertyEditor::getPropertyAttributes(const QString& group,
 
 RPropertyAttributes RPropertyEditor::getCustomPropertyAttributes(const QString& group, const QString& title) {
     RPropertyAttributes ret = RObject::getCustomPropertyAttributes(group, title);
-    ret.setPropertyTypeId(RPropertyTypeId(group, title));
+    //ret.setPropertyTypeId(RPropertyTypeId(group, title));
     return ret;
 }
 

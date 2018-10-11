@@ -402,9 +402,11 @@ bool RObject::setMember(QList<double>& variable, const QVariant& value, bool con
  *      The IDs that are returned can be translated into a group title and
  *      a property title using \ref getPropertyGroupTitle and \ref getPropertyTitle.
  */
-QSet<RPropertyTypeId> RObject::getPropertyTypeIds() const {
-    QSet<RPropertyTypeId> ret = RPropertyTypeId::getPropertyTypeIds(typeid(*this));
-    ret.unite(getCustomPropertyTypeIds());
+QSet<RPropertyTypeId> RObject::getPropertyTypeIds(RPropertyAttributes::Option option) const {
+    QSet<RPropertyTypeId> ret = RPropertyTypeId::getPropertyTypeIds(typeid(*this), option);
+    if (option==RPropertyAttributes::NoOptions) {
+        ret.unite(getCustomPropertyTypeIds());
+    }
     return ret;
 }
 

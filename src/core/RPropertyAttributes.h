@@ -30,7 +30,6 @@
 
 #include "RDebug.h"
 #include "RMath.h"
-#include "RPropertyTypeId.h"
 
 /**
  * Structure to transfer attributes about property types.
@@ -71,7 +70,10 @@ public:
         Sum = 0x100000 | ReadOnly | Redundant,  //!< Sum up this property when multiple entities are selected (area, length),
                                          //!< implies ReadOnly and Redundant
         Undeletable = 0x200000,          //!< Property is undeletable (custom properties only)
-        OnRequest = 0x400000             //!< Property shown on request (slow to compute)
+        OnRequest = 0x400000,            //!< Property shown on request (slow to compute)
+        Location = 0x800000,             //!< Property affected when transforming
+        RefPoint = 0x1000000,            //!< Property affected when moving reference point
+        Geometry = Location | RefPoint   //!< Property affected when chaning geometry (Location | RefPoint)
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -218,6 +220,10 @@ public:
         return options.testFlag(Label);
     }
 
+    bool isCustom() const {
+        return options.testFlag(Custom);
+    }
+
     bool isDimensionLabel() const {
         return options.testFlag(DimensionLabel);
     }
@@ -246,14 +252,6 @@ public:
         setOption(NumericallySorted, on);
     }
 
-    RPropertyTypeId getPropertyTypeId() const {
-        return propertyTypeId;
-    }
-
-    void setPropertyTypeId(RPropertyTypeId pid) {
-        propertyTypeId = pid;
-    }
-
     QString getLabel() const {
         return label;
     }
@@ -278,9 +276,6 @@ public:
         if (choices != other.choices) {
             return false;
         }
-        if (propertyTypeId != other.propertyTypeId) {
-            return false;
-        }
 
         return true;
     }
@@ -294,7 +289,6 @@ private:
     RPropertyAttributes::Options options;
     QSet<QString> choices;
     QString label;
-    RPropertyTypeId propertyTypeId;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(RPropertyAttributes::Options)

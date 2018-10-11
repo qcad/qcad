@@ -32,6 +32,7 @@
 
 #include "RDebug.h"
 #include "RS.h"
+#include "RPropertyAttributes.h"
 
 /**
  * Represents unique property type IDs. Every property type an object can have
@@ -91,8 +92,9 @@ public:
     /**
      * \nonscriptable
      */
-    void generateId(const std::type_info& classInfo, 
-        const QString& groupTitle, const QString& title, bool forceNew = false);
+    void generateId(const std::type_info& classInfo,
+        const QString& groupTitle, const QString& title, bool forceNew = false,
+        RPropertyAttributes::Options options = RPropertyAttributes::NoOptions);
     /**
      * \nonscriptable
      */
@@ -102,8 +104,7 @@ public:
     /**
      * \nonscriptable
      */
-    static QSet<RPropertyTypeId> getPropertyTypeIds(
-            const std::type_info& classInfo);
+    static QSet<RPropertyTypeId> getPropertyTypeIds(const std::type_info& classInfo, RPropertyAttributes::Option = RPropertyAttributes::NoOptions);
     /**
      * \nonscriptable
      */
@@ -124,17 +125,30 @@ public:
 
 private:
     long int id;
+    RPropertyAttributes::Options options;
     QString customPropertyTitle;
     QString customPropertyName;
 
     static long int counter;
+
+    // maps class ID to set of property IDs:
     static QMap<QString, QSet<RPropertyTypeId> > propertyTypeByObjectMap;
-    static QMap<long int, QPair<QString, QString> > titleMap;
+
+    // maps class ID / option combinations to set of property IDs:
+    static QMap<QPair<QString, RPropertyAttributes::Option>, QSet<RPropertyTypeId> > propertyTypeByObjectOptionMap;
+
+    // maps property type IDs to group title / title:
+    static QMap<long int, QPair<QString, QString> > idToTitleMap;
+
+    // maps group title / title to property ID:
+    static QMap<QString, QMap<QString, RPropertyTypeId> > titleToIdMap;
+
+    static QList<RPropertyAttributes::Option> cachedOptionList;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RPropertyTypeId& p);
 
-QCADCORE_EXPORT uint qHash(RPropertyTypeId propertyTypeId);
+QCADCORE_EXPORT uint qHash(const RPropertyTypeId& propertyTypeId);
 
 Q_DECLARE_METATYPE(RPropertyTypeId)
 Q_DECLARE_METATYPE(RPropertyTypeId*)

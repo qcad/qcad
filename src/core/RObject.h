@@ -154,7 +154,7 @@ public:
         return getFlag(RObject::Undone);
     }
 
-    virtual QSet<RPropertyTypeId> getPropertyTypeIds() const;
+    virtual QSet<RPropertyTypeId> getPropertyTypeIds(RPropertyAttributes::Option option = RPropertyAttributes::NoOptions) const;
     virtual QSet<RPropertyTypeId> getCustomPropertyTypeIds() const;
 
     /**
