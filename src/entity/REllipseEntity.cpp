@@ -76,18 +76,18 @@ void REllipseEntity::init() {
     REllipseEntity::PropertyDisplayedColor.generateId(typeid(REllipseEntity), REntity::PropertyDisplayedColor);
     REllipseEntity::PropertyDrawOrder.generateId(typeid(REllipseEntity), REntity::PropertyDrawOrder);
 
-    REllipseEntity::PropertyCenterX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));
-    REllipseEntity::PropertyCenterY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    REllipseEntity::PropertyCenterZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    REllipseEntity::PropertyMajorPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "X"));
-    REllipseEntity::PropertyMajorPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    REllipseEntity::PropertyMajorPointZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    REllipseEntity::PropertyRatio.generateId(typeid(REllipseEntity), "",QT_TRANSLATE_NOOP("REntity",  "Ratio"));
-    REllipseEntity::PropertyStartParam.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Parameter"));
-    REllipseEntity::PropertyEndParam.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "End Parameter"));
-    REllipseEntity::PropertyStartAngle.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), true);
-    REllipseEntity::PropertyEndAngle.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), true);
-    REllipseEntity::PropertyReversed.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Reversed"));
+    REllipseEntity::PropertyCenterX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyCenterY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyCenterZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyMajorPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyMajorPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyMajorPointZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyRatio.generateId(typeid(REllipseEntity), "",QT_TRANSLATE_NOOP("REntity",  "Ratio"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyStartParam.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Parameter"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyEndParam.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "End Parameter"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyStartAngle.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), true, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyEndAngle.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), true, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyReversed.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Reversed"), false, RPropertyAttributes::Geometry);
 
     REllipseEntity::PropertyStartPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "X"));
     REllipseEntity::PropertyStartPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Y"));

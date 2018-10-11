@@ -84,13 +84,14 @@ void RArcEntity::init() {
     RArcEntity::PropertyColor.generateId(typeid(RArcEntity), REntity::PropertyColor);
     RArcEntity::PropertyDisplayedColor.generateId(typeid(RArcEntity), REntity::PropertyDisplayedColor);
     RArcEntity::PropertyDrawOrder.generateId(typeid(RArcEntity), REntity::PropertyDrawOrder);
-    RArcEntity::PropertyCenterX.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RArcEntity::PropertyCenterY.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RArcEntity::PropertyCenterZ.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RArcEntity::PropertyRadius.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Radius"));
-    RArcEntity::PropertyStartAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"));
-    RArcEntity::PropertyEndAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "End Angle"));
-    RArcEntity::PropertyReversed.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Reversed"));
+
+    RArcEntity::PropertyCenterX.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyCenterY.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyCenterZ.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyRadius.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Radius"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyStartAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyEndAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyReversed.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Reversed"), false, RPropertyAttributes::Geometry);
 
     RArcEntity::PropertyDiameter.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Diameter"));
     RArcEntity::PropertyLength.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));

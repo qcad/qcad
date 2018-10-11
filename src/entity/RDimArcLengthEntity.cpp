@@ -110,9 +110,9 @@ void RDimArcLengthEntity::init() {
     RDimArcLengthEntity::PropertyExtLineFix.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyExtLineFix);
     RDimArcLengthEntity::PropertyExtLineFixLength.generateId(typeid(RDimArcLengthEntity), RDimensionEntity::PropertyExtLineFixLength);
 
-    RDimArcLengthEntity::PropertyCenterX.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true);
-    RDimArcLengthEntity::PropertyCenterY.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true);
-    RDimArcLengthEntity::PropertyCenterZ.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true);
+    RDimArcLengthEntity::PropertyCenterX.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+    RDimArcLengthEntity::PropertyCenterY.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+    RDimArcLengthEntity::PropertyCenterZ.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
     RDimArcLengthEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimArcLengthEntity), RDimAngularEntity::PropertyExtensionLine1EndX);
     RDimArcLengthEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimArcLengthEntity), RDimAngularEntity::PropertyExtensionLine1EndY);
@@ -126,9 +126,9 @@ void RDimArcLengthEntity::init() {
     RDimArcLengthEntity::PropertyExtensionLine2EndY.generateId(typeid(RDimArcLengthEntity), RDimAngularEntity::PropertyExtensionLine2EndY);
     RDimArcLengthEntity::PropertyExtensionLine2EndZ.generateId(typeid(RDimArcLengthEntity), RDimAngularEntity::PropertyExtensionLine2EndZ);
 
-    RDimArcLengthEntity::PropertyDimArcPositionX.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true);
-    RDimArcLengthEntity::PropertyDimArcPositionY.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true);
-    RDimArcLengthEntity::PropertyDimArcPositionZ.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true);
+    RDimArcLengthEntity::PropertyDimArcPositionX.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+    RDimArcLengthEntity::PropertyDimArcPositionY.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+    RDimArcLengthEntity::PropertyDimArcPositionZ.generateId(typeid(RDimArcLengthEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
     RDimArcLengthEntity::PropertyDimArcSymbolType.generateId(typeid(RDimArcLengthEntity), "", QT_TRANSLATE_NOOP("REntity", "Arc Symbol Type"));
 }

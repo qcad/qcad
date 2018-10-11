@@ -100,13 +100,13 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyExtLineFix.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyExtLineFix);
     RDimRadialEntity::PropertyExtLineFixLength.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyExtLineFixLength);
 
-    RDimRadialEntity::PropertyCenterPointX.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true);
-    RDimRadialEntity::PropertyCenterPointY.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true);
-    RDimRadialEntity::PropertyCenterPointZ.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true);
+    RDimRadialEntity::PropertyCenterPointX.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+    RDimRadialEntity::PropertyCenterPointY.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+    RDimRadialEntity::PropertyCenterPointZ.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
-    RDimRadialEntity::PropertyChordPointX.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RDimRadialEntity::PropertyChordPointY.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RDimRadialEntity::PropertyChordPointZ.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RDimRadialEntity::PropertyChordPointX.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RDimRadialEntity::PropertyChordPointY.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RDimRadialEntity::PropertyChordPointZ.generateId(typeid(RDimRadialEntity), QT_TRANSLATE_NOOP("REntity", "Chord Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 }
 
 bool RDimRadialEntity::setProperty(RPropertyTypeId propertyTypeId,

@@ -85,17 +85,17 @@ void RImageEntity::init() {
 
     RImageEntity::PropertyFileName.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "File"));
 
-    RImageEntity::PropertyInsertionPointX.generateId(typeid(RImageEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RImageEntity::PropertyInsertionPointY.generateId(typeid(RImageEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RImageEntity::PropertyInsertionPointZ.generateId(typeid(RImageEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RImageEntity::PropertyInsertionPointX.generateId(typeid(RImageEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RImageEntity::PropertyInsertionPointY.generateId(typeid(RImageEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RImageEntity::PropertyInsertionPointZ.generateId(typeid(RImageEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 
-    RImageEntity::PropertyScaleFactorX.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Width Factor"));
-    RImageEntity::PropertyScaleFactorY.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Height Factor"));
+    RImageEntity::PropertyScaleFactorX.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Width Factor"), false, RPropertyAttributes::Geometry);
+    RImageEntity::PropertyScaleFactorY.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Height Factor"), false, RPropertyAttributes::Geometry);
 
-    RImageEntity::PropertyWidth.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Width"));
-    RImageEntity::PropertyHeight.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
+    RImageEntity::PropertyWidth.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Width"), false, RPropertyAttributes::Geometry);
+    RImageEntity::PropertyHeight.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"), false, RPropertyAttributes::Geometry);
 
-    RImageEntity::PropertyAngle.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RImageEntity::PropertyAngle.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"), false, RPropertyAttributes::Geometry);
 
     RImageEntity::PropertyFade.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Fade"));
 }

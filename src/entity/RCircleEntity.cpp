@@ -72,10 +72,11 @@ void RCircleEntity::init() {
     RCircleEntity::PropertyColor.generateId(typeid(RCircleEntity), REntity::PropertyColor);
     RCircleEntity::PropertyDisplayedColor.generateId(typeid(RCircleEntity), REntity::PropertyDisplayedColor);
     RCircleEntity::PropertyDrawOrder.generateId(typeid(RCircleEntity), REntity::PropertyDrawOrder);
-    RCircleEntity::PropertyCenterX.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RCircleEntity::PropertyCenterY.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RCircleEntity::PropertyCenterZ.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RCircleEntity::PropertyRadius.generateId(typeid(RCircleEntity), "", QT_TRANSLATE_NOOP("REntity", "Radius"));
+
+    RCircleEntity::PropertyCenterX.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RCircleEntity::PropertyCenterY.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RCircleEntity::PropertyCenterZ.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RCircleEntity::PropertyRadius.generateId(typeid(RCircleEntity), "", QT_TRANSLATE_NOOP("REntity", "Radius"), false, RPropertyAttributes::Geometry);
 
     RCircleEntity::PropertyDiameter.generateId(typeid(RCircleEntity), "", QT_TRANSLATE_NOOP("REntity", "Diameter"));
     RCircleEntity::PropertyCircumference.generateId(typeid(RCircleEntity), "", QT_TRANSLATE_NOOP("REntity", "Circumference"));

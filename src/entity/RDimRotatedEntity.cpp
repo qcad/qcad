@@ -118,7 +118,7 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyExtensionPoint2Y.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyExtensionPoint2Y);
     RDimRotatedEntity::PropertyExtensionPoint2Z.generateId(typeid(RDimRotatedEntity), RDimLinearEntity::PropertyExtensionPoint2Z);
 
-    RDimRotatedEntity::PropertyAngle.generateId(typeid(RDimRotatedEntity), "", QT_TRANSLATE_NOOP("REntity", "Dimension Angle"));
+    RDimRotatedEntity::PropertyAngle.generateId(typeid(RDimRotatedEntity), "", QT_TRANSLATE_NOOP("REntity", "Dimension Angle"), false, RPropertyAttributes::Geometry);
 }
 
 bool RDimRotatedEntity::setProperty(RPropertyTypeId propertyTypeId,
