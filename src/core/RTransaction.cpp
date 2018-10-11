@@ -548,6 +548,8 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
     bool mustClone = false;
     if (!entity.isNull() && entity->getId()!=REntity::INVALID_ID) {
+        // always clone:
+        //mustClone = true;
         QSharedPointer<REntity> oldEntity = storage->queryEntityDirect(entity->getId());
         if (!oldEntity.isNull()) {
             // object is entity and not new:
@@ -708,10 +710,15 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         // and store the property changes (if any) in this transaction:
         QSet<RPropertyTypeId> propertyTypeIds;
         if (modifiedPropertyTypeIds.isEmpty()) {
+//            qWarning() << "doing full diff of all properties";
+//            qWarning() << "old obj: " << *oldObject;
+//            qWarning() << "new obj: " << *object;
             propertyTypeIds = object->getPropertyTypeIds();
         }
         else {
             propertyTypeIds = modifiedPropertyTypeIds;
+
+            //qDebug() << "only diff props: " << propertyTypeIds;
 
             // if at least one property is a redundant property, we need to
             // check all properties for changes:
@@ -730,6 +737,9 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
             if (all) {
                 propertyTypeIds = object->getPropertyTypeIds();
+//                qWarning() << "doing full diff of all properties";
+//                qWarning() << "old obj: " << *oldObject;
+//                qWarning() << "new obj: " << *object;
             }
         }
 
