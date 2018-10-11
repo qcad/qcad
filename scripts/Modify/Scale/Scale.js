@@ -281,11 +281,11 @@ Scale.prototype.getOperation = function(preview) {
 /**
  * Callback function for Transform.getOperation.
  */
-Scale.prototype.transform = function(entity, k, op, preview, forceNew) {
+Scale.prototype.transform = function(entity, k, op, preview, flags) {
     // uniform scaling (supported by all entities):
     if (isNull(this.factorY)) {
         entity.scale(Math.pow(this.factorX, k), this.focusPoint);
-        op.addObject(entity, this.useCurrentAttributes, forceNew);
+        op.addObject(entity, flags);
         return;
     }
 
@@ -316,14 +316,14 @@ Scale.prototype.transform = function(entity, k, op, preview, forceNew) {
             op.deleteObject(entity);
         }
         if (!isNull(e)) {
-            op.addObject(e, this.useCurrentAttributes, forceNew);
+            op.addObject(e, flags);
         }
         return;
     }
 
     // non-uniform scaling of other entities:
     entity.scale(sv, this.focusPoint);
-    op.addObject(entity, this.useCurrentAttributes, forceNew);
+    op.addObject(entity, flags);
 };
 
 Scale.prototype.getAuxPreview = function() {

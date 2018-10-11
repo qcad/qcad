@@ -438,7 +438,8 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             //qDebug("value: ", value);
 
             var attributes = this.getPropertyAttributes(group, title);
-            var propertyTypeId = attributes.getPropertyTypeId();
+            //var propertyTypeId = attributes.getPropertyTypeId();
+            var propertyTypeId = RPropertyTypeId.getPropertyTypeId(group, title);
 
             //qDebug("isMixed: ", attributes.isMixed());
 

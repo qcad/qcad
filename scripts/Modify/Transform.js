@@ -134,12 +134,20 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
                 }
             }
 
+            var f = RAddObjectsOperation.GeometryOnly;
+            if (!this.useCurrentAttributes) {
+                f = f | RAddObjectsOperation.UseAttributes;
+            }
+
             if (cache) {
                 op.deleteObject(entity);
-                this.transform(entity, k, op, preview, true);
+                this.transform(entity, k, op, preview, f | RAddObjectsOperation.ForceNew);
             }
             else {
-                this.transform(entity, k, op, preview, copies>0);
+                if (copies>0) {
+                    f = f | RAddObjectsOperation.ForceNew;
+                }
+                this.transform(entity, k, op, preview, f);
             }
         }
         op.endCycle();

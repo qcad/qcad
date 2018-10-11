@@ -229,14 +229,14 @@ Projection.prototype.postTransform = function(entity) {
  * Callback function for Transform.getOperation. Generic for all projections.
  * \param k Ignored
  */
-Projection.prototype.transform = function(entity, k, op, preview, forceNew) {
+Projection.prototype.transform = function(entity, k, op, preview, flags) {
     var i;
 
     this.preTransform(entity);
 
     // shapes that represent this entity:
     var shapes = entity.getShapes();
-    this.addTransformedShapes(entity, shapes, op, preview, forceNew);
+    this.addTransformedShapes(entity, shapes, op, preview, flags);
 
     // text data that is part of this entity (dimension label):
     if (isDimensionEntity(entity) && isFunction(entity.getTextData)) {
@@ -247,7 +247,7 @@ Projection.prototype.transform = function(entity, k, op, preview, forceNew) {
                 continue;
             }
             shapes = painterPaths[i].getShapes();
-            this.addTransformedShapes(entity, shapes, op, preview, forceNew);
+            this.addTransformedShapes(entity, shapes, op, preview, flags);
         }
     }
 };
@@ -260,7 +260,7 @@ Projection.prototype.transform = function(entity, k, op, preview, forceNew) {
  * \param shapes Array The transformed shapes
  * \param op RAddObjectsOperation Operation
  */
-Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview, forceNew) {
+Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview, flags) {
     for (var i=0; i<shapes.length; i++) {
         var s = this.projectShape(shapes[i].data(), preview);
         for (var n=0; n<s.length; n++) {
@@ -275,7 +275,8 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
 
             e.copyAttributesFrom(entity);
             //e.move(this.targetPoint);
-            op.addObject(e, false, forceNew);
+            flags = flags | RAddObjectsOperation.UseAttributes;
+            op.addObject(e, flags);
         }
     }
 };
