@@ -37,6 +37,7 @@
 	<entry key="RSnap::Status" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RPluginInterface::InitStatus" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RRefPoint::Flags" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RAddObjectsOperation::Flags" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="RS::AngleFormat" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::AngleUnit" value="toNumber()" testFunction="isNumber()" cast="int" />

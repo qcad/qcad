@@ -81,6 +81,8 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RAddObjectsOperation* getSelf(const QString& fName, QScriptContext* context)
     ;static RAddObjectsOperation* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static  QScriptValue toScriptValueEnumFlag(QScriptEngine* engine, const RAddObjectsOperation::Flag& value)
+    ;static  void fromScriptValueEnumFlag(const QScriptValue& value, RAddObjectsOperation::Flag& out)
     ;};
     #endif
     

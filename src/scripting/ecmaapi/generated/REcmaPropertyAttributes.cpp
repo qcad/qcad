@@ -114,6 +114,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isLabel, "isLabel");
             
+            REcmaHelper::registerFunction(&engine, proto, isCustom, "isCustom");
+            
             REcmaHelper::registerFunction(&engine, proto, isDimensionLabel, "isDimensionLabel");
             
             REcmaHelper::registerFunction(&engine, proto, isInteger, "isInteger");
@@ -127,10 +129,6 @@
             REcmaHelper::registerFunction(&engine, proto, isNumericallySorted, "isNumericallySorted");
             
             REcmaHelper::registerFunction(&engine, proto, setNumericallySorted, "setNumericallySorted");
-            
-            REcmaHelper::registerFunction(&engine, proto, getPropertyTypeId, "getPropertyTypeId");
-            
-            REcmaHelper::registerFunction(&engine, proto, setPropertyTypeId, "setPropertyTypeId");
             
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
@@ -278,6 +276,21 @@
 
     ctor.setProperty("OnRequest",
     QScriptValue(RPropertyAttributes::OnRequest),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Location",
+    QScriptValue(RPropertyAttributes::Location),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("RefPoint",
+    QScriptValue(RPropertyAttributes::RefPoint),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Geometry",
+    QScriptValue(RPropertyAttributes::Geometry),
     QScriptValue::ReadOnly);
 
 
@@ -2123,6 +2136,55 @@
             return result;
         }
          QScriptValue
+        REcmaPropertyAttributes::isCustom
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isCustom", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isCustom";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isCustom", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isCustom();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isCustom().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isCustom", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPropertyAttributes::isDimensionLabel
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2475,122 +2537,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setNumericallySorted", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPropertyAttributes::getPropertyTypeId
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPropertyAttributes::getPropertyTypeId", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::getPropertyTypeId";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPropertyAttributes* self = 
-                        getSelf("getPropertyTypeId", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RPropertyTypeId'
-    RPropertyTypeId cppResult =
-        
-               self->getPropertyTypeId();
-        // return type: RPropertyTypeId
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.getPropertyTypeId().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPropertyAttributes::getPropertyTypeId", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPropertyAttributes::setPropertyTypeId
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPropertyAttributes::setPropertyTypeId", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setPropertyTypeId";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPropertyAttributes* self = 
-                        getSelf("setPropertyTypeId", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RPropertyTypeId */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RPropertyTypeId*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RPropertyTypeId*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RPropertyAttributes: Argument 0 is not of type RPropertyTypeId.",
-                               context);                    
-                    }
-                    RPropertyTypeId 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setPropertyTypeId(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setPropertyTypeId().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setPropertyTypeId", context, engine);
             return result;
         }
          QScriptValue

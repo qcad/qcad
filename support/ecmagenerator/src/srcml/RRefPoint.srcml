@@ -114,7 +114,7 @@
     }</block></function>
 
     <function><type><name>bool</name></type> <name>getFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Flag</name></name></type> <name>flag</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr>(<name>flags</name> &amp; <name>flags</name>) == <name>flag</name></expr>;</return>
+        <return>return <expr>(<name>flags</name> &amp; <name>flag</name>) == <name>flag</name></expr>;</return>
     }</block></function>
 
     <function><type><name><name>RRefPoint</name>::<name>Flags</name></name></type> <name>getFlags</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

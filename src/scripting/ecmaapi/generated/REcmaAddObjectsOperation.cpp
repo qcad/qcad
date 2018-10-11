@@ -105,8 +105,40 @@
     // enum values:
     
 
+    ctor.setProperty("NoFlags",
+    QScriptValue(RAddObjectsOperation::NoFlags),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UseAttributes",
+    QScriptValue(RAddObjectsOperation::UseAttributes),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ForceNew",
+    QScriptValue(RAddObjectsOperation::ForceNew),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("GeometryOnly",
+    QScriptValue(RAddObjectsOperation::GeometryOnly),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Delete",
+    QScriptValue(RAddObjectsOperation::Delete),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
+    qScriptRegisterMetaType<RAddObjectsOperation::Flag>(
+        &engine,
+        toScriptValueEnumFlag,
+        fromScriptValueEnumFlag,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
         
     // init class:
     engine.globalObject().setProperty("RAddObjectsOperation",
@@ -911,6 +943,77 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RObject > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RAddObjectsOperation::Flags */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RObject > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RObject * o0 = 
+                    qscriptvalue_cast < RObject * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RObject >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RObject >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RAddObjectsOperation: Argument 0 is not of type  RObject .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RAddObjectsOperation: Argument 0 is not of type  RObject .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RObject > 
+                    //a0 =
+                    //QSharedPointer < RObject >(o0->clone());
+                
+                    // argument isStandardType
+                    RAddObjectsOperation::Flags
+                    a1 =
+                    (RAddObjectsOperation::Flags)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addObject(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.addObject().",
                    context);
@@ -1358,5 +1461,15 @@
             
 
 
+        }
+         QScriptValue REcmaAddObjectsOperation::toScriptValueEnumFlag(QScriptEngine* engine, const RAddObjectsOperation::Flag& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaAddObjectsOperation::fromScriptValueEnumFlag(const QScriptValue& value, RAddObjectsOperation::Flag& out)
+    
+        {
+            out = qvariant_cast<RAddObjectsOperation::Flag>(value.toVariant());
         }
         

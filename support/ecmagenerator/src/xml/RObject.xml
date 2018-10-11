@@ -101,7 +101,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; RPropertyTypeId &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="RPropertyAttributes::Option"
+        typeName="RPropertyAttributes::Option" name="option"
+        hasDefault="true"
+        default="RPropertyAttributes :: NoOptions"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getCustomPropertyTypeIds"
     cppName="getCustomPropertyTypeIds" specifier="public"

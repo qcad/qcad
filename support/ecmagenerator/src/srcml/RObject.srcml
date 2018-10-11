@@ -155,7 +155,7 @@
         <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RObject</name>::<name>Undone</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>(<param><decl><type><name><name>RPropertyAttributes</name>::<name>Option</name></name></type> <name>option</name> =<init> <expr><name><name>RPropertyAttributes</name>::<name>NoOptions</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getCustomPropertyTypeIds</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**

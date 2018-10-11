@@ -7,6 +7,13 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="ROperation" specifier="public" />
+    <enum name="Flag">
+      <value name="NoFlags" />
+      <value name="UseAttributes" />
+      <value name="ForceNew" />
+      <value name="GeometryOnly" />
+      <value name="Delete" />
+    </enum>
     <constructor>
       <variant>
         <arg type="bool" typeName="bool" name="undoable"
@@ -58,6 +65,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="forceNew"
         hasDefault="true" default="false" isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RObject &gt; &amp;"
+        typeName="QSharedPointer &lt; RObject &gt;" name="object"
+        isConst="true" />
+        <arg type="RAddObjectsOperation::Flags"
+        typeName="RAddObjectsOperation::Flags" name="flags"
+        isConst="false" />
       </variant>
     </method>
     <method name="deleteObject" cppName="deleteObject"

@@ -33,6 +33,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyAttributes.h"</cpp:file></cpp:include>
 
 <comment type="block">/**
  * Represents unique property type IDs. Every property type an object can have
@@ -92,8 +93,9 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function_decl><type><name>void</name></type> <name>generateId</name><parameter_list>(<param><decl><type><name>const</name> <name><name>std</name>::<name>type_info</name></name>&amp;</type> <name>classInfo</name></decl></param>, 
-        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>groupTitle</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceNew</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>generateId</name><parameter_list>(<param><decl><type><name>const</name> <name><name>std</name>::<name>type_info</name></name>&amp;</type> <name>classInfo</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>groupTitle</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceNew</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name> =<init> <expr><name><name>RPropertyAttributes</name>::<name>NoOptions</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <comment type="block">/**
      * \nonscriptable
      */</comment>
@@ -103,8 +105,7 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function_decl><type><name>static</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>(
-            <param><decl><type><name>const</name> <name><name>std</name>::<name>type_info</name></name>&amp;</type> <name>classInfo</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>(<param><decl><type><name>const</name> <name><name>std</name>::<name>type_info</name></name>&amp;</type> <name>classInfo</name></decl></param>, <param><decl><type><name><name>RPropertyAttributes</name>::<name>Option</name></name></type> =<init> <expr><name><name>RPropertyAttributes</name>::<name>NoOptions</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <comment type="block">/**
      * \nonscriptable
      */</comment>
@@ -125,17 +126,30 @@
 
 </public><private>private:
     <decl_stmt><decl><type><name>long</name> <name>int</name></type> <name>id</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>customPropertyTitle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>customPropertyName</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>long</name> <name>int</name></type> <name>counter</name></decl>;</decl_stmt>
+
+    <comment type="line">// maps class ID to set of property IDs:</comment>
     <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>propertyTypeByObjectMap</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>long</name> <name>int</name></argument>, <argument><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>titleMap</name></decl>;</decl_stmt>
+
+    <comment type="line">// maps class ID / option combinations to set of property IDs:</comment>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name><name>RPropertyAttributes</name>::<name>Option</name></name></argument>&gt;</argument_list></name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>propertyTypeByObjectOptionMap</name></decl>;</decl_stmt>
+
+    <comment type="line">// maps property type IDs to group title / title:</comment>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>long</name> <name>int</name></argument>, <argument><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>idToTitleMap</name></decl>;</decl_stmt>
+
+    <comment type="line">// maps group title / title to property ID:</comment>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>titleToIdMap</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name><name>RPropertyAttributes</name>::<name>Option</name></name></argument>&gt;</argument_list></name></type> <name>cachedOptionList</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
 
-<function_decl><type><name>QCADCORE_EXPORT</name> <name>uint</name></type> <name>qHash</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>uint</name></type> <name>qHash</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>)</parameter_list>;</function_decl>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyTypeId</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyTypeId*</argument>)</argument_list></macro>

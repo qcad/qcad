@@ -142,6 +142,9 @@
         isLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isCustom
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isDimensionLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -161,12 +164,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setNumericallySorted
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getPropertyTypeId
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setPropertyTypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLabel

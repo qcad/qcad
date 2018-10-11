@@ -42,34 +42,87 @@
  */</comment>
 <class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RAddObjectsOperation</name><super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
 </private><public>public:
+    <enum>enum <name>Flag</name> <block>{
+        <expr><name>NoFlags</name>       = 0x000</expr>,
+        <expr><name>UseAttributes</name> = 0x001</expr>,     <comment type="block">/**&lt; Use assigned attributes instead of current attributes (color, linetype, width) */</comment>
+        <expr><name>ForceNew</name>      = 0x002</expr>,     <comment type="block">/**&lt; Force adding existing entity as new, duplicate entity */</comment>
+        <expr><name>GeometryOnly</name>  = 0x004</expr>,     <comment type="block">/**&lt; Only geometric properties have changed */</comment>
+        <expr><name>Delete</name>        = 0x008</expr>      <comment type="block">/**&lt; Delete object */</comment>
+    }</block>;</enum>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>Flag</argument>)</argument_list></macro>
+
     <class>class <name>RModifiedObjects</name> <block>{<private type="default">
     </private><public>public:
         <comment type="line">// constructor to mark cycles:</comment>
         <constructor><name>RModifiedObjects</name><parameter_list>()</parameter_list>
             <member_list>: <call><name>object</name><argument_list>(<argument><expr><call><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call>,
-              <call><name>useCurrentAttributes</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>,
-              <call><name>forceNew</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>,
-              <call><name>deleteIt</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+              <call><name>flags</name><argument_list>(<argument><expr><name><name>RAddObjectsOperation</name>::<name>NoFlags</name></name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
 
         <comment type="line">// constructor to delete object:</comment>
         <constructor><name>RModifiedObjects</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>object</name></decl></param>)</parameter_list>
             <member_list>: <call><name>object</name><argument_list>(<argument><expr><name>object</name></expr></argument>)</argument_list></call>,
-              <call><name>useCurrentAttributes</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>,
-              <call><name>forceNew</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>,
-              <call><name>deleteIt</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+              <call><name>flags</name><argument_list>(<argument><expr><name><name>RAddObjectsOperation</name>::<name>Delete</name></name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
 
         <comment type="line">// constructor to add object:</comment>
         <constructor><name>RModifiedObjects</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>object</name></decl></param>, <param><decl><type><name>bool</name></type> <name>useCurrentAttributes</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceNew</name></decl></param>)</parameter_list>
-            <member_list>: <call><name>object</name><argument_list>(<argument><expr><name>object</name></expr></argument>)</argument_list></call>,
-              <call><name>useCurrentAttributes</name><argument_list>(<argument><expr><name>useCurrentAttributes</name></expr></argument>)</argument_list></call>,
-              <call><name>forceNew</name><argument_list>(<argument><expr><name>forceNew</name></expr></argument>)</argument_list></call>,
-              <call><name>deleteIt</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+            <member_list>: <call><name>object</name><argument_list>(<argument><expr><name>object</name></expr></argument>)</argument_list></call> </member_list><block>{
+
+            <expr_stmt><expr><call><name>setUseAttributes</name><argument_list>(<argument><expr>!<name>useCurrentAttributes</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <constructor_decl><name>setForceNew</name><parameter_list>(<param><decl><type><name>forceNew</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        }</block></constructor>
+
+        <comment type="line">// constructor to add object:</comment>
+        <constructor><name>RModifiedObjects</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>object</name></decl></param>, <param><decl><type><name><name>RAddObjectsOperation</name>::<name>Flags</name></name></type> <name>flags</name></decl></param>)</parameter_list>
+            <member_list>: <call><name>object</name><argument_list>(<argument><expr><name>object</name></expr></argument>)</argument_list></call>, <call><name>flags</name><argument_list>(<argument><expr><name>flags</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+
+        <function><type><name>void</name></type> <name>setUseAttributes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+            <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RAddObjectsOperation</name>::<name>UseAttributes</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        }</block></function>
+
+        <function><type><name>bool</name></type> <name>getUseAttributes</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+            <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RAddObjectsOperation</name>::<name>UseAttributes</name></name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></function>
+
+        <function><type><name>void</name></type> <name>setForceNew</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+            <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RAddObjectsOperation</name>::<name>ForceNew</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        }</block></function>
+
+        <function><type><name>bool</name></type> <name>getForceNew</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+            <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RAddObjectsOperation</name>::<name>ForceNew</name></name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></function>
+
+        <function><type><name>void</name></type> <name>setGeometryOnly</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+            <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RAddObjectsOperation</name>::<name>GeometryOnly</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        }</block></function>
+
+        <function><type><name>bool</name></type> <name>getGeometryOnly</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+            <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RAddObjectsOperation</name>::<name>GeometryOnly</name></name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></function>
+
+        <function><type><name>void</name></type> <name>setDelete</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+            <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RAddObjectsOperation</name>::<name>Delete</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        }</block></function>
+
+        <function><type><name>bool</name></type> <name>getDelete</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+            <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RAddObjectsOperation</name>::<name>Delete</name></name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></function>
+
+        <function><type><name>void</name></type> <name>setFlag</name><parameter_list>(<param><decl><type><name><name>RAddObjectsOperation</name>::<name>Flag</name></name></type> <name>flag</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+            <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
+                <expr_stmt><expr><name>flags</name> |= <name>flag</name></expr>;</expr_stmt>
+            }</block></then> <else>else <block>{
+                <expr_stmt><expr><name>flags</name> &amp;= ~<name>flag</name></expr>;</expr_stmt>
+            }</block></else></if>
+        }</block></function>
+
+        <function><type><name>bool</name></type> <name>getFlag</name><parameter_list>(<param><decl><type><name><name>RAddObjectsOperation</name>::<name>Flag</name></name></type> <name>flag</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+            <return>return <expr>(<name>flags</name> &amp; <name>flag</name>) == <name>flag</name></expr>;</return>
+        }</block></function>
 
         <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>object</name></decl>;</decl_stmt>
-        <decl_stmt><decl><type><name>bool</name></type> <name>useCurrentAttributes</name></decl>;</decl_stmt>
-        <decl_stmt><decl><type><name>bool</name></type> <name>forceNew</name></decl>;</decl_stmt>
-        <decl_stmt><decl><type><name>bool</name></type> <name>deleteIt</name></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name><name>RAddObjectsOperation</name>::<name>Flags</name></name></type> <name>flags</name></decl>;</decl_stmt>
     </public>}</block>;</class>
+
 
 </public><public>public:
     <constructor_decl><name>RAddObjectsOperation</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undoable</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
@@ -89,7 +142,10 @@
     <function_decl><type><name>void</name></type> <name>endCycle</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addObject</name><parameter_list>(<param><decl><type><name>const</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name>&amp;</type> <name>object</name></decl></param>,
-        <param><decl><type><name>bool</name></type> <name>useCurrentAttributes</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceNew</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+        <param><decl><type><name>bool</name></type> <name>useCurrentAttributes</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceNew</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addObject</name><parameter_list>(<param><decl><type><name>const</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name>&amp;</type> <name>object</name></decl></param>,
+        <param><decl><type><name><name>RAddObjectsOperation</name>::<name>Flags</name></name></type> <name>flags</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>deleteObject</name><parameter_list>(<param><decl><type><name>const</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name>&amp;</type> <name>object</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -116,6 +172,10 @@
 
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAddObjectsOperation*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAddObjectsOperation::Flag</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAddObjectsOperation::Flag*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;RAddObjectsOperation::Flag&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;RAddObjectsOperation::Flag&gt;*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>
