@@ -67,7 +67,7 @@ bool RSpatialIndexSimple::removeFromIndex(
     Q_UNUSED(y2)
     Q_UNUSED(z2)
     
-    Q_ASSERT(false);
+    qFatal("not implemented");
     //RBox box(RVector(x1,y1,z1),RVector(x2,y2,z2));
     //si.remove(id);
     return true;
