@@ -48,10 +48,9 @@ RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool previ
         }
         
         // apply operation to cloned entity:
-        bool modified = entity->moveReferencePoint(referencePoint, targetPoint);
-        
-        if (modified) {
-            transaction.addObject(entity, false);
+        if (entity->moveReferencePoint(referencePoint, targetPoint)) {
+            QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::RefPoint);
+            transaction.addObject(entity, false, false, props);
         }
     }
         

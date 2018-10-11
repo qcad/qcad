@@ -38,7 +38,7 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
     RVector center = RVector::nullVector;
 
     RTranslation* translation = dynamic_cast<RTranslation*>(transformation);
-    if (translation!=NULL) {
+    if (translation!=nullptr) {
         translate = true;
         translationOffset = translation->offset;
         rotationAngle = translation->rotationAngle;
@@ -77,7 +77,17 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
                 entity->move(translationOffset * k);
             }
 
-            addObject(entity, useCurrentAttributes, !move);
+            //QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::Location);
+
+            RAddObjectsOperation::Flags flags = RAddObjectsOperation::GeometryOnly;
+            if (!useCurrentAttributes) {
+                flags = flags | RAddObjectsOperation::UseAttributes;
+            }
+            if (!move) {
+                flags = flags | RAddObjectsOperation::ForceNew;
+            }
+
+            addObject(entity, flags);
         }
         endCycle();
     }

@@ -57,7 +57,7 @@ void RAddObjectsOperation::replaceObject(const QSharedPointer<RObject>& object,
 
         if (addedObjects[i].object->getId()==id) {
             addedObjects[i].object = object;
-            addedObjects[i].useCurrentAttributes = useCurrentAttributes;
+            addedObjects[i].setUseAttributes(!useCurrentAttributes);
             return;
         }
     }
@@ -97,6 +97,22 @@ void RAddObjectsOperation::addObject(const QSharedPointer<RObject>& object,
     addedObjects.append(RModifiedObjects(object, useCurrentAttributes, forceNew));
 }
 
+void RAddObjectsOperation::addObject(const QSharedPointer<RObject>& object, RAddObjectsOperation::Flags flags) {
+    if (object.isNull()) {
+        return;
+    }
+
+    if (limitPreview) {
+        previewCounter += object->getComplexity();
+    }
+
+    //qDebug() << "addObject: flags:" << flags;
+
+    addedObjects.append(RModifiedObjects(object, flags));
+
+    //qDebug() << "flags:" << addedObjects.last().flags;
+}
+
 void RAddObjectsOperation::deleteObject(const QSharedPointer<RObject>& object) {
     if (object.isNull()) {
         return;
@@ -118,22 +134,31 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) {
             break;
         }
 
-        if (addedObjects[i].object.isNull()) {
+        RModifiedObjects modObj = addedObjects[i];
+
+        if (modObj.object.isNull()) {
             transaction.endCycle();
             //qWarning() << "RAddObjectsOperation::apply: "
             //        "list contains NULL object";
             continue;
         }
 
-        if (addedObjects[i].deleteIt) {
-            transaction.deleteObject(addedObjects[i].object);
+        if (modObj.getDelete()) {
+            transaction.deleteObject(modObj.object);
             continue;
         }
 
+        QSet<RPropertyTypeId> props;
+        if (modObj.getGeometryOnly()) {
+            // we know that only geometry was modified for this object:
+            props = modObj.object->getPropertyTypeIds(RPropertyAttributes::Geometry);
+        }
+
         transaction.addObject(
-            addedObjects[i].object,
-            addedObjects[i].useCurrentAttributes,
-            addedObjects[i].forceNew
+            modObj.object,
+            !modObj.getUseAttributes(),
+            modObj.getForceNew(),
+            props
         );
     }
 

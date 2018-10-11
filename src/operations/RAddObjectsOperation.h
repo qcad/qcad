@@ -41,34 +41,87 @@ class RObject;
  */
 class QCADOPERATIONS_EXPORT RAddObjectsOperation: public ROperation {
 public:
+    enum Flag {
+        NoFlags       = 0x000,
+        UseAttributes = 0x001,     /**< Use assigned attributes instead of current attributes (color, linetype, width) */
+        ForceNew      = 0x002,     /**< Force adding existing entity as new, duplicate entity */
+        GeometryOnly  = 0x004,     /**< Only geometric properties have changed (e.g. transformation) */
+        Delete        = 0x008      /**< Delete object */
+    };
+    Q_DECLARE_FLAGS(Flags, Flag)
+
     class RModifiedObjects {
     public:
         // constructor to mark cycles:
         RModifiedObjects()
             : object(QSharedPointer<RObject>()),
-              useCurrentAttributes(false),
-              forceNew(false),
-              deleteIt(false) {}
+              flags(RAddObjectsOperation::NoFlags) {}
 
         // constructor to delete object:
         RModifiedObjects(QSharedPointer<RObject> object)
             : object(object),
-              useCurrentAttributes(false),
-              forceNew(false),
-              deleteIt(true) {}
+              flags(RAddObjectsOperation::Delete) {}
 
         // constructor to add object:
         RModifiedObjects(QSharedPointer<RObject> object, bool useCurrentAttributes, bool forceNew)
-            : object(object),
-              useCurrentAttributes(useCurrentAttributes),
-              forceNew(forceNew),
-              deleteIt(false) {}
+            : object(object) {
+
+            setUseAttributes(!useCurrentAttributes);
+            setForceNew(forceNew);
+        }
+
+        // constructor to add object:
+        RModifiedObjects(QSharedPointer<RObject> object, RAddObjectsOperation::Flags flags)
+            : object(object), flags(flags) {}
+
+        void setUseAttributes(bool on) {
+            setFlag(RAddObjectsOperation::UseAttributes, on);
+        }
+
+        bool getUseAttributes() const {
+            return getFlag(RAddObjectsOperation::UseAttributes);
+        }
+
+        void setForceNew(bool on) {
+            setFlag(RAddObjectsOperation::ForceNew, on);
+        }
+
+        bool getForceNew() const {
+            return getFlag(RAddObjectsOperation::ForceNew);
+        }
+
+        void setGeometryOnly(bool on) {
+            setFlag(RAddObjectsOperation::GeometryOnly, on);
+        }
+
+        bool getGeometryOnly() const {
+            return getFlag(RAddObjectsOperation::GeometryOnly);
+        }
+
+        void setDelete(bool on) {
+            setFlag(RAddObjectsOperation::Delete, on);
+        }
+
+        bool getDelete() const {
+            return getFlag(RAddObjectsOperation::Delete);
+        }
+
+        void setFlag(RAddObjectsOperation::Flag flag, bool on) {
+            if (on) {
+                flags |= flag;
+            } else {
+                flags &= ~flag;
+            }
+        }
+
+        bool getFlag(RAddObjectsOperation::Flag flag) const {
+            return (flags & flag) == flag;
+        }
 
         QSharedPointer<RObject> object;
-        bool useCurrentAttributes;
-        bool forceNew;
-        bool deleteIt;
+        RAddObjectsOperation::Flags flags;
     };
+
 
 public:
     RAddObjectsOperation(bool undoable = true);
@@ -88,7 +141,10 @@ public:
     void endCycle();
 
     void addObject(const QSharedPointer<RObject>& object,
-        bool useCurrentAttributes = true, bool forceNew=false);
+        bool useCurrentAttributes=true, bool forceNew=false);
+
+    void addObject(const QSharedPointer<RObject>& object,
+        RAddObjectsOperation::Flags flags);
 
     void deleteObject(const QSharedPointer<RObject>& object);
 
@@ -115,5 +171,9 @@ private:
 
 
 Q_DECLARE_METATYPE(RAddObjectsOperation*)
+Q_DECLARE_METATYPE(RAddObjectsOperation::Flag)
+Q_DECLARE_METATYPE(RAddObjectsOperation::Flag*)
+Q_DECLARE_METATYPE(QFlags<RAddObjectsOperation::Flag>)
+Q_DECLARE_METATYPE(QFlags<RAddObjectsOperation::Flag>*)
 
 #endif

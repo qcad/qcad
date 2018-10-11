@@ -52,11 +52,11 @@ RTransaction RMoveSelectionOperation::apply(RDocument& document, bool preview) {
 
         // apply operation to entity:
         if (entity->move(targetPoint - referencePoint)) {
-            transaction.addObject(entity, false);
+            QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::Location);
+            transaction.addObject(entity, false, false, props);
         }
     }
 
     transaction.end();
-
     return transaction;
 }
