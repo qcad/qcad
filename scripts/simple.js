@@ -102,7 +102,7 @@ function createDocument() {
  * \return new empty RDocumentInterface with default settings
  */
 function createDocumentInterface() {
-    return new RDocumentInterface(new RDocument(new RMemoryStorage(), new RSpatialIndexSimple()));
+    return new RDocumentInterface(new RDocument(new RMemoryStorage(), createSpatialIndex()));
 }
 
 /**
