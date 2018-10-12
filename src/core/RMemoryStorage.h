@@ -214,7 +214,7 @@ protected:
     QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
     mutable QHash<REntity::Id, QSharedPointer<REntity> > selectedEntityMap;
     mutable bool selectedEntityMapDirty;
-    QMultiHash<RBlock::Id, QSharedPointer<REntity> > blockEntityMap;
+    QHash<RBlock::Id, QHash<REntity::Id, QSharedPointer<REntity> > > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
     QHash<RLayout::Id, QSharedPointer<RLayout> > layoutMap;

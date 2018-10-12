@@ -402,8 +402,8 @@ bool RMemoryStorage::hasBlockEntities(RBlock::Id blockId) const {
         return false;
     }
 
-    QList<QSharedPointer<REntity> > candidates = blockEntityMap.values(blockId);
-    QList<QSharedPointer<REntity> >::iterator it;
+    QHash<REntity::Id, QSharedPointer<REntity> > candidates = blockEntityMap.value(blockId);
+    QHash<REntity::Id, QSharedPointer<REntity> >::iterator it;
     for (it=candidates.begin(); it!=candidates.end(); it++) {
         QSharedPointer<REntity> e = *it;
         if (!e.isNull() && !e->isUndone()) {
@@ -419,8 +419,8 @@ QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
     }
 
     QSet<REntity::Id> result;
-    QList<QSharedPointer<REntity> > candidates = blockEntityMap.values(blockId);
-    QList<QSharedPointer<REntity> >::iterator it;
+    QHash<REntity::Id, QSharedPointer<REntity> > candidates = blockEntityMap.value(blockId);
+    QHash<REntity::Id, QSharedPointer<REntity> >::iterator it;
     for (it=candidates.begin(); it!=candidates.end(); it++) {
         QSharedPointer<REntity> e = *it;
         if (!e.isNull() && !e->isUndone()) {
@@ -1129,7 +1129,14 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
     if (!entity.isNull()) {
-        blockEntityMap.remove(entity->getBlockId(), entity);
+        //blockEntityMap.remove(entity->getBlockId(), entity);
+        blockEntityMap[entity->getBlockId()].remove(entity->getId());
+        if (blockEntityMap[entity->getBlockId()].isEmpty()) {
+            // no entities left for this block:
+            blockEntityMap.remove(entity->getBlockId());
+            //qDebug() << "blockEntityMap empty";
+        }
+        //qDebug() << "entities left for block:" << blockEntityMap[entity->getBlockId()].count();
         return true;
     }
 
@@ -1258,7 +1265,18 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     if (!entity.isNull()) {
         entityMap[entity->getId()] = entity;
-        blockEntityMap.insert(entity->getBlockId(), entity);
+
+        //QHash<REntity::Id, QSharedPointer<REntity> > candidates = blockEntityMap.value(blockId);
+
+        if (!blockEntityMap.contains(entity->getBlockId())) {
+            blockEntityMap.insert(entity->getBlockId(), QHash<REntity::Id, QSharedPointer<REntity> >());
+        }
+        blockEntityMap[entity->getBlockId()].insert(entity->getId(), entity);
+        //qDebug() << "blockEntityMap:" << blockEntityMap.count();
+        //qDebug() << "blockEntityMap block:" << blockEntityMap[entity->getBlockId()].count();
+
+        //blockEntityMap.insert(entity->getBlockId(), entity);
+
         setMaxDrawOrder(qMax(entity->getDrawOrder()+1, getMaxDrawOrder()));
 
         if (entity->getParentId()!=REntity::INVALID_ID) {
@@ -1343,7 +1361,16 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
 
         QSharedPointer<REntity> entity = obj.dynamicCast<REntity>();
         if (!entity.isNull()) {
-            blockEntityMap.remove(entity->getBlockId(), entity);
+            //blockEntityMap.remove(entity->getBlockId(), entity);
+
+            blockEntityMap[entity->getBlockId()].remove(entity->getId());
+            if (blockEntityMap[entity->getBlockId()].isEmpty()) {
+                // no entities left for this block:
+                blockEntityMap.remove(entity->getBlockId());
+                //qDebug() << "blockEntityMap empty";
+            }
+            //qDebug() << "entities left for block:" << blockEntityMap[entity->getBlockId()].count();
+
             //qDebug() << "deleteObject: removed " << entity->getId() << " from block " << entity->getBlockId();
 
             // remove entity from childMap values:
