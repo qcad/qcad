@@ -109,6 +109,8 @@ public:
     virtual RLayout::Id getLayoutId(const QString& layoutName) const;
 
     virtual QString getBlockName(RBlock::Id blockId) const;
+    virtual QString getBlockNameFromLayout(const QString& layoutName) const;
+    virtual QString getBlockNameFromLayout(RLayout::Id layoutId) const;
     virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     virtual RBlock::Id getBlockId(const QString& blockName) const;
     virtual RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const;

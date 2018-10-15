@@ -323,6 +323,8 @@ public:
 
     QString getTempBlockName() const;
     QString getBlockName(RBlock::Id blockId) const;
+    QString getBlockNameFromLayout(const QString& layoutName) const;
+    QString getBlockNameFromLayout(RLayout::Id layoutId) const;
     QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
     QString getLayerName(RLayer::Id layerId) const;

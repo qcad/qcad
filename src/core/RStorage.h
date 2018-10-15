@@ -398,6 +398,8 @@ public:
     virtual double getLinetypeScale() const;
 
     virtual QString getBlockName(RBlock::Id blockId) const = 0;
+    virtual QString getBlockNameFromLayout(const QString& layoutName) const = 0;
+    virtual QString getBlockNameFromLayout(RLayout::Id layoutId) const = 0;
     virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
     virtual RBlock::Id getBlockId(const QString& blockName) const = 0;
     virtual RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const = 0;

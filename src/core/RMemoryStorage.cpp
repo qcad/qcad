@@ -750,6 +750,32 @@ QString RMemoryStorage::getBlockName(RBlock::Id blockId) const {
     return l->getName();
 }
 
+QString RMemoryStorage::getBlockNameFromLayout(const QString& layoutName) const {
+    // look up layout:
+    QSet<RBlock::Id> ids = queryAllLayoutBlocks();
+    QSet<RBlock::Id>::iterator it;
+    for (it = ids.begin(); it != ids.end(); it++) {
+        QSharedPointer<RBlock> layoutBlock = queryBlockDirect(*it);
+        if (QString::compare(layoutBlock->getLayoutName(), layoutName, Qt::CaseInsensitive)==0) {
+            return layoutBlock->getName();
+        }
+    }
+    return QString();
+}
+
+QString RMemoryStorage::getBlockNameFromLayout(RLayout::Id layoutId) const {
+    // look up layout:
+    QSet<RBlock::Id> ids = queryAllLayoutBlocks();
+    QSet<RBlock::Id>::iterator it;
+    for (it = ids.begin(); it != ids.end(); it++) {
+        QSharedPointer<RBlock> layoutBlock = queryBlockDirect(*it);
+        if (layoutBlock->getLayoutId()==layoutId) {
+            return layoutBlock->getName();
+        }
+    }
+    return QString();
+}
+
 QSet<QString> RMemoryStorage::getBlockNames(const QString& rxStr) const {
     QRegExp rx(rxStr);
     QSet<QString> ret;

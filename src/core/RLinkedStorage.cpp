@@ -276,6 +276,22 @@ QString RLinkedStorage::getBlockName(RBlock::Id blockId) const {
     return ret;
 }
 
+QString RLinkedStorage::getBlockNameFromLayout(const QString& layoutName) const {
+    QString ret = RMemoryStorage::getBlockNameFromLayout(layoutName);
+    if (ret.isNull()) {
+        ret = backStorage->getBlockNameFromLayout(layoutName);
+    }
+    return ret;
+}
+
+QString RLinkedStorage::getBlockNameFromLayout(RLayout::Id layoutId) const {
+    QString ret = RMemoryStorage::getBlockNameFromLayout(layoutId);
+    if (ret.isNull()) {
+        ret = backStorage->getBlockNameFromLayout(layoutId);
+    }
+    return ret;
+}
+
 QString RLinkedStorage::getViewName(RView::Id viewId) const {
     QString ret = RMemoryStorage::getViewName(viewId);
     if (ret.isNull()) {
