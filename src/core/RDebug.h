@@ -83,13 +83,13 @@ public:
      * Stops the timer with the given ID and prints the given message together 
      * with the time that has elapsed.
      */
-    static unsigned long long stopTimer(int id, const QString& msg, unsigned long long msThreshold = 0);
+    static uint stopTimer(int id, const QString& msg, uint msThreshold = 0);
 
     /**
      * Stops the timer with ID 0 and prints the given message together 
      * with the time that has elapsed.
      */
-    static int stopTimer(const QString& msg) {
+    static uint stopTimer(const QString& msg) {
         return stopTimer(0, msg);
     }
 
