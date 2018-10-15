@@ -229,6 +229,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBlockName, "getBlockName");
             
+            REcmaHelper::registerFunction(&engine, proto, getBlockNameFromLayout, "getBlockNameFromLayout");
+            
             REcmaHelper::registerFunction(&engine, proto, getBlockNames, "getBlockNames");
             
             REcmaHelper::registerFunction(&engine, proto, getBlockId, "getBlockId");
@@ -6054,6 +6056,98 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getBlockNameFromLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getBlockNameFromLayout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getBlockNameFromLayout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getBlockNameFromLayout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getBlockNameFromLayout(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayout::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayout::Id
+                    a0 =
+                    (RLayout::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getBlockNameFromLayout(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getBlockNameFromLayout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getBlockNameFromLayout", context, engine);
             return result;
         }
          QScriptValue

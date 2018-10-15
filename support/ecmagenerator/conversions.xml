@@ -11,6 +11,8 @@
 	<entry key="qint64" value="toNumber()" testFunction="isNumber()" />
     -->
 	<entry key="uint" value="toNumber()" testFunction="isNumber()" />
+	<entry key="uint64" value="toNumber()" testFunction="isNumber()" />
+	<entry key="quint64" value="toNumber()" testFunction="isNumber()" />
 	<entry key="uint8_t" value="toNumber()" testFunction="isNumber()" />
 	<entry key="bool" value="toBool()" testFunction="isBool()" />
 

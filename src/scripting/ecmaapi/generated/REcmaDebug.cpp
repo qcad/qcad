@@ -324,11 +324,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'int'
-    int cppResult =
+    // return type 'uint'
+    uint cppResult =
         RDebug::
        stopTimer(a0);
-        // return type: int
+        // return type: uint
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -367,13 +367,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'int'
-    int cppResult =
+    // return type 'uint'
+    uint cppResult =
         RDebug::
        stopTimer(a0
         ,
     a1);
-        // return type: int
+        // return type: uint
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -391,7 +391,7 @@
         ) /* type: QString */
      && (
             context->argument(2).isNumber()
-        ) /* type: int */
+        ) /* type: uint */
     
     ){
     // prepare arguments:
@@ -413,9 +413,9 @@
                     toString();
                 
                     // argument isStandardType
-                    int
+                    uint
                     a2 =
-                    (int)
+                    (uint)
                     
                     context->argument( 2 ).
                     toNumber();
@@ -423,15 +423,15 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'int'
-    int cppResult =
+    // return type 'uint'
+    uint cppResult =
         RDebug::
        stopTimer(a0
         ,
     a1
         ,
     a2);
-        // return type: int
+        // return type: uint
                 // standard Type
                 result = QScriptValue(cppResult);
             

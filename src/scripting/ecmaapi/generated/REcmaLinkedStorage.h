@@ -190,6 +190,9 @@
         getBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBlockNameFromLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBlockNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

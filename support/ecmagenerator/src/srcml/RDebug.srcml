@@ -84,13 +84,13 @@
      * Stops the timer with the given ID and prints the given message together 
      * with the time that has elapsed.
      */</comment>
-    <function_decl><type><name>static</name> <name>int</name></type> <name>stopTimer</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>msg</name></decl></param>, <param><decl><type><name>int</name></type> <name>msThreshold</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>uint</name></type> <name>stopTimer</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>msg</name></decl></param>, <param><decl><type><name>uint</name></type> <name>msThreshold</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Stops the timer with ID 0 and prints the given message together 
      * with the time that has elapsed.
      */</comment>
-    <function><type><name>static</name> <name>int</name></type> <name>stopTimer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>msg</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>static</name> <name>uint</name></type> <name>stopTimer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>msg</name></decl></param>)</parameter_list> <block>{
         <return>return <expr><call><name>stopTimer</name><argument_list>(<argument><expr>0</expr></argument>, <argument><expr><name>msg</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 

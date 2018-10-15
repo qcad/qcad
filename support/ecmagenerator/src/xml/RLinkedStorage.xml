@@ -441,6 +441,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getBlockNameFromLayout"
+    cppName="getBlockNameFromLayout" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layoutName" isConst="true" />
+      </variant>
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLayout::Id" typeName="RLayout::Id"
+        name="layoutId" isConst="false" />
+      </variant>
+    </method>
     <method name="getBlockNames" cppName="getBlockNames"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

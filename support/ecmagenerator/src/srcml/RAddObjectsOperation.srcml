@@ -46,7 +46,7 @@
         <expr><name>NoFlags</name>       = 0x000</expr>,
         <expr><name>UseAttributes</name> = 0x001</expr>,     <comment type="block">/**&lt; Use assigned attributes instead of current attributes (color, linetype, width) */</comment>
         <expr><name>ForceNew</name>      = 0x002</expr>,     <comment type="block">/**&lt; Force adding existing entity as new, duplicate entity */</comment>
-        <expr><name>GeometryOnly</name>  = 0x004</expr>,     <comment type="block">/**&lt; Only geometric properties have changed */</comment>
+        <expr><name>GeometryOnly</name>  = 0x004</expr>,     <comment type="block">/**&lt; Only geometric properties have changed (e.g. transformation) */</comment>
         <expr><name>Delete</name>        = 0x008</expr>      <comment type="block">/**&lt; Delete object */</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>Flag</argument>)</argument_list></macro>

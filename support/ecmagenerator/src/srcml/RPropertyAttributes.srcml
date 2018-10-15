@@ -31,7 +31,6 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
-<comment type="line">//#include "RPropertyTypeId.h"</comment>
 
 <comment type="block">/**
  * Structure to transfer attributes about property types.
@@ -254,14 +253,6 @@
         <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>NumericallySorted</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
-<comment type="line">//    RPropertyTypeId getPropertyTypeId() const {</comment>
-<comment type="line">//        return propertyTypeId;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setPropertyTypeId(RPropertyTypeId pid) {</comment>
-<comment type="line">//        propertyTypeId = pid;</comment>
-<comment type="line">//    }</comment>
-
     <function><type><name>QString</name></type> <name>getLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>label</name></expr>;</return>
     }</block></function>
@@ -286,9 +277,6 @@
         <if>if <condition>(<expr><name>choices</name> != <name>other</name>.<name>choices</name></expr>)</condition><then> <block>{
             <return>return <expr><name>false</name></expr>;</return>
         }</block></then></if>
-<comment type="line">//        if (propertyTypeId != other.propertyTypeId) {</comment>
-<comment type="line">//            return false;</comment>
-<comment type="line">//        }</comment>
 
         <return>return <expr><name>true</name></expr>;</return>
     }</block></function>
@@ -302,7 +290,6 @@
     <decl_stmt><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>choices</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>label</name></decl>;</decl_stmt>
-    <comment type="line">//RPropertyTypeId propertyTypeId;</comment>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_OPERATORS_FOR_FLAGS</name><argument_list>(<argument>RPropertyAttributes::Options</argument>)</argument_list></macro>
