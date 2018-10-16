@@ -124,9 +124,11 @@ Rotate.prototype.pickCoordinate = function(event, preview) {
 
     switch (this.state) {
     case Rotate.State.SettingCenterPoint:
-        if (!preview) {
-            this.centerPoint = event.getModelPosition();
-
+        this.centerPoint = event.getModelPosition();
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
             if (this.useDialog) {
                 this.setState(-1);
                 if (!this.showDialog()) {
