@@ -125,9 +125,12 @@ Mirror.prototype.pickCoordinate = function(event, preview) {
                 }
             }
 
-            di.applyOperation(this.getOperation(false));
-            di.setRelativeZero(this.axisPoint2);
-            this.terminate();
+            var op = this.getOperation(false);
+            if (!isNull(op)) {
+                di.applyOperation(op);
+                di.setRelativeZero(this.axisPoint2);
+                this.terminate();
+            }
         }
         break;
     }

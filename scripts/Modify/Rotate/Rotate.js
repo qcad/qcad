@@ -121,6 +121,7 @@ Rotate.prototype.escapeEvent = function() {
 
 Rotate.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
+    var op;
 
     switch (this.state) {
     case Rotate.State.SettingCenterPoint:
@@ -147,7 +148,7 @@ Rotate.prototype.pickCoordinate = function(event, preview) {
 
             // angle defined in dialog:
             else {
-                var op = this.getOperation(false);
+                op = this.getOperation(false);
                 if (!isNull(op)) {
                     di.applyOperation(op);
                     di.setRelativeZero(this.centerPoint);
@@ -175,7 +176,7 @@ Rotate.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            var op = this.getOperation(false);
+            op = this.getOperation(false);
             if (!isNull(op)) {
                 di.applyOperation(op);
                 di.setRelativeZero(this.targetPoint);

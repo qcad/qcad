@@ -188,10 +188,12 @@ Scale.prototype.pickCoordinate = function(event, preview) {
         }
         else {
             op = this.getOperation(false);
-            di.applyOperation(op);
-            di.setRelativeZero(this.targetPoint);
-            this.setState(-1);
-            this.terminate();
+            if (!isNull(op)) {
+                di.applyOperation(op);
+                di.setRelativeZero(this.targetPoint);
+                this.setState(-1);
+                this.terminate();
+            }
         }
         break;
     }
@@ -296,6 +298,9 @@ Scale.prototype.getOperation = function(preview) {
         }
 
         s2 = this.focusPoint.getDistanceTo(this.targetPoint);
+        if (s2<RS.PointTolerance) {
+            return undefined;
+        }
 
         this.factorX = s2/s1;
         this.factorY = undefined;

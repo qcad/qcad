@@ -100,6 +100,7 @@ Translate.prototype.escapeEvent = function() {
 
 Translate.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
+    var op;
 
     switch (this.state) {
     case Translate.State.SettingReferencePoint:
@@ -114,7 +115,10 @@ Translate.prototype.pickCoordinate = function(event, preview) {
         this.targetPoint = event.getModelPosition();
 
         if (preview) {
-            di.previewOperation(this.getOperation(true));
+            op = this.getOperation(true);
+            if (!isNull(op)) {
+                di.previewOperation();
+            }
         }
         else {
             if (this.useDialog) {
@@ -126,9 +130,12 @@ Translate.prototype.pickCoordinate = function(event, preview) {
                 }
             }
 
-            di.applyOperation(this.getOperation(false));
-            di.setRelativeZero(this.targetPoint);
-            this.terminate();
+            op = this.getOperation(false);
+            if (!isNull(op)) {
+                di.applyOperation(op);
+                di.setRelativeZero(this.targetPoint);
+                this.terminate();
+            }
         }
         break;
     }
