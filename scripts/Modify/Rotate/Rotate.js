@@ -32,12 +32,20 @@ function Rotate(guiAction) {
     this.targetPoint = undefined;
     this.angle = undefined;
     this.angleByMouse = false;
-    this.useDialog = true;
+
+    this.useDialog = RSettings.getBoolValue("Rotate/UseDialog", true);
+
+    if (!this.useDialog) {
+        this.setUiOptions("Rotate.ui");
+    }
 }
 
 Rotate.prototype = new Transform();
-
 Rotate.includeBasePath = includeBasePath;
+
+Rotate.getPreferencesCategory = function() {
+    return [qsTr("Modify"), qsTr("Rotate")];
+};
 
 Rotate.State = {
     SettingCenterPoint : 0,
@@ -66,7 +74,6 @@ Rotate.prototype.setState = function(state) {
     case Rotate.State.SettingCenterPoint:
         this.referencePoint = undefined;
         this.targetPoint = undefined;
-        this.angle = undefined;
         var trCenterPoint = qsTr("Center point");
         this.setCommandPrompt(trCenterPoint);
         this.setLeftMouseTip(trCenterPoint);
@@ -272,3 +279,10 @@ Rotate.prototype.getAuxPreview = function() {
     return ret;
 };
 
+Rotate.prototype.slotAngleChanged = function(v) {
+    this.angle = v;
+};
+
+Rotate.prototype.slotAngleByMouseChanged = function(v) {
+    this.angleByMouse = v;
+};
