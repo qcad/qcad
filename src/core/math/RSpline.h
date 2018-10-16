@@ -35,7 +35,6 @@
 #include "opennurbs/opennurbs.h"
 #endif
 
-
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
 #endif
@@ -55,8 +54,11 @@
 class QCADCORE_EXPORT RSpline: public RShape, public RExplodable {
 public:
     RSpline();
+    RSpline(const RSpline& other);
     RSpline(const QList<RVector>& controlPoints, int degree);
-    virtual ~RSpline();
+    //virtual ~RSpline();
+
+    RSpline& operator =(const RSpline& other);
 
     virtual RShape::Type getShapeType() const {
         return Spline;
@@ -255,6 +257,8 @@ protected:
     void updateInternal() const;
     void updateBoundingBox() const;
 
+    virtual void print(QDebug dbg) const;
+
 public:
     // members are mutable, so the spline can update itself from fit points
 
@@ -303,9 +307,6 @@ public:
 
     mutable bool dirty;
     mutable bool updateInProgress;
-
-protected:
-    virtual void print(QDebug dbg) const;
 
 private:
 #ifndef R_NO_OPENNURBS

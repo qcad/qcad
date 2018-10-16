@@ -37,6 +37,10 @@ RSpline::RSpline() :
     degree(3), periodic(false), dirty(true), updateInProgress(false) {
 }
 
+RSpline::RSpline(const RSpline& other) {
+    *this = other;
+}
+
 /**
  * Creates a spline object with the given control points and degree.
  */
@@ -46,8 +50,30 @@ RSpline::RSpline(const QList<RVector>& controlPoints, int degree) :
     //updateInternal();
 }
 
-RSpline::~RSpline() {
+//RSpline::~RSpline() {
     //invalidate();
+//}
+
+RSpline& RSpline::operator =(const RSpline& other) {
+    controlPoints = other.controlPoints;
+    knotVector = other.knotVector;
+    weights = other.weights;
+    fitPoints = other.fitPoints;
+    degree = other.degree;
+    tangentStart = other.tangentStart;
+    tangentEnd = other.tangentEnd;
+    periodic = other.periodic;
+    dirty = other.dirty;
+    updateInProgress = other.updateInProgress;
+#ifndef R_NO_OPENNURBS
+    if (other.curve.IsValid()) {
+        curve = other.curve;
+    }
+#endif
+    boundingBox = other.boundingBox;
+    exploded = other.exploded;
+
+    return *this;
 }
 
 void RSpline::copySpline(const RSpline& other) {
@@ -939,7 +965,7 @@ QList<QSharedPointer<RShape> > RSpline::getExplodedWithSegmentLength(double segm
     QList<RSpline> bezierSegments = getBezierSegments();
     for (int i=0; i<bezierSegments.length(); i++) {
         double len = bezierSegments[i].getLength();
-        int seg = ceil(len / segmentLength);
+        int seg = static_cast<int>(ceil(len / segmentLength));
         ret.append(bezierSegments[i].getExploded(seg));
     }
     return ret;
@@ -1395,6 +1421,7 @@ RSpline RSpline::simplify(double tolerance) {
 void RSpline::invalidate() const {
 #ifndef R_NO_OPENNURBS
     curve.Destroy();
+    //curve.Initialize();
 #endif
     exploded.clear();
 }
@@ -1621,8 +1648,10 @@ void RSpline::updateBoundingBox() const {
  * \return List of bezier spline segments which together represent this curve.
  */
 QList<RSpline> RSpline::getBezierSegments(const RBox& queryBox) const {
+    int ctrlCount = countControlPoints();
+
     // spline is a single bezier segment:
-    if (countControlPoints()==getDegree()+1) {
+    if (ctrlCount==getDegree()+1) {
         return QList<RSpline>() << *this;
     }
 
@@ -1630,31 +1659,33 @@ QList<RSpline> RSpline::getBezierSegments(const RBox& queryBox) const {
 
     QList<RSpline> ret;
 #ifndef R_NO_OPENNURBS
-    ON_NurbsCurve* dup = dynamic_cast<ON_NurbsCurve*>(curve.DuplicateCurve());
-    if (dup==NULL) {
-        return ret;
+    if (ctrlCount>0) {
+        ON_NurbsCurve* dup = dynamic_cast<ON_NurbsCurve*>(curve.DuplicateCurve());
+        if (dup==NULL) {
+            return ret;
+        }
+
+        dup->MakePiecewiseBezier();
+        for (int i=0; i<=dup->CVCount() - dup->Order(); ++i) {
+            ON_BezierCurve bc;
+            if (!dup->ConvertSpanToBezier(i, bc)) {
+                continue;
+            }
+
+            QList<RVector> ctrlPts;
+            for (int cpi=0; cpi<bc.CVCount(); cpi++) {
+                ON_3dPoint onp;
+                bc.GetCV(cpi, onp);
+                ctrlPts.append(RVector(onp.x, onp.y, onp.z));
+            }
+            RSpline bezierSegment(ctrlPts, degree);
+
+            if (!queryBox.isValid() || queryBox.intersects(bezierSegment.getBoundingBox())) {
+                ret.append(bezierSegment);
+            }
+        }
+        delete dup;
     }
-
-    dup->MakePiecewiseBezier();
-    for (int i=0; i<=dup->CVCount() - dup->Order(); ++i) {
-        ON_BezierCurve bc;
-        if (!dup->ConvertSpanToBezier(i, bc)) {
-            continue;
-        }
-
-        QList<RVector> ctrlPts;
-        for (int cpi=0; cpi<bc.CVCount(); cpi++) {
-            ON_3dPoint onp;
-            bc.GetCV(cpi, onp);
-            ctrlPts.append(RVector(onp.x, onp.y, onp.z));
-        }
-        RSpline bezierSegment(ctrlPts, degree);
-
-        if (!queryBox.isValid() || queryBox.intersects(bezierSegment.getBoundingBox())) {
-            ret.append(bezierSegment);
-        }
-    }
-    delete dup;
  #endif
 
     return ret;
