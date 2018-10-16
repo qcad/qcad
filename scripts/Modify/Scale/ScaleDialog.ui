@@ -252,6 +252,9 @@
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="toolTip">
+               <string>Define factor using mouse cursor</string>
+              </property>
               <property name="icon">
                <iconset>
                 <normaloff>ByMouse.svg</normaloff>ByMouse.svg</iconset>

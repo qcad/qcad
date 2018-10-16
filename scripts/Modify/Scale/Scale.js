@@ -33,11 +33,20 @@ function Scale(guiAction) {
     this.targetPoint = undefined;
     this.factorX = undefined;
     this.factorY = undefined;
+
+    this.useDialog = RSettings.getBoolValue("Scale/UseDialog", true);
+
+    if (!this.useDialog) {
+        this.setUiOptions("Scale.ui");
+    }
 }
 
 Scale.prototype = new Transform();
-
 Scale.includeBasePath = includeBasePath;
+
+Scale.getPreferencesCategory = function() {
+    return [qsTr("Modify"), qsTr("Scale")];
+};
 
 Scale.State = {
     SettingCenterPoint : 0,
@@ -66,8 +75,8 @@ Scale.prototype.setState = function(state) {
     case Scale.State.SettingCenterPoint:
         this.referencePoint = undefined;
         this.targetPoint = undefined;
-        this.factorX = undefined;
-        this.factorY = undefined;
+        //this.factorX = undefined;
+        //this.factorY = undefined;
         var trCenterPoint = qsTr("Focus point");
         this.setCommandPrompt(trCenterPoint);
         this.setLeftMouseTip(trCenterPoint);
@@ -99,6 +108,12 @@ Scale.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
+Scale.prototype.initUiOptions = function(resume, optionsToolBar) {
+    EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
+
+    this.initWidgets(optionsToolBar, "Sq");
+};
+
 Scale.prototype.escapeEvent = function() {
     switch (this.state) {
     case Scale.State.SettingCenterPoint:
@@ -121,14 +136,19 @@ Scale.prototype.pickCoordinate = function(event, preview) {
 
     switch (this.state) {
     case Scale.State.SettingCenterPoint:
-        if (!preview) {
-            this.focusPoint = event.getModelPosition();
-            this.setState(-1);
+        this.focusPoint = event.getModelPosition();
 
-            if (!this.showDialog()) {
-                // dialog canceled:
-                this.terminate();
-                return;
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            if (this.useDialog) {
+                this.setState(-1);
+                if (!this.showDialog()) {
+                    // dialog canceled:
+                    this.terminate();
+                    return;
+                }
             }
 
             // define factor with mouse:
@@ -186,26 +206,7 @@ Scale.prototype.showDialog = function() {
     var dialog = WidgetFactory.createDialog(Scale.includeBasePath, "ScaleDialog.ui");
     var widgets = getWidgets(dialog);
 
-    widgets["FactorX"].textChanged.connect(
-                function(text) {
-                    if (widgets["KeepProportions"].checked===true) {
-                        widgets["FactorY"].text = text;
-                    }
-                });
-
-    widgets["KeepProportions"].toggled.connect(
-                function(checked) {
-                    if (checked) {
-                        widgets["FactorY"].text = widgets["FactorX"].text;
-                    }
-
-                    if (checked) {
-                        widgets["KeepProportions"].icon = new QIcon(Scale.includeBasePath + "/KeepProportionsOn.svg");
-                    }
-                    else {
-                        widgets["KeepProportions"].icon = new QIcon(Scale.includeBasePath + "/KeepProportionsOff.svg");
-                    }
-                });
+    this.initWidgets(dialog);
 
     WidgetFactory.restoreState(dialog);
 
@@ -227,7 +228,8 @@ Scale.prototype.showDialog = function() {
 
     if (widgets["FactorByMouse"].checked===true) {
         this.factorByMouse = true;
-        this.factor = undefined;
+        this.factorX = undefined;
+        this.factorY = undefined;
     }
     else {
         this.factorByMouse = false;
@@ -247,6 +249,34 @@ Scale.prototype.showDialog = function() {
     dialog.destroy();
     EAction.activateMainWindow();
     return true;
+};
+
+Scale.prototype.initWidgets = function(widget, postfix) {
+    if (isNull(postfix)) {
+        postfix = "";
+    }
+
+    var widgets = getWidgets(widget);
+    widgets["FactorX"].textChanged.connect(
+                function(text) {
+                    if (widgets["KeepProportions"].checked===true) {
+                        widgets["FactorY"].text = text;
+                    }
+                });
+
+    widgets["KeepProportions"].toggled.connect(
+                function(checked) {
+                    if (checked) {
+                        widgets["FactorY"].text = widgets["FactorX"].text;
+                    }
+
+                    if (checked) {
+                        widgets["KeepProportions"].icon = new QIcon(Scale.includeBasePath + "/KeepProportionsOn" + postfix + ".svg");
+                    }
+                    else {
+                        widgets["KeepProportions"].icon = new QIcon(Scale.includeBasePath + "/KeepProportionsOff" + postfix + ".svg");
+                    }
+                });
 };
 
 Scale.prototype.getOperation = function(preview) {
@@ -348,5 +378,14 @@ Scale.prototype.getAuxPreview = function() {
     return ret;
 };
 
+Scale.prototype.slotFactorXChanged = function(v) {
+    this.factorX = v;
+};
 
+Scale.prototype.slotFactorYChanged = function(v) {
+    this.factorY = v;
+};
 
+Scale.prototype.slotFactorByMouseChanged = function(v) {
+    this.factorByMouse = v;
+};
