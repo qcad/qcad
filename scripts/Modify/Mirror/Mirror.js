@@ -29,11 +29,20 @@ function Mirror(guiAction) {
 
     this.axisPoint1 = undefined;
     this.axisPoint2 = undefined;
+
+    this.useDialog = RSettings.getBoolValue("Mirror/UseDialog", true);
+
+    if (!this.useDialog) {
+        this.setUiOptions("Mirror.ui");
+    }
 }
 
 Mirror.prototype = new Transform();
-
 Mirror.includeBasePath = includeBasePath;
+
+Mirror.getPreferencesCategory = function() {
+    return [qsTr("Modify"), qsTr("Mirror")];
+};
 
 Mirror.State = {
     SettingAxisPoint1 : 0,
@@ -107,11 +116,13 @@ Mirror.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            this.setState(-1);
-            if (!this.showDialog()) {
-                // dialog canceled:
-                this.terminate();
-                return;
+            if (this.useDialog) {
+                this.setState(-1);
+                if (!this.showDialog()) {
+                    // dialog canceled:
+                    this.terminate();
+                    return;
+                }
             }
 
             di.applyOperation(this.getOperation(false));
@@ -139,9 +150,11 @@ Mirror.prototype.showDialog = function() {
     var widgets = getWidgets(dialog);
     if (widgets["DeleteOriginal"].checked===true) {
         this.copies = 0;
+        this.copy = false;
     }
     else if (widgets["KeepOriginal"].checked===true) {
         this.copies = 1;
+        this.copy = true;
     }
 
     this.useCurrentAttributes = (widgets["UseCurrentAttributes"].checked===true);
@@ -173,3 +186,13 @@ Mirror.prototype.getAuxPreview = function() {
     return ret;
 };
 
+Mirror.prototype.slotCopyChanged = function(checked) {
+    Transform.prototype.slotCopyChanged.call(this, checked);
+
+    if (this.copy) {
+        this.copies = 1;
+    }
+    else {
+        this.copies = 0;
+    }
+};
