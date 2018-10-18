@@ -444,7 +444,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             if (propertyTypeId.getId()===-1) {
                 // property is custom property
                 // make sure it knows it's titles, etc:
-                propertyTypeId.setCustomPropertyTitle("QCAD");
+                propertyTypeId.setCustomPropertyTitle(RSettings.getAppId());
                 propertyTypeId.setCustomPropertyName(title);
             }
 
