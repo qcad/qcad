@@ -441,6 +441,13 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             //var propertyTypeId = attributes.getPropertyTypeId();
             var propertyTypeId = RPropertyTypeId.getPropertyTypeId(group, title);
 
+            if (propertyTypeId.getId()===-1) {
+                // property is custom property
+                // make sure it knows it's titles, etc:
+                propertyTypeId.setCustomPropertyTitle("QCAD");
+                propertyTypeId.setCustomPropertyName(title);
+            }
+
             //qDebug("isMixed: ", attributes.isMixed());
 
             if (isNull(value)) {
