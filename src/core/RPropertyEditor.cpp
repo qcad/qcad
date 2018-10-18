@@ -44,8 +44,7 @@ RPropertyEditor::~RPropertyEditor() {
  * Sets the property with the given name to the given value or to 'mixed'
  * if that property exists already with a different value.
  *
- * \param propertyTypeId: Id of the property in the format "Group|Property".
- * \param property: Value and attributes of the property.
+ * \param propertyTypeId: Id of the property.
  * \param showOnRequest: True to show also slow properties shown on request.
  */
 void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
@@ -53,7 +52,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
 
     Q_UNUSED(document)
 
-    // always show on requestable properties:
+    // show on request properties:
     showOnRequest = showOnRequest || RSettings::getBoolValue("PropertyEditor/ShowOnRequest", false)==true;
 
     RPropertyTypeId pid = propertyTypeId;
