@@ -55,7 +55,6 @@
 #include <QFileSystemModel>
 #include <QFrame>
 #include <QGestureEvent>
-#include <QGLWidget>
 #include <QGraphicsItem>
 #include <QGraphicsView>
 #include <QGridLayout>
@@ -198,7 +197,6 @@ Q_DECLARE_METATYPE(QFontMetrics*)
 Q_DECLARE_METATYPE(QFontDatabase*)
 Q_DECLARE_METATYPE(QFrame*)
 Q_DECLARE_METATYPE(QGestureEvent*)
-Q_DECLARE_METATYPE(QGLWidget*)
 Q_DECLARE_METATYPE(QGraphicsView*)
 Q_DECLARE_METATYPE(QGridLayout*)
 Q_DECLARE_METATYPE(QHelpEvent*)
