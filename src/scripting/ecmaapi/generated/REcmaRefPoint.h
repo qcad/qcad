@@ -96,6 +96,12 @@
         setArrow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFlag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

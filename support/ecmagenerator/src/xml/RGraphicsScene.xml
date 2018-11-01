@@ -274,6 +274,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="position" isConst="true" />
       </variant>
     </method>
+    <method name="selectReferencePoints"
+    cppName="selectReferencePoints" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="add"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="exportCurrentEntity"
     cppName="exportCurrentEntity" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -292,11 +302,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
-    <method name="getReferencePoints" cppName="getReferencePoints"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QMultiMap &lt; REntity::Id , RRefPoint &gt; &amp;"
-      isPureVirtual="false" />
+    <method name="countReferencePoints"
+    cppName="countReferencePoints" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
     </method>
     <method name="dump" cppName="dump" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

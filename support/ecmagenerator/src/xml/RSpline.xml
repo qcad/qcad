@@ -10,6 +10,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
+        <arg type="RSpline &amp;" typeName="RSpline" name="other"
+        isConst="true" />
+      </variant>
+      <variant>
         <arg type="QList &lt; RVector &gt; &amp;"
         typeName="QList &lt; RVector &gt;" name="controlPoints"
         isConst="true" />
@@ -17,6 +21,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
+    <method name="operator =" cppName="operator ="
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RSpline &amp;" isPureVirtual="false">
+        <arg type="RSpline &amp;" typeName="RSpline" name="other"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getShapeType" cppName="getShapeType"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

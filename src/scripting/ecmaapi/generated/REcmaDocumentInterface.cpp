@@ -79,6 +79,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getGraphicsViewWithFocus, "getGraphicsViewWithFocus");
             
+            REcmaHelper::registerFunction(&engine, proto, getGraphicsSceneWithFocus, "getGraphicsSceneWithFocus");
+            
             REcmaHelper::registerFunction(&engine, proto, addCoordinateListener, "addCoordinateListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyCoordinateListeners, "notifyCoordinateListeners");
@@ -790,6 +792,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::getGraphicsViewWithFocus", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::getGraphicsSceneWithFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::getGraphicsSceneWithFocus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::getGraphicsSceneWithFocus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("getGraphicsSceneWithFocus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RGraphicsScene *'
+    RGraphicsScene * cppResult =
+        
+               self->getGraphicsSceneWithFocus();
+        // return type: RGraphicsScene *
+                // RGraphicsScene:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.getGraphicsSceneWithFocus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::getGraphicsSceneWithFocus", context, engine);
             return result;
         }
          QScriptValue

@@ -67,6 +67,9 @@
 
     // public methods:
     static  QScriptValue
+        operator_assign
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -15,6 +15,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Start" />
       <value name="End" />
       <value name="Arrow" />
+      <value name="Selected" />
     </enum>
     <constructor>
       <variant />
@@ -138,6 +139,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="setArrow" cppName="setArrow" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isSelected" cppName="isSelected"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setSelected" cppName="setSelected"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />

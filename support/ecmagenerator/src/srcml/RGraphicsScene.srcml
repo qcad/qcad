@@ -132,16 +132,19 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>highlightEntity</name><parameter_list>(<param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <comment type="block">/**
-     * Highlights the reference point at the given position. This is typically
-     * used to highlight reference point when the mouse hovers over them.
-     */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>highlightReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RRefPoint</name>&amp;</type> <name>position</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>selectReferencePoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportCurrentEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>unexportEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>QMultiMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RRefPoint</name></argument>&gt;</argument_list></name>&amp;</type> <name>getReferencePoints</name><parameter_list>()</parameter_list> <block>{
+    <function_decl><type><name>int</name></type> <name>countReferencePoints</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>getReferencePoints</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>referencePoints</name></expr>;</return>
     }</block></function>
 
@@ -175,7 +178,7 @@
      * Used for drawing reference points.
      * TODO: store selection status of reference points.
      */</comment>
-    <decl_stmt><decl><type><name>QMultiMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>referencePoints</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>referencePoints</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>deleting</name></decl>;</decl_stmt>

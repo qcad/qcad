@@ -59,6 +59,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RGraphicsView *"
       isPureVirtual="false" />
     </method>
+    <method name="getGraphicsSceneWithFocus"
+    cppName="getGraphicsSceneWithFocus" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RGraphicsScene *"
+      isPureVirtual="false" />
+    </method>
     <method name="addCoordinateListener"
     cppName="addCoordinateListener" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

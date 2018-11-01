@@ -135,11 +135,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, highlightReferencePoint, "highlightReferencePoint");
             
+            REcmaHelper::registerFunction(&engine, proto, selectReferencePoints, "selectReferencePoints");
+            
             REcmaHelper::registerFunction(&engine, proto, exportCurrentEntity, "exportCurrentEntity");
             
             REcmaHelper::registerFunction(&engine, proto, unexportEntity, "unexportEntity");
             
-            REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
+            REcmaHelper::registerFunction(&engine, proto, countReferencePoints, "countReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
@@ -2366,6 +2368,86 @@
             return result;
         }
          QScriptValue
+        REcmaGraphicsScene::selectReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsScene::selectReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::selectReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsScene* self = 
+                        getSelf("selectReferencePoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->selectReferencePoints(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.selectReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsScene::selectReferencePoints", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGraphicsScene::exportCurrentEntity
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2532,19 +2614,19 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsScene::getReferencePoints
+        REcmaGraphicsScene::countReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::getReferencePoints", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::getReferencePoints";
+            //REcmaHelper::functionStart("REcmaGraphicsScene::countReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::countReferencePoints";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsScene* self = 
-                        getSelf("getReferencePoints", context);
+                        getSelf("countReferencePoints", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2561,24 +2643,23 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMultiMap < REntity::Id , RRefPoint > &'
-    QMultiMap < REntity::Id , RRefPoint > & cppResult =
+    // return type 'int'
+    int cppResult =
         
-               self->getReferencePoints();
-        // return type: QMultiMap < REntity::Id , RRefPoint > &
-                // reference
-                result = engine->newVariant(
-                QVariant::fromValue(&cppResult));
+               self->countReferencePoints();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
             
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.getReferencePoints().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.countReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::getReferencePoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsScene::countReferencePoints", context, engine);
             return result;
         }
          QScriptValue

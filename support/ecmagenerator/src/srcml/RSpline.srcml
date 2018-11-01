@@ -36,7 +36,6 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"opennurbs/opennurbs.h"</cpp:file></cpp:include>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
-
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
@@ -56,8 +55,11 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSpline</name><super>: <specifier>public</specifier> <name>RShape</name>, <specifier>public</specifier> <name>RExplodable</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor_decl><name>RSpline</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RSpline</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RSpline</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>controlPoints</name></decl></param>, <param><decl><type><name>int</name></type> <name>degree</name></decl></param>)</parameter_list>;</constructor_decl>
-    <destructor_decl><specifier>virtual</specifier> <name>~RSpline</name><parameter_list>()</parameter_list>;</destructor_decl>
+    <comment type="line">//virtual ~RSpline();</comment>
+
+    <function_decl><type><name>RSpline</name>&amp;</type> <name>operator =</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>virtual</name> <name><name>RShape</name>::<name>Type</name></name></type> <name>getShapeType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>Spline</name></expr>;</return>
@@ -256,6 +258,8 @@
     <function_decl><type><name>void</name></type> <name>updateInternal</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>updateBoundingBox</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
 </protected><public>public:
     <comment type="line">// members are mutable, so the spline can update itself from fit points</comment>
 
@@ -305,15 +309,14 @@
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>dirty</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>updateInProgress</name></decl>;</decl_stmt>
 
-</public><protected>protected:
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-
-</protected><private>private:
+</public><private>private:
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>R_NO_OPENNURBS</name></cpp:ifndef>
     <decl_stmt><decl><type><name>mutable</name> <name>ON_NurbsCurve</name></type> <name>curve</name></decl>;</decl_stmt>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
     <decl_stmt><decl><type><name>mutable</name> <name>RBox</name></type> <name>boundingBox</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>exploded</name></decl>;</decl_stmt>
+    <comment type="line">// cached length:</comment>
+    <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>length</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RSplineProxy</name>*</type> <name>splineProxy</name></decl>;</decl_stmt>
 </private>}</block>;</class>

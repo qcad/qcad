@@ -61,6 +61,9 @@
         getGraphicsViewWithFocus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getGraphicsSceneWithFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addCoordinateListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

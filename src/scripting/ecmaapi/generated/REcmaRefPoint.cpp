@@ -96,6 +96,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setArrow, "setArrow");
             
+            REcmaHelper::registerFunction(&engine, proto, isSelected, "isSelected");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSelected, "setSelected");
+            
             REcmaHelper::registerFunction(&engine, proto, setFlag, "setFlag");
             
             REcmaHelper::registerFunction(&engine, proto, getFlag, "getFlag");
@@ -166,6 +170,11 @@
 
     ctor.setProperty("Arrow",
     QScriptValue(RRefPoint::Arrow),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Selected",
+    QScriptValue(RRefPoint::Selected),
     QScriptValue::ReadOnly);
 
 
@@ -1475,6 +1484,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRefPoint::setArrow", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::isSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::isSelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::isSelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("isSelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSelected();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.isSelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::isSelected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRefPoint::setSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRefPoint::setSelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRefPoint::setSelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRefPoint* self = 
+                        getSelf("setSelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSelected(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.setSelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRefPoint::setSelected", context, engine);
             return result;
         }
          QScriptValue
