@@ -36,7 +36,7 @@
     <message>
         <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Inserisci bitmap</translation>
+        <translation>Inserire bitmap</translation>
     </message>
     <message>
         <location filename="../Image.ui" line="+17"/>

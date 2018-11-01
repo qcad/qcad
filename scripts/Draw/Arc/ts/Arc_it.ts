@@ -6,7 +6,7 @@
     <message>
         <location filename="../Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation>Menù archi</translation>
+        <translation>Strumenti archi</translation>
     </message>
     <message>
         <source>Show arc tools</source>

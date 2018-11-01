@@ -11,11 +11,11 @@
     <message>
         <location line="-27"/>
         <source>Point Tools</source>
-        <translation>Strumenti di punto</translation>
+        <translation>Strumenti punti</translation>
     </message>
     <message>
         <source>Show point tools</source>
-        <translation type="vanished">Strumenti di punto</translation>
+        <translation type="vanished">Strumenti punto</translation>
     </message>
 </context>
 </TS>

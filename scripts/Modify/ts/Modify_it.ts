@@ -7,7 +7,7 @@
         <location filename="../Modify.js" line="+99"/>
         <source>Modification Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Strumenti di modifica</translation>
+        <translation>Strumenti modifica</translation>
     </message>
     <message>
         <source>Show modification tools</source>

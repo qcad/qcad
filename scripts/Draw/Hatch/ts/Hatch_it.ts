@@ -18,7 +18,7 @@
     <message>
         <location filename="../Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Menù tratteggi</translation>
+        <translation>Strumenti tratteggi</translation>
     </message>
     <message>
         <source>Show hatch tools</source>

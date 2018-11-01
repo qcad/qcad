@@ -6,7 +6,7 @@
     <message>
         <location filename="../Information.js" line="+285"/>
         <source>Information Tools</source>
-        <translation>Strumenti di informazione</translation>
+        <translation>Strumenti informazione</translation>
     </message>
     <message>
         <source>Show information tools</source>

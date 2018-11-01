@@ -6,7 +6,7 @@
     <message>
         <location filename="../Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>Spline strumenti</translation>
+        <translation>Strumenti spline</translation>
     </message>
     <message>
         <source>Show spline tools</source>
