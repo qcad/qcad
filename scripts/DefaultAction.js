@@ -137,10 +137,17 @@ DefaultAction.prototype.resumeEvent = function() {
 };
 
 DefaultAction.prototype.mouseMoveEvent = function(event) {
-    // we're in the middle of panning: don't do anything:
+    // we're in the middle of panning:
+    // do nothing:
     if (event.buttons().valueOf() === Qt.MidButton.valueOf() ||
         (event.buttons().valueOf() === Qt.LeftButton.valueOf() &&
          event.modifiers().valueOf() === Qt.ControlModifier.valueOf())) {
+        return;
+    }
+
+    // we're in the middle of choosing something from a context menu:
+    // do nothing:
+    if (this.waitingForContextMenu) {
         return;
     }
 
@@ -275,11 +282,16 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
 };
 
 DefaultAction.prototype.mouseReleaseEvent = function(event) {
+    if (this.waitingForContextMenu) {
+        return;
+    }
+
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
     var entityId;
 
-    var shiftPressed = this.isShiftPressed(event) || (event.modifiers() & Qt.ControlModifier) > 0 || persistentSelection===true;
-    var addToSelection = this.getAddToSelection(shiftPressed);
+    var shiftPressed = isShiftPressed();
+    var controlPressed = isControlPressed();
+    var addToSelection = this.getAddToSelection(shiftPressed) || controlPressed || persistentSelection===true;
 
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
@@ -300,7 +312,6 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
                     return;
                 }
             }
-
 
             // find selectable entity under cursor:
             entityId = this.getEntityId(event, false, true);
@@ -330,17 +341,9 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             this.di.clearPreview();
             this.d2Model = event.getModelPosition();
 
-            if (addToSelection ||
-                (event.modifiers().valueOf() == Qt.ControlModifier.valueOf()) ||
-                persistentSelection===true) {
+            // select entities:
+            this.di.selectBoxXY(new RBox(this.d1Model, this.d2Model), addToSelection);
 
-                // add all entities in window to the selection:
-                this.di.selectBoxXY(new RBox(this.d1Model, this.d2Model), true);
-            } else {
-                // select entities in window only:
-                this.di.selectBoxXY(new RBox(this.d1Model, this.d2Model), false);
-            }
-            // event.setConsumed(true);
             this.setState(DefaultAction.State.Neutral);
             break;
 
@@ -455,7 +458,7 @@ DefaultAction.prototype.escapeEvent = function(event) {
 DefaultAction.prototype.pickCoordinate = function(event, preview) {
     var op;
 
-    var shiftPressed = this.isShiftPressed(event);
+    var shiftPressed = isShiftPressed();
     var addToSelection = this.getAddToSelection(shiftPressed);
     var doc = this.getDocument();
 
@@ -690,7 +693,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
         if (RSettings.getBoolValue("GraphicsView/DoubleClickSelectContour", true)===true) {
             include("scripts/Select/SelectContour/SelectContour.js");
             var matchingEntityIds = SelectContour.getConnectedEntities(this.document, entityId, 0.001);
-            var add = this.isShiftPressed(event);
+            var add = isShiftPressed();
             if (entity.isSelected()) {
                 this.di.selectEntities(matchingEntityIds, add);
             }
@@ -704,19 +707,6 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
 //    else if (isViewportEntity(entity)) {
 //        this.di.setCurrentViewport(entity.data());
 //    }
-};
-
-/**
- * \return True if the shift key is pressed to alter the function (e.g. add to selection).
- */
-DefaultAction.prototype.isShiftPressed = function(event) {
-    if (isFunction(event.getModifiers)) {
-        return (event.getModifiers() & Qt.ShiftModifier) > 0;
-    }
-    if (isFunction(event.modifiers)) {
-        return (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf());
-    }
-    return false;
 };
 
 /**
