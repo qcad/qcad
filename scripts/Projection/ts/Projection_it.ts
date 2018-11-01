@@ -6,7 +6,7 @@
     <message>
         <location filename="../Projection.js" line="+82"/>
         <source>Projection Tools</source>
-        <translation>Strumenti di proiezione</translation>
+        <translation>Strumenti proiezione</translation>
     </message>
     <message>
         <source>Show projection tools</source>

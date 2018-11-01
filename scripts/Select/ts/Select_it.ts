@@ -8,7 +8,7 @@
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Mostra menù &quot;Seleziona&quot;</translatorcomment>
-        <translation>Strumenti di selezione</translation>
+        <translation>Strumenti selezione</translation>
     </message>
     <message>
         <source>Show selection tools</source>
