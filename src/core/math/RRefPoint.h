@@ -26,6 +26,7 @@ public:
         Start     = 0x010,        /**< Reference point is a start point */
         End       = 0x020,        /**< Reference point is a start point */
         Arrow     = 0x040,        /**< Reference point is a dimension arrow */
+        Selected  = 0x080         /**< Reference point is selected */
     };
     Q_DECLARE_FLAGS(Flags, Flag)
 
@@ -102,6 +103,14 @@ public:
 
     void setArrow(bool on) {
         setFlag(RRefPoint::Arrow, on);
+    }
+
+    bool isSelected() const {
+        return getFlag(RRefPoint::Selected);
+    }
+
+    void setSelected(bool on) {
+        setFlag(RRefPoint::Selected, on);
     }
 
     void setFlag(RRefPoint::Flag flag, bool on) {

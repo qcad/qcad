@@ -304,16 +304,19 @@ void RGraphicsViewImage::updateImage() {
     }
 
     // paint reference points of selected entities:
-    QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
-    int num = referencePoints.count();
+    QMap<REntity::Id, QList<RRefPoint> >& referencePoints = scene->getReferencePoints();
+    int num = scene->countReferencePoints();
     if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 100000)) {
         QPainter gbPainter(&graphicsBufferWithPreview);
-        QMultiMap<REntity::Id, RRefPoint>::iterator it;
+        QMap<REntity::Id, QList<RRefPoint> >::iterator it;
         for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
-            RRefPoint p = it.value();
-            RRefPoint pm = mapToView(p);
-            pm.setFlags(p.getFlags());
-            paintReferencePoint(gbPainter, pm, false);
+            QList<RRefPoint>& list = it.value();
+            for (int i=0; i<list.length(); i++) {
+                RRefPoint p = list[i];
+                RRefPoint pm = mapToView(p);
+                pm.setFlags(p.getFlags());
+                paintReferencePoint(gbPainter, pm, false);
+            }
         }
         gbPainter.end();
     }
@@ -397,10 +400,14 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint&
     }
     else {
         if (pos.isCenter() || pos.isArrow()) {
+            // center or arrow:
+            // round:
             painter.setBrush(color);
             painter.drawEllipse(pos.x - size/2, pos.y - size/2, size, size);
         }
         else {
+            // other:
+            // rectangle:
             painter.setBrush(color);
             painter.fillRect(QRect(pos.x - size/2, pos.y - size/2, size, size), color);
         }
@@ -410,7 +417,12 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint&
                 painter.setPen(QPen(Qt::white));
             }
             else {
-                painter.setPen(QPen(Qt::gray));
+                if (pos.isSelected()) {
+                    painter.setPen(QPen(Qt::red));
+                }
+                else {
+                    painter.setPen(QPen(Qt::gray));
+                }
             }
         }
         else {
@@ -1179,7 +1191,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         painter->setBrush(brush);
         painter->setPen(pen);
 
-        if (isPrintingOrExporting() /*|| clipBox.contains(pathBB)*/) {
+        if (scene->getDraftMode() || isPrintingOrExporting() /*|| clipBox.contains(pathBB)*/) {
             if (brush.style() != Qt::NoBrush) {
                 painter->fillPath(path, brush);
             }

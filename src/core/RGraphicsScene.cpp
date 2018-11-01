@@ -294,6 +294,16 @@ void RGraphicsScene::handlePinchGestureEvent(QPinchGesture& gesture) {
     documentInterface.pinchGestureEvent(gesture);
 }
 
+int RGraphicsScene::countReferencePoints() const {
+    int ret;
+    QMap<REntity::Id, QList<RRefPoint> >::const_iterator it;
+    for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
+        const QList<RRefPoint>& list = it.value();
+        ret+=list.length();
+    }
+    return ret;
+}
+
 /**
  * Adds the reference points of the entity that is currently being exported
  * to the internal \c referencePoints map.
@@ -309,21 +319,68 @@ void RGraphicsScene::exportReferencePoints() {
         return;
     }
 
-    // remove all previous reference points of this entity:
-    referencePoints.remove(entity->getId());
-
     if (entity->isUndone() || entity->isSelected()==false) {
+        // remove all previous reference points of this entity:
+        referencePoints.remove(entity->getId());
         return;
     }
 
+    QList<RRefPoint> oldRps = referencePoints.value(entity->getId());
+    //qDebug() << "oldRps:" << oldRps;
+
+    // remove all previous reference points of this entity:
+    referencePoints.remove(entity->getId());
+
+    //qDebug() << "exportReferencePoints: " << entity->getId();
+    //RDebug::printBacktrace();
+
     // get list of reference points:
-    QList<RRefPoint> ref = entity->getReferencePoints(getProjectionRenderingHint());
+    QList<RRefPoint> rps = entity->getReferencePoints(getProjectionRenderingHint());
+    //qDebug() << "rps:" << rps;
+
+    referencePoints.insert(entity->getId(), QList<RRefPoint>());
 
     // export reference points:
-    QList<RRefPoint>::iterator it;
-    for (it=ref.begin(); it!=ref.end(); ++it) {
-        referencePoints.insert(entity->getId(), *it);
+    for (int i=0; i<rps.length(); i++) {
+        RRefPoint rp = rps[i];
+        if (i<oldRps.length()) {
+            RRefPoint oldRp = oldRps[i];
+            if (RVector(oldRp).equalsFuzzy(RVector(rp))) {
+                // reuse old reference point (might be selected):
+                //qDebug() << "reuse old rp: " << oldRp;
+                referencePoints[entity->getId()].append(oldRp);
+                continue;
+            }
+        }
+
+        referencePoints[entity->getId()].append(rp);
     }
+}
+
+void RGraphicsScene::selectReferencePoints(const RBox& box, bool add) {
+    QMap<REntity::Id, QList<RRefPoint> >::iterator it;
+    for (it=referencePoints.begin(); it!=referencePoints.end(); ++it) {
+        QList<RRefPoint>& list = it.value();
+        for (int i=0; i<list.length(); i++) {
+            if (box.contains(list[i])) {
+                list[i].setSelected(true);
+            }
+            else if (!add) {
+                list[i].setSelected(false);
+            }
+        }
+
+    }
+
+//    QMultiMap<REntity::Id, RRefPoint>::iterator it;
+//    for (it=referencePoints.begin(); it!=referencePoints.end(); ++it) {
+//        if (box.contains(it.value())) {
+//            it.value().setSelected(true);
+//        }
+//        else if (!add) {
+//            it.value().setSelected(false);
+//        }
+//    }
 }
 
 void RGraphicsScene::exportCurrentEntity(bool preview, bool forceSelected) {
@@ -332,10 +389,15 @@ void RGraphicsScene::exportCurrentEntity(bool preview, bool forceSelected) {
 }
 
 void RGraphicsScene::unexportEntity(REntity::Id entityId) {
+    qDebug() << "unexportEntity: " << entityId;
     RExporter::unexportEntity(entityId);
     referencePoints.remove(entityId);
 }
 
+/**
+ * Highlights the reference point at the given position. This is typically
+ * used to highlight reference point when the mouse hovers over them.
+ */
 void RGraphicsScene::highlightReferencePoint(const RRefPoint& position) {
     highlightedReferencePoint = position;
 }
