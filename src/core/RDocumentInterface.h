@@ -125,6 +125,7 @@ public:
     RStorage& getStorage();
     QList<RGraphicsScene*> getGraphicsScenes();
     RGraphicsView* getGraphicsViewWithFocus();
+    RGraphicsScene* getGraphicsSceneWithFocus();
 
     void addCoordinateListener(RCoordinateListener* l);
     void notifyCoordinateListeners();

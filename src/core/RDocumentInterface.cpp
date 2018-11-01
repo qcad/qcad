@@ -321,6 +321,19 @@ RGraphicsView* RDocumentInterface::getGraphicsViewWithFocus() {
 }
 
 /**
+ * \return The graphics scene that currently has the focus or the
+ *      first attached scene or NULL if no scene is attached.
+ */
+RGraphicsScene* RDocumentInterface::getGraphicsSceneWithFocus() {
+    RGraphicsView* view = getGraphicsViewWithFocus();
+    if (view!=nullptr) {
+        return view->getScene();
+    }
+
+    return nullptr;
+}
+
+/**
  * Sets the action that is active if no other action is active.
  */
 void RDocumentInterface::setDefaultAction(RAction* action) {
