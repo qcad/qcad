@@ -9599,7 +9599,6 @@
     <file alias="scripts/Widgets/FirstStart/FirstStart.js">../../scripts/Widgets/FirstStart/FirstStart.js</file>
     <file alias="scripts/Widgets/FirstStart/FirstStartDialog.ui">../../scripts/Widgets/FirstStart/FirstStartDialog.ui</file>
     <file alias="scripts/Widgets/FirstStart/FirstStartInit.js">../../scripts/Widgets/FirstStart/FirstStartInit.js</file>
-    <file alias="scripts/Widgets/FirstStart/firststart.png">../../scripts/Widgets/FirstStart/firststart.png</file>
     <file alias="scripts/Widgets/FirstStart/ts/FirstStart_cs.qm">../../scripts/Widgets/FirstStart/ts/FirstStart_cs.qm</file>
     <file alias="scripts/Widgets/FirstStart/ts/FirstStart_de.qm">../../scripts/Widgets/FirstStart/ts/FirstStart_de.qm</file>
     <file alias="scripts/Widgets/FirstStart/ts/FirstStart_en.qm">../../scripts/Widgets/FirstStart/ts/FirstStart_en.qm</file>
