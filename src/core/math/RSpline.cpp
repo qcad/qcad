@@ -34,7 +34,7 @@ RSplineProxy* RSpline::splineProxy = NULL;
  * Creates a spline object without controlPoints.
  */
 RSpline::RSpline() :
-    degree(3), periodic(false), dirty(true), updateInProgress(false) {
+    degree(3), periodic(false), dirty(true), updateInProgress(false), length(RNANDOUBLE) {
 }
 
 RSpline::RSpline(const RSpline& other) {
@@ -45,7 +45,7 @@ RSpline::RSpline(const RSpline& other) {
  * Creates a spline object with the given control points and degree.
  */
 RSpline::RSpline(const QList<RVector>& controlPoints, int degree) :
-    controlPoints(controlPoints), degree(degree), periodic(false), dirty(true), updateInProgress(false) {
+    controlPoints(controlPoints), degree(degree), periodic(false), dirty(true), updateInProgress(false), length(RNANDOUBLE) {
 
     //updateInternal();
 }
@@ -72,6 +72,7 @@ RSpline& RSpline::operator =(const RSpline& other) {
 #endif
     boundingBox = other.boundingBox;
     exploded = other.exploded;
+    length = other.length;
 
     return *this;
 }
@@ -86,6 +87,7 @@ void RSpline::copySpline(const RSpline& other) {
     this->tangentStart = other.tangentStart;
     this->tangentEnd = other.tangentEnd;
     this->boundingBox = other.boundingBox;
+    this->length = other.length;
     bool d = other.dirty;
 
     // do NOT copy curve member (copying of ON_NurbsCurve is broken, segfaults).
@@ -1001,19 +1003,23 @@ double RSpline::getLength() const {
     if (!isValid()) {
         return 0.0;
     }
+    if (!dirty && !RMath::isNaN(length)) {
+        return length;
+    }
 
     if (hasProxy()) {
-        return splineProxy->getDistanceAtT(*this, getTMax());
+        length = splineProxy->getDistanceAtT(*this, getTMax());
     }
     else {
-        double length = 0.0;
+        length = 0.0;
         QList<QSharedPointer<RShape> > shapes = getExploded();
         for (int i=0; i<shapes.size(); i++) {
             QSharedPointer<RShape> shape = shapes[i];
             length += shape->getLength();
         }
-        return length;
     }
+
+    return length;
 
     // seems to only work in the context of another product which uses OpenNURBS:
     // curve.GetLength(&length);
@@ -1424,6 +1430,7 @@ void RSpline::invalidate() const {
     //curve.Initialize();
 #endif
     exploded.clear();
+    length = RNANDOUBLE;
 }
 
 void RSpline::updateInternal() const {
@@ -1442,6 +1449,7 @@ void RSpline::updateInternal() const {
     }
 
     exploded.clear();
+    length = RNANDOUBLE;
 
     // if fit points are known, update from fit points, otherwise from
     // control points:

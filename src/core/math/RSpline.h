@@ -314,6 +314,8 @@ private:
 #endif
     mutable RBox boundingBox;
     mutable QList<QSharedPointer<RShape> > exploded;
+    // cached length:
+    mutable double length;
 
     static RSplineProxy* splineProxy;
 };
