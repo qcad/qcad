@@ -2424,15 +2424,23 @@ function writeTextFile(fileName, str) {
 
 function getKeyboardModifiers() {
     if (RSettings.isQt(5)) {
-        return QGuiApplication.keyboardModifiers();
+        return QGuiApplication.queryKeyboardModifiers();
     }
     else {
-        return QApplication.keyboardModifiers();
+        return QApplication.queryKeyboardModifiers();
     }
 }
 
 function isShiftPressed() {
-    return getKeyboardModifiers().valueOf() & Qt.ShiftModifier.valueOf();
+    return (getKeyboardModifiers() & Qt.ShiftModifier) > 0;
+}
+
+function isAltPressed() {
+    return (getKeyboardModifiers() & Qt.AltModifier) > 0;
+}
+
+function isControlPressed() {
+    return (getKeyboardModifiers() & Qt.ControlModifier) > 0;
 }
 
 function createSpatialIndex() {
