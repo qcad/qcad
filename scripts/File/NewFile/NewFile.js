@@ -480,10 +480,12 @@ NewFile.setupDefaultAction = function(documentInterface) {
  */
 NewFile.getDefaultActionClass = function() {
     var defaultActionClass = "DefaultAction";
+
     var defaultActionFile = RSettings.getStringValue("NewFile/DefaultAction", "");
     if (defaultActionFile.length===0) {
         return defaultActionClass;
     }
+
     var defaultActionFileInfo = new QFileInfo(defaultActionFile);
     if (!defaultActionFileInfo.exists()) {
         defaultActionFileInfo = new QFileInfo(":/" + defaultActionFile);
@@ -492,6 +494,10 @@ NewFile.getDefaultActionClass = function() {
         include(defaultActionFile);
         defaultActionClass = new QFileInfo(defaultActionFile).baseName();
     }
+    else {
+        qWarning("custom default action class not found:", defaultActionFile);
+    }
+
     return defaultActionClass;
 };
 
