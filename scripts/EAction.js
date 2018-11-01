@@ -55,6 +55,8 @@ function EAction(guiAction) {
     // set to true to prefer dialog over options tool bar:
     this.useDialog = false;
     this.dialogUiFile = undefined;
+
+    this.waitingForContextMenu = false;
 }
 
 EAction.prototype = new RActionAdapter();
@@ -2059,15 +2061,7 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
         selectable = false;
     }
 
-    var mod;
-    if (isFunction(event.getModifiers)) {
-        mod = event.getModifiers();
-    }
-    else {
-        mod = event.modifiers();
-    }
-
-    var altPressed = (mod & Qt.AltModifier)!==0;
+    var altPressed = isAltPressed();
     if (!altPressed || preview) {
         if (!isNull(action.idFromContextMenu)) {
             // user already chose an entity from the context menu:
@@ -2096,7 +2090,6 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
     var ret = RObject.INVALID_ID;
     var doc = di.getDocument();
     var menu = new QMenu(EAction.getGraphicsView());
-    var a, r;
     menu.objectName = "EntityContextMenu";
 
     // reacts to hovering and clicking of context menu items:
@@ -2118,6 +2111,7 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
     // invalid entity id is used to to cancel:
     entityIds.push(RObject.INVALID_ID);
 
+    var a, reactor;
     for (var i=0; i<entityIds.length && i<20; i++) {
         var id = entityIds[i];
         var str;
@@ -2149,16 +2143,18 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
             a.icon = icon;
         }
 
-        r = new Reactor(id);
-        a.triggered.connect(r, "trigger");
-        a.hovered.connect(r, "hover");
+        reactor = new Reactor(id);
+        a.triggered.connect(reactor, "trigger");
+        a.hovered.connect(reactor, "hover");
     }
 
     // show context menu:
     if (!menu.isEmpty()) {
         var prev = QCoreApplication.testAttribute(Qt.AA_DontShowIconsInMenus);
         QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, false);
+        this.waitingForContextMenu = true;
         menu.exec(new QPoint(QCursor.pos().x(), QCursor.pos().y()+10));
+        this.waitingForContextMenu = false;
         QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, prev);
         di.clearPreview();
     }
