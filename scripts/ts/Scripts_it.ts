@@ -52,7 +52,7 @@
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+377"/>
+        <location line="+380"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>
@@ -79,18 +79,18 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+64"/>
+        <location filename="../EAction.js" line="+66"/>
         <source>Back</source>
         <translation>Indietro</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2077"/>
+        <location line="+2069"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-1802"/>
+        <location line="-1794"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -129,12 +129,12 @@
         <translation>Entità è su un layer bloccato.</translation>
     </message>
     <message>
-        <location line="+232"/>
+        <location line="+224"/>
         <source>Length:</source>
         <translation>Lunghezza:</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+42"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità non è un riferimento di blocco.</translation>
@@ -247,7 +247,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1003"/>
+        <location filename="../WidgetFactory.js" line="+1007"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>

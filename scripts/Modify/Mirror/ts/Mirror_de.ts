@@ -9,7 +9,17 @@
         <translation>S&amp;piegeln</translation>
     </message>
     <message>
-        <location filename="../Mirror.js" line="+62"/>
+        <location filename="../Mirror.js" line="+44"/>
+        <source>Modify</source>
+        <translation>Modifizieren</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mirror</source>
+        <translation>Spiegeln</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>First point of symmetry axis</source>
         <translation>Erster Punkt der Symmetrieachse</translation>
     </message>

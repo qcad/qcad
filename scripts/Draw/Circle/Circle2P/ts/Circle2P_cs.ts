@@ -26,7 +26,7 @@
     <message>
         <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
-        <translation>Vykreslit oblouk z 2 diametrálně protějších bodů</translation>
+        <translation>Nakreslit oblouk z 2 diametrálně protějších bodů</translation>
     </message>
 </context>
 </TS>

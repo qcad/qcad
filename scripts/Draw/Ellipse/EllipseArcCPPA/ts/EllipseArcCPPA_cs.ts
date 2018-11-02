@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>EllipseArcCPPA</name>
     <message>
@@ -71,7 +71,7 @@
     <message>
         <location line="+16"/>
         <source>End angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový úhel:</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPA.ui" line="+17"/>

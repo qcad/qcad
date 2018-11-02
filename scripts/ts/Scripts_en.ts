@@ -47,7 +47,7 @@
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+377"/>
+        <location line="+380"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
@@ -74,18 +74,18 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+64"/>
+        <location filename="../EAction.js" line="+66"/>
         <source>Back</source>
         <translation>Back</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2077"/>
+        <location line="+2069"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-1802"/>
+        <location line="-1794"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Active Tool:</translation>
@@ -116,12 +116,12 @@
         <translation>Entity is on a locked layer.</translation>
     </message>
     <message>
-        <location line="+232"/>
+        <location line="+224"/>
         <source>Length:</source>
         <translation>Length:</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+42"/>
         <source>Entity is not a block reference.</source>
         <translation>Entity is not a block reference.</translation>
     </message>
@@ -213,7 +213,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1003"/>
+        <location filename="../WidgetFactory.js" line="+1007"/>
         <source>Restore defaults</source>
         <translation>Restore defaults</translation>
     </message>

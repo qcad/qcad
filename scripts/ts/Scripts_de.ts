@@ -47,7 +47,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+377"/>
+        <location line="+380"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -74,18 +74,18 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+64"/>
+        <location filename="../EAction.js" line="+66"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2077"/>
+        <location line="+2069"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1802"/>
+        <location line="-1794"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -124,12 +124,12 @@
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
     <message>
-        <location line="+232"/>
+        <location line="+224"/>
         <source>Length:</source>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+42"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
@@ -233,7 +233,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1003"/>
+        <location filename="../WidgetFactory.js" line="+1007"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>

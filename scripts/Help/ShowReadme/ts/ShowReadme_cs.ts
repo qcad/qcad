@@ -11,7 +11,7 @@
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation>Nezobrazoval tento dialog při startu</translation>
+        <translation>Nezobrazovat tento dialog při startu</translation>
     </message>
 </context>
 <context>

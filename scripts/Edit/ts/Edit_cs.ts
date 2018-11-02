@@ -42,7 +42,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Předvolby aktuálního výkresu mohou být změněny v&lt;br/&gt;&lt;i&gt;Úpravy &amp;gt; Předvolby výkresu&lt;/i&gt;.</translation>
+        <translation>Předvolby aktuálního výkresu mohou být změněny v&lt;br/&gt;&lt;i&gt;Upravit &amp;gt; Předvolby výkresu&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -72,7 +72,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+27"/>
         <source>&amp;Edit</source>
-        <translation>Úpr&amp;avy</translation>
+        <translation>Upr&amp;avit</translation>
     </message>
 </context>
 <context>

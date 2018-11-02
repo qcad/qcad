@@ -11,7 +11,7 @@
     <message>
         <location line="+5"/>
         <source>Choose end point of arc</source>
-        <translation>Zvolte koncový bod oblouku</translation>
+        <translation>Vyberte koncový bod oblouku</translation>
     </message>
     <message>
         <location filename="../ArcTangential.ui" line="+17"/>
@@ -26,7 +26,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation>Vykreslit oblouk tangenciálně k základu</translation>
+        <translation>Nakreslit oblouk tangenciálně k základu</translation>
     </message>
 </context>
 </TS>

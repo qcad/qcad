@@ -47,7 +47,7 @@
         <translation>Presunúť prvok na požadované miesto</translation>
     </message>
     <message>
-        <location line="+377"/>
+        <location line="+380"/>
         <source>Move Reference Point</source>
         <translation>Presunúť referenčný bod</translation>
     </message>
@@ -74,18 +74,18 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+64"/>
+        <location filename="../EAction.js" line="+66"/>
         <source>Back</source>
         <translation>Späť</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2077"/>
+        <location line="+2069"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-1802"/>
+        <location line="-1794"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktívny Nástroj:</translation>
@@ -120,12 +120,12 @@
         <translation>Prvok je na zamknutej vrstve.</translation>
     </message>
     <message>
-        <location line="+232"/>
+        <location line="+224"/>
         <source>Length:</source>
         <translation>Dĺžka:</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+42"/>
         <source>Entity is not a block reference.</source>
         <translation>Prvok nie je blok.</translation>
     </message>
@@ -225,7 +225,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1003"/>
+        <location filename="../WidgetFactory.js" line="+1007"/>
         <source>Restore defaults</source>
         <translation>Obnoviť predvolené</translation>
     </message>

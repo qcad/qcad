@@ -34,7 +34,7 @@
     <message>
         <location line="+14"/>
         <source>Default color for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí barva pro vrstvu 0:</translation>
     </message>
     <message>
         <location line="-45"/>

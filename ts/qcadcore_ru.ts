@@ -437,7 +437,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+150"/>
         <source>Custom</source>
         <translation>Пользовательский</translation>
     </message>

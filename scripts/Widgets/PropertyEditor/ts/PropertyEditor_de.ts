@@ -26,12 +26,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1392"/>
+        <location filename="../PropertyEditor.js" line="+1400"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1199"/>
+        <location line="-1207"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -55,7 +55,7 @@
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+183"/>
+        <location line="+191"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -215,7 +215,7 @@
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-1068"/>
+        <location filename="../PropertyEditor.js" line="-1076"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

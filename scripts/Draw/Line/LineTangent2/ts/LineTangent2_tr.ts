@@ -21,12 +21,12 @@
     <message>
         <location filename="../LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation type="unfinished"></translation>
+        <translation>Te&amp;ğet (İki Daire)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>Teğet çiz (daire, daire)</translation>
     </message>
 </context>
 </TS>

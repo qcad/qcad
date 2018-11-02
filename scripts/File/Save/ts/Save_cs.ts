@@ -29,7 +29,7 @@
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation>Všechny černé objekty a vrstvy budou uloženy jako bílé.</translation>
+        <translation>Všechny černé prvky a vrstvy budou uloženy jako bílé.</translation>
     </message>
     <message>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
@@ -52,7 +52,7 @@
     <message>
         <location line="+4"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation>Černé objekty a vrstvy jsou uloženy jako bílé.</translation>
+        <translation>Černé prvky a vrstvy jsou uloženy jako bílé.</translation>
     </message>
     <message>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>

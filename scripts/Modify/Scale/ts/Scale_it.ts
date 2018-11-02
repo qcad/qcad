@@ -4,7 +4,17 @@
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../Scale.js" line="+71"/>
+        <location filename="../Scale.js" line="+48"/>
+        <source>Modify</source>
+        <translation>Modifica</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Scale</source>
+        <translation>Scala</translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Punto focale</translation>
@@ -110,7 +120,12 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
         <translation>Fattore &amp;y:</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+44"/>
+        <source>Define factor using mouse cursor</source>
+        <translation>Definire il fattore usando il cursore del mouse</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa layer e gli &amp;attributi corrente</translation>
     </message>

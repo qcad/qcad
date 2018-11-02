@@ -67,7 +67,7 @@
         <translation>Custom</translation>
     </message>
     <message>
-        <location line="+166"/>
+        <location line="+174"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>

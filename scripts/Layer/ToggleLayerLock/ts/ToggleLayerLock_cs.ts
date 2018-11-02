@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Přepnout stav uzamčení</translation>
     </message>
 </context>
 <context>

@@ -16,7 +16,7 @@
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
-        <translation>Kreslit samostatný bod</translation>
+        <translation>Nakreslit samostatný bod</translation>
     </message>
 </context>
 </TS>

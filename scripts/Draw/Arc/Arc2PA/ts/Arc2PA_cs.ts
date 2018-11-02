@@ -57,7 +57,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
-        <translation>Kreslení oblouku z 2 bodů a úhlu</translation>
+        <translation>Nakreslit oblouk z 2 bodů a úhlu</translation>
     </message>
 </context>
 </TS>

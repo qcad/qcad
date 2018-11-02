@@ -6,37 +6,37 @@
     <message>
         <location filename="../ArcCPA.js" line="+66"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Střed</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Bod na oblouku nebo poloměr</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Bod na oblouku</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Start angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční úhel</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový úhel</translation>
     </message>
     <message>
         <location filename="../ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Směr:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Proti směru hodinových ručiček (pozitivní)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -57,7 +57,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation>Kreslit oblouk ze středu, bodu na oblouku a úhlech</translation>
+        <translation>Nakreslit oblouk ze středu, bodu na oblouku a úhlech</translation>
     </message>
 </context>
 </TS>

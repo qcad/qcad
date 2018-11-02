@@ -46,12 +46,12 @@
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation>Zrcadlit blok&lt;br&gt;horizontálně</translation>
+        <translation>Překlopit blok&lt;br&gt;horizontálně</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation>Zrcadlit blok&lt;br&gt;vertikálně</translation>
+        <translation>Překlopit blok&lt;br&gt;vertikálně</translation>
     </message>
     <message>
         <location line="+18"/>

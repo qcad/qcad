@@ -4,7 +4,17 @@
 <context>
     <name>Mirror</name>
     <message>
-        <location filename="../Mirror.js" line="+62"/>
+        <location filename="../Mirror.js" line="+44"/>
+        <source>Modify</source>
+        <translation>Modificar</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mirror</source>
+        <translation>Espejo</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primer punto del eje de simetría</translation>

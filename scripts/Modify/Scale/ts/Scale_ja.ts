@@ -4,7 +4,17 @@
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../Scale.js" line="+71"/>
+        <location filename="../Scale.js" line="+48"/>
+        <source>Modify</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Focus point</source>
         <translation>中心点</translation>
     </message>
@@ -67,7 +77,12 @@
         <translation>係数&amp;y:</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+44"/>
+        <source>Define factor using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>

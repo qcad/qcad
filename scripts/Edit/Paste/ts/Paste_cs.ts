@@ -26,7 +26,7 @@
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Otočit vložené objekty&lt;br&gt;v tomto úhlu</translation>
+        <translation>Otočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -36,57 +36,57 @@
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Zvětšit objekty&lt;br&gt; tímto faktorem</translation>
+        <translation>Zvětšit prvky&lt;br&gt; tímto faktorem</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Překlopit vložené prvky&lt;br&gt;horizontálně</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Překlopit vložené prvky&lt;br&gt;vertikálně</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Vložit všechny prvky do aktuální vrstvy&lt;br&gt;namísto původní vrstvy</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Do aktuální vrstvy</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepsat existující vrstvy&lt;br&gt;ve výkresu s vrstvami&lt;br&gt;ze schránky</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepsat vrstvy</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepsat existující bloky&lt;br&gt;ve výkresu s bloky&lt;br&gt;ze schránky</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepsat bloky</translation>
     </message>
     <message>
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vložit</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="unfinished"></translation>
+        <translation>Obnovení výchozích hodnot při každém použití nástroje</translation>
     </message>
 </context>
 </TS>

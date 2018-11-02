@@ -4,7 +4,17 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="+70"/>
+        <location filename="../Rotate.js" line="+47"/>
+        <source>Modify</source>
+        <translation>Modifier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rotate</source>
+        <translation>Rotation</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Center point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Point central</translation>

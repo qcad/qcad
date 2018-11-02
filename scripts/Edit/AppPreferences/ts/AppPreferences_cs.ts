@@ -6,7 +6,7 @@
     <message>
         <location filename="../AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation>Aplikační &amp;předvolby</translation>
+        <translation>&amp;Předvolby aplikace</translation>
     </message>
 </context>
 </TS>

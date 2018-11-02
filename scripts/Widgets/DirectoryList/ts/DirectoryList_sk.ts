@@ -4,13 +4,19 @@
 <context>
     <name>DirectoryList</name>
     <message>
+        <source>The folder
+&apos;%1&apos;
+is already in the list.</source>
+        <translation type="vanished">Priečinok
+&apos;%1&apos;
+už existuje v zozname.</translation>
+    </message>
+    <message>
         <location filename="../DirectoryList.js" line="+57"/>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation>Priečinok
-&quot;%1&quot;
-už existuje v zozname.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

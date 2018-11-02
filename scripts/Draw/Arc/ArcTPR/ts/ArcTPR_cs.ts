@@ -6,7 +6,7 @@
     <message>
         <location filename="../ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation>Vyberte čáru, oblouk, kruh nebo elipsu</translation>
+        <translation>Vyberte čáru, oblouk, kružnici nebo elipsu</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -37,7 +37,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Kreslení oblouku pomocí bodu s poloměrem</translation>
+        <translation>Nakreslit oblouk pomocí bodu s poloměrem</translation>
     </message>
 </context>
 </TS>

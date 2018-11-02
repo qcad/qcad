@@ -4,17 +4,21 @@
 <context>
     <name>SelectByColor</name>
     <message>
-        <location filename="../SelectByColor.js" line="64"/>
         <source>Select one or more objects of the desired color first</source>
-        <translation>Selecteer eerst een of meerdere objecten van de gewenste kleur</translation>
+        <translation type="vanished">Selecteer eerst een of meerdere objecten van de gewenste kleur</translation>
     </message>
     <message>
-        <location filename="../SelectByColor.js" line="80"/>
+        <location filename="../SelectByColor.js" line="+64"/>
+        <source>Select one or more objects only of the desired color</source>
+        <translation>Selecteer een of meerdere objecten van de gewenste kleur</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
         <translation>Alle zichtbare objecten van kleur %1 geselecteerd</translation>
     </message>
     <message>
-        <location filename="../SelectByColorInit.js" line="2"/>
+        <location filename="../SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
         <translation>Op kleur</translation>
     </message>
@@ -22,7 +26,7 @@
 <context>
     <name>SelectByColorInit</name>
     <message>
-        <location filename="../SelectByColorInit.js" line="5"/>
+        <location line="+3"/>
         <source>Select all objects of a color</source>
         <translation>Selecteer alle objecten van een kleur</translation>
     </message>

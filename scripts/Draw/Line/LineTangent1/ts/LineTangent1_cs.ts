@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>LineTangent1</name>
     <message>
         <location filename="../LineTangent1.js" line="+64"/>
         <source>Choose start point of tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte počáteční bod tečny</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte kružnici, oblouk nebo elipsu</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>No tangent possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Žádná tečna není možná.</translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Nelze kreslit tečnu z bodu v kružnici do kružnice</translation>
     </message>
     <message>
         <location filename="../LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tečna (bod, kružnice)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nakreslit tečnu (bod, kružnice)</translation>
     </message>
 </context>
 </TS>

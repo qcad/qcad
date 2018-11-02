@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
         <location filename="../SelectIntersectedEntities.js" line="+89"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>První bod</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhý bod</translation>
     </message>
     <message>
         <location filename="../SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Režim:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -34,27 +34,27 @@
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Přidat do aktuálního výběru</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Odečíst od aktuálního výběru</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Společné s aktuálním výběrem</translation>
     </message>
     <message>
         <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>(Ne-)Vybrat protínající se objekty</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished"></translation>
+        <translation>(Ne-) Vybrat všechny objekty protínající se čárou</translation>
     </message>
 </context>
 </TS>

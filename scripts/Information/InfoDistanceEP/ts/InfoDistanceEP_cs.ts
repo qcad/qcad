@@ -6,7 +6,7 @@
     <message>
         <location filename="../InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation>Určete objekt</translation>
+        <translation>Určete prvek</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Vzdálenost mezi &amp;objektem a bodem</translation>
+        <translation>Vzdálenost mezi &amp;prvkem a bodem</translation>
     </message>
 </context>
 </TS>

@@ -21,7 +21,7 @@
     <message>
         <location line="+5"/>
         <source>Draw concentric arc</source>
-        <translation>Kreslit soustředný oblouk</translation>
+        <translation>Nakreslit soustředný oblouk</translation>
     </message>
 </context>
 </TS>

@@ -4,7 +4,17 @@
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../Scale.js" line="+71"/>
+        <location filename="../Scale.js" line="+48"/>
+        <source>Modify</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Punkt skupienia</translation>
@@ -100,7 +110,12 @@ Mnożnik &amp;Y:</translatorcomment>
         <translation>Współczynnik skali wzdłuż osi &amp;Y:</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+44"/>
+        <source>Define factor using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użycie aktualnej warstwy i &amp;atrybutów</translation>

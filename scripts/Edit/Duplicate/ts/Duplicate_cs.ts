@@ -19,8 +19,8 @@
     <message numerus="yes">
         <location filename="../Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n prvek/y duplikovány</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>

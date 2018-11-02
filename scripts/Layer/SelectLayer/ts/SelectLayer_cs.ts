@@ -11,12 +11,12 @@
     <message>
         <location filename="../SelectLayer.js" line="+55"/>
         <source>%1 entities added to selection.</source>
-        <translation>%1 objektů přidáno do výběru.</translation>
+        <translation>%1 prvků přidáno do výběru.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation>%1 objektů odebráno z výběru.</translation>
+        <translation>%1 prvků odebráno z výběru.</translation>
     </message>
 </context>
 </TS>

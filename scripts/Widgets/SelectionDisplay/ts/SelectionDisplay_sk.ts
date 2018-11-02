@@ -9,20 +9,32 @@
         <translation>Žiadne vybrané prvky.</translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation>%1 %2 na Vrstve &quot;%3&quot;</translation>
+        <source>%1 %2 on Layer &apos;%3&apos;</source>
+        <translation type="vanished">%1 %2 na Vrstve &apos;%3&apos;</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+26"/>
         <source>%1 %2 on %3 Layers</source>
         <translation>%1 %2 na %3 Vrstvách</translation>
     </message>
     <message numerus="yes">
-        <location line="+4"/>
+        <source>%n Entities on Layer &apos;%1&apos;</source>
+        <translation type="vanished">
+            <numerusform>%n prvky na vrstve &apos;%1&apos;</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>%1 %2 on Layer &quot;%3&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+7"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation>
-            <numerusform>%n prvky na vrstve &quot;%1&quot;</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -51,8 +63,8 @@
         </translation>
     </message>
     <message>
-        <source>%1 Entities on Layer &quot;%2&quot;</source>
-        <translation type="vanished">%1 Prvkov(-y) na Vrstve &quot;%2&quot;</translation>
+        <source>%1 Entities on Layer &apos;%2&apos;</source>
+        <translation type="vanished">%1 Prvkov(-y) na Vrstve &apos;%2&apos;</translation>
     </message>
     <message>
         <source>%1 Entities on %2 Layers</source>

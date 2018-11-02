@@ -6,7 +6,7 @@
     <message>
         <location filename="../LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dikey Çizgi</translation>
     </message>
     <message>
         <location line="+4"/>

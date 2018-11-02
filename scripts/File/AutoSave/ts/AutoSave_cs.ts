@@ -20,7 +20,7 @@
     <message>
         <location line="+95"/>
         <source>Autosaving to:</source>
-        <translation>Automaticky uložit do:</translation>
+        <translation>Automatické ukládání do:</translation>
     </message>
     <message>
         <location line="+20"/>

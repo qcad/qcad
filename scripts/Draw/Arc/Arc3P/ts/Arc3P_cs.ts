@@ -26,7 +26,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation>Kreslení oblouku ze 3 bodů</translation>
+        <translation>Nakreslit oblouk ze 3 bodů</translation>
     </message>
 </context>
 </TS>

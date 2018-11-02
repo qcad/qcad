@@ -212,7 +212,7 @@
         <translation>Programiranje</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+50"/>
         <source>Translations</source>
         <translation>Prevodi</translation>
     </message>

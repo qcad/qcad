@@ -11,12 +11,12 @@
     <message>
         <location filename="../ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Soustředný (skrz bod)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nakreslit soustředný oblouk skrz bod</translation>
     </message>
 </context>
 </TS>

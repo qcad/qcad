@@ -6,36 +6,36 @@
     <message>
         <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
-        <translation>Nástroje úsečky</translation>
+        <translation>Nástroje čar</translation>
     </message>
     <message>
         <source>Show line tools</source>
-        <translation type="vanished">Zobrazit nástroje úsečky</translation>
+        <translation type="vanished">Zobrazit nástroje čar</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Line</source>
-        <translation>Ú&amp;sečka</translation>
+        <translation>&amp;Čára</translation>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation>Stejný typ objektu jako originál</translation>
+        <translation>Stejný typ prvku jako originál</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation>Segment úsečky</translation>
+        <translation>Segment čáry</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation>Nekonečná přímka</translation>
+        <translation>Přímka</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation>Paprsek</translation>
+        <translation>Polopřímka</translation>
     </message>
 </context>
 </TS>

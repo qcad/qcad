@@ -6,7 +6,7 @@
     <message>
         <location filename="../DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>&amp;Blok Referans Seçimlerini Kaldır</translation>
+        <translation>&amp;Zrušit výběr reference bloku</translation>
     </message>
 </context>
 </TS>

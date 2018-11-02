@@ -35,13 +35,13 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1392"/>
+        <location filename="../PropertyEditor.js" line="+1400"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1199"/>
+        <location line="-1207"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -84,7 +84,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+166"/>
+        <location line="+174"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó

@@ -37,8 +37,7 @@
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform>%n &apos;autosave&apos; záložný súbor(-y) výkresu(-ov) bez názvu bol/boli nájdené.
-Chcete ho/ich obnoviť?</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>

@@ -56,12 +56,12 @@
     <message>
         <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
-        <translation>Úsečka zadaná &amp;2 body</translation>
+        <translation>Čára zadaná &amp;2 body</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
-        <translation>Kreslit jednu úsečku nebo sekvenci úseček</translation>
+        <translation>Nakreslit jednu čáru nebo sekvenci čar</translation>
     </message>
 </context>
 </TS>

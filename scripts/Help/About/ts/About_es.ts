@@ -220,7 +220,7 @@
         <translation>Programación</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+50"/>
         <source>Translations</source>
         <translation>Traducciones</translation>
     </message>

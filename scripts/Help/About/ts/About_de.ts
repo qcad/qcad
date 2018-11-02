@@ -228,7 +228,7 @@
         <translation>Programmierung</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+50"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>

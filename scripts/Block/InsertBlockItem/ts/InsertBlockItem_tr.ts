@@ -11,7 +11,7 @@
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation>&quot;%1&quot; için düzeltilmiş geçersiz blok adı</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>

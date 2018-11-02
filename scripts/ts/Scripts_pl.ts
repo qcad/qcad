@@ -52,7 +52,7 @@
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
-        <location line="+377"/>
+        <location line="+380"/>
         <source>Move Reference Point</source>
         <translation>Przenieś punkt odniesienia</translation>
     </message>
@@ -79,7 +79,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+64"/>
+        <location filename="../EAction.js" line="+66"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -89,7 +89,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2077"/>
+        <location line="+2069"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -98,7 +98,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-1802"/>
+        <location line="-1794"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -148,12 +148,12 @@ Narzędzia CAD</translatorcomment>
         <translation>Obiekt nie znajduje się na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location line="+232"/>
+        <location line="+224"/>
         <source>Length:</source>
         <translation>Długość:</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+42"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Obiekt nie jest odniesieniem bloku.</translation>
@@ -268,7 +268,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1003"/>
+        <location filename="../WidgetFactory.js" line="+1007"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--

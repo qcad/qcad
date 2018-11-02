@@ -26,24 +26,40 @@
         <translation>Neplatná hodnota:</translation>
     </message>
     <message>
+        <source>Invalid coordinate or distance &apos;%1&apos;.</source>
+        <translation type="vanished">Neplatné súradnice alebo vzdialenosť &apos;%1&apos;.</translation>
+    </message>
+    <message>
+        <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
+        <translation type="vanished">Neznámy príkaz alebo neplatné súradnice alebo hodnota: &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Numbers may be entered as: &apos;%1&apos;</source>
+        <translation type="vanished">Čísla môžu byť zapísané ako: &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>
+        <translation type="vanished">Súradnice môžu byť zadaná ako: &apos;%1&apos; (absolútne) alebo &apos;%2&apos; (relatívne) alebo &apos;%3&apos; (polárne), alebo &apos;%4&apos; (relatívne polárne)</translation>
+    </message>
+    <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation>Neplatné súradnice alebo vzdialenosť &quot;%1&quot;.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation>Neznámy príkaz alebo neplatné súradnice alebo hodnota: &quot;%1&quot;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &quot;%1&quot;</source>
-        <translation>Čísla môžu byť zapísané ako: &quot;%1&quot;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation>Súradnice môžu byť zadaná ako: &quot;%1&quot; (absolútne) alebo &quot;%2&quot; (relatívne) alebo &quot;%3&quot; (polárne), alebo &quot;%4&quot; (relatívne polárne)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

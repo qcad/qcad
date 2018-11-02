@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>Modify</name>
     <message>
         <location filename="../Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Nástroje úprav</translation>
+    </message>
+    <message>
+        <source>Show modification tools</source>
+        <translation type="vanished">Zobrazit nástroje úprav</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Úpravy</translation>
     </message>
 </context>
 <context>
@@ -19,22 +23,22 @@
     <message>
         <location filename="../ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte roh</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte první prvek</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte druhý prvek</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nastavte bod</translation>
     </message>
 </context>
 <context>
@@ -42,7 +46,7 @@
     <message>
         <location filename="../Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tento nástroj vyžaduje výběr</translation>
     </message>
 </context>
 </TS>

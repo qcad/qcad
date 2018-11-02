@@ -45,12 +45,12 @@
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation>Zrcadlit vložené prvky&lt;br&gt;horizontálně</translation>
+        <translation>Překlopit vložené prvky&lt;br&gt;horizontálně</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation>Zrcadlit vložené prvky&lt;br&gt;vertikálně</translation>
+        <translation>Překlopit vložené prvky&lt;br&gt;vertikálně</translation>
     </message>
     <message>
         <location line="+14"/>

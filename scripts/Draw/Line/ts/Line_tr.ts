@@ -25,12 +25,12 @@
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Çizgi Bölümü</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonsuz Çizgi</translation>
     </message>
     <message>
         <location line="+17"/>

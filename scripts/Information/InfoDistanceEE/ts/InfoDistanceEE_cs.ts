@@ -6,12 +6,12 @@
     <message>
         <location filename="../InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation>Určete první objekt</translation>
+        <translation>Určete první prvek</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation>Určete druhý objekt</translation>
+        <translation>Určete druhý prvek</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation>Vzdálenost mezi &amp;objekty</translation>
+        <translation>Vzdálenost mezi &amp;prvky</translation>
     </message>
 </context>
 </TS>
