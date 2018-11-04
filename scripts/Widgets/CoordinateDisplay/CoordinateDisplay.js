@@ -24,6 +24,10 @@ include("scripts/Widgets/StatusBar/StatusBar.js");
 function CoordinateDisplay() {
 }
 
+CoordinateDisplay.getPreferencesCategory = function() {
+    return [ qsTr("Widgets"), qsTr("Coordinate Display") ];
+};
+
 CoordinateDisplay.singleShot = undefined;
 
 CoordinateDisplay.widget = undefined;
@@ -37,6 +41,7 @@ CoordinateDisplay.counter = 0;
 CoordinateDisplay.postInit = function(basePath) {
     CoordinateDisplay.widget = WidgetFactory.createWidget(basePath, "CoordinateDisplay.ui");
     StatusBar.addWidget(CoordinateDisplay.widget, 100, RSettings.getBoolValue("StatusBar/CoordinateDisplay", true));
+    CoordinateDisplay.forcedUpdateInterval = RSettings.getIntValue("CoordinateDisplay/Interval", 8);
 
     CoordinateDisplay.lAbs = CoordinateDisplay.widget.findChild("Abs");
     CoordinateDisplay.lAbs.font = RSettings.getStatusBarFont();
@@ -87,17 +92,17 @@ CoordinateDisplay.update = function(documentInterface) {
         }
     }
 
-    CoordinateDisplay.singleShot = new QTimer();
-    CoordinateDisplay.singleShot.singleShot = true;
-    CoordinateDisplay.singleShot.timeout.connect(CoordinateDisplay.timedUpdate);
-
-    // force immediate update every 10 mouse moves
+    // force immediate update every X mouse moves
     CoordinateDisplay.counter++;
-    if (CoordinateDisplay.counter>=10) {
-        CoordinateDisplay.singleShot.start(0);
+    if (CoordinateDisplay.counter>=CoordinateDisplay.forcedUpdateInterval) {
+        //CoordinateDisplay.singleShot.start(0);
+        CoordinateDisplay.timedUpdate();
         CoordinateDisplay.counter = 0;
     }
     else {
+        CoordinateDisplay.singleShot = new QTimer();
+        CoordinateDisplay.singleShot.singleShot = true;
+        CoordinateDisplay.singleShot.timeout.connect(CoordinateDisplay.timedUpdate);
         CoordinateDisplay.singleShot.start(20);
     }
 };

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CoordinateDisplay</class>
+ <widget class="QWidget" name="CoordinateDisplay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>398</width>
+    <height>298</height>
+   </rect>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Force update every N mouse moves:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="Interval">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <item>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">16</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">32</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">64</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">128</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
