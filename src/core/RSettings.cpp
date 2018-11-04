@@ -84,9 +84,13 @@ int RSettings::ignoreBlockReferencePoint = -1;
 int RSettings::ignoreAllReferencePoints = -1;
 int RSettings::referencePointSize = -1;
 int RSettings::referencePointShape = -1;
+QString RSettings::polarCoordinateSeparator = QString::null;
+QString RSettings::cartesianCoordinateSeparator = QString::null;
+QString RSettings::relativeCoordinatePrefix = QString::null;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
+
 QSettings* RSettings::qSettings = NULL;
 
 QStringList RSettings::originalArguments;
@@ -100,6 +104,7 @@ bool RSettings::newVersion = false;
 int RSettings::previousVersion = 0;
 
 QStringList RSettings::openGLMessages;
+
 
 /**
  * App ID used for DXF/DWG exports / imports to identify app XData.
@@ -910,6 +915,36 @@ int RSettings::getReferencePointShape() {
     return referencePointShape;
 }
 
+/**
+ * \return Polar coordinate separator (<).
+ */
+QString RSettings::getPolarCoordinateSeparator() {
+    if (polarCoordinateSeparator.isNull()) {
+        polarCoordinateSeparator = getStringValue("Input/PolarCoordinateSeparator", "<");
+    }
+    return polarCoordinateSeparator;
+}
+
+/**
+ * \return Cartesian coordinate separator (,).
+ */
+QString RSettings::getCartesianCoordinateSeparator() {
+    if (cartesianCoordinateSeparator.isNull()) {
+        cartesianCoordinateSeparator = getStringValue("Input/CartesianCoordinateSeparator", ",");
+    }
+    return cartesianCoordinateSeparator;
+}
+
+/**
+ * \return Relative coordinate prefix (@).
+ */
+QString RSettings::getRelativeCoordinatePrefix() {
+    if (relativeCoordinatePrefix.isNull()) {
+        relativeCoordinatePrefix = getStringValue("Input/RelativeCoordinatePrefix", "@");
+    }
+    return relativeCoordinatePrefix;
+}
+
 bool RSettings::hasDarkGuiBackground() {
     if (darkGuiBackground==-1) {
 //        // find out what color is used for QFrames (this might originate from a CSS stylesheet):
@@ -1602,6 +1637,9 @@ void RSettings::resetCache() {
     ignoreAllReferencePoints = -1;
     referencePointSize = -1;
     referencePointShape = -1;
+    cartesianCoordinateSeparator = QString::null;
+    polarCoordinateSeparator = QString::null;
+    relativeCoordinatePrefix = QString::null;
     mouseThreshold = -1;
     themePath = QString();
     cache.clear();

@@ -1738,7 +1738,7 @@ function coordinateToString(coordinate, decimals, relative, polar, doc) {
     var second;
     var sep;
     if (polar) {
-        sep = RSettings.getStringValue("Input/PolarCoordinateSeparator", "<");
+        sep = RSettings.getPolarCoordinateSeparator();
         if (!isNull(doc)) {
             first = doc.formatLinear(coordinate.getMagnitude());
             second = doc.formatAngle(coordinate.getAngle());
@@ -1749,7 +1749,7 @@ function coordinateToString(coordinate, decimals, relative, polar, doc) {
         }
     }
     else {
-        sep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ",");
+        sep = RSettings.getCartesianCoordinateSeparator();
         if (!isNull(doc)) {
             first = doc.formatLinear(coordinate.x);
             second = doc.formatLinear(coordinate.y);
@@ -1762,10 +1762,7 @@ function coordinateToString(coordinate, decimals, relative, polar, doc) {
 
     var prefix;
     if (relative) {
-        prefix = RSettings.getStringValue(
-                    "Input/RelativeCoordinatePrefix",
-                    String.fromCharCode(64)  // @ (doxygen can't cope with an @ here)
-        );
+        prefix = RSettings.getRelativeCoordinatePrefix();
     }
     else {
         prefix = "";

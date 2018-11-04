@@ -275,6 +275,9 @@ public:
     static bool getIgnoreAllReferencePoints();
     static int getReferencePointSize();
     static int getReferencePointShape();
+    static QString getPolarCoordinateSeparator();
+    static QString getCartesianCoordinateSeparator();
+    static QString getRelativeCoordinatePrefix();
 
     static bool hasDarkGuiBackground();
     static bool hasCustomStyleSheet();
@@ -334,6 +337,10 @@ private:
     static int ignoreAllReferencePoints;
     static int referencePointSize;
     static int referencePointShape;
+    static QString polarCoordinateSeparator;
+    static QString cartesianCoordinateSeparator;
+    static QString relativeCoordinatePrefix;
+
     static QStringList recentFiles;
     static QLocale* numberLocale;
 
