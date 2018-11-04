@@ -454,6 +454,15 @@
         getReferencePointShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPolarCoordinateSeparator
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCartesianCoordinateSeparator
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRelativeCoordinatePrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasDarkGuiBackground
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

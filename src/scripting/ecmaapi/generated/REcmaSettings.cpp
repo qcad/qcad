@@ -329,6 +329,12 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getReferencePointShape, "getReferencePointShape");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPolarCoordinateSeparator, "getPolarCoordinateSeparator");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getCartesianCoordinateSeparator, "getCartesianCoordinateSeparator");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getRelativeCoordinatePrefix, "getRelativeCoordinatePrefix");
+            
             REcmaHelper::registerFunction(&engine, &ctor, hasDarkGuiBackground, "hasDarkGuiBackground");
             
             REcmaHelper::registerFunction(&engine, &ctor, hasCustomStyleSheet, "hasCustomStyleSheet");
@@ -7053,6 +7059,123 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getReferencePointShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getPolarCoordinateSeparator
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPolarCoordinateSeparator", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPolarCoordinateSeparator";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getPolarCoordinateSeparator();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPolarCoordinateSeparator().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPolarCoordinateSeparator", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getCartesianCoordinateSeparator
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getCartesianCoordinateSeparator", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getCartesianCoordinateSeparator";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getCartesianCoordinateSeparator();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getCartesianCoordinateSeparator().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getCartesianCoordinateSeparator", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getRelativeCoordinatePrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getRelativeCoordinatePrefix", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getRelativeCoordinatePrefix";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getRelativeCoordinatePrefix();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getRelativeCoordinatePrefix().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getRelativeCoordinatePrefix", context, engine);
             return result;
         }
          QScriptValue

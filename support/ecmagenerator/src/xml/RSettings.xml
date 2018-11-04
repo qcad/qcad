@@ -872,6 +872,21 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="getPolarCoordinateSeparator"
+    cppName="getPolarCoordinateSeparator" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getCartesianCoordinateSeparator"
+    cppName="getCartesianCoordinateSeparator" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getRelativeCoordinatePrefix"
+    cppName="getRelativeCoordinatePrefix" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="hasDarkGuiBackground"
     cppName="hasDarkGuiBackground" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
