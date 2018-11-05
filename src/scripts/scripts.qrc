@@ -9548,6 +9548,7 @@
     <file alias="scripts/Widgets/CommandLine/ts/CommandLine_zh_TW.qm">../../scripts/Widgets/CommandLine/ts/CommandLine_zh_TW.qm</file>
     <file alias="scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js">../../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js</file>
     <file alias="scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui">../../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui</file>
+    <file alias="scripts/Widgets/CoordinateDisplay/PreferencesPage.ui">../../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui</file>
     <file alias="scripts/Widgets/CoordinateDisplay/ts/CoordinateDisplay_cs.qm">../../scripts/Widgets/CoordinateDisplay/ts/CoordinateDisplay_cs.qm</file>
     <file alias="scripts/Widgets/CoordinateDisplay/ts/CoordinateDisplay_de.qm">../../scripts/Widgets/CoordinateDisplay/ts/CoordinateDisplay_de.qm</file>
     <file alias="scripts/Widgets/CoordinateDisplay/ts/CoordinateDisplay_en.qm">../../scripts/Widgets/CoordinateDisplay/ts/CoordinateDisplay_en.qm</file>
