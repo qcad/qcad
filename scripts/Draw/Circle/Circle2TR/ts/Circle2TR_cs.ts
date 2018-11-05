@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>Circle2TR</name>
     <message>
         <location filename="../Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>První čára, oblouk nebo kružnice</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhá čára, oblouk nebo kružnice</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte řešení</translation>
     </message>
     <message>
         <location line="+99"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Žádné řešení</translation>
     </message>
     <message>
         <location filename="../Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Poloměr:</translation>
     </message>
     <message>
         <location filename="../Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>2 &amp;Tečny a poloměr</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Nakreslit kružnici dotýkající se dvou prvků a daným poloměrem</translation>
     </message>
 </context>
 </TS>

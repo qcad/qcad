@@ -6,7 +6,7 @@
     <message>
         <location filename="../EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
-        <translation>&amp;Návrat do hlavního kreslení</translation>
+        <translation>&amp;Návrat do hlavního výkresu</translation>
     </message>
 </context>
 </TS>

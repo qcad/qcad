@@ -72,12 +72,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation type="unfinished"></translation>
+        <translation>Kabinetní</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation type="unfinished"></translation>
+        <translation>Kavalírní</translation>
     </message>
 </context>
 </TS>

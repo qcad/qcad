@@ -18,7 +18,7 @@
         <translation type="vanished">Mostra gli strumenti di disegno vari</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>&amp;Draw</source>
         <translation>&amp;Disegna</translation>
     </message>

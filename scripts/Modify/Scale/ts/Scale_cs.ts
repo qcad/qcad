@@ -6,12 +6,12 @@
     <message>
         <location filename="../Scale.js" line="+48"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Upravit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Měřítko</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -79,7 +79,7 @@
     <message>
         <location line="+44"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Definujte faktor pomocí kurzoru myši</translation>
     </message>
     <message>
         <location line="+25"/>

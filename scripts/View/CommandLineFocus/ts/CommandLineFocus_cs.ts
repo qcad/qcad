@@ -6,7 +6,7 @@
     <message>
         <location filename="../CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation type="unfinished">&amp;Skočit na příkazový řádek</translation>
+        <translation>&amp;Skočit na příkazový řádek</translation>
     </message>
 </context>
 </TS>

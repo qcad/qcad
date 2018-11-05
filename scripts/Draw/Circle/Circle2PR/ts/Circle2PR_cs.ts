@@ -36,28 +36,28 @@
     <message>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation type="unfinished"></translation>
+        <translation>Střed nalevo od úsečky P1 - P2</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Řešení</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation type="unfinished"></translation>
+        <translation>Střed napravo od úsečky P1 - P2</translation>
     </message>
     <message>
         <location filename="../Circle2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 Body a poloměr</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Nakreslit kružnici z 2 bodů a poloměru</translation>
     </message>
 </context>
 </TS>

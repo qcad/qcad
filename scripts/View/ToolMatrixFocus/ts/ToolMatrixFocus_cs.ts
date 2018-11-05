@@ -12,7 +12,7 @@
     <message>
         <location filename="../ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation type="unfinished">&amp;Skočit na Nástroje kreslení</translation>
+        <translation>&amp;Skočit na Matici nástrojů</translation>
     </message>
 </context>
 </TS>

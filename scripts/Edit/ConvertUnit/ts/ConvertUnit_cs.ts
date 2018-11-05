@@ -11,7 +11,7 @@
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybraná jednotka &quot;%1&quot;. Nic se nestane</translation>
     </message>
     <message>
         <source>Unit &apos;%1&apos; selected - Nothing to be done</source>

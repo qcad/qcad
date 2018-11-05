@@ -64,7 +64,7 @@
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation>Úpravy bloku &quot;%1&quot;&lt;br&gt;Po dokončení úprav zvolte &lt;i&gt;Blok &gt; Návrat do hlavního výkresu&lt;/i&gt;</translation>
     </message>
     <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
@@ -615,22 +615,22 @@
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhlové kóty (2 čáry)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhlová kóta (2 čáry)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhlové kóty (3 body)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhlová kóta (3 body)</translation>
     </message>
     <message>
         <location line="+2"/>

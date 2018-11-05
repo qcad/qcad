@@ -21,7 +21,7 @@
     <message>
         <location line="+1"/>
         <source>levelOfDetail</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">levelOfDetail</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -302,7 +302,7 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetovat výběr štítků</translation>
     </message>
     <message>
         <location line="+126"/>

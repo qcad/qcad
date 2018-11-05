@@ -22,7 +22,7 @@
         <translation type="vanished">Diverse Zeichnungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>&amp;Draw</source>
         <translation>&amp;Zeichnen</translation>
     </message>

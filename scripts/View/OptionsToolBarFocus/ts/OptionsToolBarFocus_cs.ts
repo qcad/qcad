@@ -6,7 +6,7 @@
     <message>
         <location filename="../OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
-        <translation type="unfinished">Skočit na panel Nastavení</translation>
+        <translation>Skočit na panel Nastavení</translation>
     </message>
 </context>
 </TS>

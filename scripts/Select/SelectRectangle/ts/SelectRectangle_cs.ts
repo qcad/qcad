@@ -16,7 +16,7 @@
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation>Dokončeno</translation>
+        <translation>Dokončit</translation>
     </message>
     <message>
         <location filename="../SelectRectangle.ui" line="+17"/>
@@ -34,7 +34,7 @@
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SelectionMode</translation>
     </message>
     <message>
         <location line="-53"/>

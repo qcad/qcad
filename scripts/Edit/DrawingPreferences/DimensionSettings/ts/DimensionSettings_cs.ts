@@ -82,7 +82,7 @@
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished"></translation>
+        <translation>Geometrické jednotky</translation>
     </message>
     <message>
         <location line="+209"/>
@@ -92,11 +92,11 @@
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pro zobrazení formátů &quot;Stavitelský&quot; nebo &quot;Inženýrský&quot; musí být vybraná jednotka výkresu &quot;Palec&quot;. Formát byl změněn na &quot;Desetinný&quot;.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">Pro zobrazení formátů &quot;Stavitelský&quot; nebo &quot;Inženýrský&quot; musí být vybraná jednotka výkresu &quot;Palec&quot;. Formát byl změněn na &quot;Desetinný&quot;.</translation>
+        <translation type="vanished">Pro zobrazení formátů &apos;Stavitelský&apos; nebo &apos;Inženýrský&apos; musí být vybraná jednotka výkresu &apos;Palec&apos;. Formát byl změněn na &apos;Desetinný&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
@@ -136,7 +136,7 @@
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Přírůstek kótovací čáry:</translation>
     </message>
     <message>
         <location line="+28"/>

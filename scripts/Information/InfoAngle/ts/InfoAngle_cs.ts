@@ -16,7 +16,7 @@
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation>Dokončit</translation>
     </message>
     <message>
         <location line="+88"/>

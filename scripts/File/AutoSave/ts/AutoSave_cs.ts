@@ -25,19 +25,20 @@
     <message>
         <location line="+20"/>
         <source>Autosave failed:</source>
-        <translation>Automatické uložení selhalo</translation>
+        <translation>Automatické ukládání selhalo:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation>Automatické uložení je kompletní.</translation>
+        <translation>Automatické ukládání dokončeno.</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Byly nalezeny %n záložní soubor(y) automatického ukládání výkresů bez názvu.
+Přejete si je obnovit?</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -46,7 +47,8 @@ Do you wish to recover it/them?</source>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Existuje soubor automatického ukládání pro &quot;%1&quot;.
+Přejete si ho obnovit?</translation>
     </message>
     <message numerus="yes">
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.

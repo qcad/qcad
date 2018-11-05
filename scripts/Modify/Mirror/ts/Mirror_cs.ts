@@ -6,12 +6,12 @@
     <message>
         <location filename="../Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Upravit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrcadlit</translation>
     </message>
     <message>
         <location line="+27"/>

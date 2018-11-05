@@ -11,7 +11,7 @@
     <message>
         <location line="+33"/>
         <source>Import SVG</source>
-        <translation type="unfinished"></translation>
+        <translation>Importovat SVG</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -27,7 +27,7 @@
         <location line="-34"/>
         <location filename="../SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG Import</translation>
     </message>
     <message>
         <location filename="../SvgImportDialog.ui" line="+8"/>
@@ -42,17 +42,17 @@
     <message>
         <location filename="../SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG &amp;Import...</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation>Křivky</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation>Je-li to vhodné, automaticky konvertovat křivky na čáry / oblouky </translation>
     </message>
 </context>
 </TS>

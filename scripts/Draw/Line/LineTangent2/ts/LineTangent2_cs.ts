@@ -6,7 +6,7 @@
     <message>
         <location filename="../LineTangent2.js" line="+70"/>
         <source>Choose first circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte první kružnici nebo oblouk</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -16,7 +16,7 @@
     <message>
         <location line="+140"/>
         <source>No tangent possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Žádná tečna není možná</translation>
     </message>
     <message>
         <location filename="../LineTangent2Init.js" line="+2"/>

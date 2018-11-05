@@ -11,7 +11,7 @@
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Chybně nastavené jméno bloku na &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>

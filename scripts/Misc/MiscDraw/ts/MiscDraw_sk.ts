@@ -9,7 +9,7 @@
         <translation>Rôzne</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+35"/>
         <source>&amp;Draw</source>
         <translation>&amp;Kreslenie</translation>
     </message>
@@ -18,7 +18,7 @@
         <translation type="vanished">Zobraziť rôzne nástroje kreslenia</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-26"/>
         <source>Misc Drawing Tools</source>
         <translation>Rôzne nástroje kreslenia</translation>
     </message>

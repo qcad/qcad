@@ -317,14 +317,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation>Rozšiřující bod 1</translation>
+        <translation>Vynášecí bod 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation>Rozšiřující bod 2</translation>
+        <translation>Vynášecí bod 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
@@ -471,12 +471,12 @@
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Pevná vynášecí čára</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Délka vynášecí čáry</translation>
     </message>
     <message>
         <location line="+8"/>

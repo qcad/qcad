@@ -6,12 +6,12 @@
     <message>
         <location filename="../Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Upravit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotovat</translation>
     </message>
     <message>
         <location line="+30"/>

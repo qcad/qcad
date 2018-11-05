@@ -79,7 +79,7 @@
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Pluginy a doplňky skriptů podléhají příslušné licenci (viz záložka &quot;Pluginy&quot;).</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -94,7 +94,7 @@
     <message>
         <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program je poskytován jako IS bez ŽÁDNÉ ZÁRUKY JAKÉHOKOLIV DRUHU, VČETNĚ ZÁRUKY DESIGNU, OBCHODOVATELNOSTI A VHODNOSTI PRO URČITÝ ÚČEL.</translation>
     </message>
     <message>
         <location line="+12"/>

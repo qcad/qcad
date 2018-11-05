@@ -6,67 +6,67 @@
     <message>
         <location filename="../EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Střed</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlavní bod elipsy nebo hlavní poloměr</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlavní bod elipsy</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Vedlejší bod elipsy nebo vedlejší poloměr</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Vedlejší bod elipsy</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Rotation angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhel natočení</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční parametr</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový parametr</translation>
     </message>
     <message>
         <location line="+267"/>
         <source>Invalid major radius.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neplatný hlavní poloměr.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hlavní poloměr:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhel:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vedlejší poloměr:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Start angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční úhel:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -76,33 +76,33 @@
     <message>
         <location filename="../EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Směr:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Proti směru hodinových ručiček (kladný)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Směr</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Po směru hodinových ručiček (záporný)</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eliptický oblouk</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation type="unfinished"></translation>
+        <translation>Nakreslit eliptický oblouk pomocí středu, hlavního bodu, poměru a úhlů</translation>
     </message>
 </context>
 </TS>

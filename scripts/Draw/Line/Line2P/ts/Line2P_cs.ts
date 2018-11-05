@@ -16,7 +16,7 @@
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation>Dokončeno</translation>
+        <translation>Dokončit</translation>
     </message>
     <message>
         <location filename="../Line2P.ui" line="+23"/>

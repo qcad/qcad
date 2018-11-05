@@ -16,7 +16,7 @@
     <message>
         <location line="+4"/>
         <source>Done</source>
-        <translation>Dokončeno</translation>
+        <translation>Dokončit</translation>
     </message>
     <message>
         <location filename="../SplineControlPoints.ui" line="+23"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatrhněte pro uzavření křivky</translation>
     </message>
     <message>
         <location line="+3"/>

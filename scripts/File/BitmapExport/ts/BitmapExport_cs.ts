@@ -14,12 +14,12 @@
     <message>
         <location filename="../BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba při generování bitmapového souboru &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitmapový soubor byl exportován do &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -59,7 +59,7 @@
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportovat ohraničující rámeček výběru</translation>
     </message>
     <message>
         <location line="+36"/>

@@ -102,57 +102,57 @@
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Speciální znaky...</translation>
     </message>
     <message>
         <location line="+305"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>Další...</translation>
     </message>
     <message>
         <location line="+131"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Stupeň</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus-Mínus</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Průměr</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Téměř se rovná</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Násobení</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Dělení</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pí</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation type="unfinished">Identita</translation>
+        <translation>Totožné</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -172,17 +172,17 @@
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished"></translation>
+        <translation>Čtvereční</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation>Krychlový</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation>Nezlomitelná mezera</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
@@ -197,45 +197,46 @@
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation type="unfinished">Výška:</translation>
+        <translation>Výška:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Výška textu v jednotkách výkresu</translation>
     </message>
     <message>
         <location line="+18"/>
         <location line="+268"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Tučné</translation>
     </message>
     <message>
         <location line="-261"/>
         <location line="+274"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Kurzíva</translation>
     </message>
     <message>
         <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>Text se upraví na jeden řádek a zruší se formátování</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Jednoduchý text
+(jeden řádek, bez formátování)</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Rich Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Naformátovaný text</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyjmout</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -270,47 +271,47 @@
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Podrobnosti vlastností</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation>Štítek:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation>Výzva:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hodnota:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Text Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>Geometrie textu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Faktor řádkování:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Faktor řádkování</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished">Úhel:</translation>
+        <translation>Úhel:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhel natočení</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -335,57 +336,57 @@
     <message>
         <location line="+29"/>
         <source>Middle Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Středně vpravo</translation>
     </message>
     <message>
         <location line="+116"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí vlevo</translation>
     </message>
     <message>
         <location line="-177"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Nahoře vlevo</translation>
     </message>
     <message>
         <location line="+206"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí střed</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí vpravo</translation>
     </message>
     <message>
         <location line="-116"/>
         <source>Middle Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Středně uprostřed</translation>
     </message>
     <message>
         <location line="+203"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Dole vpravo</translation>
     </message>
     <message>
         <location line="-174"/>
         <source>Middle Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Středně vlevo</translation>
     </message>
     <message>
         <location line="-58"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Nahoře vpravo</translation>
     </message>
     <message>
         <location line="+291"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Storno</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
 </context>
 </TS>

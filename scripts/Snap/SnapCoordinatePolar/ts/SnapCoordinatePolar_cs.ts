@@ -26,7 +26,7 @@
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaškrtněte pro relativní souřadnice</translation>
     </message>
     <message>
         <location line="+3"/>

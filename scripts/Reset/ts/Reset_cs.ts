@@ -11,7 +11,7 @@
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation type="unfinished">&amp;Vynulovat / Nečinný</translation>
+        <translation>&amp;Resetovat / Nečinný</translation>
     </message>
 </context>
 </TS>

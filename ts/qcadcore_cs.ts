@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation type="unfinished">Font kótování</translation>
+        <translation>Písmo kót</translation>
     </message>
 </context>
 <context>
@@ -470,12 +470,12 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="-7"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnuto</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmraženo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -485,7 +485,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished"></translation>
+        <translation>Srolováno</translation>
     </message>
     <message>
         <location line="+1"/>

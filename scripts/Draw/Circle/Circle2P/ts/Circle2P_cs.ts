@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhý bod</translation>
     </message>
     <message>
         <location line="+83"/>

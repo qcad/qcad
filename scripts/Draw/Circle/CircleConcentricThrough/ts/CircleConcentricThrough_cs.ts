@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>CircleConcentricThrough</name>
     <message>
         <location filename="../CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Počet:</translation>
     </message>
     <message>
         <location filename="../CircleConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Soustředná (skrz &amp;bod)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Nakreslit soustřednou kružnici skrz bod</translation>
     </message>
 </context>
 </TS>

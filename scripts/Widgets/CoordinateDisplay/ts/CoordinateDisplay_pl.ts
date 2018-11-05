@@ -31,5 +31,20 @@ Względne współrzędne kartezjańskie</translatorcomment>
 Względne współrzędne biegunowe</translatorcomment>
         <translation>Względna współrzędna biegunowa</translation>
     </message>
+    <message>
+        <location filename="../CoordinateDisplay.js" line="+28"/>
+        <source>Widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Coordinate Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Force update every N mouse moves:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

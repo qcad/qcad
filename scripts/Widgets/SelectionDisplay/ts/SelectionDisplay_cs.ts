@@ -28,13 +28,13 @@
     <message>
         <location line="-3"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2 na vrstvě &quot;%3&quot;</translation>
     </message>
     <message numerus="yes">
         <location line="+7"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n prvků na vrstvě &quot;%1&quot;</numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>

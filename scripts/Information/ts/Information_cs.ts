@@ -20,7 +20,7 @@
     <message>
         <location filename="../Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation type="unfinished">Přidat měřítko kreslení</translation>
+        <translation>Přidat míru do výkresu</translation>
     </message>
     <message>
         <location line="+17"/>

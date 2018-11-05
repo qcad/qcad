@@ -18,7 +18,7 @@
         <translation type="vanished">Toon diverse tekenfuncties</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>&amp;Draw</source>
         <translation>&amp;Tekenen</translation>
     </message>

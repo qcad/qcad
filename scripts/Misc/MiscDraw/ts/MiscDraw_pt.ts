@@ -18,7 +18,7 @@
         <translation type="vanished">Mostrar ferramentas de desenho miscelânea</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>&amp;Draw</source>
         <translation>&amp;Desenhar</translation>
     </message>

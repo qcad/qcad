@@ -29,7 +29,7 @@
     <message>
         <location line="+17"/>
         <source>Default lineweight for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí tloušťka čáry pro vrstvu 0:</translation>
     </message>
     <message>
         <location line="+14"/>

@@ -26,57 +26,57 @@
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Oblouk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus/Mínus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Téměř se rovná</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Asymptoticky rovné</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Čtverec</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Dimension Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Nástroje kót</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>D&amp;imension</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kóty</translation>
     </message>
     <message>
         <location filename="../Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Popisek:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Předpona</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadejte pevný popisek nebo nechte prázdné pro automatický popisek</translation>
     </message>
     <message>
         <location line="+61"/>

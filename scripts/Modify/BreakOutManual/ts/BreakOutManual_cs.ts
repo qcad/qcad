@@ -23,7 +23,7 @@
         <location line="+8"/>
         <location line="+7"/>
         <source>Done</source>
-        <translation>Dokončeno</translation>
+        <translation>Dokončit</translation>
     </message>
     <message>
         <location line="-10"/>
