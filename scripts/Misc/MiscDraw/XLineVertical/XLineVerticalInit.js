@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["xlinevertical", "xv"]);
     action.setGroupSortOrder(54050);
     action.setSortOrder(200);
-    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel"]);
+    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel", "MiscDrawMatrixPanel"]);
 }

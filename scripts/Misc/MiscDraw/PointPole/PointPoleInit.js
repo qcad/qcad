@@ -5,5 +5,5 @@ function init(basePath) {
     action.setIcon(basePath + "/PointPole.svg");
     action.setGroupSortOrder(54300);
     action.setSortOrder(100);
-    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel"]);
+    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel", "MiscDrawMatrixPanel"]);
 }

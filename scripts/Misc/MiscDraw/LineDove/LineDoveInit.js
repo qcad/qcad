@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands(["dovetail"]);
     action.setGroupSortOrder(54200);
     action.setSortOrder(220);
-    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel"]);
+    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel", "MiscDrawMatrixPanel"]);
 }

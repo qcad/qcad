@@ -5,5 +5,5 @@ function init(basePath) {
     action.setIcon(basePath + "/LineSimilarityAxes.svg");
     action.setGroupSortOrder(54400);
     action.setSortOrder(200);
-    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel"]);
+    action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel", "MiscDrawMatrixPanel"]);
 }

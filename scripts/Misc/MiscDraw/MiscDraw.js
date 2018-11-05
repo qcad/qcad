@@ -79,6 +79,9 @@ MiscDraw.getCadToolBarPanel = function() {
     return tb;
 };
 
+MiscDraw.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(MiscDraw.getTitle(), "MiscDrawMatrixPanel", 2100);
+};
 
 MiscDraw.getTitle = function() {
     return qsTr("&Draw");
@@ -92,4 +95,5 @@ MiscDraw.init = function() {
     MiscDraw.getMenu();
     MiscDraw.getToolBar();
     MiscDraw.getCadToolBarPanel();
+    MiscDraw.getToolMatrixPanel();
 };
