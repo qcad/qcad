@@ -289,8 +289,8 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
     var entityId;
 
-    var shiftPressed = isShiftPressed();
-    var controlPressed = isControlPressed();
+    var shiftPressed = isShiftPressed(event);
+    var controlPressed = isControlPressed(event);
     var addToSelection = this.getAddToSelection(shiftPressed) || controlPressed || persistentSelection===true;
 
     if (event.button() === Qt.LeftButton) {
@@ -458,7 +458,7 @@ DefaultAction.prototype.escapeEvent = function(event) {
 DefaultAction.prototype.pickCoordinate = function(event, preview) {
     var op;
 
-    var shiftPressed = isShiftPressed();
+    var shiftPressed = isShiftPressed(event);
     var addToSelection = this.getAddToSelection(shiftPressed);
     var doc = this.getDocument();
 
@@ -693,7 +693,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
         if (RSettings.getBoolValue("GraphicsView/DoubleClickSelectContour", true)===true) {
             include("scripts/Select/SelectContour/SelectContour.js");
             var matchingEntityIds = SelectContour.getConnectedEntities(this.document, entityId, 0.001);
-            var add = isShiftPressed();
+            var add = isShiftPressed(event);
             if (entity.isSelected()) {
                 this.di.selectEntities(matchingEntityIds, add);
             }

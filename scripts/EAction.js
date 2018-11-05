@@ -2061,7 +2061,7 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
         selectable = false;
     }
 
-    var altPressed = isAltPressed();
+    var altPressed = isAltPressed(event);
     if (!altPressed || preview) {
         if (!isNull(action.idFromContextMenu)) {
             // user already chose an entity from the context menu:

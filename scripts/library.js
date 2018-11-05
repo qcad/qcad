@@ -2419,7 +2419,16 @@ function writeTextFile(fileName, str) {
     file.close();
 }
 
-function getKeyboardModifiers() {
+function getKeyboardModifiers(event) {
+    if (!isNull(event)) {
+        if (isFunction(event.getModifiers)) {
+            return event.getModifiers();
+        }
+        else {
+            return event.modifiers();
+        }
+    }
+
     if (RSettings.isQt(5)) {
         return QGuiApplication.queryKeyboardModifiers();
     }
@@ -2428,16 +2437,19 @@ function getKeyboardModifiers() {
     }
 }
 
-function isShiftPressed() {
-    return (getKeyboardModifiers() & Qt.ShiftModifier) > 0;
+function isShiftPressed(event) {
+    return (getKeyboardModifiers(event) & Qt.ShiftModifier) > 0 ||
+           (getKeyboardModifiers() & Qt.ShiftModifier) > 0;
 }
 
-function isAltPressed() {
-    return (getKeyboardModifiers() & Qt.AltModifier) > 0;
+function isAltPressed(event) {
+    return (getKeyboardModifiers(event) & Qt.AltModifier) > 0 ||
+           (getKeyboardModifiers() & Qt.AltModifier) > 0;
 }
 
-function isControlPressed() {
-    return (getKeyboardModifiers() & Qt.ControlModifier) > 0;
+function isControlPressed(event) {
+    return (getKeyboardModifiers(event) & Qt.ControlModifier) > 0 ||
+           (getKeyboardModifiers() & Qt.ControlModifier) > 0;
 }
 
 function createSpatialIndex() {
