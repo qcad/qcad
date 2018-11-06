@@ -389,7 +389,6 @@ void RGraphicsScene::exportCurrentEntity(bool preview, bool forceSelected) {
 }
 
 void RGraphicsScene::unexportEntity(REntity::Id entityId) {
-    qDebug() << "unexportEntity: " << entityId;
     RExporter::unexportEntity(entityId);
     referencePoints.remove(entityId);
 }
