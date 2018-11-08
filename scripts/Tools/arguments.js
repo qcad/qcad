@@ -31,8 +31,10 @@ function getArgument(args, shortFlag, longFlag, def) {
         if (ret.length===0) {
             return def;
         }
+        return RSettings.getArgument(args, shortFlag, longFlag);
     }
-    return RSettings.getArgument(args, shortFlag, longFlag);
+
+    return RSettings.getArgument(args, shortFlag, longFlag, def);
 }
 
 /**
@@ -83,6 +85,7 @@ function getIntListArgument(args, shortFlag, longFlag, def) {
         if (ret.length===0) {
             return def;
         }
+        return ret;
     }
 
     return RSettings.getIntListArgument(args, shortFlag, longFlag, def);
@@ -132,10 +135,8 @@ function getFloatArgument(args, shortFlag, longFlag, def) {
         if (ret===undefined) {
             return def;
         }
-
         return RSettings.getFloatArgument(args, shortFlag, longFlag);
     }
-
     return RSettings.getFloatArgument(args, shortFlag, longFlag, def);
 }
 
@@ -146,8 +147,9 @@ function getColorArgument(args, shortFlag, longFlag, def) {
         if (ret===undefined) {
             return def;
         }
+        return RSettings.getColorArgument(args, shortFlag, longFlag);
     }
-    return RSettings.getColorArgument(args, shortFlag, longFlag);
+    return RSettings.getColorArgument(args, shortFlag, longFlag, def);
 }
 
 function getBoxArgument(args, shortFlag, longFlag, def) {
@@ -157,8 +159,9 @@ function getBoxArgument(args, shortFlag, longFlag, def) {
         if (ret===undefined) {
             return def;
         }
+        return RSettings.getBoxArgument(args, shortFlag, longFlag);
     }
-    return RSettings.getBoxArgument(args, shortFlag, longFlag);
+    return RSettings.getBoxArgument(args, shortFlag, longFlag, def);
 
 //    var parts = ret.split(',');
 //    if (parts.length!==4) {
