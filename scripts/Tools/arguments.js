@@ -85,7 +85,7 @@ function getIntListArgument(args, shortFlag, longFlag, def) {
         }
     }
 
-    return RSettings.getIntListArgument(args, shortFlag, longFlag);
+    return RSettings.getIntListArgument(args, shortFlag, longFlag, def);
 
 //    var arg = getArgument(args, shortFlag, longFlag);
 //    if (arg===undefined) {
