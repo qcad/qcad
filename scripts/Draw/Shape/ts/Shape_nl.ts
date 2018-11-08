@@ -6,7 +6,7 @@
     <message>
         <location filename="../Shape.js" line="+75"/>
         <source>Shape Tools</source>
-        <translation>Vormgereedschappen</translation>
+        <translation>Vorm gereedschappen</translation>
     </message>
     <message>
         <source>Show shape tools</source>

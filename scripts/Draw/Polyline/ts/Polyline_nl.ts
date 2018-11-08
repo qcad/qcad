@@ -6,7 +6,7 @@
     <message>
         <location filename="../Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation>Polylijn gereedschap</translation>
+        <translation>Polylijn gereedschappen</translation>
     </message>
     <message>
         <source>Show polyline tools</source>

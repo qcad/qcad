@@ -128,12 +128,12 @@
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation>Snap gereedschappen</translation>
+        <translation>Vangfuncties</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation>Snap label:</translation>
+        <translation>Vang label:</translation>
     </message>
     <message>
         <location line="+33"/>

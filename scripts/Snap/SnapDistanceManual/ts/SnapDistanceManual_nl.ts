@@ -41,7 +41,7 @@
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation>Snap afstand tussen twee punten</translation>
+        <translation>Vang afstand tussen twee punten</translation>
     </message>
 </context>
 </TS>

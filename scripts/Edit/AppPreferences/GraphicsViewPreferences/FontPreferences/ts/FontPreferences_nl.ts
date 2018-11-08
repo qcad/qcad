@@ -24,7 +24,7 @@
     <message>
         <location line="+16"/>
         <source>Snap Label Font:</source>
-        <translation>Snap label:</translation>
+        <translation>Vang label:</translation>
     </message>
     <message>
         <location line="+13"/>

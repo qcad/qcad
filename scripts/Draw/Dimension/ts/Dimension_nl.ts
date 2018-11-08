@@ -56,7 +56,7 @@
     <message>
         <location line="+79"/>
         <source>Dimension Tools</source>
-        <translation>Bematinggereedschap</translation>
+        <translation>Bemating gereedschappen</translation>
     </message>
     <message>
         <source>Show dimension tools</source>

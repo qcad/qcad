@@ -11,7 +11,7 @@
     <message>
         <location filename="../SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Vang</translation>
     </message>
     <message>
         <location line="+0"/>

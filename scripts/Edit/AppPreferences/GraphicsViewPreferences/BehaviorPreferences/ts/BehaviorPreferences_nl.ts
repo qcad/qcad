@@ -100,7 +100,7 @@
     <message>
         <location line="+109"/>
         <source>Cursor range for snap:</source>
-        <translation>Cursor bereik voor snap:</translation>
+        <translation>Cursor bereik voor vangen:</translation>
     </message>
     <message>
         <location line="-7"/>

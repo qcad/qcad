@@ -6,7 +6,7 @@
     <message>
         <location filename="../Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation>Modificeren gereedschappen</translation>
+        <translation>Modificatie gereedschappen</translation>
     </message>
     <message>
         <source>Show modification tools</source>

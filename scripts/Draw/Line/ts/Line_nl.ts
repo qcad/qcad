@@ -6,7 +6,7 @@
     <message>
         <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
-        <translation>Lijnhulpmiddelen</translation>
+        <translation>Lijn gereedschappen</translation>
     </message>
     <message>
         <source>Show line tools</source>

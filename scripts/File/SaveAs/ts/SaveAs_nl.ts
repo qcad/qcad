@@ -34,7 +34,7 @@
     </message>
     <message>
         <source>Save as</source>
-        <translation type="vanished">Bewaar als</translation>
+        <translation type="vanished">Opslaan als</translation>
     </message>
     <message>
         <location filename="../SaveAs.js" line="+38"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation>Bewaar &amp;als...</translation>
+        <translation>Opslaan &amp;als...</translation>
     </message>
 </context>
 </TS>

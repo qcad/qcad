@@ -6,7 +6,7 @@
     <message>
         <location filename="../Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation>Boogen gereedschappen</translation>
+        <translation>Boog gereedschappen</translation>
     </message>
     <message>
         <source>Show arc tools</source>

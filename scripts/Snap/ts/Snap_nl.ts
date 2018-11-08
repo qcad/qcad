@@ -6,16 +6,16 @@
     <message>
         <location filename="../Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Snap gereedschappen</translation>
+        <translation>Vangfuncties</translation>
     </message>
     <message>
         <source>Show snap tools</source>
-        <translation type="vanished">Snap gereedschappen tonen</translation>
+        <translation type="vanished">Vangfuncties tonen</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation>&amp;Snap</translation>
+        <translation>&amp;Vang</translation>
     </message>
 </context>
 </TS>

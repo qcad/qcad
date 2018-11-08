@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Auto snap</translation>
+        <translation>Auto vang</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Snap</translation>
+        <translation>Vang</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Auto snap</translation>
+        <translation>Auto vang</translation>
     </message>
     <message>
         <location filename="../SnapAutoInit.js" line="+2"/>

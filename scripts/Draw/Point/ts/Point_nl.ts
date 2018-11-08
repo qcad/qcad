@@ -6,11 +6,11 @@
     <message>
         <location filename="../Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation>Punt gereedschap</translation>
+        <translation>Punt gereedschappen</translation>
     </message>
     <message>
         <source>Show point tools</source>
-        <translation type="vanished">Punt gereedschap tonen</translation>
+        <translation type="vanished">Punt gereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
