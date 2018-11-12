@@ -174,6 +174,7 @@ QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, b
     // force flipping arrows (against logic above):
     if (isArrow1Flipped()) {
         outsideArrow = !outsideArrow;
+        outsideLabel = outsideArrow;
     }
 
     double arrowAngle;
