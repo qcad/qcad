@@ -468,7 +468,10 @@ QVariant RObject::getCustomProperty(const QString& title, const QString& key, co
 
 double RObject::getCustomDoubleProperty(const QString& title, const QString& key, double defaultValue) const {
     QVariant ret = getCustomProperty(title, key, defaultValue);
-    if (ret.type()==QVariant::Double) {
+    if (ret.type()==QVariant::Double ||
+        ret.type()==QVariant::Int || ret.type()==QVariant::UInt ||
+        ret.type()==QVariant::LongLong || ret.type()==QVariant::ULongLong) {
+
         return ret.toDouble();
     }
     if (ret.type()==QVariant::String) {
