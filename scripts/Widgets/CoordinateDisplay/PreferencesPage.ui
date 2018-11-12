@@ -14,7 +14,7 @@
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Force update every N mouse moves:</string>
+      <string>Forced update every N mouse moves:</string>
      </property>
     </widget>
    </item>
