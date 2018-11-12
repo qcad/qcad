@@ -622,7 +622,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             else {
                 WidgetFactory.connect(c.toggled, signalReceiver, c.objectName);
                 c.toggled.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
-                c.checked = (c.objectName == value);
+                if (value==="true") {
+                    c.checked = value;
+                }
+                else {
+                    c.checked = (c.objectName == value);
+                }
             }
             continue;
         }
