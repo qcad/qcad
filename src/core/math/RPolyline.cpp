@@ -692,7 +692,8 @@ bool RPolyline::isClosed() const {
 }
 
 /**
- * \return True is this polyline is logically or geometrically closed.
+ * \return True is this polyline is geometrically closed. If this polyline is
+ * logically closed it is implicitely also geometrically closed.
  */
 bool RPolyline::isGeometricallyClosed(double tolerance) const {
     return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
