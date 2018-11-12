@@ -36,7 +36,7 @@
     <message>
         <location line="+4"/>
         <source>Draw horizontal line</source>
-        <translation>Kreslit vodorovnou čáru</translation>
+        <translation>Nakreslit vodorovnou čáru</translation>
     </message>
 </context>
 </TS>

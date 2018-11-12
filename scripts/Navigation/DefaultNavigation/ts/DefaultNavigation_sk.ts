@@ -44,7 +44,7 @@
     <message>
         <location line="-7"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Krokovanie stredným tlačítkom myši:</translation>
     </message>
     <message>
         <location line="+34"/>

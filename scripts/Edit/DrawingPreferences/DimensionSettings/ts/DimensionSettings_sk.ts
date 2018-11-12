@@ -92,7 +92,7 @@
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pre zobrazenie kót vo formátoch &quot;Architektonický&quot; alebo &quot;Strojársky&quot; musia byť nastavené jednotky v &quot;Palcoch&quot;. Formát zmenený na &quot;Desatinný&quot;.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
@@ -140,7 +140,7 @@
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prírastok kóty:</translation>
     </message>
     <message>
         <location line="+28"/>

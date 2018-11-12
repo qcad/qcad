@@ -61,27 +61,27 @@
     <message>
         <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor &quot;%1&quot; už existuje. Chcete ho prepísať?</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzia formátu súboru, ktorú používate, sa neodporúča: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Všetky vlastné farby sa nastavia na najbližšiu fixnú farbu.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uloženie do formátu súboru verzie &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vlastné farby sú nastavené na najbližšiu fixnú farbu.</translation>
     </message>
     <message>
         <location line="+6"/>

@@ -31,7 +31,7 @@
     <message>
         <location filename="../RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>&amp;Zaoblení</translation>
+        <translation>&amp;Zaoblit</translation>
     </message>
 </context>
 </TS>

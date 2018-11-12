@@ -36,7 +36,7 @@
     <message>
         <location filename="../BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation>&amp;Zkosení</translation>
+        <translation>&amp;Zkosit</translation>
     </message>
 </context>
 </TS>

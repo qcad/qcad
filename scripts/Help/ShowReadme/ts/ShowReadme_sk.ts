@@ -28,7 +28,7 @@
     <message>
         <location filename="../ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor &quot;%1&quot; neexistuje.</translation>
     </message>
 </context>
 </TS>

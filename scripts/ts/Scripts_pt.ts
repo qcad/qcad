@@ -215,6 +215,11 @@ Ferramentas CAD</translatorcomment>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a line, arc, circle, spline or polyline.</source>
+        <translation>A entidade não é uma linha, arco, círculo ou polilinha.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
         <translation>A entidade não é uma linha, arco, círculo, elipse, spline ou polilinha.</translation>
     </message>
@@ -271,7 +276,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1007"/>
+        <location filename="../WidgetFactory.js" line="+1012"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--

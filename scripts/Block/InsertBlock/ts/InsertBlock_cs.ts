@@ -11,12 +11,12 @@
     <message>
         <location filename="../InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Rotace:</translation>
+        <translation>Natočení:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation>Rotace bloku&lt;br&gt;dle tohoto úhlu</translation>
+        <translation>Natočit blok&lt;br&gt;v tomto úhlu</translation>
     </message>
     <message>
         <location line="+107"/>

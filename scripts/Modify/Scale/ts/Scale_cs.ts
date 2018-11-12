@@ -6,7 +6,7 @@
     <message>
         <location filename="../Scale.js" line="+48"/>
         <source>Modify</source>
-        <translation>Upravit</translation>
+        <translation>Úpravy</translation>
     </message>
     <message>
         <location line="+0"/>

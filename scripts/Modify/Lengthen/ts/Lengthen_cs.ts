@@ -21,7 +21,7 @@
     <message>
         <location filename="../LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>&amp;Prodloužení / Zkrácení</translation>
+        <translation>&amp;Prodloužit / Zkrátit</translation>
     </message>
 </context>
 </TS>

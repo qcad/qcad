@@ -6,7 +6,7 @@
     <message>
         <location filename="../PrintPreview.js" line="+232"/>
         <source>Drag to move paper</source>
-        <translation>Chyťte a hýbte s papierom</translation>
+        <translation>Chyťte a hýbte papierom</translation>
     </message>
     <message>
         <location line="+1"/>

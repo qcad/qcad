@@ -6,7 +6,7 @@
     <message>
         <location filename="../Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation>Upravit</translation>
+        <translation>Úpravy</translation>
     </message>
     <message>
         <location line="+0"/>

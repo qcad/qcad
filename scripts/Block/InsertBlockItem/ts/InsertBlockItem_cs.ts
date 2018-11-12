@@ -25,12 +25,12 @@
     <message>
         <location filename="../InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Rotace:</translation>
+        <translation>Natočení:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Natočení spojených prvků&lt;br&gt;dle daného úhlu</translation>
+        <translation>Natočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
     </message>
     <message>
         <location line="+100"/>
@@ -40,7 +40,7 @@
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Měřítko spojených prvků&lt;br&gt;dle tohoto faktoru</translation>
+        <translation>Změnit měřítko vložených prvků&lt;br&gt;tímto faktorem</translation>
     </message>
     <message>
         <location line="+65"/>

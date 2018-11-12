@@ -31,7 +31,7 @@
     <message>
         <location filename="../Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>O&amp;točit 2</translation>
+        <translation>Na&amp;točit 2</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Možnosti otáčení 2</translation>
+        <translation>Možnosti natočení 2</translation>
     </message>
     <message>
         <location line="+10"/>

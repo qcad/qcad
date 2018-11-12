@@ -30,17 +30,21 @@
     <message>
         <location filename="../CoordinateDisplay.js" line="+28"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Koordinatenanzeige</translation>
+    </message>
+    <message>
+        <source>Force update every N mouse moves:</source>
+        <translation type="obsolete">Update, wenn sich die N Maus bewegt:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
-        <source>Force update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <source>Forced update every N mouse moves:</source>
+        <translation>Erzwungene Aktualisierung alle N Mausbewegungen:</translation>
     </message>
 </context>
 </TS>

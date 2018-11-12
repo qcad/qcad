@@ -16,12 +16,12 @@
     <message>
         <location filename="../OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Posun (skrz bod)</translation>
+        <translation>Posunout (skrz bod)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Posun čáry, oblouku, kružnice nebo elipsy skrz bod</translation>
+        <translation>Posunout čáru, oblouk, kružnici nebo elipsu skrz bod</translation>
     </message>
 </context>
 </TS>

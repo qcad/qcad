@@ -191,6 +191,11 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a line, arc, circle, spline or polyline.</source>
+        <translation>Entità non è una linea, un arco, un cerchio o polilinea.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
         <translation>Entità non è una linea, un arco, un cerchio, un ellisse, una spline o polilinea.</translation>
     </message>
@@ -247,7 +252,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1007"/>
+        <location filename="../WidgetFactory.js" line="+1012"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>

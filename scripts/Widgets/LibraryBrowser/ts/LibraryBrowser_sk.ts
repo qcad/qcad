@@ -138,7 +138,7 @@ Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: nedá sa pripojiť k DB.
+        <translation>Doplnok Prehliadač Knižnica: nedá sa pripojiť k DB.
 Chyba ovládača: %1
 Chyba databázy: %2
 Súbor databázy: %3
@@ -187,7 +187,7 @@ Prehliadač Knižnica nebude k dispozícii.</translation>
     <message>
         <location line="+2"/>
         <source>&amp;Show in %1...</source>
-        <translation>&amp;Zobraziť  %1...</translation>
+        <translation>&amp;Zobraziť v %1...</translation>
     </message>
     <message>
         <location line="+28"/>

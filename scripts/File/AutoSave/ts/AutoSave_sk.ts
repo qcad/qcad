@@ -36,17 +36,21 @@
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Bol nájdený %n súbor bez názvu automatickým uložením.
+Prajete si ho obnoviť?</numerusform>
+            <numerusform>Boli nájdené %n súbory bez názvu automatickým uložením.
+Prajete si ich obnoviť?</numerusform>
+            <numerusform>Bolo nájdených %n súborov bez názvu automatickým uložením.
+Prajete si ich obnoviť?</numerusform>
         </translation>
     </message>
     <message>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatickým uložením súbor &quot;%1&quot; už existuje.
+Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.

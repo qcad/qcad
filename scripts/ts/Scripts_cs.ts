@@ -93,7 +93,7 @@
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation>Žádné</translation>
+        <translation>Žádný</translation>
     </message>
     <message>
         <location line="+662"/>
@@ -172,6 +172,11 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a line, arc, circle, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
         <translation>Prvek není čára, oblouk, kružnice, elipsa, křivka ani lomená čára.</translation>
     </message>
@@ -213,7 +218,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1007"/>
+        <location filename="../WidgetFactory.js" line="+1012"/>
         <source>Restore defaults</source>
         <translation>Obnovit výchozí nastavení</translation>
     </message>

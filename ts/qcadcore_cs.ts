@@ -634,7 +634,7 @@
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation>Otočení</translation>
+        <translation>Natočení</translation>
     </message>
     <message>
         <location line="+1"/>

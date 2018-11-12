@@ -34,17 +34,21 @@ Coordonnées polaires relatives</translatorcomment>
     <message>
         <location filename="../CoordinateDisplay.js" line="+28"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Affichage des coordonnées</translation>
+    </message>
+    <message>
+        <source>Force update every N mouse moves:</source>
+        <translation type="obsolete">Forcer une mise à jour chaque fois que la souris N bouge :</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
-        <source>Force update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <source>Forced update every N mouse moves:</source>
+        <translation>Mise à jour forcée tous les N mouvements de souris :</translation>
     </message>
 </context>
 </TS>

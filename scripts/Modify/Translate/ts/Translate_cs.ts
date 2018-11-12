@@ -11,7 +11,7 @@
     <message>
         <location filename="../Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation>Upravit</translation>
+        <translation>Úpravy</translation>
     </message>
     <message>
         <location line="+0"/>

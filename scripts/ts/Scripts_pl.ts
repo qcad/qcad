@@ -211,6 +211,11 @@ Narzędzia CAD</translatorcomment>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a line, arc, circle, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
         <translation>Obiekt nie jest linią, łukiem, okręgiem, elipsą ani linią łamaną.</translation>
     </message>
@@ -268,7 +273,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1007"/>
+        <location filename="../WidgetFactory.js" line="+1012"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--

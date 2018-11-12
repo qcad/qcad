@@ -21,12 +21,12 @@
     <message>
         <location filename="../Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation>Rotace:</translation>
+        <translation>Natočení:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Otočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
+        <translation>Natočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Zvětšit prvky&lt;br&gt; tímto faktorem</translation>
+        <translation>Změnit měřítko vložených prvků&lt;br&gt;tímto faktorem</translation>
     </message>
     <message>
         <location line="+72"/>

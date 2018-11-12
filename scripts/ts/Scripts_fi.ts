@@ -172,6 +172,11 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a line, arc, circle, spline or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
         <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi, käyrä tai moniviiva.</translation>
     </message>
@@ -221,7 +226,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+1007"/>
+        <location filename="../WidgetFactory.js" line="+1012"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>

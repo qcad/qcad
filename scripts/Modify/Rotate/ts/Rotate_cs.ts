@@ -6,12 +6,12 @@
     <message>
         <location filename="../Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation>Upravit</translation>
+        <translation>Úpravy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation>Rotovat</translation>
+        <translation>Natočit</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation>&amp;Otočit</translation>
+        <translation>&amp;Natočit</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation>Možnosti otáčení</translation>
+        <translation>Možnosti natočení</translation>
     </message>
     <message>
         <location line="+14"/>

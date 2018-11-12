@@ -288,12 +288,12 @@
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
         <source>Tag</source>
-        <translation>Značka</translation>
+        <translation>Štítek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished">Prompt</translation>
+        <translation>Připomínka</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>

@@ -146,7 +146,7 @@
     <message>
         <location line="-2"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Pluginy a doplnky skriptov podliehajú príslušnej licencii (pozrite si kartu &quot;Zásuvné moduly&quot;).</translation>
     </message>
     <message>
         <location line="+5"/>

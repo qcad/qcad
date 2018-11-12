@@ -11,7 +11,7 @@
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Nástroje okna</translation>
     </message>
 </context>
 </TS>

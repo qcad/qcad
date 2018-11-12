@@ -39,12 +39,12 @@
     <message>
         <location filename="../OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Posun (se vzdáleností)</translation>
+        <translation>Posunout (se vzdáleností)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Posun čáry, oblouku, kružnice nebo elipsy</translation>
+        <translation>Posunout čáru, oblouk, kružnici nebo elipsu</translation>
     </message>
 </context>
 </TS>

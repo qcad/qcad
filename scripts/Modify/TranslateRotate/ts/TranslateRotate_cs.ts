@@ -11,7 +11,7 @@
     <message>
         <location filename="../TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation>Přesunout a otočit</translation>
+        <translation>Přesunout a natočit</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation>Možnosti přesunu a otáčení</translation>
+        <translation>Možnosti přesunu a natočení</translation>
     </message>
     <message>
         <location line="+14"/>

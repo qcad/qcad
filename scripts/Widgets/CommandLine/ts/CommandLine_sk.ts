@@ -44,22 +44,22 @@
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neplatné súradnice alebo vzdialenosť &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznámy príkaz alebo neplatné súradnice alebo hodnota: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Čísla môžu byť zapísané ako: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Súradnice môžu byť zadaná ako: &quot;%1&quot; (absolútne) alebo &quot;%2&quot; (relatívne) alebo &quot;%3&quot; (polárne), alebo &quot;%4&quot; (relatívne polárne)</translation>
     </message>
     <message>
         <location line="+8"/>

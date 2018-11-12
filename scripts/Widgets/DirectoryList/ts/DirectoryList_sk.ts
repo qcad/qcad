@@ -16,7 +16,9 @@ už existuje v zozname.</translation>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Priečinok
+&quot;%1&quot;
+už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+2"/>

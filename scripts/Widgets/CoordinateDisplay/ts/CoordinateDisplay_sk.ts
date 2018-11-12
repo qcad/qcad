@@ -35,7 +35,7 @@
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
-        <source>Force update every N mouse moves:</source>
+        <source>Forced update every N mouse moves:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

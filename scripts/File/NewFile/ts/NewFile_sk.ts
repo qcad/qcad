@@ -77,7 +77,7 @@
     <message>
         <location line="+12"/>
         <source>read-only</source>
-        <translation> ...len na čítanie</translation>
+        <translation>... len na čítanie</translation>
     </message>
     <message>
         <location line="+58"/>

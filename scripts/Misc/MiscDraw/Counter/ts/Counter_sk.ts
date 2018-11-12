@@ -20,7 +20,7 @@
     <message>
         <location line="+14"/>
         <source>Increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prírastok:</translation>
     </message>
     <message>
         <location line="+14"/>

@@ -6,12 +6,12 @@
     <message>
         <location filename="../Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation>Kreslit</translation>
+        <translation>Kreslení</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Kreslit</translation>
+        <translation>&amp;Kreslení</translation>
     </message>
     <message>
         <location line="+15"/>

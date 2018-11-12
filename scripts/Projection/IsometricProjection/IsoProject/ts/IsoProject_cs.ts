@@ -36,12 +36,12 @@
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation>Otočit výběr proti směru hodinových ručiček</translation>
+        <translation>Natočit výběr proti směru hodinových ručiček</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation>Otočit výběr ve směru hodinových ručiček</translation>
+        <translation>Natočit výběr ve směru hodinových ručiček</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>

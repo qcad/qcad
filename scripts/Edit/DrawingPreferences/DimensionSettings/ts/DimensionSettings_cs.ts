@@ -6,7 +6,7 @@
     <message>
         <location filename="../DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation>Výchozí nastavení pro nový výkres</translation>
+        <translation>Výchozí nastavení pro nové výkresy</translation>
     </message>
     <message>
         <location line="+0"/>
