@@ -2205,6 +2205,10 @@ EAction.warnNotLineArcCircleEllipseSpline = function() {
     EAction.handleUserWarning(qsTr("Entity is not a line, arc, circle, ellipse or spline."));
 };
 
+EAction.warnNotLineArcCircleSplinePolyline = function() {
+    EAction.handleUserWarning(qsTr("Entity is not a line, arc, circle, spline or polyline."));
+};
+
 EAction.warnNotLineArcCircleEllipseSplinePolyline = function() {
     EAction.handleUserWarning(qsTr("Entity is not a line, arc, circle, ellipse, spline or polyline."));
 };
