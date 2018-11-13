@@ -656,7 +656,7 @@ double RGraphicsSceneQt::getLineTypePatternScale(const RLinetypePattern& p) cons
     }
 
     // see: FS#322 - Line type scaling with print scale factor
-    if (view->isPrintingOrExporting() || view->isPrintPreview()) {
+    if (view->isPrinting() || view->isPrintPreview()) {
         QVariant scaleVariant = getDocument().getVariable("PageSettings/Scale", QVariant(), true);
         if (!scaleVariant.isValid() || !scaleVariant.canConvert(QVariant::String)) {
             return factor;
