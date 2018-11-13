@@ -12,12 +12,12 @@
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation>Nebyly nalezeny informace o verši.</translation>
+        <translation>Informace o verzi nebyly nalezeny.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation>Není spojení na šéfové nebi soubor nebyl nalezen Zkuste to prosím později.</translation>
+        <translation>Žádné připojení k serveru nebo nebyl nalezen aktualizační soubor. Zkuste to prosím později.</translation>
     </message>
     <message>
         <location filename="../CheckForUpdatesDialog.ui" line="+53"/>

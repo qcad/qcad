@@ -490,22 +490,22 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished"></translation>
+        <translation>Vytiskne se</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished"></translation>
+        <translation>Lze přichytit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+        <translation>Vypnutí je zmrazení</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="-23"/>
         <source>Tab Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Pořadí tabulátoru</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -526,7 +526,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Vložení základny</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -645,7 +645,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished">Vystředit pohled</translation>
+        <translation>Vystředit pohled</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -772,7 +772,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Phantom</source>
-        <translation type="unfinished">Stínová</translation>
+        <translation>Stínová</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -782,7 +782,7 @@
     <message>
         <location line="+1"/>
         <source>ISO dash space</source>
-        <translation type="unfinished">ISO přerušovaná mezera</translation>
+        <translation>ISO čárka mezera</translation>
     </message>
     <message>
         <location line="+1"/>

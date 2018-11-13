@@ -51,7 +51,7 @@
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation>Zrušit předchozí část</translation>
+        <translation>Zrušit předchozí segment</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation>Obnovit část</translation>
+        <translation>Obnovit segment</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -96,7 +96,7 @@
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation>Nakreslit lomenou čáru s úsečkami a obloukovými částmi</translation>
+        <translation>Nakreslit lomenou čáru s úsečkami a obloukovými segmenty</translation>
     </message>
 </context>
 </TS>

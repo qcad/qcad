@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>Numbers may be entered as: &apos;%1&apos;</source>
-        <translation type="vanished">Čísla mohou být zadána jako: &apos;%1&apos;</translation>
+        <translation type="vanished">Počty mohou být zadány jako: &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Coordinates may be entered as: &apos;%1&apos; (absolute) or &apos;%2&apos; (relative) or &apos;%3&apos; (polar) or &apos;%4&apos; (relative polar)</source>

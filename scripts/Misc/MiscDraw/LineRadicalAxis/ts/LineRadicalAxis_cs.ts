@@ -21,7 +21,7 @@
     <message>
         <location filename="../LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Základní osa 2 kružnic</translation>
     </message>
 </context>
 </TS>

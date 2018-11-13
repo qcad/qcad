@@ -15,7 +15,7 @@
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished"></translation>
+        <translation>Posluchač &amp;transakcí</translation>
     </message>
 </context>
 </TS>

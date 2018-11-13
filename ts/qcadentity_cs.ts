@@ -402,7 +402,7 @@
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Souřadnice</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -416,7 +416,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový bod odkazové čáry</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+121"/>
@@ -826,7 +826,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Upevňující bod</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -865,7 +865,7 @@
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+2"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Typ obloukového symbolu</translation>
     </message>
 </context>
 </TS>

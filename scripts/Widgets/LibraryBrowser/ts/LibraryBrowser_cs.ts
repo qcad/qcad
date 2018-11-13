@@ -6,7 +6,7 @@
     <message>
         <location filename="../LibraryBrowser.js" line="+72"/>
         <source>audience</source>
-        <translation type="unfinished"></translation>
+        <translation>publikum</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+1"/>
         <source>levelOfDetail</source>
-        <translation type="unfinished">levelOfDetail</translation>
+        <translation>Level detailu</translation>
     </message>
     <message>
         <location line="+1"/>

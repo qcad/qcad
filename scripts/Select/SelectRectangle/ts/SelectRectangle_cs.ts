@@ -34,7 +34,7 @@
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="unfinished">SelectionMode</translation>
+        <translation>Režim výběru</translation>
     </message>
     <message>
         <location line="-53"/>

@@ -91,7 +91,7 @@
     <message>
         <location line="+3"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished">V zobrazení modelu automaticky přepnout na typy čar v závislosti na obrazovce</translation>
+        <translation>V zobrazení modelu automaticky přepnout na typy čar v závislosti na obrazovce</translation>
     </message>
     <message>
         <location line="+7"/>
