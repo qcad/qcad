@@ -1119,7 +1119,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
                 // use width of path pen
                 pen.setWidthF(pen.widthF() / getFactor());
             }
-            else if (isPrintingOrExporting()) {
+            else if (isPrinting()) {
                 if (hairlineMode) {
                     //pen.setWidthF(0.05 / drawingScale);
                     pen.setWidthF(0.0);
