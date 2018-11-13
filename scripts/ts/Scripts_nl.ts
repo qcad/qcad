@@ -173,7 +173,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Object is niet een lijn, boog, cirkel of polylijn.</translation>
+        <translation>Object is niet een lijn, boog, cirkel, spline of polylijn.</translation>
     </message>
     <message>
         <location line="+4"/>

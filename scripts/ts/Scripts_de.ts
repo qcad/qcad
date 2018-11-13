@@ -181,7 +181,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Element ist keine Linie, kein Bogen oder Kreis und keine Polylinie.</translation>
+        <translation>Element ist keine Linie, kein Bogen, kein Kreis, keine Spline und keine Polylinie.</translation>
     </message>
     <message>
         <location line="+4"/>

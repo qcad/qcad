@@ -192,7 +192,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Entità non è una linea, un arco, un cerchio o polilinea.</translation>
+        <translation>Entità non è una linea, un arco, un cerchio, una spline o polilinea.</translation>
     </message>
     <message>
         <location line="+4"/>

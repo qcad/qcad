@@ -216,7 +216,7 @@ Ferramentas CAD</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>A entidade não é uma linha, arco, círculo ou polilinha.</translation>
+        <translation>A entidade não é uma linha, arco, círculo, spline ou polilinha.</translation>
     </message>
     <message>
         <location line="+4"/>

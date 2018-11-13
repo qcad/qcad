@@ -26,7 +26,7 @@
     <message>
         <location filename="../CoordinateDisplay.js" line="+28"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>

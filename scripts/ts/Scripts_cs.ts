@@ -173,7 +173,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvek není čára, oblouk, kružnice, křivka ani lomená čára.</translation>
     </message>
     <message>
         <location line="+4"/>
