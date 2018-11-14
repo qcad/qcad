@@ -21,7 +21,7 @@
 
 QStringList RDxfImporterFactory::getFilterStrings() {
     QStringList ret;
-    ret << QObject::tr("DXF Files [dxflib] %1").arg("(*.dxf)");
+    ret << QString("DXF Files [dxflib] (*.dxf)");
     return ret;
 }
 
