@@ -71,6 +71,10 @@ public:
     static RPropertyTypeId PropertyExtLineFix;
     static RPropertyTypeId PropertyExtLineFixLength;
 
+    static RPropertyTypeId PropertyCenterX;
+    static RPropertyTypeId PropertyCenterY;
+    static RPropertyTypeId PropertyCenterZ;
+
     static RPropertyTypeId PropertyExtensionLine1EndX;
     static RPropertyTypeId PropertyExtensionLine1EndY;
     static RPropertyTypeId PropertyExtensionLine1EndZ;

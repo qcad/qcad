@@ -108,9 +108,13 @@ void RDimAngular3PEntity::init() {
     RDimAngular3PEntity::PropertyExtLineFix.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyExtLineFix);
     RDimAngular3PEntity::PropertyExtLineFixLength.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyExtLineFixLength);
 
-    RDimAngular3PEntity::PropertyCenterX.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-    RDimAngular3PEntity::PropertyCenterY.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-    RDimAngular3PEntity::PropertyCenterZ.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyCenterX.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyCenterY.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyCenterZ.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+
+    RDimAngular3PEntity::PropertyCenterX.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyCenterX);
+    RDimAngular3PEntity::PropertyCenterY.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyCenterY);
+    RDimAngular3PEntity::PropertyCenterZ.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyCenterZ);
 
     RDimAngular3PEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine1EndX);
     RDimAngular3PEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine1EndY);
@@ -124,9 +128,13 @@ void RDimAngular3PEntity::init() {
     RDimAngular3PEntity::PropertyExtensionLine2EndY.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine2EndY);
     RDimAngular3PEntity::PropertyExtensionLine2EndZ.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine2EndZ);
 
-    RDimAngular3PEntity::PropertyDimArcPositionX.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-    RDimAngular3PEntity::PropertyDimArcPositionY.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-    RDimAngular3PEntity::PropertyDimArcPositionZ.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyDimArcPositionX.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyDimArcPositionY.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyDimArcPositionZ.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+
+    RDimAngular3PEntity::PropertyDimArcPositionX.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyDimArcPositionX);
+    RDimAngular3PEntity::PropertyDimArcPositionY.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyDimArcPositionY);
+    RDimAngular3PEntity::PropertyDimArcPositionZ.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyDimArcPositionZ);
 }
 
 bool RDimAngular3PEntity::setProperty(RPropertyTypeId propertyTypeId,

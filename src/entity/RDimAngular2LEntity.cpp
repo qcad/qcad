@@ -116,17 +116,25 @@ void RDimAngular2LEntity::init() {
     RDimAngular2LEntity::PropertyExtensionLine1StartY.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 Start"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
     RDimAngular2LEntity::PropertyExtensionLine1StartZ.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 Start"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
-    RDimAngular2LEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-    RDimAngular2LEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-    RDimAngular2LEntity::PropertyExtensionLine1EndZ.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+    RDimAngular2LEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngular2LEntity), RDimAngularEntity::PropertyExtensionLine1EndX);
+    RDimAngular2LEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngular2LEntity), RDimAngularEntity::PropertyExtensionLine1EndY);
+    RDimAngular2LEntity::PropertyExtensionLine1EndZ.generateId(typeid(RDimAngular2LEntity), RDimAngularEntity::PropertyExtensionLine1EndZ);
+
+//    RDimAngular2LEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+//    RDimAngular2LEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+//    RDimAngular2LEntity::PropertyExtensionLine1EndZ.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
     RDimAngular2LEntity::PropertyExtensionLine2StartX.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 Start"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
     RDimAngular2LEntity::PropertyExtensionLine2StartY.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 Start"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
     RDimAngular2LEntity::PropertyExtensionLine2StartZ.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 Start"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
-    RDimAngular2LEntity::PropertyExtensionLine2EndX.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-    RDimAngular2LEntity::PropertyExtensionLine2EndY.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-    RDimAngular2LEntity::PropertyExtensionLine2EndZ.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+//    RDimAngular2LEntity::PropertyExtensionLine2EndX.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+//    RDimAngular2LEntity::PropertyExtensionLine2EndY.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+//    RDimAngular2LEntity::PropertyExtensionLine2EndZ.generateId(typeid(RDimAngular2LEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+
+    RDimAngular2LEntity::PropertyExtensionLine2EndX.generateId(typeid(RDimAngular2LEntity), RDimAngularEntity::PropertyExtensionLine2EndX);
+    RDimAngular2LEntity::PropertyExtensionLine2EndY.generateId(typeid(RDimAngular2LEntity), RDimAngularEntity::PropertyExtensionLine2EndY);
+    RDimAngular2LEntity::PropertyExtensionLine2EndZ.generateId(typeid(RDimAngular2LEntity), RDimAngularEntity::PropertyExtensionLine2EndZ);
 
     RDimAngular2LEntity::PropertyDimArcPositionX.generateId(typeid(RDimAngular2LEntity), RDimAngularEntity::PropertyDimArcPositionX);
     RDimAngular2LEntity::PropertyDimArcPositionY.generateId(typeid(RDimAngular2LEntity), RDimAngularEntity::PropertyDimArcPositionY);

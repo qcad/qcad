@@ -50,6 +50,10 @@ RPropertyTypeId RDimAngularEntity::PropertyArrow2Flipped;
 RPropertyTypeId RDimAngularEntity::PropertyExtLineFix;
 RPropertyTypeId RDimAngularEntity::PropertyExtLineFixLength;
 
+RPropertyTypeId RDimAngularEntity::PropertyCenterX;
+RPropertyTypeId RDimAngularEntity::PropertyCenterY;
+RPropertyTypeId RDimAngularEntity::PropertyCenterZ;
+
 RPropertyTypeId RDimAngularEntity::PropertyExtensionLine1EndX;
 RPropertyTypeId RDimAngularEntity::PropertyExtensionLine1EndY;
 RPropertyTypeId RDimAngularEntity::PropertyExtensionLine1EndZ;
@@ -99,6 +103,10 @@ void RDimAngularEntity::init() {
 
     RDimAngularEntity::PropertyExtLineFix.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyExtLineFix);
     RDimAngularEntity::PropertyExtLineFixLength.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyExtLineFixLength);
+
+    RDimAngularEntity::PropertyCenterX.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyCenterY.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyCenterZ.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
     RDimAngularEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
     RDimAngularEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
