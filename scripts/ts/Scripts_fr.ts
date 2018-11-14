@@ -993,6 +993,11 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
         <source>DWG Drawing</source>
         <translation>Dessin DWG</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF File</source>
+        <translation>Fichier PDF</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

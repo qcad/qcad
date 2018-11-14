@@ -968,6 +968,11 @@ in linee, solidi e testi</translatorcomment>
         <source>DWG Drawing</source>
         <translation>Disegno DWG</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF File</source>
+        <translation>File PDF</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

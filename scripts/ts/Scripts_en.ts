@@ -872,6 +872,11 @@
         <source>DWG Drawing</source>
         <translation>DWG Drawing</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF File</source>
+        <translation>PDF File</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

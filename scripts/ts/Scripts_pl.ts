@@ -1087,6 +1087,11 @@ Wprowadź tekst</translatorcomment>
         <source>DWG Drawing</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF File</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

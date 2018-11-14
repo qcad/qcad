@@ -981,6 +981,11 @@ en las líneas, los sólidos y los textos</translatorcomment>
         <source>DWG Drawing</source>
         <translation>Dibujo DWG</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF File</source>
+        <translation>Archivo PDF</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

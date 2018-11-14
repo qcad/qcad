@@ -14,7 +14,7 @@
         <translation>Tehty</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+406"/>
         <source>Export to PDF</source>
         <translation>Vie PDF:ksi</translation>
     </message>

@@ -1157,6 +1157,11 @@ Insira o texto de dimensão
         <source>DWG Drawing</source>
         <translation>Desenho DWG</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF File</source>
+        <translation>Ficheiro PDF</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

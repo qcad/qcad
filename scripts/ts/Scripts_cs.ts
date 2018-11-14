@@ -872,6 +872,11 @@
         <source>DWG Drawing</source>
         <translation>Výkres DWG</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF File</source>
+        <translation>Soubor PDF</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>
