@@ -38,7 +38,7 @@
 </private><public>public:
     <destructor><specifier>virtual</specifier> <name>~RTextProxy</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
-    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>getSimpleTextBlocks</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>getSimpleTextBlocks</name><parameter_list>(<param><decl><type><name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

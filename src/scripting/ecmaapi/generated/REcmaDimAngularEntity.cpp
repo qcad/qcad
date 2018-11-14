@@ -214,6 +214,18 @@
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyExtLineFixLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyCenterX",
+                qScriptValueFromValue(&engine, RDimAngularEntity::PropertyCenterX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyCenterY",
+                qScriptValueFromValue(&engine, RDimAngularEntity::PropertyCenterY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyCenterZ",
+                qScriptValueFromValue(&engine, RDimAngularEntity::PropertyCenterZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyExtensionLine1EndX",
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyExtensionLine1EndX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
