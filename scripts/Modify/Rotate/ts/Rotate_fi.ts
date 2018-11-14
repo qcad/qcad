@@ -33,6 +33,11 @@
         <source>&amp;Rotate</source>
         <translation>&amp;Kierrä</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>RotateOptions</name>

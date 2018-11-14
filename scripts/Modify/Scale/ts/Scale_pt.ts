@@ -47,6 +47,11 @@ Ponto de destino</translatorcomment>
 &amp;Escala:</translatorcomment>
         <translation>&amp;Escalone</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Usar diálogo para opções de ferramentas</translation>
+    </message>
 </context>
 <context>
     <name>ScaleDialog</name>

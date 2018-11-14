@@ -862,6 +862,16 @@
         <source>SVG Files</source>
         <translation>SVG Files</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Drawing</source>
+        <translation>DXF Drawing</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DWG Drawing</source>
+        <translation>DWG Drawing</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

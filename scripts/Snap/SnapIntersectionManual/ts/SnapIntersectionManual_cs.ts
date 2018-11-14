@@ -28,5 +28,10 @@
         <source>Second entity</source>
         <translation>Druhý prvek</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Terminate manual intersection tool after one use</source>
+        <translation>Po jednom použití ukončete nástroj ručního průniku</translation>
+    </message>
 </context>
 </TS>

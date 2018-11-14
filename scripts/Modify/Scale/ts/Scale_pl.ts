@@ -43,6 +43,11 @@ Wskaż punkt docelowy</translatorcomment>
 &amp;Skaluj</translatorcomment>
         <translation>Prze&amp;skaluj</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ScaleOptions</name>

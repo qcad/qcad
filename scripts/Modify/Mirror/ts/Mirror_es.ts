@@ -30,6 +30,11 @@
         <source>&amp;Mirror</source>
         <translation>&amp;Espejo</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Utilice diálogo para opciones de la herramienta</translation>
+    </message>
 </context>
 <context>
     <name>MirrorDialog</name>

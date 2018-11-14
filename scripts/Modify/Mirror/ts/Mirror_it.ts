@@ -32,6 +32,11 @@ Secondo punto per l&apos;asse dello specchio</translatorcomment>
         <source>&amp;Mirror</source>
         <translation>&amp;Specchio</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Usa finestra di dialogo per le opzioni degli strumenti</translation>
+    </message>
 </context>
 <context>
     <name>MirrorDialog</name>

@@ -35,6 +35,11 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
 &amp;Espelhe</translatorcomment>
         <translation>&amp;Espelhe</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Usar diálogo para opções de ferramentas</translation>
+    </message>
 </context>
 <context>
     <name>MirrorDialog</name>

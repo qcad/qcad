@@ -41,6 +41,11 @@ Obiettivo punto</translatorcomment>
         <source>&amp;Rotate</source>
         <translation>&amp;Ruota</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Usa finestra di dialogo per le opzioni degli strumenti</translation>
+    </message>
 </context>
 <context>
     <name>RotateOptions</name>

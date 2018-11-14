@@ -983,6 +983,16 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
         <source>SVG Files</source>
         <translation>Fichiers SVG</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Drawing</source>
+        <translation>Dessin DXF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DWG Drawing</source>
+        <translation>Dessin DWG</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

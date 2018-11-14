@@ -38,6 +38,11 @@ Punto objetivo</translatorcomment>
         <source>&amp;Scale</source>
         <translation>&amp;Escalar</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Utilice diálogo para opciones de la herramienta</translation>
+    </message>
 </context>
 <context>
     <name>ScaleDialog</name>

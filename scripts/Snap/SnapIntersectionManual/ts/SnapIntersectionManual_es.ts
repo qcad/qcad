@@ -29,5 +29,10 @@
         <source>Second entity</source>
         <translation>Segunda entidad</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Terminate manual intersection tool after one use</source>
+        <translation>Terminar la herramienta de intersección manual después de un uso</translation>
+    </message>
 </context>
 </TS>

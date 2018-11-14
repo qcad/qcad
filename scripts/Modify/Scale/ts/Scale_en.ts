@@ -33,6 +33,11 @@
         <source>&amp;Scale</source>
         <translation>&amp;Scale</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Use dialog for tool options</translation>
+    </message>
 </context>
 <context>
     <name>ScaleOptions</name>

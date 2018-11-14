@@ -33,6 +33,11 @@
         <source>Target point</source>
         <translation>Zielpunkt</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Dialog verwenden für Werkzeugoptionen</translation>
+    </message>
 </context>
 <context>
     <name>RotateOptions</name>

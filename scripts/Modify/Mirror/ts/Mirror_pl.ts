@@ -35,6 +35,11 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
 &amp;Odbijaj</translatorcomment>
         <translation>Odbij &amp;lustrzanie</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MirrorOptions</name>

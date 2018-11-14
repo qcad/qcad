@@ -28,6 +28,11 @@
         <source>&amp;Mirror</source>
         <translation>&amp;Mirror</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Use dialog for tool options</translation>
+    </message>
 </context>
 <context>
     <name>MirrorOptions</name>

@@ -862,6 +862,16 @@
         <source>SVG Files</source>
         <translation>Soubory SVG</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Drawing</source>
+        <translation>Výkres DXF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DWG Drawing</source>
+        <translation>Výkres DWG</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

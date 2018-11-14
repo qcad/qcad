@@ -33,6 +33,11 @@
         <source>&amp;Rotate</source>
         <translation>&amp;Natočit</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Použít dialog pro nastavení nástroje</translation>
+    </message>
 </context>
 <context>
     <name>RotateOptions</name>

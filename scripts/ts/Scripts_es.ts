@@ -971,6 +971,16 @@ en las líneas, los sólidos y los textos</translatorcomment>
         <source>SVG Files</source>
         <translation>Archivos SVG</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Drawing</source>
+        <translation>Dibujo DXF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DWG Drawing</source>
+        <translation>Dibujo DWG</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

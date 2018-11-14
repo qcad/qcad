@@ -36,6 +36,11 @@ Indiquer le point cible</translatorcomment>
         <source>&amp;Scale</source>
         <translation>&amp;Echelle</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Utiliser dialogue pour options de l&apos;outil</translation>
+    </message>
 </context>
 <context>
     <name>ScaleDialog</name>
