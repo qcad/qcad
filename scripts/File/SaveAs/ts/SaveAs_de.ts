@@ -26,7 +26,7 @@
         <translation>Laden/Speichern</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Keine Exportfilter wurden gefunden. Abbruch...</translation>
     </message>

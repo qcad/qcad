@@ -968,6 +968,21 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité inconnue</translation>
     </message>
+    <message>
+        <location line="+6"/>
+        <source>All CAD Files</source>
+        <translation>Tous les fichiers CAO</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Files</source>
+        <translation>Fichiers DXF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SVG Files</source>
+        <translation>Fichiers SVG</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

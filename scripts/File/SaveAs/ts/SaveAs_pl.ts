@@ -56,7 +56,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation>Otwieranie/zapisywanie</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Nie odnaleziono filtrów eksportowania. Anulowanie...</translation>
     </message>

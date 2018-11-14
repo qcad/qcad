@@ -39,7 +39,7 @@
         <translation>Open/Save</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>No export filters have been found. Aborting...</translation>
     </message>

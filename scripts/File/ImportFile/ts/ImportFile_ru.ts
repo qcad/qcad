@@ -9,7 +9,7 @@
         <translation>Ошибка при импортировании файла %1</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+29"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Фильтры для импорта не найдены. Операция прервана...</translation>
     </message>

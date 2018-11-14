@@ -21,8 +21,8 @@
         <translation>&amp;Arquivo</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -31,7 +31,7 @@ Formato:</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translatorcomment>--exact match--
 --file: Save_pt.ts--
@@ -54,7 +54,7 @@ O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translatorcomm
         <translation type="vanished">O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation>Todos os arquivos</translation>
     </message>

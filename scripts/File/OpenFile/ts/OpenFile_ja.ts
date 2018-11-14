@@ -8,7 +8,7 @@
         <translation type="vanished">インポートフィルタがありません</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="+46"/>
+        <location filename="../OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>インポートフィルタがみつかりません。中断します...</translation>
     </message>

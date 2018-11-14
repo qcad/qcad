@@ -18,13 +18,13 @@
         <translation>&amp;Fichier</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>Format :</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translatorcomment>--exact match--
 --file: Save_fr.ts--
@@ -40,12 +40,12 @@ Remplacer?</translatorcomment>
         <translation type="vanished">Le fichier &apos;%1&apos; existe déjà. Est-ce que vous souhaitez le remplacer?</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>All Files</source>
         <translation>Tous les fichiers</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-21"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--exact match--
 --file: Save_fr.ts--

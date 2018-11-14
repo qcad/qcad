@@ -18,13 +18,13 @@
         <translation>&amp;File</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translation>Overwrite File?</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="vanished">The file &apos;%1&apos; already exists. Do you wish to overwrite it?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation>All Files</translation>
     </message>

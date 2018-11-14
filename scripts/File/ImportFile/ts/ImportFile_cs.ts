@@ -9,7 +9,7 @@
         <translation>Chyba při importu souboru %1</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+29"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Nebyly nalezeny žádné filtry pro import. Přerušení...</translation>
     </message>

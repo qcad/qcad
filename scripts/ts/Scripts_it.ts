@@ -943,6 +943,21 @@ in linee, solidi e testi</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità sconosciuta</translation>
     </message>
+    <message>
+        <location line="+6"/>
+        <source>All CAD Files</source>
+        <translation>Tutti i file CAD</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Files</source>
+        <translation>File DXF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SVG Files</source>
+        <translation>File SVG</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

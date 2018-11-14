@@ -859,6 +859,21 @@
         <source>Unknown Entity</source>
         <translation>Onbekende object</translation>
     </message>
+    <message>
+        <location line="+6"/>
+        <source>All CAD Files</source>
+        <translation>Alle CAD bestanden</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Files</source>
+        <translation>DXF bestanden</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SVG Files</source>
+        <translation>SVG bestanden</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

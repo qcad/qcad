@@ -18,13 +18,13 @@
         <translation>Файл</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>Формат:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translation>Перезаписать файл?</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="vanished">Файл с именем «%1» уже существует. Заменить его?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation type="unfinished"></translation>
     </message>

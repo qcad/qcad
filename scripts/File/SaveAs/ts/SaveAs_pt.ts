@@ -26,7 +26,7 @@
         <translation>Carregue/Grave</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Nenhum filtro de exportação foi encontrado. Abortando...</translation>
     </message>

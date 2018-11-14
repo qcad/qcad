@@ -51,7 +51,7 @@
         <translation>Odpri/Shrani</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Ni bil najden noben filter. Prekinjam...</translation>
     </message>

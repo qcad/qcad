@@ -4,7 +4,7 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="+46"/>
+        <location filename="../OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Nie odnaleziono filtrów importowania. Anulowanie...</translation>
     </message>

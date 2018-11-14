@@ -22,8 +22,8 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
         <translation>&amp;Plik</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -32,7 +32,7 @@ Format:</translatorcomment>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zastąpić plik?</translation>
@@ -48,7 +48,7 @@ Format:</translatorcomment>
         <translation type="vanished">Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation>Wszystkie pliki</translation>
     </message>

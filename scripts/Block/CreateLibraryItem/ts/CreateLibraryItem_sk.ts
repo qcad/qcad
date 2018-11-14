@@ -9,7 +9,7 @@
         <translation>Referenčný bod</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+32"/>
         <source>Save library item as...</source>
         <translation>Uložiť položku knižnice ako...</translation>
     </message>

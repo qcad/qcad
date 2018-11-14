@@ -9,7 +9,7 @@
         <translation>基準点</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+32"/>
         <source>Save library item as...</source>
         <translation>ライブラリアイテムを名前をつけて保存…</translation>
     </message>

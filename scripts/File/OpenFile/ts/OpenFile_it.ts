@@ -8,7 +8,7 @@
         <translation type="vanished">Nessun filtri di importazione</translation>
     </message>
     <message>
-        <location filename="../OpenFile.js" line="+46"/>
+        <location filename="../OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Non sono stati trovati filtri di importazione. Interruzione...</translation>
     </message>

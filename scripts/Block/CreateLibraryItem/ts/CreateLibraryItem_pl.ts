@@ -13,7 +13,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation>Punkt odniesienia</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+32"/>
         <source>Save library item as...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zapisz element kolekcji jako...</translation>

@@ -9,7 +9,7 @@
         <translation>Referentna Točka</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+32"/>
         <source>Save library item as...</source>
         <translation>Snimi stavku zbirke kao...</translation>
     </message>

@@ -26,7 +26,7 @@
         <translation>Charger/Enregistrer</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Pas de filtres d&apos;exportation ont été trouvés. Abandon...</translation>
     </message>

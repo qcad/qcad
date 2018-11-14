@@ -9,7 +9,7 @@
         <translation>Atskaitinis taškas</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+32"/>
         <source>Save library item as...</source>
         <translation>Išsaugoti bibliotekos elementą kaip...</translation>
     </message>

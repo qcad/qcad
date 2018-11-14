@@ -18,13 +18,13 @@
         <translation>&amp;Soubor</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translation>Přepsat soubor?</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="vanished">Soubor &apos;%1&apos; již existuje. Přeješ si ho přepsat?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation>Všechny soubory</translation>
     </message>

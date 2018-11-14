@@ -847,6 +847,21 @@
         <source>Unknown Entity</source>
         <translation>Neznámý prvek</translation>
     </message>
+    <message>
+        <location line="+6"/>
+        <source>All CAD Files</source>
+        <translation>Všechny CAD soubory</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Files</source>
+        <translation>Soubory DXF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SVG Files</source>
+        <translation>Soubory SVG</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

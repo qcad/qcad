@@ -26,7 +26,7 @@
         <translation>Carico/Salvare</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>

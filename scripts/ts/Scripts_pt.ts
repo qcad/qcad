@@ -1132,6 +1132,21 @@ Insira o texto de dimensão
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidade Desconhecida</translation>
     </message>
+    <message>
+        <location line="+6"/>
+        <source>All CAD Files</source>
+        <translation>Todos os arquivos CAD</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DXF Files</source>
+        <translation>Arquivos DXF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SVG Files</source>
+        <translation>Arquivos SVG</translation>
+    </message>
 </context>
 <context>
     <name>simple_modify</name>

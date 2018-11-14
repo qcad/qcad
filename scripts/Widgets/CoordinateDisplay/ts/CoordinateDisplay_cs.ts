@@ -31,12 +31,12 @@
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazení souřadnic</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vynucená aktualizace každých 7 pohybů myší:</translation>
     </message>
 </context>
 </TS>

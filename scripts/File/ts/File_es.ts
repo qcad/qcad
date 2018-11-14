@@ -18,13 +18,13 @@
         <translation>&amp;Fichero</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--
@@ -47,7 +47,7 @@ El archivo &apos;%1&apos; ya existe. ¿Desea sobreescribirlo?</translatorcomment
         <translation type="vanished">El archivo &apos;%1&apos; ya existe. ¿Desea sobreescribirlo?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation>Todos los archivos</translation>
     </message>

@@ -18,13 +18,13 @@
         <translation>&amp;Datoteka</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translation>Prepišem datoteko?</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="vanished">Datoteka &apos;%1&apos; že obstaja. Jo želite prepisat?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation>Vse datoteke</translation>
     </message>

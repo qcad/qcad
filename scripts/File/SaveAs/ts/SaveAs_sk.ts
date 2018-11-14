@@ -47,7 +47,7 @@
         <translation>Otvoriť/Uložiť</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Žiadne exportné filtre sa nenašli. Ukončujem...</translation>
     </message>

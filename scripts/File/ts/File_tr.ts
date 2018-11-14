@@ -18,13 +18,13 @@
         <translation>&amp;Dosya</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>Biçim:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translation>Üzerine yazılsın mı?</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="vanished">&apos;%1&apos; dosyası zaten var. Üzerine yazmak istiyor musun?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation>Tüm Dosyalar</translation>
     </message>

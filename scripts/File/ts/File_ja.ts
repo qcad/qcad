@@ -18,13 +18,13 @@
         <translation>&amp;F ファイル</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translation>ファイルを上書きしますか?</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="vanished">ファイル&apos;%1&apos;は既に存在します。 上書きしますか?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation type="unfinished"></translation>
     </message>

@@ -39,7 +39,7 @@
         <translation>Aç/Kaydet</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Hiçbir dışa  alma filtresi bulunamadı. Durduruluyor ...</translation>
     </message>

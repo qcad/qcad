@@ -39,7 +39,7 @@
         <translation>Otevřít/Uložit</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Nebyly nalezeny žádné filtry pro export. Přerušení...</translation>
     </message>

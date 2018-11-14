@@ -18,13 +18,13 @@
         <translation>&amp;Bestand</translation>
     </message>
     <message>
-        <location line="+91"/>
-        <location line="+69"/>
+        <location line="+92"/>
+        <location line="+70"/>
         <source>Format:</source>
         <translation>Formaat:</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-33"/>
         <source>Overwrite File?</source>
         <translation>Bestand overschrijven?</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="vanished">Het bestand &apos;%1&apos; bestaat al. Wilt u het overschrijven?</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+21"/>
         <source>All Files</source>
         <translation>Alle bestanden</translation>
     </message>
