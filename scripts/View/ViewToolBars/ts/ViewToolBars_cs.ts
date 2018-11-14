@@ -8,5 +8,15 @@
         <source>&amp;Toolbars and Widgets</source>
         <translation>Panely &amp;nástrojů a Widgety</translation>
     </message>
+    <message>
+        <location line="+5"/>
+        <source>Widgets</source>
+        <translation>Widgety</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Toolbars</source>
+        <translation>Nástrojové lišty</translation>
+    </message>
 </context>
 </TS>

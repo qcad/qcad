@@ -12,5 +12,15 @@
         <source>&amp;Toolbars and Widgets</source>
         <translation>&amp;Barras de herramientas y widgets</translation>
     </message>
+    <message>
+        <location line="+5"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Toolbars</source>
+        <translation>Barras de herramientas</translation>
+    </message>
 </context>
 </TS>

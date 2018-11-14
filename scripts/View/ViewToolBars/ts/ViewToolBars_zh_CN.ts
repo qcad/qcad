@@ -8,5 +8,15 @@
         <source>&amp;Toolbars and Widgets</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+5"/>
+        <source>Widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Toolbars</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

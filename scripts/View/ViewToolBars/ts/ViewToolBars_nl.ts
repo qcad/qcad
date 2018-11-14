@@ -8,5 +8,15 @@
         <source>&amp;Toolbars and Widgets</source>
         <translation>&amp;Werkbalken en widgets</translation>
     </message>
+    <message>
+        <location line="+5"/>
+        <source>Widgets</source>
+        <translation>Widgets</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Toolbars</source>
+        <translation>Werkbalken</translation>
+    </message>
 </context>
 </TS>
