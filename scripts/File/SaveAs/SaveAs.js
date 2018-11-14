@@ -41,14 +41,15 @@ SaveAs.getPreferencesCategory = function() {
 SaveAs.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     var widgets = getWidgets(pageWidget);
 
-    var nameFilters = RFileExporterRegistry.getFilterStrings();
+    var filterStrings = RFileExporterRegistry.getFilterStrings();
+    filterStrings = translateFilterStrings(filterStrings);
 
     // Offer only a limited choice here as not all file format versions
     // are suitable for saving all information (e.g. 24 bit colors):
-    for (var i=0; i<nameFilters.length; i++) {
-        var nameFilter = nameFilters[i];
-        if (File.isRecommendedVersion(nameFilter)) {
-            widgets["Filter"].addItem(nameFilter);
+    for (var i=0; i<filterStrings.length; i++) {
+        var filterString = filterStrings[i];
+        if (File.isRecommendedVersion(filterString)) {
+            widgets["Filter"].addItem(filterString);
         }
     }
 };
@@ -58,8 +59,9 @@ SaveAs.prototype.beginEvent = function() {
     var appWin = EAction.getMainWindow();
     var i;
 
-    var nameFilters = RFileExporterRegistry.getFilterStrings();
-    if (nameFilters.length===0) {
+    var filterStrings = RFileExporterRegistry.getFilterStrings();
+    filterStrings = translateFilterStrings(filterStrings);
+    if (filterStrings.length===0) {
         EAction.handleUserWarning(qsTr("No export filters have been found. Aborting..."));
         this.terminate();
         return;
@@ -91,7 +93,7 @@ SaveAs.prototype.beginEvent = function() {
         }
         fileDialog.fileMode = QFileDialog.AnyFile;
         fileDialog.acceptMode = QFileDialog.AcceptSave;
-        fileDialog.setNameFilters(nameFilters);
+        fileDialog.setNameFilters(filterStrings);
 
         var fileName = this.getDocument().getFileName();
         var fileInfo = new QFileInfo(fileName);
@@ -99,13 +101,13 @@ SaveAs.prototype.beginEvent = function() {
         var suffix = fileInfo.suffix().toLowerCase();
 
         // select first name filter in case everything else fails:
-        fileDialog.selectNameFilter(nameFilters[0]);
+        fileDialog.selectNameFilter(filterStrings[0]);
 
         if (suffix.length!==0 && !defaultNameFilter.containsIgnoreCase(suffix)) {
             // preselect first name filter that matches current extension:
-            for (i=0; i<nameFilters.length; ++i) {
-                if (nameFilters[i].contains("R27") && nameFilters[i].contains("*." + suffix)) {
-                    fileDialog.selectNameFilter(nameFilters[i]);
+            for (i=0; i<filterStrings.length; ++i) {
+                if (filterStrings[i].contains("R27") && filterStrings[i].contains("*." + suffix)) {
+                    fileDialog.selectNameFilter(filterStrings[i]);
                     break;
                 }
             }
@@ -114,9 +116,9 @@ SaveAs.prototype.beginEvent = function() {
             // preselect configured name filter:
             if (defaultNameFilter.length===0) {
                 // preselect default name filter DXF R27:
-                for (i=0; i<nameFilters.length; ++i) {
-                    if (nameFilters[i].contains("R27") && nameFilters[i].contains("*.dxf")) {
-                        fileDialog.selectNameFilter(nameFilters[i]);
+                for (i=0; i<filterStrings.length; ++i) {
+                    if (filterStrings[i].contains("R27") && filterStrings[i].contains("*.dxf")) {
+                        fileDialog.selectNameFilter(filterStrings[i]);
                         break;
                     }
                 }

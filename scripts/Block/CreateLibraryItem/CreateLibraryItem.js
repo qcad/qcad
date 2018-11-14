@@ -73,11 +73,14 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
     op.setText(this.getToolTitle());
     itemDocumentInterface.applyOperation(op);
 
+    var filterStrings = RFileExporterRegistry.getFilterStrings();
+    filterStrings = translateFilterStrings(filterStrings);
+
     var res = File.getSaveFileName(
         EAction.getMainWindow(),
         qsTr("Save library item as..."),
         RSettings.getLaunchPath() + "/libraries",
-        RFileExporterRegistry.getFilterStrings());
+        filterStrings);
 
     if (!isNull(res)) {
         itemDocumentInterface.exportFile(res[0], res[1]);

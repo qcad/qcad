@@ -633,10 +633,11 @@ PrintPreviewImpl.prototype.slotPdfExport = function() {
         initialFileName = fileInfo.absoluteFilePath();
     }
 
-    var filters = [ "PDF File (*.pdf)" ];
+    var filterStrings = [ "PDF File (*.pdf)" ];
+    filterStrings = translateFilterStrings(filterStrings);
 
     var ret = File.getSaveFileName(appWin, qsTr("Export to PDF"),
-                   initialFileName, filters);
+                   initialFileName, filterStrings);
 
     if (isNull(ret)) {
         return;

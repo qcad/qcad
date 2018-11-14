@@ -914,6 +914,18 @@ function entityTypeToString(type, plural) {
     }
 }
 
+function translateFilterStrings(filterStrings) {
+    for (var i=0; i<filterStrings.length; i++) {
+        filterStrings[i] = filterStrings[i].replace("All CAD Files", qsTr("All CAD Files"));
+        filterStrings[i] = filterStrings[i].replace("DXF Files", qsTr("DXF Files"));
+        filterStrings[i] = filterStrings[i].replace("SVG Files", qsTr("SVG Files"));
+        filterStrings[i] = filterStrings[i].replace("DXF Drawing", qsTr("DXF Drawing"));
+        filterStrings[i] = filterStrings[i].replace("DWG Drawing", qsTr("DWG Drawing"));
+        filterStrings[i] = filterStrings[i].replace("PDF File", qsTr("PDF File"));
+    }
+    return filterStrings;
+}
+
 /**
  * Checks the type of the given object.
  *

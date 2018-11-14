@@ -96,18 +96,19 @@ ImportFile.prototype.initOperation = function(op) {
 ImportFile.prototype.getFileName = function() {
     var lastOpenFileDir = RSettings.getStringValue("ImportFile/Path", RSettings.getDocumentsLocation());
 
-    var filters = RFileImporterRegistry.getFilterStrings();
-    if (filters.length===0) {
+    var filterStrings = RFileImporterRegistry.getFilterStrings();
+    filterStrings = translateFilterStrings(filterStrings);
+    if (filterStrings.length===0) {
         EAction.handleUserWarning(qsTr("No import filters have been found. Aborting..."));
         return undefined;
     }
 
-    filters = new Array(qsTr("All Files") + " (*)").concat(filters);
+    filterStrings = new Array(qsTr("All Files") + " (*)").concat(filterStrings);
 
     var appWin = EAction.getMainWindow();
     var fileDialog = new QFileDialog(appWin, qsTr("Import Drawing"), lastOpenFileDir, "");
-    var allFilter = filters[0];
-    fileDialog.setNameFilters(filters);
+    var allFilter = filterStrings[0];
+    fileDialog.setNameFilters(filterStrings);
     fileDialog.selectNameFilter(allFilter);
     fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
     if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {

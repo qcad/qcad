@@ -166,6 +166,7 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
     fileDialog.fileMode = QFileDialog.AnyFile;
     fileDialog.acceptMode = QFileDialog.AcceptSave;
 
+    filterStrings = translateFilterStrings(filterStrings);
     fileDialog.setNameFilters(filterStrings);
     
     fileDialog.selectFile(fiDir.completeBaseName());
@@ -237,6 +238,7 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
 File.getOpenFileName = function(parentWidget, caption, dir, filterStrings) {
     if (isNull(filterStrings)) {
         filterStrings = RFileImporterRegistry.getFilterStrings();
+        filterStrings = translateFilterStrings(filterStrings);
     }
     filterStrings = new Array(qsTr("All Files") + " (*)").concat(filterStrings);
 
