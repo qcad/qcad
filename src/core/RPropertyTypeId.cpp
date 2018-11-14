@@ -95,7 +95,8 @@ void RPropertyTypeId::generateId(const std::type_info& classInfo,
         titleToIdMap[groupTitle].insert(title, *this);
     }
     else {
-        qWarning() << "duplicate property ID: " << groupTitle << "/" << title;
+        qWarning() << "duplicate property ID: " << groupTitle << "/" << title
+                   << " class: " << classInfo.name();
     }
 }
 
