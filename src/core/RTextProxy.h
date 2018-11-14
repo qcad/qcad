@@ -37,7 +37,7 @@ class QCADCORE_EXPORT RTextProxy {
 public:
     virtual ~RTextProxy() {}
 
-    virtual QList<RTextBasedData> getSimpleTextBlocks(const RTextBasedData& text) const = 0;
+    virtual QList<RTextBasedData> getSimpleTextBlocks(RTextBasedData& text) const = 0;
 };
 
 #endif

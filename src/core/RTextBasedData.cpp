@@ -560,7 +560,7 @@ QList<RTextLayout> RTextBasedData::getTextLayouts() const {
  * Complex formatted texts are split up into smaller text blocks,
  * each with unique formatting, color, etc.
  */
-QList<RTextBasedData> RTextBasedData::getSimpleTextBlocks() const {
+QList<RTextBasedData> RTextBasedData::getSimpleTextBlocks() {
     if (hasProxy()) {
         return getTextProxy()->getSimpleTextBlocks(*this);
     }

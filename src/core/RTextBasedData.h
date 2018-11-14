@@ -327,7 +327,7 @@ public:
 
     QList<RTextLayout> getTextLayouts() const;
 
-    QList<RTextBasedData> getSimpleTextBlocks() const;
+    QList<RTextBasedData> getSimpleTextBlocks();
 
 //    virtual RTextBasedData getRenderedTextData() const {
 //        return *this;

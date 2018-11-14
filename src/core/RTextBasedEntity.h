@@ -253,7 +253,7 @@ public:
         getData().sync(other.getData());
     }
 
-    QList<RTextBasedData> getSimpleTextBlocks() const {
+    QList<RTextBasedData> getSimpleTextBlocks() {
         return getData().getSimpleTextBlocks();
     }
 
