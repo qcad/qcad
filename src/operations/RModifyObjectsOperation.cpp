@@ -38,7 +38,7 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
     RVector center = RVector::nullVector;
 
     RTranslation* translation = dynamic_cast<RTranslation*>(transformation);
-    if (translation!=nullptr) {
+    if (translation!=NULL) {
         translate = true;
         translationOffset = translation->offset;
         rotationAngle = translation->rotationAngle;

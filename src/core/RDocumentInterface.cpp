@@ -326,11 +326,11 @@ RGraphicsView* RDocumentInterface::getGraphicsViewWithFocus() {
  */
 RGraphicsScene* RDocumentInterface::getGraphicsSceneWithFocus() {
     RGraphicsView* view = getGraphicsViewWithFocus();
-    if (view!=nullptr) {
+    if (view!=NULL) {
         return view->getScene();
     }
 
-    return nullptr;
+    return NULL;
 }
 
 /**
