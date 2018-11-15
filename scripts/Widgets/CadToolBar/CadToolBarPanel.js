@@ -38,7 +38,7 @@ function CadToolBarPanel(parent, hasBackButton) {
     if (hasBackButton) {
         var backAction = new RGuiAction(qsTr("Back"), this);
         backAction.objectName = "Back";
-        backAction.setIcon("scripts/Widgets/CadToolBar/Back.svg");
+        backAction.setIcon(autoPath("scripts/Widgets/CadToolBar/Back.svg"));
         this.addAction(backAction);
         backAction.triggered.connect(CadToolBar, "back");
     }
