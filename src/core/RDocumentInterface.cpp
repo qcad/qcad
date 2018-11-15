@@ -1388,8 +1388,8 @@ void RDocumentInterface::redo() {
  * Flush transactions.
  */
 void RDocumentInterface::flushTransactions() {
-    document.resetTransactionStack();
     document.getStorage().deleteTransactionsFrom(0);
+    document.resetTransactionStack();
 
     if (RMainWindow::hasMainWindow()) {
         //RMainWindow::getMainWindow()->postTransactionEvent();
