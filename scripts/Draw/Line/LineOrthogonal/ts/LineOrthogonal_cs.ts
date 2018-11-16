@@ -31,12 +31,12 @@
     <message>
         <location filename="../LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation>&amp;Ortogonální</translation>
+        <translation>&amp;Kolmice</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation>Nakreslit čáru ortogonálně k základnímu prvku</translation>
+        <translation>Nakreslit čáru kolmo k základnímu prvku</translation>
     </message>
 </context>
 </TS>

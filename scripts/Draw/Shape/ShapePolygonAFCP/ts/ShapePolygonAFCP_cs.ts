@@ -31,7 +31,7 @@
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation>Nakreslit pravidelný mnohoúhelník pomocí středu a středu strany</translation>
+        <translation>Nakreslit pravidelný polygon pomocí středu a středu strany</translation>
     </message>
 </context>
 </TS>

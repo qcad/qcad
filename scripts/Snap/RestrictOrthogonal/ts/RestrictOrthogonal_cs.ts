@@ -6,7 +6,7 @@
     <message>
         <location filename="../RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation>Omezit ortogonálně</translation>
+        <translation>Omezit &amp;kolmo</translation>
     </message>
 </context>
 </TS>

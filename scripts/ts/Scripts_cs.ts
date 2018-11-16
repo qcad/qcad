@@ -82,7 +82,7 @@
         <location line="+1"/>
         <location line="+2069"/>
         <source>Cancel</source>
-        <translation>Zrušit</translation>
+        <translation>Storno</translation>
     </message>
     <message>
         <location line="-1794"/>
@@ -424,7 +424,7 @@
     <message>
         <location filename="../library.js" line="+829"/>
         <source>Objects</source>
-        <translation>Objekty</translation>
+        <translation>Objektů</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -434,7 +434,7 @@
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation>Neznámé objekty</translation>
+        <translation>Neznámých objektů</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -444,7 +444,7 @@
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation>Bloky</translation>
+        <translation>Bloků</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -454,7 +454,7 @@
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation>Vrstvy</translation>
+        <translation>Vrstev</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -494,7 +494,7 @@
     <message>
         <location line="+3"/>
         <source>Entities</source>
-        <translation>Prvky</translation>
+        <translation>Prvků</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -514,7 +514,7 @@
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation>Reference bloku</translation>
+        <translation>Referencí bloku</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -534,7 +534,7 @@
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation>Oblouky</translation>
+        <translation>Oblouků</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -564,7 +564,7 @@
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation>Kružnice</translation>
+        <translation>Kružnic</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -574,7 +574,7 @@
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation>Kóty</translation>
+        <translation>Kót</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -584,7 +584,7 @@
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation>Zarovnané kóty</translation>
+        <translation>Zarovnaných kót</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -594,7 +594,7 @@
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation>Úhlové kóty</translation>
+        <translation>Úhlových kót</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -645,7 +645,7 @@
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation>Kóty průměru</translation>
+        <translation>Kót průměru</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -655,7 +655,7 @@
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Souřadnicové kóty</translation>
+        <translation>Souřadnicových kót</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -665,7 +665,7 @@
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation>Natočené kóty</translation>
+        <translation>Natočených kót</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -675,7 +675,7 @@
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation>Kóty poloměrů</translation>
+        <translation>Kót poloměrů</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -685,7 +685,7 @@
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation>Elipsy</translation>
+        <translation>Elips</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -705,7 +705,7 @@
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation>Obrázky</translation>
+        <translation>Obrázků</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -715,7 +715,7 @@
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation>Odkazové kóty</translation>
+        <translation>Odkazových kót</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -725,7 +725,7 @@
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation>Čáry</translation>
+        <translation>Čar</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -735,7 +735,7 @@
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation>Přímky</translation>
+        <translation>Přímek</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -745,7 +745,7 @@
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation>Polopřímky</translation>
+        <translation>Polopřímek</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -755,7 +755,7 @@
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation>Body</translation>
+        <translation>Bodů</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -765,7 +765,7 @@
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation>Lomené čáry</translation>
+        <translation>Lomených čar</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -775,7 +775,7 @@
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Výplně</translation>
+        <translation>Výplní</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -785,7 +785,7 @@
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation>Trasy</translation>
+        <translation>Tras</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -795,7 +795,7 @@
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation>Plochy</translation>
+        <translation>Ploch</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -805,7 +805,7 @@
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation>Křivky</translation>
+        <translation>Křivek</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -820,7 +820,7 @@
     <message>
         <location line="+2"/>
         <source>Texts</source>
-        <translation>Texty</translation>
+        <translation>Textů</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -830,7 +830,7 @@
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Výřezy</translation>
+        <translation>Výřezů</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -840,7 +840,7 @@
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation>Neznámé prvky</translation>
+        <translation>Neznámých prvků</translation>
     </message>
     <message>
         <location line="+0"/>

@@ -24,7 +24,7 @@
     <message>
         <location line="+36"/>
         <source>Files</source>
-        <translation>Soubory</translation>
+        <translation>soubory</translation>
     </message>
     <message>
         <location line="+10"/>

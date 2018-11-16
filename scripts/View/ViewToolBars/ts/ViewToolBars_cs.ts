@@ -16,7 +16,7 @@
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation>Nástrojové lišty</translation>
+        <translation>Panely nástrojů</translation>
     </message>
 </context>
 </TS>

@@ -37,7 +37,7 @@
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation>Pixely / Palec</translation>
+        <translation>Pixelů / palec</translation>
     </message>
     <message>
         <location filename="../SvgImportInit.js" line="+2"/>

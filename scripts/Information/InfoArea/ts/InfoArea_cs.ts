@@ -36,7 +36,7 @@
     <message>
         <location filename="../InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation>Plocha &amp;Polygonu</translation>
+        <translation>Plocha &amp;polygonu</translation>
     </message>
 </context>
 </TS>

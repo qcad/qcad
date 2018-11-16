@@ -21,12 +21,12 @@
     <message>
         <location filename="../LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation>Kolmá teč&amp;na</translation>
+        <translation>Kolmice/teč&amp;na</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation>Nakreslit tečnu kružnice, oblouku nebo elipsy kolmou k určené čáře</translation>
+        <translation>Nakreslit kolmici k čáře a tečnu ke kružnici, oblouku nebo elipsy</translation>
     </message>
 </context>
 </TS>

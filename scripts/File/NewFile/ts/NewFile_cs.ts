@@ -62,7 +62,7 @@
     <message>
         <location line="+12"/>
         <source>Drawing loaded successfully:</source>
-        <translation>Kresba byla úspěšně načtena:</translation>
+        <translation>Výkres byl úspěšně načten:</translation>
     </message>
     <message>
         <location line="+4"/>

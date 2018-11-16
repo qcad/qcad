@@ -31,7 +31,7 @@
     <message>
         <location filename="../ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;Měřítko</translation>
+        <translation>&amp;Změnit měřítko</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

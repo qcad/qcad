@@ -61,7 +61,7 @@
     <message>
         <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>Soubor &quot;%1&quot; již existuje. Opravdu ho chcete přepsat?</translation>
+        <translation>Soubor &quot;%1&quot; již existuje. Přejete si ho přepsat?</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -91,7 +91,7 @@
     <message>
         <location line="+19"/>
         <source>Saved drawing:</source>
-        <translation>Uložený výkres:</translation>
+        <translation>Uložen výkres:</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -19,7 +19,7 @@
         <location line="+134"/>
         <location line="+11"/>
         <source>Internet:</source>
-        <translation>Internet:</translation>
+        <translation>URL:</translation>
     </message>
     <message>
         <location line="-143"/>
@@ -55,7 +55,7 @@
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation>%1 je aplikace pro počítačem podporovaný návrh (CAD).</translation>
+        <translation>%1 je aplikace pro počítačem podporované projektování (CAD).</translation>
     </message>
     <message>
         <location line="+4"/>
