@@ -80,7 +80,7 @@ MiscDraw.getCadToolBarPanel = function() {
 };
 
 MiscDraw.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(MiscDraw.getTitle(), "MiscDrawMatrixPanel", 2100);
+    return EAction.getToolMatrixPanel(qsTr("Misc Draw"), "MiscDrawMatrixPanel", 2050);
 };
 
 MiscDraw.getTitle = function() {
