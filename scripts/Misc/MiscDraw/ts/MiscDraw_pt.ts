@@ -14,11 +14,16 @@
         <translation>Ferramentas de desenho miscelânea</translation>
     </message>
     <message>
+        <location line="+22"/>
+        <source>Misc Draw</source>
+        <translation>Miscelânea Desenho</translation>
+    </message>
+    <message>
         <source>Show misc drawing tools</source>
         <translation type="vanished">Mostrar ferramentas de desenho miscelânea</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+4"/>
         <source>&amp;Draw</source>
         <translation>&amp;Desenhar</translation>
     </message>

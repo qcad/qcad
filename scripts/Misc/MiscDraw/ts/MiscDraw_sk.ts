@@ -9,7 +9,12 @@
         <translation>Rôzne</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+31"/>
+        <source>Misc Draw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>&amp;Draw</source>
         <translation>&amp;Kreslenie</translation>
     </message>

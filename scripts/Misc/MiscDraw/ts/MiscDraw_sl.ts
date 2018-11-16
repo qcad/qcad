@@ -14,11 +14,16 @@
         <translation>Razna orodja risbe</translation>
     </message>
     <message>
+        <location line="+22"/>
+        <source>Misc Draw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show misc drawing tools</source>
         <translation type="vanished">Prikaži razna orodja risbe</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+4"/>
         <source>&amp;Draw</source>
         <translation>&amp;Riši</translation>
     </message>

@@ -14,7 +14,12 @@
         <translation>Různé nástroje kreslení</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+22"/>
+        <source>Misc Draw</source>
+        <translation>Různé Kreslení</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>&amp;Draw</source>
         <translation>&amp;Kreslení</translation>
     </message>
