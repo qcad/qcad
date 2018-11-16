@@ -26,7 +26,7 @@
     <message>
         <location filename="../CoordinateDisplay.js" line="+28"/>
         <source>Widgets</source>
-        <translation>Widgets</translation>
+        <translation>Widgety</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation>Vynucená aktualizace každých 7 pohybů myší:</translation>
+        <translation>Vynucená aktualizace každých N pohybů myší:</translation>
     </message>
 </context>
 </TS>
