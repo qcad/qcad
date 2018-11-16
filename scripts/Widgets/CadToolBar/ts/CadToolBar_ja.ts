@@ -46,7 +46,8 @@
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="+109"/>
+        <location filename="../CadToolBarPanel.js" line="+39"/>
+        <location line="+70"/>
         <source>Back</source>
         <translation>戻る</translation>
     </message>

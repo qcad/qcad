@@ -9,7 +9,7 @@
         <translation>Panely &amp;nástrojů a Widgety</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Widgets</source>
         <translation>Widgety</translation>
     </message>

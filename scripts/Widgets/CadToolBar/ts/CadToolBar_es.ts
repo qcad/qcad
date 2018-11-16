@@ -62,7 +62,8 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="+109"/>
+        <location filename="../CadToolBarPanel.js" line="+39"/>
+        <location line="+70"/>
         <source>Back</source>
         <translation>Atrás</translation>
     </message>

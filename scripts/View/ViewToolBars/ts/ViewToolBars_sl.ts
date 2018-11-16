@@ -13,7 +13,7 @@
         <translation>&amp;Orodne vrstice in Gradniki</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
