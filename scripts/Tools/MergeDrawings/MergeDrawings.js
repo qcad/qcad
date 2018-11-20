@@ -19,7 +19,7 @@
 
 /**
  * Command line tool.
- * Marges multiple drawing files (DWG, DXF) into one.
+ * Merges multiple drawing files (DWG, DXF) into one.
  */
 
 include("scripts/Tools/arguments.js");
