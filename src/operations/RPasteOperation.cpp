@@ -41,6 +41,10 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) {
     // 20151118: allow also entities on locked / invisible layers to be pasted:
     transaction.setAllowAll(true);
 
+    if (offsets.isEmpty()) {
+        offsets.append(RVector(0,0));
+    }
+
     int iMax = offsets.length();
     if (preview && iMax>10) {
         iMax = 10;
