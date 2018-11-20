@@ -1314,8 +1314,9 @@ bool RSpline::isValid() const {
         return false;
     }
     if (hasFitPoints()) {
-        if (fitPoints.count() < 3) {
-            //qDebug() << "RSpline::isValid: spline not valid: less than 3 fit points";
+        // spline with two fit points is line:
+        if (fitPoints.count() < 2) {
+            //qDebug() << "RSpline::isValid: spline not valid: less than 2 fit points";
             return false;
         }
         return true;
@@ -1616,7 +1617,8 @@ void RSpline::updateFromControlPoints() const {
  * Degree is always corrected to 3rd degree.
  */
 void RSpline::updateFromFitPoints() const {
-    if (fitPoints.size()<degree) {
+    // spline with two fit points is line:
+    if (fitPoints.size()<2) {
         invalidate();
         return;
     }
