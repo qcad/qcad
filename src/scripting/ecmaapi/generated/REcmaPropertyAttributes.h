@@ -166,6 +166,12 @@
         setNumericallySorted
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isScaleType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScaleType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

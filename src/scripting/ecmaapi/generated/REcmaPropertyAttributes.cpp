@@ -130,6 +130,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setNumericallySorted, "setNumericallySorted");
             
+            REcmaHelper::registerFunction(&engine, proto, isScaleType, "isScaleType");
+            
+            REcmaHelper::registerFunction(&engine, proto, setScaleType, "setScaleType");
+            
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
             REcmaHelper::registerFunction(&engine, proto, setLabel, "setLabel");
@@ -291,6 +295,11 @@
 
     ctor.setProperty("Geometry",
     QScriptValue(RPropertyAttributes::Geometry),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Scale",
+    QScriptValue(RPropertyAttributes::Scale),
     QScriptValue::ReadOnly);
 
 
@@ -2537,6 +2546,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setNumericallySorted", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isScaleType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isScaleType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isScaleType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isScaleType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isScaleType();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isScaleType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isScaleType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setScaleType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setScaleType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setScaleType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setScaleType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScaleType(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setScaleType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setScaleType", context, engine);
             return result;
         }
          QScriptValue
