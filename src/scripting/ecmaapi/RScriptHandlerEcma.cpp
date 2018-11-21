@@ -535,6 +535,13 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQLineEdit.property("prototype").setProperty("validator",
             engine->newFunction(ecmaQLineEditValidator));
 
+    // workaround API for not scriptable QModelIndexList:
+    QScriptValue classQItemSelectionModel = globalObject.property("QItemSelectionModel");
+    classQItemSelectionModel.property("prototype").setProperty("countSelectedRows",
+            engine->newFunction(ecmaQItemSelectionModelCountSelectedRows));
+    classQItemSelectionModel.property("prototype").setProperty("selectedRow",
+            engine->newFunction(ecmaQItemSelectionModelSelectedRow));
+
 //    QScriptValue classQWebPage = globalObject.property("QWebPage");
 //    classQWebPage.property("prototype").setProperty("setLinkDelegationPolicy",
 //            engine->newFunction(ecmaQWebPageSetLinkDelegationPolicy));
@@ -1927,6 +1934,40 @@ QScriptValue RScriptHandlerEcma::ecmaQLineEditValidator(QScriptContext* context,
     const QValidator* cppResult = self->validator();
     return qScriptValueFromValue(engine, cppResult);
     //return engine->newQObject();
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelCountSelectedRows(QScriptContext* context, QScriptEngine* engine) {
+    qDebug() << "RScriptHandlerEcma::ecmaQItemCountSelectionModelSelectedRows";
+
+    QItemSelectionModel* self = REcmaHelper::scriptValueTo<QItemSelectionModel>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QItemSelectionModel.selectedRows(): Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 0) {
+        return throwError("Wrong number/types of arguments for QItemSelectionModel.countSelectedRows.", context);
+    }
+
+    int cppResult = self->selectedRows().length();
+    return qScriptValueFromValue(engine, cppResult);
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelSelectedRow(QScriptContext* context, QScriptEngine* engine) {
+    qDebug() << "RScriptHandlerEcma::ecmaQItemSelectionModelSelectedRow";
+
+    QItemSelectionModel* self = REcmaHelper::scriptValueTo<QItemSelectionModel>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QItemSelectionModel.selectedRows(): Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 1) {
+        return throwError("Wrong number/types of arguments for QItemSelectionModel.selectedRows.", context);
+    }
+
+    int idx = context->argument(1).toInteger();
+
+    const QModelIndex cppResult = self->selectedRows().at(idx);
+    return qScriptValueFromValue(engine, cppResult);
 }
 
 //QScriptValue RScriptHandlerEcma::ecmaQWebPageSetLinkDelegationPolicy(QScriptContext* context, QScriptEngine* engine) {

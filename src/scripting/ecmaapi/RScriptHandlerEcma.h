@@ -106,6 +106,8 @@ public:
     static QScriptValue ecmaQLocaleScript(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQLocaleScriptToString(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQLineEditValidator(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQItemSelectionModelCountSelectedRows(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQItemSelectionModelSelectedRow(QScriptContext* context, QScriptEngine* engine);
     //static QScriptValue ecmaQWebPageSetLinkDelegationPolicy(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaMSleep(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaParseXml(QScriptContext* context, QScriptEngine* engine);
