@@ -1937,8 +1937,6 @@ QScriptValue RScriptHandlerEcma::ecmaQLineEditValidator(QScriptContext* context,
 }
 
 QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelCountSelectedRows(QScriptContext* context, QScriptEngine* engine) {
-    qDebug() << "RScriptHandlerEcma::ecmaQItemCountSelectionModelSelectedRows";
-
     QItemSelectionModel* self = REcmaHelper::scriptValueTo<QItemSelectionModel>(context->thisObject());
     if (self == NULL) {
         return throwError("QItemSelectionModel.selectedRows(): Object is NULL", context);
@@ -1953,8 +1951,6 @@ QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelCountSelectedRows(QScrip
 }
 
 QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelSelectedRow(QScriptContext* context, QScriptEngine* engine) {
-    qDebug() << "RScriptHandlerEcma::ecmaQItemSelectionModelSelectedRow";
-
     QItemSelectionModel* self = REcmaHelper::scriptValueTo<QItemSelectionModel>(context->thisObject());
     if (self == NULL) {
         return throwError("QItemSelectionModel.selectedRows(): Object is NULL", context);
