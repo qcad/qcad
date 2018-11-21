@@ -938,6 +938,10 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
         if (attributes.isAngleType()) {
             control.setAngle(true);
         }
+        // TODO: support scale in RMathLineEdit:
+//        if (attributes.isScaleType()) {
+//            control.setScale(true);
+//        }
         control.objectName = objectName;
     }
 

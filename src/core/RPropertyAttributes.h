@@ -73,7 +73,8 @@ public:
         OnRequest = 0x400000,            //!< Property shown on request (slow to compute)
         Location = 0x800000,             //!< Property affected when transforming
         RefPoint = 0x1000000,            //!< Property affected when moving reference point
-        Geometry = Location | RefPoint   //!< Property affected when chaning geometry (Location | RefPoint)
+        Geometry = Location | RefPoint,  //!< Property affected when chaning geometry (Location | RefPoint)
+        Scale = 0x2000000                //!< Property is scale (1:2, 5"=1", ...)
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -250,6 +251,14 @@ public:
 
     void setNumericallySorted(bool on) {
         setOption(NumericallySorted, on);
+    }
+
+    bool isScaleType() const {
+        return options.testFlag(Scale);
+    }
+
+    void setScaleType(bool v) {
+        setOption(Scale, v);
     }
 
     QString getLabel() const {
