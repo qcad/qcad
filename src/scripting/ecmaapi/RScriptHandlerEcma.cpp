@@ -1939,7 +1939,7 @@ QScriptValue RScriptHandlerEcma::ecmaQLineEditValidator(QScriptContext* context,
 QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelCountSelectedRows(QScriptContext* context, QScriptEngine* engine) {
     QItemSelectionModel* self = REcmaHelper::scriptValueTo<QItemSelectionModel>(context->thisObject());
     if (self == NULL) {
-        return throwError("QItemSelectionModel.selectedRows(): Object is NULL", context);
+        return throwError("QItemSelectionModel.countSelectedRows(): Object is NULL", context);
     }
 
     if (context->argumentCount() != 0) {
@@ -1953,11 +1953,11 @@ QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelCountSelectedRows(QScrip
 QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelSelectedRow(QScriptContext* context, QScriptEngine* engine) {
     QItemSelectionModel* self = REcmaHelper::scriptValueTo<QItemSelectionModel>(context->thisObject());
     if (self == NULL) {
-        return throwError("QItemSelectionModel.selectedRows(): Object is NULL", context);
+        return throwError("QItemSelectionModel.selectedRow(): Object is NULL", context);
     }
 
     if (context->argumentCount() != 1) {
-        return throwError("Wrong number/types of arguments for QItemSelectionModel.selectedRows.", context);
+        return throwError("Wrong number/types of arguments for QItemSelectionModel.selectedRow.", context);
     }
 
     int idx = context->argument(1).toInteger();
