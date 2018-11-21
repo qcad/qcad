@@ -127,7 +127,7 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
     } else if (propertyTypeId == PropertyHeight) {
         return qMakePair(QVariant(data.height), RPropertyAttributes());
     } else if (propertyTypeId == PropertyScale) {
-        return qMakePair(QVariant(data.scaleFactor), RPropertyAttributes());
+        return qMakePair(QVariant(data.scaleFactor), RPropertyAttributes(RPropertyAttributes::Scale));
     } else if (propertyTypeId == PropertyRotation) {
         return qMakePair(QVariant(data.rotation), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyOn) {
