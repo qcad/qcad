@@ -175,7 +175,6 @@ protected:
     /**
      * Internal map of reference points for every selected entity in the scene.
      * Used for drawing reference points.
-     * TODO: store selection status of reference points.
      */
     QMap<REntity::Id, QList<RRefPoint> > referencePoints;
 

@@ -295,7 +295,7 @@ void RGraphicsScene::handlePinchGestureEvent(QPinchGesture& gesture) {
 }
 
 int RGraphicsScene::countReferencePoints() const {
-    int ret;
+    int ret = 0;
     QMap<REntity::Id, QList<RRefPoint> >::const_iterator it;
     for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
         const QList<RRefPoint>& list = it.value();
