@@ -21,12 +21,12 @@
     <message>
         <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Aan&amp;haling</translation>
+        <translation>&amp;Verwijslijn</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Verwijslijn (lijn sequentie met pijl)</translation>
+        <translation>Verwijslijn (polylijn met pijl)</translation>
     </message>
     <message>
         <location filename="../Leader.ui" line="+23"/>
