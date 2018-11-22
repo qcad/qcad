@@ -94,10 +94,10 @@ void RPropertyTypeId::generateId(const std::type_info& classInfo,
     if (!titleToIdMap[groupTitle].contains(title)) {
         titleToIdMap[groupTitle].insert(title, *this);
     }
-    else {
-        qWarning() << "duplicate property ID: " << groupTitle << "/" << title
-                   << " class: " << classInfo.name();
-    }
+//    else {
+//        qWarning() << "duplicate property ID: " << groupTitle << "/" << title
+//                   << " class: " << classInfo.name();
+//    }
 }
 
 void RPropertyTypeId::generateId(const std::type_info& classInfo,
