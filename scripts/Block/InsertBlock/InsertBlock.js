@@ -62,6 +62,7 @@ InsertBlock.prototype.beginEvent = function() {
     if (!isNull(doc)) {
         var ids = doc.queryBlockEntities(blockId);
         var first = true;
+        var items = [];
         for (i=0; i<ids.length; i++) {
             var id = ids[i];
             var e = doc.queryEntityDirect(id);
@@ -77,9 +78,17 @@ InsertBlock.prototype.beginEvent = function() {
             var tag = e.getTag();
             var prompt = e.getPrompt();
             var defaultValue = e.getEscapedText();
+            items.push([prompt, [tag, defaultValue]]);
+        }
 
-            var tagCombo = optionsToolBar.findChild("AttributeTag");
-            tagCombo.addItem(prompt, [tag, defaultValue]);
+        items.sort(function(a, b) {
+            return Array.alphaNumericalSorter(a[0], b[0]);
+        });
+
+        var tagCombo = optionsToolBar.findChild("AttributeTag");
+        for (i=0; i<items.length; i++) {
+            var item = items[i];
+            tagCombo.addItem(item[0], item[1]);
         }
     }
 
