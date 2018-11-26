@@ -31,7 +31,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukončiť nástroj Ručná Priesečnica po jednom použití</translation>
     </message>
 </context>
 </TS>

@@ -26,17 +26,17 @@
     <message>
         <location filename="../CoordinateDisplay.js" line="+28"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazenie súradníc</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vynútená aktualizácia každého N pohybu myši:</translation>
     </message>
 </context>
 </TS>

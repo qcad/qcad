@@ -61,7 +61,7 @@
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+621"/>
+        <location line="+625"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -96,7 +96,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1207"/>
+        <location line="-1211"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -160,7 +160,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+132"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utilisez la mesure automatique</translation>

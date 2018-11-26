@@ -4,7 +4,7 @@
 <context>
     <name>InsertBlock</name>
     <message>
-        <location filename="../InsertBlock.js" line="+108"/>
+        <location filename="../InsertBlock.js" line="+117"/>
         <source>Position</source>
         <translatorcomment>Konum olsa daha iyi olur muydu?</translatorcomment>
         <translation>Konum</translation>

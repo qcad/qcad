@@ -11,7 +11,7 @@
     <message>
         <location line="+31"/>
         <source>Misc Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>Rôzne kreslenie</translation>
     </message>
     <message>
         <location line="+4"/>

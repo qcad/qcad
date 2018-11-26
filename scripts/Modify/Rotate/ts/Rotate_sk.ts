@@ -6,12 +6,12 @@
     <message>
         <location filename="../Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Úpravy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>Otočiť</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť okienko pre nastavenia nástroja</translation>
     </message>
 </context>
 <context>

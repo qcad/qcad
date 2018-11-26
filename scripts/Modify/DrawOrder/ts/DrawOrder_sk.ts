@@ -17,12 +17,12 @@
     <message>
         <location filename="../DrawOrder.js" line="+92"/>
         <source>&amp;Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Poradie &amp;vykreslovania</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Poradie vykreslovania</translation>
     </message>
 </context>
 </TS>

@@ -67,13 +67,13 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+668"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1207"/>
+        <location line="-1211"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -141,7 +141,7 @@ Mosaico horizontal
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+621"/>
+        <location line="+625"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -171,12 +171,12 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-504"/>
+        <location line="-508"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+132"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utilizar la medición automática</translation>

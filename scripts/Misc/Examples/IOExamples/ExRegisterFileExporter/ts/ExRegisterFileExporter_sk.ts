@@ -16,7 +16,7 @@
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Registrovaný exportér súborov pre &quot;.example&quot;. K pozretiu filtra pre akciu použite Súbor &gt; Uložiť ako...</translation>
     </message>
     <message>
         <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>

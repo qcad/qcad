@@ -177,7 +177,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvok nie je čiara, oblúk, kruh, spline-a alebo krivka.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -395,17 +395,17 @@
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation type="unfinished"></translation>
+        <translation>Predchádzajúce</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Above</source>
-        <translation type="unfinished"></translation>
+        <translation>Hore</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>None</source>
-        <translation type="unfinished">Žiadne</translation>
+        <translation>Žiadne</translation>
     </message>
 </context>
 <context>
@@ -620,27 +620,27 @@
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation>Uhlové kóty (2 čiary)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation>Uhlová kóta (2 čiary)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Uhlové kóty (3 body)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Uhlová kóta (3 body)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Uhlová kóta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -850,32 +850,32 @@
     <message>
         <location line="+6"/>
         <source>All CAD Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Všetky CAD súbory</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbory DXF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbory SVG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Výkres DXF</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Výkres DWG</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor PDF</translation>
     </message>
 </context>
 <context>

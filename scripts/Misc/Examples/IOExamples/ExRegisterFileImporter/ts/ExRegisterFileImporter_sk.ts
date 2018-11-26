@@ -11,12 +11,12 @@
     <message>
         <location line="+53"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Čítať zo súboru: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Registrovaný exportér súborov pre &quot;.example&quot;. K pozretiu filtra pre akciu použite Súbor &gt; Otvoriť.</translation>
     </message>
     <message>
         <source>Read from file: &apos;%1&apos;</source>

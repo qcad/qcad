@@ -6,12 +6,12 @@
     <message>
         <location filename="../Scale.js" line="+48"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Úpravy</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Mierka</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť okienko pre nastavenia nástroja</translation>
     </message>
 </context>
 <context>
@@ -84,7 +84,7 @@
     <message>
         <location line="+44"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Definujte faktor pomocou kurzora myši</translation>
     </message>
     <message>
         <location line="+25"/>

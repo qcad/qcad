@@ -20,7 +20,7 @@
     <message>
         <location line="+18"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Výstupné vrcholy krivky</translation>
     </message>
 </context>
 </TS>

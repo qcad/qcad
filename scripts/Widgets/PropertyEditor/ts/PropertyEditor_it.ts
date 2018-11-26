@@ -60,13 +60,13 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+668"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1207"/>
+        <location line="-1211"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -123,7 +123,7 @@ Nessuna selezione</translatorcomment>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+621"/>
+        <location line="+625"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -153,12 +153,12 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-504"/>
+        <location line="-508"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+132"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Utilizzare la misurazione automatica</translation>

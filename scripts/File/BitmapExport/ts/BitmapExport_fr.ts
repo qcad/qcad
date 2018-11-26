@@ -55,12 +55,12 @@
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation>Largeur&#xa0;: </translation>
+        <translation>Largeur : </translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation>Hauteur&#xa0;: </translation>
+        <translation>Hauteur : </translation>
     </message>
     <message>
         <location line="+23"/>

@@ -102,7 +102,7 @@
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+132"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>

@@ -54,7 +54,7 @@
     <message>
         <location line="+207"/>
         <source>Panning threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit posunu (px):</translation>
     </message>
     <message>
         <location line="-217"/>

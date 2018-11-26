@@ -15,12 +15,12 @@
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Panely nástrojov</translation>
     </message>
 </context>
 </TS>
