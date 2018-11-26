@@ -1960,7 +1960,7 @@ QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelSelectedRow(QScriptConte
         return throwError("Wrong number/types of arguments for QItemSelectionModel.selectedRow.", context);
     }
 
-    int idx = context->argument(1).toInteger();
+    int idx = context->argument(0).toInteger();
 
     const QModelIndex cppResult = self->selectedRows().at(idx);
     return qScriptValueFromValue(engine, cppResult);
