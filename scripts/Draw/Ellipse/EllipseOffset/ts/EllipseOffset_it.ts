@@ -13,11 +13,11 @@
     </message>
     <message>
         <source>&amp;Concentric (Distance)</source>
-        <translation type="obsolete">&amp;Concentrico (Distanza)</translation>
+        <translation type="obsolete">&amp;Concentrico (distanza)</translation>
     </message>
     <message>
         <source>&amp;Concentric (with Distance)</source>
-        <translation type="obsolete">&amp;Concentrico (Distanza)</translation>
+        <translation type="obsolete">&amp;Concentrico (distanza)</translation>
     </message>
     <message>
         <source>Draw concentric circle</source>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>&amp;Curvo parallelo (Distanza)</translation>
+        <translation>&amp;Curvo parallelo (distanza)</translation>
     </message>
     <message>
         <location line="+4"/>
