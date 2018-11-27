@@ -21,7 +21,7 @@
     <message>
         <location filename="../Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>&amp;2 Punti</translation>
+        <translation>&amp;2 punti</translation>
     </message>
     <message>
         <location line="+4"/>

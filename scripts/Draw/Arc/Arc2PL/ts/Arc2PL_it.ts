@@ -51,7 +51,7 @@
     <message>
         <location filename="../Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation>2 Punti e &amp;lunghezza</translation>
+        <translation>2 punti e &amp;lunghezza</translation>
     </message>
     <message>
         <location line="+4"/>
