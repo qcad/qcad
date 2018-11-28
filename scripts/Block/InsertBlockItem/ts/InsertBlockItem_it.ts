@@ -43,17 +43,17 @@
     </message>
     <message>
         <source>To current layer</source>
-        <translation type="obsolete">Al layer attuale</translation>
+        <translation type="obsolete">Al livello attuale</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali layer&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli layer di appunti</translation>
+        <translation>Sovrascrivere eventuali layer&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livello di appunti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation>Sovrascrivere layer</translation>
+        <translation>Sovrascrivere livello</translation>
     </message>
     <message>
         <location line="+7"/>

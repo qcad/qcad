@@ -194,7 +194,7 @@ Parsec</translatorcomment>
 --file: qcadguiqt_it.ts--
 Da Layer
 Scegli layer nella cartella</translatorcomment>
-        <translation>Da Layer</translation>
+        <translation>Da livello</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -547,7 +547,7 @@ Tipo Ordinata</translatorcomment>
 &amp;Layer
 Livelli
 Lista Layer</translatorcomment>
-        <translation>Layer</translation>
+        <translation>Livello</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -690,7 +690,7 @@ Colore G&amp;riglia:</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation>Altezza Testo</translation>
+        <translation>Altezza testo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1090,7 +1090,7 @@ Margine (Ingrandita)</translatorcomment>
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+856"/>
         <source>By Layer</source>
-        <translation>Da Layer</translation>
+        <translation>Da livello</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1300,7 +1300,7 @@ Margine (Ingrandita)</translatorcomment>
 --file: qcadguiqt_it.ts--
 Da Layer
 Scegli layer nella cartella</translatorcomment>
-        <translation>Da Layer</translation>
+        <translation>Da livello</translation>
     </message>
     <message>
         <location line="+1"/>

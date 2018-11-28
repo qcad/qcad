@@ -119,7 +119,7 @@
     <message>
         <location line="+147"/>
         <source>Text height:</source>
-        <translation>Altezza Testo:</translation>
+        <translation>Altezza testo:</translation>
     </message>
     <message>
         <location line="+10"/>

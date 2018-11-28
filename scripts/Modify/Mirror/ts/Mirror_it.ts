@@ -87,7 +87,7 @@ Secondo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Usa layer e gli &amp;attributi corrente</translation>
+        <translation>Usa livello e gli &amp;attributi corrente</translation>
     </message>
 </context>
 </TS>

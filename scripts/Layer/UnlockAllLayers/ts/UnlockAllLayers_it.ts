@@ -5,11 +5,11 @@
     <name>ShowAllLayers</name>
     <message>
         <source>&amp;Show all Layers</source>
-        <translation type="vanished">&amp;Mostra tutti i layer</translation>
+        <translation type="vanished">&amp;Mostra tutti i livelli</translation>
     </message>
     <message>
         <source>&amp;Show All Layers</source>
-        <translation type="vanished">Mostra tutti i layer</translation>
+        <translation type="vanished">Mostra tutti i livelli</translation>
     </message>
 </context>
 <context>
@@ -17,7 +17,7 @@
     <message>
         <location filename="../UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation>&amp;Sblocca tutti i layer</translation>
+        <translation>&amp;Sblocca tutti i livelli</translation>
     </message>
 </context>
 </TS>

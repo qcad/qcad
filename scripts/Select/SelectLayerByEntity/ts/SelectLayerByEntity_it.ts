@@ -6,7 +6,7 @@
     <message>
         <source>Choose entity on layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Scegli entità sul layer</translation>
+        <translation type="obsolete">Scegli entità sul livello</translation>
     </message>
     <message>
         <source>(De-)Select La&amp;yer</source>
@@ -15,7 +15,7 @@
     <message>
         <source>(De-)Select all entities on the same layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">(De-)seleziona tutte le entità sullo stesso layer</translation>
+        <translation type="obsolete">(De-)seleziona tutte le entità sullo stesso livello</translation>
     </message>
     <message>
         <source>Mode:</source>
@@ -66,7 +66,7 @@ Interseca con la selezione corrente</translatorcomment>
     <message>
         <location filename="../SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Scegli entità sul layer</translation>
+        <translation>Scegli entità sul livello</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntity.ui" line="+17"/>
@@ -104,12 +104,12 @@ Interseca con la selezione corrente</translatorcomment>
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(De)seleziona la&amp;yer</translation>
+        <translation>(De)seleziona li&amp;vello</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>(De-)seleziona tutte le entità sullo stesso layer</translation>
+        <translation>(De-)seleziona tutte le entità sullo stesso livello</translation>
     </message>
 </context>
 </TS>

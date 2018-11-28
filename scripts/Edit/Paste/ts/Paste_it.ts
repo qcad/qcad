@@ -36,22 +36,22 @@
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Incolla tutte le entità&lt;br&gt;al layer corrente al&lt;br&gt;posto del layer originale</translation>
+        <translation>Incolla tutte le entità&lt;br&gt;al livello corrente al&lt;br&gt;posto del livello originale</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation>Al layer attuale</translation>
+        <translation>Al livello attuale</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali layer&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli layer di appunti</translation>
+        <translation>Sovrascrivere eventuali livello&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livello di appunti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation>Sovrascrivere layer</translation>
+        <translation>Sovrascrivere livello</translation>
     </message>
     <message>
         <location line="+7"/>

@@ -5,12 +5,12 @@
     <name>RemoveLayer</name>
     <message>
         <source>&amp;Remove Layer</source>
-        <translation type="vanished">Cancella Layer</translation>
+        <translation type="vanished">Cancella livello</translation>
     </message>
     <message>
         <location filename="../RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation>&amp;Cancella Layer</translation>
+        <translation>&amp;Cancella livello</translation>
     </message>
 </context>
 </TS>

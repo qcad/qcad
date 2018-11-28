@@ -89,8 +89,8 @@ Obiettivo punto</translatorcomment>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--exact match--
 --file: Mirror_it.ts--
-Usa layer e gli &amp;attributi corrente</translatorcomment>
-        <translation>Usa layer e gli &amp;attributi corrente</translation>
+Usa livello e gli &amp;attributi corrente</translatorcomment>
+        <translation>Usa livello e gli &amp;attributi corrente</translation>
     </message>
 </context>
 </TS>

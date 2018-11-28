@@ -5,12 +5,12 @@
     <name>HideAllLayers</name>
     <message>
         <source>&amp;Hide all Layers</source>
-        <translation type="vanished">Nascondi tutti i layer</translation>
+        <translation type="vanished">Nascondi tutti i livelli</translation>
     </message>
     <message>
         <location filename="../HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation>Nascondi tutti i layer</translation>
+        <translation>Nascondi tutti i livelli</translation>
     </message>
 </context>
 </TS>

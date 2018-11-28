@@ -11,7 +11,7 @@
     <message>
         <location line="+54"/>
         <source>&amp;Layer List</source>
-        <translation>Lista &amp;layer</translation>
+        <translation>Lista &amp;livelli</translation>
     </message>
     <message>
         <source>Lists</source>
@@ -21,7 +21,7 @@
         <location line="-54"/>
         <location line="+109"/>
         <source>Layer List</source>
-        <translation>Lista layer</translation>
+        <translation>Lista livelli</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>

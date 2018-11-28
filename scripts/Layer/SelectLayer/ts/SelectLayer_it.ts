@@ -6,7 +6,7 @@
     <message>
         <location filename="../SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Seleziona layer</translation>
+        <translation>&amp;Seleziona livello</translation>
     </message>
     <message>
         <location filename="../SelectLayer.js" line="+55"/>

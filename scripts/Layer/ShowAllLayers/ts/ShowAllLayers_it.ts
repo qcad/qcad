@@ -5,12 +5,12 @@
     <name>ShowAllLayers</name>
     <message>
         <source>&amp;Show all Layers</source>
-        <translation type="vanished">Mostra tutti i layer</translation>
+        <translation type="vanished">Mostra tutti i livelli</translation>
     </message>
     <message>
         <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>Mostra tutti i layer</translation>
+        <translation>Mostra tutti i livelli</translation>
     </message>
 </context>
 </TS>

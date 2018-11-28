@@ -16,19 +16,19 @@
     <message>
         <location line="+23"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation>%1 %2 su layer &quot;%3&quot;</translation>
+        <translation>%1 %2 su livello &quot;%3&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation>%1 %2 su %3 layers</translation>
+        <translation>%1 %2 su %3 livello</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation>
             <numerusform>%n entità su layer &quot;%1&quot;</numerusform>
-            <numerusform>%n entità su layer &quot;%1&quot;</numerusform>
+            <numerusform>%n entità su livello &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -43,8 +43,8 @@
         <location line="+0"/>
         <source>%n Layers</source>
         <translation>
-            <numerusform>%n layer</numerusform>
-            <numerusform>%n layers</numerusform>
+            <numerusform>%n livello</numerusform>
+            <numerusform>%n livelli</numerusform>
         </translation>
     </message>
     <message>
@@ -81,13 +81,13 @@ Il punto di taglio non è sull&apos;oggetto.</translatorcomment>
         <source>Layer &quot;%1&quot;</source>
         <translatorcomment>--google--
 Layer &quot;%1&quot; convertito con successo 
-Conversione non riuscita per il layer &quot;%1&quot;</translatorcomment>
+Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
         <translation type="vanished">Strato &quot;%1&quot;</translation>
     </message>
     <message>
         <source>%1 Layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">%1 Layers</translation>
+        <translation type="vanished">%1 livelli</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -52,16 +52,16 @@
     <message>
         <location line="+68"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation>Cercando di disegnare o modificare le entità su un layer bloccato.</translation>
+        <translation>Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked or invisible layer.</source>
-        <translation type="obsolete">Cercando di disegnare o modificare le entità su un layer bloccato.</translation>
+        <translation type="obsolete">Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
     </message>
     <message>
         <source>Trying to draw on or modify entities on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Cercando di disegnare o modificare le entità su un layer bloccato.</translation>
+        <translation type="obsolete">Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
     </message>
     <message>
         <location line="-342"/>

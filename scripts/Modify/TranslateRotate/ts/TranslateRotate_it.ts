@@ -44,8 +44,8 @@
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--exact match--
 --file: Mirror_it.ts--
-Usa layer e gli &amp;attributi corrente</translatorcomment>
-        <translation type="obsolete">Usa layer e gli &amp;attributi corrente</translation>
+Usa livello e gli &amp;attributi corrente</translatorcomment>
+        <translation type="obsolete">Usa livello e gli &amp;attributi corrente</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Usa layer e gli &amp;attributi corrente</translation>
+        <translation>Usa livello e gli &amp;attributi corrente</translation>
     </message>
 </context>
 </TS>

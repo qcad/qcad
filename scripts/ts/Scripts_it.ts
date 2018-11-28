@@ -126,7 +126,7 @@
         <location line="+710"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entità è su un layer bloccato.</translation>
+        <translation>Entità è su un livello bloccato.</translation>
     </message>
     <message>
         <location line="+224"/>
@@ -533,12 +533,12 @@
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation>Layer</translation>
+        <translation>Livelli</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation>Layer</translation>
+        <translation>Livello</translation>
     </message>
     <message>
         <location line="+2"/>

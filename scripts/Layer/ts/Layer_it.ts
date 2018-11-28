@@ -15,22 +15,22 @@
     <message>
         <location line="+28"/>
         <source>&amp;Layer</source>
-        <translation>&amp;Layer</translation>
+        <translation>&amp;Livello</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation>Visualizzare tutti i layers</translation>
+        <translation>Visualizzare tutti i livelli</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation>Nascondere tutti i layers</translation>
+        <translation>Nascondere tutti i livelli</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation>Scongiurare tutti i layers</translation>
+        <translation>Scongiurare tutti i livelli</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -40,12 +40,12 @@
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation>Blocca tutti i layers</translation>
+        <translation>Blocca tutti i livelli</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation>Sblocca tutti i layer</translation>
+        <translation>Sblocca tutti i livelli</translation>
     </message>
 </context>
 <context>
@@ -53,12 +53,12 @@
     <message>
         <location filename="../LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation>Dati del layer</translation>
+        <translation>Dati del livello</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Layer name:</source>
-        <translation>Nome del Layer:</translation>
+        <translation>Nome del livello:</translation>
     </message>
     <message>
         <source>Pen</source>
@@ -92,12 +92,12 @@
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation>Nome del layer è vuoto.</translation>
+        <translation>Nome del livello è vuoto.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation>Layer già esistente.</translation>
+        <translation>Livello già esistente.</translation>
     </message>
 </context>
 </TS>

@@ -15,7 +15,7 @@
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation>Aggiungi strato</translation>
+        <translation>Aggiungi livello</translation>
     </message>
 </context>
 </TS>
