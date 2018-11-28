@@ -117,7 +117,7 @@ Translate.prototype.pickCoordinate = function(event, preview) {
         if (preview) {
             op = this.getOperation(true);
             if (!isNull(op)) {
-                di.previewOperation();
+                di.previewOperation(op);
             }
         }
         else {
