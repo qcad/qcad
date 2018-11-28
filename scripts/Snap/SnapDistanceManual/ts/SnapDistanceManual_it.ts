@@ -40,12 +40,12 @@
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation>Aggancia distanza tra 2 punti</translation>
+        <translation>Scatta distanza tra 2 punti</translation>
     </message>
     <message>
         <location filename="../SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Snap distanza:</translation>
+        <translation>Distanza di scatto:</translation>
     </message>
     <message>
         <location line="+69"/>

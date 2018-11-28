@@ -143,7 +143,7 @@ Visualizzazione grafica</translatorcomment>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation>Strumenti snap</translation>
+        <translation>Strumenti scatto</translation>
     </message>
     <message>
         <location line="+15"/>

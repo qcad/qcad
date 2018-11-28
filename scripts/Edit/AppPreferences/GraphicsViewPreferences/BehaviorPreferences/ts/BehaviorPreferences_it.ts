@@ -100,7 +100,7 @@
     <message>
         <location line="+109"/>
         <source>Cursor range for snap:</source>
-        <translation>Gamma cursore del mouse di aggancia:</translation>
+        <translation>Gamma cursore del mouse di scatto:</translation>
     </message>
     <message>
         <location line="-7"/>

@@ -12,7 +12,7 @@
     <message>
         <location filename="../SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation>Aggancia</translation>
+        <translation>Scatto</translation>
     </message>
     <message>
         <location line="+0"/>

@@ -801,7 +801,7 @@ Colore G&amp;riglia:</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Agganciabile</translation>
+        <translation>Scattante</translation>
     </message>
     <message>
         <location line="+1"/>

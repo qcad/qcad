@@ -16,7 +16,7 @@
         <location filename="../SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Snap distanza:</translation>
+        <translation>Distanza di scatto:</translation>
     </message>
 </context>
 </TS>

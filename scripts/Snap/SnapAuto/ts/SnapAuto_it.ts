@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Aggancia auto</translation>
+        <translation>Scatto automatico</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -69,12 +69,12 @@
     <message>
         <location filename="../SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Aggancia</translation>
+        <translation>Scatto</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Aggancia auto</translation>
+        <translation>Scatto automatico</translation>
     </message>
 </context>
 </TS>

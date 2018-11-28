@@ -7,16 +7,16 @@
         <location filename="../Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Strumenti snap</translation>
+        <translation>Strumenti scatto</translation>
     </message>
     <message>
         <source>Show snap tools</source>
-        <translation type="vanished">Mostra strumenti di aggancia</translation>
+        <translation type="vanished">Mostra strumenti scatto</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation>&amp;Snap</translation>
+        <translation>&amp;Scatto</translation>
     </message>
 </context>
 </TS>
