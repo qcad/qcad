@@ -63,7 +63,7 @@
         <location line="+668"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>*VARIA*</translation>
+        <translation>*VARIE*</translation>
     </message>
     <message>
         <location line="-1211"/>
