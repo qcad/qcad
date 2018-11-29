@@ -300,7 +300,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location filename="../LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation>File system</translation>
+        <translation>Sistema di file</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -348,7 +348,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location line="+27"/>
         <source>Update DB from file system</source>
-        <translation>Aggiorna</translation>
+        <translation>Aggiornare il DB dal sistema di file</translation>
     </message>
     <message>
         <location line="+7"/>
