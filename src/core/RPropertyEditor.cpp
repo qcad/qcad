@@ -213,7 +213,8 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
     QSet<RObject::Id>::iterator it;
 
-    // only block ref and attributes selected: default to filter block ref:
+    // only block ref and attributes selected:
+    // default to filter block ref:
     if (entityTypeFilter==RS::EntityAll && !manual) {
         bool foundBlockRef = false;
         bool foundAttribute = false;
