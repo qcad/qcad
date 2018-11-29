@@ -10,7 +10,7 @@
     <message>
         <location filename="../InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation>Posizione &amp;relativo</translation>
+        <translation>Posizione &amp;relativa</translation>
     </message>
 </context>
 </TS>

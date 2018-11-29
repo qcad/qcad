@@ -139,7 +139,7 @@
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation>Dimensione Freccia:</translation>
+        <translation>Dimensione freccia:</translation>
     </message>
     <message>
         <location line="+108"/>
@@ -149,7 +149,7 @@
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation>Fattore di Scala:</translation>
+        <translation>Fattore di scala:</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -164,7 +164,7 @@
     <message>
         <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation>Architettonica Tick</translation>
+        <translation>Architettonica tick</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -194,7 +194,7 @@
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation>Quota Lineare</translation>
+        <translation>Quota lineare</translation>
     </message>
     <message>
         <location line="+8"/>
