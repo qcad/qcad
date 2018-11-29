@@ -639,6 +639,49 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPropertyAttributes::Option */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RPropertyAttributes::Option*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPropertyAttributes::Option*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RBlockReferenceEntity: Argument 0 is not of type RPropertyAttributes::Option*.",
+                               context);                    
+                    }
+                    RPropertyAttributes::Option& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RPropertyTypeId >'
+    QSet < RPropertyTypeId > cppResult =
+        
+               self->getPropertyTypeIds(a0);
+        // return type: QSet < RPropertyTypeId >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getPropertyTypeIds().",
                    context);
