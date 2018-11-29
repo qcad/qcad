@@ -174,18 +174,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="REntity::Id" isPureVirtual="false" />
     </method>
-    <method name="setParentId" cppName="setParentId"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id" name="id"
-        isConst="false" />
-      </variant>
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
-        name="parentId" isConst="false" />
-      </variant>
-    </method>
     <method name="setLinetypeId" cppName="setLinetypeId"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -722,6 +710,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setParentId" cppName="setParentId"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="parentId" isConst="false" />
+      </variant>
     </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
