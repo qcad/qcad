@@ -300,7 +300,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location filename="../LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation>Sistema di file</translation>
+        <translation>File</translation>
     </message>
     <message>
         <location line="+60"/>
