@@ -650,6 +650,7 @@ public:
 protected:
     /**
      * \copydoc REntityData::setParentId
+     * Use RStorage::setEntityParentId instead.
      */
     void setParentId(REntity::Id parentId) {
         getData().setParentId(parentId);
