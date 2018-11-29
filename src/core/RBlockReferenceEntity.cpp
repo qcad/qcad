@@ -106,7 +106,7 @@ void RBlockReferenceEntity::init() {
     QT_TRANSLATE_NOOP("REntity", "Attributes");
 }
 
-QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds() const {
+QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds(RPropertyAttributes::Option option) const {
     QSet<RPropertyTypeId> ret;
 
     // TODO: move to RObject?
@@ -122,7 +122,8 @@ QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds() const {
                 continue;
             }
 
-            QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds();
+            // get block attribute properties:
+            QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds(option);
             QSet<RPropertyTypeId>::iterator it2;
             for (it2=childProperties.begin(); it2!=childProperties.end(); it2++) {
                 RPropertyTypeId pid = *it2;
@@ -136,8 +137,12 @@ QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds() const {
             }
         }
     }
+    else {
+        qWarning() << "document is NULL";
+    }
 
-    ret.unite(REntity::getPropertyTypeIds());
+    ret.unite(REntity::getPropertyTypeIds(option));
+
     return ret;
 }
 
