@@ -7123,8 +7123,10 @@
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest02.js">../../scripts/Modify/Explode/Tests/ExplodeTest02.js</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest03.js">../../scripts/Modify/Explode/Tests/ExplodeTest03.js</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest04.js">../../scripts/Modify/Explode/Tests/ExplodeTest04.js</file>
+    <file alias="scripts/Modify/Explode/Tests/ExplodeTest05.js">../../scripts/Modify/Explode/Tests/ExplodeTest05.js</file>
     <file alias="scripts/Modify/Explode/Tests/data/attributes.dxf">../../scripts/Modify/Explode/Tests/data/attributes.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/block.dxf">../../scripts/Modify/Explode/Tests/data/block.dxf</file>
+    <file alias="scripts/Modify/Explode/Tests/data/block_attrib.dxf">../../scripts/Modify/Explode/Tests/data/block_attrib.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/explodable.dxf">../../scripts/Modify/Explode/Tests/data/explodable.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/data/splines.dxf">../../scripts/Modify/Explode/Tests/data/splines.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest00_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest00_000.dxf</file>
@@ -7132,6 +7134,7 @@
     <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest02_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest02_000.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest03_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest03_000.dxf</file>
     <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest04_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest04_000.dxf</file>
+    <file alias="scripts/Modify/Explode/Tests/required/ExplodeTest05_000.dxf">../../scripts/Modify/Explode/Tests/required/ExplodeTest05_000.dxf</file>
     <file alias="scripts/Modify/Explode/ts/Explode_cs.qm">../../scripts/Modify/Explode/ts/Explode_cs.qm</file>
     <file alias="scripts/Modify/Explode/ts/Explode_de.qm">../../scripts/Modify/Explode/ts/Explode_de.qm</file>
     <file alias="scripts/Modify/Explode/ts/Explode_en.qm">../../scripts/Modify/Explode/ts/Explode_en.qm</file>
