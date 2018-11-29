@@ -164,7 +164,7 @@
     <message>
         <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation>Architettonica tick</translation>
+        <translation>Contrassegni architettonici</translation>
     </message>
     <message>
         <location line="+23"/>
