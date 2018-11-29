@@ -245,6 +245,13 @@
     }</block></function>
 
     <comment type="block">/**
+     * \copydoc REntityData::setParentId
+     */</comment>
+    <function><type><name>void</name></type> <name>setParentId</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setParentId</name><argument_list>(<argument><expr><name>id</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
      * \copydoc REntityData::setLinetypeId
      */</comment>
     <function><type><name>void</name></type> <name>setLinetypeId</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <block>{

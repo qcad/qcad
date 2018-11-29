@@ -176,7 +176,6 @@
     <comment type="block">/**
      * Internal map of reference points for every selected entity in the scene.
      * Used for drawing reference points.
-     * TODO: store selection status of reference points.
      */</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>referencePoints</name></decl>;</decl_stmt>
 

@@ -126,6 +126,9 @@
         getParentId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setParentId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setLinetypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
