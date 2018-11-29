@@ -31,12 +31,12 @@
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation>Larghezza Carta:</translation>
+        <translation>Larghezza carta:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paper height:</source>
-        <translation>Altezza Carta:</translation>
+        <translation>Altezza carta:</translation>
     </message>
     <message>
         <location line="+74"/>
