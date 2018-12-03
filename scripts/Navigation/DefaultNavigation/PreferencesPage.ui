@@ -6,41 +6,82 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>451</width>
-    <height>343</height>
+    <width>553</width>
+    <height>334</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Mouse wheel / two finger swipe:</string>
+     <item row="6" column="1" colspan="2">
+      <widget class="QComboBox" name="PanThreshold">
+       <property name="editable">
+        <bool>true</bool>
        </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">14</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">18</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">20</string>
+        </property>
+       </item>
       </widget>
      </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_3">
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Middle mouse button zoom factor:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0" colspan="3">
-      <widget class="QCheckBox" name="ReverseMouseWheelZoom">
-       <property name="text">
-        <string>Reverse mouse wheel direction for zoom</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1" colspan="2">
-      <widget class="QComboBox" name="Wheel"/>
-     </item>
-     <item row="1" column="0" colspan="3">
-      <widget class="QCheckBox" name="PanGesture">
-       <property name="text">
-        <string>Enable pan gesture</string>
+        <string>Mouse wheel zoom factor:</string>
        </property>
       </widget>
      </item>
@@ -54,10 +95,27 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_2">
+     <item row="1" column="0" colspan="3">
+      <widget class="QCheckBox" name="PanGesture">
        <property name="text">
-        <string>Mouse wheel zoom factor:</string>
+        <string>Enable pan gesture</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="3">
+      <widget class="QCheckBox" name="ReverseMouseWheelZoom">
+       <property name="text">
+        <string>Reverse mouse wheel direction for zoom</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QComboBox" name="Wheel">
+       <property name="sizeAdjustPolicy">
+        <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+       </property>
+       <property name="minimumContentsLength">
+        <number>16</number>
        </property>
       </widget>
      </item>
@@ -268,69 +326,18 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="1" colspan="2">
-      <widget class="QComboBox" name="PanThreshold">
-       <property name="editable">
-        <bool>true</bool>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Mouse wheel / two finger swipe:</string>
        </property>
-       <property name="currentIndex">
-        <number>2</number>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Middle mouse button zoom factor:</string>
        </property>
-       <item>
-        <property name="text">
-         <string notr="true">0</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">4</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">6</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">8</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">10</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">12</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">14</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">16</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">18</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string notr="true">20</string>
-        </property>
-       </item>
       </widget>
      </item>
     </layout>
