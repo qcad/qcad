@@ -43,12 +43,12 @@ function init(basePath) {
     });
 
     // sync button:
-    formWidget.findChild("Reset").clicked.connect(function() {
-        LibraryBrowser.selectedTagIds = [];
-        LibraryBrowser.openCategoryIds = [];
-        LibraryBrowser.updateTagsTab(true);
-        LibraryBrowser.updateTagsView();
-    });
+//    formWidget.findChild("Reset").clicked.connect(function() {
+//        LibraryBrowser.selectedTagIds = [];
+//        LibraryBrowser.openCategoryIds = [];
+//        LibraryBrowser.updateTagsTab(true);
+//        LibraryBrowser.updateTagsView();
+//    });
 
     // insert button:
     formWidget.findChild("Insert").clicked.connect(function() {
