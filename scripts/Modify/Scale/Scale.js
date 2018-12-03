@@ -318,7 +318,7 @@ Scale.prototype.getOperation = function(preview) {
  */
 Scale.prototype.transform = function(entity, k, op, preview, flags) {
     // uniform scaling (supported by all entities):
-    if (isNull(this.factorY)) {
+    if (isNull(this.factorY) || RMath.fuzzyCompare(this.factorX, this.factorY)) {
         entity.scale(Math.pow(this.factorX, k), this.focusPoint);
         op.addObject(entity, flags);
         return;
@@ -347,7 +347,7 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
             e.setSelected(true);
         }
 
-        if (this.copies===0) {
+        if (this.getCopies()===0) {
             op.deleteObject(entity);
         }
         if (!isNull(e)) {
