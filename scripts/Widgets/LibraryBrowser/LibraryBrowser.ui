@@ -146,24 +146,6 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="Line" name="line">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QToolButton" name="Reset">
-           <property name="toolTip">
-            <string>Reset tag selection</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>Reset.svg</normaloff>Reset.svg</iconset>
-           </property>
-          </widget>
-         </item>
         </layout>
        </item>
        <item>
