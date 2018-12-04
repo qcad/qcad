@@ -744,7 +744,7 @@ double RMath::makeAngleReadable(double angle, bool readable, bool* corrected) {
 }
 
 /**
- * \param angle the angle in rad
+ * \param angle The text angle in rad
  *
  * \param tolerance The tolerance by which the angle still maybe
  * in the unreadable range.
@@ -754,8 +754,7 @@ double RMath::makeAngleReadable(double angle, bool readable, bool* corrected) {
  */
 bool RMath::isAngleReadable(double angle, double tolerance) {
     double angleCorrected = getNormalizedAngle(angle);
-    if (angleCorrected > M_PI / 2.0 * 3.0 + tolerance || angleCorrected < M_PI
-            / 2.0 + tolerance) {
+    if (angleCorrected > M_PI / 2.0 * 3.0 + tolerance || angleCorrected < M_PI / 2.0 + tolerance) {
         return true;
     } else {
         return false;
