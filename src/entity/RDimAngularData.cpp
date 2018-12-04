@@ -385,9 +385,7 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
     double textAngle;
     // rotate text so it's readable from the bottom or right (ISO)
     // quadrant 1 & 4
-    if (dimAngle1>M_PI/2.0*3.0+0.001 ||
-        dimAngle1<M_PI/2.0+0.001) {
-
+    if (RMath::isAngleReadable(dimAngle1)) {
         distV.setPolar(dimgap + dimtxt/2, dimAngle1+M_PI/2.0);
         textAngle = dimAngle1;
     }
