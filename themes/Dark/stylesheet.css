@@ -19,7 +19,7 @@ QGroupBox::title,
 QMenuBar, QMenu, QMenu::item,
 QComboBox QAbstractItemView,
 QTreeView, QListWidget, QListView, QTableWidget, QTableView,
-QTextEdit, QTextBrowser {
+QTextEdit, QTextBrowser, QToolBar {
     background-color: #3c3f41;
     color: #bbbbbb;
 }
