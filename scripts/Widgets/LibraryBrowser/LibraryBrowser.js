@@ -202,7 +202,6 @@ LibraryBrowser.getSourceList = function() {
     }
 
     sourceList = sourceList.unique();
-    qDebug("sourceList: ", sourceList);
 
     return sourceList;
 };
