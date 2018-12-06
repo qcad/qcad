@@ -11,7 +11,7 @@
     <message>
         <location line="-27"/>
         <source>Point Tools</source>
-        <translation>Herramientas punto</translation>
+        <translation>Herramientas de punto</translation>
     </message>
     <message>
         <source>Show point tools</source>

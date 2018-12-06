@@ -60,7 +60,7 @@
     <message>
         <location line="+79"/>
         <source>Dimension Tools</source>
-        <translation>Herramientas dimensión</translation>
+        <translation>Herramientas de dimensión</translation>
     </message>
     <message>
         <source>Show dimension tools</source>

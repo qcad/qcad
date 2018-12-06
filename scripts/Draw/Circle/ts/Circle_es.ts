@@ -6,7 +6,7 @@
     <message>
         <location filename="../Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation>Herramientas círculo</translation>
+        <translation>Herramientas de círculo</translation>
     </message>
     <message>
         <source>Show circle tools</source>

@@ -18,7 +18,7 @@
     <message>
         <location filename="../Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation>Menú rayado</translation>
+        <translation>Herramientas de textura</translation>
     </message>
     <message>
         <source>Show hatch tools</source>
@@ -27,7 +27,7 @@
     <message>
         <location line="+27"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Rayado</translation>
+        <translation>&amp;Textura</translation>
     </message>
     <message>
         <source>Draw hatch or solid fill</source>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation>Rayado</translation>
+        <translation>Textura</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -54,7 +54,7 @@
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Patrón de rayado</translation>
+        <translation>Patrón de textura</translation>
     </message>
     <message>
         <location line="+16"/>

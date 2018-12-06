@@ -6,7 +6,7 @@
     <message>
         <location filename="../Ellipse.js" line="+85"/>
         <source>Ellipse Tools</source>
-        <translation>Herramientas elipse</translation>
+        <translation>Herramientas de elipse</translation>
     </message>
     <message>
         <source>Show ellipse tools</source>
