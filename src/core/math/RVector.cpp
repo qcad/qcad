@@ -61,7 +61,7 @@ bool RVector::isValid() const {
 }
 
 bool RVector::isZero() const {
-    return x<RS::PointTolerance && y<RS::PointTolerance && z<RS::PointTolerance;
+    return fabs(x)<RS::PointTolerance && fabs(y)<RS::PointTolerance && fabs(z)<RS::PointTolerance;
 }
 
 bool RVector::isSane() const {
