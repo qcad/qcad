@@ -1128,9 +1128,12 @@ QString RSettings::getOSVersion() {
     // QSysInfo::MV_10_13:
     case 0x000F:
         return "macOS 10.13";
+    // QSysInfo::MV_10_14:
+    case 0x0010:
+        return "macOS 10.14";
     default:
     case QSysInfo::MV_Unknown:
-        return "macOS > 10.13 (Unsupported)";
+        return "macOS > 10.14 (Unsupported)";
     }
 #else
     return "Unknown";
