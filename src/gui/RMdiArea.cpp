@@ -38,6 +38,10 @@ RMdiArea::RMdiArea(QWidget* parent) :
         addTabButton = new QToolButton(this);
         addTabButton->hide();
     }
+
+    if (RSettings::hasDarkGuiBackground()) {
+        setBackground(QBrush(QColor("#1E1E1E")));
+    }
 }
 
 /**
