@@ -122,7 +122,6 @@ TextDialog.prototype.show =  function(textDataIn) {
     }
 
     this.dialog = WidgetFactory.createDialog(TextDialog.basePath, "TextDialog.ui", EAction.getMainWindow());
-    this.dialog.windowIcon = new QIcon(autoIconPath(TextDialog.basePath + "/../Text.svg"));
 
     // initialize dialog controls:
     this.textEdit = this.dialog.findChild("Text");
