@@ -11,7 +11,7 @@
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation>Intersecties</translation>
+        <translation>Snijpunten</translation>
     </message>
     <message>
         <location line="+10"/>

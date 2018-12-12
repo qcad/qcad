@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation>&amp;Intersectie manueel</translation>
+        <translation>&amp;Snijpunt manueel</translation>
     </message>
     <message>
         <location filename="../SnapIntersectionManual.js" line="+47"/>
@@ -16,7 +16,7 @@
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation>Intersectie manueel</translation>
+        <translation>Snijpunt manueel</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation>Intersectie manueel na één gebruik beëindigen</translation>
+        <translation>Snijpunt manueel na één gebruik beëindigen</translation>
     </message>
 </context>
 </TS>
