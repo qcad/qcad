@@ -321,10 +321,21 @@ QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
     width: 0;
 }
 
+/* Background of tool matrix panels */
 QTreeWidget#ToolMatrix > QWidget > QWidget {
     background-color: #282A2D;
 }
 
-/*QTreeWidget#ToolMatrix > QWidget > QWidget QToolButton {
-    padding: 2px;
-}*/
+QTreeWidget#ToolMatrix QToolButton {
+    color: #DEDEDE;
+}
+
+/* ToolTip */
+QToolTip, QTipLabel {
+    border: 1px solid #3D3D3D;
+    border-radius: 3px;
+    background: #292929;
+    color: #DEDEDE;
+    margin: 0;
+    padding: 0;
+}
