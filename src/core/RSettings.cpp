@@ -968,6 +968,9 @@ bool RSettings::hasDarkGuiBackground() {
     return darkGuiBackground==1;
 }
 
+/**
+ * \return True if a custom stylesheet is present for the whole application. Z.B. a theme is present.
+ */
 bool RSettings::hasCustomStyleSheet() {
     return !qApp->styleSheet().isEmpty();
 }
