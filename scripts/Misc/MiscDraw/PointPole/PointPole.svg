@@ -13,7 +13,7 @@
    style="fill:none;stroke-linecap:round;stroke-linejoin:round"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="PointPole.svg">
   <metadata
      id="metadata26">
@@ -23,7 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -42,13 +42,13 @@
      inkscape:window-height="1203"
      id="namedview22"
      showgrid="false"
-     inkscape:zoom="2.8284271"
+     inkscape:zoom="1.4142136"
      inkscape:cx="289.21298"
-     inkscape:cy="255.25616"
+     inkscape:cy="254.72583"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g12" />
+     inkscape:current-layer="g6" />
   <g
      transform="matrix(3,0,0,-3,-16.249059,100.75137)"
      id="g4">
@@ -60,12 +60,12 @@
          cy="30"
          r="10.296"
          id="circle8"
-         style="stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="stroke-width:1.50521219;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          d="M 33,5 53,40"
          id="path10"
          inkscape:connector-curvature="0"
-         style="stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="stroke-width:1.50521219;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <g
        style="stroke:#ff0000;stroke-width:0.75260607;stroke-miterlimit:4;stroke-dasharray:none"

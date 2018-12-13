@@ -10,7 +10,7 @@
    viewBox="0 0 512 512"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    width="100%"
    height="100%"
    sodipodi:docname="CreateBlock-inverse.svg">
@@ -41,23 +41,23 @@
      id="namedview20"
      showgrid="false"
      inkscape:zoom="0.4609375"
-     inkscape:cx="256"
+     inkscape:cx="-216.94915"
      inkscape:cy="256"
      inkscape:window-x="1010"
      inkscape:window-y="388"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2" />
   <g
-     style="fill:#ffd132;fill-opacity:1"
+     style="fill:#ffe793;fill-opacity:1"
      id="g4">
     <path
        d="m376 312h-304v-224h304v224"
        id="path6"
-       style="fill:#ffd132;fill-opacity:1" />
+       style="fill:#ffe793;fill-opacity:1" />
     <path
        d="m488 400a120 120 0 1 1 -240 0 120 120 0 1 1 240 0z"
        transform="matrix(1.06667 0 0 1.06667-64.53-130.67)"
-       style="stroke:#fff;stroke-width:15;fill:#ffd132;fill-opacity:1"
+       style="stroke:#fff;stroke-width:15;fill:#ffe793;fill-opacity:1"
        id="path8" />
   </g>
   <g

@@ -13,7 +13,7 @@
    style="fill:none;stroke-linecap:round;stroke-linejoin:round"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="PointPowerCenter.svg">
   <metadata
      id="metadata36">
@@ -23,7 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -48,7 +48,7 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g14" />
+     inkscape:current-layer="g6" />
   <g
      transform="matrix(3,0,0,-3,-13.253303,116.25005)"
      id="g4">
@@ -60,19 +60,19 @@
          cy="30"
          r="7.0700002"
          id="circle8"
-         style="stroke-width:0.75260473;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="stroke-width:1.50520948;stroke-miterlimit:4;stroke-dasharray:none" />
       <circle
          cx="43"
          cy="22"
          r="8.6020002"
          id="circle10"
-         style="stroke-width:0.75260473;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="stroke-width:1.50520948;stroke-miterlimit:4;stroke-dasharray:none" />
       <circle
          cx="36"
          cy="44"
          r="7.0700002"
          id="circle12"
-         style="stroke-width:0.75260473;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="stroke-width:1.50520948;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <g
        style="stroke:#ff0000;stroke-width:0.75260473;stroke-miterlimit:4;stroke-dasharray:none"
