@@ -37,24 +37,24 @@ function RCadToolMatrixTreePanel(parent, objectName) {
     //var colorName = color.name();
     //var colorLightName = color.lighter(105).name();
 
-    this.styleSheet =
-          //"QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 " + colorName + ", stop:1 " + colorLightName + "); }"
-         "QToolButton {"
-        + "  border-style: none;"
-        + "}"
-        + RCadToolMatrixTreePanel.getCheckedStyle()
-        + RCadToolMatrixTreePanel.getPressedStyle();
+    if (!RSettings.hasCustomStyleSheet()) {
+        this.styleSheet =
+              //"QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 " + colorName + ", stop:1 " + colorLightName + "); }"
+             "QToolButton {"
+            + "  border-style: none;"
+            + "}"
+            + RCadToolMatrixTreePanel.getCheckedStyle()
+            + RCadToolMatrixTreePanel.getPressedStyle();
+    }
 }
 
 RCadToolMatrixTreePanel.prototype = new QWidget();
 
 RCadToolMatrixTreePanel.getCheckedStyle = function() {
-    if (!RSettings.hasCustomStyleSheet()) {
-        return "QToolButton:checked {"
-                + "  border-radius: 4px; "
-                + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
-                + "}";
-    }
+    return "QToolButton:checked {"
+            + "  border-radius: 4px; "
+            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
+            + "}";
 };
 
 RCadToolMatrixTreePanel.getPressedStyle = function() {
