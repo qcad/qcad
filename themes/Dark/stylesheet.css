@@ -19,6 +19,40 @@ QLabel, QCheckBox, QRadioButton {
 
 QStatusBar {
     background-color: #2D2F32;
+    color: #DEDEDE;
+}
+
+QMenu, QMenu::item {
+    background-color: #2D2F32;
+    color: #DEDEDE;
+}
+
+QMenu {
+    border: 1px solid #2d2d2d;
+}
+QMenu::item:disabled {
+    color: #323232;
+}
+QMenu::item:selected {
+    background-color: #157EF2;
+}
+QMenu::icon {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+QMenu::icon:checked {
+    background-color: blue;
+    border: 1px inset red;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+}
+QMenu::separator {
+    height: 2px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop:0 #282a2b, stop:1 #45484b);
+    margin: 0 1px;
 }
 
 QTextEdit,
@@ -173,7 +207,8 @@ QToolBar#Options QLabel#Icon {
 QDockWidget QToolButton,
 QDialog QToolButton,
 QToolBar#Options QToolButton,
-QToolBar#CadQToolBar QToolButton {
+QToolBar#CadQToolBar QToolButton,
+QTreeWidget#ToolMatrix QToolButton {
     border: 1px solid #27292a;
     border-top: 1px solid #797B7E;
     border-right: 1px solid #797B7E;
@@ -182,19 +217,23 @@ QToolBar#CadQToolBar QToolButton {
 QDockWidget QToolButton:checked,
 QDialog QToolButton:checked,
 QToolBar#Options QToolButton:checked,
-QToolBar#CadQToolBar QToolButton:checked {
+QToolBar#CadQToolBar QToolButton:checked,
+QTreeWidget#ToolMatrix QToolButton:checked {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #909090, stop:1 #808080);
 }
 QDockWidget QToolButton:pressed,
 QDialog QToolButton:pressed,
 QToolBar#Options QToolButton:pressed,
-QToolBar#CadQToolBar QToolButton:pressed {
-  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #777777);
+QToolBar#CadQToolBar QToolButton:pressed,
+QTreeWidget#ToolMatrix QToolButton:pressed {
+  /*background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #777777);*/
+  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #909090, stop:1 #808080);
 }
 QDockWidget QToolButton:disabled,
 QDialog QToolButton:disabled,
 QToolBar#Options QToolButton:disabled,
-QToolBar#CadQToolBar QToolButton:disabled {
+QToolBar#CadQToolBar QToolButton:disabled,
+QTreeWidget#ToolMatrix QToolButton:disabled {
     border: 1px solid #101010;
     border-top: 1px solid #303030;
     border-right: 1px solid #303030;
@@ -281,3 +320,11 @@ QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
     height: 0;
     width: 0;
 }
+
+QTreeWidget#ToolMatrix > QWidget > QWidget {
+    background-color: #282A2D;
+}
+
+/*QTreeWidget#ToolMatrix > QWidget > QWidget QToolButton {
+    padding: 2px;
+}*/
