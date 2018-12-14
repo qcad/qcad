@@ -989,7 +989,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
         // check if we're on the line already
         // (since we might start before the line due to pattern offset):
-        if (nextTotal > 0.0) {
+        if (nextTotal > -RS::PointTolerance) {
             dash = RLine(cursor, cursor + vp[i]);
 
             if (!isGap) {
