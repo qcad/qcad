@@ -917,7 +917,7 @@ RPolyline RPolyline::convertArcToLineSegmentsLength(double segmentLength) const 
 /**
  * \return A QPainterPath object that represents this polyline.
  */
-RPainterPath RPolyline::toPainterPath() const {
+RPainterPath RPolyline::toPainterPath(bool addOriginalShapes) const {
     RPainterPath ret;
 
     if (vertices.size()<=1) {
@@ -932,6 +932,9 @@ RPainterPath RPolyline::toPainterPath() const {
         }
         QSharedPointer<RShape> shape = getSegmentAt(i);
         ret.addShape(shape);
+        if (addOriginalShapes) {
+            ret.addOriginalShape(shape);
+        }
     }
 
     return ret;

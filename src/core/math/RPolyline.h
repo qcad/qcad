@@ -220,7 +220,7 @@ public:
 
     static bool isStraight(double bulge);
 
-    RPainterPath toPainterPath() const;
+    RPainterPath toPainterPath(bool addOriginalShapes = false) const;
 
     bool simplify(double tolerance = RS::PointTolerance);
     QList<RVector> verifyTangency(double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4);
