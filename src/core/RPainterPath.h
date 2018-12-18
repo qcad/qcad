@@ -246,6 +246,8 @@ public:
 
     void addOriginalShape(QSharedPointer<RShape> shape);
     bool hasOriginalShapes() const;
+    int countOriginalShapes() const;
+    QSharedPointer<RShape> getOriginalShape(int i) const;
 
     static void rotateList(QList<RPainterPath>& pps, double angle);
     static void translateList(QList<RPainterPath>& pps, const RVector& offset);

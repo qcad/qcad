@@ -766,3 +766,11 @@ void RPainterPath::addOriginalShape(QSharedPointer<RShape> shape) {
 bool RPainterPath::hasOriginalShapes() const {
     return !originalShapes.isEmpty();
 }
+
+int RPainterPath::countOriginalShapes() const {
+    return originalShapes.count();
+}
+
+QSharedPointer<RShape> RPainterPath::getOriginalShape(int i) const {
+    return originalShapes[i];
+}
