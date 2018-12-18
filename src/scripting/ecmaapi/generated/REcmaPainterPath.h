@@ -276,6 +276,12 @@
         hasOriginalShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        countOriginalShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOriginalShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         rotateList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

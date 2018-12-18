@@ -850,7 +850,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="toPainterPath" cppName="toPainterPath"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RPainterPath" isPureVirtual="false" />
+      <variant returnType="RPainterPath" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="addOriginalShapes"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
     </method>
     <method name="simplify" cppName="simplify" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
