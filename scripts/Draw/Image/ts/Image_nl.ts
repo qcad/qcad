@@ -54,9 +54,13 @@
         <translation>Hoek:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Bitmap invoegen</translation>
+        <translation type="vanished">Bitmap invoegen</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation>&amp;Bitmap invoegen</translation>
     </message>
 </context>
 </TS>

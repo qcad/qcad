@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -67,11 +68,11 @@
     </message>
     <message>
         <location line="+127"/>
-        <source>Editing block "%1"&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"/>
+        <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Editing block '%1'&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation type="vanished">Edytowanie bloku „%1”&lt;br&gt;Proszę użyć polecenia&lt;i&gt;Blok &gt; Wróć do rysunku&lt;/i&gt; po zakończeniu.</translation>
     </message>
 </context>
@@ -109,7 +110,7 @@ Anuluj
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
 Brak
-Wyrażenia "pragma" nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
+Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyrażenie zastępcze</translatorcomment>
         <translation>Brak</translation>
     </message>
     <message>
@@ -211,7 +212,7 @@ Narzędzia CAD</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -457,23 +458,23 @@ Dzielenie (÷)</translatorcomment>
         <location line="+7"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Above</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -750,27 +751,27 @@ Wymiar kątowy</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -867,9 +868,9 @@ Kreskowanie
         <location line="+2"/>
         <source>Images</source>
         <translatorcomment>--google--
-&lt;img src=":/trolltech/assistant/images/wrap.png"&gt;&amp;nbsp;Przeszukano od początku
-&lt;img src=":/trolltech/assistant/images/wrap.png"&gt;nbsp;Przeszukano od początku
-&lt;img src=":/trolltech/shared/images/wrap.png"&gt;&amp;nbsp;Przeszukano od początku</translatorcomment>
+&lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;&amp;nbsp;Przeszukano od początku
+&lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;nbsp;Przeszukano od początku
+&lt;img src=&quot;:/trolltech/shared/images/wrap.png&quot;&gt;&amp;nbsp;Przeszukano od początku</translatorcomment>
         <translation>Obrazy</translation>
     </message>
     <message>
@@ -983,12 +984,12 @@ Kreskowanie / całkowite Wypełnienia</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1021,7 +1022,7 @@ Krzywa składana</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

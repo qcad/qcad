@@ -21,7 +21,7 @@
     <message>
         <location filename="../DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation>&amp;Allineato</translation>
+        <translation>&amp;Allineata</translation>
     </message>
     <message>
         <location line="+4"/>

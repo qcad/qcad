@@ -54,9 +54,13 @@
         <translation>Kot:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Vstavi sliko</translation>
+        <translation type="vanished">Vstavi sliko</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

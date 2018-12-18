@@ -70,7 +70,7 @@
         <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
-        <translation>Browser librerie</translation>
+        <translation>Navigatore di librerie</translation>
     </message>
     <message>
         <location line="-1149"/>
@@ -162,7 +162,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+43"/>
         <source>Source removed from part library: %1</source>
-        <translation>Fonte rimosso dalla biblioteca: %1</translation>
+        <translation>Fonte rimosso dalla librerie: %1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -292,7 +292,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location filename="../LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
-        <translation>&amp;Browser librerie</translation>
+        <translation>&amp;Navigatore di librerie</translation>
     </message>
 </context>
 <context>

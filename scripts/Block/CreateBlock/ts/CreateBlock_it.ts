@@ -19,7 +19,7 @@
     <message>
         <location filename="../CreateBlockInit.js" line="+2"/>
         <source>&amp;Create Block from Selection</source>
-        <translation>&amp;Creare un blocco dalla selezione</translation>
+        <translation>&amp;Crea blocco da selezione</translation>
     </message>
 </context>
 </TS>

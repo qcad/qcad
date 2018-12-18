@@ -28,7 +28,7 @@
     <message>
         <location line="+12"/>
         <source>Block name:</source>
-        <translation>Nome del Blocco:</translation>
+        <translation>Nome del blocco:</translation>
     </message>
     <message>
         <location line="+7"/>

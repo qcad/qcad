@@ -91,10 +91,14 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation>Kąt:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wstaw bitmapę</translation>
+        <translation type="vanished">Wstaw bitmapę</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

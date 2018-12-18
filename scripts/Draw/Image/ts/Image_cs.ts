@@ -54,9 +54,13 @@
         <translation>Úhel:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Vložit bitmapu</translation>
+        <translation type="vanished">Vložit bitmapu</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation>Vložit &amp;bitmapu</translation>
     </message>
 </context>
 </TS>

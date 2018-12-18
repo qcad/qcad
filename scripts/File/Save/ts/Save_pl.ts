@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -9,12 +10,12 @@
         <translation>Zastąpić plik?</translation>
     </message>
     <message>
-        <source>The file '%1' already exists. Do you wish to overwrite it?</source>
+        <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="vanished">Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>
     <message>
-        <source>All custom colors will be 'rounded' to the nearest fixed color.</source>
+        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
         <translation type="vanished">Wszystkie dostosowane kolory zostaną przybliżone najbliższymi ustalonymi kolorami.</translation>
     </message>
     <message>
@@ -24,18 +25,18 @@
         <translation>Nie zalecana wersja formatu pliku</translation>
     </message>
     <message>
-        <source>The file format version you are using is not recommended: '%1'.</source>
+        <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="vanished">Używana wersja formatu pliku nie jest zalecana: „%1”.</translation>
     </message>
     <message>
         <location line="-17"/>
-        <source>The file "%1" already exists. Do you wish to overwrite it?</source>
+        <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The file format version you are using is not recommended: "%1".</source>
+        <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
         <translation>Używany format pliku nie jest zalecany: „%1”.</translation>
     </message>
     <message>
@@ -57,17 +58,17 @@
     <message>
         <location line="+0"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Saving to file format version "%1".</source>
+        <source>Saving to file format version &quot;%1&quot;.</source>
         <translation>Zapisywanie do formatu pliku w wersji „%1”.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -80,9 +81,9 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <source>All custom colors will be 'rounded' to the nearest fixed color. Proceed?</source>
+        <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color. Proceed?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Wszystkie niestandardowe kolory zostaną "zaokrąglone&amp;quot; do najbliższego stałego koloru. Kontynuować?</translation>
+        <translation type="obsolete">Wszystkie niestandardowe kolory zostaną &quot;zaokrąglone&amp;quot; do najbliższego stałego koloru. Kontynuować?</translation>
     </message>
     <message>
         <location line="-32"/>
@@ -93,9 +94,9 @@ Zapisywanie... </translatorcomment>
         <translation>Zapisywanie...</translation>
     </message>
     <message>
-        <source>Saving to file format version '%1'.</source>
+        <source>Saving to file format version &apos;%1&apos;.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Zapisywanie do pliku w wersji formatu '%1'.</translation>
+        <translation type="vanished">Zapisywanie do pliku w wersji formatu &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -104,7 +105,7 @@ Zapisywanie... </translatorcomment>
         <translation>Czarne obiekty i warstwy są zapisywane jako białe.</translation>
     </message>
     <message>
-        <source>Custom colors are 'rounded' to the nearest fixed color.</source>
+        <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="vanished">Dostosowane kolory są przybliżane najbliższymi ustalonymi kolorami.</translation>
     </message>

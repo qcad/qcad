@@ -51,10 +51,9 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Posição</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Insira um Bitmap</translation>
+        <translation type="vanished">Insira um Bitmap</translation>
     </message>
     <message>
         <location filename="../Image.ui" line="+17"/>
@@ -90,6 +89,11 @@ Altura:
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo:</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation>&amp;Insira um Bitmap</translation>
     </message>
 </context>
 </TS>

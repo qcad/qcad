@@ -54,9 +54,13 @@
         <translation>Angle:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Insert Bitmap</translation>
+        <translation type="vanished">Insert Bitmap</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation>&amp;Insert Bitmap</translation>
     </message>
 </context>
 </TS>

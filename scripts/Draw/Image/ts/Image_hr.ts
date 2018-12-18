@@ -55,7 +55,7 @@
     </message>
     <message>
         <location filename="../ImageInit.js" line="+2"/>
-        <source>Insert Bitmap</source>
+        <source>&amp;Insert Bitmap</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

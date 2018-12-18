@@ -54,9 +54,13 @@
         <translation>Угол:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Вставить растровое изображение</translation>
+        <translation type="vanished">Вставить растровое изображение</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

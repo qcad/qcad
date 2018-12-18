@@ -11,7 +11,7 @@
     <message>
         <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation>M&amp;odifica blocco da un riferimento</translation>
+        <translation>E&amp;dita blocco da riferimento</translation>
     </message>
     <message>
         <location line="+1"/>

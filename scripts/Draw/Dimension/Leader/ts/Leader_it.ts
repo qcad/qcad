@@ -21,12 +21,12 @@
     <message>
         <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>&amp;Principale</translation>
+        <translation>&amp;Direttrice</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Principale (linea con freccia)</translation>
+        <translation>Direttrice (sequenza di linee con freccia)</translation>
     </message>
     <message>
         <source>Draw leader (line seqence with arrow)</source>

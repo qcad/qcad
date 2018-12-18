@@ -16,12 +16,12 @@
     <message>
         <location filename="../DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>&amp;Ordinate (X/Y)</translation>
+        <translation>&amp;Ordinata (X/Y)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation>Valore dell&apos;ordinata</translation>
+        <translation>Disegnare quota ordinata.</translation>
     </message>
 </context>
 </TS>

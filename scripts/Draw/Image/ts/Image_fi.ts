@@ -54,9 +54,13 @@
         <translation>Kulma:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Lisää bittikartta</translation>
+        <translation type="vanished">Lisää bittikartta</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

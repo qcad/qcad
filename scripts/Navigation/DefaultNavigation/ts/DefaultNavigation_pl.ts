@@ -33,7 +33,7 @@ Pasek do nawigacji
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location filename="../PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Kółko myszy / przeciągnięcie dwoma palcami:</translation>
@@ -44,7 +44,7 @@ Pasek do nawigacji
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-238"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Włączenie gestu przesuwania</translation>
@@ -55,17 +55,17 @@ Pasek do nawigacji
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-234"/>
+        <location line="-217"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Odwrócenie kierunku kółka myszy dla przybliżania</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="-24"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Współczynnik przybliżania kółka myszy:</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+7"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Ograniczenie przybliżania i przewijania w celu zapobiegania przepełnienia</translation>
     </message>

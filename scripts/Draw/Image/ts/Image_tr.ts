@@ -54,9 +54,13 @@
         <translation>Açı:</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Bitmap İçe Aktar</translation>
+        <translation type="vanished">Bitmap İçe Aktar</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

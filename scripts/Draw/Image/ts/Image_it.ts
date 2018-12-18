@@ -34,9 +34,8 @@
         <translation>Posizione</translation>
     </message>
     <message>
-        <location filename="../ImageInit.js" line="+2"/>
         <source>Insert Bitmap</source>
-        <translation>Inserire bitmap</translation>
+        <translation type="vanished">Inserisci bitmap</translation>
     </message>
     <message>
         <location filename="../Image.ui" line="+17"/>
@@ -57,6 +56,11 @@
         <location line="+27"/>
         <source>Angle:</source>
         <translation>Angolo:</translation>
+    </message>
+    <message>
+        <location filename="../ImageInit.js" line="+2"/>
+        <source>&amp;Insert Bitmap</source>
+        <translation>&amp;Inserisci bitmap</translation>
     </message>
 </context>
 </TS>

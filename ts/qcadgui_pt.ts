@@ -90,7 +90,7 @@ Configurar...</translatorcomment>
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+156"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+161"/>
         <source>Invalid</source>
         <translation>Inválido</translation>
     </message>

@@ -86,7 +86,7 @@ Zastępcze widżety</translatorcomment>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1158"/>
+        <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translatorcomment>--exact match--
@@ -95,7 +95,7 @@ Przeglądarka bibliotek</translatorcomment>
         <translation>Przeglądarka kolekcji</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1149"/>
         <source>Icon</source>
         <translatorcomment>--google--
 XX ikona wybrana wyłączona
@@ -119,7 +119,7 @@ Atrybuty filtru bieżącej dokumentacji (lista oddzielona przecinkami):</transla
         <translation>Wybór katalogu źródłowego</translation>
     </message>
     <message>
-        <location line="+688"/>
+        <location line="+687"/>
         <source>Page %1 of %2</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -422,10 +422,9 @@ Znajdź w tekście...</translatorcomment>
         <translation>Wyszukaj</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Reset tag selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wyczyść wybór znacznika</translation>
+        <translation type="vanished">Wyczyść wybór znacznika</translation>
     </message>
     <message>
         <source>about:blank</source>
@@ -434,7 +433,7 @@ Znajdź w tekście...</translatorcomment>
         <translation type="obsolete">about: blank</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Favorites</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
