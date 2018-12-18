@@ -91,7 +91,12 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
     }
     else {
         error = "";
-        p.setColor(QPalette::Text, QColor(Qt::black));
+        if (RSettings::hasDarkGuiBackground()) {
+            p.setColor(QPalette::Text, QColor(Qt::white));
+        }
+        else {
+            p.setColor(QPalette::Text, QColor(Qt::black));
+        }
         QString str;
         //str.sprintf("%.6g%s",value,(const char*)RUnit::unitToSymbol(defaultUnit).toUtf8());
         str.sprintf("%.6g",value);
@@ -227,7 +232,12 @@ QString RMathLineEdit::getError() {
 void RMathLineEdit::clearError() {
     error = "";
     QPalette p = palette();
-    p.setColor(QPalette::Text, QColor(Qt::black));
+    if (RSettings::hasDarkGuiBackground()) {
+        p.setColor(QPalette::Text, QColor(Qt::white));
+    }
+    else {
+        p.setColor(QPalette::Text, QColor(Qt::black));
+    }
     setPalette(p);
 }
 
@@ -236,6 +246,11 @@ void RMathLineEdit::setToolTip(const QString& toolTip) {
     if (originalToolTip.isEmpty() && error.isEmpty() && toolTip.isEmpty()) {
         QLineEdit::setToolTip("");
         return;
+    }
+
+    QString textCol = "black";
+    if (RSettings::hasDarkGuiBackground()) {
+        textCol = "white";
     }
 
     QLineEdit::setToolTip(
@@ -249,7 +264,7 @@ void RMathLineEdit::setToolTip(const QString& toolTip) {
         )
         .arg(originalToolTip)
         .arg(originalToolTip.isEmpty() ? "" : "<br>")
-        .arg(error.isEmpty() ? "black" : "red")
+        .arg(error.isEmpty() ? textCol : "red")
         .arg(toolTip)
     );
 }
