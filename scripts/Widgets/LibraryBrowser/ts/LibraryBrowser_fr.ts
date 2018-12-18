@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1158"/>
+        <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Explorateur de la bibliothèque</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1149"/>
         <source>Icon</source>
         <translation>Icône</translation>
     </message>
@@ -88,7 +88,7 @@
         <translation>Choisissez le dossier source</translation>
     </message>
     <message>
-        <location line="+688"/>
+        <location line="+687"/>
         <source>Page %1 of %2</source>
         <translation>Page %1 de %2</translation>
     </message>
@@ -308,7 +308,7 @@ dans les résultats de recherche :</translation>
         <translation>Recherche</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+179"/>
         <source>Favorites</source>
         <translation>Favoris</translation>
     </message>
@@ -317,7 +317,7 @@ dans les résultats de recherche :</translation>
         <translation type="vanished">Tags</translation>
     </message>
     <message>
-        <location line="-174"/>
+        <location line="-156"/>
         <source>Look for:</source>
         <translation>Rechercher :</translation>
     </message>
@@ -332,16 +332,15 @@ dans les résultats de recherche :</translation>
         <translation>Rechercher</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation>Réinitialisé</translation>
+        <translation type="vanished">Réinitialisé</translation>
     </message>
     <message>
         <source>about:blank</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+165"/>
         <source>Insert selected item into drawing</source>
         <translation>Insérez élément sélectionné dans le dessin</translation>
     </message>

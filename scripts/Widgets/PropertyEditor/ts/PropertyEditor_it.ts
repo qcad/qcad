@@ -178,7 +178,7 @@ Specifica la base</translatorcomment>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation>Editor delle proprietà</translation>
+        <translation>Editor di proprietà</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>

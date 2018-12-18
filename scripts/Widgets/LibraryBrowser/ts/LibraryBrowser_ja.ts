@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1158"/>
+        <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>ライブラリブラウザ</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1149"/>
         <source>Icon</source>
         <translation>アイコン</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation>ソースフォルダを選択</translation>
     </message>
     <message>
-        <location line="+688"/>
+        <location line="+687"/>
         <source>Page %1 of %2</source>
         <translation>ページ %1 / %2</translation>
     </message>
@@ -304,16 +304,15 @@ shown in search results:</source>
         <translation>検索</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation>タグ選択をリセット</translation>
+        <translation type="vanished">タグ選択をリセット</translation>
     </message>
     <message>
         <source>about:blank</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Favorites</source>
         <translation>お気に入り</translation>
     </message>

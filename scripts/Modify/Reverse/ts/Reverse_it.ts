@@ -6,7 +6,7 @@
     <message>
         <location filename="../ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation>Inverti pagine</translation>
+        <translation>&amp;Inverti</translation>
     </message>
 </context>
 </TS>

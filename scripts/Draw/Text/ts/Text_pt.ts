@@ -65,7 +65,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="+242"/>
+        <location filename="../TextDialog/TextDialog.js" line="+241"/>
         <source>Default value:</source>
         <translation>Valor padrão:</translation>
     </message>

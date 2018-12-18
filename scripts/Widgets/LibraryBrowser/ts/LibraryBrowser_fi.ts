@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1158"/>
+        <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Historiaselain</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1149"/>
         <source>Icon</source>
         <translation>Kuvake</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation>Valitse lähdekansio</translation>
     </message>
     <message>
-        <location line="+688"/>
+        <location line="+687"/>
         <source>Page %1 of %2</source>
         <translation>Sivu %1 / %2</translation>
     </message>
@@ -304,16 +304,15 @@ näkyy etsintätuloksissa:</translation>
         <translation>Etsi</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation>Nollaa tunnisteiden/tagien valinta</translation>
+        <translation type="vanished">Nollaa tunnisteiden/tagien valinta</translation>
     </message>
     <message>
         <source>about:blank</source>
         <translation type="vanished">tietoa:tyhjä</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Favorites</source>
         <translation>Suosikit</translation>
     </message>

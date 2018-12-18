@@ -18,7 +18,7 @@
     <message>
         <location filename="../Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation>Doppia &amp;rotazione</translation>
+        <translation>Ruota &amp;due</translation>
     </message>
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
@@ -86,7 +86,7 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location filename="../Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Opzioni Doppia Rotazione</translation>
+        <translation>Opzioni ruota due</translation>
     </message>
     <message>
         <location line="+10"/>

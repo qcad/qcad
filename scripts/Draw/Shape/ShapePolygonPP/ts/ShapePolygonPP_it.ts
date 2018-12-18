@@ -24,11 +24,11 @@
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="vanished">Poligo&amp;no (due punti d&apos;angolo)</translation>
+        <translation type="vanished">Poligo&amp;no (due spigoli)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation type="vanished">Disegnare un poligono regolare da due punti dell&apos;angolo</translation>
+        <translation type="vanished">Disegnare un poligono regolare da due spigoli</translation>
     </message>
 </context>
 <context>
@@ -64,12 +64,12 @@
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>Poligo&amp;no (due punti d&apos;angolo)</translation>
+        <translation>Poligo&amp;no (due &amp;spigoli)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation>Disegnare un poligono regolare da due punti dell&apos;angolo</translation>
+        <translation>Disegnare un poligono regolare da due spigoli</translation>
     </message>
 </context>
 </TS>

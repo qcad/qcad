@@ -14,7 +14,7 @@
     <message>
         <location filename="../LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>Par&amp;allela (passante per un punto)</translation>
+        <translation>Par&amp;allela (attraverso un punto)</translation>
     </message>
     <message>
         <location line="+4"/>

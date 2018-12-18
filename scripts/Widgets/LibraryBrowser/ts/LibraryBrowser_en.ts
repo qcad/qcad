@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1158"/>
+        <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Library Browser</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1149"/>
         <source>Icon</source>
         <translation>Icon</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation>Choose Source Folder</translation>
     </message>
     <message>
-        <location line="+688"/>
+        <location line="+687"/>
         <source>Page %1 of %2</source>
         <translation>Page %1 of %2</translation>
     </message>
@@ -300,12 +300,11 @@ shown in search results:</translation>
         <translation>Find</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation>Reset tag selection</translation>
+        <translation type="vanished">Reset tag selection</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Favorites</source>
         <translation>Favorites</translation>
     </message>

@@ -27,7 +27,7 @@
     <message>
         <location filename="../LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation>A&amp;llungare / accorciare</translation>
+        <translation>A&amp;llunga / accorcia</translation>
     </message>
 </context>
 </TS>

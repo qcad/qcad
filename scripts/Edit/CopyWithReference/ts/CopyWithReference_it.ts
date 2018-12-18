@@ -6,7 +6,7 @@
     <message>
         <location filename="../CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation>&amp;Copia con il riferimento</translation>
+        <translation>&amp;Copia con riferimento</translation>
     </message>
 </context>
 </TS>

@@ -12,7 +12,7 @@
     <message>
         <location filename="../SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation>(De)seleziona &amp;contorno</translation>
+        <translation>(De-)seleziona &amp;contorno</translation>
     </message>
     <message>
         <location line="+4"/>

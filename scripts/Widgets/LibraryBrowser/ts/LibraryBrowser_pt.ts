@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1158"/>
+        <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Navegador de Biblioteca</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1149"/>
         <source>Icon</source>
         <translation>Ícone</translation>
     </message>
@@ -88,7 +88,7 @@
         <translation>Escolha a Pasta de Origem</translation>
     </message>
     <message>
-        <location line="+688"/>
+        <location line="+687"/>
         <source>Page %1 of %2</source>
         <translation>Página %1 de %2</translation>
     </message>
@@ -308,7 +308,7 @@ nos resultados de busca:</translation>
         <translation>Procurar</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+179"/>
         <source>Favorites</source>
         <translation>Favoritos</translation>
     </message>
@@ -317,7 +317,7 @@ nos resultados de busca:</translation>
         <translation type="vanished">Rótulos</translation>
     </message>
     <message>
-        <location line="-174"/>
+        <location line="-156"/>
         <source>Look for:</source>
         <translation>Procure por:</translation>
     </message>
@@ -332,16 +332,15 @@ nos resultados de busca:</translation>
         <translation>Procure</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation>Resete a seleção de rótulos</translation>
+        <translation type="vanished">Resete a seleção de rótulos</translation>
     </message>
     <message>
         <source>about:blank</source>
         <translation type="vanished">sobre:branco</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+165"/>
         <source>Insert selected item into drawing</source>
         <translation>Insira o item selecionado no desenho</translation>
     </message>

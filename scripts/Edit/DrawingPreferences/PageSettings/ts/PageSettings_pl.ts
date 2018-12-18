@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -147,7 +146,7 @@ Wysokość papieru:</translatorcomment>
     <message>
         <location line="+6"/>
         <source>Point size (mm):</source>
-        <translation type="unfinished"></translation>
+        <translation>Rozmiar punktu (mm):</translation>
     </message>
     <message>
         <location line="+7"/>

@@ -39,7 +39,7 @@
     <message>
         <location filename="../TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation>&amp;Raccorda</translation>
+        <translation>&amp;Tagliare</translation>
     </message>
 </context>
 </TS>

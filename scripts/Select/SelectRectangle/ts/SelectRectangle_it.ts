@@ -21,7 +21,7 @@
     <message>
         <location filename="../SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>(De-)selezionare un&apos;area &amp;rettangolare</translation>
+        <translation>(De-)Seleziona area &amp;rettangolare</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation>Zoom avanti</translation>
+        <translation>Zoom &amp;in</translation>
     </message>
 </context>
 </TS>

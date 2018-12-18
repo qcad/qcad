@@ -45,7 +45,7 @@
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
-        <translation type="vanished">Rettangolo con le &amp;dimensioni</translation>
+        <translation type="vanished">Rettangolo con &amp;dimensioni</translation>
     </message>
     <message>
         <source>Draw rectangle with position and size</source>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation>S&amp;posta e ruota</translation>
+        <translation>Mu&amp;ovi e ruota</translation>
     </message>
     <message>
         <location filename="../TranslateRotate.ui" line="+17"/>
@@ -53,7 +53,7 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location filename="../TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation>Opzioni Sposta e Ruota</translation>
+        <translation>Opzioni muovi e ruota</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -63,17 +63,17 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Cancella Originali</translation>
+        <translation>&amp;Cancella originali</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Tieni Originali</translation>
+        <translation>&amp;Tieni originali</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation>Copie &amp;Multiple</translation>
+        <translation>Copie &amp;multiple</translation>
     </message>
     <message>
         <location line="+94"/>

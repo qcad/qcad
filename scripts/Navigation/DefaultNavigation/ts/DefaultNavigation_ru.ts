@@ -27,37 +27,37 @@
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location filename="../PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Колёсико мыши/два пальца:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="-231"/>
         <source>Enable pan gesture</source>
         <translation>Включить жест панорамирования</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Обратное направление колёсика мыши для увеличения</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+231"/>
         <source>Middle mouse button zoom factor:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="-255"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Коэффициент масштабирования для колёсика мыши:</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+241"/>
         <source>Panning threshold (px):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-217"/>
+        <location line="-234"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Ограничить масштабирование и прокручивание чтобы предотвратить переполнение</translation>
     </message>

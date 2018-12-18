@@ -62,17 +62,17 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Cancella Originali</translation>
+        <translation>&amp;Cancella originali</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Tieni Originali</translation>
+        <translation>&amp;Tieni originali</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation>Copie &amp;Multiple</translation>
+        <translation>Copie &amp;multiple</translation>
     </message>
     <message>
         <location line="+94"/>

@@ -27,12 +27,12 @@
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+50"/>
+        <location filename="../PreferencesPage.ui" line="+91"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+241"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -42,7 +42,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-238"/>
         <source>Enable pan gesture</source>
         <translation type="unfinished"></translation>
     </message>
@@ -52,12 +52,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-234"/>
+        <location line="-217"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="-24"/>
         <source>Mouse wheel zoom factor:</source>
         <translation type="unfinished"></translation>
     </message>

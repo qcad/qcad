@@ -6,7 +6,7 @@
     <message>
         <location filename="../PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation>Pan</translation>
+        <translation>&amp;Panoramica</translation>
     </message>
 </context>
 </TS>

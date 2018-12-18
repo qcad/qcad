@@ -27,12 +27,12 @@
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+50"/>
+        <location filename="../PreferencesPage.ui" line="+91"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Omezit přiblížení a rolování, aby nedošlo k přetečení</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+241"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translation>Kolečko myši / přejetí dvou prstů:</translation>
     </message>
@@ -42,7 +42,7 @@
         <translation>Faktor přiblížení prostředního tlačítka myši:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-238"/>
         <source>Enable pan gesture</source>
         <translation>Povolit gesto posunu</translation>
     </message>
@@ -52,12 +52,12 @@
         <translation>Práh posunu (px):</translation>
     </message>
     <message>
-        <location line="-234"/>
+        <location line="-217"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Obrátit směr přibližování u kolečka myši</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="-24"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>Faktor přiblížení kolečka myši:</translation>
     </message>

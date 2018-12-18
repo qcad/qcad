@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1158"/>
+        <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Prohlížeč knihoven</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1149"/>
         <source>Icon</source>
         <translation>Ikona</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation>Vyberte zdrojovou složku</translation>
     </message>
     <message>
-        <location line="+688"/>
+        <location line="+687"/>
         <source>Page %1 of %2</source>
         <translation>Stránka %1 z %2</translation>
     </message>
@@ -300,12 +300,11 @@ ve výsledcích vyhledávání:</translation>
         <translation>Najít</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation>Resetovat výběr štítků</translation>
+        <translation type="vanished">Resetovat výběr štítků</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Favorites</source>
         <translation>Oblíbené</translation>
     </message>

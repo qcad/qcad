@@ -6,7 +6,7 @@
     <message>
         <location filename="../CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation>&amp;Taglia usando un riferimento</translation>
+        <translation>&amp;Taglia con riferimento</translation>
     </message>
 </context>
 </TS>

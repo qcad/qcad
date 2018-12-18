@@ -12,12 +12,12 @@
     <message>
         <location filename="../EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation>Modificare il te&amp;sto</translation>
+        <translation>Edita te&amp;sto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Edit text</source>
-        <translation>Raccorda di un valore</translation>
+        <translation>Edita testo</translation>
     </message>
 </context>
 </TS>

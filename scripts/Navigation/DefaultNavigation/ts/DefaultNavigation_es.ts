@@ -34,39 +34,39 @@ Las capas ráster de elevada resolución pueden ralentizar la navegación en QGI
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location filename="../PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>La rueda del ratón / dos pasar el dedo:</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="-231"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Habilitar gesto de pan</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
         <translation>Inversa dirección de la rueda del ratón para el zoom</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+231"/>
         <source>Middle mouse button zoom factor:</source>
         <translation>Factor de zoom del botón central del ratón:</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="-255"/>
         <source>Mouse wheel zoom factor:</source>
         <translation>La rueda del ratón factor de zoom:</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+241"/>
         <source>Panning threshold (px):</source>
         <translation>Umbral de panoramización:</translation>
     </message>
     <message>
-        <location line="-217"/>
+        <location line="-234"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Limitar el zoom para evitar desbordamientos</translation>
     </message>

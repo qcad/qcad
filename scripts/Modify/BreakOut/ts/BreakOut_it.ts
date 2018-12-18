@@ -4,14 +4,9 @@
 <context>
     <name>BreakOut</name>
     <message>
-        <source>Choose line, arc or circle segment</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Scegli il segmento di linea, arco o cerchio</translation>
-    </message>
-    <message>
         <location filename="../BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation>&amp;Dividi 2</translation>
+        <translation>&amp;Rompi segmento</translation>
     </message>
     <message>
         <location filename="../BreakOut.ui" line="+17"/>

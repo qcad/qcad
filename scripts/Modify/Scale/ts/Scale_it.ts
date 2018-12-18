@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation>Scala</translation>
+        <translation>Ridimensiona</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -36,7 +36,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location filename="../ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation>&amp;Scala</translation>
+        <translation>&amp;Ridimensiona</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
@@ -87,7 +87,7 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location filename="../ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Opzioni scala</translation>
+        <translation>Opzioni di ridimensionamento</translation>
     </message>
     <message>
         <location line="+14"/>

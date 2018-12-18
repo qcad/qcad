@@ -28,12 +28,12 @@ Seconda entità non può essere tagliato.</translatorcomment>
     <message>
         <location filename="../RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation>A&amp;rrotonda</translation>
+        <translation>&amp;Raccordo</translation>
     </message>
     <message>
         <location filename="../Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation>Raccorda</translation>
+        <translation>Tagliare</translation>
     </message>
     <message>
         <location line="+17"/>

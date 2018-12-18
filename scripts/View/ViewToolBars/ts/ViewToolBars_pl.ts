@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -11,12 +10,12 @@
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widżety</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Paski narzędziowe</translation>
     </message>
 </context>
 </TS>

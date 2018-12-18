@@ -10,7 +10,7 @@
     <message>
         <location filename="../LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation>&amp;Tangente (C,C)</translation>
+        <translation>&amp;Tan&amp;gente (due cerchi)</translation>
     </message>
     <message>
         <location line="+4"/>

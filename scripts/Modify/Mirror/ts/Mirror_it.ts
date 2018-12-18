@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation>Specchio</translation>
+        <translation>Specchia</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -23,14 +23,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translatorcomment>--google--
-Secondo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Secondo punto di asse di simmetria</translation>
     </message>
     <message>
         <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation>&amp;Specchio</translation>
+        <translation>&amp;Specchia</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
@@ -50,11 +48,11 @@ Secondo punto per l&apos;asse dello specchio</translatorcomment>
     </message>
     <message>
         <source>&amp;Delete original</source>
-        <translation type="obsolete">&amp;Cancella Originali</translation>
+        <translation type="obsolete">&amp;Cancella originali</translation>
     </message>
     <message>
         <source>&amp;Keep original</source>
-        <translation type="obsolete">&amp;Tieni Originali</translation>
+        <translation type="obsolete">&amp;Tieni originali</translation>
     </message>
     <message>
         <source>Use current layer and &amp;attributes</source>
@@ -67,7 +65,7 @@ Secondo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Opzioni Specchio</translation>
+        <translation>Opzioni specchio</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -77,12 +75,12 @@ Secondo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Cancella Originali</translation>
+        <translation>&amp;Cancella originali</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Tieni Originali</translation>
+        <translation>&amp;Tieni originali</translation>
     </message>
     <message>
         <location line="+79"/>

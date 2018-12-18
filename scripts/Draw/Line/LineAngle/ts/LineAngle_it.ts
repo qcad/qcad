@@ -16,7 +16,7 @@
     <message>
         <location filename="../LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation>Linea da &amp;angle</translation>
+        <translation>Linea da un &amp;angolo</translation>
     </message>
     <message>
         <location line="+4"/>

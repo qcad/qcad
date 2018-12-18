@@ -6,7 +6,7 @@
     <message>
         <location filename="../TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation>Doppio &amp;raccordo</translation>
+        <translation>Tagliare &amp;entrambi</translation>
     </message>
 </context>
 </TS>

@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1158"/>
+        <location line="+1157"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Bibliothekbrowser</translation>
     </message>
     <message>
-        <location line="-1150"/>
+        <location line="-1149"/>
         <source>Icon</source>
         <translation>Ikone</translation>
     </message>
@@ -88,7 +88,7 @@
         <translation>Quellordner wählen</translation>
     </message>
     <message>
-        <location line="+688"/>
+        <location line="+687"/>
         <source>Page %1 of %2</source>
         <translation>Seite %1 von %2</translation>
     </message>
@@ -308,7 +308,7 @@ im Suchresultat:</translation>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+179"/>
         <source>Favorites</source>
         <translation>Favoriten</translation>
     </message>
@@ -317,7 +317,7 @@ im Suchresultat:</translation>
         <translation type="vanished">Tags</translation>
     </message>
     <message>
-        <location line="-174"/>
+        <location line="-156"/>
         <source>Look for:</source>
         <translation>Suchen nach:</translation>
     </message>
@@ -332,16 +332,15 @@ im Suchresultat:</translation>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation>Tags zurücksetzen</translation>
+        <translation type="vanished">Tags zurücksetzen</translation>
     </message>
     <message>
         <source>about:blank</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+165"/>
         <source>Insert selected item into drawing</source>
         <translation>Ausgewähltes Objekt in Zeichnung einfügen</translation>
     </message>

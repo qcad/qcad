@@ -10,7 +10,7 @@
     <message>
         <location filename="../LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation>&amp;Tangente (P,C)</translation>
+        <translation>&amp;Tangente (Punto, Cerchio)</translation>
     </message>
     <message>
         <location line="+4"/>

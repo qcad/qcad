@@ -685,7 +685,7 @@ Colore G&amp;riglia:</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation>Nome del font</translation>
+        <translation>Nome carattere</translation>
     </message>
     <message>
         <location line="+1"/>

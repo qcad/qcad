@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="pl">
 <context>
@@ -99,7 +98,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pierwszorzędny punkt odniesienia:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -134,7 +133,7 @@ Tło okna:</translatorcomment>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugorzędny punkt odniesienia:</translation>
     </message>
     <message>
         <location line="+30"/>

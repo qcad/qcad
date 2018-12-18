@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation>Sposta / Copia</translation>
+        <translation>Muovi/Copia</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -30,13 +30,12 @@ Obiettivo punto</translatorcomment>
     <message>
         <location filename="../TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
-        <translation>&amp;Sposta / copia</translation>
+        <translation>&amp;Muovi / copia</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Spostare o copiare entità una volta o più volte</translation>
+        <translation>Muovere o copiare entità una o più volte</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
@@ -104,17 +103,17 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Cancella Originali</translation>
+        <translation>&amp;Cancella originali</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation>&amp;Tieni Originali</translation>
+        <translation>&amp;Tieni originali</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation>Copie &amp;Multiple</translation>
+        <translation>Copie &amp;multiple</translation>
     </message>
     <message>
         <location line="+86"/>

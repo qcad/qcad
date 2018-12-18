@@ -10,7 +10,7 @@
     <message>
         <location filename="../AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation>Preferenze &amp;applicazione</translation>
+        <translation>Preferenze d’&amp;applicazione</translation>
     </message>
 </context>
 </TS>

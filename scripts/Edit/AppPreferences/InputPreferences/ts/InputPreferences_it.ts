@@ -129,7 +129,7 @@ Percentuale di elementi
     <message>
         <location line="+0"/>
         <source>Coordinate Format</source>
-        <translation>Formato delle coordinate</translation>
+        <translation>Formato coordinata</translation>
     </message>
     <message>
         <location line="+15"/>

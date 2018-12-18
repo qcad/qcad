@@ -76,7 +76,7 @@
     <message>
         <location filename="../EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation>Arco &amp;ellittico</translation>
+        <translation>Arco d’&amp;ellisse</translation>
     </message>
     <message>
         <location line="+4"/>
