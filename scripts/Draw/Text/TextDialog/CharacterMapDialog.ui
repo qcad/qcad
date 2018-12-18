@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>Character Map</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>../Text.svg</normaloff>../Text.svg</iconset>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">

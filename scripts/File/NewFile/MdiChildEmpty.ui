@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
+ <class>MdiChild</class>
  <widget class="RMdiChildQt" name="MdiChild">
   <property name="geometry">
    <rect>
@@ -19,12 +19,17 @@
   <property name="windowTitle">
    <string>Untitled</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>Document.svg</normaloff>Document.svg</iconset>
-  </property>
   <layout class="QGridLayout" name="gridLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <property name="spacing">

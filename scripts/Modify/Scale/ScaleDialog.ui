@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>Scale Options</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>Scale.svg</normaloff>Scale.svg</iconset>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">

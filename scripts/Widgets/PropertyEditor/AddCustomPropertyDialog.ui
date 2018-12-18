@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>Add Custom Property</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>AddCustomProperty.svg</normaloff>AddCustomProperty.svg</iconset>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="Layout">

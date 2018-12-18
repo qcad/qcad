@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>Closing Drawing...</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>../CloseFile/CloseFile.svg</normaloff>../CloseFile/CloseFile.svg</iconset>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="Text1">

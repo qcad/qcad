@@ -16,10 +16,6 @@
   <property name="windowTitle">
    <string>Block Data</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>EditBlock/EditBlock.svg</normaloff>EditBlock/EditBlock.svg</iconset>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QFormLayout" name="formLayout">

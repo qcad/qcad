@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>Array of Blocks</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>Translate.svg</normaloff>Translate.svg</iconset>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
@@ -56,8 +52,8 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="RMathLineEdit" name="ColumnSpacing" native="true">
-       <property name="text" stdset="0">
+      <widget class="RMathLineEdit" name="ColumnSpacing">
+       <property name="text">
         <string notr="true">1</string>
        </property>
        <property name="angle" stdset="0">
@@ -73,8 +69,8 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="RMathLineEdit" name="RowSpacing" native="true">
-       <property name="text" stdset="0">
+      <widget class="RMathLineEdit" name="RowSpacing">
+       <property name="text">
         <string notr="true">1</string>
        </property>
        <property name="angle" stdset="0">
@@ -99,8 +95,8 @@
  <customwidgets>
   <customwidget>
    <class>RMathLineEdit</class>
-   <extends>QWidget</extends>
-   <header>rmathlineedit.h</header>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

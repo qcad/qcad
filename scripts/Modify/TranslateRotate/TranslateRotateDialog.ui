@@ -7,15 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>466</width>
-    <height>291</height>
+    <height>292</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Move and Rotate Options</string>
-  </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>TranslateRotate.svg</normaloff>TranslateRotate.svg</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>

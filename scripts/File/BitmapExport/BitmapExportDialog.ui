@@ -13,10 +13,6 @@
   <property name="windowTitle">
    <string>Bitmap Export</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>BitmapExport.svg</normaloff>BitmapExport.svg</iconset>
-  </property>
   <property name="modal">
    <bool>true</bool>
   </property>

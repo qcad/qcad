@@ -16,10 +16,6 @@
   <property name="windowTitle">
    <string>Layer Data</string>
   </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>EditLayer/EditLayer.svg</normaloff>EditLayer/EditLayer.svg</iconset>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QFormLayout" name="Layout">
@@ -168,14 +164,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>RColorCombo</class>
-   <extends>QComboBox</extends>
-   <header>RColorCombo.h</header>
-  </customwidget>
-  <customwidget>
    <class>RLineweightCombo</class>
    <extends>QComboBox</extends>
    <header>RLineweightCombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RColorCombo</class>
+   <extends>QComboBox</extends>
+   <header>RColorCombo.h</header>
   </customwidget>
   <customwidget>
    <class>RLinetypeCombo</class>

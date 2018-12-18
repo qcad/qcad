@@ -7,15 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>422</width>
-    <height>257</height>
+    <height>264</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Move / Copy Options</string>
-  </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>Translate.svg</normaloff>Translate.svg</iconset>
   </property>
   <layout class="QVBoxLayout" name="_2">
    <item>
