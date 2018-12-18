@@ -16,7 +16,7 @@
     <message>
         <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation>Esportazione bitmap</translation>
+        <translation>Esporta bitmap</translation>
     </message>
     <message>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
@@ -45,7 +45,7 @@
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation>Esportazione bitmap</translation>
+        <translation>Esporta bitmap</translation>
     </message>
     <message>
         <location line="+13"/>
