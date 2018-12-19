@@ -17,7 +17,7 @@
         <location filename="../SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)Seleziona entità intersecate</translation>
+        <translation>(De-)seleziona entità intersecate</translation>
     </message>
     <message>
         <location line="+4"/>

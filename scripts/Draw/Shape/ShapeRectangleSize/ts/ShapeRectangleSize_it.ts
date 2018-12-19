@@ -109,7 +109,7 @@
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>Rettangolo con le &amp;dimensioni</translation>
+        <translation>Rettangolo con &amp;dimensioni</translation>
     </message>
     <message>
         <location line="+5"/>
