@@ -55,7 +55,7 @@
         <translation>Podatki bloka</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translation>Ime bloka:</translation>
     </message>

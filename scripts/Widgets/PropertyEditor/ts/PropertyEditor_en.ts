@@ -9,7 +9,7 @@
         <translation>Add Custom Property</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Name:</source>
         <translation>Name:</translation>
     </message>

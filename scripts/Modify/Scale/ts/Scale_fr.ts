@@ -86,7 +86,7 @@ Indiquer le point cible</translatorcomment>
         <translation>Options de mise à l&apos;échelle</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Nombre de copies</translation>
     </message>

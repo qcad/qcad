@@ -29,7 +29,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+9"/>
         <source>Size</source>
         <translation type="unfinished"></translation>
     </message>

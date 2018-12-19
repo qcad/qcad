@@ -71,7 +71,7 @@
         <translation>Tason tieto</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Layer name:</source>
         <translation>Tason nimi:</translation>
     </message>

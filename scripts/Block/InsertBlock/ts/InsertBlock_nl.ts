@@ -70,7 +70,7 @@
         <translation>Blok &amp;invoegen</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
         <translation>Kolommen:</translation>
     </message>

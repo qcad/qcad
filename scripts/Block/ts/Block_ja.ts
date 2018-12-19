@@ -55,7 +55,7 @@
         <translation>ブロックデータ</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translation>ブロック名:</translation>
     </message>

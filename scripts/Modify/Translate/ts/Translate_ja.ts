@@ -62,7 +62,7 @@
         <translation>移動/コピーオプション</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>コピーの数</translation>
     </message>

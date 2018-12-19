@@ -32,7 +32,7 @@ Opcje przesuwania/obracania</translatorcomment>
         <translation>Opcje przenoszenia i obracania</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

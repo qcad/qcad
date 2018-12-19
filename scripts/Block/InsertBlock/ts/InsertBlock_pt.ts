@@ -105,7 +105,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation type="obsolete">Opções mova / copie</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
         <translation>Colunas:</translation>
     </message>

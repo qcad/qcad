@@ -123,7 +123,7 @@ Use camada e &amp;atributos atual</translatorcomment>
         <translation>Opções de escalonamento</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Número de Cópias</translation>
     </message>

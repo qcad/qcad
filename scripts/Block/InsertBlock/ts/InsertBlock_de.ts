@@ -97,7 +97,7 @@
         <translation type="obsolete">Verschieben / Kopieren Optionen</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
         <translation>Spalten:</translation>
     </message>

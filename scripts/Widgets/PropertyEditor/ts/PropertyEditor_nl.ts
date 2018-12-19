@@ -9,7 +9,7 @@
         <translation>Gebruiker gedefinieerde eigenschap toevoegen</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Name:</source>
         <translation>Naam:</translation>
     </message>

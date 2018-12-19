@@ -54,7 +54,7 @@
         <translation>Options de déplacement et de rotation</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Nombre de copies</translation>
     </message>

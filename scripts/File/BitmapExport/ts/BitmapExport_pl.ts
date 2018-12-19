@@ -46,7 +46,7 @@ Eksportuj bitmapę...</translatorcomment>
         <translation>Eksportowanie bitmapy</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+9"/>
         <source>Size</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--

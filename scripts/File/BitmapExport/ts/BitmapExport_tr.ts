@@ -37,7 +37,7 @@
         <translation>Bitmap Dışa Aktar </translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+9"/>
         <source>Size</source>
         <translation>Boyut</translation>
     </message>

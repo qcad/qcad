@@ -55,7 +55,7 @@
         <translation>块数据</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translation>块名：</translation>
     </message>

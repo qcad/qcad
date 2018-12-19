@@ -12,9 +12,16 @@
 <context>
     <name>Form</name>
     <message>
+        <source>Untitled</source>
+        <translation type="vanished">Brez naslova</translation>
+    </message>
+</context>
+<context>
+    <name>MdiChild</name>
+    <message>
         <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation>Brez naslova</translation>
+        <translation type="unfinished">Brez naslova</translation>
     </message>
 </context>
 <context>

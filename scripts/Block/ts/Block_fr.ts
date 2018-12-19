@@ -26,7 +26,7 @@
         <translation>Données du bloc</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translation>Nom du Bloc :</translation>
     </message>

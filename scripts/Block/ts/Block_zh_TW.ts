@@ -47,7 +47,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translation type="unfinished"></translation>
     </message>

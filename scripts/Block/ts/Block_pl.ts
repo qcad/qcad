@@ -61,7 +61,7 @@
         <translation>Dane bloku</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

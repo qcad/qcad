@@ -53,7 +53,7 @@ Cor e transparência do fundo da página (também usada para exportar bitmaps</t
         <translation>Exporte como Bitmap</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+9"/>
         <source>Size</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

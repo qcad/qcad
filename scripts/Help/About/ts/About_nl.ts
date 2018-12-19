@@ -235,7 +235,7 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../AboutDialog.ui" line="+105"/>
+        <location filename="../AboutDialog.ui" line="+101"/>
         <source>About</source>
         <translation>Over</translation>
     </message>

@@ -79,7 +79,7 @@
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&amp;Tratteggi da selezione</translation>
+        <translation>&amp;Tratteggio da selezione</translation>
     </message>
     <message>
         <location line="+5"/>

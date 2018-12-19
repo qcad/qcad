@@ -78,7 +78,7 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
         <translation>Dane warstwy</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Layer name:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

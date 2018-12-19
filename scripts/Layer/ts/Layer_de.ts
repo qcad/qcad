@@ -51,7 +51,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.ui" line="+29"/>
+        <location filename="../LayerDialog.ui" line="+25"/>
         <source>Layer name:</source>
         <translation>Layername:</translation>
     </message>
@@ -80,7 +80,7 @@
         <translation>Linientyp:</translation>
     </message>
     <message>
-        <location line="-104"/>
+        <location line="-100"/>
         <source>Layer Data</source>
         <translation>Layer</translation>
     </message>

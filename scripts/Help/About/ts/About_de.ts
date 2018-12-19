@@ -255,7 +255,7 @@
         <translation type="obsolete">Über QCAD</translation>
     </message>
     <message>
-        <location filename="../AboutDialog.ui" line="+105"/>
+        <location filename="../AboutDialog.ui" line="+101"/>
         <source>About</source>
         <translation>Über</translation>
     </message>

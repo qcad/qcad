@@ -51,7 +51,7 @@
         <translation>Lohkon Tiedot</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translation>Lohkon nimi:</translation>
     </message>

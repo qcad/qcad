@@ -55,7 +55,7 @@
         <translation>Data bloku</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translation>Název bloku:</translation>
     </message>

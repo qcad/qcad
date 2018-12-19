@@ -84,7 +84,7 @@ Use camada e &amp;atributos atual</translatorcomment>
         <translation>Opções de Mova e Rotacione</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Número de Cópias</translation>
     </message>

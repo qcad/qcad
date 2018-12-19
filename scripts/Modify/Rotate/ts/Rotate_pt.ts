@@ -66,7 +66,7 @@ Opções de Rotacione</translatorcomment>
         <translation>Opções de Rotação</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translatorcomment>--exact match--
 --file: Mirror_pt.ts--

@@ -55,7 +55,7 @@
         <translation>Block Data</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Block name:</source>
         <translation>Block name:</translation>
     </message>

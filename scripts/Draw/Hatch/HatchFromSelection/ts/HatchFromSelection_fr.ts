@@ -79,7 +79,7 @@
     <message>
         <location filename="../HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>&amp;Hachures depuis sélection</translation>
+        <translation>&amp;Hachure de sélection</translation>
     </message>
     <message>
         <location line="+5"/>

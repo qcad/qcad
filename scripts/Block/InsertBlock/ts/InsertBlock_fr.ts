@@ -97,7 +97,7 @@
         <translation type="obsolete">Options de déplacement/copie</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
         <translation>Colonnes :</translation>
     </message>

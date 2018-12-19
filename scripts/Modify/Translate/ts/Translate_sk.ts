@@ -62,7 +62,7 @@
         <translation>Možnosti presúvania / kopírovania</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Počet kópií</translation>
     </message>

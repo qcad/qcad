@@ -10,7 +10,7 @@
         <translation>Aggiungi proprietà personalizzata</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Name:</source>
         <translation>Nome:</translation>
     </message>

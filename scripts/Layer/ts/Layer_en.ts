@@ -71,7 +71,7 @@
         <translation>Layer Data</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Layer name:</source>
         <translation>Layer name:</translation>
     </message>

@@ -96,7 +96,7 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
         <translation>Opzioni Spostamento</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Numero di copie</translation>
     </message>

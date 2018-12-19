@@ -93,7 +93,7 @@
         <translation>Verschieben / Kopieren Optionen</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Anzahl Kopien</translation>
     </message>

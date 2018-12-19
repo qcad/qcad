@@ -10,7 +10,7 @@
     </message>
 </context>
 <context>
-    <name>Form</name>
+    <name>MdiChild</name>
     <message>
         <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>

@@ -57,7 +57,7 @@
         <translation>Données du calque</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Layer name:</source>
         <translation>Nom du calque :</translation>
     </message>

@@ -12,6 +12,13 @@
 <context>
     <name>Form</name>
     <message>
+        <source>Untitled</source>
+        <translation type="vanished">Sin título</translation>
+    </message>
+</context>
+<context>
+    <name>MdiChild</name>
+    <message>
         <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
         <translation>Sin título</translation>

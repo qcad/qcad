@@ -14,13 +14,20 @@
 <context>
     <name>Form</name>
     <message>
-        <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
         <translatorcomment>--exact match--
 --file: qt_help_pl.ts--
 Nienazwany
 (Nienazwany)</translatorcomment>
-        <translation>Bez nazwy</translation>
+        <translation type="vanished">Bez nazwy</translation>
+    </message>
+</context>
+<context>
+    <name>MdiChild</name>
+    <message>
+        <location filename="../MdiChildEmpty.ui" line="+20"/>
+        <source>Untitled</source>
+        <translation type="unfinished">Bez nazwy</translation>
     </message>
 </context>
 <context>

@@ -9,7 +9,7 @@
         <translation>Přidat vlastní vlastnost</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+8"/>
         <source>Name:</source>
         <translation>Název:</translation>
     </message>

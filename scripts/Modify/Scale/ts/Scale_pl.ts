@@ -60,7 +60,7 @@ Opcje skalowania</translatorcomment>
         <translation>Opcje skalowania</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

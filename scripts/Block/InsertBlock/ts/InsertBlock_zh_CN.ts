@@ -70,7 +70,7 @@
         <translation>插入块(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../InsertBlockDialog.ui" line="+12"/>
+        <location filename="../InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
         <translation>列数：</translation>
     </message>

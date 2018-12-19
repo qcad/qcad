@@ -26,7 +26,7 @@
     <message>
         <location filename="../DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation>&amp;Ruotata (Lineare)</translation>
+        <translation>&amp;Ruotata (lineare)</translation>
     </message>
     <message>
         <location line="+5"/>

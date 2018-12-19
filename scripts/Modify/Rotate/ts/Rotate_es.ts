@@ -55,7 +55,7 @@ Punto objetivo</translatorcomment>
         <translation>Opciones de rotación</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Number of Copies</source>
         <translation>Número de copias</translation>
     </message>

@@ -14,12 +14,19 @@
 <context>
     <name>Form</name>
     <message>
-        <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Desenho sem título
 Sem Título</translatorcomment>
+        <translation type="vanished">Sem título</translation>
+    </message>
+</context>
+<context>
+    <name>MdiChild</name>
+    <message>
+        <location filename="../MdiChildEmpty.ui" line="+20"/>
+        <source>Untitled</source>
         <translation>Sem título</translation>
     </message>
 </context>
