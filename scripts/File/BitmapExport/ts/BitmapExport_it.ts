@@ -40,7 +40,7 @@
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation>&amp;Esportazione bitmap...</translation>
+        <translation>Esporta bit&amp;map...</translation>
     </message>
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>
