@@ -88,6 +88,20 @@ function getTransactionDocument() {
 }
 
 /**
+ * Returns the RDocumentInterface the current transaction applies to or
+ * the current document interface or undefined.
+ * \ingroup ecma_simple
+ */
+function getTransactionDocumentInterface() {
+    if (!isNull(__simpleDi)) {
+        return __simpleDi;
+    }
+    else {
+        return getDocumentInterface();
+    }
+}
+
+/**
  * Returns the current operation if we are in a transaction or a new operation.
  * \ingroup ecma_simple
  */
