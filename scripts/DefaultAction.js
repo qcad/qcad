@@ -17,9 +17,9 @@
  * along with QCAD.
  */
 
-include("EAction.js");
-include("Select/Select.js");
-include("Widgets/CadToolBar/CadToolBar.js");
+include("scripts/EAction.js");
+include("scripts/Select/Select.js");
+include("scripts/Widgets/CadToolBar/CadToolBar.js");
 
 /**
  * \class DefaultAction
