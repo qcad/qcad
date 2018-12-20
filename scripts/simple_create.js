@@ -3,6 +3,35 @@
  */
 
 /**
+ * Sets the current color for newly added entities
+ * \ingroup ecma_simple
+ *
+ * \code
+ * setCurrentColor(new RColor(255, 255, 255))
+ * setCurrentColor(new RColor("white"))
+ * setCurrentColor(255, 255, 255)
+ * \endcode
+ */
+function setCurrentColor(color) {
+    var di = getTransactionDocumentInterface();
+    if (isNull(di)) {
+        di = getTransactionDocument();
+    }
+    if (isNull(di)) {
+        qWarning("no document interface or document");
+        return;
+    }
+
+    // r, g, b:
+    if (arguments.length===3) {
+        setCurrentColor(new RColor(arguments[0], arguments[1], arguments[2]));
+        return;
+    }
+
+    di.setCurrentColor(color);
+}
+
+/**
  * Adds a layer to the drawing.
  * \ingroup ecma_simple
  *
@@ -324,14 +353,32 @@ function addShapes(shapes) {
  *
  * \return The added entity. The entity does not yet have a valid ID if it was added within a
  * transaction.
+ *
+ * \code
+ * addShape(shape)
+ * addShape(shape, new RColor(255,0,0), "CONTINUOUS", 0.05)
+ * \endcode
  */
-function addShape(shape) {
+function addShape(shape, color, linetype, lineweight) {
     var doc = getTransactionDocument();
     if (isNull(doc)) {
         return undefined;
     }
 
     var entity = shapeToEntity(doc, shape);
+    if (!isNull(color)) {
+        entity.setColor(color);
+    }
+    if (isNumber(linetype)) {
+        entity.setLinetypeId(linetype);
+    }
+    if (isString(linetype)) {
+        entity.setLinetypeId(doc.getLinetypeId(linetype));
+    }
+    if (isNumber(lineweight)) {
+        entity.setLineweight(lineweight);
+    }
+
     return addEntity(entity);
 }
 
