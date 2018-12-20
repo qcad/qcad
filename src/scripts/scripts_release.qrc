@@ -5213,6 +5213,7 @@
     <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_tr.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_tr.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_zh_CN.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_zh_CN.qm</file>
     <file alias="scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_zh_TW.qm">../../scripts/Misc/Examples/ListenerExamples/ts/ListenerExamples_zh_TW.qm</file>
+    <file alias="scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js">../../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_cs.qm">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_cs.qm</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_de.qm">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ts/ExMathSpiral_de.qm</file>
