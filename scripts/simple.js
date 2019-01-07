@@ -26,6 +26,7 @@ __simpleDi = undefined;
 
 include("simple_create.js");
 include("simple_info.js");
+include("simple_input.js");
 include("simple_modify.js");
 include("simple_transaction.js");
 include("simple_view.js");
