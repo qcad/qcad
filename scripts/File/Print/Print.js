@@ -46,7 +46,14 @@ function Print(guiAction, document, view) {
 
 Print.prototype = new File();
 
-Print.defaultPrinter = new QPrinter();
+Print.defaultPrinter = undefined;
+
+Print.getDefaultPrinter = function() {
+    if (isNull(Print.defaultPrinter)) {
+        Print.defaultPrinter = new QPrinter();
+    }
+    return Print.defaultPrinter;
+};
 
 Print.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
@@ -852,7 +859,7 @@ Print.getColorModeString = function(colorModeEnum) {
  * \return Default page rect of default printer in paper units.
  */
 Print.getDefaultPageRect = function(document, paperUnit) {
-    var r = Print.defaultPrinter.pageRect(QPrinter.Millimeter);
+    var r = Print.getDefaultPrinter().pageRect(QPrinter.Millimeter);
     if (isNull(paperUnit)) {
         if (!isNull(document)) {
             paperUnit = Print.getPaperUnit(document);
@@ -874,7 +881,7 @@ Print.getDefaultPageRect = function(document, paperUnit) {
  * \return Default paper rect of default printer in paper units.
  */
 Print.getDefaultPaperRect = function(document, paperUnit) {
-    var r = Print.defaultPrinter.paperRect(QPrinter.Millimeter);
+    var r = Print.getDefaultPrinter().paperRect(QPrinter.Millimeter);
     if (isNull(paperUnit)) {
         if (!isNull(document)) {
             paperUnit = Print.getPaperUnit(document);
@@ -1025,7 +1032,7 @@ Print.setOffset = function(di, offset) {
  * \return Paper size in MM as QSizeF object.
  */
 Print.getPaperSizeMM = function(document) {
-    //var defaultPaperSizeMM = Print.defaultPrinter.paperSize(QPrinter.Millimeter);
+    //var defaultPaperSizeMM = Print.getDefaultPrinter().paperSize(QPrinter.Millimeter);
     var wMM = RUnit.convert(Print.getPaperWidth(document), Print.getPaperUnit(document), RS.Millimeter);
     var hMM = RUnit.convert(Print.getPaperHeight(document), Print.getPaperUnit(document), RS.Millimeter);
     return new QSizeF(wMM, hMM);
@@ -1036,7 +1043,7 @@ Print.getPaperSizeMM = function(document) {
  * or QPrinter.
  */
 Print.getDefaultPaperSizeMM = function() {
-    var defaultPaperSizeMM = Print.defaultPrinter.paperSize(QPrinter.Millimeter);
+    var defaultPaperSizeMM = Print.getDefaultPrinter().paperSize(QPrinter.Millimeter);
 
     var dwMM = defaultPaperSizeMM.width();
     var dhMM = defaultPaperSizeMM.height();
