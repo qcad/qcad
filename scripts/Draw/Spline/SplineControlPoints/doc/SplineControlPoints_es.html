@@ -1,37 +1,58 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Automatically generated file. Do not edit. -->
-<html xmlns='http://www.w3.org/1999/xhtml'>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Spline (puntos de control)</title>
-<meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head>
-<body style='font-family:Arial, Helvetica, sans-serif'>
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="font-style: italic;">Esta es una traducción automática.</p>
+<div class="nobreak">
 <h2>Spline (puntos de control)</h2>
-<p style='background-color:#f0f0f0;padding:15px'>
+<p class="toolinfo">
 <b>Barra de herramienta / icono:</b>
-<br /><img src='../../doc/Spline.png' width='40' height='40' />
+<br /><img src="../../doc/Spline.png" width="40" height="40" />
 &#160;&#160;&#160;
-<img src='../doc/SplineControlPoints.png' width='40' height='40' />
+<img src="../doc/SplineControlPoints.png" width="40" height="40" />
 &#160;&#160;&#160;
 <br/>
-<b>Menú:</b> <font face='courier new'>Dibujar &gt; Spline &gt; Spline (puntos de control)</font>
-<br /><b>Acceso directo:</b> <font face='courier new'>S, P</font>
-<br /><b>Comandos:</b> <font face='courier new'>spline | sp</font>
+<b>Menú:</b> <font face="courier new">Dibujar &gt; Spline &gt; Spline (puntos de control)</font>
+<br /><b>Acceso directo:</b> <font face="courier new">S, P</font>
+<br /><b>Comandos:</b> <font face="courier new">spline | sp</font>
 </p>
+</div>
 <p><strong>Descripción:</strong></p>
-<p></p>
+<p>Dibuja curvas de estrías desde los puntos de control. Los únicos splines
+soportados son los B-Splines racionales no uniformes (NURBS) con factores de
+ponderación homogéneos.</p>
 <p><strong>Procedimiento:</strong></p>
-<ol>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-</ol>
-
-<p>
-</p>
+<div>
+  <ol>
+    <li>Seleccione el grado de la lengüeta en la barra de herramientas de
+    opciones. Los grados soportados son 2 (b-spline cuadrático) y 3 (b-spline
+    cúbico). Cuanto mayor sea el grado, más suave será la curva. 
+    <br />Tenga en cuenta que una b-spline cuadrática requiere por definición
+    al menos 3 puntos de control, mientras que una b-spline cúbica tiene al
+    menos 4 puntos de control.</li>
+    <li>Marque la casilla de verificación'Cerrado' en la barra de herramientas
+    de opciones si desea crear una spline cerrada. Las ranuras cerradas son
+    bucles cerrados continuos.</li>
+    <li>Especifique los puntos de control. Después de definir el tercer punto
+    de control (para acanaladuras cuadráticas) o cuarto (para acanaladuras
+    cúbicas), se mostrará una vista previa. Puede eliminar el último punto de
+    control de nuevo haciendo clic en el botón"Deshacer" en la barra de
+    herramientas de opciones.</li>
+    <li>Presione escape o haga clic con el botón derecho del ratón después de
+    fijar el último punto para confirmar la forma de la lengüeta.</li>
+    <li>Puede crear otra spline o hacer clic con el botón derecho del ratón
+    para terminar la herramienta.</li>
+  </ol>
+  <p>Ejemplo para dos estrías abiertas (cuadrática y cúbica): 
+  <br />
+  <img src="SplineControlPoints01.png" class="figure" />
+  <br />Ejemplo para dos splines periódicos cerrados (cuadráticos y cúbicos) 
+  <br />
+  <img src="SplineControlPoints02.png" class="figure" /></p>
+</div>
 </body>
 </html>

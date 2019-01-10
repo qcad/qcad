@@ -1,21 +1,113 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Automatically generated file. Do not edit. -->
-<html xmlns='http://www.w3.org/1999/xhtml'>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Pole powierzchni łuku/koła/elipsy</title>
-<meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head>
-<body style='font-family:Arial, Helvetica, sans-serif'>
+<link rel="stylesheet" type="text/css" href="../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="font-style: italic;">Jest to tłumaczenie automatyczne.</p>
+<div class="nobreak">
 <h2>Pole powierzchni łuku/koła/elipsy</h2>
-<p style='background-color:#f0f0f0;padding:15px'>
+<p class="toolinfo">
 <b>Pasek narzędziowy / ikona:</b>
-<br /><img src='../../doc/Information.png' width='40' height='40' />
+<br /><img src="../../doc/Information.png" width="40" height="40" />
 &#160;&#160;&#160;
-<img src='../doc/InfoArcCircleArea.png' width='40' height='40' />
+<img src="../doc/InfoArcCircleArea.png" width="40" height="40" />
 &#160;&#160;&#160;
 <br/>
-<b>Menu:</b> <font face='courier new'>Informacja &gt; Pole powierzchni łuku/koła/elipsy</font>
-<br /><b>Skrót:</b> <font face='courier new'>I, C</font>
-<br /><b>Polecenia:</b> <font face='courier new'>acearea | ic</font>
+<b>Menu:</b> <font face="courier new">Informacja &gt; Pole powierzchni łuku/koła/elipsy</font>
+<br /><b>Skrót:</b> <font face="courier new">I, C</font>
+<br /><b>Polecenia:</b> <font face="courier new">acearea | ic</font>
 </p>
+</div>
+<p><strong>Opis:</strong></p>
+<div xml:space="preserve">
+ 
+<p>Autor: Robert S.</p> 
+<p>Polecenie to oblicza obszar łuków, okręgów, elips i łuków eliptycznych i
+opcjonalnie dodaje informacje do bieżącej warstwy rysunku. Jeśli wybierzesz
+inny typ jednostki, w wierszu poleceń pojawi się ostrzeżenie.</p> 
+<p>W przypadku łuków istnieją dwie opcje obliczania powierzchni, a mianowicie
+Segment lub Sektor. Powierzchnia odcinka (lub plastra) to obszar ograniczony
+łukiem oraz dwie linie wyznaczone od punktu początkowego i końcowego łuku do
+jego środka. Obszar sektora jest to obszar ograniczony łukiem i pasem
+narysowanym od punktu początkowego łuku do punktu końcowego.</p> 
+<p>
+<img alt="Segment or Sector" src="ArcCircle01.png" /> 
+<br /> Rysunek 1: segment (plaster) i sektor.</p> 
+<p>
+  <b>Opcje</b>
+</p> 
+<p>Polecenie to posiada standardowe opcje 
+<i>"Dodaj pomiar do rysunku</i>" i 
+<i>"Wysokość tekstu</i>".</p> 
+<p>
+<img alt="Standard options" src="ArcCircle02a.png" /> 
+<br /> Rysunek 2: Standardowe opcje informacji</p> 
+<p>Niezależnie od tego, czy jest to wyłączone czy nie, po kliknięciu na łuk,
+okrąg, elipsę lub eliptyczny łuk informacje są wyświetlane w widżecie wiersza
+poleceń.</p> 
+<p>
+<img alt="Info is displayed in command line widget" src="ArcCircle03.png"
+height="58" width="475" /> 
+<br /> Rysunek 3: Informacje wyświetlane w wierszu poleceń</p> 
+<p>(Uwaga: Przy każdym uruchomieniu polecenia informacyjnego pole wyboru 
+<i>"Dodaj pomiar do rysunku</i>" jest zawsze odznaczone. Musisz pamiętać, aby
+włączyć go, jeśli chcesz, aby informacje zostały dodane do rysunku).</p> 
+<p>Dodano również następujące opcje.</p> 
+<p>
+<img alt="Options toolbar" src="ArcCircle02.png" /> 
+<br /> Rysunek 4: Opcje dodane</p> 
+<p>
+  <b>Tryb:</b>
+</p> 
+<p>Tryb ten dotyczy tylko łuków.</p> 
+<p>
+<img alt="Sector" src="InfoSector.png" height="24" width="24" /> 
+<br /> 
+<i>Sektor:</i> Tryb ten zwraca obszar sektora. Jest to przydatne w połączeniu z
+poleceniem 
+<i>"Obszar wielokątny</i>".</p> 
+<p>
+<img alt="Segment" src="InfoSlice.png" height="24" width="24" /> 
+<i>Segment:</i> Tryb ten zwraca obszar segmentu.</p> 
+<p>
+  <b>Dodać:</b>
+</p> 
+<p>
+<i>Jednostka:</i> Zaznacza to, czy chcesz dodać kopię mierzonego elementu do
+bieżącej warstwy rysunku.</p> 
+<p>
+<i>Akord:</i> Wybierz, czy chcesz dodać do rysunku cięciwę (sektor), czy też
+linie promienia (segment).</p> 
+<p>
+<i>W kierunku wzdłużnym:</i> Domyślnie obszar jest zawsze drukowany na rysunku.
+Opcja ta określa, czy do rysunku mają być dodane dodatkowe informacje.</p> 
+<p>Dla okręgów i pełnych elips dodatkową informacją jest obwód. Używa się w tym
+celu punktu środkowego jako lewego dolnego rogu dodanego tekstu.</p> 
+<p>
+  <img alt="Extra info for circles and ellipses" src="ArcCircle04.png" />
+</p> 
+<p>W przypadku łuków okrągłych dodatkową informacją jest długość łuku i długość
+pasa (w trybie sektorowym) lub promień (w trybie sektorowym).</p> 
+<p>W przypadku elipsy dodatkową informacją jest długość łuku i długość pasa (w
+trybie sektorowym) lub odległość od punktu centralnego do punktu początkowego
+łuku, a następnie odległość od punktu środkowego do punktu końcowego łuku (w
+trybie odcinkowym).</p> 
+<p>Dolny lewy róg dodanego tekstu jest punktem końcowym łuku.</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle06.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle05.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle08.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle07.png" />
+</p> 
+</div>
 </body>
 </html>

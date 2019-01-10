@@ -1,37 +1,58 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Automatically generated file. Do not edit. -->
-<html xmlns='http://www.w3.org/1999/xhtml'>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Spline (sommets de contrôle)</title>
-<meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head>
-<body style='font-family:Arial, Helvetica, sans-serif'>
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="font-style: italic;">Ceci est une traduction automatique.</p>
+<div class="nobreak">
 <h2>Spline (sommets de contrôle)</h2>
-<p style='background-color:#f0f0f0;padding:15px'>
+<p class="toolinfo">
 <b>Barre d'outil / icône :</b>
-<br /><img src='../../doc/Spline.png' width='40' height='40' />
+<br /><img src="../../doc/Spline.png" width="40" height="40" />
 &#160;&#160;&#160;
-<img src='../doc/SplineControlPoints.png' width='40' height='40' />
+<img src="../doc/SplineControlPoints.png" width="40" height="40" />
 &#160;&#160;&#160;
 <br/>
-<b>Menu :</b> <font face='courier new'>Dessin &gt; Spline &gt; Spline (sommets de contrôle)</font>
-<br /><b>Raccourci :</b> <font face='courier new'>S, P</font>
-<br /><b>Commandes :</b> <font face='courier new'>spline | sp</font>
+<b>Menu :</b> <font face="courier new">Dessin &gt; Spline &gt; Spline (sommets de contrôle)</font>
+<br /><b>Raccourci :</b> <font face="courier new">S, P</font>
+<br /><b>Commandes :</b> <font face="courier new">spline | sp</font>
 </p>
+</div>
 <p><strong>Description :</strong></p>
-<p></p>
+<p>Dessine les courbes splines à partir des points de contrôle. Les cannelures
+B rationnelles non uniformes (NURBS) avec des facteurs de pondération homogènes
+sont les seules cannelures qui sont supportées.</p>
 <p><strong>Procédure :</strong></p>
-<ol>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-</ol>
-
-<p>
-</p>
+<div>
+  <ol>
+    <li>Choisissez le degré de la spline dans la barre d'outils des options.
+    Les degrés supportés sont 2 (quadratique b-spline) et 3 (cubique b-spline).
+    Plus le degré est élevé, plus la courbe devient'lisse'. 
+    <br />Notez qu'un b-spline quadratique nécessite par définition au moins 3
+    points de contrôle alors qu'un b-spline cubique a au moins 4 points de
+    contrôle.</li>
+    <li>Cochez la case'Fermé' dans la barre d'outils des options si vous voulez
+    créer une spline fermée. Les cannelures fermées sont des boucles fermées
+    continues.</li>
+    <li>Spécifiez les points de contrôle. Après avoir défini le troisième (pour
+    les courbes quadratiques) ou le quatrième (pour les courbes cubiques) point
+    de contrôle, un aperçu sera affiché. Vous pouvez supprimer le dernier point
+    de contrôle en cliquant sur le bouton"Annuler" dans la barre d'outils des
+    options.</li>
+    <li>Appuyez sur escape ou cliquez sur le bouton droit de la souris après
+    avoir réglé le dernier point pour confirmer la forme de la spline.</li>
+    <li>Vous pouvez créer une autre spline ou cliquer à nouveau avec le
+    bouton droit de la souris pour terminer l'outil.</li>
+  </ol>
+  <p>Exemple pour deux splines ouvertes (quadratique et cubique) : 
+  <br />
+  <img src="SplineControlPoints01.png" class="figure" />
+  <br />Exemple pour deux splines périodiques fermées (quadratique et cubique) 
+  <br />
+  <img src="SplineControlPoints02.png" class="figure" /></p>
+</div>
 </body>
 </html>
