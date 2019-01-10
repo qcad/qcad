@@ -1,1 +1,58 @@
-<p></p>
+<div>
+  <p>La riga di comando di QCAD consente di avviare comandi, inserire
+  coordinate o valori come distanze o raggi.</p>
+  <h3>Inserimento delle coordinate</h3>
+  <p>Le coordinate assolute sono inserite nel formato "x,y"</p>
+  <p class="code">40,5</p>
+  <p>Le coordinate relative sono inserite nel formato "@x,y"</p>
+  <p class="code">@10,6</p>
+  <p>Le coordinate polari assolute sono inserite nel formato
+  "distanza&lt;angolo"</p>
+  <p class="code">10&lt;30</p>
+  <p>Le coordinate polari relative sono inserite nel formato
+  "@distanza&lt;angolo"</p>
+  <p class="code">@10&lt;45</p>
+  <p>Quando si inseriscono coordinate o valori, è possibile utilizzare 
+  <a href="#expr">espressioni matematiche</a>per calcolare una coordinata sulla
+  base di valori noti. Ad esempio, la coordinata 10,5 può anche essere inserita
+  come</p>
+  <p class="code">5+5,30/6</p>
+  <h3>Calcolatrice</h3>
+  <p>La riga di comando può essere utilizzata anche come calcolatrice. Per fare
+  questo, inserire un'
+  <a href="#expr">espressione matematica</a>seguita da un segno uguale</p>
+  <p class="code">=3+4
+  <br />7</p>
+  <p>Le variabili possono essere utilizzate per memorizzare i valori</p>
+  <p class="code">::=a=5+6
+  <br />11
+  <br />=a/2
+  <br />5.5.5
+  <br /></p>
+  <a name="expr" />
+  <h3>Espressioni matematiche</h3>
+  <p>Le costanti matematiche disponibili sono:</p>
+  <p class="code">PI, LN2, LN10, LOG2E, LOG10E, LOG10E, SQRT1_2, SQRT2,
+  SQRT2</p>
+  <p>Le funzioni matematiche disponibili sono:</p>
+  <p class="code">abs, soffitto, pavimento, pavimento, exp, log, log, max, min,
+  pow, pow, sqrt, random, random, round, rad2deg, deg2rad, sin, cos, tan, asin,
+  acos, atan, atan2, atan2, log10, log1p, log2, segno, cosh, sinh, tanh, acosh,
+  asinh, atanh, expm1, hypot, cbrt, trunc</p>
+  <p>La maggior parte di queste costanti e funzioni sono funzioni standard
+  ECMAScript (JavaScript) e documentate online. In ECMAScript standard, queste
+  funzioni fanno parte della classe Math e quindi la funzione 
+  <i>abs</i>dovrebbe essere scritta come 
+  <i>Math.abs</i>. Nella riga di comando di QCAD, è possibile abbandonare la
+  parte 
+  <i>matematica</i>per comodità. Le funzioni trigonometriche (peccato, cos,
+  tan, asin, acos, atan, atan, atan2) accettano o restituiscono gli angoli in
+  gradi. Se si preferiscono le versioni radianti di queste funzioni, utilizzare
+  invece le funzioni 
+  <i>matematiche</i>originali
+  <i>.</i></p>
+  <p>Le funzioni 
+  <i>rad2deg</i>e 
+  <i>deg2rad</i>possono essere utilizzate per convertire gli angoli tra
+  radiante e gradi.</p>
+</div>

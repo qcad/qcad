@@ -1,1 +1,55 @@
-<p></p>
+<div>
+  <p>La ligne de commande de QCAD vous permet de lancer des commandes, d'entrer
+  des coordonnées ou des valeurs telles que des distances ou des rayons.</p>
+  <h3>Saisie des coordonnées</h3>
+  <p>Les coordonnées absolues sont saisies au format "x,y"</p>
+  <p class="code">40,5</p>
+  <p>Les coordonnées relatives sont saisies au format "@x,y"</p>
+  <p class="code">@10,6</p>
+  <p>Les coordonnées polaires absolues sont saisies au format
+  "distance&lt;angle"</p>
+  <p class="code">10&lt;30</p>
+  <p>Les coordonnées polaires relatives sont saisies au format
+  "@distance&lt;angle"</p>
+  <p class="code">@10&lt;45</p>
+  <p>Lors de la saisie de coordonnées ou de valeurs, des 
+  <a href="#expr">expressions mathématiques</a>peuvent être utilisées pour
+  calculer une coordonnée à partir de valeurs connues. Par exemple, la
+  coordonnée 10,5 peut également être saisie sous la forme</p>
+  <p class="code">5+5,30/6</p>
+  <h3>Calculatrice</h3>
+  <p>La ligne de commande peut également être utilisée comme calculatrice. Pour
+  ce faire, saisissez une 
+  <a href="#expr">expression mathématique</a>précédée d'un signe égal</p>
+  <p class="code">=3+4
+  <br />7</p>
+  <p>Des variables peuvent être utilisées pour stocker les valeurs</p>
+  <p class="code">=a=5+6
+  <br />11
+  <br />=a/2
+  <br />5,5
+  <br /></p>
+  <a name="expr" />
+  <h3>Expressions mathématiques</h3>
+  <p>Les constantes mathématiques disponibles sont :</p>
+  <p class="code">PI, LN2, LN10, LOG2E, LOG10E, LOG10E, SQRT1_2, SQRT2</p>
+  <p>Les fonctions mathématiques disponibles sont :</p>
+  <p class="code">abs, ceil, plancher, plancher, exp, log, max, min, pow, sqrt,
+  random, random, round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan,
+  atan2, log10, log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh,
+  expm1, hypot, cbrt, trunc</p>
+  <p>La plupart de ces constantes et fonctions sont des fonctions ECMAScript
+  (JavaScript) standard et documentées en ligne. Dans ECMAScript standard, ces
+  fonctions font partie de la classe Math, donc la fonction 
+  <i>abs</i>devrait être écrite comme 
+  <i>Math.abs.</i>Dans la ligne de commande QCAD, vous pouvez laisser la partie
+  
+  <i>Math.</i>de côté pour plus de commodité. Fonctions trigonométriques (sin,
+  cos, tan, asin, acos, atan, atan, atan2) accepter ou retourner les angles en
+  degrés. Si vous préférez les versions radian de ces fonctions, utilisez
+  plutôt les fonctions 
+  <i>mathématiques</i>originales.</p>
+  <p>Les fonctions 
+  <i>rad2deg</i>et 
+  <i>deg2rad</i>permettent de convertir les angles entre radian et degrés.</p>
+</div>

@@ -1,0 +1,54 @@
+<div>
+  <p>Linia poleceń QCAD pozwala na uruchamianie poleceń, wprowadzanie
+  współrzędnych lub wartości takich jak odległości czy promienie.</p>
+  <h3>Współrzędne wejściowe</h3>
+  <p>Współrzędne bezwzględne wprowadzane są w formacie "x,y"</p>
+  <p class="code">40,5</p>
+  <p>Współrzędne względne wprowadzane są w formacie "@x,y"</p>
+  <p class="code">@10,6</p>
+  <p>Współrzędne bezwzględne biegunowe wprowadzane są w formacie
+  "odległość&lt;kąt"</p>
+  <p class="code">10&lt;30</p>
+  <p>Względne współrzędne biegunowe wprowadzane są w formacie
+  "@distance&lt;angle"</p>
+  <p class="code">@10&lt;45</p>
+  <p>Przy wprowadzaniu współrzędnych lub wartości można używać 
+  <a href="#expr">wyrażeń matematycznych</a>do obliczania współrzędnych w
+  oparciu o znane wartości. Na przykład współrzędna 10,5 może być również
+  wprowadzona jako współrzędna</p>
+  <p class="code">5+5,30/6</p>
+  <h3>Kalkulator</h3>
+  <p>Linia poleceń może być również używana jako kalkulator. Aby to zrobić,
+  wpisz 
+  <a href="#expr">wyrażenie matematyczne</a>poprzedzone znakiem równości</p>
+  <p class="code">=3+4
+  <br />7</p>
+  <p>Zmienne mogą być używane do przechowywania wartości</p>
+  <p class="code">=a=5+6
+  <br />11
+  <br />=a/2
+  <br />5,5
+  <br /></p>
+  <a name="expr" />
+  <h3>Wyrażenia matematyczne</h3>
+  <p>Dostępne są stałe matematyczne:</p>
+  <p class="code">PI, LN2, LN10, LOG2E, LOG10E, SQRT1_2, SQRT2</p>
+  <p>Dostępne są funkcje matematyczne:</p>
+  <p class="code">abs, ceil, floor, exp, log, max, min, pow, sqrt, random,
+  round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan2, atan2,
+  log10, log1p, log2, sign, cosh, sinh, tanh, acosh, acosh, asinh, atanh,
+  atanh, expm1, hypot, cbrt, trunc</p>
+  <p>Większość tych stałych i funkcji to standardowe funkcje ECMAScript
+  (JavaScript) i udokumentowane online. W standardowym ECMAScript, funkcje te
+  są częścią klasy matematyki, więc funkcja 
+  <i>abs</i>musiałaby być napisana jako 
+  <i>Math.abs</i>. W wierszu poleceń QCAD możesz dla wygody zostawić część 
+  <i>matematyczną.</i>Funkcje trygonometryczne (grzech, cos, opalenizna, asin,
+  acos, atan, atan2) przyjmują lub zwracają kąty w stopniach. Jeśli wolisz
+  radianową wersję tych funkcji, użyj zamiast tego oryginalnych funkcji 
+  <i>matematycznych.</i></p>
+  <p>Funkcje 
+  <i>rad2deg</i>i 
+  <i>deg2rad</i>mogą być używane do konwersji kątów pomiędzy radianem i
+  stopniami.</p>
+</div>

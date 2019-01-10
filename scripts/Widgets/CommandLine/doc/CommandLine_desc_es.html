@@ -1,1 +1,57 @@
-<p></p>
+<div>
+  <p>La línea de comandos de QCAD le permite iniciar comandos, introducir
+  coordenadas o valores como distancias o radios.</p>
+  <h3>Introducción de coordenadas</h3>
+  <p>Las coordenadas absolutas se introducirán en el formato "x,y"</p>
+  <p class="code">40,5</p>
+  <p>Las coordenadas relativas se introducen en el formato "@x,y"</p>
+  <p class="code">@10,6</p>
+  <p>Las coordenadas polares absolutas se introducen en el formato
+  "distance&lt;angle"</p>
+  <p class="code">10&lt;30</p>
+  <p>Las coordenadas polares relativas se introducen en el formato
+  "@distancia&lt;ángulo"</p>
+  <p class="code">@10&lt;45</p>
+  <p>Cuando se introducen coordenadas o valores, se pueden utilizar 
+  <a href="#expr">expresiones matemáticas</a>para calcular una coordenada
+  basada en valores conocidos. Por ejemplo, la coordenada 10,5 también se puede
+  introducir como</p>
+  <p class="code">5+5,30/6</p>
+  <h3>Calculadora</h3>
+  <p>La línea de comandos también se puede utilizar como calculadora. Para
+  ello, introduzca una 
+  <a href="#expr">expresión matemática</a>precedida por un signo igual</p>
+  <p class="code">=3+4
+  <br />7</p>
+  <p>Las variables pueden utilizarse para almacenar valores</p>
+  <p class="code">=a=5+6
+  <br />11
+  <br />=a/2
+  <br />5.5
+  <br /></p>
+  <a name="expr" />
+  <h3>Expresiones matemáticas</h3>
+  <p>Las constantes matemáticas disponibles son:</p>
+  <p class="code">PI, LN2, LN10, LOG2E, LOG10E, SQRT1_2, SQRT2</p>
+  <p>Las funciones matemáticas disponibles son:</p>
+  <p class="code">abs, ceil, floor, exp, log, max, min, pow, sqrt, random,
+  round, rad2deg, deg2rad, sin, cos, tan, asin, acos, atan, atan, atan2, log10,
+  log1p, log2, sign, cosh, sinh, tanh, acosh, asinh, atanh, expm1, hypot, cbrt,
+  trunc</p>
+  <p>La mayoría de estas constantes y funciones son funciones estándar de
+  ECMAScript (JavaScript) y están documentadas en línea. En el ECMAScript
+  estándar, estas funciones forman parte de la clase de matemáticas, por lo que
+  la función 
+  <i>abs</i>tendría que escribirse como 
+  <i>Math.abs.</i>En la línea de comandos de QCAD, puede dejar de lado la parte
+  de 
+  <i>Matemáticas.</i>Funciones trigonométricas (sin, cos, tan, asin, acos,
+  atan, atan2) aceptar o devolver ángulos en grados. Si prefiere las versiones
+  en radián de estas funciones, utilice en su lugar las funciones 
+  <i>matemáticas</i>originales
+  <i>.</i></p>
+  <p>Las funciones 
+  <i>rad2deg</i>y 
+  <i>deg2rad</i>pueden utilizarse para convertir ángulos entre radián y
+  grados.</p>
+</div>
