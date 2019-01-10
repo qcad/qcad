@@ -99,7 +99,7 @@ public:
 
     virtual int countSelectedEntities() const;
     virtual void clearEntitySelection(QSet<REntity::Id>* affectedEntities = NULL);
-    virtual void selectAllEntites(QSet<REntity::Id>* affectedEntities = NULL);
+    virtual void selectAllEntities(QSet<REntity::Id>* affectedEntities = NULL);
     virtual void selectEntity(REntity::Id entityId, bool add = false,
         QSet<REntity::Id>* affectedEntities = NULL);
     virtual void deselectEntity(REntity::Id entityId,

@@ -179,7 +179,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, clearSelection, "clearSelection");
             
-            REcmaHelper::registerFunction(&engine, proto, selectAllEntites, "selectAllEntites");
+            REcmaHelper::registerFunction(&engine, proto, selectAllEntities, "selectAllEntities");
             
             REcmaHelper::registerFunction(&engine, proto, selectEntity, "selectEntity");
             
@@ -5749,19 +5749,19 @@
             return result;
         }
          QScriptValue
-        REcmaDocument::selectAllEntites
+        REcmaDocument::selectAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDocument::selectAllEntites", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::selectAllEntites";
+            //REcmaHelper::functionStart("REcmaDocument::selectAllEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::selectAllEntities";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDocument* self = 
-                        getSelf("selectAllEntites", context);
+                        getSelf("selectAllEntities", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -5780,7 +5780,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->selectAllEntites();
+               self->selectAllEntities();
     } else
 
 
@@ -5812,16 +5812,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->selectAllEntites(a0);
+               self->selectAllEntities(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.selectAllEntites().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.selectAllEntities().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDocument::selectAllEntites", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocument::selectAllEntities", context, engine);
             return result;
         }
          QScriptValue

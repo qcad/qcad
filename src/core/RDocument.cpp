@@ -2236,8 +2236,8 @@ void RDocument::clearSelection(QSet<REntity::Id>* affectedEntities) {
 /**
  * Selects all not selected entities.
  */
-void RDocument::selectAllEntites(QSet<REntity::Id>* affectedEntities) {
-    storage.selectAllEntites(affectedEntities);
+void RDocument::selectAllEntities(QSet<REntity::Id>* affectedEntities) {
+    storage.selectAllEntities(affectedEntities);
 }
 
 /**

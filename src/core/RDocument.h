@@ -181,7 +181,7 @@ public:
         QSet<REntity::Id>* affectedEntities=NULL
     );
 
-    void selectAllEntites(QSet<REntity::Id>* affectedEntities = NULL);
+    void selectAllEntities(QSet<REntity::Id>* affectedEntities = NULL);
 
     void selectEntity(
         REntity::Id entityId,

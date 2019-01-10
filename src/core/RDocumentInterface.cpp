@@ -1632,7 +1632,7 @@ void RDocumentInterface::selectBoxXY(const RBox& box, bool add) {
  */
 void RDocumentInterface::selectAll() {
     QSet<REntity::Id> entityIds;
-    document.selectAllEntites(&entityIds);
+    document.selectAllEntities(&entityIds);
     updateSelectionStatus(entityIds, true);
 
     if (RMainWindow::hasMainWindow()) {

@@ -896,7 +896,7 @@ QSharedPointer<RLinetype> RMemoryStorage::queryLinetype(const QString& linetypeN
     return QSharedPointer<RLinetype>();
 }
 
-void RMemoryStorage::selectAllEntites(QSet<REntity::Id>* affectedEntities) {
+void RMemoryStorage::selectAllEntities(QSet<REntity::Id>* affectedEntities) {
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     RBlock::Id currentBlock = getCurrentBlockId();
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {

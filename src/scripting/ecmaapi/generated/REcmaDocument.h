@@ -210,7 +210,7 @@
         clearSelection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        selectAllEntites
+        selectAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         selectEntity

@@ -154,7 +154,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, clearEntitySelection, "clearEntitySelection");
             
-            REcmaHelper::registerFunction(&engine, proto, selectAllEntites, "selectAllEntites");
+            REcmaHelper::registerFunction(&engine, proto, selectAllEntities, "selectAllEntities");
             
             REcmaHelper::registerFunction(&engine, proto, selectEntity, "selectEntity");
             
@@ -3448,19 +3448,19 @@
             return result;
         }
          QScriptValue
-        REcmaMemoryStorage::selectAllEntites
+        REcmaMemoryStorage::selectAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMemoryStorage::selectAllEntites", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::selectAllEntites";
+            //REcmaHelper::functionStart("REcmaMemoryStorage::selectAllEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::selectAllEntities";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RMemoryStorage* self = 
-                        getSelf("selectAllEntites", context);
+                        getSelf("selectAllEntities", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -3479,7 +3479,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->selectAllEntites();
+               self->selectAllEntities();
     } else
 
 
@@ -3511,16 +3511,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->selectAllEntites(a0);
+               self->selectAllEntities(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.selectAllEntites().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.selectAllEntities().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMemoryStorage::selectAllEntites", context, engine);
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::selectAllEntities", context, engine);
             return result;
         }
          QScriptValue

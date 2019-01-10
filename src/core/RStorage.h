@@ -513,7 +513,7 @@ public:
     /**
      * Sets the selection status of all entities.
      */
-    virtual void selectAllEntites(QSet<REntity::Id>* affectedEntities = NULL) = 0;
+    virtual void selectAllEntities(QSet<REntity::Id>* affectedEntities = NULL) = 0;
 
     /**
      * Selects the entity with the given ID.
