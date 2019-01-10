@@ -61,14 +61,16 @@ QPlainTextEdit {
     color: #DEDEDE;
 }
 
+/*
 QLineEdit {
     background-color: #67686A;
     color: #DEDEDE;
 
-    /*background-origin: border;
+    / *background-origin: border;
     border: 1px solid #646464;
-    selection-background-color: #4b6eaf;*/
+    selection-background-color: #4b6eaf;* /
 }
+*/
 
 QStackedWidget {
     background-color: #222222;
@@ -99,6 +101,11 @@ QDockWidget::title {
     background: #535353;
     text-align: center;
     padding-left: 5px;
+}
+
+QDockWidget > QWidget {
+    background: transparent;
+    background: #535353;
 }
 
 QTreeView {
