@@ -45,7 +45,7 @@
         <location filename="../CadToolBarPanel.js" line="+39"/>
         <location line="+70"/>
         <source>Back</source>
-        <translation>Achterkant</translation>
+        <translation>Terug</translation>
     </message>
 </context>
 </TS>

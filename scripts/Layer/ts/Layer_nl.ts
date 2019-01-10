@@ -58,7 +58,7 @@
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation>Naam van de laag is leeg.</translation>
+        <translation>Laagnaam is leeg.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -73,7 +73,7 @@
     <message>
         <location line="+8"/>
         <source>Layer name:</source>
-        <translation>Naam van de laag:</translation>
+        <translation>Laagnaam:</translation>
     </message>
     <message>
         <location line="+28"/>
