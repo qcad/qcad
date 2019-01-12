@@ -6,7 +6,7 @@
     <message>
         <location filename="../RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation>Beperk &amp;horizontaal</translation>
+        <translation>&amp;Horizontaal beperken</translation>
     </message>
 </context>
 </TS>
