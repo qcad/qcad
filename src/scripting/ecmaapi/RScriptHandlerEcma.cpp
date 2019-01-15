@@ -562,8 +562,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 #endif
 
     QScriptValue classQt = globalObject.property("Qt");
-    classQt.setProperty("escape",
-            engine->newFunction(ecmaQtEscape));
+    classQt.setProperty("escape", engine->newFunction(ecmaQtEscape));
 
     QScriptValue classQCoreApplication = globalObject.property(
             "QCoreApplication");
