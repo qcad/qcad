@@ -138,6 +138,8 @@ function PrintPreviewImpl(guiAction) {
     this.saveView = false;
     this.savedScale = undefined;
     this.savedOffset = undefined;
+
+    this.optOutRelativeZeroResume = true;
 }
 
 PrintPreviewImpl.prototype = NewFile.getDefaultAction(false);

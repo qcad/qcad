@@ -57,6 +57,8 @@ function EAction(guiAction) {
     this.dialogUiFile = undefined;
 
     this.waitingForContextMenu = false;
+
+    this.optOutRelativeZeroResume = false;
 }
 
 EAction.prototype = new RActionAdapter();
@@ -264,17 +266,19 @@ EAction.prototype.resumeEvent = function() {
         this.setState(this.state);
     }
 
-    // restore relative zero position when returning from another command:
-    var di = this.getDocumentInterface();
-    if (!isNull(di) && isValidVector(this.relativeZeroPos)) {
-        if (EAction.noRelativeZeroResume===true) {
-            EAction.noRelativeZeroResume = false;
+    if (!this.optOutRelativeZeroResume) {
+        // restore relative zero position when returning from another command:
+        var di = this.getDocumentInterface();
+        if (!isNull(di) && isValidVector(this.relativeZeroPos)) {
+            if (EAction.noRelativeZeroResume===true) {
+                EAction.noRelativeZeroResume = false;
+            }
+            else {
+                di.setRelativeZero(this.relativeZeroPos);
+            }
         }
-        else {
-            di.setRelativeZero(this.relativeZeroPos);
-        }
+        this.relativeZeroPos = undefined;
     }
-    this.relativeZeroPos = undefined;
 };
 
 /**
