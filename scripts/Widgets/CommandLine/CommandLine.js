@@ -374,6 +374,8 @@ CommandLine.init = function(basePath) {
 
         if (escape) {
             message = Qt.escape(message);
+            // workaround for Qt showing &quot; in label:
+            message = message.replace(/&quot;/g, "\"");
         }
 
         appendAndScroll("<span style='color:#cc0000;'>" + message + "</span>");
