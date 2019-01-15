@@ -4,7 +4,7 @@
 <context>
     <name>ExMandelbrot</name>
     <message>
-        <location filename="../ExMandelbrot.js" line="51"/>
+        <location filename="../ExMandelbrot.js" line="+51"/>
         <source>&amp;Mandelbrot</source>
         <translation type="unfinished"></translation>
     </message>
