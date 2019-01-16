@@ -113,7 +113,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         view.zoomTo(properties["window"], properties["margin"]);
     }
     else if (properties["zoomall"]) {
-        var bbz = doc.getBoundingBox(false);
+        var bbz = doc.getBoundingBox(false, true);
         view.zoomTo(bbz, properties["margin"]);
     }
     else if (typeof(properties["entityids"])!=="undefined") {
