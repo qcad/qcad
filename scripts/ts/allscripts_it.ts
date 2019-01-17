@@ -319,7 +319,7 @@ applicare le modifiche.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation>Predefiniti per</translation>
+        <translation>Predefiniti per </translation>
     </message>
     <message>
         <location line="+2"/>
