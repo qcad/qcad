@@ -1,6 +1,4 @@
 NAME = $${TARGET}
-TSDIR = ts
-include(../../translations.pri)
 FORMS = $${TARGET}.ui \
     PreferencesPage.ui
 SOURCES = $${TARGET}.js $${TARGET}Init.js $${TARGET}PostInit.js \

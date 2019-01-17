@@ -57,7 +57,7 @@ Screencast.getCadToolBarPanel = function() {
 };
 
 Screencast.getTitle = function() {
-    return qsTr("&Screencast");
+    return "&Screencast";
 };
 
 Screencast.prototype.getTitle = function() {

@@ -321,14 +321,15 @@ function loadTranslations(addOns, splash) {
         RSettings.loadTranslations(module);
     }
 
+    RSettings.loadTranslations("allscripts_" + locale, [autoPath("scripts/ts")]);
 
-    // install one QTranslator for each script add-on:
+    // install one QTranslator for each script add-on if available:
     if (!isNull(splash)) {
         splash.showMessage(qsTr("Loading add-on translations...") + "\n", Qt.AlignBottom);
         QCoreApplication.processEvents();
     }
 
-    RSettings.loadTranslations("Scripts_" + locale, [autoPath("scripts/ts")]);
+    //RSettings.loadTranslations("Scripts_" + locale, [autoPath("scripts/ts")]);
 
     for (var i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
