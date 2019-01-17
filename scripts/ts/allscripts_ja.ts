@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="ja">
 <context>
     <name>About</name>
     <message>
@@ -753,18 +753,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>ArcTPR</name>
     <message>
-        <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+100"/>
-        <source>Choose solution</source>
-        <translation type="unfinished">ソリューション</translation>
-    </message>
-    <message>
-        <location line="+123"/>
-        <location line="+65"/>
-        <source>No solution</source>
-        <translation type="unfinished">解決法がありません</translation>
-    </message>
-    <message>
-        <location line="-209"/>
+        <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>線分,弧,円または楕円を選択してください</translation>
     </message>
@@ -772,6 +761,17 @@ QCADを再起動してください。</translation>
         <location line="+11"/>
         <source>Point on arc</source>
         <translation>通過点</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Choose solution</source>
+        <translation>ソリューション</translation>
+    </message>
+    <message>
+        <location line="+123"/>
+        <location line="+65"/>
+        <source>No solution</source>
+        <translation>解決法がありません</translation>
     </message>
     <message>
         <source>Radius:</source>
@@ -855,8 +855,6 @@ QCADを再起動してください。</translation>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -1152,24 +1150,12 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">ファイル</translation>
+        <translation type="obsolete">ファイル</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">ビットマップとしてエクスポート</translation>
+        <translation type="obsolete">ビットマップとしてエクスポート</translation>
     </message>
 </context>
 <context>
@@ -1692,22 +1678,18 @@ Do you wish to recover it?</source>
         <translation type="vanished">&amp;g 1点と2接線</translation>
     </message>
     <message>
-        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
-        <source>2 Tan&amp;gents and Point</source>
-        <translation>&amp;g 1点と2接線</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>２つのエンティティに接し１点を通る円を描画</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>&amp;g 1点と2接線</translation>
     </message>
 </context>
 <context>
     <name>Circle2TR</name>
-    <message>
-        <source>Radius:</source>
-        <translation type="obsolete">半径:</translation>
-    </message>
     <message>
         <location filename="../Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
@@ -1731,6 +1713,10 @@ Do you wish to recover it?</source>
     <message>
         <source>Invalid radius</source>
         <translation type="vanished">無効な角度</translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="vanished">半径:</translation>
     </message>
     <message>
         <location filename="../Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -2543,6 +2529,10 @@ Do you wish to recover it?</source>
 <context>
     <name>Dialog</name>
     <message>
+        <source>Character Map</source>
+        <translation type="vanished">キャラクターマップ</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translation type="vanished">ダイアログ</translation>
     </message>
@@ -2597,10 +2587,6 @@ Do you wish to recover it?</source>
     <message>
         <source>into entities</source>
         <translation type="vanished">エンティティ情報</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translation type="vanished">キャラクターマップ</translation>
     </message>
     <message>
         <source>OK</source>
@@ -2760,8 +2746,6 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -3479,8 +3463,6 @@ is already in the list.</source>
         <location filename="../Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -4270,8 +4252,6 @@ is already in the list.</source>
         <location filename="../Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -6742,6 +6722,10 @@ shown in search results:</source>
         <translation>&amp;L 線分</translation>
     </message>
     <message>
+        <source>Same Entity Type as Original</source>
+        <translation type="vanished">オリジナルと同じエンティティタイプ</translation>
+    </message>
+    <message>
         <source>Line Segment</source>
         <translation type="vanished">行</translation>
     </message>
@@ -6752,10 +6736,6 @@ shown in search results:</source>
     <message>
         <source>Ray</source>
         <translation type="vanished">光線</translation>
-    </message>
-    <message>
-        <source>Same Entity Type as Original</source>
-        <translation type="vanished">オリジナルと同じエンティティタイプ</translation>
     </message>
 </context>
 <context>
@@ -7901,16 +7881,12 @@ shown in search results:</source>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -8080,6 +8056,42 @@ shown in search results:</source>
 <context>
     <name>Paste</name>
     <message>
+        <source>Rotation:</source>
+        <translation type="obsolete">回転:</translation>
+    </message>
+    <message>
+        <source>Rotate block&lt;br&gt;by this angle</source>
+        <translation type="obsolete">ブロック回転&lt;br&gt;この角度で</translation>
+    </message>
+    <message>
+        <source>Scale X:</source>
+        <translation type="obsolete">スケールX:</translation>
+    </message>
+    <message>
+        <source>Scale block in X&lt;br&gt;by this factor</source>
+        <translation type="obsolete">X軸ブロック拡縮&lt;br&gt;この係数で</translation>
+    </message>
+    <message>
+        <source>Keep Proportions</source>
+        <translation type="obsolete">比率保持</translation>
+    </message>
+    <message>
+        <source>Scale Y:</source>
+        <translation type="obsolete">スケールY:</translation>
+    </message>
+    <message>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Y軸ブロック拡縮&lt;br&gt;この係数で</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;horizontally</source>
+        <translation type="obsolete">ブロック反転&lt;br&gt;水平</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;vertically</source>
+        <translation type="obsolete">ブロック反転&lt;br&gt;垂直</translation>
+    </message>
+    <message>
         <location filename="../Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
         <translation>編集</translation>
@@ -8093,10 +8105,6 @@ shown in search results:</source>
         <location line="+40"/>
         <source>Position</source>
         <translation>位置</translation>
-    </message>
-    <message>
-        <source>Rotation:</source>
-        <translation type="vanished">回転:</translation>
     </message>
     <message>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
@@ -8150,38 +8158,6 @@ shown in search results:</source>
     <message>
         <source>Reset to defaults every time tool is used</source>
         <translation type="vanished">ツールを使用するたびにデフォルトにリセット</translation>
-    </message>
-    <message>
-        <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation type="obsolete">ブロック回転&lt;br&gt;この角度で</translation>
-    </message>
-    <message>
-        <source>Scale X:</source>
-        <translation type="obsolete">スケールX:</translation>
-    </message>
-    <message>
-        <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="obsolete">X軸ブロック拡縮&lt;br&gt;この係数で</translation>
-    </message>
-    <message>
-        <source>Keep Proportions</source>
-        <translation type="obsolete">比率保持</translation>
-    </message>
-    <message>
-        <source>Scale Y:</source>
-        <translation type="obsolete">スケールY:</translation>
-    </message>
-    <message>
-        <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Y軸ブロック拡縮&lt;br&gt;この係数で</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="obsolete">ブロック反転&lt;br&gt;水平</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="obsolete">ブロック反転&lt;br&gt;垂直</translation>
     </message>
 </context>
 <context>
@@ -9235,22 +9211,6 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -9320,14 +9280,6 @@ shown in search results:</source>
     <message>
         <source>Use current layer and &amp;attributes</source>
         <translation type="vanished">&amp;a 現在の画層と属性を使用</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9703,16 +9655,12 @@ shown in search results:</source>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -9725,8 +9673,6 @@ shown in search results:</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -10708,12 +10654,31 @@ shown in search results:</source>
 <context>
     <name>Text</name>
     <message>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>位置</translation>
+    </message>
+    <message>
         <source>Contents:</source>
-        <translation type="obsolete">内容:</translation>
+        <translation type="vanished">内容:</translation>
     </message>
     <message>
         <source>Height:</source>
-        <translation type="obsolete">高さ:</translation>
+        <translation type="vanished">高さ:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">角度:</translation>
+    </message>
+    <message>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation>&amp;T テキスト</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation>テキストを描画</translation>
     </message>
     <message>
         <source>Show font preview in font controls</source>
@@ -10730,25 +10695,6 @@ shown in search results:</source>
     <message>
         <source>Check all</source>
         <translation type="vanished">全てチェック</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>位置</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation>&amp;T テキスト</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation>テキストを描画</translation>
     </message>
 </context>
 <context>
@@ -11341,15 +11287,6 @@ shown in search results:</source>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
-    </message>
-    <message>
-        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
-        <source>M&amp;ove and Rotate</source>
-        <translation>&amp;o 移動と回転</translation>
-    </message>
-    <message>
         <source>Primary Angle:</source>
         <translation type="vanished">主要な角度:</translation>
     </message>
@@ -11360,6 +11297,15 @@ shown in search results:</source>
     <message>
         <source>Copies:</source>
         <translation type="vanished">コピー:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">角度:</translation>
+    </message>
+    <message>
+        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
+        <source>M&amp;ove and Rotate</source>
+        <translation>&amp;o 移動と回転</translation>
     </message>
 </context>
 <context>
@@ -12060,12 +12006,11 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>アドオンの翻訳をロード中...</translation>
+        <translation type="vanished">アドオンの翻訳をロード中...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>アドオンをロード中...</translation>
     </message>

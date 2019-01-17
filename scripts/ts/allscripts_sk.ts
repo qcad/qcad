@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="sk">
 <context>
     <name>About</name>
     <message>
@@ -1165,24 +1165,16 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished">Obrázkový súbor bol exportovaný do &quot;%1&quot;</translation>
+        <translation type="obsolete">Obrázkový súbor bol exportovaný do &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Súbory</translation>
+        <translation type="obsolete">Súbory</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Exportovať ako obrázok (BMP, JPG,...)</translation>
+        <translation type="obsolete">Exportovať ako obrázok (BMP, JPG,...)</translation>
     </message>
 </context>
 <context>
@@ -2591,6 +2583,10 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>Dialog</name>
     <message>
+        <source>Character Map</source>
+        <translation type="vanished">Mapa znakov</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translation type="vanished">Dialóg</translation>
     </message>
@@ -2645,10 +2641,6 @@ Prajete si ho obnoviť?</translation>
     <message>
         <source>into entities</source>
         <translation type="vanished">do prvkov</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translation type="vanished">Mapa znakov</translation>
     </message>
     <message>
         <source>OK</source>
@@ -6957,12 +6949,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>LineDove</name>
     <message>
-        <location filename="../Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
-        <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>&amp;Rybínový spoj z 2 bodov</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location filename="../Misc/MiscDraw/LineDove/LineDoveInit.js" line="+6"/>
         <source>Draw a dovetail joint</source>
         <translation>Nakreslite rybinový spoj</translation>
     </message>
@@ -6981,6 +6968,11 @@ vo výsledku vyhľadania:</translation>
     <message>
         <source>Second corner</source>
         <translation type="vanished">Druhý roh</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>&amp;Dovetail Joint from 2 Points</source>
+        <translation>&amp;Rybínový spoj z 2 bodov</translation>
     </message>
     <message>
         <location filename="../Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
@@ -9156,22 +9148,6 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -9249,14 +9225,6 @@ vo výsledku vyhľadania:</translation>
     <message>
         <source>Use current layer and &amp;attributes</source>
         <translation type="vanished">Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10529,16 +10497,51 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>Text</name>
     <message>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>Poloha</translation>
+    </message>
+    <message>
         <source>Contents:</source>
         <translation type="vanished">Obsah:</translation>
     </message>
     <message>
-        <source>Text</source>
-        <translation type="vanished">Text</translation>
-    </message>
-    <message>
         <source>Height:</source>
         <translation type="vanished">Výška:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Uhol:</translation>
+    </message>
+    <message>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation>&amp;Text</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation>Vložiť text</translation>
+    </message>
+    <message>
+        <source>Show font preview in font controls</source>
+        <translation type="vanished">Zobraziť náhľad písmo vo výbere písma</translation>
+    </message>
+    <message>
+        <source>Use reduced selection of fonts:</source>
+        <translation type="vanished">Redukovať výber písma:</translation>
+    </message>
+    <message>
+        <source>Uncheck all</source>
+        <translation type="vanished">Odznačiť všetko</translation>
+    </message>
+    <message>
+        <source>Check all</source>
+        <translation type="vanished">Označiť všetko</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="vanished">Text</translation>
     </message>
     <message>
         <source>Text height</source>
@@ -10575,41 +10578,6 @@ vo výsledku vyhľadania:</translation>
     <message>
         <source>Fit</source>
         <translation type="vanished">Prispôsobiť</translation>
-    </message>
-    <message>
-        <source>Show font preview in font controls</source>
-        <translation type="vanished">Zobraziť náhľad písmo vo výbere písma</translation>
-    </message>
-    <message>
-        <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">Redukovať výber písma:</translation>
-    </message>
-    <message>
-        <source>Uncheck all</source>
-        <translation type="vanished">Odznačiť všetko</translation>
-    </message>
-    <message>
-        <source>Check all</source>
-        <translation type="vanished">Označiť všetko</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>Poloha</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Uhol:</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation>&amp;Text</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation>Vložiť text</translation>
     </message>
 </context>
 <context>
@@ -11917,12 +11885,11 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Nahrávanie prekladového doplnku...</translation>
+        <translation type="vanished">Nahrávanie prekladového doplnku...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Nahrávanie doplnkov...</translation>
     </message>

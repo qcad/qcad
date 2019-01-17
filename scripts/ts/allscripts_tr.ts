@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="tr">
 <context>
     <name>About</name>
     <message>
@@ -812,8 +812,6 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -827,8 +825,6 @@ Do you wish to recover it?</source>
 Do you wish to recover it/them?</source>
         <translation type="vanished">
             <numerusform>İsimsiz çizim için %n &apos;otomatik kaydetme&apos; yedekleme dosyası bulundu.\ nOnları kurtarmak ister misiniz?</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1089,24 +1085,12 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Dosyalar</translation>
+        <translation type="obsolete">Dosyalar</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Bitmap olarak dışa aktar</translation>
+        <translation type="obsolete">Bitmap olarak dışa aktar</translation>
     </message>
 </context>
 <context>
@@ -2562,8 +2546,6 @@ Onu kurtarmak ister misiniz?</translation>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
             <numerusform>%n boyutunun etiket konumu sıfırlandı.</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3136,8 +3118,6 @@ is already in the list.</source>
         <source>%n entity/ies duplicated</source>
         <translation>
             <numerusform>%n girişi yinelenmiş</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -3896,8 +3876,6 @@ is already in the list.</source>
         <location filename="../Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -6734,16 +6712,12 @@ Library browser will not be available.</source>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -7784,22 +7758,6 @@ Library browser will not be available.</source>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -7830,14 +7788,6 @@ Library browser will not be available.</source>
         <location filename="../Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
         <translation>&amp;Ölçek</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8062,16 +8012,12 @@ Library browser will not be available.</source>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -8084,8 +8030,6 @@ Library browser will not be available.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -8847,8 +8791,23 @@ Library browser will not be available.</source>
 <context>
     <name>Text</name>
     <message>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>Konum</translation>
+    </message>
+    <message>
         <source>Contents:</source>
-        <translation type="obsolete">İçindekiler:</translation>
+        <translation type="vanished">İçindekiler:</translation>
+    </message>
+    <message>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Show font preview in font controls</source>
@@ -8865,21 +8824,6 @@ Library browser will not be available.</source>
     <message>
         <source>Check all</source>
         <translation type="vanished">Tümü işaretli</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>Konum</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9938,12 +9882,11 @@ Library browser will not be available.</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Eklenti çevirileri yükleniyor...</translation>
+        <translation type="vanished">Eklenti çevirileri yükleniyor...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Eklentiler yükleniyor ...</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="hr">
 <context>
     <name>About</name>
     <message>
@@ -872,24 +872,8 @@ Do you wish to recover it/them?</source>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Datoteke</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Export as Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Datoteke</translation>
     </message>
 </context>
 <context>
@@ -6677,22 +6661,6 @@ Library browser will not be available.</source>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -6722,14 +6690,6 @@ Library browser will not be available.</source>
     <message>
         <location filename="../Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8533,12 +8493,7 @@ Library browser will not be available.</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
-        <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation type="unfinished"></translation>
     </message>

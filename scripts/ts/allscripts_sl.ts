@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="sl">
 <context>
     <name>About</name>
     <message>
@@ -776,7 +776,7 @@ da bodo spremembe začele delovat.</translation>
     <message>
         <location filename="../Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangenta, Točka, Polmer</translation>
+        <translation>&amp;Tangenta, točka, polmer</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -852,6 +852,7 @@ da bodo spremembe začele delovat.</translation>
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
             <numerusform>Najdena je bila samodejno shanjena varnostna kopija neznanege risanja. Jo želite obnovit?</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -1145,24 +1146,12 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Datoteke</translation>
+        <translation type="obsolete">Datoteke</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Izvozi kot bitno sliko</translation>
+        <translation type="obsolete">Izvozi kot bitno sliko</translation>
     </message>
 </context>
 <context>
@@ -1689,14 +1678,14 @@ Do you wish to recover it?</source>
         <translation type="vanished">Točka, 2 Tan&amp;genti</translation>
     </message>
     <message>
-        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
-        <source>2 Tan&amp;gents and Point</source>
-        <translation>2 Ta&amp;genti ter točka</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Nariši krog tangencialno na dve entiteti, skozi točko</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>2 Ta&amp;genti ter točka</translation>
     </message>
 </context>
 <context>
@@ -2591,6 +2580,10 @@ Do you wish to recover it?</source>
 <context>
     <name>Dialog</name>
     <message>
+        <source>Character Map</source>
+        <translation type="vanished">Tabela znakov</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translation type="vanished">Dialog</translation>
     </message>
@@ -2645,10 +2638,6 @@ Do you wish to recover it?</source>
     <message>
         <source>into entities</source>
         <translation type="vanished">V črte</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translation type="vanished">Tabela znakov</translation>
     </message>
     <message>
         <source>OK</source>
@@ -2808,6 +2797,7 @@ Do you wish to recover it?</source>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -3524,6 +3514,7 @@ je že na seznamu.</translation>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
             <numerusform>1 entiteta podvojena</numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -4382,6 +4373,7 @@ je že na seznamu.</translation>
         <location filename="../Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -6826,6 +6818,10 @@ shown in search results:</source>
         <translation>&amp;Črta</translation>
     </message>
     <message>
+        <source>Same Entity Type as Original</source>
+        <translation type="vanished">Ista entiteta kot original</translation>
+    </message>
+    <message>
         <source>Line Segment</source>
         <translation type="vanished">Segment črte</translation>
     </message>
@@ -6836,10 +6832,6 @@ shown in search results:</source>
     <message>
         <source>Ray</source>
         <translation type="vanished">Poltrak</translation>
-    </message>
-    <message>
-        <source>Same Entity Type as Original</source>
-        <translation type="vanished">Ista entiteta kot original</translation>
     </message>
 </context>
 <context>
@@ -7040,6 +7032,27 @@ shown in search results:</source>
 <context>
     <name>LineDove</name>
     <message>
+        <source>First corner</source>
+        <translation type="vanished">Prvi kot</translation>
+    </message>
+    <message>
+        <source>Second corner</source>
+        <translation type="vanished">Drugi kot</translation>
+    </message>
+    <message>
+        <source>&amp;Dovetail joint</source>
+        <translation type="vanished">&amp;Rogljičast spoj</translation>
+    </message>
+    <message>
+        <source>&amp;Dovetail Joint</source>
+        <translation type="vanished">&amp;Rogljičast spoj</translation>
+    </message>
+    <message>
+        <location filename="../Misc/MiscDraw/LineDove/LineDoveInit.js" line="+6"/>
+        <source>Draw a dovetail joint</source>
+        <translation>Nariši rogljičast spoj</translation>
+    </message>
+    <message>
         <location filename="../Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
         <translation>Prva točka</translation>
@@ -7055,30 +7068,9 @@ shown in search results:</source>
         <translation>Končaj</translation>
     </message>
     <message>
-        <location filename="../Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
+        <location filename="../Misc/MiscDraw/LineDove/LineDoveInit.js" line="-4"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
         <translation>Spoj &amp;rogličenja iz 2 točk</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw a dovetail joint</source>
-        <translation>Nariši spoj za rogljičenje</translation>
-    </message>
-    <message>
-        <source>First corner</source>
-        <translation type="vanished">Prvi kot</translation>
-    </message>
-    <message>
-        <source>Second corner</source>
-        <translation type="vanished">Drugi kot</translation>
-    </message>
-    <message>
-        <source>&amp;Dovetail joint</source>
-        <translation type="vanished">&amp;Rogljičast spoj</translation>
-    </message>
-    <message>
-        <source>&amp;Dovetail Joint</source>
-        <translation type="vanished">&amp;Rogljičast spoj</translation>
     </message>
 </context>
 <context>
@@ -8090,6 +8082,7 @@ shown in search results:</source>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform>Polmer je padel pod 0,0 po %1 kocentričnimi krogi.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -8099,6 +8092,7 @@ shown in search results:</source>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform>Polmer je padel pod 0,0 po %1 kocentričnimi loki.</numerusform>
         </translation>
     </message>
     <message>
@@ -9438,22 +9432,6 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -9523,14 +9501,6 @@ shown in search results:</source>
     <message>
         <source>Use current layer and &amp;attributes</source>
         <translation type="vanished">Uporabi trenutno plast in &amp;atribute</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9891,6 +9861,7 @@ shown in search results:</source>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -9900,12 +9871,14 @@ shown in search results:</source>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -10893,16 +10866,51 @@ shown in search results:</source>
 <context>
     <name>Text</name>
     <message>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>Pozicija</translation>
+    </message>
+    <message>
         <source>Contents:</source>
         <translation type="vanished">Vsebina:</translation>
     </message>
     <message>
-        <source>Text</source>
-        <translation type="vanished">Besedilo</translation>
-    </message>
-    <message>
         <source>Height:</source>
         <translation type="vanished">Višina:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Kot:</translation>
+    </message>
+    <message>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation>&amp;Besedilo</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation>Vstavi besedilo</translation>
+    </message>
+    <message>
+        <source>Show font preview in font controls</source>
+        <translation type="vanished">Prikaži predogled pisave v nastavitvah pisave</translation>
+    </message>
+    <message>
+        <source>Use reduced selection of fonts:</source>
+        <translation type="vanished">Uporabi zmanjšan izbor pisav:</translation>
+    </message>
+    <message>
+        <source>Uncheck all</source>
+        <translation type="vanished">Odznači vse</translation>
+    </message>
+    <message>
+        <source>Check all</source>
+        <translation type="vanished">Izberi vse</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="vanished">Besedilo</translation>
     </message>
     <message>
         <source>Text height</source>
@@ -10939,41 +10947,6 @@ shown in search results:</source>
     <message>
         <source>Fit</source>
         <translation type="vanished">Prilagodi</translation>
-    </message>
-    <message>
-        <source>Show font preview in font controls</source>
-        <translation type="vanished">Prikaži predogled pisave v nastavitvah pisave</translation>
-    </message>
-    <message>
-        <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">Uporabi zmanjšan izbor pisav:</translation>
-    </message>
-    <message>
-        <source>Uncheck all</source>
-        <translation type="vanished">Odznači vse</translation>
-    </message>
-    <message>
-        <source>Check all</source>
-        <translation type="vanished">Izberi vse</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>Pozicija</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Kot:</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation>&amp;Besedilo</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation>Vstavi besedilo</translation>
     </message>
 </context>
 <context>
@@ -11563,15 +11536,6 @@ shown in search results:</source>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <source>Angle:</source>
-        <translation type="vanished">Kot:</translation>
-    </message>
-    <message>
-        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
-        <source>M&amp;ove and Rotate</source>
-        <translation>Premakni in r&amp;otiraj</translation>
-    </message>
-    <message>
         <source>Primary Angle:</source>
         <translation type="vanished">Primarni kot:</translation>
     </message>
@@ -11582,6 +11546,15 @@ shown in search results:</source>
     <message>
         <source>Copies:</source>
         <translation type="vanished">Kopij:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Kot:</translation>
+    </message>
+    <message>
+        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
+        <source>M&amp;ove and Rotate</source>
+        <translation>Premakni in r&amp;otiraj</translation>
     </message>
 </context>
 <context>
@@ -12286,12 +12259,11 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Nalagam prevode dodatkov...</translation>
+        <translation type="vanished">Nalagam prevode dodatkov...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Nalagam dodatke...</translation>
     </message>

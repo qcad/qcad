@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="pl">
 <context>
     <name>About</name>
     <message>
@@ -1417,24 +1417,12 @@ Bardzo gruby</translatorcomment>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Pliki</translation>
+        <translation type="obsolete">Pliki</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Eksportuj bitmapę</translation>
+        <translation type="obsolete">Eksportuj bitmapę</translation>
     </message>
 </context>
 <context>
@@ -3086,6 +3074,11 @@ Odznacz w&amp;szystko</translatorcomment>
 <context>
     <name>Dialog</name>
     <message>
+        <source>Character Map</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">Tablica znaków</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -3171,11 +3164,6 @@ Zablokuj wszystkie bloki</translatorcomment>
         <source>into entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="vanished">na obiekty</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Tablica znaków</translation>
     </message>
     <message>
         <source>OK</source>
@@ -4526,13 +4514,13 @@ Edytuj blok z &amp;insertu</translatorcomment>
         <location filename="../Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę wskazać tekst</translation>
+        <translation type="unfinished">Wybierz tekst</translation>
     </message>
     <message>
         <location filename="../Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Edytuj &amp;tekst</translation>
+        <translation type="unfinished">Edytuj tekst</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4540,7 +4528,7 @@ Edytuj blok z &amp;insertu</translatorcomment>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
 Modyfikuj tekst</translatorcomment>
-        <translation>Modyfikuje tekst</translation>
+        <translation type="unfinished">Modyfikuj tekst</translation>
     </message>
 </context>
 <context>
@@ -8328,14 +8316,14 @@ Pionowy</translatorcomment>
         <translatorcomment>--google--
 Pokaż menu &quot;Linie&quot;
 Pokaż menu &quot;Łamane&quot;</translatorcomment>
-        <translation type="unfinished">Narzędzia linii</translation>
+        <translation>Narzędzia linii</translation>
     </message>
     <message>
         <source>Show line tools</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Pokaż menu &quot;Linie&quot;</translatorcomment>
-        <translation type="obsolete">Pokaż menu &quot;Linie&quot;</translation>
+        <translation type="vanished">Wyświetla narzędzia linii</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8344,7 +8332,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
 --file: qcad_pl.ts--
 &amp;Linia
 &amp;Liniowy</translatorcomment>
-        <translation type="unfinished">&amp;Linia</translation>
+        <translation>&amp;Linia</translation>
     </message>
     <message>
         <source>Same Entity Type as Original</source>
@@ -8827,19 +8815,19 @@ Wskaż punkt</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Wprowadź liczbę:
 Liczba:</translatorcomment>
-        <translation type="obsolete">Liczba:</translation>
+        <translation type="vanished">Ilość:</translation>
     </message>
     <message>
         <location filename="../Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Równolegle (poprzez Point)</translation>
+        <translation>Rów&amp;noległa (przez punkt)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Rysowanie linii równoległej lub koncentryczne łuk lub okrąg przez dany punkt</translation>
+        <translation>Rysuje linię równoległą lub koncentryczny łuk, okrąg przez dany punkt</translation>
     </message>
 </context>
 <context>
@@ -10057,6 +10045,55 @@ Wysokość papieru:</translatorcomment>
 <context>
     <name>Paste</name>
     <message>
+        <source>Rotation:</source>
+        <translatorcomment>--exact match--
+--file: qcadguiqt_pl.ts--
+Obracanie:</translatorcomment>
+        <translation type="obsolete">Obracanie:</translation>
+    </message>
+    <message>
+        <source>Rotate block&lt;br&gt;by this angle</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Obróć blok &lt;br&gt; przez to kąt</translation>
+    </message>
+    <message>
+        <source>Scale X:</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Skala X:</translation>
+    </message>
+    <message>
+        <source>Scale block in X&lt;br&gt;by this factor</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Skala blok w X &lt;br&gt; tym czynnikiem</translation>
+    </message>
+    <message>
+        <source>Keep Proportions</source>
+        <translatorcomment>--ignored case--
+--file: qcadguiqt_pl.ts--
+Zachowaj proporcje</translatorcomment>
+        <translation type="obsolete">Zachowaj proporcje</translation>
+    </message>
+    <message>
+        <source>Scale Y:</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Skala Y:</translation>
+    </message>
+    <message>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Blok Skala w Y &lt;br&gt; tym czynnikiem</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;horizontally</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Odwróć blok &lt;br&gt; poziomo</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;vertically</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="obsolete">Odwróć blok &lt;br&gt; pionowo</translation>
+    </message>
+    <message>
         <location filename="../Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
         <translation>Edycja</translation>
@@ -10075,13 +10112,6 @@ Wskaż położenie linii wymiarowej lub wprowadź kąt:
 Wskaż położenie linii wymiarowej lub wprowadź kąt
 Wskaż pozycje</translatorcomment>
         <translation>Położenie</translation>
-    </message>
-    <message>
-        <source>Rotation:</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_pl.ts--
-Obracanie:</translatorcomment>
-        <translation type="vanished">Obrót:</translation>
     </message>
     <message>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
@@ -10154,48 +10184,6 @@ Użyj bieżącej warstwy</translatorcomment>
     <message>
         <source>Reset to defaults every time tool is used</source>
         <translation type="vanished">Przywrócenie ustawień domyślnych za każdym użyciem narzędzia</translation>
-    </message>
-    <message>
-        <source>Rotate block&lt;br&gt;by this angle</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Obróć blok &lt;br&gt; przez to kąt</translation>
-    </message>
-    <message>
-        <source>Scale X:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Skala X:</translation>
-    </message>
-    <message>
-        <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Skala blok w X &lt;br&gt; tym czynnikiem</translation>
-    </message>
-    <message>
-        <source>Keep Proportions</source>
-        <translatorcomment>--ignored case--
---file: qcadguiqt_pl.ts--
-Zachowaj proporcje</translatorcomment>
-        <translation type="obsolete">Zachowaj proporcje</translation>
-    </message>
-    <message>
-        <source>Scale Y:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Skala Y:</translation>
-    </message>
-    <message>
-        <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Blok Skala w Y &lt;br&gt; tym czynnikiem</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;horizontally</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Odwróć blok &lt;br&gt; poziomo</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;vertically</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Odwróć blok &lt;br&gt; pionowo</translation>
     </message>
 </context>
 <context>
@@ -11677,22 +11665,6 @@ Zachowaj j&amp;ako...</translatorcomment>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -11796,14 +11768,6 @@ Mnożnik &amp;Y:</translatorcomment>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="vanished">Użycie aktualnej warstwy i &amp;atrybutów</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13438,30 +13402,6 @@ Wszystkie pliki (*)</translatorcomment>
 <context>
     <name>Text</name>
     <message>
-        <source>Contents:</source>
-        <translation type="obsolete">Zawartość:</translation>
-    </message>
-    <message>
-        <source>Height:</source>
-        <translation type="obsolete">Wysokość:</translation>
-    </message>
-    <message>
-        <source>Show font preview in font controls</source>
-        <translation type="vanished">Wyświetlanie podglądu czcionki w elementach sterujących czcionek</translation>
-    </message>
-    <message>
-        <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">Używanie mniejszej ilości czcionek</translation>
-    </message>
-    <message>
-        <source>Uncheck all</source>
-        <translation type="vanished">Odznacz wszystkie</translation>
-    </message>
-    <message>
-        <source>Check all</source>
-        <translation type="vanished">Zaznacz wszystkie</translation>
-    </message>
-    <message>
         <location filename="../Draw/Text/Text.js" line="+88"/>
         <source>Position</source>
         <translatorcomment>--exact match--
@@ -13470,6 +13410,22 @@ Wskaż położenie linii wymiarowej lub wprowadź kąt:
 Wskaż położenie linii wymiarowej lub wprowadź kąt
 Wskaż pozycje</translatorcomment>
         <translation>Położenie</translation>
+    </message>
+    <message>
+        <source>Contents:</source>
+        <translatorcomment>--ignored colon--
+--file: assistant_pl.ts--
+Błąd podczas wklejania zawartości schowka: Brak głównego elementu &lt;ui&gt;.
+Błąd podczas wklejania zawartości schowka: Brak głównego elementu &lt;ui&gt;</translatorcomment>
+        <translation type="vanished">Zawartość:</translation>
+    </message>
+    <message>
+        <source>Height:</source>
+        <translatorcomment>--exact match--
+--file: qt_pl.ts--
+Wysokość:
+Wysokość tekstu:</translatorcomment>
+        <translation type="vanished">Wysokość:</translation>
     </message>
     <message>
         <source>Angle:</source>
@@ -13494,6 +13450,22 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translatorcomment>--google--
 Rysuj obiekty tekstowe</translatorcomment>
         <translation>Rysuje tekst</translation>
+    </message>
+    <message>
+        <source>Show font preview in font controls</source>
+        <translation type="vanished">Wyświetlanie podglądu czcionki w elementach sterujących czcionek</translation>
+    </message>
+    <message>
+        <source>Use reduced selection of fonts:</source>
+        <translation type="vanished">Używanie mniejszej ilości czcionek</translation>
+    </message>
+    <message>
+        <source>Uncheck all</source>
+        <translation type="vanished">Odznacz wszystkie</translation>
+    </message>
+    <message>
+        <source>Check all</source>
+        <translation type="vanished">Zaznacz wszystkie</translation>
     </message>
 </context>
 <context>
@@ -14109,7 +14081,7 @@ Ciągłe linie &amp;siatki</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Zmień widoczność</translatorcomment>
-        <translation>&amp;Przełącz widoczność</translation>
+        <translation type="unfinished">&amp;Zmień widoczność</translation>
     </message>
 </context>
 <context>
@@ -14292,22 +14264,6 @@ Kopie &amp;wielokrotne:</translatorcomment>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <source>Angle:</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_pl.ts--
-Wprowadź kąt:
-Wskaż położenie linii wymiarowej:</translatorcomment>
-        <translation type="vanished">Kąt:</translation>
-    </message>
-    <message>
-        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
-        <source>M&amp;ove and Rotate</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_pl.ts--
-Przesuń i &amp;obróć</translatorcomment>
-        <translation>P&amp;rzenieś i obróć</translation>
-    </message>
-    <message>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Główny Angle:</translation>
@@ -14325,6 +14281,22 @@ Kopie &amp;wielokrotne:
 Kopie wielokrotne:
 Kopie:</translatorcomment>
         <translation type="obsolete">Kopie:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translatorcomment>--exact match--
+--file: qcadguiqt_pl.ts--
+Wprowadź kąt:
+Wskaż położenie linii wymiarowej:</translatorcomment>
+        <translation type="vanished">Kąt:</translation>
+    </message>
+    <message>
+        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
+        <source>M&amp;ove and Rotate</source>
+        <translatorcomment>--exact match--
+--file: qcadguiqt_pl.ts--
+Przesuń i &amp;obróć</translatorcomment>
+        <translation>P&amp;rzenieś i obróć</translation>
     </message>
 </context>
 <context>
@@ -15281,12 +15253,11 @@ Zoom wg &amp;wyboru</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Wczytywanie tłumaczeń dodatków...</translation>
+        <translation type="vanished">Wczytywanie tłumaczeń dodatków...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Wczytywanie dodatków....</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="fr">
 <context>
     <name>About</name>
     <message>
@@ -948,7 +948,6 @@ Do you wish to recover it/them?</source>
 Voulez-vous le récupérer?</numerusform>
             <numerusform>%n fichiers de &apos;sauvegarde automatique&apos; pour dessins sans titre ont été trouvés.
 Voulez-vous les récupérer?</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -976,7 +975,6 @@ Do you wish to recover it/them?</source>
 Voulez-vous le récupérer?</numerusform>
             <numerusform>%n fichiers de sauvegarde automatique pour dessins sans titre ont été trouvés.
 Voulez-vous les récupérer?</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1270,24 +1268,20 @@ Voulez-vous le récupérer?</translation>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
         <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished">Erreur lors de la génération du fichier Bitmap &quot;%1&quot; : &quot;%2&quot;</translation>
+        <translation type="obsolete">Erreur lors de la génération du fichier Bitmap &quot;%1&quot; : &quot;%2&quot;</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished">Fichier Bitmap a été exportée vers &quot;%1&quot;</translation>
+        <translation type="obsolete">Fichier Bitmap a été exportée vers &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Fichiers</translation>
+        <translation type="obsolete">Fichiers</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Exporter en bitmap</translation>
+        <translation type="obsolete">Exporter en bitmap</translation>
     </message>
 </context>
 <context>
@@ -1856,22 +1850,18 @@ Espacement de grille minimal (px)</translatorcomment>
         <translation type="vanished">Point, 2 tan&amp;gentes</translation>
     </message>
     <message>
-        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
-        <source>2 Tan&amp;gents and Point</source>
-        <translation>2 tan&amp;gentes et point</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Tracez un cercle tangent à deux entités et par un point</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>2 tan&amp;gentes et point</translation>
     </message>
 </context>
 <context>
     <name>Circle2TR</name>
-    <message>
-        <source>Radius:</source>
-        <translation type="obsolete">Rayon :</translation>
-    </message>
     <message>
         <location filename="../Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
@@ -1895,6 +1885,10 @@ Espacement de grille minimal (px)</translatorcomment>
     <message>
         <source>Invalid radius</source>
         <translation type="vanished">Rayon invalide</translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="vanished">Rayon :</translation>
     </message>
     <message>
         <location filename="../Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -2861,6 +2855,10 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
 <context>
     <name>Dialog</name>
     <message>
+        <source>Character Map</source>
+        <translation type="vanished">Table des caractères</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translation type="vanished">Dialogue</translation>
     </message>
@@ -2928,10 +2926,6 @@ Combiner hachures</translatorcomment>
         <source>into entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="vanished">en entités</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translation type="vanished">Table des caractères</translation>
     </message>
     <message>
         <source>OK</source>
@@ -3097,7 +3091,6 @@ Combiner hachures</translatorcomment>
         <translation>
             <numerusform>Position de l&apos;étiquette d&apos;un dimension a été réinitialisé.</numerusform>
             <numerusform>Position de l&apos;étiquette de %n dimensions a été réinitialisé.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3856,7 +3849,6 @@ est déjà dans la liste.</translation>
         <translation>
             <numerusform>%n entité a été dupliqué</numerusform>
             <numerusform>%n entités ont été dupliqués</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -4578,7 +4570,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mandelbrot</translation>
     </message>
 </context>
 <context>
@@ -4602,7 +4594,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Exemple &amp;minimal 2</translation>
     </message>
 </context>
 <context>
@@ -4739,7 +4731,6 @@ est déjà dans la liste.</translation>
         <translation>
             <numerusform>La transaction a affecté un objet.</numerusform>
             <numerusform>La transaction a affecté %n objets.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -7833,6 +7824,10 @@ dans les résultats de recherche :</translation>
         <translation>Outils de ligne</translation>
     </message>
     <message>
+        <source>Same Entity Type as Original</source>
+        <translation type="vanished">Même type d&apos;entité que pour l&apos;origine</translation>
+    </message>
+    <message>
         <source>Line Segment</source>
         <translation type="vanished">Segment de ligne</translation>
     </message>
@@ -7843,10 +7838,6 @@ dans les résultats de recherche :</translation>
     <message>
         <source>Ray</source>
         <translation type="vanished">Rayon</translation>
-    </message>
-    <message>
-        <source>Same Entity Type as Original</source>
-        <translation type="vanished">Même type d&apos;entité que pour l&apos;origine</translation>
     </message>
 </context>
 <context>
@@ -8200,6 +8191,14 @@ dans les résultats de recherche :</translation>
 <context>
     <name>LineParallel</name>
     <message>
+        <source>Length:</source>
+        <translation type="obsolete">Longueur :</translation>
+    </message>
+    <message>
+        <source>1</source>
+        <translation type="obsolete">1</translation>
+    </message>
+    <message>
         <source>Distance:</source>
         <translation type="obsolete">Distance :</translation>
     </message>
@@ -8228,14 +8227,6 @@ dans les résultats de recherche :</translation>
     <message>
         <source>&amp;Number:</source>
         <translation type="vanished">&amp;Nombre :</translation>
-    </message>
-    <message>
-        <source>Length:</source>
-        <translation type="obsolete">Longueur :</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation type="obsolete">1</translation>
     </message>
 </context>
 <context>
@@ -9174,7 +9165,6 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>
             <numerusform>Rayon chuté en dessous de zéro après %n cercle concentrique.</numerusform>
             <numerusform>Rayon chuté en dessous de zéro après %n cercles concentriques.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -9183,7 +9173,6 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>
             <numerusform>Rayon chuté en dessous de zéro, après %n arc concentrique.</numerusform>
             <numerusform>Rayon chuté en dessous de zéro, après %n arcs concentriques.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9403,7 +9392,39 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <name>Paste</name>
     <message>
         <source>Rotation:</source>
-        <translation type="vanished">Rotation :</translation>
+        <translation type="obsolete">Rotation :</translation>
+    </message>
+    <message>
+        <source>Rotate block&lt;br&gt;by this angle</source>
+        <translation type="obsolete">Faire pivoter le&lt;br&gt;bloc par cet angle</translation>
+    </message>
+    <message>
+        <source>Scale X:</source>
+        <translation type="obsolete">Echelle X:</translation>
+    </message>
+    <message>
+        <source>Scale block in X&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Échelle du bloc en X&lt;br&gt;par ce facteur</translation>
+    </message>
+    <message>
+        <source>Keep Proportions</source>
+        <translation type="obsolete">Garder les proportions</translation>
+    </message>
+    <message>
+        <source>Scale Y:</source>
+        <translation type="obsolete">Echelle Y:</translation>
+    </message>
+    <message>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Échelle du bloc en Y&lt;br&gt;par ce facteur</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;horizontally</source>
+        <translation type="obsolete">Retourner bloc&lt;br&gt;horizontalement</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;vertically</source>
+        <translation type="obsolete">Retourner bloc&lt;br&gt;verticalement</translation>
     </message>
     <message>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
@@ -9472,38 +9493,6 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <source>Reset to defaults every time tool is used</source>
         <translation type="vanished">Réinitialisation des valeurs par défaut à chaque utilisation de l&apos;outil</translation>
-    </message>
-    <message>
-        <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation type="obsolete">Faire pivoter le&lt;br&gt;bloc par cet angle</translation>
-    </message>
-    <message>
-        <source>Scale X:</source>
-        <translation type="obsolete">Echelle X:</translation>
-    </message>
-    <message>
-        <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Échelle du bloc en X&lt;br&gt;par ce facteur</translation>
-    </message>
-    <message>
-        <source>Keep Proportions</source>
-        <translation type="obsolete">Garder les proportions</translation>
-    </message>
-    <message>
-        <source>Scale Y:</source>
-        <translation type="obsolete">Echelle Y:</translation>
-    </message>
-    <message>
-        <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Échelle du bloc en Y&lt;br&gt;par ce facteur</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="obsolete">Retourner bloc&lt;br&gt;horizontalement</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="obsolete">Retourner bloc&lt;br&gt;verticalement</translation>
     </message>
 </context>
 <context>
@@ -10786,22 +10775,6 @@ Indiquer le point cible</translatorcomment>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -10918,14 +10891,6 @@ Indiquer le point cible</translatorcomment>
     <message>
         <source>Use current layer and &amp;attributes</source>
         <translation type="vanished">Utiliser calque et &amp;attributs actuel</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11382,7 +11347,6 @@ Mode de couleur :</translatorcomment>
         <translation>
             <numerusform>%n entité sur calque &quot;%1&quot;</numerusform>
             <numerusform>%n entités sur calque &quot;%1&quot;</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -11391,7 +11355,6 @@ Mode de couleur :</translatorcomment>
         <translation>
             <numerusform>%n entité</numerusform>
             <numerusform>%n entités</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -11400,7 +11363,6 @@ Mode de couleur :</translatorcomment>
         <translation>
             <numerusform>%n calque</numerusform>
             <numerusform>%n calques</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -12450,7 +12412,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichiers SVG %1</translation>
     </message>
 </context>
 <context>
@@ -12477,16 +12439,51 @@ Indiquer le point cible</translatorcomment>
 <context>
     <name>Text</name>
     <message>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>Position</translation>
+    </message>
+    <message>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation>&amp;Texte</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation>Dessinez texte</translation>
+    </message>
+    <message>
         <source>Contents:</source>
         <translation type="vanished">Sommaire :</translation>
     </message>
     <message>
-        <source>Text</source>
-        <translation type="vanished">Texte</translation>
+        <source>Height:</source>
+        <translation type="vanished">Hauteur : </translation>
     </message>
     <message>
-        <source>Height:</source>
-        <translation type="vanished">Hauteur : </translation>
+        <source>Angle:</source>
+        <translation type="vanished">Angle :</translation>
+    </message>
+    <message>
+        <source>Show font preview in font controls</source>
+        <translation type="vanished">Afficher l&apos;aperçu de police dans les contrôles de police</translation>
+    </message>
+    <message>
+        <source>Use reduced selection of fonts:</source>
+        <translation type="vanished">Utilisez réduit sélection de polices :</translation>
+    </message>
+    <message>
+        <source>Uncheck all</source>
+        <translation type="vanished">Décocher tout</translation>
+    </message>
+    <message>
+        <source>Check all</source>
+        <translation type="vanished">Cocher toutes</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="vanished">Texte</translation>
     </message>
     <message>
         <source>Text height</source>
@@ -12523,41 +12520,6 @@ Indiquer le point cible</translatorcomment>
     <message>
         <source>Fit</source>
         <translation type="vanished">Ajuster</translation>
-    </message>
-    <message>
-        <source>Show font preview in font controls</source>
-        <translation type="vanished">Afficher l&apos;aperçu de police dans les contrôles de police</translation>
-    </message>
-    <message>
-        <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">Utilisez réduit sélection de polices :</translation>
-    </message>
-    <message>
-        <source>Uncheck all</source>
-        <translation type="vanished">Décocher tout</translation>
-    </message>
-    <message>
-        <source>Check all</source>
-        <translation type="vanished">Cocher toutes</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>Position</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation>&amp;Texte</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation>Dessinez texte</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Angle :</translation>
     </message>
 </context>
 <context>
@@ -13030,12 +12992,12 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Barres d&apos;outils</translation>
+        <translation>Barres d&apos;outils</translation>
     </message>
 </context>
 <context>
@@ -13185,15 +13147,6 @@ Indiquer le point cible</translatorcomment>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
-        <source>M&amp;ove and Rotate</source>
-        <translation>Déplacemen&amp;t et rotation</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Angle :</translation>
-    </message>
-    <message>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="vanished">Angle primaire :</translation>
@@ -13206,6 +13159,15 @@ Indiquer le point cible</translatorcomment>
     <message>
         <source>Copies:</source>
         <translation type="vanished">Copies : </translation>
+    </message>
+    <message>
+        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
+        <source>M&amp;ove and Rotate</source>
+        <translation>Déplacemen&amp;t et rotation</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Angle :</translation>
     </message>
 </context>
 <context>
@@ -14011,12 +13973,11 @@ Indiquer le point cible</translatorcomment>
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Chargement add-on traductions...</translation>
+        <translation type="vanished">Chargement add-on traductions...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Chargement add-ons...</translation>
     </message>

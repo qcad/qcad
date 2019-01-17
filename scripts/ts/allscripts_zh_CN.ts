@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="zh_CN">
 <context>
     <name>About</name>
     <message>
@@ -682,18 +682,7 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcTPR</name>
     <message>
-        <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+100"/>
-        <source>Choose solution</source>
-        <translation type="unfinished">选择解决方案</translation>
-    </message>
-    <message>
-        <location line="+123"/>
-        <location line="+65"/>
-        <source>No solution</source>
-        <translation type="unfinished">没有解决方案</translation>
-    </message>
-    <message>
-        <location line="-209"/>
+        <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>选择直线，弧，圆或者椭圆</translation>
     </message>
@@ -701,6 +690,17 @@ the preference changes to take effect.</source>
         <location line="+11"/>
         <source>Point on arc</source>
         <translation>弧上的点</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Choose solution</source>
+        <translation>选择方案</translation>
+    </message>
+    <message>
+        <location line="+123"/>
+        <location line="+65"/>
+        <source>No solution</source>
+        <translation>无方案</translation>
     </message>
     <message>
         <source>Radius:</source>
@@ -791,8 +791,6 @@ Do you wish to recover it?</source>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -919,24 +917,8 @@ Do you wish to recover it/them?</source>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">文件</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Export as Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">文件</translation>
     </message>
 </context>
 <context>
@@ -1387,14 +1369,14 @@ Do you wish to recover it/them?</source>
         <translation type="vanished">点、双切线(&amp;g)</translation>
     </message>
     <message>
-        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
-        <source>2 Tan&amp;gents and Point</source>
-        <translation>双切线和点</translation>
+        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
+        <source>Draw circle tangential to two entities, through point</source>
+        <translation>过点向2个实体画相切弧</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Draw circle tangential to two entities, through point</source>
-        <translation>过点向2个实体画公切圆</translation>
+        <location line="-4"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>双切线和点</translation>
     </message>
 </context>
 <context>
@@ -2270,8 +2252,6 @@ Do you wish to recover it/them?</source>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -2779,8 +2759,6 @@ is already in the list.</source>
         <location filename="../Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -3562,8 +3540,6 @@ is already in the list.</source>
         <location filename="../Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -5995,16 +5971,12 @@ Library browser will not be available.</source>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -6233,7 +6205,7 @@ Library browser will not be available.</source>
     <message>
         <location filename="../Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">无方案</translation>
     </message>
     <message>
         <location filename="../Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
@@ -6837,22 +6809,6 @@ Library browser will not be available.</source>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -6882,14 +6838,6 @@ Library browser will not be available.</source>
     <message>
         <location filename="../Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7111,16 +7059,12 @@ Library browser will not be available.</source>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -7133,8 +7077,6 @@ Library browser will not be available.</source>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -8697,12 +8639,7 @@ Library browser will not be available.</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
-        <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation type="unfinished"></translation>
     </message>

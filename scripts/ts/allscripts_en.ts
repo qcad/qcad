@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="en">
 <context>
     <name>About</name>
     <message>
@@ -827,7 +827,6 @@ Do you wish to recover it/them?</source>
 Do you wish to recover it?</numerusform>
             <numerusform>%n autosave backup files for untitled drawings were found.
 Do you wish to recover them?</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1131,24 +1130,16 @@ Do you wish to recover it?</translation>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished">Bitmap file has been exported to &quot;%1&quot;</translation>
+        <translation type="obsolete">Bitmap file has been exported to &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Files</translation>
+        <translation type="obsolete">Files</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Export as Bitmap</translation>
+        <translation type="obsolete">Export as Bitmap</translation>
     </message>
 </context>
 <context>
@@ -2521,6 +2512,10 @@ Do you wish to recover it?</translation>
 <context>
     <name>Dialog</name>
     <message>
+        <source>Character Map</source>
+        <translation type="vanished">Character Map</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translation type="vanished">Dialog</translation>
     </message>
@@ -2575,10 +2570,6 @@ Do you wish to recover it?</translation>
     <message>
         <source>into entities</source>
         <translation type="vanished">into entities</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translation type="vanished">Character Map</translation>
     </message>
     <message>
         <source>OK</source>
@@ -2740,7 +2731,6 @@ Do you wish to recover it?</translation>
         <translation>
             <numerusform>Label position of one dimension was reset.</numerusform>
             <numerusform>Label position of %n dimensions was reset.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3395,7 +3385,6 @@ is already in the list.</translation>
         <translation type="vanished">
             <numerusform>One entity duplicated</numerusform>
             <numerusform>%n entities duplicated</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -3404,7 +3393,6 @@ is already in the list.</translation>
         <translation>
             <numerusform>One entity duplicated</numerusform>
             <numerusform>%n entities duplicated</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -4068,7 +4056,7 @@ is already in the list.</translation>
     <message>
         <location filename="../Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mandelbrot</translation>
     </message>
 </context>
 <context>
@@ -4092,7 +4080,7 @@ is already in the list.</translation>
     <message>
         <location filename="../Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Minimal Example 2</translation>
     </message>
 </context>
 <context>
@@ -4229,7 +4217,6 @@ is already in the list.</translation>
         <translation>
             <numerusform>Transaction affected one object.</numerusform>
             <numerusform>Transaction affected %n objects.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -7609,7 +7596,6 @@ shown in search results:</translation>
         <translation>
             <numerusform>Radius dropped below 0.0 after one concentric circle.</numerusform>
             <numerusform>Radius dropped below 0.0 after %n concentric circles.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -7618,7 +7604,6 @@ shown in search results:</translation>
         <translation>
             <numerusform>Radius dropped below 0.0 after one concentric arc.</numerusform>
             <numerusform>Radius dropped below 0.0 after %n concentric arcs.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -8912,22 +8897,6 @@ shown in search results:</translation>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -9005,14 +8974,6 @@ shown in search results:</translation>
     <message>
         <source>Use current layer and &amp;attributes</source>
         <translation type="vanished">Use current layer and &amp;attributes</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9376,7 +9337,6 @@ shown in search results:</translation>
         <translation>
             <numerusform>One entity on Layer &quot;%1&quot;</numerusform>
             <numerusform>%n Entities on Layer &quot;%1&quot;</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -9385,7 +9345,6 @@ shown in search results:</translation>
         <translation>
             <numerusform>One Entity</numerusform>
             <numerusform>%n Entities</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9399,7 +9358,6 @@ shown in search results:</translation>
         <translation>
             <numerusform>one Layer</numerusform>
             <numerusform>%n Layers</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -10250,7 +10208,7 @@ shown in search results:</translation>
     <message>
         <location filename="../ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG Files %1</translation>
     </message>
 </context>
 <context>
@@ -10273,16 +10231,51 @@ shown in search results:</translation>
 <context>
     <name>Text</name>
     <message>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>Position</translation>
+    </message>
+    <message>
         <source>Contents:</source>
         <translation type="vanished">Contents:</translation>
     </message>
     <message>
-        <source>Text</source>
-        <translation type="vanished">Text</translation>
-    </message>
-    <message>
         <source>Height:</source>
         <translation type="vanished">Height:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Angle:</translation>
+    </message>
+    <message>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation>&amp;Text</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation>Draw text</translation>
+    </message>
+    <message>
+        <source>Show font preview in font controls</source>
+        <translation type="vanished">Show font preview in font controls</translation>
+    </message>
+    <message>
+        <source>Use reduced selection of fonts:</source>
+        <translation type="vanished">Use reduced selection of fonts:</translation>
+    </message>
+    <message>
+        <source>Uncheck all</source>
+        <translation type="vanished">Uncheck all</translation>
+    </message>
+    <message>
+        <source>Check all</source>
+        <translation type="vanished">Check all</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="vanished">Text</translation>
     </message>
     <message>
         <source>Text height</source>
@@ -10319,41 +10312,6 @@ shown in search results:</translation>
     <message>
         <source>Fit</source>
         <translation type="vanished">Fit</translation>
-    </message>
-    <message>
-        <source>Show font preview in font controls</source>
-        <translation type="vanished">Show font preview in font controls</translation>
-    </message>
-    <message>
-        <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">Use reduced selection of fonts:</translation>
-    </message>
-    <message>
-        <source>Uncheck all</source>
-        <translation type="vanished">Uncheck all</translation>
-    </message>
-    <message>
-        <source>Check all</source>
-        <translation type="vanished">Check all</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>Position</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Angle:</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation>&amp;Text</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation>Draw text</translation>
     </message>
 </context>
 <context>
@@ -10827,12 +10785,12 @@ shown in search results:</translation>
     <message>
         <location filename="../Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Toolbars</translation>
+        <translation>Toolbars</translation>
     </message>
 </context>
 <context>
@@ -11610,12 +11568,11 @@ shown in search results:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Loading add-on translations...</translation>
+        <translation type="vanished">Loading add-on translations...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Loading add-ons...</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="nl">
 <context>
     <name>About</name>
     <message>
@@ -749,18 +749,7 @@ de wijzigingen door te voeren.</translation>
 <context>
     <name>ArcTPR</name>
     <message>
-        <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+100"/>
-        <source>Choose solution</source>
-        <translation type="unfinished">Kies oplossing</translation>
-    </message>
-    <message>
-        <location line="+123"/>
-        <location line="+65"/>
-        <source>No solution</source>
-        <translation type="unfinished">Geen oplossing</translation>
-    </message>
-    <message>
-        <location line="-209"/>
+        <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Kies lijn, boog, cirkel of ellips</translation>
     </message>
@@ -768,6 +757,17 @@ de wijzigingen door te voeren.</translation>
         <location line="+11"/>
         <source>Point on arc</source>
         <translation>Punt op boog</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Choose solution</source>
+        <translation>Kies oplossing</translation>
+    </message>
+    <message>
+        <location line="+123"/>
+        <location line="+65"/>
+        <source>No solution</source>
+        <translation>Geen oplossing</translation>
     </message>
     <message>
         <source>Radius:</source>
@@ -855,7 +855,6 @@ Do you wish to recover it/them?</source>
 Wilt u de tekening herstellen?</numerusform>
             <numerusform>%n automatisch opgeslagen bestanden voor naamloose tekeningen worden gevonden.
 Wilt u deze herstellen?</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -885,7 +884,6 @@ Do you wish to recover it/them?</source>
 Wilt u de tekening herstellen?</numerusform>
             <numerusform>%n &apos;auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
 Wilt u deze herstellen?</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1170,24 +1168,16 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished">Bitmap bestand is aangemaakt als &quot;%1&quot;</translation>
+        <translation type="obsolete">Bitmap bestand is aangemaakt als &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Bestanden</translation>
+        <translation type="obsolete">Bestanden</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Exporteren als bitmap</translation>
+        <translation type="obsolete">Exporteren als bitmap</translation>
     </message>
 </context>
 <context>
@@ -1694,14 +1684,14 @@ Wilt u het herstellen?</translation>
         <translation type="vanished">Punt, 2 tan&amp;genten</translation>
     </message>
     <message>
-        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
-        <source>2 Tan&amp;gents and Point</source>
-        <translation>2 tan&amp;genten en punt</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Cirkel tangentieel aan twee objecten, door punt</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>2 tan&amp;genten en punt</translation>
     </message>
 </context>
 <context>
@@ -2568,6 +2558,10 @@ Wilt u het herstellen?</translation>
 <context>
     <name>Dialog</name>
     <message>
+        <source>Character Map</source>
+        <translation type="vanished">Speciale tekens</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translation type="vanished">Dialoog</translation>
     </message>
@@ -2622,10 +2616,6 @@ Wilt u het herstellen?</translation>
     <message>
         <source>into entities</source>
         <translation type="vanished">in objecten</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translation type="vanished">Speciale tekens</translation>
     </message>
     <message>
         <source>OK</source>
@@ -2787,7 +2777,6 @@ Wilt u het herstellen?</translation>
         <translation>
             <numerusform>Label positie van een bemating teruggezet.</numerusform>
             <numerusform>Label positie van %n bematingen teruggezet.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3459,7 +3448,6 @@ is al in de lijst.</translation>
         <translation>
             <numerusform>Een object is gedupliceerd</numerusform>
             <numerusform>%n objecten werden gedupliceerd</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -4119,7 +4107,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mandelbrot</translation>
     </message>
 </context>
 <context>
@@ -4143,7 +4131,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Minimaal voorbeeld 2</translation>
     </message>
 </context>
 <context>
@@ -4280,7 +4268,6 @@ is al in de lijst.</translation>
         <translation>
             <numerusform>Transactie beïnvloed een object.</numerusform>
             <numerusform>Transactie beïnvloed %n objecten.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -7769,7 +7756,6 @@ getoond in zoekresultaten:</translation>
         <translation>
             <numerusform>Radius gedaald tot onder 0 na een concentrische cirkel.</numerusform>
             <numerusform>Radius gedaald tot onder 0 na %n concentrische cirkels.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -7778,7 +7764,6 @@ getoond in zoekresultaten:</translation>
         <translation>
             <numerusform>Radius gedaald tot onder 0 na een concentrische boog.</numerusform>
             <numerusform>Radius gedaald tot onder 0 na %n concentrische boogen.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9078,22 +9063,6 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -9171,14 +9140,6 @@ getoond in zoekresultaten:</translation>
     <message>
         <source>Use current layer and &amp;attributes</source>
         <translation type="vanished">Gebruik huidige laag en &amp;attributen</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9534,7 +9495,6 @@ getoond in zoekresultaten:</translation>
         <translation>
             <numerusform>Een object op laag &quot;%1&quot;</numerusform>
             <numerusform>%n objecten op laag &quot;%1&quot;</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -9543,7 +9503,6 @@ getoond in zoekresultaten:</translation>
         <translation>
             <numerusform>Een object</numerusform>
             <numerusform>%n objecten</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9557,7 +9516,6 @@ getoond in zoekresultaten:</translation>
         <translation>
             <numerusform>een laag</numerusform>
             <numerusform>%n laagen</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -10420,7 +10378,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG-bestanden %1</translation>
     </message>
 </context>
 <context>
@@ -10443,16 +10401,51 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>Text</name>
     <message>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>Positie</translation>
+    </message>
+    <message>
         <source>Contents:</source>
         <translation type="vanished">Inhoud:</translation>
     </message>
     <message>
-        <source>Text</source>
-        <translation type="vanished">Tekst</translation>
-    </message>
-    <message>
         <source>Height:</source>
         <translation type="vanished">Hoogte:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Hoek:</translation>
+    </message>
+    <message>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation>&amp;Tekst</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation>Tekst tekenen</translation>
+    </message>
+    <message>
+        <source>Show font preview in font controls</source>
+        <translation type="vanished">Toon lettertype voorvertoning in lettertype bedieningselementen</translation>
+    </message>
+    <message>
+        <source>Use reduced selection of fonts:</source>
+        <translation type="vanished">Gebruik verminderde selectie van lettertypen:</translation>
+    </message>
+    <message>
+        <source>Uncheck all</source>
+        <translation type="vanished">Deselecteer alle</translation>
+    </message>
+    <message>
+        <source>Check all</source>
+        <translation type="vanished">Selecteer alle</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="vanished">Tekst</translation>
     </message>
     <message>
         <source>Text height</source>
@@ -10489,41 +10482,6 @@ getoond in zoekresultaten:</translation>
     <message>
         <source>Fit</source>
         <translation type="vanished">Passen</translation>
-    </message>
-    <message>
-        <source>Show font preview in font controls</source>
-        <translation type="vanished">Toon lettertype voorvertoning in lettertype bedieningselementen</translation>
-    </message>
-    <message>
-        <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">Gebruik verminderde selectie van lettertypen:</translation>
-    </message>
-    <message>
-        <source>Uncheck all</source>
-        <translation type="vanished">Deselecteer alle</translation>
-    </message>
-    <message>
-        <source>Check all</source>
-        <translation type="vanished">Selecteer alle</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>Positie</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Hoek:</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation>&amp;Tekst</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation>Tekst tekenen</translation>
     </message>
 </context>
 <context>
@@ -10993,12 +10951,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Werkbalken</translation>
+        <translation>Werkbalken</translation>
     </message>
 </context>
 <context>
@@ -11823,12 +11781,11 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Laden van add-on vertalingen...</translation>
+        <translation type="vanished">Laden van add-on vertalingen...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Laden van add-ons...</translation>
     </message>

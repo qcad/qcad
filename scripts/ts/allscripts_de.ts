@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="de">
 <context>
     <name>About</name>
     <message>
@@ -820,10 +820,6 @@ um die Änderungen zu übernehmen.</translation>
 <context>
     <name>ArcTPR</name>
     <message>
-        <source>Line, arc, circle or ellipse</source>
-        <translation type="obsolete">Linie, Bogen, Kreis oder Ellipse</translation>
-    </message>
-    <message>
         <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
@@ -857,6 +853,10 @@ um die Änderungen zu übernehmen.</translation>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
         <translation>Zeichnet einen Bogen tangential zu Objekt, durch Punkt mit Radius</translation>
+    </message>
+    <message>
+        <source>Line, arc, circle or ellipse</source>
+        <translation type="obsolete">Linie, Bogen, Kreis oder Ellipse</translation>
     </message>
 </context>
 <context>
@@ -973,7 +973,6 @@ Do you wish to recover it/them?</source>
 Möchten Sie die Zeichnung wiederherstellen?</numerusform>
             <numerusform>%n autosave Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -1286,24 +1285,20 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
         <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished">Fehler beim Generieren der Bitmap Datei &quot;%1&quot;: &quot;%2&quot;</translation>
+        <translation type="vanished">Fehler beim Generieren der Bitmap Datei &quot;%1&quot;: &quot;%2&quot;</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished">Bitmap wurde erstellt als &quot;%1&quot;</translation>
+        <translation type="vanished">Bitmap wurde erstellt als &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Dateien</translation>
+        <translation type="vanished">Dateien</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Exportieren als Bitmap</translation>
+        <translation type="vanished">Exportieren als Bitmap</translation>
     </message>
 </context>
 <context>
@@ -1917,22 +1912,18 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="vanished">Punkt, 2 Tan&amp;genten</translation>
     </message>
     <message>
-        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
-        <source>2 Tan&amp;gents and Point</source>
-        <translation>2 Tan&amp;genten und Punkt</translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Kreis, tangential zu zwei Objekten, durch Punkt</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>2 Tan&amp;genten und Punkt</translation>
     </message>
 </context>
 <context>
     <name>Circle2TR</name>
-    <message>
-        <source>Radius:</source>
-        <translation type="obsolete">Radius:</translation>
-    </message>
     <message>
         <location filename="../Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
@@ -1956,6 +1947,10 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <source>Invalid radius</source>
         <translation type="vanished">Ungültiger Radius</translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="vanished">Radius:</translation>
     </message>
     <message>
         <location filename="../Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -2937,6 +2932,14 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>Dialog</name>
     <message>
+        <source>...</source>
+        <translation type="obsolete">...</translation>
+    </message>
+    <message>
+        <source>Character Map</source>
+        <translation type="vanished">Zeichentabelle</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translation type="vanished">Dialog</translation>
     </message>
@@ -2991,14 +2994,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <source>into entities</source>
         <translation type="vanished">in Objekte</translation>
-    </message>
-    <message>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translation type="vanished">Zeichentabelle</translation>
     </message>
     <message>
         <source>OK</source>
@@ -3164,7 +3159,6 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>
             <numerusform>Beschriftungsposition von einer Bemassung zurückgesetzt.</numerusform>
             <numerusform>Beschriftungsposition von %n Bemassungen zurückgesetzt.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -3918,7 +3912,6 @@ ist bereits in der Liste.</translation>
         <translation type="vanished">
             <numerusform>Ein Objekt dupliziert</numerusform>
             <numerusform>%n Objekte dupliziert</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -3927,7 +3920,6 @@ ist bereits in der Liste.</translation>
         <translation>
             <numerusform>Ein Objekt dupliziert</numerusform>
             <numerusform>%n Objekte dupliziert</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -4689,7 +4681,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mandelbrot Beispiel</translation>
     </message>
 </context>
 <context>
@@ -4713,7 +4705,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location filename="../Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Minimales Beispiel 2</translation>
     </message>
 </context>
 <context>
@@ -4854,7 +4846,6 @@ ist bereits in der Liste.</translation>
         <translation>
             <numerusform>Transaktion beeinflusste ein Objekt.</numerusform>
             <numerusform>Transaktion beeinflusste %n Objekte.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -8260,6 +8251,27 @@ im Suchresultat:</translation>
 <context>
     <name>LineDove</name>
     <message>
+        <source>First corner</source>
+        <translation type="vanished">Erster Eckpunkt</translation>
+    </message>
+    <message>
+        <source>Second corner</source>
+        <translation type="vanished">Zweiter Eckpunkt</translation>
+    </message>
+    <message>
+        <source>&amp;Dovetail joint</source>
+        <translation type="vanished">&amp;Schwalbenschwanzverbindung</translation>
+    </message>
+    <message>
+        <source>&amp;Dovetail Joint</source>
+        <translation type="vanished">&amp;Schwalbenschwanzverbindung</translation>
+    </message>
+    <message>
+        <location filename="../Misc/MiscDraw/LineDove/LineDoveInit.js" line="+6"/>
+        <source>Draw a dovetail joint</source>
+        <translation>Schwalbenschwanzverbindung zeichnen</translation>
+    </message>
+    <message>
         <location filename="../Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
         <translation>Erster Punkt</translation>
@@ -8275,30 +8287,9 @@ im Suchresultat:</translation>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location filename="../Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
+        <location filename="../Misc/MiscDraw/LineDove/LineDoveInit.js" line="-4"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
         <translation>&amp;Schwalbenschwanzverbindung von 2 Punkten</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw a dovetail joint</source>
-        <translation>Schwalbenschwanzverbindung zeichnen</translation>
-    </message>
-    <message>
-        <source>First corner</source>
-        <translation type="vanished">Erster Eckpunkt</translation>
-    </message>
-    <message>
-        <source>Second corner</source>
-        <translation type="vanished">Zweiter Eckpunkt</translation>
-    </message>
-    <message>
-        <source>&amp;Dovetail joint</source>
-        <translation type="vanished">&amp;Schwalbenschwanzverbindung</translation>
-    </message>
-    <message>
-        <source>&amp;Dovetail Joint</source>
-        <translation type="vanished">&amp;Schwalbenschwanzverbindung</translation>
     </message>
 </context>
 <context>
@@ -8444,12 +8435,16 @@ im Suchresultat:</translation>
 <context>
     <name>LineParallel</name>
     <message>
-        <source>Distance:</source>
-        <translation type="obsolete">Abstand:</translation>
+        <source>Length:</source>
+        <translation type="obsolete">Länge:</translation>
     </message>
     <message>
         <source>1</source>
         <translation type="obsolete">1</translation>
+    </message>
+    <message>
+        <source>Distance:</source>
+        <translation type="obsolete">Abstand:</translation>
     </message>
     <message>
         <source>Number:</source>
@@ -8476,10 +8471,6 @@ im Suchresultat:</translation>
     <message>
         <source>&amp;Number:</source>
         <translation type="vanished">&amp;Anzahl:</translation>
-    </message>
-    <message>
-        <source>Length:</source>
-        <translation type="obsolete">Länge:</translation>
     </message>
     <message>
         <source>0</source>
@@ -9470,7 +9461,6 @@ im Suchresultat:</translation>
         <translation>
             <numerusform>Radius kleiner als 0.0 nach einem konzentrischen Kreis.</numerusform>
             <numerusform>Radius kleiner als 0.0 nach %n konzentrischen Kreisen.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -9479,7 +9469,6 @@ im Suchresultat:</translation>
         <translation>
             <numerusform>Radius kleiner als 0.0 nach einem konzentrischen Kreisbogen.</numerusform>
             <numerusform>Radius kleiner als 0.0 nach %n konzentrischen Kreisbögen.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9712,28 +9701,40 @@ nicht öffnen.
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Edit/Paste/Paste.js" line="+52"/>
-        <source>Edit</source>
-        <translation>Bearbeiten</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Paste</source>
-        <translation>Einfügen</translation>
-    </message>
-    <message>
-        <location line="+40"/>
-        <source>Position</source>
-        <translation>Position</translation>
-    </message>
-    <message>
-        <location filename="../Edit/Paste/PasteInit.js" line="+2"/>
-        <source>&amp;Paste</source>
-        <translation>Ein&amp;fügen</translation>
-    </message>
-    <message>
         <source>Rotation:</source>
-        <translation type="vanished">Rotation:</translation>
+        <translation type="obsolete">Rotation:</translation>
+    </message>
+    <message>
+        <source>Rotate block&lt;br&gt;by this angle</source>
+        <translation type="obsolete">Block rotieren&lt;br&gt;um diesen Winkel</translation>
+    </message>
+    <message>
+        <source>Scale X:</source>
+        <translation type="obsolete">Skalierung X:</translation>
+    </message>
+    <message>
+        <source>Scale block in X&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Block skalieren in X&lt;br&gt;um diesen Faktor</translation>
+    </message>
+    <message>
+        <source>Keep Proportions</source>
+        <translation type="obsolete">Proportional</translation>
+    </message>
+    <message>
+        <source>Scale Y:</source>
+        <translation type="obsolete">Skalierung Y:</translation>
+    </message>
+    <message>
+        <source>Scale block in Y&lt;br&gt;by this factor</source>
+        <translation type="obsolete">Block skalieren in Y&lt;br&gt;um diesen Faktor</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;horizontally</source>
+        <translation type="obsolete">Block horizontal&lt;br&gt;spiegeln</translation>
+    </message>
+    <message>
+        <source>Flip block&lt;br&gt;vertically</source>
+        <translation type="obsolete">Block vertikal&lt;br&gt;spiegeln</translation>
     </message>
     <message>
         <source>150</source>
@@ -9745,35 +9746,11 @@ nicht öffnen.
     </message>
     <message>
         <source>Scale:</source>
-        <translation type="vanished">Skalierung:</translation>
-    </message>
-    <message>
-        <source>3</source>
-        <translation type="obsolete">3</translation>
-    </message>
-    <message>
-        <source>4</source>
-        <translation type="obsolete">4</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation type="obsolete">5</translation>
+        <translation type="obsolete">Skalierung:</translation>
     </message>
     <message>
         <source>To current layer</source>
-        <translation type="vanished">Auf aktuellen Layer</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad User Reference Manual - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Basic Editing Commands&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad Benutzerhandbuch - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Grundlegende Bearbeitungsbefehle&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad User Reference Manual - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Basic Editing Commands&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;link&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</source>
-        <translation type="obsolete">&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad User Reference Manual - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Grundlegende Bearbeitungsbefehle&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;link&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="vanished">Eingefügte Elemente um&lt;br&gt;diesen Winkel rotieren</translation>
+        <translation type="obsolete">Auf aktuellen Layer</translation>
     </message>
     <message>
         <source>30</source>
@@ -9814,6 +9791,50 @@ nicht öffnen.
     <message>
         <source>330</source>
         <translation type="obsolete">330</translation>
+    </message>
+    <message>
+        <location filename="../Edit/Paste/Paste.js" line="+52"/>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Paste</source>
+        <translation>Einfügen</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>Position</source>
+        <translation>Position</translation>
+    </message>
+    <message>
+        <location filename="../Edit/Paste/PasteInit.js" line="+2"/>
+        <source>&amp;Paste</source>
+        <translation>Ein&amp;fügen</translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation type="obsolete">3</translation>
+    </message>
+    <message>
+        <source>4</source>
+        <translation type="obsolete">4</translation>
+    </message>
+    <message>
+        <source>5</source>
+        <translation type="obsolete">5</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad User Reference Manual - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Basic Editing Commands&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</source>
+        <translation type="obsolete">&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad Benutzerhandbuch - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Grundlegende Bearbeitungsbefehle&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad User Reference Manual - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Basic Editing Commands&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;link&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</source>
+        <translation type="obsolete">&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad User Reference Manual - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Grundlegende Bearbeitungsbefehle&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;link&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
+        <translation type="vanished">Eingefügte Elemente um&lt;br&gt;diesen Winkel rotieren</translation>
     </message>
     <message>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
@@ -9862,38 +9883,6 @@ nicht öffnen.
     <message>
         <source>Reset to defaults every time tool is used</source>
         <translation type="vanished">Zurücksetzen auf die Standardeinstellungen jedes Mal wenn das Werkzeug verwendet wird</translation>
-    </message>
-    <message>
-        <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation type="obsolete">Block rotieren&lt;br&gt;um diesen Winkel</translation>
-    </message>
-    <message>
-        <source>Scale X:</source>
-        <translation type="obsolete">Skalierung X:</translation>
-    </message>
-    <message>
-        <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Block skalieren in X&lt;br&gt;um diesen Faktor</translation>
-    </message>
-    <message>
-        <source>Keep Proportions</source>
-        <translation type="obsolete">Proportional</translation>
-    </message>
-    <message>
-        <source>Scale Y:</source>
-        <translation type="obsolete">Skalierung Y:</translation>
-    </message>
-    <message>
-        <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="obsolete">Block skalieren in Y&lt;br&gt;um diesen Faktor</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="obsolete">Block horizontal&lt;br&gt;spiegeln</translation>
-    </message>
-    <message>
-        <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="obsolete">Block vertikal&lt;br&gt;spiegeln</translation>
     </message>
 </context>
 <context>
@@ -11192,17 +11181,15 @@ nicht öffnen.
 <context>
     <name>ScMirrored</name>
     <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
         <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">&amp;Gespiegelt</translation>
     </message>
 </context>
 <context>
     <name>ScPrepare</name>
     <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
         <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Fensterposition vorbereiten</translation>
     </message>
 </context>
 <context>
@@ -11326,14 +11313,6 @@ nicht öffnen.
     <message>
         <source>Use current layer and &amp;attributes</source>
         <translation type="vanished">Aktueller Layer / &amp;Attribute</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11727,7 +11706,6 @@ SelectionMode</translatorcomment>
         <translation>
             <numerusform>Ein Objekt auf Layer &quot;%1&quot;</numerusform>
             <numerusform>%n Objekte auf Layer &quot;%1&quot;</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -11736,7 +11714,6 @@ SelectionMode</translatorcomment>
         <translation>
             <numerusform>Ein Objekt</numerusform>
             <numerusform>%n Objekte</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -11745,7 +11722,6 @@ SelectionMode</translatorcomment>
         <translation>
             <numerusform>einem Layer</numerusform>
             <numerusform>%n Layer</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -12787,7 +12763,7 @@ SelectionMode</translatorcomment>
     <message>
         <location filename="../ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG Dateien %1</translation>
     </message>
 </context>
 <context>
@@ -12814,16 +12790,59 @@ SelectionMode</translatorcomment>
 <context>
     <name>Text</name>
     <message>
-        <source>Contents:</source>
-        <translation type="vanished">Inhalt:</translation>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>Position</translation>
     </message>
     <message>
-        <source>Text</source>
-        <translation type="vanished">Text</translation>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation>&amp;Text</translation>
     </message>
     <message>
         <source>Height:</source>
         <translation type="vanished">Höhe:</translation>
+    </message>
+    <message>
+        <source>10</source>
+        <translation type="obsolete">10</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Winkel:</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="obsolete">0</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation>Text einfügen</translation>
+    </message>
+    <message>
+        <source>Contents:</source>
+        <translation type="vanished">Inhalt:</translation>
+    </message>
+    <message>
+        <source>Show font preview in font controls</source>
+        <translation type="vanished">Schriftvorschau anzeigen in Schriftauswahl</translation>
+    </message>
+    <message>
+        <source>Use reduced selection of fonts:</source>
+        <translation type="vanished">Reduzierte Schriftauswahl benutzen:</translation>
+    </message>
+    <message>
+        <source>Uncheck all</source>
+        <translation type="vanished">Alle deaktivieren</translation>
+    </message>
+    <message>
+        <source>Check all</source>
+        <translation type="vanished">Alle aktivieren</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="vanished">Text</translation>
     </message>
     <message>
         <source>Text height</source>
@@ -12836,10 +12855,6 @@ SelectionMode</translatorcomment>
     <message>
         <source>Letter spacing</source>
         <translation type="vanished">Buchstabenabstand</translation>
-    </message>
-    <message>
-        <source>0</source>
-        <translation type="vanished">0</translation>
     </message>
     <message>
         <source>Direction:</source>
@@ -12864,45 +12879,6 @@ SelectionMode</translatorcomment>
     <message>
         <source>Fit</source>
         <translation type="vanished">Anpassen</translation>
-    </message>
-    <message>
-        <source>Show font preview in font controls</source>
-        <translation type="vanished">Schriftvorschau anzeigen in Schriftauswahl</translation>
-    </message>
-    <message>
-        <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">Reduzierte Schriftauswahl benutzen:</translation>
-    </message>
-    <message>
-        <source>Uncheck all</source>
-        <translation type="vanished">Alle deaktivieren</translation>
-    </message>
-    <message>
-        <source>Check all</source>
-        <translation type="vanished">Alle aktivieren</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>Position</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation>&amp;Text</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation type="obsolete">10</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Winkel:</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation>Text einfügen</translation>
     </message>
 </context>
 <context>
@@ -13444,12 +13420,12 @@ Kursiv
     <message>
         <location filename="../Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Werkzeugleisten</translation>
+        <translation>Werkzeugleisten</translation>
     </message>
 </context>
 <context>
@@ -13598,19 +13574,6 @@ Kursiv
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
-        <source>M&amp;ove and Rotate</source>
-        <translation>V&amp;erschieben und Rotieren</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Winkel:</translation>
-    </message>
-    <message>
-        <source>30</source>
-        <translation type="obsolete">30</translation>
-    </message>
-    <message>
         <source>11</source>
         <translation type="obsolete">11</translation>
     </message>
@@ -13623,8 +13586,21 @@ Kursiv
         <translation type="vanished">Hauptwinkel:</translation>
     </message>
     <message>
+        <source>30</source>
+        <translation type="obsolete">30</translation>
+    </message>
+    <message>
         <source>Secondary Angle:</source>
         <translation type="vanished">Nebenwinkel:</translation>
+    </message>
+    <message>
+        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
+        <source>M&amp;ove and Rotate</source>
+        <translation>V&amp;erschieben und Rotieren</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Winkel:</translation>
     </message>
 </context>
 <context>
@@ -14439,12 +14415,11 @@ Kursiv
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Lade Add-on Übersetzungen...</translation>
+        <translation type="vanished">Lade Add-on Übersetzungen...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Lade Add-ons...</translation>
     </message>

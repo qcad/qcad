@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs">
+<TS version="2.1" language="fi">
 <context>
     <name>About</name>
     <message>
@@ -693,7 +693,17 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>ArcTPR</name>
     <message>
-        <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+100"/>
+        <location filename="../Draw/Arc/ArcTPR/ArcTPR.js" line="+79"/>
+        <source>Choose line, arc, circle or ellipse</source>
+        <translation type="unfinished">Valitse viiva, kaari, ympyrä tai ellipsi</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Point on arc</source>
+        <translation type="unfinished">Piste kaarella</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Choose solution</source>
         <translation type="unfinished">Valitse ratkaisu</translation>
     </message>
@@ -702,16 +712,6 @@ asetuksien muutokset astuvat voimaan.</translation>
         <location line="+65"/>
         <source>No solution</source>
         <translation type="unfinished">Ei ratkaisua</translation>
-    </message>
-    <message>
-        <location line="-209"/>
-        <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished">Valitse viiva, kaari, ympyrä tai ellipsi</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Point on arc</source>
-        <translation type="unfinished">Piste kaarella</translation>
     </message>
     <message>
         <location filename="../Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
@@ -791,7 +791,6 @@ asetuksien muutokset astuvat voimaan.</translation>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -1056,24 +1055,12 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BitmapExport2</name>
     <message>
-        <location filename="../File/BitmapExport/BitmapExport2.js" line="+54"/>
-        <source>Error while generating Bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+45"/>
         <source>Files</source>
-        <translation type="unfinished">Tiedostot</translation>
+        <translation type="obsolete">Tiedostot</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished">Vie bittikartta-muodossa</translation>
+        <translation type="obsolete">Vie bittikartta-muodossa</translation>
     </message>
 </context>
 <context>
@@ -1560,14 +1547,14 @@ Haluatko palauttaa sen?</translation>
         <translation type="vanished">Piste, 2 Tangenttia</translation>
     </message>
     <message>
-        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
-        <source>2 Tan&amp;gents and Point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location filename="../Draw/Circle/Circle2TP/Circle2TPInit.js" line="+6"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Piirrä ympyrä tangentiaalisesti kahteen kohteeseen, pisteen kautta</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2375,6 +2362,10 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>Dialog</name>
     <message>
+        <source>Character Map</source>
+        <translation type="vanished">Merkkikartta</translation>
+    </message>
+    <message>
         <source>Dialog</source>
         <translation type="vanished">Kyselyikkuna</translation>
     </message>
@@ -2429,10 +2420,6 @@ Haluatko palauttaa sen?</translation>
     <message>
         <source>into entities</source>
         <translation type="vanished">kohteisiin</translation>
-    </message>
-    <message>
-        <source>Character Map</source>
-        <translation type="vanished">Merkkikartta</translation>
     </message>
     <message>
         <source>OK</source>
@@ -2592,7 +2579,6 @@ Haluatko palauttaa sen?</translation>
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -3291,7 +3277,6 @@ on jo luettelossa.</translation>
         <location filename="../Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -4082,7 +4067,6 @@ on jo luettelossa.</translation>
         <location filename="../Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -6680,7 +6664,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation>&amp;Yhdensuuntainen (pisteen kautta)</translation>
+        <translation>Yhdensuuntainen (pisteen kautta)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7337,14 +7321,12 @@ näkyy etsintätuloksissa:</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -8590,22 +8572,6 @@ näkyy etsintätuloksissa:</translation>
     </message>
 </context>
 <context>
-    <name>ScMirrored</name>
-    <message>
-        <location filename="../Misc/Screencast/ScMirrored/ScMirroredInit.js" line="+5"/>
-        <source>&amp;Mirrored</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>ScPrepare</name>
-    <message>
-        <location filename="../Misc/Screencast/ScPrepare/ScPrepareInit.js" line="+5"/>
-        <source>&amp;Prepare Window Position</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Scale</name>
     <message>
         <location filename="../Modify/Scale/Scale.js" line="+48"/>
@@ -8675,14 +8641,6 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <source>Use current layer and &amp;attributes</source>
         <translation type="vanished">Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
-    </message>
-</context>
-<context>
-    <name>Screencast</name>
-    <message>
-        <location filename="../Misc/Screencast/Screencast.js" line="+60"/>
-        <source>&amp;Screencast</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9023,14 +8981,12 @@ näkyy etsintätuloksissa:</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -9044,7 +9000,6 @@ näkyy etsintätuloksissa:</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -9952,12 +9907,31 @@ näkyy etsintätuloksissa:</translation>
 <context>
     <name>Text</name>
     <message>
+        <location filename="../Draw/Text/Text.js" line="+88"/>
+        <source>Position</source>
+        <translation>Sijainti</translation>
+    </message>
+    <message>
         <source>Contents:</source>
-        <translation type="obsolete">Sisältö:</translation>
+        <translation type="vanished">Sisältö:</translation>
     </message>
     <message>
         <source>Height:</source>
-        <translation type="obsolete">Korkeus:</translation>
+        <translation type="vanished">Korkeus:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Kulma:</translation>
+    </message>
+    <message>
+        <location filename="../Draw/Text/TextInit.js" line="+2"/>
+        <source>&amp;Text</source>
+        <translation>&amp;Teksti</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw text</source>
+        <translation>Piirrä teksti</translation>
     </message>
     <message>
         <source>Show font preview in font controls</source>
@@ -9974,25 +9948,6 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <source>Check all</source>
         <translation type="vanished">Valitse kaikki</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/Text.js" line="+88"/>
-        <source>Position</source>
-        <translation>Sijainti</translation>
-    </message>
-    <message>
-        <source>Angle:</source>
-        <translation type="vanished">Kulma:</translation>
-    </message>
-    <message>
-        <location filename="../Draw/Text/TextInit.js" line="+2"/>
-        <source>&amp;Text</source>
-        <translation>&amp;Teksti</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw text</source>
-        <translation>Piirrä teksti</translation>
     </message>
 </context>
 <context>
@@ -10552,15 +10507,6 @@ näkyy etsintätuloksissa:</translation>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <source>Angle:</source>
-        <translation type="vanished">Kulma:</translation>
-    </message>
-    <message>
-        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
-        <source>M&amp;ove and Rotate</source>
-        <translation>Siirrä ja kierrä</translation>
-    </message>
-    <message>
         <source>Primary Angle:</source>
         <translation type="vanished">Ensisijainen kulma:</translation>
     </message>
@@ -10571,6 +10517,15 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <source>Copies:</source>
         <translation type="vanished">Kopioita:</translation>
+    </message>
+    <message>
+        <source>Angle:</source>
+        <translation type="vanished">Kulma:</translation>
+    </message>
+    <message>
+        <location filename="../Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
+        <source>M&amp;ove and Rotate</source>
+        <translation>Siirrä ja kierrä</translation>
     </message>
 </context>
 <context>
@@ -11263,12 +11218,11 @@ näkyy etsintätuloksissa:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+327"/>
         <source>Loading add-on translations...</source>
-        <translation>Lataamassa lisäosia käännökseen...</translation>
+        <translation type="vanished">Lataamassa lisäosia käännökseen...</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../autostart.js" line="+359"/>
         <source>Loading add-ons...</source>
         <translation>Lataamassa lisäosia...</translation>
     </message>
