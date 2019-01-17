@@ -4584,7 +4584,12 @@ est déjà dans la liste.</translation>
 <context>
     <name>ExMinimal</name>
     <message>
-        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+18"/>
+        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
+        <source>Hello World!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Minimal Example</source>
         <translation>Exemple &amp;minimal</translation>
     </message>
@@ -13973,11 +13978,12 @@ Indiquer le point cible</translatorcomment>
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation type="vanished">Chargement add-on traductions...</translation>
+        <translation>Chargement add-on traductions...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+359"/>
+        <location line="+31"/>
         <source>Loading add-ons...</source>
         <translation>Chargement add-ons...</translation>
     </message>

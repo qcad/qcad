@@ -2,991 +2,990 @@ NAME = allscripts
 TSDIR = .
 include(../translations.pri)
 SOURCES = \
-    ../Misc/MiscDevelopment/MiscDevelopment.js \
-    ../Misc/MiscDevelopment/DevDebug/DevDebug.js \
-    ../Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js \
-    ../Misc/MiscDevelopment/RunScript/RunScript.js \
-    ../Misc/MiscDevelopment/RunScript/RunScriptInit.js \
-    ../Misc/MiscIO/ImportPoints/ImportPoints.js \
-    ../Misc/MiscIO/MolImport/MolImporter.js \
-    ../Misc/MiscIO/MolImport/MolImportInit.js \
-    ../Misc/MiscIO/MolImport/MolImport.js \
-    ../Misc/MiscIO/MiscIO.js \
-    ../Misc/MiscBlock/MiscBlock.js \
-    ../Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js \
-    ../Misc/MiscBlock/BlockFixNames/BlockFixNames.js \
-    ../Misc/MiscBlock/BlockListExport/BlockListExport.js \
-    ../Misc/Misc.js \
-    ../Misc/MiscDraw/TextAlong/TextAlong.js \
-    ../Misc/MiscDraw/TextAlong/TextAlongInit.js \
-    ../Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js \
-    ../Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js \
-    ../Misc/MiscDraw/LineDove/LineDove.js \
-    ../Misc/MiscDraw/LineDove/LineDoveInit.js \
-    ../Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js \
-    ../Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxes.js \
-    ../Misc/MiscDraw/Cross/Cross.js \
-    ../Misc/MiscDraw/Cross/CrossInit.js \
-    ../Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js \
-    ../Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js \
-    ../Misc/MiscDraw/XLineHorizontal/XLineHorizontal.js \
-    ../Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js \
-    ../Misc/MiscDraw/MiscDraw.js \
-    ../Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js \
-    ../Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js \
-    ../Misc/MiscDraw/Counter/Counter.js \
-    ../Misc/MiscDraw/Counter/CounterInit.js \
-    ../Misc/MiscDraw/PointPole/PointPole.js \
-    ../Misc/MiscDraw/PointPole/PointPoleInit.js \
-    ../Misc/MiscDraw/XLineVertical/XLineVertical.js \
-    ../Misc/MiscDraw/XLineVertical/XLineVerticalInit.js \
-    ../Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \
-    ../Misc/MiscModify/SplineToLine/SplineToLine.js \
-    ../Misc/MiscModify/FlushBackLog/FlushBackLog.js \
-    ../Misc/MiscModify/MiscModify.js \
-    ../Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js \
-    ../Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js \
-    ../Misc/Screencast/ScMirrored/ScMirrored.js \
-    ../Misc/Screencast/ScMirrored/ScMirroredInit.js \
-    ../Misc/Screencast/Screencast.js \
-    ../Misc/Screencast/ScPrepare/ScPrepare.js \
-    ../Misc/Screencast/ScPrepare/ScPrepareInit.js \
-    ../Misc/Examples/ExMinimal/ExMinimal.js \
-    ../Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js \
-    ../Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js \
-    ../Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js \
-    ../Misc/Examples/DrawExamples/DrawExamples.js \
-    ../Misc/Examples/DrawExamples/ExText/ExText.js \
-    ../Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js \
-    ../Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js \
-    ../Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js \
-    ../Misc/Examples/ModifyExamples/ModifyExamples.js \
-    ../Misc/Examples/CommandLineExamples/CommandLineExamples.js \
-    ../Misc/Examples/CommandLineExamples/ExSetColor/ExSetColor.js \
-    ../Misc/Examples/QtExamples/ExDirListing/ExDirListing.js \
-    ../Misc/Examples/QtExamples/ExWidget/MyWidget.js \
-    ../Misc/Examples/QtExamples/ExWidget/ExWidget.js \
-    ../Misc/Examples/QtExamples/QtExamples.js \
-    ../Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js \
-    ../Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js \
-    ../Misc/Examples/QtExamples/ExProcess/ExProcess.js \
-    ../Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js \
-    ../Misc/Examples/ListenerExamples/ListenerExamples.js \
-    ../Misc/Examples/ListenerExamples/ExExportListener/ExExportListener.js \
-    ../Misc/Examples/BlockExamples/BlockExamples.js \
-    ../Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js \
-    ../Misc/Examples/ExMinimal2/ExMinimal2.js \
-    ../Misc/Examples/MathExamples/MathExamples.js \
-    ../Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js \
-    ../Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js \
-    ../Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js \
-    ../Misc/Examples/LayerExamples/LayerExamples.js \
-    ../Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js \
-    ../Misc/Examples/IOExamples/_AutoLoadInitFileDialog/AutoLoadInitFileDialog.js \
-    ../Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js \
-    ../Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js \
-    ../Misc/Examples/IOExamples/IOExamples.js \
-    ../Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js \
-    ../Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js \
-    ../Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js \
-    ../Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js \
-    ../Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js \
-    ../Misc/Examples/Examples.js \
-    ../Misc/Tutorials/MenusAndToolBars/MyAction.js \
-    ../Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js \
-    ../Misc/Tutorials/MenusAndToolBars/MyScripts.js \
-    ../Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.js \
-    ../Misc/Tutorials/CommandLineTools/CommandLineTools.js \
-    ../Misc/Tutorials/CommandLineTools/ExPdfExport/ExPdfExport.js \
-    ../Misc/Tutorials/CommandLineTools/CreatingDrawing/CreatingDrawing.js \
-    ../Misc/Tutorials/CommandLineTools/ExSvgExport/ExSvgExport.js \
-    ../Misc/Tutorials/Tutorials.js \
-    ../Misc/Tutorials/PersistentWidgets/PersistentWidgets.js \
-    ../Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js \
-    ../Misc/MiscSelect/SelectByHandle/SelectByHandle.js \
-    ../Misc/MiscSelect/MiscSelect.js \
-    ../Misc/MiscSelect/SelectByColor/SelectByColor.js \
-    ../Misc/MiscSelect/SelectByColor/SelectByColorInit.js \
-    ../simple_view.js \
-    ../WidgetFactory.js \
-    ../ShapeAlgorithms.js \
-    ../Tools/arguments.js \
-    ../Tools/MergeDrawings/MergeDrawings.js \
-    ../Tools/MergeDrawings/MergeDrawingsInit.js \
-    ../Tools/ExTool/ExTool.js \
-    ../Information/InfoArcCircleArea/InfoArcCircleAreaInit.js \
-    ../Information/InfoArcCircleArea/InfoArcCircleArea.js \
-    ../Information/InfoDistanceEE/Tests/InfoDistanceEETest03.js \
-    ../Information/InfoDistanceEE/Tests/InfoDistanceEETest02.js \
-    ../Information/InfoDistanceEE/Tests/InfoDistanceEETest01.js \
-    ../Information/InfoDistanceEE/Tests/InfoDistanceEETest04.js \
-    ../Information/InfoDistanceEE/Tests/InfoDistanceEETest00.js \
-    ../Information/InfoDistanceEE/InfoDistanceEEInit.js \
-    ../Information/InfoDistanceEE/InfoDistanceEE.js \
-    ../Information/InfoDistanceEP/InfoDistanceEP.js \
-    ../Information/InfoDistanceEP/Tests/InfoDistanceEPTest00.js \
-    ../Information/InfoDistanceEP/InfoDistanceEPInit.js \
-    ../Information/InfoDistancePP/InfoDistancePP.js \
-    ../Information/InfoDistancePP/Tests/InfoDistancePPTest00.js \
-    ../Information/InfoDistancePP/InfoDistancePPInit.js \
-    ../Information/InfoPositionPol/InfoPositionPol.js \
-    ../Information/InfoPositionPol/InfoPositionPolInit.js \
-    ../Information/InfoArea/InfoArea.js \
-    ../Information/InfoArea/InfoAreaInit.js \
-    ../Information/Information.js \
-    ../Information/InfoAngle/InfoAngleInit.js \
-    ../Information/InfoAngle/InfoAngle.js \
-    ../Information/InfoPositionPolRel/InfoPositionPolRelInit.js \
-    ../Information/InfoPositionPolRel/InfoPositionPolRel.js \
-    ../Information/InfoPolylineArea/InfoPolylineArea.js \
-    ../Information/InfoPolylineArea/InfoPolylineAreaInit.js \
-    ../Information/InfoPositionRel/InfoPositionRel.js \
-    ../Information/InfoPositionRel/InfoPositionRelInit.js \
-    ../Information/InfoPosition/InfoPositionInit.js \
-    ../Information/InfoPosition/InfoPosition.js \
-    ../autostart.js \
-    ../File/PrintPreview/PrintPreview.js \
-    ../File/PrintPreview/PrintPreviewInit.js \
-    ../File/PdfExport/PdfExportInit.js \
-    ../File/PdfExport/PdfExport.js \
-    ../File/ImportFile/ImportFileInit.js \
-    ../File/ImportFile/ImportFile.js \
-    ../File/SvgImport/SvgImport.js \
-    ../File/SvgImport/SvgImportInit.js \
-    ../File/BitmapExport/BitmapExport2.js \
-    ../File/BitmapExport/BitmapExport.js \
-    ../File/BitmapExport/BitmapExportWorker.js \
-    ../File/BitmapExport/BitmapExportInit.js \
-    ../File/Quit/Quit.js \
-    ../File/Quit/QuitInit.js \
-    ../File/Print/PrintInit.js \
-    ../File/Print/Print.js \
-    ../File/AutoSave/AutoSave.js \
-    ../File/CloseFile/CloseFile.js \
-    ../File/CloseFile/CloseFileInit.js \
-    ../File/PrintCurrentView/PrintCurrentView.js \
-    ../File/PrintCurrentView/PrintCurrentViewInit.js \
-    ../File/OpenFile/OpenFileInit.js \
-    ../File/OpenFile/OpenFile.js \
-    ../File/File.js \
-    ../File/SaveAs/SaveAs.js \
-    ../File/SaveAs/SaveAsInit.js \
-    ../File/NewFile/NewFileInit.js \
-    ../File/NewFile/NewFile.js \
-    ../File/Save/Save.js \
-    ../File/Save/SaveInit.js \
-    ../File/RecentFiles/RecentFilesInit.js \
-    ../File/RecentFiles/RecentFiles.js \
-    ../simple_info.js \
-    ../simple_modify.js \
-    ../AddOn.js \
-    ../Reset/Reset.js \
-    ../Reset/ResetInit.js \
-    ../simple_input.js \
-    ../Navigation/DefaultNavigation/DefaultNavigation.js \
-    ../Modify/Rotate/RotateInit.js \
-    ../Modify/Rotate/Tests/RotateTest01.js \
-    ../Modify/Rotate/Tests/RotateTest00.js \
-    ../Modify/Rotate/Rotate.js \
-    ../Modify/FlipVertical/FlipVerticalInit.js \
-    ../Modify/FlipVertical/FlipVertical.js \
-    ../Modify/FlipVertical/Tests/FlipVerticalTest00.js \
-    ../Modify/Bevel/BevelInit.js \
-    ../Modify/Bevel/Tests/BevelTest04.js \
-    ../Modify/Bevel/Tests/BevelTest00.js \
-    ../Modify/Bevel/Tests/BevelTest01.js \
-    ../Modify/Bevel/Tests/BevelTest05.js \
-    ../Modify/Bevel/Tests/BevelTest02.js \
-    ../Modify/Bevel/Tests/BevelTest06.js \
-    ../Modify/Bevel/Tests/BevelTest07.js \
-    ../Modify/Bevel/Tests/BevelTest03.js \
-    ../Modify/Bevel/Bevel.js \
-    ../Modify/Scale/ScaleInit.js \
-    ../Modify/Scale/Tests/ScaleTest05.js \
-    ../Modify/Scale/Tests/ScaleTest01.js \
-    ../Modify/Scale/Tests/ScaleTest00.js \
-    ../Modify/Scale/Tests/ScaleTest04.js \
-    ../Modify/Scale/Tests/ScaleTest08.js \
-    ../Modify/Scale/Tests/ScaleTest03.js \
-    ../Modify/Scale/Tests/ScaleTest07.js \
-    ../Modify/Scale/Tests/ScaleTest06.js \
-    ../Modify/Scale/Tests/ScaleTest02.js \
-    ../Modify/Scale/Scale.js \
-    ../Modify/TrimBoth/Tests/TrimBothTest01.js \
-    ../Modify/TrimBoth/Tests/TrimBothTest04.js \
-    ../Modify/TrimBoth/Tests/TrimBothTest00.js \
-    ../Modify/TrimBoth/Tests/TrimBothTest03.js \
-    ../Modify/TrimBoth/Tests/TrimBothTest02.js \
-    ../Modify/TrimBoth/TrimBoth.js \
-    ../Modify/TrimBoth/TrimBothInit.js \
-    ../Modify/ModifyCorner.js \
-    ../Modify/Translate/Translate.js \
-    ../Modify/Translate/Tests/TranslateTest00.js \
-    ../Modify/Translate/Tests/TranslateTest01.js \
-    ../Modify/Translate/Tests/TranslateTest02.js \
-    ../Modify/Translate/TranslateInit.js \
-    ../Modify/Stretch/StretchInit.js \
-    ../Modify/Stretch/Tests/StretchTest02.js \
-    ../Modify/Stretch/Tests/StretchTest01.js \
-    ../Modify/Stretch/Tests/StretchTest00.js \
-    ../Modify/Stretch/Stretch.js \
-    ../Modify/Lengthen/Tests/LengthenTest03.js \
-    ../Modify/Lengthen/Tests/LengthenTest02.js \
-    ../Modify/Lengthen/Tests/LengthenTest01.js \
-    ../Modify/Lengthen/Tests/LengthenTest00.js \
-    ../Modify/Lengthen/LengthenInit.js \
-    ../Modify/Lengthen/Lengthen.js \
-    ../Modify/Divide/Divide.js \
-    ../Modify/Divide/DivideInit.js \
-    ../Modify/Divide/Tests/DivideTest02.js \
-    ../Modify/Divide/Tests/DivideTest01.js \
-    ../Modify/EditText/EditTextInit.js \
-    ../Modify/EditText/EditText.js \
-    ../Modify/FlipHorizontal/FlipHorizontalInit.js \
-    ../Modify/FlipHorizontal/Tests/FlipHorizontalTest00.js \
-    ../Modify/FlipHorizontal/FlipHorizontal.js \
-    ../Modify/Reverse/Reverse.js \
-    ../Modify/Reverse/ReverseInit.js \
-    ../Modify/Reverse/Tests/ReverseTest00.js \
-    ../Modify/Trim/Trim.js \
-    ../Modify/Trim/Tests/TrimTest00.js \
-    ../Modify/Trim/Tests/TrimTest10.js \
-    ../Modify/Trim/Tests/TrimTest04.js \
-    ../Modify/Trim/Tests/TrimTest05.js \
-    ../Modify/Trim/Tests/TrimTest01.js \
-    ../Modify/Trim/Tests/TrimTest11.js \
-    ../Modify/Trim/Tests/TrimTest06.js \
-    ../Modify/Trim/Tests/TrimTest02.js \
-    ../Modify/Trim/Tests/TrimTest03.js \
-    ../Modify/Trim/Tests/TrimTest07.js \
-    ../Modify/Trim/Tests/TrimTest08.js \
-    ../Modify/Trim/Tests/TrimTest09.js \
-    ../Modify/Trim/TrimInit.js \
-    ../Modify/Offset/OffsetInit.js \
-    ../Modify/Offset/Offset.js \
-    ../Modify/Offset/Tests/OffsetTest02.js \
-    ../Modify/Offset/Tests/OffsetTest00.js \
-    ../Modify/Offset/Tests/OffsetTest01.js \
-    ../Modify/BreakOutManual/BreakOutManualInit.js \
-    ../Modify/BreakOutManual/BreakOutManual.js \
-    ../Modify/BreakOutManual/Tests/BreakOutManualTest02.js \
-    ../Modify/BreakOutManual/Tests/BreakOutManualTest00.js \
-    ../Modify/BreakOutManual/Tests/BreakOutManualTest01.js \
-    ../Modify/BreakOut/Tests/BreakOutTest07.js \
-    ../Modify/BreakOut/Tests/BreakOutTest03.js \
-    ../Modify/BreakOut/Tests/BreakOutTest13.js \
-    ../Modify/BreakOut/Tests/BreakOutTest02.js \
-    ../Modify/BreakOut/Tests/BreakOutTest12.js \
-    ../Modify/BreakOut/Tests/BreakOutTest06.js \
-    ../Modify/BreakOut/Tests/BreakOutTest16.js \
-    ../Modify/BreakOut/Tests/BreakOutTest09.js \
-    ../Modify/BreakOut/Tests/BreakOutTest08.js \
-    ../Modify/BreakOut/Tests/BreakOutTest01.js \
-    ../Modify/BreakOut/Tests/BreakOutTest11.js \
-    ../Modify/BreakOut/Tests/BreakOutTest05.js \
-    ../Modify/BreakOut/Tests/BreakOutTest15.js \
-    ../Modify/BreakOut/Tests/BreakOutTest04.js \
-    ../Modify/BreakOut/Tests/BreakOutTest14.js \
-    ../Modify/BreakOut/Tests/BreakOutTest00.js \
-    ../Modify/BreakOut/Tests/BreakOutTest10.js \
-    ../Modify/BreakOut/BreakOut.js \
-    ../Modify/BreakOut/BreakOutInit.js \
-    ../Modify/DrawOrder/ToFront/ToFrontInit.js \
-    ../Modify/DrawOrder/ToFront/ToFront.js \
-    ../Modify/DrawOrder/ToBack/ToBackInit.js \
-    ../Modify/DrawOrder/ToBack/ToBack.js \
-    ../Modify/DrawOrder/DrawOrder.js \
-    ../Modify/BreakOutGap/BreakOutGapInit.js \
-    ../Modify/BreakOutGap/Tests/BreakOutGapTest01.js \
-    ../Modify/BreakOutGap/BreakOutGap.js \
-    ../Modify/Explode/Tests/ExplodeTest04.js \
-    ../Modify/Explode/Tests/ExplodeTest00.js \
-    ../Modify/Explode/Tests/ExplodeTest01.js \
-    ../Modify/Explode/Tests/ExplodeTest05.js \
-    ../Modify/Explode/Tests/ExplodeTest02.js \
-    ../Modify/Explode/Tests/ExplodeTest03.js \
-    ../Modify/Explode/ExplodeInit.js \
-    ../Modify/Explode/Explode.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest03.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest07.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest06.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest02.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest09.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest08.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest05.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest01.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest00.js \
-    ../Modify/AutoTrim/Tests/AutoTrimTest04.js \
-    ../Modify/AutoTrim/AutoTrim.js \
-    ../Modify/AutoTrim/AutoTrimInit.js \
-    ../Modify/TranslateRotate/TranslateRotateInit.js \
-    ../Modify/TranslateRotate/TranslateRotate.js \
-    ../Modify/TranslateRotate/Tests/TranslateRotateTest00.js \
-    ../Modify/TranslateRotate/Tests/TranslateRotateTest01.js \
-    ../Modify/TranslateRotate/Tests/TranslateRotateTest02.js \
-    ../Modify/Rotate2/Rotate2Init.js \
-    ../Modify/Rotate2/Rotate2.js \
-    ../Modify/Rotate2/Tests/Rotate2Test03.js \
-    ../Modify/Rotate2/Tests/Rotate2Test02.js \
-    ../Modify/Rotate2/Tests/Rotate2Test06.js \
-    ../Modify/Rotate2/Tests/Rotate2Test01.js \
-    ../Modify/Rotate2/Tests/Rotate2Test05.js \
-    ../Modify/Rotate2/Tests/Rotate2Test04.js \
-    ../Modify/OffsetThrough/OffsetThroughInit.js \
-    ../Modify/OffsetThrough/OffsetThrough.js \
-    ../Modify/EditHatch/EditHatchInit.js \
-    ../Modify/EditHatch/EditHatch.js \
-    ../Modify/Round/RoundInit.js \
-    ../Modify/Round/Tests/RoundTest00.js \
-    ../Modify/Round/Tests/RoundTest01.js \
-    ../Modify/Round/Round.js \
-    ../Modify/Modify.js \
-    ../Modify/Transform.js \
-    ../Modify/Mirror/Tests/MirrorTest01.js \
-    ../Modify/Mirror/Tests/MirrorTest00.js \
-    ../Modify/Mirror/Mirror.js \
-    ../Modify/Mirror/MirrorInit.js \
-    ../DbConnection.js \
-    ../ImportExport/SvgImporter/SvgImporterInit.js \
-    ../ImportExport/SvgImporter/SvgImporter.js \
-    ../library.js \
-    ../EAction.js \
-    ../simple.js \
-    ../Edit/ClipboardOperation.js \
-    ../Edit/CopyWithReference/Tests/CopyWithReferenceTest00.js \
-    ../Edit/CopyWithReference/CopyWithReferenceInit.js \
-    ../Edit/CopyWithReference/CopyWithReference.js \
-    ../Edit/CutWithReference/CutWithReference.js \
-    ../Edit/CutWithReference/CutWithReferenceInit.js \
-    ../Edit/CutWithReference/Tests/CutWithReferenceTest00.js \
-    ../Edit/Edit.js \
-    ../Edit/Delete/Tests/DeleteTest00.js \
-    ../Edit/Delete/Delete.js \
-    ../Edit/Delete/DeleteInit.js \
-    ../Edit/Esc/Esc.js \
-    ../Edit/Esc/EscInit.js \
-    ../Edit/Esc/Tests/EActionTest03.js \
-    ../Edit/Esc/Tests/EActionTest02.js \
-    ../Edit/Esc/Tests/EActionTest01.js \
-    ../Edit/Esc/Tests/EActionTest00.js \
-    ../Edit/Redo/Redo.js \
-    ../Edit/Redo/RedoInit.js \
-    ../Edit/DrawingPreferences/PageSettings/PageSettingsInit.js \
-    ../Edit/DrawingPreferences/PageSettings/PageSettings.js \
-    ../Edit/DrawingPreferences/DrawingPreferences.js \
-    ../Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js \
-    ../Edit/DrawingPreferences/ViewportSettings/ViewportSettingsInit.js \
-    ../Edit/DrawingPreferences/GridSettings/GridSettingsInit.js \
-    ../Edit/DrawingPreferences/GridSettings/GridSettings.js \
-    ../Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js \
-    ../Edit/DrawingPreferences/LinetypeSettings/LinetypeSettingsInit.js \
-    ../Edit/DrawingPreferences/UnitSettings/UnitSettings.js \
-    ../Edit/DrawingPreferences/UnitSettings/UnitSettingsInit.js \
-    ../Edit/DrawingPreferences/DimensionSettings/DimensionSettingsInit.js \
-    ../Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js \
-    ../Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js \
-    ../Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettingsInit.js \
-    ../Edit/DrawingPreferences/ColorSettings/ColorSettings.js \
-    ../Edit/DrawingPreferences/ColorSettings/ColorSettingsInit.js \
-    ../Edit/Undo/UndoInit.js \
-    ../Edit/Undo/Undo.js \
-    ../Edit/AppPreferences/LayerCompatibility/LayerCompatibilityInit.js \
-    ../Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js \
-    ../Edit/AppPreferences/ThemePreferences/ThemePreferences.js \
-    ../Edit/AppPreferences/ThemePreferences/ThemePreferencesInit.js \
-    ../Edit/AppPreferences/LanguagePreferences/LanguagePreferencesInit.js \
-    ../Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js \
-    ../Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js \
-    ../Edit/AppPreferences/ScriptingPreferences/ScriptingPreferencesInit.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferencesInit.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferencesInit.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferencesInit.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js \
-    ../Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferencesInit.js \
-    ../Edit/AppPreferences/AppPreferences.js \
-    ../Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js \
-    ../Edit/AppPreferences/KeyboardPreferences/KeyboardPreferencesInit.js \
-    ../Edit/AppPreferences/ToolBarPreferences/ToolBarPreferencesInit.js \
-    ../Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js \
-    ../Edit/AppPreferences/StartupPreferences/StartupPreferences.js \
-    ../Edit/AppPreferences/StartupPreferences/StartupPreferencesInit.js \
-    ../Edit/AppPreferences/InputPreferences/InputPreferencesInit.js \
-    ../Edit/AppPreferences/InputPreferences/InputPreferences.js \
-    ../Edit/AppPreferences/TextPreferences/TextPreferencesInit.js \
-    ../Edit/AppPreferences/TextPreferences/TextPreferences.js \
-    ../Edit/Duplicate/Tests/DuplicateTest00.js \
-    ../Edit/Duplicate/DuplicateInit.js \
-    ../Edit/Duplicate/Duplicate.js \
-    ../Edit/ConvertUnit/ConvertUnit.js \
-    ../Edit/ConvertUnit/ConvertUnitInit.js \
-    ../Edit/Cut/Cut.js \
-    ../Edit/Cut/CutInit.js \
-    ../Edit/Cut/Tests/CutTest00.js \
-    ../Edit/AbstractPreferences.js \
-    ../Edit/Copy/Copy.js \
-    ../Edit/Copy/Tests/CopyTest00.js \
-    ../Edit/Copy/CopyInit.js \
-    ../Edit/Paste/Tests/PasteTest02.js \
-    ../Edit/Paste/Tests/PasteTest00.js \
-    ../Edit/Paste/Tests/PasteTest01.js \
-    ../Edit/Paste/Paste.js \
-    ../Edit/Paste/PasteInit.js \
-    ../Layer/EditLayer/EditLayerInit.js \
-    ../Layer/EditLayer/EditLayer.js \
-    ../Layer/DeselectLayer/DeselectLayer.js \
-    ../Layer/DeselectLayer/DeselectLayerInit.js \
-    ../Layer/HierarchicalLayers.js \
-    ../Layer/LockAllLayers/LockAllLayersInit.js \
-    ../Layer/LockAllLayers/LockAllLayers.js \
-    ../Layer/LayerDialog.js \
-    ../Layer/ShowAllLayers/ShowAllLayers.js \
-    ../Layer/ShowAllLayers/ShowAllLayersInit.js \
-    ../Layer/ToggleLayerVisibility/Tests/ToggleLayerVisibilityTest00.js \
-    ../Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js \
-    ../Layer/ToggleLayerVisibility/ToggleLayerVisibility.js \
-    ../Layer/ToggleLayerLock/ToggleLayerLock.js \
-    ../Layer/ToggleLayerLock/ToggleLayerLockInit.js \
-    ../Layer/SelectLayer/SelectLayerInit.js \
-    ../Layer/SelectLayer/SelectLayer.js \
-    ../Layer/RemoveLayer/RemoveLayer.js \
-    ../Layer/RemoveLayer/RemoveLayerInit.js \
-    ../Layer/AddLayer/AddLayer.js \
-    ../Layer/AddLayer/Tests/AddLayerTest02.js \
-    ../Layer/AddLayer/Tests/AddLayerTest00.js \
-    ../Layer/AddLayer/Tests/AddLayerTest01.js \
-    ../Layer/AddLayer/AddLayerInit.js \
-    ../Layer/HideAllLayers/HideAllLayersInit.js \
-    ../Layer/HideAllLayers/HideAllLayers.js \
-    ../Layer/UnlockAllLayers/UnlockAllLayers.js \
-    ../Layer/UnlockAllLayers/UnlockAllLayersInit.js \
-    ../Layer/ShowActiveLayer/ShowActiveLayer.js \
-    ../Layer/ShowActiveLayer/ShowActiveLayerInit.js \
-    ../Layer/Layer.js \
-    ../Window/CloseAll/CloseAllInit.js \
-    ../Window/CloseAll/CloseAll.js \
-    ../Window/Window.js \
-    ../Window/PreviousWindow/PreviousWindow.js \
-    ../Window/PreviousWindow/PreviousWindowInit.js \
-    ../Window/NextWindow/NextWindowInit.js \
-    ../Window/NextWindow/NextWindow.js \
-    ../Snap/Snap.js \
-    ../Snap/RestrictVertical/RestrictVertical.js \
-    ../Snap/RestrictVertical/RestrictVerticalInit.js \
-    ../Snap/SnapTangential/SnapTangentialInit.js \
-    ../Snap/SnapTangential/SnapTangential.js \
-    ../Snap/SnapMiddle/SnapMiddleInit.js \
-    ../Snap/SnapMiddle/SnapMiddle.js \
-    ../Snap/SnapIntersectionManual/SnapIntersectionManual.js \
-    ../Snap/SnapIntersectionManual/Tests/SnapIntersectionManualTest00.js \
-    ../Snap/SnapIntersectionManual/SnapIntersectionManualInit.js \
-    ../Snap/LockRelativeZero/LockRelativeZeroInit.js \
-    ../Snap/LockRelativeZero/LockRelativeZero.js \
-    ../Snap/SnapXManual/SnapXManualInit.js \
-    ../Snap/SnapXManual/SnapXManual.js \
-    ../Snap/SnapGrid/SnapGridInit.js \
-    ../Snap/SnapGrid/SnapGrid.js \
-    ../Snap/SnapDistance/SnapDistance.js \
-    ../Snap/SnapDistance/SnapDistanceInit.js \
-    ../Snap/SetRelativeZero/SetRelativeZero.js \
-    ../Snap/SetRelativeZero/SetRelativeZeroInit.js \
-    ../Snap/RestrictOff/RestrictOffInit.js \
-    ../Snap/RestrictOff/RestrictOff.js \
-    ../Snap/SnapCenter/SnapCenterInit.js \
-    ../Snap/SnapCenter/SnapCenter.js \
-    ../Snap/SnapYManual/SnapYManualInit.js \
-    ../Snap/SnapYManual/SnapYManual.js \
-    ../Snap/SnapCoordinate/SnapCoordinateInit.js \
-    ../Snap/SnapCoordinate/SnapCoordinate.js \
-    ../Snap/SnapFree/SnapFreeInit.js \
-    ../Snap/SnapFree/SnapFree.js \
-    ../Snap/SnapAuto/SnapAutoInit.js \
-    ../Snap/SnapAuto/SnapAuto.js \
-    ../Snap/RestrictAngleLength/RestrictAngleLengthInit.js \
-    ../Snap/RestrictAngleLength/RestrictAngleLength.js \
-    ../Snap/SnapPerpendicular/SnapPerpendicular.js \
-    ../Snap/SnapPerpendicular/SnapPerpendicularInit.js \
-    ../Snap/SnapIntersection/Tests/SnapIntersectionTest02.js \
-    ../Snap/SnapIntersection/Tests/SnapIntersectionTest03.js \
-    ../Snap/SnapIntersection/Tests/SnapIntersectionTest00.js \
-    ../Snap/SnapIntersection/Tests/SnapIntersectionTest04.js \
-    ../Snap/SnapIntersection/Tests/SnapIntersectionTest05.js \
-    ../Snap/SnapIntersection/Tests/SnapIntersectionTest01.js \
-    ../Snap/SnapIntersection/SnapIntersectionInit.js \
-    ../Snap/SnapIntersection/SnapIntersection.js \
-    ../Snap/SnapReference/SnapReferenceInit.js \
-    ../Snap/SnapReference/SnapReference.js \
-    ../Snap/SnapSelectionCenter/SnapSelectionCenter.js \
-    ../Snap/SnapSelectionCenter/SnapSelectionCenterInit.js \
-    ../Snap/SnapOnEntity/SnapOnEntityInit.js \
-    ../Snap/SnapOnEntity/SnapOnEntity.js \
-    ../Snap/SnapEnd/SnapEndInit.js \
-    ../Snap/SnapEnd/SnapEnd.js \
-    ../Snap/SnapMiddleManual/Tests/SnapMiddleManualTest00.js \
-    ../Snap/SnapMiddleManual/SnapMiddleManual.js \
-    ../Snap/SnapMiddleManual/SnapMiddleManualInit.js \
-    ../Snap/RestrictOrthogonal/RestrictOrthogonal.js \
-    ../Snap/RestrictOrthogonal/RestrictOrthogonalInit.js \
-    ../Snap/SnapCoordinatePolar/SnapCoordinatePolar.js \
-    ../Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js \
-    ../Snap/RestrictHorizontal/RestrictHorizontalInit.js \
-    ../Snap/RestrictHorizontal/RestrictHorizontal.js \
-    ../Snap/SnapDistanceManual/SnapDistanceManual.js \
-    ../Snap/SnapDistanceManual/Tests/SnapDistanceManualTest00.js \
-    ../Snap/SnapDistanceManual/SnapDistanceManualInit.js \
-    ../View/CommandLineFocus/CommandLineFocus.js \
-    ../View/CommandLineFocus/CommandLineFocusInit.js \
-    ../View/LinetypeMode/LinetypeMode.js \
-    ../View/ToggleGrid/ToggleGrid.js \
-    ../View/DisplayDistanceAngle/DisplayDistanceAngle.js \
-    ../View/DisplayDistanceAngle/DisplayDistanceAngleInit.js \
-    ../View/DraftMode/DraftMode.js \
-    ../View/OptionsToolBarFocus/OptionsToolBarFocus.js \
-    ../View/OptionsToolBarFocus/OptionsToolBarFocusInit.js \
-    ../View/Zoom/PreviousView/PreviousView.js \
-    ../View/Zoom/PreviousView/PreviousViewInit.js \
-    ../View/Zoom/ZoomToSelection/ZoomToSelectionInit.js \
-    ../View/Zoom/ZoomToSelection/ZoomToSelection.js \
-    ../View/Zoom/PanZoom/PanZoomInit.js \
-    ../View/Zoom/PanZoom/PanZoom.js \
-    ../View/Zoom/ZoomOut/ZoomOut.js \
-    ../View/Zoom/ZoomOut/ZoomOutInit.js \
-    ../View/Zoom/Zoom.js \
-    ../View/Zoom/WindowZoom/WindowZoomInit.js \
-    ../View/Zoom/WindowZoom/WindowZoom.js \
-    ../View/Zoom/ZoomIn/ZoomIn.js \
-    ../View/Zoom/ZoomIn/ZoomInInit.js \
-    ../View/Zoom/AutoZoom/AutoZoomInit.js \
-    ../View/Zoom/AutoZoom/AutoZoom.js \
-    ../View/IsometricView/IsometricView.js \
-    ../View/IsometricView/IsometricGridLeft/IsometricGridLeft.js \
-    ../View/IsometricView/IsometricGridOff/IsometricGridOff.js \
-    ../View/IsometricView/IsometricGridTop/IsometricGridTop.js \
-    ../View/IsometricView/IsometricGridRight/IsometricGridRight.js \
-    ../View/ToolMatrixFocus/ToolMatrixFocusInit.js \
-    ../View/ToolMatrixFocus/ToolMatrixFocus.js \
-    ../View/View.js \
-    ../View/AntialiasingMode/AntialiasingMode.js \
-    ../View/ShowToolDialog/ShowToolDialog.js \
-    ../View/ViewToolBars/ViewToolBars.js \
-    ../View/ViewToolBars/ViewToolBarsPostInit.js \
-    ../DefaultAction.js \
-    ../lib/sprintf2/sprintf2.js \
-    ../lib/hull/hull.js \
-    ../lib/hull/grid.js \
-    ../lib/hull/intersect.js \
-    ../lib/date.format.js \
-    ../date.js \
-    ../simple_create.js \
-    ../Select/SelectRectangle/SelectRectangle.js \
-    ../Select/SelectRectangle/SelectRectangleInit.js \
-    ../Select/InvertSelection/InvertSelectionInit.js \
-    ../Select/InvertSelection/InvertSelection.js \
-    ../Select/SelectContour/SelectContourInit.js \
-    ../Select/SelectContour/SelectContour.js \
-    ../Select/DeselectAll/DeselectAll.js \
-    ../Select/DeselectAll/DeselectAllInit.js \
-    ../Select/Select.js \
-    ../Select/SelectAll/SelectAllInit.js \
-    ../Select/SelectAll/SelectAll.js \
-    ../Select/SelectLayerByEntity/SelectLayerByEntity.js \
-    ../Select/SelectLayerByEntity/SelectLayerByEntityInit.js \
-    ../Select/SelectIntersectedEntities/SelectIntersectedEntities.js \
-    ../Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js \
-    ../Apollonius.js \
-    ../map.js \
-    ../Draw/DrawBasedOnThreeCircles.js \
-    ../Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js \
-    ../Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest01.js \
-    ../Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest00.js \
-    ../Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js \
-    ../Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest02.js \
-    ../Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest01.js \
-    ../Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest00.js \
-    ../Draw/Shape/ShapePolygonCP/ShapePolygonCP.js \
-    ../Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js \
-    ../Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js \
-    ../Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest02.js \
-    ../Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest00.js \
-    ../Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest01.js \
-    ../Draw/Shape/ShapePolygonPP/ShapePolygonPP.js \
-    ../Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.js \
-    ../Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest01.js \
-    ../Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest00.js \
-    ../Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js \
-    ../Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js \
-    ../Draw/Shape/ShapePolygonAFCP/Tests/ShapePolygonAFCPTest00.js \
-    ../Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js \
-    ../Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.js \
-    ../Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js \
-    ../Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest00.js \
-    ../Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest01.js \
-    ../Draw/Shape/Shape.js \
-    ../Draw/DrawBasedOnRectanglePP.js \
-    ../Draw/Polyline/Polyline.js \
-    ../Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest00.js \
-    ../Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest01.js \
-    ../Draw/Polyline/DrawPolyline/DrawPolylineInit.js \
-    ../Draw/Polyline/DrawPolyline/DrawPolyline.js \
-    ../Draw/Point/Point.js \
-    ../Draw/Point/Point1P/Point1PInit.js \
-    ../Draw/Point/Point1P/Point1P.js \
-    ../Draw/Point/Point1P/Tests/Point1PTest00.js \
-    ../Draw/Hatch/Hatch.js \
-    ../Draw/Hatch/HatchDialog.js \
-    ../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest06.js \
-    ../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest02.js \
-    ../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest03.js \
-    ../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js \
-    ../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest00.js \
-    ../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest04.js \
-    ../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest05.js \
-    ../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest01.js \
-    ../Draw/Hatch/HatchFromSelection/HatchFromSelection.js \
-    ../Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js \
-    ../Draw/Image/ImageInit.js \
-    ../Draw/Image/Tests/ImageTest00.js \
-    ../Draw/Image/Image.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapIntersection.js \
-    ../Draw/Line/Line2P/Tests/Lines01.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapCoordinate.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapOnEntity.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapEnd.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapPolarCoordinate.js \
-    ../Draw/Line/Line2P/Tests/Lines00.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapIntersectionBlock.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapReferences.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapFree.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapMiddle.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapDistance.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapMiddleManual.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapCenter.js \
-    ../Draw/Line/Line2P/Tests/Lines02.js \
-    ../Draw/Line/Line2P/Tests/LinesSnapGrid.js \
-    ../Draw/Line/Line2P/Line2PInit.js \
-    ../Draw/Line/Line2P/Line2P.js \
-    ../Draw/Line/LineParallel/LineParallelInit.js \
-    ../Draw/Line/LineParallel/LineParallel.js \
-    ../Draw/Line/LineParallel/Tests/LineParallelTest00.js \
-    ../Draw/Line/LineParallel/Tests/LineParallelTest01.js \
-    ../Draw/Line/Line.js \
-    ../Draw/Line/LineHorizontal/LineHorizontal.js \
-    ../Draw/Line/LineHorizontal/LineHorizontalInit.js \
-    ../Draw/Line/LineHorizontal/Tests/LineHorizontalTest00.js \
-    ../Draw/Line/LineBisector/LineBisector.js \
-    ../Draw/Line/LineBisector/LineBisectorInit.js \
-    ../Draw/Line/LineBisector/Tests/LineBisectorTest00.js \
-    ../Draw/Line/LineBisector/Tests/LineBisectorTest01.js \
-    ../Draw/Line/LineOrthogonal/Tests/LineOrthogonalTest00.js \
-    ../Draw/Line/LineOrthogonal/LineOrthogonalInit.js \
-    ../Draw/Line/LineOrthogonal/LineOrthogonal.js \
-    ../Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js \
-    ../Draw/Line/LineOrthogonalTangent/Tests/LineOrthogonalTangentTest00.js \
-    ../Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js \
-    ../Draw/Line/LineTangent1/Tests/LineTangent1Test01.js \
-    ../Draw/Line/LineTangent1/Tests/LineTangent1Test00.js \
-    ../Draw/Line/LineTangent1/LineTangent1Init.js \
-    ../Draw/Line/LineTangent1/LineTangent1.js \
-    ../Draw/Line/LineFreehand/LineFreehandInit.js \
-    ../Draw/Line/LineFreehand/LineFreehand.js \
-    ../Draw/Line/LineAngle/LineAngle.js \
-    ../Draw/Line/LineAngle/Tests/LineAngle00.js \
-    ../Draw/Line/LineAngle/Tests/LineAngle01.js \
-    ../Draw/Line/LineAngle/Tests/LineAngle02.js \
-    ../Draw/Line/LineAngle/LineAngleInit.js \
-    ../Draw/Line/LineRelativeAngle/Tests/LineRelativeAngleTest00.js \
-    ../Draw/Line/LineRelativeAngle/LineRelativeAngle.js \
-    ../Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js \
-    ../Draw/Line/LineTangent2/LineTangent2.js \
-    ../Draw/Line/LineTangent2/Tests/LineTangent2Test00.js \
-    ../Draw/Line/LineTangent2/Tests/LineTangent2Test01.js \
-    ../Draw/Line/LineTangent2/LineTangent2Init.js \
-    ../Draw/Line/LineParallelThrough/LineParallelThroughInit.js \
-    ../Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest01.js \
-    ../Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest00.js \
-    ../Draw/Line/LineParallelThrough/LineParallelThrough.js \
-    ../Draw/Line/LineVertical/LineVerticalInit.js \
-    ../Draw/Line/LineVertical/Tests/LineVerticalTest00.js \
-    ../Draw/Line/LineVertical/LineVertical.js \
-    ../Draw/Spline/Spline.js \
-    ../Draw/Spline/SplineControlPoints/SplineControlPointsInit.js \
-    ../Draw/Spline/SplineControlPoints/Tests/SplineControlPointsTest00.js \
-    ../Draw/Spline/SplineControlPoints/SplineControlPoints.js \
-    ../Draw/Draw.js \
-    ../Draw/Circle/Circle3P/Circle3PInit.js \
-    ../Draw/Circle/Circle3P/Tests/Circle3PTest00.js \
-    ../Draw/Circle/Circle3P/Circle3P.js \
-    ../Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js \
-    ../Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js \
-    ../Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js \
-    ../Draw/Circle/Circle2TP/Circle2TPInit.js \
-    ../Draw/Circle/Circle2TP/Circle2TP.js \
-    ../Draw/Circle/Circle.js \
-    ../Draw/Circle/CircleCR/CircleCRInit.js \
-    ../Draw/Circle/CircleCR/Tests/CircleCRTest01.js \
-    ../Draw/Circle/CircleCR/Tests/CircleCRTest00.js \
-    ../Draw/Circle/CircleCR/CircleCR.js \
-    ../Draw/Circle/CircleConcentricThrough/Tests/CircleConcentricThroughTest00.js \
-    ../Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js \
-    ../Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.js \
-    ../Draw/Circle/Circle3T/Tests/Circle3TTest00.js \
-    ../Draw/Circle/Circle3T/Tests/Circle3TTest01.js \
-    ../Draw/Circle/Circle3T/Tests/Circle3TTest02.js \
-    ../Draw/Circle/Circle3T/Tests/Circle3TTest03.js \
-    ../Draw/Circle/Circle3T/Circle3TInit.js \
-    ../Draw/Circle/Circle3T/Circle3T.js \
-    ../Draw/Circle/CircleT2P/CircleT2P.js \
-    ../Draw/Circle/CircleT2P/Tests/CircleT2PTest00.js \
-    ../Draw/Circle/CircleT2P/CircleT2PInit.js \
-    ../Draw/Circle/Circle2TR/Circle2TR.js \
-    ../Draw/Circle/Circle2TR/Circle2TRInit.js \
-    ../Draw/Circle/Circle2TR/Tests/Circle2TRTest00.js \
-    ../Draw/Circle/Circle2TR/Tests/Circle2TRTest01.js \
-    ../Draw/Circle/CircleCD/CircleCDInit.js \
-    ../Draw/Circle/CircleCD/CircleCD.js \
-    ../Draw/Circle/CircleCD/Tests/CircleCDTest00.js \
-    ../Draw/Circle/CircleConcentric/Tests/CircleConcentricTest00.js \
-    ../Draw/Circle/CircleConcentric/CircleConcentricInit.js \
-    ../Draw/Circle/CircleConcentric/CircleConcentric.js \
-    ../Draw/Circle/CircleCP/CircleCPInit.js \
-    ../Draw/Circle/CircleCP/Tests/CircleCPTest00.js \
-    ../Draw/Circle/CircleCP/CircleCP.js \
-    ../Draw/Circle/CircleTPR/Tests/CircleTPRTest00.js \
-    ../Draw/Circle/CircleTPR/CircleTPR.js \
-    ../Draw/Circle/CircleTPR/CircleTPRInit.js \
-    ../Draw/Circle/Circle2PR/Circle2PR.js \
-    ../Draw/Circle/Circle2PR/Tests/Circle2PRTest00.js \
-    ../Draw/Circle/Circle2PR/Circle2PRInit.js \
-    ../Draw/Circle/Circle2P/Circle2PInit.js \
-    ../Draw/Circle/Circle2P/Tests/Circle2PTest00.js \
-    ../Draw/Circle/Circle2P/Circle2P.js \
-    ../Draw/Ellipse/EllipseCPP/EllipseCPPInit.js \
-    ../Draw/Ellipse/EllipseCPP/Tests/EllipseCPPTest00.js \
-    ../Draw/Ellipse/EllipseCPP/EllipseCPP.js \
-    ../Draw/Ellipse/EllipseDD/EllipseDDInit.js \
-    ../Draw/Ellipse/EllipseDD/Tests/EllipseDDTest00.js \
-    ../Draw/Ellipse/EllipseDD/EllipseDD.js \
-    ../Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js \
-    ../Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js \
-    ../Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js \
-    ../Draw/Ellipse/EllipseRR/EllipseRRInit.js \
-    ../Draw/Ellipse/EllipseRR/Tests/EllipseRRTest00.js \
-    ../Draw/Ellipse/EllipseRR/EllipseRR.js \
-    ../Draw/Ellipse/Ellipse.js \
-    ../Draw/Ellipse/EllipseOffsetThrough/Tests/EllipseOffsetThroughTest00.js \
-    ../Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.js \
-    ../Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js \
-    ../Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js \
-    ../Draw/Ellipse/EllipseOffset/Tests/EllipseOffsetTest00.js \
-    ../Draw/Ellipse/EllipseOffset/EllipseOffset.js \
-    ../Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js \
-    ../Draw/Ellipse/EllipseInscribedQuad/Tests/EllipseInscribedQuadTest00.js \
-    ../Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js \
-    ../Draw/Text/TextDialog/CharacterMapDialog.js \
-    ../Draw/Text/TextDialog/TextDialog.js \
-    ../Draw/Text/Tests/Text15.js \
-    ../Draw/Text/Tests/Text05.js \
-    ../Draw/Text/Tests/Text11.js \
-    ../Draw/Text/Tests/Text01.js \
-    ../Draw/Text/Tests/Text10.js \
-    ../Draw/Text/Tests/Text14.js \
-    ../Draw/Text/Tests/Text04.js \
-    ../Draw/Text/Tests/Text13.js \
-    ../Draw/Text/Tests/Text03.js \
-    ../Draw/Text/Tests/Text17.js \
-    ../Draw/Text/Tests/Text07.js \
-    ../Draw/Text/Tests/Text16.js \
-    ../Draw/Text/Tests/Text06.js \
-    ../Draw/Text/Tests/Text12.js \
-    ../Draw/Text/Tests/Text02.js \
-    ../Draw/Text/Tests/Text09.js \
-    ../Draw/Text/Tests/Text08.js \
-    ../Draw/Text/TextInit.js \
-    ../Draw/Text/Text.js \
-    ../Draw/Arc/ArcConcentric/Tests/ArcConcentricTest00.js \
-    ../Draw/Arc/ArcConcentric/ArcConcentricInit.js \
-    ../Draw/Arc/ArcConcentric/ArcConcentric.js \
-    ../Draw/Arc/Arc3P/Tests/Arc3PTest00.js \
-    ../Draw/Arc/Arc3P/Arc3P.js \
-    ../Draw/Arc/Arc3P/Arc3PInit.js \
-    ../Draw/Arc/Arc2PA/Tests/Arc2PATest00.js \
-    ../Draw/Arc/Arc2PA/Arc2PA.js \
-    ../Draw/Arc/Arc2PA/Arc2PAInit.js \
-    ../Draw/Arc/Arc2PH/Arc2PH.js \
-    ../Draw/Arc/Arc2PH/Arc2PHInit.js \
-    ../Draw/Arc/Arc2PH/Tests/Arc2PHTest00.js \
-    ../Draw/Arc/ArcTPR/ArcTPRInit.js \
-    ../Draw/Arc/ArcTPR/Tests/ArcTPRTest00.js \
-    ../Draw/Arc/ArcTPR/ArcTPR.js \
-    ../Draw/Arc/Arc2PR/Arc2PRInit.js \
-    ../Draw/Arc/Arc2PR/Tests/Arc2PRTest00.js \
-    ../Draw/Arc/Arc2PR/Arc2PR.js \
-    ../Draw/Arc/Arc.js \
-    ../Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js \
-    ../Draw/Arc/ArcConcentricThrough/Tests/ArcConcentricThroughTest00.js \
-    ../Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.js \
-    ../Draw/Arc/ArcCPA/ArcCPAInit.js \
-    ../Draw/Arc/ArcCPA/Tests/ArcCPATest00.js \
-    ../Draw/Arc/ArcCPA/ArcCPA.js \
-    ../Draw/Arc/ArcTangential/ArcTangentialInit.js \
-    ../Draw/Arc/ArcTangential/ArcTangential.js \
-    ../Draw/Arc/ArcTangential/Tests/ArcTangentialTest00.js \
-    ../Draw/Arc/Arc2PL/Arc2PL.js \
-    ../Draw/Arc/Arc2PL/Arc2PLInit.js \
-    ../Draw/Arc/Arc2PL/Tests/Arc2PLTest00.js \
-    ../Draw/DrawBasedOnRectangleSize.js \
-    ../Draw/Dimension/DimAligned/DimAlignedInit.js \
-    ../Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js \
-    ../Draw/Dimension/DimAligned/DimAligned.js \
-    ../Draw/Dimension/DimAngular/DimAngularInit.js \
-    ../Draw/Dimension/DimAngular/Tests/DimAngularTest00.js \
-    ../Draw/Dimension/DimAngular/Tests/DimAngularTest01.js \
-    ../Draw/Dimension/DimAngular/DimAngular.js \
-    ../Draw/Dimension/DimRadial/Tests/DimRadialTest00.js \
-    ../Draw/Dimension/DimRadial/DimRadialInit.js \
-    ../Draw/Dimension/DimRadial/DimRadial.js \
-    ../Draw/Dimension/DimRegen/DimRegenInit.js \
-    ../Draw/Dimension/DimRegen/DimRegen.js \
-    ../Draw/Dimension/Leader/LeaderInit.js \
-    ../Draw/Dimension/Leader/Tests/LeaderTest00.js \
-    ../Draw/Dimension/Leader/Leader.js \
-    ../Draw/Dimension/DimDiametric/DimDiametricInit.js \
-    ../Draw/Dimension/DimDiametric/Tests/DimDiametricTest00.js \
-    ../Draw/Dimension/DimDiametric/DimDiametric.js \
-    ../Draw/Dimension/DimRotated/DimRotatedInit.js \
-    ../Draw/Dimension/DimRotated/Tests/DimRotatedTest00.js \
-    ../Draw/Dimension/DimRotated/DimRotated.js \
-    ../Draw/Dimension/Dimension.js \
-    ../Draw/Dimension/DimOrdinate/DimOrdinate.js \
-    ../Draw/Dimension/DimOrdinate/Tests/DimOrdinateTest00.js \
-    ../Draw/Dimension/DimOrdinate/DimOrdinateInit.js \
-    ../Draw/Dimension/DimHorizontal/DimHorizontal.js \
-    ../Draw/Dimension/DimHorizontal/DimHorizontalInit.js \
-    ../Draw/Dimension/DimHorizontal/Tests/DimHorizontalTest00.js \
-    ../Draw/Dimension/DimVertical/Tests/DimVerticalTest00.js \
-    ../Draw/Dimension/DimVertical/DimVertical.js \
-    ../Draw/Dimension/DimVertical/DimVerticalInit.js \
-    ../Widgets/ViewportWidget/ViewportWidget.js \
-    ../Widgets/CadToolMatrix/CadToolMatrix.js \
-    ../Widgets/MouseDisplay/MouseDisplay.js \
-    ../Widgets/StatusBar/StatusBar.js \
-    ../Widgets/DirectoryList/DirectoryList.js \
-    ../Widgets/PenToolBar/PenToolBar.js \
-    ../Widgets/TabBar/TabBar.js \
-    ../Widgets/CoordinateDisplay/CoordinateDisplay.js \
-    ../Widgets/ProgressBar/ProgressBar.js \
-    ../Widgets/CommandLine/CommandLine.js \
-    ../Widgets/LayerList/LayerList.js \
-    ../Widgets/BlockList/BlockList.js \
-    ../Widgets/OptionsToolBar/OptionsToolBar.js \
-    ../Widgets/ToolBarContextMenu/ToolBarContextMenu.js \
-    ../Widgets/FirstStart/FirstStart.js \
-    ../Widgets/FirstStart/FirstStartInit.js \
-    ../Widgets/SelectionDisplay/SelectionDisplay.js \
-    ../Widgets/CadToolBar/CadToolBar.js \
-    ../Widgets/CadToolBar/CadToolBarPanel.js \
-    ../Widgets/CadToolBar/ColumnLayout.js \
-    ../Widgets/PropertyEditor/PropertyEditor.js \
-    ../Widgets/LibraryBrowser/FileIconProvider.js \
-    ../Widgets/LibraryBrowser/LibraryBrowserInit.js \
-    ../Widgets/LibraryBrowser/LibraryBrowser.js \
-    ../Widgets/LibraryBrowser/ItemDelegate.js \
-    ../Widgets/LibraryBrowser/ListViewEventHandler.js \
-    ../Widgets/LibraryBrowser/db/TagPeer.js \
-    ../Widgets/LibraryBrowser/db/ItemTagPeer.js \
-    ../Widgets/LibraryBrowser/db/ItemTag.js \
-    ../Widgets/LibraryBrowser/db/ItemPeer.js \
-    ../Widgets/LibraryBrowser/db/Table.js \
-    ../Widgets/LibraryBrowser/db/Tag.js \
-    ../Widgets/LibraryBrowser/db/Item.js \
-    ../Widgets/LibraryBrowser/db/TagCategory.js \
-    ../Widgets/LibraryBrowser/db/Locale.js \
-    ../Widgets/LibraryBrowser/db/TagCategoryPeer.js \
-    ../Widgets/LibraryBrowser/db/LocalePeer.js \
-    ../Widgets/LibraryBrowser/LibraryBrowserPostInit.js \
-    ../Widgets/LibraryBrowser/Favorites.js \
-    ../Widgets/LibraryBrowser/Rdf.js \
-    ../Widgets/AutoZoomView/AutoZoomView.js \
-    ../Widgets/Widgets.js \
-    ../input.js \
-    ../simple_transaction.js \
-    ../Help/FAQ/FAQInit.js \
-    ../Help/FAQ/FAQ.js \
-    ../Help/Website/WebsiteInit.js \
-    ../Help/Website/Website.js \
-    ../Help/CheckForUpdates/CheckForUpdatesPostInit.js \
-    ../Help/CheckForUpdates/CheckForUpdatesInit.js \
-    ../Help/CheckForUpdates/CheckForUpdates.js \
-    ../Help/About/AboutInit.js \
-    ../Help/About/About.js \
-    ../Help/About/AboutCredits.js \
-    ../Help/Help.js \
-    ../Help/BrowseUserManual/BrowseUserManualInit.js \
-    ../Help/BrowseUserManual/BrowseUserManual.js \
-    ../Help/Forum/ForumInit.js \
-    ../Help/Forum/Forum.js \
-    ../Help/ShowReadme/ShowReadmeInit.js \
-    ../Help/ShowReadme/ShowReadme.js \
-    ../Help/ReportTranslationError/ReportTranslationErrorInit.js \
-    ../Help/ReportTranslationError/ReportTranslationError.js \
-    ../Help/ReportBug/ReportBug.js \
-    ../Help/ReportBug/ReportBugInit.js \
-    ../Block/DeselectBlockReferences/DeselectBlockReferences.js \
-    ../Block/DeselectBlockReferences/DeselectBlockReferencesInit.js \
-    ../Block/ToggleBlockVisibility/ToggleBlockVisibility.js \
-    ../Block/ToggleBlockVisibility/ToggleBlockVisibilityInit.js \
-    ../Block/EditFromReference/EditFromReferenceInit.js \
-    ../Block/EditFromReference/EditFromReference.js \
-    ../Block/EditFromReference/Tests/EditFromReferenceTest00.js \
-    ../Block/InsertScriptItem/InsertScriptItemInit.js \
-    ../Block/InsertScriptItem/InsertScriptItem.js \
-    ../Block/BlockInsert.js \
-    ../Block/EditBlock/EditBlockInit.js \
-    ../Block/EditBlock/Tests/EditBlockTest00.js \
-    ../Block/EditBlock/EditBlock.js \
-    ../Block/SelectBlockReferences/SelectBlockReferences.js \
-    ../Block/SelectBlockReferences/SelectBlockReferencesInit.js \
-    ../Block/InsertBlockItem/InsertBlockItemInit.js \
-    ../Block/InsertBlockItem/InsertBlockItem.js \
-    ../Block/CreateBlock/Tests/CreateBlockTest02.js \
-    ../Block/CreateBlock/Tests/CreateBlockTest01.js \
-    ../Block/CreateBlock/Tests/CreateBlockTest00.js \
-    ../Block/CreateBlock/CreateBlock.js \
-    ../Block/CreateBlock/CreateBlockInit.js \
-    ../Block/Block.js \
-    ../Block/CreateLibraryItem/CreateLibraryItem.js \
-    ../Block/CreateLibraryItem/CreateLibraryItemInit.js \
-    ../Block/EditMainDrawing/EditMainDrawingInit.js \
-    ../Block/EditMainDrawing/EditMainDrawing.js \
-    ../Block/RemoveBlock/RemoveBlock.js \
-    ../Block/RemoveBlock/Tests/RemoveBlockTest00.js \
-    ../Block/RemoveBlock/RemoveBlockInit.js \
-    ../Block/ShowAllBlocks/ShowAllBlocks.js \
-    ../Block/ShowAllBlocks/ShowAllBlocksInit.js \
-    ../Block/AddBlock/AddBlock.js \
-    ../Block/AddBlock/Tests/AddBlockTest00.js \
-    ../Block/AddBlock/AddBlockInit.js \
-    ../Block/RenameBlock/RenameBlockInit.js \
-    ../Block/RenameBlock/Tests/RenameBlockTest00.js \
-    ../Block/RenameBlock/RenameBlock.js \
-    ../Block/InsertBlock/InsertBlock.js \
-    ../Block/InsertBlock/Tests/InsertBlockTest00.js \
-    ../Block/InsertBlock/Tests/InsertBlockTest01.js \
-    ../Block/InsertBlock/InsertBlockInit.js \
-    ../Block/BlockDialog.js \
-    ../Block/HideAllBlocks/HideAllBlocksInit.js \
-    ../Block/HideAllBlocks/HideAllBlocks.js \
-    ../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest10.js \
-    ../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest00.js \
-    ../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest04.js \
-    ../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest11.js \
-    ../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest01.js \
-    ../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest03.js \
-    ../Projection/IsometricProjection/IsoProject/IsoProject.js \
-    ../Projection/IsometricProjection/IsoProject/IsoProjectInit.js \
-    ../Projection/IsometricProjection/IsometricProjection.js \
-    ../Projection/Projection.js \
-    ../sprintf.js
+../AddOn.js \
+../Apollonius.js \
+../Block/AddBlock/AddBlock.js \
+../Block/AddBlock/AddBlockInit.js \
+../Block/AddBlock/Tests/AddBlockTest00.js \
+../Block/Block.js \
+../Block/BlockDialog.js \
+../Block/BlockInsert.js \
+../Block/CreateBlock/CreateBlock.js \
+../Block/CreateBlock/CreateBlockInit.js \
+../Block/CreateBlock/Tests/CreateBlockTest00.js \
+../Block/CreateBlock/Tests/CreateBlockTest01.js \
+../Block/CreateBlock/Tests/CreateBlockTest02.js \
+../Block/CreateLibraryItem/CreateLibraryItem.js \
+../Block/CreateLibraryItem/CreateLibraryItemInit.js \
+../Block/DeselectBlockReferences/DeselectBlockReferences.js \
+../Block/DeselectBlockReferences/DeselectBlockReferencesInit.js \
+../Block/EditBlock/EditBlock.js \
+../Block/EditBlock/EditBlockInit.js \
+../Block/EditBlock/Tests/EditBlockTest00.js \
+../Block/EditFromReference/EditFromReference.js \
+../Block/EditFromReference/EditFromReferenceInit.js \
+../Block/EditFromReference/Tests/EditFromReferenceTest00.js \
+../Block/EditMainDrawing/EditMainDrawing.js \
+../Block/EditMainDrawing/EditMainDrawingInit.js \
+../Block/HideAllBlocks/HideAllBlocks.js \
+../Block/HideAllBlocks/HideAllBlocksInit.js \
+../Block/InsertBlock/InsertBlock.js \
+../Block/InsertBlock/InsertBlockInit.js \
+../Block/InsertBlock/Tests/InsertBlockTest00.js \
+../Block/InsertBlock/Tests/InsertBlockTest01.js \
+../Block/InsertBlockItem/InsertBlockItem.js \
+../Block/InsertBlockItem/InsertBlockItemInit.js \
+../Block/InsertScriptItem/InsertScriptItem.js \
+../Block/InsertScriptItem/InsertScriptItemInit.js \
+../Block/RemoveBlock/RemoveBlock.js \
+../Block/RemoveBlock/RemoveBlockInit.js \
+../Block/RemoveBlock/Tests/RemoveBlockTest00.js \
+../Block/RenameBlock/RenameBlock.js \
+../Block/RenameBlock/RenameBlockInit.js \
+../Block/RenameBlock/Tests/RenameBlockTest00.js \
+../Block/SelectBlockReferences/SelectBlockReferences.js \
+../Block/SelectBlockReferences/SelectBlockReferencesInit.js \
+../Block/ShowAllBlocks/ShowAllBlocks.js \
+../Block/ShowAllBlocks/ShowAllBlocksInit.js \
+../Block/ToggleBlockVisibility/ToggleBlockVisibility.js \
+../Block/ToggleBlockVisibility/ToggleBlockVisibilityInit.js \
+../DbConnection.js \
+../DefaultAction.js \
+../Draw/Arc/Arc.js \
+../Draw/Arc/Arc2PA/Arc2PA.js \
+../Draw/Arc/Arc2PA/Arc2PAInit.js \
+../Draw/Arc/Arc2PA/Tests/Arc2PATest00.js \
+../Draw/Arc/Arc2PH/Arc2PH.js \
+../Draw/Arc/Arc2PH/Arc2PHInit.js \
+../Draw/Arc/Arc2PH/Tests/Arc2PHTest00.js \
+../Draw/Arc/Arc2PL/Arc2PL.js \
+../Draw/Arc/Arc2PL/Arc2PLInit.js \
+../Draw/Arc/Arc2PL/Tests/Arc2PLTest00.js \
+../Draw/Arc/Arc2PR/Arc2PR.js \
+../Draw/Arc/Arc2PR/Arc2PRInit.js \
+../Draw/Arc/Arc2PR/Tests/Arc2PRTest00.js \
+../Draw/Arc/Arc3P/Arc3P.js \
+../Draw/Arc/Arc3P/Arc3PInit.js \
+../Draw/Arc/Arc3P/Tests/Arc3PTest00.js \
+../Draw/Arc/ArcCPA/ArcCPA.js \
+../Draw/Arc/ArcCPA/ArcCPAInit.js \
+../Draw/Arc/ArcCPA/Tests/ArcCPATest00.js \
+../Draw/Arc/ArcConcentric/ArcConcentric.js \
+../Draw/Arc/ArcConcentric/ArcConcentricInit.js \
+../Draw/Arc/ArcConcentric/Tests/ArcConcentricTest00.js \
+../Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.js \
+../Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js \
+../Draw/Arc/ArcConcentricThrough/Tests/ArcConcentricThroughTest00.js \
+../Draw/Arc/ArcTPR/ArcTPR.js \
+../Draw/Arc/ArcTPR/ArcTPRInit.js \
+../Draw/Arc/ArcTPR/Tests/ArcTPRTest00.js \
+../Draw/Arc/ArcTangential/ArcTangential.js \
+../Draw/Arc/ArcTangential/ArcTangentialInit.js \
+../Draw/Arc/ArcTangential/Tests/ArcTangentialTest00.js \
+../Draw/Circle/Circle.js \
+../Draw/Circle/Circle2P/Circle2P.js \
+../Draw/Circle/Circle2P/Circle2PInit.js \
+../Draw/Circle/Circle2P/Tests/Circle2PTest00.js \
+../Draw/Circle/Circle2PR/Circle2PR.js \
+../Draw/Circle/Circle2PR/Circle2PRInit.js \
+../Draw/Circle/Circle2PR/Tests/Circle2PRTest00.js \
+../Draw/Circle/Circle2TP/Circle2TP.js \
+../Draw/Circle/Circle2TP/Circle2TPInit.js \
+../Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js \
+../Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js \
+../Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js \
+../Draw/Circle/Circle2TR/Circle2TR.js \
+../Draw/Circle/Circle2TR/Circle2TRInit.js \
+../Draw/Circle/Circle2TR/Tests/Circle2TRTest00.js \
+../Draw/Circle/Circle2TR/Tests/Circle2TRTest01.js \
+../Draw/Circle/Circle3P/Circle3P.js \
+../Draw/Circle/Circle3P/Circle3PInit.js \
+../Draw/Circle/Circle3P/Tests/Circle3PTest00.js \
+../Draw/Circle/Circle3T/Circle3T.js \
+../Draw/Circle/Circle3T/Circle3TInit.js \
+../Draw/Circle/Circle3T/Tests/Circle3TTest00.js \
+../Draw/Circle/Circle3T/Tests/Circle3TTest01.js \
+../Draw/Circle/Circle3T/Tests/Circle3TTest02.js \
+../Draw/Circle/Circle3T/Tests/Circle3TTest03.js \
+../Draw/Circle/CircleCD/CircleCD.js \
+../Draw/Circle/CircleCD/CircleCDInit.js \
+../Draw/Circle/CircleCD/Tests/CircleCDTest00.js \
+../Draw/Circle/CircleCP/CircleCP.js \
+../Draw/Circle/CircleCP/CircleCPInit.js \
+../Draw/Circle/CircleCP/Tests/CircleCPTest00.js \
+../Draw/Circle/CircleCR/CircleCR.js \
+../Draw/Circle/CircleCR/CircleCRInit.js \
+../Draw/Circle/CircleCR/Tests/CircleCRTest00.js \
+../Draw/Circle/CircleCR/Tests/CircleCRTest01.js \
+../Draw/Circle/CircleConcentric/CircleConcentric.js \
+../Draw/Circle/CircleConcentric/CircleConcentricInit.js \
+../Draw/Circle/CircleConcentric/Tests/CircleConcentricTest00.js \
+../Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.js \
+../Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js \
+../Draw/Circle/CircleConcentricThrough/Tests/CircleConcentricThroughTest00.js \
+../Draw/Circle/CircleT2P/CircleT2P.js \
+../Draw/Circle/CircleT2P/CircleT2PInit.js \
+../Draw/Circle/CircleT2P/Tests/CircleT2PTest00.js \
+../Draw/Circle/CircleTPR/CircleTPR.js \
+../Draw/Circle/CircleTPR/CircleTPRInit.js \
+../Draw/Circle/CircleTPR/Tests/CircleTPRTest00.js \
+../Draw/Dimension/DimAligned/DimAligned.js \
+../Draw/Dimension/DimAligned/DimAlignedInit.js \
+../Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js \
+../Draw/Dimension/DimAngular/DimAngular.js \
+../Draw/Dimension/DimAngular/DimAngularInit.js \
+../Draw/Dimension/DimAngular/Tests/DimAngularTest00.js \
+../Draw/Dimension/DimAngular/Tests/DimAngularTest01.js \
+../Draw/Dimension/DimDiametric/DimDiametric.js \
+../Draw/Dimension/DimDiametric/DimDiametricInit.js \
+../Draw/Dimension/DimDiametric/Tests/DimDiametricTest00.js \
+../Draw/Dimension/DimHorizontal/DimHorizontal.js \
+../Draw/Dimension/DimHorizontal/DimHorizontalInit.js \
+../Draw/Dimension/DimHorizontal/Tests/DimHorizontalTest00.js \
+../Draw/Dimension/DimOrdinate/DimOrdinate.js \
+../Draw/Dimension/DimOrdinate/DimOrdinateInit.js \
+../Draw/Dimension/DimOrdinate/Tests/DimOrdinateTest00.js \
+../Draw/Dimension/DimRadial/DimRadial.js \
+../Draw/Dimension/DimRadial/DimRadialInit.js \
+../Draw/Dimension/DimRadial/Tests/DimRadialTest00.js \
+../Draw/Dimension/DimRegen/DimRegen.js \
+../Draw/Dimension/DimRegen/DimRegenInit.js \
+../Draw/Dimension/DimRotated/DimRotated.js \
+../Draw/Dimension/DimRotated/DimRotatedInit.js \
+../Draw/Dimension/DimRotated/Tests/DimRotatedTest00.js \
+../Draw/Dimension/DimVertical/DimVertical.js \
+../Draw/Dimension/DimVertical/DimVerticalInit.js \
+../Draw/Dimension/DimVertical/Tests/DimVerticalTest00.js \
+../Draw/Dimension/Dimension.js \
+../Draw/Dimension/Leader/Leader.js \
+../Draw/Dimension/Leader/LeaderInit.js \
+../Draw/Dimension/Leader/Tests/LeaderTest00.js \
+../Draw/Draw.js \
+../Draw/DrawBasedOnRectanglePP.js \
+../Draw/DrawBasedOnRectangleSize.js \
+../Draw/DrawBasedOnThreeCircles.js \
+../Draw/Ellipse/Ellipse.js \
+../Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js \
+../Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js \
+../Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js \
+../Draw/Ellipse/EllipseCPP/EllipseCPP.js \
+../Draw/Ellipse/EllipseCPP/EllipseCPPInit.js \
+../Draw/Ellipse/EllipseCPP/Tests/EllipseCPPTest00.js \
+../Draw/Ellipse/EllipseDD/EllipseDD.js \
+../Draw/Ellipse/EllipseDD/EllipseDDInit.js \
+../Draw/Ellipse/EllipseDD/Tests/EllipseDDTest00.js \
+../Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuad.js \
+../Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js \
+../Draw/Ellipse/EllipseInscribedQuad/Tests/EllipseInscribedQuadTest00.js \
+../Draw/Ellipse/EllipseOffset/EllipseOffset.js \
+../Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js \
+../Draw/Ellipse/EllipseOffset/Tests/EllipseOffsetTest00.js \
+../Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.js \
+../Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js \
+../Draw/Ellipse/EllipseOffsetThrough/Tests/EllipseOffsetThroughTest00.js \
+../Draw/Ellipse/EllipseRR/EllipseRR.js \
+../Draw/Ellipse/EllipseRR/EllipseRRInit.js \
+../Draw/Ellipse/EllipseRR/Tests/EllipseRRTest00.js \
+../Draw/Hatch/Hatch.js \
+../Draw/Hatch/HatchDialog.js \
+../Draw/Hatch/HatchFromSelection/HatchFromSelection.js \
+../Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js \
+../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest00.js \
+../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest01.js \
+../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest02.js \
+../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest03.js \
+../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest04.js \
+../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest05.js \
+../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest06.js \
+../Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js \
+../Draw/Image/Image.js \
+../Draw/Image/ImageInit.js \
+../Draw/Image/Tests/ImageTest00.js \
+../Draw/Line/Line.js \
+../Draw/Line/Line2P/Line2P.js \
+../Draw/Line/Line2P/Line2PInit.js \
+../Draw/Line/Line2P/Tests/Lines00.js \
+../Draw/Line/Line2P/Tests/Lines01.js \
+../Draw/Line/Line2P/Tests/Lines02.js \
+../Draw/Line/Line2P/Tests/LinesSnapCenter.js \
+../Draw/Line/Line2P/Tests/LinesSnapCoordinate.js \
+../Draw/Line/Line2P/Tests/LinesSnapDistance.js \
+../Draw/Line/Line2P/Tests/LinesSnapEnd.js \
+../Draw/Line/Line2P/Tests/LinesSnapFree.js \
+../Draw/Line/Line2P/Tests/LinesSnapGrid.js \
+../Draw/Line/Line2P/Tests/LinesSnapIntersection.js \
+../Draw/Line/Line2P/Tests/LinesSnapIntersectionBlock.js \
+../Draw/Line/Line2P/Tests/LinesSnapMiddle.js \
+../Draw/Line/Line2P/Tests/LinesSnapMiddleManual.js \
+../Draw/Line/Line2P/Tests/LinesSnapOnEntity.js \
+../Draw/Line/Line2P/Tests/LinesSnapPolarCoordinate.js \
+../Draw/Line/Line2P/Tests/LinesSnapReferences.js \
+../Draw/Line/LineAngle/LineAngle.js \
+../Draw/Line/LineAngle/LineAngleInit.js \
+../Draw/Line/LineAngle/Tests/LineAngle00.js \
+../Draw/Line/LineAngle/Tests/LineAngle01.js \
+../Draw/Line/LineAngle/Tests/LineAngle02.js \
+../Draw/Line/LineBisector/LineBisector.js \
+../Draw/Line/LineBisector/LineBisectorInit.js \
+../Draw/Line/LineBisector/Tests/LineBisectorTest00.js \
+../Draw/Line/LineBisector/Tests/LineBisectorTest01.js \
+../Draw/Line/LineFreehand/LineFreehand.js \
+../Draw/Line/LineFreehand/LineFreehandInit.js \
+../Draw/Line/LineHorizontal/LineHorizontal.js \
+../Draw/Line/LineHorizontal/LineHorizontalInit.js \
+../Draw/Line/LineHorizontal/Tests/LineHorizontalTest00.js \
+../Draw/Line/LineOrthogonal/LineOrthogonal.js \
+../Draw/Line/LineOrthogonal/LineOrthogonalInit.js \
+../Draw/Line/LineOrthogonal/Tests/LineOrthogonalTest00.js \
+../Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js \
+../Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js \
+../Draw/Line/LineOrthogonalTangent/Tests/LineOrthogonalTangentTest00.js \
+../Draw/Line/LineParallel/LineParallel.js \
+../Draw/Line/LineParallel/LineParallelInit.js \
+../Draw/Line/LineParallel/Tests/LineParallelTest00.js \
+../Draw/Line/LineParallel/Tests/LineParallelTest01.js \
+../Draw/Line/LineParallelThrough/LineParallelThrough.js \
+../Draw/Line/LineParallelThrough/LineParallelThroughInit.js \
+../Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest00.js \
+../Draw/Line/LineParallelThrough/Tests/LineParallelThroughTest01.js \
+../Draw/Line/LineRelativeAngle/LineRelativeAngle.js \
+../Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js \
+../Draw/Line/LineRelativeAngle/Tests/LineRelativeAngleTest00.js \
+../Draw/Line/LineTangent1/LineTangent1.js \
+../Draw/Line/LineTangent1/LineTangent1Init.js \
+../Draw/Line/LineTangent1/Tests/LineTangent1Test00.js \
+../Draw/Line/LineTangent1/Tests/LineTangent1Test01.js \
+../Draw/Line/LineTangent2/LineTangent2.js \
+../Draw/Line/LineTangent2/LineTangent2Init.js \
+../Draw/Line/LineTangent2/Tests/LineTangent2Test00.js \
+../Draw/Line/LineTangent2/Tests/LineTangent2Test01.js \
+../Draw/Line/LineVertical/LineVertical.js \
+../Draw/Line/LineVertical/LineVerticalInit.js \
+../Draw/Line/LineVertical/Tests/LineVerticalTest00.js \
+../Draw/Point/Point.js \
+../Draw/Point/Point1P/Point1P.js \
+../Draw/Point/Point1P/Point1PInit.js \
+../Draw/Point/Point1P/Tests/Point1PTest00.js \
+../Draw/Polyline/DrawPolyline/DrawPolyline.js \
+../Draw/Polyline/DrawPolyline/DrawPolylineInit.js \
+../Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest00.js \
+../Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest01.js \
+../Draw/Polyline/Polyline.js \
+../Draw/Shape/Shape.js \
+../Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js \
+../Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js \
+../Draw/Shape/ShapePolygonAFCP/Tests/ShapePolygonAFCPTest00.js \
+../Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js \
+../Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js \
+../Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest00.js \
+../Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest01.js \
+../Draw/Shape/ShapePolygonCP/ShapePolygonCP.js \
+../Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js \
+../Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest00.js \
+../Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest01.js \
+../Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest02.js \
+../Draw/Shape/ShapePolygonPP/ShapePolygonPP.js \
+../Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js \
+../Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest00.js \
+../Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest01.js \
+../Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest02.js \
+../Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.js \
+../Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js \
+../Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest00.js \
+../Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest01.js \
+../Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.js \
+../Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js \
+../Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest00.js \
+../Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest01.js \
+../Draw/Spline/Spline.js \
+../Draw/Spline/SplineControlPoints/SplineControlPoints.js \
+../Draw/Spline/SplineControlPoints/SplineControlPointsInit.js \
+../Draw/Spline/SplineControlPoints/Tests/SplineControlPointsTest00.js \
+../Draw/Text/Tests/Text01.js \
+../Draw/Text/Tests/Text02.js \
+../Draw/Text/Tests/Text03.js \
+../Draw/Text/Tests/Text04.js \
+../Draw/Text/Tests/Text05.js \
+../Draw/Text/Tests/Text06.js \
+../Draw/Text/Tests/Text07.js \
+../Draw/Text/Tests/Text08.js \
+../Draw/Text/Tests/Text09.js \
+../Draw/Text/Tests/Text10.js \
+../Draw/Text/Tests/Text11.js \
+../Draw/Text/Tests/Text12.js \
+../Draw/Text/Tests/Text13.js \
+../Draw/Text/Tests/Text14.js \
+../Draw/Text/Tests/Text15.js \
+../Draw/Text/Tests/Text16.js \
+../Draw/Text/Tests/Text17.js \
+../Draw/Text/Text.js \
+../Draw/Text/TextDialog/CharacterMapDialog.js \
+../Draw/Text/TextDialog/TextDialog.js \
+../Draw/Text/TextInit.js \
+../EAction.js \
+../Edit/AbstractPreferences.js \
+../Edit/AppPreferences/AppPreferences.js \
+../Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js \
+../Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferencesInit.js \
+../Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferences.js \
+../Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/ColorPreferencesInit.js \
+../Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js \
+../Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferencesInit.js \
+../Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js \
+../Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferences.js \
+../Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/GridPreferencesInit.js \
+../Edit/AppPreferences/InputPreferences/InputPreferences.js \
+../Edit/AppPreferences/InputPreferences/InputPreferencesInit.js \
+../Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js \
+../Edit/AppPreferences/KeyboardPreferences/KeyboardPreferencesInit.js \
+../Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js \
+../Edit/AppPreferences/LanguagePreferences/LanguagePreferencesInit.js \
+../Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js \
+../Edit/AppPreferences/LayerCompatibility/LayerCompatibilityInit.js \
+../Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js \
+../Edit/AppPreferences/ScriptingPreferences/ScriptingPreferencesInit.js \
+../Edit/AppPreferences/StartupPreferences/StartupPreferences.js \
+../Edit/AppPreferences/StartupPreferences/StartupPreferencesInit.js \
+../Edit/AppPreferences/TextPreferences/TextPreferences.js \
+../Edit/AppPreferences/TextPreferences/TextPreferencesInit.js \
+../Edit/AppPreferences/ThemePreferences/ThemePreferences.js \
+../Edit/AppPreferences/ThemePreferences/ThemePreferencesInit.js \
+../Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js \
+../Edit/AppPreferences/ToolBarPreferences/ToolBarPreferencesInit.js \
+../Edit/ClipboardOperation.js \
+../Edit/ConvertUnit/ConvertUnit.js \
+../Edit/ConvertUnit/ConvertUnitInit.js \
+../Edit/Copy/Copy.js \
+../Edit/Copy/CopyInit.js \
+../Edit/Copy/Tests/CopyTest00.js \
+../Edit/CopyWithReference/CopyWithReference.js \
+../Edit/CopyWithReference/CopyWithReferenceInit.js \
+../Edit/CopyWithReference/Tests/CopyWithReferenceTest00.js \
+../Edit/Cut/Cut.js \
+../Edit/Cut/CutInit.js \
+../Edit/Cut/Tests/CutTest00.js \
+../Edit/CutWithReference/CutWithReference.js \
+../Edit/CutWithReference/CutWithReferenceInit.js \
+../Edit/CutWithReference/Tests/CutWithReferenceTest00.js \
+../Edit/Delete/Delete.js \
+../Edit/Delete/DeleteInit.js \
+../Edit/Delete/Tests/DeleteTest00.js \
+../Edit/DrawingPreferences/ColorSettings/ColorSettings.js \
+../Edit/DrawingPreferences/ColorSettings/ColorSettingsInit.js \
+../Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js \
+../Edit/DrawingPreferences/DimensionSettings/DimensionSettingsInit.js \
+../Edit/DrawingPreferences/DrawingPreferences.js \
+../Edit/DrawingPreferences/GridSettings/GridSettings.js \
+../Edit/DrawingPreferences/GridSettings/GridSettingsInit.js \
+../Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js \
+../Edit/DrawingPreferences/LinetypeSettings/LinetypeSettingsInit.js \
+../Edit/DrawingPreferences/PageSettings/PageSettings.js \
+../Edit/DrawingPreferences/PageSettings/PageSettingsInit.js \
+../Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js \
+../Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettingsInit.js \
+../Edit/DrawingPreferences/UnitSettings/UnitSettings.js \
+../Edit/DrawingPreferences/UnitSettings/UnitSettingsInit.js \
+../Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js \
+../Edit/DrawingPreferences/ViewportSettings/ViewportSettingsInit.js \
+../Edit/Duplicate/Duplicate.js \
+../Edit/Duplicate/DuplicateInit.js \
+../Edit/Duplicate/Tests/DuplicateTest00.js \
+../Edit/Edit.js \
+../Edit/Esc/Esc.js \
+../Edit/Esc/EscInit.js \
+../Edit/Esc/Tests/EActionTest00.js \
+../Edit/Esc/Tests/EActionTest01.js \
+../Edit/Esc/Tests/EActionTest02.js \
+../Edit/Esc/Tests/EActionTest03.js \
+../Edit/Paste/Paste.js \
+../Edit/Paste/PasteInit.js \
+../Edit/Paste/Tests/PasteTest00.js \
+../Edit/Paste/Tests/PasteTest01.js \
+../Edit/Paste/Tests/PasteTest02.js \
+../Edit/Redo/Redo.js \
+../Edit/Redo/RedoInit.js \
+../Edit/Undo/Undo.js \
+../Edit/Undo/UndoInit.js \
+../File/AutoSave/AutoSave.js \
+../File/BitmapExport/BitmapExport.js \
+../File/BitmapExport/BitmapExportInit.js \
+../File/BitmapExport/BitmapExportWorker.js \
+../File/CloseFile/CloseFile.js \
+../File/CloseFile/CloseFileInit.js \
+../File/File.js \
+../File/ImportFile/ImportFile.js \
+../File/ImportFile/ImportFileInit.js \
+../File/NewFile/NewFile.js \
+../File/NewFile/NewFileInit.js \
+../File/OpenFile/OpenFile.js \
+../File/OpenFile/OpenFileInit.js \
+../File/PdfExport/PdfExport.js \
+../File/PdfExport/PdfExportInit.js \
+../File/Print/Print.js \
+../File/Print/PrintInit.js \
+../File/PrintCurrentView/PrintCurrentView.js \
+../File/PrintCurrentView/PrintCurrentViewInit.js \
+../File/PrintPreview/PrintPreview.js \
+../File/PrintPreview/PrintPreviewInit.js \
+../File/Quit/Quit.js \
+../File/Quit/QuitInit.js \
+../File/RecentFiles/RecentFiles.js \
+../File/RecentFiles/RecentFilesInit.js \
+../File/Save/Save.js \
+../File/Save/SaveInit.js \
+../File/SaveAs/SaveAs.js \
+../File/SaveAs/SaveAsInit.js \
+../File/SvgImport/SvgImport.js \
+../File/SvgImport/SvgImportInit.js \
+../Help/About/About.js \
+../Help/About/AboutCredits.js \
+../Help/About/AboutInit.js \
+../Help/BrowseUserManual/BrowseUserManual.js \
+../Help/BrowseUserManual/BrowseUserManualInit.js \
+../Help/CheckForUpdates/CheckForUpdates.js \
+../Help/CheckForUpdates/CheckForUpdatesInit.js \
+../Help/CheckForUpdates/CheckForUpdatesPostInit.js \
+../Help/FAQ/FAQ.js \
+../Help/FAQ/FAQInit.js \
+../Help/Forum/Forum.js \
+../Help/Forum/ForumInit.js \
+../Help/Help.js \
+../Help/ReportBug/ReportBug.js \
+../Help/ReportBug/ReportBugInit.js \
+../Help/ReportTranslationError/ReportTranslationError.js \
+../Help/ReportTranslationError/ReportTranslationErrorInit.js \
+../Help/ShowReadme/ShowReadme.js \
+../Help/ShowReadme/ShowReadmeInit.js \
+../Help/Website/Website.js \
+../Help/Website/WebsiteInit.js \
+../ImportExport/SvgImporter/SvgImporter.js \
+../ImportExport/SvgImporter/SvgImporterInit.js \
+../Information/InfoAngle/InfoAngle.js \
+../Information/InfoAngle/InfoAngleInit.js \
+../Information/InfoArcCircleArea/InfoArcCircleArea.js \
+../Information/InfoArcCircleArea/InfoArcCircleAreaInit.js \
+../Information/InfoArea/InfoArea.js \
+../Information/InfoArea/InfoAreaInit.js \
+../Information/InfoDistanceEE/InfoDistanceEE.js \
+../Information/InfoDistanceEE/InfoDistanceEEInit.js \
+../Information/InfoDistanceEE/Tests/InfoDistanceEETest00.js \
+../Information/InfoDistanceEE/Tests/InfoDistanceEETest01.js \
+../Information/InfoDistanceEE/Tests/InfoDistanceEETest02.js \
+../Information/InfoDistanceEE/Tests/InfoDistanceEETest03.js \
+../Information/InfoDistanceEE/Tests/InfoDistanceEETest04.js \
+../Information/InfoDistanceEP/InfoDistanceEP.js \
+../Information/InfoDistanceEP/InfoDistanceEPInit.js \
+../Information/InfoDistanceEP/Tests/InfoDistanceEPTest00.js \
+../Information/InfoDistancePP/InfoDistancePP.js \
+../Information/InfoDistancePP/InfoDistancePPInit.js \
+../Information/InfoDistancePP/Tests/InfoDistancePPTest00.js \
+../Information/InfoPolylineArea/InfoPolylineArea.js \
+../Information/InfoPolylineArea/InfoPolylineAreaInit.js \
+../Information/InfoPosition/InfoPosition.js \
+../Information/InfoPosition/InfoPositionInit.js \
+../Information/InfoPositionPol/InfoPositionPol.js \
+../Information/InfoPositionPol/InfoPositionPolInit.js \
+../Information/InfoPositionPolRel/InfoPositionPolRel.js \
+../Information/InfoPositionPolRel/InfoPositionPolRelInit.js \
+../Information/InfoPositionRel/InfoPositionRel.js \
+../Information/InfoPositionRel/InfoPositionRelInit.js \
+../Information/Information.js \
+../Layer/AddLayer/AddLayer.js \
+../Layer/AddLayer/AddLayerInit.js \
+../Layer/AddLayer/Tests/AddLayerTest00.js \
+../Layer/AddLayer/Tests/AddLayerTest01.js \
+../Layer/AddLayer/Tests/AddLayerTest02.js \
+../Layer/DeselectLayer/DeselectLayer.js \
+../Layer/DeselectLayer/DeselectLayerInit.js \
+../Layer/EditLayer/EditLayer.js \
+../Layer/EditLayer/EditLayerInit.js \
+../Layer/HideAllLayers/HideAllLayers.js \
+../Layer/HideAllLayers/HideAllLayersInit.js \
+../Layer/HierarchicalLayers.js \
+../Layer/Layer.js \
+../Layer/LayerDialog.js \
+../Layer/LockAllLayers/LockAllLayers.js \
+../Layer/LockAllLayers/LockAllLayersInit.js \
+../Layer/RemoveLayer/RemoveLayer.js \
+../Layer/RemoveLayer/RemoveLayerInit.js \
+../Layer/SelectLayer/SelectLayer.js \
+../Layer/SelectLayer/SelectLayerInit.js \
+../Layer/ShowActiveLayer/ShowActiveLayer.js \
+../Layer/ShowActiveLayer/ShowActiveLayerInit.js \
+../Layer/ShowAllLayers/ShowAllLayers.js \
+../Layer/ShowAllLayers/ShowAllLayersInit.js \
+../Layer/ToggleLayerLock/ToggleLayerLock.js \
+../Layer/ToggleLayerLock/ToggleLayerLockInit.js \
+../Layer/ToggleLayerVisibility/Tests/ToggleLayerVisibilityTest00.js \
+../Layer/ToggleLayerVisibility/ToggleLayerVisibility.js \
+../Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js \
+../Layer/UnlockAllLayers/UnlockAllLayers.js \
+../Layer/UnlockAllLayers/UnlockAllLayersInit.js \
+../Misc/Examples/BlockExamples/BlockExamples.js \
+../Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js \
+../Misc/Examples/CommandLineExamples/CommandLineExamples.js \
+../Misc/Examples/CommandLineExamples/ExSetColor/ExSetColor.js \
+../Misc/Examples/DrawExamples/DrawExamples.js \
+../Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js \
+../Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js \
+../Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js \
+../Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js \
+../Misc/Examples/DrawExamples/ExText/ExText.js \
+../Misc/Examples/DrawExamples/ExThreePoints/ExThreePoints.js \
+../Misc/Examples/ExMinimal/ExMinimal.js \
+../Misc/Examples/ExMinimal2/ExMinimal2.js \
+../Misc/Examples/Examples.js \
+../Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js \
+../Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js \
+../Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js \
+../Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js \
+../Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js \
+../Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js \
+../Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js \
+../Misc/Examples/IOExamples/IOExamples.js \
+../Misc/Examples/IOExamples/_AutoLoadInitFileDialog/AutoLoadInitFileDialog.js \
+../Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js \
+../Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js \
+../Misc/Examples/LayerExamples/LayerExamples.js \
+../Misc/Examples/ListenerExamples/ExExportListener/ExExportListener.js \
+../Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js \
+../Misc/Examples/ListenerExamples/ListenerExamples.js \
+../Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js \
+../Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js \
+../Misc/Examples/MathExamples/MathExamples.js \
+../Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js \
+../Misc/Examples/ModifyExamples/ModifyExamples.js \
+../Misc/Examples/QtExamples/ExDirListing/ExDirListing.js \
+../Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js \
+../Misc/Examples/QtExamples/ExProcess/ExProcess.js \
+../Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js \
+../Misc/Examples/QtExamples/ExWidget/ExWidget.js \
+../Misc/Examples/QtExamples/ExWidget/MyWidget.js \
+../Misc/Examples/QtExamples/QtExamples.js \
+../Misc/Misc.js \
+../Misc/MiscBlock/BlockFixNames/BlockFixNames.js \
+../Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js \
+../Misc/MiscBlock/BlockListExport/BlockListExport.js \
+../Misc/MiscBlock/MiscBlock.js \
+../Misc/MiscDevelopment/DevDebug/DevDebug.js \
+../Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js \
+../Misc/MiscDevelopment/MiscDevelopment.js \
+../Misc/MiscDevelopment/RunScript/RunScript.js \
+../Misc/MiscDevelopment/RunScript/RunScriptInit.js \
+../Misc/MiscDraw/Counter/Counter.js \
+../Misc/MiscDraw/Counter/CounterInit.js \
+../Misc/MiscDraw/Cross/Cross.js \
+../Misc/MiscDraw/Cross/CrossInit.js \
+../Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \
+../Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js \
+../Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js \
+../Misc/MiscDraw/LineDove/LineDove.js \
+../Misc/MiscDraw/LineDove/LineDoveInit.js \
+../Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js \
+../Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js \
+../Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxes.js \
+../Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js \
+../Misc/MiscDraw/MiscDraw.js \
+../Misc/MiscDraw/PointPole/PointPole.js \
+../Misc/MiscDraw/PointPole/PointPoleInit.js \
+../Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js \
+../Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js \
+../Misc/MiscDraw/TextAlong/TextAlong.js \
+../Misc/MiscDraw/TextAlong/TextAlongInit.js \
+../Misc/MiscDraw/XLineHorizontal/XLineHorizontal.js \
+../Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js \
+../Misc/MiscDraw/XLineVertical/XLineVertical.js \
+../Misc/MiscDraw/XLineVertical/XLineVerticalInit.js \
+../Misc/MiscIO/ImportPoints/ImportPoints.js \
+../Misc/MiscIO/MiscIO.js \
+../Misc/MiscIO/MolImport/MolImport.js \
+../Misc/MiscIO/MolImport/MolImportInit.js \
+../Misc/MiscIO/MolImport/MolImporter.js \
+../Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js \
+../Misc/MiscModify/FlushBackLog/FlushBackLog.js \
+../Misc/MiscModify/MiscModify.js \
+../Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js \
+../Misc/MiscModify/SplineToLine/SplineToLine.js \
+../Misc/MiscSelect/MiscSelect.js \
+../Misc/MiscSelect/SelectByColor/SelectByColor.js \
+../Misc/MiscSelect/SelectByColor/SelectByColorInit.js \
+../Misc/MiscSelect/SelectByHandle/SelectByHandle.js \
+../Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js \
+../Misc/Screencast/ScMirrored/ScMirrored.js \
+../Misc/Screencast/ScMirrored/ScMirroredInit.js \
+../Misc/Screencast/ScPrepare/ScPrepare.js \
+../Misc/Screencast/ScPrepare/ScPrepareInit.js \
+../Misc/Screencast/Screencast.js \
+../Misc/Tutorials/CommandLineTools/CommandLineTools.js \
+../Misc/Tutorials/CommandLineTools/CreatingDrawing/CreatingDrawing.js \
+../Misc/Tutorials/CommandLineTools/ExPdfExport/ExPdfExport.js \
+../Misc/Tutorials/CommandLineTools/ExSvgExport/ExSvgExport.js \
+../Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.js \
+../Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js \
+../Misc/Tutorials/MenusAndToolBars/MyAction.js \
+../Misc/Tutorials/MenusAndToolBars/MyScripts.js \
+../Misc/Tutorials/PersistentWidgets/PersistentWidgets.js \
+../Misc/Tutorials/Tutorials.js \
+../Modify/AutoTrim/AutoTrim.js \
+../Modify/AutoTrim/AutoTrimInit.js \
+../Modify/AutoTrim/Tests/AutoTrimTest00.js \
+../Modify/AutoTrim/Tests/AutoTrimTest01.js \
+../Modify/AutoTrim/Tests/AutoTrimTest02.js \
+../Modify/AutoTrim/Tests/AutoTrimTest03.js \
+../Modify/AutoTrim/Tests/AutoTrimTest04.js \
+../Modify/AutoTrim/Tests/AutoTrimTest05.js \
+../Modify/AutoTrim/Tests/AutoTrimTest06.js \
+../Modify/AutoTrim/Tests/AutoTrimTest07.js \
+../Modify/AutoTrim/Tests/AutoTrimTest08.js \
+../Modify/AutoTrim/Tests/AutoTrimTest09.js \
+../Modify/Bevel/Bevel.js \
+../Modify/Bevel/BevelInit.js \
+../Modify/Bevel/Tests/BevelTest00.js \
+../Modify/Bevel/Tests/BevelTest01.js \
+../Modify/Bevel/Tests/BevelTest02.js \
+../Modify/Bevel/Tests/BevelTest03.js \
+../Modify/Bevel/Tests/BevelTest04.js \
+../Modify/Bevel/Tests/BevelTest05.js \
+../Modify/Bevel/Tests/BevelTest06.js \
+../Modify/Bevel/Tests/BevelTest07.js \
+../Modify/BreakOut/BreakOut.js \
+../Modify/BreakOut/BreakOutInit.js \
+../Modify/BreakOut/Tests/BreakOutTest00.js \
+../Modify/BreakOut/Tests/BreakOutTest01.js \
+../Modify/BreakOut/Tests/BreakOutTest02.js \
+../Modify/BreakOut/Tests/BreakOutTest03.js \
+../Modify/BreakOut/Tests/BreakOutTest04.js \
+../Modify/BreakOut/Tests/BreakOutTest05.js \
+../Modify/BreakOut/Tests/BreakOutTest06.js \
+../Modify/BreakOut/Tests/BreakOutTest07.js \
+../Modify/BreakOut/Tests/BreakOutTest08.js \
+../Modify/BreakOut/Tests/BreakOutTest09.js \
+../Modify/BreakOut/Tests/BreakOutTest10.js \
+../Modify/BreakOut/Tests/BreakOutTest11.js \
+../Modify/BreakOut/Tests/BreakOutTest12.js \
+../Modify/BreakOut/Tests/BreakOutTest13.js \
+../Modify/BreakOut/Tests/BreakOutTest14.js \
+../Modify/BreakOut/Tests/BreakOutTest15.js \
+../Modify/BreakOut/Tests/BreakOutTest16.js \
+../Modify/BreakOutGap/BreakOutGap.js \
+../Modify/BreakOutGap/BreakOutGapInit.js \
+../Modify/BreakOutGap/Tests/BreakOutGapTest01.js \
+../Modify/BreakOutManual/BreakOutManual.js \
+../Modify/BreakOutManual/BreakOutManualInit.js \
+../Modify/BreakOutManual/Tests/BreakOutManualTest00.js \
+../Modify/BreakOutManual/Tests/BreakOutManualTest01.js \
+../Modify/BreakOutManual/Tests/BreakOutManualTest02.js \
+../Modify/Divide/Divide.js \
+../Modify/Divide/DivideInit.js \
+../Modify/Divide/Tests/DivideTest01.js \
+../Modify/Divide/Tests/DivideTest02.js \
+../Modify/DrawOrder/DrawOrder.js \
+../Modify/DrawOrder/ToBack/ToBack.js \
+../Modify/DrawOrder/ToBack/ToBackInit.js \
+../Modify/DrawOrder/ToFront/ToFront.js \
+../Modify/DrawOrder/ToFront/ToFrontInit.js \
+../Modify/EditHatch/EditHatch.js \
+../Modify/EditHatch/EditHatchInit.js \
+../Modify/EditText/EditText.js \
+../Modify/EditText/EditTextInit.js \
+../Modify/Explode/Explode.js \
+../Modify/Explode/ExplodeInit.js \
+../Modify/Explode/Tests/ExplodeTest00.js \
+../Modify/Explode/Tests/ExplodeTest01.js \
+../Modify/Explode/Tests/ExplodeTest02.js \
+../Modify/Explode/Tests/ExplodeTest03.js \
+../Modify/Explode/Tests/ExplodeTest04.js \
+../Modify/Explode/Tests/ExplodeTest05.js \
+../Modify/FlipHorizontal/FlipHorizontal.js \
+../Modify/FlipHorizontal/FlipHorizontalInit.js \
+../Modify/FlipHorizontal/Tests/FlipHorizontalTest00.js \
+../Modify/FlipVertical/FlipVertical.js \
+../Modify/FlipVertical/FlipVerticalInit.js \
+../Modify/FlipVertical/Tests/FlipVerticalTest00.js \
+../Modify/Lengthen/Lengthen.js \
+../Modify/Lengthen/LengthenInit.js \
+../Modify/Lengthen/Tests/LengthenTest00.js \
+../Modify/Lengthen/Tests/LengthenTest01.js \
+../Modify/Lengthen/Tests/LengthenTest02.js \
+../Modify/Lengthen/Tests/LengthenTest03.js \
+../Modify/Mirror/Mirror.js \
+../Modify/Mirror/MirrorInit.js \
+../Modify/Mirror/Tests/MirrorTest00.js \
+../Modify/Mirror/Tests/MirrorTest01.js \
+../Modify/Modify.js \
+../Modify/ModifyCorner.js \
+../Modify/Offset/Offset.js \
+../Modify/Offset/OffsetInit.js \
+../Modify/Offset/Tests/OffsetTest00.js \
+../Modify/Offset/Tests/OffsetTest01.js \
+../Modify/Offset/Tests/OffsetTest02.js \
+../Modify/OffsetThrough/OffsetThrough.js \
+../Modify/OffsetThrough/OffsetThroughInit.js \
+../Modify/Reverse/Reverse.js \
+../Modify/Reverse/ReverseInit.js \
+../Modify/Reverse/Tests/ReverseTest00.js \
+../Modify/Rotate/Rotate.js \
+../Modify/Rotate/RotateInit.js \
+../Modify/Rotate/Tests/RotateTest00.js \
+../Modify/Rotate/Tests/RotateTest01.js \
+../Modify/Rotate2/Rotate2.js \
+../Modify/Rotate2/Rotate2Init.js \
+../Modify/Rotate2/Tests/Rotate2Test01.js \
+../Modify/Rotate2/Tests/Rotate2Test02.js \
+../Modify/Rotate2/Tests/Rotate2Test03.js \
+../Modify/Rotate2/Tests/Rotate2Test04.js \
+../Modify/Rotate2/Tests/Rotate2Test05.js \
+../Modify/Rotate2/Tests/Rotate2Test06.js \
+../Modify/Round/Round.js \
+../Modify/Round/RoundInit.js \
+../Modify/Round/Tests/RoundTest00.js \
+../Modify/Round/Tests/RoundTest01.js \
+../Modify/Scale/Scale.js \
+../Modify/Scale/ScaleInit.js \
+../Modify/Scale/Tests/ScaleTest00.js \
+../Modify/Scale/Tests/ScaleTest01.js \
+../Modify/Scale/Tests/ScaleTest02.js \
+../Modify/Scale/Tests/ScaleTest03.js \
+../Modify/Scale/Tests/ScaleTest04.js \
+../Modify/Scale/Tests/ScaleTest05.js \
+../Modify/Scale/Tests/ScaleTest06.js \
+../Modify/Scale/Tests/ScaleTest07.js \
+../Modify/Scale/Tests/ScaleTest08.js \
+../Modify/Stretch/Stretch.js \
+../Modify/Stretch/StretchInit.js \
+../Modify/Stretch/Tests/StretchTest00.js \
+../Modify/Stretch/Tests/StretchTest01.js \
+../Modify/Stretch/Tests/StretchTest02.js \
+../Modify/Transform.js \
+../Modify/Translate/Tests/TranslateTest00.js \
+../Modify/Translate/Tests/TranslateTest01.js \
+../Modify/Translate/Tests/TranslateTest02.js \
+../Modify/Translate/Translate.js \
+../Modify/Translate/TranslateInit.js \
+../Modify/TranslateRotate/Tests/TranslateRotateTest00.js \
+../Modify/TranslateRotate/Tests/TranslateRotateTest01.js \
+../Modify/TranslateRotate/Tests/TranslateRotateTest02.js \
+../Modify/TranslateRotate/TranslateRotate.js \
+../Modify/TranslateRotate/TranslateRotateInit.js \
+../Modify/Trim/Tests/TrimTest00.js \
+../Modify/Trim/Tests/TrimTest01.js \
+../Modify/Trim/Tests/TrimTest02.js \
+../Modify/Trim/Tests/TrimTest03.js \
+../Modify/Trim/Tests/TrimTest04.js \
+../Modify/Trim/Tests/TrimTest05.js \
+../Modify/Trim/Tests/TrimTest06.js \
+../Modify/Trim/Tests/TrimTest07.js \
+../Modify/Trim/Tests/TrimTest08.js \
+../Modify/Trim/Tests/TrimTest09.js \
+../Modify/Trim/Tests/TrimTest10.js \
+../Modify/Trim/Tests/TrimTest11.js \
+../Modify/Trim/Trim.js \
+../Modify/Trim/TrimInit.js \
+../Modify/TrimBoth/Tests/TrimBothTest00.js \
+../Modify/TrimBoth/Tests/TrimBothTest01.js \
+../Modify/TrimBoth/Tests/TrimBothTest02.js \
+../Modify/TrimBoth/Tests/TrimBothTest03.js \
+../Modify/TrimBoth/Tests/TrimBothTest04.js \
+../Modify/TrimBoth/TrimBoth.js \
+../Modify/TrimBoth/TrimBothInit.js \
+../Navigation/DefaultNavigation/DefaultNavigation.js \
+../Projection/IsometricProjection/IsoProject/IsoProject.js \
+../Projection/IsometricProjection/IsoProject/IsoProjectInit.js \
+../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest00.js \
+../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest01.js \
+../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest03.js \
+../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest04.js \
+../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest10.js \
+../Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest11.js \
+../Projection/IsometricProjection/IsometricProjection.js \
+../Projection/Projection.js \
+../Reset/Reset.js \
+../Reset/ResetInit.js \
+../Select/DeselectAll/DeselectAll.js \
+../Select/DeselectAll/DeselectAllInit.js \
+../Select/InvertSelection/InvertSelection.js \
+../Select/InvertSelection/InvertSelectionInit.js \
+../Select/Select.js \
+../Select/SelectAll/SelectAll.js \
+../Select/SelectAll/SelectAllInit.js \
+../Select/SelectContour/SelectContour.js \
+../Select/SelectContour/SelectContourInit.js \
+../Select/SelectIntersectedEntities/SelectIntersectedEntities.js \
+../Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js \
+../Select/SelectLayerByEntity/SelectLayerByEntity.js \
+../Select/SelectLayerByEntity/SelectLayerByEntityInit.js \
+../Select/SelectRectangle/SelectRectangle.js \
+../Select/SelectRectangle/SelectRectangleInit.js \
+../ShapeAlgorithms.js \
+../Snap/LockRelativeZero/LockRelativeZero.js \
+../Snap/LockRelativeZero/LockRelativeZeroInit.js \
+../Snap/RestrictAngleLength/RestrictAngleLength.js \
+../Snap/RestrictAngleLength/RestrictAngleLengthInit.js \
+../Snap/RestrictHorizontal/RestrictHorizontal.js \
+../Snap/RestrictHorizontal/RestrictHorizontalInit.js \
+../Snap/RestrictOff/RestrictOff.js \
+../Snap/RestrictOff/RestrictOffInit.js \
+../Snap/RestrictOrthogonal/RestrictOrthogonal.js \
+../Snap/RestrictOrthogonal/RestrictOrthogonalInit.js \
+../Snap/RestrictVertical/RestrictVertical.js \
+../Snap/RestrictVertical/RestrictVerticalInit.js \
+../Snap/SetRelativeZero/SetRelativeZero.js \
+../Snap/SetRelativeZero/SetRelativeZeroInit.js \
+../Snap/Snap.js \
+../Snap/SnapAuto/SnapAuto.js \
+../Snap/SnapAuto/SnapAutoInit.js \
+../Snap/SnapCenter/SnapCenter.js \
+../Snap/SnapCenter/SnapCenterInit.js \
+../Snap/SnapCoordinate/SnapCoordinate.js \
+../Snap/SnapCoordinate/SnapCoordinateInit.js \
+../Snap/SnapCoordinatePolar/SnapCoordinatePolar.js \
+../Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js \
+../Snap/SnapDistance/SnapDistance.js \
+../Snap/SnapDistance/SnapDistanceInit.js \
+../Snap/SnapDistanceManual/SnapDistanceManual.js \
+../Snap/SnapDistanceManual/SnapDistanceManualInit.js \
+../Snap/SnapDistanceManual/Tests/SnapDistanceManualTest00.js \
+../Snap/SnapEnd/SnapEnd.js \
+../Snap/SnapEnd/SnapEndInit.js \
+../Snap/SnapFree/SnapFree.js \
+../Snap/SnapFree/SnapFreeInit.js \
+../Snap/SnapGrid/SnapGrid.js \
+../Snap/SnapGrid/SnapGridInit.js \
+../Snap/SnapIntersection/SnapIntersection.js \
+../Snap/SnapIntersection/SnapIntersectionInit.js \
+../Snap/SnapIntersection/Tests/SnapIntersectionTest00.js \
+../Snap/SnapIntersection/Tests/SnapIntersectionTest01.js \
+../Snap/SnapIntersection/Tests/SnapIntersectionTest02.js \
+../Snap/SnapIntersection/Tests/SnapIntersectionTest03.js \
+../Snap/SnapIntersection/Tests/SnapIntersectionTest04.js \
+../Snap/SnapIntersection/Tests/SnapIntersectionTest05.js \
+../Snap/SnapIntersectionManual/SnapIntersectionManual.js \
+../Snap/SnapIntersectionManual/SnapIntersectionManualInit.js \
+../Snap/SnapIntersectionManual/Tests/SnapIntersectionManualTest00.js \
+../Snap/SnapMiddle/SnapMiddle.js \
+../Snap/SnapMiddle/SnapMiddleInit.js \
+../Snap/SnapMiddleManual/SnapMiddleManual.js \
+../Snap/SnapMiddleManual/SnapMiddleManualInit.js \
+../Snap/SnapMiddleManual/Tests/SnapMiddleManualTest00.js \
+../Snap/SnapOnEntity/SnapOnEntity.js \
+../Snap/SnapOnEntity/SnapOnEntityInit.js \
+../Snap/SnapPerpendicular/SnapPerpendicular.js \
+../Snap/SnapPerpendicular/SnapPerpendicularInit.js \
+../Snap/SnapReference/SnapReference.js \
+../Snap/SnapReference/SnapReferenceInit.js \
+../Snap/SnapSelectionCenter/SnapSelectionCenter.js \
+../Snap/SnapSelectionCenter/SnapSelectionCenterInit.js \
+../Snap/SnapTangential/SnapTangential.js \
+../Snap/SnapTangential/SnapTangentialInit.js \
+../Snap/SnapXManual/SnapXManual.js \
+../Snap/SnapXManual/SnapXManualInit.js \
+../Snap/SnapYManual/SnapYManual.js \
+../Snap/SnapYManual/SnapYManualInit.js \
+../Tools/ExTool/ExTool.js \
+../Tools/MergeDrawings/MergeDrawings.js \
+../Tools/MergeDrawings/MergeDrawingsInit.js \
+../Tools/arguments.js \
+../View/AntialiasingMode/AntialiasingMode.js \
+../View/CommandLineFocus/CommandLineFocus.js \
+../View/CommandLineFocus/CommandLineFocusInit.js \
+../View/DisplayDistanceAngle/DisplayDistanceAngle.js \
+../View/DisplayDistanceAngle/DisplayDistanceAngleInit.js \
+../View/DraftMode/DraftMode.js \
+../View/IsometricView/IsometricGridLeft/IsometricGridLeft.js \
+../View/IsometricView/IsometricGridOff/IsometricGridOff.js \
+../View/IsometricView/IsometricGridRight/IsometricGridRight.js \
+../View/IsometricView/IsometricGridTop/IsometricGridTop.js \
+../View/IsometricView/IsometricView.js \
+../View/LinetypeMode/LinetypeMode.js \
+../View/OptionsToolBarFocus/OptionsToolBarFocus.js \
+../View/OptionsToolBarFocus/OptionsToolBarFocusInit.js \
+../View/ShowToolDialog/ShowToolDialog.js \
+../View/ToggleGrid/ToggleGrid.js \
+../View/ToolMatrixFocus/ToolMatrixFocus.js \
+../View/ToolMatrixFocus/ToolMatrixFocusInit.js \
+../View/View.js \
+../View/ViewToolBars/ViewToolBars.js \
+../View/ViewToolBars/ViewToolBarsPostInit.js \
+../View/Zoom/AutoZoom/AutoZoom.js \
+../View/Zoom/AutoZoom/AutoZoomInit.js \
+../View/Zoom/PanZoom/PanZoom.js \
+../View/Zoom/PanZoom/PanZoomInit.js \
+../View/Zoom/PreviousView/PreviousView.js \
+../View/Zoom/PreviousView/PreviousViewInit.js \
+../View/Zoom/WindowZoom/WindowZoom.js \
+../View/Zoom/WindowZoom/WindowZoomInit.js \
+../View/Zoom/Zoom.js \
+../View/Zoom/ZoomIn/ZoomIn.js \
+../View/Zoom/ZoomIn/ZoomInInit.js \
+../View/Zoom/ZoomOut/ZoomOut.js \
+../View/Zoom/ZoomOut/ZoomOutInit.js \
+../View/Zoom/ZoomToSelection/ZoomToSelection.js \
+../View/Zoom/ZoomToSelection/ZoomToSelectionInit.js \
+../WidgetFactory.js \
+../Widgets/AutoZoomView/AutoZoomView.js \
+../Widgets/BlockList/BlockList.js \
+../Widgets/CadToolBar/CadToolBar.js \
+../Widgets/CadToolBar/CadToolBarPanel.js \
+../Widgets/CadToolBar/ColumnLayout.js \
+../Widgets/CadToolMatrix/CadToolMatrix.js \
+../Widgets/CommandLine/CommandLine.js \
+../Widgets/CoordinateDisplay/CoordinateDisplay.js \
+../Widgets/DirectoryList/DirectoryList.js \
+../Widgets/FirstStart/FirstStart.js \
+../Widgets/FirstStart/FirstStartInit.js \
+../Widgets/LayerList/LayerList.js \
+../Widgets/LibraryBrowser/Favorites.js \
+../Widgets/LibraryBrowser/FileIconProvider.js \
+../Widgets/LibraryBrowser/ItemDelegate.js \
+../Widgets/LibraryBrowser/LibraryBrowser.js \
+../Widgets/LibraryBrowser/LibraryBrowserInit.js \
+../Widgets/LibraryBrowser/LibraryBrowserPostInit.js \
+../Widgets/LibraryBrowser/ListViewEventHandler.js \
+../Widgets/LibraryBrowser/Rdf.js \
+../Widgets/LibraryBrowser/db/Item.js \
+../Widgets/LibraryBrowser/db/ItemPeer.js \
+../Widgets/LibraryBrowser/db/ItemTag.js \
+../Widgets/LibraryBrowser/db/ItemTagPeer.js \
+../Widgets/LibraryBrowser/db/Locale.js \
+../Widgets/LibraryBrowser/db/LocalePeer.js \
+../Widgets/LibraryBrowser/db/Table.js \
+../Widgets/LibraryBrowser/db/Tag.js \
+../Widgets/LibraryBrowser/db/TagCategory.js \
+../Widgets/LibraryBrowser/db/TagCategoryPeer.js \
+../Widgets/LibraryBrowser/db/TagPeer.js \
+../Widgets/MouseDisplay/MouseDisplay.js \
+../Widgets/OptionsToolBar/OptionsToolBar.js \
+../Widgets/PenToolBar/PenToolBar.js \
+../Widgets/ProgressBar/ProgressBar.js \
+../Widgets/PropertyEditor/PropertyEditor.js \
+../Widgets/SelectionDisplay/SelectionDisplay.js \
+../Widgets/StatusBar/StatusBar.js \
+../Widgets/TabBar/TabBar.js \
+../Widgets/ToolBarContextMenu/ToolBarContextMenu.js \
+../Widgets/ViewportWidget/ViewportWidget.js \
+../Widgets/Widgets.js \
+../Window/CloseAll/CloseAll.js \
+../Window/CloseAll/CloseAllInit.js \
+../Window/NextWindow/NextWindow.js \
+../Window/NextWindow/NextWindowInit.js \
+../Window/PreviousWindow/PreviousWindow.js \
+../Window/PreviousWindow/PreviousWindowInit.js \
+../Window/Window.js \
+../autostart.js \
+../date.js \
+../input.js \
+../lib/date.format.js \
+../lib/hull/grid.js \
+../lib/hull/hull.js \
+../lib/hull/intersect.js \
+../lib/sprintf2/sprintf2.js \
+../library.js \
+../map.js \
+../simple.js \
+../simple_create.js \
+../simple_info.js \
+../simple_input.js \
+../simple_modify.js \
+../simple_transaction.js \
+../simple_view.js \
+../sprintf.js \

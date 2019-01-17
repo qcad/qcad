@@ -4040,7 +4040,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mandelbrot</translation>
     </message>
 </context>
 <context>
@@ -4054,7 +4054,12 @@ již v seznamu je.</translation>
 <context>
     <name>ExMinimal</name>
     <message>
-        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+18"/>
+        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
+        <source>Hello World!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Minimal Example</source>
         <translation>&amp;Minimální příklad</translation>
     </message>
@@ -11490,11 +11495,12 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>autostart</name>
     <message>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation type="vanished">Načítání překladů doplňků...</translation>
+        <translation>Načítání překladů doplňků...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+359"/>
+        <location line="+31"/>
         <source>Loading add-ons...</source>
         <translation>Načítání doplňků...</translation>
     </message>

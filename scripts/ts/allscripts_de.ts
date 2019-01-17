@@ -4695,7 +4695,12 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ExMinimal</name>
     <message>
-        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+18"/>
+        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
+        <source>Hello World!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Minimal Example</source>
         <translation>&amp;Minimales Beispiel</translation>
     </message>
@@ -14415,11 +14420,12 @@ Kursiv
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation type="vanished">Lade Add-on Übersetzungen...</translation>
+        <translation>Lade Add-on Übersetzungen...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+359"/>
+        <location line="+31"/>
         <source>Loading add-ons...</source>
         <translation>Lade Add-ons...</translation>
     </message>

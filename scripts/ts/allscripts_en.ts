@@ -4070,7 +4070,12 @@ is already in the list.</translation>
 <context>
     <name>ExMinimal</name>
     <message>
-        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+18"/>
+        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
+        <source>Hello World!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Minimal Example</source>
         <translation>&amp;Minimal Example</translation>
     </message>
@@ -11568,11 +11573,12 @@ shown in search results:</translation>
 <context>
     <name>autostart</name>
     <message>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation type="vanished">Loading add-on translations...</translation>
+        <translation>Loading add-on translations...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+359"/>
+        <location line="+31"/>
         <source>Loading add-ons...</source>
         <translation>Loading add-ons...</translation>
     </message>

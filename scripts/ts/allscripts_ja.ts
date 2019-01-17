@@ -4135,7 +4135,12 @@ is already in the list.</source>
 <context>
     <name>ExMinimal</name>
     <message>
-        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+18"/>
+        <location filename="../Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
+        <source>Hello World!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>&amp;Minimal Example</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12006,11 +12011,12 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation type="vanished">アドオンの翻訳をロード中...</translation>
+        <translation>アドオンの翻訳をロード中...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+359"/>
+        <location line="+31"/>
         <source>Loading add-ons...</source>
         <translation>アドオンをロード中...</translation>
     </message>
