@@ -48,7 +48,7 @@ ExMandelbrot.prototype.beginEvent = function() {
  * Adds a menu for this action to Examples/Math Examples/Spiral.
  */
 ExMandelbrot.init = function(basePath) {
-    var action = new RGuiAction(qsTr("&Mandelbrot"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("&Mandelbrot Example"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ExMandelbrot.js");
     action.setGroupSortOrder(79700);
