@@ -8,6 +8,7 @@ TRANSLATIONS = \
     $$PWD/ts/$${NAME}_fi.ts \
     $$PWD/ts/$${NAME}_fr.ts \
     $$PWD/ts/$${NAME}_hu.ts \
+    $$PWD/ts/$${NAME}_hr.ts \
     $$PWD/ts/$${NAME}_it.ts \
     $$PWD/ts/$${NAME}_ja.ts \
     $$PWD/ts/$${NAME}_lt.ts \
@@ -18,6 +19,6 @@ TRANSLATIONS = \
     $$PWD/ts/$${NAME}_sk.ts \
     $$PWD/ts/$${NAME}_sl.ts \
     $$PWD/ts/$${NAME}_sv.ts \
+    $$PWD/ts/$${NAME}_tr.ts \
     $$PWD/ts/$${NAME}_zh_CN.ts \
     $$PWD/ts/$${NAME}_zh_TW.ts
-
