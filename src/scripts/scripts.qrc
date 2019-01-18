@@ -1082,7 +1082,6 @@
     <file alias="scripts/File/BitmapExport/BitmapExport-inverse.svg">../../scripts/File/BitmapExport/BitmapExport-inverse.svg</file>
     <file alias="scripts/File/BitmapExport/BitmapExport.js">../../scripts/File/BitmapExport/BitmapExport.js</file>
     <file alias="scripts/File/BitmapExport/BitmapExport.svg">../../scripts/File/BitmapExport/BitmapExport.svg</file>
-    <file alias="scripts/File/BitmapExport/BitmapExport2.js">../../scripts/File/BitmapExport/BitmapExport2.js</file>
     <file alias="scripts/File/BitmapExport/BitmapExportDialog.ui">../../scripts/File/BitmapExport/BitmapExportDialog.ui</file>
     <file alias="scripts/File/BitmapExport/BitmapExportInit.js">../../scripts/File/BitmapExport/BitmapExportInit.js</file>
     <file alias="scripts/File/BitmapExport/BitmapExportWorker.js">../../scripts/File/BitmapExport/BitmapExportWorker.js</file>
@@ -2450,13 +2449,26 @@
     <file alias="scripts/splashscreen.png">../../scripts/splashscreen.png</file>
     <file alias="scripts/splashscreen@2x.png">../../scripts/splashscreen@2x.png</file>
     <file alias="scripts/sprintf.js">../../scripts/sprintf.js</file>
-    <file alias="scripts/ts/allscripts_cs.qm">../../scripts/ts/allscripts_cs.qm</file>
-    <file alias="scripts/ts/allscripts_de.qm">../../scripts/ts/allscripts_de.qm</file>
-    <file alias="scripts/ts/allscripts_en.qm">../../scripts/ts/allscripts_en.qm</file>
-    <file alias="scripts/ts/allscripts_es.qm">../../scripts/ts/allscripts_es.qm</file>
-    <file alias="scripts/ts/allscripts_fi.qm">../../scripts/ts/allscripts_fi.qm</file>
-    <file alias="scripts/ts/allscripts_fr.qm">../../scripts/ts/allscripts_fr.qm</file>
-    <file alias="scripts/ts/allscripts_hr.qm">../../scripts/ts/allscripts_hr.qm</file>
-    <file alias="scripts/ts/allscripts_hu.qm">../../scripts/ts/allscripts_hu.qm</file>
+    <file alias="ts/scripts_cs.qm">../../ts/scripts_cs.qm</file>
+    <file alias="ts/scripts_de.qm">../../ts/scripts_de.qm</file>
+    <file alias="ts/scripts_en.qm">../../ts/scripts_en.qm</file>
+    <file alias="ts/scripts_es.qm">../../ts/scripts_es.qm</file>
+    <file alias="ts/scripts_fi.qm">../../ts/scripts_fi.qm</file>
+    <file alias="ts/scripts_fr.qm">../../ts/scripts_fr.qm</file>
+    <file alias="ts/scripts_hr.qm">../../ts/scripts_hr.qm</file>
+    <file alias="ts/scripts_hu.qm">../../ts/scripts_hu.qm</file>
+    <file alias="ts/scripts_it.qm">../../ts/scripts_it.qm</file>
+    <file alias="ts/scripts_ja.qm">../../ts/scripts_ja.qm</file>
+    <file alias="ts/scripts_lt.qm">../../ts/scripts_lt.qm</file>
+    <file alias="ts/scripts_nl.qm">../../ts/scripts_nl.qm</file>
+    <file alias="ts/scripts_pl.qm">../../ts/scripts_pl.qm</file>
+    <file alias="ts/scripts_pt.qm">../../ts/scripts_pt.qm</file>
+    <file alias="ts/scripts_ru.qm">../../ts/scripts_ru.qm</file>
+    <file alias="ts/scripts_sk.qm">../../ts/scripts_sk.qm</file>
+    <file alias="ts/scripts_sl.qm">../../ts/scripts_sl.qm</file>
+    <file alias="ts/scripts_sv.qm">../../ts/scripts_sv.qm</file>
+    <file alias="ts/scripts_tr.qm">../../ts/scripts_tr.qm</file>
+    <file alias="ts/scripts_zh_CN.qm">../../ts/scripts_zh_CN.qm</file>
+    <file alias="ts/scripts_zh_TW.qm">../../ts/scripts_zh_TW.qm</file>
   </qresource>
 </RCC>
