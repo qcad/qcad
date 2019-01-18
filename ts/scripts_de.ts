@@ -4695,9 +4695,13 @@ ist bereits in der Liste.</translation>
 <context>
     <name>ExMinimal</name>
     <message>
-        <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World!</source>
-        <translation>Hallo Welt!</translation>
+        <translation type="vanished">Hallo Welt!</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
+        <source>Hello World.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>

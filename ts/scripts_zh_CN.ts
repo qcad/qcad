@@ -3424,7 +3424,7 @@ is already in the list.</source>
     <name>ExMinimal</name>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
-        <source>Hello World!</source>
+        <source>Hello World.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

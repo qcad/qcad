@@ -4070,9 +4070,13 @@ is already in the list.</translation>
 <context>
     <name>ExMinimal</name>
     <message>
-        <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World!</source>
-        <translation>Hello World!</translation>
+        <translation type="vanished">Hello World!</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
+        <source>Hello World.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>

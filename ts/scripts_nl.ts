@@ -4121,9 +4121,13 @@ is al in de lijst.</translation>
 <context>
     <name>ExMinimal</name>
     <message>
-        <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World!</source>
-        <translation>Hallo wereld!</translation>
+        <translation type="vanished">Hallo wereld!</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
+        <source>Hello World.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
