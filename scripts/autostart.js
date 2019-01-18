@@ -310,7 +310,7 @@ function loadTranslations(addOns, splash) {
     }
 
     // load C++ translations:
-    var modules = ["qt", "assistant", "qt_help", "qcadcore", "qcadentity", "qcadgui"];
+    var modules = ["qt", "assistant", "qt_help", "qcadcore", "qcadentity", "qcadgui", "scripts"];
     if (RSettings.isQt(5)) {
         modules.unshift("qtbase");
     }
@@ -321,7 +321,7 @@ function loadTranslations(addOns, splash) {
         RSettings.loadTranslations(module);
     }
 
-    RSettings.loadTranslations("allscripts_" + locale, [autoPath("scripts/ts")]);
+    //RSettings.loadTranslations("scripts_" + locale, [autoPath("scripts/ts")]);
 
     // install one QTranslator for each script add-on if available:
     if (!isNull(splash)) {
