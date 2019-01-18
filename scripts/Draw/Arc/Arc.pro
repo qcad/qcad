@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 SUBDIRS = \
-    ts \
+    dir \
     Arc2PA \
     Arc2PH \
     Arc2PL \

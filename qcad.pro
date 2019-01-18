@@ -2,8 +2,7 @@ include (shared.pri)
 
 TEMPLATE = subdirs
 SUBDIRS = \
-    src \
-    ts
+    src
 
 win32 {
     dirs = $$system("dir /B ..\* | findstr qcad..*")

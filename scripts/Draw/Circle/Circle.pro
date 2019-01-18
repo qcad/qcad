@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 SUBDIRS = \
-    ts \
+    dir \
     Circle2P \
     Circle2PR \
     Circle2TR \

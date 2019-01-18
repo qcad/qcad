@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 SUBDIRS = \
-    ts \
+    dir \
     EllipseArcCPPA \
     EllipseCPP \
     EllipseOffset \

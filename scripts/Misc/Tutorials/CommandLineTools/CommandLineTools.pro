@@ -4,4 +4,4 @@ SUBDIRS = \
     CreatingDrawing \
     ExPdfExport \
     ExSvgExport \
-    ts
+    dir

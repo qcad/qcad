@@ -12,4 +12,4 @@ SUBDIRS = \
     Shape \
     Spline \
     Text \
-    ts
+    dir

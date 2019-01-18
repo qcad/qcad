@@ -26,4 +26,4 @@ SUBDIRS = \
     TranslateRotate \
     Trim \
     TrimBoth \
-    ts
+    dir

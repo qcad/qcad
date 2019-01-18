@@ -573,9 +573,13 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
 
     QTranslator* translator = new QTranslator(qApp);
     for (int i=0; i<translationsDirs.size(); ++i) {
-        if (translator->load(module + "_" + locale, translationsDirs[i])) {
+        QString name = module + "_" + locale;
+        if (translator->load(name, translationsDirs[i])) {
             QCoreApplication::installTranslator(translator);
             break;
+        }
+        else {
+            qWarning() << "Cannot load translation:" << name;
         }
     }
 }

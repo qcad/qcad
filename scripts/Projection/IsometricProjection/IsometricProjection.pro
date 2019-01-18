@@ -1,4 +1,4 @@
 TEMPLATE = subdirs
 SUBDIRS = \
     IsoProject \
-    ts
+    dir

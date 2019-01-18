@@ -1,4 +1,4 @@
 TEMPLATE = subdirs
 SUBDIRS = \
-    ts \
+    dir \
     Point1P

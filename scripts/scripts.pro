@@ -20,5 +20,5 @@ SUBDIRS = \
     View \
     Widgets \
     Window \
-    ts
+    dir
 

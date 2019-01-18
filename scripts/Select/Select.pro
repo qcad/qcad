@@ -7,4 +7,4 @@ SUBDIRS = \
     SelectIntersectedEntities \
     SelectLayerByEntity \
     SelectRectangle \
-    ts
+    dir

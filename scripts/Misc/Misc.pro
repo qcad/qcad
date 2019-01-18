@@ -9,4 +9,4 @@ SUBDIRS = \
     MiscSelect \
     Screencast \
     Tutorials \
-    ts
+    dir

@@ -3,4 +3,4 @@ TEMPLATE = subdirs
 SUBDIRS = \
     ExAddLayer \
     ExLayerCustomProperty \
-    ts
+    dir

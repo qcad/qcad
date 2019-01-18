@@ -1,6 +1,6 @@
 TEMPLATE = subdirs
 SUBDIRS = \
-    ts \
+    dir \
     DimAligned \
     DimAngular \
     DimDiametric \

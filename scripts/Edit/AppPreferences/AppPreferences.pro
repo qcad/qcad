@@ -10,4 +10,4 @@ SUBDIRS = \
     TextPreferences \
     ThemePreferences \
     ToolBarPreferences \
-    ts
+    dir

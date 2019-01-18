@@ -1,5 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS = \
-    ts \
+    dir \
     MergeDrawings

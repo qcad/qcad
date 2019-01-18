@@ -1,7 +1,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS = \
-    ts \
+    dir \
     Counter \
     Cross \
     DrawBoundingBox \
