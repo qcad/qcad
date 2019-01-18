@@ -9,7 +9,7 @@ ExMinimal.prototype = new EAction();
 ExMinimal.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    EAction.handleUserMessage(qsTr("Hello World!"));
+    EAction.handleUserMessage(qsTr("Hello World."));
 
     this.terminate();
 };
