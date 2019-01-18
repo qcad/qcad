@@ -9,6 +9,9 @@
 
 bool RScriptsPlugin::init() {
     qDebug() << "RScriptsPlugin::init";
+
+    RSettings::loadTranslations("scripts", QStringList() << ":ts");
+
     return true;
 }
 
