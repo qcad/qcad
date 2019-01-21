@@ -76,6 +76,8 @@ QList<RRefPoint> RPolylineData::getReferencePoints(RS::ProjectionRenderingHint h
             //}
         //}
     }
+    // make sure start point is on top of end point for closed polyline:
+    ret.append(ret.takeFirst());
     return ret;
 }
 
