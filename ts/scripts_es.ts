@@ -4576,7 +4576,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hola Mundo.</translation>
     </message>
     <message>
         <location line="+6"/>
