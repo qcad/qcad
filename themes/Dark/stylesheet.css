@@ -183,6 +183,10 @@ QToolBar {
     background-color: #282A2D;
 }
 
+QToolButton {
+  background-color: transparent;
+}
+
 QToolButton:checked {
   background-color: #848484;
 }
