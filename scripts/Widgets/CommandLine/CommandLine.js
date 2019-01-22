@@ -82,9 +82,9 @@ CommandLine.init = function(basePath) {
     dock.hidden.connect(function() { action.setChecked(false); });
 
     var blue = "#0000cc";
-    if (RSettings.hasDarkGuiBackground()) {
-        blue = "#2E9AFE";
-    }
+//    if (RSettings.hasDarkGuiBackground()) {
+//        blue = "#2E9AFE";
+//    }
 
     // open fragment links of format "#<entity ID>,<entity ID>" by selecting
     // the entities with the given IDs:
