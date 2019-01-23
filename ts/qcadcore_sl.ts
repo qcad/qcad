@@ -607,7 +607,7 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished"></translation>
+        <translation>Izrisljivo</translation>
     </message>
     <message>
         <location line="+1"/>
