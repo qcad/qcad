@@ -116,7 +116,7 @@ function openFiles(args, createNew, close) {
         }
 
         // argument with two parameters
-        if (args[i] === "-font-substitution" || args[i] === "-fs") {
+        if (args[i] === "-font-substitution" || args[i] === "-fs" || args[i] === "-ts") {
             // skip 3 arguments
             i+=2;
             if (i>=args.length) {
@@ -315,13 +315,37 @@ function loadTranslations(addOns, splash) {
         modules.unshift("qtbase");
     }
 
+    var i;
+    var module;
+
     for (var mi=0; mi<modules.length; ++mi) {
-        var module = modules[mi];
+        module = modules[mi];
 
         RSettings.loadTranslations(module);
     }
 
     //RSettings.loadTranslations("scripts_" + locale, [autoPath("scripts/ts")]);
+
+    // load translations from arguments:
+    var args = QCoreApplication.arguments();
+    for (i = 0; i < args.length; ++i) {
+        if (args[i] === "-ts") {
+            if (++i>=args.length) {
+                break;
+            }
+            module = args[i];
+            if (++i>=args.length) {
+                break;
+            }
+            var dir = args[i];
+
+            RSettings.loadTranslations(module, [autoPath(dir)]);
+        }
+    }
+
+//    RSettings.loadTranslations("scripts", [autoPath("ts")]);
+//    RSettings.loadTranslations("proscripts", [autoPath("../qcadpro/ts")]);
+//    RSettings.loadTranslations("camscripts", [autoPath("../qcadcam/ts")]);
 
     // install one QTranslator for each script add-on if available:
     if (!isNull(splash)) {
@@ -331,7 +355,7 @@ function loadTranslations(addOns, splash) {
 
     //RSettings.loadTranslations("Scripts_" + locale, [autoPath("scripts/ts")]);
 
-    for (var i = 0; i < addOns.length; ++i) {
+    for (i = 0; i < addOns.length; ++i) {
         var addOn = addOns[i];
         if (isNull(addOn)) {
             qWarning("Null add on found");
