@@ -352,7 +352,7 @@
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Атрибуты</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
@@ -592,7 +592,7 @@
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Заморожен</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -602,12 +602,12 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished"></translation>
+        <translation>Свёрнут</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation type="unfinished"></translation>
+        <translation>Начертаемый</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -617,7 +617,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+        <translation>Выкл заморожено</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -629,35 +629,35 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished"></translation>
+        <translation>Минимальные лимиты</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальные лимиты</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished"></translation>
+        <translation>База вставки</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation type="unfinished"></translation>
+        <translation>Минимальные степени</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальные степени</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+627"/>
