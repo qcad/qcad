@@ -2096,7 +2096,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation>Onbekende commando of ongeldige coördinaaten of waarde: &quot;%1&quot;</translation>
+        <translation>Onbekende opdracht of ongeldige coördinaaten of waarde: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2141,12 +2141,12 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation>Commando</translation>
+        <translation>Opdracht</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation>Commando:</translation>
+        <translation>Opdracht:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2171,7 +2171,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation>&amp;Commando regel</translation>
+        <translation>&amp;Opdrachtregel</translation>
     </message>
 </context>
 <context>
@@ -2179,7 +2179,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>&amp;Focus op commando regel</translation>
+        <translation>&amp;Focus op opdrachtregel</translation>
     </message>
 </context>
 <context>
@@ -2187,7 +2187,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation>&amp;Commandoregel tools</translation>
+        <translation>&amp;Opdrachtregel gereedschappen</translation>
     </message>
 </context>
 <context>
