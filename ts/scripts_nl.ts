@@ -2076,12 +2076,12 @@ Wilt u het herstellen?</translation>
         <location line="+0"/>
         <location line="+46"/>
         <source>Command Line</source>
-        <translation>Comando regel</translation>
+        <translation>Opdrachtregel</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>&amp;Command Line</source>
-        <translation>&amp;Comando regel</translation>
+        <translation>&amp;Opdrachtregel</translation>
     </message>
     <message>
         <location line="+188"/>
