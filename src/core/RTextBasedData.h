@@ -136,10 +136,7 @@ public:
         return fontName;
     }
 
-    void setFontName(const QString& fontName) {
-        this->fontName = fontName;
-        update();
-    }
+    void setFontName(const QString& fontName);
 
     QString getFontFile() const {
         return fontFile;

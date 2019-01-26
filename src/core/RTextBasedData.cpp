@@ -527,6 +527,13 @@ QList<QSharedPointer<RShape> > RTextBasedData::getExploded() const {
 //    return shapes;
 }
 
+void RTextBasedData::setFontName(const QString& fontName) {
+    this->fontName = fontName;
+    // reset fontFile if font name changed:
+    this->fontFile = "";
+    update();
+}
+
 void RTextBasedData::update(bool layout) const {
     dirty = true;
     if (layout) {
