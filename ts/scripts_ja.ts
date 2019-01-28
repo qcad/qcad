@@ -227,28 +227,33 @@
         <translation type="obsolete">QCADについて</translation>
     </message>
     <message>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
         <source>About</source>
-        <translation type="vanished">ソフトウェアについて</translation>
+        <translation>ソフトウェアについて</translation>
     </message>
     <message>
         <source>about:blank</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
+        <location line="+134"/>
         <source>Plugins</source>
-        <translation type="vanished">プラグイン</translation>
+        <translation>プラグイン</translation>
     </message>
     <message>
+        <location line="+67"/>
         <source>Scripts</source>
-        <translation type="vanished">スクリプト</translation>
+        <translation>スクリプト</translation>
     </message>
     <message>
+        <location line="+67"/>
         <source>System</source>
-        <translation type="vanished">システム</translation>
+        <translation>システム</translation>
     </message>
     <message>
+        <location line="-201"/>
         <source>Credits</source>
-        <translation type="vanished">クレジット</translation>
+        <translation>クレジット</translation>
     </message>
     <message>
         <source>About Plugins</source>
@@ -329,16 +334,19 @@ QCADを再起動してください。</translation>
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
+        <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="vanished">カスタムプロパティを追加</translation>
+        <translation>カスタムプロパティを追加</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Name:</source>
-        <translation type="vanished">名前:</translation>
+        <translation>名前:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Value:</source>
-        <translation type="vanished">値:</translation>
+        <translation>値:</translation>
     </message>
 </context>
 <context>
@@ -428,24 +436,30 @@ QCADを再起動してください。</translation>
         <translation>２つの点は同一です</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Direction:</source>
-        <translation type="vanished">向き:</translation>
+        <translation>向き:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="vanished">反時計回り（正）</translation>
+        <translation>反時計回り（正）</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
-        <translation type="vanished">向き</translation>
+        <translation>向き</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">時計回り（負）</translation>
+        <translation>時計回り（負）</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
@@ -481,20 +495,24 @@ QCADを再起動してください。</translation>
         <translation>２つの点は同じです。</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
         <source>Height:</source>
-        <translation type="vanished">高さ:</translation>
+        <translation>高さ:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Direction:</source>
-        <translation type="vanished">向き:</translation>
+        <translation>向き:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="vanished">反時計回り（正）</translation>
+        <translation>反時計回り（正）</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">時計回り（負）</translation>
+        <translation>時計回り（負）</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -535,20 +553,24 @@ QCADを再起動してください。</translation>
         <translation>２点の距離は弧の長さより小さくなければなりません。</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="vanished">長さ:</translation>
+        <translation>長さ:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Direction:</source>
-        <translation type="vanished">向き:</translation>
+        <translation>向き:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="vanished">反時計回り（正）</translation>
+        <translation>反時計回り（正）</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">時計回り（負）</translation>
+        <translation>時計回り（負）</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -584,40 +606,51 @@ QCADを再起動してください。</translation>
         <translation>２点は同一です</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
+        <translation>半径:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Direction:</source>
-        <translation type="vanished">向き:</translation>
+        <translation>向き:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="vanished">反時計回り（正）</translation>
+        <translation>反時計回り（正）</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
-        <translation type="vanished">向き</translation>
+        <translation>向き</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">時計回り（負）</translation>
+        <translation>時計回り（負）</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Solution:</source>
-        <translation type="vanished">ソリューション:</translation>
+        <translation>ソリューション:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Shorter Arc</source>
-        <translation type="vanished">短い弧</translation>
+        <translation>短い弧</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Solution</source>
-        <translation type="vanished">ソリューション</translation>
+        <translation>ソリューション</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Longer Arc</source>
-        <translation type="vanished">長い弧</translation>
+        <translation>長い弧</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
@@ -686,20 +719,25 @@ QCADを再起動してください。</translation>
         <translation>終了角度</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="vanished">向き:</translation>
+        <translation>向き:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="vanished">反時計回り（正）</translation>
+        <translation>反時計回り（正）</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
-        <translation type="vanished">向き</translation>
+        <translation>向き</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">時計回り（負）</translation>
+        <translation>時計回り（負）</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -715,12 +753,14 @@ QCADを再起動してください。</translation>
 <context>
     <name>ArcConcentric</name>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="vanished">距離:</translation>
+        <translation>距離:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Number:</source>
-        <translation type="vanished">個数:</translation>
+        <translation>個数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -736,8 +776,9 @@ QCADを再起動してください。</translation>
 <context>
     <name>ArcConcentricThrough</name>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">個数:</translation>
+        <translation>個数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
@@ -774,8 +815,9 @@ QCADを再起動してください。</translation>
         <translation>解決法がありません</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
+        <translation>半径:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
@@ -801,8 +843,9 @@ QCADを再起動してください。</translation>
         <translation>弧の終了点を選択してください</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
+        <translation>半径:</translation>
     </message>
     <message>
         <source>&amp;Tangentially connected</source>
@@ -920,63 +963,77 @@ Do you wish to recover it?</source>
         <translation>ファイルを移動できません:</translation>
     </message>
     <message>
+        <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="vanished">オートセーブ可能にする</translation>
+        <translation>オートセーブ可能にする</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="vanished">オートセーブ間隔:</translation>
+        <translation>オートセーブ間隔:</translation>
     </message>
     <message>
+        <location line="+54"/>
         <source>min</source>
-        <translation type="vanished">分</translation>
+        <translation>分</translation>
     </message>
 </context>
 <context>
     <name>AutoSnap</name>
     <message>
+        <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation type="vanished">自動スナップ</translation>
+        <translation>自動スナップ</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Intersections</source>
-        <translation type="vanished">交点</translation>
+        <translation>交点</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>End points</source>
-        <translation type="vanished">終了点</translation>
+        <translation>終了点</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Middle points</source>
-        <translation type="vanished">中央点</translation>
+        <translation>中央点</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Center points</source>
-        <translation type="vanished">中心点</translation>
+        <translation>中心点</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="vanished">垂直</translation>
+        <translation>垂直</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Tangential</source>
-        <translation type="vanished">正接</translation>
+        <translation>正接</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Reference points</source>
-        <translation type="vanished">参照点</translation>
+        <translation>参照点</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Grid points</source>
-        <translation type="vanished">グリッド点</translation>
+        <translation>グリッド点</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="vanished">エンティティ上の点</translation>
+        <translation>エンティティ上の点</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="vanished">自由位置</translation>
+        <translation>自由位置</translation>
     </message>
 </context>
 <context>
@@ -1026,16 +1083,19 @@ Do you wish to recover it?</source>
         <translation>２つ目のエンティティはトリムできません。</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="vanished">トリム</translation>
+        <translation>トリム</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="vanished">長さ１:</translation>
+        <translation>長さ１:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Length 2:</source>
-        <translation type="vanished">長さ２:</translation>
+        <translation>長さ２:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1074,72 +1134,100 @@ Do you wish to recover it?</source>
         <translation type="vanished">ビットマップファイルはエクスポートされました &apos;%1&apos;</translation>
     </message>
     <message>
+        <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="vanished">ビットマップエクスポート</translation>
+        <translation>ビットマップエクスポート</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Size</source>
-        <translation type="vanished">サイズ</translation>
+        <translation>サイズ</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Width:</source>
-        <translation type="vanished">幅:</translation>
+        <translation>幅:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Height:</source>
-        <translation type="vanished">高さ:</translation>
+        <translation>高さ:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="vanished">図面単位あたりのピクセル数:</translation>
+        <translation>図面単位あたりのピクセル数:</translation>
     </message>
     <message>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Transparent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+23"/>
         <source>Color</source>
-        <translation type="vanished">色</translation>
+        <translation>色</translation>
     </message>
     <message>
+        <location line="-17"/>
         <source>Monochrome</source>
-        <translation type="vanished">モノクロ</translation>
+        <translation>モノクロ</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Grayscale</source>
-        <translation type="vanished">グレースケール</translation>
+        <translation>グレースケール</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Anti-aliasing</source>
-        <translation type="vanished">アンチエイリアス</translation>
+        <translation>アンチエイリアス</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation type="vanished">アンチエイリアスを使用</translation>
+        <translation>アンチエイリアスを使用</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Margin</source>
-        <translation type="vanished">余白</translation>
+        <translation>余白</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Margin:</source>
-        <translation type="vanished">余白:</translation>
+        <translation>余白:</translation>
     </message>
     <message>
+        <location line="+62"/>
         <source>px</source>
-        <translation type="vanished">ピクセル</translation>
+        <translation>ピクセル</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation type="vanished">線分太さと相殺するために余分な余白を追加</translation>
+        <translation>線分太さと相殺するために余分な余白を追加</translation>
     </message>
     <message>
+        <location line="-170"/>
         <source>Background</source>
-        <translation type="vanished">背景</translation>
+        <translation>背景</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>White</source>
-        <translation type="vanished">白</translation>
+        <translation>白</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Black</source>
-        <translation type="vanished">黒</translation>
+        <translation>黒</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1215,16 +1303,19 @@ Do you wish to recover it?</source>
         <translation>ブロックは既に存在します。</translation>
     </message>
     <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation type="vanished">ブロックデータ</translation>
+        <translation>ブロックデータ</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Block name:</source>
-        <translation type="vanished">ブロック名:</translation>
+        <translation>ブロック名:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>block 1</source>
-        <translation type="vanished">ブロック１</translation>
+        <translation>ブロック１</translation>
     </message>
 </context>
 <context>
@@ -1258,12 +1349,14 @@ Do you wish to recover it?</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
-        <translation type="vanished">内側のブロックを非表示</translation>
+        <translation>内側のブロックを非表示</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Enable alternating row colors</source>
-        <translation type="vanished">行の交互色を使用する</translation>
+        <translation>行の交互色を使用する</translation>
     </message>
 </context>
 <context>
@@ -1328,8 +1421,9 @@ Do you wish to recover it?</source>
         <translation>線分、弧、円または楕円の切片を選択してください</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="vanished">セグメントを削除</translation>
+        <translation>セグメントを削除</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
@@ -1350,8 +1444,9 @@ Do you wish to recover it?</source>
         <translation>点を指定</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation type="vanished">ギャップ:</translation>
+        <translation>ギャップ:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
@@ -1394,8 +1489,9 @@ Do you wish to recover it?</source>
         <translation>削除するには円や楕円の一部をクリックしてください</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="vanished">セグメントを削除</translation>
+        <translation>セグメントを削除</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
@@ -1433,20 +1529,24 @@ Do you wish to recover it?</source>
         <translation type="vanished">タイトルバー切り替え</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation type="vanished">アイコンサイズ:</translation>
+        <translation>アイコンサイズ:</translation>
     </message>
     <message>
+        <location line="+71"/>
         <source>Pixel</source>
-        <translation type="vanished">ピクセル</translation>
+        <translation>ピクセル</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>px</source>
-        <translation type="vanished">ピクセル</translation>
+        <translation>ピクセル</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Columns:</source>
-        <translation type="vanished">列:</translation>
+        <translation>列:</translation>
     </message>
 </context>
 <context>
@@ -1492,20 +1592,24 @@ Do you wish to recover it?</source>
         <translation>ツールマトリクス</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation type="vanished">アイコンのサイズ:</translation>
+        <translation>アイコンのサイズ:</translation>
     </message>
     <message>
+        <location line="+96"/>
         <source>Pixel</source>
-        <translation type="vanished">ピクセル</translation>
+        <translation>ピクセル</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>px</source>
-        <translation type="vanished">px</translation>
+        <translation>px</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>List view</source>
-        <translation type="vanished">リストビュー</translation>
+        <translation>リストビュー</translation>
     </message>
 </context>
 <context>
@@ -1520,6 +1624,7 @@ Do you wish to recover it?</source>
     <name>CheckForUpdates</name>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation>アップデートを確認しています...</translation>
     </message>
@@ -1538,8 +1643,9 @@ Do you wish to recover it?</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
-        <translation type="vanished">アップデートの確認を自動的に行う</translation>
+        <translation>アップデートの確認を自動的に行う</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
@@ -1615,24 +1721,30 @@ Do you wish to recover it?</source>
         <translation>２点は同一です</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
+        <translation>半径:</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Solution:</source>
-        <translation type="vanished">ソリューション:</translation>
+        <translation>ソリューション:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation type="vanished">１−２点の線分の左に中心を置く</translation>
+        <translation>１−２点の線分の左に中心を置く</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Solution</source>
-        <translation type="vanished">ソリューション</translation>
+        <translation>ソリューション</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation type="vanished">１−２点の線分の右に中心を置く</translation>
+        <translation>１−２点の線分の右に中心を置く</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -1715,8 +1827,9 @@ Do you wish to recover it?</source>
         <translation type="vanished">無効な角度</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
+        <translation>半径:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -1819,16 +1932,21 @@ Do you wish to recover it?</source>
         <translation type="vanished">中心及び半径半径から円を描画</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleCD/CircleCD.ui" line="+17"/>
+        <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="+89"/>
         <source>Diameter:</source>
-        <translation type="vanished">直径:</translation>
+        <translation>直径:</translation>
     </message>
     <message>
+        <location line="+33"/>
+        <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">基準点:</translation>
+        <translation>基準点:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
@@ -1875,16 +1993,21 @@ Do you wish to recover it?</source>
         <translation type="vanished">中心</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
+        <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
+        <translation>半径:</translation>
     </message>
     <message>
+        <location line="+33"/>
+        <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">基準点:</translation>
+        <translation>基準点:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
@@ -1900,12 +2023,14 @@ Do you wish to recover it?</source>
 <context>
     <name>CircleConcentric</name>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="vanished">距離:</translation>
+        <translation>距離:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Number:</source>
-        <translation type="vanished">数:</translation>
+        <translation>数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
@@ -1921,8 +2046,9 @@ Do you wish to recover it?</source>
 <context>
     <name>CircleConcentricThrough</name>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">数:</translation>
+        <translation>数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
@@ -1996,8 +2122,9 @@ Do you wish to recover it?</source>
         <translation>指定した半径で点を通る、エンティティに接する円を描く</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
+        <translation>半径:</translation>
     </message>
 </context>
 <context>
@@ -2019,8 +2146,9 @@ Do you wish to recover it?</source>
 <context>
     <name>CloseDialog</name>
     <message>
+        <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="vanished">図面を閉じています...</translation>
+        <translation>図面を閉じています...</translation>
     </message>
 </context>
 <context>
@@ -2067,24 +2195,29 @@ Do you wish to recover it?</source>
         <translation>色</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
-        <translation type="vanished">背景色:</translation>
+        <translation>背景色:</translation>
     </message>
     <message>
+        <location line="+44"/>
         <source>Color Mode</source>
-        <translation type="vanished">色モード</translation>
+        <translation>色モード</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Full color</source>
-        <translation type="vanished">フルカラー</translation>
+        <translation>フルカラー</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Grayscale</source>
-        <translation type="vanished">グレースケール</translation>
+        <translation>グレースケール</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Black / white</source>
-        <translation type="vanished">白黒</translation>
+        <translation>白黒</translation>
     </message>
 </context>
 <context>
@@ -2097,6 +2230,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-30"/>
         <location line="+46"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>コマンドライン</translation>
     </message>
@@ -2184,16 +2318,19 @@ Do you wish to recover it?</source>
         <translation>:</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
-        <translation type="vanished">ヒストリサイズ:</translation>
+        <translation>ヒストリサイズ:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation type="vanished">ダイアログとして警告を表示</translation>
+        <translation>ダイアログとして警告を表示</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation type="vanished">ダイアログとして情報を表示</translation>
+        <translation>ダイアログとして情報を表示</translation>
     </message>
 </context>
 <context>
@@ -2252,39 +2389,47 @@ Do you wish to recover it?</source>
         <translation>他の図面単位に変更する</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation type="vanished">現在の値:</translation>
+        <translation>現在の値:</translation>
     </message>
     <message>
+        <location line="+53"/>
         <source>To:</source>
-        <translation type="vanished">変更後:</translation>
+        <translation>変更後:</translation>
     </message>
     <message>
+        <location line="+30"/>
         <source>Convert:</source>
-        <translation type="vanished">変換:</translation>
+        <translation>変換:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>...</source>
-        <translation type="vanished">...</translation>
+        <translation>...</translation>
     </message>
 </context>
 <context>
     <name>CoordinateDisplay</name>
     <message>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translation type="vanished">絶対デカルト座標</translation>
+        <translation>絶対デカルト座標</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translation type="vanished">絶対極座標</translation>
+        <translation>絶対極座標</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translation type="vanished">相対デカルト座標</translation>
+        <translation>相対デカルト座標</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translation type="vanished">相対極座標</translation>
+        <translation>相対極座標</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
@@ -2294,6 +2439,11 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
+        <source>Forced update every N mouse moves:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2328,6 +2478,36 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Auto increment number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
+        <source>Start:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Precision:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of decimal digits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Prefix:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Suffix:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2383,6 +2563,39 @@ Do you wish to recover it?</source>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CrossOptions</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/Cross/Cross.ui" line="+17"/>
+        <source>X:</source>
+        <translation type="unfinished">X:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Y:</source>
+        <translation type="unfinished">Y:</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>Extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Total length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Percent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Angle:</source>
+        <translation type="unfinished">角度:</translation>
     </message>
 </context>
 <context>
@@ -2529,72 +2742,90 @@ Do you wish to recover it?</source>
 <context>
     <name>Dialog</name>
     <message>
+        <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="vanished">キャラクターマップ</translation>
+        <translation>キャラクターマップ</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
-        <translation type="vanished">ダイアログ</translation>
+        <translation>ダイアログ</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation type="vanished">弧と円</translation>
+        <translation>弧と円</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation type="vanished">線分情報（長さ固定）</translation>
+        <translation>線分情報（長さ固定）</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation type="vanished">線分情報（角度固定）</translation>
+        <translation>線分情報（角度固定）</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Ellipses</source>
-        <translation type="vanished">弧</translation>
+        <translation>弧</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation type="vanished">弧のポリライン情報</translation>
+        <translation>弧のポリライン情報</translation>
     </message>
     <message>
+        <location line="+5"/>
+        <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation type="vanished">線分のポリライン情報</translation>
+        <translation>線分のポリライン情報</translation>
     </message>
     <message>
+        <location line="-8"/>
         <source>Splines</source>
-        <translation type="vanished">スプライン</translation>
+        <translation>スプライン</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Dimensions</source>
-        <translation type="vanished">寸法</translation>
+        <translation>寸法</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation type="vanished">線分、ソリッド及びテキスト情報</translation>
+        <translation>線分、ソリッド及びテキスト情報</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Hatches</source>
-        <translation type="vanished">ハッチング</translation>
+        <translation>ハッチング</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into lines</source>
-        <translation type="vanished">線分情報</translation>
+        <translation>線分情報</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Blocks</source>
-        <translation type="vanished">ブロック</translation>
+        <translation>ブロック</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into entities</source>
-        <translation type="vanished">エンティティ情報</translation>
+        <translation>エンティティ情報</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
         <source>OK</source>
-        <translation type="vanished">OK</translation>
+        <translation>OK</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Cancel</source>
-        <translation type="vanished">キャンセル</translation>
+        <translation>キャンセル</translation>
     </message>
 </context>
 <context>
@@ -2651,6 +2882,11 @@ Do you wish to recover it?</source>
         <location line="+5"/>
         <source>Draw angular dimension</source>
         <translation>角度寸法の描画</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
+        <source>Use maximum angle</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2777,8 +3013,9 @@ Do you wish to recover it?</source>
         <translation>寸法線の位置</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
@@ -2871,32 +3108,44 @@ Do you wish to recover it?</source>
         <translation>&amp;i 寸法</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation type="vanished">ラベル:</translation>
+        <translation>ラベル:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Prefix</source>
-        <translation type="vanished">接頭辞</translation>
+        <translation>接頭辞</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="vanished">固定ラベルを入力または自動ラベルを削除</translation>
+        <translation>固定ラベルを入力または自動ラベルを削除</translation>
     </message>
     <message>
+        <location line="+61"/>
         <source>Upper tolerance</source>
-        <translation type="vanished">許容誤差の上限</translation>
+        <translation>許容誤差の上限</translation>
     </message>
     <message>
+        <location line="+54"/>
         <source>Lower tolerance</source>
-        <translation type="vanished">許容誤差の下限</translation>
+        <translation>許容誤差の下限</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Scale</source>
-        <translation type="vanished">スケール</translation>
+        <translation>スケール</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="vanished">図面の縮尺</translation>
+        <translation>図面の縮尺</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Auto</source>
+        <translation type="unfinished">自動</translation>
     </message>
 </context>
 <context>
@@ -3001,100 +3250,131 @@ Do you wish to recover it?</source>
         <translation type="vanished">寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
-        <translation type="vanished">サイズ</translation>
+        <translation>サイズ</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Keep proportions</source>
-        <translation type="vanished">比率を維持</translation>
+        <translation>比率を維持</translation>
     </message>
     <message>
+        <location line="+147"/>
         <source>Text height:</source>
-        <translation type="vanished">テキスト高さ:</translation>
+        <translation>テキスト高さ:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation type="vanished">延長線のオフセット:</translation>
+        <translation>延長線のオフセット:</translation>
     </message>
     <message>
+        <location line="-74"/>
         <source>Extension line extension:</source>
-        <translation type="vanished">延長線の拡張:</translation>
+        <translation>延長線の拡張:</translation>
     </message>
     <message>
+        <location line="-52"/>
         <source>Dimension line gap:</source>
-        <translation type="vanished">寸法線のギャップ:</translation>
+        <translation>寸法線のギャップ:</translation>
     </message>
     <message>
+        <location line="+42"/>
         <source>Arrow size:</source>
-        <translation type="vanished">矢印のサイズ:</translation>
+        <translation>矢印のサイズ:</translation>
     </message>
     <message>
+        <location line="+108"/>
+        <source>Dimension line increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation type="vanished">倍率サイズ:</translation>
+        <translation>倍率サイズ:</translation>
     </message>
     <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
-        <translation type="vanished">矢印のスタイル</translation>
+        <translation>矢印のスタイル</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Arrow</source>
-        <translation type="vanished">矢印</translation>
+        <translation>矢印</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation type="vanished">建築チェック</translation>
+        <translation>建築チェック</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Font</source>
-        <translation type="vanished">フォント</translation>
+        <translation>フォント</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation type="vanished">フォント:</translation>
+        <translation>フォント:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Number Format</source>
-        <translation type="vanished">数字の書式</translation>
+        <translation>数字の書式</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="vanished">小数点:</translation>
+        <translation>小数点:</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Label Format</source>
-        <translation type="vanished">ラベルフォーマット</translation>
+        <translation>ラベルフォーマット</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation type="vanished">線形寸法</translation>
+        <translation>線形寸法</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation type="vanished">&amp;F フォーマット:</translation>
+        <translation>&amp;F フォーマット:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation type="vanished">&amp;r 正確さ:</translation>
+        <translation>&amp;r 正確さ:</translation>
     </message>
     <message>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation type="vanished">末尾のゼロを表示</translation>
+        <translation>末尾のゼロを表示</translation>
     </message>
     <message>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="vanished">角度寸法</translation>
+        <translation>角度寸法</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation type="vanished">&amp;o フォーマット:</translation>
+        <translation>&amp;o フォーマット:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="vanished">&amp;c 正確さ:</translation>
+        <translation>&amp;c 正確さ:</translation>
     </message>
     <message>
+        <location line="+32"/>
+        <location line="+19"/>
         <source>Preview</source>
-        <translation type="vanished">プレビュー</translation>
+        <translation>プレビュー</translation>
     </message>
 </context>
 <context>
@@ -3382,44 +3662,54 @@ is already in the list.</source>
         <translation>arc</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="vanished">ポリラインを閉じる</translation>
+        <translation>ポリラインを閉じる</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>,, C</source>
-        <translation type="vanished">,, C</translation>
+        <translation>,, C</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="vanished">前のセグメントを取り消し</translation>
+        <translation>前のセグメントを取り消し</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, U</source>
-        <translation type="vanished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="vanished">セグメントをやり直し</translation>
+        <translation>セグメントをやり直し</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, R</source>
-        <translation type="vanished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="vanished">半径を指定の弧:</translation>
+        <translation>半径を指定の弧:</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>,, A</source>
-        <translation type="vanished">,, A</translation>
+        <translation>,, A</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Sweep</source>
-        <translation type="vanished">曲線</translation>
+        <translation>曲線</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="vanished">長さや角度を制限</translation>
+        <translation>長さや角度を制限</translation>
     </message>
     <message>
         <source>Arc segment with radius:</source>
@@ -3600,7 +3890,23 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+25"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
+        <source>ECMAScript Shell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this dialog again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3789,20 +4095,25 @@ is already in the list.</source>
         <translation>終了角度:</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="vanished">向き:</translation>
+        <translation>向き:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="vanished">反時計回り（正）</translation>
+        <translation>反時計回り（正）</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
-        <translation type="vanished">向き</translation>
+        <translation>向き</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">時計回り（負）</translation>
+        <translation>時計回り（負）</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
@@ -3857,20 +4168,27 @@ is already in the list.</source>
 <context>
     <name>EllipseDD</name>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui" line="+17"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation type="vanished">X直径:</translation>
+        <translation>X直径:</translation>
     </message>
     <message>
+        <location line="+23"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
-        <translation type="vanished">Y直径:</translation>
+        <translation>Y直径:</translation>
     </message>
     <message>
+        <location line="+30"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">基準点:</translation>
+        <translation>基準点:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
@@ -3919,12 +4237,14 @@ is already in the list.</source>
 <context>
     <name>EllipseOffset</name>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="vanished">距離:</translation>
+        <translation>距離:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Number:</source>
-        <translation type="vanished">数:</translation>
+        <translation>数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -3940,8 +4260,9 @@ is already in the list.</source>
 <context>
     <name>EllipseOffsetThrough</name>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">数:</translation>
+        <translation>数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -3957,20 +4278,27 @@ is already in the list.</source>
 <context>
     <name>EllipseRR</name>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRR.ui" line="+17"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
-        <translation type="vanished">X半径:</translation>
+        <translation>X半径:</translation>
     </message>
     <message>
+        <location line="+23"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
-        <translation type="vanished">Y半径:</translation>
+        <translation>Y半径:</translation>
     </message>
     <message>
+        <location line="+30"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">基準点:</translation>
+        <translation>基準点:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
@@ -4152,6 +4480,11 @@ is already in the list.</source>
         <source>&amp;Minimal Example 2</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ExProcess</name>
@@ -4217,6 +4550,26 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
+        <source>Enter Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>1280x720 (720p) 16:9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1920x1080 (1080p, Full HD) 16:9</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4336,28 +4689,34 @@ is already in the list.</source>
         <translation>&amp;E 分解</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+197"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="vanished">テキストのグリフをポリラインに分解</translation>
+        <translation>テキストのグリフをポリラインに分解</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Spline segments:</source>
-        <translation type="vanished">スプラインセグメント:</translation>
+        <translation>スプラインセグメント:</translation>
     </message>
     <message>
+        <location line="-27"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation type="vanished">弧セグメント（楕円あたり）:</translation>
+        <translation>弧セグメント（楕円あたり）:</translation>
     </message>
     <message>
+        <location line="-7"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="vanished">スプラインを線分セグメントのポリラインに分解</translation>
+        <translation>スプラインを線分セグメントのポリラインに分解</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="vanished">マルチラインテキストを複数の1行テキストに分解する</translation>
+        <translation>マルチラインテキストを複数の1行テキストに分解する</translation>
     </message>
     <message>
+        <location line="-31"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="vanished">スプライン近似公差:</translation>
+        <translation>スプライン近似公差:</translation>
     </message>
 </context>
 <context>
@@ -4535,16 +4894,19 @@ is already in the list.</source>
         <translation type="obsolete">２:水平</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation type="vanished">３:右</translation>
+        <translation>３:右</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation type="vanished">３:左</translation>
+        <translation>３:左</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation type="vanished">３:上</translation>
+        <translation>３:上</translation>
     </message>
     <message>
         <source>Three: Below</source>
@@ -4574,6 +4936,26 @@ is already in the list.</source>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="obsolete">グリッド間隔＜メタグリッド間隔</translation>
     </message>
+    <message>
+        <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">フォーム</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Cube size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>10</source>
+        <translation type="unfinished">10</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Draw plates</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Forum</name>
@@ -4586,209 +4968,262 @@ is already in the list.</source>
 <context>
     <name>FourEqual</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="vanished">４:イコール</translation>
+        <translation>４:イコール</translation>
     </message>
 </context>
 <context>
     <name>FourLeft</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="vanished">４:左</translation>
+        <translation>４:左</translation>
     </message>
 </context>
 <context>
     <name>FourRight</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="vanished">４:右</translation>
+        <translation>４:右</translation>
     </message>
 </context>
 <context>
     <name>GraphicsView</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
-        <translation type="vanished">ダブルクリック</translation>
+        <translation>ダブルクリック</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation type="vanished">ダブルクリックでテキスト編集</translation>
+        <translation>ダブルクリックでテキスト編集</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="vanished">ダブルクリックでハッチング修正</translation>
+        <translation>ダブルクリックでハッチング修正</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="vanished">ブロック参照をダブルクリックしてブロックをオープン</translation>
+        <translation>ブロック参照をダブルクリックしてブロックをオープン</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Right double-click to reset</source>
-        <translation type="vanished">右ダブルクリックでリセット</translation>
+        <translation>右ダブルクリックでリセット</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Blocks</source>
-        <translation type="vanished">ブロック</translation>
+        <translation>ブロック</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation type="vanished">ブロック参照を属性と一緒に選択する</translation>
+        <translation>ブロック参照を属性と一緒に選択する</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation type="vanished">参照が非表示の時に属性を隠す</translation>
+        <translation>参照が非表示の時に属性を隠す</translation>
     </message>
     <message>
+        <location line="+126"/>
         <source>Highlight entity within range</source>
-        <translation type="vanished">範囲内のエンティティをハイライト</translation>
+        <translation>範囲内のエンティティをハイライト</translation>
     </message>
     <message>
+        <location line="-211"/>
         <source>Right-Click</source>
-        <translation type="vanished">右クリック</translation>
+        <translation>右クリック</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="vanished">右クリックでエンティティを選択解除</translation>
+        <translation>右クリックでエンティティを選択解除</translation>
     </message>
     <message>
+        <location line="+46"/>
         <source>Double-click to select contour</source>
-        <translation type="vanished">ダブルクリックで輪郭を選択</translation>
+        <translation>ダブルクリックで輪郭を選択</translation>
     </message>
     <message>
+        <location line="+43"/>
         <source>Cursor Range</source>
-        <translation type="vanished">カーソル範囲</translation>
+        <translation>カーソル範囲</translation>
     </message>
     <message>
+        <location line="+109"/>
         <source>Cursor range for snap:</source>
-        <translation type="vanished">スナップするカーソル範囲:</translation>
+        <translation>スナップするカーソル範囲:</translation>
     </message>
     <message>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="vanished">エンティティを拾うためにカーソルで範囲指定</translation>
+        <translation>エンティティを拾うためにカーソルで範囲指定</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
         <source>Automatically scale grid</source>
-        <translation type="vanished">自動的にグリッドを拡縮</translation>
+        <translation>自動的にグリッドを拡縮</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation type="vanished">自動的にメタグリッドを拡縮</translation>
+        <translation>自動的にメタグリッドを拡縮</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation type="vanished">実線グリッド</translation>
+        <translation>実線グリッド</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation type="vanished">最小グリッド幅(px):</translation>
+        <translation>最小グリッド幅(px):</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="vanished">定規及びスクロールバー</translation>
+        <translation>定規及びスクロールバー</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="vanished">定規を表示</translation>
+        <translation>定規を表示</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="vanished">スクロールバーを表示</translation>
+        <translation>スクロールバーを表示</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Cursor</source>
-        <translation type="vanished">カーソル</translation>
+        <translation>カーソル</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="vanished">十字線を表示</translation>
+        <translation>十字線を表示</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="vanished">大きな十字線を表示</translation>
+        <translation>大きな十字線を表示</translation>
     </message>
     <message>
         <source>Grid</source>
         <translation type="obsolete">グリッド</translation>
     </message>
     <message>
+        <location line="-64"/>
         <source>Origin</source>
-        <translation type="vanished">原点</translation>
+        <translation>原点</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="vanished">原点軸の表示</translation>
+        <translation>原点軸の表示</translation>
     </message>
     <message>
+        <location line="+71"/>
         <source>Auto Zoom</source>
-        <translation type="vanished">オートズーム</translation>
+        <translation>オートズーム</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Margin (px):</source>
-        <translation type="vanished">マージン（ピクセル）:</translation>
+        <translation>マージン（ピクセル）:</translation>
     </message>
     <message>
+        <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation type="vanished">読み込み時に自動拡縮</translation>
+        <translation>読み込み時に自動拡縮</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Color Adjustment</source>
-        <translation type="vanished">色調節</translation>
+        <translation>色調節</translation>
     </message>
     <message>
+        <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="vanished">白に白/黒に黒の表示を防ぐ</translation>
+        <translation>白に白/黒に黒の表示を防ぐ</translation>
     </message>
     <message>
+        <location line="-29"/>
         <source>Color lightness threshold:</source>
-        <translation type="vanished">色の明るさ閾値:</translation>
+        <translation>色の明るさ閾値:</translation>
     </message>
     <message>
+        <location line="+39"/>
+        <source>Disable for printing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Linetypes</source>
-        <translation type="vanished">ラインタイプ</translation>
+        <translation>ラインタイプ</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="vanished">自動的にモデルビューの基本線種を使用</translation>
+        <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="vanished">線分太さによるラインタイプパターンのスケール</translation>
+        <translation>線分太さによるラインタイプパターンのスケール</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="vanished">線の太さのパターン·スケール 0.00mm:</translation>
+        <translation>線の太さのパターン·スケール 0.00mm:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Display and Performance</source>
-        <translation type="vanished">表示と性能</translation>
+        <translation>表示と性能</translation>
     </message>
     <message>
+        <location line="+229"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="vanished">エンティティをこの数以上の連続点として表示する</translation>
+        <translation>エンティティをこの数以上の連続点として表示する</translation>
     </message>
     <message>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="vanished">弧を描く時に分割する最小角度（度）</translation>
+        <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
+        <location line="-134"/>
         <source>Use full resolution for Retina display</source>
-        <translation type="vanished">Retinaディスプレイでフル解像度を用いる</translation>
+        <translation>Retinaディスプレイでフル解像度を用いる</translation>
     </message>
     <message>
+        <location line="-7"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="vanished">デフォルトでアンチエイリアスする</translation>
+        <translation>デフォルトでアンチエイリアスする</translation>
     </message>
     <message>
+        <location line="+327"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation type="vanished">表示される参照点の最大数</translation>
+        <translation>表示される参照点の最大数</translation>
     </message>
     <message>
+        <location line="-62"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="vanished">ハッチング表示のタイムアウト:</translation>
+        <translation>ハッチング表示のタイムアウト:</translation>
     </message>
     <message>
+        <location line="-343"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="vanished">自動的にモデルビューの基本線種を使用</translation>
+        <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
@@ -4799,151 +5234,193 @@ is already in the list.</source>
         <translation type="vanished">パフォーマンス</translation>
     </message>
     <message>
+        <location line="+92"/>
         <source>Number of preview entities:</source>
-        <translation type="vanished">プレビューエンティティの数:</translation>
+        <translation>プレビューエンティティの数:</translation>
     </message>
     <message>
         <source>Text height display threshold (px):</source>
         <translation type="vanished">テキスト高さの表示しきい値 (px):</translation>
     </message>
     <message>
+        <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="vanished">この角度以下の弧を直線で表示 (度):</translation>
+        <translation>この角度以下の弧を直線で表示 (度):</translation>
     </message>
     <message>
         <source>Text height display threshold:</source>
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
+        <location line="+335"/>
         <source>Selection</source>
-        <translation type="vanished">選択</translation>
+        <translation>選択</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation type="vanished">選択を持続</translation>
+        <translation>選択を持続</translation>
     </message>
 </context>
 <context>
     <name>GraphicsViewColors</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="vanished">グラフィックビュー</translation>
+        <translation>グラフィックビュー</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Background:</source>
-        <translation type="vanished">背景:</translation>
+        <translation>背景:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Cursor</source>
-        <translation type="vanished">カーソル</translation>
+        <translation>カーソル</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation type="vanished">十字線:</translation>
+        <translation>十字線:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="vanished">非アクティブな十字線:</translation>
+        <translation>非アクティブな十字線:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Origin</source>
-        <translation type="vanished">原点</translation>
+        <translation>原点</translation>
     </message>
     <message>
+        <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="vanished">相対ゼロ:</translation>
+        <translation>相対ゼロ:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Grid</source>
-        <translation type="vanished">グリッド</translation>
+        <translation>グリッド</translation>
     </message>
     <message>
+        <location line="+48"/>
         <source>Meta grid:</source>
-        <translation type="vanished">メタグリッド:</translation>
+        <translation>メタグリッド:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Selection</source>
-        <translation type="vanished">選択</translation>
+        <translation>選択</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="vanished">主要な選択色:</translation>
+        <translation>主要な選択色:</translation>
     </message>
     <message>
+        <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="vanished">2番目の選択色を使用する</translation>
+        <translation>2番目の選択色を使用する</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="vanished">2番目の選択色:</translation>
+        <translation>2番目の選択色:</translation>
     </message>
     <message>
         <source>Draggable reference points:</source>
         <translation type="vanished">ドラッグ可能な基準点:</translation>
     </message>
     <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="vanished">2番目の基準点:</translation>
+        <translation>2番目の基準点:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
-        <translation type="vanished">選択ボックスの境界:</translation>
+        <translation>選択ボックスの境界:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="vanished">選択ボックス:</translation>
+        <translation>選択ボックス:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="vanished">クロスセレクションボックス:</translation>
+        <translation>クロスセレクションボックス:</translation>
     </message>
     <message>
+        <location line="+30"/>
         <source>Start points:</source>
-        <translation type="vanished">開始点:</translation>
+        <translation>開始点:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>End points:</source>
-        <translation type="vanished">終了点:</translation>
+        <translation>終了点:</translation>
     </message>
     <message>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
-        <translation type="vanished">スナップツール</translation>
+        <translation>スナップツール</translation>
     </message>
     <message>
+        <location line="+15"/>
         <source>Snap label:</source>
-        <translation type="vanished">スナップラベル:</translation>
+        <translation>スナップラベル:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="vanished">情報</translation>
+        <translation>情報</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="vanished">測定とラベル:</translation>
+        <translation>測定とラベル:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="vanished">描画ツール</translation>
+        <translation>描画ツール</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="vanished">補助輪郭:</translation>
+        <translation>補助輪郭:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="vanished">拡大ツール</translation>
+        <translation>拡大ツール</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="vanished">ズームボックス:</translation>
+        <translation>ズームボックス:</translation>
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
         <translation type="obsolete">非アクティブな十字線:</translation>
     </message>
     <message>
+        <location line="-643"/>
         <source>Origin:</source>
-        <translation type="vanished">原点:</translation>
+        <translation>原点:</translation>
     </message>
     <message>
         <source>Relative Zero:</source>
@@ -4954,8 +5431,9 @@ is already in the list.</source>
         <translation type="obsolete">基準点:</translation>
     </message>
     <message>
+        <location line="+81"/>
         <source>Grid:</source>
-        <translation type="vanished">グリッド:</translation>
+        <translation>グリッド:</translation>
     </message>
     <message>
         <source>Meta Grid:</source>
@@ -5001,39 +5479,57 @@ is already in the list.</source>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
-        <translation type="vanished">定規フォント:</translation>
+        <translation>定規フォント:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Snap Label Font:</source>
-        <translation type="vanished">スナップラベルフォント:</translation>
+        <translation>スナップラベルフォント:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Info Label Font:</source>
-        <translation type="vanished">情報ラベルフォント:</translation>
+        <translation>情報ラベルフォント:</translation>
     </message>
 </context>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="vanished">マウスホイール/2本指スワイプ:</translation>
+        <translation>マウスホイール/2本指スワイプ:</translation>
     </message>
     <message>
+        <location line="-231"/>
         <source>Enable pan gesture</source>
-        <translation type="vanished">パンゼスチャを有効にする</translation>
+        <translation>パンゼスチャを有効にする</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="vanished">拡大縮小の際にマウスホイールの向きを反転する</translation>
+        <translation>拡大縮小の際にマウスホイールの向きを反転する</translation>
     </message>
     <message>
+        <location line="+217"/>
+        <source>Panning threshold (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Middle mouse button zoom factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-255"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="vanished">マウスホイールズーム倍率:</translation>
+        <translation>マウスホイールズーム倍率:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="vanished">オーバーフローを防止するためズームやスクロールを制限</translation>
+        <translation>オーバーフローを防止するためズームやスクロールを制限</translation>
     </message>
 </context>
 <context>
@@ -5126,36 +5622,44 @@ is already in the list.</source>
 <context>
     <name>HatchDialog</name>
     <message>
+        <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="vanished">ハッチング</translation>
+        <translation>ハッチング</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Type</source>
-        <translation type="vanished">タイプ</translation>
+        <translation>タイプ</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Solid Fill</source>
-        <translation type="vanished">全面色</translation>
+        <translation>全面色</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="vanished">ハッチパターン</translation>
+        <translation>ハッチパターン</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Preview</source>
-        <translation type="vanished">プレビュー</translation>
+        <translation>プレビュー</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Pattern</source>
-        <translation type="vanished">パターン</translation>
+        <translation>パターン</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Scale:</source>
-        <translation type="vanished">縮尺:</translation>
+        <translation>縮尺:</translation>
     </message>
 </context>
 <context>
@@ -5259,20 +5763,24 @@ is already in the list.</source>
         <translation>位置</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
         <source>Width:</source>
-        <translation type="vanished">幅:</translation>
+        <translation>幅:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Keep proportions</source>
-        <translation type="vanished">比率を維持</translation>
+        <translation>比率を維持</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Height:</source>
-        <translation type="vanished">高さ:</translation>
+        <translation>高さ:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
         <source>Insert Bitmap</source>
@@ -5319,6 +5827,71 @@ is already in the list.</source>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
         <translation>&amp;I インポート</translation>
+    </message>
+    <message>
+        <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
+        <source>As block:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Rotation:</source>
+        <translation type="unfinished">回転:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
+        <translation type="unfinished">貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Scale:</source>
+        <translation type="unfinished">縮尺:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Scale pasted entities&lt;br&gt;by this factor</source>
+        <translation type="unfinished">貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Flip pasted entities&lt;br&gt;horizontally</source>
+        <translation type="unfinished">貼り付けエンティティを反転&lt;br&gt;水平</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Flip pasted entities&lt;br&gt;vertically</source>
+        <translation type="unfinished">貼り付けエンティティを反転&lt;br&gt;垂直</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
+        <translation type="unfinished">オリジナルの画層の代わりに&lt;br&gt;全てのエンティティを現在の画層に&lt;br&gt;貼り付け</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>To current layer</source>
+        <translation type="unfinished">現在の画層へ</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
+        <translation type="unfinished">クリップボードから図面の&lt;br&gt;既存の画層に上書き</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Overwrite layers</source>
+        <translation type="unfinished">画層に上書き</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
+        <translation type="unfinished">クリップボードから図面の&lt;br&gt;既存のブロックに上書き</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Overwrite blocks</source>
+        <translation type="unfinished">ブロックに上書き</translation>
     </message>
 </context>
 <context>
@@ -5458,44 +6031,53 @@ is already in the list.</source>
         <translation>弧面積:</translation>
     </message>
     <message>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">モード:</translation>
+        <translation>モード:</translation>
     </message>
     <message>
+        <location line="+30"/>
         <source>Calculate Area of Sector</source>
-        <translation type="vanished">セクターの面積を計算</translation>
+        <translation>セクターの面積を計算</translation>
     </message>
     <message>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
-        <translation type="vanished">セグメントの面積を計算</translation>
+        <translation>セグメントの面積を計算</translation>
     </message>
     <message>
+        <location line="+53"/>
         <source>Add:</source>
-        <translation type="vanished">追加:</translation>
+        <translation>追加:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation type="vanished">図面にエンティティを追加</translation>
+        <translation>図面にエンティティを追加</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Entity</source>
-        <translation type="vanished">エンティティ</translation>
+        <translation>エンティティ</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="-96"/>
         <location line="+67"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
         <source>Chord</source>
         <translation>弦</translation>
     </message>
     <message>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation type="vanished">長さ/外周を図面に追加</translation>
+        <translation>長さ/外周を図面に追加</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="-68"/>
         <location line="+24"/>
         <location line="+43"/>
         <location line="+22"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+3"/>
         <source>Length</source>
         <translation>長さ</translation>
     </message>
@@ -5528,12 +6110,14 @@ is already in the list.</source>
         <translation>外周（長さ）:</translation>
     </message>
     <message>
+        <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="vanished">長さを計算してツールを閉じます。</translation>
+        <translation>長さを計算してツールを閉じます。</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="vanished">ツールを閉じます。</translation>
+        <translation>ツールを閉じます。</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
@@ -5736,12 +6320,14 @@ is already in the list.</source>
         <translation>&amp;I 情報</translation>
     </message>
     <message>
+        <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation type="vanished">図面に寸法を追加</translation>
+        <translation>図面に寸法を追加</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Text height:</source>
-        <translation type="vanished">テキストの高さ:</translation>
+        <translation>テキストの高さ:</translation>
     </message>
     <message>
         <source>Text Height:</source>
@@ -5751,40 +6337,49 @@ is already in the list.</source>
 <context>
     <name>Input</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
-        <translation type="vanished">小数点:</translation>
+        <translation>小数点:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
-        <translation type="vanished">デカルト座標セパレータ:</translation>
+        <translation>デカルト座標セパレータ:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
-        <translation type="vanished">極座標セパレータ:</translation>
+        <translation>極座標セパレータ:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Relative Coordinate Prefix:</source>
-        <translation type="vanished">相対座標プレフィクス:</translation>
+        <translation>相対座標プレフィクス:</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Examples</source>
-        <translation type="vanished">例</translation>
+        <translation>例</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Absolute Cartesian Coordinate:</source>
-        <translation type="vanished">絶対デカルト座標:</translation>
+        <translation>絶対デカルト座標:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Absolute Polar Coordinate:</source>
-        <translation type="vanished">絶対極座標:</translation>
+        <translation>絶対極座標:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Relative Cartesian Coordinate:</source>
-        <translation type="vanished">相対デカルト座標:</translation>
+        <translation>相対デカルト座標:</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Relative Polar Coordinate:</source>
-        <translation type="vanished">相対極座標:</translation>
+        <translation>相対極座標:</translation>
     </message>
 </context>
 <context>
@@ -5862,64 +6457,80 @@ is already in the list.</source>
         <translation>&amp;I ブロック挿入</translation>
     </message>
     <message>
+        <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="vanished">回転:</translation>
+        <translation>回転:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation type="vanished">ブロック回転&lt;br&gt;この角度で</translation>
+        <translation>ブロック回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
+        <location line="+107"/>
         <source>Scale X:</source>
-        <translation type="vanished">スケールX:</translation>
+        <translation>スケールX:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="vanished">X軸ブロック拡縮&lt;br&gt;この係数で</translation>
+        <translation>X軸ブロック拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
+        <location line="+68"/>
         <source>Y:</source>
-        <translation type="vanished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="vanished">Y軸ブロック拡縮&lt;br&gt;この係数で</translation>
+        <translation>Y軸ブロック拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
+        <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation type="vanished">比率保持</translation>
+        <translation>比率保持</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="vanished">ブロック反転&lt;br&gt;水平</translation>
+        <translation>ブロック反転&lt;br&gt;水平</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="vanished">ブロック反転&lt;br&gt;垂直</translation>
+        <translation>ブロック反転&lt;br&gt;垂直</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Single Block</source>
-        <translation type="vanished">１つのブロック</translation>
+        <translation>１つのブロック</translation>
     </message>
     <message>
+        <location line="+17"/>
+        <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation type="vanished">ブロックの配列</translation>
+        <translation>ブロックの配列</translation>
     </message>
     <message>
+        <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
-        <translation type="vanished">列:</translation>
+        <translation>列:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Rows:</source>
-        <translation type="vanished">行:</translation>
+        <translation>行:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation type="vanished">列間隔:</translation>
+        <translation>列間隔:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation type="vanished">行間:</translation>
+        <translation>行間:</translation>
     </message>
 </context>
 <context>
@@ -5944,44 +6555,54 @@ is already in the list.</source>
         <translation>位置</translation>
     </message>
     <message>
+        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="vanished">回転:</translation>
+        <translation>回転:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="vanished">貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
+        <translation>貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
+        <location line="+100"/>
         <source>Scale:</source>
-        <translation type="vanished">縮尺:</translation>
+        <translation>縮尺:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="vanished">貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
+        <translation>貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
+        <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="vanished">貼り付けエンティティを反転&lt;br&gt;水平</translation>
+        <translation>貼り付けエンティティを反転&lt;br&gt;水平</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="vanished">貼り付けエンティティを反転&lt;br&gt;垂直</translation>
+        <translation>貼り付けエンティティを反転&lt;br&gt;垂直</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="vanished">クリップボードから図面の&lt;br&gt;既存の画層に上書き</translation>
+        <translation>クリップボードから図面の&lt;br&gt;既存の画層に上書き</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="vanished">画層に上書き</translation>
+        <translation>画層に上書き</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="vanished">クリップボードから図面の&lt;br&gt;既存のブロックに上書き</translation>
+        <translation>クリップボードから図面の&lt;br&gt;既存のブロックに上書き</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="vanished">ブロックに上書き</translation>
+        <translation>ブロックに上書き</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
@@ -6017,36 +6638,44 @@ is already in the list.</source>
 <context>
     <name>IsoProject</name>
     <message>
+        <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation type="vanished">上</translation>
+        <translation>上</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Bottom</source>
-        <translation type="vanished">下</translation>
+        <translation>下</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Left</source>
-        <translation type="vanished">左</translation>
+        <translation>左</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Left back</source>
-        <translation type="vanished">左背面</translation>
+        <translation>左背面</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Right</source>
-        <translation type="vanished">右</translation>
+        <translation>右</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Right back</source>
-        <translation type="vanished">右背面</translation>
+        <translation>右背面</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="vanished">投影前に選択を反時計回りに回転</translation>
+        <translation>投影前に選択を反時計回りに回転</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="vanished">投影前に選択を時計回りに回転</translation>
+        <translation>投影前に選択を時計回りに回転</translation>
     </message>
     <message>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
@@ -6142,6 +6771,19 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>Keyboard</name>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
+        <source>Shortcut timeout:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Enable keyboard navigation in list widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>KeyboardPreferences</name>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
@@ -6157,8 +6799,9 @@ is already in the list.</source>
 <context>
     <name>Language</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translation type="vanished">ユーザインターフェースの言語:</translation>
+        <translation>ユーザインターフェースの言語:</translation>
     </message>
 </context>
 <context>
@@ -6177,12 +6820,24 @@ is already in the list.</source>
 <context>
     <name>Layer</name>
     <message>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default color for new layers:</source>
-        <translation type="vanished">新規レイヤーのデフォルト色:</translation>
+        <translation>新規レイヤーのデフォルト色:</translation>
     </message>
     <message>
+        <location line="+17"/>
+        <source>Default lineweight for layer 0:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Default color for layer 0:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-45"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="vanished">新規レイヤーのデフォルト線太さ:</translation>
+        <translation>新規レイヤーのデフォルト線太さ:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
@@ -6242,20 +6897,24 @@ is already in the list.</source>
         <translation>互換性</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation type="vanished">レイヤー 0</translation>
+        <translation>レイヤー 0</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation type="vanished">レイヤー0は通常のレイヤーとして振る舞う(QCAD)</translation>
+        <translation>レイヤー0は通常のレイヤーとして振る舞う(QCAD)</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation type="vanished">レイヤー０で異なる動作（最高の互換性）</translation>
+        <translation>レイヤー０で異なる動作（最高の互換性）</translation>
     </message>
     <message>
+        <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="vanished">レイヤー０のエンティティをブロック参照の属性と見た目にします。</translation>
+        <translation>レイヤー０のエンティティをブロック参照の属性と見た目にします。</translation>
     </message>
 </context>
 <context>
@@ -6276,32 +6935,38 @@ is already in the list.</source>
         <translation>画層は既に存在します。</translation>
     </message>
     <message>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation type="vanished">画層データ</translation>
+        <translation>画層データ</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Layer name:</source>
-        <translation type="vanished">画層名:</translation>
+        <translation>画層名:</translation>
     </message>
     <message>
         <source>Pen</source>
         <translation type="vanished">ペン</translation>
     </message>
     <message>
+        <location line="+28"/>
         <source>Attributes</source>
-        <translation type="vanished">属性</translation>
+        <translation>属性</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Color:</source>
-        <translation type="vanished">色:</translation>
+        <translation>色:</translation>
     </message>
     <message>
+        <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="vanished">ラインの太さ:</translation>
+        <translation>ラインの太さ:</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="vanished">ラインタイプ:</translation>
+        <translation>ラインタイプ:</translation>
     </message>
 </context>
 <context>
@@ -6331,8 +6996,9 @@ is already in the list.</source>
         <translation>画層リスト</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="vanished">行の交互色を使用する</translation>
+        <translation>行の交互色を使用する</translation>
     </message>
 </context>
 <context>
@@ -6370,12 +7036,14 @@ is already in the list.</source>
         <translation>引出線（矢つきの連続線分）</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation type="vanished">最後の処理をアンドゥ</translation>
+        <translation>最後の処理をアンドゥ</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Arrow head</source>
-        <translation type="vanished">矢印の先端</translation>
+        <translation>矢印の先端</translation>
     </message>
 </context>
 <context>
@@ -6386,12 +7054,14 @@ is already in the list.</source>
         <translation>線分または弧を選択</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation type="vanished">増分:</translation>
+        <translation>増分:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="vanished">伸長または縮小（負）の増分</translation>
+        <translation>伸長または縮小（負）の増分</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -6613,77 +7283,93 @@ Database file: %3
         <translation>&amp;L ライブラリブラウザ</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
         <source>Synchronization</source>
-        <translation type="vanished">同期</translation>
+        <translation>同期</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Update search index on startup</source>
-        <translation type="vanished">開始時のインデックス検索を更新</translation>
+        <translation>開始時のインデックス検索を更新</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Display Options</source>
-        <translation type="vanished">ディスプレイオプション</translation>
+        <translation>ディスプレイオプション</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Icon Size:</source>
-        <translation type="vanished">アイコンサイズ:</translation>
+        <translation>アイコンサイズ:</translation>
     </message>
     <message>
+        <location line="+44"/>
         <source>View Mode:</source>
-        <translation type="vanished">ビューモード:</translation>
+        <translation>ビューモード:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation type="vanished">検索結果の
+        <translation>検索結果の
 アイテム数:</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Library Sources</source>
-        <translation type="vanished">ライブラリソース</translation>
+        <translation>ライブラリソース</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Add...</source>
-        <translation type="vanished">追加...</translation>
+        <translation>追加...</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Remove</source>
-        <translation type="vanished">削除</translation>
+        <translation>削除</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Up</source>
-        <translation type="vanished">アップ</translation>
+        <translation>アップ</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Down</source>
-        <translation type="vanished">ダウン</translation>
+        <translation>ダウン</translation>
     </message>
 </context>
 <context>
     <name>LibraryBrowserForm</name>
     <message>
+        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation type="vanished">ファイルシステム</translation>
+        <translation>ファイルシステム</translation>
     </message>
     <message>
         <source>Tags</source>
         <translation type="vanished">タグ</translation>
     </message>
     <message>
+        <location line="+60"/>
         <source>Search</source>
-        <translation type="vanished">検索</translation>
+        <translation>検索</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Look for:</source>
-        <translation type="vanished">探す:</translation>
+        <translation>探す:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Clear</source>
-        <translation type="vanished">クリア</translation>
+        <translation>クリア</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Find</source>
-        <translation type="vanished">検索</translation>
+        <translation>検索</translation>
     </message>
     <message>
         <source>Reset tag selection</source>
@@ -6694,20 +7380,24 @@ shown in search results:</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
+        <location line="+129"/>
         <source>Favorites</source>
-        <translation type="vanished">お気に入り</translation>
+        <translation>お気に入り</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation type="vanished">選択されたアイテムを図面に挿入</translation>
+        <translation>選択されたアイテムを図面に挿入</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
-        <translation type="vanished">ファイルシステムからDBをアップデート</translation>
+        <translation>ファイルシステムからDBをアップデート</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>0</source>
-        <translation type="vanished">0</translation>
+        <translation>0</translation>
     </message>
 </context>
 <context>
@@ -6727,20 +7417,24 @@ shown in search results:</source>
         <translation>&amp;L 線分</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="vanished">オリジナルと同じエンティティタイプ</translation>
+        <translation>オリジナルと同じエンティティタイプ</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Line Segment</source>
-        <translation type="vanished">行</translation>
+        <translation>行</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="vanished">無限の線</translation>
+        <translation>無限の線</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Ray</source>
-        <translation type="vanished">光線</translation>
+        <translation>光線</translation>
     </message>
 </context>
 <context>
@@ -6761,32 +7455,39 @@ shown in search results:</source>
         <translation>完了</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation type="vanished">シーケンスを閉じる</translation>
+        <translation>シーケンスを閉じる</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, C</source>
-        <translation type="vanished">,, C</translation>
+        <translation>,, C</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="vanished">前のセグメントを取り消し</translation>
+        <translation>前のセグメントを取り消し</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, U</source>
-        <translation type="vanished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="vanished">セグメントをやり直し</translation>
+        <translation>セグメントをやり直し</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, R</source>
-        <translation type="vanished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Restrict length or angle</source>
-        <translation type="vanished">長さや角度を制限</translation>
+        <translation>長さや角度を制限</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -6812,28 +7513,34 @@ shown in search results:</source>
         <translation>位置を指定</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>&amp;Angle:</source>
-        <translation type="vanished">&amp;A 角度:</translation>
+        <translation>&amp;A 角度:</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>&amp;Length:</source>
-        <translation type="vanished">&amp;L 長さ:</translation>
+        <translation>&amp;L 長さ:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>&amp;Reference Point:</source>
-        <translation type="vanished">&amp;R 基準点:</translation>
+        <translation>&amp;R 基準点:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Start</source>
-        <translation type="vanished">開始</translation>
+        <translation>開始</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Middle</source>
-        <translation type="vanished">中央</translation>
+        <translation>中央</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>End</source>
-        <translation type="vanished">終端</translation>
+        <translation>終端</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -6864,12 +7571,14 @@ shown in search results:</source>
         <translation>直線は交差しません。</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="vanished">長さ:</translation>
+        <translation>長さ:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Number:</source>
-        <translation type="vanished">数:</translation>
+        <translation>数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
@@ -6909,6 +7618,41 @@ shown in search results:</source>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
+        <source>Depth:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Finger Width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Finger/Slot Ratio:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>&amp;Style:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Finger first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Slot first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Tenons</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LineDove</name>
@@ -6935,6 +7679,26 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
+        <source>Number of Dovetails:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Dovetail Height:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Dovetail Gradient:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Dovetail/Pin Ratio:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6964,24 +7728,29 @@ shown in search results:</source>
 <context>
     <name>LineHorizontal</name>
     <message>
+        <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>&amp;Length:</source>
-        <translation type="vanished">&amp;L 長さ:</translation>
+        <translation>&amp;L 長さ:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>&amp;Reference Point:</source>
-        <translation type="vanished">&amp;R 基準点:</translation>
+        <translation>&amp;R 基準点:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Start</source>
-        <translation type="vanished">開始</translation>
+        <translation>開始</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Middle</source>
-        <translation type="vanished">中央</translation>
+        <translation>中央</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>End</source>
-        <translation type="vanished">終端</translation>
+        <translation>終端</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
@@ -6997,24 +7766,29 @@ shown in search results:</source>
 <context>
     <name>LineOrthogonal</name>
     <message>
+        <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="vanished">長さ:</translation>
+        <translation>長さ:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="vanished">&amp;R 基準点:</translation>
+        <translation>&amp;R 基準点:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Start</source>
-        <translation type="vanished">開始</translation>
+        <translation>開始</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Middle</source>
-        <translation type="vanished">中央</translation>
+        <translation>中央</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>End</source>
-        <translation type="vanished">終端</translation>
+        <translation>終端</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -7062,12 +7836,14 @@ shown in search results:</source>
         <translation type="vanished">線分、弧、円を選択</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation type="vanished">&amp;D 距離:</translation>
+        <translation>&amp;D 距離:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation type="vanished">&amp;N 数:</translation>
+        <translation>&amp;N 数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
@@ -7091,8 +7867,9 @@ shown in search results:</source>
         <translation type="vanished">点を指定</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">数:</translation>
+        <translation>数:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
@@ -7171,6 +7948,11 @@ shown in search results:</source>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
+        <source>Length:</source>
+        <translation type="unfinished">長さ:</translation>
     </message>
 </context>
 <context>
@@ -7272,28 +8054,34 @@ shown in search results:</source>
         <translation>位置を指定</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation type="vanished">相対角度:</translation>
+        <translation>相対角度:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Length:</source>
-        <translation type="vanished">長さ:</translation>
+        <translation>長さ:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="vanished">&amp;R 基準点:</translation>
+        <translation>&amp;R 基準点:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Start</source>
-        <translation type="vanished">開始</translation>
+        <translation>開始</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Middle</source>
-        <translation type="vanished">中央</translation>
+        <translation>中央</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>End</source>
-        <translation type="vanished">終端</translation>
+        <translation>終端</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -7416,8 +8204,14 @@ shown in search results:</source>
         <translation>一般</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
-        <translation type="vanished">グローバルラインタイプの縮尺:</translation>
+        <translation>グローバルラインタイプの縮尺:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Scale of linetypes matches the scale of each viewport</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7455,8 +8249,9 @@ shown in search results:</source>
 <context>
     <name>MdiChild</name>
     <message>
+        <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="obsolete">無題</translation>
+        <translation type="unfinished">無題</translation>
     </message>
 </context>
 <context>
@@ -7499,28 +8294,48 @@ shown in search results:</source>
         <source>&amp;Mirror</source>
         <translation>&amp;M 鏡像反転</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
+        <source>Copy</source>
+        <translation type="unfinished">コピー</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">ツールオプションのためダイアログを使用</translation>
+    </message>
 </context>
 <context>
     <name>MirrorOptions</name>
     <message>
+        <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="vanished">鏡像反転オプション</translation>
+        <translation>鏡像反転オプション</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">コピーの数</translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">&amp;D オリジナルを削除</translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">&amp;K オリジナルを維持</translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">&amp;a 現在の画層と属性を利用</translation>
+        <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
 </context>
 <context>
@@ -7743,10 +8558,60 @@ shown in search results:</source>
     </message>
 </context>
 <context>
+    <name>MouseDisplay</name>
+    <message>
+        <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
+        <source>Form</source>
+        <translation type="unfinished">フォーム</translation>
+    </message>
+</context>
+<context>
+    <name>MyPositionDialog</name>
+    <message>
+        <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
+        <source>Enter Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Position X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+14"/>
+        <source>0.00</source>
+        <translation type="unfinished">0.00</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Position Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MyScripts</name>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MyWidget</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
+        <source>Character Map</source>
+        <translation type="unfinished">キャラクターマップ</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>MyLineEdit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>MyButton</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7851,12 +8716,14 @@ shown in search results:</source>
         <translation type="obsolete">線分、弧、円を選択</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation type="vanished">&amp;D 距離:</translation>
+        <translation>&amp;D 距離:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation type="vanished">&amp;N 数:</translation>
+        <translation>&amp;N 数:</translation>
     </message>
     <message>
         <source>Para&amp;llel (with Distance)</source>
@@ -7912,8 +8779,9 @@ shown in search results:</source>
         <translation>点を指定</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">個数:</translation>
+        <translation>個数:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
@@ -7994,60 +8862,79 @@ shown in search results:</source>
         <translation>カスタム</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
-        <translation type="vanished">ページの向き</translation>
+        <translation>ページの向き</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Portrait</source>
-        <translation type="vanished">ポートレート（縦）</translation>
+        <translation>ポートレート（縦）</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Landscape</source>
-        <translation type="vanished">ランドスケープ（横）</translation>
+        <translation>ランドスケープ（横）</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Paper</source>
-        <translation type="vanished">用紙</translation>
+        <translation>用紙</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Paper size:</source>
-        <translation type="vanished">用紙サイズ:</translation>
+        <translation>用紙サイズ:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Paper width:</source>
-        <translation type="vanished">用紙幅:</translation>
+        <translation>用紙幅:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Paper height:</source>
-        <translation type="vanished">用紙高さ:</translation>
+        <translation>用紙高さ:</translation>
     </message>
     <message>
+        <location line="+74"/>
         <source>Viewport</source>
-        <translation type="vanished">ビューポート</translation>
+        <translation>ビューポート</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation type="vanished">&amp;S 縮尺:</translation>
+        <translation>&amp;S 縮尺:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Offset X:</source>
-        <translation type="vanished">オフセットX:</translation>
+        <translation>オフセットX:</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Offset Y:</source>
-        <translation type="vanished">オフセットY:</translation>
+        <translation>オフセットY:</translation>
     </message>
     <message>
+        <location line="+41"/>
         <source>Zero-Point</source>
-        <translation type="vanished">ゼロ点</translation>
+        <translation>ゼロ点</translation>
     </message>
     <message>
+        <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation type="vanished">その他</translation>
+        <translation>その他</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Point size (mm):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Show paper borders</source>
-        <translation type="vanished">用紙の縁を表示</translation>
+        <translation>用紙の縁を表示</translation>
     </message>
 </context>
 <context>
@@ -8061,8 +8948,9 @@ shown in search results:</source>
 <context>
     <name>Paste</name>
     <message>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="obsolete">回転:</translation>
+        <translation type="unfinished">回転:</translation>
     </message>
     <message>
         <source>Rotate block&lt;br&gt;by this angle</source>
@@ -8112,48 +9000,59 @@ shown in search results:</source>
         <translation>位置</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="vanished">貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
+        <translation>貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
+        <location line="+107"/>
         <source>Scale:</source>
-        <translation type="vanished">縮尺:</translation>
+        <translation>縮尺:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="vanished">貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
+        <translation>貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="vanished">貼り付けエンティティを反転&lt;br&gt;水平</translation>
+        <translation>貼り付けエンティティを反転&lt;br&gt;水平</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="vanished">貼り付けエンティティを反転&lt;br&gt;垂直</translation>
+        <translation>貼り付けエンティティを反転&lt;br&gt;垂直</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="vanished">オリジナルの画層の代わりに&lt;br&gt;全てのエンティティを現在の画層に&lt;br&gt;貼り付け</translation>
+        <translation>オリジナルの画層の代わりに&lt;br&gt;全てのエンティティを現在の画層に&lt;br&gt;貼り付け</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>To current layer</source>
-        <translation type="vanished">現在の画層へ</translation>
+        <translation>現在の画層へ</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="vanished">クリップボードから図面の&lt;br&gt;既存の画層に上書き</translation>
+        <translation>クリップボードから図面の&lt;br&gt;既存の画層に上書き</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="vanished">画層に上書き</translation>
+        <translation>画層に上書き</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="vanished">クリップボードから図面の&lt;br&gt;既存のブロックに上書き</translation>
+        <translation>クリップボードから図面の&lt;br&gt;既存のブロックに上書き</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="vanished">ブロックに上書き</translation>
+        <translation>ブロックに上書き</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
@@ -8161,8 +9060,9 @@ shown in search results:</source>
         <translation>&amp;P 貼り付け</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="vanished">ツールを使用するたびにデフォルトにリセット</translation>
+        <translation>ツールを使用するたびにデフォルトにリセット</translation>
     </message>
 </context>
 <context>
@@ -8253,12 +9153,14 @@ shown in search results:</source>
         <translation>一般</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation type="vanished">モード: </translation>
+        <translation>モード: </translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation type="vanished">ピクセルサイズ:</translation>
+        <translation>ピクセルサイズ:</translation>
     </message>
 </context>
 <context>
@@ -8312,28 +9214,35 @@ shown in search results:</source>
 <context>
     <name>PreferencesDialog</name>
     <message>
+        <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
+        <location line="+71"/>
+        <location line="+21"/>
         <source>Preferences</source>
-        <translation type="vanished">設定</translation>
+        <translation>設定</translation>
     </message>
     <message>
+        <location line="-74"/>
         <source>Filter</source>
-        <translation type="vanished">フィルタ</translation>
+        <translation>フィルタ</translation>
     </message>
     <message>
         <source>Clear Search</source>
         <translation type="vanished">検索結果をクリア</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Expand Tree</source>
-        <translation type="vanished">ツリーを広げる</translation>
+        <translation>ツリーを広げる</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="vanished">ツリーを折りたたむ</translation>
+        <translation>ツリーを折りたたむ</translation>
     </message>
     <message>
+        <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation type="vanished">初期値に置き換える</translation>
+        <translation>初期値に置き換える</translation>
     </message>
 </context>
 <context>
@@ -8411,72 +9320,89 @@ shown in search results:</source>
         <translation>エキスポート失敗(書き込み不可): %1</translation>
     </message>
     <message>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation type="vanished">印刷プレビューを閉じる</translation>
+        <translation>印刷プレビューを閉じる</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Print...</source>
-        <translation type="vanished">印刷...</translation>
+        <translation>印刷...</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="vanished">PDFとしてエクスポート...</translation>
+        <translation>PDFとしてエクスポート...</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Scale:</source>
-        <translation type="vanished">縮尺:</translation>
+        <translation>縮尺:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="vanished">図面の縮尺</translation>
+        <translation>図面の縮尺</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation type="vanished">用紙位置の移動</translation>
+        <translation>用紙位置の移動</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation type="vanished">ページに図面を自動的に収める</translation>
+        <translation>ページに図面を自動的に収める</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Auto Center</source>
-        <translation type="vanished">自動センタリング</translation>
+        <translation>自動センタリング</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Portrait</source>
-        <translation type="vanished">ポートレート（縦）</translation>
+        <translation>ポートレート（縦）</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Landscape</source>
-        <translation type="vanished">ランドスケープ（横）</translation>
+        <translation>ランドスケープ（横）</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation type="vanished">ページにオートズーム</translation>
+        <translation>ページにオートズーム</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation type="vanished">フルカラーモード</translation>
+        <translation>フルカラーモード</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation type="vanished">グレースケールモード</translation>
+        <translation>グレースケールモード</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation type="vanished">白黒モード</translation>
+        <translation>白黒モード</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation type="vanished">用紙の境界を表示</translation>
+        <translation>用紙の境界を表示</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation type="vanished">切り取りマークを印刷</translation>
+        <translation>切り取りマークを印刷</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Show More Options</source>
-        <translation type="vanished">追加のオプションを表示</translation>
+        <translation>追加のオプションを表示</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
@@ -8619,44 +9545,62 @@ shown in search results:</source>
         <translation>プロパティエディタ</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="vanished">選択:</translation>
+        <translation>選択:</translation>
     </message>
     <message>
         <source>General</source>
         <translation type="vanished">全般</translation>
     </message>
     <message>
+        <location line="+31"/>
         <source>General Properties</source>
-        <translation type="vanished">一般プロパティ</translation>
+        <translation>一般プロパティ</translation>
     </message>
     <message>
+        <location line="+25"/>
         <source>Color:</source>
-        <translation type="vanished">色:</translation>
+        <translation>色:</translation>
     </message>
     <message>
         <source>Move Selection to a New Layer</source>
         <translation type="vanished">選択内容を新規画層に移動</translation>
     </message>
     <message>
+        <location line="+104"/>
         <source>Linetype Scale:</source>
-        <translation type="vanished">ラインタイプスケール:</translation>
+        <translation>ラインタイプスケール:</translation>
     </message>
     <message>
+        <location line="+49"/>
         <source>Protected:</source>
-        <translation type="vanished">保護されています:</translation>
+        <translation>保護されています:</translation>
     </message>
     <message>
+        <location line="-143"/>
         <source>Handle:</source>
-        <translation type="vanished">扱い:</translation>
+        <translation>扱い:</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="vanished">Z座標の表示</translation>
+        <translation>Z座標の表示</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="vanished">現在のブロックと現在のレイヤーのプロパティを表示</translation>
+        <translation>現在のブロックと現在のレイヤーのプロパティを表示</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8678,12 +9622,14 @@ shown in search results:</source>
 <context>
     <name>ReadmeDialog</name>
     <message>
+        <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation type="vanished">Readme</translation>
+        <translation>Readme</translation>
     </message>
     <message>
+        <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation type="vanished">スタートアップ時にこのダイアログを表示しない</translation>
+        <translation>スタートアップ時にこのダイアログを表示しない</translation>
     </message>
 </context>
 <context>
@@ -8713,8 +9659,9 @@ shown in search results:</source>
         <translation>&amp;R 最近使ったファイルを開く</translation>
     </message>
     <message>
+        <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation type="vanished">最近使用したファイル履歴の保存数:</translation>
+        <translation>最近使用したファイル履歴の保存数:</translation>
     </message>
 </context>
 <context>
@@ -8798,16 +9745,20 @@ shown in search results:</source>
 <context>
     <name>RestrictAngleLength</name>
     <message>
+        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+20"/>
+        <location line="+47"/>
         <source>Base:</source>
-        <translation type="vanished">ベース:</translation>
+        <translation>ベース:</translation>
     </message>
     <message>
+        <location line="-20"/>
         <source>Distance:</source>
-        <translation type="vanished">距離:</translation>
+        <translation>距離:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
@@ -8887,6 +9838,36 @@ shown in search results:</source>
         <source>&amp;Rotate</source>
         <translation>&amp;R 回転</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">ツールオプションのためダイアログを使用</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
+        <source>Copy</source>
+        <translation type="unfinished">コピー</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">コピーの数:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Angle:</source>
+        <translation type="unfinished">角度:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Define angle using mouse cursor</source>
+        <translation type="unfinished">マウスカーソルで角度を指定して下さい</translation>
+    </message>
 </context>
 <context>
     <name>Rotate2</name>
@@ -8906,86 +9887,105 @@ shown in search results:</source>
         <translation>&amp;w 回転２</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="vanished">１つ目の角度:</translation>
+        <translation>１つ目の角度:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="vanished">２つ目の角度:</translation>
+        <translation>２つ目の角度:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Copies:</source>
-        <translation type="vanished">コピー数:</translation>
+        <translation>コピー数:</translation>
     </message>
 </context>
 <context>
     <name>Rotate2Options</name>
     <message>
+        <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation type="vanished">回転２オプション</translation>
+        <translation>回転２オプション</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">コピーの数</translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">&amp;D オリジナルを削除</translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">&amp;K オリジナルを維持</translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;M 多重コピー</translation>
+        <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
+        <location line="+94"/>
         <source>Angle (&amp;a):</source>
-        <translation type="vanished">角度(&amp;a):</translation>
+        <translation>角度(&amp;a):</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Angle (&amp;b):</source>
-        <translation type="vanished">角度(&amp;b):</translation>
+        <translation>角度(&amp;b):</translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">&amp;a 現在の画層と属性を利用</translation>
+        <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
 </context>
 <context>
     <name>RotateOptions</name>
     <message>
+        <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation type="vanished">回転オプション</translation>
+        <translation>回転オプション</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">コピーの数</translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">&amp;D オリジナルを削除</translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">&amp;K オリジナルを維持</translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;M 多重コピー</translation>
+        <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
-        <translation type="vanished">&amp;A 角度(a):</translation>
+        <translation>&amp;A 角度(a):</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="vanished">マウスカーソルで角度を指定して下さい</translation>
+        <translation>マウスカーソルで角度を指定して下さい</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">&amp;a 現在の画層と属性を利用</translation>
+        <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
 </context>
 <context>
@@ -9006,12 +10006,14 @@ shown in search results:</source>
         <translation>２つ目のエンティティはトリムできません。</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="vanished">トリム</translation>
+        <translation>トリム</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">半径:</translation>
+        <translation>半径:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -9049,6 +10051,21 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>Open and run a script file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
+        <source>Running Script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this dialog again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9158,24 +10175,29 @@ shown in search results:</source>
 <context>
     <name>SaveAs</name>
     <message>
+        <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="vanished">ファイルダイアログ</translation>
+        <translation>ファイルダイアログ</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="vanished">システムのファイル選択ダイアログを使用</translation>
+        <translation>システムのファイル選択ダイアログを使用</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Saving</source>
-        <translation type="vanished">保存中</translation>
+        <translation>保存中</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Default format:</source>
-        <translation type="vanished">デフォルトフォーマット:</translation>
+        <translation>デフォルトフォーマット:</translation>
     </message>
     <message>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation type="vanished">２４ビットカラーをサポートしない形式の時警告を出す</translation>
+        <translation>２４ビットカラーをサポートしない形式の時警告を出す</translation>
     </message>
     <message>
         <source>Load/Save</source>
@@ -9247,51 +10269,112 @@ shown in search results:</source>
         <source>&amp;Scale</source>
         <translation>&amp;S 縮尺</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">ツールオプションのためダイアログを使用</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
+        <source>Copy</source>
+        <translation type="unfinished">コピー</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">コピーの数:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Factor x:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+14"/>
+        <source>1</source>
+        <translation type="unfinished">1</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Factor y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Proportional</source>
+        <translation type="unfinished">比例</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Define factor using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ScaleOptions</name>
     <message>
+        <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation type="vanished">縮尺オプション</translation>
+        <translation>縮尺オプション</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">コピーの数</translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">&amp;D オリジナルを削除</translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">&amp;K オリジナルを維持</translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;M 多重コピー</translation>
+        <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
-        <translation type="vanished">係数&amp;x:</translation>
+        <translation>係数&amp;x:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Proportional</source>
-        <translation type="vanished">比例</translation>
+        <translation>比例</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation type="vanished">係数&amp;y:</translation>
+        <translation>係数&amp;y:</translation>
     </message>
     <message>
+        <location line="+44"/>
+        <source>Define factor using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">&amp;a 現在の画層と属性を使用</translation>
+        <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>
 </context>
 <context>
     <name>Scripting</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation type="vanished">スタートアップ時にスクリプトフォルダを再スキャン</translation>
+        <translation>スタートアップ時にスクリプトフォルダを再スキャン</translation>
     </message>
 </context>
 <context>
@@ -9390,6 +10473,19 @@ shown in search results:</source>
     </message>
 </context>
 <context>
+    <name>SelectByHandleDialog</name>
+    <message>
+        <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
+        <source>Selection by Handle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Handle (hex):</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SelectContour</name>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+53"/>
@@ -9397,32 +10493,42 @@ shown in search results:</source>
         <translation>輪郭のエンティティを選択</translation>
     </message>
     <message>
+        <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">モード:</translation>
+        <translation>モード:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="vanished">現在の選択を置き換え</translation>
+        <translation>現在の選択を置き換え</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="vanished">選択モード</translation>
+        <translation>選択モード</translation>
     </message>
     <message>
+        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="vanished">現在の選択に追加</translation>
+        <translation>現在の選択に追加</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="vanished">現在の選択から差し引く</translation>
+        <translation>現在の選択から差し引く</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="vanished">現在の選択と交差</translation>
+        <translation>現在の選択と交差</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Tolerance:</source>
-        <translation type="vanished">許容誤差:</translation>
+        <translation>許容誤差:</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -9448,28 +10554,37 @@ shown in search results:</source>
         <translation>第2点</translation>
     </message>
     <message>
+        <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">モード:</translation>
+        <translation>モード:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="vanished">現在の選択を置き換え</translation>
+        <translation>現在の選択を置き換え</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="vanished">選択モード</translation>
+        <translation>選択モード</translation>
     </message>
     <message>
+        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="vanished">現在の選択に追加</translation>
+        <translation>現在の選択に追加</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="vanished">現在の選択から差し引く</translation>
+        <translation>現在の選択から差し引く</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="vanished">現在の選択と交差</translation>
+        <translation>現在の選択と交差</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
@@ -9544,28 +10659,37 @@ shown in search results:</source>
         <translation>画層のエンティティを選択</translation>
     </message>
     <message>
+        <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">モード:</translation>
+        <translation>モード:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="vanished">現在の選択を置き換え</translation>
+        <translation>現在の選択を置き換え</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="vanished">選択モード</translation>
+        <translation>選択モード</translation>
     </message>
     <message>
+        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="vanished">現在の選択に追加</translation>
+        <translation>現在の選択に追加</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="vanished">現在の選択から差し引く</translation>
+        <translation>現在の選択から差し引く</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="vanished">現在の選択と交差</translation>
+        <translation>現在の選択と交差</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -9596,32 +10720,42 @@ shown in search results:</source>
         <translation>完了</translation>
     </message>
     <message>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">モード:</translation>
+        <translation>モード:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="vanished">現在の選択を置き換え</translation>
+        <translation>現在の選択を置き換え</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="vanished">選択モード</translation>
+        <translation>選択モード</translation>
     </message>
     <message>
+        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="vanished">現在の選択に追加</translation>
+        <translation>現在の選択に追加</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="vanished">現在の選択から差し引く</translation>
+        <translation>現在の選択から差し引く</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="vanished">現在の選択と交差</translation>
+        <translation>現在の選択と交差</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="vanished">クロスセレクション</translation>
+        <translation>クロスセレクション</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -9709,8 +10843,9 @@ shown in search results:</source>
 %1.</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="vanished">フォーム</translation>
+        <translation>フォーム</translation>
     </message>
 </context>
 <context>
@@ -9747,12 +10882,14 @@ shown in search results:</source>
         <translation>&amp;S 成形</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation type="vanished">ポリライン</translation>
+        <translation>ポリライン</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Fill</source>
-        <translation type="vanished">塗りつぶし</translation>
+        <translation>塗りつぶし</translation>
     </message>
 </context>
 <context>
@@ -9820,8 +10957,9 @@ shown in search results:</source>
         <translation>中心と辺の中心から正多角形を描く</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="vanished">頂点:</translation>
+        <translation>頂点:</translation>
     </message>
 </context>
 <context>
@@ -9862,12 +11000,14 @@ shown in search results:</source>
         <translation>辺の中心と反対側の辺または頂点から正多角形を描く</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="vanished">頂点:</translation>
+        <translation>頂点:</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Corner to Corner</source>
-        <translation type="vanished">頂点から頂点</translation>
+        <translation>頂点から頂点</translation>
     </message>
 </context>
 <context>
@@ -9888,8 +11028,9 @@ shown in search results:</source>
         <translation>完了</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="vanished">頂点:</translation>
+        <translation>頂点:</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
@@ -9924,8 +11065,9 @@ shown in search results:</source>
         <translation>完了</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="vanished">頂点の数:</translation>
+        <translation>頂点の数:</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
@@ -10039,24 +11181,32 @@ shown in search results:</source>
         <translation>位置とサイズを指定して四角形を描画</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
-        <translation type="vanished">&amp;W 幅:</translation>
+        <translation>&amp;W 幅:</translation>
     </message>
     <message>
+        <location line="+23"/>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
-        <translation type="vanished">&amp;H 高さ:</translation>
+        <translation>&amp;H 高さ:</translation>
     </message>
     <message>
+        <location line="+30"/>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">基準点:</translation>
+        <translation>基準点:</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="vanished">ポリライン</translation>
+        <translation>ポリライン</translation>
     </message>
 </context>
 <context>
@@ -10111,8 +11261,9 @@ shown in search results:</source>
 <context>
     <name>Single</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="vanished">単一</translation>
+        <translation>単一</translation>
     </message>
 </context>
 <context>
@@ -10166,28 +11317,34 @@ shown in search results:</source>
         <translation>座標セット</translation>
     </message>
     <message>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
         <source>&amp;x:</source>
-        <translation type="vanished">&amp;x:</translation>
+        <translation>&amp;x:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>X Coordinate</source>
-        <translation type="vanished">X座標</translation>
+        <translation>X座標</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>&amp;y:</source>
-        <translation type="vanished">&amp;y:</translation>
+        <translation>&amp;y:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Y Coordinate</source>
-        <translation type="vanished">Y座標</translation>
+        <translation>Y座標</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="vanished">相対座標の場合チェック</translation>
+        <translation>相対座標の場合チェック</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="vanished">&amp;v 相対座標</translation>
+        <translation>&amp;v 相対座標</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -10198,28 +11355,34 @@ shown in search results:</source>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
-        <translation type="vanished">&amp;r 半径:</translation>
+        <translation>&amp;r 半径:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Radius (Distance)</source>
-        <translation type="vanished">半径（距離）</translation>
+        <translation>半径（距離）</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>&amp;&lt;:</source>
-        <translation type="vanished">&amp;&lt; 角度:</translation>
+        <translation>&amp;&lt; 角度:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Angle</source>
-        <translation type="vanished">角度</translation>
+        <translation>角度</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="vanished">相対座標の場合チェック</translation>
+        <translation>相対座標の場合チェック</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="vanished">&amp;v 相対座標</translation>
+        <translation>&amp;v 相対座標</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -10230,8 +11393,9 @@ shown in search results:</source>
 <context>
     <name>SnapDistance</name>
     <message>
+        <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="vanished">スナップ距離:</translation>
+        <translation>スナップ距離:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
@@ -10262,20 +11426,24 @@ shown in search results:</source>
         <translation>2点間のスナップ距離</translation>
     </message>
     <message>
+        <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="vanished">合わせる距離:</translation>
+        <translation>合わせる距離:</translation>
     </message>
     <message>
+        <location line="+69"/>
         <source>Distance</source>
-        <translation type="vanished">距離</translation>
+        <translation>距離</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Percentage</source>
-        <translation type="vanished">パーセンテージ</translation>
+        <translation>パーセンテージ</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Fraction</source>
-        <translation type="vanished">分数</translation>
+        <translation>分数</translation>
     </message>
 </context>
 <context>
@@ -10336,6 +11504,11 @@ shown in search results:</source>
         <location line="+11"/>
         <source>Second entity</source>
         <translation>２つ目のエンティティ</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
+        <source>Terminate manual intersection tool after one use</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10445,24 +11618,29 @@ shown in search results:</source>
         <translation>完了</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
         <source>Undo Last Control Point</source>
-        <translation type="vanished">最後の制御点を取り消し</translation>
+        <translation>最後の制御点を取り消し</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Degree:</source>
-        <translation type="vanished">次数:</translation>
+        <translation>次数:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Choose Spline Degree</source>
-        <translation type="vanished">スプライン角度を指定</translation>
+        <translation>スプライン角度を指定</translation>
     </message>
     <message>
+        <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="vanished">閉じたスプラインへのチェック</translation>
+        <translation>閉じたスプラインへのチェック</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Closed</source>
-        <translation type="vanished">閉じる</translation>
+        <translation>閉じる</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -10486,8 +11664,9 @@ shown in search results:</source>
 <context>
     <name>Startup</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation type="vanished">スプラッシュスクリーンを表示</translation>
+        <translation>スプラッシュスクリーンを表示</translation>
     </message>
 </context>
 <context>
@@ -10501,32 +11680,39 @@ shown in search results:</source>
 <context>
     <name>StatusBar</name>
     <message>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
-        <translation type="vanished">ステータスバーフォント:</translation>
+        <translation>ステータスバーフォント:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="vanished">ステータスバー</translation>
+        <translation>ステータスバー</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="vanished">座標表示</translation>
+        <translation>座標表示</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="vanished">マウス表示</translation>
+        <translation>マウス表示</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Selection display</source>
-        <translation type="vanished">選択表示</translation>
+        <translation>選択表示</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Progress display</source>
-        <translation type="vanished">進捗表示</translation>
+        <translation>進捗表示</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Show status tips</source>
-        <translation type="vanished">ステータスにTips表示</translation>
+        <translation>ステータスにTips表示</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
@@ -10611,24 +11797,29 @@ shown in search results:</source>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="-34"/>
+        <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>SVGインポート</translation>
     </message>
     <message>
+        <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation type="vanished">解像度:</translation>
+        <translation>解像度:</translation>
     </message>
     <message>
+        <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="vanished">ピクセル·パー·インチ</translation>
+        <translation>ピクセル·パー·インチ</translation>
     </message>
     <message>
+        <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="vanished">スプライン曲線</translation>
+        <translation>スプライン曲線</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation type="vanished">もし適当であればスプラインを線分・弧に自動コンバート</translation>
+        <translation>もし適当であればスプラインを線分・弧に自動コンバート</translation>
     </message>
 </context>
 <context>
@@ -10642,8 +11833,9 @@ shown in search results:</source>
 <context>
     <name>TabBar</name>
     <message>
+        <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation type="vanished">タブバーを表示</translation>
+        <translation>タブバーを表示</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
@@ -10664,16 +11856,21 @@ shown in search results:</source>
         <translation>位置</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Contents:</source>
-        <translation type="vanished">内容:</translation>
+        <translation>内容:</translation>
     </message>
     <message>
+        <location line="+20"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+23"/>
         <source>Height:</source>
-        <translation type="vanished">高さ:</translation>
+        <translation>高さ:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
@@ -10686,20 +11883,74 @@ shown in search results:</source>
         <translation>テキストを描画</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
         <source>Show font preview in font controls</source>
-        <translation type="vanished">フォントコントロールでフォントのプレビューを表示</translation>
+        <translation>フォントコントロールでフォントのプレビューを表示</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">フォントの選択制限を使用:</translation>
+        <translation>フォントの選択制限を使用:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Uncheck all</source>
-        <translation type="vanished">全てチェックを外す</translation>
+        <translation>全てチェックを外す</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Check all</source>
-        <translation type="vanished">全てチェック</translation>
+        <translation>全てチェック</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-10"/>
+        <source>Text</source>
+        <translation type="unfinished">テキスト</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Text height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Letter spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>0</source>
+        <translation type="unfinished">0</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Direction:</source>
+        <translation type="unfinished">向き:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Counter Clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Fit text to line, arc or circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Fit</source>
+        <translation type="unfinished">フィット</translation>
     </message>
 </context>
 <context>
@@ -10870,166 +12121,208 @@ shown in search results:</source>
         <translation>ノーブレークスペース</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation type="vanished">テキスト</translation>
+        <translation>テキスト</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Main Font</source>
-        <translation type="vanished">メインフォント</translation>
+        <translation>メインフォント</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Height:</source>
-        <translation type="vanished">高さ:</translation>
+        <translation>高さ:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="vanished">ユニットのテキスト高さ</translation>
+        <translation>ユニットのテキスト高さ</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <location line="+268"/>
         <source>Bold</source>
-        <translation type="vanished">太字</translation>
+        <translation>太字</translation>
     </message>
     <message>
+        <location line="-261"/>
+        <location line="+274"/>
         <source>Italic</source>
-        <translation type="vanished">斜体</translation>
+        <translation>斜体</translation>
     </message>
     <message>
+        <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="vanished">テキストは１行に収められフォーマットされません</translation>
+        <translation>テキストは１行に収められフォーマットされません</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="vanished">シンプルテキスト
+        <translation>シンプルテキスト
 （１行、フォーマットなし）</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Rich Text</source>
-        <translation type="vanished">リッチテキスト</translation>
+        <translation>リッチテキスト</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Cut</source>
-        <translation type="vanished">切り取り</translation>
+        <translation>切り取り</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Copy</source>
-        <translation type="vanished">コピー</translation>
+        <translation>コピー</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Paste</source>
-        <translation type="vanished">貼り付け</translation>
+        <translation>貼り付け</translation>
     </message>
     <message>
+        <location line="+170"/>
         <source>Ctrl+B</source>
-        <translation type="vanished">Ctrl+B</translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation type="vanished">Ctrl+I</translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
+        <location line="+40"/>
         <source>Insert Symbol...</source>
-        <translation type="vanished">シンボル挿入...</translation>
+        <translation>シンボル挿入...</translation>
     </message>
     <message>
+        <location line="+43"/>
         <source>Source</source>
-        <translation type="vanished">ソース</translation>
+        <translation>ソース</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="vanished">属性の詳細</translation>
+        <translation>属性の詳細</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Tag:</source>
-        <translation type="vanished">タグ:</translation>
+        <translation>タグ:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="vanished">プロンプト:</translation>
+        <translation>プロンプト:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Value:</source>
-        <translation type="vanished">値:</translation>
+        <translation>値:</translation>
     </message>
     <message>
+        <location line="+42"/>
         <source>Text Geometry</source>
-        <translation type="vanished">テキスト配置</translation>
+        <translation>テキスト配置</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="vanished">行間隔係数:</translation>
+        <translation>行間隔係数:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="vanished">行間隔係数</translation>
+        <translation>行間隔係数</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="vanished">回転角度</translation>
+        <translation>回転角度</translation>
     </message>
     <message>
+        <location line="+25"/>
         <source>Alignment</source>
-        <translation type="vanished">位置合わせ</translation>
+        <translation>位置合わせ</translation>
     </message>
     <message>
+        <location line="+79"/>
         <source>Top Center</source>
-        <translation type="vanished">上 中央</translation>
+        <translation>上 中央</translation>
     </message>
     <message>
+        <location line="+145"/>
         <source>Base Left</source>
-        <translation type="vanished">ベース 左</translation>
+        <translation>ベース 左</translation>
     </message>
     <message>
+        <location line="-177"/>
         <source>Top Left</source>
-        <translation type="vanished">左上</translation>
+        <translation>左上</translation>
     </message>
     <message>
+        <location line="+206"/>
         <source>Base Center</source>
-        <translation type="vanished">ベース 中央</translation>
+        <translation>ベース 中央</translation>
     </message>
     <message>
+        <location line="+29"/>
         <source>Base Right</source>
-        <translation type="vanished">ベース 右</translation>
+        <translation>ベース 右</translation>
     </message>
     <message>
+        <location line="-145"/>
         <source>Top Right</source>
-        <translation type="vanished">右上</translation>
+        <translation>右上</translation>
     </message>
     <message>
+        <location line="+203"/>
         <source>Bottom Center</source>
-        <translation type="vanished">下 中央</translation>
+        <translation>下 中央</translation>
     </message>
     <message>
+        <location line="-145"/>
         <source>Middle Left</source>
-        <translation type="vanished">左中央</translation>
+        <translation>左中央</translation>
     </message>
     <message>
+        <location line="-29"/>
         <source>Middle Center</source>
-        <translation type="vanished">中心</translation>
+        <translation>中心</translation>
     </message>
     <message>
+        <location line="-58"/>
         <source>Middle Right</source>
-        <translation type="vanished">右中央</translation>
+        <translation>右中央</translation>
     </message>
     <message>
+        <location line="+203"/>
         <source>Bottom Left</source>
-        <translation type="vanished">下 左</translation>
+        <translation>下 左</translation>
     </message>
     <message>
+        <location line="+58"/>
         <source>Bottom Right</source>
-        <translation type="vanished">下 右</translation>
+        <translation>下 右</translation>
     </message>
     <message>
+        <location line="+59"/>
         <source>Cancel</source>
-        <translation type="vanished">キャンセル</translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>OK</source>
-        <translation type="vanished">OK</translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -11048,8 +12341,9 @@ shown in search results:</source>
 <context>
     <name>Theme</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User Interface Theme:</source>
-        <translation type="vanished">ユーザインターフェーステーマ:</translation>
+        <translation>ユーザインターフェーステーマ:</translation>
     </message>
 </context>
 <context>
@@ -11068,22 +12362,25 @@ shown in search results:</source>
 <context>
     <name>ThreeBelow</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="vanished">３:下</translation>
+        <translation>３:下</translation>
     </message>
 </context>
 <context>
     <name>ThreeHorizontal</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="vanished">３:水平</translation>
+        <translation>３:水平</translation>
     </message>
 </context>
 <context>
     <name>ThreeVertical</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="vanished">３:垂直</translation>
+        <translation>３:垂直</translation>
     </message>
 </context>
 <context>
@@ -11144,24 +12441,29 @@ shown in search results:</source>
 <context>
     <name>ToolBar</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon Size:</source>
-        <translation type="vanished">アイコンサイズ:</translation>
+        <translation>アイコンサイズ:</translation>
     </message>
     <message>
+        <location line="+72"/>
         <source>Pixel</source>
-        <translation type="vanished">ピクセル</translation>
+        <translation>ピクセル</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>px</source>
-        <translation type="vanished">ピクセル</translation>
+        <translation>ピクセル</translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>Options Toolbar</source>
-        <translation type="vanished">オプションツールバー</translation>
+        <translation>オプションツールバー</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Shortcut Prefix Character:</source>
-        <translation type="vanished">ショートカット前置文字:</translation>
+        <translation>ショートカット前置文字:</translation>
     </message>
 </context>
 <context>
@@ -11201,8 +12503,9 @@ shown in search results:</source>
 <context>
     <name>ToolMatrixWidget</name>
     <message>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+37"/>
         <source>Filter</source>
-        <translation type="vanished">フィルター</translation>
+        <translation>フィルター</translation>
     </message>
 </context>
 <context>
@@ -11246,47 +12549,57 @@ shown in search results:</source>
         <translation>１回または複数回の移動またはコピー</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="vanished">ツールオプションのためダイアログを使用</translation>
+        <translation>ツールオプションのためダイアログを使用</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="vanished">コピー</translation>
+        <translation>コピー</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="vanished">コピーの数:</translation>
+        <translation>コピーの数:</translation>
     </message>
     <message>
+        <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">現在のレイヤーと属性を使用</translation>
+        <translation>現在のレイヤーと属性を使用</translation>
     </message>
 </context>
 <context>
     <name>TranslateOptions</name>
     <message>
+        <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation type="vanished">移動/コピーオプション</translation>
+        <translation>移動/コピーオプション</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">コピーの数</translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">&amp;D オリジナルを削除</translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">&amp;K オリジナルを維持</translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;M 多重コピー</translation>
+        <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">&amp;a 現在の画層と属性を使用</translation>
+        <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>
 </context>
 <context>
@@ -11304,8 +12617,9 @@ shown in search results:</source>
         <translation type="vanished">コピー:</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="vanished">角度:</translation>
+        <translation>角度:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
@@ -11316,32 +12630,39 @@ shown in search results:</source>
 <context>
     <name>TranslateRotateOptions</name>
     <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation type="vanished">移動と回転オプション</translation>
+        <translation>移動と回転オプション</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">コピーの数</translation>
+        <translation>コピーの数</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">&amp;D オリジナルを削除</translation>
+        <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">&amp;K オリジナルを維持</translation>
+        <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;M 多重コピー</translation>
+        <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
-        <translation type="vanished">&amp;A 角度(a):</translation>
+        <translation>&amp;A 角度(a):</translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">&amp;a 現在の画層と属性を使用</translation>
+        <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>
 </context>
 <context>
@@ -11401,15 +12722,17 @@ shown in search results:</source>
 <context>
     <name>TwoHorizontal</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="vanished">２:水平</translation>
+        <translation>２:水平</translation>
     </message>
 </context>
 <context>
     <name>TwoVertical</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="vanished">２:垂直</translation>
+        <translation>２:垂直</translation>
     </message>
 </context>
 <context>
@@ -11423,16 +12746,19 @@ shown in search results:</source>
 <context>
     <name>UnitSettings</name>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
-        <translation type="vanished">図面単位:</translation>
+        <translation>図面単位:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Paper Unit:</source>
-        <translation type="vanished">用紙単位:</translation>
+        <translation>用紙単位:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="vanished">測定系（ラインタイプとハッチパターンのため）</translation>
+        <translation>測定系（ラインタイプとハッチパターンのため）</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -11621,12 +12947,19 @@ shown in search results:</source>
 <context>
     <name>Viewport</name>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation type="vanished">ビューポート</translation>
+        <translation>ビューポート</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Preview</source>
-        <translation type="vanished">プレビュー</translation>
+        <translation>プレビュー</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">グリッド間隔＜メタグリッド間隔</translation>
     </message>
 </context>
 <context>
@@ -12011,7 +13344,7 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+328"/>
+        <location filename="../scripts/autostart.js" line="+352"/>
         <source>Loading add-on translations...</source>
         <translation>アドオンの翻訳をロード中...</translation>
     </message>
@@ -12481,44 +13814,80 @@ shown in search results:</source>
 <context>
     <name>scrollArea</name>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="vanished">ビューポート 1</translation>
+        <translation>ビューポート 1</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="vanished">グリッドを表示</translation>
+        <translation>グリッドを表示</translation>
     </message>
     <message>
+        <location line="-446"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation type="vanished">等角グリッド</translation>
+        <translation>等角グリッド</translation>
     </message>
     <message>
+        <location line="-449"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="vanished">グリッド間隔</translation>
+        <translation>グリッド間隔</translation>
     </message>
     <message>
+        <location line="-450"/>
+        <location line="+90"/>
+        <location line="+76"/>
+        <location line="+89"/>
+        <location line="+76"/>
+        <location line="+56"/>
+        <location line="+116"/>
+        <location line="+30"/>
         <source>Y:</source>
-        <translation type="vanished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
+        <location line="-512"/>
+        <location line="+76"/>
+        <location line="+55"/>
+        <location line="+63"/>
+        <location line="+89"/>
+        <location line="+90"/>
+        <location line="+62"/>
+        <location line="+63"/>
         <source>X:</source>
-        <translation type="vanished">X:</translation>
+        <translation>X:</translation>
     </message>
     <message>
+        <location line="-462"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation type="vanished">メタグリッド間隔</translation>
+        <translation>メタグリッド間隔</translation>
     </message>
     <message>
+        <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="vanished">ビューポート 2</translation>
+        <translation>ビューポート 2</translation>
     </message>
     <message>
+        <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="vanished">ビューポート 3</translation>
+        <translation>ビューポート 3</translation>
     </message>
     <message>
+        <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="vanished">ビューポート 4</translation>
+        <translation>ビューポート 4</translation>
     </message>
 </context>
 <context>

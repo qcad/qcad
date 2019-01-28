@@ -235,28 +235,33 @@
 <context>
     <name>AboutDialog</name>
     <message>
+        <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
         <source>About</source>
-        <translation type="vanished">О программе</translation>
+        <translation>О программе</translation>
     </message>
     <message>
         <source>about:blank</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
+        <location line="+67"/>
         <source>Credits</source>
-        <translation type="vanished">Об авторах</translation>
+        <translation>Об авторах</translation>
     </message>
     <message>
+        <location line="+67"/>
         <source>Plugins</source>
-        <translation type="vanished">Надстройки</translation>
+        <translation>Надстройки</translation>
     </message>
     <message>
+        <location line="+67"/>
         <source>Scripts</source>
-        <translation type="vanished">Скрипты</translation>
+        <translation>Скрипты</translation>
     </message>
     <message>
+        <location line="+67"/>
         <source>System</source>
-        <translation type="vanished">Система</translation>
+        <translation>Система</translation>
     </message>
 </context>
 <context>
@@ -325,16 +330,19 @@ the preference changes to take effect.</source>
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
+        <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="vanished">Добавить пользовательское свойство</translation>
+        <translation>Добавить пользовательское свойство</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Name:</source>
-        <translation type="vanished">Имя:</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Value:</source>
-        <translation type="vanished">Значение:</translation>
+        <translation>Значение:</translation>
     </message>
 </context>
 <context>
@@ -424,24 +432,30 @@ the preference changes to take effect.</source>
         <translation>Обе точки идентичны</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Direction:</source>
-        <translation type="vanished">Направление:</translation>
+        <translation>Направление:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="vanished">Против часовой стрелки (положительное)</translation>
+        <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
-        <translation type="vanished">Направление</translation>
+        <translation>Направление</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">По часовой стрелке (Отрицательное)</translation>
+        <translation>По часовой стрелке (Отрицательное)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
@@ -477,20 +491,24 @@ the preference changes to take effect.</source>
         <translation>Две точки идентичны</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
         <source>Height:</source>
-        <translation type="vanished">Высота:</translation>
+        <translation>Высота:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Direction:</source>
-        <translation type="vanished">Направление:</translation>
+        <translation>Направление:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="vanished">Против часовой стрелки (положительный)</translation>
+        <translation>Против часовой стрелки (положительный)</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">По часовой стрелке (отрицательный)</translation>
+        <translation>По часовой стрелке (отрицательный)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -531,20 +549,24 @@ the preference changes to take effect.</source>
         <translation>Расстояние между двумя точками должно быть меньше длины дуги</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="vanished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Direction:</source>
-        <translation type="vanished">Направление:</translation>
+        <translation>Направление:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="vanished">Против часовой стрелки (положительный)</translation>
+        <translation>Против часовой стрелки (положительный)</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">По часовой стрелке (отрицательный)</translation>
+        <translation>По часовой стрелке (отрицательный)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
@@ -580,40 +602,51 @@ the preference changes to take effect.</source>
         <translation>Обе точки идентичны</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Direction:</source>
-        <translation type="vanished">Направление:</translation>
+        <translation>Направление:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="vanished">Против часовой стрелки (положительное)</translation>
+        <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
-        <translation type="vanished">Направление</translation>
+        <translation>Направление</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">По часовой стрелке (Отрицательное)</translation>
+        <translation>По часовой стрелке (Отрицательное)</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Solution:</source>
-        <translation type="vanished">Решение:</translation>
+        <translation>Решение:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Shorter Arc</source>
-        <translation type="vanished">Дуга короче</translation>
+        <translation>Дуга короче</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Solution</source>
-        <translation type="vanished">Решение</translation>
+        <translation>Решение</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Longer Arc</source>
-        <translation type="vanished">Дуга длиннее</translation>
+        <translation>Дуга длиннее</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
@@ -682,20 +715,25 @@ the preference changes to take effect.</source>
         <translation>Конечный угол</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="vanished">Направление:</translation>
+        <translation>Направление:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="vanished">Против часовой стрелки (положительное)</translation>
+        <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
-        <translation type="vanished">Направление</translation>
+        <translation>Направление</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">По часовой стрелке (Отрицательное)</translation>
+        <translation>По часовой стрелке (Отрицательное)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -711,12 +749,14 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcConcentric</name>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="vanished">Расстояние:</translation>
+        <translation>Расстояние:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
@@ -732,8 +772,9 @@ the preference changes to take effect.</source>
 <context>
     <name>ArcConcentricThrough</name>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
@@ -770,8 +811,9 @@ the preference changes to take effect.</source>
         <translation>Решения нет</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
@@ -797,8 +839,9 @@ the preference changes to take effect.</source>
         <translation>Выбрать конечную точку дуги</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -914,63 +957,77 @@ Do you wish to recover it?</source>
         <translation>Не удалось удалить файл:</translation>
     </message>
     <message>
+        <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="vanished">Включить автосохранение</translation>
+        <translation>Включить автосохранение</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="vanished">Интервал автосохранения:</translation>
+        <translation>Интервал автосохранения:</translation>
     </message>
     <message>
+        <location line="+54"/>
         <source>min</source>
-        <translation type="vanished">мин</translation>
+        <translation>мин</translation>
     </message>
 </context>
 <context>
     <name>AutoSnap</name>
     <message>
+        <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation type="vanished">Автоприлипание</translation>
+        <translation>Автоприлипание</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Intersections</source>
-        <translation type="vanished">Пересечения</translation>
+        <translation>Пересечения</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>End points</source>
-        <translation type="vanished">Конечные точки</translation>
+        <translation>Конечные точки</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Middle points</source>
-        <translation type="vanished">Средние точки</translation>
+        <translation>Средние точки</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Center points</source>
-        <translation type="vanished">Точки центра</translation>
+        <translation>Точки центра</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="vanished">Перпендикуляр</translation>
+        <translation>Перпендикуляр</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Tangential</source>
-        <translation type="vanished">По касательной</translation>
+        <translation>По касательной</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Reference points</source>
-        <translation type="vanished">Точка привязки</translation>
+        <translation>Точка привязки</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Grid points</source>
-        <translation type="vanished">Точки сетки</translation>
+        <translation>Точки сетки</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="vanished">Точка на объекте</translation>
+        <translation>Точка на объекте</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="vanished">Свободное размещение курсора</translation>
+        <translation>Свободное размещение курсора</translation>
     </message>
 </context>
 <context>
@@ -1020,16 +1077,19 @@ Do you wish to recover it?</source>
         <translation>Второй объект не может быть подрезан.</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="vanished">Усечь</translation>
+        <translation>Усечь</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="vanished">Длина 1:</translation>
+        <translation>Длина 1:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Length 2:</source>
-        <translation type="vanished">Длина 2:</translation>
+        <translation>Длина 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1068,44 +1128,100 @@ Do you wish to recover it?</source>
         <translation type="vanished">Растровый файл был экспортирован в &apos;%1&apos;</translation>
     </message>
     <message>
+        <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="vanished">Экспорт растрового изображения</translation>
+        <translation>Экспорт растрового изображения</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Size</source>
-        <translation type="vanished">Размер</translation>
+        <translation>Размер</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Width:</source>
-        <translation type="vanished">Ширина:</translation>
+        <translation>Ширина:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Height:</source>
-        <translation type="vanished">Высота:</translation>
+        <translation>Высота:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="vanished">Пикселей на единицу измерения чертежа:</translation>
+        <translation>Пикселей на единицу измерения чертежа:</translation>
     </message>
     <message>
+        <location line="+72"/>
+        <source>Export bounding box of selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Transparent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+23"/>
+        <source>Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Monochrome</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Grayscale</source>
+        <translation type="unfinished">Градации серого</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Anti-aliasing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use anti-aliasing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Margin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Margin:</source>
-        <translation type="vanished">Поле:</translation>
+        <translation>Поле:</translation>
     </message>
     <message>
+        <location line="+62"/>
         <source>px</source>
-        <translation type="vanished">пикс.</translation>
+        <translation>пикс.</translation>
     </message>
     <message>
+        <location line="+9"/>
+        <source>Add extra margin to compensate for line weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-170"/>
         <source>Background</source>
-        <translation type="vanished">Фон</translation>
+        <translation>Фон</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>White</source>
-        <translation type="vanished">Белый</translation>
+        <translation>Белый</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Black</source>
-        <translation type="vanished">Чёрный</translation>
+        <translation>Чёрный</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
@@ -1181,16 +1297,19 @@ Do you wish to recover it?</source>
         <translation>Блок уже существует.</translation>
     </message>
     <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation type="vanished">Данные блока</translation>
+        <translation>Данные блока</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Block name:</source>
-        <translation type="vanished">Наименование блока:</translation>
+        <translation>Наименование блока:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>block 1</source>
-        <translation type="vanished">блок 1</translation>
+        <translation>блок 1</translation>
     </message>
 </context>
 <context>
@@ -1224,12 +1343,14 @@ Do you wish to recover it?</source>
         <translation>Виджеты</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
-        <translation type="vanished">Скрыть внутренние блоки</translation>
+        <translation>Скрыть внутренние блоки</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Enable alternating row colors</source>
-        <translation type="vanished">Включить цвета чередующихся строк</translation>
+        <translation>Включить цвета чередующихся строк</translation>
     </message>
 </context>
 <context>
@@ -1294,8 +1415,9 @@ Do you wish to recover it?</source>
         <translation>Выбрать участок линии, дуги, окружности или эллипса</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="vanished">Удалить сегмент</translation>
+        <translation>Удалить сегмент</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
@@ -1316,8 +1438,9 @@ Do you wish to recover it?</source>
         <translation>Укажите точку</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation type="vanished">Зазор:</translation>
+        <translation>Зазор:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
@@ -1364,8 +1487,9 @@ Do you wish to recover it?</source>
         <translation>Щёлкните на части окружности или эллипса для удаления</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="vanished">Удалить сегмент</translation>
+        <translation>Удалить сегмент</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
@@ -1399,20 +1523,24 @@ Do you wish to recover it?</source>
         <translation>Вертикальная/Горизонтальная</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation type="vanished">Размер иконки:</translation>
+        <translation>Размер иконки:</translation>
     </message>
     <message>
+        <location line="+71"/>
         <source>Pixel</source>
-        <translation type="vanished">Пиксел</translation>
+        <translation>Пиксел</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>px</source>
-        <translation type="vanished">пикс.</translation>
+        <translation>пикс.</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Columns:</source>
-        <translation type="vanished">Столбцы:</translation>
+        <translation>Столбцы:</translation>
     </message>
 </context>
 <context>
@@ -1458,20 +1586,24 @@ Do you wish to recover it?</source>
         <translation>Матрица инструмента</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation type="vanished">Размер значка:</translation>
+        <translation>Размер значка:</translation>
     </message>
     <message>
+        <location line="+96"/>
         <source>Pixel</source>
-        <translation type="vanished">Пиксель</translation>
+        <translation>Пиксель</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>px</source>
-        <translation type="vanished">пикс.</translation>
+        <translation>пикс.</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>List view</source>
-        <translation type="vanished">В виде списка</translation>
+        <translation>В виде списка</translation>
     </message>
 </context>
 <context>
@@ -1486,6 +1618,7 @@ Do you wish to recover it?</source>
     <name>CheckForUpdates</name>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation>Проверить обновления...</translation>
     </message>
@@ -1504,8 +1637,9 @@ Do you wish to recover it?</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
+        <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
-        <translation type="vanished">Автоматически проверять обновления</translation>
+        <translation>Автоматически проверять обновления</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
@@ -1581,24 +1715,30 @@ Do you wish to recover it?</source>
         <translation>Обе точки идентичны</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Solution:</source>
-        <translation type="vanished">Решение:</translation>
+        <translation>Решение:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation type="vanished">Центр Слева от линии P1 - P2</translation>
+        <translation>Центр Слева от линии P1 - P2</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Solution</source>
-        <translation type="vanished">Решение</translation>
+        <translation>Решение</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation type="vanished">Центр Справа от линии P1 - P2</translation>
+        <translation>Центр Справа от линии P1 - P2</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -1677,8 +1817,9 @@ Do you wish to recover it?</source>
         <translation type="vanished">Недопустимое значение радиуса</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
@@ -1761,16 +1902,21 @@ Do you wish to recover it?</source>
 <context>
     <name>CircleCD</name>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleCD/CircleCD.ui" line="+17"/>
+        <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="+89"/>
         <source>Diameter:</source>
-        <translation type="vanished">Диаметр:</translation>
+        <translation>Диаметр:</translation>
     </message>
     <message>
+        <location line="+33"/>
+        <location filename="../scripts/Draw/Circle/CircleCD/CircleCDDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">Базовая точка:</translation>
+        <translation>Базовая точка:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
@@ -1809,16 +1955,21 @@ Do you wish to recover it?</source>
 <context>
     <name>CircleCR</name>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
+        <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
-        <translation type="vanished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
     <message>
+        <location line="+33"/>
+        <location filename="../scripts/Draw/Circle/CircleCR/CircleCRDialog.ui" line="-60"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">Базовая точка:</translation>
+        <translation>Базовая точка:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
@@ -1834,12 +1985,14 @@ Do you wish to recover it?</source>
 <context>
     <name>CircleConcentric</name>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="vanished">Расстояние:</translation>
+        <translation>Расстояние:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js" line="+2"/>
@@ -1855,8 +2008,9 @@ Do you wish to recover it?</source>
 <context>
     <name>CircleConcentricThrough</name>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit.js" line="+2"/>
@@ -1926,8 +2080,9 @@ Do you wish to recover it?</source>
         <translation>Рисовать окружность, касающуюся объекта, через точку с заданным радиусом</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">Радиус:</translation>
+        <translation>Радиус:</translation>
     </message>
 </context>
 <context>
@@ -1949,8 +2104,9 @@ Do you wish to recover it?</source>
 <context>
     <name>CloseDialog</name>
     <message>
+        <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="vanished">Закрытие чертежа...</translation>
+        <translation>Закрытие чертежа...</translation>
     </message>
 </context>
 <context>
@@ -1997,24 +2153,29 @@ Do you wish to recover it?</source>
         <translation>Цвета</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
-        <translation type="vanished">Цвет фона:</translation>
+        <translation>Цвет фона:</translation>
     </message>
     <message>
+        <location line="+44"/>
         <source>Color Mode</source>
-        <translation type="vanished">Цветовой режим</translation>
+        <translation>Цветовой режим</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Full color</source>
-        <translation type="vanished">Полноцветный</translation>
+        <translation>Полноцветный</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Grayscale</source>
-        <translation type="vanished">Градации серого</translation>
+        <translation>Градации серого</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Black / white</source>
-        <translation type="vanished">Чёрно-белый</translation>
+        <translation>Чёрно-белый</translation>
     </message>
 </context>
 <context>
@@ -2027,6 +2188,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <location line="+46"/>
+        <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Командная строка</translation>
     </message>
@@ -2106,16 +2268,19 @@ Do you wish to recover it?</source>
         <translation>: </translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
-        <translation type="vanished">Размер истории:</translation>
+        <translation>Размер истории:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation type="vanished">Показать предупреждения как диалог</translation>
+        <translation>Показать предупреждения как диалог</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation type="vanished">Показать информацию как диалог</translation>
+        <translation>Показать информацию как диалог</translation>
     </message>
 </context>
 <context>
@@ -2169,24 +2334,48 @@ Do you wish to recover it?</source>
         <source>Convert drawing to a different drawing unit</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
+        <source>From:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>To:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Convert:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoordinateDisplay</name>
     <message>
+        <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translation type="vanished">Абсолютная декартовая координата</translation>
+        <translation>Абсолютная декартовая координата</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translation type="vanished">Абсолютная полярная координата</translation>
+        <translation>Абсолютная полярная координата</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translation type="vanished">Относительная декартовая координата</translation>
+        <translation>Относительная декартовая координата</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translation type="vanished">Относительная полярная координата</translation>
+        <translation>Относительная полярная координата</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
@@ -2196,6 +2385,11 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
+        <source>Forced update every N mouse moves:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2223,20 +2417,38 @@ Do you wish to recover it?</source>
         <translation>Позиция</translation>
     </message>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation type="vanished">Начало:</translation>
+        <translation>Начало:</translation>
     </message>
     <message>
         <source>Incr:</source>
         <translation type="vanished">Прирост:</translation>
     </message>
     <message>
-        <source>Prefix:</source>
-        <translation type="vanished">Префикс:</translation>
+        <location line="+14"/>
+        <source>Increment:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+14"/>
+        <source>Precision:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of decimal digits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Prefix:</source>
+        <translation>Префикс:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Suffix:</source>
-        <translation type="vanished">Суффикс:</translation>
+        <translation>Суффикс:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
@@ -2306,28 +2518,34 @@ Do you wish to recover it?</source>
 <context>
     <name>CrossOptions</name>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/Cross/Cross.ui" line="+17"/>
         <source>X:</source>
-        <translation type="vanished">X:</translation>
+        <translation>X:</translation>
     </message>
     <message>
+        <location line="+32"/>
         <source>Y:</source>
-        <translation type="vanished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
+        <location line="+57"/>
         <source>Extension</source>
-        <translation type="vanished">Расширение</translation>
+        <translation>Расширение</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Total length</source>
-        <translation type="vanished">Общая длина</translation>
+        <translation>Общая длина</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Percent</source>
-        <translation type="vanished">Процент</translation>
+        <translation>Процент</translation>
     </message>
     <message>
+        <location line="+15"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
 </context>
 <context>
@@ -2474,72 +2692,90 @@ Do you wish to recover it?</source>
 <context>
     <name>Dialog</name>
     <message>
+        <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="vanished">Таблица символов</translation>
+        <translation>Таблица символов</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
-        <translation type="vanished">Диалог</translation>
+        <translation>Диалог</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation type="vanished">Дуги и окружности</translation>
+        <translation>Дуги и окружности</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation type="vanished">в сегменты линии (фиксированная длина)</translation>
+        <translation>в сегменты линии (фиксированная длина)</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation type="vanished">в сегменты линии (фиксированный угол)</translation>
+        <translation>в сегменты линии (фиксированный угол)</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Ellipses</source>
-        <translation type="vanished">Эллипсы</translation>
+        <translation>Эллипсы</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation type="vanished">в многоугольник с сегментами дуги</translation>
+        <translation>в многоугольник с сегментами дуги</translation>
     </message>
     <message>
+        <location line="+5"/>
+        <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation type="vanished">в многоугольник с сегментами линии</translation>
+        <translation>в многоугольник с сегментами линии</translation>
     </message>
     <message>
+        <location line="-8"/>
         <source>Splines</source>
-        <translation type="vanished">Кривые</translation>
+        <translation>Кривые</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Dimensions</source>
-        <translation type="vanished">Размеры</translation>
+        <translation>Размеры</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation type="vanished">в линии, твёрдые тела и тексты</translation>
+        <translation>в линии, твёрдые тела и тексты</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Hatches</source>
-        <translation type="vanished">Штриховки</translation>
+        <translation>Штриховки</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into lines</source>
-        <translation type="vanished">в линии</translation>
+        <translation>в линии</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Blocks</source>
-        <translation type="vanished">Блоки</translation>
+        <translation>Блоки</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>into entities</source>
-        <translation type="vanished">в объекты</translation>
+        <translation>в объекты</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
         <source>OK</source>
-        <translation type="vanished">OK</translation>
+        <translation>OK</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Cancel</source>
-        <translation type="vanished">Отменить</translation>
+        <translation>Отменить</translation>
     </message>
 </context>
 <context>
@@ -2596,6 +2832,11 @@ Do you wish to recover it?</source>
         <location line="+5"/>
         <source>Draw angular dimension</source>
         <translation>Рисовать угловой размер</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
+        <source>Use maximum angle</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2724,8 +2965,9 @@ Do you wish to recover it?</source>
         <translation>Положение размерной линии</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
@@ -2818,32 +3060,44 @@ Do you wish to recover it?</source>
         <translation>&amp;Размер</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation type="vanished">Метка:</translation>
+        <translation>Метка:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Prefix</source>
-        <translation type="vanished">Префикс</translation>
+        <translation>Префикс</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="vanished">Введите фиксированную метку или оставьте пустым для автоматической метки</translation>
+        <translation>Введите фиксированную метку или оставьте пустым для автоматической метки</translation>
     </message>
     <message>
+        <location line="+61"/>
         <source>Upper tolerance</source>
-        <translation type="vanished">Больше допуск</translation>
+        <translation>Больше допуск</translation>
     </message>
     <message>
+        <location line="+54"/>
         <source>Lower tolerance</source>
-        <translation type="vanished">Меньше допуск</translation>
+        <translation>Меньше допуск</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Scale</source>
-        <translation type="vanished">Масшабировать</translation>
+        <translation>Масшабировать</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="vanished">Масштаб рисования</translation>
+        <translation>Масштаб рисования</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Auto</source>
+        <translation type="unfinished">Автоматический</translation>
     </message>
 </context>
 <context>
@@ -2944,92 +3198,131 @@ Do you wish to recover it?</source>
         <translation type="vanished">Единицы измерения чертежа должны быть дюймами или футами для отображения меток в форматах Архитектуры или Инженеринга. Формат был изменён на десятичный.</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
-        <translation type="vanished">Размеры</translation>
+        <translation>Размеры</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Keep proportions</source>
-        <translation type="vanished">Сохранять пропорции</translation>
+        <translation>Сохранять пропорции</translation>
     </message>
     <message>
+        <location line="+147"/>
         <source>Text height:</source>
-        <translation type="vanished">Высота текста:</translation>
+        <translation>Высота текста:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation type="vanished">Смещение линии-выноски:</translation>
+        <translation>Смещение линии-выноски:</translation>
     </message>
     <message>
+        <location line="-74"/>
         <source>Extension line extension:</source>
-        <translation type="vanished">Выступ линии-выноски:</translation>
+        <translation>Выступ линии-выноски:</translation>
     </message>
     <message>
+        <location line="-52"/>
         <source>Dimension line gap:</source>
-        <translation type="vanished">Расстояние от текста до размерной линии:</translation>
+        <translation>Расстояние от текста до размерной линии:</translation>
     </message>
     <message>
+        <location line="+42"/>
         <source>Arrow size:</source>
-        <translation type="vanished">Величина стрелки:</translation>
+        <translation>Величина стрелки:</translation>
     </message>
     <message>
+        <location line="+108"/>
+        <source>Dimension line increment:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation type="vanished">Величина коэффициента масштабирования:</translation>
+        <translation>Величина коэффициента масштабирования:</translation>
     </message>
     <message>
+        <location line="+38"/>
         <source>Arrow Style</source>
-        <translation type="vanished">Стиль стрелки</translation>
+        <translation>Стиль стрелки</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Arrow</source>
-        <translation type="vanished">Стрелка</translation>
+        <translation>Стрелка</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation type="vanished">Архитектурная засечка</translation>
+        <translation>Архитектурная засечка</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Font</source>
-        <translation type="vanished">Шрифт</translation>
+        <translation>Шрифт</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation type="vanished">Шрифт размерной надписи:</translation>
+        <translation>Шрифт размерной надписи:</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Number Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Decimal separator:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
         <source>Label Format</source>
-        <translation type="vanished">Формат метки</translation>
+        <translation>Формат метки</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation type="vanished">Линейные размеры</translation>
+        <translation>Линейные размеры</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation type="vanished">&amp;Формат:</translation>
+        <translation>&amp;Формат:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation type="vanished">То&amp;чность:</translation>
+        <translation>То&amp;чность:</translation>
     </message>
     <message>
+        <location line="+32"/>
+        <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation type="vanished">Показать завершающие нули</translation>
+        <translation>Показать завершающие нули</translation>
     </message>
     <message>
+        <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="vanished">Угловые размеры</translation>
+        <translation>Угловые размеры</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation type="vanished">Ф&amp;ормат:</translation>
+        <translation>Ф&amp;ормат:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="vanished">Точ&amp;ность:</translation>
+        <translation>Точ&amp;ность:</translation>
     </message>
     <message>
+        <location line="+32"/>
+        <location line="+19"/>
         <source>Preview</source>
-        <translation type="vanished">Предварительный просмотр</translation>
+        <translation>Предварительный просмотр</translation>
     </message>
 </context>
 <context>
@@ -3266,44 +3559,54 @@ is already in the list.</source>
         <translation>дуга</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="vanished">Закрыть многоугольник</translation>
+        <translation>Закрыть многоугольник</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>,, C</source>
-        <translation type="vanished">,, C</translation>
+        <translation>,, C</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="vanished">Отменить предыдущий сегмент</translation>
+        <translation>Отменить предыдущий сегмент</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, U</source>
-        <translation type="vanished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="vanished">Вернуть сегмент</translation>
+        <translation>Вернуть сегмент</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, R</source>
-        <translation type="vanished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="vanished">Дуга с радиусом:</translation>
+        <translation>Дуга с радиусом:</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>,, A</source>
-        <translation type="vanished">,, A</translation>
+        <translation>,, A</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Sweep</source>
-        <translation type="vanished">Развёртка</translation>
+        <translation>Развёртка</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="vanished">Ограничить длину угла</translation>
+        <translation>Ограничить длину угла</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
@@ -3482,8 +3785,24 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+25"/>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Оболочка скрипта</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
+        <source>ECMAScript Shell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this dialog again</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3671,20 +3990,25 @@ is already in the list.</source>
         <translation>Конечный угол:</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui" line="+17"/>
         <source>Direction:</source>
-        <translation type="vanished">Направление:</translation>
+        <translation>Направление:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="vanished">Против часовой стрелки (положительное)</translation>
+        <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <location line="+17"/>
         <source>Direction</source>
-        <translation type="vanished">Направление</translation>
+        <translation>Направление</translation>
     </message>
     <message>
+        <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="vanished">По часовой стрелке (Отрицательное)</translation>
+        <translation>По часовой стрелке (Отрицательное)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
@@ -3717,20 +4041,27 @@ is already in the list.</source>
 <context>
     <name>EllipseDD</name>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui" line="+17"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation type="vanished">Диаметр X:</translation>
+        <translation>Диаметр X:</translation>
     </message>
     <message>
+        <location line="+23"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
-        <translation type="vanished">Диаметр Y:</translation>
+        <translation>Диаметр Y:</translation>
     </message>
     <message>
+        <location line="+30"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="-23"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">Точка привязки:</translation>
+        <translation>Точка привязки:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
@@ -3779,12 +4110,14 @@ is already in the list.</source>
 <context>
     <name>EllipseOffset</name>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="vanished">Расстояние:</translation>
+        <translation>Расстояние:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
@@ -3800,8 +4133,9 @@ is already in the list.</source>
 <context>
     <name>EllipseOffsetThrough</name>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
@@ -3817,20 +4151,27 @@ is already in the list.</source>
 <context>
     <name>EllipseRR</name>
     <message>
+        <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRR.ui" line="+17"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
-        <translation type="vanished">Радиус X:</translation>
+        <translation>Радиус X:</translation>
     </message>
     <message>
+        <location line="+23"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
-        <translation type="vanished">Радиус Y:</translation>
+        <translation>Радиус Y:</translation>
     </message>
     <message>
+        <location line="+30"/>
+        <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-90"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">Точка привязки:</translation>
+        <translation>Точка привязки:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
@@ -4032,6 +4373,11 @@ is already in the list.</source>
         <source>&amp;Minimal Example 2</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ExProcess</name>
@@ -4116,20 +4462,24 @@ is already in the list.</source>
         <translation>&amp;Изменить размер окна</translation>
     </message>
     <message>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation type="vanished">Ввести размер</translation>
+        <translation>Ввести размер</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Size:</source>
-        <translation type="vanished">Размер:</translation>
+        <translation>Размер:</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>1280x720 (720p) 16:9</source>
-        <translation type="vanished">1280x720 (720p) 16:9</translation>
+        <translation>1280x720 (720p) 16:9</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
-        <translation type="vanished">1920x1080 (1080p, Full HD) 16:9</translation>
+        <translation>1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
 </context>
 <context>
@@ -4250,12 +4600,34 @@ is already in the list.</source>
         <translation>&amp;Разрушить</translation>
     </message>
     <message>
-        <source>Spline segments:</source>
-        <translation type="vanished">Сегменты кривых:</translation>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+176"/>
+        <source>Spline approximation tolerance:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Explode splines to polylines with line segments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Explode text glyphs to polylines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode multiline texts into multiple simple text blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Spline segments:</source>
+        <translation>Сегменты кривых:</translation>
+    </message>
+    <message>
+        <location line="-27"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation type="vanished">Сегменты эллипса (от полного эллипса):</translation>
+        <translation>Сегменты эллипса (от полного эллипса):</translation>
     </message>
 </context>
 <context>
@@ -4421,16 +4793,39 @@ is already in the list.</source>
         <translation type="vanished">Без имени</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation type="vanished">Три: Правый</translation>
+        <translation>Три: Правый</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation type="vanished">Три: Левый</translation>
+        <translation>Три: Левый</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation type="vanished">Три: Над</translation>
+        <translation>Три: Над</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Форма</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Cube size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>10</source>
+        <translation type="unfinished">10</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Draw plates</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4444,358 +4839,508 @@ is already in the list.</source>
 <context>
     <name>FourEqual</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="vanished">Четыре: Равный</translation>
+        <translation>Четыре: Равный</translation>
     </message>
 </context>
 <context>
     <name>FourLeft</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="vanished">Четыре: Левый</translation>
+        <translation>Четыре: Левый</translation>
     </message>
 </context>
 <context>
     <name>FourRight</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="vanished">Четыре: Правый</translation>
+        <translation>Четыре: Правый</translation>
     </message>
 </context>
 <context>
     <name>GraphicsView</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
-        <translation type="vanished">Двойной щелчок</translation>
+        <translation>Двойной щелчок</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation type="vanished">Двойной щелчок для редактирования текста</translation>
+        <translation>Двойной щелчок для редактирования текста</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="vanished">Дважды щёлкните для изменения штриховки</translation>
+        <translation>Дважды щёлкните для изменения штриховки</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="vanished">Двойной щелчок по привязке блока открывает блок</translation>
+        <translation>Двойной щелчок по привязке блока открывает блок</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Right double-click to reset</source>
-        <translation type="vanished">Двойной щелчок правой кнопкой мыши для сброса</translation>
+        <translation>Двойной щелчок правой кнопкой мыши для сброса</translation>
     </message>
     <message>
+        <location line="+10"/>
+        <source>Blocks</source>
+        <translation type="unfinished">Блоки</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation type="vanished">Выберите ссылки блоков вместе с атрибутами</translation>
+        <translation>Выберите ссылки блоков вместе с атрибутами</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Hide attributes when block references are hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+126"/>
+        <source>Highlight entity within range</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-211"/>
         <source>Right-Click</source>
-        <translation type="vanished">Щелчок правой кнопкой</translation>
+        <translation>Щелчок правой кнопкой</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="vanished">Щелчок правой кнопкой мыши для отмены выбора объектов</translation>
+        <translation>Щелчок правой кнопкой мыши для отмены выбора объектов</translation>
     </message>
     <message>
         <source>Right-click on entity shows context menu</source>
         <translation type="vanished">Щелчок правой кнопкой мыши показывает контекстное меню</translation>
     </message>
     <message>
+        <location line="+46"/>
         <source>Double-click to select contour</source>
-        <translation type="vanished">Двойной щелчок выбирает контур</translation>
+        <translation>Двойной щелчок выбирает контур</translation>
     </message>
     <message>
         <source>Block Selection</source>
         <translation type="vanished">Блочное выделение</translation>
     </message>
     <message>
+        <location line="+43"/>
         <source>Cursor Range</source>
-        <translation type="vanished">Диапазон курсора</translation>
+        <translation>Диапазон курсора</translation>
     </message>
     <message>
+        <location line="+109"/>
         <source>Cursor range for snap:</source>
-        <translation type="vanished">Диапазон курсора для прилипания:</translation>
+        <translation>Диапазон курсора для прилипания:</translation>
     </message>
     <message>
+        <location line="-7"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="vanished">Диапазон курсора для выбора объектов:</translation>
+        <translation>Диапазон курсора для выбора объектов:</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
         <source>Automatically scale grid</source>
-        <translation type="vanished">Масштабировать сетку автоматически</translation>
+        <translation>Масштабировать сетку автоматически</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation type="vanished">Масштабировать дополнительную сетку автоматически</translation>
+        <translation>Масштабировать дополнительную сетку автоматически</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation type="vanished">Сплошные линии сетки</translation>
+        <translation>Сплошные линии сетки</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation type="vanished">Минимальный шаг сетки (пикс):</translation>
+        <translation>Минимальный шаг сетки (пикс):</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation type="vanished">Начало координат</translation>
+        <translation>Начало координат</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="vanished">Показать большие оси начала координат</translation>
+        <translation>Показать большие оси начала координат</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="vanished">Линейки и полосы прокрутки</translation>
+        <translation>Линейки и полосы прокрутки</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="vanished">Показать линейки</translation>
+        <translation>Показать линейки</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="vanished">Показать полосы прокрутки</translation>
+        <translation>Показать полосы прокрутки</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Cursor</source>
-        <translation type="vanished">Курсор</translation>
+        <translation>Курсор</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="vanished">Показать визирные линии</translation>
+        <translation>Показать визирные линии</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="vanished">Показать большие визирные линии</translation>
+        <translation>Показать большие визирные линии</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="vanished">Автоматическое масштабирование</translation>
+        <translation>Автоматическое масштабирование</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Margin (px):</source>
-        <translation type="vanished">Край (пикс):</translation>
+        <translation>Край (пикс):</translation>
     </message>
     <message>
+        <location line="+69"/>
+        <source>Auto zoom on load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Color Adjustment</source>
-        <translation type="vanished">Регулировка цвета</translation>
+        <translation>Регулировка цвета</translation>
     </message>
     <message>
+        <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="vanished">Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
+        <translation>Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
     </message>
     <message>
+        <location line="-29"/>
         <source>Color lightness threshold:</source>
-        <translation type="vanished">Порог светлоты цвета:</translation>
+        <translation>Порог светлоты цвета:</translation>
     </message>
     <message>
+        <location line="+39"/>
+        <source>Disable for printing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Linetypes</source>
-        <translation type="vanished">Тип линии</translation>
+        <translation>Тип линии</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="vanished">Автоматически переключиться на экран на основе типов линий в просмотре моделей</translation>
+        <translation>Автоматически переключиться на экран на основе типов линий в просмотре моделей</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="vanished">Масштабировать шаблоны типов линий по весу линии</translation>
+        <translation>Масштабировать шаблоны типов линий по весу линии</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="vanished">Шаблон масштаба для толщины линии в 0.00 мм:</translation>
+        <translation>Шаблон масштаба для толщины линии в 0.00 мм:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Display and Performance</source>
-        <translation type="vanished">Отображение и производительность</translation>
+        <translation>Отображение и производительность</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Use full resolution for Retina display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+216"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="vanished">Отображать объекты с более чем N тире как непрерывные:</translation>
+        <translation>Отображать объекты с более чем N тире как непрерывные:</translation>
     </message>
     <message>
+        <location line="-223"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="vanished">Сглаживание по умолчанию</translation>
+        <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
+        <location line="-78"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="vanished">Автоматически использовать экран на основе типов линий в просмотре моделей</translation>
+        <translation>Автоматически использовать экран на основе типов линий в просмотре моделей</translation>
     </message>
     <message>
+        <location line="+92"/>
         <source>Number of preview entities:</source>
-        <translation type="vanished">Количество объектов при предпросмотре:</translation>
+        <translation>Количество объектов при предпросмотре:</translation>
     </message>
     <message>
         <source>Text height display threshold (px):</source>
         <translation type="vanished">Порог отображения высоты текста (пикс):</translation>
     </message>
     <message>
+        <location line="+58"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="vanished">Отображать дуги как линии под этим углом (в градусах):</translation>
+        <translation>Отображать дуги как линии под этим углом (в градусах):</translation>
     </message>
     <message>
+        <location line="+69"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="vanished">Минимальный шаг угля для рендеринга дуги (в градусах):</translation>
+        <translation>Минимальный шаг угля для рендеринга дуги (в градусах):</translation>
     </message>
     <message>
+        <location line="+124"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="vanished">Время ожидания для рендеринга штриховки:</translation>
+        <translation>Время ожидания для рендеринга штриховки:</translation>
     </message>
     <message>
+        <location line="+62"/>
+        <source>Maximum number of reference points displayed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+80"/>
         <source>Selection</source>
-        <translation type="vanished">Выбор</translation>
+        <translation>Выбор</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation type="vanished">Постоянное выделение</translation>
+        <translation>Постоянное выделение</translation>
     </message>
 </context>
 <context>
     <name>GraphicsViewColors</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/ColorPreferences/PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="vanished">Графический вид</translation>
+        <translation>Графический вид</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Background:</source>
-        <translation type="vanished">Фон:</translation>
+        <translation>Фон:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Cursor</source>
-        <translation type="vanished">Курсор</translation>
+        <translation>Курсор</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation type="vanished">Визирные линии:</translation>
+        <translation>Визирные линии:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="vanished">Неактивные визирные линии:</translation>
+        <translation>Неактивные визирные линии:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Origin</source>
-        <translation type="vanished">Начало координат</translation>
+        <translation>Начало координат</translation>
     </message>
     <message>
+        <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="vanished">Относительный ноль:</translation>
+        <translation>Относительный ноль:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Grid</source>
-        <translation type="vanished">По сетке</translation>
+        <translation>По сетке</translation>
     </message>
     <message>
+        <location line="+48"/>
         <source>Meta grid:</source>
-        <translation type="vanished">Дополнительная сетка:</translation>
+        <translation>Дополнительная сетка:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Selection</source>
-        <translation type="vanished">Выбор</translation>
+        <translation>Выбор</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="vanished">Первичный цвет выделения:</translation>
+        <translation>Первичный цвет выделения:</translation>
     </message>
     <message>
+        <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="vanished">Использовать вторичный цвет выделения</translation>
+        <translation>Использовать вторичный цвет выделения</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="vanished">Вторичный цвет выделения:</translation>
+        <translation>Вторичный цвет выделения:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Primary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Secondary reference points:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Draggable reference points:</source>
         <translation type="vanished">Перетаскиваемые точка привязки</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
-        <translation type="vanished">Выделение границы коробки:</translation>
+        <translation>Выделение границы коробки:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="vanished">Выделение заполненной коробки:</translation>
+        <translation>Выделение заполненной коробки:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="vanished">Коробка, заполненная крестовым выделением</translation>
+        <translation>Коробка, заполненная крестовым выделением</translation>
     </message>
     <message>
+        <location line="+30"/>
+        <source>Start points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>End points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Tertiary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Snap Tools</source>
-        <translation type="vanished">Инструменты прилипания</translation>
+        <translation>Инструменты прилипания</translation>
     </message>
     <message>
+        <location line="+15"/>
         <source>Snap label:</source>
-        <translation type="vanished">Метка прилипания:</translation>
+        <translation>Метка прилипания:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="vanished">Инструменты информации</translation>
+        <translation>Инструменты информации</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="vanished">Измерения и метки:</translation>
+        <translation>Измерения и метки:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="vanished">Чертёжные утилиты</translation>
+        <translation>Чертёжные утилиты</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="vanished">Вспомогательные формы:</translation>
+        <translation>Вспомогательные формы:</translation>
     </message>
     <message>
+        <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="vanished">Инструменты масштабирования</translation>
+        <translation>Инструменты масштабирования</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="vanished">Масштаб границы коробки:</translation>
+        <translation>Масштаб границы коробки:</translation>
     </message>
     <message>
+        <location line="-643"/>
         <source>Origin:</source>
-        <translation type="vanished">Начало координат:</translation>
+        <translation>Начало координат:</translation>
     </message>
     <message>
+        <location line="+81"/>
         <source>Grid:</source>
-        <translation type="vanished">Сетка:</translation>
+        <translation>Сетка:</translation>
     </message>
 </context>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
-        <translation type="vanished">Шрифт линейки:</translation>
+        <translation>Шрифт линейки:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Snap Label Font:</source>
-        <translation type="vanished">Шрифт метки прилипания:</translation>
+        <translation>Шрифт метки прилипания:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Info Label Font:</source>
-        <translation type="vanished">Шрифт метки информации:</translation>
+        <translation>Шрифт метки информации:</translation>
     </message>
 </context>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
+        <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="vanished">Колёсико мыши/два пальца:</translation>
+        <translation>Колёсико мыши/два пальца:</translation>
     </message>
     <message>
+        <location line="-231"/>
         <source>Enable pan gesture</source>
-        <translation type="vanished">Включить жест панорамирования</translation>
+        <translation>Включить жест панорамирования</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="vanished">Обратное направление колёсика мыши для увеличения</translation>
+        <translation>Обратное направление колёсика мыши для увеличения</translation>
     </message>
     <message>
+        <location line="+217"/>
+        <source>Panning threshold (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Middle mouse button zoom factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-255"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="vanished">Коэффициент масштабирования для колёсика мыши:</translation>
+        <translation>Коэффициент масштабирования для колёсика мыши:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="vanished">Ограничить масштабирование и прокручивание чтобы предотвратить переполнение</translation>
+        <translation>Ограничить масштабирование и прокручивание чтобы предотвратить переполнение</translation>
     </message>
 </context>
 <context>
@@ -4884,36 +5429,44 @@ is already in the list.</source>
 <context>
     <name>HatchDialog</name>
     <message>
+        <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="vanished">Штриховка</translation>
+        <translation>Штриховка</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Type</source>
-        <translation type="vanished">Тип</translation>
+        <translation>Тип</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Solid Fill</source>
-        <translation type="vanished">Заливка цветом</translation>
+        <translation>Заливка цветом</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="vanished">Стили штриховки</translation>
+        <translation>Стили штриховки</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Preview</source>
-        <translation type="vanished">Предварительный просмотр</translation>
+        <translation>Предварительный просмотр</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Pattern</source>
-        <translation type="vanished">Рисунок</translation>
+        <translation>Рисунок</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Scale:</source>
-        <translation type="vanished">Масштаб:</translation>
+        <translation>Масштаб:</translation>
     </message>
 </context>
 <context>
@@ -5009,20 +5562,24 @@ is already in the list.</source>
         <translation>Позиция</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
         <source>Width:</source>
-        <translation type="vanished">Ширина:</translation>
+        <translation>Ширина:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Keep proportions</source>
-        <translation type="vanished">Сохранять пропорции</translation>
+        <translation>Сохранять пропорции</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Height:</source>
-        <translation type="vanished">Высота:</translation>
+        <translation>Высота:</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
         <source>Insert Bitmap</source>
@@ -5065,6 +5622,71 @@ is already in the list.</source>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
         <translation>Импорт</translation>
+    </message>
+    <message>
+        <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
+        <source>As block:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Rotation:</source>
+        <translation type="unfinished">Вращение:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Rotate pasted entities&lt;br&gt;by this angle</source>
+        <translation type="unfinished">Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Scale:</source>
+        <translation type="unfinished">Масштаб:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Scale pasted entities&lt;br&gt;by this factor</source>
+        <translation type="unfinished">Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Flip pasted entities&lt;br&gt;horizontally</source>
+        <translation type="unfinished">Развернуть вставленный элемент&lt;br&gt;по горизонтали</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Flip pasted entities&lt;br&gt;vertically</source>
+        <translation type="unfinished">Развернуть вставленный элемент&lt;br&gt;по вертикали</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
+        <translation type="unfinished">Вставить все объекты&lt;br&gt;в текущий слой&lt;br&gt;вместо исходного слоя</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>To current layer</source>
+        <translation type="unfinished">На текущий слой</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
+        <translation type="unfinished">Переписать существующие слои&lt;br&gt;в чертеже&lt;br&gt;слоями из буфера обмена</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Overwrite layers</source>
+        <translation type="unfinished">Перезаписать слои</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
+        <translation type="unfinished">Переписать существующие блоки&lt;br&gt;в чертеже&lt;br&gt;блоками из буфера обмена</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Overwrite blocks</source>
+        <translation type="unfinished">Перезаписать блоки</translation>
     </message>
 </context>
 <context>
@@ -5204,44 +5826,53 @@ is already in the list.</source>
         <translation>Область дуги:</translation>
     </message>
     <message>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">Режим:</translation>
+        <translation>Режим:</translation>
     </message>
     <message>
+        <location line="+30"/>
         <source>Calculate Area of Sector</source>
-        <translation type="vanished">Вычислить область сектора</translation>
+        <translation>Вычислить область сектора</translation>
     </message>
     <message>
+        <location line="-23"/>
         <source>Calculate Area of Segment</source>
-        <translation type="vanished">Вычислить область сектора</translation>
+        <translation>Вычислить область сектора</translation>
     </message>
     <message>
+        <location line="+53"/>
         <source>Add:</source>
-        <translation type="vanished">Добавить:</translation>
+        <translation>Добавить:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation type="vanished">Добавить объекты для черчения</translation>
+        <translation>Добавить объекты для черчения</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Entity</source>
-        <translation type="vanished">Сущность</translation>
+        <translation>Сущность</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="-96"/>
         <location line="+67"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
         <source>Chord</source>
         <translation>Хорда</translation>
     </message>
     <message>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+13"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation type="vanished">Добавить длины/периметр для черчения</translation>
+        <translation>Добавить длины/периметр для черчения</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="-68"/>
         <location line="+24"/>
         <location line="+43"/>
         <location line="+22"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+3"/>
         <source>Length</source>
         <translation>Длина</translation>
     </message>
@@ -5274,12 +5905,14 @@ is already in the list.</source>
         <translation>периметр:</translation>
     </message>
     <message>
+        <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="vanished">Рассчитать длину и закрыть инструмент.</translation>
+        <translation>Рассчитать длину и закрыть инструмент.</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="vanished">Закрыть инструмент.</translation>
+        <translation>Закрыть инструмент.</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
@@ -5478,12 +6111,14 @@ is already in the list.</source>
         <translation>И&amp;нфо</translation>
     </message>
     <message>
+        <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation type="vanished">Добавить измерение к черчению</translation>
+        <translation>Добавить измерение к черчению</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Text height:</source>
-        <translation type="vanished">Высота текста:</translation>
+        <translation>Высота текста:</translation>
     </message>
     <message>
         <source>Text Height:</source>
@@ -5493,40 +6128,49 @@ is already in the list.</source>
 <context>
     <name>Input</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
-        <translation type="vanished">Десятичная точка:</translation>
+        <translation>Десятичная точка:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
-        <translation type="vanished">Разделитель декартовой координаты:</translation>
+        <translation>Разделитель декартовой координаты:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
-        <translation type="vanished">Разделитель полярной координаты:</translation>
+        <translation>Разделитель полярной координаты:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Relative Coordinate Prefix:</source>
-        <translation type="vanished">Префикс относительной координаты:</translation>
+        <translation>Префикс относительной координаты:</translation>
     </message>
     <message>
+        <location line="+12"/>
         <source>Examples</source>
-        <translation type="vanished">Примеры</translation>
+        <translation>Примеры</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Absolute Cartesian Coordinate:</source>
-        <translation type="vanished">Абсолютная декартовая координата:</translation>
+        <translation>Абсолютная декартовая координата:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Absolute Polar Coordinate:</source>
-        <translation type="vanished">Абсолютная полярная координата:</translation>
+        <translation>Абсолютная полярная координата:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Relative Cartesian Coordinate:</source>
-        <translation type="vanished">Относительная декартовая координата:</translation>
+        <translation>Относительная декартовая координата:</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Relative Polar Coordinate:</source>
-        <translation type="vanished">Относительная полярная координата:</translation>
+        <translation>Относительная полярная координата:</translation>
     </message>
 </context>
 <context>
@@ -5599,48 +6243,60 @@ is already in the list.</source>
         <translation>Позиция</translation>
     </message>
     <message>
+        <location filename="../scripts/Block/InsertBlock/InsertBlock.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="vanished">Вращение:</translation>
+        <translation>Вращение:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Rotate block&lt;br&gt;by this angle</source>
-        <translation type="vanished">Вращать блок&lt;br&gt;на заданный угол</translation>
+        <translation>Вращать блок&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
+        <location line="+107"/>
         <source>Scale X:</source>
-        <translation type="vanished">Масштаб по X:</translation>
+        <translation>Масштаб по X:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="vanished">Масштабировать блок по оси X&lt;br&gt;на заданный коэффициент</translation>
+        <translation>Масштабировать блок по оси X&lt;br&gt;на заданный коэффициент</translation>
     </message>
     <message>
+        <location line="+68"/>
         <source>Y:</source>
-        <translation type="vanished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="vanished">Масштабировать блок по оси Y&lt;br&gt;на заданный коэффициент</translation>
+        <translation>Масштабировать блок по оси Y&lt;br&gt;на заданный коэффициент</translation>
     </message>
     <message>
+        <location line="+65"/>
         <source>Keep Proportions</source>
-        <translation type="vanished">Сохранять пропорции</translation>
+        <translation>Сохранять пропорции</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="vanished">Развернуть блок&lt;br&gt;по горизонтали</translation>
+        <translation>Развернуть блок&lt;br&gt;по горизонтали</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="vanished">Развернуть блок&lt;br&gt;по вертикали</translation>
+        <translation>Развернуть блок&lt;br&gt;по вертикали</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Single Block</source>
-        <translation type="vanished">Одиночный блок</translation>
+        <translation>Одиночный блок</translation>
     </message>
     <message>
+        <location line="+17"/>
+        <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+14"/>
         <source>Array of Blocks</source>
-        <translation type="vanished">Массив блоков</translation>
+        <translation>Массив блоков</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockInit.js" line="+2"/>
@@ -5648,20 +6304,24 @@ is already in the list.</source>
         <translation>Вставить блок</translation>
     </message>
     <message>
+        <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
-        <translation type="vanished">Столбцы:</translation>
+        <translation>Столбцы:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Rows:</source>
-        <translation type="vanished">Ряды:</translation>
+        <translation>Ряды:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation type="vanished">Интервал между столбцами:</translation>
+        <translation>Интервал между столбцами:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation type="vanished">Интервал между рядами:</translation>
+        <translation>Интервал между рядами:</translation>
     </message>
 </context>
 <context>
@@ -5686,44 +6346,54 @@ is already in the list.</source>
         <translation>Позиция</translation>
     </message>
     <message>
+        <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="vanished">Вращение:</translation>
+        <translation>Вращение:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="vanished">Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
+        <translation>Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
+        <location line="+100"/>
         <source>Scale:</source>
-        <translation type="vanished">Масштаб:</translation>
+        <translation>Масштаб:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="vanished">Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
+        <translation>Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
     </message>
     <message>
+        <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="vanished">Развернуть вставленный элемент&lt;br&gt;по горизонтали</translation>
+        <translation>Развернуть вставленный элемент&lt;br&gt;по горизонтали</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="vanished">Развернуть вставленный элемент&lt;br&gt;по вертикали</translation>
+        <translation>Развернуть вставленный элемент&lt;br&gt;по вертикали</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="vanished">Переписать существующие слои&lt;br&gt;в чертеже&lt;br&gt;слоями из буфера обмена</translation>
+        <translation>Переписать существующие слои&lt;br&gt;в чертеже&lt;br&gt;слоями из буфера обмена</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="vanished">Перезаписать слои</translation>
+        <translation>Перезаписать слои</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="vanished">Переписать существующие блоки&lt;br&gt;в чертеже&lt;br&gt;блоками из буфера обмена</translation>
+        <translation>Переписать существующие блоки&lt;br&gt;в чертеже&lt;br&gt;блоками из буфера обмена</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="vanished">Перезаписать блоки</translation>
+        <translation>Перезаписать блоки</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
@@ -5759,36 +6429,44 @@ is already in the list.</source>
 <context>
     <name>IsoProject</name>
     <message>
+        <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation type="vanished">Верх</translation>
+        <translation>Верх</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Bottom</source>
-        <translation type="vanished">Низ</translation>
+        <translation>Низ</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Left</source>
-        <translation type="vanished">Левая</translation>
+        <translation>Левая</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Left back</source>
-        <translation type="vanished">Назад влево</translation>
+        <translation>Назад влево</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Right</source>
-        <translation type="vanished">Правая</translation>
+        <translation>Правая</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Right back</source>
-        <translation type="vanished">Назад вправо</translation>
+        <translation>Назад вправо</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="vanished">Повернуть выделение против часовой стрелки до проекции</translation>
+        <translation>Повернуть выделение против часовой стрелки до проекции</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="vanished">Повернуть выделение по часовой стрелке до проекции</translation>
+        <translation>Повернуть выделение по часовой стрелке до проекции</translation>
     </message>
     <message>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
@@ -5884,6 +6562,19 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>Keyboard</name>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
+        <source>Shortcut timeout:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Enable keyboard navigation in list widgets</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>KeyboardPreferences</name>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
@@ -5899,8 +6590,9 @@ is already in the list.</source>
 <context>
     <name>Language</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translation type="vanished">Язык интерфейса пользователя</translation>
+        <translation>Язык интерфейса пользователя</translation>
     </message>
 </context>
 <context>
@@ -5919,12 +6611,24 @@ is already in the list.</source>
 <context>
     <name>Layer</name>
     <message>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default color for new layers:</source>
-        <translation type="vanished">Цвет новых слоёв по умолчанию:</translation>
+        <translation>Цвет новых слоёв по умолчанию:</translation>
     </message>
     <message>
+        <location line="+17"/>
+        <source>Default lineweight for layer 0:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Default color for layer 0:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-45"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="vanished">Толщина линий для новых слоёв по умолчанию:</translation>
+        <translation>Толщина линий для новых слоёв по умолчанию:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
@@ -5984,12 +6688,24 @@ is already in the list.</source>
         <translation>Совместимость</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation type="vanished">Слой 0</translation>
+        <translation>Слой 0</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation type="vanished">Слой 0 ведёт себя как обычный слой (QCAD)</translation>
+        <translation>Слой 0 ведёт себя как обычный слой (QCAD)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Layer 0 behaves differently (best compatibility)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
@@ -6014,28 +6730,34 @@ is already in the list.</source>
         <translation>Слой уже существует.</translation>
     </message>
     <message>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation type="vanished">Слой данных</translation>
+        <translation>Слой данных</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Layer name:</source>
-        <translation type="vanished">Название слоя:</translation>
+        <translation>Название слоя:</translation>
     </message>
     <message>
+        <location line="+28"/>
         <source>Attributes</source>
-        <translation type="vanished">Атрибуты</translation>
+        <translation>Атрибуты</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Color:</source>
-        <translation type="vanished">Цвет:</translation>
+        <translation>Цвет:</translation>
     </message>
     <message>
+        <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="vanished">Толщина линий:</translation>
+        <translation>Толщина линий:</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="vanished">Тип линии:</translation>
+        <translation>Тип линии:</translation>
     </message>
 </context>
 <context>
@@ -6065,8 +6787,9 @@ is already in the list.</source>
         <translation>Список слоёв</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="vanished">Включить цвета чередующихся строк</translation>
+        <translation>Включить цвета чередующихся строк</translation>
     </message>
 </context>
 <context>
@@ -6104,12 +6827,14 @@ is already in the list.</source>
         <translation>Рисовать полку-выноску (линию, чередующаяся стрелкой)</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation type="vanished">Отменить последний сегмент</translation>
+        <translation>Отменить последний сегмент</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Arrow head</source>
-        <translation type="vanished">Вершина стрелки</translation>
+        <translation>Вершина стрелки</translation>
     </message>
 </context>
 <context>
@@ -6120,12 +6845,14 @@ is already in the list.</source>
         <translation>Выберите линию или дугу</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation type="vanished">Величина:</translation>
+        <translation>Величина:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="vanished">Сумма удлинить или укоротить (отрицательная)</translation>
+        <translation>Сумма удлинить или укоротить (отрицательная)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -6347,77 +7074,93 @@ Library browser will not be available.</source>
         <translation>&amp;Обзор библиотеки</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
         <source>Synchronization</source>
-        <translation type="vanished">Синхронизация</translation>
+        <translation>Синхронизация</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Update search index on startup</source>
-        <translation type="vanished">Обновлять индекс поиска при запуске</translation>
+        <translation>Обновлять индекс поиска при запуске</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Display Options</source>
-        <translation type="vanished">Параметры отображения</translation>
+        <translation>Параметры отображения</translation>
     </message>
     <message>
+        <location line="+9"/>
         <source>Icon Size:</source>
-        <translation type="vanished">Размер иконки:</translation>
+        <translation>Размер иконки:</translation>
     </message>
     <message>
+        <location line="+44"/>
         <source>View Mode:</source>
-        <translation type="vanished">Режим отображения:</translation>
+        <translation>Режим отображения:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation type="vanished">Количество объектов,
+        <translation>Количество объектов,
 показываемых в результатах поиска:</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Library Sources</source>
-        <translation type="vanished">Источники библиотек</translation>
+        <translation>Источники библиотек</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Add...</source>
-        <translation type="vanished">Добавить...</translation>
+        <translation>Добавить...</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Remove</source>
-        <translation type="vanished">Удалить</translation>
+        <translation>Удалить</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Up</source>
-        <translation type="vanished">Вверх</translation>
+        <translation>Вверх</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Down</source>
-        <translation type="vanished">Вниз</translation>
+        <translation>Вниз</translation>
     </message>
 </context>
 <context>
     <name>LibraryBrowserForm</name>
     <message>
+        <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation type="vanished">Файловая система</translation>
+        <translation>Файловая система</translation>
     </message>
     <message>
         <source>Tags</source>
         <translation type="vanished">Метки</translation>
     </message>
     <message>
+        <location line="+60"/>
         <source>Search</source>
-        <translation type="vanished">Поиск</translation>
+        <translation>Поиск</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Look for:</source>
-        <translation type="vanished">Искать:</translation>
+        <translation>Искать:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Clear</source>
-        <translation type="vanished">Очистить</translation>
+        <translation>Очистить</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Find</source>
-        <translation type="vanished">Найти</translation>
+        <translation>Найти</translation>
     </message>
     <message>
         <source>Reset tag selection</source>
@@ -6428,20 +7171,24 @@ shown in search results:</source>
         <translation type="vanished">about:blank</translation>
     </message>
     <message>
+        <location line="+129"/>
         <source>Favorites</source>
-        <translation type="vanished">Избранное</translation>
+        <translation>Избранное</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation type="vanished">Вставить выделенный объект в чертёж</translation>
+        <translation>Вставить выделенный объект в чертёж</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
-        <translation type="vanished">Обновить базу данных из файловой системы</translation>
+        <translation>Обновить базу данных из файловой системы</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>0</source>
-        <translation type="vanished">0</translation>
+        <translation>0</translation>
     </message>
 </context>
 <context>
@@ -6461,20 +7208,24 @@ shown in search results:</source>
         <translation>Линия</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="vanished">Такой же тип объекта как оригинал</translation>
+        <translation>Такой же тип объекта как оригинал</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Line Segment</source>
-        <translation type="vanished">Отрезок</translation>
+        <translation>Отрезок</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="vanished">Бесконечная линия</translation>
+        <translation>Бесконечная линия</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Ray</source>
-        <translation type="vanished">Луч</translation>
+        <translation>Луч</translation>
     </message>
 </context>
 <context>
@@ -6495,32 +7246,39 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation type="vanished">Закрыть последовательность</translation>
+        <translation>Закрыть последовательность</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, C</source>
-        <translation type="vanished">,, C</translation>
+        <translation>,, C</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="vanished">Отменить предыдущий сегмент</translation>
+        <translation>Отменить предыдущий сегмент</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, U</source>
-        <translation type="vanished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="vanished">Вернуть сегмент</translation>
+        <translation>Вернуть сегмент</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>,, R</source>
-        <translation type="vanished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Restrict length or angle</source>
-        <translation type="vanished">Ограничить длину угла</translation>
+        <translation>Ограничить длину угла</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -6546,28 +7304,34 @@ shown in search results:</source>
         <translation>Укажите положение</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>&amp;Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>&amp;Length:</source>
-        <translation type="vanished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>&amp;Reference Point:</source>
-        <translation type="vanished">&amp;Точка привязки:</translation>
+        <translation>&amp;Точка привязки:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Start</source>
-        <translation type="vanished">Начало</translation>
+        <translation>Начало</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Middle</source>
-        <translation type="vanished">Середина</translation>
+        <translation>Середина</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>End</source>
-        <translation type="vanished">Конец</translation>
+        <translation>Конец</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
@@ -6598,12 +7362,14 @@ shown in search results:</source>
         <translation>Линии не пересекаются.</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="vanished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
@@ -6634,28 +7400,39 @@ shown in search results:</source>
         <translation>Готово</translation>
     </message>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation type="vanished">Глубина:</translation>
+        <translation>Глубина:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Finger Width:</source>
-        <translation type="vanished">Толщина указателя:</translation>
+        <translation>Толщина указателя:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="vanished">Соотношение указателя/слота:</translation>
+        <translation>Соотношение указателя/слота:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>&amp;Style:</source>
-        <translation type="vanished">&amp;Стиль:</translation>
+        <translation>&amp;Стиль:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Finger first</source>
-        <translation type="vanished">Сначала указатель</translation>
+        <translation>Сначала указатель</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Slot first</source>
-        <translation type="vanished">Сначала слот</translation>
+        <translation>Сначала слот</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Tenons</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Tennons</source>
@@ -6711,6 +7488,26 @@ shown in search results:</source>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
+        <source>Number of Dovetails:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Dovetail Height:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Dovetail Gradient:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Dovetail/Pin Ratio:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LineFreehand</name>
@@ -6738,24 +7535,29 @@ shown in search results:</source>
 <context>
     <name>LineHorizontal</name>
     <message>
+        <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
         <source>&amp;Length:</source>
-        <translation type="vanished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>&amp;Reference Point:</source>
-        <translation type="vanished">Базовая точка:</translation>
+        <translation>Базовая точка:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Start</source>
-        <translation type="vanished">Начало</translation>
+        <translation>Начало</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Middle</source>
-        <translation type="vanished">Середина</translation>
+        <translation>Середина</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>End</source>
-        <translation type="vanished">Конец</translation>
+        <translation>Конец</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
@@ -6771,24 +7573,29 @@ shown in search results:</source>
 <context>
     <name>LineOrthogonal</name>
     <message>
+        <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="vanished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="vanished">&amp;Точка привязки:</translation>
+        <translation>&amp;Точка привязки:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Start</source>
-        <translation type="vanished">Начало</translation>
+        <translation>Начало</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Middle</source>
-        <translation type="vanished">Середина</translation>
+        <translation>Середина</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>End</source>
-        <translation type="vanished">Конец</translation>
+        <translation>Конец</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js" line="+2"/>
@@ -6832,12 +7639,14 @@ shown in search results:</source>
 <context>
     <name>LineParallel</name>
     <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation type="vanished">&amp;Дистанция:</translation>
+        <translation>&amp;Дистанция:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation type="vanished">&amp;Число:</translation>
+        <translation>&amp;Число:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
@@ -6853,8 +7662,9 @@ shown in search results:</source>
 <context>
     <name>LineParallelThrough</name>
     <message>
+        <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
@@ -6880,8 +7690,9 @@ shown in search results:</source>
         <translation>Вторая дуга или окружность </translation>
     </message>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="vanished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
@@ -6906,28 +7717,34 @@ shown in search results:</source>
         <translation>Установить положение</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation type="vanished">Относительный угол:</translation>
+        <translation>Относительный угол:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Length:</source>
-        <translation type="vanished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="vanished">Точка привязки:</translation>
+        <translation>Точка привязки:</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Start</source>
-        <translation type="vanished">Начало</translation>
+        <translation>Начало</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Middle</source>
-        <translation type="vanished">Середина</translation>
+        <translation>Середина</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>End</source>
-        <translation type="vanished">Конец</translation>
+        <translation>Конец</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -7050,8 +7867,14 @@ shown in search results:</source>
         <translation>Основные настройки</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
-        <translation type="vanished">Глобальный масштаб типа линии:</translation>
+        <translation>Глобальный масштаб типа линии:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Scale of linetypes matches the scale of each viewport</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7089,8 +7912,9 @@ shown in search results:</source>
 <context>
     <name>MdiChild</name>
     <message>
+        <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="obsolete">Без имени</translation>
+        <translation type="unfinished">Без имени</translation>
     </message>
 </context>
 <context>
@@ -7133,28 +7957,48 @@ shown in search results:</source>
         <source>&amp;Mirror</source>
         <translation>&amp;Зеркально отразить</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
+        <source>Copy</source>
+        <translation type="unfinished">Копировать</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation type="unfinished">Использовать текущий с&amp;лой и атрибуты</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Используйте диалоговое окно для опций инструмента</translation>
+    </message>
 </context>
 <context>
     <name>MirrorOptions</name>
     <message>
+        <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="vanished">Параметры зеркала</translation>
+        <translation>Параметры зеркала</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">Число копий</translation>
+        <translation>Число копий</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">У&amp;далить оригинал</translation>
+        <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">С&amp;охранить оригинал</translation>
+        <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
 </context>
 <context>
@@ -7405,11 +8249,61 @@ shown in search results:</source>
     </message>
 </context>
 <context>
+    <name>MouseDisplay</name>
+    <message>
+        <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
+        <source>Form</source>
+        <translation type="unfinished">Форма</translation>
+    </message>
+</context>
+<context>
+    <name>MyPositionDialog</name>
+    <message>
+        <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
+        <source>Enter Position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Position X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+14"/>
+        <source>0.00</source>
+        <translation type="unfinished">0.00</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Position Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MyScripts</name>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
         <translation>Мои скрипты</translation>
+    </message>
+</context>
+<context>
+    <name>MyWidget</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
+        <source>Character Map</source>
+        <translation type="unfinished">Таблица символов</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>MyLineEdit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>MyButton</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7501,12 +8395,14 @@ shown in search results:</source>
 <context>
     <name>Offset</name>
     <message>
+        <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation type="vanished">&amp;Дистанция:</translation>
+        <translation>&amp;Дистанция:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation type="vanished">&amp;Число:</translation>
+        <translation>&amp;Число:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
@@ -7550,8 +8446,9 @@ shown in search results:</source>
         <translation>Укажите точку</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="vanished">Количество:</translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
@@ -7628,60 +8525,79 @@ shown in search results:</source>
         <translation>Пользовательский</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
-        <translation type="vanished">Ориентация бумаги</translation>
+        <translation>Ориентация бумаги</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Portrait</source>
-        <translation type="vanished">Книжная</translation>
+        <translation>Книжная</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Landscape</source>
-        <translation type="vanished">Альбомная</translation>
+        <translation>Альбомная</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Paper</source>
-        <translation type="vanished">Бумага</translation>
+        <translation>Бумага</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Paper size:</source>
-        <translation type="vanished">Размер листа:</translation>
+        <translation>Размер листа:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Paper width:</source>
-        <translation type="vanished">Ширина бумаги:</translation>
+        <translation>Ширина бумаги:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Paper height:</source>
-        <translation type="vanished">Высота бумаги:</translation>
+        <translation>Высота бумаги:</translation>
     </message>
     <message>
+        <location line="+74"/>
         <source>Viewport</source>
-        <translation type="vanished">Видовой экран</translation>
+        <translation>Видовой экран</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation type="vanished">Мас&amp;штаб:</translation>
+        <translation>Мас&amp;штаб:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Offset X:</source>
-        <translation type="vanished">Смещение X:</translation>
+        <translation>Смещение X:</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Offset Y:</source>
-        <translation type="vanished">Смещение Y:</translation>
+        <translation>Смещение Y:</translation>
     </message>
     <message>
+        <location line="+41"/>
         <source>Zero-Point</source>
-        <translation type="vanished">Нулевая точка</translation>
+        <translation>Нулевая точка</translation>
     </message>
     <message>
+        <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation type="vanished">Разное</translation>
+        <translation>Разное</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Point size (mm):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Show paper borders</source>
-        <translation type="vanished">Показать края страницы</translation>
+        <translation>Показать края страницы</translation>
     </message>
 </context>
 <context>
@@ -7710,57 +8626,74 @@ shown in search results:</source>
         <translation>Позиция</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="vanished">Вращение:</translation>
+        <translation>Вращение:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="vanished">Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
+        <translation>Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
+        <location line="+107"/>
         <source>Scale:</source>
-        <translation type="vanished">Масштаб:</translation>
+        <translation>Масштаб:</translation>
     </message>
     <message>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="vanished">Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
+        <translation>Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
     </message>
     <message>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="vanished">Развернуть вставленный элемент&lt;br&gt;по горизонтали</translation>
+        <translation>Развернуть вставленный элемент&lt;br&gt;по горизонтали</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="vanished">Развернуть вставленный элемент&lt;br&gt;по вертикали</translation>
+        <translation>Развернуть вставленный элемент&lt;br&gt;по вертикали</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="vanished">Вставить все объекты&lt;br&gt;в текущий слой&lt;br&gt;вместо исходного слоя</translation>
+        <translation>Вставить все объекты&lt;br&gt;в текущий слой&lt;br&gt;вместо исходного слоя</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>To current layer</source>
-        <translation type="vanished">На текущий слой</translation>
+        <translation>На текущий слой</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="vanished">Переписать существующие слои&lt;br&gt;в чертеже&lt;br&gt;слоями из буфера обмена</translation>
+        <translation>Переписать существующие слои&lt;br&gt;в чертеже&lt;br&gt;слоями из буфера обмена</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="vanished">Перезаписать слои</translation>
+        <translation>Перезаписать слои</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="vanished">Переписать существующие блоки&lt;br&gt;в чертеже&lt;br&gt;блоками из буфера обмена</translation>
+        <translation>Переписать существующие блоки&lt;br&gt;в чертеже&lt;br&gt;блоками из буфера обмена</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="vanished">Перезаписать блоки</translation>
+        <translation>Перезаписать блоки</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
         <translation>&amp;Вставить</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
+        <source>Reset to defaults every time tool is used</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7851,12 +8784,14 @@ shown in search results:</source>
         <translation>Основные настройки</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation type="vanished">Режим: </translation>
+        <translation>Режим: </translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation type="vanished">Размер (в пикселях):</translation>
+        <translation>Размер (в пикселях):</translation>
     </message>
 </context>
 <context>
@@ -7910,28 +8845,35 @@ shown in search results:</source>
 <context>
     <name>PreferencesDialog</name>
     <message>
+        <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
+        <location line="+71"/>
+        <location line="+21"/>
         <source>Preferences</source>
-        <translation type="vanished">Настройки</translation>
+        <translation>Настройки</translation>
     </message>
     <message>
+        <location line="-74"/>
         <source>Filter</source>
-        <translation type="vanished">Фильтр</translation>
+        <translation>Фильтр</translation>
     </message>
     <message>
         <source>Clear Search</source>
         <translation type="vanished">Очистить поиск</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Expand Tree</source>
-        <translation type="vanished">Развернуть дерево</translation>
+        <translation>Развернуть дерево</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="vanished">Свернуть дерево</translation>
+        <translation>Свернуть дерево</translation>
     </message>
     <message>
+        <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation type="vanished">Сбросить в значения по умолчанию</translation>
+        <translation>Сбросить в значения по умолчанию</translation>
     </message>
 </context>
 <context>
@@ -8009,72 +8951,89 @@ shown in search results:</source>
         <translation>Ошибка экспорта (не удалось отрыть файл для записи): %1</translation>
     </message>
     <message>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation type="vanished">Закрыть предварительный просмотр</translation>
+        <translation>Закрыть предварительный просмотр</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Print...</source>
-        <translation type="vanished">Печать...</translation>
+        <translation>Печать...</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="vanished">Экспорт в PDF...</translation>
+        <translation>Экспорт в PDF...</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Scale:</source>
-        <translation type="vanished">Масштаб:</translation>
+        <translation>Масштаб:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="vanished">Масштаб рисования</translation>
+        <translation>Масштаб рисования</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation type="vanished">Переместить позицию бумаги</translation>
+        <translation>Переместить позицию бумаги</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation type="vanished">Вписать чертёж на страницу(ы) автоматически</translation>
+        <translation>Вписать чертёж на страницу(ы) автоматически</translation>
     </message>
     <message>
+        <location line="+11"/>
         <source>Auto Center</source>
-        <translation type="vanished">Центрировать автоматически</translation>
+        <translation>Центрировать автоматически</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Portrait</source>
-        <translation type="vanished">Книжная</translation>
+        <translation>Книжная</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Landscape</source>
-        <translation type="vanished">Альбомная</translation>
+        <translation>Альбомная</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation type="vanished">Автоматическое увеличение до размера страницы</translation>
+        <translation>Автоматическое увеличение до размера страницы</translation>
     </message>
     <message>
+        <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation type="vanished">Полноцветный режим</translation>
+        <translation>Полноцветный режим</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation type="vanished">Режим градаций серого</translation>
+        <translation>Режим градаций серого</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation type="vanished">Чёрно-белый режим</translation>
+        <translation>Чёрно-белый режим</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation type="vanished">Показывать границы страницы</translation>
+        <translation>Показывать границы страницы</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation type="vanished">Печать меток обрезки</translation>
+        <translation>Печать меток обрезки</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Show More Options</source>
-        <translation type="vanished">Показать больше параметров</translation>
+        <translation>Показать больше параметров</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
@@ -8209,40 +9168,58 @@ shown in search results:</source>
         <translation>Виджеты</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="vanished">Выделение:</translation>
+        <translation>Выделение:</translation>
     </message>
     <message>
+        <location line="+31"/>
         <source>General Properties</source>
-        <translation type="vanished">Общие свойства</translation>
+        <translation>Общие свойства</translation>
     </message>
     <message>
+        <location line="+25"/>
         <source>Color:</source>
-        <translation type="vanished">Цвет:</translation>
+        <translation>Цвет:</translation>
     </message>
     <message>
         <source>Move Selection to a New Layer</source>
         <translation type="vanished">Перенос выделения на новый слой</translation>
     </message>
     <message>
+        <location line="+104"/>
         <source>Linetype Scale:</source>
-        <translation type="vanished">Масштаб типа линии:</translation>
+        <translation>Масштаб типа линии:</translation>
     </message>
     <message>
+        <location line="+49"/>
         <source>Protected:</source>
-        <translation type="vanished">Защищённый:</translation>
+        <translation>Защищённый:</translation>
     </message>
     <message>
+        <location line="-143"/>
         <source>Handle:</source>
-        <translation type="vanished">Обработчик:</translation>
+        <translation>Обработчик:</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="vanished">Отобразить координаты Z</translation>
+        <translation>Отобразить координаты Z</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="vanished">Отображать свойства текущего блока и текущего слоя</translation>
+        <translation>Отображать свойства текущего блока и текущего слоя</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Allow adding custom properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Always show all properties (this may slow down selection of entities)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8264,12 +9241,14 @@ shown in search results:</source>
 <context>
     <name>ReadmeDialog</name>
     <message>
+        <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation type="vanished">Краткое описание</translation>
+        <translation>Краткое описание</translation>
     </message>
     <message>
+        <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation type="vanished">Не показывать этот диалог при запуске программы</translation>
+        <translation>Не показывать этот диалог при запуске программы</translation>
     </message>
 </context>
 <context>
@@ -8299,8 +9278,9 @@ shown in search results:</source>
         <translation>&amp;Открыть недавние файлы</translation>
     </message>
     <message>
+        <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation type="vanished">Размер истории недавних файлов:</translation>
+        <translation>Размер истории недавних файлов:</translation>
     </message>
 </context>
 <context>
@@ -8384,16 +9364,20 @@ shown in search results:</source>
 <context>
     <name>RestrictAngleLength</name>
     <message>
+        <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+20"/>
+        <location line="+47"/>
         <source>Base:</source>
-        <translation type="vanished">Основа:</translation>
+        <translation>Основа:</translation>
     </message>
     <message>
+        <location line="-20"/>
         <source>Distance:</source>
-        <translation type="vanished">Расстояние:</translation>
+        <translation>Расстояние:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
@@ -8473,6 +9457,36 @@ shown in search results:</source>
         <source>&amp;Rotate</source>
         <translation>&amp;Поворот</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Используйте диалоговое окно для опций инструмента</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
+        <source>Copy</source>
+        <translation type="unfinished">Копировать</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">Число копий:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation type="unfinished">Использовать текущий с&amp;лой и атрибуты</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Angle:</source>
+        <translation type="unfinished">Угол:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Define angle using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Rotate2</name>
@@ -8492,82 +9506,105 @@ shown in search results:</source>
         <translation>Вращать вокруг &amp;двух</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="vanished">Первичный угол:</translation>
+        <translation>Первичный угол:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="vanished">Вторичный угол:</translation>
+        <translation>Вторичный угол:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Copies:</source>
-        <translation type="vanished">Копии: </translation>
+        <translation>Копии: </translation>
     </message>
 </context>
 <context>
     <name>Rotate2Options</name>
     <message>
+        <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation type="vanished">Параметры поворота вокруг двух центров</translation>
+        <translation>Параметры поворота вокруг двух центров</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">Число копий</translation>
+        <translation>Число копий</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">У&amp;далить оригинал</translation>
+        <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">С&amp;охранить оригинал</translation>
+        <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;Несколько копий</translation>
+        <translation>&amp;Несколько копий</translation>
     </message>
     <message>
+        <location line="+94"/>
         <source>Angle (&amp;a):</source>
-        <translation type="vanished">&amp;Угол (a):</translation>
+        <translation>&amp;Угол (a):</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Angle (&amp;b):</source>
-        <translation type="vanished">&amp;Угол (b):</translation>
+        <translation>&amp;Угол (b):</translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
 </context>
 <context>
     <name>RotateOptions</name>
     <message>
+        <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation type="vanished">Параметры поворота</translation>
+        <translation>Параметры поворота</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">Число копий</translation>
+        <translation>Число копий</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">У&amp;далить оригинал</translation>
+        <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">С&amp;охранить оригинал</translation>
+        <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;Несколько копий</translation>
+        <translation>&amp;Несколько копий</translation>
     </message>
     <message>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
-        <translation type="vanished">&amp;Угол (a):</translation>
+        <translation>&amp;Угол (a):</translation>
     </message>
     <message>
+        <location line="+20"/>
+        <source>Define angle using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
 </context>
 <context>
@@ -8588,12 +9625,14 @@ shown in search results:</source>
         <translation>Второй объект не может быть подрезан.</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="vanished">Усечь</translation>
+        <translation>Усечь</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Radius:</source>
-        <translation type="vanished">Радиус</translation>
+        <translation>Радиус</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -8631,6 +9670,21 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>Open and run a script file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
+        <source>Running Script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this dialog again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8740,24 +9794,29 @@ shown in search results:</source>
 <context>
     <name>SaveAs</name>
     <message>
+        <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="vanished">Файловый диалог</translation>
+        <translation>Файловый диалог</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="vanished">Использовать системный файловый диалог</translation>
+        <translation>Использовать системный файловый диалог</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Saving</source>
-        <translation type="vanished">Сохранить</translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Default format:</source>
-        <translation type="vanished">Формат по умолчанию:</translation>
+        <translation>Формат по умолчанию:</translation>
     </message>
     <message>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation type="vanished">Показать предупреждение при сохранении в формате, который не поддерживает 24-битные цвета</translation>
+        <translation>Показать предупреждение при сохранении в формате, который не поддерживает 24-битные цвета</translation>
     </message>
     <message>
         <source>Load/Save</source>
@@ -8825,51 +9884,112 @@ shown in search results:</source>
         <source>&amp;Scale</source>
         <translation>&amp;Масштабировать</translation>
     </message>
+    <message>
+        <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation type="unfinished">Используйте диалоговое окно для опций инструмента</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
+        <source>Copy</source>
+        <translation type="unfinished">Копировать</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation type="unfinished">Число копий:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation type="unfinished">Использовать текущий с&amp;лой и атрибуты</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Factor x:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+14"/>
+        <source>1</source>
+        <translation type="unfinished">1</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Factor y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Proportional</source>
+        <translation type="unfinished">Пропорционально</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Define factor using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ScaleOptions</name>
     <message>
+        <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation type="vanished">Параметры масштаба</translation>
+        <translation>Параметры масштаба</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">Число копий</translation>
+        <translation>Число копий</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">У&amp;далить оригинал</translation>
+        <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">С&amp;охранить оригинал</translation>
+        <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;Несколько копий</translation>
+        <translation>&amp;Несколько копий</translation>
     </message>
     <message>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
-        <translation type="vanished">Коэффициент &amp;x:</translation>
+        <translation>Коэффициент &amp;x:</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Proportional</source>
-        <translation type="vanished">Пропорционально</translation>
+        <translation>Пропорционально</translation>
     </message>
     <message>
+        <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation type="vanished">Коэффициент &amp;y:</translation>
+        <translation>Коэффициент &amp;y:</translation>
     </message>
     <message>
+        <location line="+44"/>
+        <source>Define factor using mouse cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
 </context>
 <context>
     <name>Scripting</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation type="vanished">Пересканировать директории скриптов при запуске</translation>
+        <translation>Пересканировать директории скриптов при запуске</translation>
     </message>
 </context>
 <context>
@@ -8978,12 +10098,14 @@ shown in search results:</source>
 <context>
     <name>SelectByHandleDialog</name>
     <message>
+        <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation type="vanished">Выделение обработчиком</translation>
+        <translation>Выделение обработчиком</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation type="vanished">Обработчик (шестнадцатиричный):</translation>
+        <translation>Обработчик (шестнадцатиричный):</translation>
     </message>
 </context>
 <context>
@@ -8994,32 +10116,42 @@ shown in search results:</source>
         <translation>Выберите объект из контура</translation>
     </message>
     <message>
+        <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">Режим:</translation>
+        <translation>Режим:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="vanished">Заменить текущее выделение</translation>
+        <translation>Заменить текущее выделение</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="vanished">Режим выделения</translation>
+        <translation>Режим выделения</translation>
     </message>
     <message>
+        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="vanished">Добавить в текущее выделение</translation>
+        <translation>Добавить в текущее выделение</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="vanished">Вычесть из текущего выделения</translation>
+        <translation>Вычесть из текущего выделения</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="vanished">Пересечь с текущим выделением</translation>
+        <translation>Пересечь с текущим выделением</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Tolerance:</source>
-        <translation type="vanished">Допуск:</translation>
+        <translation>Допуск:</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -9045,28 +10177,37 @@ shown in search results:</source>
         <translation>Вторая точка</translation>
     </message>
     <message>
+        <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">Режим:</translation>
+        <translation>Режим:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="vanished">Заменить текущее выделение</translation>
+        <translation>Заменить текущее выделение</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="vanished">Режим выделения</translation>
+        <translation>Режим выделения</translation>
     </message>
     <message>
+        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="vanished">Добавить в текущее выделение</translation>
+        <translation>Добавить в текущее выделение</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="vanished">Вычесть из текущего выделения</translation>
+        <translation>Вычесть из текущего выделения</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="vanished">Пересечь с текущим выделением</translation>
+        <translation>Пересечь с текущим выделением</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
@@ -9105,28 +10246,37 @@ shown in search results:</source>
         <translation>Выберите объект на слое</translation>
     </message>
     <message>
+        <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">Режим:</translation>
+        <translation>Режим:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="vanished">Заменить текущее выделение</translation>
+        <translation>Заменить текущее выделение</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="vanished">Режим выделения</translation>
+        <translation>Режим выделения</translation>
     </message>
     <message>
+        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="vanished">Добавить в текущее выделение</translation>
+        <translation>Добавить в текущее выделение</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="vanished">Вычесть из текущего выделения</translation>
+        <translation>Вычесть из текущего выделения</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="vanished">Пересечь с текущим выделением</translation>
+        <translation>Пересечь с текущим выделением</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
@@ -9157,32 +10307,42 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="vanished">Режим:</translation>
+        <translation>Режим:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="vanished">Заменить текущее выделение</translation>
+        <translation>Заменить текущее выделение</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="vanished">Режим выделения</translation>
+        <translation>Режим выделения</translation>
     </message>
     <message>
+        <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="vanished">Добавить в текущее выделение</translation>
+        <translation>Добавить в текущее выделение</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="vanished">Вычесть из текущего выделения</translation>
+        <translation>Вычесть из текущего выделения</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="vanished">Пересечь с текущим выделением</translation>
+        <translation>Пересечь с текущим выделением</translation>
     </message>
     <message>
+        <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="vanished">Крестовое выделение</translation>
+        <translation>Крестовое выделение</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -9260,8 +10420,9 @@ shown in search results:</source>
 %1.</translation>
     </message>
     <message>
+        <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="vanished">Форма</translation>
+        <translation>Форма</translation>
     </message>
 </context>
 <context>
@@ -9294,8 +10455,14 @@ shown in search results:</source>
         <translation>Фигура</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation type="vanished">Создать ломаную линию</translation>
+        <translation>Создать ломаную линию</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Fill</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9363,8 +10530,9 @@ shown in search results:</source>
         <translation>Рисовать правильный многоугольник по центру и средней точке стороны</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="vanished">Углы:</translation>
+        <translation>Углы:</translation>
     </message>
 </context>
 <context>
@@ -9405,12 +10573,14 @@ shown in search results:</source>
         <translation>Рисовать правильный многоугольник из средних точек двух противоположных сторон или двух противоположных углов</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="vanished">Углы:</translation>
+        <translation>Углы:</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Corner to Corner</source>
-        <translation type="vanished">Угол к углу</translation>
+        <translation>Угол к углу</translation>
     </message>
 </context>
 <context>
@@ -9431,8 +10601,9 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="vanished">Углы:</translation>
+        <translation>Углы:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -9463,8 +10634,9 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="vanished">Углы:</translation>
+        <translation>Углы:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
@@ -9503,24 +10675,32 @@ shown in search results:</source>
         <translation>Рисовать прямоугольник в заданной позиции и заданным размером</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
-        <translation type="vanished">Ширина:</translation>
+        <translation>Ширина:</translation>
     </message>
     <message>
+        <location line="+23"/>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
-        <translation type="vanished">Высота:</translation>
+        <translation>Высота:</translation>
     </message>
     <message>
+        <location line="+30"/>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="vanished">Базовая точка:</translation>
+        <translation>Базовая точка:</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="vanished">Создать ломаную линию</translation>
+        <translation>Создать ломаную линию</translation>
     </message>
 </context>
 <context>
@@ -9567,8 +10747,9 @@ shown in search results:</source>
 <context>
     <name>Single</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="vanished">Одинарный</translation>
+        <translation>Одинарный</translation>
     </message>
 </context>
 <context>
@@ -9622,28 +10803,34 @@ shown in search results:</source>
         <translation>Установите координату</translation>
     </message>
     <message>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
         <source>&amp;x:</source>
-        <translation type="vanished">&amp;x:</translation>
+        <translation>&amp;x:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>X Coordinate</source>
-        <translation type="vanished">Координата X</translation>
+        <translation>Координата X</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>&amp;y:</source>
-        <translation type="vanished">&amp;y:</translation>
+        <translation>&amp;y:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Y Coordinate</source>
-        <translation type="vanished">Координата Y</translation>
+        <translation>Координата Y</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="vanished">Отметьте для относительных координат</translation>
+        <translation>Отметьте для относительных координат</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="vanished">Относител&amp;ьный</translation>
+        <translation>Относител&amp;ьный</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -9654,28 +10841,34 @@ shown in search results:</source>
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
+        <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
-        <translation type="vanished">&amp;r:</translation>
+        <translation>&amp;r:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Radius (Distance)</source>
-        <translation type="vanished">Радиус (Расстояние)</translation>
+        <translation>Радиус (Расстояние)</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>&amp;&lt;:</source>
-        <translation type="vanished">&amp;&lt;:</translation>
+        <translation>&amp;&lt;:</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Angle</source>
-        <translation type="vanished">Угол</translation>
+        <translation>Угол</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="vanished">Отметьте для относительных координат</translation>
+        <translation>Отметьте для относительных координат</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="vanished">Относител&amp;ьный</translation>
+        <translation>Относител&amp;ьный</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -9686,8 +10879,9 @@ shown in search results:</source>
 <context>
     <name>SnapDistance</name>
     <message>
+        <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="vanished">Расстояние прилипания:</translation>
+        <translation>Расстояние прилипания:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
@@ -9708,20 +10902,24 @@ shown in search results:</source>
         <translation>Вторая точка</translation>
     </message>
     <message>
+        <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="vanished">Расстояние прилипания:</translation>
+        <translation>Расстояние прилипания:</translation>
     </message>
     <message>
+        <location line="+69"/>
         <source>Distance</source>
-        <translation type="vanished">Расстояние</translation>
+        <translation>Расстояние</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Percentage</source>
-        <translation type="vanished">Проценты</translation>
+        <translation>Проценты</translation>
     </message>
     <message>
+        <location line="+5"/>
         <source>Fraction</source>
-        <translation type="vanished">Дробь</translation>
+        <translation>Дробь</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
@@ -9791,6 +10989,11 @@ shown in search results:</source>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
+        <source>Terminate manual intersection tool after one use</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9901,24 +11104,29 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
         <source>Undo Last Control Point</source>
-        <translation type="vanished">Возврат к последней контрольной точке</translation>
+        <translation>Возврат к последней контрольной точке</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Degree:</source>
-        <translation type="vanished">Градусы:</translation>
+        <translation>Градусы:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Choose Spline Degree</source>
-        <translation type="vanished">Выберите градус кривой</translation>
+        <translation>Выберите градус кривой</translation>
     </message>
     <message>
+        <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="vanished">Отметить для закрытой кривой</translation>
+        <translation>Отметить для закрытой кривой</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Closed</source>
-        <translation type="vanished">Закрытый</translation>
+        <translation>Закрытый</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -9942,8 +11150,9 @@ shown in search results:</source>
 <context>
     <name>Startup</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation type="vanished">Включить сплэшскрин</translation>
+        <translation>Включить сплэшскрин</translation>
     </message>
 </context>
 <context>
@@ -9957,28 +11166,39 @@ shown in search results:</source>
 <context>
     <name>StatusBar</name>
     <message>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
-        <translation type="vanished">Шрифт строки статуса</translation>
+        <translation>Шрифт строки статуса</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="vanished">Виджеты строки статуса</translation>
+        <translation>Виджеты строки статуса</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="vanished">Дисплей координаты</translation>
+        <translation>Дисплей координаты</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="vanished">Дисплей мыши</translation>
+        <translation>Дисплей мыши</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Selection display</source>
-        <translation type="vanished">Дисплей выделения</translation>
+        <translation>Дисплей выделения</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Progress display</source>
-        <translation type="vanished">Дисплей прогресса</translation>
+        <translation>Дисплей прогресса</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Show status tips</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
@@ -10058,21 +11278,34 @@ shown in search results:</source>
     </message>
     <message>
         <location line="-34"/>
+        <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Импорт SVG</translation>
     </message>
     <message>
+        <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation type="vanished">Разрешение:</translation>
+        <translation>Разрешение:</translation>
     </message>
     <message>
+        <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="vanished">Пиксели/дюйм</translation>
+        <translation>Пиксели/дюйм</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
         <translation>&amp;Импорт SVG...</translation>
+    </message>
+    <message>
+        <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
+        <source>Splines</source>
+        <translation type="unfinished">Кривые</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Automatically convert splines to lines / arcs if appropriate</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10086,8 +11319,9 @@ shown in search results:</source>
 <context>
     <name>TabBar</name>
     <message>
+        <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation type="vanished">Показывать строку вкладок</translation>
+        <translation>Показывать строку вкладок</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
@@ -10108,16 +11342,21 @@ shown in search results:</source>
         <translation>Положение</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Contents:</source>
-        <translation type="vanished">Содержимое:</translation>
+        <translation>Содержимое:</translation>
     </message>
     <message>
+        <location line="+20"/>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+23"/>
         <source>Height:</source>
-        <translation type="vanished">Высота:</translation>
+        <translation>Высота:</translation>
     </message>
     <message>
+        <location line="+20"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
@@ -10130,20 +11369,74 @@ shown in search results:</source>
         <translation>Рисовать текст</translation>
     </message>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
         <source>Show font preview in font controls</source>
-        <translation type="vanished">Показать предварительный просмотр шрифта в управлении шрифтами</translation>
+        <translation>Показать предварительный просмотр шрифта в управлении шрифтами</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation type="vanished">Использовать сокращённый набор шрифтов:</translation>
+        <translation>Использовать сокращённый набор шрифтов:</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Uncheck all</source>
-        <translation type="vanished">Снять все отметки</translation>
+        <translation>Снять все отметки</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Check all</source>
-        <translation type="vanished">Отметить все</translation>
+        <translation>Отметить все</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-10"/>
+        <source>Text</source>
+        <translation type="unfinished">Текст</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Text height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Letter spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>0</source>
+        <translation type="unfinished">0</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Direction:</source>
+        <translation type="unfinished">Направление:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Counter Clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Clockwise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Fit text to line, arc or circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Fit</source>
+        <translation type="unfinished">Заполнить</translation>
     </message>
 </context>
 <context>
@@ -10314,166 +11607,208 @@ shown in search results:</source>
         <translation>Неразрывный пробел</translation>
     </message>
     <message>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation type="vanished">Текст</translation>
+        <translation>Текст</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Main Font</source>
-        <translation type="vanished">Основной шрифт</translation>
+        <translation>Основной шрифт</translation>
     </message>
     <message>
+        <location line="+24"/>
         <source>Height:</source>
-        <translation type="vanished">Высота:</translation>
+        <translation>Высота:</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="vanished">Высота текста в единицах измерения чертежа</translation>
+        <translation>Высота текста в единицах измерения чертежа</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <location line="+268"/>
         <source>Bold</source>
-        <translation type="vanished">Полужирный</translation>
+        <translation>Полужирный</translation>
     </message>
     <message>
+        <location line="-261"/>
+        <location line="+274"/>
         <source>Italic</source>
-        <translation type="vanished">Курсив</translation>
+        <translation>Курсив</translation>
     </message>
     <message>
+        <location line="-260"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="vanished">Текст помещается на одной строке и не имеет форматирования</translation>
+        <translation>Текст помещается на одной строке и не имеет форматирования</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="vanished">Простой текст
+        <translation>Простой текст
 (одна линия, без форматирования)</translation>
     </message>
     <message>
+        <location line="+21"/>
         <source>Rich Text</source>
-        <translation type="vanished">Текст с форматированием</translation>
+        <translation>Текст с форматированием</translation>
     </message>
     <message>
+        <location line="+36"/>
         <source>Cut</source>
-        <translation type="vanished">Вырезать</translation>
+        <translation>Вырезать</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Copy</source>
-        <translation type="vanished">Копировать</translation>
+        <translation>Копировать</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Paste</source>
-        <translation type="vanished">Вставить</translation>
+        <translation>Вставить</translation>
     </message>
     <message>
+        <location line="+170"/>
         <source>Ctrl+B</source>
-        <translation type="vanished">Ctrl+B</translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation type="vanished">Ctrl+I</translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
+        <location line="+40"/>
         <source>Insert Symbol...</source>
-        <translation type="vanished">Вставить символ...</translation>
+        <translation>Вставить символ...</translation>
     </message>
     <message>
+        <location line="+43"/>
         <source>Source</source>
-        <translation type="vanished">Источник</translation>
+        <translation>Источник</translation>
     </message>
     <message>
+        <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="vanished">Атрибуты</translation>
+        <translation>Атрибуты</translation>
     </message>
     <message>
+        <location line="+8"/>
         <source>Tag:</source>
-        <translation type="vanished">Метка:</translation>
+        <translation>Метка:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="vanished">Подсказка:</translation>
+        <translation>Подсказка:</translation>
     </message>
     <message>
+        <location line="+17"/>
         <source>Value:</source>
-        <translation type="vanished">Значение:</translation>
+        <translation>Значение:</translation>
     </message>
     <message>
+        <location line="+42"/>
         <source>Text Geometry</source>
-        <translation type="vanished">Геометрия текста</translation>
+        <translation>Геометрия текста</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="vanished">Коэффициент межстрочного интервала:</translation>
+        <translation>Коэффициент межстрочного интервала:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="vanished">Коэффициент межстрочного интервала</translation>
+        <translation>Коэффициент межстрочного интервала</translation>
     </message>
     <message>
+        <location line="+16"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="vanished">Угол вращения</translation>
+        <translation>Угол вращения</translation>
     </message>
     <message>
+        <location line="+25"/>
         <source>Alignment</source>
-        <translation type="vanished">Выравнивание</translation>
+        <translation>Выравнивание</translation>
     </message>
     <message>
+        <location line="+311"/>
         <source>Bottom Left</source>
-        <translation type="vanished">Слева внизу</translation>
+        <translation>Слева внизу</translation>
     </message>
     <message>
+        <location line="+29"/>
         <source>Bottom Center</source>
-        <translation type="vanished">Снизу и по центру</translation>
+        <translation>Снизу и по центру</translation>
     </message>
     <message>
+        <location line="-261"/>
         <source>Top Center</source>
-        <translation type="vanished">Вверху и по центру</translation>
+        <translation>Вверху и по центру</translation>
     </message>
     <message>
+        <location line="+29"/>
         <source>Middle Right</source>
-        <translation type="vanished">Справа посередине</translation>
+        <translation>Справа посередине</translation>
     </message>
     <message>
+        <location line="+116"/>
         <source>Base Left</source>
-        <translation type="vanished">Левая основа</translation>
+        <translation>Левая основа</translation>
     </message>
     <message>
+        <location line="-177"/>
         <source>Top Left</source>
-        <translation type="vanished">Вверху слева</translation>
+        <translation>Вверху слева</translation>
     </message>
     <message>
+        <location line="+206"/>
         <source>Base Center</source>
-        <translation type="vanished">Центральная основа</translation>
+        <translation>Центральная основа</translation>
     </message>
     <message>
+        <location line="+29"/>
         <source>Base Right</source>
-        <translation type="vanished">Правая основа</translation>
+        <translation>Правая основа</translation>
     </message>
     <message>
+        <location line="-116"/>
         <source>Middle Center</source>
-        <translation type="vanished">Посередине и по центру</translation>
+        <translation>Посередине и по центру</translation>
     </message>
     <message>
+        <location line="+203"/>
         <source>Bottom Right</source>
-        <translation type="vanished">Внизу справа</translation>
+        <translation>Внизу справа</translation>
     </message>
     <message>
+        <location line="-174"/>
         <source>Middle Left</source>
-        <translation type="vanished">Посередине и слева</translation>
+        <translation>Посередине и слева</translation>
     </message>
     <message>
+        <location line="-58"/>
         <source>Top Right</source>
-        <translation type="vanished">Сверху справа</translation>
+        <translation>Сверху справа</translation>
     </message>
     <message>
+        <location line="+291"/>
         <source>Cancel</source>
-        <translation type="vanished">Отменить</translation>
+        <translation>Отменить</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>OK</source>
-        <translation type="vanished">OK</translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -10487,6 +11822,14 @@ shown in search results:</source>
         <location line="+0"/>
         <source>Text</source>
         <translation>Текст</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
+        <source>User Interface Theme:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10505,22 +11848,25 @@ shown in search results:</source>
 <context>
     <name>ThreeBelow</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="vanished">Три: Под</translation>
+        <translation>Три: Под</translation>
     </message>
 </context>
 <context>
     <name>ThreeHorizontal</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="vanished">Три: Горизонтальный</translation>
+        <translation>Три: Горизонтальный</translation>
     </message>
 </context>
 <context>
     <name>ThreeVertical</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="vanished">Три: Вертикальный</translation>
+        <translation>Три: Вертикальный</translation>
     </message>
 </context>
 <context>
@@ -10574,24 +11920,29 @@ shown in search results:</source>
 <context>
     <name>ToolBar</name>
     <message>
+        <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon Size:</source>
-        <translation type="vanished">Размер иконки:</translation>
+        <translation>Размер иконки:</translation>
     </message>
     <message>
+        <location line="+72"/>
         <source>Pixel</source>
-        <translation type="vanished">Пиксель</translation>
+        <translation>Пиксель</translation>
     </message>
     <message>
+        <location line="+3"/>
         <source>px</source>
-        <translation type="vanished">пикс.</translation>
+        <translation>пикс.</translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>Options Toolbar</source>
-        <translation type="vanished">Панель опций</translation>
+        <translation>Панель опций</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>Shortcut Prefix Character:</source>
-        <translation type="vanished">Префикс символа горячей клавиши:</translation>
+        <translation>Префикс символа горячей клавиши:</translation>
     </message>
 </context>
 <context>
@@ -10631,8 +11982,9 @@ shown in search results:</source>
 <context>
     <name>ToolMatrixWidget</name>
     <message>
+        <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+37"/>
         <source>Filter</source>
-        <translation type="vanished">Фильтр</translation>
+        <translation>Фильтр</translation>
     </message>
 </context>
 <context>
@@ -10676,54 +12028,65 @@ shown in search results:</source>
         <translation>Переместить или скопировать объекты один или несколько раз</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="vanished">Используйте диалоговое окно для опций инструмента</translation>
+        <translation>Используйте диалоговое окно для опций инструмента</translation>
     </message>
     <message>
+        <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="vanished">Копировать</translation>
+        <translation>Копировать</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="vanished">Число копий:</translation>
+        <translation>Число копий:</translation>
     </message>
     <message>
+        <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
 </context>
 <context>
     <name>TranslateOptions</name>
     <message>
+        <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation type="vanished">Опции Сдвига/Копирования</translation>
+        <translation>Опции Сдвига/Копирования</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">Число копий</translation>
+        <translation>Число копий</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">У&amp;далить оригинал</translation>
+        <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">С&amp;охранить оригинал</translation>
+        <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;Несколько копий</translation>
+        <translation>&amp;Несколько копий</translation>
     </message>
     <message>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
 </context>
 <context>
     <name>TranslateRotate</name>
     <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="vanished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
@@ -10734,32 +12097,39 @@ shown in search results:</source>
 <context>
     <name>TranslateRotateOptions</name>
     <message>
+        <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation type="vanished">Параметры сдвига/поворота</translation>
+        <translation>Параметры сдвига/поворота</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="vanished">Число копий</translation>
+        <translation>Число копий</translation>
     </message>
     <message>
+        <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="vanished">У&amp;далить оригинал</translation>
+        <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="vanished">С&amp;охранить оригинал</translation>
+        <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
+        <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="vanished">&amp;Несколько копий</translation>
+        <translation>&amp;Несколько копий</translation>
     </message>
     <message>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
-        <translation type="vanished">&amp;Угол (a):</translation>
+        <translation>&amp;Угол (a):</translation>
     </message>
     <message>
+        <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="vanished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
 </context>
 <context>
@@ -10819,15 +12189,17 @@ shown in search results:</source>
 <context>
     <name>TwoHorizontal</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="vanished">Два: Горизонтальный</translation>
+        <translation>Два: Горизонтальный</translation>
     </message>
 </context>
 <context>
     <name>TwoVertical</name>
     <message>
+        <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="vanished">Два: Вертикальный</translation>
+        <translation>Два: Вертикальный</translation>
     </message>
 </context>
 <context>
@@ -10841,16 +12213,19 @@ shown in search results:</source>
 <context>
     <name>UnitSettings</name>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
-        <translation type="vanished">Единица измерения чертежа:</translation>
+        <translation>Единица измерения чертежа:</translation>
     </message>
     <message>
+        <location line="+10"/>
         <source>Paper Unit:</source>
-        <translation type="vanished">Единица размера бумаги:</translation>
+        <translation>Единица размера бумаги:</translation>
     </message>
     <message>
+        <location line="+13"/>
         <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="vanished">Система измерения (для типов линий и образцов штриховки):</translation>
+        <translation>Система измерения (для типов линий и образцов штриховки):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -11039,12 +12414,19 @@ shown in search results:</source>
 <context>
     <name>Viewport</name>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation type="vanished">Видовые экраны</translation>
+        <translation>Видовые экраны</translation>
     </message>
     <message>
+        <location line="+14"/>
         <source>Preview</source>
-        <translation type="vanished">Предварительный просмотр</translation>
+        <translation>Предварительный просмотр</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
+        <source>Grid Spacing &lt; Meta Grid Spacing</source>
+        <translation type="unfinished">Шаг сетки &lt; шага дополнительной сетки</translation>
     </message>
 </context>
 <context>
@@ -11433,7 +12815,7 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+328"/>
+        <location filename="../scripts/autostart.js" line="+352"/>
         <source>Loading add-on translations...</source>
         <translation>Загрузка переводов для add-on...</translation>
     </message>
@@ -11903,44 +13285,80 @@ shown in search results:</source>
 <context>
     <name>scrollArea</name>
     <message>
+        <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="vanished">Видовой экран 1</translation>
+        <translation>Видовой экран 1</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="vanished">Показать сетку</translation>
+        <translation>Показать сетку</translation>
     </message>
     <message>
+        <location line="-446"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation type="vanished">Изометрическая сетка</translation>
+        <translation>Изометрическая сетка</translation>
     </message>
     <message>
+        <location line="-449"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="vanished">Интервалы сетки</translation>
+        <translation>Интервалы сетки</translation>
     </message>
     <message>
+        <location line="-450"/>
+        <location line="+90"/>
+        <location line="+76"/>
+        <location line="+89"/>
+        <location line="+76"/>
+        <location line="+56"/>
+        <location line="+116"/>
+        <location line="+30"/>
         <source>Y:</source>
-        <translation type="vanished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
+        <location line="-512"/>
+        <location line="+76"/>
+        <location line="+55"/>
+        <location line="+63"/>
+        <location line="+89"/>
+        <location line="+90"/>
+        <location line="+62"/>
+        <location line="+63"/>
         <source>X:</source>
-        <translation type="vanished">X:</translation>
+        <translation>X:</translation>
     </message>
     <message>
+        <location line="-462"/>
+        <location line="+152"/>
+        <location line="+152"/>
+        <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation type="vanished">Минимальный шаг дополнительной сетки</translation>
+        <translation>Минимальный шаг дополнительной сетки</translation>
     </message>
     <message>
+        <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="vanished">Видовой экран 2</translation>
+        <translation>Видовой экран 2</translation>
     </message>
     <message>
+        <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="vanished">Видовой экран 3</translation>
+        <translation>Видовой экран 3</translation>
     </message>
     <message>
+        <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="vanished">Видовой экран 4</translation>
+        <translation>Видовой экран 4</translation>
     </message>
 </context>
 <context>
