@@ -2807,7 +2807,7 @@ Přejete si ho obnovit?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Použijte maximální úhel</translation>
     </message>
 </context>
 <context>
@@ -4301,7 +4301,7 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ahoj světe.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4314,12 +4314,12 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Minimální příklad 2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Poloměr:</translation>
     </message>
 </context>
 <context>
@@ -4737,22 +4737,21 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished">Formulář</translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost kostky:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation type="vanished">10</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Draw plates</source>
-        <translation type="unfinished"></translation>
+        <location line="+14"/>
+        <source>Draw glue lap</source>
+        <translation>Nakreslete kroužek lepidla</translation>
     </message>
 </context>
 <context>
@@ -5521,67 +5520,67 @@ již v seznamu je.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Jako blok:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Natočení:</translation>
+        <translation>Natočení:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Natočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
+        <translation>Natočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Scale:</source>
-        <translation type="unfinished">Měřítko:</translation>
+        <translation>Měřítko:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Změnit měřítko vložených prvků&lt;br&gt;tímto faktorem</translation>
+        <translation>Změnit měřítko vložených prvků&lt;br&gt;tímto faktorem</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Překlopit vložené prvky&lt;br&gt;horizontálně</translation>
+        <translation>Překlopit vložené prvky&lt;br&gt;horizontálně</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Překlopit vložené prvky&lt;br&gt;vertikálně</translation>
+        <translation>Překlopit vložené prvky&lt;br&gt;vertikálně</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">Vložit všechny prvky do aktuální vrstvy&lt;br&gt;namísto původní vrstvy</translation>
+        <translation>Vložit všechny prvky do aktuální vrstvy&lt;br&gt;namísto původní vrstvy</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished">Do aktuální vrstvy</translation>
+        <translation>Do aktuální vrstvy</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Překreslit existující vrstvy&lt;br&gt;ve výkresu&lt;br&gt;vrstvami ze schránky</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepsat vrstvy</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Překreslit existující bloky&lt;br&gt;ve výkresu&lt;br&gt;bloky ze schránky</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Přepsat bloky</translation>
+        <translation>Přepsat bloky</translation>
     </message>
 </context>
 <context>
@@ -7351,7 +7350,7 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rybinová výška:</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -7816,12 +7815,12 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopírovat</translation>
+        <translation>Kopírovat</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Použít aktuální vrstvu a &amp;vlastnosti</translation>
+        <translation>Použít aktuální vrstvu a &amp;vlastnosti</translation>
     </message>
 </context>
 <context>
@@ -8076,7 +8075,7 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished">Formulář</translation>
+        <translation>Form</translation>
     </message>
 </context>
 <context>
@@ -8089,18 +8088,18 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozice X:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozice Y:</translation>
     </message>
 </context>
 <context>
@@ -8116,17 +8115,17 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">Mapa znaků</translation>
+        <translation>Mapa znaků</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation>MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation>MyButton</translation>
     </message>
 </context>
 <context>
@@ -9280,27 +9279,27 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopírovat</translation>
+        <translation>Kopírovat</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Počet kopií:</translation>
+        <translation>Počet kopií:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Použít aktuální vrstvu a &amp;vlastnosti</translation>
+        <translation>Použít aktuální vrstvu a &amp;vlastnosti</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Úhel:</translation>
+        <translation>Úhel:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished">Určete úhel pomocí kurzoru myši</translation>
+        <translation>Určete úhel pomocí kurzoru myši</translation>
     </message>
 </context>
 <context>
@@ -9699,43 +9698,43 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopírovat</translation>
+        <translation>Kopírovat</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Počet kopií:</translation>
+        <translation>Počet kopií:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Použít aktuální vrstvu a &amp;vlastnosti</translation>
+        <translation>Použít aktuální vrstvu a &amp;vlastnosti</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Faktor &amp;x:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Faktor &amp;y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished">Úměrně</translation>
+        <translation>Úměrně</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished">Definujte faktor pomocí kurzoru myši</translation>
+        <translation>Definujte faktor pomocí kurzoru myši</translation>
     </message>
 </context>
 <context>
@@ -11108,7 +11107,7 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -11745,12 +11744,12 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgety</translation>
+        <translation>Widgety</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Panely nástrojů</translation>
+        <translation>Panely nástrojů</translation>
     </message>
 </context>
 <context>

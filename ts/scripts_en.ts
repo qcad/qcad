@@ -2806,7 +2806,7 @@ Do you wish to recover it?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Use maximum angle</translation>
     </message>
 </context>
 <context>
@@ -4339,7 +4339,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Radius:</translation>
     </message>
 </context>
 <context>
@@ -4768,22 +4768,25 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished">Form</translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cube size:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation type="vanished">10</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
+        <source>Draw glue lap</source>
+        <translation>Draw glue lap</translation>
+    </message>
+    <message>
         <source>Draw plates</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Draw plates</translation>
     </message>
 </context>
 <context>
@@ -5568,67 +5571,67 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation>As block:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Rotation:</translation>
+        <translation>Rotation:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Rotate pasted entities&lt;br&gt;by this angle</translation>
+        <translation>Rotate pasted entities&lt;br&gt;by this angle</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Scale:</source>
-        <translation type="unfinished">Scale:</translation>
+        <translation>Scale:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Scale pasted entities&lt;br&gt;by this factor</translation>
+        <translation>Scale pasted entities&lt;br&gt;by this factor</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Flip pasted entities&lt;br&gt;horizontally</translation>
+        <translation>Flip pasted entities&lt;br&gt;horizontally</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Flip pasted entities&lt;br&gt;vertically</translation>
+        <translation>Flip pasted entities&lt;br&gt;vertically</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</translation>
+        <translation>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished">To current layer</translation>
+        <translation>To current layer</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</translation>
+        <translation>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished">Overwrite layers</translation>
+        <translation>Overwrite layers</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</translation>
+        <translation>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Overwrite blocks</translation>
+        <translation>Overwrite blocks</translation>
     </message>
 </context>
 <context>
@@ -7386,22 +7389,22 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation>Number of Dovetails:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dovetail Height:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dovetail Gradient:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dovetail/Pin Ratio:</translation>
     </message>
 </context>
 <context>
@@ -7856,12 +7859,12 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Copy</translation>
+        <translation>Copy</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Use current layer and &amp;attributes</translation>
+        <translation>Use current layer and &amp;attributes</translation>
     </message>
 </context>
 <context>
@@ -8140,7 +8143,7 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished">Form</translation>
+        <translation>Form</translation>
     </message>
 </context>
 <context>
@@ -8148,23 +8151,23 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Enter Position</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Position X:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Position Y:</translation>
     </message>
 </context>
 <context>
@@ -8180,17 +8183,17 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">Character Map</translation>
+        <translation>Character Map</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation>MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation>MyButton</translation>
     </message>
 </context>
 <context>
@@ -9342,27 +9345,27 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Copy</translation>
+        <translation>Copy</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Number of Copies:</translation>
+        <translation>Number of Copies:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Use current layer and &amp;attributes</translation>
+        <translation>Use current layer and &amp;attributes</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Angle:</translation>
+        <translation>Angle:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished">Define angle using mouse cursor</translation>
+        <translation>Define angle using mouse cursor</translation>
     </message>
 </context>
 <context>
@@ -9761,43 +9764,43 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Copy</translation>
+        <translation>Copy</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Number of Copies:</translation>
+        <translation>Number of Copies:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Use current layer and &amp;attributes</translation>
+        <translation>Use current layer and &amp;attributes</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor &amp;x:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor &amp;y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished">Proportional</translation>
+        <translation>Proportional</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished">Define factor using mouse cursor</translation>
+        <translation>Define factor using mouse cursor</translation>
     </message>
 </context>
 <context>
@@ -12299,7 +12302,7 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Grid Spacing &lt; Meta Grid Spacing</translation>
     </message>
 </context>
 <context>

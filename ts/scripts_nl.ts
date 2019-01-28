@@ -2852,7 +2852,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik maximale hoek</translation>
     </message>
 </context>
 <context>
@@ -4390,7 +4390,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Straal:</translation>
     </message>
 </context>
 <context>
@@ -4819,22 +4819,21 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished">Form</translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kubusgrootte:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation type="vanished">10</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Draw plates</source>
-        <translation type="unfinished"></translation>
+        <location line="+14"/>
+        <source>Draw glue lap</source>
+        <translation>Lijmronde tekenen</translation>
     </message>
 </context>
 <context>
@@ -5651,67 +5650,67 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Als blok:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Rotatie:</translation>
+        <translation>Rotatie:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
+        <translation>Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Scale:</source>
-        <translation type="unfinished">Schaal:</translation>
+        <translation>Schaal:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Schaal ingevoegde objecten&lt;br&gt;met deze factor</translation>
+        <translation>Schaal ingevoegde objecten&lt;br&gt;met deze factor</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Ingevoegde objecten&lt;br&gt;horizontaal spiegelen</translation>
+        <translation>Ingevoegde objecten&lt;br&gt;horizontaal spiegelen</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Ingevoegde objecten&lt;br&gt;verticaal spiegelen</translation>
+        <translation>Ingevoegde objecten&lt;br&gt;verticaal spiegelen</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">Alle objecten op huidige laag&lt;br&gt;invoegen in plaats of de originele laag</translation>
+        <translation>Alle objecten op huidige laag&lt;br&gt;invoegen in plaats of de originele laag</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished">Op huidige laag</translation>
+        <translation>Op huidige laag</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">Bestaande lagen&lt;br&gt;van de tekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
+        <translation>Bestaande lagen&lt;br&gt;van de tekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished">Lagen overschrijven</translation>
+        <translation>Lagen overschrijven</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Bestaande blokken&lt;br&gt;van detekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
+        <translation>Bestaande blokken&lt;br&gt;van detekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Blokken overschrijven</translation>
+        <translation>Blokken overschrijven</translation>
     </message>
 </context>
 <context>
@@ -7520,22 +7519,22 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal Zwaluwstaarten:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zwaluwstaart hoogte:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zwaluwstaartgradiënt:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verhouding zwaluwstaart tot speld:</translation>
     </message>
 </context>
 <context>
@@ -7994,12 +7993,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiëren</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>
 </context>
 <context>
@@ -8282,7 +8281,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished">Form</translation>
+        <translation>Form</translation>
     </message>
 </context>
 <context>
@@ -8290,23 +8289,23 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie invoeren</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie X:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie Y:</translation>
     </message>
 </context>
 <context>
@@ -8322,17 +8321,17 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">Speciale tekens</translation>
+        <translation>Speciale tekens</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation>MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation>MyButton</translation>
     </message>
 </context>
 <context>
@@ -9500,27 +9499,27 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiëren</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Aantal kopieën:</translation>
+        <translation>Aantal kopieën:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Hoek:</translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished">Definieer hoek met behulp van de muis cursor</translation>
+        <translation>Definieer hoek met behulp van de muis cursor</translation>
     </message>
 </context>
 <context>
@@ -9927,43 +9926,43 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiëren</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Aantal kopieën:</translation>
+        <translation>Aantal kopieën:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor &amp;x:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor &amp;y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished">Proportioneel</translation>
+        <translation>Proportioneel</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished">Definieer de factor met behulp van de muiscursor</translation>
+        <translation>Definieer de factor met behulp van de muiscursor</translation>
     </message>
 </context>
 <context>
@@ -12465,7 +12464,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Raster tussenafstand &lt; Meta raster tussenafstand</translation>
+        <translation>Raster tussenafstand &lt; Meta raster tussenafstand</translation>
     </message>
 </context>
 <context>

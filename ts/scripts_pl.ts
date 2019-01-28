@@ -5903,13 +5903,12 @@ Zaznacza pojedynczy obiekt</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation type="obsolete">10</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Draw plates</source>
+        <location line="+14"/>
+        <source>Draw glue lap</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

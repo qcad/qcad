@@ -3153,7 +3153,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar el ángulo máximo</translation>
     </message>
 </context>
 <context>
@@ -4839,7 +4839,7 @@ ya está en la lista.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Radio:</translation>
     </message>
 </context>
 <context>
@@ -5385,22 +5385,21 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished">Form</translation>
+        <translation>Form</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño del cubo:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation type="vanished">10</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Draw plates</source>
-        <translation type="unfinished"></translation>
+        <location line="+14"/>
+        <source>Draw glue lap</source>
+        <translation>Dibujar la vuelta de pegamento</translation>
     </message>
 </context>
 <context>
@@ -6522,67 +6521,67 @@ Ver gráficos</translatorcomment>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Como bloque:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Rotación:</translation>
+        <translation>Rotación:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Girar las entidades&lt;br&gt;pegadas por este ángulo</translation>
+        <translation>Girar las entidades&lt;br&gt;pegadas por este ángulo</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Scale:</source>
-        <translation type="unfinished">Escala:</translation>
+        <translation>Escala:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Escala de entidades&lt;br&gt;pegadas por este factor</translation>
+        <translation>Escala de entidades&lt;br&gt;pegadas por este factor</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Voltear las entidades&lt;br&gt;pegado horizontal</translation>
+        <translation>Voltear las entidades&lt;br&gt;pegado horizontal</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Voltear las entidades&lt;br&gt;pegado verticalmente</translation>
+        <translation>Voltear las entidades&lt;br&gt;pegado verticalmente</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">Pegar todas las entidades&lt;br&gt;a la capa actual en&lt;br&gt;lugar de la capa original</translation>
+        <translation>Pegar todas las entidades&lt;br&gt;a la capa actual en&lt;br&gt;lugar de la capa original</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished">En la capa actual</translation>
+        <translation>En la capa actual</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">Sobrescribir las capas&lt;br&gt;existentes en el dibujo con&lt;br&gt;las capas desde el portapapeles</translation>
+        <translation>Sobrescribir las capas&lt;br&gt;existentes en el dibujo con&lt;br&gt;las capas desde el portapapeles</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished">Sobrescribir las capas</translation>
+        <translation>Sobrescribir las capas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Sobreescribir los bloques&lt;br&gt;existentes en la elaboración&lt;br&gt;de bloques desde el portapapeles</translation>
+        <translation>Sobreescribir los bloques&lt;br&gt;existentes en la elaboración&lt;br&gt;de bloques desde el portapapeles</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Sobreescribir los bloques</translation>
+        <translation>Sobreescribir los bloques</translation>
     </message>
 </context>
 <context>
@@ -8647,22 +8646,22 @@ en los resultados de búsqueda:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de colas de milano:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Altura de cola de milano:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradiente de cola de milano:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Relación entre cola de milano y alfiler:</translation>
     </message>
 </context>
 <context>
@@ -9305,12 +9304,12 @@ en los resultados de búsqueda:</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Copiar</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Usar capa y los &amp;atributos actual</translation>
+        <translation>Usar capa y los &amp;atributos actual</translation>
     </message>
 </context>
 <context>
@@ -9621,7 +9620,7 @@ en los resultados de búsqueda:</translation>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished">Form</translation>
+        <translation>Form</translation>
     </message>
 </context>
 <context>
@@ -9629,23 +9628,23 @@ en los resultados de búsqueda:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingresar posición</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Posición X:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Posición Y:</translation>
     </message>
 </context>
 <context>
@@ -9661,17 +9660,17 @@ en los resultados de búsqueda:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">Mapa de caracteres</translation>
+        <translation>Mapa de caracteres</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation>MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation>MyButton</translation>
     </message>
 </context>
 <context>
@@ -10082,7 +10081,7 @@ en los resultados de búsqueda:</translation>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Rotación:</translation>
+        <translation>Rotación:</translation>
     </message>
     <message>
         <source>Rotate block&lt;br&gt;by this angle</source>
@@ -11136,27 +11135,27 @@ Punto objetivo</translatorcomment>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Copiar</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Número de copias:</translation>
+        <translation>Número de copias:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Usar capa y los &amp;atributos actual</translation>
+        <translation>Usar capa y los &amp;atributos actual</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Ángulo:</translation>
+        <translation>Ángulo:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished">Definir ángulo con el cursor del ratón</translation>
+        <translation>Definir ángulo con el cursor del ratón</translation>
     </message>
 </context>
 <context>
@@ -11637,43 +11636,43 @@ Punto objetivo</translatorcomment>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Copiar</translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Número de copias:</translation>
+        <translation>Número de copias:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Usar capa y los &amp;atributos actual</translation>
+        <translation>Usar capa y los &amp;atributos actual</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor &amp;x:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor &amp;y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished">Proporcional</translation>
+        <translation>Proporcional</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished">Definir el factor con el cursor del ratón</translation>
+        <translation>Definir el factor con el cursor del ratón</translation>
     </message>
 </context>
 <context>
@@ -14650,7 +14649,7 @@ Usar capa y los &amp;atributos actual</translatorcomment>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
+        <translation>Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
     </message>
 </context>
 <context>
