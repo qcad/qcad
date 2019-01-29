@@ -738,7 +738,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation>&amp;Centrum, punt, hoeken</translation>
+        <translation>&amp;Middelpunt, punt, hoeken</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1013,7 +1013,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation>Centrumpunten</translation>
+        <translation>Centrum</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1263,7 +1263,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+106"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ongeldige beeldformaat (breedte x hoogte moet kleiner zijn dan %1)</translation>
     </message>
@@ -1731,7 +1731,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation>Centrum links van lijn P1-P2</translation>
+        <translation>Middelpunt links van lijn P1-P2</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1742,7 +1742,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation>Centrum rechts van lijn P1-P2</translation>
+        <translation>Middelpunt rechts van lijn P1-P2</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -3940,7 +3940,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
-        <translation>Centrum</translation>
+        <translation>Middelpunt</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4036,24 +4036,24 @@ is al in de lijst.</translation>
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation>Ellipsboog van centrum, eindpunt eerste as, verhouding van assen en hoeken</translation>
+        <translation>Ellipsboog van middelpunt, eindpunt eerste as, verhouding van assen en hoeken</translation>
     </message>
 </context>
 <context>
     <name>EllipseCPP</name>
     <message>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation type="vanished">&amp;Ellips van centrum, punt, verhouding van assen</translation>
+        <translation type="vanished">&amp;Ellips van middelpunt, punt, verhouding van assen</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation>&amp;Ellips (centrum, punt, verhouding)</translation>
+        <translation>&amp;Ellips (middelpunt, punt, verhouding)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation>Ellips van centrum, punt, verhouding van assen</translation>
+        <translation>Ellips van middelpunt, punt, verhouding van assen</translation>
     </message>
 </context>
 <context>
@@ -4140,12 +4140,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js" line="+2"/>
         <source>&amp;Parallel Curve (with Distance)</source>
-        <translation>&amp;Parallel spline (afstand)</translation>
+        <translation>&amp;Parallelle curve (met afstand)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation>Parallel spline aan ellips tekenen</translation>
+        <translation>Parallelle curve aan ellips tekenen</translation>
     </message>
 </context>
 <context>
@@ -4158,12 +4158,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation>Parallel spline (&amp;door punt)</translation>
+        <translation>Parallelle curve (&amp;door punt)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation>Parallel spline aan ellips door punt</translation>
+        <translation>Parallelle curve aan ellips door punt</translation>
     </message>
 </context>
 <context>
@@ -8856,7 +8856,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>Power centrum van drie cirkels</translation>
+        <translation>Power middelpunt van drie cirkels</translation>
     </message>
 </context>
 <context>
@@ -9474,7 +9474,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+30"/>
         <source>Center point</source>
-        <translation>Centrum</translation>
+        <translation>Middelpunt</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -9527,12 +9527,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation>Centrum van de primaire rotatie</translation>
+        <translation>Middelpunt van de primaire rotatie</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation>Centrum van de secundaire rotatie</translation>
+        <translation>Middelpunt van de secundaire rotatie</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
@@ -10538,7 +10538,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation>Centrum</translation>
+        <translation>Middelpunt</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -10553,12 +10553,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>Pol&amp;ygon (centrum, zijkant)</translation>
+        <translation>Pol&amp;ygon (middelpunt, zijkant)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation>Regelmatige veelhoek van centrum en middelpunt van zijkant tekenen</translation>
+        <translation>Regelmatige veelhoek van middelpunt en middelpunt van zijkant tekenen</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -10619,7 +10619,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+58"/>
         <source>Center</source>
-        <translation>Centrum</translation>
+        <translation>Middelpunt</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10639,12 +10639,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>Veel&amp;hoek (centrum, hoek)</translation>
+        <translation>Veel&amp;hoek (middelpunt, hoek)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Regelmatige veelhoek van centrum en hoekpunt</translation>
+        <translation>Regelmatige veelhoek van middelpunt en hoekpunt</translation>
     </message>
 </context>
 <context>
@@ -11077,7 +11077,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
         <source>Center of &amp;Selection</source>
-        <translation>Centrum van &amp;selectie</translation>
+        <translation>Middelpunt van &amp;selectie</translation>
     </message>
 </context>
 <context>
@@ -11783,12 +11783,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+29"/>
         <source>Bottom Center</source>
-        <translation>Onderkant centrum</translation>
+        <translation>Onderkant middelpunt</translation>
     </message>
     <message>
         <location line="-261"/>
         <source>Top Center</source>
-        <translation>Bovenkant centrum</translation>
+        <translation>Bovenkant middelpunt</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -11808,7 +11808,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+206"/>
         <source>Base Center</source>
-        <translation>Basis centrum</translation>
+        <translation>Basis middelpunt</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -11818,7 +11818,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="-116"/>
         <source>Middle Center</source>
-        <translation>Midden centrum</translation>
+        <translation>Midden middelpunt</translation>
     </message>
     <message>
         <location line="+203"/>
@@ -12529,7 +12529,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="vanished">Centrum</translation>
+        <translation type="vanished">Middelpunt</translation>
     </message>
     <message>
         <source>Middle</source>

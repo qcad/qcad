@@ -1508,7 +1508,7 @@ Bardzo gruby</translatorcomment>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+106"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nieprawidłowy rozmiar obrazu (szerokość x wysokość musi być mniejsze niż %1)</translation>
     </message>

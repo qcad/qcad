@@ -1208,7 +1208,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+106"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Geçersiz resim boyutu (genişlik x yükseklik %1&apos;den az olmalıdır)</translation>
     </message>
