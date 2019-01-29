@@ -513,7 +513,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation>2 Punten en &amp;hoogte</translation>
+        <translation>2 punten en &amp;hoogte</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -571,7 +571,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation>2 Punten en &amp;lengte</translation>
+        <translation>2 punten en &amp;lengte</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -679,7 +679,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>&amp;3 Punten</translation>
+        <translation>&amp;3 punten</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -738,7 +738,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation>&amp;Center, punt, hoeken</translation>
+        <translation>&amp;Centrum, punt, hoeken</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1688,7 +1688,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
         <source>&amp;2 Points</source>
-        <translation>&amp;2 Punten</translation>
+        <translation>&amp;2 punten</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8856,7 +8856,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation>&quot;Power center&quot; van drie cirkels</translation>
+        <translation>Power centrum van drie cirkels</translation>
     </message>
 </context>
 <context>
@@ -10639,7 +10639,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>Veel&amp;hoek (Centrum, hoek)</translation>
+        <translation>Veel&amp;hoek (centrum, hoek)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11783,12 +11783,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+29"/>
         <source>Bottom Center</source>
-        <translation>Onder center</translation>
+        <translation>Onderkant centrum</translation>
     </message>
     <message>
         <location line="-261"/>
         <source>Top Center</source>
-        <translation>Boven center</translation>
+        <translation>Bovenkant centrum</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -11803,12 +11803,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="-177"/>
         <source>Top Left</source>
-        <translation>Boven links</translation>
+        <translation>Bovenkant links</translation>
     </message>
     <message>
         <location line="+206"/>
         <source>Base Center</source>
-        <translation>Basis center</translation>
+        <translation>Basis centrum</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -11818,12 +11818,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="-116"/>
         <source>Middle Center</source>
-        <translation>Midden center</translation>
+        <translation>Midden centrum</translation>
     </message>
     <message>
         <location line="+203"/>
         <source>Bottom Right</source>
-        <translation>Onder rechts</translation>
+        <translation>Onderkant rechts</translation>
     </message>
     <message>
         <location line="-174"/>
@@ -11833,12 +11833,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="-58"/>
         <source>Top Right</source>
-        <translation>Boven rechts</translation>
+        <translation>Bovenkant rechts</translation>
     </message>
     <message>
         <location line="+291"/>
         <source>Cancel</source>
-        <translation>Annuleer</translation>
+        <translation>Annuleren</translation>
     </message>
     <message>
         <location line="+13"/>
