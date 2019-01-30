@@ -30,6 +30,9 @@ function ShapeRectangleSize(guiAction) {
 
     this.createPolyline = false;
     this.fill = false;
+    this.roundCorners = false;
+    this.radius = 1.0;
+
     this.includeBasePath = ShapeRectangleSize.includeBasePath;
     this.dialogUiFile = "ShapeRectangleSizeDialog.ui";
 
@@ -49,6 +52,14 @@ ShapeRectangleSize.prototype.slotCreatePolylineChanged = function(checked) {
 
 ShapeRectangleSize.prototype.slotFillChanged = function(checked) {
     Shape.slotFillChanged(this, checked);
+};
+
+ShapeRectangleSize.prototype.slotRoundCornersChanged = function(checked) {
+    Shape.slotRoundCornersChanged(this, checked);
+};
+
+ShapeRectangleSize.prototype.slotRadiusChanged = function(v) {
+    Shape.slotRadiusChanged(this, v);
 };
 
 ShapeRectangleSize.prototype.initUiOptions = function(resume, optionsToolBar) {
