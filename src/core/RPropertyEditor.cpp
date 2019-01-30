@@ -364,10 +364,14 @@ void RPropertyEditor::clearEditor() {
 
 void RPropertyEditor::updateLayers(RDocumentInterface* documentInterface) {
     if (documentInterface==NULL) {
-        updateFromDocument(NULL, false);
+        // 20190130: changed from false to true:
+        // workaround for Qt 5.10.1 bug (crash when changing layer name in property editor)
+        updateFromDocument(NULL, true);
     }
     else {
-        updateFromDocument(&documentInterface->getDocument(), false);
+        // 20190130: changed from false to true:
+        // workaround for Qt 5.10.1 bug (crash when changing layer name in property editor)
+        updateFromDocument(&documentInterface->getDocument(), true);
     }
 }
 
