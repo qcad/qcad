@@ -5911,7 +5911,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation>Set volgende hoek</translation>
+        <translation>Set volgende polygoon hoek</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10553,12 +10553,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation>Pol&amp;ygon (middelpunt, zijkant)</translation>
+        <translation>Pol&amp;ygoon (middelpunt, zijkant)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation>Regelmatige veelhoek van middelpunt en middelpunt van zijkant tekenen</translation>
+        <translation>Regelmatige polygoon van middelpunt en middelpunt van zijkant tekenen</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -10596,12 +10596,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation>Veelhoe&amp;k (kant, kant)</translation>
+        <translation>Polygoo&amp;n (zijkant, zijkant)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation>Regelmatige veelhoek van midden punten van twee tegenovergestelde zijden of twee tegenovergestelde hoeken tekenen</translation>
+        <translation>Regelmatige polygoon van midden punten van twee tegenovergestelde zijden of twee tegenovergestelde hoeken tekenen</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
@@ -10639,12 +10639,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation>Veel&amp;hoek (middelpunt, hoek)</translation>
+        <translation>Pol&amp;ygoon (middelpunt, hoek)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Regelmatige veelhoek van middelpunt en hoekpunt</translation>
+        <translation>Regelmatige polygoon van middelpunt en hoekpunt</translation>
     </message>
 </context>
 <context>
@@ -10672,12 +10672,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>Polygo&amp;n (2 punten van zijkant)</translation>
+        <translation>Polygoo&amp;n (2 punten van zijkant)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation>Regelmatige veelhoek van eindpunten van een zijkant</translation>
+        <translation>Regelmatige polygoon van eindpunten van een zijkant</translation>
     </message>
 </context>
 <context>
@@ -10698,12 +10698,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js" line="+2"/>
         <source>Rectangle with &amp;Size</source>
-        <translation>Rechthoek met &amp;maat</translation>
+        <translation>Rechthoek met af&amp;metingen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
-        <translation>Rechthoek met positie en maat tekenen</translation>
+        <translation>Rechthoek met positie en afmetingen tekenen</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
