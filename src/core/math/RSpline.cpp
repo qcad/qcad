@@ -1276,6 +1276,17 @@ bool RSpline::reverse() {
     return true;
 }
 
+bool RSpline::stretch(const RPolyline& area, const RVector& offset) {
+    if (!fitPoints.isEmpty()) {
+        for (int i=0; i<fitPoints.size(); i++) {
+            fitPoints[i].stretch(area, offset);
+        }
+        update();
+        return true;
+    }
+    return false;
+}
+
 QSharedPointer<RShape> RSpline::getTransformed(const QTransform& transform) const {
     QSharedPointer<RSpline> ret = QSharedPointer<RSpline>(clone());
 

@@ -179,6 +179,7 @@ public:
     virtual bool flipHorizontal();
     virtual bool flipVertical();
     virtual bool reverse();
+    virtual bool stretch(const RPolyline& area, const RVector& offset);
 
     QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 
