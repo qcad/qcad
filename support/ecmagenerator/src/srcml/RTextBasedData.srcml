@@ -137,10 +137,7 @@
         <return>return <expr><name>fontName</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setFontName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>this</name>-&gt;<name>fontName</name> = <name>fontName</name></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>void</name></type> <name>setFontName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>QString</name></type> <name>getFontFile</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>fontFile</name></expr>;</return>

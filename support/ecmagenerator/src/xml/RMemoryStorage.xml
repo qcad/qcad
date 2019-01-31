@@ -395,7 +395,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="selectAllEntites" cppName="selectAllEntites"
+    <method name="selectAllEntities" cppName="selectAllEntities"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

@@ -162,6 +162,9 @@
         countReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasSelectedReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         dump
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

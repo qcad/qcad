@@ -48,6 +48,7 @@ do
             echo "processing $cppfile ..."
             #(
                 src2srcml "$f" "$SPATH/$srcmlfile"
+                #src2srcml "$f" -o "$SPATH/$srcmlfile"
                 #if [ `uname` == "Darwin" ]
                 #then
                 #    DYLD_LIBRARY_PATH=$srcmlpath srcml "$f" -o "$SPATH/$srcmlfile"

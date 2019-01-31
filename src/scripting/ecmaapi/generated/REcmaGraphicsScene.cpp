@@ -143,6 +143,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, countReferencePoints, "countReferencePoints");
             
+            REcmaHelper::registerFunction(&engine, proto, hasSelectedReferencePoints, "hasSelectedReferencePoints");
+            
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
         engine.setDefaultPrototype(
@@ -2660,6 +2662,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsScene::countReferencePoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsScene::hasSelectedReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsScene::hasSelectedReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::hasSelectedReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsScene* self = 
+                        getSelf("hasSelectedReferencePoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasSelectedReferencePoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.hasSelectedReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsScene::hasSelectedReferencePoints", context, engine);
             return result;
         }
          QScriptValue

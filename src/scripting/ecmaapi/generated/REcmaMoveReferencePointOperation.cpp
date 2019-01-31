@@ -72,6 +72,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, apply, "apply");
             
+            REcmaHelper::registerFunction(&engine, proto, setGraphicsScene, "setGraphicsScene");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RMoveReferencePointOperation*>(), *proto);
 
@@ -391,6 +393,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMoveReferencePointOperation::apply", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMoveReferencePointOperation::setGraphicsScene
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMoveReferencePointOperation::setGraphicsScene", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMoveReferencePointOperation::setGraphicsScene";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMoveReferencePointOperation* self = 
+                        getSelf("setGraphicsScene", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RGraphicsScene * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RGraphicsScene * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RGraphicsScene >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMoveReferencePointOperation: Argument 0 is not of type RGraphicsScene *RGraphicsScene *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGraphicsScene(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMoveReferencePointOperation.setGraphicsScene().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMoveReferencePointOperation::setGraphicsScene", context, engine);
             return result;
         }
          QScriptValue REcmaMoveReferencePointOperation::toString

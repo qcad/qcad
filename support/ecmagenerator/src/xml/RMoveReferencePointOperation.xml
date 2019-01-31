@@ -24,5 +24,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="setGraphicsScene" cppName="setGraphicsScene"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsScene *" typeName="RGraphicsScene *"
+        name="s" isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>
