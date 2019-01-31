@@ -28,7 +28,8 @@ RMoveReferencePointOperation::RMoveReferencePointOperation(
     const RVector& referencePoint, 
     const RVector& targetPoint)
     : referencePoint(referencePoint),
-      targetPoint(targetPoint) {
+      targetPoint(targetPoint),
+      scene(NULL) {
 }
 
 
@@ -39,6 +40,16 @@ RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool previ
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
 
+    RVector delta = targetPoint-referencePoint;
+    bool moveSelected = false;
+    QMap<REntity::Id, QList<RRefPoint> > referencePoints;
+
+    // if multilpe reference points are selected, move all of those:
+    if (scene!=NULL && scene->hasSelectedReferencePoints()) {
+        moveSelected = true;
+        referencePoints = scene->getReferencePoints();
+    }
+
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
     QSet<REntity::Id>::iterator it;
     for (it=selectedEntities.begin(); it!=selectedEntities.end(); it++) {
@@ -47,10 +58,24 @@ RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool previ
             continue;
         }
         
-        // apply operation to cloned entity:
-        if (entity->moveReferencePoint(referencePoint, targetPoint)) {
+        // move all selected reference points:
+        if (moveSelected) {
+            QList<RRefPoint> entityReferencePoints = referencePoints[*it];
+            for (int i=0; i<entityReferencePoints.length(); i++) {
+                if (entityReferencePoints[i].isSelected()) {
+                    entity->moveReferencePoint(entityReferencePoints[i], entityReferencePoints[i]+delta);
+                }
+            }
             QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::RefPoint);
             transaction.addObject(entity, false, false, props);
+        }
+
+        // move single reference point:
+        else {
+            if (entity->moveReferencePoint(referencePoint, targetPoint)) {
+                QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::RefPoint);
+                transaction.addObject(entity, false, false, props);
+            }
         }
     }
         

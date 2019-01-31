@@ -24,6 +24,7 @@
 
 #include "RDocument.h"
 #include "RExporter.h"
+#include "RGraphicsScene.h"
 #include "ROperation.h"
 #include "RVector.h"
 
@@ -45,9 +46,14 @@ public:
     
     virtual RTransaction apply(RDocument& document, bool preview = false);
 
+    void setGraphicsScene(RGraphicsScene* s) {
+        scene = s;
+    }
+
 private:
     RVector referencePoint;
     RVector targetPoint;
+    RGraphicsScene* scene;
 };
 
 Q_DECLARE_METATYPE(RMoveReferencePointOperation*)

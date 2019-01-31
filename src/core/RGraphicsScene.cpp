@@ -351,6 +351,11 @@ void RGraphicsScene::exportReferencePoints() {
                 referencePoints[entity->getId()].append(oldRp);
                 continue;
             }
+            else {
+                if (oldRp.isSelected()) {
+                    rp.setSelected(true);
+                }
+            }
         }
 
         referencePoints[entity->getId()].append(rp);
@@ -381,6 +386,19 @@ void RGraphicsScene::selectReferencePoints(const RBox& box, bool add) {
 //            it.value().setSelected(false);
 //        }
 //    }
+}
+
+bool RGraphicsScene::hasSelectedReferencePoints() const {
+    QMap<REntity::Id, QList<RRefPoint> >::const_iterator it;
+    for (it=referencePoints.constBegin(); it!=referencePoints.constEnd(); ++it) {
+        const QList<RRefPoint>& list = it.value();
+        for (int i=0; i<list.length(); i++) {
+            if (list[i].isSelected()) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 void RGraphicsScene::exportCurrentEntity(bool preview, bool forceSelected) {

@@ -147,6 +147,8 @@ public:
         return referencePoints;
     }
 
+    bool hasSelectedReferencePoints() const;
+
 //    virtual bool isVisualExporter() const {
 //        return true;
 //    }
