@@ -264,6 +264,7 @@ HEADERS = \
     math/RRay.h \
     math/RRefPoint.h \
     math/RShape.h \
+    math/RShapeProxy.h \
     math/RSpline.h \
     math/RSplineProxy.h \
     math/RTextLabel.h \
