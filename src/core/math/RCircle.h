@@ -22,6 +22,7 @@
 
 #include "../core_global.h"
 
+#include "RArc.h"
 #include "RShape.h"
 #include "RVector.h"
 
@@ -53,6 +54,8 @@ public:
 
     static RCircle createFrom2Points(const RVector& p1, const RVector& p2);
     static RCircle createFrom3Points(const RVector& p1, const RVector& p2, const RVector& p3);
+
+    RArc toArc(double startAngle=0.0) const;
 
     bool isValid() const {
         return center.isValid();

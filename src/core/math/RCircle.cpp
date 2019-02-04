@@ -82,6 +82,10 @@ RCircle RCircle::createFrom3Points(const RVector& p1,
     return RCircle(center, radius);
 }
 
+RArc RCircle::toArc(double startAngle) const {
+    return RArc(getCenter(), getRadius(), startAngle, startAngle + 2*M_PI, false);
+}
+
 void RCircle::setZ(double z) {
     center.z = z;
 }
