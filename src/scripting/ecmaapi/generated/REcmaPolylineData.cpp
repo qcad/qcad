@@ -141,6 +141,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
             
+            REcmaHelper::registerFunction(&engine, proto, roundAllCorners, "roundAllCorners");
+            
             REcmaHelper::registerFunction(&engine, proto, verifyTangency, "verifyTangency");
             
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
@@ -3143,6 +3145,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::simplify", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::roundAllCorners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::roundAllCorners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::roundAllCorners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("roundAllCorners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->roundAllCorners(a0);
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.roundAllCorners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::roundAllCorners", context, engine);
             return result;
         }
          QScriptValue

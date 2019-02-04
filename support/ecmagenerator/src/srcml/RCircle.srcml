@@ -23,6 +23,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RArc.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
@@ -54,6 +55,8 @@
 
     <function_decl><type><name>static</name> <name>RCircle</name></type> <name>createFrom2Points</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>RCircle</name></type> <name>createFrom3Points</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p3</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RArc</name></type> <name>toArc</name><parameter_list>(<param><decl><type><name>double</name></type> <name>startAngle</name>=<init><expr>0.0</expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>center</name>.<call><name>isValid</name><argument_list>()</argument_list></call></expr>;</return>

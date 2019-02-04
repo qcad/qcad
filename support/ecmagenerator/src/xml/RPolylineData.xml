@@ -271,6 +271,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="roundAllCorners" cppName="roundAllCorners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false">
+        <arg type="double" typeName="double" name="radius"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="verifyTangency" cppName="verifyTangency"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

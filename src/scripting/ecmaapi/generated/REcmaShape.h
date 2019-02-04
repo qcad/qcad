@@ -328,10 +328,25 @@
         trim
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        roundAllCorners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        roundShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        xLineToRay
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        rayToLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getErrorCode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         dump
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

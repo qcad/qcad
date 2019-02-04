@@ -64,6 +64,9 @@
         createFrom3Points
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

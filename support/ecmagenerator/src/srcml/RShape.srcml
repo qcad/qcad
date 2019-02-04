@@ -26,8 +26,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShapeProxy.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RArc</name>;</class_decl>
 <class_decl>class <name>RBox</name>;</class_decl>
@@ -438,6 +439,16 @@
             <param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>limitingShape</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>limitingClickPos</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>trimBoth</name></decl></param>, <param><decl><type><name>bool</name></type> <name>samePolyline</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>roundAllCorners</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>shapes</name></decl></param>, <param><decl><type><name>double</name></type> <name>radius</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>roundShapes</name><parameter_list>(
+            <param><decl><type><name>const</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPos1</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape2</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPos2</name></decl></param>,
+            <param><decl><type><name>bool</name></type> <name>trim</name></decl></param>, <param><decl><type><name>bool</name></type> <name>samePolyline</name></decl></param>, <param><decl><type><name>double</name></type> <name>radius</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>xLineToRay</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>rayToLine</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
+
     <function><type><name>static</name> <name>int</name></type> <name>getErrorCode</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>errorCode</name></expr>;</return>
     }</block></function>
@@ -452,6 +463,27 @@
         <return>return <expr><name>dbg</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>shapeProxy</name>!=<name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>void</name></type> <name>setShapeProxy</name><parameter_list>(<param><decl><type><name>RShapeProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>shapeProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr>delete <name>shapeProxy</name></expr>;</expr_stmt>
+        }</block></then></if>
+        <expr_stmt><expr><name>shapeProxy</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>RShapeProxy</name>*</type> <name>getShapeProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>shapeProxy</name></expr>;</return>
+    }</block></function>
+
 </public><private>private:
     <function_decl><type><name>static</name> <name>double</name></type> <name>ellipse2tr</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>, <param><decl><type><name>double</name></type> <name>y</name></decl></param>, <param><decl><type><name>double</name></type> <name>AA</name></decl></param>, <param><decl><type><name>double</name></type> <name>BB</name></decl></param>,
                         <param><decl><type><name>double</name></type> <name>CC</name></decl></param>, <param><decl><type><name>double</name></type> <name>DD</name></decl></param>, <param><decl><type><name>double</name></type> <name>EE</name></decl></param>, <param><decl><type><name>double</name></type> <name>FF</name></decl></param>)</parameter_list>;</function_decl>
@@ -463,7 +495,10 @@
 </private><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>errorCode</name></decl>;</decl_stmt>
-</protected>}</block>;</class>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>RShapeProxy</name>*</type> <name>shapeProxy</name></decl>;</decl_stmt>
+</private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RShape*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RShape::Type</argument>)</argument_list></macro>

@@ -438,6 +438,9 @@
         morph
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        roundAllCorners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

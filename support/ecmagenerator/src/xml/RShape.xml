@@ -1012,6 +1012,62 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="roundAllCorners" cppName="roundAllCorners"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; QSharedPointer &lt; RShape &gt; &gt; &amp;"
+        typeName="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+        name="shapes" isConst="true" />
+        <arg type="double" typeName="double" name="radius"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="roundShapes" cppName="roundShapes"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RShape &gt;"
+        typeName="QSharedPointer &lt; RShape &gt;" name="shape1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="clickPos1" isConst="true" />
+        <arg type="QSharedPointer &lt; RShape &gt;"
+        typeName="QSharedPointer &lt; RShape &gt;" name="shape2"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="clickPos2" isConst="true" />
+        <arg type="bool" typeName="bool" name="trim"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="samePolyline"
+        isConst="false" />
+        <arg type="double" typeName="double" name="radius"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="xLineToRay" cppName="xLineToRay"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RShape &gt;"
+        typeName="QSharedPointer &lt; RShape &gt;" name="shape"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="rayToLine" cppName="rayToLine" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RShape &gt;"
+        typeName="QSharedPointer &lt; RShape &gt;" name="shape"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getErrorCode" cppName="getErrorCode"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -1020,6 +1076,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="dump" cppName="dump" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="hasProxy" cppName="hasProxy" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

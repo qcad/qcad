@@ -153,6 +153,9 @@
         simplify
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        roundAllCorners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         verifyTangency
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

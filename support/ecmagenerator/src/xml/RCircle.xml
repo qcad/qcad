@@ -55,6 +55,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="toArc" cppName="toArc" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RArc" isPureVirtual="false">
+        <arg type="double" typeName="double" name="startAngle"
+        hasDefault="true" default="0.0" isConst="false" />
+      </variant>
+    </method>
     <method name="isValid" cppName="isValid" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

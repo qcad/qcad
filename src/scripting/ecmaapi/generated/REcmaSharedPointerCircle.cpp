@@ -92,6 +92,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, toArc, "toArc");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
             REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
@@ -783,6 +785,87 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerCircle::createFrom3Points", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerCircle::toArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::toArc", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::toArc";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCircle* self = 
+                        getSelf("toArc", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RArc'
+    RArc cppResult =
+        
+               self->toArc();
+        // return type: RArc
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RArc'
+    RArc cppResult =
+        
+               self->toArc(a0);
+        // return type: RArc
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.toArc().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::toArc", context, engine);
             return result;
         }
          QScriptValue

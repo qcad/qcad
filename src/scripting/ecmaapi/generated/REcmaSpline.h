@@ -299,6 +299,9 @@
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        stretch
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTransformed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
