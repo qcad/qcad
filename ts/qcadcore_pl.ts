@@ -351,7 +351,7 @@
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrybuty</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
