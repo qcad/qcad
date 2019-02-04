@@ -35,6 +35,7 @@
 double RShape::twopi = M_PI*2;
 double RShape::epsTolerance = 1.0e-02;
 int RShape::errorCode = 0;
+RShapeProxy* RShape::shapeProxy = NULL;
 
 bool RShape::isFullEllipseShape(const RShape& s) {
     return s.getShapeType()==RShape::Ellipse && dynamic_cast<const REllipse&>(s).isFullEllipse();
@@ -2297,6 +2298,207 @@ QList<QSharedPointer<RShape> > RShape::trim(
     }
 
     return ret;
+}
+
+/**
+ * Round every corner of the list of given (connected) shapes with the given radius.
+ */
+QList<QSharedPointer<RShape> > RShape::roundAllCorners(const QList<QSharedPointer<RShape> >& shapes, double radius) {
+    if (RShape::hasProxy()) {
+        return RShape::getShapeProxy()->roundAllCorners(shapes, radius);
+    }
+    return shapes;
+}
+
+/**
+ * Rounds the given shape1 againt shape2.
+ *
+ * \param shape1 First shape of corner.
+ * \param clickPos1 Coordinate that was clicked when the user selected shape1.
+ * \param shape2 Second shape of corner.
+ * \param clickPos2 Coordinate that was clicked when the user selected shape2.
+ * \param trim true: Trim both shapes to rounding arc.
+ * \param radius Radius of rounding.
+ * \param solutionPos Position that determines which solution to apply (optional, defaults to clickPos1)
+ *
+ * \return Array of three shapes: shape1 (trimmed), rounding, shape2 (trimmed)
+ * or emtpy array.
+ */
+QList<QSharedPointer<RShape> > RShape::roundShapes(
+        const QSharedPointer<RShape> shape1, const RVector& clickPos1,
+        const QSharedPointer<RShape> shape2, const RVector& clickPos2,
+        bool trim, bool samePolyline, double radius, const RVector& pos) {
+
+    QList<QSharedPointer<RShape> > ret;
+
+    if (shape1.isNull() || !clickPos1.isValid() ||
+        shape2.isNull() || !clickPos2.isValid()) {
+        return ret;
+    }
+
+    RVector p = pos;
+    if (!p.isValid()) {
+        p = clickPos2;
+    }
+
+    // convert circles to arcs:
+    QSharedPointer<RShape> s1 = shape1;
+    QSharedPointer<RShape> s2 = shape2;
+    if (shape1->getShapeType()==RShape::Circle) {
+        QSharedPointer<RCircle> circle1 = shape1.dynamicCast<RCircle>();
+        s1 = QSharedPointer<RShape>(new RArc(circle1->toArc()));
+    }
+    if (shape2->getShapeType()==RShape::Circle) {
+        QSharedPointer<RCircle> circle2 = shape2.dynamicCast<RCircle>();
+        s2 = QSharedPointer<RShape>(new RArc(circle2->toArc()));
+    }
+
+    QSharedPointer<RShape> simpleShape1 = s1;
+    QSharedPointer<RShape> simpleShape2 = s2;
+    int i1, i2;
+
+    // rounding polylines?
+    // round segments instead:
+    if (shape1->getShapeType()==RShape::Polyline) {
+        QSharedPointer<RPolyline> pl1 = shape1.dynamicCast<RPolyline>();
+        i1 = pl1->getClosestSegment(clickPos1);
+        if (i1==-1) {
+            return ret;
+        }
+        simpleShape1 = pl1->getSegmentAt(i1);
+    }
+
+    if (shape2->getShapeType()==RShape::Polyline) {
+        QSharedPointer<RPolyline> pl2 = shape2.dynamicCast<RPolyline>();
+        i2 = pl2->getClosestSegment(clickPos2);
+        if (i2==-1) {
+            return ret;
+        }
+        simpleShape2 = pl2->getSegmentAt(i2);
+    }
+
+    // create two temporary parallels:
+    QList<QSharedPointer<RShape> > parallels1 = simpleShape1->getOffsetShapes(radius, 1, RS::NoSide, p);
+    QList<QSharedPointer<RShape> > parallels2 = simpleShape2->getOffsetShapes(radius, 1, RS::NoSide, p);
+
+    if (parallels1.length()!=1 || parallels2.length()!=1) {
+        return ret;
+    }
+
+    QSharedPointer<RShape> parallel1 = parallels1[0];
+    QSharedPointer<RShape> parallel2 = parallels2[0];
+
+    QList<RVector> sol2 = simpleShape1->getIntersectionPoints(*simpleShape2.data(), false);
+
+    QList<RVector> ipParallel = parallel1->getIntersectionPoints(*parallel2.data(), false);
+    if (ipParallel.isEmpty()) {
+        return ret;
+    }
+
+    // there might be two intersections: choose the closest:
+    RVector ip = p.getClosest(ipParallel);
+    RVector p1 = simpleShape1->getClosestPointOnShape(ip, false);
+    RVector p2 = simpleShape2->getClosestPointOnShape(ip, false);
+    double ang1 = ip.getAngleTo(p1);
+    double ang2 = ip.getAngleTo(p2);
+    bool reversed = (RMath::getAngleDifference(ang1, ang2) > M_PI);
+
+    RArc arc(ip, radius, ang1, ang2, reversed);
+
+    //RVector bp1 = arc.getStartPoint();
+    //RVector bp2 = arc.getEndPoint();
+
+    QSharedPointer<RShape> trimmed1, trimmed2;
+    if (samePolyline) {
+        trimmed1 = QSharedPointer<RShape>(simpleShape1->clone());
+        trimmed2 = QSharedPointer<RShape>(simpleShape2->clone());
+    }
+    else {
+        trimmed1 = QSharedPointer<RShape>(shape1->clone());
+        trimmed2 = QSharedPointer<RShape>(shape2->clone());
+    }
+
+    RS::Ending ending1, ending2;
+
+    if (trim || samePolyline) {
+        // trim entities to intersection
+        RVector is2 = clickPos2.getClosest(sol2);
+        ending1 = trimmed1->getTrimEnd(is2, clickPos1);
+        switch (ending1) {
+        case RS::EndingStart:
+            trimmed1->trimStartPoint(p1, clickPos1);
+            if (isXLineShape(*trimmed1)) {
+                trimmed1 = xLineToRay(trimmed1);
+            }
+            break;
+        case RS::EndingEnd:
+            trimmed1->trimEndPoint(p1, clickPos1);
+            if (isXLineShape(*trimmed1)) {
+                trimmed1 = xLineToRay(trimmed1);
+            }
+            else if (isRayShape(*trimmed1)) {
+                trimmed1 = rayToLine(trimmed1);
+            }
+            break;
+        default:
+            break;
+        }
+
+        is2 = clickPos1.getClosest(sol2);
+        ending2 = trimmed2->getTrimEnd(is2, clickPos2);
+        switch (ending2) {
+        case RS::EndingStart:
+            trimmed2->trimStartPoint(p2, clickPos2);
+            if (isXLineShape(*trimmed2)) {
+                trimmed2 = xLineToRay(trimmed2);
+            }
+            break;
+        case RS::EndingEnd:
+            trimmed2->trimEndPoint(p2, clickPos2);
+            if (isXLineShape(*trimmed2)) {
+                trimmed2 = xLineToRay(trimmed2);
+            }
+            else if (isRayShape(*trimmed2)) {
+                trimmed2 = rayToLine(trimmed2);
+            }
+            break;
+        default:
+            break;
+        }
+    }
+
+    if (samePolyline) {
+        QSharedPointer<RPolyline> pl1 = shape1.dynamicCast<RPolyline>();
+        RPolyline pl = pl1->modifyPolylineCorner(*trimmed1.data(), ending1, i1, *trimmed2.data(), ending2, i2, &arc);
+        return QList<QSharedPointer<RShape> >() <<  QSharedPointer<RShape>(new RPolyline(pl));
+    }
+
+    ret.append(trimmed1);
+    ret.append(QSharedPointer<RShape>(new RArc(arc)));
+    ret.append(trimmed2);
+
+//    shape1 = trimmed1;
+//    shape2 = trimmed2;
+//    return QSharedPointer<RShape>(new RArc(arc));
+    //return [ trimmed1, arc, trimmed2 ];
+
+    return ret;
+}
+
+QSharedPointer<RShape> RShape::xLineToRay(QSharedPointer<RShape> shape) {
+    QSharedPointer<RXLine> xLine = shape.dynamicCast<RXLine>();
+    if (!xLine.isNull()) {
+        return QSharedPointer<RShape>(new RRay(xLine->getBasePoint(), xLine->getDirectionVector()));
+    }
+    return shape;
+}
+
+QSharedPointer<RShape> RShape::rayToLine(QSharedPointer<RShape> shape) {
+    QSharedPointer<RRay> ray = shape.dynamicCast<RRay>();
+    if (!ray.isNull()) {
+        return QSharedPointer<RShape>(new RLine(ray->getBasePoint(), ray->getSecondPoint()));
+    }
+    return shape;
 }
 
 void RShape::dump() const{

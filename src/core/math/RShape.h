@@ -25,8 +25,9 @@
 #include <QList>
 #include <QSharedPointer>
 
-#include "RVector.h"
 #include "RMath.h"
+#include "RShapeProxy.h"
+#include "RVector.h"
 
 class RArc;
 class RBox;
@@ -437,6 +438,16 @@ public:
             const RShape& limitingShape, const RVector& limitingClickPos,
             bool trimBoth, bool samePolyline);
 
+    static QList<QSharedPointer<RShape> > roundAllCorners(const QList<QSharedPointer<RShape> >& shapes, double radius);
+
+    static QList<QSharedPointer<RShape> > roundShapes(
+            const QSharedPointer<RShape> shape1, const RVector& clickPos1,
+            const QSharedPointer<RShape> shape2, const RVector& clickPos2,
+            bool trim, bool samePolyline, double radius, const RVector& pos);
+
+    static QSharedPointer<RShape> xLineToRay(QSharedPointer<RShape> shape);
+    static QSharedPointer<RShape> rayToLine(QSharedPointer<RShape> shape);
+
     static int getErrorCode() {
         return errorCode;
     }
@@ -451,6 +462,27 @@ public:
         return dbg;
     }
 
+    static bool hasProxy() {
+        return shapeProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setShapeProxy(RShapeProxy* p) {
+        if (shapeProxy!=NULL) {
+            delete shapeProxy;
+        }
+        shapeProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RShapeProxy* getShapeProxy() {
+        return shapeProxy;
+    }
+
 private:
     static double ellipse2tr(double x, double y, double AA, double BB,
                         double CC, double DD, double EE, double FF);
@@ -462,6 +494,9 @@ private:
 protected:
     virtual void print(QDebug dbg) const;
     static int errorCode;
+
+private:
+    static RShapeProxy* shapeProxy;
 };
 
 Q_DECLARE_METATYPE(RShape*)
