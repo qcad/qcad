@@ -211,12 +211,12 @@ Shape.getShapes = function(action, vertices) {
             var s2 = shapes[(i+1)%shapes.length];
             var clickPos2 = s2.getPointWithDistanceToStart(s2.getLength()/3);
             var pos = RVector.getAverage(clickPos1, clickPos2);
-            var res = Round.roundShapes(s1, clickPos1, s2, clickPos2, true, false, action.radius, pos);
-            if (!isNull(res)) {
+            var res = RShape.roundShapes(s1, clickPos1, s2, clickPos2, true, false, action.radius, pos);
+            if (res.length>2) {
                 if (!isNull(cursor)) {
                     newShapes.push(new RLine(cursor, res[1].getStartPoint()));
                 }
-                newShapes.push(res[1]);
+                newShapes.push(res[1].clone());
                 cursor = res[1].getEndPoint();
             }
         }
