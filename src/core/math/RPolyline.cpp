@@ -2101,3 +2101,10 @@ QList<RPolyline> RPolyline::morph(const RPolyline& target, int steps, RS::Easing
     }
     return QList<RPolyline>();
 }
+
+RPolyline RPolyline::roundAllCorners(double radius) const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->roundAllCorners(*this, radius);
+    }
+    return *this;
+}

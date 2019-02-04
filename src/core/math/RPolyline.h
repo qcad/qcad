@@ -252,6 +252,7 @@ public:
     bool setHeight(double v);
 
     QList<RPolyline> morph(const RPolyline& target, int steps, RS::Easing easing = RS::Linear, bool zLinear = true, double customFactor = RNANDOUBLE) const;
+    RPolyline roundAllCorners(double radius) const;
 
     static bool hasProxy() {
         return polylineProxy!=NULL;
