@@ -193,6 +193,10 @@ public:
         RPolyline::simplify(angleTolerance);
     }
 
+    RPolyline roundAllCorners(double radius) {
+        return RPolyline::roundAllCorners(radius);
+    }
+
     QList<RVector> verifyTangency(double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4) {
         return RPolyline::verifyTangency(toleranceMin, toleranceMax);
     }
