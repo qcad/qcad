@@ -7418,12 +7418,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation>&amp;Deellijn hoek</translation>
+        <translation>&amp;Deellijn van hoek</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>Deellijn van hoek tekenen</translation>
+        <translation>Deellijn van een hoek tekenen</translation>
     </message>
 </context>
 <context>
