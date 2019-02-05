@@ -2638,7 +2638,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Presunúť prvok na požadované miesto</translation>
     </message>
     <message>
-        <location line="+380"/>
+        <location line="+384"/>
         <source>Move Reference Point</source>
         <translation>Presunúť referenčný bod</translation>
     </message>
@@ -10568,7 +10568,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../scripts/Draw/Shape/Shape.js" line="+75"/>
+        <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
         <translation>Nástroje Tvaru</translation>
     </message>
@@ -10590,6 +10590,16 @@ vo výsledku vyhľadania:</translation>
         <location line="+10"/>
         <source>Fill</source>
         <translation>Výplň</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Polomer:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>1</source>
+        <translation type="unfinished">Rozostup medzi písmenami {1?}</translation>
     </message>
 </context>
 <context>

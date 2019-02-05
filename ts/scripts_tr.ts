@@ -2554,7 +2554,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+380"/>
+        <location line="+384"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10143,7 +10143,7 @@ shown in search results:</source>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../scripts/Draw/Shape/Shape.js" line="+75"/>
+        <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10160,6 +10160,16 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Fill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Yarıçap:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

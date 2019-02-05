@@ -2894,7 +2894,7 @@ Coordenadas polares relativa:</translatorcomment>
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+380"/>
+        <location line="+384"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>
@@ -12375,7 +12375,7 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../scripts/Draw/Shape/Shape.js" line="+75"/>
+        <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
         <translation>Herramientas de forma</translation>
     </message>
@@ -12401,6 +12401,16 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
         <location line="+10"/>
         <source>Fill</source>
         <translation>Relleno</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Radio:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>1</source>
+        <translation type="unfinished">1</translation>
     </message>
 </context>
 <context>

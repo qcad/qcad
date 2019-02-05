@@ -2613,7 +2613,7 @@ Wilt u het herstellen?</translation>
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+380"/>
+        <location line="+384"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -10472,7 +10472,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../scripts/Draw/Shape/Shape.js" line="+75"/>
+        <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
         <translation>Vorm gereedschappen</translation>
     </message>
@@ -10494,6 +10494,16 @@ getoond in zoekresultaten:</translation>
         <location line="+10"/>
         <source>Fill</source>
         <translation>Vulling</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Straal:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>1</source>
+        <translation type="unfinished">1</translation>
     </message>
 </context>
 <context>

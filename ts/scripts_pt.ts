@@ -3363,7 +3363,7 @@ C&amp;rie Novo Bloco</translatorcomment>
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+380"/>
+        <location line="+384"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -14310,7 +14310,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../scripts/Draw/Shape/Shape.js" line="+75"/>
+        <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
         <translation>Ferramentas de Forma</translation>
     </message>
@@ -14336,6 +14336,16 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+10"/>
         <source>Fill</source>
         <translation>Preencher</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Raio:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>1</source>
+        <translation type="unfinished">1</translation>
     </message>
 </context>
 <context>

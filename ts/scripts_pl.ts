@@ -3170,7 +3170,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
-        <location line="+380"/>
+        <location line="+384"/>
         <source>Move Reference Point</source>
         <translation>Przenieś punkt odniesienia</translation>
     </message>
@@ -13421,7 +13421,7 @@ Wskaż pozycje</translatorcomment>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../scripts/Draw/Shape/Shape.js" line="+75"/>
+        <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
         <translation>Narzędzia figur</translation>
     </message>
@@ -13447,6 +13447,16 @@ Wskaż pozycje</translatorcomment>
         <location line="+10"/>
         <source>Fill</source>
         <translation>Wypełnienie</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Promień:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>1</source>
+        <translation type="unfinished">1</translation>
     </message>
 </context>
 <context>

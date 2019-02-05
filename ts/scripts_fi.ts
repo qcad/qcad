@@ -2600,7 +2600,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Siirrä kohde haluttuun paikkaan</translation>
     </message>
     <message>
-        <location line="+380"/>
+        <location line="+384"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viite</translation>
     </message>
@@ -10495,7 +10495,7 @@ näkyy etsintätuloksissa:</translation>
 <context>
     <name>Shape</name>
     <message>
-        <location filename="../scripts/Draw/Shape/Shape.js" line="+75"/>
+        <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
         <translation>Muototyökalut</translation>
     </message>
@@ -10521,6 +10521,16 @@ näkyy etsintätuloksissa:</translation>
         <location line="+10"/>
         <source>Fill</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Radius:</source>
+        <translation type="unfinished">Säde:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>1</source>
+        <translation type="unfinished">1</translation>
     </message>
 </context>
 <context>
