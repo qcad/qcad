@@ -8083,7 +8083,7 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadejte pozici</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10269,12 +10269,12 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Poloměr:</translation>
+        <translation>Poloměr:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
 </context>
 <context>
