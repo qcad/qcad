@@ -70,9 +70,10 @@ RoundTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::RoundButton');
-    this.setToolOption('Round/Trim', 'true');
-    this.setToolOption('Round/Radius', '5');
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::RoundProButton');
+    this.setToolOption('RoundPro/Trim', 'true');
+    this.setToolOption('RoundPro/Radius', '5');
+    this.setToolOption('RoundPro/PolylineMode', 'false');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.8, 25.5);

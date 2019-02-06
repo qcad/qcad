@@ -38,9 +38,10 @@ RoundTest00.prototype.test00 = function() {
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(49, 428), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Round/Tests/data/lines.dxf');
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::RoundButton');
-    this.setToolOption('Round/Trim', 'true');
-    this.setToolOption('Round/Radius',  [ 5, 0 ] );
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::RoundProButton');
+    this.setToolOption('RoundPro/Trim', 'true');
+    this.setToolOption('RoundPro/Radius',  [ 5, 0 ] );
+    this.setToolOption('RoundPro/PolylineMode', 'false');
     this.updateToolOptions();
     this.setZoom(12, new RVector(1.08333, 2.91667, 0) );
     var p = new RVector(0.083333, 27.916667);
@@ -50,8 +51,9 @@ RoundTest00.prototype.test00 = function() {
     var p = new RVector(1.916667, 29.5);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setToolOption('Round/Trim', 'false');
-    this.setToolOption('Round/Radius',  [ 5, 0 ] );
+    this.setToolOption('RoundPro/Trim', 'false');
+    this.setToolOption('RoundPro/Radius',  [ 5, 0 ] );
+    this.setToolOption('RoundPro/PolylineMode', 'false');
     this.updateToolOptions();
     this.setZoom(12, new RVector(1.08333, 2.91667, 0) );
     var p = new RVector(36.416667, 29.583333);
@@ -69,8 +71,9 @@ RoundTest00.prototype.test00 = function() {
     var p = new RVector(37.916667, 20.416667);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setToolOption('Round/Trim', 'true');
-    this.setToolOption('Round/Radius',  [ 5, 0 ] );
+    this.setToolOption('RoundPro/Trim', 'true');
+    this.setToolOption('RoundPro/Radius',  [ 5, 0 ] );
+    this.setToolOption('RoundPro/PolylineMode', 'false');
     this.updateToolOptions();
     this.setZoom(12, new RVector(1.08333, 2.91667, 0) );
     var p = new RVector(21.416667, 19.916667);
