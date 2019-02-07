@@ -10498,12 +10498,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Straal:</translation>
+        <translation>Straal:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
 </context>
 <context>

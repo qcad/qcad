@@ -12382,12 +12382,12 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Rayon :</translation>
+        <translation>Rayon :</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
 </context>
 <context>
