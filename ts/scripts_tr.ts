@@ -79,7 +79,7 @@
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Eklentiler ve komut dosyası eklentileri ilgili lisanslarına tabidir (bkz. &quot;Eklentiler&quot; sekmesi).</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -308,12 +308,12 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Özellik Ekle</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ad:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -326,12 +326,12 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Katman</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Katman Ekle</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
