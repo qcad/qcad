@@ -299,10 +299,10 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             this.childGroup.destroy();
             this.childGroup = undefined;
         }
-        if (!isNull(this.customGroup)) {
-            this.customGroup.destroy();
-            this.customGroup = undefined;
-        }
+    }
+    if (!isNull(this.customGroup)) {
+        this.customGroup.destroy();
+        this.customGroup = undefined;
     }
 
     var selectionCombo = this.widget.findChild("Selection");
@@ -388,23 +388,6 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         gridLayoutChild.setColumnStretch(3,0);
         this.childGroup.setLayout(gridLayoutChild);
         this.childGroup.visible = false;
-
-        // custom properties:
-        if (RSettings.isXDataEnabled()) {
-            // create custom property group box with grid layout:
-            this.customGroup = new QGroupBox(qsTr("Custom"), this.widget);
-            layout.insertWidget(4, this.customGroup);
-
-            // grid layout with four columns and N rows for N property controls:
-            // (the fourth column is for the 'remove property' button)
-            gridLayoutCustom = new QGridLayout(this.customGroup);
-            gridLayoutCustom.setVerticalSpacing(2);
-            gridLayoutCustom.setColumnStretch(0,0);
-            gridLayoutCustom.setColumnStretch(1,1);
-            gridLayoutCustom.setColumnStretch(2,0);
-            gridLayoutCustom.setColumnStretch(3,0);
-            this.customGroup.setLayout(gridLayoutCustom);
-        }
     }
     else {
         if (!isNull(this.geometryGroup)) {
@@ -413,9 +396,23 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         if (!isNull(this.childGroup)) {
             gridLayoutChild = this.childGroup.layout();
         }
-        if (!isNull(this.customGroup)) {
-            gridLayoutCustom = this.customGroup.layout();
-        }
+    }
+
+    // custom properties:
+    if (RSettings.isXDataEnabled()) {
+        // create custom property group box with grid layout:
+        this.customGroup = new QGroupBox(qsTr("Custom"), this.widget);
+        layout.insertWidget(4, this.customGroup);
+
+        // grid layout with four columns and N rows for N property controls:
+        // (the fourth column is for the 'remove property' button)
+        gridLayoutCustom = new QGridLayout(this.customGroup);
+        gridLayoutCustom.setVerticalSpacing(2);
+        gridLayoutCustom.setColumnStretch(0,0);
+        gridLayoutCustom.setColumnStretch(1,1);
+        gridLayoutCustom.setColumnStretch(2,0);
+        gridLayoutCustom.setColumnStretch(3,0);
+        this.customGroup.setLayout(gridLayoutCustom);
     }
 
     var firstEntry = true;
@@ -441,11 +438,15 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             //var propertyTypeId = attributes.getPropertyTypeId();
             var propertyTypeId = RPropertyTypeId.getPropertyTypeId(group, title);
 
+            var onlyChangesProp = onlyChanges;
+
+            // don't use isCustom here:
             if (propertyTypeId.getId()===-1) {
                 // property is custom property
                 // make sure it knows it's titles, etc:
                 propertyTypeId.setCustomPropertyTitle(group);
                 propertyTypeId.setCustomPropertyName(title);
+                onlyChangesProp = false;
             }
 
             //qDebug("isMixed: ", attributes.isMixed());
@@ -522,7 +523,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 
             // other properties:
             else {
-                var gridLayout;
+                var gridLayout = undefined;
                 var groupBox = undefined;
                 if (propertyTypeId.isCustom()) {
                     // block reference attributes:
@@ -550,10 +551,12 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                 // add group title and index controls if the property is a list:
                 if (pi===0 && !isNull(gridLayout) && !isNull(groupBox)) {
                     // create group label:
-                    if (!onlyChanges && group.length!==0 &&
-                            // situation with two splines, one with fit points,
-                            // one with control points: no group label for fit points:
-                            attributes.isList()===isArray(value)) {
+                    if (!onlyChangesProp && group.length!==0 &&
+                        // situation with two splines, one with fit points,
+                        // one with control points: no group label for fit points:
+                        attributes.isList()===isArray(value)) {
+
+                        qDebug("add group label: ", group);
                         var groupLabel = new QLabel(RSettings.translate("REntity", group), groupBox);
                         groupLabel.styleSheet = "margin-bottom:0px;font-weight:bold;";
                         if (!firstEntry) {
@@ -564,7 +567,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                     }
 
                     // if property is a list, add list index control:
-                    if (!onlyChanges && attributes.isList()) {
+                    if (!onlyChangesProp && attributes.isList()) {
                         row = gridLayout.rowCount();
                         var indexLabel = new QLabel(qsTr("Index"), groupBox);
                         indexLabel.alignment = Qt.AlignRight | Qt.AlignVCenter;
@@ -596,16 +599,18 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                         controls = undefined;
                     }
                     else {
-                        controls = this.initControls(propertyTypeId, onlyChanges);
+                        controls = this.initControls(propertyTypeId, onlyChangesProp);
                     }
                 }
 
                 // add property name and controls to layout:
-                if (!onlyChanges) {
+                if (!onlyChangesProp) {
                     if (!isNull(controls) && !isNull(gridLayout)) {
                         row = gridLayout.rowCount();
                         var localTitle = title;
-                        if (propertyTypeId.isCustom() && group!==RSettings.getAppId() && propertyTypeId.getCustomPropertyTitle()!=="Attributes") {
+                        if (propertyTypeId.isCustom() && group!==RSettings.getAppId() &&
+                            propertyTypeId.getCustomPropertyTitle()!=="Attributes") {
+
                             var pos = title.indexOf("_");
                             if (pos!==-1) {
                                 localTitle = title.mid(pos+1);
