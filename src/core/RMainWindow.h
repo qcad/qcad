@@ -112,10 +112,10 @@ public:
     ) = 0;
     virtual void postCloseEvent() = 0;
     //virtual void postPropertyEvent() = 0;
-//    virtual void postPropertyEvent(RPropertyTypeId propertyTypeId,
-//        const QVariant& value,
-//        RS::EntityType entityTypeFilter = RS::EntityAll
-//    ) = 0;
+    virtual void postPropertyEvent(RPropertyTypeId propertyTypeId,
+        const QVariant& value,
+        RS::EntityType entityTypeFilter = RS::EntityAll
+    ) = 0;
 
     void addPropertyListener(RPropertyListener* l);
     void removePropertyListener(RPropertyListener* l);

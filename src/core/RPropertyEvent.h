@@ -22,7 +22,7 @@
 
 #include "core_global.h"
 
-#include <QVariant>
+#include <QEvent>
 
 #include "RPropertyTypeId.h"
 #include "RPropertyAttributes.h"
@@ -37,9 +37,10 @@
  * \scriptable
  * \copyable
  */
-class QCADCORE_EXPORT RPropertyEvent {
+class QCADCORE_EXPORT RPropertyEvent : public QEvent {
 public:
     RPropertyEvent() :
+        QEvent((QEvent::Type)(QEvent::User+500)),
         propertyTypeId(-1) {
     }
 
@@ -49,7 +50,8 @@ public:
      */
     RPropertyEvent(RPropertyTypeId propertyTypeId, const QVariant& value,
                    RS::EntityType entityTypeFilter = RS::EntityAll)
-        : propertyTypeId(propertyTypeId),
+        : QEvent((QEvent::Type)(QEvent::User+500)),
+          propertyTypeId(propertyTypeId),
           value(value),
           entityTypeFilter(entityTypeFilter) {
     }

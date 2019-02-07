@@ -90,6 +90,10 @@ public:
         bool onlyChanges=false,
         RS::EntityType entityTypeFilter = RS::EntityAll
     );
+    virtual void postPropertyEvent(RPropertyTypeId propertyTypeId,
+        const QVariant& value,
+        RS::EntityType entityTypeFilter = RS::EntityAll
+    );
     virtual void postCloseEvent();
 
     RMdiChildQt* getMdiChild();

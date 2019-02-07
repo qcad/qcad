@@ -387,7 +387,8 @@ void RPropertyEditor::propertyChanged(RPropertyTypeId propertyTypeId,
                                       QVariant propertyValue,
                                       QVariant::Type typeHint) {
 
-    if (RMainWindow::getMainWindow() == NULL) {
+    RMainWindow* appWin = RMainWindow::getMainWindow();
+    if (appWin == NULL) {
         qWarning() << QString("RPropertyEditor::itemChanged: mainWindow is NULL");
         return;
     }
@@ -400,8 +401,7 @@ void RPropertyEditor::propertyChanged(RPropertyTypeId propertyTypeId,
         }
     }
 
-    RPropertyEvent pe(propertyTypeId, propertyValue, entityTypeFilter);
-    RMainWindow::getMainWindow()->propertyChangeEvent(pe);
+    appWin->postPropertyEvent(propertyTypeId, propertyValue, entityTypeFilter);
 }
 
 void RPropertyEditor::listPropertyChanged(RPropertyTypeId propertyTypeId,

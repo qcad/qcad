@@ -140,6 +140,11 @@ void RMainWindowQt::postTransactionEvent(RTransaction& t, bool onlyChanges, RS::
     QCoreApplication::postEvent(this, event);
 }
 
+void RMainWindowQt::postPropertyEvent(RPropertyTypeId propertyTypeId, const QVariant& value, RS::EntityType entityTypeFilter) {
+    RPropertyEvent* event = new RPropertyEvent(propertyTypeId, value, entityTypeFilter);
+    QCoreApplication::postEvent(this, event);
+}
+
 void RMainWindowQt::postCloseEvent() {
     QCloseEvent* event = new QCloseEvent();
     QCoreApplication::postEvent(this, event);
@@ -667,6 +672,14 @@ bool RMainWindowQt::event(QEvent* e) {
         RTransaction t = te->getTransaction();
         notifyTransactionListeners(getDocument(), &t);
         return true;
+    }
+
+    RPropertyEvent* pe = dynamic_cast<RPropertyEvent*>(e);
+    if (pe!=NULL) {
+        RDocumentInterface* documentInterface = getDocumentInterface();
+        if (documentInterface!=NULL) {
+            documentInterface->propertyChangeEvent(*pe);
+        }
     }
 
     RCloseCurrentEvent* cce = dynamic_cast<RCloseCurrentEvent*>(e);
