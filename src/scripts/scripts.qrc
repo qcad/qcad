@@ -1791,9 +1791,11 @@
     <file alias="scripts/Modify/Round/RoundInit.js">../../scripts/Modify/Round/RoundInit.js</file>
     <file alias="scripts/Modify/Round/Tests/RoundTest00.js">../../scripts/Modify/Round/Tests/RoundTest00.js</file>
     <file alias="scripts/Modify/Round/Tests/RoundTest01.js">../../scripts/Modify/Round/Tests/RoundTest01.js</file>
+    <file alias="scripts/Modify/Round/Tests/RoundTest02.js">../../scripts/Modify/Round/Tests/RoundTest02.js</file>
     <file alias="scripts/Modify/Round/Tests/data/lines.dxf">../../scripts/Modify/Round/Tests/data/lines.dxf</file>
     <file alias="scripts/Modify/Round/Tests/required/RoundTest00_000.dxf">../../scripts/Modify/Round/Tests/required/RoundTest00_000.dxf</file>
     <file alias="scripts/Modify/Round/Tests/required/RoundTest01_000.dxf">../../scripts/Modify/Round/Tests/required/RoundTest01_000.dxf</file>
+    <file alias="scripts/Modify/Round/Tests/required/RoundTest02_000.dxf">../../scripts/Modify/Round/Tests/required/RoundTest02_000.dxf</file>
     <file alias="scripts/Modify/Scale/ByMouse.svg">../../scripts/Modify/Scale/ByMouse.svg</file>
     <file alias="scripts/Modify/Scale/ByMouseSq.svg">../../scripts/Modify/Scale/ByMouseSq.svg</file>
     <file alias="scripts/Modify/Scale/KeepProportionsOff.svg">../../scripts/Modify/Scale/KeepProportionsOff.svg</file>
