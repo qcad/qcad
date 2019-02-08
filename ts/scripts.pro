@@ -741,6 +741,7 @@ SOURCES = \
 ../scripts/Modify/Round/RoundInit.js \
 ../scripts/Modify/Round/Tests/RoundTest00.js \
 ../scripts/Modify/Round/Tests/RoundTest01.js \
+../scripts/Modify/Round/Tests/RoundTest02.js \
 ../scripts/Modify/Scale/Scale.js \
 ../scripts/Modify/Scale/ScaleInit.js \
 ../scripts/Modify/Scale/Tests/ScaleTest00.js \

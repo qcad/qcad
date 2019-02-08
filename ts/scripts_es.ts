@@ -10623,7 +10623,7 @@ en los resultados de búsqueda:</translation>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+736"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+754"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -10658,7 +10658,7 @@ en los resultados de búsqueda:</translation>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1211"/>
+        <location line="-1229"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -10691,7 +10691,7 @@ Seleccin nula</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--
@@ -10700,7 +10700,7 @@ Valor indexado</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Retire esta propiedad de los objetos seleccionados</translation>
     </message>
@@ -12405,12 +12405,11 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Radio:</translation>
+        <translation>Radio:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation type="obsolete">1</translation>
     </message>
 </context>
 <context>

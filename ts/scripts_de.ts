@@ -11059,12 +11059,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1404"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1211"/>
+        <location line="-1229"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11088,12 +11088,12 @@ nicht öffnen.
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+191"/>
+        <location line="+207"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Eigenschaft von ausgewählten Objekten entfernen</translation>
     </message>
@@ -11248,7 +11248,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1080"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1098"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -12729,12 +12729,11 @@ SelectionMode</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Radius:</translation>
+        <translation>Radius:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation type="vanished">1</translation>
     </message>
 </context>
 <context>

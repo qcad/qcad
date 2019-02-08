@@ -9110,12 +9110,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1404"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1211"/>
+        <location line="-1229"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9140,12 +9140,12 @@ getoond in zoekresultaten:</translation>
         <translation>Gebruiker gedefinieerd</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Eigenschap van geselecteerde objecten verwijderen</translation>
     </message>
@@ -10501,9 +10501,8 @@ getoond in zoekresultaten:</translation>
         <translation>Straal:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation>1</translation>
+        <translation type="vanished">1</translation>
     </message>
 </context>
 <context>

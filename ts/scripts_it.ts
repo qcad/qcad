@@ -10603,7 +10603,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+736"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+754"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -10638,7 +10638,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1211"/>
+        <location line="-1229"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -10670,12 +10670,12 @@ Nessuna selezione</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>
@@ -12389,12 +12389,11 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Raggio:</translation>
+        <translation>Raggio:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation type="obsolete">1</translation>
     </message>
 </context>
 <context>

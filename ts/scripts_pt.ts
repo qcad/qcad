@@ -12309,13 +12309,13 @@ Cultura marcas de impressão</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1404"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1211"/>
+        <location line="-1229"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -12358,7 +12358,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó
@@ -12366,7 +12366,7 @@ Trocar para a próxima camada</translatorcomment>
         <translation>Índice</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Remova esta propriedade dos objetos selecionados</translation>
     </message>
@@ -14340,12 +14340,11 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Raio:</translation>
+        <translation>Raio:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation type="obsolete">1</translation>
     </message>
 </context>
 <context>

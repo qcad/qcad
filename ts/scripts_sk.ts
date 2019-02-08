@@ -9203,12 +9203,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Vždy zobrazovať všetky vlastnosti (môže to spomaliť výber prvkov)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1404"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1211"/>
+        <location line="-1229"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9237,12 +9237,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Vlastné</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translation>Zoznam</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Odstrániť vlastnosť z vybraných prvkov</translation>
     </message>
@@ -10597,9 +10597,8 @@ vo výsledku vyhľadania:</translation>
         <translation type="unfinished">Polomer:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">Rozostup medzi písmenami {1?}</translation>
+        <translation type="obsolete">Rozostup medzi písmenami {1?}</translation>
     </message>
 </context>
 <context>

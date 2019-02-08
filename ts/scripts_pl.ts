@@ -11579,13 +11579,13 @@ Wskaż punkt docelowy</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1404"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1211"/>
+        <location line="-1229"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -11628,7 +11628,7 @@ Własne filtry</translatorcomment>
         <translation>Dostosowany</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
@@ -11637,7 +11637,7 @@ Uaktualnianie indeksu wyszukiwawczego</translatorcomment>
         <translation>Indeks</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Usuń właściwość z zaznaczonych obiektów</translation>
     </message>
@@ -13454,9 +13454,8 @@ Wskaż pozycje</translatorcomment>
         <translation type="unfinished">Promień:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation type="obsolete">1</translation>
     </message>
 </context>
 <context>

@@ -4141,7 +4141,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman Ekle</translation>
     </message>
 </context>
 <context>
@@ -6521,7 +6521,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8866,12 +8866,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10166,11 +10166,6 @@ shown in search results:</source>
         <location line="+14"/>
         <source>Radius:</source>
         <translation type="unfinished">Yarıçap:</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>1</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12515,7 +12510,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Katman</translation>
     </message>
     <message>
         <location line="+2"/>

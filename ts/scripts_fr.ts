@@ -10649,12 +10649,12 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
@@ -10709,7 +10709,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1211"/>
+        <location line="-1229"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -10734,7 +10734,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+354"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -12385,9 +12385,8 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translation>Rayon :</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation>1</translation>
+        <translation type="vanished">1</translation>
     </message>
 </context>
 <context>

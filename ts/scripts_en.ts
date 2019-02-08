@@ -9013,12 +9013,12 @@ shown in search results:</translation>
         <translation>Custom</translation>
     </message>
     <message>
-        <location line="+174"/>
+        <location line="+190"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+79"/>
         <source>Remove this property from selected objects</source>
         <translation>Remove this property from selected objects</translation>
     </message>
@@ -10347,9 +10347,8 @@ shown in search results:</translation>
         <translation>Radius:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>1</source>
-        <translation>1</translation>
+        <translation type="vanished">1</translation>
     </message>
 </context>
 <context>
