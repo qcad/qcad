@@ -296,7 +296,7 @@ musíte znovu spustiť QCAD.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation>Predvolené</translation>
+        <translation>Predvolené pre </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -919,13 +919,12 @@ Do you wish to recover them?</source>
     <message numerus="yes">
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="vanished">
-            <numerusform>%n &apos;autosave&apos; záložný súbor(-y) výkresu(-ov) bez názvu bol/boli nájdené.
-Chcete ho/ich obnoviť?</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n &apos;autosave&apos; záložný súbor výkresu bez názvu bol nájdený.
+Chcete ho obnoviť?</numerusform>
+        <numerusform>%n &apos;autosave&apos; záložné súbory výkresov bez názvu boli nájdené.
+Chcete ich obnoviť?</numerusform>
+        <numerusform></numerusform>
+        </translation></message>
     <message>
         <location line="-64"/>
         <source>Recover Files?</source>
@@ -1302,7 +1301,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Blok &quot;%1&quot; už existuje &lt;br&gt; a bude prepísaný</translation>
+        <translation>Blok &quot;%1&quot; už existuje&lt;br&gt;a bude prepísaný.</translation>
     </message>
     <message>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
@@ -1379,7 +1378,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation>Blok: </translation>
+        <translation>Blok:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2877,7 +2876,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť maximálny uhol</translation>
     </message>
 </context>
 <context>
@@ -4414,7 +4413,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mandelbrot vzor</translation>
     </message>
 </context>
 <context>
@@ -4430,7 +4429,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ahoj Svet.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4443,12 +4442,12 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mini príklad 2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Polomer:</translation>
     </message>
 </context>
 <context>
@@ -4887,7 +4886,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť kocky:</translation>
     </message>
     <message>
         <source>10</source>
@@ -4896,7 +4895,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nakreslite kruh lepidla</translation>
     </message>
 </context>
 <context>
@@ -5667,7 +5666,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vložiť obrázok</translation>
     </message>
 </context>
 <context>
@@ -5705,67 +5704,67 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ako blok:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Natočenie:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Natočiť vkladané prvky&lt;br&gt;pod týmto uhlom</translation>
+        <translation>Natočiť vkladané prvky&lt;br&gt;pod týmto uhlom</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Scale:</source>
-        <translation type="unfinished">Mierka:</translation>
+        <translation>Mierka:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Mierka vkladaných prvkov&lt;br&gt;podľa tohto faktora</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrkadliť vodorovne&lt;br&gt;vkladané prvky</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrkadliť zvisle&lt;br&gt;vkladané prvky</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">Prilepiť všetky prvky&lt;br&gt;z pôvodnej vrstvy&lt;br&gt;na aktuálnu vrstvu</translation>
+        <translation>Prilepiť všetky prvky&lt;br&gt;z pôvodnej vrstvy&lt;br&gt;na aktuálnu vrstvu</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished">Na aktuálnu vrstvu</translation>
+        <translation>Na aktuálnu vrstvu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepísať existujúce vrstvy&lt;br&gt;vo výkrese&lt;br&gt;vrstvami zo schránky</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished">Prepísať vrstvy</translation>
+        <translation>Prepísať vrstvy</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepísať existujúce bloky&lt;br&gt;vo výkrese&lt;br&gt;blokmi zo schránky</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Prepísať bloky</translation>
+        <translation>Prepísať bloky</translation>
     </message>
 </context>
 <context>
@@ -7574,22 +7573,22 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation>Počet výstupkov:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Výška:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sklon:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomer výstupok/západka:</translation>
     </message>
 </context>
 <context>
@@ -8001,7 +8000,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished">Bez názvu</translation>
+        <translation>Bez názvu</translation>
     </message>
 </context>
 <context>
@@ -8052,12 +8051,12 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopírovať</translation>
+        <translation>Kopírovať</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
+        <translation>Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
     </message>
 </context>
 <context>
@@ -8356,12 +8355,12 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadajte pozíciu</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Poloha X:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8372,7 +8371,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Poloha Y:</translation>
     </message>
 </context>
 <context>
@@ -8388,17 +8387,17 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">Mapa znakov</translation>
+        <translation>Mapa znakov</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation>MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation>MyButton</translation>
     </message>
 </context>
 <context>
@@ -9580,27 +9579,27 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopírovať</translation>
+        <translation>Kopírovať</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Počet kópií:</translation>
+        <translation>Počet kópií:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
+        <translation>Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Uhol:</translation>
+        <translation>Uhol:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished">Definujte uhol pomocou kurzora myši</translation>
+        <translation>Definujte uhol pomocou kurzora myši</translation>
     </message>
 </context>
 <context>
@@ -10007,22 +10006,22 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopírovať</translation>
+        <translation>Kopírovať</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Počet kópií:</translation>
+        <translation>Počet kópií:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
+        <translation>Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Faktor x:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10033,17 +10032,17 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Faktor y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished">Úmerný</translation>
+        <translation>Úmerný</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished">Definujte faktor pomocou kurzora myši</translation>
+        <translation>Definujte faktor pomocou kurzora myši</translation>
     </message>
 </context>
 <context>
@@ -10594,7 +10593,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Polomer:</translation>
+        <translation>Polomer:</translation>
     </message>
     <message>
         <source>1</source>
@@ -11449,7 +11448,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbory SVG% 1</translation>
     </message>
 </context>
 <context>
@@ -12097,12 +12096,12 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished">Pomôcky</translation>
+        <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Panely nástrojov</translation>
+        <translation>Panely nástrojov</translation>
     </message>
 </context>
 <context>
@@ -12573,7 +12572,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Rozostup Siete &lt; Rozostup Mriežky</translation>
+        <translation>Rozostup Siete &lt; Rozostup Mriežky</translation>
     </message>
 </context>
 <context>
