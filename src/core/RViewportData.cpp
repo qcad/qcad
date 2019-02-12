@@ -61,8 +61,8 @@ RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
  */
 RVector RViewportData::getViewOffset() const {
     RVector offset(0,0);
-    offset -= viewCenter * scaleFactor;
-    offset -= viewTarget * scaleFactor;
+    offset -= viewCenter.get2D() * scaleFactor;
+    offset -= viewTarget.get2D() * scaleFactor;
     return position + offset;
 }
 
