@@ -1171,7 +1171,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation>Exporteer rechthoekige zone rond selectie</translation>
+        <translation>Exporteer de begrenzingsbox van de selectie</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -10381,12 +10381,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>Rechthoekige &amp;gebied (de-)selecteren</translation>
+        <translation>Rechthoekig &amp;gebied (de-)selecteren</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation>Alle objecten in een rechthoekige gebied (de-)selecteren</translation>
+        <translation>Alle objecten in een rechthoekig gebied (de-)selecteren</translation>
     </message>
 </context>
 <context>
