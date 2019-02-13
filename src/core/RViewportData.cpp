@@ -56,6 +56,13 @@ RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
     return RBox(position, width, height);
 }
 
+void RViewportData::to2D() {
+    REntityData::to2D();
+
+    viewCenter = viewCenter.get2D();
+    viewTarget = viewTarget.get2D();
+}
+
 /**
  * \return Offset or position of 0/0 of view (model space block) for this viewport.
  */

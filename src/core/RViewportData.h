@@ -61,6 +61,8 @@ public:
 
     virtual RBox getBoundingBox(bool ignoreEmpty) const;
 
+    virtual void to2D();
+
     virtual RBox getBoundingBox() const {
         return getBoundingBox(false);
     }
