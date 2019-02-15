@@ -186,6 +186,8 @@ public:
      */
     virtual QList<RVector> getCenterPoints() const = 0;
 
+    RVector getPointOnShape() const;
+
     /**
      * \return All points on this shape with the given distance to an endpoint.
      */

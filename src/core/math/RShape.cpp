@@ -162,6 +162,20 @@ bool RShape::equals(const RShape& other, double tolerance) const {
     return true;
 }
 
+RVector RShape::getPointOnShape() const {
+    QList<RVector> midPoints = getMiddlePoints();
+    if (midPoints.size()>0) {
+        return midPoints[0];
+    }
+
+    QList<RVector> endPoints = getEndPoints();
+    if (endPoints.size()>0) {
+        return endPoints[0];
+    }
+
+    return getClosestPointOnShape(RVector(0.0,0.0));
+}
+
 /**
  * \return Point at given percentile.
  */
