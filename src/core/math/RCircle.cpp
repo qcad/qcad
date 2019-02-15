@@ -22,6 +22,7 @@
 #include "RBox.h"
 #include "RCircle.h"
 #include "RTriangle.h"
+#include "RPolyline.h"
 
 /**
  * Creates a circle object with invalid center and 0 radius.
@@ -243,6 +244,17 @@ bool RCircle::flipHorizontal() {
 bool RCircle::flipVertical() {
     center.flipVertical();
     return true;
+}
+
+bool RCircle::stretch(const RPolyline& area, const RVector& offset) {
+    bool ret = false;
+
+    if (area.containsShape(*this)) {
+        // whole circle insise stretch area:
+        return move(offset);
+    }
+
+    return ret;
 }
 
 QSharedPointer<RShape> RCircle::getTransformed(const QTransform& transform) const {
