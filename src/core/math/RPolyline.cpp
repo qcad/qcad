@@ -1238,8 +1238,16 @@ bool RPolyline::containsShape(const RShape& shape) const {
     if (shape.isDirected()) {
         return contains(shape.getStartPoint()) && contains(shape.getEndPoint());
     }
+    else {
+        // e.g. circle:
+        RVector pointOnShape = shape.getPointOnShape();
+        if (contains(pointOnShape, true)) {
+            return true;
+        }
+    }
 
-    Q_ASSERT("shape not supported");
+    // unsupported shape:
+    Q_ASSERT(false);
     return false;
 }
 
