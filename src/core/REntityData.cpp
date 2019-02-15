@@ -338,17 +338,11 @@ RPolyline REntityData::getHull(double offset) const {
  *  inside a polygon.
  */
 RVector REntityData::getPointOnEntity() const {
-    QList<RVector> midPoints = getMiddlePoints();
-    if (midPoints.size()>0) {
-        return midPoints[0];
+    const RShape* s = castToConstShape();
+    if (s==NULL) {
+        return RVector::invalid;
     }
-
-    QList<RVector> endPoints = getEndPoints();
-    if (endPoints.size()>0) {
-        return endPoints[0];
-    }
-
-    return getClosestPointOnEntity(RVector(0.0,0.0));
+    return s->getPointOnShape();
 }
 
 /**
