@@ -18,10 +18,10 @@
  */
 
 /**
- * \defgroup ecma_miscdraw_counter Auto increment numbers
- * \ingroup ecma_miscdraw
+ * \class Counter
+ * \ingroup ecma_misc_draw
  *
- * \brief This module contains the ECMAScript implementation of the auto increment numbers
+ * \brief Implementation of the auto increment number text tool.
  */
 include("scripts/EAction.js");
 
