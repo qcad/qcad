@@ -19,6 +19,7 @@ TRANSLATIONS = \
     $$PWD/ts/$${NAME}_sk.ts \
     $$PWD/ts/$${NAME}_sl.ts \
     $$PWD/ts/$${NAME}_sv.ts \
+    $$PWD/ts/$${NAME}_th.ts \
     $$PWD/ts/$${NAME}_tr.ts \
     $$PWD/ts/$${NAME}_zh_CN.ts \
     $$PWD/ts/$${NAME}_zh_TW.ts
