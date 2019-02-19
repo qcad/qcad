@@ -741,7 +741,6 @@ SOURCES = \
 ../scripts/Modify/Round/RoundInit.js \
 ../scripts/Modify/Round/Tests/RoundTest00.js \
 ../scripts/Modify/Round/Tests/RoundTest01.js \
-../scripts/Modify/Round/Tests/RoundTest02.js \
 ../scripts/Modify/Scale/Scale.js \
 ../scripts/Modify/Scale/ScaleInit.js \
 ../scripts/Modify/Scale/Tests/ScaleTest00.js \
@@ -758,6 +757,8 @@ SOURCES = \
 ../scripts/Modify/Stretch/Tests/StretchTest00.js \
 ../scripts/Modify/Stretch/Tests/StretchTest01.js \
 ../scripts/Modify/Stretch/Tests/StretchTest02.js \
+../scripts/Modify/Stretch/Tests/StretchTest03.js \
+../scripts/Modify/Stretch/Tests/StretchTest05.js \
 ../scripts/Modify/Transform.js \
 ../scripts/Modify/Translate/Tests/TranslateTest00.js \
 ../scripts/Modify/Translate/Tests/TranslateTest01.js \

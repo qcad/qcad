@@ -919,12 +919,14 @@ Do you wish to recover them?</source>
     <message numerus="yes">
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation><numerusform>%n &apos;autosave&apos; záložný súbor výkresu bez názvu bol nájdený.
+        <translation type="vanished">
+            <numerusform>%n &apos;autosave&apos; záložný súbor výkresu bez názvu bol nájdený.
 Chcete ho obnoviť?</numerusform>
-        <numerusform>%n &apos;autosave&apos; záložné súbory výkresov bez názvu boli nájdené.
+            <numerusform>%n &apos;autosave&apos; záložné súbory výkresov bez názvu boli nájdené.
 Chcete ich obnoviť?</numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <location line="-64"/>
         <source>Recover Files?</source>
