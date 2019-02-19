@@ -102,7 +102,6 @@ public:
     virtual bool mirror(const RLine& axis);
     virtual bool flipHorizontal();
     virtual bool flipVertical();
-    virtual bool stretch(const RPolyline& area, const RVector& offset);
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 

@@ -1742,10 +1742,14 @@ bool RShape::stretch(const RBox& area, const RVector& offset) {
 }
 
 bool RShape::stretch(const RPolyline& area, const RVector& offset) {
-    Q_UNUSED(area)
-    Q_UNUSED(offset)
+    bool ret = false;
 
-    return false;
+    if (area.containsShape(*this)) {
+        // whole shape inside stretch area:
+        return move(offset);
+    }
+
+    return ret;
 }
 
 bool RShape::scale(double scaleFactor, const RVector& center) {
