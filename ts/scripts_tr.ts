@@ -336,7 +336,7 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>K&amp;atman Ekle</translation>
     </message>
 </context>
 <context>
@@ -352,12 +352,12 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
     <message>
         <location filename="../scripts/Apollonius.js" line="+1769"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Geçersiz yarıçap</translation>
+        <translation>Geçersiz yarıçap</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation type="unfinished">Çözüm yok</translation>
+        <translation>Çözüm yok</translation>
     </message>
 </context>
 <context>
@@ -869,7 +869,8 @@ Do you wish to recover it/them?</source>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot; için bir otomatik kaydetme yedekleme dosyası var.
+Kurtarmak ister misiniz?</translation>
     </message>
     <message numerus="yes">
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
@@ -982,7 +983,7 @@ Onu kurtarmak ister misiniz?</translation>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation type="unfinished"></translation>
+        <translation>Izgara noktaları</translation>
     </message>
     <message>
         <location line="+10"/>
