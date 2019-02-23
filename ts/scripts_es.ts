@@ -3143,7 +3143,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation>&amp;Angular</translation>
+        <translation>&amp;Ángulo</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3171,7 +3171,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation>&amp;Diametro</translation>
+        <translation>&amp;Diámetro</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3211,7 +3211,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>&amp;Ordinal (X/Y)</translation>
+        <translation>&amp;Coordenadas (X/Y)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3234,7 +3234,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation>&amp;Radial</translation>
+        <translation>&amp;Radio</translation>
     </message>
     <message>
         <location line="+5"/>
