@@ -10603,7 +10603,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+754"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+761"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -10638,7 +10638,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1229"/>
+        <location line="-1236"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -10670,7 +10670,7 @@ Nessuna selezione</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+197"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>

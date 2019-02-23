@@ -11579,13 +11579,13 @@ Wskaż punkt docelowy</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1229"/>
+        <location line="-1236"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -11628,7 +11628,7 @@ Własne filtry</translatorcomment>
         <translation>Dostosowany</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+197"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

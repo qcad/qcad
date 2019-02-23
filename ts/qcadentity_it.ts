@@ -42,7 +42,6 @@ Specificare la posizione</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+124"/>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: wp-geo-it_IT.po--
@@ -53,7 +52,6 @@ Larghezza
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: wp-geo-it_IT.po--
@@ -103,7 +101,7 @@ Altezza Testo:</translatorcomment>
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-19"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+106"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+77"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -673,7 +671,17 @@ Impossibile connettere alla polilinea chiusa.</translatorcomment>
         <translation>Angolo di base</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>Size 1</source>
+        <translation>Dimensioni 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size 2</source>
+        <translation>Dimensioni 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Global Z</source>
         <translation>Z globale</translation>
     </message>

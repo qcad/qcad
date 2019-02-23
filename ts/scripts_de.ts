@@ -11059,12 +11059,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1229"/>
+        <location line="-1236"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11088,7 +11088,7 @@ nicht öffnen.
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+214"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -11248,7 +11248,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1098"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1105"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

@@ -9145,12 +9145,12 @@ näkyy etsintätuloksissa:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1229"/>
+        <location line="-1236"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9179,7 +9179,7 @@ näkyy etsintätuloksissa:</translation>
         <translation>Muokattu</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+197"/>
         <source>Index</source>
         <translation>Hakemisto</translation>
     </message>

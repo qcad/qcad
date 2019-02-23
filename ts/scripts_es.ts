@@ -2081,7 +2081,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
     </message>
     <message>
         <source>Center, &amp;Radius</source>
-        <translation>Centro y &amp;radio</translation>
+        <translation type="vanished">Centro y &amp;radio</translation>
     </message>
     <message>
         <source>Draw circle from center and radius</source>
@@ -10623,7 +10623,7 @@ en los resultados de búsqueda:</translation>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+754"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+761"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -10658,7 +10658,7 @@ en los resultados de búsqueda:</translation>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1229"/>
+        <location line="-1236"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -10691,7 +10691,7 @@ Seleccin nula</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+197"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--

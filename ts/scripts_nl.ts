@@ -9110,12 +9110,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1229"/>
+        <location line="-1236"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9140,7 +9140,7 @@ getoond in zoekresultaten:</translation>
         <translation>Gebruiker gedefinieerd</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+197"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>

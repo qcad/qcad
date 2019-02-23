@@ -8943,7 +8943,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Vlastní</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+197"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>

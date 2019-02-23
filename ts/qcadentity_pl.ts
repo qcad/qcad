@@ -626,13 +626,11 @@ Punkt główny|Y</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+11"/>
         <source>Width</source>
         <translation>Szerokość</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Wysokość</translation>
     </message>
@@ -660,7 +658,7 @@ Punkt główny|Y</translatorcomment>
         <translation type="vanished">W lewo</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-21"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
         <translation type="unfinished">Wzór linii łamanej</translation>
     </message>
@@ -708,7 +706,17 @@ Punkt główny|Y</translatorcomment>
         <translation type="unfinished">Kąt podstawy</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>Size 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Global Z</source>
         <translation type="unfinished"></translation>
     </message>

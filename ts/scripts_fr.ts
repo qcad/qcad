@@ -10649,7 +10649,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+197"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -10709,7 +10709,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1229"/>
+        <location line="-1236"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -10734,7 +10734,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+354"/>
+        <location line="+361"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal

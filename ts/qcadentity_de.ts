@@ -88,13 +88,11 @@
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+18"/>
         <source>Width</source>
         <translation>Breite</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Höhe</translation>
     </message>
@@ -158,7 +156,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-18"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RRayEntity.cpp" line="-6"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -492,7 +490,17 @@
         <translation>Basiswinkel</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>Size 1</source>
+        <translation>Grösse 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size 2</source>
+        <translation>Grösse 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Global Z</source>
         <translation>Globales Z</translation>
     </message>

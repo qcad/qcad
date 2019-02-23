@@ -9204,12 +9204,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Vždy zobrazovať všetky vlastnosti (môže to spomaliť výber prvkov)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1422"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1229"/>
+        <location line="-1236"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9238,7 +9238,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Vlastné</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+197"/>
         <source>Index</source>
         <translation>Zoznam</translation>
     </message>

@@ -604,13 +604,11 @@
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+11"/>
         <source>Width</source>
         <translation>Breedte</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Hoogte</translation>
     </message>
@@ -638,7 +636,7 @@
         <translation type="vanished">Linksom</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-21"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
         <translation>Polylijnpatroon</translation>
     </message>
@@ -685,7 +683,17 @@
         <translation>Basishoek</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>Size 1</source>
+        <translation>Grootte 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size 2</source>
+        <translation>Grootte 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Global Z</source>
         <translation>Algeheel Z</translation>
     </message>

@@ -740,7 +740,6 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+11"/>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -751,7 +750,6 @@ Espessura:
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -787,7 +785,7 @@ Tamanho da seta:</translatorcomment>
         <translation type="vanished">Anti-horário</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-21"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
         <translation>Padrão para Polilinha</translation>
     </message>
@@ -840,7 +838,17 @@ Fechado</translatorcomment>
         <translation>Ângulo base</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>Size 1</source>
+        <translation>Tamanho 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size 2</source>
+        <translation>Tamanho 2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Global Z</source>
         <translation>Z global</translation>
     </message>
