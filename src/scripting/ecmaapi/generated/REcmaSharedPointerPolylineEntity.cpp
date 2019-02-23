@@ -325,11 +325,11 @@
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyWidth",
-                qScriptValueFromValue(&engine, RPolylineEntity::PropertyWidth),
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyHeight",
-                qScriptValueFromValue(&engine, RPolylineEntity::PropertyHeight),
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertySize2),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyElevation",

@@ -53,8 +53,8 @@ RPropertyTypeId RPolylineEntity::PropertyArea;
 RPropertyTypeId RPolylineEntity::PropertyTotalArea;
 
 RPropertyTypeId RPolylineEntity::PropertyBaseAngle;
-RPropertyTypeId RPolylineEntity::PropertyWidth;
-RPropertyTypeId RPolylineEntity::PropertyHeight;
+RPropertyTypeId RPolylineEntity::PropertySize1;
+RPropertyTypeId RPolylineEntity::PropertySize2;
 RPropertyTypeId RPolylineEntity::PropertyElevation;
 
 //#if QT_VERSION >= 0x050000
@@ -121,8 +121,8 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyTotalArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
 
     RPolylineEntity::PropertyBaseAngle.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Base Angle"));
-    RPolylineEntity::PropertyWidth.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
-    RPolylineEntity::PropertyHeight.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
+    RPolylineEntity::PropertySize1.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Size 1"));
+    RPolylineEntity::PropertySize2.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Size 2"));
 
     RPolylineEntity::PropertyElevation.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Z"));
 }
@@ -166,10 +166,10 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
 //            }
         }
 
-        else if (PropertyWidth==propertyTypeId) {
+        else if (PropertySize1==propertyTypeId) {
             ret = ret || data.setWidth(value.toDouble());
         }
-        else if (PropertyHeight==propertyTypeId) {
+        else if (PropertySize2==propertyTypeId) {
             ret = ret || data.setHeight(value.toDouble());
         }
     }
@@ -298,12 +298,12 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
                 v.setValue(baseAngle);
                 return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
             }
-            else if (propertyTypeId == PropertyWidth) {
+            else if (propertyTypeId == PropertySize1) {
                 QVariant v;
                 v.setValue(data.getWidth());
                 return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
             }
-            else if (propertyTypeId == PropertyHeight) {
+            else if (propertyTypeId == PropertySize2) {
                 QVariant v;
                 v.setValue(data.getHeight());
                 return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));

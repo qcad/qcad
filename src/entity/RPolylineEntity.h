@@ -75,8 +75,8 @@ public:
     static RPropertyTypeId PropertyTotalArea;
 
     static RPropertyTypeId PropertyBaseAngle;
-    static RPropertyTypeId PropertyWidth;
-    static RPropertyTypeId PropertyHeight;
+    static RPropertyTypeId PropertySize1;
+    static RPropertyTypeId PropertySize2;
 
     static RPropertyTypeId PropertyElevation;
 
