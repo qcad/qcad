@@ -772,7 +772,7 @@ Tipo de línea:</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation>&amp;Centro, Punto, Angulo</translation>
+        <translation>&amp;Centro, punto y ángulo</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -884,7 +884,7 @@ Tipo de línea:</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangente, punto, radio</translation>
+        <translation>&amp;Tangente, punto y radio</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2081,7 +2081,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
     </message>
     <message>
         <source>Center, &amp;Radius</source>
-        <translation type="vanished">Centro, &amp;radio</translation>
+        <translation>Centro y &amp;radio</translation>
     </message>
     <message>
         <source>Draw circle from center and radius</source>
@@ -2111,7 +2111,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation>Centro, &amp;diámetro</translation>
+        <translation>Centro y &amp;diámetro</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2138,7 +2138,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation>&amp;Centro, point</translation>
+        <translation>&amp;Centro y punto</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2286,7 +2286,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangente, punto, radio</translation>
+        <translation>&amp;Tangente, punto y radio</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3115,7 +3115,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation>&amp;Alineado</translation>
+        <translation>&amp;Alineada</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3292,7 +3292,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation>&amp;Girada (lineal)</translation>
+        <translation>&amp;Rotada (lineal)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7621,7 +7621,7 @@ Proyección &amp;Isométrica</translatorcomment>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation>Proyección &amp;derecho</translation>
+        <translation>Proyección &amp;derecha</translation>
     </message>
 </context>
 <context>
