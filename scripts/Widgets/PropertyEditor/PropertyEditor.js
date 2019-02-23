@@ -418,12 +418,19 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         }
     }
 
-    // clear custom group:
-    if (!isNull(this.customGroup)) {
-        var children = this.customGroup.children();
-        for (var i=0; i<children.length; i++) {
-            var child = children[i];
-            if (!isOfType(child, QGridLayout)) {
+    // clear custom property group and child (block attributes) groups:
+    // these are always rebuilt:
+    var groupsToClear = [this.customGroup, this.childGroup];
+    for (var gtci=0; gtci<groupsToClear.length; gtci++) {
+        var groupToClear = groupsToClear[gtci];
+        if (!isNull(groupToClear)) {
+            var children = groupToClear.children();
+            for (var i=0; i<children.length; i++) {
+                var child = children[i];
+                if (isOfType(child, QGridLayout)) {
+                    // don't destroy layout:
+                    continue;
+                }
                 children[i].destroy();
             }
         }
@@ -746,7 +753,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     }
 
     // add custom property button:
-    if (!onlyChanges) {
+    //if (!onlyChanges) {
         if (RSettings.isXDataEnabled() && RSettings.getBoolValue("PropertyEditor/AddCustomProperties", true)!==false) {
             var addCustomPropertyButton = new QToolButton(this.widget);
             addCustomPropertyButton.icon = new QIcon(this.basePath + "/AddCustomProperty.svg");
@@ -756,7 +763,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             addCustomPropertyButton.clicked.connect(this, "addCustomProperty");
             gridLayoutCustom.addWidget(addCustomPropertyButton, gridLayoutCustom.rowCount(),3, 1,1);
         }
-    }
+    //}
 
     this.widget.updatesEnabled = true;
 };
