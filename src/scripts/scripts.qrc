@@ -1842,11 +1842,15 @@
     <file alias="scripts/Modify/Stretch/Tests/StretchTest00.js">../../scripts/Modify/Stretch/Tests/StretchTest00.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest01.js">../../scripts/Modify/Stretch/Tests/StretchTest01.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest02.js">../../scripts/Modify/Stretch/Tests/StretchTest02.js</file>
+    <file alias="scripts/Modify/Stretch/Tests/StretchTest03.js">../../scripts/Modify/Stretch/Tests/StretchTest03.js</file>
+    <file alias="scripts/Modify/Stretch/Tests/StretchTest05.js">../../scripts/Modify/Stretch/Tests/StretchTest05.js</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities0.dxf">../../scripts/Modify/Stretch/Tests/data/entities0.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities1.dxf">../../scripts/Modify/Stretch/Tests/data/entities1.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest00_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest00_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest01_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest01_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest02_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest02_000.dxf</file>
+    <file alias="scripts/Modify/Stretch/Tests/required/StretchTest03_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest03_000.dxf</file>
+    <file alias="scripts/Modify/Stretch/Tests/required/StretchTest05_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest05_000.dxf</file>
     <file alias="scripts/Modify/Transform.js">../../scripts/Modify/Transform.js</file>
     <file alias="scripts/Modify/Translate/PreferencesPage.ui">../../scripts/Modify/Translate/PreferencesPage.ui</file>
     <file alias="scripts/Modify/Translate/Tests/TranslateTest00.js">../../scripts/Modify/Translate/Tests/TranslateTest00.js</file>
@@ -2467,6 +2471,7 @@
     <file alias="ts/scripts_sk.qm">../../ts/scripts_sk.qm</file>
     <file alias="ts/scripts_sl.qm">../../ts/scripts_sl.qm</file>
     <file alias="ts/scripts_sv.qm">../../ts/scripts_sv.qm</file>
+    <file alias="ts/scripts_th.qm">../../ts/scripts_th.qm</file>
     <file alias="ts/scripts_tr.qm">../../ts/scripts_tr.qm</file>
     <file alias="ts/scripts_zh_CN.qm">../../ts/scripts_zh_CN.qm</file>
     <file alias="ts/scripts_zh_TW.qm">../../ts/scripts_zh_TW.qm</file>
