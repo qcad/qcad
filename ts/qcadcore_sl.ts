@@ -250,7 +250,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation>Položaj</translation>
+        <translation>Postavitev</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+65"/>
@@ -481,7 +481,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation>Položaj besedila</translation>
+        <translation>Postavitev besedila</translation>
     </message>
     <message>
         <location line="+1"/>
