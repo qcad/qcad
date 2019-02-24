@@ -374,14 +374,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation>Definiranje točke</translation>
+        <translation>Določanje točke</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation>Vodilna končna točka</translation>
+        <translation>Končna točka opisnice</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+121"/>
@@ -397,7 +397,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation>Toleranca</translation>
+        <translation>Dopustno odstopanje</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -421,27 +421,27 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation>Položaj besedila</translation>
+        <translation>Postavitev besedila</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrni prvo puščico</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrni drugo puščico</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Nespremenljiva pomožna kotirna črta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolžina pomožne kotirne črte</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -456,24 +456,24 @@
     <message>
         <location line="+1"/>
         <source>Linear Factor</source>
-        <translation>Faktor povečave</translation>
+        <translation>Količnik povečave</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block Name</source>
-        <translation>Ime bloka</translation>
+        <translation>Ime zbira</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Pozicija samodejnega napisa</translation>
+        <translation>Postavitev samodejnega napisa</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation>Glavne točke</translation>
+        <translation>Glavna točka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -576,7 +576,7 @@
         <location line="+1"/>
         <source>Vertex</source>
         <translatorcomment>temer krivulje?</translatorcomment>
-        <translation>Teme</translation>
+        <translation>Oglišče</translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
@@ -591,17 +591,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation>Položaj</translation>
+        <translation>Postavitev</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation>Faktor širine</translation>
+        <translation>Količnik širine</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation>Faktor višine</translation>
+        <translation>Količnik višine</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -616,7 +616,7 @@
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation>Prelij</translation>
+        <translation>Pojemek</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
@@ -626,17 +626,17 @@
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation>Blok puščice</translation>
+        <translation>Zbir puščice</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation>Vzorec lomljenka</translation>
+        <translation>Vzorec črtovja</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation>Zaključeno</translation>
+        <translation>Sklenjeno</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -656,12 +656,12 @@
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation>Globalna širina</translation>
+        <translation>Enakomerna širina</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Usmeritev</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -757,7 +757,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation>Kontrolna točka</translation>
+        <translation>Krmilna točka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -779,26 +779,26 @@
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi začetno dotikalnico</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>Začetna dotikalnica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi končno dotikalnico</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation>Končna dotikalnica</translation>
     </message>
     <message>
         <source>Simple</source>
@@ -900,7 +900,7 @@
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+141"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip ločnega simbola</translation>
     </message>
 </context>
 </TS>
