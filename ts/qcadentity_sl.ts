@@ -421,7 +421,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation>Pozicija besedila</translation>
+        <translation>Položaj besedila</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -591,7 +591,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation>Pozicija</translation>
+        <translation>Položaj</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -838,7 +838,7 @@
     </message>
     <message>
         <source>Italic</source>
-        <translation type="vanished">Poštevno</translation>
+        <translation>Poševno</translation>
     </message>
     <message>
         <source>Line Spacing</source>
