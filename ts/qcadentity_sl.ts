@@ -838,7 +838,7 @@
     </message>
     <message>
         <source>Italic</source>
-        <translation>Poševno</translation>
+        <translation type="vanished">Poševno</translation>
     </message>
     <message>
         <source>Line Spacing</source>

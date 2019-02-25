@@ -702,7 +702,7 @@
     </message>
     <message>
         <source>Linetype</source>
-        <translation>Vrsta črte</translation>
+        <translation type="vanished">Vrsta črte</translation>
     </message>
     <message>
         <source>Lineweight</source>
@@ -717,7 +717,7 @@
     </message>
     <message>
         <source>By Block</source>
-        <translation>Po zbiru</translation>
+        <translation type="vanished">Po zbiru</translation>
     </message>
     <message>
         <source>Continuous</source>
@@ -725,39 +725,39 @@
     </message>
     <message>
         <source>Dot</source>
-        <translation>Pikčasto</translation>
+        <translation type="vanished">Pikčasto</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation>Pikčasto (gosto)</translation>
+        <translation type="vanished">Pikčasto (gosto)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation>Pikčasto (redko)</translation>
+        <translation type="vanished">Pikčasto (redko)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation>Črtkano</translation>
+        <translation type="vanished">Črtkano</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation>Črtkano (gosto)</translation>
+        <translation type="vanished">Črtkano (gosto)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation>Črtkano (redko)</translation>
+        <translation type="vanished">Črtkano (redko)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation>Črtopično</translation>
+        <translation type="vanished">Črtopično</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation>Črtopično (gosto)</translation>
+        <translation type="vanished">Črtopično (gosto)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation>Črtopično (redko)</translation>
+        <translation type="vanished">Črtopično (redko)</translation>
     </message>
     <message>
         <source>Divide</source>
@@ -777,11 +777,11 @@
     </message>
     <message>
         <source>Center (small)</source>
-        <translation>Srednjica (gosta)</translation>
+        <translation type="vanished">Srednjica (gosta)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation>Srednjica (redka)</translation>
+        <translation type="vanished">Srednjica (redka)</translation>
     </message>
     <message>
         <source>Border</source>
@@ -789,11 +789,11 @@
     </message>
     <message>
         <source>Border (small)</source>
-        <translation>Rob (gosto)</translation>
+        <translation type="vanished">Rob (gosto)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation>Rob (redko)</translation>
+        <translation type="vanished">Rob (redko)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
