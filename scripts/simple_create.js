@@ -293,6 +293,10 @@ function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold
     if (arguments.length===10) {
         return addSimpleText(arguments[0], new RVector(arguments[1], arguments[2]), arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9]);
     }
+    if (arguments.length===3 && isNumber(position)) {
+        // addSimpleText("text", x, y)
+        return addSimpleText(arguments[0], new RVector(arguments[1], arguments[2]));
+    }
 
     var doc = getTransactionDocument();
     if (isNull(doc)) {
