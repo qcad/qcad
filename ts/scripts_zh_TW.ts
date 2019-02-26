@@ -424,13 +424,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
-        <source>Direction</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -594,13 +588,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
-        <source>Direction</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -615,13 +603,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
-        <source>Solution</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation type="unfinished"></translation>
     </message>
@@ -702,13 +684,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
-        <source>Direction</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1636,13 +1612,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
-        <source>Solution</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3852,13 +3822,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
-        <source>Direction</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished"></translation>
     </message>

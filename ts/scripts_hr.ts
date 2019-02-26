@@ -418,13 +418,11 @@ the preference changes to take effect.</source>
         <translation>Smjer obrnuto od kazaljke na satu (Pozitivno)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smjer</translation>
+        <translation type="vanished">Smjer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Smjer kazaljke na satu (Negativno)</translation>
     </message>
@@ -588,13 +586,11 @@ the preference changes to take effect.</source>
         <translation>Smjer suprotan od kazaljke na satu (Pozitivan)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smjer</translation>
+        <translation type="vanished">Smjer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Smjer kazaljke na satu (Negativan)</translation>
     </message>
@@ -609,13 +605,11 @@ the preference changes to take effect.</source>
         <translation>Kraći Luk</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Rješenje</translation>
+        <translation type="vanished">Rješenje</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Duži Kut</translation>
     </message>
@@ -696,13 +690,11 @@ the preference changes to take effect.</source>
         <translation>Smjer suprotan od kazaljke na satu (pozitivan)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smjer</translation>
+        <translation type="vanished">Smjer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Smjer kazaljke na satu (Negativan)</translation>
     </message>
@@ -1647,13 +1639,11 @@ Do you wish to recover it?</source>
         <translation>Centar Lijevo od Linije P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Rješenje</translation>
+        <translation type="vanished">Rješenje</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Centar Desno od Linije P1 - P2</translation>
     </message>
@@ -3891,13 +3881,11 @@ is already in the list.</source>
         <translation>Smjer suprotan od kazaljke na satu (pozitivan)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smjer</translation>
+        <translation type="vanished">Smjer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Smjer kazaljke na satu (Negativan)</translation>
     </message>

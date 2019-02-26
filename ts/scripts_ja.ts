@@ -451,13 +451,11 @@ QCADを再起動してください。</translation>
         <translation>反時計回り（正）</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>向き</translation>
+        <translation type="vanished">向き</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>時計回り（負）</translation>
     </message>
@@ -621,13 +619,11 @@ QCADを再起動してください。</translation>
         <translation>反時計回り（正）</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>向き</translation>
+        <translation type="vanished">向き</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>時計回り（負）</translation>
     </message>
@@ -642,13 +638,11 @@ QCADを再起動してください。</translation>
         <translation>短い弧</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>ソリューション</translation>
+        <translation type="vanished">ソリューション</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>長い弧</translation>
     </message>
@@ -729,13 +723,11 @@ QCADを再起動してください。</translation>
         <translation>反時計回り（正）</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>向き</translation>
+        <translation type="vanished">向き</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>時計回り（負）</translation>
     </message>
@@ -1736,13 +1728,11 @@ Do you wish to recover it?</source>
         <translation>１−２点の線分の左に中心を置く</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>ソリューション</translation>
+        <translation type="vanished">ソリューション</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>１−２点の線分の右に中心を置く</translation>
     </message>
@@ -4105,13 +4095,11 @@ is already in the list.</source>
         <translation>反時計回り（正）</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>向き</translation>
+        <translation type="vanished">向き</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>時計回り（負）</translation>
     </message>

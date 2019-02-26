@@ -422,13 +422,11 @@ the preference changes to take effect.</source>
         <translation>Směr otočení (Kladně)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Směr</translation>
+        <translation type="vanished">Směr</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Otočení (Záporné)</translation>
     </message>
@@ -592,13 +590,11 @@ the preference changes to take effect.</source>
         <translation>Směr otáčení (Kladný)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Směr</translation>
+        <translation type="vanished">Směr</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Směr otáčení (Záporný)</translation>
     </message>
@@ -613,13 +609,11 @@ the preference changes to take effect.</source>
         <translation>Malý oblouk</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Řešení</translation>
+        <translation type="vanished">Řešení</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Dlouhý oblouk</translation>
     </message>
@@ -700,13 +694,11 @@ the preference changes to take effect.</source>
         <translation>Proti směru hodinových ručiček (pozitivní)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Směr</translation>
+        <translation type="vanished">Směr</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Směr otáčení (Negativní)</translation>
     </message>
@@ -1689,13 +1681,11 @@ Přejete si ho obnovit?</translation>
         <translation>Střed nalevo od úsečky P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Řešení</translation>
+        <translation type="vanished">Řešení</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Střed napravo od úsečky P1 - P2</translation>
     </message>
@@ -3963,13 +3953,11 @@ již v seznamu je.</translation>
         <translation>Proti směru hodinových ručiček (kladný)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Směr</translation>
+        <translation type="vanished">Směr</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Po směru hodinových ručiček (záporný)</translation>
     </message>

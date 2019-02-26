@@ -447,13 +447,11 @@ da bodo spremembe začele delovat.</translation>
         <translation>Nasprotno smeri urinega kazalca (Pozitivna)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smer</translation>
+        <translation type="vanished">Smer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smeri urinega kazalca (Negativna)</translation>
     </message>
@@ -617,13 +615,11 @@ da bodo spremembe začele delovat.</translation>
         <translation>Nasproti urinega kazalca (Pozitivna)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smer</translation>
+        <translation type="vanished">Smer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smeri urinega kazalca (Negativna)</translation>
     </message>
@@ -638,13 +634,11 @@ da bodo spremembe začele delovat.</translation>
         <translation>Krajši lok</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Rešitev</translation>
+        <translation type="vanished">Rešitev</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Daljši lok</translation>
     </message>
@@ -725,13 +719,11 @@ da bodo spremembe začele delovat.</translation>
         <translation>Nasproti smeri urinega kazalca (Pozitivna)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smer</translation>
+        <translation type="vanished">Smer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smeri urinega kazalca (Negativna)</translation>
     </message>
@@ -1736,13 +1728,11 @@ Do you wish to recover it?</source>
         <translation>Sredina levo od premice P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Rešitev</translation>
+        <translation type="vanished">Rešitev</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Sredina desno od premice P1 - P2</translation>
     </message>
@@ -4115,13 +4105,11 @@ je že na seznamu.</translation>
         <translation>Nasprotno smeri urnega kazalca (pozitivna)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smer</translation>
+        <translation type="vanished">Smer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smeri urnega kazalca (Negativna)</translation>
     </message>

@@ -447,13 +447,11 @@ the preference changes to take effect.</source>
         <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Направление</translation>
+        <translation type="vanished">Направление</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>По часовой стрелке (Отрицательное)</translation>
     </message>
@@ -617,13 +615,11 @@ the preference changes to take effect.</source>
         <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Направление</translation>
+        <translation type="vanished">Направление</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>По часовой стрелке (Отрицательное)</translation>
     </message>
@@ -638,13 +634,11 @@ the preference changes to take effect.</source>
         <translation>Дуга короче</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Решение</translation>
+        <translation type="vanished">Решение</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Дуга длиннее</translation>
     </message>
@@ -725,13 +719,11 @@ the preference changes to take effect.</source>
         <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Направление</translation>
+        <translation type="vanished">Направление</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>По часовой стрелке (Отрицательное)</translation>
     </message>
@@ -1730,13 +1722,11 @@ Do you wish to recover it?</source>
         <translation>Центр Слева от линии P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Решение</translation>
+        <translation type="vanished">Решение</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Центр Справа от линии P1 - P2</translation>
     </message>
@@ -4000,13 +3990,11 @@ is already in the list.</source>
         <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Направление</translation>
+        <translation type="vanished">Направление</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>По часовой стрелке (Отрицательное)</translation>
     </message>

@@ -564,18 +564,16 @@ Descrição:</translatorcomment>
         <translation>Anti-horário (positivo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Direção de Visualização:
 Direção de Visualização
 LTR</translatorcomment>
-        <translation>Direção</translation>
+        <translation type="vanished">Direção</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Horário (negativo)</translation>
@@ -761,18 +759,16 @@ Descrição:</translatorcomment>
         <translation>Anti-Horário (positivo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Direção de Visualização:
 Direção de Visualização
 LTR</translatorcomment>
-        <translation>Descrição</translation>
+        <translation type="vanished">Descrição</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Horário (negativo)</translation>
@@ -792,17 +788,15 @@ Resolução padrão de exportação</translatorcomment>
         <translation>Arco mais curto</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
         <translatorcomment>--google--
 Relação:
 Relação
 Resolução preferida para a figura (pontos por polegada)</translatorcomment>
-        <translation>Solução</translation>
+        <translation type="vanished">Solução</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Arco mais longo</translation>
@@ -926,18 +920,16 @@ Descrição:</translatorcomment>
         <translation>Anti-Horário (positivo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Direção de Visualização:
 Direção de Visualização
 LTR</translatorcomment>
-        <translation>Direção</translation>
+        <translation type="vanished">Direção</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Horário (negativo)</translation>
@@ -2223,18 +2215,16 @@ Solução:</translatorcomment>
         <translation>Centro à Esquerda da Linha P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 Relação:
 Relação
 Solução:</translatorcomment>
-        <translation>Solução</translation>
+        <translation type="vanished">Solução</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Centro à Direita da Linha P1 - P2</translation>
@@ -5239,18 +5229,16 @@ Descrição:</translatorcomment>
         <translation>Anti-horário (positivo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Direção de Visualização:
 Direção de Visualização
 LTR</translatorcomment>
-        <translation>Direção</translation>
+        <translation type="vanished">Direção</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Horário (negativo)</translation>

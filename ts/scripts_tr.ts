@@ -423,13 +423,11 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Saat Yönünün Tersi (Pozitif)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Yön</translation>
+        <translation type="vanished">Yön</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
     </message>
@@ -593,13 +591,11 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Saat Yönünün Tersine (Pozitif)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Yön</translation>
+        <translation type="vanished">Yön</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
     </message>
@@ -614,13 +610,11 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Daha kısa Yay</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Çözüm</translation>
+        <translation type="vanished">Çözüm</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Daha uzun Yay</translation>
     </message>
@@ -701,13 +695,11 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Saat yönünün tersine (pozitif)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Yön</translation>
+        <translation type="vanished">Yön</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat yönünde (Negatif)</translation>
     </message>
@@ -1680,13 +1672,11 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>P1 - P2 Hattının Merkez Solu</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Çözüm</translation>
+        <translation type="vanished">Çözüm</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>P1 - P2 Hattının Merkezi Sağı</translation>
     </message>
@@ -3936,13 +3926,11 @@ is already in the list.</source>
         <translation>Saat Yönünün Tersi (pozitif)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Yön</translation>
+        <translation type="vanished">Yön</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Saat Yönünde (Negatif)</translation>
     </message>

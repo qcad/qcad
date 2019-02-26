@@ -447,13 +447,11 @@ musíte znovu spustiť QCAD.</translation>
         <translation>Proti smeru hodinových ručičiek (plusový)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smer</translation>
+        <translation type="vanished">Smer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smere hodinových ručičiek (mínusový)</translation>
     </message>
@@ -617,13 +615,11 @@ musíte znovu spustiť QCAD.</translation>
         <translation>Proti smeru hodinových ručičiek (plusový)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smer</translation>
+        <translation type="vanished">Smer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smere hodinových ručičiek (mínusový)</translation>
     </message>
@@ -638,13 +634,11 @@ musíte znovu spustiť QCAD.</translation>
         <translation>Kratší oblúk</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Možnosť</translation>
+        <translation type="vanished">Možnosť</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Dlhší oblúk</translation>
     </message>
@@ -725,13 +719,11 @@ musíte znovu spustiť QCAD.</translation>
         <translation>Proti smeru hodinových ručičiek (plusový)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smer</translation>
+        <translation type="vanished">Smer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smere hodinových ručičiek (mínusový)</translation>
     </message>
@@ -1752,13 +1744,11 @@ Prajete si ho obnoviť?</translation>
         <translation>Stredový bod naľavo od priamky P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Možnosť</translation>
+        <translation type="vanished">Možnosť</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Stredový bod napravo od priamky P1 - P2</translation>
     </message>
@@ -4073,13 +4063,11 @@ už existuje v zozname.</translation>
         <translation>Proti smeru hodinových ručičiek</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Smer</translation>
+        <translation type="vanished">Smer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>V smere hodinových ručičiek</translation>
     </message>

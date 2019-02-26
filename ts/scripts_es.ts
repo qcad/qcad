@@ -478,13 +478,11 @@ Tipo de línea:</translatorcomment>
         <translation>Contador Dirección Reloj (positiva)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Dirección</translation>
+        <translation type="vanished">Dirección</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Dirección Reloj (negativo)</translation>
     </message>
@@ -648,13 +646,11 @@ Tipo de línea:</translatorcomment>
         <translation>Contador Dirección Reloj (positiva)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Dirección</translation>
+        <translation type="vanished">Dirección</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Dirección Reloj (negativo)</translation>
     </message>
@@ -669,13 +665,11 @@ Tipo de línea:</translatorcomment>
         <translation>Arco corto</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Solución</translation>
+        <translation type="vanished">Solución</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Arco largo</translation>
     </message>
@@ -790,13 +784,11 @@ Tipo de línea:</translatorcomment>
         <translation>Contador Dirección Reloj (positiva)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Dirección</translation>
+        <translation type="vanished">Dirección</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Dirección Reloj (negativo)</translation>
     </message>
@@ -1872,13 +1864,11 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
         <translation>Centro está en el lado izquierdo de la línea P1-P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Solución</translation>
+        <translation type="vanished">Solución</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Centro es el derecho de la línea P1-P2</translation>
     </message>
@@ -4443,13 +4433,11 @@ ya está en la lista.</translation>
         <translation>Contador Dirección Reloj (positiva)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Dirección</translation>
+        <translation type="vanished">Dirección</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Dirección Reloj (negativo)</translation>
     </message>

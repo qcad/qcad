@@ -427,13 +427,11 @@ the preference changes to take effect.</translation>
         <translation>Counter Clockwise (Positive)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Direction</translation>
+        <translation type="vanished">Direction</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Clockwise (Negative)</translation>
     </message>
@@ -597,13 +595,11 @@ the preference changes to take effect.</translation>
         <translation>Counter Clockwise (Positive)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Direction</translation>
+        <translation type="vanished">Direction</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Clockwise (Negative)</translation>
     </message>
@@ -618,13 +614,11 @@ the preference changes to take effect.</translation>
         <translation>Shorter Arc</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Solution</translation>
+        <translation type="vanished">Solution</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Longer Arc</translation>
     </message>
@@ -705,13 +699,11 @@ the preference changes to take effect.</translation>
         <translation>Counter Clockwise (positive)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Direction</translation>
+        <translation type="vanished">Direction</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Clockwise (Negative)</translation>
     </message>
@@ -1696,13 +1688,11 @@ Do you wish to recover it?</translation>
         <translation>Center Left of Line P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Solution</translation>
+        <translation type="vanished">Solution</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Center Right of Line P1 - P2</translation>
     </message>
@@ -3963,13 +3953,11 @@ is already in the list.</translation>
         <translation>Counter Clockwise (positive)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Direction</translation>
+        <translation type="vanished">Direction</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Clockwise (Negative)</translation>
     </message>

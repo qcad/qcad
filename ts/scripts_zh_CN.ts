@@ -418,13 +418,11 @@ the preference changes to take effect.</source>
         <translation>逆时针（正向）</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>方向</translation>
+        <translation type="vanished">方向</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>顺时针（负向）</translation>
     </message>
@@ -588,13 +586,11 @@ the preference changes to take effect.</source>
         <translation>逆时针（正向）</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>方向</translation>
+        <translation type="vanished">方向</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>顺时针（负向）</translation>
     </message>
@@ -609,13 +605,11 @@ the preference changes to take effect.</source>
         <translation>短弧</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>方案</translation>
+        <translation type="vanished">方案</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>长弧</translation>
     </message>
@@ -696,13 +690,11 @@ the preference changes to take effect.</source>
         <translation>逆时针（正向）</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>方向</translation>
+        <translation type="vanished">方向</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>顺时针（反向）</translation>
     </message>
@@ -1653,13 +1645,11 @@ Do you wish to recover it?</source>
         <translation>线P1-P2的中间偏左</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>方案</translation>
+        <translation type="vanished">方案</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>线P1-P2的中间偏右</translation>
     </message>
@@ -3893,13 +3883,11 @@ is already in the list.</source>
         <translation>逆时针（正向）</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>方向</translation>
+        <translation type="vanished">方向</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>顺时针（负向）</translation>
     </message>

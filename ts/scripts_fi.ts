@@ -423,13 +423,11 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>Vastapäivään (Positiivinen)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Suunta</translation>
+        <translation type="vanished">Suunta</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Myötäpäivään (Negatiivinen)</translation>
     </message>
@@ -593,13 +591,11 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>Vastapäivään (Positiivinen)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Suunta</translation>
+        <translation type="vanished">Suunta</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Myötäpäivään (Negatiivinen)</translation>
     </message>
@@ -614,13 +610,11 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>Lyhyempi Kaari</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Ratkaisu</translation>
+        <translation type="vanished">Ratkaisu</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Pidempi Kaari</translation>
     </message>
@@ -701,13 +695,11 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>Vastapäivään (Positiivinen)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Suunta</translation>
+        <translation type="vanished">Suunta</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Myötäpäivään (Negatiivinen)</translation>
     </message>
@@ -1701,13 +1693,11 @@ Haluatko palauttaa sen?</translation>
         <translation>Keskitä vasemmalle linjasta P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Ratkaisu</translation>
+        <translation type="vanished">Ratkaisu</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Keskitä oikealle linjasta P1 - P2</translation>
     </message>
@@ -4044,13 +4034,11 @@ on jo luettelossa.</translation>
         <translation>Vastapäivään (positiivinen)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Suunta</translation>
+        <translation type="vanished">Suunta</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Myötäpäivään (Negatiivinen)</translation>
     </message>

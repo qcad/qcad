@@ -418,13 +418,11 @@ the preference changes to take effect.</source>
         <translation>Balra (Pozitív)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Irány</translation>
+        <translation type="vanished">Irány</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Jobbra (Negatív)</translation>
     </message>
@@ -588,13 +586,11 @@ the preference changes to take effect.</source>
         <translation>Balra (Pozitív)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Irány</translation>
+        <translation type="vanished">Irány</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Jobbra (Negatív)</translation>
     </message>
@@ -609,13 +605,11 @@ the preference changes to take effect.</source>
         <translation>Rövidebb ív</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Megoldás</translation>
+        <translation type="vanished">Megoldás</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Hosszabb ív</translation>
     </message>
@@ -696,13 +690,11 @@ the preference changes to take effect.</source>
         <translation>Balra (pozitív)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Irány</translation>
+        <translation type="vanished">Irány</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Jobbra (negatív)</translation>
     </message>
@@ -1638,13 +1630,11 @@ Do you wish to recover it?</source>
         <translation>P1 - P2 vonal bal közép</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Megoldás</translation>
+        <translation type="vanished">Megoldás</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>P1 - P2 vonal jobb közép</translation>
     </message>
@@ -3876,13 +3866,11 @@ is already in the list.</source>
         <translation type="unfinished">Balra (pozitív)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished">Irány</translation>
+        <translation type="obsolete">Irány</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation type="unfinished"></translation>
     </message>

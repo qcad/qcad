@@ -500,18 +500,16 @@ Kierunek widoku:</translatorcomment>
         <translation>Przeciwnie do ruchu wskazówek zegara (w lewo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Kierunek widoku:
 Kierunek widoku
 LTR</translatorcomment>
-        <translation>Kierunek</translation>
+        <translation type="vanished">Kierunek</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zgodnie z ruchem wskazówek zegara (w lewo)</translation>
@@ -696,18 +694,16 @@ Kierunek widoku:</translatorcomment>
         <translation>Przeciwnie do ruchu wskazówek zegara (w lewo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Kierunek widoku:
 Kierunek widoku
 LTR</translatorcomment>
-        <translation>Kierunek</translation>
+        <translation type="vanished">Kierunek</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zgodnie z ruchem wskazówek zegara (w prawo)</translation>
@@ -726,16 +722,14 @@ Rozdzielczość:</translatorcomment>
         <translation>Krótszy łuk</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
         <translatorcomment>--google--
 Rozdzielczość:
 Rozdzielczość</translatorcomment>
-        <translation>Rozwiązanie</translation>
+        <translation type="vanished">Rozwiązanie</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Dłuższy łuk</translation>
@@ -850,18 +844,16 @@ Kierunek widoku:</translatorcomment>
         <translation>Przeciwnie do ruchu wskazówek zegara (w lewo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Kierunek widoku:
 Kierunek widoku
 LTR</translatorcomment>
-        <translation>Kierunek</translation>
+        <translation type="vanished">Kierunek</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zgodnie z ruchem wskazówek zegara (w prawo)</translation>
@@ -2078,16 +2070,14 @@ Rozdzielczość:</translatorcomment>
         <translation>Środek po lewej stronie linii P1 - P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
         <translatorcomment>--google--
 Rozdzielczość:
 Rozdzielczość</translatorcomment>
-        <translation>Rozwiązanie</translation>
+        <translation type="vanished">Rozwiązanie</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Środek po prawej stronie linii P1 - P2</translation>
@@ -4967,18 +4957,16 @@ Kierunek widoku:</translatorcomment>
         <translation>Przeciwny do ruchu wskazówek zegara (w lewo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Kierunek widoku:
 Kierunek widoku
 LTR</translatorcomment>
-        <translation>Kierunek</translation>
+        <translation type="vanished">Kierunek</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zgodny z ruchem wskazówek zegara (w prawo)</translation>

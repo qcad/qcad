@@ -447,13 +447,11 @@ de wijzigingen door te voeren.</translation>
         <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Richting</translation>
+        <translation type="vanished">Richting</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Met de klok mee (negatieve)</translation>
     </message>
@@ -617,13 +615,11 @@ de wijzigingen door te voeren.</translation>
         <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Richting</translation>
+        <translation type="vanished">Richting</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Met de klok mee (negatief)</translation>
     </message>
@@ -638,13 +634,11 @@ de wijzigingen door te voeren.</translation>
         <translation>Kortere boog</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Oplossing</translation>
+        <translation type="vanished">Oplossing</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Langere boog</translation>
     </message>
@@ -725,13 +719,11 @@ de wijzigingen door te voeren.</translation>
         <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Richting</translation>
+        <translation type="vanished">Richting</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Met de klok mee (negatief)</translation>
     </message>
@@ -1734,13 +1726,11 @@ Wilt u het herstellen?</translation>
         <translation>Middelpunt links van lijn P1-P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Oplossing</translation>
+        <translation type="vanished">Oplossing</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Middelpunt rechts van lijn P1-P2</translation>
     </message>
@@ -4018,13 +4008,11 @@ is al in de lijst.</translation>
         <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Richting</translation>
+        <translation type="vanished">Richting</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Met de klok mee (negatief)</translation>
     </message>

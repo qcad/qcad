@@ -472,13 +472,11 @@ applicare le modifiche.</translation>
         <translation>Senso antiorario (positivo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Direzione</translation>
+        <translation type="vanished">Direzione</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Senso orario (negativo)</translation>
     </message>
@@ -642,13 +640,11 @@ applicare le modifiche.</translation>
         <translation>Senso antiorario (positivo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Direzione</translation>
+        <translation type="vanished">Direzione</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Senso orario (negativo)</translation>
     </message>
@@ -663,13 +659,11 @@ applicare le modifiche.</translation>
         <translation>Arco corto</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Soluzione</translation>
+        <translation type="vanished">Soluzione</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Longer Arc</source>
         <translation>Arco lungo</translation>
     </message>
@@ -784,13 +778,11 @@ applicare le modifiche.</translation>
         <translation>Senso antiorario (positivo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Direzione</translation>
+        <translation type="vanished">Direzione</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Senso orario (negativo)</translation>
     </message>
@@ -1875,13 +1867,11 @@ vuoto</translatorcomment>
         <translation>Center è a sinistra della linea P1-P2</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Soluzione</translation>
+        <translation type="vanished">Soluzione</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Center è a destra della linea P1-P2</translation>
     </message>
@@ -4449,13 +4439,11 @@ is already in the list.</source>
         <translation>Senso antiorario (positivo)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Direzione</translation>
+        <translation type="vanished">Direzione</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Senso orario (negativo)</translation>
     </message>

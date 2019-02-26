@@ -509,13 +509,11 @@ um die Änderungen zu übernehmen.</translation>
         <translation type="obsolete">Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Richtung</translation>
+        <translation type="vanished">Richtung</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
     </message>
@@ -679,13 +677,11 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Richtung</translation>
+        <translation type="vanished">Richtung</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
     </message>
@@ -705,10 +701,8 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Langer Bogen</translation>
     </message>
     <message>
-        <location line="-7"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Lösung</translation>
+        <translation type="vanished">Lösung</translation>
     </message>
 </context>
 <context>
@@ -791,13 +785,11 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Richtung</translation>
+        <translation type="vanished">Richtung</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
     </message>
@@ -1972,13 +1964,11 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Kürzer</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <location line="+17"/>
         <source>Solution</source>
-        <translation>Lösung</translation>
+        <translation type="vanished">Lösung</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+27"/>
         <source>Center Right of Line P1 - P2</source>
         <translation>Zentrum rechts der Linie P1-P2</translation>
     </message>
@@ -4544,13 +4534,11 @@ ist bereits in der Liste.</translation>
         <translation>Gegenuhrzeigersinn (positiv)</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+17"/>
         <source>Direction</source>
-        <translation>Richtung</translation>
+        <translation type="vanished">Richtung</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translation>Uhrzeigersinn (negativ)</translation>
     </message>
