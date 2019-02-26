@@ -1,8 +1,0 @@
-/*!
-
-\defgroup spatialindex Spatialindex Module
-
-\brief This module implements the spatial index interface
-based on the spatial index library from
-<a href="http://research.att.com/~marioh/spatialindex/">Navel Ltd</a>.
-*/

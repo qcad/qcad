@@ -1,7 +1,0 @@
-#ifndef ZIP_RC
-#define ZIP_RC
-
-#define VER_ORIGINALFILENAME_STR    "qcadzip.dll"
-#include "../../shared.rc"
-
-#endif // ZIP_RC
