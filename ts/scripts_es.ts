@@ -11945,16 +11945,12 @@ Modo de búsqueda:</translatorcomment>
         <translation>Reemplazar la selección actual</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Añadir a la selección actual</translation>
@@ -12017,16 +12013,12 @@ Modo de búsqueda:</translatorcomment>
         <translation>Reemplazar la selección actual</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Añadir a la selección actual</translation>
@@ -12127,15 +12119,11 @@ Modo de búsqueda:</translatorcomment>
         <translation>Reemplazar la selección actual</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Añadir a la selección actual</translation>
     </message>
@@ -12211,18 +12199,14 @@ Reemplazar la selección actual</translatorcomment>
         <translation>Reemplazar la selección actual</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectContour_es.ts--
 SelectionMode</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_es.ts--

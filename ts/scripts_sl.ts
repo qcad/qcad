@@ -10612,15 +10612,11 @@ shown in search results:</source>
         <translation>Zamenjaj trenutni izbor</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>NačinIzbire</translation>
+        <translation type="vanished">NačinIzbire</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Dodaj k trenutnemu izboru</translation>
     </message>
@@ -10673,15 +10669,11 @@ shown in search results:</source>
         <translation>Zamenjaj trenutni izbor</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>NačinIzbire</translation>
+        <translation type="vanished">NačinIzbire</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Dodaj k trenutni izbiri</translation>
     </message>
@@ -10742,15 +10734,11 @@ shown in search results:</source>
         <translation>Zamenjaj trenutni izbor</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>NačinIzbire</translation>
+        <translation type="vanished">NačinIzbire</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Dodaj k trenutnemu izboru</translation>
     </message>
@@ -10803,15 +10791,11 @@ shown in search results:</source>
         <translation>Zamenjaj trenutno izbiro</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>NačinIzbire</translation>
+        <translation type="vanished">NačinIzbire</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Dodaj k trenutnemu izboru</translation>
     </message>

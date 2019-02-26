@@ -11909,16 +11909,12 @@ Modo colore:</translatorcomment>
         <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aggiungere alla selezione corrente</translation>
@@ -11983,18 +11979,14 @@ Sostituire la selezione corrente</translatorcomment>
         <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 SelectionMode</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
@@ -12111,15 +12103,11 @@ Interseca con la selezione corrente</translatorcomment>
         <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Aggiungere alla selezione corrente</translation>
     </message>
@@ -12195,18 +12183,14 @@ Sostituire la selezione corrente</translatorcomment>
         <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 SelectionMode</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--

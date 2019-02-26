@@ -9924,15 +9924,11 @@ ve výsledcích vyhledávání:</translation>
         <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Režim výběru</translation>
+        <translation type="vanished">Režim výběru</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Přidat do aktuálního výběru</translation>
     </message>
@@ -9985,15 +9981,11 @@ ve výsledcích vyhledávání:</translation>
         <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Režim výběru</translation>
+        <translation type="vanished">Režim výběru</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Přidat do aktuálního výběru</translation>
     </message>
@@ -10054,15 +10046,11 @@ ve výsledcích vyhledávání:</translation>
         <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Režim výběru</translation>
+        <translation type="vanished">Režim výběru</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Přidat k aktuálnímu výběru</translation>
     </message>
@@ -10115,15 +10103,11 @@ ve výsledcích vyhledávání:</translation>
         <translation>Nahradit aktuální výběr</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Režim výběru</translation>
+        <translation type="vanished">Režim výběru</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Přidat k aktuálnímu výběru</translation>
     </message>

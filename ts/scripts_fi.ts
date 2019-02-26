@@ -10179,15 +10179,11 @@ näkyy etsintätuloksissa:</translation>
         <translation>Korvaa nykyinen valinta</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Valintatila</translation>
+        <translation type="vanished">Valintatila</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Lisää nykyiseen valintaan</translation>
     </message>
@@ -10240,15 +10236,11 @@ näkyy etsintätuloksissa:</translation>
         <translation>Korvaa nykyinen valinta</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Valintatila</translation>
+        <translation type="vanished">Valintatila</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Lisää nykyiseen valintaan</translation>
     </message>
@@ -10309,15 +10301,11 @@ näkyy etsintätuloksissa:</translation>
         <translation>Korvaa nykyinen valinta</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Valintatila</translation>
+        <translation type="vanished">Valintatila</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Lisää nykyiseen valintaan</translation>
     </message>
@@ -10370,15 +10358,11 @@ näkyy etsintätuloksissa:</translation>
         <translation>Korvaa nykyinen valinta</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Valintatila</translation>
+        <translation type="vanished">Valintatila</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Lisää nykyiseen valintaan</translation>
     </message>

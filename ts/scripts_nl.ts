@@ -10160,15 +10160,11 @@ getoond in zoekresultaten:</translation>
         <translation>Vervang huidige selectie</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Toevoegen aan huidige selectie</translation>
     </message>
@@ -10221,15 +10217,11 @@ getoond in zoekresultaten:</translation>
         <translation>Vervang huidige selectie</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Toevoegen aan huidige selectie</translation>
     </message>
@@ -10290,15 +10282,11 @@ getoond in zoekresultaten:</translation>
         <translation>Vervang huidige selectie</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Toevoegen aan huidige selectie</translation>
     </message>
@@ -10351,15 +10339,11 @@ getoond in zoekresultaten:</translation>
         <translation>Vervang huidige selectie</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Toevoegen aan huidige selectie</translation>
     </message>

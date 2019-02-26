@@ -10502,15 +10502,11 @@ shown in search results:</source>
         <translation>現在の選択を置き換え</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>選択モード</translation>
+        <translation type="vanished">選択モード</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>現在の選択に追加</translation>
     </message>
@@ -10563,15 +10559,11 @@ shown in search results:</source>
         <translation>現在の選択を置き換え</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>選択モード</translation>
+        <translation type="vanished">選択モード</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>現在の選択に追加</translation>
     </message>
@@ -10668,15 +10660,11 @@ shown in search results:</source>
         <translation>現在の選択を置き換え</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>選択モード</translation>
+        <translation type="vanished">選択モード</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>現在の選択に追加</translation>
     </message>
@@ -10729,15 +10717,11 @@ shown in search results:</source>
         <translation>現在の選択を置き換え</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>選択モード</translation>
+        <translation type="vanished">選択モード</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>現在の選択に追加</translation>
     </message>

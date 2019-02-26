@@ -12366,15 +12366,11 @@ nicht öffnen.
         <translation>Aktuelle Selektion ersetzen</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Zur aktuellen Selektion hinzufügen</translation>
     </message>
@@ -12427,15 +12423,11 @@ nicht öffnen.
         <translation>Aktuelle Selektion ersetzen</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Zur aktuellen Selektion hinzufügen</translation>
     </message>
@@ -12496,15 +12488,11 @@ nicht öffnen.
         <translation>Aktuelle Selektion ersetzen</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Zur aktuellen Selektion hinzufügen</translation>
     </message>
@@ -12561,18 +12549,14 @@ nicht öffnen.
         <translation>Aktuelle Selektion ersetzen</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectPolygon_de.ts--
 SelectionMode</translatorcomment>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Zur aktuellen Selektion hinzufügen</translation>
     </message>

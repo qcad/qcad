@@ -10125,15 +10125,11 @@ shown in search results:</source>
         <translation>Заменить текущее выделение</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Режим выделения</translation>
+        <translation type="vanished">Режим выделения</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Добавить в текущее выделение</translation>
     </message>
@@ -10186,15 +10182,11 @@ shown in search results:</source>
         <translation>Заменить текущее выделение</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Режим выделения</translation>
+        <translation type="vanished">Режим выделения</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Добавить в текущее выделение</translation>
     </message>
@@ -10255,15 +10247,11 @@ shown in search results:</source>
         <translation>Заменить текущее выделение</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Режим выделения</translation>
+        <translation type="vanished">Режим выделения</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Добавить в текущее выделение</translation>
     </message>
@@ -10316,15 +10304,11 @@ shown in search results:</source>
         <translation>Заменить текущее выделение</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>Режим выделения</translation>
+        <translation type="vanished">Режим выделения</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Добавить в текущее выделение</translation>
     </message>

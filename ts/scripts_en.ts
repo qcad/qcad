@@ -10006,15 +10006,11 @@ shown in search results:</translation>
         <translation>Replace the current selection</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Add to the current selection</translation>
     </message>
@@ -10067,15 +10063,11 @@ shown in search results:</translation>
         <translation>Replace the current selection</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Add to the current selection</translation>
     </message>
@@ -10136,15 +10128,11 @@ shown in search results:</translation>
         <translation>Replace the current selection</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Add to the current selection</translation>
     </message>
@@ -10197,15 +10185,11 @@ shown in search results:</translation>
         <translation>Replace the current selection</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation type="vanished">SelectionMode</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Add to the current selection</translation>
     </message>

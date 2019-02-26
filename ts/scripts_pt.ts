@@ -13835,16 +13835,12 @@ Modo:</translatorcomment>
         <translation>Substitua a seleção atual</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>ModoSeleção</translation>
+        <translation type="vanished">ModoSeleção</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Adicione à seleção atual</translation>
@@ -13921,18 +13917,14 @@ Substituir a seleção atual</translatorcomment>
         <translation>Substitua a seleção atual</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 SelectionMode</translatorcomment>
-        <translation>ModoSeleção</translation>
+        <translation type="vanished">ModoSeleção</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
@@ -14052,15 +14044,11 @@ Interseção com a seleção atual</translatorcomment>
         <translation>Substitua a seleção atual</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>ModoSeleção</translation>
+        <translation type="vanished">ModoSeleção</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Adicione à seleção atual</translation>
     </message>
@@ -14149,18 +14137,14 @@ Substituir a seleção atual</translatorcomment>
         <translation>Substitua a seleção atual</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 SelectionMode</translatorcomment>
-        <translation>ModoSeleção</translation>
+        <translation type="vanished">ModoSeleção</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--

@@ -12976,16 +12976,12 @@ Odznacz &amp;wszystko</translatorcomment>
         <translation>Zamień aktualne zaznaczenie</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>TrybZaznaczania</translation>
+        <translation type="vanished">TrybZaznaczania</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Dodaj do aktualnego zaznaczenia</translation>
@@ -13056,16 +13052,12 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation>Zamień aktualne zaznaczenie</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>TrybZaznaczania</translation>
+        <translation type="vanished">TrybZaznaczania</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Dodaj do aktualnego zaznaczenia</translation>
@@ -13180,15 +13172,11 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation>Zamień aktualne zaznaczenie</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>TrybZaznaczania</translation>
+        <translation type="vanished">TrybZaznaczania</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translation>Dodaj do aktualnego zaznaczenia</translation>
     </message>
@@ -13252,16 +13240,12 @@ Zrobione
         <translation>Zamień aktualne zaznaczenie</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+20"/>
-        <location line="+20"/>
-        <location line="+20"/>
         <source>SelectionMode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>TrybZaznaczania</translation>
+        <translation type="vanished">TrybZaznaczania</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Dodaj do aktualnego zaznaczenia</translation>
