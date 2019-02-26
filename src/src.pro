@@ -10,8 +10,7 @@ SUBDIRS = \
     stemmer \
     spatialindex \
     gui \
-    io \
-    zip
+    io
 
 !r_mobile {
     SUBDIRS += \
