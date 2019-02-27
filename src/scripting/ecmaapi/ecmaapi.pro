@@ -27,6 +27,4 @@ LIBS += \
     -l$${RLIBNAME}operations \
     -l$${RLIBNAME}snap \
     -l$${RLIBNAME}spatialindex \
-    -l$${RLIBNAME}stemmer \
-    -l$${RLIBNAME}zip \
-    -lquazip
+    -l$${RLIBNAME}stemmer
