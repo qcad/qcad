@@ -35,3 +35,9 @@ spatialindexnavel:  MIT
                     See src/3rdparty/spatialindexnavel/COPYING
 stemmer:            BSD 2-Clause License
                     See src/3rdparty/stemmer/bsd-2.txt
+
+Qt ships with QCAD under the LGPL Open Source license (see lgpl.txt) which confers 
+various rights to you as the user, including the right to recompile the Qt libraries 
+for your platform. To do that follow the documentation shown on the Qt website at:
+http://doc.qt.io/qt-5/build-sources.html
+
