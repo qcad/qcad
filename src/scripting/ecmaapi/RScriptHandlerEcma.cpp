@@ -369,7 +369,6 @@
 #include "REcmaXLine.h"
 #include "REcmaXLineData.h"
 #include "REcmaXLineEntity.h"
-#include "REcmaZip.h"
 
 //#if QT_VERSION < 0x050600
 //#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
