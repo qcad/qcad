@@ -977,8 +977,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaAutoLoadEcma::initEcma(*engine);
 
-    REcmaZip::initEcma(*engine);
-
 
     // *** end of "do not change the order" ***
 
