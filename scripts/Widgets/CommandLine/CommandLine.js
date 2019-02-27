@@ -436,4 +436,24 @@ CommandLine.init = function(basePath) {
             lCommand.text = text + qsTr(": ");
         }
     });
+
+    var system;
+    switch (RS.getSystemId()) {
+    case "win":
+        system = "Windows";
+        break;
+    case "osx":
+        system = "macOS";
+        break;
+    case "linux":
+        system = "Linux";
+        break;
+    }
+    EAction.handleUserMessage(
+                "%1 %2 / %3 %4"
+                .arg(qApp.applicationName)
+                .arg(RSettings.getVersionString())
+                .arg(system)
+                .arg(RS.getBuildCpuArchitecture())
+                );
 };
