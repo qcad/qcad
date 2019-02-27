@@ -28,7 +28,7 @@
         <translation type="vanished">Del tega programa © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Program je nuden KOT JE to je BREZ KAKRŠNE KOLI GARANCIJE, KAR VKLUČUJE GARANCIJO OBLIKE, STROJNO OBDELOVALNOST TER USKLAJENOST ZA DOLOČENI NAMEN.</translation>
     </message>
@@ -65,14 +65,14 @@
         <translation>Neznano</translation>
     </message>
     <message>
-        <location line="-128"/>
-        <location line="+121"/>
+        <location line="-129"/>
+        <location line="+122"/>
         <source>Version:</source>
         <translation>Verzija:</translation>
     </message>
     <message>
-        <location line="-111"/>
-        <location line="+115"/>
+        <location line="-112"/>
+        <location line="+116"/>
         <source>Qt Version:</source>
         <translation>Qt verzija:</translation>
     </message>
@@ -86,14 +86,14 @@
         <translation>Licenca:</translation>
     </message>
     <message>
-        <location line="-125"/>
-        <location line="+134"/>
+        <location line="-126"/>
+        <location line="+135"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-144"/>
         <source>Build Date:</source>
         <translation>Datum kreiranja:</translation>
     </message>
@@ -151,6 +151,11 @@
     <message>
         <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

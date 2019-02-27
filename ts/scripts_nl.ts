@@ -28,7 +28,7 @@
         <translation type="vanished">Delen van deze software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>De software wordt verspreid in de hoop dat deze nuttig is maar ZONDER ENIGE GARANTIE, zelfs zonder impliciete garantie van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.</translation>
     </message>
@@ -65,14 +65,14 @@
         <translation>Onbekend</translation>
     </message>
     <message>
-        <location line="-128"/>
-        <location line="+121"/>
+        <location line="-129"/>
+        <location line="+122"/>
         <source>Version:</source>
         <translation>Versie:</translation>
     </message>
     <message>
-        <location line="-111"/>
-        <location line="+115"/>
+        <location line="-112"/>
+        <location line="+116"/>
         <source>Qt Version:</source>
         <translation>Qt Versie:</translation>
     </message>
@@ -86,14 +86,14 @@
         <translation>Licentie:</translation>
     </message>
     <message>
-        <location line="-125"/>
-        <location line="+134"/>
+        <location line="-126"/>
+        <location line="+135"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-144"/>
         <source>Build Date:</source>
         <translation>Aanmaakdatum:</translation>
     </message>
@@ -152,6 +152,15 @@
         <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
         <translation>Delen van deze software © %1 The Qt Company Ltd.</translation>
+    </message>
+    <message>
+        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website.&lt;/a&gt;</source>
+        <translation type="vanished">Qt wordt geleverd met QCAD onder de &lt;a href=&apos;%1&apos;&gt;LGPL Open Source licentie&lt;/a&gt; die u als gebruiker verschillende rechten geeft, waaronder het recht om de Qt libraries voor uw platform te hercompileren. Om dat te doen volgt u de &lt;a href=&apos;%2&apos;&gt;documentatie op de Qt website&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
+        <translation>Qt wordt geleverd met QCAD onder de &lt;a href=&apos;%1&apos;&gt;LGPL Open Source licentie&lt;/a&gt; die u als gebruiker verschillende rechten geeft, waaronder het recht om de Qt libraries voor uw platform te hercompileren. Om dat te doen volgt u de &lt;a href=&apos;%2&apos;&gt;documentatie op de Qt website&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+19"/>

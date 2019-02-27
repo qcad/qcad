@@ -23,7 +23,7 @@
         <translation type="obsolete">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>プログラムは現状のまま提供され、設計、商品性、および特定の目的への適合性を含む、いかなる保証もありません。</translation>
     </message>
@@ -60,19 +60,19 @@
         <translation>不明</translation>
     </message>
     <message>
-        <location line="-128"/>
-        <location line="+121"/>
+        <location line="-129"/>
+        <location line="+122"/>
         <source>Version:</source>
         <translation>バージョン:</translation>
     </message>
     <message>
-        <location line="-111"/>
-        <location line="+115"/>
+        <location line="-112"/>
+        <location line="+116"/>
         <source>Qt Version:</source>
         <translation>Qtバージョン:</translation>
     </message>
     <message>
-        <location line="-90"/>
+        <location line="-91"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -82,19 +82,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+89"/>
         <source>License:</source>
         <translation>ライセンス:</translation>
     </message>
     <message>
-        <location line="-125"/>
-        <location line="+134"/>
+        <location line="-126"/>
+        <location line="+135"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>インターネット:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-144"/>
         <source>Build Date:</source>
         <translation>ビルド日付:</translation>
     </message>
@@ -142,7 +147,7 @@
         <translation type="vanished">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>No plugins found.</source>
         <translation>プラグインがありません</translation>
     </message>

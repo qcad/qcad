@@ -9,7 +9,7 @@
         <translation>Tietoja kohteesta %1</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+103"/>
         <source>Plugins</source>
         <translation>Liitännäiset</translation>
     </message>
@@ -41,14 +41,14 @@
         <translation>Tuntematon</translation>
     </message>
     <message>
-        <location line="-128"/>
-        <location line="+121"/>
+        <location line="-129"/>
+        <location line="+122"/>
         <source>Version:</source>
         <translation>Versio:</translation>
     </message>
     <message>
-        <location line="-111"/>
-        <location line="+115"/>
+        <location line="-112"/>
+        <location line="+116"/>
         <source>Qt Version:</source>
         <translation>Qt-versio:</translation>
     </message>
@@ -58,14 +58,14 @@
         <translation>Lisenssi:</translation>
     </message>
     <message>
-        <location line="-125"/>
-        <location line="+134"/>
+        <location line="-126"/>
+        <location line="+135"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-144"/>
         <source>Build Date:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -122,6 +122,11 @@
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

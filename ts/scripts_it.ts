@@ -37,7 +37,16 @@
         <translation>Plugins e script add-ons sono soggetti alle rispettive licenze (vedi scheda &quot;Plugins&quot;).</translation>
     </message>
     <message>
+        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website.&lt;/a&gt;</source>
+        <translation type="vanished">Qt viene fornito con QCAD sotto la licenza Open Source &lt;a href=&apos;%1&apos;&gt;LGPL&lt;/a&gt; che ti conferisce vari diritti come utente, incluso il diritto di ricompilare le librerie Qt per la tua piattaforma. Per farlo seguire &lt;a href=&apos;%2&apos;&gt;la documentazione mostrata sul sito web Qt&lt;/a&gt;.</translation>
+    </message>
+    <message>
         <location line="+6"/>
+        <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
+        <translation>Qt viene fornito con QCAD sotto la licenza Open Source &lt;a href=&apos;%1&apos;&gt;LGPL&lt;/a&gt; che ti conferisce vari diritti come utente, incluso il diritto di ricompilare le librerie Qt per la tua piattaforma. Per farlo seguire &lt;a href=&apos;%2&apos;&gt;la documentazione mostrata sul sito web Qt&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Questo programma è distribuito SENZA ALCUNA GARANZIA, INCLUSA la garanzia implicita PER DISEGNO, COMMERCIABILITÀ E IDONEITÀ AD UNO SCOPO PARTICOLARE.</translation>
     </message>
@@ -74,14 +83,14 @@
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location line="-128"/>
-        <location line="+121"/>
+        <location line="-129"/>
+        <location line="+122"/>
         <source>Version:</source>
         <translation>Versione:</translation>
     </message>
     <message>
-        <location line="-111"/>
-        <location line="+115"/>
+        <location line="-112"/>
+        <location line="+116"/>
         <source>Qt Version:</source>
         <translation>Versione Qt:</translation>
     </message>
@@ -95,14 +104,14 @@
         <translation>Licenza:</translation>
     </message>
     <message>
-        <location line="-125"/>
-        <location line="+134"/>
+        <location line="-126"/>
+        <location line="+135"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-144"/>
         <source>Build Date:</source>
         <translation>Data Compilazione:</translation>
     </message>
@@ -158,7 +167,7 @@
         <translation type="vanished">Porzioni di questo software © 2012 Nokia Corporation e / o della sua controllata(ies).</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>No plugins found.</source>
         <translation>Nessun plugin trovato.</translation>
     </message>
