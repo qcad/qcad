@@ -11,9 +11,7 @@ LIBS += \
     -l$${RLIBNAME}snap \
     -l$${RLIBNAME}core \
     -l$${RLIBNAME}stemmer \
-    -lstemmer \
-    -l$${RLIBNAME}zip \
-    -lquazip
+    -lstemmer
 
 !r_no_opennurbs {
     LIBS += \
