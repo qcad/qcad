@@ -31,7 +31,9 @@
     ;
 
     // conversion functions for base classes:
-    
+    static  QScriptValue getQEvent(QScriptContext *context,
+            QScriptEngine *engine)
+        ;
 
     // returns class name:
     static  QScriptValue getClassName(QScriptContext *context, QScriptEngine *engine) 

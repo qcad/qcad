@@ -547,9 +547,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyBaseAngle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyWidth" type="RPropertyTypeId"
+    <property name="PropertySize1" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyHeight" type="RPropertyTypeId"
+    <property name="PropertySize2" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyElevation" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

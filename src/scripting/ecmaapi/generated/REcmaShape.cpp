@@ -109,6 +109,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCenterPoints, "getCenterPoints");
             
+            REcmaHelper::registerFunction(&engine, proto, getPointOnShape, "getPointOnShape");
+            
             REcmaHelper::registerFunction(&engine, proto, getPointsWithDistanceToEnd, "getPointsWithDistanceToEnd");
             
             REcmaHelper::registerFunction(&engine, proto, getPointWithDistanceToStart, "getPointWithDistanceToStart");
@@ -3062,6 +3064,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShape::getCenterPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::getPointOnShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::getPointOnShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::getPointOnShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RShape* self = 
+                        getSelf("getPointOnShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointOnShape();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getPointOnShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::getPointOnShape", context, engine);
             return result;
         }
          QScriptValue

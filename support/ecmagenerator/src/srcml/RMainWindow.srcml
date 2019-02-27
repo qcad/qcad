@@ -113,10 +113,10 @@
     )</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>postCloseEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <comment type="line">//virtual void postPropertyEvent() = 0;</comment>
-<comment type="line">//    virtual void postPropertyEvent(RPropertyTypeId propertyTypeId,</comment>
-<comment type="line">//        const QVariant&amp; value,</comment>
-<comment type="line">//        RS::EntityType entityTypeFilter = RS::EntityAll</comment>
-<comment type="line">//    ) = 0;</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>postPropertyEvent</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
+        <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>
+    )</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addPropertyListener</name><parameter_list>(<param><decl><type><name>RPropertyListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removePropertyListener</name><parameter_list>(<param><decl><type><name>RPropertyListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>

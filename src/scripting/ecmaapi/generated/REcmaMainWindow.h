@@ -109,6 +109,9 @@
         postCloseEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        postPropertyEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addPropertyListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

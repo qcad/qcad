@@ -317,6 +317,9 @@
         postTransactionEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        postPropertyEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         postCloseEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

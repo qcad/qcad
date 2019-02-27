@@ -155,6 +155,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RS :: EntityAll" isConst="false" />
       </variant>
     </method>
+    <method name="postPropertyEvent" cppName="postPropertyEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
+        name="propertyTypeId" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
+        isConst="true" />
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="entityTypeFilter" hasDefault="true"
+        default="RS :: EntityAll" isConst="false" />
+      </variant>
+    </method>
     <method name="postCloseEvent" cppName="postCloseEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -91,6 +91,10 @@
         <param><decl><type><name>bool</name></type> <name>onlyChanges</name>=<init><expr><name>false</name></expr></init></decl></param>,
         <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>
     )</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>postPropertyEvent</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
+        <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>
+    )</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>postCloseEvent</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>RMdiChildQt</name>*</type> <name>getMdiChild</name><parameter_list>()</parameter_list>;</function_decl>

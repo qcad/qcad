@@ -23,6 +23,19 @@
     }
 
     
+        // primary base class QEvent:
+        
+            QScriptValue dpt = engine.defaultPrototype(
+                qMetaTypeId<QEvent*>());
+
+            if (dpt.isValid()) {
+                proto->setPrototype(dpt);
+            }
+          
+        /*
+        
+        */
+    
 
     QScriptValue fun;
 
@@ -36,6 +49,9 @@
     // destroy:
     REcmaHelper::registerFunction(&engine, proto, destroy, "destroy");
     
+        // conversion for base class QEvent
+        REcmaHelper::registerFunction(&engine, proto, getQEvent, "getQEvent");
+        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -285,7 +301,16 @@
     
 
     // conversion functions for base classes:
-    
+     QScriptValue REcmaPropertyEvent::getQEvent(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                QEvent* cppResult =
+                    qscriptvalue_cast<RPropertyEvent*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
+            
 
     // returns class name:
      QScriptValue REcmaPropertyEvent::getClassName(QScriptContext *context, QScriptEngine *engine) 
@@ -301,6 +326,8 @@
     {
         QStringList list;
         
+        list.append("QEvent");
+    
 
         return qScriptValueFromSequence(engine, list);
     }

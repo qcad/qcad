@@ -23,7 +23,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QEvent&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyAttributes.h"</cpp:file></cpp:include>
@@ -38,9 +38,10 @@
  * \scriptable
  * \copyable
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyEvent</name> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyEvent</name> <super>: <specifier>public</specifier> <name>QEvent</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor><name>RPropertyEvent</name><parameter_list>()</parameter_list> <member_list>:
+        <call><name>QEvent</name><argument_list>(<argument><expr>(<name><name>QEvent</name>::<name>Type</name></name>)(<name><name>QEvent</name>::<name>User</name></name>+500)</expr></argument>)</argument_list></call>,
         <call><name>propertyTypeId</name><argument_list>(<argument><expr>-1</expr></argument>)</argument_list></call> </member_list><block>{
     }</block></constructor>
 
@@ -50,7 +51,8 @@
      */</comment>
     <constructor><name>RPropertyEvent</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
                    <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>)</parameter_list>
-        <member_list>: <call><name>propertyTypeId</name><argument_list>(<argument><expr><name>propertyTypeId</name></expr></argument>)</argument_list></call>,
+        <member_list>: <call><name>QEvent</name><argument_list>(<argument><expr>(<name><name>QEvent</name>::<name>Type</name></name>)(<name><name>QEvent</name>::<name>User</name></name>+500)</expr></argument>)</argument_list></call>,
+          <call><name>propertyTypeId</name><argument_list>(<argument><expr><name>propertyTypeId</name></expr></argument>)</argument_list></call>,
           <call><name>value</name><argument_list>(<argument><expr><name>value</name></expr></argument>)</argument_list></call>,
           <call><name>entityTypeFilter</name><argument_list>(<argument><expr><name>entityTypeFilter</name></expr></argument>)</argument_list></call> </member_list><block>{
     }</block></constructor>

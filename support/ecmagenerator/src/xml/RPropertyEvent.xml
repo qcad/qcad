@@ -5,6 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QEvent" specifier="public" />
     <constructor>
       <variant />
       <variant>
