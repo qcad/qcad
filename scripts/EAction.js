@@ -569,10 +569,12 @@ EAction.prototype.hideOptionsToolBarWidgets = function(widgets, noSyncWidgets) {
 };
 
 /**
- * Called when user presses enter. Default implementation calls showDialog.
+ * Called when user presses enter. Default implementation calls showDialog if configured.
  */
 EAction.prototype.enterEvent = function() {
-    this.showDialog();
+    if (RSettings.getBoolValue("Transform/EnterShowsDialog", false)===true) {
+        this.showDialog();
+    }
 };
 
 /**
