@@ -7995,7 +7995,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
 </context>
 <context>
@@ -8023,7 +8023,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
 </context>
 <context>
@@ -9466,7 +9466,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation>Roteer</translation>
+        <translation>Roteren</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -9486,7 +9486,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation>&amp;Roteer</translation>
+        <translation>&amp;Roteren</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
@@ -9506,7 +9506,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -9592,7 +9592,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
 </context>
 <context>
@@ -9635,7 +9635,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
 </context>
 <context>
@@ -9933,7 +9933,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10012,7 +10012,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
 </context>
 <context>
@@ -12077,7 +12077,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
 </context>
 <context>
@@ -12110,7 +12110,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
 </context>
 <context>
@@ -12161,7 +12161,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Gebruik huidige laag en &amp;attributen</translation>
+        <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
 </context>
 <context>
