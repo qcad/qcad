@@ -156,7 +156,7 @@
             <item row="0" column="0">
              <widget class="QLabel" name="LabelX">
               <property name="text">
-               <string>Factor &amp;x:</string>
+               <string>Factor x:</string>
               </property>
               <property name="buddy">
                <cstring>FactorX</cstring>
@@ -205,7 +205,7 @@
                <bool>false</bool>
               </property>
               <property name="text">
-               <string>Factor &amp;y:</string>
+               <string>Factor y:</string>
               </property>
               <property name="buddy">
                <cstring>FactorY</cstring>
