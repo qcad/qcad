@@ -4533,7 +4533,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2073"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -4542,7 +4542,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-1794"/>
+        <location line="-1796"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -4558,7 +4558,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation>Brak</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -12779,27 +12779,35 @@ Kopie &amp;wielokrotne:</translatorcomment>
     </message>
     <message>
         <location line="+112"/>
+        <source>Factor x:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Factor y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Factor &amp;x:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Mnożnik &amp;X:</translatorcomment>
-        <translation>Współczynnik skali wzdłuż osi &amp;X:</translation>
+        <translation type="vanished">Współczynnik skali wzdłuż osi &amp;X:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-26"/>
         <source>Proportional</source>
         <translation>Proporcjonalnie</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>Factor &amp;y:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Mnożnik &amp;Y:</translatorcomment>
-        <translation>Współczynnik skali wzdłuż osi &amp;Y:</translation>
+        <translation type="vanished">Współczynnik skali wzdłuż osi &amp;Y:</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+70"/>
         <source>Define factor using mouse cursor</source>
         <translation type="unfinished"></translation>
     </message>

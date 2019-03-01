@@ -4154,12 +4154,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2073"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1794"/>
+        <location line="-1796"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -4174,7 +4174,7 @@ ist bereits in der Liste.</translation>
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -12164,21 +12164,29 @@ nicht öffnen.
     </message>
     <message>
         <location line="+112"/>
-        <source>Factor &amp;x:</source>
-        <translation>Faktor &amp;X:</translation>
+        <source>Factor x:</source>
+        <translation type="unfinished">Faktor &amp;X:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+49"/>
+        <source>Factor y:</source>
+        <translation type="unfinished">Faktor &amp;Y:</translation>
+    </message>
+    <message>
+        <source>Factor &amp;x:</source>
+        <translation type="vanished">Faktor &amp;X:</translation>
+    </message>
+    <message>
+        <location line="-26"/>
         <source>Proportional</source>
         <translation>Proportional</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation>Faktor &amp;Y:</translation>
+        <translation type="vanished">Faktor &amp;Y:</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+70"/>
         <source>Define factor using mouse cursor</source>
         <translation>Faktor mit dem Mauszeiger definieren</translation>
     </message>

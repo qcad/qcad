@@ -4079,12 +4079,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2073"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-1794"/>
+        <location line="-1796"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -4096,7 +4096,7 @@ is already in the list.</source>
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
@@ -11695,21 +11695,29 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     </message>
     <message>
         <location line="+112"/>
-        <source>Factor &amp;x:</source>
-        <translation>Fattore &amp;x:</translation>
+        <source>Factor x:</source>
+        <translation type="unfinished">Fattore &amp;x:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+49"/>
+        <source>Factor y:</source>
+        <translation type="unfinished">Fattore &amp;y:</translation>
+    </message>
+    <message>
+        <source>Factor &amp;x:</source>
+        <translation type="vanished">Fattore &amp;x:</translation>
+    </message>
+    <message>
+        <location line="-26"/>
         <source>Proportional</source>
         <translation>Proporzionale</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation>Fattore &amp;y:</translation>
+        <translation type="vanished">Fattore &amp;y:</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+70"/>
         <source>Define factor using mouse cursor</source>
         <translation>Definire il fattore usando il cursore del mouse</translation>
     </message>

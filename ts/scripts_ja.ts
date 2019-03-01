@@ -3761,12 +3761,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2073"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-1794"/>
+        <location line="-1796"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
@@ -3777,7 +3777,7 @@ is already in the list.</source>
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -10337,21 +10337,29 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+112"/>
-        <source>Factor &amp;x:</source>
-        <translation>係数&amp;x:</translation>
+        <source>Factor x:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+49"/>
+        <source>Factor y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Factor &amp;x:</source>
+        <translation type="vanished">係数&amp;x:</translation>
+    </message>
+    <message>
+        <location line="-26"/>
         <source>Proportional</source>
         <translation>比例</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation>係数&amp;y:</translation>
+        <translation type="vanished">係数&amp;y:</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+70"/>
         <source>Define factor using mouse cursor</source>
         <translation type="unfinished"></translation>
     </message>

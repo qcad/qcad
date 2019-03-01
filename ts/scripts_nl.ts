@@ -3678,12 +3678,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2073"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1794"/>
+        <location line="-1796"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
@@ -3694,7 +3694,7 @@ is al in de lijst.</translation>
         <translation>Geen</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
@@ -9991,21 +9991,29 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <location line="+112"/>
-        <source>Factor &amp;x:</source>
-        <translation>Factor &amp;x:</translation>
+        <source>Factor x:</source>
+        <translation type="unfinished">Factor &amp;x:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+49"/>
+        <source>Factor y:</source>
+        <translation type="unfinished">Factor &amp;y:</translation>
+    </message>
+    <message>
+        <source>Factor &amp;x:</source>
+        <translation type="vanished">Factor &amp;x:</translation>
+    </message>
+    <message>
+        <location line="-26"/>
         <source>Proportional</source>
         <translation>Proportioneel</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation>Factor &amp;y:</translation>
+        <translation type="vanished">Factor &amp;y:</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+70"/>
         <source>Define factor using mouse cursor</source>
         <translation>Definieer de factor met behulp van de muiscursor</translation>
     </message>

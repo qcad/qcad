@@ -4793,7 +4793,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2071"/>
+        <location line="+2073"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -4802,7 +4802,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1794"/>
+        <location line="-1796"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -4823,7 +4823,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+664"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -13619,21 +13619,29 @@ Use camada e &amp;atributos atual</translatorcomment>
     </message>
     <message>
         <location line="+112"/>
-        <source>Factor &amp;x:</source>
-        <translation>Fator &amp;x:</translation>
+        <source>Factor x:</source>
+        <translation type="unfinished">Fator &amp;x:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+49"/>
+        <source>Factor y:</source>
+        <translation type="unfinished">Fator &amp;y:</translation>
+    </message>
+    <message>
+        <source>Factor &amp;x:</source>
+        <translation type="vanished">Fator &amp;x:</translation>
+    </message>
+    <message>
+        <location line="-26"/>
         <source>Proportional</source>
         <translation>Proporcional</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation>Fator &amp;y:</translation>
+        <translation type="vanished">Fator &amp;y:</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+70"/>
         <source>Define factor using mouse cursor</source>
         <translation>Definir fator usando o cursor do mouse</translation>
     </message>
