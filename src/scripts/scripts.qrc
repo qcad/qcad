@@ -2299,6 +2299,7 @@
     <file alias="scripts/Widgets/FirstStart/FirstStart.js">../../scripts/Widgets/FirstStart/FirstStart.js</file>
     <file alias="scripts/Widgets/FirstStart/FirstStartDialog.ui">../../scripts/Widgets/FirstStart/FirstStartDialog.ui</file>
     <file alias="scripts/Widgets/FirstStart/FirstStartInit.js">../../scripts/Widgets/FirstStart/FirstStartInit.js</file>
+    <file alias="scripts/Widgets/FirstStart/firststart.jpg">../../scripts/Widgets/FirstStart/firststart.jpg</file>
     <file alias="scripts/Widgets/LayerList/LayerList.js">../../scripts/Widgets/LayerList/LayerList.js</file>
     <file alias="scripts/Widgets/LayerList/LayerList.svg">../../scripts/Widgets/LayerList/LayerList.svg</file>
     <file alias="scripts/Widgets/LayerList/LayerList.ui">../../scripts/Widgets/LayerList/LayerList.ui</file>

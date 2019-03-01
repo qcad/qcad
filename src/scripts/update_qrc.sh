@@ -6,7 +6,7 @@ tmp="tmp.qrc"
 
 rm -rf allfiles.qrc
 
-find ../../scripts -type f \( -name "*.js" -o -name "*.qm" -o -name "*.ui" -o -name "*.svg" -o -name "*.png" -o -name "*.xsl" -o -name "*.ttf" -o -name "*.dxf" \) | /usr/bin/sort | sed "s#../../##" | sed "s#\(.*\)#    <file alias=\"\1\">../../\1</file>#" >>allfiles.qrc
+find ../../scripts -type f \( -name "*.js" -o -name "*.qm" -o -name "*.ui" -o -name "*.svg" -o -name "*.png" -o -name "*.jpg" -o -name "*.xsl" -o -name "*.ttf" -o -name "*.dxf" \) | /usr/bin/sort | sed "s#../../##" | sed "s#\(.*\)#    <file alias=\"\1\">../../\1</file>#" >>allfiles.qrc
 
 find ../../ts -type f -name "*scripts_*.qm" \
     | /usr/bin/sort | sed "s#../../##" | sed "s#\(.*\)#    <file alias=\"\1\">../../\1</file>#" >>allfiles.qrc
