@@ -13620,12 +13620,12 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location line="+112"/>
         <source>Factor x:</source>
-        <translation type="unfinished">Fator &amp;x:</translation>
+        <translation>Fator x:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished">Fator &amp;y:</translation>
+        <translation>Fator y:</translation>
     </message>
     <message>
         <source>Factor &amp;x:</source>

@@ -11740,12 +11740,12 @@ Usar capa y los &amp;atributos actual</translatorcomment>
     <message>
         <location line="+112"/>
         <source>Factor x:</source>
-        <translation type="unfinished">Factor &amp;x:</translation>
+        <translation>Factor x:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished">Factor &amp;y:</translation>
+        <translation>Factor y:</translation>
     </message>
     <message>
         <source>Factor &amp;x:</source>

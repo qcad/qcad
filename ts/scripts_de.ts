@@ -12165,12 +12165,12 @@ nicht öffnen.
     <message>
         <location line="+112"/>
         <source>Factor x:</source>
-        <translation type="unfinished">Faktor &amp;X:</translation>
+        <translation>Faktor X:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished">Faktor &amp;Y:</translation>
+        <translation>Faktor Y:</translation>
     </message>
     <message>
         <source>Factor &amp;x:</source>

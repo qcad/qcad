@@ -11696,12 +11696,12 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location line="+112"/>
         <source>Factor x:</source>
-        <translation type="unfinished">Fattore &amp;x:</translation>
+        <translation>Fattore x:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished">Fattore &amp;y:</translation>
+        <translation>Fattore y:</translation>
     </message>
     <message>
         <source>Factor &amp;x:</source>
