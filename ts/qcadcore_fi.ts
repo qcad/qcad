@@ -612,7 +612,7 @@
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished">Nappaava</translation>
+        <translation>Nappaava</translation>
     </message>
     <message>
         <location line="+1"/>
