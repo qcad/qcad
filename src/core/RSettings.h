@@ -80,6 +80,7 @@ public:
     static QList<int> getIntListArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, QList<int> def = RDEFAULT_QLISTINT);
     static double getFloatArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, double def = RNANDOUBLE);
     static RColor getColorArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RColor& def = RDEFAULT_RCOLOR);
+    static RVector getVectorArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RVector& def = RDEFAULT_RVECTOR);
     static RBox getBoxArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RBox& def = RDEFAULT_RBOX);
     static bool testArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag);
 

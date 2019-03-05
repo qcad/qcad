@@ -251,6 +251,23 @@ RColor RSettings::getColorArgument(const QStringList& args, const QString& short
     return RColor(ret);
 }
 
+RVector RSettings::getVectorArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RVector& def) {
+    QString ret = getArgument(args, shortFlag, longFlag);
+    if (ret.isNull()) {
+        return def;
+    }
+    QStringList parts = ret.split(',');
+    if (parts.length()!=2) {
+        return def;
+    }
+    QList<double> floatParts;
+    for (int i=0; i<parts.length(); i++) {
+        floatParts.append(parts[i].toDouble());
+    }
+
+    return RVector(floatParts[0], floatParts[1]);
+}
+
 RBox RSettings::getBoxArgument(const QStringList& args, const QString& shortFlag, const QString& longFlag, const RBox& def) {
     QString ret = getArgument(args, shortFlag, longFlag);
     if (ret.isNull()) {
