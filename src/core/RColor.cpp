@@ -24,6 +24,7 @@
 #include "RCircle.h"
 #include "RDebug.h"
 #include "RMath.h"
+#include "RSettings.h"
 
 QColor RColor::CompatByLayer = QColor(1,1,1);
 QColor RColor::CompatByBlock = QColor(2,2,2);
@@ -368,7 +369,12 @@ QIcon RColor::getIcon(const RColor& color, const QSize& size) {
         opaqueBrush.setColor(col);
         painter.fillRect(w / 4, h / 4, w / 2, h / 2, opaqueBrush);
     }
-    painter.setPen(Qt::black);
+    if (RSettings::hasDarkGuiBackground()) {
+        painter.setPen(Qt::gray);
+    }
+    else {
+        painter.setPen(Qt::black);
+    }
     painter.drawRect(0, 0, w - 1, h - 1);
     painter.end();
     QIcon ret(QPixmap::fromImage(img));
