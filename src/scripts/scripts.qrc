@@ -1844,13 +1844,16 @@
     <file alias="scripts/Modify/Stretch/Tests/StretchTest02.js">../../scripts/Modify/Stretch/Tests/StretchTest02.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest03.js">../../scripts/Modify/Stretch/Tests/StretchTest03.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest05.js">../../scripts/Modify/Stretch/Tests/StretchTest05.js</file>
+    <file alias="scripts/Modify/Stretch/Tests/StretchTest06.js">../../scripts/Modify/Stretch/Tests/StretchTest06.js</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities0.dxf">../../scripts/Modify/Stretch/Tests/data/entities0.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities1.dxf">../../scripts/Modify/Stretch/Tests/data/entities1.dxf</file>
+    <file alias="scripts/Modify/Stretch/Tests/data/entities2.dxf">../../scripts/Modify/Stretch/Tests/data/entities2.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest00_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest00_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest01_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest01_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest02_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest02_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest03_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest03_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest05_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest05_000.dxf</file>
+    <file alias="scripts/Modify/Stretch/Tests/required/StretchTest06_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest06_000.dxf</file>
     <file alias="scripts/Modify/Transform.js">../../scripts/Modify/Transform.js</file>
     <file alias="scripts/Modify/Translate/PreferencesPage.ui">../../scripts/Modify/Translate/PreferencesPage.ui</file>
     <file alias="scripts/Modify/Translate/Tests/TranslateTest00.js">../../scripts/Modify/Translate/Tests/TranslateTest00.js</file>
