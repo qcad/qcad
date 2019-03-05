@@ -655,7 +655,7 @@
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Kokonaisleveys</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -687,7 +687,7 @@
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Kokonais Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
