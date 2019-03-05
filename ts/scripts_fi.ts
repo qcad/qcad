@@ -12705,7 +12705,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation>Pii</translation>
+        <translation>Fii</translation>
     </message>
     <message>
         <location line="+1"/>
