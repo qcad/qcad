@@ -4544,11 +4544,9 @@ on jo luettelossa.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation>
-            <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
+        <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
+        </translation></message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -7478,7 +7476,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="unfinished">Sormen/paikan suhde:</translation>
+        <translation>Osoita/Aukon suhde:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -7488,12 +7486,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation>Finger ensin</translation>
+        <translation>Osoita ensin</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation>Ensimmäinen paikka</translation>
+        <translation>Paikka ensin</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7521,7 +7519,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation>&amp;Sovitus Yhdistäminen 2 pisteestä</translation>
+        <translation>&amp;Sovitus Yhdistä 2 pisteestä</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7546,7 +7544,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation>Yhdistelmä/Pin suhde:</translation>
+        <translation>Yhdistelmä/Napa suhde:</translation>
     </message>
 </context>
 <context>
@@ -8337,12 +8335,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation></translation>
+        <translation>OmaViivanMuokkaus</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation>OmaPainike</translation>
     </message>
 </context>
 <context>
@@ -11093,7 +11091,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation type="unfinished">Poiminta</translation>
+        <translation>Tartunta</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11708,7 +11706,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation></translation>
+        <translation>Oomega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12712,12 +12710,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation>fii</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt fii</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12727,7 +12725,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation>oomega</translation>
     </message>
     <message>
         <location line="+1"/>
