@@ -667,7 +667,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Koko</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -865,7 +865,7 @@
     </message>
     <message>
         <source>Italic</source>
-        <translation type="vanished">Kursivoitu</translation>
+        <translation>Kursiivi</translation>
     </message>
     <message>
         <source>Line Spacing</source>
