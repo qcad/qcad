@@ -9909,7 +9909,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation type="unfinished">Skaalaa</translation>
+        <translation>Skaalaa</translation>
     </message>
     <message>
         <location line="+32"/>
