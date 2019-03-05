@@ -791,7 +791,7 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation type="unfinished">Piirrä kaari tangentiaalisesti kohteeseen, läpi säteen pisteen</translation>
+        <translation>Piirrä kaari tangentiaalisesti kohteeseen, säteen pisteen läpi</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
@@ -3812,23 +3812,23 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation type="unfinished">Näyta ECMASkripin Shell</translation>
+        <translation>Näytä ECMASkripin Shell</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>&amp;Script Shell</source>
-        <translation type="unfinished">&amp;Skripti Shell</translation>
+        <translation>&amp;Skripti Shell</translation>
     </message>
     <message>
         <location line="+25"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation type="unfinished">Skripti Shell</translation>
+        <translation>Skripti Shell</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation type="unfinished">ECMASkripti Shell</translation>
+        <translation>ECMASkripti Shell</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3894,12 +3894,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kuviointi</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokka &amp;Kuviointi</translation>
     </message>
 </context>
 <context>
@@ -4539,7 +4539,7 @@ on jo luettelossa.</translation>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation><numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
-        <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
+        <numerusform></numerusform>
         </translation></message>
     <message>
         <location line="+67"/>
@@ -4906,7 +4906,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+26"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaksoisnapauta muokataksesi kuviointia</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -5123,7 +5123,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+42"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aikakatkaisu kuvioinnin rendröintiin:</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -5250,7 +5250,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished">Tertiaariset viitepisteet:</translation>
+        <translation>Tertiaariset viitepisteet:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5454,7 +5454,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuviointityökalut</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -5529,12 +5529,12 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kuviointi valinnasta</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
+        <translation>Luo kuviointi tai kiinteä täyttö valitusta kehyksestä</translation>
     </message>
 </context>
 <context>
@@ -6354,7 +6354,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlockDialog.ui" line="+8"/>
         <source>Columns:</source>
-        <translation type="unfinished">Sarakkeet:</translation>
+        <translation>Sarakkeet:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -6558,7 +6558,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation type="unfinished"></translation>
+        <translation>Omavalinta</translation>
     </message>
 </context>
 <context>
@@ -6676,7 +6676,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Sulautetaan kaikki tasot</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7490,7 +7490,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation type="unfinished">tappia</translation>
+        <translation>Tapit</translation>
     </message>
 </context>
 <context>
@@ -7513,7 +7513,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished">&amp;Sovitus Yhdistetty 2 pisteestä</translation>
+        <translation>&amp;Sovitus Yhdistäminen 2 pisteestä</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8324,12 +8324,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">Merkkikartta</translation>
+        <translation>Merkkikartta</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation>MyLineEdit</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8463,11 +8463,9 @@ näkyy etsintätuloksissa:</translation>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Säde pieneni alle 0,0 %n samankeskisessä kaaressa.</numerusform>
+        <numerusform>Säde pieneni alle 0,0 %n samankeskisissä kaarissa.</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>OffsetThrough</name>
@@ -9954,28 +9952,28 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekijä x:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekijä y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished">Suhteellinen</translation>
+        <translation>Suhteellinen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Määritä arvo hiiren kohdistimen avulla</translation>
     </message>
 </context>
 <context>
@@ -10008,12 +10006,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+112"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arvo x:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arvo y:</translation>
     </message>
     <message>
         <source>Factor &amp;x:</source>
@@ -10031,7 +10029,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+70"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Määritä arvo hiiren kohdistimen avulla</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -10103,17 +10101,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse yksi tai useampi haluamasi väri</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitut kaikki näkyvät värin %1 kohteet</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Värin mukaan</translation>
     </message>
 </context>
 <context>
@@ -10121,7 +10119,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kaikki värin kohteet</translation>
     </message>
 </context>
 <context>
@@ -10129,17 +10127,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde valittu:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation type="unfinished"></translation>
+        <translation>Objekti ei ole piirtokohde:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kahvan mukaan</translation>
     </message>
 </context>
 <context>
@@ -10147,12 +10145,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>Valinta kahvasta</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation type="unfinished"></translation>
+        <translation>Kahva (hex):</translation>
     </message>
 </context>
 <context>
@@ -10269,12 +10267,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
         <source>%1 entities added to selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kohdetta lisättiin valintaan.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kohdetta poistettu valinnasta.</translation>
     </message>
 </context>
 <context>
@@ -10410,32 +10408,26 @@ näkyy etsintätuloksissa:</translation>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n kohde tasolla &quot;%1&quot;</numerusform>
+        <numerusform>%n kohdetta tasolla &quot;%1&quot;</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n kohde</numerusform>
+        <numerusform>%n kohdetta</numerusform>
+        </translation></message>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation type="unfinished"></translation>
+        <translation> </translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n taso</numerusform>
+        <numerusform>%n tasoa</numerusform>
+        </translation></message>
     <message>
         <source>%1 Entities on Layer &quot;%2&quot;</source>
         <translation type="vanished">%1 on &quot;%2&quot; tasolla</translation>
@@ -10498,12 +10490,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Täyte</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Säde:</translation>
+        <translation>Säde:</translation>
     </message>
     <message>
         <source>1</source>
@@ -10552,32 +10544,32 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskusta</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Middle of Side</source>
-        <translation type="unfinished"></translation>
+        <translation>Sivun keskellä</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Valmis</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Moni&amp;kulmio (Keskikohta, sivu)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä säännöllinen monikulmio keskeltä ja sivun keskipisteestä</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished">Kulmat:</translation>
+        <translation>Kulmat:</translation>
     </message>
 </context>
 <context>
@@ -10585,47 +10577,47 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.js" line="+59"/>
         <source>First side</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen sivu</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen kulma</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation type="unfinished"></translation>
+        <translation>Toinen sivu</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Toinen kulma</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Valmis</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Moni&amp;kulmio (sivu, sivu)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä säännöllinen monikulmio kahden pisteen vastakkaiselta puolelta tai kahdelta vastakkaiselta kulmalta</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished">Kulmat:</translation>
+        <translation>Kulmat:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Corner to Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulmasta kulmaan</translation>
     </message>
 </context>
 <context>
@@ -10657,7 +10649,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation type="unfinished"></translation>
+        <translation>Moni&amp;kulmio (keskusta, kulma)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10698,12 +10690,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Moni&amp;kulmio (2 pistettä sivulta)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä säännöllinen monikulmio yhden sivun loppupisteistä</translation>
     </message>
 </context>
 <context>
@@ -10805,7 +10797,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Luo moniviiva</translation>
     </message>
 </context>
 <context>
@@ -10850,7 +10842,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostoa &quot;%1&quot; ei ole.</translation>
     </message>
 </context>
 <context>
@@ -11088,22 +11080,22 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>Leikkauspiste käsin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen kohde</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Toinen kohde</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation type="unfinished"></translation>
+        <translation>Lopeta manuaalinen leikkauspisteen työkalu yhden käytön jälkeen</translation>
     </message>
 </context>
 <context>
@@ -11159,7 +11151,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangentiaalinen</translation>
     </message>
 </context>
 <context>
@@ -11253,7 +11245,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Muunna suorat käyrät viivoiksi</translation>
     </message>
 </context>
 <context>
@@ -11302,12 +11294,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä edistyminen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä tilavinkkejä</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
@@ -11350,12 +11342,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+138"/>
         <source>No selected entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei valittuja kohteita annetulla alueella</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohteita ei ole määritellyllä alueella</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
@@ -11368,7 +11360,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedosto</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -11409,12 +11401,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished">Käyrät</translation>
+        <translation>Käyrät</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation>Muunna käyrät tarvittaessa automaattisesti viivoiksi/kaariksi</translation>
     </message>
 </context>
 <context>
@@ -11422,7 +11414,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG-tiedostot %1</translation>
     </message>
 </context>
 <context>
@@ -11430,17 +11422,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished">Pienoisohjelmat</translation>
+        <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Välilehti</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä välilehtipalkki</translation>
     </message>
 </context>
 <context>
@@ -11500,52 +11492,52 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-10"/>
         <source>Text</source>
-        <translation type="unfinished">Teksti</translation>
+        <translation>Teksti</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstin korkeus</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Väli</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Letter spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Kirjainväli</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation type="unfinished">Suunta:</translation>
+        <translation>Suunta:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Vastapäivään</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Myötäpäivään</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovita teksti viivaan, kaareen tai ympyrään</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation type="unfinished">Sovita</translation>
+        <translation>Sovita</translation>
     </message>
 </context>
 <context>
@@ -11554,23 +11546,23 @@ näkyy etsintätuloksissa:</translation>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kohde</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Sijainti</translation>
+        <translation>Sijainti</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Teksti kohteen suuntaisesti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text along an entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä teksti kohteen suuntaisesti</translation>
     </message>
 </context>
 <context>
@@ -11698,7 +11690,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation>Omega</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11938,7 +11930,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User Interface Theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Käyttäjän teema:</translation>
     </message>
 </context>
 <context>
@@ -11946,12 +11938,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+30"/>
         <source>General</source>
-        <translation type="unfinished">Yleistä</translation>
+        <translation>Yleistä</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Teema</translation>
     </message>
 </context>
 <context>
@@ -12015,7 +12007,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vaihda lukitustila</translation>
     </message>
 </context>
 <context>
@@ -12059,12 +12051,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished">Pienoisohjelmat</translation>
+        <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Työkalurivit</translation>
+        <translation>Työkalurivit</translation>
     </message>
 </context>
 <context>
@@ -12085,7 +12077,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Keskitä työkalumatriisiin</translation>
     </message>
 </context>
 <context>
@@ -12093,7 +12085,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+37"/>
         <source>Filter</source>
-        <translation type="unfinished">Suodatin</translation>
+        <translation>Suodatin</translation>
     </message>
 </context>
 <context>
@@ -12109,12 +12101,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished">Muokkaa</translation>
+        <translation>Muokkaa</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä/Kopioi</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12139,22 +12131,22 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopioi</translation>
+        <translation>Kopioi</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopioiden määrä:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
+        <translation>Käytä nykyistä tasoa ja &amp;määrityksiä</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä työkalun vaihtoehtojen valintaikkunaa</translation>
     </message>
 </context>
 <context>
@@ -12273,17 +12265,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäistä kohdetta ei voi leikata.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdetta ei voi leikata.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toista kohdetta ei voi leikata.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
@@ -12304,7 +12296,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation type="unfinished"></translation>
+        <translation>Komentosarjat &amp;Opetusohjelmat</translation>
     </message>
 </context>
 <context>
@@ -12346,7 +12338,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+13"/>
         <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittausjärjestelmä (viivatyypeille ja kuvioinnin pinnoille):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -12472,12 +12464,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished"></translation>
+        <translation>Imperial</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Metrinen</translation>
     </message>
 </context>
 <context>
@@ -12498,7 +12490,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Näkymä</translation>
     </message>
     <message>
         <source>Show view tools</source>
@@ -12519,17 +12511,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Työkalurivit ja pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation type="unfinished">Pienoisohjelmat</translation>
+        <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Työkalurivit</translation>
+        <translation>Työkalurivit</translation>
     </message>
 </context>
 <context>
@@ -12547,7 +12539,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Ristikon välit &lt; Meta-ristikon välit</translation>
+        <translation>Ristikon välit &lt; Meta-ruudukon välit</translation>
     </message>
 </context>
 <context>
@@ -12614,17 +12606,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+281"/>
         <source>Dropped data not supported</source>
-        <translation type="unfinished"></translation>
+        <translation>Poistettuja tietoja ei tueta</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Importing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Tuodaan tiedosto: </translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Tuodaan URL: </translation>
     </message>
 </context>
 <context>
@@ -12662,7 +12654,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished">Kaari</translation>
+        <translation>Kaari</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12692,12 +12684,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>Square root</source>
-        <translation type="unfinished"></translation>
+        <translation>Neliöjuuri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pii</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12712,7 +12704,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished">Ohmi</translation>
+        <translation>Ohmi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12799,28 +12791,28 @@ näkyy etsintätuloksissa:</translation>
         <location line="+7"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Myötäpäivään</translation>
     </message>
     <message>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Vastapäivään</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation type="unfinished"></translation>
+        <translation>Edeltävä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Above</source>
-        <translation type="unfinished"></translation>
+        <translation>Edellä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>None</source>
-        <translation type="unfinished">Ei mitään</translation>
+        <translation>Ei mitään</translation>
     </message>
 </context>
 <context>
@@ -12841,7 +12833,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikkunatyökalut</translation>
     </message>
 </context>
 <context>
@@ -12857,12 +12849,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vaakasuuntainen rakenneviiva</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal construction line</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä vaakasuora rakenneviiva</translation>
     </message>
 </context>
 <context>
@@ -12870,12 +12862,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pystysuora rakenneviiva</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical construction line</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä pystysuora rakenneviiva</translation>
     </message>
 </context>
 <context>
@@ -12883,17 +12875,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoomaus</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished">Suurennustyökalut</translation>
+        <translation>Suurennustyökalut</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Muuta kokoa</translation>
     </message>
 </context>
 <context>
@@ -12957,72 +12949,72 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/library.js" line="+829"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Esineet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Esine</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuntemattomat esineet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuntematon esine</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished">Lohkot</translation>
+        <translation>Lohkot</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohko</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layer</source>
-        <translation type="unfinished">Taso</translation>
+        <translation>Taso</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Tasot</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation type="unfinished">Asettelu</translation>
+        <translation>Asettelu</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layouts</source>
-        <translation type="unfinished"></translation>
+        <translation>Asettelut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished">Viivatyypit</translation>
+        <translation>Viivatyypit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished">Viivatyyppi</translation>
+        <translation>Viivatyyppi</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation>Näkymät</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Näkymä</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13137,27 +13129,27 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulmamitat (2 viivaa)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulmamitat (2 viivaa)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulmamitat (3 pistettä)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Kulmamitta (3 pistettä)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaarimitta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13312,12 +13304,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"></translation>
+        <translation>Pinnat</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation>Pinta</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13367,32 +13359,32 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+6"/>
         <source>All CAD Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaikki CAD -tiedostot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation type="unfinished"></translation>
+        <translation>DXF -tiedostot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished">SVG-tiedostot</translation>
+        <translation>SVG -tiedostot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>DXF Piirros</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>DWG Piirros</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF -tiedosto</translation>
     </message>
 </context>
 <context>
@@ -13479,12 +13471,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäistä kohdetta ei voi leikata.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished">Yksikköä ei voi leikata.</translation>
+        <translation>Kohdetta ei voi leikata.</translation>
     </message>
     <message>
         <location line="+10"/>
