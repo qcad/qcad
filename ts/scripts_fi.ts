@@ -7463,7 +7463,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished">Piirrä laatikon yhteiset sormet, aukot ja tapit</translation>
+        <translation>Piirrä laatikkoa yhdistävät sormet, aukot ja tapit</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
