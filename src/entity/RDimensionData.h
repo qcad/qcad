@@ -58,6 +58,8 @@ public:
     }
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
+    virtual RVector getPointOnEntity() const;
+
     virtual bool isValid() const;
     virtual bool isSane() const;
 

@@ -108,6 +108,15 @@ RBox RDimensionData::getBoundingBox(bool ignoreEmpty) const {
     return boundingBox;
 }
 
+RVector RDimensionData::getPointOnEntity() const {
+    QList<QSharedPointer<RShape> > shapes = getShapes();
+    if (shapes.isEmpty()) {
+        return RVector::invalid;
+    }
+
+    return shapes.first()->getStartPoint();
+}
+
 bool RDimensionData::isValid() const {
     return REntityData::isValid() && definitionPoint.isValid();
 }
