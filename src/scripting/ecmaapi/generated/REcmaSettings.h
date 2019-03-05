@@ -91,6 +91,9 @@
         getColorArgument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVectorArgument
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoxArgument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -149,6 +149,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getVectorArgument" cppName="getVectorArgument"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="args" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="shortFlag" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="longFlag" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="def"
+        hasDefault="true" default="RDEFAULT_RVECTOR"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getBoxArgument" cppName="getBoxArgument"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
