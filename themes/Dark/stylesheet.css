@@ -251,6 +251,23 @@ QTreeWidget#ToolMatrix QToolButton:disabled {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #202020, stop:1 #303030);
 }
 
+QTreeView::branch:has-siblings:adjoins-item,
+QTreeView::branch:has-siblings:!adjoins-item,
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: none;
+    image: none;
+}
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+    border-image: none;
+    image: url(triangle_right.png);
+}
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings {
+    border-image: none;
+    image: url(triangle_down.png);
+}
+
 QDialog QToolButton {
     padding: 4px;
 }
