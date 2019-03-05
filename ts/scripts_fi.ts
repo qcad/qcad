@@ -9949,7 +9949,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä nykyistä tasoa ja &amp;Määrityksiä</translation>
     </message>
     <message>
         <location line="+14"/>
