@@ -865,7 +865,7 @@
     </message>
     <message>
         <source>Italic</source>
-        <translation>Kursiivi</translation>
+        <translation type="vanished">Kursiivi</translation>
     </message>
     <message>
         <source>Line Spacing</source>

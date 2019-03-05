@@ -866,11 +866,13 @@ asetuksien muutokset astuvat voimaan.</translation>
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation><numerusform>%n automaattisen tallennuksen varmuuskopiotiedosto nimettömälle piirustukselle löydettiin.
+        <translation>
+            <numerusform>%n automaattisen tallennuksen varmuuskopiotiedosto nimettömälle piirustukselle löydettiin.
 Haluatko palauttaa sen?</numerusform>
-        <numerusform>%n automaattisen tallennuksen varmuuskopiotiedostot nimettömille piirustuksille löydettiin.
+            <numerusform>%n automaattisen tallennuksen varmuuskopiotiedostot nimettömille piirustuksille löydettiin.
 Haluatko palauttaa ne?</numerusform>
-        </translation></message>
+        </translation>
+    </message>
     <message>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
@@ -1603,7 +1605,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <source>about:blank</source>
-        <translation>tietoa: tyhjä</translation>
+        <translation type="vanished">tietoa: tyhjä</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
@@ -2926,9 +2928,11 @@ Haluatko palauttaa sen?</translation>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation><numerusform>Merkin paikka %n mitassa palautettiin.</numerusform>
-        <numerusform>Merkkien paikat %n mitoissa palautettiin.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Merkin paikka %n mitassa palautettiin.</numerusform>
+            <numerusform>Merkkien paikat %n mitoissa palautettiin.</numerusform>
+        </translation>
+    </message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
         <translation type="vanished">Nollaa selitteen sijainti %1 mittasuhteesta(-suhteista).</translation>
@@ -3679,9 +3683,11 @@ on jo luettelossa.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
-        <translation><numerusform>%n kohde monistettu</numerusform>
-        <numerusform>%n kohteet monistettu</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n kohde monistettu</numerusform>
+            <numerusform>%n kohteet monistettu</numerusform>
+        </translation>
+    </message>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
@@ -4538,9 +4544,11 @@ on jo luettelossa.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation><numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -8457,15 +8465,19 @@ näkyy etsintätuloksissa:</translation>
     <message numerus="yes">
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation><numerusform>Säde laski alle 0,0:n jälkeen, kun keskipiste oli %n.</numerusform>
-        <numerusform>Säde laski alle 0,0:n jälkeen, kun keskipisteet olivat %n.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Säde laski alle 0,0:n jälkeen, kun keskipiste oli %n.</numerusform>
+            <numerusform>Säde laski alle 0,0:n jälkeen, kun keskipisteet olivat %n.</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation><numerusform>Säde pieneni alle 0,0 %n samankeskisessä kaaressa.</numerusform>
-        <numerusform>Säde pieneni alle 0,0 %n samankeskisissä kaarissa.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Säde pieneni alle 0,0 %n samankeskisessä kaaressa.</numerusform>
+            <numerusform>Säde pieneni alle 0,0 %n samankeskisissä kaarissa.</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>OffsetThrough</name>
@@ -10408,15 +10420,19 @@ näkyy etsintätuloksissa:</translation>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation><numerusform>%n kohde tasolla &quot;%1&quot;</numerusform>
-        <numerusform>%n kohdetta tasolla &quot;%1&quot;</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n kohde tasolla &quot;%1&quot;</numerusform>
+            <numerusform>%n kohdetta tasolla &quot;%1&quot;</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation><numerusform>%n kohde</numerusform>
-        <numerusform>%n kohdetta</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n kohde</numerusform>
+            <numerusform>%n kohdetta</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+0"/>
         <source>on</source>
@@ -10425,9 +10441,11 @@ näkyy etsintätuloksissa:</translation>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation><numerusform>%n taso</numerusform>
-        <numerusform>%n tasoa</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n taso</numerusform>
+            <numerusform>%n tasoa</numerusform>
+        </translation>
+    </message>
     <message>
         <source>%1 Entities on Layer &quot;%2&quot;</source>
         <translation type="vanished">%1 on &quot;%2&quot; tasolla</translation>

@@ -32,11 +32,6 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+126"/>
         <source>Custom</source>
-        <translatorcomment>--exact match--
---file: es.po--
-No objetos de dimensión seleccionados con una posición de texto personalizado.
-No objetos de dimensión seleccionados con una posición de texto personalizado
-Personalizado</translatorcomment>
         <translation>Personalizado</translation>
     </message>
 </context>

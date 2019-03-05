@@ -32,11 +32,6 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+126"/>
         <source>Custom</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-Aucun objets de dimension sélectionné avec une position de texte personnalisé.
-Aucun objets de dimension sélectionné avec une position de texte personnalisé
-Personnalisé</translatorcomment>
         <translation>Personnalisé</translation>
     </message>
 </context>

@@ -34,11 +34,6 @@ Impossibile eseguire Qt Assistant (%1)</translatorcomment>
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+126"/>
         <source>Custom</source>
-        <translatorcomment>--exact match--
---file: locale_it_BKChem.po--
-Nessun oggetto dimensione selezionata con una posizione di testo personalizzato.
-Nessun oggetto dimensione selezionata con una posizione di testo personalizzato
-Personalizzato</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
 </context>
