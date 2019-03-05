@@ -152,6 +152,18 @@ function getColorArgument(args, shortFlag, longFlag, def) {
     return RSettings.getColorArgument(args, shortFlag, longFlag, def);
 }
 
+function getVectorArgument(args, shortFlag, longFlag, def) {
+    // make sure undefined can be returned as default:
+    if (def===undefined) {
+        var ret = getArgument(args, shortFlag, longFlag);
+        if (ret===undefined) {
+            return def;
+        }
+        return RSettings.getVectorArgument(args, shortFlag, longFlag);
+    }
+    return RSettings.getVectorArgument(args, shortFlag, longFlag, def);
+}
+
 function getBoxArgument(args, shortFlag, longFlag, def) {
     // make sure undefined can be returned as default:
     if (def===undefined) {
