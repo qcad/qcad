@@ -626,7 +626,7 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>2 Pistettä ja Säde</translation>
+        <translation>&amp;2 Pistettä ja Säde</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -654,12 +654,12 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
         <source>&amp;3 Points</source>
-        <translation>3 Pistettä</translation>
+        <translation>&amp;3 Pistettä</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation>Piirra kaari 3:lla pisteellä</translation>
+        <translation>Piirrä kaari 3:lla pisteellä</translation>
     </message>
 </context>
 <context>
@@ -711,7 +711,7 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation>Keskipiste, Piste, Kulmat</translation>
+        <translation>&amp;Keskipiste, Piste, Kulmat</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -956,7 +956,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Automaattinen poiminta</translation>
+        <translation>Automaattinen tartunta</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1014,7 +1014,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation>Automaattinen hienosäätö</translation>
+        <translation>Automaattinen &amp;hienosäätö</translation>
     </message>
 </context>
 <context>
@@ -1205,7 +1205,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation>Bittikartan tuonti...</translation>
+        <translation>Bittikartan tuonti ...</translation>
     </message>
 </context>
 <context>
@@ -1315,7 +1315,7 @@ Haluatko palauttaa sen?</translation>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
-        <translation>Estoluettelo /lohko</translation>
+        <translation>Lohkoluettelo</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
@@ -1591,7 +1591,7 @@ Haluatko palauttaa sen?</translation>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation>Tarkistetaan päivityksiä...</translation>
+        <translation>Tarkistetaan päivityksiä ...</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1615,7 +1615,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation>&amp;Tarkista päivitykset...</translation>
+        <translation>&amp;Tarkista päivitykset ...</translation>
     </message>
 </context>
 <context>
@@ -1755,7 +1755,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation>2 tangenttia ja piste</translation>
+        <translation>2 tan&amp;genttia ja piste</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1864,7 +1864,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation>3 Tangenttia</translation>
+        <translation>3 T&amp;angenttia</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1975,7 +1975,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation>Keskipiste, Säde</translation>
+        <translation>Keskipiste, &amp;Säde</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2054,7 +2054,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation type="vanished">2 Pistettä ja Tangentti</translation>
+        <translation>2 Pistet&amp;tä ja Tangentti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
@@ -2541,7 +2541,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation>Proentti</translation>
+        <translation>Prosentti</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2667,7 +2667,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation>&amp;poista lohkoviitteet</translation>
+        <translation>&amp;Poista lohkoviitteet</translation>
     </message>
 </context>
 <context>
@@ -2721,13 +2721,13 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation>monilinjaan kaarisegmenteillä</translation>
+        <translation>murtoviivaan kaarisegmenteillä</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation>monilinjaan viivasegmenteillä</translation>
+        <translation>murtoviivaan viivasegmenteillä</translation>
     </message>
     <message>
         <location line="-8"/>
@@ -2747,7 +2747,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation>Luukut</translation>
+        <translation>Kuvioinnit</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2800,7 +2800,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+4"/>
         <source>Draw aligned dimension</source>
-        <translation>Piirrä kohdistettu mitoitus</translation>
+        <translation>Piirrä kohdistettu mitta</translation>
     </message>
 </context>
 <context>
@@ -2828,7 +2828,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+5"/>
         <source>Draw angular dimension</source>
-        <translation>Piirrä vinomitoitus</translation>
+        <translation>Piirrä kulmamitta</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -2846,17 +2846,17 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Mitoitusviivan sijainti tai kulma</translation>
+        <translation>Mittaviivan sijainti tai kulma</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation>Halkaisija</translation>
+        <translation>&amp;Vastakkaiset</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation>Piirrä halkaisijamitoitus</translation>
+        <translation>Piirrä vastakkainen mitta</translation>
     </message>
 </context>
 <context>
@@ -2864,7 +2864,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
-        <translation>Vaakasuuntainen</translation>
+        <translation>&amp;Vaakasuuntainen</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2887,7 +2887,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation>Koordinaatit (X/Y)</translation>
+        <translation>&amp;Ordinaatta (X/Y)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2910,7 +2910,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
         <source>&amp;Radial</source>
-        <translation>Säteittäinen</translation>
+        <translation>&amp;Säteittäinen</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2981,7 +2981,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimVertical/DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation>Pystysuuntainen</translation>
+        <translation>&amp;Pystysuuntainen</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3053,7 +3053,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+27"/>
         <source>D&amp;imension</source>
-        <translation>Mittasuhde</translation>
+        <translation>M&amp;ittasuhde</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -3088,7 +3088,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation>Mittakaava</translation>
+        <translation>Piirroksen Mittakaava</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3251,7 +3251,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation>arkkitehtien rasti</translation>
+        <translation>Arkkitehtien rasti</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3307,12 +3307,12 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation>Muotoile:</translation>
+        <translation>M&amp;uotoile:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation>Tarkkuus:</translation>
+        <translation>Tark&amp;kuus:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3347,7 +3347,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Näytä &amp;etäisyys/kulma</translation>
+        <translation>Näytä &amp;Etäisyys/kulma</translation>
     </message>
 </context>
 <context>
@@ -3359,7 +3359,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Valitse viiva, kaari, ympyrä, ellipsi, käyrä tai moniviiva</translation>
+        <translation>Valitse viiva, kaari, ympyrä, ellipsi, käyrä tai murtoviiva</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3379,7 +3379,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation>Jaa</translation>
+        <translation>&amp;Jaa</translation>
     </message>
 </context>
 <context>
@@ -3760,7 +3760,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation>Kohde ei ole viiva, kaari tai moniviiva.</translation>
+        <translation>Kohde ei ole viiva, kaari tai murtoviiva.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3790,7 +3790,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi tai moniviiva.</translation>
+        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi tai murtoviiva.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3800,17 +3800,17 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation>Kohde ei ole viiva, kaari, ympyrä, käyrä tai moniviiva.</translation>
+        <translation>Kohde ei ole viiva, kaari, ympyrä, käyrä tai murtoviiva.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi, käyrä tai moniviiva.</translation>
+        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi, käyrä tai murtoviiva.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation>Kohde ei ole moniviiva.</translation>
+        <translation>Kohde ei ole murtoviiva.</translation>
     </message>
 </context>
 <context>
@@ -3905,7 +3905,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation>Muokka &amp;Kuviointi</translation>
+        <translation>Muokkaa &amp;Kuviointi</translation>
     </message>
 </context>
 <context>
@@ -3934,7 +3934,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation>Muokkaa tekstiä</translation>
+        <translation>Muokkaa te&amp;kstiä</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5356,7 +5356,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation>Hiiren rulla/ kahden sormen pyyhintä:</translation>
+        <translation>Hiiren rulla/kahden sormen pyyhintä:</translation>
     </message>
     <message>
         <location line="-231"/>
@@ -5381,7 +5381,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+217"/>
         <source>Panning threshold (px):</source>
-        <translation>Vierityksen raja-arvo (px):</translation>
+        <translation>Panoroinnin raja-arvo (px):</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5426,7 +5426,7 @@ on jo luettelossa.</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Grid</source>
-        <translation>Ristikko</translation>
+        <translation>Ruudukko</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -5455,7 +5455,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="vanished">Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai splini. Löydetty:</translation>
+        <translation>Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai käyrä. Löydetty:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
@@ -5502,7 +5502,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation>Kuvio</translation>
+        <translation>Kuviomalli</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5525,7 +5525,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation>Silmukkaa ei suljettu pisteessa %1/%2.</translation>
+        <translation>Silmukkaa ei suljettu pisteessä %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -5576,7 +5576,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation>&amp;Tuonti ja vienti</translation>
+        <translation>&amp;Tuonti/Vienti</translation>
     </message>
 </context>
 <context>
@@ -10408,7 +10408,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+23"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation>%1 %2 on &quot;%3&quot; tasolla</translation>
+        <translation>%1 %2 on tasolla &quot;%3&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10501,7 +10501,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation>Luo moniviiva</translation>
+        <translation>Luo murtoviiva</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10660,7 +10660,7 @@ näkyy etsintätuloksissa:</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation type="vanished">Monikulmio (keskus, piste)</translation>
+        <translation>Monikulmio (keskusta, piste)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -10813,7 +10813,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation>Luo moniviiva</translation>
+        <translation>Luo murtoviiva</translation>
     </message>
 </context>
 <context>
@@ -10821,7 +10821,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation>Näytä vain aktiivinen</translation>
+        <translation>Näytä &amp;Vain aktiivinen</translation>
     </message>
 </context>
 <context>
@@ -10874,16 +10874,16 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Poimintatyökalut</translation>
+        <translation>Tartuntatyökalut</translation>
     </message>
     <message>
         <source>Show snap tools</source>
-        <translation type="vanished">Näytä poimintatyökalut</translation>
+        <translation>Näytä tartuntatyökalut</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation>&amp;Poiminta</translation>
+        <translation>&amp;Tartunta</translation>
     </message>
 </context>
 <context>
@@ -10891,12 +10891,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Poiminta</translation>
+        <translation>Tartunta</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Automaattinen poiminta</translation>
+        <translation>Automaattinen tartunta</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
@@ -10909,7 +10909,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation>Keskipiste</translation>
+        <translation>&amp;Keskipiste</translation>
     </message>
 </context>
 <context>
@@ -10998,7 +10998,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Poiminnan etäisyys:</translation>
+        <translation>Tartuntaetäisyys:</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
@@ -11021,7 +11021,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation>Poiminnan etäisyys:</translation>
+        <translation>Tartunnan etäisyys:</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -11070,7 +11070,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation>&amp;Ristikko</translation>
+        <translation>&amp;Ruudukko</translation>
     </message>
 </context>
 <context>
@@ -11175,7 +11175,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation>&amp;X/Y pisteistä</translation>
+        <translation>&amp;X/Y Pisteistä</translation>
     </message>
 </context>
 <context>
@@ -11295,7 +11295,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation>koordinaattinäyttö</translation>
+        <translation>Koordinaattinäyttö</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11310,7 +11310,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation>Näytä edistyminen</translation>
+        <translation>Edistymisnäyttö</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -11493,7 +11493,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation>Käytä rajattua kirjasinvalintaa:</translation>
+        <translation>Käytä rajoitettua kirjasinvalintaa:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11518,7 +11518,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation>Väli</translation>
+        <translation>Riviväli</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11586,7 +11586,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
         <source>Default value:</source>
-        <translation>&amp;Oletusarvo:</translation>
+        <translation>Oletusarvo:</translation>
     </message>
     <message>
         <location line="+266"/>
@@ -11601,7 +11601,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Leikkaa</translation>
+        <translation>&amp;Leikkaa</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11636,17 +11636,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation>&amp;Väri...</translation>
+        <translation>&amp;Väri ...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
-        <translation>&amp;Erikoismerkit...</translation>
+        <translation>&amp;Erikoismerkit ...</translation>
     </message>
     <message>
         <location line="+305"/>
         <source>Others...</source>
-        <translation>Muut...</translation>
+        <translation>Muut ...</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -11765,7 +11765,7 @@ näkyy etsintätuloksissa:</translation>
         <source>Simple text
 (one line, no formatting)</source>
         <translation>Pelkkä teksti
-(yksi rivi, ei muotoilua )</translation>
+(yksi rivi, ei muotoilua)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -11800,7 +11800,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+40"/>
         <source>Insert Symbol...</source>
-        <translation>Lisää erikoismerkki...</translation>
+        <translation>Lisää symboli ...</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -11815,7 +11815,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation>Tunniste, tag:</translation>
+        <translation>Tunniste:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11900,7 +11900,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="-116"/>
         <source>Middle Center</source>
-        <translation>Sivukeski</translation>
+        <translation>Keskikeskus</translation>
     </message>
     <message>
         <location line="+203"/>
@@ -11910,7 +11910,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="-174"/>
         <source>Middle Left</source>
-        <translation>Sivuvasen</translation>
+        <translation>Vasen keski</translation>
     </message>
     <message>
         <location line="-58"/>
@@ -12007,7 +12007,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Block/ToggleBlockVisibility/ToggleBlockVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation>Kytke Näkyvyys</translation>
+        <translation>&amp;Vaihda Näkyvyys</translation>
     </message>
 </context>
 <context>
@@ -12015,7 +12015,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation>&amp;Ristikko</translation>
+        <translation>&amp;Ruudukko</translation>
     </message>
 </context>
 <context>
@@ -12170,7 +12170,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation>Siirrä / kopioi valinnat</translation>
+        <translation>Siirrä / Kopioi valinnat</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12281,17 +12281,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Ensimmäistä kohdetta ei voi leikata.</translation>
+        <translation>Ensimmäistä kohdetta ei voida hienosäätää.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Kohdetta ei voi leikata.</translation>
+        <translation>Kohdetta ei voi hienosäätää.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Toista kohdetta ei voi leikata.</translation>
+        <translation>Toista kohdetta ei voida hienosäätää.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
@@ -12320,7 +12320,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation>Kaksi: : Vaakasuunnassa</translation>
+        <translation>Kaksi: Vaakasuunnassa</translation>
     </message>
 </context>
 <context>
@@ -12440,7 +12440,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation>Mikrometri</translation>
+        <translation>Mikroni</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12493,7 +12493,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation>&amp;Vapauta taso</translation>
+        <translation>&amp;Vapauta kaikki tasot</translation>
     </message>
 </context>
 <context>
@@ -12501,16 +12501,16 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Näkymätyökalut</translation>
+        <translation>Katselutyökalut</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation>Näkymä</translation>
+        <translation>Näytä</translation>
     </message>
     <message>
         <source>Show view tools</source>
-        <translation type="vanished">Näytä näkymätyökalut</translation>
+        <translation>Näytä katselutyökalut</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12555,7 +12555,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Ristikon välit &lt; Meta-ruudukon välit</translation>
+        <translation>Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
 </context>
 <context>
@@ -12617,7 +12617,7 @@ näkyy etsintätuloksissa:</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Ristikon välit &lt; Meta-ristikon välit</translation>
+        <translation>Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+281"/>
@@ -12639,7 +12639,7 @@ näkyy etsintätuloksissa:</translation>
     <name>ViewportWidgetGl</name>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="vanished">Ristikon välit &lt; Meta-ristikon välit</translation>
+        <translation>Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
 </context>
 <context>
@@ -12660,7 +12660,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+47"/>
         <source>Insert Symbol</source>
-        <translation>Lisää erikoismerkki</translation>
+        <translation>Lisää Symboli</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12938,17 +12938,17 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/autostart.js" line="+352"/>
         <source>Loading add-on translations...</source>
-        <translation>Lataamassa lisäosia käännökseen...</translation>
+        <translation>Ladataan lisäosia käännökseen ...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation>Lataamassa lisäosia...</translation>
+        <translation>Ladataan lisäosia ...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation>Määrittelemässä lisäosia...</translation>
+        <translation>Määrittelemässä lisäosia ...</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -12957,7 +12957,7 @@ näkyy etsintätuloksissa:</translation>
     </message>
     <message>
         <source>Post-initializing add-ons...</source>
-        <translation type="vanished">Jälki-alustetaan lisäosat...</translation>
+        <translation>Jälki-alustetaan lisäosat ...</translation>
     </message>
 </context>
 <context>
@@ -13180,7 +13180,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Y-ordinaatan mitat</translation>
+        <translation>Ordinaatan mitat</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13220,12 +13220,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation>Luukut</translation>
+        <translation>Kuvioinnit</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Luukku</translation>
+        <translation>Kuviointi</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13295,7 +13295,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation>Moniviiva</translation>
+        <translation>Murtoviiva</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13365,7 +13365,7 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation>Tuntematon kohteet</translation>
+        <translation>Tuntemattomat kohteet</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13416,7 +13416,7 @@ näkyy etsintätuloksissa:</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation>Näytä ristikko</translation>
+        <translation>Näytä ruudukko</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -13424,7 +13424,7 @@ näkyy etsintätuloksissa:</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation>Isometrinen ristikko</translation>
+        <translation>Isometrinen ruudukko</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -13432,7 +13432,7 @@ näkyy etsintätuloksissa:</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation>Apuviivojen väli</translation>
+        <translation>Ruudukon väli</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -13464,7 +13464,7 @@ näkyy etsintätuloksissa:</translation>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation>Kuvaavien apuviivojen väli</translation>
+        <translation>Aliruudukon väli</translation>
     </message>
     <message>
         <location line="-390"/>
@@ -13487,12 +13487,12 @@ näkyy etsintätuloksissa:</translation>
     <message>
         <location filename="../scripts/simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation>Ensimmäistä kohdetta ei voi leikata.</translation>
+        <translation>Ensimmäistä kohdetta ei voi hienosäätää.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation>Kohdetta ei voi leikata.</translation>
+        <translation>Kohdetta ei voi hienosäätää.</translation>
     </message>
     <message>
         <location line="+10"/>
