@@ -209,7 +209,7 @@
     <message>
         <location line="+1"/>
         <source>Others...</source>
-        <translation>Muut...</translation>
+        <translation>Muut ...</translation>
     </message>
 </context>
 <context>
@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Mittakaavan fontti</translation>
+        <translation>Kirjasimen mitta</translation>
     </message>
 </context>
 <context>
@@ -607,12 +607,12 @@
     <message>
         <location line="+1"/>
         <source>Plottable</source>
-        <translation>Piirrettävä</translation>
+        <translation>Piirturilla</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Nappaava</translation>
+        <translation>Tarttuva</translation>
     </message>
     <message>
         <location line="+1"/>
