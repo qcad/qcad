@@ -275,7 +275,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation>Kysy</translation>
+        <translation>Kehote</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
@@ -630,7 +630,7 @@
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation>Moniviivainen kuvio</translation>
+        <translation>Murtoviivan kuvio</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -723,7 +723,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation>Kynän kulma</translation>
+        <translation>Kiinteä kulma</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
