@@ -4069,7 +4069,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation type="vanished">&amp;Elliptinen kaari keskeltä, piste, suhteella</translation>
+        <translation>&amp;Täysi Ellipsi keskeltä, piste, suhde</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
@@ -4161,7 +4161,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation>Merkitty nelikulmiossa</translation>
+        <translation>Merkitään nelikulmaiseen</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4285,7 +4285,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation>Voit &lt;i&gt; Muokkaa&gt; Kumoa &lt;/i&gt; palauttaa rivikokonaisuuden.</translation>
+        <translation>Voit &lt;i&gt; Muokkaa&gt; Kumoa&lt;/i&gt; palauttaaksesi rivikokonaisuuden.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -4314,7 +4314,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation>Piirrä &amp;Fontit</translation>
+        <translation>Piirrä &amp;Kirjasimet</translation>
     </message>
 </context>
 <context>
@@ -4332,7 +4332,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+18"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation>&amp;Tulosta monilinjan kärkipisteet</translation>
+        <translation>&amp;Tulosta murtoviivan kärkipisteet</translation>
     </message>
 </context>
 <context>
@@ -4405,7 +4405,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation>&amp;Minimal esimerkki</translation>
+        <translation>&amp;Pienin esimerkki</translation>
     </message>
 </context>
 <context>
@@ -4658,7 +4658,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
-        <translation>Faktatietoa (online)</translation>
+        <translation>UK&amp;K (online)</translation>
     </message>
 </context>
 <context>
@@ -4762,7 +4762,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation>Käännä vaakasuoraan</translation>
+        <translation>Käännä vaaka&amp;suoraan</translation>
     </message>
 </context>
 <context>
@@ -4770,7 +4770,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation>Käännä pystysuoraan</translation>
+        <translation>Käännä pysty&amp;suoraan</translation>
     </message>
 </context>
 <context>
@@ -4967,7 +4967,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation>Automaattisesti säätyvä meta-ruudukko</translation>
+        <translation>Automaattisesti säätyvä aliruudukko</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5022,7 +5022,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation>Automaattinen mittakaava/zoomaus</translation>
+        <translation>Automaattinen suurennus/zoomaus</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -5082,7 +5082,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Kuvion mitta viivapaksuudella 0.00m:</translation>
+        <translation>Kuvion mitta viivapaksuudella 0.00 m:</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -5177,7 +5177,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Alkuperä</translation>
+        <translation>Lähtöpaikka</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -5187,12 +5187,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation>Ristikko</translation>
+        <translation>Ruudukko</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Meta grid:</source>
-        <translation>Meta/kuvaus ristikko:</translation>
+        <translation>Aliruudukko:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -5261,12 +5261,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation>Poimintatyökalut</translation>
+        <translation>Tartuntatyökalut</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation>Poiminnan selite:</translation>
+        <translation>Tartunnan selite:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -5343,7 +5343,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+16"/>
         <source>Snap Label Font:</source>
-        <translation>Poiminnan selitteen kirjasin:</translation>
+        <translation>Tartunnan selitteen kirjasin:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5465,7 +5465,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+27"/>
         <source>&amp;Hatch</source>
-        <translation>&amp;Kuviotäyttö</translation>
+        <translation>&amp;Kuvionti</translation>
     </message>
     <message>
         <source>Draw hatch or solid fill</source>
@@ -5492,7 +5492,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation>Kuviotäytön Kuvio</translation>
+        <translation>Kuvioinnin Kuviomalli</translation>
     </message>
     <message>
         <location line="+16"/>
