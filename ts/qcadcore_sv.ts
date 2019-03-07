@@ -119,7 +119,7 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translation type="unfinished">Av block</translation>
+        <translation>Från block</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -278,7 +278,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Origo</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -352,7 +352,7 @@
     <message>
         <location line="+3"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribut</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
@@ -464,7 +464,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished">Alias</translation>
+        <translation>Handtag</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -547,12 +547,12 @@
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotation</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>På</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -587,12 +587,12 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Av</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Frozen</source>
-        <translation type="unfinished"></translation>
+        <translation>Fryst</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -602,7 +602,7 @@
     <message>
         <location line="+1"/>
         <source>Collapsed</source>
-        <translation type="unfinished"></translation>
+        <translation>Kollapsad</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -629,14 +629,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished"></translation>
+        <translation>Min-gränser</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished"></translation>
+        <translation>Max-gränser</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -743,7 +743,7 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontinuerlig</translation>
     </message>
     <message>
         <location line="+2"/>
