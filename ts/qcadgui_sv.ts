@@ -14,12 +14,12 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+195"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Slut</translation>
     </message>
     <message>
         <location line="+3"/>
