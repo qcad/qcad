@@ -6,86 +6,86 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+63"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Om %1</translation>
     </message>
     <message>
         <location line="+49"/>
         <location line="+122"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Version:</translation>
     </message>
     <message>
         <location line="-118"/>
         <location line="+135"/>
         <location line="+11"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>Webbsida:</translation>
     </message>
     <message>
         <location line="-144"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Byggdatum:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Revision:</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+116"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt Version:</translation>
     </message>
     <message>
         <location line="-112"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arkitektur:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kompilator:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licensnyckel:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 är ett program för datorstödd konstruktion (CAD).</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 är baserad på QCAD, en fri mjukvara med öppen källkod.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 är fri mjukvara med öppen källkod.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <translation>Det betyder att alla kan &lt;a href=&apos;%1&apos;&gt;delta&lt;/a&gt;!</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugins och tilläggsskript har egna licenser som reglerar dess användning (se &quot;Plugin&quot;-fliken).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Alla varumärken eller produktnamn är varumärken eller registrerade varumärken som tillhör respektive innehavare.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Delar av denna mjukvara © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -100,89 +100,89 @@
     <message>
         <location line="+12"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No plugins found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inga plugin hittades.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingen information tillgänglig</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Beskrivning:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Okänd</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licens:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiv</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inaktiv (starta om)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Utvärderingsversion:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fil:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Error:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>Tilläggsskript</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inga tilläggsskript hittades.</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Credits</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Om...</translation>
     </message>
 </context>
 <context>
@@ -190,27 +190,27 @@
     <message>
         <location filename="../scripts/Help/About/AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmering</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Översättning</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Mallar</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikoner</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Testning, utvärdering och mindre buggrättningar</translation>
     </message>
 </context>
 <context>
@@ -218,27 +218,27 @@
     <message>
         <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Om</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Credits</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Skript</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>System</translation>
     </message>
 </context>
 <context>
@@ -246,48 +246,49 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Programinställningar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Ritningsinställningar</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Verkställ ändringar</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>Omstart krävs</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Starta om QCAD för att
+ändringarna ska slå igenom.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation type="unfinished"></translation>
+        <translation>Standard för </translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta är standardinställningarna för nya ritningar.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändringarna kommer påverka nya ritningar men INTE den pågående ritningen.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inställningarna för den pågående ritningen kan ändras under &lt;br/&gt;&lt;i&gt;Editera &amp;gt; Ritningsinställningar&lt;/i&gt;.</translation>
     </message>
 </context>
 <context>
@@ -308,17 +309,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Lägg till anpassad egenskap</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Namn:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished">Värde:</translation>
+        <translation>Värde:</translation>
     </message>
 </context>
 <context>
@@ -326,17 +327,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Lager</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Lägg till lager</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lägg till lager</translation>
     </message>
 </context>
 <context>
@@ -344,7 +345,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kantutjämning</translation>
     </message>
 </context>
 <context>
@@ -352,12 +353,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Apollonius.js" line="+1769"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Ogiltig radie</translation>
+        <translation>Ogiltig radie</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation type="unfinished">Ingen lösning</translation>
+        <translation>Ingen lösning</translation>
     </message>
 </context>
 <context>
@@ -365,7 +366,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Applikationsinställningar</translation>
     </message>
 </context>
 <context>
@@ -447,52 +448,52 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished">Startpunkt</translation>
+        <translation>Startpunkt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished">Slutpunkt</translation>
+        <translation>Slutpunkt</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid height</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogiltig höjd</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>De två punkterna är identiska</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation type="unfinished"></translation>
+        <translation>2 punkter och höjd</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and height</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita en cirkelbåge utifrån 2 punkter och höjd</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.ui" line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished">Höjd:</translation>
+        <translation>Höjd:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished">Riktning:</translation>
+        <translation>Riktning:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished">Motsols (positiv)</translation>
+        <translation>Motsols (positiv)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Medsols (negativ)</translation>
+        <translation>Medsols (negativ)</translation>
     </message>
 </context>
 <context>
@@ -500,57 +501,57 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished">Startpunkt</translation>
+        <translation>Startpunkt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished">Slutpunkt</translation>
+        <translation>Slutpunkt</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid length</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogiltig längd</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>De två punkterna är identiska</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation type="unfinished"></translation>
+        <translation>Avståndet mellan de två punkterna måste vara mindre än cirkelbågens längd</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 punkter och längd</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and length</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita en cirkelbåge utifrån 2 punkter och längd</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Längd:</translation>
+        <translation>Längd:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished">Riktning:</translation>
+        <translation>Riktning:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished">Motsols (positiv)</translation>
+        <translation>Motsols (positiv)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Medsols (negativ)</translation>
+        <translation>Medsols (negativ)</translation>
     </message>
 </context>
 <context>
@@ -814,7 +815,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangentiellt kopplad</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -827,94 +828,93 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fil</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisk sparning</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Autosaving to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Autospara till:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Autosave failed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Autosave misslyckades:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>Autosave lyckades.</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Autosparad backupfil för en icke namngiven ritning hittades. Vill du återställa den?</numerusform>
+        <numerusform>%n autosparade backupfiler för icke namngivna ritningar hittades. Vill du återställa dem?</numerusform>
+        </translation></message>
     <message>
         <location line="+5"/>
         <source>Recover Files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Återställ filer?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation type="unfinished"></translation>
+        <translation>Återställda</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation type="unfinished"></translation>
+        <translation>Återställ fil?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>En autosparad backup-fil för &quot;%1&quot; existerar.
+Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan inte byta namn på fil:</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Flyttade autosparad backup-fil till:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Flyttade originalfilen till:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Det går inte att ta bort filen:</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivera autospar</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervall för autospar:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation type="unfinished"></translation>
+        <translation>min</translation>
     </message>
 </context>
 <context>
@@ -922,57 +922,57 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisk snapning</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Intersections</source>
-        <translation type="unfinished"></translation>
+        <translation>Skärningspunkter</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>End points</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändpunkter</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittpunkter</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrumpunkter</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Vinkelrät</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangentiell</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation type="unfinished"></translation>
+        <translation>Referenspunkter</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation type="unfinished"></translation>
+        <translation>Rasterpunkter</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Punkt på entitet</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Free positioning</source>
-        <translation type="unfinished"></translation>
+        <translation>Fri positionering</translation>
     </message>
 </context>
 <context>
@@ -980,7 +980,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/AutoTrim/AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto &amp;Trim</translation>
     </message>
 </context>
 <context>
@@ -988,7 +988,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Auto Zoom</translation>
     </message>
 </context>
 <context>
@@ -1009,37 +1009,37 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
-        <translation type="unfinished"></translation>
+        <translation>De två objekten kan inte fasas.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Första objektet kan inte trimmas.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Andra objektet kan inte trimmas.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
-        <translation type="unfinished"></translation>
+        <translation>Fas</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Trimma</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Längd 1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length 2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Längd 2:</translation>
     </message>
 </context>
 <context>
@@ -1047,27 +1047,27 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Fel vid generering av bitmappsfil &apos;%1&apos;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitmappsfilen har exporterats till &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Filer</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportera som bitmapp</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportera bit&amp;map...</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
