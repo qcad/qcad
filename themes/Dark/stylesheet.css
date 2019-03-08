@@ -369,3 +369,10 @@ QToolTip, QTipLabel {
     padding: 0;
 }
 */
+
+QMainWindow::separator {
+    background-color: #2D2F32;
+    spacing: 0;
+    padding: 0;
+    margin: 0;
+}
