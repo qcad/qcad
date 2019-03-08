@@ -75,7 +75,7 @@ public:
         Snappable = 0x200,        //!< snap disabled for this layer
         OffIsFreeze = 0x400       //!< off means freeze for this layer
     };
-    Q_DECLARE_FLAGS(Flags, LayerFlag)
+    Q_DECLARE_FLAGS(LayerFlags, LayerFlag)
 
 public:
     RLayer();
@@ -303,7 +303,7 @@ public:
 
 private:
     QString name;
-    Flags flags;
+    LayerFlags flags;
     RColor color;
     RLinetype::Id linetypeId;
     RLineweight::Lineweight lineweight;
