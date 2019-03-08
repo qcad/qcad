@@ -2387,24 +2387,39 @@ function autoIconPath(path) {
 function applyTheme() {
     var theme = RSettings.getValue("Theme/ThemeName", undefined);
     if (!isNull(theme)) {
-        var prefix = "themes/" + theme + "/";
-        var fn = prefix + "stylesheet.css";
-        if (new QFileInfo(fn).exists()) {
-            var file = new QFile(fn);
-            var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
-            if (file.open(flags)) {
-                var textStream = new QTextStream(file);
-                var allLines = textStream.readAll();
-                file.close();
-                allLines = allLines.replace(/url\(/g, "url(" + prefix);
-                qApp.setStyleSheet(allLines);
-                return;
+        var path = "themes/" + theme + "/";
+
+        qApp.styleSheet = "";
+
+        // load stylesheet.css, stylesheet_[win|macos|linux].css:
+        var found = false;
+        var systemId = RS.getSystemId();
+        if (systemId==="osx") systemId = "macos";
+
+        var postfixes = ["", "_" + systemId];
+        for (var i=0; i<postfixes.length; i++) {
+            var postfix = postfixes[i];
+            var fn = path + "stylesheet" + postfix + ".css";
+            qDebug("trying to load theme stylesheet: ", fn);
+            if (new QFileInfo(fn).exists()) {
+                var file = new QFile(fn);
+                var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+                if (file.open(flags)) {
+                    var textStream = new QTextStream(file);
+                    var allLines = textStream.readAll();
+                    file.close();
+                    allLines = allLines.replace(/url\(/g, "url(" + path);
+                    qApp.styleSheet = qApp.styleSheet + "\n" + allLines;
+                    found = true;
+                }
             }
         }
-        if (theme!=="Default") {
-            qWarning("Cannot open theme: ", theme);
+
+        if (!found) {
+            if (theme!=="Default") {
+                qWarning("Cannot open theme: ", theme);
+            }
         }
-        qApp.setStyleSheet("");
     }
 }
 
