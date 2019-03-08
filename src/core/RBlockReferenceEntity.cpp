@@ -409,6 +409,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                     break;
                 }
 
+                // query entity from block reference (applies transformations):
                 QSharedPointer<REntity> entityBase = data.queryEntity(*it);
                 if (entityBase.isNull()) {
                     continue;
