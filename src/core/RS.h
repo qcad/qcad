@@ -128,6 +128,7 @@ public:
 
         ObjectBlock,
         ObjectLayer,
+        ObjectLayerState,
         ObjectLinetype,
         ObjectView,
         ObjectLayout,
