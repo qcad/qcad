@@ -54,6 +54,7 @@ void RMemoryStorage::clear() {
     blockEntityMap.clear();
     blockMap.clear();
     layerMap.clear();
+    layerStateMap.clear();
     layoutMap.clear();
     linetypeMap.clear();
     childMap.clear();
@@ -256,6 +257,18 @@ QSet<RLayer::Id> RMemoryStorage::queryAllLayers(bool undone) {
     QHash<RObject::Id, QSharedPointer<RLayer> >::iterator it;
     for (it = layerMap.begin(); it != layerMap.end(); ++it) {
         QSharedPointer<RLayer> l = *it;
+        if (!l.isNull() && (undone || !l->isUndone())) {
+            result.insert(l->getId());
+        }
+    }
+    return result;
+}
+
+QSet<RLayerState::Id> RMemoryStorage::queryAllLayerStates(bool undone) {
+    QSet<RLayerState::Id> result;
+    QHash<RObject::Id, QSharedPointer<RLayerState> >::iterator it;
+    for (it = layerStateMap.begin(); it != layerStateMap.end(); ++it) {
+        QSharedPointer<RLayerState> l = *it;
         if (!l.isNull() && (undone || !l->isUndone())) {
             result.insert(l->getId());
         }
@@ -646,6 +659,40 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(const QString& layerName) cons
         }
     }
     return QSharedPointer<RLayer>();
+}
+
+QSharedPointer<RLayerState> RMemoryStorage::queryLayerStateDirect(RLayerState::Id layerStateId) const {
+    if (!layerStateMap.contains(layerStateId)) {
+        return QSharedPointer<RLayerState>();
+    }
+    return layerStateMap[layerStateId].dynamicCast<RLayerState>();
+}
+
+QSharedPointer<RLayerState> RMemoryStorage::queryLayerState(RLayerState::Id layerStateId) const {
+    if (!layerStateMap.contains(layerStateId)) {
+        return QSharedPointer<RLayerState> ();
+    }
+    if (layerStateMap[layerStateId].isNull()) {
+        return QSharedPointer<RLayerState> ();
+    }
+    if (!layerStateMap[layerStateId].dynamicCast<RLayerState>().isNull()) {
+        return QSharedPointer<RLayerState>((RLayerState*)layerStateMap[layerStateId]->clone());
+    }
+
+    qWarning() << "RMemoryStorage::queryLayerState: should never be reached: " << layerStateId;
+    qWarning() << "RMemoryStorage::queryLayerState: found object but not layerState: " << *layerStateMap[layerStateId];
+    return QSharedPointer<RLayerState>();
+}
+
+QSharedPointer<RLayerState> RMemoryStorage::queryLayerState(const QString& layerStateName) const {
+    QHash<RObject::Id, QSharedPointer<RLayerState> >::const_iterator it;
+    for (it = layerStateMap.constBegin(); it != layerStateMap.constEnd(); ++it) {
+        QSharedPointer<RLayerState> l = *it;
+        if (!l.isNull() && l->getName().compare(layerStateName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
+            return QSharedPointer<RLayerState> (l->clone());
+        }
+    }
+    return QSharedPointer<RLayerState>();
 }
 
 QSharedPointer<RLayout> RMemoryStorage::queryLayoutDirect(RLayout::Id layoutId) const {
@@ -1176,6 +1223,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     }
 
     QSharedPointer<RLayer> layer;
+    QSharedPointer<RLayerState> layerState;
     QSharedPointer<RLayout> layout;
     QSharedPointer<RBlock> block;
     QSharedPointer<RLinetype> linetype;
@@ -1195,6 +1243,25 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
                 if (!existingLayer.isNull()) {
                     if (existingLayer->isProtected()) {
                         layer->setProtected(true);
+                    }
+                }
+            }
+        }
+    }
+
+    // never allow two layer states with identical names, update layer state instead:
+    if (object->getType()==RS::ObjectLayerState) {
+        layerState = object.dynamicCast<RLayerState>();
+        if (!layerState.isNull()) {
+            RLayerState::Id id = getLayerStateId(layerState->getName());
+            if (id != RLayerState::INVALID_ID && id != layerState->getId()) {
+                setObjectId(*layerState, id);
+
+                // never unprotect an existing protected layerState:
+                QSharedPointer<RLayerState> existingLayerState = queryLayerStateDirect(id);
+                if (!existingLayerState.isNull()) {
+                    if (existingLayerState->isProtected()) {
+                        layerState->setProtected(true);
                     }
                 }
             }
@@ -1314,6 +1381,10 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         layerMap[object->getId()] = layer;
     }
 
+    if (!layerState.isNull()) {
+        layerStateMap[object->getId()] = layerState;
+    }
+
     if (!layout.isNull()) {
         layoutMap[object->getId()] = layout;
     }
@@ -1418,6 +1489,9 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
     }
     if (layerMap.contains(objectId)) {
         layerMap.remove(objectId);
+    }
+    if (layerStateMap.contains(objectId)) {
+        layerStateMap.remove(objectId);
     }
     if (linetypeMap.contains(objectId)) {
         linetypeMap.remove(objectId);
@@ -1639,6 +1713,37 @@ RLayer::Id RMemoryStorage::getLayerId(const QString& layerName) const {
     QSharedPointer<RLayer> l = queryLayer(layerName);
     if (l.isNull()) {
         return RLayer::INVALID_ID;
+    }
+    return l->getId();
+}
+
+QString RMemoryStorage::getLayerStateName(RLayerState::Id layerStateId) const {
+    QSharedPointer<RLayerState> l = queryLayerStateDirect(layerStateId);
+    if (l.isNull()) {
+        return QString();
+    }
+    return l->getName();
+}
+
+QSet<QString> RMemoryStorage::getLayerStateNames(const QString& rxStr) const {
+    QRegExp rx(rxStr);
+    QSet<QString> ret;
+    QHash<RObject::Id, QSharedPointer<RLayerState> >::const_iterator it;
+    for (it = layerStateMap.constBegin(); it != layerStateMap.constEnd(); ++it) {
+        QSharedPointer<RLayerState> l = *it;
+        if (!l.isNull() && !l->isUndone()) {
+            if (rx.isEmpty() || rx.exactMatch(l->getName())) {
+                ret.insert(l->getName());
+            }
+        }
+    }
+    return ret;
+}
+
+RLayerState::Id RMemoryStorage::getLayerStateId(const QString& layerStateName) const {
+    QSharedPointer<RLayerState> l = queryLayerState(layerStateName);
+    if (l.isNull()) {
+        return RLayerState::INVALID_ID;
     }
     return l->getId();
 }

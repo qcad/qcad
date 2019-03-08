@@ -49,6 +49,7 @@ public:
     virtual QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types);
     virtual QSet<RUcs::Id> queryAllUcs();
     virtual QSet<RLayer::Id> queryAllLayers(bool undone = false);
+    virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false);
     virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false);
     virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) const;
     virtual QSet<RLayout::Id> queryAllLayouts(bool undone = false);
@@ -80,6 +81,10 @@ public:
     virtual QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
+
+    virtual QSharedPointer<RLayerState> queryLayerStateDirect(RLayerState::Id layerStateId) const;
+    virtual QSharedPointer<RLayerState> queryLayerState(RLayerState::Id layerStateId) const;
+    virtual QSharedPointer<RLayerState> queryLayerState(const QString& layerStateName) const;
 
     virtual QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const;
     virtual QSharedPointer<RLayout> queryLayout(RLayout::Id layoutId) const;

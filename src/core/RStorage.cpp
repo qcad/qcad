@@ -203,6 +203,11 @@ bool RStorage::hasLayer(const QString& layerName) const {
     return sl.contains(layerName, Qt::CaseInsensitive);
 }
 
+bool RStorage::hasLayerState(const QString& layerStateName) const {
+    QStringList sl = getLayerStateNames().toList();
+    return sl.contains(layerStateName, Qt::CaseInsensitive);
+}
+
 bool RStorage::hasLayout(const QString& layoutName) const {
     QStringList sl = getLayoutNames().toList();
     return sl.contains(layoutName, Qt::CaseInsensitive);
@@ -424,6 +429,20 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
             QSharedPointer<RLayer> l = s.queryObjectDirect(id).dynamicCast<RLayer>();
             if (l.isNull()) {
                 dbg.nospace() << "layer not found: " << id;
+                continue;
+            }
+            dbg.nospace() << *l.data() << "\n";
+        }
+    }
+
+    {
+        QSet<RLayerState::Id> layerStates = s.queryAllLayerStates(true);
+        QSetIterator<RLayerState::Id> i(layerStates);
+        while (i.hasNext()) {
+            RLayerState::Id id = i.next();
+            QSharedPointer<RLayerState> l = s.queryObjectDirect(id).dynamicCast<RLayerState>();
+            if (l.isNull()) {
+                dbg.nospace() << "layer state not found: " << id;
                 continue;
             }
             dbg.nospace() << *l.data() << "\n";

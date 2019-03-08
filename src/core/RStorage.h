@@ -31,6 +31,7 @@
 #include "RDocumentVariables.h"
 #include "REntity.h"
 #include "RLayer.h"
+#include "RLayerState.h"
 #include "RLinetype.h"
 #include "RLinetypePattern.h"
 #include "RModifiedListener.h"
@@ -135,6 +136,11 @@ public:
      * \return A set of all layer IDs of the document.
      */
     virtual QSet<RLayer::Id> queryAllLayers(bool undone = false) = 0;
+
+    /**
+     * \return A set of all layer state IDs of the document.
+     */
+    virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false) = 0;
 
     /**
      * \return A set of all block IDs of the document.
@@ -270,6 +276,26 @@ public:
     virtual QSharedPointer<RLayer> queryCurrentLayer() {
         return queryLayer(getCurrentLayerId());
     }
+
+    /**
+     * \return A pointer to the layer state with the given \c layerStateId
+     *      or NULL if no such layer state exists.
+     */
+    virtual QSharedPointer<RLayerState> queryLayerState(RLayerState::Id layerStateId) const = 0;
+
+    virtual QSharedPointer<RLayerState> queryLayerStateDirect(RLayerState::Id layerStateId) const {
+        return queryLayerState(layerStateId);
+    }
+    virtual QSharedPointer<RLayerState> queryLayerStateDirect(const QString& layerStateName) const {
+        return queryLayerStateDirect(getLayerStateId(layerStateName));
+    }
+
+    /**
+     * \return A pointer to the layer with the given \c layerName
+     *      or NULL if no such layer exists.
+     */
+    virtual QSharedPointer<RLayerState> queryLayerState(const QString& layerStateName) const = 0;
+
 
     /**
      * \return A pointer to the layout with the given \c layoutId
@@ -420,6 +446,11 @@ public:
         return layer0Id;
     }
     virtual bool hasLayer(const QString& layerName) const;
+
+    virtual QString getLayerStateName(RLayerState::Id layerStateId) const = 0;
+    virtual QSet<QString> getLayerStateNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
+    virtual RLayer::Id getLayerStateId(const QString& layerStateName) const = 0;
+    virtual bool hasLayerState(const QString& layerStateName) const;
 
     virtual QString getLayoutName(RLayout::Id layoutId) const = 0;
     virtual QSet<QString> getLayoutNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;

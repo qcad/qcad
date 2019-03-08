@@ -55,6 +55,7 @@ public:
     virtual QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types);
     virtual QSet<RUcs::Id> queryAllUcs();
     virtual QSet<RLayer::Id> queryAllLayers(bool undone = false);
+    virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false);
     virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false);
     virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) const;
     virtual QSet<RBlock::Id> queryAllLayouts(bool undone);
@@ -81,6 +82,8 @@ public:
     virtual QSharedPointer<REntity> queryEntity(REntity::Id objectId) const;
     virtual QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
+    virtual QSharedPointer<RLayerState> queryLayerState(RLayerState::Id layerStateId) const;
+    virtual QSharedPointer<RLayerState> queryLayerState(const QString& layerStateName) const;
     virtual QSharedPointer<RLayout> queryLayout(RLayout::Id layoutId) const;
     virtual QSharedPointer<RLayout> queryLayout(const QString& layoutName) const;
     virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;
@@ -150,6 +153,10 @@ public:
     virtual QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     virtual RLayer::Id getLayerId(const QString& layerName) const;
 
+    virtual QString getLayerStateName(RLayerState::Id layerStateId) const;
+    virtual QSet<QString> getLayerStateNames(const QString& rxStr = RDEFAULT_QSTRING) const;
+    virtual RLayerState::Id getLayerStateId(const QString& layerStateName) const;
+
     virtual QString getLayoutName(RLayout::Id layoutId) const;
     virtual QSet<QString> getLayoutNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     virtual RLayout::Id getLayoutId(const QString& layoutName) const;
@@ -176,6 +183,7 @@ public:
     virtual QSharedPointer<REntity> queryEntityDirect(REntity::Id objectId) const;
     virtual QSharedPointer<RUcs> queryUcsDirect(RUcs::Id ucsId) const;
     virtual QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
+    virtual QSharedPointer<RLayerState> queryLayerStateDirect(RLayerState::Id layerStateId) const;
     virtual QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const;
     virtual QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
 
@@ -219,6 +227,7 @@ protected:
     QHash<RBlock::Id, QHash<REntity::Id, QSharedPointer<REntity> > > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
+    QHash<RLayerState::Id, QSharedPointer<RLayerState> > layerStateMap;
     QHash<RLayout::Id, QSharedPointer<RLayout> > layoutMap;
     QHash<RLinetype::Id, QSharedPointer<RLinetype> > linetypeMap;
     /** maps parent entity IDs to child entity IDs */

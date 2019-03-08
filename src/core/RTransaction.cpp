@@ -578,21 +578,32 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         }
     }
 
+    if (!mustClone && object->getId()!=RObject::INVALID_ID) {
+        if (object->getType()==RS::ObjectLayerState) {
+            // always clone layer states:
+            mustClone = true;
+        }
+    }
+
     // if object is an existing hatch and we are not just changing a property:
     // delete original and add new since hatch geometry cannot be completely
     // defined through properties which is a requirement for changing objects
     // through transactions:
     if (mustClone) {
-        QSharedPointer<REntity> clone = QSharedPointer<REntity>(entity->clone());
-        objectStorage->setObjectId(*clone, REntity::INVALID_ID);
+        QSharedPointer<RObject> clone = QSharedPointer<RObject>(object->clone());
+
+        objectStorage->setObjectId(*clone, RObject::INVALID_ID);
         // note that we delete the OLD entity here
         // (old entity is queried from storage since we pass the ID here):
-        deleteObject(entity->getId(), true);
+        deleteObject(object->getId(), true);
         addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
 
         // draw order was set to top value automatically by
         // saveObject of RMemoryStorage:
-        clone->setDrawOrder(entity->getDrawOrder());
+        QSharedPointer<REntity> entityClone = object.dynamicCast<REntity>();
+        if (!entityClone.isNull()) {
+            entityClone->setDrawOrder(entity->getDrawOrder());
+        }
         return true;
     }
 

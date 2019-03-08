@@ -61,6 +61,11 @@ QSet<RLayer::Id> RLinkedStorage::queryAllLayers(bool undone) {
             .unite(backStorage->queryAllLayers(undone));
 }
 
+QSet<RLayerState::Id> RLinkedStorage::queryAllLayerStates(bool undone) {
+    return RMemoryStorage::queryAllLayerStates(undone)
+            .unite(backStorage->queryAllLayerStates(undone));
+}
+
 QSet<RBlock::Id> RLinkedStorage::queryAllBlocks(bool undone) {
     return RMemoryStorage::queryAllBlocks(undone)
             .unite(backStorage->queryAllBlocks(undone));
@@ -220,6 +225,28 @@ QSharedPointer<RLayer> RLinkedStorage::queryLayer(const QString& layerName) cons
     QSharedPointer<RLayer> ret = RMemoryStorage::queryLayer(layerName);
     if (ret.isNull()) {
         ret = backStorage->queryLayer(layerName);
+    }
+    return ret;
+}
+
+QSharedPointer<RLayerState> RLinkedStorage::queryLayerStateDirect(RLayerState::Id layerStateId) const {
+    if (!layerStateMap.contains(layerStateId)) {
+        return backStorage->queryLayerStateDirect(layerStateId);
+    }
+    return RMemoryStorage::queryLayerStateDirect(layerStateId);
+}
+
+QSharedPointer<RLayerState> RLinkedStorage::queryLayerState(RLayerState::Id layerStateId) const {
+    if (!layerStateMap.contains(layerStateId)) {
+        return backStorage->queryLayerState(layerStateId);
+    }
+    return RMemoryStorage::queryLayerState(layerStateId);
+}
+
+QSharedPointer<RLayerState> RLinkedStorage::queryLayerState(const QString& layerStateName) const {
+    QSharedPointer<RLayerState> ret = RMemoryStorage::queryLayerState(layerStateName);
+    if (ret.isNull()) {
+        ret = backStorage->queryLayerState(layerStateName);
     }
     return ret;
 }

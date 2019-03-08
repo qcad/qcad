@@ -59,6 +59,8 @@
 #include "RFontList.h"
 #include "RHatchEntity.h"
 #include "RImageEntity.h"
+#include "RLayer.h"
+#include "RLayerState.h"
 #include "RLeaderEntity.h"
 #include "RLineEntity.h"
 #include "RLinetypeListImperial.h"
@@ -281,6 +283,7 @@ int main(int argc, char *argv[]) {
 
     RUcs::init();
     RLayer::init();
+    RLayerState::init();
     RLayout::init();
     RLinetype::init();
     RBlock::init();
