@@ -354,18 +354,18 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
     }
 
     // nested block reference with negative scale factors (flipped):
-    RBlockReferenceEntity* blockReference = dynamic_cast<RBlockReferenceEntity*>(&entity);
-    if (blockReference!=NULL && scaleFactors.y<0.0) {
-        blockReference->move(-block->getOrigin());
-        blockReference->scale(scaleFactors);
-        blockReference->rotate(-2*blockReference->getRotation(), blockReference->getPosition());
-        blockReference->rotate(rotation);
-        blockReference->move(position);
-        if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
-            blockReference->scaleVisualProperties(visualPropertiesScale);
-        }
-        return true;
-    }
+//    RBlockReferenceEntity* blockReference = dynamic_cast<RBlockReferenceEntity*>(&entity);
+//    if (blockReference!=NULL && scaleFactors.y<0.0) {
+//        blockReference->move(-block->getOrigin());
+//        blockReference->scale(scaleFactors);
+//        blockReference->rotate(-2*blockReference->getRotation(), blockReference->getPosition());
+//        blockReference->rotate(rotation);
+//        blockReference->move(position);
+//        if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
+//            blockReference->scaleVisualProperties(visualPropertiesScale);
+//        }
+//        return true;
+//    }
 
     if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
         entity.scaleVisualProperties(visualPropertiesScale);
