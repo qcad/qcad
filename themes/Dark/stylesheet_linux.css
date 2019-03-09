@@ -2,6 +2,8 @@
 QCAD Dark Theme
 Linux specific (fix checkboxes)
 */
+
+/* QCheckBox */
 QCheckBox::indicator,
 QGroupBox::indicator {
     width: 13px;
@@ -41,3 +43,28 @@ QGroupBox::indicator:indeterminate:pressed {
     background-color: #22bb22;
     image: url(checkbox_indeterminate.png);
 }
+
+/* QRadioButton */
+QRadioButton::indicator {
+    width: 13px;
+    height: 13px;
+}
+QRadioButton::indicator:unchecked {
+    image: url(radio_unchecked.png);
+}
+QRadioButton::indicator:unchecked:hover {
+    image: url(radio_unchecked.png);
+}
+QRadioButton::indicator:unchecked:pressed {
+    image: url(radio_unchecked.png);
+}
+QRadioButton::indicator:checked {
+    image: url(radio_checked.png);
+}
+QRadioButton::indicator:checked:hover {
+    image: url(radio_checked.png);
+}
+QRadioButton::indicator:checked:pressed {
+    image: url(radio_checked.png);
+}
+
