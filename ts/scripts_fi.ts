@@ -2054,7 +2054,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation>2 Pistet&amp;tä ja Tangentti</translation>
+        <translation type="vanished">2 Pistet&amp;tä ja Tangentti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
@@ -4069,7 +4069,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translation>&amp;Täysi Ellipsi keskeltä, piste, suhde</translation>
+        <translation type="vanished">&amp;Täysi Ellipsi keskeltä, piste, suhde</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
@@ -4544,9 +4544,11 @@ on jo luettelossa.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation><numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
-        <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
+            <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -5455,7 +5457,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai käyrä. Löydetty:</translation>
+        <translation type="vanished">Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai käyrä. Löydetty:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
@@ -9306,7 +9308,7 @@ näkyy hakutuloksissa:</translation>
     <name>RecentFiles</name>
     <message>
         <source>Load/Save</source>
-        <translation>Lataa/Tallenna</translation>
+        <translation type="vanished">Lataa/Tallenna</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
@@ -9871,7 +9873,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Load/Save</source>
-        <translation>Lataa/Tallenna</translation>
+        <translation type="vanished">Lataa/Tallenna</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -10660,7 +10662,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Moni&amp;kulmio (keskusta, piste)</translation>
+        <translation type="vanished">Moni&amp;kulmio (keskusta, piste)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -10697,7 +10699,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Moni&amp;kulmio (kaksi kulmaa)</translation>
+        <translation type="vanished">Moni&amp;kulmio (kaksi kulmaa)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
@@ -10878,7 +10880,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Show snap tools</source>
-        <translation>Näytä tartuntatyökalut</translation>
+        <translation type="vanished">Näytä tartuntatyökalut</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -12510,7 +12512,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Show view tools</source>
-        <translation>Näytä katselutyökalut</translation>
+        <translation type="vanished">Näytä katselutyökalut</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12617,7 +12619,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Ruudukon välit &lt; Aliruudukon välit</translation>
+        <translation type="vanished">Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+281"/>
@@ -12639,7 +12641,7 @@ näkyy hakutuloksissa:</translation>
     <name>ViewportWidgetGl</name>
     <message>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Ruudukon välit &lt; Aliruudukon välit</translation>
+        <translation type="vanished">Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
 </context>
 <context>
@@ -12957,7 +12959,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Post-initializing add-ons...</source>
-        <translation>Jälki-alustetaan lisäosat ...</translation>
+        <translation type="vanished">Jälki-alustetaan lisäosat ...</translation>
     </message>
 </context>
 <context>

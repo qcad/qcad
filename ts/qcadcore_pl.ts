@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+287"/>
+        <location filename="../src/core/RColor.cpp" line="+288"/>
         <source>By Layer</source>
         <translation>Według warstwy</translation>
     </message>
@@ -580,6 +580,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="-6"/>
         <location filename="../src/core/RLayer.cpp" line="-8"/>
+        <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
         <translation>Nazwa</translation>

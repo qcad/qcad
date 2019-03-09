@@ -854,9 +854,11 @@ the preference changes to take effect.</source>
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation><numerusform>Autosparad backupfil för en icke namngiven ritning hittades. Vill du återställa den?</numerusform>
-        <numerusform>%n autosparade backupfiler för icke namngivna ritningar hittades. Vill du återställa dem?</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Autosparad backupfil för en icke namngiven ritning hittades. Vill du återställa den?</numerusform>
+            <numerusform>%n autosparade backupfiler för icke namngivna ritningar hittades. Vill du återställa dem?</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+5"/>
         <source>Recover Files?</source>
@@ -4064,7 +4066,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till lager</translation>
     </message>
 </context>
 <context>
@@ -5322,7 +5324,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Image/Image.js" line="+133"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filer</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -6444,7 +6446,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lager</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6711,7 +6713,7 @@ is already in the list.</source>
     <message>
         <location line="-27"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fil:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6721,7 +6723,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Licens:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -8914,7 +8916,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fil</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9267,12 +9269,12 @@ shown in search results:</source>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första objektet kan inte trimmas.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Andra objektet kan inte trimmas.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -9282,7 +9284,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Trimma</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9426,7 +9428,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fil</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10334,7 +10336,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk snapning</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
@@ -10810,7 +10812,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fil</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11703,7 +11705,7 @@ shown in search results:</source>
     <message>
         <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första objektet kan inte trimmas.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11713,7 +11715,7 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Andra objektet kan inte trimmas.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
@@ -12367,7 +12369,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lager</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12854,7 +12856,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första objektet kan inte trimmas.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12864,7 +12866,7 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Andra objektet kan inte trimmas.</translation>
     </message>
 </context>
 </TS>

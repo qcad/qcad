@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+287"/>
+        <location filename="../src/core/RColor.cpp" line="+288"/>
         <source>By Layer</source>
         <translation>Podle vrstvy</translation>
     </message>
@@ -240,6 +240,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+63"/>
         <location filename="../src/core/RLayer.cpp" line="+90"/>
+        <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+80"/>
         <source>Name</source>
         <translation>Jméno</translation>

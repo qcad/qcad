@@ -759,6 +759,7 @@ SOURCES = \
 ../scripts/Modify/Stretch/Tests/StretchTest02.js \
 ../scripts/Modify/Stretch/Tests/StretchTest03.js \
 ../scripts/Modify/Stretch/Tests/StretchTest05.js \
+../scripts/Modify/Stretch/Tests/StretchTest06.js \
 ../scripts/Modify/Transform.js \
 ../scripts/Modify/Translate/Tests/TranslateTest00.js \
 ../scripts/Modify/Translate/Tests/TranslateTest01.js \
