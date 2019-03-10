@@ -31,7 +31,8 @@ QMenu {
     border: 1px solid #2d2d2d;
 }
 QMenu::item:disabled {
-    color: #323232;
+    /*color: #323232;*/
+    color: #707070;
 }
 QMenu::item:selected {
     background-color: #157EF2;
