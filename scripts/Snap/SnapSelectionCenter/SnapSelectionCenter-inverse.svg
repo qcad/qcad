@@ -1,1 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 492)"><path d="M288-236A32 32 0 1 0 224 -236 32 32 0 0 0 288 -236" style="fill:#f00"/><g transform="translate(0-476)" style="fill:none;opacity:.25;stroke:#f00;color:#000;stroke-linecap:square"><path transform="matrix(.8 0 0 .8 113.6 91.2)" d="M168 136A80 80 0 1 1 8 136 80 80 0 1 1 168 136z" style="stroke-width:20"/><g style="stroke-width:16"><path d="m376 184l-128 144h128v-144z"/><path d="m56 184c0-62.05 25.952-112 96-112h304v336h-272v-80h-128v-144z"/></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="SnapSelectionCenter-inverse.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1726"
+     inkscape:window-height="1050"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g14" />
+  <g
+     transform="translate(0 492)"
+     id="g14">
+    <path
+       d="M288-236A32 32 0 1 0 224 -236 32 32 0 0 0 288 -236"
+       style="fill:#f00"
+       id="path2" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:square;opacity:0.5;"
+       d="m 248,-276 a 64,64 0 1 1 -128,0 64,64 0 1 1 128,0 z" />
+    <g
+       id="g10"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:square;opacity:0.5;"
+       transform="translate(0,-476)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path6"
+         d="M 376,184 248,328 h 128 z"
+         style="" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path8"
+         d="M 56,184 C 56,121.95 81.952,72 152,72 H 456 V 408 H 184 V 328 H 56 Z"
+         style="" />
+    </g>
+  </g>
+</svg>
