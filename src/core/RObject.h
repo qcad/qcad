@@ -96,6 +96,14 @@ public:
 
     virtual RObject* clone() const = 0;
 
+    /**
+     * \return True to always clone object instead of saving diff when object changes.
+     * This can be used for complex object types which cannot be modified using properties.
+     */
+    virtual bool mustAlwaysClone() const {
+        return false;
+    }
+
     RDocument* getDocument() {
         return document;
     }
