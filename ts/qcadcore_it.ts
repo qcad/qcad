@@ -912,7 +912,7 @@ Colore G&amp;riglia:</translatorcomment>
 --file: qcadguiqt_it.ts--
 Da Layer
 Scegli layer nella cartella</translatorcomment>
-        <translation type="vanished">Da Layer</translation>
+        <translation>Per livello</translation>
     </message>
     <message>
         <source>By Block</source>
