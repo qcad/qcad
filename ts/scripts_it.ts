@@ -6550,7 +6550,7 @@ Visualizzazione grafica</translatorcomment>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Incolla tutte le entità&lt;br&gt;al layer corrente al&lt;br&gt;posto del layer originale</translation>
+        <translation>Incolla tutte le entità&lt;br&gt;al livello corrente al&lt;br&gt;posto del livello originale</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7391,7 +7391,7 @@ Percentuale di elementi
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation>Sovrascrivere eventuali layer&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livello di appunti</translation>
+        <translation>Sovrascrivere eventuali livelli&lt;br&gt;esistenti nel disegno&lt;br&gt;con gli livelli di appunti</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7802,7 +7802,7 @@ Per favore riavvia Photivo per cambiare le impostazioni della lingua</translator
     </message>
     <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
-        <translation type="vanished">Entità in blocchi sul layer 0 assumere attributi del riferimento di blocco (compatibilità)</translation>
+        <translation>Entità in blocchi sul livello 0 assumere attributi del riferimento di blocco (compatibilità)</translation>
     </message>
 </context>
 <context>
@@ -9307,7 +9307,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Usa layer e gli &amp;attributi corrente</translation>
+        <translation>Usa il livello e gli &amp;attributi corrente</translation>
     </message>
 </context>
 <context>
@@ -10792,7 +10792,7 @@ Specifica la base</translatorcomment>
     <message>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Sposta la selezione ad un nuovo layer</translation>
+        <translation>Sposta la selezione ad un nuovo livello</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -11116,7 +11116,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Usa layer e gli &amp;attributi corrente</translation>
+        <translation>Usa livello e gli &amp;attributi corrente</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11618,7 +11618,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Usa layer e gli &amp;attributi corrente</translation>
+        <translation>Usa il livello e gli &amp;attributi corrente</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -12269,11 +12269,9 @@ Interseca con la selezione corrente</translatorcomment>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation>
-            <numerusform>%n entità su layer &quot;%1&quot;</numerusform>
-            <numerusform>%n entità su livello &quot;%1&quot;</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n entità su livello &quot;%1&quot;</numerusform>
+        <numerusform>%n entità su livello &quot;%1&quot;</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
@@ -12292,7 +12290,7 @@ Interseca con la selezione corrente</translatorcomment>
     </message>
     <message>
         <source>%1 Entities on Layer &quot;%2&quot;</source>
-        <translation type="vanished">%1 entità su layer &quot;%2&quot;</translation>
+        <translation>%1 entità su livello &quot;%2&quot;</translation>
     </message>
     <message>
         <source>%1 Entities on %2 Layers</source>
@@ -12755,12 +12753,12 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
     <name>ShowAllLayers</name>
     <message>
         <source>&amp;Show all Layers</source>
-        <translation type="vanished">Mostra tutti i layer</translation>
+        <translation>&amp;Mostra tutti i livelli</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation>Mostra tutti i layer</translation>
+        <translation>&amp;Mostra tutti i livelli</translation>
     </message>
 </context>
 <context>
