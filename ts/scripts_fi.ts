@@ -12731,7 +12731,7 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation>fii</translation>
+        <translation>phi</translation>
     </message>
     <message>
         <location line="+1"/>
