@@ -114,6 +114,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="queryAllLayerStates"
+    cppName="queryAllLayerStates" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RLayerState::Id &gt;"
+      isPureVirtual="true">
+        <arg type="bool" typeName="bool" name="undone"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="queryAllBlocks" cppName="queryAllBlocks"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -356,6 +365,34 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RLayer &gt;"
       isPureVirtual="false" />
+    </method>
+    <method name="queryLayerState" cppName="queryLayerState"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayerState &gt;"
+      isPureVirtual="false">
+        <arg type="RLayerState::Id" typeName="RLayerState::Id"
+        name="layerStateId" isConst="false" />
+      </variant>
+      <variant returnType="QSharedPointer &lt; RLayerState &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerStateName" isConst="true" />
+      </variant>
+    </method>
+    <method name="queryLayerStateDirect"
+    cppName="queryLayerStateDirect" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayerState &gt;"
+      isPureVirtual="false">
+        <arg type="RLayerState::Id" typeName="RLayerState::Id"
+        name="layerStateId" isConst="false" />
+      </variant>
+      <variant returnType="QSharedPointer &lt; RLayerState &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerStateName" isConst="true" />
+      </variant>
     </method>
     <method name="queryLayout" cppName="queryLayout"
     specifier="public" isStatic="false" isVirtual="true"
@@ -821,6 +858,40 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
+      </variant>
+    </method>
+    <method name="getLayerStateName" cppName="getLayerStateName"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLayerState::Id" typeName="RLayerState::Id"
+        name="layerStateId" isConst="false" />
+      </variant>
+    </method>
+    <method name="getLayerStateNames" cppName="getLayerStateNames"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; QString &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="rxStr"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getLayerStateId" cppName="getLayerStateId"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RLayer::Id" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerStateName" isConst="true" />
+      </variant>
+    </method>
+    <method name="hasLayerState" cppName="hasLayerState"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerStateName" isConst="true" />
       </variant>
     </method>
     <method name="getLayoutName" cppName="getLayoutName"

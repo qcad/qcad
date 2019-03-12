@@ -70,6 +70,9 @@
         queryAllLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryAllLayerStates
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -140,6 +143,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLayerStateDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLayerState
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryLayoutDirect

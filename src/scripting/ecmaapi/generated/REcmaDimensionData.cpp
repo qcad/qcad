@@ -69,6 +69,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
+            REcmaHelper::registerFunction(&engine, proto, getPointOnEntity, "getPointOnEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
             REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
@@ -699,6 +701,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getPointOnEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getPointOnEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getPointOnEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getPointOnEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointOnEntity();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getPointOnEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getPointOnEntity", context, engine);
             return result;
         }
          QScriptValue

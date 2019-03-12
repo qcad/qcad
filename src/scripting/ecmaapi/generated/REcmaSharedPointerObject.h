@@ -57,6 +57,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        mustAlwaysClone
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

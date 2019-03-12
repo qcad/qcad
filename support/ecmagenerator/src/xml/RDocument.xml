@@ -160,6 +160,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RLayer::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryAllLayerStates"
+    cppName="queryAllLayerStates" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RLayerState::Id &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryAllBlocks" cppName="queryAllBlocks"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -452,6 +458,29 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="queryLayerState" cppName="queryLayerState"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayerState &gt;"
+      isPureVirtual="false">
+        <arg type="RLayerState::Id" typeName="RLayerState::Id"
+        name="layerStateId" isConst="false" />
+      </variant>
+      <variant returnType="QSharedPointer &lt; RLayerState &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerStateName" isConst="true" />
+      </variant>
+    </method>
+    <method name="queryLayerStateDirect"
+    cppName="queryLayerStateDirect" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayerState &gt;"
+      isPureVirtual="false">
+        <arg type="RLayerState::Id" typeName="RLayerState::Id"
+        name="layerStateId" isConst="false" />
       </variant>
     </method>
     <method name="queryLayout" cppName="queryLayout"
@@ -1157,6 +1186,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getLayerStateName" cppName="getLayerStateName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLayerState::Id" typeName="RLayerState::Id"
+        name="layerStateId" isConst="false" />
+      </variant>
+    </method>
+    <method name="getLayerStateNames" cppName="getLayerStateNames"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; QString &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="rxStr"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getLayoutName" cppName="getLayoutName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -1176,6 +1223,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
+      </variant>
+    </method>
+    <method name="hasLayerState" cppName="hasLayerState"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerStateName" isConst="true" />
       </variant>
     </method>
     <method name="hasBlock" cppName="hasBlock" specifier="public"
@@ -1219,6 +1274,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RLayer::Id" isPureVirtual="false" />
+    </method>
+    <method name="getLayerStateId" cppName="getLayerStateId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLayerState::Id" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerStateName" isConst="true" />
+      </variant>
     </method>
     <method name="getBlockId" cppName="getBlockId"
     specifier="public" isStatic="false" isVirtual="false"

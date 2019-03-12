@@ -151,6 +151,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("ObjectLayerState",
+    QScriptValue(RS::ObjectLayerState),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("ObjectLinetype",
     QScriptValue(RS::ObjectLinetype),
     QScriptValue::ReadOnly);

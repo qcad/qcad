@@ -97,6 +97,14 @@
 
     <function_decl><type><name>virtual</name> <name>RObject</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * \return True to always clone object instead of saving diff when object changes.
+     * This can be used for complex object types which cannot be modified using properties.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>mustAlwaysClone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>document</name></expr>;</return>
     }</block></function>

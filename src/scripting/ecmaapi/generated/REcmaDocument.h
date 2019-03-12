@@ -93,6 +93,9 @@
         queryAllLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryAllLayerStates
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -184,6 +187,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryLayerDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLayerState
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLayerStateDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryLayout
@@ -432,6 +441,12 @@
         getLayerNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLayerStateName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayerStateNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLayoutName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -439,6 +454,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasLayerState
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasBlock
@@ -457,6 +475,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLayer0Id
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayerStateId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBlockId

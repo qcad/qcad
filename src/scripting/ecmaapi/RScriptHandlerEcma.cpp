@@ -168,6 +168,7 @@
 #include "REcmaLayer.h"
 #include "REcmaLayerListener.h"
 #include "REcmaLayerListenerAdapter.h"
+#include "REcmaLayerState.h"
 #include "REcmaLayout.h"
 #include "REcmaLeaderData.h"
 #include "REcmaLeaderEntity.h"
@@ -276,6 +277,7 @@
 #include "REcmaSharedPointerHatchEntity.h"
 #include "REcmaSharedPointerImageEntity.h"
 #include "REcmaSharedPointerLayer.h"
+#include "REcmaSharedPointerLayerState.h"
 #include "REcmaSharedPointerLayout.h"
 #include "REcmaSharedPointerLeaderEntity.h"
 #include "REcmaSharedPointerLine.h"
@@ -727,6 +729,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSharedPointerEntity::initEcma(*engine);
     REcmaLayer::initEcma(*engine);
     REcmaSharedPointerLayer::initEcma(*engine);
+    REcmaLayerState::initEcma(*engine);
+    REcmaSharedPointerLayerState::initEcma(*engine);
     REcmaLayout::initEcma(*engine);
     REcmaSharedPointerLayout::initEcma(*engine);
     REcmaBlock::initEcma(*engine);
@@ -1155,6 +1159,9 @@ void RScriptHandlerEcma::createActionDocumentLevel(const QString& scriptFile,
     }
 
     if (!QFileInfo(scriptFile).exists()) {
+        qWarning() << "RScriptHandlerEcma::createActionDocumentLevel(): "
+                   << scriptFile
+                   << ": file not found.";
         getScriptEngine().currentContext()->throwError(QString(
                 "File %1 does not exists.").arg(scriptFile));
         return;

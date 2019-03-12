@@ -76,7 +76,7 @@
         <expr><name>Snappable</name> = 0x200</expr>,        <comment type="line">//!&lt; snap disabled for this layer</comment>
         <expr><name>OffIsFreeze</name> = 0x400</expr>       <comment type="line">//!&lt; off means freeze for this layer</comment>
     }</block>;</enum>
-    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>LayerFlag</argument>)</argument_list></macro>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>LayerFlags</argument>, <argument>LayerFlag</argument>)</argument_list></macro>
 
 </public><public>public:
     <constructor_decl><name>RLayer</name><parameter_list>()</parameter_list>;</constructor_decl>
@@ -304,7 +304,7 @@
 
 </public><private>private:
     <decl_stmt><decl><type><name>QString</name></type> <name>name</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>Flags</name></type> <name>flags</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>LayerFlags</name></type> <name>flags</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RColor</name></type> <name>color</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl>;</decl_stmt>

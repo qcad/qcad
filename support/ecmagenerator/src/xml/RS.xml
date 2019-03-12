@@ -19,6 +19,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="ObjectUnknown" />
       <value name="ObjectBlock" />
       <value name="ObjectLayer" />
+      <value name="ObjectLayerState" />
       <value name="ObjectLinetype" />
       <value name="ObjectView" />
       <value name="ObjectLayout" />

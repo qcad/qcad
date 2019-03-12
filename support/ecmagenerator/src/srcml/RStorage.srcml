@@ -32,6 +32,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentVariables.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayer.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayerState.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLinetype.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RModifiedListener.h"</cpp:file></cpp:include>
@@ -136,6 +137,11 @@
      * \return A set of all layer IDs of the document.
      */</comment>
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RLayer</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllLayers</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return A set of all layer state IDs of the document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>RLayerState</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllLayerStates</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * \return A set of all block IDs of the document.
@@ -271,6 +277,26 @@
     <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>queryCurrentLayer</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><call><name>queryLayer</name><argument_list>(<argument><expr><call><name>getCurrentLayerId</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
+
+    <comment type="block">/**
+     * \return A pointer to the layer state with the given \c layerStateId
+     *      or NULL if no such layer state exists.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayerState</name></argument>&gt;</argument_list></name></type> <name>queryLayerState</name><parameter_list>(<param><decl><type><name><name>RLayerState</name>::<name>Id</name></name></type> <name>layerStateId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayerState</name></argument>&gt;</argument_list></name></type> <name>queryLayerStateDirect</name><parameter_list>(<param><decl><type><name><name>RLayerState</name>::<name>Id</name></name></type> <name>layerStateId</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>queryLayerState</name><argument_list>(<argument><expr><name>layerStateId</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayerState</name></argument>&gt;</argument_list></name></type> <name>queryLayerStateDirect</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerStateName</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>queryLayerStateDirect</name><argument_list>(<argument><expr><call><name>getLayerStateId</name><argument_list>(<argument><expr><name>layerStateName</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return A pointer to the layer with the given \c layerName
+     *      or NULL if no such layer exists.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLayerState</name></argument>&gt;</argument_list></name></type> <name>queryLayerState</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerStateName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
 
     <comment type="block">/**
      * \return A pointer to the layout with the given \c layoutId
@@ -421,6 +447,11 @@
         <return>return <expr><name>layer0Id</name></expr>;</return>
     }</block></function>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLayerStateName</name><parameter_list>(<param><decl><type><name><name>RLayerState</name>::<name>Id</name></name></type> <name>layerStateId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getLayerStateNames</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>rxStr</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>RLayer</name>::<name>Id</name></name></type> <name>getLayerStateId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerStateName</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasLayerState</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerStateName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getLayoutName</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>Id</name></name></type> <name>layoutId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getLayoutNames</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>rxStr</name> =<init> <expr><name>RDEFAULT_QSTRING</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
