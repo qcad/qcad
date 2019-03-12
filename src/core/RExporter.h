@@ -146,12 +146,14 @@ public:
     virtual void exportIntListWithName(const QString& dictionaryName, const QString& name, const QString& listName, QList<int64_t>& values);
 
     virtual void exportLayers();
+    virtual void exportLayerStates();
     virtual void exportBlocks();
     virtual void exportViews();
     virtual void exportLinetypes();
 
     virtual void exportLayer(RLayer& /*layer*/) {}
     virtual void exportLayer(RLayer::Id layerId);
+    virtual void exportLayerState(RLayerState& /*layerState*/) {}
     virtual void exportBlock(RBlock& /*block*/) {}
     virtual void exportBlock(RBlock::Id blockId);
     virtual void exportView(RView& /*view*/) {}

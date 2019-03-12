@@ -468,6 +468,7 @@ bool RExporter::exportDocument() {
     }
     exportLinetypes();
     exportLayers();
+    exportLayerStates();
     exportBlocks();
     exportViews();
     if (isVisualExporter()) {
@@ -532,6 +533,17 @@ void RExporter::exportLayers() {
         QSharedPointer<RLayer> e = document->queryLayerDirect(*it);
         if (!e.isNull()) {
             exportLayer(*e);
+        }
+    }
+}
+
+void RExporter::exportLayerStates() {
+    QSet<RLayerState::Id> ids = document->queryAllLayerStates();
+    QSet<RLayerState::Id>::iterator it;
+    for (it = ids.begin(); it != ids.end(); it++) {
+        QSharedPointer<RLayerState> ls = document->queryLayerStateDirect(*it);
+        if (!ls.isNull()) {
+            exportLayerState(*ls);
         }
     }
 }
