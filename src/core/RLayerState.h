@@ -74,14 +74,28 @@ public:
         return name;
     }
 
-    void setName(const QString& n);
+    void setName(const QString& n) {
+        name = n.trimmed();
+    }
+
+    QString getDescription() const {
+        return description;
+    }
+
+    void setDescription(const QString& d) {
+        description = d;
+    }
 
     void addLayer(QSharedPointer<RLayer> layer);
 
     QList<QSharedPointer<RLayer> > getLayers() const;
 
+    QStringList getLayerNames() const;
+    QSharedPointer<RLayer> getLayer(const QString& layerName) const;
+
 private:
     QString name;
+    QString description;
     QList<QSharedPointer<RLayer> > layers;
 };
 

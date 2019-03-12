@@ -50,10 +50,6 @@ RLayerState* RLayerState::clone() const {
     return new RLayerState(*this);
 }
 
-void RLayerState::setName(const QString& n) {
-    name = n.trimmed();
-}
-
 void RLayerState::addLayer(QSharedPointer<RLayer> layer) {
     if (layer.isNull()) {
         qWarning() << "layer is NULL";
@@ -72,6 +68,23 @@ void RLayerState::addLayer(QSharedPointer<RLayer> layer) {
 
 QList<QSharedPointer<RLayer> > RLayerState::getLayers() const {
     return layers;
+}
+
+QStringList RLayerState::getLayerNames() const {
+    QStringList ret;
+    for (int i=0; i<layers.length(); i++) {
+        ret.append(layers[i]->getName());
+    }
+    return RS::sortAlphanumerical(ret);
+}
+
+QSharedPointer<RLayer> RLayerState::getLayer(const QString& layerName) const {
+    for (int i=0; i<layers.length(); i++) {
+        if (QString::compare(layers[i]->getName(), layerName, Qt::CaseInsensitive)==0) {
+            return layers[i];
+        }
+    }
+    return QSharedPointer<RLayer>();
 }
 
 bool RLayerState::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
