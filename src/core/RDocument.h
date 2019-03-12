@@ -35,6 +35,7 @@
 #include "RTransactionStack.h"
 #include "RUcs.h"
 #include "RLayer.h"
+#include "RLayerState.h"
 #include "RLinetype.h"
 #include "RView.h"
 
@@ -105,6 +106,7 @@ public:
     QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) const;
     QSet<RUcs::Id> queryAllUcs() const;
     QSet<RLayer::Id> queryAllLayers() const;
+    QSet<RLayerState::Id> queryAllLayerStates() const;
     QSet<RBlock::Id> queryAllBlocks() const;
     QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false) const;
     QSet<RBlock::Id> queryAllLayouts() const;
@@ -163,6 +165,9 @@ public:
     QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
     QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
+    QSharedPointer<RLayerState> queryLayerState(RLayerState::Id layerStateId) const;
+    QSharedPointer<RLayerState> queryLayerStateDirect(RLayerState::Id layerStateId) const;
+    QSharedPointer<RLayerState> queryLayerState(const QString& layerStateName) const;
     QSharedPointer<RLayout> queryLayout(RLayout::Id layoutId) const;
     QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const;
     QSharedPointer<RLayout> queryLayout(const QString& layoutName) const;
@@ -329,10 +334,13 @@ public:
     QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
     QString getLayerName(RLayer::Id layerId) const;
     QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
+    QString getLayerStateName(RLayerState::Id layerStateId) const;
+    QSet<QString> getLayerStateNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     QString getLayoutName(RLayout::Id layoutId) const;
     QSet<QString> getViewNames() const;
 
     bool hasLayer(const QString& layerName) const;
+    bool hasLayerState(const QString& layerStateName) const;
     bool hasBlock(const QString& blockName) const;
     bool hasLayout(const QString& layoutName) const;
     bool hasView(const QString& viewName) const;
@@ -340,6 +348,9 @@ public:
 
     RLayer::Id getLayerId(const QString& layerName) const;
     RLayer::Id getLayer0Id() const;
+
+    RLayerState::Id getLayerStateId(const QString& layerStateName) const;
+
     RBlock::Id getBlockId(const QString& blockName) const;
     RBlock::Id getBlockIdAuto(const QString& blockLayoutName) const;
     RBlock::Id getModelSpaceBlockId() const;
