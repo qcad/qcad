@@ -997,6 +997,13 @@ bool RDocument::hasLayer(const QString& layerName) const {
 }
 
 /**
+ * \copydoc RStorage::hasLayerStates
+ */
+bool RDocument::hasLayerStates() const {
+    return storage.hasLayerStates();
+}
+
+/**
  * \copydoc RStorage::hasLayerState
  */
 bool RDocument::hasLayerState(const QString& layerStateName) const {

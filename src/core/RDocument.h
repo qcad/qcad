@@ -340,6 +340,7 @@ public:
     QSet<QString> getViewNames() const;
 
     bool hasLayer(const QString& layerName) const;
+    bool hasLayerStates() const;
     bool hasLayerState(const QString& layerStateName) const;
     bool hasBlock(const QString& blockName) const;
     bool hasLayout(const QString& layoutName) const;

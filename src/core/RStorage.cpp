@@ -203,6 +203,10 @@ bool RStorage::hasLayer(const QString& layerName) const {
     return sl.contains(layerName, Qt::CaseInsensitive);
 }
 
+bool RStorage::hasLayerStates() const {
+    return !queryAllLayerStates().isEmpty();
+}
+
 bool RStorage::hasLayerState(const QString& layerStateName) const {
     QStringList sl = getLayerStateNames().toList();
     return sl.contains(layerStateName, Qt::CaseInsensitive);

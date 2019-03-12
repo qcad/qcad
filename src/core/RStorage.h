@@ -140,7 +140,7 @@ public:
     /**
      * \return A set of all layer state IDs of the document.
      */
-    virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false) = 0;
+    virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false) const = 0;
 
     /**
      * \return A set of all block IDs of the document.
@@ -450,6 +450,7 @@ public:
     virtual QString getLayerStateName(RLayerState::Id layerStateId) const = 0;
     virtual QSet<QString> getLayerStateNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
     virtual RLayer::Id getLayerStateId(const QString& layerStateName) const = 0;
+    virtual bool hasLayerStates() const;
     virtual bool hasLayerState(const QString& layerStateName) const;
 
     virtual QString getLayoutName(RLayout::Id layoutId) const = 0;

@@ -55,7 +55,7 @@ public:
     virtual QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types);
     virtual QSet<RUcs::Id> queryAllUcs();
     virtual QSet<RLayer::Id> queryAllLayers(bool undone = false);
-    virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false);
+    virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false) const;
     virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false);
     virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool includeModelSpace = false, bool undone = false) const;
     virtual QSet<RBlock::Id> queryAllLayouts(bool undone);

@@ -264,10 +264,10 @@ QSet<RLayer::Id> RMemoryStorage::queryAllLayers(bool undone) {
     return result;
 }
 
-QSet<RLayerState::Id> RMemoryStorage::queryAllLayerStates(bool undone) {
+QSet<RLayerState::Id> RMemoryStorage::queryAllLayerStates(bool undone) const {
     QSet<RLayerState::Id> result;
-    QHash<RObject::Id, QSharedPointer<RLayerState> >::iterator it;
-    for (it = layerStateMap.begin(); it != layerStateMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RLayerState> >::const_iterator it;
+    for (it = layerStateMap.constBegin(); it != layerStateMap.constEnd(); ++it) {
         QSharedPointer<RLayerState> l = *it;
         if (!l.isNull() && (undone || !l->isUndone())) {
             result.insert(l->getId());
