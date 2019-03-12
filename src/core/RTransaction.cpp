@@ -579,8 +579,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     }
 
     if (!mustClone && object->getId()!=RObject::INVALID_ID) {
-        if (object->getType()==RS::ObjectLayerState) {
-            // always clone layer states:
+        if (object->mustAlwaysClone()) {
             mustClone = true;
         }
     }
