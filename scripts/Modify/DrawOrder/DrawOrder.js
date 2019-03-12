@@ -20,7 +20,7 @@
 include("scripts/Modify/Modify.js");
 
 /**
- * \defgroup ecma_projection Draw order Tools
+ * \defgroup ecma_draworder Draw order Tools
  * \ingroup ecma_modify
  *
  * \brief This module contains ECMAScript implementations of drawing order tools.
@@ -29,7 +29,7 @@ include("scripts/Modify/Modify.js");
 /**
  * \class DrawOrder
  * \brief Base class for all draw order tools.
- * \ingroup ecma_projection
+ * \ingroup ecma_draworder
  */
 function DrawOrder(guiAction) {
     Modify.call(this, guiAction);
