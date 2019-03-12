@@ -78,6 +78,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getDescription" cppName="getDescription"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setDescription" cppName="setDescription"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="d"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="addLayer" cppName="addLayer" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -90,6 +103,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; QSharedPointer &lt; RLayer &gt; &gt;"
       isPureVirtual="false" />
+    </method>
+    <method name="getLayerNames" cppName="getLayerNames"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="getLayer" cppName="getLayer" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayer &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layerName" isConst="true" />
+      </variant>
     </method>
     <property name="PropertyCustom" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

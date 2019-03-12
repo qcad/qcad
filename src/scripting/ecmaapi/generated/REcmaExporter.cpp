@@ -155,6 +155,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportLayers, "exportLayers");
             
+            REcmaHelper::registerFunction(&engine, proto, exportLayerStates, "exportLayerStates");
+            
             REcmaHelper::registerFunction(&engine, proto, exportBlocks, "exportBlocks");
             
             REcmaHelper::registerFunction(&engine, proto, exportViews, "exportViews");
@@ -162,6 +164,8 @@
             REcmaHelper::registerFunction(&engine, proto, exportLinetypes, "exportLinetypes");
             
             REcmaHelper::registerFunction(&engine, proto, exportLayer, "exportLayer");
+            
+            REcmaHelper::registerFunction(&engine, proto, exportLayerState, "exportLayerState");
             
             REcmaHelper::registerFunction(&engine, proto, exportBlock, "exportBlock");
             
@@ -2689,6 +2693,50 @@
             return result;
         }
          QScriptValue
+        REcmaExporter::exportLayerStates
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportLayerStates", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportLayerStates";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportLayerStates", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportLayerStates();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportLayerStates().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportLayerStates", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaExporter::exportBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2910,6 +2958,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::exportLayerState
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportLayerState", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportLayerState";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportLayerState", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLayerState */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RLayerState*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLayerState*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLayerState*.",
+                               context);                    
+                    }
+                    RLayerState& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportLayerState(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportLayerState().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportLayerState", context, engine);
             return result;
         }
          QScriptValue

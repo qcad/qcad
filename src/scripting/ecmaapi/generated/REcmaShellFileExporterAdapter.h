@@ -294,6 +294,11 @@
             );
         
     
+      void exportLayerStates(
+                
+            );
+        
+    
       void exportBlocks(
                 
             );
@@ -315,6 +320,11 @@
         
       void exportLayer(
                 RLayer::Id layerId
+            );
+        
+    
+      void exportLayerState(
+                RLayerState & arg1
             );
         
     

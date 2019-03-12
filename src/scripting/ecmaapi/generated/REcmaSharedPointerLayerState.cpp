@@ -85,9 +85,17 @@
             
             REcmaHelper::registerFunction(&engine, proto, setName, "setName");
             
+            REcmaHelper::registerFunction(&engine, proto, getDescription, "getDescription");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDescription, "setDescription");
+            
             REcmaHelper::registerFunction(&engine, proto, addLayer, "addLayer");
             
             REcmaHelper::registerFunction(&engine, proto, getLayers, "getLayers");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayerNames, "getLayerNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayer, "getLayer");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RLayerStatePointer>(), *proto);
@@ -1154,6 +1162,110 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerLayerState::getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLayerState::getDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayerState::getDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("getDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDescription();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.getDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayerState::getDescription", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLayerState::setDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLayerState::setDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayerState::setDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("setDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDescription(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.setDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayerState::setDescription", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerLayerState::addLayer
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1286,6 +1398,115 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerLayerState::getLayers", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLayerState::getLayerNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLayerState::getLayerNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayerState::getLayerNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("getLayerNames", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getLayerNames();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.getLayerNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayerState::getLayerNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLayerState::getLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLayerState::getLayer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayerState::getLayer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("getLayer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayer >'
+    QSharedPointer < RLayer > cppResult =
+        
+               self->getLayer(a0);
+        // return type: QSharedPointer < RLayer >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.getLayer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayerState::getLayer", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerLayerState::toString

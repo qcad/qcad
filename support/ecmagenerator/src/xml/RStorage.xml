@@ -886,6 +886,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="layerStateName" isConst="true" />
       </variant>
     </method>
+    <method name="hasLayerStates" cppName="hasLayerStates"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="hasLayerState" cppName="hasLayerState"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

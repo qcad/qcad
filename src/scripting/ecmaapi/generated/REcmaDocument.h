@@ -456,6 +456,9 @@
         hasLayer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasLayerStates
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasLayerState
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

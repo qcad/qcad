@@ -157,6 +157,9 @@
         exportLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportLayerStates
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -167,6 +170,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportLayerState
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportBlock

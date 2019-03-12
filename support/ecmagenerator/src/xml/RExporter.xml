@@ -304,6 +304,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="exportLayerStates" cppName="exportLayerStates"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="exportBlocks" cppName="exportBlocks"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -329,6 +334,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="exportLayerState" cppName="exportLayerState"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLayerState &amp;" typeName="RLayerState"
+        name="" isConst="false" />
       </variant>
     </method>
     <method name="exportBlock" cppName="exportBlock"

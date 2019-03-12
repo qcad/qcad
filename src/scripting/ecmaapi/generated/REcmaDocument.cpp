@@ -343,6 +343,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasLayer, "hasLayer");
             
+            REcmaHelper::registerFunction(&engine, proto, hasLayerStates, "hasLayerStates");
+            
             REcmaHelper::registerFunction(&engine, proto, hasLayerState, "hasLayerState");
             
             REcmaHelper::registerFunction(&engine, proto, hasBlock, "hasBlock");
@@ -11496,6 +11498,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::hasLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::hasLayerStates
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::hasLayerStates", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::hasLayerStates";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("hasLayerStates", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasLayerStates();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.hasLayerStates().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::hasLayerStates", context, engine);
             return result;
         }
          QScriptValue

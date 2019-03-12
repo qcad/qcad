@@ -271,6 +271,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLayerStateId, "getLayerStateId");
             
+            REcmaHelper::registerFunction(&engine, proto, hasLayerStates, "hasLayerStates");
+            
             REcmaHelper::registerFunction(&engine, proto, hasLayerState, "hasLayerState");
             
             REcmaHelper::registerFunction(&engine, proto, getLayoutName, "getLayoutName");
@@ -7492,6 +7494,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getLayerStateId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::hasLayerStates
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::hasLayerStates", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::hasLayerStates";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("hasLayerStates", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasLayerStates();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.hasLayerStates().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::hasLayerStates", context, engine);
             return result;
         }
          QScriptValue

@@ -77,10 +77,22 @@
         setName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addLayer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayerNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

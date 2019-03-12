@@ -83,9 +83,17 @@
             
             REcmaHelper::registerFunction(&engine, proto, setName, "setName");
             
+            REcmaHelper::registerFunction(&engine, proto, getDescription, "getDescription");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDescription, "setDescription");
+            
             REcmaHelper::registerFunction(&engine, proto, addLayer, "addLayer");
             
             REcmaHelper::registerFunction(&engine, proto, getLayers, "getLayers");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayerNames, "getLayerNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayer, "getLayer");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RLayerState*>(), *proto);
@@ -1153,6 +1161,110 @@
             return result;
         }
          QScriptValue
+        REcmaLayerState::getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayerState::getDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayerState::getDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("getDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDescription();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.getDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayerState::getDescription", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayerState::setDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayerState::setDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayerState::setDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("setDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDescription(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.setDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayerState::setDescription", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaLayerState::addLayer
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1285,6 +1397,115 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLayerState::getLayers", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayerState::getLayerNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayerState::getLayerNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayerState::getLayerNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("getLayerNames", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getLayerNames();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.getLayerNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayerState::getLayerNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayerState::getLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayerState::getLayer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayerState::getLayer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("getLayer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayer >'
+    QSharedPointer < RLayer > cppResult =
+        
+               self->getLayer(a0);
+        // return type: QSharedPointer < RLayer >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.getLayer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayerState::getLayer", context, engine);
             return result;
         }
          QScriptValue REcmaLayerState::toString
