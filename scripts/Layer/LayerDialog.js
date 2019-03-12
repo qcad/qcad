@@ -37,7 +37,7 @@ function LayerDialog(documentInterface, layer) {
     }
     this.layer = layer;
     this.prefix = undefined;
-    this.defaultName = "layer %1";
+    this.defaultName = qsTr("layer", "default layer name prefix") + " %1";
     this.defaultColor = RSettings.getColor("Layer/DefaultColor", new RColor("black"));
 }
 

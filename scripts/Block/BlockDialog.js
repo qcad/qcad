@@ -79,7 +79,7 @@ BlockDialog.prototype.show = function() {
         var c = 0;
         while (!this.validate()) {
             ++c;
-            leBlockName.text = "block " + c;
+            leBlockName.text = qsTr("block", "default block name prefix") + " " + c;
         }
     }
 

@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Block Data</string>
+   <string>Block</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -27,11 +27,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="BlockName">
-       <property name="text">
-        <string>block 1</string>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="BlockName"/>
      </item>
     </layout>
    </item>
