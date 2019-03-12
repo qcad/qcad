@@ -3,4 +3,4 @@ SOURCES = \
     ../Block.js \
     ../BlockDialog.js \
     ../BlockInsert.js
-FORMS = ../BlockDialog.ui ../LayoutDialog.ui
+FORMS = ../BlockDialog.ui
