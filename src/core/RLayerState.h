@@ -58,6 +58,10 @@ public:
 
     virtual RLayerState* clone() const;
 
+    virtual bool mustAlwaysClone() const {
+        return true;
+    }
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);
@@ -72,11 +76,13 @@ public:
 
     void setName(const QString& n);
 
-    void addLayer(const QString& layerName, RLayer::LayerFlags layerFlags);
+    void addLayer(QSharedPointer<RLayer> layer);
+
+    QList<QSharedPointer<RLayer> > getLayers() const;
 
 private:
     QString name;
-    QMap<QString, RLayer::LayerFlags> layerStates;
+    QList<QSharedPointer<RLayer> > layers;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RLayerState& l);

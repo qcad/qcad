@@ -54,8 +54,24 @@ void RLayerState::setName(const QString& n) {
     name = n.trimmed();
 }
 
-void RLayerState::addLayer(const QString& layerName, RLayer::LayerFlags layerFlags) {
-    layerStates.insert(layerName, layerFlags);
+void RLayerState::addLayer(QSharedPointer<RLayer> layer) {
+    if (layer.isNull()) {
+        qWarning() << "layer is NULL";
+        return;
+    }
+
+    // remove existing layer with same name:
+    for (int i=0; i<layers.length(); i++) {
+        if (QString::compare(layers[i]->getName(), layer->getName(), Qt::CaseInsensitive)==0) {
+            layers.removeAt(i);
+            break;
+        }
+    }
+    layers.append(layer);
+}
+
+QList<QSharedPointer<RLayer> > RLayerState::getLayers() const {
+    return layers;
 }
 
 bool RLayerState::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
