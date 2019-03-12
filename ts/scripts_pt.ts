@@ -1630,7 +1630,13 @@ Preto</translatorcomment>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation>bloco</translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaços no início ou no fim.</translation>
     </message>
@@ -1661,10 +1667,14 @@ Preto</translatorcomment>
         <translation>O Bloco já existe.</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dados do Bloco</translation>
+        <translation type="vanished">Dados do Bloco</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation>Bloco</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1675,10 +1685,9 @@ Nome do Bloco:</translatorcomment>
         <translation>Nome do Bloco:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Bloco 1</translation>
+        <translation type="vanished">Bloco 1</translation>
     </message>
 </context>
 <context>
@@ -8957,7 +8966,13 @@ Utilize a &amp;camada atual</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation>camada</translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaços à esquerda ou à direita.</translation>
     </message>
@@ -8974,13 +8989,12 @@ Utilize a &amp;camada atual</translatorcomment>
         <translation>Esta camada já existe.</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dados da Camada</translation>
+        <translation type="vanished">Dados da Camada</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
         <source>Layer name:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -8998,7 +9012,12 @@ Abertura abortada</translatorcomment>
         <translation type="vanished">Caneta</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-8"/>
+        <source>Layer</source>
+        <translation>Camada</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Attributes</source>
         <translation>Atributos</translation>
     </message>

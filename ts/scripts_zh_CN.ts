@@ -1204,7 +1204,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>前导或尾随空格。</translation>
     </message>
@@ -1233,9 +1239,13 @@ Do you wish to recover it?</source>
         <translation>块名已经存在。</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>块数据</translation>
+        <translation type="vanished">块数据</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1243,9 +1253,8 @@ Do you wish to recover it?</source>
         <translation>块名：</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>块1</translation>
+        <translation type="vanished">块1</translation>
     </message>
 </context>
 <context>
@@ -6528,7 +6537,13 @@ is already in the list.</source>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">前导或尾随空格。</translation>
     </message>
@@ -6544,7 +6559,7 @@ is already in the list.</source>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
-        <source>Layer Data</source>
+        <source>Layer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

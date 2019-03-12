@@ -1247,7 +1247,13 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Välit alussa tai lopussa.</translation>
     </message>
@@ -1272,9 +1278,13 @@ Haluatko palauttaa sen?</translation>
         <translation>Lohko on jo olemassa.</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>Lohkon Tiedot</translation>
+        <translation type="vanished">Lohkon Tiedot</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation type="unfinished">Lohko</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1282,9 +1292,8 @@ Haluatko palauttaa sen?</translation>
         <translation>Lohkon nimi:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>lohko 1</translation>
+        <translation type="vanished">lohko 1</translation>
     </message>
 </context>
 <context>
@@ -6767,7 +6776,13 @@ on jo luettelossa.</translation>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>Edeltävät tai lopussa olevat välilyönnit.</translation>
     </message>
@@ -6782,12 +6797,11 @@ on jo luettelossa.</translation>
         <translation>Taso on jo olemassa.</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation>Tason tieto</translation>
+        <translation type="vanished">Tason tieto</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
         <source>Layer name:</source>
         <translation>Tason nimi:</translation>
     </message>
@@ -6796,7 +6810,12 @@ on jo luettelossa.</translation>
         <translation type="vanished">Kynä</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-8"/>
+        <source>Layer</source>
+        <translation type="unfinished">Taso</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Attributes</source>
         <translation>Ominaisuudet</translation>
     </message>

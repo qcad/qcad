@@ -1289,7 +1289,13 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation>blok</translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spaties voor of na.</translation>
     </message>
@@ -1301,7 +1307,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+5"/>
         <source>Block name is invalid.</source>
-        <translation>De bloknaam is onjuist.</translation>
+        <translation>De bloknaam is ongeldig.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1318,9 +1324,13 @@ Wilt u het herstellen?</translation>
         <translation>Blok bestaat al.</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>Blok gegevens</translation>
+        <translation type="vanished">Blok gegevens</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1328,9 +1338,8 @@ Wilt u het herstellen?</translation>
         <translation>Bloknaam:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>blok 1</translation>
+        <translation type="vanished">blok 1</translation>
     </message>
 </context>
 <context>
@@ -6736,7 +6745,13 @@ is al in de lijst.</translation>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation>laag</translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spaties voor of na.</translation>
     </message>
@@ -6751,8 +6766,12 @@ is al in de lijst.</translation>
         <translation>Laag bestaat al.</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
+        <translation type="vanished">Laag</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
+        <source>Layer</source>
         <translation>Laag</translation>
     </message>
     <message>

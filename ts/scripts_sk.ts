@@ -1283,7 +1283,13 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Počiatočné alebo koncové medzery.</translation>
     </message>
@@ -1312,9 +1318,13 @@ Prajete si ho obnoviť?</translation>
         <translation>Blok už existuje.</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>Dáta bloku</translation>
+        <translation type="vanished">Dáta bloku</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation type="unfinished">Blok</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1322,9 +1332,8 @@ Prajete si ho obnoviť?</translation>
         <translation>Názov bloku:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>blok 1</translation>
+        <translation type="vanished">blok 1</translation>
     </message>
 </context>
 <context>
@@ -6788,7 +6797,13 @@ už existuje v zozname.</translation>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>Na začiatku alebo na konci nesmie byť medzera.</translation>
     </message>
@@ -6803,9 +6818,13 @@ už existuje v zozname.</translation>
         <translation>Zadajte iný názov. Takýto už existuje.</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation>Údaje vrstvy</translation>
+        <translation type="vanished">Údaje vrstvy</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
+        <source>Layer</source>
+        <translation type="unfinished">Vrstva</translation>
     </message>
     <message>
         <location line="+8"/>

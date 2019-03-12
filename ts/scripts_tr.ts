@@ -1231,7 +1231,13 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Başında veya sonundaki boşluklar.</translation>
     </message>
@@ -1260,9 +1266,13 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Blok zaten var.</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>Blok Verisi</translation>
+        <translation type="vanished">Blok Verisi</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation type="unfinished">Blok</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1270,9 +1280,8 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Blok adı:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>blok 1</translation>
+        <translation type="vanished">blok 1</translation>
     </message>
 </context>
 <context>
@@ -6546,7 +6555,13 @@ is already in the list.</source>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation type="unfinished">Başında veya sonundaki boşluklar.</translation>
     </message>
@@ -6562,8 +6577,8 @@ is already in the list.</source>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
-        <source>Layer Data</source>
-        <translation type="unfinished"></translation>
+        <source>Layer</source>
+        <translation type="unfinished">Katman</translation>
     </message>
     <message>
         <location line="+8"/>

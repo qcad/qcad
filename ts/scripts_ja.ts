@@ -1271,7 +1271,13 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>上部または下部の余白。</translation>
     </message>
@@ -1300,9 +1306,13 @@ Do you wish to recover it?</source>
         <translation>ブロックは既に存在します。</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>ブロックデータ</translation>
+        <translation type="vanished">ブロックデータ</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation type="unfinished">ブロック</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1310,9 +1320,8 @@ Do you wish to recover it?</source>
         <translation>ブロック名:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>ブロック１</translation>
+        <translation type="vanished">ブロック１</translation>
     </message>
 </context>
 <context>
@@ -6912,7 +6921,13 @@ is already in the list.</source>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>上部または下部の余白</translation>
     </message>
@@ -6927,12 +6942,11 @@ is already in the list.</source>
         <translation>画層は既に存在します。</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation>画層データ</translation>
+        <translation type="vanished">画層データ</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
         <source>Layer name:</source>
         <translation>画層名:</translation>
     </message>
@@ -6941,7 +6955,12 @@ is already in the list.</source>
         <translation type="vanished">ペン</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-8"/>
+        <source>Layer</source>
+        <translation type="unfinished">レイヤー</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Attributes</source>
         <translation>属性</translation>
     </message>

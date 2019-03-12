@@ -1533,7 +1533,13 @@ Bardzo gruby</translatorcomment>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>
@@ -1564,10 +1570,14 @@ Bardzo gruby</translatorcomment>
         <translation>Blok już istnieje.</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dane bloku</translation>
+        <translation type="vanished">Dane bloku</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation type="unfinished">Blok</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1578,10 +1588,9 @@ Nazwa bloku:</translatorcomment>
         <translation>Nazwa bloku:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Blok 1</translation>
+        <translation type="vanished">Blok 1</translation>
     </message>
 </context>
 <context>
@@ -8323,7 +8332,13 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>Poprzedzające lub końcowe odstępy.</translation>
     </message>
@@ -8340,13 +8355,12 @@ Użyj bieżącej &amp;warstwy</translatorcomment>
         <translation>Warstwa już istnieje.</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dane warstwy</translation>
+        <translation type="vanished">Dane warstwy</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
         <source>Layer name:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -8363,7 +8377,12 @@ Otwieranie przerwane</translatorcomment>
         <translation type="obsolete">Pióro</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-8"/>
+        <source>Layer</source>
+        <translation type="unfinished">Warstwa</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Attributes</source>
         <translation>Atrybuty</translation>
     </message>

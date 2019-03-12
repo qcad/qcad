@@ -1393,9 +1393,13 @@ Voulez-vous le récupérer?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>Données du bloc</translation>
+        <translation type="vanished">Données du bloc</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation>Bloc</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1403,12 +1407,17 @@ Voulez-vous le récupérer?</translation>
         <translation>Nom du Bloc :</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>block 1</translation>
+        <translation type="vanished">block 1</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation>bloc</translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>
@@ -7816,13 +7825,12 @@ Indiquer le point cible</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Données du calque</translation>
+        <translation type="vanished">Données du calque</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
         <source>Layer name:</source>
         <translation>Nom du calque :</translation>
     </message>
@@ -7831,7 +7839,12 @@ Indiquer le point cible</translatorcomment>
         <translation type="vanished">Stylo</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-8"/>
+        <source>Layer</source>
+        <translation>Calque</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Attributes</source>
         <translation>Attributs</translation>
     </message>
@@ -7854,7 +7867,13 @@ Indiquer le point cible</translatorcomment>
         <translation>Type de ligne :</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation>calque</translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>

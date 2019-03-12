@@ -1414,7 +1414,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation>block</translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Führende oder nachfolgende Leerzeichen.</translation>
     </message>
@@ -1443,9 +1449,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Block existiert bereits.</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>Block Daten</translation>
+        <translation type="vanished">Block Daten</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation>Block</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1453,9 +1463,8 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Blockname:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>block 1</translation>
+        <translation type="vanished">block 1</translation>
     </message>
 </context>
 <context>
@@ -7982,7 +7991,12 @@ ist bereits in der Liste.</translation>
         <translation type="vanished">Stift</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-8"/>
+        <source>Layer</source>
+        <translation>Layer</translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>Attributes</source>
         <translation>Attribute</translation>
     </message>
@@ -8002,12 +8016,17 @@ ist bereits in der Liste.</translation>
         <translation>Linientyp:</translation>
     </message>
     <message>
-        <location line="-100"/>
         <source>Layer Data</source>
-        <translation>Layer</translation>
+        <translation type="vanished">Layer</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation>layer</translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>Führende oder nachfolgende Leerzeichen.</translation>
     </message>

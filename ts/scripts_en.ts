@@ -1255,7 +1255,13 @@ Do you wish to recover it?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+134"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <source>block</source>
+        <comment>default block name prefix</comment>
+        <translation>block</translation>
+    </message>
+    <message>
+        <location line="+52"/>
         <source>Leading or trailing spaces.</source>
         <translation>Leading or trailing spaces.</translation>
     </message>
@@ -1284,9 +1290,13 @@ Do you wish to recover it?</translation>
         <translation>Block already exists.</translation>
     </message>
     <message>
-        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block Data</source>
-        <translation>Block Data</translation>
+        <translation type="vanished">Block Data</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
+        <source>Block</source>
+        <translation>Block</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1294,9 +1304,8 @@ Do you wish to recover it?</translation>
         <translation>Block name:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>block 1</source>
-        <translation>block 1</translation>
+        <translation type="vanished">block 1</translation>
     </message>
 </context>
 <context>
@@ -6641,7 +6650,13 @@ is already in the list.</translation>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.js" line="+190"/>
+        <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
+        <source>layer</source>
+        <comment>default layer name prefix</comment>
+        <translation>layer</translation>
+    </message>
+    <message>
+        <location line="+150"/>
         <source>Leading or trailing spaces.</source>
         <translation>Leading or trailing spaces.</translation>
     </message>
@@ -6656,9 +6671,13 @@ is already in the list.</translation>
         <translation>Layer already exists.</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation>Layer Data</translation>
+        <translation type="vanished">Layer Data</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
+        <source>Layer</source>
+        <translation>Layer</translation>
     </message>
     <message>
         <location line="+8"/>
