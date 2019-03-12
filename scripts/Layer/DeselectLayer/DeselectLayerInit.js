@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/DeselectLayer.svg");
     action.setDefaultShortcuts([new QKeySequence("y,-"), new QKeySequence("y,d")]);
     action.setDefaultCommands(["layerdeselect", "deselectlayer", "y-", "yd"]);
-    action.setGroupSortOrder(17400);
+    action.setGroupSortOrder(14400);
     action.setSortOrder(200);
     action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel", "LayerMatrixPanel"]);
 }
