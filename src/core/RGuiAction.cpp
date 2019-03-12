@@ -75,6 +75,8 @@ RGuiAction::RGuiAction(const QString& text, QObject* parent)
 
 
 RGuiAction::~RGuiAction() {
+    //qDebug() << "RGuiAction::~RGuiAction:" << scriptFile << " / sep: " << isSeparator();
+
     QList<QMap<QString, RGuiAction*>*> maps;
     maps << &actionsByCommand;
     maps << &actionsByShortcut;
