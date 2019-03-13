@@ -86,6 +86,14 @@ public:
         description = d;
     }
 
+    QString getCurrentLayerName() const {
+        return currentLayer;
+    }
+
+    void setCurrentLayerName(const QString& l) {
+        currentLayer = l;
+    }
+
     void addLayer(QSharedPointer<RLayer> layer);
 
     QList<QSharedPointer<RLayer> > getLayers() const;
@@ -96,6 +104,7 @@ public:
 private:
     QString name;
     QString description;
+    QString currentLayer;
     QList<QSharedPointer<RLayer> > layers;
 };
 
