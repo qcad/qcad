@@ -81,6 +81,12 @@
         setDescription
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCurrentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCurrentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addLayer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

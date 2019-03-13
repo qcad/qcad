@@ -87,6 +87,14 @@
         <expr_stmt><expr><name>description</name> = <name>d</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>QString</name></type> <name>getCurrentLayerName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>currentLayer</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCurrentLayerName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>l</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>currentLayer</name> = <name>l</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function_decl><type><name>void</name></type> <name>addLayer</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></type> <name>layer</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getLayers</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -97,6 +105,7 @@
 </public><private>private:
     <decl_stmt><decl><type><name>QString</name></type> <name>name</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>description</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>currentLayer</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>layers</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 

@@ -118,7 +118,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="queryAllLayerStates" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSet &lt; RLayerState::Id &gt;"
-      isPureVirtual="true">
+      isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
         hasDefault="true" default="false" isConst="false" />
       </variant>

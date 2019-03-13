@@ -87,6 +87,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDescription, "setDescription");
             
+            REcmaHelper::registerFunction(&engine, proto, getCurrentLayerName, "getCurrentLayerName");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCurrentLayerName, "setCurrentLayerName");
+            
             REcmaHelper::registerFunction(&engine, proto, addLayer, "addLayer");
             
             REcmaHelper::registerFunction(&engine, proto, getLayers, "getLayers");
@@ -1262,6 +1266,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLayerState::setDescription", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayerState::getCurrentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayerState::getCurrentLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayerState::getCurrentLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("getCurrentLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getCurrentLayerName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.getCurrentLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayerState::getCurrentLayerName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayerState::setCurrentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayerState::setCurrentLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayerState::setCurrentLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLayerState* self = 
+                        getSelf("setCurrentLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLayerName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayerState.setCurrentLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayerState::setCurrentLayerName", context, engine);
             return result;
         }
          QScriptValue
