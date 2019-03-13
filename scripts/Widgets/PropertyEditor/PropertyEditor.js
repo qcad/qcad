@@ -753,7 +753,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     }
 
     // add custom property button:
-    //if (!onlyChanges) {
+    if (!isNull(gridLayoutCustom)) {
         if (RSettings.isXDataEnabled() && RSettings.getBoolValue("PropertyEditor/AddCustomProperties", true)!==false) {
             var addCustomPropertyButton = new QToolButton(this.widget);
             addCustomPropertyButton.icon = new QIcon(this.basePath + "/AddCustomProperty.svg");
@@ -763,7 +763,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             addCustomPropertyButton.clicked.connect(this, "addCustomProperty");
             gridLayoutCustom.addWidget(addCustomPropertyButton, gridLayoutCustom.rowCount(),3, 1,1);
         }
-    //}
+    }
 
     this.widget.updatesEnabled = true;
 };
