@@ -68,3 +68,19 @@ QRadioButton::indicator:checked:pressed {
     image: url(radio_checked.png);
 }
 
+/* 
+Menu bar
+this might or might not be needed or working
+(patch by forum user 'pik' 
+*/
+QMenuBar {
+    background-color: #282A2D;
+}
+
+QMenuBar::item {
+    color: #eeeeee;
+}
+
+QMenu::item::disabled {
+    color: #707070;
+}
