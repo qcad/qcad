@@ -7802,7 +7802,7 @@ Per favore riavvia Photivo per cambiare le impostazioni della lingua</translator
     </message>
     <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
-        <translation>Entità in blocchi sul livello 0 assumere attributi del riferimento di blocco (compatibilità)</translation>
+        <translation type="vanished">Entità in blocchi sul livello 0 assumere attributi del riferimento di blocco (compatibilità)</translation>
     </message>
 </context>
 <context>
@@ -10792,7 +10792,7 @@ Specifica la base</translatorcomment>
     <message>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Sposta la selezione ad un nuovo livello</translation>
+        <translation type="vanished">Sposta la selezione ad un nuovo livello</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -12269,9 +12269,11 @@ Interseca con la selezione corrente</translatorcomment>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation><numerusform>%n entità su livello &quot;%1&quot;</numerusform>
-        <numerusform>%n entità su livello &quot;%1&quot;</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n entità su livello &quot;%1&quot;</numerusform>
+            <numerusform>%n entità su livello &quot;%1&quot;</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
@@ -12290,7 +12292,7 @@ Interseca con la selezione corrente</translatorcomment>
     </message>
     <message>
         <source>%1 Entities on Layer &quot;%2&quot;</source>
-        <translation>%1 entità su livello &quot;%2&quot;</translation>
+        <translation type="vanished">%1 entità su livello &quot;%2&quot;</translation>
     </message>
     <message>
         <source>%1 Entities on %2 Layers</source>
@@ -12753,7 +12755,7 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
     <name>ShowAllLayers</name>
     <message>
         <source>&amp;Show all Layers</source>
-        <translation>&amp;Mostra tutti i livelli</translation>
+        <translation type="vanished">&amp;Mostra tutti i livelli</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
