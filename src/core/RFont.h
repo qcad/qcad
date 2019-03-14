@@ -98,9 +98,10 @@ public:
         return glyphMap;
     }
 
-    /**
-     * \nonscriptable
-     */
+    QList<QChar> getGlyphNames() const {
+        return glyphMap.keys();
+    }
+
     RPainterPath getGlyph(const QChar& ch, bool draft = false) const;
 
     /**
