@@ -550,8 +550,9 @@ void RExporter::exportLayerStates() {
 
 void RExporter::exportBlocks() {
     QSet<RBlock::Id> ids = document->queryAllBlocks();
-    QSet<RBlock::Id>::iterator it;
-    for (it = ids.begin(); it != ids.end(); it++) {
+    QList<RBlock::Id> idsSorted = document->sortBlocks(ids.toList());
+    QList<RBlock::Id>::iterator it;
+    for (it = idsSorted.begin(); it != idsSorted.end(); it++) {
         QSharedPointer<RBlock> e = document->queryBlock(*it);
         if (!e.isNull()) {
             exportBlock(*e);
