@@ -92,6 +92,7 @@
 	<entry key="QEasingCurve::Type" value="toNumber()" testFunction="isNumber()" cast="int" />
 
 	<entry key="QString" value="toString()" testFunction="isString()" />
+	<entry key="QChar" value="toString().at(0)" testFunction="isString()" />
 	<entry key="QColor" value="toVariant()" testFunction="isVariant()" />
 	<entry key="QMouseEvent" value="toVariant()" testFunction="isVariant()" defaultConstructor="false"/>
 	<entry key="QKeyEvent" value="toVariant()" testFunction="isVariant()" defaultConstructor="false" copyable="false" />
