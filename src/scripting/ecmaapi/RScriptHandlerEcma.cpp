@@ -143,7 +143,7 @@
 #include "REcmaFocusListenerAdapter.h"
 #include "REcmaFontChooserWidget.h"
 #include "REcmaFontDatabase.h"
-#include "REcmaFontList.h"
+#include "REcmaFont.h"
 #include "REcmaFontList.h"
 #include "REcmaGraphicsScene.h"
 #include "REcmaGraphicsSceneQt.h"
@@ -590,6 +590,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaPattern::initEcma(*engine);
     REcmaPatternListMetric::initEcma(*engine);
     REcmaPatternListImperial::initEcma(*engine);
+    REcmaFont::initEcma(*engine);
     REcmaFontList::initEcma(*engine);
     REcmaFileCache::initEcma(*engine);
 

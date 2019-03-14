@@ -99,9 +99,10 @@
         <return>return <expr><name>glyphMap</name></expr>;</return>
     }</block></function>
 
-    <comment type="block">/**
-     * \nonscriptable
-     */</comment>
+    <function><type><name>QList<argument_list>&lt;<argument><name>QChar</name></argument>&gt;</argument_list></name></type> <name>getGlyphNames</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>glyphMap</name>.<call><name>keys</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>RPainterPath</name></type> <name>getGlyph</name><parameter_list>(<param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**

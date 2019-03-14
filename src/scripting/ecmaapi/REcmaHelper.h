@@ -113,6 +113,8 @@ static QScriptValue pairListToScriptValue(QScriptEngine* engine, const QList<QPa
 
 static QScriptValue listToScriptValue(QScriptEngine* engine, const QList<QSharedPointer<RShape> >& cppValue);
 
+static QScriptValue listToScriptValue(QScriptEngine* engine, const QList<QChar>& cppValue);
+
 
 template<class T>
 static QScriptValue listToScriptValue(QScriptEngine* engine, const QList<T>& cppValue) {

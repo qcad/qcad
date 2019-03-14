@@ -660,6 +660,15 @@ QScriptValue REcmaHelper::listToScriptValue(QScriptEngine* engine, const QList<Q
     return qScriptValueFromValue(engine, vl);
 }
 
+QScriptValue REcmaHelper::listToScriptValue(QScriptEngine* engine, const QList<QChar>& cppValue) {
+    QVariantList vl;
+    for (int i = 0; i < cppValue.size(); ++i) {
+        QVariant v(QString(cppValue.at(i)));
+        vl.append(v);
+    }
+    return qScriptValueFromValue(engine, vl);
+}
+
 QVariant REcmaHelper::toVariant(const QSharedPointer<RShape>& cppValue) {
     QVariant v;
 
