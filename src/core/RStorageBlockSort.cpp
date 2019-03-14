@@ -1,9 +1,5 @@
 #include <Qt>
 
-#if QT_VERSION >= 0x050200
-#include <QCollator>
-#endif
-
 #include "RBlock.h"
 #include "RLayout.h"
 #include "RStorage.h"
@@ -69,12 +65,6 @@ bool RStorageBlockSort::operator()(RBlock::Id a, RBlock::Id b) const {
         blockTitleB = blockTitleB.mid(1);
     }
 
-#if QT_VERSION >= 0x050200
-    QCollator collator;
-    collator.setNumericMode(true);
-    return collator.compare(blockTitleA, blockTitleB) < 0;
-#else
-    return blockTitleA < blockTitleB;
-#endif
+    return RS::compareAlphanumerical(blockTitleA, blockTitleB) < 0;
 }
 
