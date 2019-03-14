@@ -82,9 +82,12 @@ CommandLine.init = function(basePath) {
     dock.hidden.connect(function() { action.setChecked(false); });
 
     var blue = "#0000cc";
-//    if (RSettings.hasDarkGuiBackground()) {
-//        blue = "#2E9AFE";
-//    }
+    var red = "#cc0000";
+
+    if (RSettings.hasDarkGuiBackground()) {
+        blue = "#2E9AFF";
+        red = "#FF6060";
+    }
 
     // open fragment links of format "#<entity ID>,<entity ID>" by selecting
     // the entities with the given IDs:
@@ -378,7 +381,7 @@ CommandLine.init = function(basePath) {
             message = message.replace(/&quot;/g, "\"");
         }
 
-        appendAndScroll("<span style='color:#cc0000;'>" + message + "</span>");
+        appendAndScroll("<span style='color:" + red + ";'>" + message + "</span>");
         if (RSettings.getBoolValue("CommandLine/WarningsAsDialog", false) || messageBox) {
             QMessageBox.warning(appWin, qsTr("Warning"), message);
         }
