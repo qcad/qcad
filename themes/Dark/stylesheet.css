@@ -58,7 +58,7 @@ QMenu::separator {
 
 QTextEdit,
 QPlainTextEdit {
-    background-color: #696969;
+    background-color: #404040;
     color: #DEDEDE;
 }
 
