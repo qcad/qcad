@@ -62,6 +62,11 @@ QPlainTextEdit {
     color: #DEDEDE;
 }
 
+
+QDialog#TextDialog QTextEdit#Text {
+    background-color: white;
+}
+
 /*
 QLineEdit {
     background-color: #67686A;
