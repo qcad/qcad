@@ -106,9 +106,19 @@ SaveAs.prototype.beginEvent = function() {
         if (suffix.length!==0 && !defaultNameFilter.containsIgnoreCase(suffix)) {
             // preselect first name filter that matches current extension:
             for (i=0; i<filterStrings.length; ++i) {
-                if (filterStrings[i].contains("R27") && filterStrings[i].contains("*." + suffix)) {
-                    fileDialog.selectNameFilter(filterStrings[i]);
-                    break;
+                // for DXF, DWG:
+                if (suffix==="dxf" || suffix==="dwg") {
+                    if (filterStrings[i].contains("R27") && filterStrings[i].contains("*." + suffix)) {
+                        fileDialog.selectNameFilter(filterStrings[i]);
+                        break;
+                    }
+                }
+                else {
+                    // for CXF, etc.:
+                    if (filterStrings[i].contains("*." + suffix)) {
+                        fileDialog.selectNameFilter(filterStrings[i]);
+                        break;
+                    }
                 }
             }
         }
