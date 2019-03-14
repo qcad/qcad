@@ -277,14 +277,27 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
  * E.g. "abc123" -> "abc", "123"
  */
 QStringList RS::compareChunkify(const QString& s) {
+    static QRegExp rx("0x[0-9a-fA-F]*");
+
     QStringList tz;
     bool nummerical = false;
+    QString sLocal;
 
-    for (int i=0; i<s.length(); i++) {
-        QChar c = s.at(i);
+    if (s.startsWith("0x")) {
+        if (rx.indexIn(s)==0) {
+            int len = rx.matchedLength();
+            sLocal = s.mid(len);
+            nummerical = true;
+            tz.append(s.left(len));
+        }
+    }
+    else {
+        sLocal = s;
+    }
 
+    for (int i=0; i<sLocal.length(); i++) {
+        QChar c = sLocal.at(i);
         bool n = c.isDigit() || c=='.';
-
         if (n!=nummerical || i==0) {
             tz.append(c);
             nummerical = n;
@@ -308,8 +321,15 @@ int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
     for (int x = 0; x<aa.length() && x < bb.length(); x++) {
         if (aa[x] != bb[x]) {
             bool ok1, ok2;
-            float c = aa[x].toFloat(&ok1);
-            float d = bb[x].toFloat(&ok2);
+            float c, d;
+            if (x==0 && aa[0].startsWith("0x") && bb[0].startsWith("0x")) {
+                c = aa[0].mid(2).toInt(&ok1, 16);
+                d = bb[0].mid(2).toInt(&ok2, 16);
+            }
+            else {
+                c = aa[x].toFloat(&ok1);
+                d = bb[x].toFloat(&ok2);
+            }
             if (ok1 && ok2) {
                 if (c-d<0.0) {
                     return -1;
