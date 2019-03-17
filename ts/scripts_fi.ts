@@ -1250,7 +1250,7 @@ Haluatko palauttaa sen?</translation>
         <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation>lohko</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -1284,7 +1284,7 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation type="unfinished">Lohko</translation>
+        <translation>Lohko</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6779,7 +6779,7 @@ on jo luettelossa.</translation>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation>taso</translation>
     </message>
     <message>
         <location line="+150"/>
@@ -6812,7 +6812,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="-8"/>
         <source>Layer</source>
-        <translation type="unfinished">Taso</translation>
+        <translation>Taso</translation>
     </message>
     <message>
         <location line="+36"/>
