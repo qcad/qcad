@@ -75,5 +75,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="getShapeNames" cppName="getShapeNames"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QString &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getShape" cppName="getShape" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RPainterPath" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

@@ -71,6 +71,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getGlyph, "getGlyph");
             
+            REcmaHelper::registerFunction(&engine, proto, getShapeNames, "getShapeNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getShape, "getShape");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RFont*>(), *proto);
 
@@ -851,6 +855,115 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaFont::getGlyph", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFont::getShapeNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFont::getShapeNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFont::getShapeNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFont* self = 
+                        getSelf("getShapeNames", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QString >'
+    QList < QString > cppResult =
+        
+               self->getShapeNames();
+        // return type: QList < QString >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getShapeNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFont::getShapeNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFont::getShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFont::getShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFont::getShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFont* self = 
+                        getSelf("getShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPainterPath'
+    RPainterPath cppResult =
+        
+               self->getShape(a0);
+        // return type: RPainterPath
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFont::getShape", context, engine);
             return result;
         }
          QScriptValue REcmaFont::toString

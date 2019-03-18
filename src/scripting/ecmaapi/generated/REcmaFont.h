@@ -81,6 +81,12 @@
         ;static  QScriptValue
         getGlyph
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapeNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShape
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
