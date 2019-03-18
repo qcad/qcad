@@ -1,22 +1,23 @@
-[0083] ZIG
-L 0,0,1,1
-L 1,1,2,0
+# Format:            QCAD 3 Font
+# Creator:           QCAD
+# Version:           3.22.1
+# Name:              ltypeshp
+# Encoding:          UTF-8
+# LetterSpacing:     3
+# WordSpacing:       6.75
+# LineSpacingFactor: 1
+# Author:            Andrew Mustun
 
-[0086] BAT
-L 0,0,-1,2
-A 1,2,2,0,180
-L 3,2,2,0
+[0042] BAT
+PL 0,0,0,-1,2,-1,3,2,0,2,0,0
 
-[0082] TRACK1
-L 0,0,0,1
-L 0,0,0,-1
+[0042] BOX
+PLC 0,1,0,2,1,0,2,-1,0,0,-1,0,0,1,0
 
-[0084] BOX
-L 0,0,0,1
-L 0,1,2,1
-L 2,1,2,-1
-L 2,-1,0,-1
-L 0,-1,0,0
+[0043] CIRC1
 
-[0085] CIRC1
-A 1,0,1,0,360
+[0054] TRACK1
+PL 0,-1,0,0,1,0,0,1,0
+
+[005a] ZIG
+PL 0,0,0,1,1,0,2,0,0
