@@ -63,17 +63,22 @@ RPainterPath RFont::getGlyph(const QChar& ch, bool draft) const {
         return glyphMap.value(ch);
     }
 
-    return RPainterPath();
+    RPainterPath ret;
+    ret.setValid(false);
+    return ret;
 }
 
-QPainterPath RFont::getShape(const QString& name) const {
+RPainterPath RFont::getShape(const QString& name) const {
     if (shapeMap.contains(name)) {
         return shapeMap.value(name);
     }
     if (name.length()==1 && glyphMap.contains(name.at(0))) {
         return glyphMap.value(name.at(0));
     }
-    return QPainterPath();
+
+    RPainterPath ret;
+    ret.setValid(false);
+    return ret;
 }
 
 QString RFont::getShapeName(const QChar& ch) const {
@@ -183,9 +188,7 @@ bool RFont::load() {
 
             // read unicode:
             QRegExp rx("\\[([0-9A-Fa-f]{4,4})\\]\\s*(.*)?");
-            rx.indexIn(line);
-            //QString cap = regexp.cap();
-            if (rx.captureCount()>0) {
+            if (rx.indexIn(line)==0 && rx.captureCount()>0) {
                 int uCode = rx.cap(1).toInt(0, 16);
                 ch = QChar(uCode);
                 if (rx.captureCount()>1) {
@@ -195,16 +198,10 @@ bool RFont::load() {
                 }
             }
 
-            // read UTF8 (qcad 1 compatibility)
-            else if (line.indexOf(']')>=3) {
-                int i = line.indexOf(']');
-                QString mid = line.mid(1, i-1);
-                ch = QString::fromUtf8(mid.toLatin1()).at(0);
-            }
-
-            // read normal ascii character:
             else {
-                ch = line.at(1);
+                // skip line:
+                qDebug() << "skip";
+                continue;
             }
 
             // create new glyph:
@@ -220,11 +217,44 @@ bool RFont::load() {
                 line = ts.readLine();
 
                 if (!line.isEmpty()) {
-                    coordsStr = line.right(line.length()-2);
+                    QRegExp rx("(L|A|AR|PL|PLC) ([0-9,+-\.]*)");
+                    if (rx.indexIn(line)==-1) {
+                        continue;
+                    }
+                    QString code = rx.cap(1);
+                    //qDebug() << "code:" << code;
+                    coordsStr = rx.cap(2);
+                    //qDebug() << "coords:" << coordsStr;
+                    //coordsStr = line.right(line.length()-2);
                     coords = coordsStr.split(',');
 
+                    // Polyline:
+                    if ((code=="PL" || code=="PLC") && coords.length()>1) {
+                        RPolyline pl;
+                        for (int i=0; i<coords.length()-2; i+=3) {
+                            double x = coords[i].toDouble()*scale;
+                            double y = coords[i+1].toDouble()*scale;
+                            double b = coords[i+2].toDouble();
+                            //qDebug() << "vertex:" << x << y << b;
+                            pl.appendVertex(RVector(x,y), b);
+                        }
+                        if (code=="PLC") {
+                            pl.setClosed(true);
+                        }
+                        RVector startPoint = pl.getStartPoint();
+                        if (!pos.isValid() || !pos.equalsFuzzy(startPoint)) {
+                            glyph.moveTo(startPoint.x, startPoint.y);
+                            glyphDraft.moveTo(startPoint.x, startPoint.y);
+                        }
+                        glyph.addPolyline(pl);
+                        glyphDraft.addPolyline(pl);
+                        glyph.addOriginalShape(QSharedPointer<RShape>(new RPolyline(pl)));
+                        //qDebug() << "pl" << pl;
+                        pos = pl.getEndPoint();
+                    }
+
                     // Line:
-                    if (line.at(0)=='L' && coords.size()==4) {
+                    else if (code=="L" && coords.length()==4) {
                         RVector startPoint(
                                     coords.at(0).toDouble()*scale,
                                     coords.at(1).toDouble()*scale
@@ -245,14 +275,14 @@ bool RFont::load() {
                     }
 
                     // Arc:
-                    else if (line.at(0)=='A' && coords.size()==5) {
+                    else if ((code=="A" || code=="AR") && coords.length()==5) {
                         containsArcs = true;
                         double cx = coords.at(0).toDouble()*scale;
                         double cy = coords.at(1).toDouble()*scale;
                         double r = coords.at(2).toDouble()*scale;
                         double a1 = coords.at(3).toDouble();
                         double a2 = coords.at(4).toDouble();
-                        bool reversed = (line.at(1)=='R');
+                        bool reversed = (code=="AR");
 
                         RArc arc(RVector(cx, cy), r,
                                  RMath::deg2rad(a1),

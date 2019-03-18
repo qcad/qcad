@@ -104,10 +104,11 @@ public:
 
     RPainterPath getGlyph(const QChar& ch, bool draft = false) const;
 
-    /**
-     * \nonscriptable
-     */
-    QPainterPath getShape(const QString& name) const;
+    QList<QString> getShapeNames() const {
+        return shapeMap.keys();
+    }
+
+    RPainterPath getShape(const QString& name) const;
 
     /**
      * \nonscriptable
@@ -126,7 +127,7 @@ private:
     //! list of glyphs as painter paths (letters)
     QMap<QChar, RPainterPath> glyphMap;
     //! list of shapes (used for complex line types)
-    QMap<QString, QPainterPath> shapeMap;
+    QMap<QString, RPainterPath> shapeMap;
     QMap<QChar, QString> numNameMap;
     QMap<QChar, QPainterPath> glyphDraftMap;
 
