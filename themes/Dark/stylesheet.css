@@ -294,6 +294,15 @@ QTabBar::tab:selected {
     border-bottom: 1px solid #121212;
 }
 
+QTabBar::close-button { 
+    image: url(close.png);
+    subcontrol-position: left;
+} 
+
+QTabBar::close-button:hover {
+    image: url(close-hover.png);
+}
+
 /* CAD tool bar tool buttons */
 /*QToolBar#CadQToolBar QToolButton {
   border: 1px solid #27292a;
