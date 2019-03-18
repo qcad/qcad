@@ -62,14 +62,25 @@ RPainterPath::RPainterPath(const RPainterPath& other) :
     // detach original shapes:
     for (int i=0; i<other.originalShapes.length(); i++) {
         QSharedPointer<RShape> originalShape = other.originalShapes[i];
-        QSharedPointer<RLine> originalLine = originalShape.dynamicCast<RLine>();
-        QSharedPointer<RArc> originalArc = originalShape.dynamicCast<RArc>();
-        if (!originalLine.isNull()) {
-            originalShapes.append(QSharedPointer<RShape>(new RLine(*originalLine)));
-        }
-        if (!originalArc.isNull()) {
-            originalShapes.append(QSharedPointer<RShape>(new RArc(*originalArc)));
-        }
+        originalShapes.append(QSharedPointer<RShape>(originalShape->clone()));
+
+//        QSharedPointer<RLine> originalLine = originalShape.dynamicCast<RLine>();
+//        if (!originalLine.isNull()) {
+//            originalShapes.append(QSharedPointer<RShape>(new RLine(*originalLine)));
+//            continue;
+//        }
+
+//        QSharedPointer<RArc> originalArc = originalShape.dynamicCast<RArc>();
+//        if (!originalArc.isNull()) {
+//            originalShapes.append(QSharedPointer<RShape>(new RArc(*originalArc)));
+//            continue;
+//        }
+
+//        QSharedPointer<RPolyline> originalPl = originalShape.dynamicCast<RPolyline>();
+//        if (!originalPl.isNull()) {
+//            originalShapes.append(QSharedPointer<RShape>(new RPolyline(*originalPl)));
+//            continue;
+//        }
     }
 
     //RDebug::incCounter("RPainterPath");
@@ -755,6 +766,12 @@ void RPainterPath::addShape(QSharedPointer<RShape> shape) {
         ex.exportEllipse(*ellipse);
         RPainterPath pp = ex.getPainterPath();
         addPath(pp);
+        return;
+    }
+
+    QSharedPointer<RPolyline> pl = shape.dynamicCast<RPolyline>();
+    if (!pl.isNull()) {
+        addPolyline(*pl);
         return;
     }
 }
