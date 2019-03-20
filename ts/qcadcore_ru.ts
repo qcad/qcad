@@ -114,7 +114,7 @@
     <message>
         <location filename="../src/core/RColor.cpp" line="+288"/>
         <source>By Layer</source>
-        <translation> По слою</translation>
+        <translation>По слою</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+65"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Единицы измерения точек</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -613,7 +613,7 @@
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation type="unfinished"></translation>
+        <translation>Способный</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -663,12 +663,12 @@
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+627"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Обнаружена круговая (рекурсивная) ссылка на блок:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя блока:</translation>
     </message>
 </context>
 <context>
@@ -734,7 +734,7 @@
     <message>
         <location filename="../src/core/RLinetypePattern.cpp" line="+856"/>
         <source>By Layer</source>
-        <translation> По слою</translation>
+        <translation>По слою</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -928,7 +928,7 @@
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+35"/>
         <source>By Layer</source>
-        <translation> По слою</translation>
+        <translation>По слою</translation>
     </message>
     <message>
         <location line="+1"/>
