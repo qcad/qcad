@@ -136,12 +136,13 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<p>" + qsTr("%1 is an application for computer-aided design (CAD).").arg(this.applicationName) + "</p>"
             + "<p/>";
 
-            if (this.applicationName!=="QCAD") {
+            if (this.applicationName!=="QCAD" && this.applicationName!=="QCAD Community Edition") {
                 html += "<p>" + qsTr("%1 is based on QCAD, a free (open source) software.").arg(this.applicationName) + "</p>";
             }
             else {
                 html += "<p>" + qsTr("%1 is free (open source) software.").arg("QCAD") + "<br/>"
-                      + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("http://www.qcad.org/contribute") + "</p>";
+                     + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("http://www.qcad.org/contribute") + "</p>"
+                     + "" + qsTr("Additional tools, features and file formats including DWG are available in <a href='%1'>QCAD Professional</a> or <a href='%2'>QCAD/CAM</a>.").arg("https://qcad.org/shop").arg("https://qcad.org/shop");
             }
 
             html += "<p>" + qsTr("Plugins and script add-ons are subject to their respective license (see \"Plugins\" tab).") + "</p>"
