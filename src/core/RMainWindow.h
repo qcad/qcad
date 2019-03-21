@@ -182,7 +182,7 @@ public:
 
     void addLayerListener(RLayerListener* l);
     void removeLayerListener(RLayerListener* l);
-    void notifyLayerListeners(RDocumentInterface* documentInterface);
+    void notifyLayerListeners(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds);
     void notifyLayerListenersCurrentLayer(RDocumentInterface* documentInterface);
 
     void addBlockListener(RBlockListener* l);

@@ -202,7 +202,8 @@ void RMainWindow::notifyListeners(bool withNull) {
     notifyTransactionListeners(document);
     notifyPropertyListeners(document);
     notifySelectionListeners(di);
-    notifyLayerListeners(di);
+    QList<RLayer::Id> layerIds;
+    notifyLayerListeners(di, layerIds);
     notifyPenListeners(di);
     notifyBlockListeners(di);
     notifyViewListeners(di);
@@ -646,10 +647,10 @@ void RMainWindow::removeLayerListener(RLayerListener* l) {
 /**
  * Notifies all layer listeners that at least one layer object has changed.
  */
-void RMainWindow::notifyLayerListeners(RDocumentInterface* documentInterface) {
+void RMainWindow::notifyLayerListeners(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds) {
     QList<RLayerListener*>::iterator it;
     for (it = layerListeners.begin(); it != layerListeners.end(); ++it) {
-        (*it)->updateLayers(documentInterface);
+        (*it)->updateLayers(documentInterface, layerIds);
     }
 }
 
