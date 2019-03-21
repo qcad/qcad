@@ -41,7 +41,7 @@
         <translation type="vanished">Teile dieser Software sind © 2008-2018 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation>Plugins und Skript Add-ons unterliegen ihrer jeweiligen Lizenz (siehe &quot;Plugins&quot; Reiter).</translation>
     </message>
@@ -59,7 +59,12 @@
         <translation type="vanished">Qt wird mit QCAD unter der &lt;a href=&apos;%1&apos;&gt;LGPL Open Source Lizenz&lt;/a&gt; ausgeliefert, die Ihnen als Benutzer verschiedene Rechte verleiht, einschliesslich des Rechts, die Qt-Bibliotheken für Ihre Plattform neu zu kompilieren. Folgen Sie dazu der &lt;a href=&apos;%2&apos;&gt;Dokumentation auf der Qt-Webseite&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation>Zusätzliche Werkzeuge, Funktionen und Dateiformate einschliesslich DWG sind in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; oder &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt; verfügbar.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
         <translation>Qt wird mit QCAD unter der &lt;a href=&apos;%1&apos;&gt;LGPL Open Source Lizenz&lt;/a&gt; ausgeliefert, die Ihnen als Benutzer verschiedene Rechte verleiht, einschliesslich des Rechts, die Qt-Bibliotheken für Ihre Plattform neu zu kompilieren. Folgen Sie dazu der &lt;a href=&apos;%2&apos;&gt;Dokumentation auf der Qt-Webseite&lt;/a&gt;.</translation>
     </message>
@@ -101,14 +106,14 @@
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt Version:</translation>
     </message>
@@ -122,14 +127,14 @@
         <translation>Lizenz:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Erstellungsdatum:</translation>
     </message>
@@ -166,7 +171,7 @@
         <translation type="vanished">Plugins und Skript Add-ons unterliegen ihrer jeweiligen Lizenz (siehe &quot;Plugins&quot; Reiter).</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Alle Marken und Produktnamen sind Marken oder eingetragene Marken der jeweiligen Inhaber.</translation>
     </message>
@@ -1490,7 +1495,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -2527,7 +2532,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Ungültige Koordinate &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+223"/>
+        <location line="+226"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Unbekanntes Kommando oder ungültige Koordinate oder Wert: &quot;%1&quot;</translation>
     </message>
@@ -2560,12 +2565,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Versuch Objekte auf gesperrtem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-345"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+218"/>
+        <location line="+221"/>
         <source>Invalid value:</source>
         <translation>Ungültiger Wert:</translation>
     </message>
@@ -11979,7 +11984,7 @@ nicht öffnen.
         <translation>Keine Exportfilter wurden gefunden. Abbruch...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

@@ -23,7 +23,7 @@
         <translation type="obsolete">このソフトウェアの一部にQtを使用しています。© 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>プログラムは現状のまま提供され、設計、商品性、および特定の目的への適合性を含む、いかなる保証もありません。</translation>
     </message>
@@ -60,19 +60,24 @@
         <translation>不明</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>バージョン:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qtバージョン:</translation>
     </message>
     <message>
-        <location line="-91"/>
+        <location line="-94"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -92,14 +97,14 @@
         <translation>ライセンス:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>インターネット:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>ビルド日付:</translation>
     </message>
@@ -138,7 +143,7 @@
         <translation type="vanished">プラグインとスクリプト拡張機能は個別のライセンスが適用されます（&apos;プラグイン&apos;タブ参照）</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>すべてのブランドまたは製品名は、それぞれの所有者の商標または登録商標です。</translation>
     </message>
@@ -1343,7 +1348,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -2243,7 +2248,7 @@ Do you wish to recover it?</source>
         <translation type="obsolete">無効な座標 &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+210"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>不明なコマンドまたは無効な座標もしくは値: &quot;%1&quot;</translation>
     </message>
@@ -2272,12 +2277,12 @@ Do you wish to recover it?</source>
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-345"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="+218"/>
+        <location line="+221"/>
         <source>Invalid value:</source>
         <translation>不正な値:</translation>
     </message>
@@ -10238,7 +10243,7 @@ shown in search results:</source>
         <translation>エクスポートフィルタがみつかりません。中断します...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>

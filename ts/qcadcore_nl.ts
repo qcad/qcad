@@ -665,7 +665,7 @@
         <translation type="vanished">Plot randen</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+627"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+646"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circular (recursieve) blok referencing gedetecteerd:</translation>
     </message>

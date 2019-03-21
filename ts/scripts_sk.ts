@@ -28,7 +28,7 @@
         <translation type="vanished">Súčasti tohto software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Tento program je šírený v nádeji, že bude užitočný, ale BEZ ZÁRUKY - dokonca bez predpokladanej záruky obchodovateľnosti na konkrétny účel.</translation>
     </message>
@@ -65,14 +65,14 @@
         <translation>Neznáme</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Verzia:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt Verzia:</translation>
     </message>
@@ -86,14 +86,14 @@
         <translation>Licencia:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Dátum vytvorenia:</translation>
     </message>
@@ -127,7 +127,7 @@
         <translation type="vanished">Zásuvné moduly a skripty podliehajú vlastným licenciám (pozri záložku Zásuvné moduly).</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Všetky značky alebo názvy produktov sú ochrannými známkami alebo registrovanými ochrannými známkami príslušných vlastníkov.</translation>
     </message>
@@ -144,7 +144,12 @@
         <translation type="obsolete">Súčasti tohto software © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-5"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation>Pluginy a doplnky skriptov podliehajú príslušnej licencii (pozrite si kartu &quot;Zásuvné moduly&quot;).</translation>
     </message>
@@ -1359,7 +1364,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -2224,7 +2229,7 @@ Prajete si ho obnoviť?</translation>
         <translation>&amp;Príkazový riadok</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+191"/>
         <source>Invalid value:</source>
         <translation>Neplatná hodnota:</translation>
     </message>
@@ -9970,7 +9975,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Žiadne exportné filtre sa nenašli. Ukončujem...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>

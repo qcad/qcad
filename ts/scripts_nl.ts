@@ -28,7 +28,7 @@
         <translation type="vanished">Delen van deze software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>De software wordt verspreid in de hoop dat deze nuttig is maar ZONDER ENIGE GARANTIE, zelfs zonder impliciete garantie van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.</translation>
     </message>
@@ -65,14 +65,14 @@
         <translation>Onbekend</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Versie:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt Versie:</translation>
     </message>
@@ -86,14 +86,14 @@
         <translation>Licentie:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Aanmaakdatum:</translation>
     </message>
@@ -127,7 +127,7 @@
         <translation type="vanished">Plugins en script add-ons zijn beschikbaar onder hun respectieve licentie (zie tabblad &apos;Plugins&apos;).</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Alle merk- en productnamen zijn handelsmerken of geregistreerde handelsmerken van hun respectievelijke eigenaren.</translation>
     </message>
@@ -158,7 +158,12 @@
         <translation type="vanished">Qt wordt geleverd met QCAD onder de &lt;a href=&apos;%1&apos;&gt;LGPL Open Source licentie&lt;/a&gt; die u als gebruiker verschillende rechten geeft, waaronder het recht om de Qt libraries voor uw platform te hercompileren. Om dat te doen volgt u de &lt;a href=&apos;%2&apos;&gt;documentatie op de Qt website&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation>Extra tools, functies en bestandsformaten inclusief DWG zijn beschikbaar in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; of &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
         <translation>Qt wordt geleverd met QCAD onder de &lt;a href=&apos;%1&apos;&gt;LGPL Open Source licentie&lt;/a&gt; die u als gebruiker verschillende rechten geeft, waaronder het recht om de Qt libraries voor uw platform te hercompileren. Om dat te doen volgt u de &lt;a href=&apos;%2&apos;&gt;documentatie op de Qt website&lt;/a&gt;.</translation>
     </message>
@@ -1361,7 +1366,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -2218,7 +2223,7 @@ Wilt u het herstellen?</translation>
         <translation>&amp;Opdrachtregel</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+191"/>
         <source>Invalid value:</source>
         <translation>Ongeldig waarde:</translation>
     </message>
@@ -9892,7 +9897,7 @@ getoond in zoekresultaten:</translation>
         <translation>Geen export filters zijn gevonden. Afgebroken...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Formaat:</translation>
     </message>

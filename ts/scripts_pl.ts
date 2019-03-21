@@ -27,7 +27,7 @@
         <translation type="obsolete">Fragmenty tego oprogramowania © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Program jest udostępniony w stanie takim, JAKIM JEST, BEZ JAKICHKOLWIEK GWARANCJI, WŁĄCZAJĄC W TO GWARANCJĘ ZAPROJEKTOWANIA, ZGODNOŚCI Z PRZEZNACZENIEM I PRZYDATNOŚCI DO OKREŚLONEGO CELU.</translation>
     </message>
@@ -64,19 +64,24 @@
         <translation>Nieznany</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Wersja:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Wersja Qt:</translation>
     </message>
     <message>
-        <location line="-91"/>
+        <location line="-94"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -96,14 +101,14 @@
         <translation>Licencja:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Strona internetowa:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Data kompilacji:</translation>
     </message>
@@ -142,7 +147,7 @@
         <translation type="vanished">Wtyczki i dodatki skryptów są przedmiotem odpowiednich im licencji (proszę sprawdzić kartę „Wtyczki”)</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Wszystkie marki lub nazwy produktów są znakami towarowymi lub zarejestrowanymi znakami towarowymi i należą do ich właścicieli.</translation>
     </message>
@@ -1612,7 +1617,7 @@ Nazwa bloku:</translatorcomment>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -2695,7 +2700,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+210"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nieznane polecenie lub nieprawidłowa współrzędna bądź wartość: „%1”</translation>
@@ -2729,12 +2734,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-345"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="+218"/>
+        <location line="+221"/>
         <source>Invalid value:</source>
         <translation>Nieprawidłowa wartość:</translation>
     </message>
@@ -12645,7 +12650,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation>Nie odnaleziono filtrów eksportowania. Anulowanie...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

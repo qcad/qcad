@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+49"/>
-        <location line="+122"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Sürüm:</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+135"/>
+        <location line="-119"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>İnternet:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Derleme Tarihi:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+116"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt Sürümü:</translation>
     </message>
     <message>
-        <location line="-112"/>
+        <location line="-113"/>
         <source>Architecture:</source>
         <translation>Mimari:</translation>
     </message>
@@ -75,6 +75,11 @@
     <message>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
         <translation type="vanished">Eklentiler ve komut dosyası eklentileri, ilgili lisanslarına tabidir (bkz. &apos;Eklentiler&apos; sekmesi).</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1303,7 +1308,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetler</translation>
     </message>
@@ -2160,7 +2165,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="vanished">Koordinatlar şu şekilde girilebilir: &apos;%1&apos; (mutlak) veya &apos;%2&apos; (göreceli) veya &apos;%3&apos; (polar) veya &apos;%4&apos; (göreceli polar)</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+191"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9576,7 +9581,7 @@ shown in search results:</source>
         <translation>Hiçbir dışa  alma filtresi bulunamadı. Durduruluyor ...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Biçim:</translation>
     </message>

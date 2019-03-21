@@ -9,7 +9,7 @@
         <translation>Tietoja kohteesta %1</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+104"/>
         <source>Plugins</source>
         <translation>Liitännäiset</translation>
     </message>
@@ -41,14 +41,14 @@
         <translation>Tuntematon</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Versio:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt-versio:</translation>
     </message>
@@ -58,14 +58,14 @@
         <translation>Lisenssi:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Tekopäivä:</translation>
     </message>
@@ -108,6 +108,11 @@
         <location line="+1"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
         <translation>Tämä tarkoittaa sitä, että jokainen voi &lt;a href=&apos;%1&apos;&gt;osallistua&lt;/a&gt;!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1315,7 +1320,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -2212,7 +2217,7 @@ Haluatko palauttaa sen?</translation>
         <translation>&amp;Komentorivi</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+191"/>
         <source>Invalid value:</source>
         <translation>Virheellinen arvo:</translation>
     </message>
@@ -9918,7 +9923,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Vientisuodattimia ei löydetty. Keskeytetään ...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Muoto:</translation>
     </message>

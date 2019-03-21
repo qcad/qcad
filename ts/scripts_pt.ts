@@ -34,7 +34,7 @@
         <translation type="vanished">Partes deste software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation>Plugins e script add-ons estão sujeitos às suas respectivas licenças (ver &quot;Plugins&quot; tab).</translation>
     </message>
@@ -43,7 +43,12 @@
         <translation type="vanished">O Qt vem com QCAD sob a licença &lt;a href=&apos;%1&apos;&gt;LGPL Open Source&lt;/a&gt; que lhe confere vários direitos como usuário, incluindo o direito de recompilar as bibliotecas Qt para sua plataforma. Para fazer isso, siga a documentação &lt;a href=&apos;%2&apos;&gt;documentação mostrada no site Qt&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-3"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation>Ferramentas, recursos e formatos de arquivo adicionais, incluindo DWG, estão disponíveis em &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; ou &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
         <translation>O Qt vem com QCAD sob a licença &lt;a href=&apos;%1&apos;&gt;LGPL Open Source&lt;/a&gt; que lhe confere vários direitos como usuário, incluindo o direito de recompilar as bibliotecas Qt para sua plataforma. Para fazer isso, siga a documentação &lt;a href=&apos;%2&apos;&gt;documentação mostrada no site Qt&lt;/a&gt;.</translation>
     </message>
@@ -85,14 +90,14 @@
         <translation>Desconhecido</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Versão:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt Versão:</translation>
     </message>
@@ -106,14 +111,14 @@
         <translation>Licença:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Data de constituição:</translation>
     </message>
@@ -147,7 +152,7 @@
         <translation type="vanished">Plugins e script add-ons estão sujeitos às suas respectivas licenças (ver &quot;Plugins&quot; tab).</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Todos os nomes de incêndio ou produtos são marcas comerciais ou marcas comerciais registradas de seus respectivos proprietários.</translation>
     </message>
@@ -1709,7 +1714,7 @@ Nome do Bloco:</translatorcomment>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -2883,7 +2888,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Coordenar inválido &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+223"/>
+        <location line="+226"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Comando desconhecido, ou coordenadas ou valor inválido: &quot;%1&quot;</translation>
     </message>
@@ -2917,12 +2922,12 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-345"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+218"/>
+        <location line="+221"/>
         <source>Invalid value:</source>
         <translation>Valor inválido:</translation>
     </message>
@@ -13412,7 +13417,7 @@ Desenho salvo: %1</translatorcomment>
         <translation>Nenhum filtro de exportação foi encontrado. Abortando...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

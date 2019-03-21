@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+49"/>
-        <location line="+122"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+135"/>
+        <location line="-119"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Webbsida:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Byggdatum:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+116"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt Version:</translation>
     </message>
     <message>
-        <location line="-112"/>
+        <location line="-113"/>
         <source>Architecture:</source>
         <translation>Arkitektur:</translation>
     </message>
@@ -71,6 +71,11 @@
         <location line="+1"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
         <translation>Det betyder att alla kan &lt;a href=&apos;%1&apos;&gt;delta&lt;/a&gt;!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1264,7 +1269,7 @@ Vill du återställa den?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2109,7 +2114,7 @@ Vill du återställa den?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+191"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9456,7 +9461,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation type="unfinished">Format:</translation>
     </message>

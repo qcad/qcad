@@ -23,7 +23,7 @@
         <translation type="vanished">Фрагменты этой программы © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Программа предоставляется КАК ЕСТЬ, БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ВКЛЮЧАЯ ГАРАНТИИ ДИЗАЙНА, КОММЕРЧЕСКОЙ ЦЕННОСТИ И ПРИГОДНОСТИ ДЛЯ КОНКРЕТНЫХ ЦЕЛЕЙ.</translation>
     </message>
@@ -60,14 +60,14 @@
         <translation>Неизвестно</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Версия:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Версия Qt:</translation>
     </message>
@@ -81,14 +81,14 @@
         <translation>Лицензия:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Интернет:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Дата сборки:</translation>
     </message>
@@ -127,7 +127,7 @@
         <translation type="vanished">Плагины и скрипты дополнений подчиняются их соответствующей лицензии (см. вкладку &apos;Плагины&apos;).</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Все бренды или названия продуктов являются товарными знаками или зарегистрированными товарными знаками их соответствующих владельцев.</translation>
     </message>
@@ -144,7 +144,12 @@
         <translation type="obsolete">Фрагменты этой программы © 2008-2016 The Qt Company Ltd. {2008-2017 ?} {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-5"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1337,7 +1342,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -2202,7 +2207,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Командная строка</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+191"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2943,7 +2948,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation>Сбросить позицию метки из %1 размера(ов).</translation>
+        <translation type="vanished">Сбросить позицию метки из %1 размера(ов).</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
@@ -5205,7 +5210,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Draggable reference points:</source>
-        <translation>Перетаскиваемые точки привязки:</translation>
+        <translation type="vanished">Перетаскиваемые точки привязки:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -5402,7 +5407,7 @@ is already in the list.</source>
     <name>Hatch</name>
     <message>
         <source>No boundary selected.</source>
-        <translation>Нет выбранной границы.</translation>
+        <translation type="vanished">Нет выбранной границы.</translation>
     </message>
     <message>
         <source>Loop not closed at point %1/%2.</source>
@@ -9853,7 +9858,7 @@ shown in search results:</source>
         <translation>Фильтры для экспорта не найдены. Операция прервана...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Формат:</translation>
     </message>
@@ -10470,7 +10475,7 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Радиус:</translation>
     </message>
     <message>
         <source>1</source>

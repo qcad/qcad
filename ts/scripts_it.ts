@@ -32,7 +32,7 @@
         <translation type="vanished">Porzioni di questo software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation>Plugins e script add-ons sono soggetti alle rispettive licenze (vedi scheda &quot;Plugins&quot;).</translation>
     </message>
@@ -41,7 +41,12 @@
         <translation type="vanished">Qt viene fornito con QCAD sotto la licenza Open Source &lt;a href=&apos;%1&apos;&gt;LGPL&lt;/a&gt; che ti conferisce vari diritti come utente, incluso il diritto di ricompilare le librerie Qt per la tua piattaforma. Per farlo seguire &lt;a href=&apos;%2&apos;&gt;la documentazione mostrata sul sito web Qt&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-3"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation>Strumenti aggiuntivi, funzioni e formati di file, incluso DWG sono disponibili in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; o &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
         <translation>Qt viene fornito con QCAD sotto la licenza Open Source &lt;a href=&apos;%1&apos;&gt;LGPL&lt;/a&gt; che ti conferisce vari diritti come utente, incluso il diritto di ricompilare le librerie Qt per la tua piattaforma. Per farlo seguire &lt;a href=&apos;%2&apos;&gt;la documentazione mostrata sul sito web Qt&lt;/a&gt;.</translation>
     </message>
@@ -83,14 +88,14 @@
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Versione:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Versione Qt:</translation>
     </message>
@@ -104,14 +109,14 @@
         <translation>Licenza:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Data Compilazione:</translation>
     </message>
@@ -145,7 +150,7 @@
         <translation type="vanished">Plugins e script add-ons sono soggetti alle rispettive licenze (vedi scheda &quot;Plugins&quot;).</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Tutti i nomi di marchio o di prodotto sono diritti registrati dai rispettivi proprietari.</translation>
     </message>
@@ -1466,7 +1471,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -2454,7 +2459,7 @@ Visualizzazione grafica</translatorcomment>
         <translation type="obsolete">Non valido coordinate &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+223"/>
+        <location line="+226"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Comando sconosciuto o coordinate o valore non valido: &quot;%1&quot;</translation>
     </message>
@@ -2488,12 +2493,12 @@ Visualizzazione grafica</translatorcomment>
         <translation type="obsolete">Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-345"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+218"/>
+        <location line="+221"/>
         <source>Invalid value:</source>
         <translation>Valore non valido:</translation>
     </message>
@@ -11528,7 +11533,7 @@ Seconda entità non può essere tagliato.</translatorcomment>
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

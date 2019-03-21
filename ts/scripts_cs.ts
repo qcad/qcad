@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+49"/>
-        <location line="+122"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Verze:</translation>
     </message>
     <message>
-        <location line="-118"/>
-        <location line="+135"/>
+        <location line="-119"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>URL:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Datum sestavení:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+116"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Verze Qt:</translation>
     </message>
     <message>
-        <location line="-112"/>
+        <location line="-113"/>
         <source>Architecture:</source>
         <translation>Architektura:</translation>
     </message>
@@ -75,6 +75,11 @@
     <message>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
         <translation type="vanished">Pluginy a doplňky skriptů podléhají příslušné licenci (viz záložka &apos;Pluginy&apos;).</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1312,7 +1317,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <source>Widgets</source>
         <translation>Widgety</translation>
     </message>
@@ -2157,7 +2162,7 @@ Přejete si ho obnovit?</translation>
         <translation>&amp;Příkazový řádek</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+191"/>
         <source>Invalid value:</source>
         <translation>Neplatná hodnota:</translation>
     </message>
@@ -9660,7 +9665,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Nebyly nalezeny žádné filtry pro export. Přerušení...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>

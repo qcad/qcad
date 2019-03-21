@@ -28,7 +28,7 @@
         <translation type="vanished">Del tega programa © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Program je nuden KOT JE to je BREZ KAKRŠNE KOLI GARANCIJE, KAR VKLUČUJE GARANCIJO OBLIKE, STROJNO OBDELOVALNOST TER USKLAJENOST ZA DOLOČENI NAMEN.</translation>
     </message>
@@ -65,14 +65,14 @@
         <translation>Neznano</translation>
     </message>
     <message>
-        <location line="-129"/>
-        <location line="+122"/>
+        <location line="-130"/>
+        <location line="+123"/>
         <source>Version:</source>
         <translation>Verzija:</translation>
     </message>
     <message>
-        <location line="-112"/>
-        <location line="+116"/>
+        <location line="-113"/>
+        <location line="+117"/>
         <source>Qt Version:</source>
         <translation>Qt verzija:</translation>
     </message>
@@ -86,14 +86,14 @@
         <translation>Licenca:</translation>
     </message>
     <message>
-        <location line="-126"/>
-        <location line="+135"/>
+        <location line="-127"/>
+        <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-144"/>
+        <location line="-145"/>
         <source>Build Date:</source>
         <translation>Datum kreiranja:</translation>
     </message>
@@ -127,7 +127,7 @@
         <translation type="vanished">Vtičniki ter skriptni dodatki nosijo individualne licence (glej zavihek &apos;Vtičniki&apos;).</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
         <translation>Vse znamke ali imena izdelkov so blagovna znamka ali registirana blagovna znamka imena ustreznih nosilcev.</translation>
     </message>
@@ -144,7 +144,12 @@
         <translation type="obsolete">Del tega programa © 2008-2017 The Qt Company Ltd. {2008-2018 ?}</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-5"/>
+        <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1343,7 +1348,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+453"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -2244,7 +2249,7 @@ Do you wish to recover it?</source>
         <translation>&amp;Ukazna vrstica</translation>
     </message>
     <message>
-        <location line="+188"/>
+        <location line="+191"/>
         <source>Invalid value:</source>
         <translation>Neveljavna vrednost:</translation>
     </message>
@@ -10340,7 +10345,7 @@ shown in search results:</source>
         <translation>Ni bil najden noben filter. Prekinjam...</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+84"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
