@@ -1096,16 +1096,28 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RLayer::Id > */
+    
     ){
     // prepare arguments:
     
+                    // argument isArray
+                    QList < RLayer::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->notifyLayerListeners();
+               self->notifyLayerListeners(a0);
     } else
 
 

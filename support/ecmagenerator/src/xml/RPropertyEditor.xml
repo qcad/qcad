@@ -50,6 +50,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocumentInterface *"
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
+        <arg type="QList &lt; RLayer::Id &gt; &amp;"
+        typeName="QList &lt; RLayer::Id &gt;" name="layerIds"
+        isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
       </variant>
     </method>
     <method name="setCurrentLayer" cppName="setCurrentLayer"

@@ -62,6 +62,10 @@
     
     
       void updateLayers(
+                RDocumentInterface * documentInterface, QList < RLayer::Id > & layerIds
+            );
+        
+      void updateLayers(
                 RDocumentInterface * documentInterface
             );
         

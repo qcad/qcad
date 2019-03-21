@@ -98,7 +98,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="notifyLayerListeners"
     cppName="notifyLayerListeners" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RLayer::Id &gt; &amp;"
+        typeName="QList &lt; RLayer::Id &gt;" name="layerIds"
+        isConst="false" />
+      </variant>
     </method>
     <method name="addTransactionListener"
     cppName="addTransactionListener" specifier="public"

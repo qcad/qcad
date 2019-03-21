@@ -274,11 +274,14 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
         ) /* type: RDocumentInterface * */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < RLayer::Id > */
     
     ){
     // prepare arguments:
@@ -296,12 +299,23 @@
                         return REcmaHelper::throwError("RLayerListenerAdapter: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
                     }
                 
+                    // argument isArray
+                    QList < RLayer::Id >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->updateLayers(a0);
+               self->updateLayers(a0
+        ,
+    a1);
     } else
 
 
