@@ -224,7 +224,7 @@
     <message>
         <location line="+16"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Шаблоны</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1157,7 +1157,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+36"/>
         <source>Transparent</source>
-        <translation type="unfinished"></translation>
+        <translation>С прозрачностью</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1168,7 +1168,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="-17"/>
         <source>Monochrome</source>
-        <translation type="unfinished"></translation>
+        <translation>Монохромный</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1188,7 +1188,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation>Поле</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2249,7 +2249,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>Expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Выражение</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2351,7 +2351,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+30"/>
         <source>Convert:</source>
-        <translation type="unfinished"></translation>
+        <translation>Преобразовать:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2437,7 +2437,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+14"/>
         <source>Precision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Точность:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3135,7 +3135,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation>Пространство</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6585,7 +6585,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Клавиатура</translation>
     </message>
 </context>
 <context>
@@ -9139,7 +9139,7 @@ shown in search results:</source>
     <message>
         <location line="+45"/>
         <source>Show</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9671,7 +9671,7 @@ shown in search results:</source>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить скрипт</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
@@ -10396,7 +10396,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation type="unfinished"></translation>
+        <translation>Вкл</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
@@ -10465,7 +10465,7 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation>Залить</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11413,12 +11413,12 @@ shown in search results:</source>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Интервалы</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Letter spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Межбувенный интервал</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13211,12 +13211,12 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"></translation>
+        <translation>Грани</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation>Грань</translation>
     </message>
     <message>
         <location line="+2"/>
