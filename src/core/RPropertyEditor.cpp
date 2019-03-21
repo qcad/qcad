@@ -362,6 +362,12 @@ void RPropertyEditor::clearEditor() {
     updateGui();
 }
 
+void RPropertyEditor::updateLayers(RDocumentInterface* documentInterface, QList<RObject::Id>& layerIds) {
+    Q_UNUSED(layerIds)
+
+    updateLayers(documentInterface);
+}
+
 void RPropertyEditor::updateLayers(RDocumentInterface* documentInterface) {
     if (documentInterface==NULL) {
         // 20190130: changed from false to true:

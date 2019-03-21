@@ -132,7 +132,7 @@ public:
 
     void addLayerListener(RLayerListener* l);
     void removeLayerListener(RLayerListener* l);
-    void notifyLayerListeners();
+    void notifyLayerListeners(QList<RLayer::Id>& layerIds);
 
     int addTransactionListener(RTransactionListener* l);
     void removeTransactionListener(int key);

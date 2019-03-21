@@ -56,6 +56,7 @@ public:
     virtual void updateFromObject(RObject* object, RDocument* document = NULL);
     virtual void clearEditor();
 
+    virtual void updateLayers(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds);
     virtual void updateLayers(RDocumentInterface* documentInterface);
     virtual void setCurrentLayer(RDocumentInterface* documentInterface);
     virtual void clearLayers();

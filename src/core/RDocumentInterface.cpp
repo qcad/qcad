@@ -233,10 +233,10 @@ void RDocumentInterface::removeLayerListener(RLayerListener* l) {
  * particular document. Used for layer lists other than the global one
  * (e.g. in preferences).
  */
-void RDocumentInterface::notifyLayerListeners() {
+void RDocumentInterface::notifyLayerListeners(QList<RLayer::Id>& layerIds) {
     QList<RLayerListener*>::iterator it;
     for (it = layerListeners.begin(); it != layerListeners.end(); ++it) {
-        (*it)->updateLayers(this);
+        (*it)->updateLayers(this, layerIds);
     }
 }
 
@@ -2098,6 +2098,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
     bool ucsHasChanged = false;
     bool linetypeHasChanged = false;
     bool layerHasChanged = false;
+    QSet<RLayer::Id> changedLayerIds;
     bool blockHasChanged = false;
     bool layoutHasChanged = false;
     bool viewHasChanged = false;
@@ -2107,7 +2108,8 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
 
     QList<RObject::Id>::iterator it;
     for (it=objectIds.begin(); it!=objectIds.end(); ++it) {
-        QSharedPointer<RObject> object = document.queryObjectDirect(*it);
+        RObject::Id objectId = *it;
+        QSharedPointer<RObject> object = document.queryObjectDirect(objectId);
         if (object.isNull()) {
             continue;
         }
@@ -2144,7 +2146,8 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
 
         QSharedPointer<RLayer> layer = object.dynamicCast<RLayer> ();
         if (!layer.isNull()) {
-            layerHasChanged = true;
+            //layerHasChanged = true;
+            changedLayerIds.insert(objectId);
 
             // deselect entities on locked or invisible layer:
             if (layer->isLocked() || layer->isOffOrFrozen()) {
@@ -2184,9 +2187,11 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         }
     }
 
+    QList<RLayer::Id> changedLayerIdList = changedLayerIds.toList();
+
     // notify local listeners:
-    if (layerHasChanged) {
-        notifyLayerListeners();
+    if (!changedLayerIds.isEmpty()) {
+        notifyLayerListeners(changedLayerIdList);
     }
 
     // notify global listeners if this is not the clipboard document interface:
@@ -2198,8 +2203,8 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
             // TODO:
             //RMainWindow::getMainWindow()->notifyLinetypeListeners(this);
         }
-        if (layerHasChanged) {
-            RMainWindow::getMainWindow()->notifyLayerListeners(this);
+        if (!changedLayerIds.isEmpty()) {
+            RMainWindow::getMainWindow()->notifyLayerListeners(this, changedLayerIdList);
         }
         if (blockHasChanged || layoutHasChanged) {
             RMainWindow::getMainWindow()->notifyBlockListeners(this);

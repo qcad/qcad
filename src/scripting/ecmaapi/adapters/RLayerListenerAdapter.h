@@ -36,8 +36,8 @@ public:
     RLayerListenerAdapter(QObject* parent=NULL) : QObject(parent) { }
     virtual ~RLayerListenerAdapter() { }
 
-    virtual void updateLayers(RDocumentInterface* documentInterface) {
-        emit layersUpdated(documentInterface);
+    virtual void updateLayers(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds) {
+        emit layersUpdated(documentInterface, layerIds);
     }
 
     virtual void setCurrentLayer(RDocumentInterface* documentInterface) {
@@ -49,7 +49,7 @@ public:
     }
 
 signals:
-    void layersUpdated(RDocumentInterface* documentInterface);
+    void layersUpdated(RDocumentInterface* documentInterface, QList<int> layerIds);
     void currentLayerSet(RDocumentInterface* documentInterface);
     void layersCleared();
 };
