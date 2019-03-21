@@ -181,8 +181,8 @@ void RGraphicsViewQt::tabletEvent(QTabletEvent* event) {
         return;
     }
 
-#if QT_VERSION != 0x050C00
-    // Qt 5.12 crashes:
+#if QT_VERSION < 0x050C00
+    // Qt 5.12, 5.13 crashes:
     RTabletEvent e(*event, *scene, *this);
     RGraphicsView::handleTabletEvent(e);
 #endif
