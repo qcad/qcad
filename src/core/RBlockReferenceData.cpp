@@ -282,6 +282,25 @@ RBox RBlockReferenceData::getBoundingBox(bool ignoreEmpty) const {
     return ret;
 }
 
+RVector RBlockReferenceData::getPointOnEntity() const {
+    if (document == NULL) {
+        return RVector::invalid;
+    }
+
+    QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
+    if (ids.isEmpty()) {
+        return RVector::invalid;
+    }
+
+    QSet<REntity::Id>::iterator it = ids.begin();
+    QSharedPointer<REntity> entity = queryEntity(*it);
+    if (entity.isNull()) {
+        return RVector::invalid;
+    }
+
+    return entity->getPointOnEntity();
+}
+
 /**
  * \return The entity with the given ID, transformed according to
  *     the transformation of this block reference.

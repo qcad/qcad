@@ -61,6 +61,8 @@ public:
     virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const;
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
+    virtual RVector getPointOnEntity() const;
+
     virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
     virtual RVector getVectorTo(const RVector& point,  bool limited = true, double strictRange = RMAXDOUBLE) const;
