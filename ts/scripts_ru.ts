@@ -381,7 +381,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Apollonius.js" line="+1769"/>
         <source>Invalid radius</source>
-        <translation type="unfinished">Недопустимое значение радиуса</translation>
+        <translation>Недопустимый радиус</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -865,7 +865,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation type="unfinished">Файл</translation>
+        <translation>Файл</translation>
     </message>
     <message>
         <location line="+95"/>
@@ -1163,7 +1163,7 @@ Do you wish to recover it?</source>
         <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет</translation>
     </message>
     <message>
         <location line="-17"/>
@@ -1173,12 +1173,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation type="unfinished">Градации серого</translation>
+        <translation>Градации серого</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>Антиалиасинг</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1306,7 +1306,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation type="unfinished">Блок</translation>
+        <translation>Блок</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1369,7 +1369,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation>Идентификатор ссылки на блок</translation>
+        <translation>Идентификатор ссылки на блок:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1650,7 +1650,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation>Проверить обновления</translation>
+        <translation>Проверить &amp;обновления...</translation>
     </message>
 </context>
 <context>
@@ -2341,12 +2341,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation type="unfinished"></translation>
+        <translation>Из:</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>To:</source>
-        <translation type="unfinished"></translation>
+        <translation>В:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -2356,7 +2356,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+7"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
 </context>
 <context>
@@ -2384,7 +2384,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
         <source>Widgets</source>
-        <translation type="unfinished">Виджеты</translation>
+        <translation>Виджеты</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2943,7 +2943,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation type="vanished">Сбросить позицию метки из %1 размера(ов)</translation>
+        <translation>Сбросить позицию метки из %1 размера(ов).</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
@@ -3101,7 +3101,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+18"/>
         <source>Auto</source>
-        <translation type="unfinished">Автоматический</translation>
+        <translation>Автоматический</translation>
     </message>
 </context>
 <context>
@@ -3279,7 +3279,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Десятичный разделитель:</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -3409,7 +3409,7 @@ is already in the list.</source>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished">Чертёжные утилиты</translation>
+        <translation>Чертёжные утилиты</translation>
     </message>
 </context>
 <context>
@@ -3956,17 +3956,17 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Start parameter</source>
-        <translation>Начальный параметр </translation>
+        <translation>Начальный параметр</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
-        <translation>Конечный параметр </translation>
+        <translation>Конечный параметр</translation>
     </message>
     <message>
         <location line="+267"/>
         <source>Invalid major radius.</source>
-        <translation>Недопустимое значение большого радиуса</translation>
+        <translation>Недопустимое значение большого радиуса.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4216,7 +4216,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished">Добавить слой</translation>
+        <translation>Добавить слой</translation>
     </message>
     <message>
         <source>Add layer</source>
@@ -4313,22 +4313,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation type="unfinished">Первый угол</translation>
+        <translation>Первый угол</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished">Второй угол</translation>
+        <translation>Второй угол</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished">&amp;Ласточкин хвост</translation>
+        <translation>&amp;Ласточкин хвост</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished">Нарисовать ласточкин хвост</translation>
+        <translation>Нарисовать ласточкин хвост</translation>
     </message>
 </context>
 <context>
@@ -4679,7 +4679,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>All Files</source>
-        <translation type="unfinished">Все файлы</translation>
+        <translation>Все файлы</translation>
     </message>
 </context>
 <context>
@@ -4812,7 +4812,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished">Форма</translation>
+        <translation>Форма</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -4891,7 +4891,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation type="unfinished">Блоки</translation>
+        <translation>Блоки</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -5205,7 +5205,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Draggable reference points:</source>
-        <translation type="vanished">Перетаскиваемые точка привязки</translation>
+        <translation>Перетаскиваемые точки привязки:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -5220,7 +5220,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation>Коробка, заполненная крестовым выделением</translation>
+        <translation>Коробка, заполненная крестовым выделением:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5402,7 +5402,7 @@ is already in the list.</source>
     <name>Hatch</name>
     <message>
         <source>No boundary selected.</source>
-        <translation type="vanished">Нет выбранной границы</translation>
+        <translation>Нет выбранной границы.</translation>
     </message>
     <message>
         <source>Loop not closed at point %1/%2.</source>
@@ -5475,17 +5475,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">Нет выбранной границы</translation>
+        <translation>Нет выбранной границы.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Цикл не закрыт в точке %1/%2.</translation>
+        <translation>Цикл не закрыт в точке %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Каждый объект с границей должен быть линией, дугой, окружностью, эллиптической дугой, эллипсом, ломаной или кривой. Найдено:</translation>
+        <translation>Каждый объект с границей должен быть линией, дугой, окружностью, эллиптической дугой, эллипсом, ломаной или кривой. Найдено:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
@@ -5632,62 +5632,62 @@ is already in the list.</source>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Вращение:</translation>
+        <translation>Вращение:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
+        <translation>Вращать вставленные элементы&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
         <location line="+107"/>
         <source>Scale:</source>
-        <translation type="unfinished">Масштаб:</translation>
+        <translation>Масштаб:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
+        <translation>Масштабировать вставленные элементы&lt;br&gt;на заданный коэффициент</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Развернуть вставленный элемент&lt;br&gt;по горизонтали</translation>
+        <translation>Развернуть вставленные элементы&lt;br&gt;по горизонтали</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Развернуть вставленный элемент&lt;br&gt;по вертикали</translation>
+        <translation>Развернуть вставленные элементы&lt;br&gt;по вертикали</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">Вставить все объекты&lt;br&gt;в текущий слой&lt;br&gt;вместо исходного слоя</translation>
+        <translation>Вставить все объекты&lt;br&gt;в текущий слой&lt;br&gt;вместо исходного слоя</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished">На текущий слой</translation>
+        <translation>На текущий слой</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">Переписать существующие слои&lt;br&gt;в чертеже&lt;br&gt;слоями из буфера обмена</translation>
+        <translation>Переписать существующие слои&lt;br&gt;в чертеже&lt;br&gt;слоями из буфера обмена</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished">Перезаписать слои</translation>
+        <translation>Перезаписать слои</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Переписать существующие блоки&lt;br&gt;в чертеже&lt;br&gt;блоками из буфера обмена</translation>
+        <translation>Переписать существующие блоки&lt;br&gt;в чертеже&lt;br&gt;блоками из буфера обмена</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Перезаписать блоки</translation>
+        <translation>Перезаписать блоки</translation>
     </message>
 </context>
 <context>
@@ -6035,12 +6035,12 @@ is already in the list.</source>
     <message>
         <location line="+45"/>
         <source>Area</source>
-        <translation type="unfinished">Область</translation>
+        <translation>Область</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Circumference</source>
-        <translation type="unfinished">Периметр</translation>
+        <translation>Периметр</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -6050,7 +6050,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished">периметр:</translation>
+        <translation>периметр:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
@@ -6580,7 +6580,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation type="unfinished">Основные настройки</translation>
+        <translation>Основное</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6593,7 +6593,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translation>Язык интерфейса пользователя</translation>
+        <translation>Язык интерфейса пользователя:</translation>
     </message>
 </context>
 <context>
@@ -6743,7 +6743,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation type="unfinished">Слой</translation>
+        <translation>Слой</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6994,7 +6994,7 @@ is already in the list.</source>
     <message>
         <location line="+16"/>
         <source>Updating library index:</source>
-        <translation>Обновление индекса библиотеки…</translation>
+        <translation>Обновление индекса библиотеки:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -7487,12 +7487,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">Первая точка</translation>
+        <translation>Первая точка</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Вторая точка</translation>
+        <translation>Вторая точка</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7698,7 +7698,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
-        <translation>Вторая дуга или окружность </translation>
+        <translation>Вторая дуга или окружность</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
@@ -7925,7 +7925,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished">Без имени</translation>
+        <translation>Без имени</translation>
     </message>
 </context>
 <context>
@@ -7946,12 +7946,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished">Изменить</translation>
+        <translation>Изменить</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>отразить</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7971,17 +7971,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Копировать</translation>
+        <translation>Копировать</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Используйте диалоговое окно для опций инструмента</translation>
+        <translation>Использовать диалоговое окно для опций инструмента</translation>
     </message>
 </context>
 <context>
@@ -8264,7 +8264,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished">Форма</translation>
+        <translation>Форма</translation>
     </message>
 </context>
 <context>
@@ -8283,7 +8283,7 @@ shown in search results:</source>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished">0.00</translation>
+        <translation>0.00</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -8304,7 +8304,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">Таблица символов</translation>
+        <translation>Таблица символов</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8624,12 +8624,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Paste</source>
-        <translation type="unfinished">Вставить</translation>
+        <translation>Вставить</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Правка</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9276,7 +9276,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation type="unfinished">Файл</translation>
+        <translation>Файл</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
@@ -9441,12 +9441,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished">Изменить</translation>
+        <translation>Изменить</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>повернуть</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -9471,27 +9471,27 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Используйте диалоговое окно для опций инструмента</translation>
+        <translation>Использовать диалоговое окно для опций инструмента</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Копировать</translation>
+        <translation>Копировать</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Число копий:</translation>
+        <translation>Число копий:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Угол:</translation>
+        <translation>Угол:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9529,7 +9529,7 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation>Копии: </translation>
+        <translation>Копии:</translation>
     </message>
 </context>
 <context>
@@ -9643,7 +9643,7 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Radius:</source>
-        <translation>Радиус</translation>
+        <translation>Радиус:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -9661,7 +9661,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">Все файлы</translation>
+        <translation>Все файлы</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9868,12 +9868,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.js" line="+48"/>
         <source>Modify</source>
-        <translation type="unfinished">Изменить</translation>
+        <translation>Изменить</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Scale</source>
-        <translation type="unfinished">Масшабировать</translation>
+        <translation>Масшабировать</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -9898,22 +9898,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Используйте диалоговое окно для опций инструмента</translation>
+        <translation>Использовать диалоговое окно для опций инструмента</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Копировать</translation>
+        <translation>Копировать</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished">Число копий:</translation>
+        <translation>Число копий:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Использовать текущий с&amp;лой и атрибуты</translation>
+        <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -9924,7 +9924,7 @@ shown in search results:</source>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished">1</translation>
+        <translation>1</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -9934,7 +9934,7 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished">Пропорционально</translation>
+        <translation>Пропорционально</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10986,7 +10986,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation type="unfinished">Привязка</translation>
+        <translation>Привязка</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11180,7 +11180,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
-        <translation>Шрифт строки статуса</translation>
+        <translation>Шрифт строки статуса:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11271,7 +11271,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation type="unfinished">Файл</translation>
+        <translation>Файл</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -11312,7 +11312,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished">Кривые</translation>
+        <translation>Кривые</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11403,7 +11403,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-10"/>
         <source>Text</source>
-        <translation type="unfinished">Текст</translation>
+        <translation>Текст</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11423,17 +11423,17 @@ shown in search results:</source>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation type="unfinished">Направление:</translation>
+        <translation>Направление:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Против часовой стрелки</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11448,7 +11448,7 @@ shown in search results:</source>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation type="unfinished">Заполнить</translation>
+        <translation>Заполнить</translation>
     </message>
 </context>
 <context>
@@ -11457,7 +11457,7 @@ shown in search results:</source>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать объект</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11849,7 +11849,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+30"/>
         <source>General</source>
-        <translation type="unfinished">Основные настройки</translation>
+        <translation>Основное</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11962,12 +11962,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished">Виджеты</translation>
+        <translation>Виджеты</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Панели инструментов</translation>
+        <translation>Панели инструментов</translation>
     </message>
 </context>
 <context>
@@ -12393,7 +12393,7 @@ shown in search results:</source>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation type="unfinished">Вид</translation>
+        <translation>Вид</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12415,12 +12415,12 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation type="unfinished">Виджеты</translation>
+        <translation>Виджеты</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation type="unfinished">Панели инструментов</translation>
+        <translation>Панели инструментов</translation>
     </message>
 </context>
 <context>
@@ -12438,7 +12438,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Шаг сетки &lt; шага дополнительной сетки</translation>
+        <translation>Шаг сетки &lt; шага дополнительной сетки</translation>
     </message>
 </context>
 <context>
@@ -12474,12 +12474,12 @@ shown in search results:</source>
     <message>
         <location line="+21"/>
         <source>Importing file: </source>
-        <translation>Импортирование файла:</translation>
+        <translation>Импортирование файла: </translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation>URL для импортирования:</translation>
+        <translation>URL для импортирования: </translation>
     </message>
     <message>
         <source>Grid</source>
@@ -12700,7 +12700,7 @@ shown in search results:</source>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Против часовой стрелке</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12715,7 +12715,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>None</source>
-        <translation type="unfinished">Нет</translation>
+        <translation>Нет</translation>
     </message>
 </context>
 <context>
@@ -12844,7 +12844,7 @@ shown in search results:</source>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation>Инициализация add-ons...</translation>
+        <translation>Инициализация add-ons:</translation>
     </message>
     <message>
         <source>Post-initializing add-ons...</source>
@@ -12896,7 +12896,7 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation type="unfinished">Слой</translation>
+        <translation>Слой</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13276,7 +13276,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished">Файлы SVG</translation>
+        <translation>Файлы SVG</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13378,17 +13378,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished">Первый объект не может быть подрезан.</translation>
+        <translation>Первый объект не может быть подрезан.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished">Объект не может быть подрезан.</translation>
+        <translation>Объект не может быть подрезан.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished">Второй объект не может быть подрезан.</translation>
+        <translation>Второй объект не может быть подрезан.</translation>
     </message>
 </context>
 </TS>
