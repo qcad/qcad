@@ -426,12 +426,12 @@
     <message>
         <location line="+2"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Кувыркающаяся первая стрелка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Кувыркающаяся вторая стрелка</translation>
     </message>
     <message>
         <location line="+2"/>
