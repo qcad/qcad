@@ -227,6 +227,7 @@ protected:
     QHash<RBlock::Id, QHash<REntity::Id, QSharedPointer<REntity> > > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
+    QHash<QString, QSharedPointer<RLayer> > layerNameMap;
     QHash<RLayerState::Id, QSharedPointer<RLayerState> > layerStateMap;
     QHash<RLayout::Id, QSharedPointer<RLayout> > layoutMap;
     QHash<RLinetype::Id, QSharedPointer<RLinetype> > linetypeMap;

@@ -222,11 +222,15 @@ QSharedPointer<RLayer> RLinkedStorage::queryLayer(RLayer::Id layerId) const {
 }
 
 QSharedPointer<RLayer> RLinkedStorage::queryLayer(const QString& layerName) const {
-    QSharedPointer<RLayer> ret = RMemoryStorage::queryLayer(layerName);
-    if (ret.isNull()) {
-        ret = backStorage->queryLayer(layerName);
+    if (!layerNameMap.contains(layerName)) {
+        return backStorage->queryLayer(layerName);
     }
-    return ret;
+    return RMemoryStorage::queryLayer(layerName);
+    //QSharedPointer<RLayer> ret = RMemoryStorage::queryLayer(layerName);
+    //if (ret.isNull()) {
+    //    ret = backStorage->queryLayer(layerName);
+    //}
+    //return ret;
 }
 
 QSharedPointer<RLayerState> RLinkedStorage::queryLayerStateDirect(RLayerState::Id layerStateId) const {

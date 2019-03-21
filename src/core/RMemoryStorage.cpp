@@ -54,6 +54,7 @@ void RMemoryStorage::clear() {
     blockEntityMap.clear();
     blockMap.clear();
     layerMap.clear();
+    layerNameMap.clear();
     layerStateMap.clear();
     layoutMap.clear();
     linetypeMap.clear();
@@ -638,27 +639,42 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(RLayer::Id layerId) const {
     if (!layerMap.contains(layerId)) {
         return QSharedPointer<RLayer> ();
     }
-    if (layerMap[layerId].isNull()) {
+    QSharedPointer<RLayer> layer = layerMap[layerId];
+    if (layer.isNull()) {
         return QSharedPointer<RLayer> ();
     }
-    if (!layerMap[layerId].dynamicCast<RLayer>().isNull()) {
-        return QSharedPointer<RLayer>((RLayer*)layerMap[layerId]->clone());
-    }
+    //if (!layer.dynamicCast<RLayer>().isNull()) {
+        return QSharedPointer<RLayer>(layer->clone());
+    //}
 
-    qWarning() << "RMemoryStorage::queryLayer: should never be reached: " << layerId;
-    qWarning() << "RMemoryStorage::queryLayer: found object but not layer: " << *layerMap[layerId];
-    return QSharedPointer<RLayer>();
+//    qWarning() << "RMemoryStorage::queryLayer: should never be reached: " << layerId;
+//    qWarning() << "RMemoryStorage::queryLayer: found object but not layer: " << *layerMap[layerId];
+//    return QSharedPointer<RLayer>();
 }
 
 QSharedPointer<RLayer> RMemoryStorage::queryLayer(const QString& layerName) const {
-    QHash<RObject::Id, QSharedPointer<RLayer> >::const_iterator it;
-    for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
-        QSharedPointer<RLayer> l = *it;
-        if (!l.isNull() && l->getName().compare(layerName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
-            return QSharedPointer<RLayer> (l->clone());
-        }
+    if (!layerNameMap.contains(layerName.toLower())) {
+        return QSharedPointer<RLayer>();
     }
-    return QSharedPointer<RLayer>();
+    QSharedPointer<RLayer> layer = layerNameMap[layerName.toLower()];
+    if (layer.isNull()) {
+        return QSharedPointer<RLayer> ();
+    }
+    if (layer->isUndone()) {
+        return QSharedPointer<RLayer> ();
+    }
+    return QSharedPointer<RLayer>(layer->clone());
+    //return layerNameMap[layerName.toLower()].dynamicCast<RLayer>();
+
+
+//    QHash<RObject::Id, QSharedPointer<RLayer> >::const_iterator it;
+//    for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
+//        QSharedPointer<RLayer> l = *it;
+//        if (!l.isNull() && l->getName().compare(layerName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
+//            return QSharedPointer<RLayer> (l->clone());
+//        }
+//    }
+//    return QSharedPointer<RLayer>();
 }
 
 QSharedPointer<RLayerState> RMemoryStorage::queryLayerStateDirect(RLayerState::Id layerStateId) const {
@@ -1213,6 +1229,14 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
         return true;
     }
 
+    if (object->getType()==RS::ObjectLayer) {
+        QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
+        if (!layer.isNull()) {
+            layerNameMap.remove(layer->getName().toLower());
+        }
+        return true;
+    }
+
     return false;
 }
 
@@ -1320,7 +1344,6 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     }
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
-
     if (!entity.isNull()) {
         Q_ASSERT_X(!queryLayerDirect(entity->getLayerId()).isNull(),
             "RMemoryStrorage::saveObject", "Layer of entity is NULL");
@@ -1379,6 +1402,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     if (!layer.isNull()) {
         layerMap[object->getId()] = layer;
+        layerNameMap[layer->getName().toLower() ] = layer;
     }
 
     if (!layerState.isNull()) {
@@ -1473,6 +1497,15 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
             // remove entity from childMap values:
             if (entity->getParentId()!=REntity::INVALID_ID) {
                 childMap.remove(entity->getParentId(), entity->getId());
+            }
+        }
+
+        // remove layer from layer name map:
+        QSharedPointer<RLayer> layer = obj.dynamicCast<RLayer>();
+        if (!layer.isNull()) {
+            QString layerKey = layer->getName().toLower();
+            if (layerNameMap.contains(layerKey)) {
+                layerNameMap.remove(layerKey);
             }
         }
     }
