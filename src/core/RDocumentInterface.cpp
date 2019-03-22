@@ -2214,7 +2214,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         }
     }
 
-    if (layerHasChanged || blockHasChanged || linetypeHasChanged) {
+    if (layerHasChanged || !changedLayerIds.isEmpty() || blockHasChanged || linetypeHasChanged) {
         if (allowRegeneration) {
             regenerateScenes(true);
         }
