@@ -310,7 +310,7 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
-        <translation>Préférences générales</translation>
+        <translation>Préférences d&apos;application</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -447,7 +447,7 @@ pour appliquer les modifications.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation>&amp;Préférences générales</translation>
+        <translation>&amp;Préférences d&apos;application</translation>
     </message>
 </context>
 <context>
