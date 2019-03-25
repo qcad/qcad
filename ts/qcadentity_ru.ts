@@ -558,7 +558,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
-        <translation>Масшабировать</translation>
+        <translation>Масштаб</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>
@@ -605,12 +605,12 @@
     <message>
         <location line="+2"/>
         <source>Width</source>
-        <translation>ширину</translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation>высоту</translation>
+        <translation>Высота</translation>
     </message>
     <message>
         <location line="+4"/>
