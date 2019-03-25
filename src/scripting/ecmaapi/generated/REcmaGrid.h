@@ -70,6 +70,9 @@
         getInfoText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getProjection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getViewportNumber
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

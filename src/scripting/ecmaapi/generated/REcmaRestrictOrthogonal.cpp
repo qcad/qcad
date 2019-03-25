@@ -86,30 +86,8 @@
     // enum values:
     
 
-    ctor.setProperty("Vertical",
-    QScriptValue(RRestrictOrthogonal::Vertical),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Horizonal",
-    QScriptValue(RRestrictOrthogonal::Horizonal),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("Orthogonal",
-    QScriptValue(RRestrictOrthogonal::Orthogonal),
-    QScriptValue::ReadOnly);
-
-
     // enum conversions:
     
-    qScriptRegisterMetaType<RRestrictOrthogonal::OrthoMode>(
-        &engine,
-        toScriptValueEnumOrthoMode,
-        fromScriptValueEnumOrthoMode,
-        ctor.property(QString::fromLatin1("prototype"))
-    );
-
         
     // init class:
     engine.globalObject().setProperty("RRestrictOrthogonal",
@@ -407,15 +385,5 @@
             
 
 
-        }
-         QScriptValue REcmaRestrictOrthogonal::toScriptValueEnumOrthoMode(QScriptEngine* engine, const RRestrictOrthogonal::OrthoMode& value)
-    
-        {
-            return QScriptValue(engine, (int)value);
-        }
-         void REcmaRestrictOrthogonal::fromScriptValueEnumOrthoMode(const QScriptValue& value, RRestrictOrthogonal::OrthoMode& out)
-    
-        {
-            out = qvariant_cast<RRestrictOrthogonal::OrthoMode>(value.toVariant());
         }
         

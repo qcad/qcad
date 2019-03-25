@@ -7,11 +7,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RSnapRestriction" specifier="public" />
-    <enum name="OrthoMode">
-      <value name="Vertical" />
-      <value name="Horizonal" />
-      <value name="Orthogonal" />
-    </enum>
     <constructor>
       <variant>
         <arg type="RDocumentInterface *"

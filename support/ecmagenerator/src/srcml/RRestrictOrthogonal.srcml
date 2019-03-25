@@ -36,25 +36,18 @@
  */</comment>
 <class>class <macro><name>QCADSNAP_EXPORT</name></macro> <name>RRestrictOrthogonal</name> <super>: <specifier>public</specifier> <name>RSnapRestriction</name></super> <block>{<private type="default">
 </private><public>public:
-    <enum>enum <name>OrthoMode</name> <block>{
-        <expr><name>Vertical</name></expr>,
-        <expr><name>Horizonal</name></expr>,
-        <expr><name>Orthogonal</name></expr>
-    }</block>;</enum>
-
     <constructor><name>RRestrictOrthogonal</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>
         <member_list>: <call><name>RSnapRestriction</name><argument_list>(<argument><expr><name>documentInterface</name></expr></argument>)</argument_list></call>, 
-          <call><name>mode</name><argument_list>(<argument><expr><name><name>RRestrictOrthogonal</name>::<name>Orthogonal</name></name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+          <call><name>mode</name><argument_list>(<argument><expr><name><name>RS</name>::<name>Orthogonal</name></name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <destructor><specifier>virtual</specifier> <name>~RRestrictOrthogonal</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>restrictSnap</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>relativeZero</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
-    <decl_stmt><decl><type><name>OrthoMode</name></type> <name>mode</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RS</name>::<name>OrthoMode</name></name></type> <name>mode</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RRestrictOrthogonal*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RRestrictOrthogonal::OrthoMode</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

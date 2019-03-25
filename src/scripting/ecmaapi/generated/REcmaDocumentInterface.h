@@ -283,6 +283,9 @@
         snap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        restrictOrtho
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClosestEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

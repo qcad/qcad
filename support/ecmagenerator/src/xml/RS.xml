@@ -69,6 +69,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="RenderFront" />
       <value name="RenderThreeD" />
     </enum>
+    <enum name="OrthoMode">
+      <value name="OrthoVertical" />
+      <value name="OrthoHorizonal" />
+      <value name="Orthogonal" />
+    </enum>
     <enum name="Side">
       <value name="NoSide" />
       <value name="LeftHand" />
@@ -110,6 +115,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="AlongPolyline" />
     </enum>
     <enum name="IsoProjectionType">
+      <value name="NoProjection" />
       <value name="Top" />
       <value name="Bottom" />
       <value name="Left" />

@@ -65,6 +65,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="true" />
     </method>
+    <method name="getProjection" cppName="getProjection"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RS::IsoProjectionType"
+      isPureVirtual="false" />
+    </method>
     <method name="getViewportNumber" cppName="getViewportNumber"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -55,8 +55,6 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RRestrictOrthogonal* getSelf(const QString& fName, QScriptContext* context)
     ;static RRestrictOrthogonal* getSelfShell(const QString& fName, QScriptContext* context)
-    ;static  QScriptValue toScriptValueEnumOrthoMode(QScriptEngine* engine, const RRestrictOrthogonal::OrthoMode& value)
-    ;static  void fromScriptValueEnumOrthoMode(const QScriptValue& value, RRestrictOrthogonal::OrthoMode& out)
     ;};
     #endif
     

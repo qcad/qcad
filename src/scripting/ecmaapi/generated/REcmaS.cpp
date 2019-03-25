@@ -386,6 +386,21 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("OrthoVertical",
+    QScriptValue(RS::OrthoVertical),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("OrthoHorizonal",
+    QScriptValue(RS::OrthoHorizonal),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Orthogonal",
+    QScriptValue(RS::Orthogonal),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("NoSide",
     QScriptValue(RS::NoSide),
     QScriptValue::ReadOnly);
@@ -513,6 +528,11 @@
 
     ctor.setProperty("AlongPolyline",
     QScriptValue(RS::AlongPolyline),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("NoProjection",
+    QScriptValue(RS::NoProjection),
     QScriptValue::ReadOnly);
 
 
@@ -1959,6 +1979,13 @@
         ctor.property(QString::fromLatin1("prototype"))
     );
 
+    qScriptRegisterMetaType<RS::OrthoMode>(
+        &engine,
+        toScriptValueEnumOrthoMode,
+        fromScriptValueEnumOrthoMode,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
     qScriptRegisterMetaType<RS::Side>(
         &engine,
         toScriptValueEnumSide,
@@ -3264,6 +3291,16 @@
     
         {
             out = qvariant_cast<RS::ProjectionRenderingHint>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumOrthoMode(QScriptEngine* engine, const RS::OrthoMode& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumOrthoMode(const QScriptValue& value, RS::OrthoMode& out)
+    
+        {
+            out = qvariant_cast<RS::OrthoMode>(value.toVariant());
         }
          QScriptValue REcmaS::toScriptValueEnumSide(QScriptEngine* engine, const RS::Side& value)
     

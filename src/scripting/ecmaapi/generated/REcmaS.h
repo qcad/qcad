@@ -101,6 +101,8 @@
     ;static  void fromScriptValueEnumEntityType(const QScriptValue& value, RS::EntityType& out)
     ;static  QScriptValue toScriptValueEnumProjectionRenderingHint(QScriptEngine* engine, const RS::ProjectionRenderingHint& value)
     ;static  void fromScriptValueEnumProjectionRenderingHint(const QScriptValue& value, RS::ProjectionRenderingHint& out)
+    ;static  QScriptValue toScriptValueEnumOrthoMode(QScriptEngine* engine, const RS::OrthoMode& value)
+    ;static  void fromScriptValueEnumOrthoMode(const QScriptValue& value, RS::OrthoMode& out)
     ;static  QScriptValue toScriptValueEnumSide(QScriptEngine* engine, const RS::Side& value)
     ;static  void fromScriptValueEnumSide(const QScriptValue& value, RS::Side& out)
     ;static  QScriptValue toScriptValueEnumEnding(QScriptEngine* engine, const RS::Ending& value)

@@ -190,6 +190,15 @@
     }</block>;</enum>
 
     <comment type="block">/**
+     * Orthogonal mode, used for snap restrictions.
+     */</comment>
+    <enum>enum <name>OrthoMode</name> <block>{
+        <expr><name>OrthoVertical</name></expr>,
+        <expr><name>OrthoHorizonal</name></expr>,
+        <expr><name>Orthogonal</name></expr>
+    }</block>;</enum>
+
+    <comment type="block">/**
      * Side used for side of a point relativ to an entity
      * (right hand or left hand side)
      */</comment>
@@ -262,6 +271,7 @@
      * Projection type for isometric projections.
      */</comment>
     <enum>enum <name>IsoProjectionType</name> <block>{
+        <expr><name>NoProjection</name> =  0x00000000</expr>,      <comment type="line">//!&lt; No projection (2d x/y)</comment>
         <expr><name>Top</name> =           0x00000001</expr>,      <comment type="line">//!&lt; Top projection (x/y)</comment>
         <expr><name>Bottom</name> =        0x00000002</expr>,      <comment type="line">//!&lt; Bottom projection (x/y)</comment>
         <expr><name>Left</name> =          0x00000004</expr>,      <comment type="line">//!&lt; Front left projection (x/z)</comment>
@@ -699,6 +709,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::HAlign*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::IsoProjectionType</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::IsoProjectionType*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::OrthoMode</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::OrthoMode*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::KnownVariable</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::KnownVariable*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::LinearFormat</argument>)</argument_list></macro>

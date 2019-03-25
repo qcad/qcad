@@ -67,6 +67,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getInfoText, "getInfoText");
             
+            REcmaHelper::registerFunction(&engine, proto, getProjection, "getProjection");
+            
             REcmaHelper::registerFunction(&engine, proto, getViewportNumber, "getViewportNumber");
             
             REcmaHelper::registerFunction(&engine, proto, getDocument, "getDocument");
@@ -642,6 +644,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGrid::getInfoText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGrid::getProjection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGrid::getProjection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGrid::getProjection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGrid* self = 
+                        getSelf("getProjection", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::IsoProjectionType'
+    RS::IsoProjectionType cppResult =
+        
+               self->getProjection();
+        // return type: RS::IsoProjectionType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.getProjection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGrid::getProjection", context, engine);
             return result;
         }
          QScriptValue
