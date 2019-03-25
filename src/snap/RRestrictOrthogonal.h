@@ -35,24 +35,17 @@ class RDocumentInterface;
  */
 class QCADSNAP_EXPORT RRestrictOrthogonal : public RSnapRestriction {
 public:
-    enum OrthoMode {
-        Vertical,
-        Horizonal,
-        Orthogonal
-    };
-
     RRestrictOrthogonal(RDocumentInterface* documentInterface)
         : RSnapRestriction(documentInterface), 
-          mode(RRestrictOrthogonal::Orthogonal) {}
+          mode(RS::Orthogonal) {}
     virtual ~RRestrictOrthogonal() {}
 
     virtual RVector restrictSnap(const RVector& position, const RVector& relativeZero);
 
 protected:
-    OrthoMode mode;
+    RS::OrthoMode mode;
 };
 
 Q_DECLARE_METATYPE(RRestrictOrthogonal*)
-Q_DECLARE_METATYPE(RRestrictOrthogonal::OrthoMode)
 
 #endif

@@ -41,6 +41,7 @@
 #include "ROperation.h"
 #include "RPoint.h"
 #include "RPolyline.h"
+#include "RRestrictOrthogonal.h"
 #include "RScriptAction.h"
 #include "RScriptHandler.h"
 #include "RScriptHandlerRegistry.h"
@@ -1473,6 +1474,9 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
         if (currentSnapRestriction!=NULL) {
             ret = currentSnapRestriction->restrictSnap(ret, getRelativeZero());
         }
+        if (event.modifiers()==Qt::ShiftModifier) {
+            ret = restrictOrtho(ret, getRelativeZero(), RS::Orthogonal);
+        }
         
         QSet<REntity::Id> entityIds = currentSnap->getEntityIds();
         QSet<REntity::Id>::iterator it;
@@ -1484,6 +1488,78 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
     }
 
     return event.getModelPosition();
+}
+
+RVector RDocumentInterface::restrictOrtho(const RVector& position, const RVector& relativeZero, RS::OrthoMode mode) {
+    RVector ret;
+    RVector retX;
+    RVector retY;
+
+    RGraphicsView* view = getLastKnownViewWithFocus();
+    if (view==NULL) {
+        return ret;
+    }
+
+    RGrid* grid = view->getGrid();
+    RS::IsoProjectionType projection = RS::NoProjection;
+    if (grid!=NULL) {
+        projection = grid->getProjection();
+    }
+
+    //if (projection!=RS::NoProjection) {
+    if (grid!=NULL && grid->isIsometric()) {
+        double d1, d2;
+        double a1, a2;
+
+        switch (projection) {
+        default:
+        case RS::IsoTop:
+            a1 = RMath::deg2rad(30);
+            a2 = RMath::deg2rad(150);
+            // d1 = x / cos(30):
+            d1 = (position.x - relativeZero.x) / (sqrt(3.0)/2);
+            d2 = -d1;
+            break;
+        case RS::IsoLeft:
+            a1 = RMath::deg2rad(150);
+            a2 = RMath::deg2rad(90);
+            d1 = (position.x - relativeZero.x) / (-sqrt(3.0)/2);
+            d2 = (position.y - relativeZero.y);
+            break;
+        case RS::IsoRight:
+            a1 = RMath::deg2rad(30);
+            a2 = RMath::deg2rad(90);
+            d1 = (position.x - relativeZero.x) / (sqrt(3.0)/2);
+            d2 = (position.y - relativeZero.y);
+            break;
+        }
+
+        retX = relativeZero + RVector::createPolar(d1, a1);
+        retY = relativeZero + RVector::createPolar(d2, a2);
+    }
+    else {
+        retX = RVector(relativeZero.x, position.y);
+        retY = RVector(position.x, relativeZero.y);
+    }
+
+    switch (mode) {
+    case RS::OrthoVertical:
+        ret = retX;
+        break;
+    case RS::OrthoHorizonal:
+        ret = retY;
+        break;
+    case RS::Orthogonal:
+        if (retX.getDistanceTo(position) > retY.getDistanceTo(position)) {
+            ret = retY;
+        }
+        else {
+            ret = retX;
+        }
+        break;
+    }
+
+    return ret;
 }
 
 /**

@@ -73,6 +73,13 @@ public:
 
     virtual QString getInfoText() = 0;
 
+    virtual bool isIsometric() const {
+        return false;
+    }
+    virtual RS::IsoProjectionType getProjection() const {
+        return RS::NoProjection;
+    }
+
     int getViewportNumber() const;
 
     RDocument* getDocument() const;

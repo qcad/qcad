@@ -233,6 +233,7 @@ public:
     RSnapRestriction* getSnapRestriction();
 
     RVector snap(RMouseEvent& event, bool preview = false);
+    RVector restrictOrtho(const RVector& position, const RVector& relativeZero, RS::OrthoMode mode = RS::Orthogonal);
 
     REntity::Id getClosestEntity(RInputEvent& event);
     REntity::Id getClosestEntity(const RVector& position,

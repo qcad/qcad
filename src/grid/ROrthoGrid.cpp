@@ -827,14 +827,14 @@ RS::IsoProjectionType ROrthoGrid::getProjection() const {
     if (projection==-1) {
         int viewportNumber = getViewportNumber();
         if (viewportNumber==-1) {
-            return RS::IsoTop;
+            return RS::NoProjection;
         }
 
         RDocument* doc = getDocument();
         if (doc==NULL) {
-            return RS::IsoTop;
+            return RS::NoProjection;
         }
-        projection = (int)doc->getVariable(QString("Grid/IsometricProjection0%1").arg(viewportNumber), (int)RS::IsoTop, true).toInt();
+        projection = (int)doc->getVariable(QString("Grid/IsometricProjection0%1").arg(viewportNumber), (int)RS::NoProjection, true).toInt();
     }
     return (RS::IsoProjectionType)projection;
 }

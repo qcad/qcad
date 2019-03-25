@@ -189,6 +189,15 @@ public:
     };
 
     /**
+     * Orthogonal mode, used for snap restrictions.
+     */
+    enum OrthoMode {
+        OrthoVertical,
+        OrthoHorizonal,
+        Orthogonal
+    };
+
+    /**
      * Side used for side of a point relativ to an entity
      * (right hand or left hand side)
      */
@@ -261,6 +270,7 @@ public:
      * Projection type for isometric projections.
      */
     enum IsoProjectionType {
+        NoProjection =  0x00000000,      //!< No projection (2d x/y)
         Top =           0x00000001,      //!< Top projection (x/y)
         Bottom =        0x00000002,      //!< Bottom projection (x/y)
         Left =          0x00000004,      //!< Front left projection (x/z)
@@ -698,6 +708,8 @@ Q_DECLARE_METATYPE(RS::HAlign)
 Q_DECLARE_METATYPE(RS::HAlign*)
 Q_DECLARE_METATYPE(RS::IsoProjectionType)
 Q_DECLARE_METATYPE(RS::IsoProjectionType*)
+Q_DECLARE_METATYPE(RS::OrthoMode)
+Q_DECLARE_METATYPE(RS::OrthoMode*)
 Q_DECLARE_METATYPE(RS::KnownVariable)
 Q_DECLARE_METATYPE(RS::KnownVariable*)
 Q_DECLARE_METATYPE(RS::LinearFormat)

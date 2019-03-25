@@ -37,7 +37,7 @@ class QCADSNAP_EXPORT RRestrictHorizontal : public RRestrictOrthogonal {
 public:
     RRestrictHorizontal(RDocumentInterface* documentInterface = NULL)
         : RRestrictOrthogonal(documentInterface) {
-        mode = Horizonal;
+        mode = RS::OrthoHorizonal;
     }
     virtual ~RRestrictHorizontal() {}
 };
