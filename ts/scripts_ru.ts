@@ -473,7 +473,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
-        <translation>Нарисовать дугу по 2-м точкам и углу</translation>
+        <translation>Начертить дугу по 2-м точкам и углу</translation>
     </message>
 </context>
 <context>
@@ -526,7 +526,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and height</source>
-        <translation>Нарисовать дугу по 2 точкам и высоте</translation>
+        <translation>Начертить дугу по 2 точкам и высоте</translation>
     </message>
 </context>
 <context>
@@ -584,7 +584,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and length</source>
-        <translation>Нарисовать дугу по двум точкам и длине</translation>
+        <translation>Начертить дугу по двум точкам и длине</translation>
     </message>
 </context>
 <context>
@@ -660,7 +660,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Нарисовать дугу по 2-м точкам и радиусу</translation>
+        <translation>Начертить дугу по 2-м точкам и радиусу</translation>
     </message>
 </context>
 <context>
@@ -688,7 +688,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation>Нарисовать дугу по 3-м точкам</translation>
+        <translation>Начертить дугу по 3-м точкам</translation>
     </message>
 </context>
 <context>
@@ -745,7 +745,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation>Нарисовать дугу по центру, точке и углу</translation>
+        <translation>Начертить дугу по центру, точке и углу</translation>
     </message>
 </context>
 <context>
@@ -768,7 +768,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc</source>
-        <translation>Рисовать концентрическую дугу</translation>
+        <translation>Начертить концентрическую дугу</translation>
     </message>
 </context>
 <context>
@@ -786,7 +786,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc through point</source>
-        <translation>Рисовать концентрическую дугу через точку</translation>
+        <translation>Начертить концентрическую дугу через точку</translation>
     </message>
 </context>
 <context>
@@ -825,7 +825,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Рисовать дугу, касающуюся объекта, через точку с заданным радиусом</translation>
+        <translation>Начертить дугу, касающуюся объекта, через точку с заданным радиусом</translation>
     </message>
 </context>
 <context>
@@ -853,7 +853,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation>Рисовать дугу, касающуюся базового объекта</translation>
+        <translation>Начертить дугу, касающуюся базового объекта</translation>
     </message>
 </context>
 <context>
@@ -1055,7 +1055,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/BehaviorPreferences/BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Графический вид</translation>
+        <translation>Графический просмотр</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1416,11 +1416,11 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>Выбрать линию, дугу, окружность, эллипс, кривую или участок ломаной</translation>
+        <translation>Выбрать линию, дугу, окружность, эллипс, сплайн или участок ломаной</translation>
     </message>
     <message>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation type="vanished">Выбрать участок линии, дуги, окружности эллипса или кривой</translation>
+        <translation>Выбрать участок линии, дуги, окружности эллипса или сплайна</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1470,7 +1470,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation>Выбрать линию, дугу, окружность, эллипс, кривую или ломаную чтобы разбить</translation>
+        <translation>Выбрать линию, дугу, окружность, эллипс, сплайн или ломаную чтобы разбить</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1702,7 +1702,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
-        <translation>Нарисовать окружность по 2-м отдельным точкам</translation>
+        <translation>Начертить окружность по 2-м отдельным точкам</translation>
     </message>
 </context>
 <context>
@@ -1759,7 +1759,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
-        <translation>Нарисовать окружность по 2-м точкам и радиусу</translation>
+        <translation>Начертить окружность по 2-м точкам и радиусу</translation>
     </message>
 </context>
 <context>
@@ -3101,7 +3101,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation>Масштаб рисования</translation>
+        <translation>Масштаб черчения</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -3363,12 +3363,12 @@ is already in the list.</source>
     <name>Divide</name>
     <message>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation type="vanished">Выбрать линию, дугу, окружность или кривую</translation>
+        <translation>Выбрать линию, дугу, окружность или сплайн</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+67"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Выбрать линию, дугу, окружность, эллипс, кривую или ломаную</translation>
+        <translation>Выбрать линию, дугу, окружность, эллипс, сплайн или ломаную</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4625,7 +4625,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Spline segments:</source>
-        <translation>Сегменты кривых:</translation>
+        <translation>Сегменты сплайнов:</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -4781,7 +4781,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Графический вид</translation>
+        <translation>Графический просмотр</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6472,7 +6472,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation type="vanished">Масштабировать проекцию к исходному размеру (&apos;изометрической рисунок&apos;)</translation>
+        <translation>Масштабировать проекцию к исходному размеру (&apos;изометрической чертёж&apos;)</translation>
     </message>
     <message>
         <source>True scale</source>
@@ -6749,7 +6749,7 @@ is already in the list.</source>
     <message>
         <location line="+8"/>
         <source>Layer name:</source>
-        <translation>Название слоя:</translation>
+        <translation>Имя слоя:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -7108,7 +7108,7 @@ Library browser will not be available.</source>
     <message>
         <location line="+44"/>
         <source>View Mode:</source>
-        <translation>Режим отображения:</translation>
+        <translation>Режим просмотра:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7526,7 +7526,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation>Нажмите для начала рисования</translation>
+        <translation>Нажмите для начала черчения</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -8089,7 +8089,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation>Разные инструменты рисования</translation>
+        <translation>Разные инструменты черчения</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -8098,7 +8098,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show misc drawing tools</source>
-        <translation type="vanished">Показать разные инструменты рисования</translation>
+        <translation>Показать разные инструменты черчения</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8889,7 +8889,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation>&amp;Предыдущий вид</translation>
+        <translation>&amp;Предыдущий просмотр</translation>
     </message>
 </context>
 <context>
@@ -8918,12 +8918,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation>Печать теку&amp;щего вида</translation>
+        <translation>Печать теку&amp;щего просмотра</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Print current view</source>
-        <translation>Печать текущего вида</translation>
+        <translation>Печать текущего просмотра</translation>
     </message>
 </context>
 <context>
@@ -8981,7 +8981,7 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation>Масштаб рисования</translation>
+        <translation>Масштаб чертежа</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10108,7 +10108,7 @@ shown in search results:</source>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation>Объект не является рисованным объектом:</translation>
+        <translation>Объект не является чертёжным объектом:</translation>
     </message>
 </context>
 <context>
