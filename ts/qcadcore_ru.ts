@@ -129,7 +129,7 @@
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation>Зеленый</translation>
+        <translation>Зелёный</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -149,7 +149,7 @@
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation>Желтый</translation>
+        <translation>Жёлтый</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -189,7 +189,7 @@
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation>Черный</translation>
+        <translation>Чёрный</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -199,7 +199,7 @@
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translation>Светлосерый</translation>
+        <translation>Светло-серый</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Шрифт размера</translation>
+        <translation>Размер шрифта</translation>
     </message>
 </context>
 <context>
@@ -322,7 +322,7 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
-        <translation>Масшабировать</translation>
+        <translation>Масштаб</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -332,7 +332,7 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation>Колонки</translation>
+        <translation>Столбцы</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -415,25 +415,25 @@
         <location line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="+3"/>
         <source>Left</source>
-        <translation>Левая</translation>
+        <translation>Слева</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Bottom</source>
-        <translation>Низ</translation>
+        <translation>Снизу</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Right</source>
-        <translation>Правая</translation>
+        <translation>Справа</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Top</source>
-        <translation>Верх</translation>
+        <translation>Сверху</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
@@ -456,7 +456,7 @@
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation>ширину</translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -469,7 +469,7 @@
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
-        <translation>высоту</translation>
+        <translation>Высота</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
@@ -491,7 +491,7 @@
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation>Просто текст</translation>
+        <translation>Простой текст</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -521,7 +521,7 @@
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation>Наклонное начертание</translation>
+        <translation>Курсив</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -547,25 +547,25 @@
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
-        <translation>вращение</translation>
+        <translation>Вращение</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation>вкл</translation>
+        <translation>Вкл</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Посмотреть Центр</translation>
+        <translation>Просмотр центра</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Посмотреть Цель</translation>
+        <translation>Просмотр цели</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -588,7 +588,7 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Off</source>
-        <translation>выкл</translation>
+        <translation>Выкл</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -598,7 +598,7 @@
     <message>
         <location line="+1"/>
         <source>Locked</source>
-        <translation>Запертый</translation>
+        <translation>Заперт</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -613,7 +613,7 @@
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Способный</translation>
+        <translation>Хватаемый</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -676,7 +676,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+186"/>
         <source>Requires selection</source>
-        <translation>Выделение требований</translation>
+        <translation>Требуется выделение</translation>
     </message>
 </context>
 <context>
@@ -687,11 +687,11 @@
     </message>
     <message>
         <source>Hidden</source>
-        <translation type="vanished">Скрыть</translation>
+        <translation>Скрыт</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation type="vanished">Запертый</translation>
+        <translation>Заперт</translation>
     </message>
     <message>
         <source>Color</source>
@@ -779,21 +779,21 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Divide</source>
-        <translation>Пунктир 2</translation>
+        <translation>Разделённая</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dot</source>
-        <translation>Пунктирная</translation>
+        <translation>Пунктирная точечная</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation>Скрыть</translation>
+        <translation>Скрыт</translation>
     </message>
     <message>
         <location line="+2"/>
