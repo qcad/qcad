@@ -2942,9 +2942,9 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation><numerusform>Положение метки размерности %n было сброшено.</numerusform>
-        <numerusform>Положение метки размерностей %n было сброшено.</numerusform>
-        <numerusform>Положение метки размерностей %n было сброшено.</numerusform>
+        <translation><numerusform>Положение метки %n-ой размерности было сброшено.</numerusform>
+        <numerusform>Положение метки %n-ёх размерностей было сброшено.</numerusform>
+        <numerusform>Положение метки %n-ти размерностей было сброшено.</numerusform>
         </translation></message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
@@ -8434,16 +8434,16 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation><numerusform>Радиус упал ниже 0,0 после %n концентрической окружности.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n концентрических окружностей.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n концентрических окружностей.</numerusform>
+        <translation><numerusform>Радиус упал ниже 0,0 после %n-ой концентрической окружности.</numerusform>
+        <numerusform>Радиус упал ниже 0,0 после %n-ёх концентрических окружностей.</numerusform>
+        <numerusform>Радиус упал ниже 0,0 после %n-ти концентрических окружностей.</numerusform>
         </translation></message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation><numerusform>Радиус упал ниже 0,0 после %n концентрической дуги.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n концентрических дуг.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n концентрических дуг.</numerusform>
+        <translation><numerusform>Радиус упал ниже 0,0 после %n-ой концентрической дуги.</numerusform>
+        <numerusform>Радиус упал ниже 0,0 после %n-ёх концентрических дуг.</numerusform>
+        <numerusform>Радиус упал ниже 0,0 после %n-ти концентрических дуг.</numerusform>
         </translation></message>
 </context>
 <context>
