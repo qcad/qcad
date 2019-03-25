@@ -217,7 +217,7 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation>Обратное направление</translation>
+        <translation>Обратный</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -270,7 +270,7 @@
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
         <source>Tag</source>
-        <translation>Поле</translation>
+        <translation>Тег</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -287,7 +287,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation>Линия, указывающая размер</translation>
+        <translation>Размерная линия</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -308,7 +308,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>Линия 1 Старт</translation>
+        <translation>Линия 1 Начало</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
@@ -322,7 +322,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>Линия 2 Старт</translation>
+        <translation>Линия 2 Начало</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
@@ -336,7 +336,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Размер дуги</translation>
+        <translation>Размерная дуга</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -386,12 +386,12 @@
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+121"/>
         <source>Dimension Angle</source>
-        <translation>Размер угла</translation>
+        <translation>Размерный угол</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation>Пометка</translation>
+        <translation>Метка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -414,7 +414,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation>Точка определения</translation>
+        <translation>Определяющая точка</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -749,7 +749,7 @@
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation>Угол</translation>
+        <translation>Градусы</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -768,7 +768,7 @@
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation>Вектор узла</translation>
+        <translation>Вектор кельтского узла</translation>
     </message>
     <message>
         <location line="+0"/>
