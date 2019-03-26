@@ -44,7 +44,6 @@ public:
          double endAngle, bool reversed = false);
     RArc(const RVector& center, double radius, double startAngle,
             double endAngle, bool reversed = false);
-    virtual ~RArc();
 
     virtual RShape::Type getShapeType() const {
         return Arc;

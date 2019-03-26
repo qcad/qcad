@@ -49,9 +49,6 @@ RLine::RLine(const RVector& startPoint, double angle, double distance) :
     endPoint = startPoint + RVector::createPolar(distance, angle);
 }
 
-RLine::~RLine() {
-}
-
 void RLine::setZ(double z) {
     startPoint.z = z;
     endPoint.z = z;

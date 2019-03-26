@@ -53,9 +53,6 @@ RArc::RArc(const RVector& center, double radius, double startAngle,
     reversed(reversed) {
 }
 
-RArc::~RArc() {
-}
-
 void RArc::setZ(double z) {
     center.z = z;
 }
