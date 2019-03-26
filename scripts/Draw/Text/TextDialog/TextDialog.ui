@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>833</width>
-    <height>581</height>
+    <height>584</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -359,6 +359,16 @@
              </property>
              <property name="shortcut">
               <string>Ctrl+I</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="Underline">
+             <property name="shortcut">
+              <string notr="true">Ctrl+U</string>
              </property>
              <property name="checkable">
               <bool>true</bool>
