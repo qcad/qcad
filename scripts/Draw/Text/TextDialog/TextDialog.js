@@ -55,8 +55,8 @@ function TextDialog(mode) {
     this.sourceEdit = undefined;
 
     this.actionTextBold = undefined;
-    //this.actionTextUnderline = undefined;
     this.actionTextItalic = undefined;
+    this.actionTextUnderline = undefined;
 
     this.actionSubscript = undefined;
     this.actionSuperscript = undefined;
@@ -251,6 +251,7 @@ TextDialog.prototype.show =  function(textDataIn) {
         editMainHeight.setValue(textDataIn.getTextHeight());
         this.sourceEdit.setPlainText(textDataIn.getEscapedText());
         this.updateRichText(true);
+        //qDebug("this.sourceEdit:", this.sourceEdit.plainText);
         if (textDataIn.getVAlign()==RS.VAlignTop) {
             if (textDataIn.getHAlign()==RS.HAlignLeft || textDataIn.getHAlign()==RS.HAlignFit || textDataIn.getHAlign()==RS.HAlignAlign) {
                 buttonTopLeft.checked = true;
@@ -393,6 +394,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     }
 
     this.mainFontChanged();
+
     this.colorChanged(this.textEdit.textColor());
     this.colorChanged(this.initialColor);
 
@@ -546,7 +548,6 @@ TextDialog.prototype.setupTextActions = function() {
     this.actionTextItalic.checkable = true;
     this.dialog.findChild("Italic").setDefaultAction(this.actionTextItalic);
 
-    /*
     this.actionTextUnderline = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Underline.svg")), qsTr("&Underline"), this.dialog);
     this.actionTextUnderline.shortcut = Qt.CTRL + Qt.Key_U;
     var underline = new QFont();
@@ -555,7 +556,6 @@ TextDialog.prototype.setupTextActions = function() {
     this.actionTextUnderline.triggered.connect(this, "textUnderline");
     this.actionTextUnderline.checkable = true;
     this.dialog.findChild("Underline").setDefaultAction(this.actionTextUnderline);
-    */
 
     this.actionSubscript = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Subscript.svg")), qsTr("&Subscript"), this.dialog);
     this.actionSubscript.shortcut = new QKeySequence(Qt.ShiftModifier | Qt.ControlModifier | Qt.Key_B);
@@ -774,13 +774,11 @@ TextDialog.prototype.textItalic = function() {
 /**
  * Called when user clicks underline button.
  */
-/*
 TextDialog.prototype.textUnderline = function() {
     var fmt = new QTextCharFormat();
     fmt.setFontUnderline(this.actionTextUnderline.checked);
     this.mergeFormatOnWordOrSelection(fmt);
 };
-*/
 
 /**
  * Called when user clicks subscript button.
@@ -922,7 +920,7 @@ TextDialog.prototype.fontChanged = function(font) {
 
     this.actionTextBold.setChecked(font.bold());
     this.actionTextItalic.setChecked(font.italic());
-    //this.actionTextUnderline.setChecked(font.underline());
+    this.actionTextUnderline.setChecked(font.underline());
 };
 
 /**
