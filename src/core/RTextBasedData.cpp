@@ -587,6 +587,7 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
     QString fontFamily = textDocument.defaultFont().family();
     int fontWeight = textDocument.defaultFont().weight();
     bool fontItalic = textDocument.defaultFont().italic();
+    bool fontUnderline = textDocument.defaultFont().underline();
     double fontHeight = textDocument.defaultFont().pointSizeF() / fontHeightFactor;
     QTextCharFormat::VerticalAlignment fontVerticalAlignment = QTextCharFormat::AlignNormal;
     QTextCharFormat::VerticalAlignment previousVerticalAlignment = QTextCharFormat::AlignNormal;
@@ -618,6 +619,7 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             //qDebug() << "text fragment: " << fragment.text();
 
             bool fontChanged = false;
+            bool underlineChanged = false;
             bool colorChanged = false;
             bool heightChanged = false;
             bool verticalAlignmentChanged = false;
@@ -634,6 +636,12 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             if (format.fontItalic()!=fontItalic) {
                 fontItalic = format.fontItalic();
                 fontChanged = true;
+            }
+
+            // detect underline change:
+            if (format.fontUnderline()!=fontUnderline) {
+                fontUnderline = format.fontUnderline();
+                underlineChanged = true;
             }
 
             // detect vertical alignment change (subscript / superscript):
@@ -726,6 +734,15 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
                 }
             }
 
+            if (underlineChanged) {
+                if (fontUnderline) {
+                    ret += (simpleText ? QString("%%u") : QString("\\L"));
+                }
+                else {
+                    ret += (simpleText ? QString("%%u") : QString("\\l"));
+                }
+            }
+
             if (heightChanged) {
                 ret += QString("\\H%1;").arg(fontHeight);
             }
@@ -757,6 +774,7 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             text.replace(RTextRenderer::chPlusMinus, RTextRenderer::escPlusMinus);
             // diameter:
             text.replace(RTextRenderer::chDiameter, RTextRenderer::escDiameter);
+
             /*
             // unicode:
             QString t;
