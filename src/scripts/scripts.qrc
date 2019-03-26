@@ -790,6 +790,7 @@
     <file alias="scripts/Draw/Text/Tests/data/text16.dxf">../../scripts/Draw/Text/Tests/data/text16.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text17.dxf">../../scripts/Draw/Text/Tests/data/text17.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text18.dxf">../../scripts/Draw/Text/Tests/data/text18.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/data/text19.dxf">../../scripts/Draw/Text/Tests/data/text19.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text01_000.dxf">../../scripts/Draw/Text/Tests/required/Text01_000.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text02_000.dxf">../../scripts/Draw/Text/Tests/required/Text02_000.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text03_000.dxf">../../scripts/Draw/Text/Tests/required/Text03_000.dxf</file>
@@ -820,6 +821,10 @@
     <file alias="scripts/Draw/Text/Tests/required/Text16_001.dxf">../../scripts/Draw/Text/Tests/required/Text16_001.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text17_000.dxf">../../scripts/Draw/Text/Tests/required/Text17_000.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text17_001.dxf">../../scripts/Draw/Text/Tests/required/Text17_001.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/required/Text18_000.dxf">../../scripts/Draw/Text/Tests/required/Text18_000.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/required/Text18_001.dxf">../../scripts/Draw/Text/Tests/required/Text18_001.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/required/Text19_000.dxf">../../scripts/Draw/Text/Tests/required/Text19_000.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/required/Text19_001.dxf">../../scripts/Draw/Text/Tests/required/Text19_001.dxf</file>
     <file alias="scripts/Draw/Text/Text-inverse.svg">../../scripts/Draw/Text/Text-inverse.svg</file>
     <file alias="scripts/Draw/Text/Text.js">../../scripts/Draw/Text/Text.js</file>
     <file alias="scripts/Draw/Text/Text.svg">../../scripts/Draw/Text/Text.svg</file>
