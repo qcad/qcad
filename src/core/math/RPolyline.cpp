@@ -1777,12 +1777,12 @@ bool RPolyline::scale(const RVector& scaleFactors, const RVector& center) {
     }
     for (int i=0; i<startWidths.size(); i++) {
         if (startWidths[i]>0.0) {
-            startWidths[i]*=scaleFactors.x;
+            startWidths[i]*=fabs(scaleFactors.x);
         }
     }
     for (int i=0; i<endWidths.size(); i++) {
         if (endWidths[i]>0.0) {
-            endWidths[i]*=scaleFactors.x;
+            endWidths[i]*=fabs(scaleFactors.x);
         }
     }
     // factor in x or in y is negative -> mirror:
