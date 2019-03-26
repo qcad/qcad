@@ -45,6 +45,7 @@ QString RTextRenderer::rxXAlignmentRight = "\\\\pxqr;";
 QString RTextRenderer::rxParagraphFeed = "\\\\P";
 QString RTextRenderer::rxXFeed = "\\\\X";
 QString RTextRenderer::rxHeightChange = "\\\\H(\\d*\\.?\\d+)(x?);";
+QString RTextRenderer::rxUnderlineChange = "\\\\L|\\\\l";
 //QString RTextRenderer::rxRelativeHeightChange = "";
 QString RTextRenderer::rxStackedText = "\\\\S([^^]*)\\^([^;]*);";
 QString RTextRenderer::rxColorChangeIndex = "\\\\C(\\d+);";
@@ -81,7 +82,8 @@ QString RTextRenderer::rxPlusMinus = "%%[pP]";
 QString RTextRenderer::escPlusMinus = "%%p";
 QString RTextRenderer::rxDiameter = "%%[cC]";
 QString RTextRenderer::escDiameter = "%%c";
-QString RTextRenderer::rxUnderlined = "%%[uU]";
+QString RTextRenderer::rxUnderline = "%%[uU]";
+QString RTextRenderer::escUnderline = "%%u";
 QString RTextRenderer::rxUnicode = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 
 QString RTextRenderer::rxAll = "("
@@ -119,7 +121,7 @@ QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxDegree + "|"
     + RTextRenderer::rxPlusMinus + "|"
     + RTextRenderer::rxDiameter + "|"
-    + RTextRenderer::rxUnderlined + "|"
+    + RTextRenderer::rxUnderline + "|"
     + RTextRenderer::rxUnicode
     + ")";
 
@@ -163,6 +165,7 @@ void RTextRenderer::renderSimple() {
     QString fontFile = textData.getFontFile();
     bool bold = textData.isBold();
     bool italic = textData.isItalic();
+    bool underline = false;
     double angle = textData.getAngle();
 
     // degree:
@@ -172,7 +175,7 @@ void RTextRenderer::renderSimple() {
     // diameter:
     text.replace(QRegExp(RTextRenderer::rxDiameter), RTextRenderer::chDiameter);
     // underlined:
-    //text.replace(QRegExp(RTextRenderer::rxUnderlined), "");
+    //text.replace(QRegExp(RTextRenderer::rxUnderline), "");
     // unicode:
     text = RDxfServices::parseUnicode(text);
 //    QRegExp reg;
@@ -215,6 +218,7 @@ void RTextRenderer::renderSimple() {
     blockFontFile.push(fontFile);
     blockBold.push(bold);
     blockItalic.push(italic);
+    blockUnderline.push(underline);
     useCadFont.push(RFontList::isCadFont(getBlockFont(), getBlockFontFile()));
     openTags.push(QStringList());
 
@@ -227,8 +231,8 @@ void RTextRenderer::renderSimple() {
     {
         // handle underlining formats:
         bool found = true;
-        QList<int> underlinedOnOff;
-        QRegExp rx(RTextRenderer::rxUnderlined);
+        QList<int> underlineOnOff;
+        QRegExp rx(RTextRenderer::rxUnderline);
         while (found) {
             found = false;
             int i = rx.indexIn(text);
@@ -236,7 +240,7 @@ void RTextRenderer::renderSimple() {
 
             if (i!=-1) {
                 found = true;
-                underlinedOnOff.append(i);
+                underlineOnOff.append(i);
                 text.replace(i, len, "");
             }
         }
@@ -244,10 +248,10 @@ void RTextRenderer::renderSimple() {
         int maxI = text.length()-1;
         QTextCharFormat fUnderlined;
         fUnderlined.setUnderlineStyle(QTextCharFormat::SingleUnderline);
-        for (int i=0; i<underlinedOnOff.length(); i+=2) {
+        for (int i=0; i<underlineOnOff.length(); i+=2) {
             QTextLayout::FormatRange fr;
-            fr.start = underlinedOnOff[i];
-            int end = i+1<underlinedOnOff.length() ? underlinedOnOff[i+1] : maxI + 1;
+            fr.start = underlineOnOff[i];
+            int end = i+1<underlineOnOff.length() ? underlineOnOff[i+1] : maxI + 1;
             fr.length = end - fr.start;
             fr.format = fUnderlined;
             formats.append(fr);
@@ -417,6 +421,7 @@ void RTextRenderer::render() {
     QString fontFile = textData.getFontFile();
     bool bold = textData.isBold();
     bool italic = textData.isItalic();
+    bool underline = false;
     double angle = textData.getAngle();
     //RColor color = textData.getColor(true);
 
@@ -479,6 +484,7 @@ void RTextRenderer::render() {
     blockFontFile.push(fontFile);
     blockBold.push(bold);
     blockItalic.push(italic);
+    blockUnderline.push(underline);
     useCadFont.push(RFontList::isCadFont(fontName, fontFile));
     openTags.push(QStringList());
 
@@ -500,7 +506,7 @@ void RTextRenderer::render() {
 //        qDebug() << "block: " << i;
 //        qDebug() << "  literal: " << literal;
 //        qDebug() << "  literal length: " << literal.length();
-//        qDebug() << "  formatting: " << formatting;
+//        qDebug() << "  formatting _after_ text block: " << formatting;
 //        qDebug() << "  font: " << blockFont.top();
 //        qDebug() << "  height: " << blockHeight.top();
 //        qDebug() << "  cad font: " << useCadFont.top();
@@ -529,6 +535,7 @@ void RTextRenderer::render() {
         bool heightChange = false;
         bool stackedText = false;
         bool fontChange = false;
+        bool underlineChange = false;
         bool colorChange = false;
         bool blockEnd = false;
 
@@ -536,6 +543,7 @@ void RTextRenderer::render() {
         if (!formatting.isEmpty()) {
             fontChange = QRegExp(rxFontChangeTtf).exactMatch(formatting) ||
                 QRegExp(rxFontChangeCad).exactMatch(formatting);
+            underlineChange = QRegExp(rxUnderlineChange).exactMatch(formatting);
             colorChange = QRegExp(rxColorChangeCustom).exactMatch(formatting) ||
                 QRegExp(rxColorChangeIndex).exactMatch(formatting);
             heightChange = QRegExp(rxHeightChange).exactMatch(formatting);
@@ -564,7 +572,7 @@ void RTextRenderer::render() {
         // reached a new text block that needs to be rendered separately
         // due to line feed, height change, font change, ...:
         if (target==RichText ||
-            lineFeed || paragraphFeed || xFeed || heightChange || stackedText ||
+            lineFeed || paragraphFeed || xFeed || heightChange || underlineChange || stackedText ||
             fontChange || colorChange || end
             || (blockEnd && blockChangedHeightOrFont)) {
 
@@ -1002,8 +1010,46 @@ void RTextRenderer::render() {
         }
 
         // underlined:
-        reg.setPattern(rxUnderlined);
+        reg.setPattern(rxUnderline);
         if (reg.exactMatch(formatting)) {
+            if (target==RichText) {
+                if (!underline) {
+                    richText += QString("<span style=\"text-decoration:underline;\">");
+                    openTags.top().append("span");
+                    underline = true;
+                }
+                else {
+                    richText += QString("<span style=\"text-decoration:none;\">");
+                    openTags.top().append("span");
+                    underline = false;
+                }
+            }
+            continue;
+        }
+
+        // underline on:
+        reg.setPattern(rxUnderlineOn);
+        if (reg.exactMatch(formatting)) {
+            setBlockUnderline(true);
+
+            if (target==RichText) {
+                richText += QString("<span style=\"text-decoration:underline;\">");
+                openTags.top().append("span");
+                underline = true;
+            }
+            continue;
+        }
+
+        // underline off:
+        reg.setPattern(rxUnderlineOff);
+        if (reg.exactMatch(formatting)) {
+            setBlockUnderline(false);
+
+            if (target==RichText) {
+                richText += QString("<span style=\"text-decoration:none;\">");
+                openTags.top().append("span");
+                underline = false;
+            }
             continue;
         }
 
@@ -1117,6 +1163,7 @@ void RTextRenderer::render() {
             blockFont.push(getBlockFont());
             blockBold.push(getBlockBold());
             blockItalic.push(getBlockItalic());
+            blockUnderline.push(getBlockUnderline());
             blockHeight.push(getBlockHeight());
             useCadFont.push(getUseCadFont());
             if (target==RichText) {
@@ -1144,6 +1191,9 @@ void RTextRenderer::render() {
             }
             if (!blockItalic.isEmpty()) {
                 blockItalic.pop();
+            }
+            if (!blockUnderline.isEmpty()) {
+                blockUnderline.pop();
             }
             if (!blockHeight.isEmpty()) {
                 blockHeight.pop();
@@ -1382,6 +1432,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     font.setPointSizeF(100.0);
     font.setBold(getBlockBold());
     font.setItalic(getBlockItalic());
+    font.setUnderline(getBlockUnderline());
 
     // bounding boxes for 1.0 height font:
     QRectF boxA = getCharacterRect(font, 'A');
@@ -1417,7 +1468,11 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
 
     layout->setFont(font);
     layout->setText(blockText);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+    layout->setFormats(formats.toVector());
+#else
     layout->setAdditionalFormats(formats);
+#endif
 
     layout->beginLayout();
     QTextLine line = layout->createLine();
@@ -1536,7 +1591,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
             isSpace = true;
         }
 
-        // handle color and other formats
+        // handle color and other format changes within the same block:
         for (int fi=0; fi<formats.size(); ++fi) {
             QTextLayout::FormatRange format = formats.at(fi);
 
@@ -1581,6 +1636,14 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
 
     //qDebug() << "indexToCursor: " << indexToCursorStart;
 
+    // whole block is underlined:
+    if (getBlockUnderline()) {
+        underlinedIndices.clear();
+        for (int i=0; i<blockText.length(); i++) {
+            underlinedIndices.append(i);
+        }
+    }
+
     if (!underlinedIndices.isEmpty()) {
         underlinedIndices.append(-1);
     }
@@ -1601,6 +1664,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
                 RPainterPath path;
                 path.moveTo(line.getStartPoint());
                 path.lineTo(line.getEndPoint());
+                path.addOriginalShape(QSharedPointer<RShape>(line.clone()));
                 preparePathTransform(path, 0.0, 1.0);
                 ppBlock.addPath(path);
                 line = RLine();
@@ -1630,7 +1694,9 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     // add text layout with paths to indicate we have to use painter paths for this text block:
     lineBlockTransforms.append(QTransform());
     RTextLayout tl(ret, currentColor);
-    tl.layout = QSharedPointer<QTextLayout>(new QTextLayout(blockText, QFont(getBlockFont())));
+    QFont font1 = getBlockFont();
+    font1.setUnderline(getBlockUnderline());
+    tl.layout = QSharedPointer<QTextLayout>(new QTextLayout(blockText, font1));
     tl.height = getBlockHeight();
     textLayouts.append(tl);
 
@@ -1682,6 +1748,7 @@ QRectF RTextRenderer::getCharacterRect(const QString& fontName, const QChar& ch)
 QRectF RTextRenderer::getCharacterRect(const QFont& font, const QChar& ch) const {
     QFont font1(font);
     font1.setPointSizeF(100.0);
+    font1.setUnderline(false);
 
     QTextLayout layout;
     layout.setFont(font1);

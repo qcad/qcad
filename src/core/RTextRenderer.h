@@ -189,6 +189,19 @@ private:
         return false;
     }
 
+    void setBlockUnderline(bool on) {
+        if (!blockUnderline.isEmpty()) {
+            blockUnderline.top() = on;
+        }
+    }
+
+    bool getBlockUnderline() const {
+        if (!blockUnderline.isEmpty()) {
+            return blockUnderline.top();
+        }
+        return false;
+    }
+
     void setBlockHeight(double h) {
         if (!blockHeight.isEmpty()) {
             blockHeight.top() = h;
@@ -226,6 +239,7 @@ public:
     static QString rxParagraphFeed;
     static QString rxXFeed;
     static QString rxHeightChange;
+    static QString rxUnderlineChange;
     //static QString rxRelativeHeightChange;
     static QString rxStackedText;
     static QString rxColorChangeIndex;
@@ -254,7 +268,8 @@ public:
     static QString escPlusMinus;
     static QString rxDiameter;
     static QString escDiameter;
-    static QString rxUnderlined;
+    static QString rxUnderline;
+    static QString escUnderline;
     static QString rxUnicode;
 
     static QString rxAll;
@@ -290,6 +305,7 @@ private:
     QStack<QString> blockFontFile;
     QStack<bool> blockBold;
     QStack<bool> blockItalic;
+    QStack<bool> blockUnderline;
     QStack<QStringList> openTags;
 };
 
