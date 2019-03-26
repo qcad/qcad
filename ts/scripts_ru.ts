@@ -1798,7 +1798,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Рисовать окружность, касающуюся двух объектов, через точку</translation>
+        <translation>Начертить окружность, касающуюся двух объектов, через точку</translation>
     </message>
 </context>
 <context>
@@ -1840,7 +1840,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to two entities with given radius</source>
-        <translation>Рисовать окружность, касающуюся двух объектов, с заданным радиусом</translation>
+        <translation>Начертить окружность, касающуюся двух объектов, с заданным радиусом</translation>
     </message>
 </context>
 <context>
@@ -1868,7 +1868,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw circle from 3 points</source>
-        <translation>Рисование окружности по 3-м точкам</translation>
+        <translation>Начертить окружность по 3-м точкам</translation>
     </message>
 </context>
 <context>
@@ -1907,7 +1907,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to three entities</source>
-        <translation>Рисовать окружность, касающуюся трёх объектов</translation>
+        <translation>Начертить окружность, касающуюся трёх объектов</translation>
     </message>
 </context>
 <context>
@@ -1937,7 +1937,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and diameter</source>
-        <translation>Рисование окружности из центра по заданному диаметру</translation>
+        <translation>Начертить окружность из центра по заданному диаметру</translation>
     </message>
 </context>
 <context>
@@ -1960,7 +1960,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation>Рисование окружности по центру и точке на окружности</translation>
+        <translation>Начертить окружность по центру и точке на окружности</translation>
     </message>
 </context>
 <context>
@@ -1990,7 +1990,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle from center and radius</source>
-        <translation>Рисование окружности по центру и радиусу</translation>
+        <translation>Начертить окружность по центру и радиусу</translation>
     </message>
 </context>
 <context>
@@ -2013,7 +2013,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw concentric circle</source>
-        <translation>Рисовать концентрическую окружность</translation>
+        <translation>Начертить концентрическую окружность</translation>
     </message>
 </context>
 <context>
@@ -2031,7 +2031,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle through point</source>
-        <translation>Рисовать концентрическую окружность через точку</translation>
+        <translation>Начертить концентрическую окружность через точку</translation>
     </message>
 </context>
 <context>
@@ -2070,7 +2070,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation>Рисовать окружность через две точки и касательную к одному объекту</translation>
+        <translation>Начертить окружность через две точки и касательную к одному объекту</translation>
     </message>
 </context>
 <context>
@@ -2088,7 +2088,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>Рисовать окружность, касающуюся объекта, через точку с заданным радиусом</translation>
+        <translation>Начертить окружность, касающуюся объекта, через точку с заданным радиусом</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
@@ -2523,7 +2523,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation>Нарисовать осевой крест в дугах, окружностях или эллипсах</translation>
+        <translation>Начертить осевой крест в дугах, окружностях или эллипсах</translation>
     </message>
 </context>
 <context>
@@ -2814,7 +2814,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+4"/>
         <source>Draw aligned dimension</source>
-        <translation>Рисовать выровненный размер</translation>
+        <translation>Начертить выровненный размер</translation>
     </message>
 </context>
 <context>
@@ -2842,7 +2842,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw angular dimension</source>
-        <translation>Рисовать угловой размер</translation>
+        <translation>Начертить угловой размер</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -2870,7 +2870,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation>Рисовать диаметральный размер</translation>
+        <translation>Начертить диаметральный размер</translation>
     </message>
 </context>
 <context>
@@ -2883,7 +2883,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw horizontal dimension</source>
-        <translation>Рисовать горизонтальный размер</translation>
+        <translation>Начертить горизонтальный размер</translation>
     </message>
 </context>
 <context>
@@ -2906,7 +2906,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation>Рисовать размер ординаты</translation>
+        <translation>Начертить размер ординаты</translation>
     </message>
 </context>
 <context>
@@ -2929,7 +2929,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw radial dimension</source>
-        <translation>Рисовать радиальный размер</translation>
+        <translation>Начертить радиальный размер</translation>
     </message>
 </context>
 <context>
@@ -2986,7 +2986,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation>Рисовать линейный размер при фиксированном угле</translation>
+        <translation>Начертить линейный размер при фиксированном угле</translation>
     </message>
 </context>
 <context>
@@ -2999,7 +2999,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+5"/>
         <source>Draw vertical dimension</source>
-        <translation>Рисовать вертикальный размер</translation>
+        <translation>Начертить вертикальный размер</translation>
     </message>
 </context>
 <context>
@@ -3404,12 +3404,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation>Рисовать</translation>
+        <translation>Начертить</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Рисовать</translation>
+        <translation>&amp;Начертить</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -3506,7 +3506,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation>&amp;Нарисовать габаритный прямоугольник</translation>
+        <translation>&amp;Начертить габаритный прямоугольник</translation>
     </message>
 </context>
 <context>
@@ -3514,7 +3514,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Черчение</translation>
+        <translation>&amp;Начертить</translation>
     </message>
 </context>
 <context>
@@ -3620,12 +3620,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation>&amp;Рисовать ломаную</translation>
+        <translation>&amp;Начертить ломаную</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation>Рисовать ломаную по линии и сегментам дуги</translation>
+        <translation>Начертить ломаную по линии и сегментам дуги</translation>
     </message>
 </context>
 <context>
@@ -4023,7 +4023,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation>Рисовать дугу эллипса по центру, основной точке, отношению и углам</translation>
+        <translation>Начертить дугу эллипса по центру, основной точке, отношению и углам</translation>
     </message>
 </context>
 <context>
@@ -4040,7 +4040,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation>Рисовать полный эллипс по центру, основной точке и отношению</translation>
+        <translation>Начертить полный эллипс по центру, основной точке и отношению</translation>
     </message>
 </context>
 <context>
@@ -4076,7 +4076,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation>Рисовать эллипс с позицией и диаметрами</translation>
+        <translation>Начертить эллипс с позицией и диаметрами</translation>
     </message>
 </context>
 <context>
@@ -4109,7 +4109,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Рисовать эллипс, вписанный в четырёхугольник</translation>
+        <translation>Начертить эллипс, вписанный в четырёхугольник</translation>
     </message>
 </context>
 <context>
@@ -4132,7 +4132,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation>Рисовать параллельную кривую к эллипсу</translation>
+        <translation>Начертить параллельную кривую к эллипсу</translation>
     </message>
 </context>
 <context>
@@ -4150,7 +4150,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation>Рисовать параллельную кривую до эллипса через точку</translation>
+        <translation>Начертить параллельную кривую до эллипса через точку</translation>
     </message>
 </context>
 <context>
@@ -4186,7 +4186,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and radii</source>
-        <translation>Рисовать эллипс с позицией и радиусами</translation>
+        <translation>Начертить эллипс с позицией и радиусами</translation>
     </message>
 </context>
 <context>
@@ -4257,7 +4257,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation>&amp;Цвета рисования</translation>
+        <translation>&amp;Цвета черчения</translation>
     </message>
 </context>
 <context>
@@ -4331,7 +4331,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation>Нарисовать ласточкин хвост</translation>
+        <translation>Начертить ласточкин хвост</translation>
     </message>
 </context>
 <context>
@@ -4497,7 +4497,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Draw text</source>
-        <translation>Нарисованный текст</translation>
+        <translation>Начерченный текст</translation>
     </message>
 </context>
 <context>
@@ -4515,7 +4515,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw three points</source>
-        <translation>Нарисовать три точки</translation>
+        <translation>Начертить три точки</translation>
     </message>
 </context>
 <context>
@@ -4827,7 +4827,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Нарисовать клейкий круг</translation>
+        <translation>Начертить клейкий круг</translation>
     </message>
 </context>
 <context>
@@ -6836,7 +6836,7 @@ is already in the list.</source>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Рисовать полку-выноску (линию, чередующаяся стрелкой)</translation>
+        <translation>Начертить полку-выноску (линию, чередующаяся стрелкой)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -7300,7 +7300,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
-        <translation>Рисовать простую линию или последовательность линий</translation>
+        <translation>Начертить простую линию или последовательность линий</translation>
     </message>
 </context>
 <context>
@@ -7353,7 +7353,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
-        <translation>Рисование линии по заданному абсолютному углу</translation>
+        <translation>Начертить линию по заданному абсолютному углу</translation>
     </message>
 </context>
 <context>
@@ -7391,7 +7391,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>Рисовать угловую биссектрису, трисектрису, ...</translation>
+        <translation>Начертить угловую биссектрису, трисектрису, ...</translation>
     </message>
 </context>
 <context>
@@ -7458,7 +7458,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation>Нарисовать короб, объединяющий указатели, слоты и шипы</translation>
+        <translation>Начертить короб, объединяющий указатели, слоты и шипы</translation>
     </message>
 </context>
 <context>
@@ -7483,7 +7483,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation>Нарисовать ласточкин хвост</translation>
+        <translation>Начертить ласточкин хвост</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
@@ -7541,7 +7541,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
-        <translation>Рисовать произвольный контур</translation>
+        <translation>Начертить произвольный контур</translation>
     </message>
 </context>
 <context>
@@ -7579,7 +7579,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw horizontal line</source>
-        <translation>Рисовать горизонтальную линию</translation>
+        <translation>Начертить горизонтальную линию</translation>
     </message>
 </context>
 <context>
@@ -7617,7 +7617,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation>Рисовать линию, ортогональную базовому объекту</translation>
+        <translation>Начертить линию, ортогональную базовому объекту</translation>
     </message>
 </context>
 <context>
@@ -7645,7 +7645,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation>Рисовать линию, ортогональную к линии и касательную к окружности, дуге или эллипсу</translation>
+        <translation>Начертить линию, ортогональную к линии и касательную к окружности, дуге или эллипсу</translation>
     </message>
 </context>
 <context>
@@ -7668,7 +7668,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation>Рисовать параллельно к существующей линии, концентрической дуге, окружности</translation>
+        <translation>Начертить параллельно к существующей линии, концентрической дуге, окружности</translation>
     </message>
 </context>
 <context>
@@ -7686,7 +7686,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation>Рисовать параллельную линию или концентрическую дугу или окружность через данную точку</translation>
+        <translation>Начертить параллельную линию или концентрическую дугу или окружность через данную точку</translation>
     </message>
 </context>
 <context>
@@ -7798,7 +7798,7 @@ shown in search results:</source>
         <location line="+25"/>
         <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation>Нельзя нарисовать касательную от точки изнутри окружности к окружности</translation>
+        <translation>Нельзя начертить касательную от точки изнутри окружности к окружности</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
@@ -7808,7 +7808,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
-        <translation>Рисовать касательную (точка, окружность)</translation>
+        <translation>Начертить касательную (точка, окружность)</translation>
     </message>
 </context>
 <context>
@@ -7836,7 +7836,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation>Рисовать касательную (окружность, окружность)</translation>
+        <translation>Начертить касательную (окружность, окружность)</translation>
     </message>
 </context>
 <context>
@@ -7849,7 +7849,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw vertical line</source>
-        <translation>Рисовать вертикальную линию</translation>
+        <translation>Начертить вертикальную линию</translation>
     </message>
 </context>
 <context>
@@ -8103,7 +8103,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation>&amp;Черчение</translation>
+        <translation>&amp;Начертить</translation>
     </message>
 </context>
 <context>
@@ -8770,7 +8770,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
-        <translation>Рисовать одиночную точку</translation>
+        <translation>Начертить одиночную точку</translation>
     </message>
 </context>
 <context>
@@ -10530,7 +10530,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and middle point of side</source>
-        <translation>Рисовать правильный многоугольник по центру и средней точке стороны</translation>
+        <translation>Начертить правильный многоугольник по центру и средней точке стороны</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -10573,7 +10573,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation>Рисовать правильный многоугольник из средних точек двух противоположных сторон или двух противоположных углов</translation>
+        <translation>Начертить правильный многоугольник из средних точек двух противоположных сторон или двух противоположных углов</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
@@ -10616,7 +10616,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Рисовать правильный многоугольник по центру и угловой точке</translation>
+        <translation>Начертить правильный многоугольник по центру и угловой точке</translation>
     </message>
 </context>
 <context>
@@ -10649,7 +10649,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation>Рисовать правильный многоугольник из конечных точек одной из сторон</translation>
+        <translation>Начертить правильный многоугольник из конечных точек одной из сторон</translation>
     </message>
 </context>
 <context>
@@ -10662,7 +10662,7 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translation>Рисовать прямоугольник по двум углам</translation>
+        <translation>Начертить прямоугольник по двум углам</translation>
     </message>
 </context>
 <context>
@@ -10675,7 +10675,7 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
-        <translation>Рисовать прямоугольник в заданной позиции и заданным размером</translation>
+        <translation>Начертить прямоугольник в заданной позиции и заданным размером</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
@@ -11139,7 +11139,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
-        <translation>Рисовать сплайн из контрольных точек</translation>
+        <translation>Начертить сплайн из контрольных точек</translation>
     </message>
 </context>
 <context>
@@ -11369,7 +11369,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw text</source>
-        <translation>Рисовать текст</translation>
+        <translation>Начертить текст</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
@@ -11464,7 +11464,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw text along an entity</source>
-        <translation>Нарисовать текст вдоль объекта</translation>
+        <translation>Начертить текст вдоль объекта</translation>
     </message>
 </context>
 <context>
@@ -11819,7 +11819,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation>Рисовать</translation>
+        <translation>Начертить</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12748,7 +12748,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw horizontal construction line</source>
-        <translation>Нарисовать горизонтальную линию конструкции</translation>
+        <translation>Начертить горизонтальную линию конструкции</translation>
     </message>
 </context>
 <context>
@@ -12761,7 +12761,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Draw vertical construction line</source>
-        <translation>Нарисовать вертикальную линию конструкции</translation>
+        <translation>Начертить вертикальную линию конструкции</translation>
     </message>
 </context>
 <context>
