@@ -581,7 +581,7 @@ QList<RTextBasedData> RTextBasedData::getSimpleTextBlocks() {
  * \param fontHeightFactor factor applied to all font heights. This allows
  *      the text edit to use a bigger / smaller font that needed in the end.
  */
-QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const RColor& initialColor, double fontHeightFactor) {
+QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const RColor& initialColor, double fontHeightFactor, bool simpleText) {
     QString ret = "";
 
     QString fontFamily = textDocument.defaultFont().family();
