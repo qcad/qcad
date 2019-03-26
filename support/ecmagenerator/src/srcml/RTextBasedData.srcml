@@ -352,7 +352,7 @@
         <return>return <expr><name>textProxy</name></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>static</name> <name>QString</name></type> <name>toEscapedText</name><parameter_list>(<param><decl><type><name>const</name> <name>QTextDocument</name>&amp;</type> <name>textDocument</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>initialColor</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name>=<init><expr>1.0</expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>toEscapedText</name><parameter_list>(<param><decl><type><name>const</name> <name>QTextDocument</name>&amp;</type> <name>textDocument</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>initialColor</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name>=<init><expr>1.0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>simpleText</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>toRichText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>escapedText</name></decl></param>, <param><decl><type><name>const</name> <name>QFont</name>&amp;</type> <name>mainFont</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name>=<init><expr>1.0</expr></init></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:

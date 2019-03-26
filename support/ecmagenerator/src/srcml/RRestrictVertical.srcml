@@ -38,7 +38,7 @@
 </private><public>public:
     <constructor><name>RRestrictVertical</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>
         <member_list>: <call><name>RRestrictOrthogonal</name><argument_list>(<argument><expr><name>documentInterface</name></expr></argument>)</argument_list></call> </member_list><block>{
-        <expr_stmt><expr><name>mode</name> = <name>Vertical</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>mode</name> = <name><name>RS</name>::<name>OrthoVertical</name></name></expr>;</expr_stmt>
     }</block></constructor>
     <destructor><specifier>virtual</specifier> <name>~RRestrictVertical</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 

@@ -74,6 +74,9 @@
 
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getInfoText</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isIsometric</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
     <function><type><name>virtual</name> <name><name>RS</name>::<name>IsoProjectionType</name></name></type> <name>getProjection</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name><name>RS</name>::<name>NoProjection</name></name></expr>;</return>
     }</block></function>

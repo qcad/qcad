@@ -190,6 +190,19 @@
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setBlockUnderline</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>blockUnderline</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>blockUnderline</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>on</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getBlockUnderline</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr>!<name>blockUnderline</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>blockUnderline</name>.<call><name>top</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setBlockHeight</name><parameter_list>(<param><decl><type><name>double</name></type> <name>h</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr>!<name>blockHeight</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
             <expr_stmt><expr><name>blockHeight</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>h</name></expr>;</expr_stmt>
@@ -256,6 +269,7 @@
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxDiameter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>escDiameter</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxUnderlined</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>escUnderlined</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxUnicode</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxAll</name></decl>;</decl_stmt>
@@ -291,6 +305,7 @@
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>blockFontFile</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>blockBold</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>blockItalic</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>blockUnderline</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QStringList</name></argument>&gt;</argument_list></name></type> <name>openTags</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 

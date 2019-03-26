@@ -66,7 +66,7 @@
     <comment type="line">// any angle.</comment>
     <comment type="line">//void updateGrid(REntity&amp; entity);</comment>
 
-    <function_decl><type><name>bool</name></type> <name>isIsometric</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isIsometric</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setIsometric</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>IsoProjectionType</name></name></type> <name>getProjection</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

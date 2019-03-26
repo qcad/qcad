@@ -588,6 +588,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double"
         name="fontHeightFactor" hasDefault="true" default="1.0"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="simpleText"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="toRichText" cppName="toRichText"
