@@ -107,6 +107,13 @@ public:
         return layout->font().italic();
     }
 
+    bool isUnderline() const {
+        if (layout.isNull()) {
+            return false;
+        }
+        return layout->font().underline();
+    }
+
 //    RVector getPosition() const {
 //        return position;
 //    }
