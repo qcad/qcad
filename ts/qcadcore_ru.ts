@@ -401,7 +401,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translation>Порядок отрисовки</translation>
+        <translation>Порядок черчения</translation>
     </message>
     <message>
         <location line="+2"/>
