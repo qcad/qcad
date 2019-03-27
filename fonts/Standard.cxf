@@ -7,6 +7,7 @@
 # LetterSpacing:     3
 # WordSpacing:       6.75
 # LineSpacingFactor: 1
+# AuxiliaryLines:    -3,0,4,6,9
 # Author:            Andrew Mustun
 
 [0021] !

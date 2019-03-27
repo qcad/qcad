@@ -7,6 +7,7 @@
 # LetterSpacing:     3
 # WordSpacing:       6.75
 # LineSpacingFactor: 1
+# AuxiliaryLines:    -3,0,4,6,9
 # Author:            Andrew Mustun (Latin1)
 # Author:            Eugene Osintsev <osgene@omskelecom.ru> (Cyrillic)
 # Author:            Yoshimune Kobayashi <cfg47520@syd.odn.ne.jp> (Japanese)
