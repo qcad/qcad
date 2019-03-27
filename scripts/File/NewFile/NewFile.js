@@ -519,6 +519,7 @@ NewFile.getDefaultAction = function(useGuiAction) {
     var defaultAction = undefined;
     if (typeof(global[defaultActionClass])!=="undefined") {
         defaultAction = new global[defaultActionClass](defaultGuiAction);
+        global[defaultActionClass].init();
     }
     return defaultAction;
 };
