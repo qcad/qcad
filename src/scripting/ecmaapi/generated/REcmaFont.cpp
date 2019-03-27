@@ -63,6 +63,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLineSpacingFactor, "getLineSpacingFactor");
             
+            REcmaHelper::registerFunction(&engine, proto, getAuxLinePositions, "getAuxLinePositions");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAuxLinePositionsString, "getAuxLinePositionsString");
+            
             REcmaHelper::registerFunction(&engine, proto, load, "load");
             
             REcmaHelper::registerFunction(&engine, proto, isLoaded, "isLoaded");
@@ -603,6 +607,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaFont::getLineSpacingFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFont::getAuxLinePositions
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFont::getAuxLinePositions", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFont::getAuxLinePositions";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFont* self = 
+                        getSelf("getAuxLinePositions", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getAuxLinePositions();
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getAuxLinePositions().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFont::getAuxLinePositions", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFont::getAuxLinePositionsString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFont::getAuxLinePositionsString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFont::getAuxLinePositionsString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFont* self = 
+                        getSelf("getAuxLinePositionsString", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getAuxLinePositionsString();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getAuxLinePositionsString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFont::getAuxLinePositionsString", context, engine);
             return result;
         }
          QScriptValue

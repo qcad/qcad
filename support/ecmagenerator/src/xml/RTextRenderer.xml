@@ -82,6 +82,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="rxHeightChange" type="QString" isConst="false"
     isStatic="true" />
+    <property name="rxUnderlineChange" type="QString"
+    isConst="false" isStatic="true" />
     <property name="rxStackedText" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxColorChangeIndex" type="QString"
@@ -136,9 +138,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="escDiameter" type="QString" isConst="false"
     isStatic="true" />
-    <property name="rxUnderlined" type="QString" isConst="false"
+    <property name="rxUnderline" type="QString" isConst="false"
     isStatic="true" />
-    <property name="escUnderlined" type="QString" isConst="false"
+    <property name="escUnderline" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxUnicode" type="QString" isConst="false"
     isStatic="true" />

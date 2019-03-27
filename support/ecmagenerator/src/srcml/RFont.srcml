@@ -23,9 +23,10 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QChar&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPainterPath&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
@@ -81,6 +82,18 @@
     <comment type="block">/** \return Default line spacing factor for this font */</comment>
     <function><type><name>double</name></type> <name>getLineSpacingFactor</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>lineSpacingFactor</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getAuxLinePositions</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>auxLinePositions</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getAuxLinePositionsString</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QString</name></type> <name>ret</name></decl>;</decl_stmt>
+        <for>for (<init><expr><type><name>int</name></type> <name>i</name>=<init><expr>0</expr></init></expr>;</init> <condition><expr><name>i</name>&lt;<name>auxLinePositions</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name>++</expr></incr>) <block>{
+            <expr_stmt><expr><name>ret</name> += <call><name>QString</name><argument_list>(<argument><expr>",%1"</expr></argument>)</argument_list></call>.<call><name>arg</name><argument_list>(<argument><expr><name><name>auxLinePositions</name><index>[<expr><name>i</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></for>
+        <return>return <expr><name>ret</name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>bool</name></type> <name>load</name><parameter_list>()</parameter_list>;</function_decl>
@@ -155,6 +168,9 @@
 
     <comment type="line">//! Default line spacing factor for this font</comment>
     <decl_stmt><decl><type><name>double</name></type> <name>lineSpacingFactor</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Aux line positions for CXF editing</comment>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>auxLinePositions</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RFont</argument>)</argument_list></macro>

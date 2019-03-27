@@ -70,6 +70,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isItalic, "isItalic");
             
+            REcmaHelper::registerFunction(&engine, proto, isUnderline, "isUnderline");
+            
             REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
@@ -726,6 +728,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextLayout::isItalic", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextLayout::isUnderline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextLayout::isUnderline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextLayout::isUnderline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextLayout* self = 
+                        getSelf("isUnderline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isUnderline();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextLayout.isUnderline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextLayout::isUnderline", context, engine);
             return result;
         }
          QScriptValue

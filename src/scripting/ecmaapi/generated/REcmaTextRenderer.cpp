@@ -116,6 +116,10 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxHeightChange),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxUnderlineChange",
+                qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineChange),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxStackedText",
                 qScriptValueFromValue(&engine, RTextRenderer::rxStackedText),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

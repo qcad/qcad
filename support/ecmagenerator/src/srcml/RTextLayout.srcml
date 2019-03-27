@@ -108,6 +108,13 @@
         <return>return <expr><name>layout</name>-&gt;<call><name>font</name><argument_list>()</argument_list></call>.<call><name>italic</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isUnderline</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><name>layout</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>layout</name>-&gt;<call><name>font</name><argument_list>()</argument_list></call>.<call><name>underline</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
 <comment type="line">//    RVector getPosition() const {</comment>
 <comment type="line">//        return position;</comment>
 <comment type="line">//    }</comment>

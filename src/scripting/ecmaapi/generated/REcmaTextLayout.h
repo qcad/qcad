@@ -76,6 +76,9 @@
         isItalic
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isUnderline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
