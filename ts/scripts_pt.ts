@@ -13333,7 +13333,7 @@ A&amp;rredonde</translatorcomment>
     <message>
         <location line="+25"/>
         <source>Saved file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arquivo salvo:</translation>
     </message>
     <message>
         <source>Saved drawing:</source>
@@ -15730,7 +15730,7 @@ Co&amp;lar</translatorcomment>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sublinhado</translation>
     </message>
     <message>
         <location line="+9"/>
