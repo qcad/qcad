@@ -195,10 +195,24 @@ QSet<REntity::Id> RMemoryStorage::queryAllVisibleEntities() {
 
 QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) {
     QSet<REntity::Id> result;
-    result.reserve(entityMap.count());
-    RBlock::Id currentBlock = getCurrentBlockId();
+
+    QHash<REntity::Id, QSharedPointer<REntity> >* map;
+    if (allBlocks) {
+        map = &entityMap;
+    }
+    else {
+        RBlock::Id currentBlockId = getCurrentBlockId();
+        if (blockEntityMap.contains(currentBlockId)) {
+            map = &blockEntityMap[currentBlockId];
+        }
+        else {
+            return result;
+        }
+    }
+
+    result.reserve(map->count());
     QHash<REntity::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+    for (it = map->begin(); it != map->end(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (e.isNull()) {
             continue;
@@ -206,14 +220,15 @@ QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks, 
         if (!undone && e->isUndone()) {
             continue;
         }
-        if (!allBlocks && e->getBlockId() != currentBlock) {
-            continue;
-        }
+//        if (!allBlocks && e->getBlockId() != currentBlock) {
+//            continue;
+//        }
         if (type!=RS::EntityAll && e->getType()!=type) {
             continue;
         }
         result.insert(e->getId());
     }
+
     return result;
 }
 
@@ -340,11 +355,19 @@ QSet<RLinetype::Id> RMemoryStorage::queryAllLinetypes() {
 }
 
 QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
-    RBlock::Id currentBlockId = getCurrentBlockId();
-
     QSet<REntity::Id> result;
+
+    RBlock::Id currentBlockId = getCurrentBlockId();
+    QHash<REntity::Id, QSharedPointer<REntity> >* map;
+    if (blockEntityMap.contains(currentBlockId)) {
+        map = &blockEntityMap[currentBlockId];
+    }
+    else {
+        return result;
+    }
+
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+    for (it = map->begin(); it != map->end(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (e.isNull()) {
             continue;
@@ -358,13 +381,14 @@ QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
             continue;
         }
 
-        if (e->getBlockId() != currentBlockId) {
-            continue;
-        }
+//        if (e->getBlockId() != currentBlockId) {
+//            continue;
+//        }
 
         result.insert(e->getId());
 
     }
+
     return result;
 }
 
@@ -1124,6 +1148,15 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
     }
 
     RBlock::Id currentBlockId = getCurrentBlockId();
+    //const QHash<REntity::Id, QSharedPointer<REntity> >* map;
+    if (!blockEntityMap.contains(currentBlockId)) {
+        return RBox();
+        //QHash<REntity::Id, QSharedPointer<REntity> > m = blockEntityMap[currentBlockId];
+        //map = &blockEntityMap.value(currentBlockId);
+    }
+    //else {
+    //}
+
     boundingBox[0][0] = RBox();
     boundingBox[0][1] = RBox();
     boundingBox[1][0] = RBox();
@@ -1131,7 +1164,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
     maxLineweight = RLineweight::Weight000;
 
     QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
-    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
+    for (it = blockEntityMap[currentBlockId].constBegin(); it != blockEntityMap[currentBlockId].constEnd(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (e.isNull() || e->isUndone()) {
             continue;
@@ -1146,7 +1179,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
 //            }
         //}
 
-        if (e->getBlockId() == currentBlockId) {
+        //if (e->getBlockId() == currentBlockId) {
             //bb.growToInclude(e->getBoundingBox(ignoreEmpty));
 
             RBox bb = e->getBoundingBox(false);
@@ -1162,7 +1195,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
                 boundingBox[1][0].growToInclude(bb);
                 boundingBox[1][1].growToInclude(bbIgnoreEmpty);
             }
-        }
+        //}
 
         // don't resolve block references, if line weight is ByBlock,
         // the maxLinewidth will be adjusted when the block reference
