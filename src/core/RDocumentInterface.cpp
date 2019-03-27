@@ -2237,7 +2237,8 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
 
         QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
         if (!block.isNull()) {
-            if (block->getId()!=document.getModelSpaceBlockId()) {
+            //if (block->getId()!=document.getModelSpaceBlockId()) {
+            if (block->getId()!=document.getCurrentBlockId()) {
                 blockHasChanged = true;
                 //document.queryBlockReferences(block->getId());
             }
