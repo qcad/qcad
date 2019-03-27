@@ -11412,7 +11412,7 @@ shown in search results:</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Underline</translation>
     </message>
     <message>
         <location line="+9"/>
