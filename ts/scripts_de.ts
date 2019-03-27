@@ -13961,7 +13961,7 @@ SelectionMode</translatorcomment>
     <message>
         <location line="+26"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
         <location line="+472"/>

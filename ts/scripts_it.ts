@@ -11459,7 +11459,7 @@ Seconda entità non può essere tagliato.</translatorcomment>
     <message>
         <location line="+25"/>
         <source>Saved file:</source>
-        <translation type="unfinished"></translation>
+        <translation>File salvato:</translation>
     </message>
     <message>
         <source>Saved drawing:</source>
@@ -13616,7 +13616,7 @@ Tutti i file</translatorcomment>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sottolineare</translation>
     </message>
     <message>
         <location line="+9"/>
