@@ -177,6 +177,15 @@ bool RFont::load() {
             } else if (identifier.toLower()=="encoding") {
                 ts.setCodec(QTextCodec::codecForName(value.toUtf8()));
                 encoding = value;
+            } else if (identifier.toLower()=="auxiliarylines") {
+                QStringList strs = value.split(",");
+                for (int i=0; i<strs.length(); i++) {
+                    bool ok;
+                    double v = strs[i].toDouble(&ok);
+                    if (ok) {
+                        auxLinePositions.append(v);
+                    }
+                }
             }
         }
 
@@ -217,7 +226,7 @@ bool RFont::load() {
                 line = ts.readLine();
 
                 if (!line.isEmpty()) {
-                    QRegExp rx("(L|A|AR|PL|PLC) ([0-9,+-\.]*)");
+                    QRegExp rx("(L|A|AR|PL|PLC) ([0-9,+-\\.]*)");
                     if (rx.indexIn(line)==-1) {
                         continue;
                     }

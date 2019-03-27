@@ -22,9 +22,10 @@
 
 #include "core_global.h"
 
-#include <QMetaType>
 #include <QChar>
+#include <QList>
 #include <QMap>
+#include <QMetaType>
 #include <QPainterPath>
 #include <QString>
 #include <QStringList>
@@ -80,6 +81,18 @@ public:
     /** \return Default line spacing factor for this font */
     double getLineSpacingFactor() const {
         return lineSpacingFactor;
+    }
+
+    QList<double> getAuxLinePositions() const {
+        return auxLinePositions;
+    }
+
+    QString getAuxLinePositionsString() const {
+        QStringList ret;
+        for (int i=0; i<auxLinePositions.length(); i++) {
+            ret.append(QString("%1").arg(auxLinePositions[i]));
+        }
+        return ret.join(",");
     }
 
     bool load();
@@ -154,6 +167,9 @@ private:
 
     //! Default line spacing factor for this font
     double lineSpacingFactor;
+
+    //! Aux line positions for CXF editing
+    QList<double> auxLinePositions;
 };
 
 Q_DECLARE_METATYPE(RFont)
