@@ -226,7 +226,7 @@ bool RFont::load() {
                 line = ts.readLine();
 
                 if (!line.isEmpty()) {
-                    QRegExp rx("(L|A|AR|PL|PLC) ([0-9,+-\\.]*)");
+                    QRegExp rx("(L|A|AR|PL|PLC) ([0-9,+-\\.e]*)");
                     if (rx.indexIn(line)==-1) {
                         continue;
                     }
