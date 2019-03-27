@@ -6,6 +6,7 @@
 # LetterSpacing:     3
 # WordSpacing:       6.75
 # LineSpacingFactor: 1
+# AuxiliaryLines:    0,-3,0, 0,0,0, 0,4,0, 0,6,0, 0,9,0
 # Author:            Andrew Mustun (Latin1)
 # Author:            Eugene Osintsev <osgene@omskelecom.ru> (Cyrillic)
 # Author:            Sam S. Ganzha <kozzak@mail.ru> (Cyrillic)
@@ -21,6 +22,8 @@ L 3.5,7,4,9
 [0023] #
 L 2,0,2,9
 L 5,9,5,0
+L 0,2.5,7,2.5
+L 7,6.5,0,6.5
 
 [0026] &
 PL 6,3.215,0,3.426,0.5976,-1,0.574,3.4024,0,3.5695,6.4482,2.0034,1.1928,6.7643,0,5,0,0
