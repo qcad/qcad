@@ -177,7 +177,6 @@ RBlockListQt.prototype.filter = function(block) {
 RBlockListQt.prototype.updateCurrentBlock = function(documentInterface) {
     var doc = documentInterface.getDocument();
 
-    qDebug("updateCurrentBlock");
     // find item which was representing the current block before:
     if (!isNull(this.currentItem)) {
         // clear pen icon from item:
