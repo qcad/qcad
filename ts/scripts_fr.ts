@@ -1470,7 +1470,7 @@ Voulez-vous le récupérer?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -11505,8 +11505,12 @@ Indiquer le point cible</translatorcomment>
     </message>
     <message>
         <location line="+25"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Dessin enregistré :</translation>
+        <translation type="vanished">Dessin enregistré :</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13563,7 +13567,7 @@ Indiquer le point cible</translatorcomment>
         <translation>Valeur par défaut :</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annuler</translation>
     </message>
@@ -13598,7 +13602,12 @@ Indiquer le point cible</translatorcomment>
         <translation>&amp;Italique</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Indice</translation>
     </message>
@@ -13618,12 +13627,12 @@ Indiquer le point cible</translatorcomment>
         <translation>&amp;Caractère spécial...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Autres...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>Degré</translation>
     </message>
@@ -13775,7 +13784,7 @@ Indiquer le point cible</translatorcomment>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Insérer symbole...</translation>
     </message>

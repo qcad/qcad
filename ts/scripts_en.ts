@@ -1332,7 +1332,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -9682,8 +9682,12 @@ shown in search results:</translation>
     </message>
     <message>
         <location line="+19"/>
+        <source>Saved file:</source>
+        <translation>Saved file:</translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Saved drawing:</translation>
+        <translation type="vanished">Saved drawing:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11371,7 +11375,7 @@ shown in search results:</translation>
         <translation>Default value:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;Undo</translation>
     </message>
@@ -11406,7 +11410,12 @@ shown in search results:</translation>
         <translation>&amp;Italic</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Subscript</translation>
     </message>
@@ -11426,12 +11435,12 @@ shown in search results:</translation>
         <translation>&amp;Special Characters...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Others...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>Degree</translation>
     </message>
@@ -11580,7 +11589,7 @@ shown in search results:</translation>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Insert Symbol...</translation>
     </message>

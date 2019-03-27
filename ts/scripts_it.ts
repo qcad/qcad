@@ -1471,7 +1471,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -11458,8 +11458,12 @@ Seconda entità non può essere tagliato.</translatorcomment>
     </message>
     <message>
         <location line="+25"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Disegno salvato:</translation>
+        <translation type="vanished">Disegno salvato:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13575,7 +13579,7 @@ Tutti i file</translatorcomment>
         <translation>Predefinito:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>
@@ -13610,7 +13614,12 @@ Tutti i file</translatorcomment>
         <translation>&amp;Corsivo</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Sottoscritto</translation>
     </message>
@@ -13630,12 +13639,12 @@ Tutti i file</translatorcomment>
         <translation>&amp;Carattere speciale...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Altri...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>Gradi</translation>
     </message>
@@ -13787,7 +13796,7 @@ Tutti i file</translatorcomment>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Inserisci Simbolo...</translation>
     </message>

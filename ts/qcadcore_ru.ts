@@ -687,11 +687,11 @@
     </message>
     <message>
         <source>Hidden</source>
-        <translation>Скрыт</translation>
+        <translation type="vanished">Скрыт</translation>
     </message>
     <message>
         <source>Locked</source>
-        <translation>Заперт</translation>
+        <translation type="vanished">Заперт</translation>
     </message>
     <message>
         <source>Color</source>

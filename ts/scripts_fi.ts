@@ -1320,7 +1320,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
@@ -9854,8 +9854,12 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <location line="+19"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Tallennettu piirros:</translation>
+        <translation type="vanished">Tallennettu piirros:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11615,7 +11619,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Oletusarvo:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;Kumoa</translation>
     </message>
@@ -11650,7 +11654,12 @@ näkyy hakutuloksissa:</translation>
         <translation>&amp;Kursivoitu</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Alaindeksi</translation>
     </message>
@@ -11670,12 +11679,12 @@ näkyy hakutuloksissa:</translation>
         <translation>&amp;Erikoismerkit ...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Muut ...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>Aste</translation>
     </message>
@@ -11824,7 +11833,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Lisää symboli ...</translation>
     </message>

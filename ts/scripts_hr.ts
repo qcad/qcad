@@ -1275,7 +1275,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9455,7 +9455,7 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+19"/>
-        <source>Saved drawing:</source>
+        <source>Saved file:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11070,7 +11070,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11105,7 +11105,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11125,12 +11130,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11278,7 +11283,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1617,7 +1617,7 @@ Nazwa bloku:</translatorcomment>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -12530,8 +12530,12 @@ Promień:</translatorcomment>
     </message>
     <message>
         <location line="+25"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Zapisany rysunek:</translation>
+        <translation type="vanished">Zapisany rysunek:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14735,7 +14739,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation>Domyślna wartość:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -14789,7 +14793,12 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>&amp;Kursywa</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Indeks &amp;dolny</translation>
@@ -14813,14 +14822,14 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Znaki &amp;specjalne...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
         <translation>Inne...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -15044,7 +15053,7 @@ CTRL+I</translatorcomment>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>

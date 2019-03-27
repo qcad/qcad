@@ -1348,7 +1348,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -10276,8 +10276,12 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+19"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Shranjena risba:</translation>
+        <translation type="vanished">Shranjena risba:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12089,7 +12093,7 @@ shown in search results:</source>
         <translation>Privzeta vrednost:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>Ra&amp;zveljavi</translation>
     </message>
@@ -12124,7 +12128,12 @@ shown in search results:</source>
         <translation>Pošev&amp;no</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>Po&amp;dpisano</translation>
     </message>
@@ -12144,12 +12153,12 @@ shown in search results:</source>
         <translation>Posebni &amp;znaki...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Drugo...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>Stopinje</translation>
     </message>
@@ -12298,7 +12307,7 @@ shown in search results:</source>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Vstavi simbol...</translation>
     </message>

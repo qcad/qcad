@@ -1495,7 +1495,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -11894,8 +11894,12 @@ nicht öffnen.
     </message>
     <message>
         <location line="+25"/>
+        <source>Saved file:</source>
+        <translation>Datei gespeichert:</translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Zeichnung gespeichert:</translation>
+        <translation type="vanished">Zeichnung gespeichert:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13930,7 +13934,7 @@ SelectionMode</translatorcomment>
         <translation>Standardwert:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
@@ -13955,7 +13959,12 @@ SelectionMode</translatorcomment>
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location line="+501"/>
+        <location line="+26"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+472"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -14027,7 +14036,7 @@ SelectionMode</translatorcomment>
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="+299"/>
         <source>Attribute Details</source>
         <translation>Attributdetails</translation>
     </message>
@@ -14141,7 +14150,7 @@ SelectionMode</translatorcomment>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-508"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-505"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -14151,7 +14160,7 @@ SelectionMode</translatorcomment>
         <translation>&amp;Kursiv</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Tiefgestellt</translation>
     </message>
@@ -14171,12 +14180,12 @@ SelectionMode</translatorcomment>
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>
@@ -14215,7 +14224,7 @@ SelectionMode</translatorcomment>
         <translation>Kubik</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="-1037"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="-1047"/>
         <source>Main Font</source>
         <translation>Hauptschriftart</translation>
     </message>
@@ -14313,7 +14322,7 @@ Kursiv
         <translation>Ctrl-I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Symbol einfügen...</translation>
     </message>

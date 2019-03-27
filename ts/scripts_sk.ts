@@ -1364,7 +1364,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -9910,8 +9910,12 @@ vo výsledku vyhľadania:</translation>
     </message>
     <message>
         <location line="+19"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Výkres uložený:</translation>
+        <translation type="vanished">Výkres uložený:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11622,7 +11626,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Prednastavené:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;Späť</translation>
     </message>
@@ -11657,7 +11661,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Š&amp;ikmé</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Dolný index</translation>
     </message>
@@ -11677,12 +11686,12 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Špeciálne Znaky...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Ďalšie...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>Stupne</translation>
     </message>
@@ -11831,7 +11840,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Vložiť Znak...</translation>
     </message>

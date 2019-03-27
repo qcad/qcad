@@ -1317,7 +1317,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <source>Widgets</source>
         <translation>Widgety</translation>
     </message>
@@ -9608,8 +9608,12 @@ ve výsledcích vyhledávání:</translation>
     </message>
     <message>
         <location line="+19"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Uložen výkres:</translation>
+        <translation type="vanished">Uložen výkres:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11284,7 +11288,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Výchozí hodnota:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
@@ -11319,7 +11323,12 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Kurzíva</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Dolní index</translation>
     </message>
@@ -11339,12 +11348,12 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Speciální znaky...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Další...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>Stupeň</translation>
     </message>
@@ -11493,7 +11502,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Vložit symbol</translation>
     </message>

@@ -1348,7 +1348,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -10174,8 +10174,12 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+19"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>図面が保存されました：</translation>
+        <translation type="vanished">図面が保存されました：</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -12003,7 +12007,7 @@ shown in search results:</source>
         <translation>デフォルト:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;U アンドゥ</translation>
     </message>
@@ -12038,7 +12042,12 @@ shown in search results:</source>
         <translation>&amp;I 斜体</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>&amp;S 添字</translation>
     </message>
@@ -12058,12 +12067,12 @@ shown in search results:</source>
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>角度</translation>
     </message>
@@ -12212,7 +12221,7 @@ shown in search results:</source>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>シンボル挿入...</translation>
     </message>

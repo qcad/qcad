@@ -1714,7 +1714,7 @@ Nome do Bloco:</translatorcomment>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -13332,8 +13332,12 @@ A&amp;rredonde</translatorcomment>
     </message>
     <message>
         <location line="+25"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Desenho gravado:</translation>
+        <translation type="vanished">Desenho gravado:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15670,7 +15674,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Valor padrão:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -15724,7 +15728,12 @@ Co&amp;lar</translatorcomment>
         <translation>&amp;Itálico</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Subscrito</translation>
@@ -15748,14 +15757,14 @@ Co&amp;lar</translatorcomment>
         <translation>&amp;Caracteres Especiais...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
         <translation>Outros...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: SplineControlPoints_pt.ts--
@@ -15980,7 +15989,7 @@ Cole o conteúdo da área de transferência</translatorcomment>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>

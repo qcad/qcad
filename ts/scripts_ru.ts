@@ -891,13 +891,15 @@ the preference changes to take effect.</source>
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation><numerusform>%n автосохранённый файл резервной копии для чертежа без названия был найден.
+        <translation>
+            <numerusform>%n автосохранённый файл резервной копии для чертежа без названия был найден.
 Вы хотите восстановить его?</numerusform>
-        <numerusform>%n автосохранённых файла резервных копий для чертежей без названия были найдены.
+            <numerusform>%n автосохранённых файла резервных копий для чертежей без названия были найдены.
 Вы хотите восстановить их?</numerusform>
-        <numerusform>%n автосохранённых файлов резервных копий для чертежей без названия были найдены.
+            <numerusform>%n автосохранённых файлов резервных копий для чертежей без названия были найдены.
 Вы хотите восстановить их?</numerusform>
-        </translation></message>
+        </translation>
+    </message>
     <message>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
@@ -1344,7 +1346,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+494"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -1411,7 +1413,7 @@ Do you wish to recover it?</source>
     <name>BreakOut</name>
     <message>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation>Выбрать линию, дугу, окружность или эллипс для автоусечения</translation>
+        <translation type="vanished">Выбрать линию, дугу, окружность или эллипс для автоусечения</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+58"/>
@@ -1420,7 +1422,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation>Выбрать участок линии, дуги, окружности эллипса или сплайна</translation>
+        <translation type="vanished">Выбрать участок линии, дуги, окружности эллипса или сплайна</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1465,7 +1467,7 @@ Do you wish to recover it?</source>
     <name>BreakOutManual</name>
     <message>
         <source>Choose line, arc, circle, ellipse or polyline to break up</source>
-        <translation>Выбрать линию, дугу, окружность, эллипс или ломаную чтобы разбить</translation>
+        <translation type="vanished">Выбрать линию, дугу, окружность, эллипс или ломаную чтобы разбить</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
@@ -2629,7 +2631,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>Редактируя блок &apos;%1&apos;,&lt;br&gt;Выбрать &lt;i&gt;Блок &gt; Вернуться к основному чертежу&lt;/i&gt;, когда закончите</translation>
+        <translation type="vanished">Редактируя блок &apos;%1&apos;,&lt;br&gt;Выбрать &lt;i&gt;Блок &gt; Вернуться к основному чертежу&lt;/i&gt;, когда закончите</translation>
     </message>
 </context>
 <context>
@@ -2942,13 +2944,15 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation><numerusform>Положение метки %n-ой размерности было сброшено.</numerusform>
-        <numerusform>Положение метки %n-ёх размерностей было сброшено.</numerusform>
-        <numerusform>Положение метки %n-ти размерностей было сброшено.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Положение метки %n-ой размерности было сброшено.</numerusform>
+            <numerusform>Положение метки %n-ёх размерностей было сброшено.</numerusform>
+            <numerusform>Положение метки %n-ти размерностей было сброшено.</numerusform>
+        </translation>
+    </message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation>Сбросить положение метки из %1 размера(ов).</translation>
+        <translation type="vanished">Сбросить положение метки из %1 размера(ов).</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
@@ -3363,7 +3367,7 @@ is already in the list.</source>
     <name>Divide</name>
     <message>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Выбрать линию, дугу, окружность или сплайн</translation>
+        <translation type="vanished">Выбрать линию, дугу, окружность или сплайн</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+67"/>
@@ -3654,10 +3658,12 @@ is already in the list.</source>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
-        <translation><numerusform>%n дублированный объект</numerusform>
-        <numerusform>%n дублированных объекта</numerusform>
-        <numerusform>%n дублированных объектов</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n дублированный объект</numerusform>
+            <numerusform>%n дублированных объекта</numerusform>
+            <numerusform>%n дублированных объектов</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
@@ -4294,7 +4300,7 @@ is already in the list.</source>
     <name>ExLayerCustomProperty</name>
     <message>
         <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
-        <translation>Добавлено пользовательское свойство &apos;МоёПользовательскоеСвойство&apos; к слою &apos;0&apos;.</translation>
+        <translation type="vanished">Добавлено пользовательское свойство &apos;МоёПользовательскоеСвойство&apos; к слою &apos;0&apos;.</translation>
     </message>
     <message>
         <source>Add custom property to a layer</source>
@@ -4523,10 +4529,12 @@ is already in the list.</source>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation><numerusform>Транзакция затронула %n объект.</numerusform>
-        <numerusform>Транзакция затронула %n объекта.</numerusform>
-        <numerusform>Транзакция затронула %n объектов.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Транзакция затронула %n объект.</numerusform>
+            <numerusform>Транзакция затронула %n объекта.</numerusform>
+            <numerusform>Транзакция затронула %n объектов.</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -4675,7 +4683,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Файл с именем «%1» уже существует. Вы хотите перезаписать его?</translation>
+        <translation type="vanished">Файл с именем «%1» уже существует. Вы хотите перезаписать его?</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5411,7 +5419,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation>Каждый объект с границей должен быть линией, дугой, окружностью, эллиптической дугой, эллипсом, ломаной или сплайном. Найдено:</translation>
+        <translation type="vanished">Каждый объект с границей должен быть линией, дугой, окружностью, эллиптической дугой, эллипсом, ломаной или сплайном. Найдено:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
@@ -6472,7 +6480,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Масштабировать проекцию к исходному размеру (&apos;изометрической чертёж&apos;)</translation>
+        <translation type="vanished">Масштабировать проекцию к исходному размеру (&apos;изометрической чертёж&apos;)</translation>
     </message>
     <message>
         <source>True scale</source>
@@ -6711,7 +6719,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Entities in blocks on layer 0 take on attributes of block reference (compatibility)</source>
-        <translation>Объекты в блоках на слое 0 принимают атрибуты привязки блока (совместимость)</translation>
+        <translation type="vanished">Объекты в блоках на слое 0 принимают атрибуты привязки блока (совместимость)</translation>
     </message>
 </context>
 <context>
@@ -6739,7 +6747,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Layer Data</source>
-        <translation>Данные слоя</translation>
+        <translation type="vanished">Данные слоя</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
@@ -7152,7 +7160,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Tags</source>
-        <translation>Теги</translation>
+        <translation type="vanished">Теги</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -7716,7 +7724,7 @@ shown in search results:</source>
     <name>LineRelativeAngle</name>
     <message>
         <source>Choose base entity</source>
-        <translation>Выбрать базовый объект</translation>
+        <translation type="vanished">Выбрать базовый объект</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+70"/>
@@ -8098,7 +8106,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show misc drawing tools</source>
-        <translation>Показать разные инструменты черчения</translation>
+        <translation type="vanished">Показать разные инструменты черчения</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8213,7 +8221,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation>Выбрать решение</translation>
+        <translation type="vanished">Выбрать решение</translation>
     </message>
 </context>
 <context>
@@ -8434,17 +8442,21 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation><numerusform>Радиус упал ниже 0,0 после %n-ой концентрической окружности.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n-ёх концентрических окружностей.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n-ти концентрических окружностей.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Радиус упал ниже 0,0 после %n-ой концентрической окружности.</numerusform>
+            <numerusform>Радиус упал ниже 0,0 после %n-ёх концентрических окружностей.</numerusform>
+            <numerusform>Радиус упал ниже 0,0 после %n-ти концентрических окружностей.</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation><numerusform>Радиус упал ниже 0,0 после %n-ой концентрической дуги.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n-ёх концентрических дуг.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n-ти концентрических дуг.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Радиус упал ниже 0,0 после %n-ой концентрической дуги.</numerusform>
+            <numerusform>Радиус упал ниже 0,0 после %n-ёх концентрических дуг.</numerusform>
+            <numerusform>Радиус упал ниже 0,0 после %n-ти концентрических дуг.</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>OffsetThrough</name>
@@ -8842,7 +8854,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show polyline tools</source>
-        <translation>Показать утилиты ломаной</translation>
+        <translation type="vanished">Показать утилиты ломаной</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9705,7 +9717,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Файл с именем &apos;%1&apos; уже существует. Вы хотите перезаписать его?</translation>
+        <translation type="vanished">Файл с именем &apos;%1&apos; уже существует. Вы хотите перезаписать его?</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9714,7 +9726,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation>Используется нерекомендованная версия формата файла: &apos;%1&apos;.</translation>
+        <translation type="vanished">Используется нерекомендованная версия формата файла: &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9737,7 +9749,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation>Сохранение в формат файла версии &apos;%1&apos;.</translation>
+        <translation type="vanished">Сохранение в формат файла версии &apos;%1&apos;.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9785,8 +9797,12 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+19"/>
+        <source>Saved file:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Saved drawing:</source>
-        <translation>Чертёж сохранен:</translation>
+        <translation type="vanished">Чертёж сохранен:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -10375,17 +10391,21 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation><numerusform>%n объект на слое &quot;%1&quot;</numerusform>
-        <numerusform>%n объекта на слое &quot;%1&quot;</numerusform>
-        <numerusform>%n объектов на слое &quot;%1&quot;</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n объект на слое &quot;%1&quot;</numerusform>
+            <numerusform>%n объекта на слое &quot;%1&quot;</numerusform>
+            <numerusform>%n объектов на слое &quot;%1&quot;</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation><numerusform>%n объект</numerusform>
-        <numerusform>%n объекта</numerusform>
-        <numerusform>%n объектов</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n объект</numerusform>
+            <numerusform>%n объекта</numerusform>
+            <numerusform>%n объектов</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+0"/>
         <source>on</source>
@@ -10394,10 +10414,12 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation><numerusform>%n слой</numerusform>
-        <numerusform>%n слоя</numerusform>
-        <numerusform>%n слоёв</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n слой</numerusform>
+            <numerusform>%n слоя</numerusform>
+            <numerusform>%n слоёв</numerusform>
+        </translation>
+    </message>
     <message>
         <source>%1 Entities on Layer &quot;%2&quot;</source>
         <translation type="vanished">%1 объектов на слое &quot;%2&quot;</translation>
@@ -11081,7 +11103,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show spline tools</source>
-        <translation>Показать инструменты работы со сплайном</translation>
+        <translation type="vanished">Показать инструменты работы со сплайном</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11475,7 +11497,7 @@ shown in search results:</source>
         <translation>Значение по умолчанию:</translation>
     </message>
     <message>
-        <location line="+266"/>
+        <location line="+268"/>
         <source>&amp;Undo</source>
         <translation>&amp;Отменить</translation>
     </message>
@@ -11510,7 +11532,12 @@ shown in search results:</source>
         <translation>&amp;Курсив</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+9"/>
+        <source>&amp;Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>&amp;Subscript</source>
         <translation>&amp;Нижний индекс</translation>
     </message>
@@ -11530,12 +11557,12 @@ shown in search results:</source>
         <translation>&amp;Специальные символы...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+303"/>
         <source>Others...</source>
         <translation>Другие...</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Degree</source>
         <translation>Градусы</translation>
     </message>
@@ -11684,7 +11711,7 @@ shown in search results:</source>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+50"/>
         <source>Insert Symbol...</source>
         <translation>Вставить символ...</translation>
     </message>
@@ -12396,7 +12423,7 @@ shown in search results:</source>
     <name>ViewToolBars</name>
     <message>
         <source>&amp;Toolbars</source>
-        <translation>&amp;Панели инструментов</translation>
+        <translation type="vanished">&amp;Панели инструментов</translation>
     </message>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
@@ -12474,7 +12501,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Grid</source>
-        <translation>Сетка</translation>
+        <translation type="vanished">Сетка</translation>
     </message>
     <message>
         <source>End</source>
@@ -12482,7 +12509,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>On Entity</source>
-        <translation>На объекте</translation>
+        <translation type="vanished">На объекте</translation>
     </message>
     <message>
         <source>Perpendicular</source>
@@ -12839,7 +12866,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Post-initializing add-ons...</source>
-        <translation>Пост-инициализация дополнений...</translation>
+        <translation type="vanished">Пост-инициализация дополнений...</translation>
     </message>
 </context>
 <context>
