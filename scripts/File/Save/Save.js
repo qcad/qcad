@@ -143,7 +143,7 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
     }
     RSettings.addRecentFile(fileName);
 
-    appWin.handleUserMessage(qsTr("Saved drawing:") + " " + fileName);
+    appWin.handleUserMessage(qsTr("Saved file:") + " " + fileName);
     if (fileVersion.length!==0) {
         appWin.handleUserMessage(qsTr("Format:") + " " + fileVersion);
     }
