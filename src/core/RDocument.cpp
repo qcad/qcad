@@ -830,22 +830,12 @@ QString RDocument::getCurrentBlockName() const {
 void RDocument::setCurrentBlock(RBlock::Id blockId) {
     RBlock::Id prevBlockId = getCurrentBlockId();
 
-    RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(&storage);
-
-    // remove references to block we're entering from spatial index:
-    if (ls==NULL) {
-        //qDebug() << "RDocument::setCurrentBlock: removing block: " << blockId;
-    }
     removeBlockFromSpatialIndex(blockId);
-    //rebuildSpatialIndex(oldBlockId);
 
     storage.setCurrentBlock(blockId);
 
     // add references to block we're leaving to spatial index:
     if (prevBlockId!=RBlock::INVALID_ID) {
-        if (ls==NULL) {
-            //qDebug() << "RDocument::setCurrentBlock: adding block back on: " << prevBlockId;
-        }
         addBlockToSpatialIndex(prevBlockId, blockId);
     }
 }
