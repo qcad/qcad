@@ -13091,13 +13091,21 @@ Use camada e &amp;atributos atual</translatorcomment>
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>Ângulo (&amp;a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation>Ângulo &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation>Ângulo &amp;b:</translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">Ângulo (&amp;a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Ângulo (&amp;b):</translation>
+        <translation type="vanished">Ângulo (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

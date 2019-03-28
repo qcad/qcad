@@ -9605,13 +9605,21 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>Hoek (&amp;a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation>Hoek &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation>Hoek &amp;b:</translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">Hoek (&amp;a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Hoek (&amp;b):</translation>
+        <translation type="vanished">Hoek (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

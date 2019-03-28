@@ -9627,13 +9627,21 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>Kulma (&amp;a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">Kulma (&amp;a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Kulma (&amp;b):</translation>
+        <translation type="vanished">Kulma (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

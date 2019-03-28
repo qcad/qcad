@@ -9683,13 +9683,21 @@ vo výsledku vyhľadania:</translation>
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>Uhol (&amp;a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">Uhol (&amp;a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Uhol (&amp;b):</translation>
+        <translation type="vanished">Uhol (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

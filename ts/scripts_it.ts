@@ -11243,13 +11243,21 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>Angolo (&amp;a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation>Angolo &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation>Angolo &amp;b:</translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">Angolo (&amp;a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Angolo (&amp;b):</translation>
+        <translation type="vanished">Angolo (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

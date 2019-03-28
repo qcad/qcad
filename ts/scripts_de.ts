@@ -11697,13 +11697,21 @@ nicht öffnen.
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>&amp;Winkel (a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation>Winkel &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation>Winkel &amp;b:</translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">&amp;Winkel (a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Winkel (&amp;b):</translation>
+        <translation type="vanished">Winkel (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

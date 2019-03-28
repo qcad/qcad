@@ -9570,13 +9570,21 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>Угол (&amp;a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">Угол (&amp;a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Угол (&amp;b):</translation>
+        <translation type="vanished">Угол (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

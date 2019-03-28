@@ -12278,19 +12278,27 @@ Kopie &amp;wielokrotne:</translatorcomment>
     </message>
     <message>
         <location line="+94"/>
+        <source>Angle &amp;a:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Angle (&amp;a):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Kąt (&amp;a):</translatorcomment>
-        <translation>Kąt (&amp;a):</translation>
+        <translation type="vanished">Kąt (&amp;a):</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Angle (&amp;b):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Kąt (&amp;b):</translatorcomment>
-        <translation>Kąt (&amp;b):</translation>
+        <translation type="vanished">Kąt (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

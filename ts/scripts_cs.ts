@@ -9381,13 +9381,21 @@ ve výsledcích vyhledávání:</translation>
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>Úhel (&amp;a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">Úhel (&amp;a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Úhel (&amp;b):</translation>
+        <translation type="vanished">Úhel (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>

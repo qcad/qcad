@@ -9455,13 +9455,21 @@ shown in search results:</translation>
     </message>
     <message>
         <location line="+94"/>
-        <source>Angle (&amp;a):</source>
-        <translation>Angle (&amp;a):</translation>
+        <source>Angle &amp;a:</source>
+        <translation>Angle &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>Angle &amp;b:</source>
+        <translation>Angle &amp;b:</translation>
+    </message>
+    <message>
+        <source>Angle (&amp;a):</source>
+        <translation type="vanished">Angle (&amp;a):</translation>
+    </message>
+    <message>
         <source>Angle (&amp;b):</source>
-        <translation>Angle (&amp;b):</translation>
+        <translation type="vanished">Angle (&amp;b):</translation>
     </message>
     <message>
         <location line="+22"/>
