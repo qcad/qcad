@@ -9798,7 +9798,7 @@ shown in search results:</source>
     <message>
         <location line="+19"/>
         <source>Saved file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранённый файл:</translation>
     </message>
     <message>
         <source>Saved drawing:</source>
@@ -11534,7 +11534,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Подчёркнутый</translation>
     </message>
     <message>
         <location line="+9"/>
