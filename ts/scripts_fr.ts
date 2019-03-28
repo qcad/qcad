@@ -7862,7 +7862,7 @@ Indiquer le point cible</translatorcomment>
         <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Epaisseur de la ligne :</translation>
+        <translation>Epaisseur de ligne :</translation>
     </message>
     <message>
         <location line="+26"/>
