@@ -1827,7 +1827,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Invalid radius</source>
-        <translation>Недопустимый радиус</translation>
+        <translation type="vanished">Недопустимый радиус</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.ui" line="+17"/>
@@ -3367,7 +3367,7 @@ is already in the list.</source>
     <name>Divide</name>
     <message>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Выбрать линию, дугу, окружность, эллипс или сплайн</translation>
+        <translation type="vanished">Выбрать линию, дугу, окружность, эллипс или сплайн</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+67"/>
@@ -6415,7 +6415,7 @@ is already in the list.</source>
     <name>InsertScriptItem</name>
     <message>
         <source>Position</source>
-        <translation>Положение</translation>
+        <translation type="vanished">Положение</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
@@ -9802,7 +9802,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Saved drawing:</source>
-        <translation>Сохранённый чертёж:</translation>
+        <translation type="vanished">Сохранённый чертёж:</translation>
     </message>
     <message>
         <location line="+2"/>
