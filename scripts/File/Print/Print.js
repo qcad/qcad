@@ -36,9 +36,6 @@ function Print(guiAction, document, view) {
     this.document = document;
     this.view = view;
 
-    // save and restore current view:
-    this.saveView = false;
-
     if (!isNull(view)) {
         this.scene = view.getScene();
     }
@@ -62,7 +59,6 @@ Print.prototype.beginEvent = function() {
     if (!PrintPreview.isRunning()) {
         var guiAction = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js");
         var action = new PrintPreview(guiAction);
-        action.saveView = this.saveView;
         action.initialAction = "Print";
         var di = EAction.getDocumentInterface();
         di.setCurrentAction(action);
@@ -1345,11 +1341,6 @@ Print.setScaleString = function(di, scaleString) {
 };
 
 Print.getColumns = function(document) {
-    var appWin = RMainWindowQt.getMainWindow();
-    if (!isNull(appWin) && appWin.property("PrintPreview/InitialZoom")==="View") {
-        return 1;
-    }
-
     return Print.getIntValue("MultiPageSettings/Columns", 1, document);
 };
 
@@ -1358,11 +1349,6 @@ Print.setColumns = function(di, columns) {
 };
 
 Print.getRows = function(document) {
-    var appWin = RMainWindowQt.getMainWindow();
-    if (!isNull(appWin) && appWin.property("PrintPreview/InitialZoom")==="View") {
-        return 1;
-    }
-
     return Print.getIntValue("MultiPageSettings/Rows", 1, document);
 };
 

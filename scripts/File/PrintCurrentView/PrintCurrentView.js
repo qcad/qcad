@@ -24,7 +24,6 @@ include("../Print/Print.js");
  */
 function PrintCurrentView(guiAction, document, view) {
     Print.call(this, guiAction);
-    this.saveView = true;
 }
 
 PrintCurrentView.prototype = new Print();

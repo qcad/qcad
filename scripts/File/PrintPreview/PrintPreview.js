@@ -138,6 +138,8 @@ function PrintPreviewImpl(guiAction) {
     this.saveView = false;
     this.savedScale = undefined;
     this.savedOffset = undefined;
+    this.savedColumns = undefined;
+    this.savedRows = undefined;
 
     this.optOutRelativeZeroResume = true;
 }
@@ -152,9 +154,15 @@ PrintPreviewImpl.State = {
 PrintPreviewImpl.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
 
-    if (this.saveView===true) {
+    var appWin = RMainWindowQt.getMainWindow();
+    var initialZoom = appWin.property("PrintPreview/InitialZoom");
+
+    if (initialZoom==="View") {
         this.savedScale = Print.getScale(this.getDocument());
         this.savedOffset = Print.getOffset(this.getDocument());
+        this.savedColumns = Print.getColumns(this.getDocument());
+        this.savedRows = Print.getRows(this.getDocument());
+        this.saveView = true;
     }
 
 //    if (!isNull(this.guiAction)) {
@@ -192,12 +200,12 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");
     action.triggered.connect(this, "updateBackgroundDecoration");
 
-    var appWin = RMainWindowQt.getMainWindow();
-    var initialZoom = appWin.property("PrintPreview/InitialZoom");
     if (initialZoom==="Auto") {
         this.slotAutoFitDrawing();
     }
     else if (initialZoom==="View") {
+        Print.setColumns(di, 1);
+        Print.setRows(di, 1);
         this.slotAutoFitBox(this.view.getBox());
     }
 
@@ -250,6 +258,9 @@ PrintPreviewImpl.prototype.finishEvent = function() {
     this.parentClass.prototype.finishEvent.call(this);
     var di = this.getDocumentInterface();
 
+    var appWin = RMainWindowQt.getMainWindow();
+    var initialZoom = appWin.property("PrintPreview/InitialZoom");
+
     if (!isNull(this.view)) {
         this.view.setPrintPreview(false);
         this.view.setBackgroundColor(this.bgColor);
@@ -283,9 +294,14 @@ PrintPreviewImpl.prototype.finishEvent = function() {
         if (!isNull(this.savedOffset)) {
             Print.setOffset(di, this.savedOffset);
         }
+        if (!isNull(this.savedColumns)) {
+            Print.setColumns(di, this.savedColumns);
+        }
+        if (!isNull(this.savedRows)) {
+            Print.setRows(di, this.savedRows);
+        }
     }
 
-    var appWin = RMainWindowQt.getMainWindow();
     if (!isNull(this.pAdapter)) {
         appWin.removePreferencesListener(this.pAdapter);
     }
