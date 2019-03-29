@@ -103,6 +103,8 @@ void RExporter::init() {
     //int v = RSettings::getIntValue("GraphicsView/PenCapStyle", Qt::RoundCap);
     //penCapStyle = (Qt::PenCapStyle)v;
     currentPen.setCapStyle(penCapStyle);
+    // needed when exporting polyline to bitmap:
+    currentPen.setJoinStyle(Qt::RoundJoin);
 }
 
 QString RExporter::getErrorMessage() const {
