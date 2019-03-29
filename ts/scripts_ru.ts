@@ -9571,12 +9571,12 @@ shown in search results:</source>
     <message>
         <location line="+94"/>
         <source>Angle &amp;a:</source>
-        <translation type="unfinished"></translation>
+        <translation>Угол &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation type="unfinished"></translation>
+        <translation>Угол &amp;b:</translation>
     </message>
     <message>
         <source>Angle (&amp;a):</source>
