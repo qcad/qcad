@@ -55,6 +55,12 @@ public:
     static RPropertyTypeId PropertyInsertionPointX;
     static RPropertyTypeId PropertyInsertionPointY;
     static RPropertyTypeId PropertyInsertionPointZ;
+
+    static RPropertyTypeId PropertyUX;
+    static RPropertyTypeId PropertyUY;
+    static RPropertyTypeId PropertyVX;
+    static RPropertyTypeId PropertyVY;
+
     static RPropertyTypeId PropertyScaleFactorX;
     static RPropertyTypeId PropertyScaleFactorY;
     static RPropertyTypeId PropertyAngle;
