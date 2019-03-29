@@ -92,6 +92,13 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         else {
             bb = doc.getBoundingBox(true, true);
         }
+
+        if (properties["noWeightMargin"]===false) {
+            // grow bounding box by max line weight:
+            var wm = RUnit.convert(doc.getMaxLineweight()/100.0/2, RS.Millimeter, doc.getUnit());
+            bb.growXY(wm);
+        }
+
         properties["width"] = Math.ceil(bb.getWidth() * properties["resolution"] + 2 * properties["margin"]);
         properties["height"] = Math.ceil(bb.getHeight() * properties["resolution"] + 2 * properties["margin"]);
     }
@@ -122,7 +129,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         view.zoomToEntities(properties["entityIds"], properties["margin"]);
     }
     else {
-        view.autoZoom(properties["margin"], true, properties["noWeightMargin"]);
+        view.autoZoom(properties["margin"], true, false);
     }
 
     // make sure we use the desired resolution:

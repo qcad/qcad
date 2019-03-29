@@ -213,7 +213,7 @@ BitmapExport.prototype.getProperties = function() {
       ret["grayscale"] = true;
     }
 
-    ret["noweightmargin"] = !weightMarginCheckbox.checked;
+    ret["noWeightMargin"] = !weightMarginCheckbox.checked;
 
     if (selectionCheckbox.checked) {
         var doc = this.getDocument();
