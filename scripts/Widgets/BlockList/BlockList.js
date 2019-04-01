@@ -204,7 +204,6 @@ RBlockListQt.prototype.updateCurrentBlock = function(documentInterface) {
 RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     this.currentItem = undefined;
 
-    RDebug.startTimer();
     this.di = documentInterface;
 
     var pos = this.verticalScrollBar().sliderPosition;
@@ -274,7 +273,6 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     }
 
     this.blockActivated();
-    RDebug.stopTimer("block list update");
 };
 
 RBlockListQt.prototype.sortBlocks = function(doc, blockIds) {
