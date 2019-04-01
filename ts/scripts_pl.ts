@@ -1510,7 +1510,7 @@ Bardzo gruby</translatorcomment>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nieprawidłowy rozmiar obrazu (szerokość x wysokość musi być mniejsze niż %1)</translation>
     </message>
@@ -1617,7 +1617,7 @@ Nazwa bloku:</translatorcomment>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -11344,7 +11344,7 @@ Wy&amp;drukuj</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+234"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę przeciągnąć, aby przesunąć arkusz</translation>
@@ -11360,7 +11360,7 @@ Zrobione
         <translation>Zrobione</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <source>Export to PDF</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

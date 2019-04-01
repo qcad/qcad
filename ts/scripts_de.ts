@@ -1394,7 +1394,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ungültige Bildgrösse (Breite x Höhe muss kleiner sein als %1)</translation>
     </message>
@@ -1495,7 +1495,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -10894,7 +10894,7 @@ nicht öffnen.
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+235"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+243"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -10919,7 +10919,7 @@ nicht öffnen.
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+406"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+414"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -10929,12 +10929,12 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-407"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-415"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+416"/>
+        <location line="+424"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>

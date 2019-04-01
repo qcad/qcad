@@ -1373,7 +1373,7 @@ Voulez-vous le récupérer?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Taille d&apos;image non valide (largeur x hauteur doit être inférieure à %1)</translation>
     </message>
@@ -1470,7 +1470,7 @@ Voulez-vous le récupérer?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -10471,7 +10471,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+234"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
         <source>Drag to move paper</source>
         <translation>Faites glisser pour déplacer le papier</translation>
     </message>
@@ -10481,7 +10481,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <source>Export to PDF</source>
         <translation>Exporter vers PDF</translation>
     </message>

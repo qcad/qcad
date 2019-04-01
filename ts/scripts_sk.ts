@@ -1263,7 +1263,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Neplatná veľkosť obrazu (šírka x výška musí byť menšia ako %1)</translation>
     </message>
@@ -1364,7 +1364,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -9046,7 +9046,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+234"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
         <source>Drag to move paper</source>
         <translation>Chyťte a hýbte papierom</translation>
     </message>
@@ -9056,7 +9056,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <source>Export to PDF</source>
         <translation>Exportovať do PDF</translation>
     </message>

@@ -1211,7 +1211,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Geçersiz resim boyutu (genişlik x yükseklik %1&apos;den az olmalıdır)</translation>
     </message>
@@ -1308,7 +1308,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetler</translation>
     </message>
@@ -8680,7 +8680,7 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+234"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
         <source>Drag to move paper</source>
         <translation>Kağıt taşımak için sürükleyin</translation>
     </message>
@@ -8690,7 +8690,7 @@ shown in search results:</source>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <source>Export to PDF</source>
         <translation>PDF Olarak Dışa Aktar</translation>
     </message>

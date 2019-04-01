@@ -1249,7 +1249,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Неверный размер изображения (ширина х высота должно быть меньше, чем %1)</translation>
     </message>
@@ -1346,7 +1346,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -8941,7 +8941,7 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+234"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
         <source>Drag to move paper</source>
         <translation>Для перемещения бумаги перетащите её</translation>
     </message>
@@ -8951,7 +8951,7 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <source>Export to PDF</source>
         <translation>Экспортировать в PDF</translation>
     </message>

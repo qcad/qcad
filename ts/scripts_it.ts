@@ -1374,7 +1374,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Dimensioni dell&apos;immagine non valido (larghezza x altezza deve essere inferiore a %1)</translation>
     </message>
@@ -1471,7 +1471,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -10430,7 +10430,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+234"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
         <source>Drag to move paper</source>
         <translation>Trascinare per spostare la carta</translation>
     </message>
@@ -10440,7 +10440,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <source>Export to PDF</source>
         <translation>Esporta PDF</translation>
     </message>

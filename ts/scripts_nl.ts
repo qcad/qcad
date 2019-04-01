@@ -1269,7 +1269,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+108"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ongeldige beeldformaat (breedte x hoogte moet kleiner zijn dan %1)</translation>
     </message>
@@ -1366,7 +1366,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+493"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
@@ -8976,7 +8976,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+234"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
         <source>Drag to move paper</source>
         <translation>Slepen om papier te verplaatsen</translation>
     </message>
@@ -8986,7 +8986,7 @@ getoond in zoekresultaten:</translation>
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+406"/>
+        <location line="+414"/>
         <source>Export to PDF</source>
         <translation>PDF exporteren</translation>
     </message>
