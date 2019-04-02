@@ -740,7 +740,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
