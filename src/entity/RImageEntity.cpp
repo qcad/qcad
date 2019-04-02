@@ -184,13 +184,13 @@ QPair<QVariant, RPropertyAttributes> RImageEntity::getProperty(
     }
 
     else if (propertyTypeId == PropertyUX) {
-        return qMakePair(QVariant(data.uVector.x), RPropertyAttributes());
+        return qMakePair(QVariant(data.uVector.x), RPropertyAttributes(RPropertyAttributes::Invisible));
     } else if (propertyTypeId == PropertyUY) {
-        return qMakePair(QVariant(data.uVector.y), RPropertyAttributes());
+        return qMakePair(QVariant(data.uVector.y), RPropertyAttributes(RPropertyAttributes::Invisible));
     } else if (propertyTypeId == PropertyVX) {
-        return qMakePair(QVariant(data.vVector.x), RPropertyAttributes());
+        return qMakePair(QVariant(data.vVector.x), RPropertyAttributes(RPropertyAttributes::Invisible));
     } else if (propertyTypeId == PropertyVY) {
-        return qMakePair(QVariant(data.vVector.y), RPropertyAttributes());
+        return qMakePair(QVariant(data.vVector.y), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
 
     else if (propertyTypeId == PropertyScaleFactorX) {
