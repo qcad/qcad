@@ -734,7 +734,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
