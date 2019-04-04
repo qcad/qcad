@@ -199,7 +199,7 @@ LayerList.getPreferencesCategory = function() {
 
 LayerList.applyPreferences = function(doc, mdiChild) {
     var appWin = RMainWindowQt.getMainWindow();
-    appWin.notifyLayerListeners(EAction.getDocumentInterface());
+    appWin.notifyLayerListeners(EAction.getDocumentInterface(), []);
 
     //if (RSettings.getBoolValue("LayerList/AlternatingRowColors", false)===true) {
         var layerList = appWin.findChild("LayerList");
