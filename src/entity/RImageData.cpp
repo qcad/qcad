@@ -152,12 +152,15 @@ bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector
 #else
     Qt::KeyboardModifiers mod = QApplication::queryKeyboardModifiers();
 #endif
+    // shift to keep aspect ratio:
     bool keepAspectRatio = mod.testFlag(Qt::ShiftModifier);
-    bool fromCenter = mod.testFlag(Qt::AltModifier);
+    // TODO: from center:
+    //bool fromCenter = mod.testFlag(???);
+    bool fromCenter = false;
 
     QList<RVector> cornersPx = getCornersPx();
     RBox box(cornersPx[0], cornersPx[2]);
-    ret = box.scaleByReference(referencePointPx, targetPointPx, keepAspectRatio);
+    ret = box.scaleByReference(referencePointPx, targetPointPx, keepAspectRatio, fromCenter);
 
     if (ret) {
         cornersPx = box.getCorners2d();
