@@ -1474,7 +1474,7 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
         if (currentSnapRestriction!=NULL) {
             ret = currentSnapRestriction->restrictSnap(ret, getRelativeZero());
         }
-        if (event.modifiers()==Qt::ShiftModifier) {
+        if (event.modifiers()==Qt::AltModifier) {
             ret = restrictOrtho(ret, getRelativeZero(), RS::Orthogonal);
         }
         
