@@ -488,7 +488,7 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
 
         if (preview) {
             this.d2Model = d2;
-            op = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
+            op = new RMoveReferencePointOperation(this.d1Model, this.d2Model, event.getModifiers());
             var scene = this.di.getGraphicsSceneWithFocus();
             op.setGraphicsScene(scene);
             this.di.previewOperation(op);
@@ -499,7 +499,7 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
             }
             else {
                 this.d2Model = d2;
-                op = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
+                op = new RMoveReferencePointOperation(this.d1Model, this.d2Model, event.getModifiers());
                 var scene = this.di.getGraphicsSceneWithFocus();
                 op.setGraphicsScene(scene);
                 op.setText(qsTr("Move Reference Point"));

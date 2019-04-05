@@ -368,9 +368,7 @@ public:
      * \return True if a reference point has been moved successfully,
      *        false otherwise.
      */
-    virtual bool moveReferencePoint(
-        const RVector& referencePoint, const RVector& targetPoint
-    ) = 0;
+    virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers = Qt::NoModifier) = 0;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);

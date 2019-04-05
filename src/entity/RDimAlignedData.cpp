@@ -76,10 +76,10 @@ QList<RRefPoint> RDimAlignedData::getReferencePoints(RS::ProjectionRenderingHint
     return ret;
 }
 
-bool RDimAlignedData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RDimAlignedData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
 
-    bool ret = RDimLinearData::moveReferencePoint(referencePoint, targetPoint);
+    bool ret = RDimLinearData::moveReferencePoint(referencePoint, targetPoint, modifiers);
 
     if (referencePoint.equalsFuzzy(refDefinitionPoint1)) {
         definitionPoint = targetPoint;

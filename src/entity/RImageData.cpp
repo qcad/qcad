@@ -137,23 +137,21 @@ QList<RRefPoint> RImageData::getReferencePoints(RS::ProjectionRenderingHint hint
     return ret;
 }
 
-bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
-    Q_UNUSED(referencePoint)
-    Q_UNUSED(targetPoint)
-
+bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
     bool ret = false;
 
     // scale image:
     RVector referencePointPx = mapToImage(referencePoint);
     RVector targetPointPx = mapToImage(targetPoint);
 
-#if QT_VERSION >= 0x050000
-    Qt::KeyboardModifiers mod = QGuiApplication::queryKeyboardModifiers();
-#else
-    Qt::KeyboardModifiers mod = QApplication::queryKeyboardModifiers();
-#endif
+//#if QT_VERSION >= 0x050000
+//    Qt::KeyboardModifiers mod = QGuiApplication::queryKeyboardModifiers();
+//#else
+//    Qt::KeyboardModifiers mod = QApplication::queryKeyboardModifiers();
+//#endif
+
     // shift to keep aspect ratio:
-    bool keepAspectRatio = mod.testFlag(Qt::ShiftModifier);
+    bool keepAspectRatio = modifiers.testFlag(Qt::ShiftModifier);
     // TODO: from center:
     //bool fromCenter = mod.testFlag(???);
     bool fromCenter = false;

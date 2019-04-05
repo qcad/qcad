@@ -572,8 +572,8 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
     return ret;
 }
 
-bool RBlockReferenceData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RBlockReferenceData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
 
     bool ret = false;
     if (referencePoint.getDistanceTo(position) < RS::PointTolerance) {

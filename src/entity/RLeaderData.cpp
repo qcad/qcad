@@ -114,8 +114,8 @@ QList<RRefPoint> RLeaderData::getReferencePoints(RS::ProjectionRenderingHint hin
     return RRefPoint::toRefPointList(getVertices());
 }
 
-bool RLeaderData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RLeaderData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
 
     bool ret = false;
 

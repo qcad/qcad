@@ -89,8 +89,9 @@ QList<RRefPoint> RViewportData::getReferencePoints(RS::ProjectionRenderingHint h
     return ret;
 }
 
-bool RViewportData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RViewportData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
+
     bool ret = false;
 
     RVector offset = targetPoint - referencePoint;

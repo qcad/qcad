@@ -83,8 +83,9 @@ QList<RRefPoint> RPolylineData::getReferencePoints(RS::ProjectionRenderingHint h
     return ret;
 }
 
-bool RPolylineData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RPolylineData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
+
     bool ret = false;
 
     QList<RVector>::iterator it;

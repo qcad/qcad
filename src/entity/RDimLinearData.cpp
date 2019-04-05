@@ -59,15 +59,13 @@ bool RDimLinearData::isSane() const {
             extensionPoint2.isSane();
 }
 
-bool RDimLinearData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
-
+bool RDimLinearData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
     bool recomputeDefPoint = false;
     if (referencePoint.equalsFuzzy(definitionPoint)) {
         recomputeDefPoint = true;
     }
 
-    bool ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint);
+    bool ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint, modifiers);
 
     if (referencePoint.equalsFuzzy(extensionPoint1)) {
         recomputeDefinitionPoint(extensionPoint1, extensionPoint2,

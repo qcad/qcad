@@ -55,8 +55,8 @@ QList<RRefPoint> REllipseData::getReferencePoints(RS::ProjectionRenderingHint hi
     return ret;
 }
 
-bool REllipseData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool REllipseData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
 
     RVector startPoint = getStartPoint();
     RVector endPoint = getEndPoint();

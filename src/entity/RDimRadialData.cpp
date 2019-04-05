@@ -66,9 +66,7 @@ QList<RRefPoint> RDimRadialData::getReferencePoints(RS::ProjectionRenderingHint 
     return ret;
 }
 
-bool RDimRadialData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
-
+bool RDimRadialData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
     bool ret = false;
 
     if (referencePoint.equalsFuzzy(chordPoint)) {
@@ -96,7 +94,7 @@ bool RDimRadialData::moveReferencePoint(const RVector& referencePoint,
 //    }
 
     if (!ret) {
-        ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint);
+        ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint, modifiers);
     }
 
     if (ret) {

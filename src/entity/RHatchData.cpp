@@ -268,7 +268,9 @@ QList<RRefPoint> RHatchData::getReferencePoints(RS::ProjectionRenderingHint hint
     return ret;
 }
 
-bool RHatchData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
+bool RHatchData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
+
     bool ret = false;
 
     for (int i=0; i<boundary.size(); ++i) {

@@ -48,8 +48,9 @@ QList<RRefPoint> RRayData::getReferencePoints(RS::ProjectionRenderingHint hint) 
     return ret;
 }
 
-bool RRayData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RRayData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
+
     bool ret = false;
     if (referencePoint.equalsFuzzy(basePoint)) {
         basePoint = targetPoint;

@@ -40,7 +40,8 @@ class REntity;
 class QCADOPERATIONS_EXPORT RMoveReferencePointOperation : public ROperation {
 public:
     RMoveReferencePointOperation(
-        const RVector& referencePoint, const RVector& targetPoint
+        const RVector& referencePoint, const RVector& targetPoint,
+        Qt::KeyboardModifiers modifiers
     );
     virtual ~RMoveReferencePointOperation() {}
     
@@ -53,6 +54,7 @@ public:
 private:
     RVector referencePoint;
     RVector targetPoint;
+    Qt::KeyboardModifiers modifiers;
     RGraphicsScene* scene;
 };
 

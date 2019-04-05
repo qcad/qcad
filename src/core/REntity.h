@@ -520,9 +520,8 @@ public:
     /**
      * \copydoc REntityData::moveReferencePoint
      */
-    virtual bool moveReferencePoint(
-        const RVector& referencePoint, const RVector& targetPoint) {
-        return getData().moveReferencePoint(referencePoint, targetPoint);
+    virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers = Qt::NoModifier) {
+        return getData().moveReferencePoint(referencePoint, targetPoint, modifiers);
     }
 
     /**

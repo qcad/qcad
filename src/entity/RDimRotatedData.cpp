@@ -72,7 +72,7 @@ QList<RRefPoint> RDimRotatedData::getReferencePoints(RS::ProjectionRenderingHint
     return ret;
 }
 
-bool RDimRotatedData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
+bool RDimRotatedData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
     // if definition point and extension points are on one line,
     // move the extension points together with the definition point:
     bool moveExtensionPoints = false;
@@ -82,7 +82,7 @@ bool RDimRotatedData::moveReferencePoint(const RVector& referencePoint, const RV
         }
     }
 
-    bool ret = RDimLinearData::moveReferencePoint(referencePoint, targetPoint);
+    bool ret = RDimLinearData::moveReferencePoint(referencePoint, targetPoint, modifiers);
 
     if (moveExtensionPoints) {
         // move extension points with definition point:

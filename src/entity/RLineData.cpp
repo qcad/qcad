@@ -61,8 +61,9 @@ QList<RRefPoint> RLineData::getReferencePoints(RS::ProjectionRenderingHint hint)
     return ret;
 }
 
-bool RLineData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RLineData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
+
     bool ret = false;
     if (referencePoint.equalsFuzzy(startPoint)) {
         startPoint = targetPoint;

@@ -61,8 +61,8 @@ QList<RRefPoint> RDimDiametricData::getReferencePoints(RS::ProjectionRenderingHi
     return ret;
 }
 
-bool RDimDiametricData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RDimDiametricData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
 
     bool ret = false;
 
@@ -92,7 +92,7 @@ bool RDimDiametricData::moveReferencePoint(const RVector& referencePoint,
     }
 
     if (!ret) {
-        ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint);
+        ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint, modifiers);
     }
 
     if (ret) {

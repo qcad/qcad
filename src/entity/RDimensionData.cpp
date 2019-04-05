@@ -204,8 +204,8 @@ bool RDimensionData::clickReferencePoint(const RVector& referencePoint) {
     return false;
 }
 
-bool RDimensionData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RDimensionData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
 
     if (referencePoint.equalsFuzzy(definitionPoint)) {
         definitionPoint = targetPoint;

@@ -64,7 +64,9 @@ QList<RRefPoint> RSplineData::getReferencePoints(RS::ProjectionRenderingHint hin
     }
 }
 
-bool RSplineData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
+bool RSplineData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
+
     bool ret = false;
     //bool periodic = isPeriodic();
 

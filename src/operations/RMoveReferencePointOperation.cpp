@@ -26,9 +26,11 @@
 
 RMoveReferencePointOperation::RMoveReferencePointOperation(
     const RVector& referencePoint, 
-    const RVector& targetPoint)
+    const RVector& targetPoint,
+    Qt::KeyboardModifiers modifiers)
     : referencePoint(referencePoint),
       targetPoint(targetPoint),
+      modifiers(modifiers),
       scene(NULL) {
 }
 
@@ -63,7 +65,7 @@ RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool previ
             QList<RRefPoint> entityReferencePoints = referencePoints[*it];
             for (int i=0; i<entityReferencePoints.length(); i++) {
                 if (entityReferencePoints[i].isSelected()) {
-                    entity->moveReferencePoint(entityReferencePoints[i], entityReferencePoints[i]+delta);
+                    entity->moveReferencePoint(entityReferencePoints[i], entityReferencePoints[i]+delta, modifiers);
                 }
             }
             QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::RefPoint);
@@ -72,7 +74,7 @@ RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool previ
 
         // move single reference point:
         else {
-            if (entity->moveReferencePoint(referencePoint, targetPoint)) {
+            if (entity->moveReferencePoint(referencePoint, targetPoint, modifiers)) {
                 QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::RefPoint);
                 transaction.addObject(entity, false, false, props);
             }

@@ -72,8 +72,8 @@ QList<RRefPoint> RDimArcLengthData::getReferencePoints(RS::ProjectionRenderingHi
     return ret;
 }
 
-bool RDimArcLengthData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RDimArcLengthData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
 
     bool ret = false;
 
@@ -84,7 +84,7 @@ bool RDimArcLengthData::moveReferencePoint(const RVector& referencePoint,
     }
 
     if (!ret) {
-        ret = RDimAngularData::moveReferencePoint(referencePoint, targetPoint);
+        ret = RDimAngularData::moveReferencePoint(referencePoint, targetPoint, modifiers);
     }
 
     if (ret) {

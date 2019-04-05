@@ -65,10 +65,8 @@ QList<RRefPoint> RDimOrdinateData::getReferencePoints(RS::ProjectionRenderingHin
     return ret;
 }
 
-bool RDimOrdinateData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
-
-    bool ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint);
+bool RDimOrdinateData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    bool ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint, modifiers);
 
     if (referencePoint.equalsFuzzy(leaderEndPoint)) {
         leaderEndPoint = targetPoint;

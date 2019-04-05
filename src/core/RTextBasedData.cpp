@@ -294,8 +294,9 @@ QList<RRefPoint> RTextBasedData::getReferencePoints(RS::ProjectionRenderingHint 
     return ret;
 }
 
-bool RTextBasedData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RTextBasedData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
+    Q_UNUSED(modifiers)
+
     bool ret = false;
     if (referencePoint.equalsFuzzy(position)) {
         position = targetPoint;
