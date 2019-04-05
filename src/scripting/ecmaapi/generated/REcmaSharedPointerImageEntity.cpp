@@ -196,6 +196,22 @@
                 qScriptValueFromValue(&engine, RImageEntity::PropertyInsertionPointZ),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyUX",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyUX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyUY",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyUY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyVX",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyVX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyVY",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyVY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyScaleFactorX",
                 qScriptValueFromValue(&engine, RImageEntity::PropertyScaleFactorX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

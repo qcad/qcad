@@ -278,6 +278,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="targetPoint" isConst="true" />
         <arg type="bool" typeName="bool" name="keepAspectRatio"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="fromCenter"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="toQRectF" cppName="toQRectF" specifier="public"

@@ -214,6 +214,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyInsertionPointZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyUX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyUY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyVX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyVY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyScaleFactorX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyScaleFactorY" type="RPropertyTypeId"
