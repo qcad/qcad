@@ -127,7 +127,10 @@ DefaultNavigation.prototype.mouseReleaseEvent = function(event) {
         (event.button() === Qt.MidButton ||
          event.button() === Qt.LeftButton)) {
 
-        this.handleMiddleMouseButtonZoom(event);
+        if (event.button() === Qt.MidButton) {
+            // only middle mouse button to zoom:
+            this.handleMiddleMouseButtonZoom(event);
+        }
 
         if (!isNull(this.savedCursor)) {
             this.view.setCursor(this.savedCursor);
