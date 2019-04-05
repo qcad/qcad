@@ -118,7 +118,7 @@
             // generate constructor variants:
             
     if( context->argumentCount() ==
-        2
+        3
                 && (
                 
                         context->argument(
@@ -152,6 +152,13 @@
                         1
                         ).isNull()
                 ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isNumber()
+                ) /* type: Qt::KeyboardModifiers */
             
     ){
     // prepare arguments:
@@ -192,6 +199,14 @@
                     a1 = 
                     *ap1;
                 
+                    // argument isStandardType
+                    Qt::KeyboardModifiers
+                    a2 =
+                    (Qt::KeyboardModifiers)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ constructor:
@@ -205,6 +220,8 @@
                     a0
         ,
     a1
+        ,
+    a2
                     );
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:

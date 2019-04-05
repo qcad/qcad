@@ -521,9 +521,8 @@
     <comment type="block">/**
      * \copydoc REntityData::moveReferencePoint
      */</comment>
-    <function><type><name>virtual</name> <name>bool</name></type> <name>moveReferencePoint</name><parameter_list>(
-        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>targetPoint</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>moveReferencePoint</name><argument_list>(<argument><expr><name>referencePoint</name></expr></argument>, <argument><expr><name>targetPoint</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>moveReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>targetPoint</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>modifiers</name> =<init> <expr><name><name>Qt</name>::<name>NoModifier</name></name></expr></init></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>moveReferencePoint</name><argument_list>(<argument><expr><name>referencePoint</name></expr></argument>, <argument><expr><name>targetPoint</name></expr></argument>, <argument><expr><name>modifiers</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <comment type="block">/**

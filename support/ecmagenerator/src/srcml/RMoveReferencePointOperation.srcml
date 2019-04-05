@@ -41,7 +41,8 @@
 <class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RMoveReferencePointOperation</name> <super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor_decl><name>RMoveReferencePointOperation</name><parameter_list>(
-        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>targetPoint</name></decl></param>
+        <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>referencePoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>targetPoint</name></decl></param>,
+        <param><decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>modifiers</name></decl></param>
     )</parameter_list>;</constructor_decl>
     <destructor><specifier>virtual</specifier> <name>~RMoveReferencePointOperation</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
     
@@ -54,6 +55,7 @@
 </public><private>private:
     <decl_stmt><decl><type><name>RVector</name></type> <name>referencePoint</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>targetPoint</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>modifiers</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RGraphicsScene</name>*</type> <name>scene</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
