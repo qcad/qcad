@@ -125,7 +125,10 @@ void RBox::move(const RVector& offset) {
     c2.move(offset);
 }
 
-bool RBox::scaleByReference(const RVector& referencePoint, const RVector& targetPoint, bool keepAspectRatio) {
+/**
+ * \todo implement fromCenter
+ */
+bool RBox::scaleByReference(const RVector& referencePoint, const RVector& targetPoint, bool keepAspectRatio, bool fromCenter) {
     RVector oriSize = getSize().getAbsolute();
 
     // prevent division by 0:
@@ -146,6 +149,9 @@ bool RBox::scaleByReference(const RVector& referencePoint, const RVector& target
         return false;
     }
 
+    RVector center = getCenter();
+
+    // vector of translation of corner:
     RVector vf;
     switch (match) {
     case 1:
