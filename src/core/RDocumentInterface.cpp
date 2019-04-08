@@ -1356,8 +1356,8 @@ void RDocumentInterface::undo() {
 
     QList<RTransaction> t = document.undo();
     for (int i=0; i<t.length(); i++) {
-        QList<RObject::Id> objectIds = t[i].getAffectedObjects();
-        objectChangeEvent(objectIds);
+        //QList<RObject::Id> objectIds = t[i].getAffectedObjects();
+        objectChangeEvent(t[i]);
 
         if (RMainWindow::hasMainWindow()) {
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
@@ -1375,8 +1375,8 @@ void RDocumentInterface::redo() {
     QList<RTransaction> t = document.redo();
 
     for (int i=0; i<t.length(); i++) {
-        QList<RObject::Id> objectIds = t[i].getAffectedObjects();
-        objectChangeEvent(objectIds);
+        //QList<RObject::Id> objectIds = t[i].getAffectedObjects();
+        objectChangeEvent(t[i]);
 
         if (RMainWindow::hasMainWindow()) {
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
@@ -2153,7 +2153,7 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
 
     clearPreview();
 
-    objectChangeEvent(objectIds);
+    objectChangeEvent(transaction);
 
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->postTransactionEvent(transaction,
@@ -2170,7 +2170,7 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
 /**
  * Triggers an objectChangeEvent for every object in the given set.
  */
-void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
+void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
     bool ucsHasChanged = false;
     bool linetypeHasChanged = false;
     bool layerHasChanged = false;
@@ -2179,6 +2179,8 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
     bool layoutHasChanged = false;
     bool viewHasChanged = false;
     bool entityHasChanged = false;
+
+    QList<RObject::Id> objectIds = transaction.getAffectedObjects();
 
     QSet<REntity::Id> entityIdsToRegenerate;
 
@@ -2241,6 +2243,15 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
             if (block->getId()!=document.getCurrentBlockId()) {
                 blockHasChanged = true;
                 //document.queryBlockReferences(block->getId());
+            }
+            else {
+                QList<RPropertyChange> propertyChanges = transaction.getPropertyChanges(objectId);
+                for (int i=0; i<propertyChanges.length(); i++) {
+                    if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyName) {
+                        // current block renamed (needs block list update):
+                        blockHasChanged = true;
+                    }
+                }
             }
 
             // deselect block reference entities of hidden block:

@@ -278,7 +278,7 @@ public:
     void previewOperation(ROperation* operation);
     RTransaction applyOperation(ROperation* operation);
 
-    void objectChangeEvent(QList<RObject::Id>& objectIds);
+    void objectChangeEvent(RTransaction& transaction);
 
     RVector getRelativeZero() const;
     RVector getLastPosition() const;
