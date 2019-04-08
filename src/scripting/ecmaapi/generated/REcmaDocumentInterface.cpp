@@ -8368,20 +8368,31 @@
     
     if( context->argumentCount() ==
     1 && (
-            context->argument(0).isArray()
-        ) /* type: QList < RObject::Id > */
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTransaction */
     
     ){
     // prepare arguments:
     
-                    // argument isArray
-                    QList < RObject::Id >
-                    a0;
-                    REcmaHelper::fromScriptValue(
-                        engine,
-                        context->argument(0),
-                        a0
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        0
+                        )
                     );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
