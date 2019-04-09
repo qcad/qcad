@@ -82,10 +82,12 @@ CommandLine.init = function(basePath) {
     dock.hidden.connect(function() { action.setChecked(false); });
 
     var blue = "#0000cc";
+    var infoBlue = "#0066cc";
     var red = "#cc0000";
 
     if (RSettings.hasDarkGuiBackground()) {
         blue = "#2E9AFF";
+        infoBlue = "#91c1ff";
         red = "#FF6060";
     }
 
@@ -393,7 +395,7 @@ CommandLine.init = function(basePath) {
             message = Qt.escape(message);
         }
 
-        appendAndScroll("<span style='color:#0066cc;'>" + message + "</span>");
+        appendAndScroll("<span style='color:" + infoBlue + ";'>" + message + "</span>");
         if (RSettings.getBoolValue("CommandLine/InfoAsDialog", false)) {
             QMessageBox.information(appWin, qsTr("Info"), message);
         }
