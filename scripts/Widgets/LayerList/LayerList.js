@@ -89,9 +89,9 @@ RLayerListQt.prototype.updateLayers = function(documentInterface) {
             continue;
         }
         var item = new QListWidgetItem(layer.getName(), this);
-        var iconName = this.basePath
+        var iconName = autoIconPath(this.basePath
                 + "/layerstatus_%1%2.svg".arg(Number(layer.isFrozen()))
-                .arg(Number(layer.isLocked()));
+                .arg(Number(layer.isLocked())));
         item.setIcon(new QIcon(iconName));
         if (layer.isProtected()) {
             item.setData(Qt.UserRole, true);
