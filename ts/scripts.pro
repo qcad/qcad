@@ -400,6 +400,11 @@ SOURCES = \
 ../scripts/Edit/Esc/Tests/EActionTest01.js \
 ../scripts/Edit/Esc/Tests/EActionTest02.js \
 ../scripts/Edit/Esc/Tests/EActionTest03.js \
+../scripts/Edit/Esc/Tests/EActionTest04.js \
+../scripts/Edit/Esc/Tests/EActionTest05.js \
+../scripts/Edit/Esc/Tests/EActionTest06.js \
+../scripts/Edit/Esc/Tests/EActionTest07.js \
+../scripts/Edit/Esc/Tests/EActionTest08.js \
 ../scripts/Edit/Paste/Paste.js \
 ../scripts/Edit/Paste/PasteInit.js \
 ../scripts/Edit/Paste/Tests/PasteTest00.js \
