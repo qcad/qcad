@@ -164,22 +164,18 @@ InfoDistanceEE.prototype.pickEntity = function(event, preview) {
         if (!preview) {
             var distance = this.point1.getDistanceTo(this.point2);
             EAction.getMainWindow().handleUserInfo(qsTr("Distance:") + " " + this.formatLinearResultCmd(distance));
-//            var line = new RLine(this.point1, this.point2);
-//            var distance = line.getLength();
-//            var resultMessage = qsTr("Distance:") + " " + this.formatLinearResultCmd(distance);
-//            var dx = Math.abs(line.getEndPoint().x - line.getStartPoint().x);
-//            var dy = Math.abs(line.getEndPoint().y - line.getStartPoint().y);
-//            var angle = line.getAngle();
-//            resultMessage += ",\n" + qsTr("Delta X:") + " " + this.formatLinearResultCmd(dx);
-//            resultMessage += ",\n" + qsTr("Delta Y:") + " " + this.formatLinearResultCmd(dy);
-//            resultMessage += ",\n" + qsTr("Angle:") + " " + this.formatAngularResultCmd(angle);
-//            this.setState(InfoDistancePP.State.SettingFirstPoint);
-//            appWin.handleUserInfo(resultMessage);
+
+            if (this.autoTerminate) {
+                this.updateLineEdit(distance);
+                this.setNoState(false);
+                this.terminate();
+                return;
+            }
+            else {
+                this.setState(InfoDistanceEE.State.SettingShape1);
+            }
         }
 
-        if (!preview) {
-            this.setState(InfoDistanceEE.State.SettingShape1);
-        }
         break;
     }
 
