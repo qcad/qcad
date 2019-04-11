@@ -105,8 +105,8 @@ bool RAction::isTerminated() {
     return terminated;
 }
 
-void RAction::setNoState() {
-    noState = true;
+void RAction::setNoState(bool on) {
+    noState = on;
 }
 
 bool RAction::hasNoState() {

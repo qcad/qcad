@@ -92,7 +92,7 @@ public:
     void setOverride();
     bool isOverride();
 
-    void setNoState();
+    void setNoState(bool on = true);
     bool hasNoState();
 
     void setUniqueGroup(const QString& ug);
