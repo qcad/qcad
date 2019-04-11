@@ -2697,13 +2697,13 @@ QStringList RDocument::getAutoVariables() const {
     return docVars->getAutoVariables();
 }
 
-double RDocument::eval(const QString& expression, bool* ok) {
+QString RDocument::substituteAutoVariables(const QString& expression) {
+    QString exp = expression;
+
     QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
     if (docVars.isNull()) {
-        return RMath::eval(expression, ok);
+        return expression;
     }
-
-    QString exp = expression;
 
     QStringList autoVariables = docVars->getAutoVariables();
     for (int i=0; i<autoVariables.length(); i++) {
@@ -2715,6 +2715,11 @@ double RDocument::eval(const QString& expression, bool* ok) {
         exp = exp.replace(QRegExp(QString("\\b%1\\b").arg(key)), QString("%1").arg(value, 0, 'f', 12));
     }
 
+    return exp;
+}
+
+double RDocument::eval(const QString& expression, bool* ok) {
+    QString exp = substituteAutoVariables(expression);
     return RMath::eval(exp, ok);
 }
 

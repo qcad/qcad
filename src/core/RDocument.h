@@ -420,6 +420,7 @@ public:
 
     QString addAutoVariable(double value);
     QStringList getAutoVariables() const;
+    QString substituteAutoVariables(const QString& expression);
     double eval(const QString& expression, bool* ok = NULL);
 
     /*

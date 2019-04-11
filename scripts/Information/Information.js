@@ -271,16 +271,18 @@ Information.prototype.resumeEvent = function() {
 /**
  * Set a math line edit as receiver of the result.
  */
-Information.prototype.setMathLineEdit = function(mathLineEditName) {
-    this.mathLineEditName = mathLineEditName;
+Information.prototype.setLineEdit = function(lineEditName) {
+    this.lineEditName = lineEditName;
     this.autoTerminate = true;
     this.addToDrawing = false;
     this.setUiOptions(undefined);
+
+    // make sure action can run even though a script is already running:
     this.setNoState();
 };
 
-Information.prototype.updateMathLineEdit = function(value) {
-    if (isNull(this.mathLineEditName)) {
+Information.prototype.updateLineEdit = function(value) {
+    if (isNull(this.lineEditName)) {
         return;
     }
 
@@ -289,15 +291,19 @@ Information.prototype.updateMathLineEdit = function(value) {
         return;
     }
 
-    var mathLineEdit = appWin.findChild(this.mathLineEditName);
-    if (isNull(mathLineEdit) || !isOfType(mathLineEdit, RMathLineEdit)) {
+    var lineEdit = appWin.findChild(this.lineEditName);
+    if (isNull(lineEdit)) {
+        return;
+    }
+
+    if (!isOfType(lineEdit, QLineEdit) && !isOfType(lineEdit, RMathLineEdit) && !isOfType(lineEdit, RCommandLine)) {
         return;
     }
 
     var di = this.getDocumentInterface();
     var doc = di.getDocument();
     var varName = doc.addAutoVariable(value);
-    mathLineEdit.insert(varName);
+    lineEdit.insert(varName);
 };
 
 Information.getMenu = function() {

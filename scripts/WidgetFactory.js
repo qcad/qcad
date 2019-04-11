@@ -1002,7 +1002,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
             }
 
             if (isOfType(w, RMathLineEdit)) {
-                WidgetFactory.initMathLineEdit(w);
+                WidgetFactory.initLineEditInfoTools(w);
             }
 
             a = targetWidget.addWidget(w);
@@ -1047,7 +1047,7 @@ WidgetFactory.adjustIcons = function(includeBasePath, widget) {
     }
 };
 
-WidgetFactory.initMathLineEdit = function(mathLineEdit) {
+WidgetFactory.initLineEditInfoTools = function(mathLineEdit) {
 };
 
 /**

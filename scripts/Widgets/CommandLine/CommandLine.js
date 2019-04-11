@@ -71,6 +71,7 @@ CommandLine.init = function(basePath) {
     var formWidget = WidgetFactory.createWidget(basePath, "CommandLine.ui");
     var teHistory = formWidget.findChild("History");
     var leCommand = formWidget.findChild("CommandEdit");
+    WidgetFactory.initLineEditInfoTools(leCommand);
     var lCommand = formWidget.findChild("CommandLabel");
     var bToggleTitleBar = formWidget.findChild("ToggleTitleBar");
     var dock = new RDockWidget(qsTr("Command Line"), appWin);
@@ -154,9 +155,13 @@ CommandLine.init = function(basePath) {
         if (isNull(di)) {
             return;
         }
+        var doc = di.getDocument();
+
+        // substitute variables:
+        var cmd = doc.substituteAutoVariables(command);
 
         // handle action specific commands for preview:
-        e = new RCommandEvent(command);
+        e = new RCommandEvent(cmd);
         di.commandEventPreview(e);
         if (e.isAccepted()) {
             di.repaintViews();
@@ -164,7 +169,7 @@ CommandLine.init = function(basePath) {
         }
 
         // handle math expressions preview,
-        if (command.startsWith("=")) {
+        if (cmd.startsWith("=")) {
             return;
         }
 
@@ -172,14 +177,15 @@ CommandLine.init = function(basePath) {
             return;
         }
 
+
         var view = di.getLastKnownViewWithFocus();
 
         // handle direct distance entry for preview:
-        var pos = stringToDirectDistanceEntry(di.getRelativeZero(), di.getCursorPosition(), command);
+        var pos = stringToDirectDistanceEntry(di.getRelativeZero(), di.getCursorPosition(), cmd);
 
         // handle coordinate entry for preview:
         if (isNull(pos) || !pos.isValid()) {
-            pos = stringToCoordinate(di.getRelativeZero(), command);
+            pos = stringToCoordinate(di.getRelativeZero(), cmd);
         }
 
         var sp;
@@ -217,8 +223,13 @@ CommandLine.init = function(basePath) {
         var di = appWin.getDocumentInterface();
 
         if (!isNull(di)) {
+            var doc = di.getDocument();
+
+            // substitute variables:
+            var cmd = doc.substituteAutoVariables(command);
+
             // handle action specific commands:
-            var e = new RCommandEvent(command);
+            var e = new RCommandEvent(cmd);
             di.commandEvent(e);
             if (e.isAccepted()) {
                 //appWin.handleUserCommand(command);
@@ -228,46 +239,46 @@ CommandLine.init = function(basePath) {
 
             // handle math expressions and leave result in command line,
             // or, if error, print error and leave command line unchanged
-            if (command.startsWith("=")) {
+            if (cmd.startsWith("=")) {
                 // remove leading '='
-                command = command.slice(1);
+                cmd = cmd.slice(1);
                 var prefix = "=";
                 var relprefix = RSettings.getStringValue(
                             "Input/RelativeCoordinatePrefix",
                             String.fromCharCode(64)  // @ (doxygen can't cope with an @ here)
                 );
-                if (command.endsWith(" ")) {
+                if (cmd.endsWith(" ")) {
                     prefix = "";
-                } else if (command.endsWith(relprefix)) {
-                    command = command.replace(relprefix, "");
+                } else if (cmd.endsWith(relprefix)) {
+                    cmd = cmd.replace(relprefix, "");
                     prefix = relprefix;
                 }
 
-                var val = RMath.eval(command);
+                var val = RMath.eval(cmd);
                 if (isNumber(val)) {
-                    appWin.handleUserCommand("=" + command);
+                    appWin.handleUserCommand("=" + cmd);
                     appWin.handleUserInfo(val.toString());
                     leCommand.text = prefix + val;
                 } else {
                     var er = RMath.getError();
-                    EAction.handleUserWarning(qsTr("Invalid value:") + " '=%1' -  %2".arg(command).arg(er));
+                    EAction.handleUserWarning(qsTr("Invalid value:") + " '=%1' -  %2".arg(cmd).arg(er));
                 }
                 return;
             }
 
             // handle direct distance entry:
-            var pos = stringToDirectDistanceEntry(di.getRelativeZero(), di.getCursorPosition(), command);
+            var pos = stringToDirectDistanceEntry(di.getRelativeZero(), di.getCursorPosition(), cmd);
 
             // handle coordinate entry:
             if (isNull(pos) || !pos.isValid()) {
-                pos = stringToCoordinate(di.getRelativeZero(), command);
+                pos = stringToCoordinate(di.getRelativeZero(), cmd);
             }
 
             if (!pos.isNaN()) {
                 if (!pos.isValid()) {
                     appWin.handleUserWarning(
                         qsTr("Invalid coordinate or distance \"%1\".")
-                            .arg(Qt.escape(command))
+                            .arg(Qt.escape(cmd))
                     );
                     return;
                 }
