@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("InfoDistancePP", "Distance &Point to Point"), RMainWindowQt
-            .getMainWindow());
+    var action = new RGuiAction(qsTranslate("InfoDistancePP", "Distance &Point to Point"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/InfoDistancePP.js");
     action.setIcon(basePath + "/InfoDistancePP.svg");
