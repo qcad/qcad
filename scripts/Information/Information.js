@@ -37,6 +37,8 @@ function Information(guiAction) {
 
     this.addToDrawing = false;
     this.textHeight = 1.0;
+    this.mathLineEdit = undefined;
+    this.autoTerminate = false;
 }
 
 Information.prototype = new EAction();
@@ -264,6 +266,38 @@ Information.prototype.slotTextHeightChanged = function(value) {
 Information.prototype.resumeEvent = function() {
     EAction.prototype.resumeEvent.call(this);
     this.simulateMouseMoveEvent();
+};
+
+/**
+ * Set a math line edit as receiver of the result.
+ */
+Information.prototype.setMathLineEdit = function(mathLineEditName) {
+    this.mathLineEditName = mathLineEditName;
+    this.autoTerminate = true;
+    this.addToDrawing = false;
+    this.setUiOptions(undefined);
+    this.setNoState();
+};
+
+Information.prototype.updateMathLineEdit = function(value) {
+    if (isNull(this.mathLineEditName)) {
+        return;
+    }
+
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+
+    var mathLineEdit = appWin.findChild(this.mathLineEditName);
+    if (isNull(mathLineEdit) || !isOfType(mathLineEdit, RMathLineEdit)) {
+        return;
+    }
+
+    var di = this.getDocumentInterface();
+    var doc = di.getDocument();
+    var varName = doc.addAutoVariable(value);
+    mathLineEdit.insert(varName);
 };
 
 Information.getMenu = function() {
