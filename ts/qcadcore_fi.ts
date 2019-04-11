@@ -661,7 +661,7 @@
         <translation>Suurin määrä</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+646"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+651"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Pyöreä (rekursiivinen) lohkojen vertailu havaittu:</translation>
     </message>

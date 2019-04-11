@@ -2238,7 +2238,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="-30"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>コマンドライン</translation>
@@ -2248,7 +2248,7 @@ Do you wish to recover it?</source>
         <translation type="obsolete">無効な座標 &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+222"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>不明なコマンドまたは無効な座標もしくは値: &quot;%1&quot;</translation>
     </message>
@@ -2277,12 +2277,12 @@ Do you wish to recover it?</source>
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-358"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location line="+234"/>
         <source>Invalid value:</source>
         <translation>不正な値:</translation>
     </message>
@@ -6177,7 +6177,7 @@ is already in the list.</source>
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>距離:</translation>
     </message>
@@ -6312,7 +6312,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translation>情報ツール</translation>
     </message>
@@ -13091,12 +13091,12 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation>シンボルを挿入</translation>
     </message>

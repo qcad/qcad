@@ -2858,7 +2858,7 @@ Cores &amp;básicas</translatorcomment>
     <name>CommandLine</name>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
@@ -2879,7 +2879,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Comando desconhecido &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>Linha de &amp;comando</translation>
     </message>
@@ -2888,7 +2888,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Coordenar inválido &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+239"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Comando desconhecido, ou coordenadas ou valor inválido: &quot;%1&quot;</translation>
     </message>
@@ -2922,12 +2922,12 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-358"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location line="+234"/>
         <source>Invalid value:</source>
         <translation>Valor inválido:</translation>
     </message>
@@ -7923,7 +7923,7 @@ lugares:\</translatorcomment>
         <translation>Concluído</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: PolylineEquidistant_pt.ts--
@@ -8091,7 +8091,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas de Informações</translation>
@@ -17257,7 +17257,7 @@ Visite &amp;Websítio</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
@@ -17266,7 +17266,7 @@ Restaurar Predefinições</translatorcomment>
         <translation>Restaure padrões</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--

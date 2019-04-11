@@ -2433,7 +2433,7 @@ Espacement de grille minimal (px)</translatorcomment>
     <name>CommandLine</name>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Ligne de commande</translation>
@@ -2449,7 +2449,7 @@ Espacement de grille minimal (px)</translatorcomment>
         <translation type="obsolete">Commande inconnue &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>Ligne de &amp;commande</translation>
     </message>
@@ -2458,7 +2458,7 @@ Espacement de grille minimal (px)</translatorcomment>
         <translation type="obsolete">Invalid coordonner &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+239"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Commande inconnue ou de coordonnées ou une valeur invalide: &quot;%1&quot;</translation>
     </message>
@@ -2492,12 +2492,12 @@ Espacement de grille minimal (px)</translatorcomment>
         <translation type="obsolete">Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-358"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location line="+234"/>
         <source>Invalid value:</source>
         <translation>Valeur invalide :</translation>
     </message>
@@ -6907,7 +6907,7 @@ Sélections persistantes</translatorcomment>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>Distance :</translation>
     </message>
@@ -7052,7 +7052,7 @@ Sélections persistantes</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Outils d&apos;information</translation>
@@ -14763,12 +14763,12 @@ Indiquer le point cible</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation>Insérer symbole</translation>
     </message>

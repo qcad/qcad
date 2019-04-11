@@ -840,7 +840,7 @@ Abre diálogo de cores</translatorcomment>
         <translation type="vanished">Margens de trama</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+646"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+651"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Foi detectada uma referência de bloco circular (recursiva):</translation>
     </message>

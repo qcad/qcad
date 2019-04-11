@@ -2218,18 +2218,18 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Príkazový riadok</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Príkazový riadok</translation>
     </message>
     <message>
-        <location line="+191"/>
+        <location line="+204"/>
         <source>Invalid value:</source>
         <translation>Neplatná hodnota:</translation>
     </message>
@@ -6053,7 +6053,7 @@ už existuje v zozname.</translation>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>Vzdialenosť:</translation>
     </message>
@@ -6184,7 +6184,7 @@ už existuje v zozname.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translation>Informačné nástroje</translation>
     </message>
@@ -12702,12 +12702,12 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation>Obnoviť predvolené</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation>Vložiť znak</translation>
     </message>

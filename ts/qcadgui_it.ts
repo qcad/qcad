@@ -88,7 +88,7 @@ Impossibile eseguire Qt Assistant (%1)</translatorcomment>
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+161"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+176"/>
         <source>Invalid</source>
         <translation>Non valido</translation>
     </message>

@@ -2509,7 +2509,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <name>CommandLine</name>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Kommandozeile</translation>
@@ -2523,7 +2523,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Unbekanntes Kommando &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Kommandozeile</translation>
     </message>
@@ -2532,7 +2532,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Ungültige Koordinate &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+239"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Unbekanntes Kommando oder ungültige Koordinate oder Wert: &quot;%1&quot;</translation>
     </message>
@@ -2565,12 +2565,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Versuch Objekte auf gesperrtem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-358"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location line="+234"/>
         <source>Invalid value:</source>
         <translation>Ungültiger Wert:</translation>
     </message>
@@ -7087,7 +7087,7 @@ ist bereits in der Liste.</translation>
         <translation>Fertig</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>Abstand:</translation>
     </message>
@@ -7238,7 +7238,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+312"/>
+        <location filename="../scripts/Information/Information.js" line="+352"/>
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>
@@ -15203,12 +15203,12 @@ Kursiv
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation>Symbol einfügen</translation>
     </message>

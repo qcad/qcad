@@ -2434,7 +2434,7 @@ Visualizzazione grafica</translatorcomment>
     <name>CommandLine</name>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Riga di comando</translation>
@@ -2450,7 +2450,7 @@ Visualizzazione grafica</translatorcomment>
         <translation type="obsolete">Comando sconosciuto &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>Riga di &amp;comando</translation>
     </message>
@@ -2459,7 +2459,7 @@ Visualizzazione grafica</translatorcomment>
         <translation type="obsolete">Non valido coordinate &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+239"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translation>Comando sconosciuto o coordinate o valore non valido: &quot;%1&quot;</translation>
     </message>
@@ -2493,12 +2493,12 @@ Visualizzazione grafica</translatorcomment>
         <translation type="obsolete">Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-358"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location line="+234"/>
         <source>Invalid value:</source>
         <translation>Valore non valido:</translation>
     </message>
@@ -6882,7 +6882,7 @@ Visualizzazione grafica</translatorcomment>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>
@@ -7025,7 +7025,7 @@ Visualizzazione grafica</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translation>Strumenti informazione</translation>
     </message>
@@ -14787,12 +14787,12 @@ Visita il &amp;sito web</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation>Inserisci Simbolo</translation>
     </message>

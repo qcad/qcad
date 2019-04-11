@@ -2212,18 +2212,18 @@ Wilt u het herstellen?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Opdrachtregel</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Opdrachtregel</translation>
     </message>
     <message>
-        <location line="+191"/>
+        <location line="+204"/>
         <source>Invalid value:</source>
         <translation>Ongeldig waarde:</translation>
     </message>
@@ -6001,7 +6001,7 @@ is al in de lijst.</translation>
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>Afstand:</translation>
     </message>
@@ -6132,7 +6132,7 @@ is al in de lijst.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translation>Informatie gereedschappen</translation>
     </message>
@@ -12605,12 +12605,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation>Symbool invoegen</translation>
     </message>

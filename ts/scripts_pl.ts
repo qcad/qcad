@@ -2685,7 +2685,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
     </message>
     <message>
         <location line="-30"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
@@ -2700,7 +2700,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+222"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nieznane polecenie lub nieprawidłowa współrzędna bądź wartość: „%1”</translation>
@@ -2734,12 +2734,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-358"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="+221"/>
+        <location line="+234"/>
         <source>Invalid value:</source>
         <translation>Nieprawidłowa wartość:</translation>
     </message>
@@ -7435,7 +7435,7 @@ Zrobione
         <translation type="unfinished">Zrobione</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -7595,7 +7595,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Narzędzia informacji</translation>
@@ -16233,7 +16233,7 @@ Odwiedź &amp;stronę</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -16241,7 +16241,7 @@ Przywróć ustawienia</translatorcomment>
         <translation>Przywróć domyślne</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

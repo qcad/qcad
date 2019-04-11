@@ -102,7 +102,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+161"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+176"/>
         <source>Invalid</source>
         <translation>Ungültig</translation>
     </message>

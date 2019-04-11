@@ -2206,18 +2206,18 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komentorivi</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Komentorivi</translation>
     </message>
     <message>
-        <location line="+191"/>
+        <location line="+204"/>
         <source>Invalid value:</source>
         <translation>Virheellinen arvo:</translation>
     </message>
@@ -6036,7 +6036,7 @@ on jo luettelossa.</translation>
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>Etäisyys:</translation>
     </message>
@@ -6167,7 +6167,7 @@ on jo luettelossa.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translation>Tietotyökalut</translation>
     </message>
@@ -12696,12 +12696,12 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation>Lisää Symboli</translation>
     </message>

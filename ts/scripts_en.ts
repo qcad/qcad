@@ -2166,18 +2166,18 @@ Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Command Line</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Command Line</translation>
     </message>
     <message>
-        <location line="+191"/>
+        <location line="+204"/>
         <source>Invalid value:</source>
         <translation>Invalid value:</translation>
     </message>
@@ -5926,7 +5926,7 @@ is already in the list.</translation>
         <translation>Done</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>Distance:</translation>
     </message>
@@ -6057,7 +6057,7 @@ is already in the list.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translation>Information Tools</translation>
     </message>
@@ -12400,12 +12400,12 @@ shown in search results:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation>Restore defaults</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation>Insert Symbol</translation>
     </message>

@@ -2142,13 +2142,13 @@ Onu kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+46"/>
+        <location line="+47"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komut Satırı</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-17"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Komut Satırı</translation>
     </message>
@@ -2165,7 +2165,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="vanished">Koordinatlar şu şekilde girilebilir: &apos;%1&apos; (mutlak) veya &apos;%2&apos; (göreceli) veya &apos;%3&apos; (polar) veya &apos;%4&apos; (göreceli polar)</translation>
     </message>
     <message>
-        <location line="+191"/>
+        <location line="+204"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5834,7 +5834,7 @@ is already in the list.</source>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+78"/>
         <source>Distance:</source>
         <translation>Mesafe:</translation>
     </message>
@@ -5965,7 +5965,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+285"/>
+        <location filename="../scripts/Information/Information.js" line="+325"/>
         <source>Information Tools</source>
         <translation>Bilgi Araçları</translation>
     </message>
@@ -12154,12 +12154,12 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1012"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
         <source>Restore defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+50"/>
         <source>Insert Symbol</source>
         <translation type="unfinished"></translation>
     </message>
