@@ -22,6 +22,7 @@
 #include <QTimer>
 #include <QToolTip>
 
+#include "RDocument.h"
 #include "RMainWindowQt.h"
 #include "RMath.h"
 #include "RMathLineEdit.h"
@@ -67,13 +68,27 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
     bool hasError = false;
     bool hasFormula = false;
 
+    // most common case (double value):
     if (QRegExp("^[+-]?\\d*\\.?\\d+$").exactMatch(text)) {
         value = text.toDouble();
         hasError = false;
         hasFormula = false;
     }
+
+    // advanced cases (formulas, variables, functions, etc.):
     else {
-        value = RMath::eval(text);
+        RDocument* doc = NULL;
+        RMainWindow* appWin = RMainWindow::getMainWindow();
+        if (appWin!=NULL) {
+            doc = appWin->getDocument();
+        }
+
+        if (doc!=NULL) {
+            value = doc->eval(text);
+        }
+        else {
+            value = RMath::eval(text);
+        }
         hasError = RMath::hasError();
         hasFormula = true;
     }
