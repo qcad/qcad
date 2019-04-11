@@ -133,6 +133,9 @@
         <expr_stmt><expr><name>dimensionFont</name> = <name>f</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function_decl><type><name>QString</name></type> <name>addAutoVariable</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QStringList</name></type> <name>getAutoVariables</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </public><private>private:

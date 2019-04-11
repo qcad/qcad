@@ -111,6 +111,12 @@
         setDimensionFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addAutoVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAutoVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         print
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

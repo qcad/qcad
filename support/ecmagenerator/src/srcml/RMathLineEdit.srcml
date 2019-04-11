@@ -76,6 +76,8 @@
 
     <function_decl><type><name>void</name></type> <name>setToolTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>toolTip</name></decl></param>)</parameter_list>;</function_decl>
 
+    <comment type="line">//QString insertAutoVariable(double value);</comment>
+
     <comment type="block">/*
     double getDefaultValue() {
         return defaultValue;
@@ -113,6 +115,7 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>originalToolTip</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>noEmit</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>noResultInToolTip</name></decl>;</decl_stmt>
+    <comment type="line">//QMap&lt;QString, double&gt; variables;</comment>
     <comment type="line">//double defaultValue;</comment>
 <comment type="line">//    QLabel* resultTip;</comment>
 </private>}</block>;</class>

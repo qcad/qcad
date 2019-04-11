@@ -1631,6 +1631,28 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="other" isConst="true" />
       </variant>
     </method>
+    <method name="addAutoVariable" cppName="addAutoVariable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="double" typeName="double" name="value"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAutoVariables" cppName="getAutoVariables"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="eval" cppName="eval" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="expression" isConst="true" />
+        <arg type="bool *" typeName="bool *" name="ok"
+        hasDefault="true" default="NULL" isConst="false" />
+      </variant>
+    </method>
     <method name="getClipboard" cppName="getClipboard"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

@@ -624,6 +624,15 @@
         copyVariablesFrom
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addAutoVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAutoVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        eval
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClipboard
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

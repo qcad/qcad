@@ -455,6 +455,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, copyVariablesFrom, "copyVariablesFrom");
             
+            REcmaHelper::registerFunction(&engine, proto, addAutoVariable, "addAutoVariable");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAutoVariables, "getAutoVariables");
+            
+            REcmaHelper::registerFunction(&engine, proto, eval, "eval");
+            
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
         engine.setDefaultPrototype(
@@ -15202,6 +15208,220 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::copyVariablesFrom", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::addAutoVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::addAutoVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::addAutoVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("addAutoVariable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->addAutoVariable(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.addAutoVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::addAutoVariable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getAutoVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getAutoVariables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getAutoVariables";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getAutoVariables", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getAutoVariables();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getAutoVariables().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getAutoVariables", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::eval
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::eval", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::eval";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("eval", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->eval(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool *
+                    a1 =
+                    (bool *)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->eval(a0
+        ,
+    a1);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.eval().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::eval", context, engine);
             return result;
         }
          QScriptValue

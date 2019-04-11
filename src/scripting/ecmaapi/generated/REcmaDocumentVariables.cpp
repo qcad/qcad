@@ -107,6 +107,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDimensionFont, "setDimensionFont");
             
+            REcmaHelper::registerFunction(&engine, proto, addAutoVariable, "addAutoVariable");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAutoVariables, "getAutoVariables");
+            
             REcmaHelper::registerFunction(&engine, proto, print, "print");
             
         engine.setDefaultPrototype(
@@ -1853,6 +1857,115 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentVariables::setDimensionFont", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentVariables::addAutoVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentVariables::addAutoVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::addAutoVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("addAutoVariable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->addAutoVariable(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.addAutoVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::addAutoVariable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentVariables::getAutoVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getAutoVariables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getAutoVariables";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("getAutoVariables", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getAutoVariables();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getAutoVariables().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getAutoVariables", context, engine);
             return result;
         }
          QScriptValue
