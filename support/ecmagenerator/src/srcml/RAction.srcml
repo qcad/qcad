@@ -93,7 +93,7 @@
     <function_decl><type><name>void</name></type> <name>setOverride</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isOverride</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>setNoState</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setNoState</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasNoState</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setUniqueGroup</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ug</name></decl></param>)</parameter_list>;</function_decl>

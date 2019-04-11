@@ -630,6 +630,9 @@
         getAutoVariables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        substituteAutoVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         eval
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

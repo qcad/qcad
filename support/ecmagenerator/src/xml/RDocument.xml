@@ -1644,6 +1644,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QStringList" isPureVirtual="false" />
     </method>
+    <method name="substituteAutoVariables"
+    cppName="substituteAutoVariables" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="expression" isConst="true" />
+      </variant>
+    </method>
     <method name="eval" cppName="eval" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">

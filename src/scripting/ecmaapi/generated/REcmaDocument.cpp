@@ -459,6 +459,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAutoVariables, "getAutoVariables");
             
+            REcmaHelper::registerFunction(&engine, proto, substituteAutoVariables, "substituteAutoVariables");
+            
             REcmaHelper::registerFunction(&engine, proto, eval, "eval");
             
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
@@ -15317,6 +15319,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getAutoVariables", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::substituteAutoVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::substituteAutoVariables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::substituteAutoVariables";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("substituteAutoVariables", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->substituteAutoVariables(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.substituteAutoVariables().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::substituteAutoVariables", context, engine);
             return result;
         }
          QScriptValue
