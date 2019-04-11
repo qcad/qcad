@@ -87,6 +87,7 @@ QPair<QVariant, RPropertyAttributes> RDocumentVariables::getProperty(RPropertyTy
         QString name = propertyTypeId.getCustomPropertyName();
         RS::KnownVariable v = RDxfServices::stringToVariable(name);
         if (appId=="QCAD" && v!=RS::INVALID) {
+            // custom property is a known DXF variable:
             return qMakePair(getKnownVariable(v), RPropertyAttributes(RPropertyAttributes::KnownVariable));
         }
     }
@@ -173,6 +174,31 @@ QVariant RDocumentVariables::getKnownVariable(RS::KnownVariable key) const {
 
 bool RDocumentVariables::hasKnownVariable(RS::KnownVariable key) const {
     return knownVariables.contains(key);
+}
+
+QString RDocumentVariables::addAutoVariable(double value) {
+    int c = getCustomIntProperty("QCAD", "AutoVariableCounter", 0);
+    c++;
+
+    QString key = QString("a%1").arg(c);
+
+    setCustomProperty("QCAD", key, value);
+    setCustomProperty("QCAD", "AutoVariableCounter", c);
+
+    return key;
+}
+
+QStringList RDocumentVariables::getAutoVariables() const {
+    QStringList ret;
+    int c = getCustomIntProperty("QCAD", "AutoVariableCounter", 0);
+    QString key;
+    for (int i=1; i<=c; i++) {
+        key = QString("a%1").arg(i);
+        if (hasCustomProperty("QCAD", key)) {
+            ret.append(key);
+        }
+    }
+    return ret;
 }
 
 void RDocumentVariables::print(QDebug dbg) const {

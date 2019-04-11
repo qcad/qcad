@@ -2678,6 +2678,46 @@ void RDocument::copyVariablesFrom(const RDocument& other) {
     delete transaction;
 }
 
+QString RDocument::addAutoVariable(double value) {
+    RTransaction* transaction = new RTransaction(storage, "Add auto variable", false);
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = storage.startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    QString ret = docVars->addAutoVariable(value);
+    storage.endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
+    transaction->end();
+    delete transaction;
+    return ret;
+}
+
+QStringList RDocument::getAutoVariables() const {
+    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
+    if (docVars.isNull()) {
+        return QStringList();
+    }
+    return docVars->getAutoVariables();
+}
+
+double RDocument::eval(const QString& expression, bool* ok) {
+    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
+    if (docVars.isNull()) {
+        return RMath::eval(expression, ok);
+    }
+
+    QString exp = expression;
+
+    QStringList autoVariables = docVars->getAutoVariables();
+    for (int i=0; i<autoVariables.length(); i++) {
+        QString key = autoVariables[i];
+        double value = docVars->getCustomDoubleProperty("QCAD", key, RNANDOUBLE);
+        if (RMath::isNaN(value)) {
+            continue;
+        }
+        exp = exp.replace(QRegExp(QString("\\b%1\\b").arg(key)), QString("%1").arg(value, 0, 'f', 12));
+    }
+
+    return RMath::eval(exp, ok);
+}
+
 RDocument& RDocument::getClipboard() {
     if (clipboard==NULL) {
         clipboard = new RDocument(

@@ -418,6 +418,10 @@ public:
 
     void copyVariablesFrom(const RDocument& other);
 
+    QString addAutoVariable(double value);
+    QStringList getAutoVariables() const;
+    double eval(const QString& expression, bool* ok = NULL);
+
     /*
     void copyToDocument(const RVector& reference, RDocument& other,
         bool selectionOnly, bool clear, RTransaction& transaction);

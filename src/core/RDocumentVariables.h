@@ -132,6 +132,9 @@ public:
         dimensionFont = f;
     }
 
+    QString addAutoVariable(double value);
+    QStringList getAutoVariables() const;
+
     virtual void print(QDebug dbg) const;
 
 private:
