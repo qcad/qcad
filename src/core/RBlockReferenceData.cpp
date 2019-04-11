@@ -282,6 +282,11 @@ RBox RBlockReferenceData::getBoundingBox(bool ignoreEmpty) const {
     return ret;
 }
 
+void RBlockReferenceData::to2D() {
+    position.z = 0.0;
+    update();
+}
+
 RVector RBlockReferenceData::getPointOnEntity() const {
     if (document == NULL) {
         return RVector::invalid;
