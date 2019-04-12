@@ -180,7 +180,7 @@ QString RDocumentVariables::addAutoVariable(double value) {
     int c = getCustomIntProperty("QCAD", "AutoVariableCounter", 0);
     c++;
 
-    QString key = QString("a%1").arg(c);
+    QString key = QString("d%1").arg(c);
 
     setCustomProperty("QCAD", key, value);
     setCustomProperty("QCAD", "AutoVariableCounter", c);
@@ -193,7 +193,7 @@ QStringList RDocumentVariables::getAutoVariables() const {
     int c = getCustomIntProperty("QCAD", "AutoVariableCounter", 0);
     QString key;
     for (int i=1; i<=c; i++) {
-        key = QString("a%1").arg(i);
+        key = QString("d%1").arg(i);
         if (hasCustomProperty("QCAD", key)) {
             ret.append(key);
         }
