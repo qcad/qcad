@@ -9843,12 +9843,12 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation>Decaler (distance)</translation>
+        <translation>Décaler (distance)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation>Décalage ligne, arc, cercle ou ellipse</translation>
+        <translation>Décalage d&apos;une ligne, d&apos;un arc, d&apos;un cercle ou d&apos;une ellipse</translation>
     </message>
     <message>
         <source>Draw parallel to existing line or concentric arc, circle</source>
@@ -9913,12 +9913,12 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation>Décalage (par point)</translation>
+        <translation>Décaler (par point)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Décalage ligne, arc, cercle ou ellipse par point</translation>
+        <translation>Décalage d&apos;une ligne, d&apos;un arc, d&apos;un cercle ou d&apos;une ellipse par un point</translation>
     </message>
 </context>
 <context>
@@ -10074,12 +10074,12 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation>Offset X:</translation>
+        <translation>Décalage X :</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
-        <translation>Offset Y:</translation>
+        <translation>Décalage Y :</translation>
     </message>
     <message>
         <location line="+41"/>
