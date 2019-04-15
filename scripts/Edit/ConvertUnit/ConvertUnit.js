@@ -128,6 +128,10 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
         if (isBlockReferenceEntity(entity)) {
             var p = entity.getPosition();
             entity.setPosition(p.operator_multiply(factor));
+            var cs = entity.getColumnSpacing();
+            entity.setColumnSpacing(cs*factor);
+            var rs = entity.getRowSpacing();
+            entity.setRowSpacing(rs*factor);
         } else if (isViewportEntity(entity)) {
             var s = entity.getScale();
             entity.scale(factor);
