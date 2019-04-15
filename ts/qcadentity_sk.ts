@@ -600,13 +600,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -701,12 +701,12 @@
     <message>
         <location line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť 2</translation>
     </message>
     <message>
         <location line="+2"/>
