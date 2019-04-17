@@ -49,7 +49,7 @@ public:
     /**
      * This method is called when a different layer becomes the new current layer.
      */
-    virtual void setCurrentLayer(RDocumentInterface* documentInterface) = 0;
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RLayer::Id previousLayerId) = 0;
 
     /**
      * This method is called to signal that no document is currently active.

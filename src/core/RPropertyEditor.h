@@ -58,7 +58,7 @@ public:
 
     virtual void updateLayers(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds);
     virtual void updateLayers(RDocumentInterface* documentInterface);
-    virtual void setCurrentLayer(RDocumentInterface* documentInterface);
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RLayer::Id previousLayerId);
     virtual void clearLayers();
 
     void propertyChanged(RPropertyTypeId propertyTypeId, QVariant propertyValue,

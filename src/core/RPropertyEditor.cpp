@@ -255,6 +255,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         }
     }
 
+    // collect properties without updating GUI:
     for (it = objectIds.begin(); it != objectIds.end(); ++it) {
         QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
         if (obj.isNull()) {
@@ -381,7 +382,9 @@ void RPropertyEditor::updateLayers(RDocumentInterface* documentInterface) {
     }
 }
 
-void RPropertyEditor::setCurrentLayer(RDocumentInterface* documentInterface) {
+void RPropertyEditor::setCurrentLayer(RDocumentInterface* documentInterface, RObject::Id previousLayerId) {
+    Q_UNUSED(previousLayerId)
+
     updateLayers(documentInterface);
 }
 

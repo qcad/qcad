@@ -2353,16 +2353,18 @@ RLinetypePattern RDocumentInterface::getCurrentLinetypePattern() {
  * Sets the current layer based on the given layer name.
  */
 void RDocumentInterface::setCurrentLayer(const QString& layerName) {
+    RLayer::Id previousLayerId = document.getCurrentLayerId();
     document.setCurrentLayer(layerName);
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
-        RMainWindow::getMainWindow()->notifyLayerListenersCurrentLayer(this);
+        RMainWindow::getMainWindow()->notifyLayerListenersCurrentLayer(this, previousLayerId);
     }
 }
 
 void RDocumentInterface::setCurrentLayer(RLayer::Id layerId) {
+    RLayer::Id previousLayerId = document.getCurrentLayerId();
     document.setCurrentLayer(layerId);
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
-        RMainWindow::getMainWindow()->notifyLayerListenersCurrentLayer(this);
+        RMainWindow::getMainWindow()->notifyLayerListenersCurrentLayer(this, previousLayerId);
     }
 }
 

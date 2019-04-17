@@ -69,7 +69,7 @@ RLayerListQt.prototype.contextMenuEvent = function(e) {
     e.ignore();
 };
 
-RLayerListQt.prototype.updateLayers = function(documentInterface) {
+RLayerListQt.prototype.updateLayers = function(documentInterface, previousLayerId) {
     this.di = documentInterface;
     var layer;
 

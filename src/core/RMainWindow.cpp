@@ -654,10 +654,10 @@ void RMainWindow::notifyLayerListeners(RDocumentInterface* documentInterface, QL
     }
 }
 
-void RMainWindow::notifyLayerListenersCurrentLayer(RDocumentInterface* documentInterface) {
+void RMainWindow::notifyLayerListenersCurrentLayer(RDocumentInterface* documentInterface, RLayer::Id previousLayerId) {
     QList<RLayerListener*>::iterator it;
     for (it = layerListeners.begin(); it != layerListeners.end(); ++it) {
-        (*it)->setCurrentLayer(documentInterface);
+        (*it)->setCurrentLayer(documentInterface, previousLayerId);
     }
 }
 
