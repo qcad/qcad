@@ -155,7 +155,7 @@ public:
     /**
      * \copydoc REntityData::isSelected
      */
-    bool isSelected() const {
+    virtual bool isSelected() const {
         return getData().isSelected();
     }
 
@@ -622,11 +622,6 @@ public:
      * to.
      */
     virtual void exportEntity(RExporter& e, bool preview = false, bool forceSelected=false) const = 0;
-
-    // from RObject:
-    virtual bool isSelectedForPropertyEditing() {
-        return isSelected();
-    }
 
     virtual void setAutoUpdatesBlocked(bool on) {
         getData().setAutoUpdatesBlocked(on);
