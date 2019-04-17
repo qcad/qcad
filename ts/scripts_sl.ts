@@ -2375,7 +2375,7 @@ Do you wish to recover it?</source>
         <translation type="vanished">Izbrana enota &apos;%1&apos; - Nič ni za naredit</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Pretvori risbo iz %1 v %2 </translation>
     </message>

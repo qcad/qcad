@@ -3053,7 +3053,7 @@ Documento carregado: %1</translatorcomment>
         <translation type="vanished">Unidade &apos;%1&apos; selecionado - nada a ser feito</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Desenho convertido de %1 para %2</translation>
     </message>

@@ -511,7 +511,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
-        <location filename="../src/core/RObject.cpp" line="+66"/>
+        <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -536,7 +536,7 @@ Liste des calques</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+99"/>
+        <location filename="../src/core/RLayer.cpp" line="+102"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_fr.ts--
@@ -624,6 +624,11 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <location line="+1"/>
         <source>Protected</source>
         <translation>Protégé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Selected</source>
+        <translation>Sélectionné</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

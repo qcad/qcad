@@ -2601,7 +2601,7 @@ Versión:</translatorcomment>
         <translation type="vanished">Unidad &apos;%1&apos; seleccionado - nada que hacer</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Dibujo convertido de %1 a %2</translation>
     </message>

@@ -516,7 +516,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
-        <location filename="../src/core/RObject.cpp" line="+66"/>
+        <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -542,7 +542,7 @@ Lista de Capas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+99"/>
+        <location filename="../src/core/RLayer.cpp" line="+102"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_es.ts--
@@ -630,6 +630,11 @@ Colores
         <location line="+1"/>
         <source>Protected</source>
         <translation>Protegida</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Selected</source>
+        <translation>Seleccionados</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

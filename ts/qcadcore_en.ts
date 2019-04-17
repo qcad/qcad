@@ -239,7 +239,7 @@
     <name>REntity</name>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+63"/>
-        <location filename="../src/core/RLayer.cpp" line="+90"/>
+        <location filename="../src/core/RLayer.cpp" line="+93"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+80"/>
         <source>Name</source>
@@ -379,7 +379,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
-        <location filename="../src/core/RObject.cpp" line="+66"/>
+        <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
@@ -568,6 +568,11 @@
         <location line="+1"/>
         <source>Protected</source>
         <translation>Protected</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Selected</source>
+        <translation>Selected</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>

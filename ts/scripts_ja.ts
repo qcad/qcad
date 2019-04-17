@@ -2383,7 +2383,7 @@ Do you wish to recover it?</source>
         <translation type="vanished">単位&apos;%1&apos;が選択されました-何もされませんでした</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1 から %2 にコンバートされた図面</translation>
     </message>

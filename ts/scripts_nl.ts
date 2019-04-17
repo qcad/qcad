@@ -2349,7 +2349,7 @@ Wilt u het herstellen?</translation>
         <translation type="vanished">Eenheid &apos;%1&apos; geselecteerd - niets te doen</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Tekening omgezet van %1 naar %2</translation>
     </message>

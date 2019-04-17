@@ -2236,7 +2236,7 @@ Vill du återställa den?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation type="unfinished"></translation>
     </message>

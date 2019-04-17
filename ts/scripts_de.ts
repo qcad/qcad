@@ -2679,7 +2679,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="vanished">Einheit &apos;%1&apos; gewählt - keine Konvertierung nötig</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Zeichnung konvertiert von %1 in %2</translation>
     </message>

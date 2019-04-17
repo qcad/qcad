@@ -506,7 +506,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
-        <location filename="../src/core/RObject.cpp" line="+66"/>
+        <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -540,7 +540,7 @@ Lista de Camadas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+99"/>
+        <location filename="../src/core/RLayer.cpp" line="+102"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tipo de Linha</translation>
@@ -625,6 +625,11 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <source>Protected</source>
         <translation>Protegido</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Selected</source>
+        <translation>Selecionada</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

@@ -2339,7 +2339,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Yksikkö &quot;%1&quot; valittu. Ei tehtävää</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Muunnettu piirros %1 %2</translation>
     </message>

@@ -355,7 +355,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
-        <location filename="../src/core/RObject.cpp" line="+66"/>
+        <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translation>Rodzaj</translation>
     </message>
@@ -376,7 +376,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+99"/>
+        <location filename="../src/core/RLayer.cpp" line="+102"/>
         <source>Linetype</source>
         <translation>Rodzaj linii</translation>
     </message>
@@ -455,6 +455,11 @@
         <location line="+1"/>
         <source>Protected</source>
         <translation>Zabezpieczony</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Selected</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

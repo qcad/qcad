@@ -2870,7 +2870,7 @@ Wersja: </translatorcomment>
         <translation type="vanished">Wybrano jednostkę „%1” - brak czynności do wykonania</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Skonwertowano jednostki rysunku z %1 na %2</translation>
     </message>

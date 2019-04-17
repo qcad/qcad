@@ -2291,7 +2291,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="vanished">&apos;%1&apos; birimi seçildi - Yapılacak bir şey yok</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1&apos;den %2&apos;ye dönüştürülen çizim</translation>
     </message>

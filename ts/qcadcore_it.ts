@@ -525,7 +525,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+87"/>
-        <location filename="../src/core/RObject.cpp" line="+66"/>
+        <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -551,7 +551,7 @@ Lista Layer</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+99"/>
+        <location filename="../src/core/RLayer.cpp" line="+102"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_it.ts--
@@ -639,6 +639,11 @@ Colore G&amp;riglia:</translatorcomment>
         <location line="+1"/>
         <source>Protected</source>
         <translation>Protetta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Selected</source>
+        <translation>Selezionato</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

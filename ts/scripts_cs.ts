@@ -2304,7 +2304,7 @@ Přejete si ho obnovit?</translation>
         <translation type="vanished">Vybraná jednotka &apos;%1&apos; - Nic se nestane</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+130"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Výkres převeden z %1 na %2</translation>
     </message>
