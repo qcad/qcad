@@ -81,10 +81,6 @@ public:
         return new RUcs(*this);
     }
 
-    virtual bool isSelectedForPropertyEditing() {
-        return false;
-    }
-
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);

@@ -362,8 +362,6 @@ public:
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
             const QVariant& value, RTransaction* transaction=NULL);
 
-    virtual bool isSelectedForPropertyEditing();
-
 protected:
     /**
      * \nonscriptable

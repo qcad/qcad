@@ -136,8 +136,6 @@ public:
 
     virtual void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
 
-    virtual bool isSelectedForPropertyEditing();
-
 public:
     static const QString modelSpaceName;
     static const QString paperSpaceName;

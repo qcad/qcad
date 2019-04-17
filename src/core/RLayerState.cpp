@@ -103,10 +103,6 @@ QPair<QVariant, RPropertyAttributes> RLayerState::getProperty(RPropertyTypeId& p
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
-bool RLayerState::isSelectedForPropertyEditing() {
-    return false;
-}
-
 /**
  * Stream operator for QDebug
  */

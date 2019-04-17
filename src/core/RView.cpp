@@ -78,11 +78,6 @@ QPair<QVariant, RPropertyAttributes> RView::getProperty(
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
-bool RView::isSelectedForPropertyEditing() {
-    return false;
-}
-
-
 /**
  * Stream operator for QDebug
  */

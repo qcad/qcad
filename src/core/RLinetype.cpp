@@ -93,10 +93,6 @@ QPair<QVariant, RPropertyAttributes> RLinetype::getProperty(
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
-bool RLinetype::isSelectedForPropertyEditing() {
-    return false;
-}
-
 bool RLinetype::isValid() const {
     return !pattern.name.isNull();
 }

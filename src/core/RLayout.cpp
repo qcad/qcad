@@ -310,10 +310,6 @@ QPair<QVariant, RPropertyAttributes> RLayout::getProperty(
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
-bool RLayout::isSelectedForPropertyEditing() {
-    return false;
-}
-
 void RLayout::print(QDebug dbg) const {
     dbg.nospace() << "RLayout(";
     RObject::print(dbg);

@@ -58,10 +58,6 @@ public:
         return new RDocumentVariables(*this);
     }
 
-    virtual bool isSelectedForPropertyEditing() {
-        return false;
-    }
-
     virtual QPair<QVariant, RPropertyAttributes>
             getProperty(RPropertyTypeId& propertyTypeId,
                     bool humanReadable = false,

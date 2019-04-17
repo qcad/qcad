@@ -164,10 +164,6 @@ void RBlock::setCustomProperty(const QString& title, const QString& key, const Q
     RObject::setCustomProperty(title, key, value);
 }
 
-bool RBlock::isSelectedForPropertyEditing() {
-    return false;
-}
-
 void RBlock::print(QDebug dbg) const {
     dbg.nospace() << "RBlock(";
     RObject::print(dbg);
