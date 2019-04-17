@@ -330,11 +330,11 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     var scrollArea = this.widget.findChild("ScrollArea");
     var layout = scrollArea.layout();
 
-    if (!onlyChanges) {
+    //if (!onlyChanges) {
         selectionCombo.clear();
         // TODO: add 'no selection' item to choose current pen:
         //selectionCombo.addItem(qsTr("No Selection"), -2);
-    }
+    //}
 
     var groups = this.getGroupTitles();
 
@@ -723,7 +723,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     }
 
     // update selection combo box at the top for entity filters:
-    if (!onlyChanges) {
+    //if (!onlyChanges) {
         var types = this.getTypes();
         var totalCount = 0;
         for (var ti=0; ti<types.length; ti++) {
@@ -750,7 +750,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 
         generalGroup.enabled = true;
         this.geometryGroup.enabled = true;
-    }
+    //}
 
     // add custom property button:
     if (!isNull(gridLayoutCustom)) {
