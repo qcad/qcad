@@ -146,7 +146,7 @@
     <message>
         <location line="-5"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ďalšie nástroje, funkcie a formáty súborov vrátane DWG sú k dispozícii v &lt;a href=&apos;%1&apos;&gt; QCAD Professional &lt;/a&gt; alebo &lt;a href=&apos;%2&apos;&gt; QCAD/CAM &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -161,7 +161,7 @@
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt sa dodáva s QCAD pod &lt;a href=&apos;%1&apos;&gt; LGPL Open Source licenciou &lt;/a&gt;, ktorá vám ako používateľovi udeľuje rôzne práva, vrátane práva prekompilovať knižnice Qt pre vašu platformu. Postupujte podľa &lt;a href=&apos;%2&apos;&gt; dokumentácie zobrazenej na webovej stránke Qt &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1291,7 +1291,7 @@ Prajete si ho obnoviť?</translation>
         <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation>blok</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -1329,7 +1329,7 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation type="unfinished">Blok</translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6805,7 +6805,7 @@ už existuje v zozname.</translation>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation>vrstva</translation>
     </message>
     <message>
         <location line="+150"/>
@@ -6829,7 +6829,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation type="unfinished">Vrstva</translation>
+        <translation>Vrstva</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9684,12 +9684,12 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="+94"/>
         <source>Angle &amp;a:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uhol &amp;a:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uhol &amp;b:</translation>
     </message>
     <message>
         <source>Angle (&amp;a):</source>
@@ -9919,7 +9919,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="+19"/>
         <source>Saved file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uložený súbor:</translation>
     </message>
     <message>
         <source>Saved drawing:</source>
@@ -11671,7 +11671,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Podčiarknuť</translation>
     </message>
     <message>
         <location line="+9"/>
