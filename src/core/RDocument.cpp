@@ -1759,6 +1759,15 @@ QSet<REntity::Id> RDocument::querySelectedEntities() {
     return storage.querySelectedEntities();
 }
 
+/**
+ * Queries all selected objects.
+ *
+ * \return Set of IDs of all selected objects.
+ */
+QSet<RObject::Id> RDocument::querySelectedLayers() const {
+    return storage.querySelectedLayers();
+}
+
 QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double tolerance) {
     QSet<REntity::Id> ret;
 
@@ -1839,7 +1848,10 @@ QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
         // no entities selected:
         if (objectIds.isEmpty()) {
             // expose properties of current layer:
-            objectIds.insert(getCurrentLayerId());
+            //objectIds.insert(getCurrentLayerId());
+
+            // expose properties of selected layer(s):
+            objectIds.unite(querySelectedLayers());
 
             // expose properties of selected block:
             RBlock::Id blockId = getCurrentBlockId();
