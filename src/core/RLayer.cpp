@@ -25,6 +25,7 @@ RPropertyTypeId RLayer::PropertyCustom;
 RPropertyTypeId RLayer::PropertyType;
 RPropertyTypeId RLayer::PropertyHandle;
 RPropertyTypeId RLayer::PropertyProtected;
+RPropertyTypeId RLayer::PropertySelected;
 
 RPropertyTypeId RLayer::PropertyName;
 RPropertyTypeId RLayer::PropertyOff;
@@ -61,6 +62,7 @@ RLayer::RLayer(RDocument* document, const QString& name,
     setCollapsed(false);
     setPlottable(true);
     setSnappable(true);
+    setSelected(false);
 
     RDebug::incCounter("RLayer");
 }
@@ -86,6 +88,7 @@ void RLayer::init() {
     RLayer::PropertyType.generateId(typeid(RLayer), RObject::PropertyType);
     RLayer::PropertyHandle.generateId(typeid(RLayer), RObject::PropertyHandle);
     RLayer::PropertyProtected.generateId(typeid(RLayer), RObject::PropertyProtected);
+    RLayer::PropertySelected.generateId(typeid(RLayer), RObject::PropertySelected);
 
     RLayer::PropertyName.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Name"));
     RLayer::PropertyOff.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Off"));
@@ -237,11 +240,6 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& proper
     //return qMakePair(QVariant(), RPropertyAttributes());
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
-
-bool RLayer::isSelectedForPropertyEditing() {
-    return false;
-}
-
 
 /**
  * Stream operator for QDebug

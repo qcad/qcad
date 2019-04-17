@@ -51,6 +51,7 @@ public:
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
+    static RPropertyTypeId PropertySelected;
 
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyOff;
@@ -67,6 +68,7 @@ public:
 
 public:
     enum LayerFlag {
+        // these complement the RObject flags
         Off = 0x010,              //!< layer is off
         Frozen = 0x020,           //!< layer is frozen
         Locked = 0x040,           //!< layer is locked
@@ -196,8 +198,6 @@ public:
             bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
             const QVariant& value, RTransaction* transaction=NULL);
-
-    virtual bool isSelectedForPropertyEditing();
 
     bool hasChildLayers() const {
         const RDocument* doc = getDocument();
